@@ -1,0 +1,90 @@
+'use client'
+
+import { useState } from 'react'
+import Link from 'next/link'
+import { Menu, X, ArrowRight } from 'lucide-react'
+
+export default function MarketingHeader() {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const navItems = [
+    { label: 'Benefits', href: '/#benefits' },
+    { label: 'Simulator', href: '/#simulator' },
+    { label: 'Features', href: '/#features' },
+    { label: 'Exams', href: '/#exams' },
+    { label: 'Pricing', href: '/#pricing' },
+    { label: 'FAQ', href: '/#faq' },
+  ]
+
+  return (
+    <header className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/95">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <Link href="/" className="flex items-center gap-2 text-xl font-extrabold tracking-tight text-gray-900 min-h-[44px]">
+          <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-blue-600 text-white font-bold text-base">
+            P
+          </span>
+          PrepIQ
+        </Link>
+
+        <nav className="hidden md:flex md:items-center md:gap-8">
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="text-sm font-medium text-gray-500 transition-colors hover:text-blue-600 py-2 px-1 min-h-[44px] flex items-center"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+
+        <div className="hidden md:flex md:items-center md:gap-4">
+          <Link
+            href="/signup"
+            className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-700 active:bg-blue-800 min-h-[44px]"
+          >
+            Start Free
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+
+        <div className="flex md:hidden">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="inline-flex items-center justify-center rounded-xl p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 min-h-[44px] min-w-[44px]"
+            aria-expanded={isOpen}
+          >
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
+      </div>
+
+      {isOpen && (
+        <div className="border-b border-gray-100 bg-white px-4 pt-2 pb-4 md:hidden">
+          <div className="flex flex-col gap-1">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setIsOpen(false)}
+                className="w-full rounded-xl px-3 py-3 text-base font-medium text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-colors min-h-[44px]"
+              >
+                {item.label}
+              </Link>
+            ))}
+            <div className="mt-4 border-t border-gray-100 pt-4">
+              <Link
+                href="/signup"
+                onClick={() => setIsOpen(false)}
+                className="flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 py-3 text-base font-semibold text-white hover:bg-blue-700 transition-colors min-h-[44px]"
+              >
+                Start Free
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
+    </header>
+  )
+}
