@@ -1,0 +1,1 @@
+ALTER TABLE questions ADD COLUMN IF NOT EXISTS source TEXT NOT NULL DEFAULT 'unknown';
