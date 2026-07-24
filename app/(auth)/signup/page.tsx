@@ -127,7 +127,7 @@ export default function SignupPage() {
       <div className="flex min-h-screen flex-col items-center justify-center px-4">
         <Link href="/" className="flex items-center gap-2 text-xl font-extrabold tracking-tight text-gray-900 mb-8 min-h-[44px]">
           <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-blue-600 text-white font-bold text-base">P</span>
-          PrepIQ
+          Propeida
         </Link>
 
         <div className="w-full max-w-sm rounded-xl border border-gray-100 bg-white p-6 shadow-xs text-center">
@@ -150,7 +150,7 @@ export default function SignupPage() {
     <div className="flex min-h-screen flex-col items-center justify-center px-4">
       <Link href="/" className="flex items-center gap-2 text-xl font-extrabold tracking-tight text-gray-900 mb-8 min-h-[44px]">
         <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-blue-600 text-white font-bold text-base">P</span>
-        PrepIQ
+        Propeida
       </Link>
 
       <div className="w-full max-w-sm rounded-xl border border-gray-100 bg-white p-6 shadow-xs">

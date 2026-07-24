@@ -11,33 +11,33 @@ export default function PrivacyPage() {
 
         <div className="mt-10 space-y-8 text-sm text-gray-500 leading-relaxed">
           <section>
-            <h2 className="text-base font-extrabold text-gray-900 mb-3">What data PrepIQ collects</h2>
+            <h2 className="text-base font-extrabold text-gray-900 mb-3">What data Propeida collects</h2>
             <p>
-              When you create an account, PrepIQ stores your email address and a randomly generated username. No real name, phone number, or address is required to use the platform.
+              When you create an account, Propeida stores your email address and a randomly generated username. No real name, phone number, or address is required to use the platform.
             </p>
             <p className="mt-3">
-              While using the platform, PrepIQ records your answers to practice questions and mock exams, your session timings, your score and accuracy data, and your daily question responses. This data is used solely to calculate your performance statistics, update your streak, and determine your leaderboard ranking.
+              While using the platform, Propeida records your answers to practice questions and mock exams, your session timings, your score and accuracy data, and your daily question responses. This data is used solely to calculate your performance statistics, update your streak, and determine your leaderboard ranking.
             </p>
           </section>
 
           <section>
             <h2 className="text-base font-extrabold text-gray-900 mb-3">How data is stored</h2>
             <p>
-              All user data is stored in a Supabase PostgreSQL database hosted on Google Cloud Platform infrastructure. Passwords are handled entirely by Supabase Auth and are never stored or readable by PrepIQ. Communication with the database is encrypted in transit.
+              All user data is stored in a Supabase PostgreSQL database hosted on Google Cloud Platform infrastructure. Passwords are handled entirely by Supabase Auth and are never stored or readable by Propeida. Communication with the database is encrypted in transit.
             </p>
           </section>
 
           <section>
             <h2 className="text-base font-extrabold text-gray-900 mb-3">Payment data</h2>
             <p>
-              Payments are processed entirely by Paystack, a PCI-DSS compliant payment processor. PrepIQ does not collect, store, or transmit credit or debit card numbers. When you make a payment, PrepIQ stores only the transaction reference, the amount paid, and the payment status returned by Paystack. All card details are handled by Paystack on their secure infrastructure.
+              Payments are processed entirely by Paystack, a PCI-DSS compliant payment processor. Propeida does not collect, store, or transmit credit or debit card numbers. When you make a payment, Propeida stores only the transaction reference, the amount paid, and the payment status returned by Paystack. All card details are handled by Paystack on their secure infrastructure.
             </p>
           </section>
 
           <section>
             <h2 className="text-base font-extrabold text-gray-900 mb-3">Data sharing</h2>
             <p>
-              PrepIQ does not sell, rent, or share your personal data with third parties. Your practice data and performance statistics are visible to you on your dashboard. Your username, score, and school affiliation are visible on the public leaderboard. No email addresses or other contact information are shown on the leaderboard or anywhere else publicly.
+              Propeida does not sell, rent, or share your personal data with third parties. Your practice data and performance statistics are visible to you on your dashboard. Your username, score, and school affiliation are visible on the public leaderboard. No email addresses or other contact information are shown on the leaderboard or anywhere else publicly.
             </p>
           </section>
 
@@ -51,7 +51,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-base font-extrabold text-gray-900 mb-3">Cookies and local storage</h2>
             <p>
-              PrepIQ uses Supabase Auth cookies to maintain your login session. No tracking cookies, analytics cookies, or third-party cookies are used. The platform uses local storage only to store a referral code reference if you sign up through a referral link.
+              Propeida uses Supabase Auth cookies to maintain your login session. No tracking cookies, analytics cookies, or third-party cookies are used. The platform uses local storage only to store a referral code reference if you sign up through a referral link.
             </p>
           </section>
 

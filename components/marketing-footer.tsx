@@ -8,7 +8,7 @@ export default function MarketingFooter() {
               <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-blue-600 text-white font-bold text-base">
                 P
               </span>
-              PrepIQ
+              Propeida
             </div>
             <p className="mt-4 text-sm text-gray-500 max-w-sm leading-relaxed">
               The fastest, most efficient path to passing competitive exams in Nigeria. Built specifically for JAMB, WAEC, and Post-UTME preparation.
@@ -73,7 +73,7 @@ export default function MarketingFooter() {
 
         <div className="mt-12 border-t border-gray-100 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-gray-400">
-            &copy; 2026 PrepIQ. All rights reserved.
+            &copy; 2026 Propeida. All rights reserved.
           </p>
           <div className="flex gap-4 text-xs text-gray-400">
             <span>Optimized for budget mobile networks</span>

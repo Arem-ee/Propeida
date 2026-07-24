@@ -50,7 +50,7 @@ export default function DashboardShell({ children, email, isAdmin, onLogout }: {
         <div className="flex items-center gap-2 px-6 h-16 border-b border-gray-100 shrink-0">
           <Link href="/dashboard" className="flex items-center gap-2 text-xl font-extrabold tracking-tight text-gray-900">
             <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-blue-600 text-white font-bold text-base">P</span>
-            PrepIQ
+            Propeida
           </Link>
         </div>
 
@@ -161,7 +161,7 @@ export default function DashboardShell({ children, email, isAdmin, onLogout }: {
         <div className="flex items-center justify-between h-14 px-4">
           <Link href="/dashboard" className="flex items-center gap-2 text-lg font-extrabold tracking-tight text-gray-900">
             <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-blue-600 text-white font-bold text-xs">P</span>
-            PrepIQ
+            Propeida
           </Link>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

@@ -8,7 +8,7 @@ const geist = Geist({
 })
 
 export const metadata: Metadata = {
-  title: 'PrepIQ — Premium Exam Prep for Nigerian Students',
+  title: 'Propeida — Premium Exam Prep for Nigerian Students',
   description:
     'Pass JAMB, Post-UTME, and WAEC with confidence. Interactive CBT mock exams, topic drills, and performance analytics — built for Nigerian students.',
 }

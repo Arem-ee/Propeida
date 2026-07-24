@@ -10,7 +10,7 @@ export default function MarketingFeatures() {
             Features built for direct score outcomes
           </h2>
           <p className="mt-4 text-lg text-gray-500 leading-relaxed">
-            No endless video lectures. No heavy textbooks. PrepIQ gives you direct practical tools to identify weak spots, master pacing, and walk into your exam halls with complete clarity.
+            No endless video lectures. No heavy textbooks. Propeida gives you direct practical tools to identify weak spots, master pacing, and walk into your exam halls with complete clarity.
           </p>
         </div>
 

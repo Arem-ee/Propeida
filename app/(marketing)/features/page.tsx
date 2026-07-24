@@ -70,7 +70,7 @@ export default function FeaturesPage() {
         <div className="mx-auto max-w-3xl text-center mb-16">
           <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Features</h1>
           <p className="mt-4 text-lg text-gray-500 leading-relaxed">
-            Every feature in PrepIQ serves one purpose: helping you practice effectively on the device and network you already have.
+            Every feature in Propeida serves one purpose: helping you practice effectively on the device and network you already have.
           </p>
         </div>
 

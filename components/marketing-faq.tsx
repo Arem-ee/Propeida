@@ -13,7 +13,7 @@ export default function MarketingFAQ() {
     {
       question: 'How is this different from reading past questions on paper or PDF?',
       answer:
-        'Paper booklets and PDFs do not enforce strict computer-based test (CBT) timing, nor do they track your topic accuracy. PrepIQ simulates the actual digital exam screen, clock pressure, and multi-subject navigation. This helps you build the actual muscle memory of completing your paper before the official countdown hit zero.',
+        'Paper booklets and PDFs do not enforce strict computer-based test (CBT) timing, nor do they track your topic accuracy. Propeida simulates the actual digital exam screen, clock pressure, and multi-subject navigation. This helps you build the actual muscle memory of completing your paper before the official countdown hit zero.',
     },
     {
       question: 'Is this really a one-time payment of ₦1,500? Are there monthly fees?',
@@ -23,7 +23,7 @@ export default function MarketingFAQ() {
     {
       question: 'Does the app work on slow network or budget data connections?',
       answer:
-        'Yes. PrepIQ is optimized specifically for Nigerian mobile network constraints. The platform is lightweight, with text-only data serialization. This means pages load instantly on basic 3G connections, and completing a full-length, 180-question mock exam consumes less than 2MB of mobile data.',
+        'Yes. Propeida is optimized specifically for Nigerian mobile network constraints. The platform is lightweight, with text-only data serialization. This means pages load instantly on basic 3G connections, and completing a full-length, 180-question mock exam consumes less than 2MB of mobile data.',
     },
     {
       question: 'Can I practice for multiple exams or do I pay separately?',

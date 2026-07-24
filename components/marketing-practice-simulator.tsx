@@ -114,7 +114,7 @@ export default function MarketingPracticeSimulator() {
             Interactive practice simulator
           </h2>
           <p className="mt-4 text-lg text-gray-500 leading-relaxed">
-            See how PrepIQ helps you master difficult concepts. Select a subject below, choose your answer, and review the detailed post-exam explanation.
+            See how Propeida helps you master difficult concepts. Select a subject below, choose your answer, and review the detailed post-exam explanation.
           </p>
         </div>
 
@@ -244,7 +244,7 @@ export default function MarketingPracticeSimulator() {
               <div className="mt-6 rounded-xl bg-blue-50/30 border border-blue-50 p-4 sm:p-5">
                 <div className="flex items-center gap-2 text-sm font-bold text-blue-800 mb-2">
                   <BookOpen className="h-4 w-4 text-blue-600" />
-                  PrepIQ High-Yield Explanation
+                  Propeida High-Yield Explanation
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed">
                   {currentQuestion.explanation}

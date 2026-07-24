@@ -23,7 +23,7 @@ export default function MarketingHeader() {
           <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-blue-600 text-white font-bold text-base">
             P
           </span>
-          PrepIQ
+          Propeida
         </Link>
 
         <nav className="hidden md:flex md:items-center md:gap-8">

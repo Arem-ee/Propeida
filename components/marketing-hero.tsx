@@ -41,7 +41,7 @@ export default function MarketingHero() {
             </h1>
 
             <p className="mt-6 text-lg text-gray-500 leading-relaxed max-w-lg">
-              PrepIQ is the fastest, most effective way to prep for JAMB and Post-UTME through interactive, real exam simulations.
+              Propeida is the fastest, most effective way to prep for JAMB and Post-UTME through interactive, real exam simulations.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-4 w-full sm:w-auto">

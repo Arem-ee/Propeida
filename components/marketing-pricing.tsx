@@ -247,7 +247,7 @@ export default function MarketingPricing() {
                 P
               </div>
               <div>
-                <h4 className="text-sm font-bold text-gray-900">Pay PrepIQ</h4>
+                <h4 className="text-sm font-bold text-gray-900">Pay Propeida</h4>
                 <p className="text-xs text-gray-400">Secured by Paystack</p>
               </div>
             </div>
@@ -313,7 +313,7 @@ export default function MarketingPricing() {
                     </div>
                     <div className="flex justify-between text-xs">
                       <span className="text-gray-400">Beneficiary:</span>
-                      <span className="font-semibold text-gray-800">PrepIQ Simulator Ltd</span>
+                      <span className="font-semibold text-gray-800">Propeida Simulator Ltd</span>
                     </div>
                   </div>
                 </div>

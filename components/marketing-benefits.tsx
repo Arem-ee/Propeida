@@ -18,7 +18,7 @@ export default function MarketingBenefits() {
       icon: Target,
       title: 'Target your exact weak spots',
       description:
-        'Re-studying what you already know is a waste of valuable hours. PrepIQ tracks your wrong answers and flags exactly which topics require your attention so you can focus on what gets you marks.',
+        'Re-studying what you already know is a waste of valuable hours. Propeida tracks your wrong answers and flags exactly which topics require your attention so you can focus on what gets you marks.',
     },
     {
       icon: ShieldCheck,

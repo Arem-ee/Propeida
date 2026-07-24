@@ -52,8 +52,8 @@ export default function SupportPage() {
       <h1 className="text-2xl font-extrabold text-gray-900 mb-2">Contact & Support</h1>
       <p className="text-sm text-gray-500 mb-8">
         Send a message to the team, or email us directly at{' '}
-        <a href="mailto:prepIQ.help@gmail.com" className="text-blue-600 hover:text-blue-700 font-semibold">
-          prepIQ.help@gmail.com
+        <a href="mailto:propeida.help@gmail.com" className="text-blue-600 hover:text-blue-700 font-semibold">
+          propeida.help@gmail.com
         </a>.
       </p>
 

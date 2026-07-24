@@ -8,7 +8,7 @@ import { ChevronLeft, ArrowRight, Sparkles } from 'lucide-react'
 
 const STEPS = [
   {
-    title: 'Welcome to PrepIQ',
+    title: 'Welcome to Propeida',
     body: "We built this because passing JAMB or your Post-UTME shouldn't come down to luck, or to grinding through past questions with no idea what you actually know. Whichever one you're preparing for, everything here is built around one thing: walking into that exam hall already knowing what to expect.",
   },
   {

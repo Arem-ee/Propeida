@@ -19,7 +19,7 @@ export default function MarketingSupportedExams() {
             Supported examinations
           </h2>
           <p className="mt-4 text-lg text-gray-500 leading-relaxed">
-            Whether you are writing a standard national exam or a competitive school-specific entrance test, PrepIQ covers the actual past question models you will face.
+            Whether you are writing a standard national exam or a competitive school-specific entrance test, Propeida covers the actual past question models you will face.
           </p>
         </div>
 
@@ -34,7 +34,7 @@ export default function MarketingSupportedExams() {
                 University Post-UTME Formats
               </h3>
               <p className="text-gray-500 text-sm leading-relaxed mb-6">
-                Post-UTME tests are fast-paced and differ completely by school. PrepIQ organizes past questions according to specific university patterns. The highly competitive <strong>Unilorin Post-UTME</strong> exam is featured with its strict time constraints and exact subject weightings.
+                Post-UTME tests are fast-paced and differ completely by school. Propeida organizes past questions according to specific university patterns. The highly competitive <strong>Unilorin Post-UTME</strong> exam is featured with its strict time constraints and exact subject weightings.
               </p>
             </div>
 
