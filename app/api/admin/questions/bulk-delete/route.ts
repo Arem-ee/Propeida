@@ -13,7 +13,7 @@ export async function POST(request: Request) {
 
     const supabase = createAdminClient()
     const { error } = await supabase.from('questions').delete().in('id', ids)
-    if (error) return NextResponse.json({ error: 'Failed to delete questions' }, { status: 500 })
+    if (error) return NextResponse.json({ error: 'Failed to delete questions', detail: error.message }, { status: 500 })
 
     return NextResponse.json({ deleted: ids.length })
   } catch {
