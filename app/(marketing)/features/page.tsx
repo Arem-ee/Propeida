@@ -1,7 +1,14 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Timer, Target, BarChart3, BookOpen, Trophy, Zap, TrendingUp } from 'lucide-react'
 import MarketingHeader from '@/components/marketing-header'
 import MarketingFooter from '@/components/marketing-footer'
+
+export const metadata: Metadata = {
+  title: 'Features',
+  description:
+    'Practice UNILORIN Post-UTME, JAMB, and WAEC past questions with CBT mock exam simulators, topic drills, and performance analytics built for Nigerian students.',
+}
 
 const featureTiles = [
   {

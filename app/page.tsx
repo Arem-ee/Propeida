@@ -1,3 +1,4 @@
+import { HomeJsonLd } from '@/components/json-ld'
 import MarketingHeader from '@/components/marketing-header'
 import MarketingHero from '@/components/marketing-hero'
 import MarketingBenefits from '@/components/marketing-benefits'
@@ -12,6 +13,7 @@ import MarketingFooter from '@/components/marketing-footer'
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white text-gray-900 antialiased selection:bg-blue-50 selection:text-blue-600">
+      <HomeJsonLd />
       <MarketingHeader />
       <main>
         <MarketingHero />

@@ -1,6 +1,13 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import MarketingHeader from '@/components/marketing-header'
 import MarketingFooter from '@/components/marketing-footer'
+
+export const metadata: Metadata = {
+  title: 'About',
+  description:
+    'Propeida helps Nigerian students pass UNILORIN Post-UTME, JAMB, and WAEC with interactive CBT mock exams and real past questions.',
+}
 
 export default function AboutPage() {
   return (

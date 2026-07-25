@@ -7,10 +7,46 @@ const geist = Geist({
   subsets: ['latin'],
 })
 
+const siteUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://propeida.vercel.app'
+
 export const metadata: Metadata = {
-  title: 'Propeida — Premium Exam Prep for Nigerian Students',
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: 'Propeida — Practice UNILORIN Post-UTME & JAMB Past Questions',
+    template: '%s | Propeida',
+  },
   description:
-    'Pass JAMB, Post-UTME, and WAEC with confidence. Interactive CBT mock exams, topic drills, and performance analytics — built for Nigerian students.',
+    'Pass your UNILORIN Post-UTME, JAMB, and WAEC with confidence. Practice real past questions with interactive CBT mock exams, topic drills, and performance analytics built for Nigerian students.',
+  keywords: [
+    'UNILORIN Post UTME past questions',
+    'Unilorin PUTME past question',
+    'practice past questions',
+    'JAMB past questions',
+    'Post UTME practice',
+    'CBT exam simulator Nigeria',
+    'WAEC past questions',
+    'Nigerian exam preparation',
+    'university entrance exam practice',
+  ],
+  openGraph: {
+    title: 'Propeida — Practice UNILORIN Post-UTME & JAMB Past Questions',
+    description:
+      'Pass your UNILORIN Post-UTME, JAMB, and WAEC with confidence. Practice real past questions with interactive CBT mock exams.',
+    url: siteUrl,
+    siteName: 'Propeida',
+    type: 'website',
+    locale: 'en_NG',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Propeida — Exam Prep for Nigerian Students',
+    description:
+      'Practice UNILORIN Post-UTME, JAMB, and WAEC past questions with interactive CBT mock exams.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
