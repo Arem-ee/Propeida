@@ -47,7 +47,6 @@ export default function DashboardPage() {
         claimReferral(pendingRef).catch(() => {}) // best-effort
       }
     } catch {
-      // ignore
     } finally {
       try { localStorage.removeItem('pending_ref') } catch {}
     }
@@ -84,7 +83,6 @@ export default function DashboardPage() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 auto-rows-min">
-        {/* Start a session CTA */}
         <Link
           href={`/practice${hub === 'universities' ? '?hub=universities' : ''}`}
           className="sm:col-span-2 rounded-xl border border-gray-100 bg-white p-5 sm:p-6 hover:border-blue-200 hover:bg-blue-50/10 transition-all"
@@ -108,7 +106,6 @@ export default function DashboardPage() {
           )}
         </Link>
 
-        {/* Streak */}
         <div className="rounded-xl border border-gray-100 bg-white p-5">
           <div className="flex items-center justify-between mb-2">
             <div className="rounded-xl bg-amber-100 p-2">
@@ -127,7 +124,6 @@ export default function DashboardPage() {
           <p className="text-xs text-gray-400 mt-0.5">Best: {streak.longest_streak} days</p>
         </div>
 
-        {/* Daily question */}
         <DailyQuestionTile
           dailyQuestion={dailyQuestion}
           onSubmit={async (answer: string) => {
@@ -139,7 +135,6 @@ export default function DashboardPage() {
           }}
         />
 
-        {/* One-line rank hook (not a full card) */}
         <div className="sm:col-span-2 rounded-xl border border-gray-100 bg-white px-5 py-3 flex items-center justify-between">
           <p className="text-sm text-gray-500">
             {hub === 'universities'

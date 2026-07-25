@@ -4,6 +4,11 @@ export const revalidate = 86400
 
 export async function GET() {
   const supabase = await createClient()
+  const { data: { user }, error: authError } = await supabase.auth.getUser()
+  if (authError || !user) {
+    return Response.json({ error: 'Not authenticated' }, { status: 401 })
+  }
+
   const today = new Date().toISOString().split('T')[0]
 
   await supabase.rpc('ensure_daily_question')

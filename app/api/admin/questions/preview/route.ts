@@ -93,7 +93,7 @@ export async function POST(request: Request) {
     }
 
     return NextResponse.json({ valid: totalValid, invalid: allInvalid, fileCount: files.length })
-  } catch (err) {
-    return NextResponse.json({ error: err instanceof Error ? err.message : 'Unauthorized' }, { status: 401 })
+  } catch {
+    return NextResponse.json({ error: 'Preview failed' }, { status: 500 })
   }
 }

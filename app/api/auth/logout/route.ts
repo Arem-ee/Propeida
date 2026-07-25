@@ -17,7 +17,12 @@ export async function POST(request: NextRequest) {
     }
   )
 
-  await supabase.auth.signOut()
+  try {
+    const { data } = await supabase.auth.getUser()
+    if (data.user) {
+      await supabase.auth.signOut()
+    }
+  } catch {}
 
   return NextResponse.redirect(new URL('/login', request.url))
 }

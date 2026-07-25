@@ -7,16 +7,16 @@ export async function POST(request: Request) {
     await requireAdmin()
 
     const { ids } = await request.json()
-    if (!Array.isArray(ids) || ids.length === 0) {
-      return NextResponse.json({ error: 'No IDs provided' }, { status: 400 })
+    if (!Array.isArray(ids) || ids.length === 0 || ids.some((id: unknown) => typeof id !== 'string')) {
+      return NextResponse.json({ error: 'No valid IDs provided' }, { status: 400 })
     }
 
     const supabase = createAdminClient()
     const { error } = await supabase.from('questions').delete().in('id', ids)
-    if (error) return NextResponse.json({ error: error.message }, { status: 500 })
+    if (error) return NextResponse.json({ error: 'Failed to delete questions' }, { status: 500 })
 
     return NextResponse.json({ deleted: ids.length })
-  } catch (err) {
-    return NextResponse.json({ error: err instanceof Error ? err.message : 'Unauthorized' }, { status: 401 })
+  } catch {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 }

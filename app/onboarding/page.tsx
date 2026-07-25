@@ -78,7 +78,6 @@ export default function OnboardingPage() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-50 px-4 py-12">
       <div className="relative w-full max-w-lg">
-        {/* Skip — visible at every step */}
         <div className="flex justify-end mb-2">
           <button
             onClick={handleSkip}
@@ -89,9 +88,7 @@ export default function OnboardingPage() {
           </button>
         </div>
 
-        {/* Card */}
         <div className="rounded-2xl border border-gray-100 bg-white p-8 sm:p-10 shadow-sm">
-          {/* Step indicator */}
           <div className="flex items-center gap-1.5 mb-8">
             {STEPS.map((_, i) => (
               <div
@@ -106,24 +103,20 @@ export default function OnboardingPage() {
             </span>
           </div>
 
-          {/* Step icon */}
           {step === 0 && (
             <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100">
               <Sparkles className="h-6 w-6 text-blue-600" />
             </div>
           )}
 
-          {/* Title */}
           <h2 className="text-xl font-extrabold text-gray-900 mb-3">
             {current.title}
           </h2>
 
-          {/* Body */}
           <p className="text-sm text-gray-600 leading-relaxed whitespace-pre-line">
             {current.body}
           </p>
 
-          {/* Navigation */}
           <div className="mt-8 flex items-center gap-3">
             {step > 0 && (
               <button

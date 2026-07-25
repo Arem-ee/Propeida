@@ -5,12 +5,10 @@ import { createClient } from '@/lib/supabase/server'
 import {
   getMockDefaults,
   fetchQuestionsForSession,
-  insertSessionAnswers,
   createExamSession,
   getSessionById,
   getSessionQuestionsWithStatus,
   isSessionExpired,
-  getUserActiveSessions,
   getFirstMockQuestions,
 } from '@/lib/practice'
 import { hasExamAccess, getUsageCounters, getFreeMockAttempts } from '@/lib/entitlements'
@@ -97,25 +95,22 @@ export async function createSession(params: CreateSessionParams) {
   const { data: { user } } = await supabase.auth.getUser()
   if (!user) throw new Error('Not authenticated')
 
-  const [hasAccess, usage] = await Promise.all([
-    hasExamAccess(user.id, params.examId),
-    getUsageCounters(user.id, params.examId),
-  ])
+  const hasAccess = await hasExamAccess(user.id, params.examId)
 
-  const isFreeMock = !hasAccess && params.mode === 'mock'
-
-  if (isFreeMock) {
+  if (!hasAccess && params.mode === 'mock') {
     const freeMockAttempts = await getFreeMockAttempts(params.examSlug)
-    if (usage.free_mocks_started >= freeMockAttempts) {
+    const { data: allowed } = await supabase.rpc('try_start_free_mock', {
+      p_user_id: user.id,
+      p_exam_id: params.examId,
+      p_max_mocks: freeMockAttempts,
+    })
+
+    if (!allowed) {
       throw new Error(`Free tier limited to ${freeMockAttempts} mock${freeMockAttempts === 1 ? '' : 's'} per exam. Upgrade to Pro for unlimited mocks.`)
     }
   }
 
-  if (!hasAccess && params.mode === 'practice') {
-    if (usage.free_questions_answered >= 30) {
-      throw new Error('Free tier limited to 30 practice questions per exam. Upgrade to Pro for unlimited practice.')
-    }
-  }
+  const isFreeMock = !hasAccess && params.mode === 'mock'
 
   let timeLimitSeconds: number | null = null
   let effectiveCount = params.questionCount
@@ -147,8 +142,18 @@ export async function createSession(params: CreateSessionParams) {
 
   let questions: SessionQuestion[]
 
-  if (isFreeMock && usage.free_mocks_started > 0) {
-    questions = await getFirstMockQuestions(user.id, params.examId)
+  if (isFreeMock) {
+    const counter = await getUsageCounters(user.id, params.examId)
+    if (counter.free_mocks_started > 1) {
+      questions = await getFirstMockQuestions(user.id, params.examId)
+    } else {
+      questions = subjectIds.length > 1
+        ? await fetchWeightedQuestions(supabase, params.examId, subjectIds, effectiveCount, session.id)
+        : await fetchQuestionsForSession(
+            { ...params, subjectIds, questionCount: effectiveCount },
+            session.id
+          )
+    }
   } else if (params.mode === 'mock' && params.examSlug === 'jamb') {
     const mockDefaults = await getMockDefaults('jamb')
     const roles = mockDefaults?.subject_roles
@@ -203,14 +208,14 @@ export async function createSession(params: CreateSessionParams) {
         )
   }
 
-  await insertSessionAnswers(session.id, questions)
-
-  if (isFreeMock) {
-    await supabase.rpc('increment_usage_counter', {
-      p_user_id: user.id,
-      p_exam_id: params.examId,
-      p_field: 'free_mocks_started',
-    })
+  const rows = questions.map((q) => ({
+    session_id: session.id,
+    question_id: q.id,
+  }))
+  const { error: answersError } = await supabase.from('session_answers').insert(rows)
+  if (answersError) {
+    await supabase.from('exam_sessions').delete().eq('id', session.id)
+    throw new Error('Failed to initialize session answers')
   }
 
   revalidatePath('/practice')
@@ -246,38 +251,19 @@ export async function submitAnswer(
     throw new Error('Time has expired for this session')
   }
 
-  const { data: question } = await supabase
-    .from('questions')
-    .select('correct_answer')
-    .eq('id', questionId)
-    .single()
-
-  if (!question) throw new Error('Question not found')
-
-  const isCorrect = selectedAnswer === question.correct_answer
-
   const { data: existingAnswer } = await supabase
     .from('session_answers')
-    .select('id, selected_answer')
+    .select('selected_answer')
     .eq('session_id', sessionId)
     .eq('question_id', questionId)
     .single()
 
-  if (existingAnswer) {
-    await supabase
-      .from('session_answers')
-      .update({ selected_answer: selectedAnswer, is_correct: isCorrect })
-      .eq('id', existingAnswer.id)
-  } else {
-    await supabase
-      .from('session_answers')
-      .insert({
-        session_id: sessionId,
-        question_id: questionId,
-        selected_answer: selectedAnswer,
-        is_correct: isCorrect,
-      })
-  }
+  const { data: isCorrect, error: answerError } = await supabase.rpc('record_session_answer', {
+    p_session_id: sessionId,
+    p_question_id: questionId,
+    p_selected_answer: selectedAnswer,
+  })
+  if (answerError || typeof isCorrect !== 'boolean') throw new Error('Failed to record answer')
 
   if (session.mode === 'practice') {
     if (!existingAnswer?.selected_answer) {
@@ -293,16 +279,17 @@ export async function submitAnswer(
 
     await supabase.rpc('update_streak', { p_user_id: user.id })
 
-    const { data: qData } = await supabase
-      .from('questions')
-      .select('explanation')
-      .eq('id', questionId)
-      .single()
+    const { data: reveal, error: revealError } = await supabase.rpc('get_session_answer_reveal', {
+      p_session_id: sessionId,
+      p_question_id: questionId,
+    })
+    const revealRow = Array.isArray(reveal) ? reveal[0] : null
+    if (revealError || !revealRow) throw new Error('Failed to load answer feedback')
 
     return {
       isCorrect,
-      correctAnswer: question.correct_answer,
-      explanation: qData?.explanation ?? '',
+      correctAnswer: revealRow.correct_answer,
+      explanation: revealRow.explanation,
     }
   }
 
@@ -318,71 +305,22 @@ export async function completeMockSession(sessionId: string) {
   if (session.user_id !== user.id) throw new Error('Session does not belong to user')
   if (session.status !== 'in_progress') throw new Error('Session is not active')
   if (session.mode !== 'mock') throw new Error('Session is not a mock exam')
-
   const expired = isSessionExpired(session.started_at, session.time_limit_seconds)
-  const completedAt = expired
-    ? new Date(session.started_at).getTime() + (session.time_limit_seconds ?? 0) * 1000
-    : Date.now()
 
-  const { data: answers } = await supabase
-    .from('session_answers')
-    .select('question_id, selected_answer, is_correct')
-    .eq('session_id', sessionId)
-
-  const totalQuestions = answers?.length ?? 0
-  const correctCount = answers?.filter((a) => a.is_correct === true).length ?? 0
-  const accuracy = totalQuestions > 0 ? Math.round((correctCount / totalQuestions) * 100) / 100 : 0
-
-  const { data: subjectData } = await supabase
-    .from('session_answers')
-    .select('is_correct, question:question_id(subject_id)')
-    .eq('session_id', sessionId)
-
-  const perfBySubject: Record<string, { correct: number; total: number }> = {}
-  for (const sa of subjectData ?? []) {
-    const q = Array.isArray(sa.question) ? sa.question[0] : sa.question
-    const subjectId = q?.subject_id
-    if (!subjectId) continue
-    if (!perfBySubject[subjectId]) {
-      perfBySubject[subjectId] = { correct: 0, total: 0 }
-    }
-    perfBySubject[subjectId].total++
-    if (sa.is_correct) perfBySubject[subjectId].correct++
-  }
-
-  const { error: sessionUpdateError } = await supabase
-    .from('exam_sessions')
-    .update({ status: 'completed', completed_at: new Date(completedAt).toISOString() })
-    .eq('id', sessionId)
-
-  if (sessionUpdateError) throw new Error('Failed to complete session')
-
-  const { error: resultError } = await supabase
-    .from('results')
-    .insert({
-      session_id: sessionId,
-      score: correctCount,
-      accuracy,
-      performance_by_subject: perfBySubject,
-    })
-
-  if (resultError) throw new Error('Failed to save results')
+  const { data: completion, error: completionError } = await supabase.rpc('complete_mock_session', {
+    p_session_id: sessionId,
+  })
+  const completionRow = Array.isArray(completion) ? completion[0] : null
+  if (completionError || !completionRow) throw new Error('Failed to complete session')
 
   await supabase.rpc('update_streak', { p_user_id: user.id })
 
   revalidatePath('/practice')
   revalidatePath(`/practice/session/${sessionId}`)
 
-  return { score: correctCount, accuracy, totalQuestions, timedOut: expired }
-}
-
-export async function getActiveSession() {
-  const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
-  if (!user) return null
-
-  const sessions = await getUserActiveSessions(user.id)
-  return sessions.length > 0 ? sessions[0] : null
+  const totalQuestions = Object.values(completionRow.performance_by_subject as Record<string, { total: number }>)
+    .reduce((total, subject) => total + subject.total, 0)
+  return { score: completionRow.score, accuracy: completionRow.accuracy, totalQuestions, timedOut: expired }
 }
 
 export async function loadSessionData(sessionId: string) {
@@ -413,37 +351,6 @@ export async function loadSessionData(sessionId: string) {
   }
 }
 
-export async function resumeSession(sessionId: string) {
-  const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
-  if (!user) throw new Error('Not authenticated')
-
-  const session = await getSessionById(sessionId)
-  if (session.user_id !== user.id) throw new Error('Session does not belong to user')
-  if (session.status !== 'in_progress') throw new Error('Session is not active')
-
-  return session
-}
-
-export async function abandonSession(sessionId: string) {
-  const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
-  if (!user) throw new Error('Not authenticated')
-
-  const session = await getSessionById(sessionId)
-  if (session.user_id !== user.id) throw new Error('Session does not belong to user')
-  if (session.status !== 'in_progress') throw new Error('Session is not active')
-
-  const { error } = await supabase
-    .from('exam_sessions')
-    .update({ status: 'abandoned' })
-    .eq('id', sessionId)
-
-  if (error) throw new Error('Failed to abandon session')
-
-  revalidatePath('/practice')
-}
-
 export async function getSessionResults(sessionId: string) {
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
@@ -470,43 +377,37 @@ export async function getSessionResults(sessionId: string) {
     .eq('id', session.exam_id)
     .single()
 
-  const answersResponse = await supabase
-    .from('session_answers')
-    .select(`
-      id,
-      question_id,
-      selected_answer,
-      is_correct,
-      time_taken_seconds,
-      question:question_id (
-        id,
-        subject_id,
-        question_text,
-        options,
-        correct_answer,
-        explanation
-      )
-    `)
-    .eq('session_id', sessionId)
-    .order('id')
+  const { data: review, error: reviewError } = await supabase.rpc('get_session_review', {
+    p_session_id: sessionId,
+  })
+  if (reviewError) throw new Error('Failed to load session review')
+  const reviewRows = (review ?? []) as {
+    question_id: string
+    subject_id: string
+    question_text: string
+    options: unknown
+    selected_answer: string | null
+    is_correct: boolean | null
+    correct_answer: string
+    explanation: string
+    time_taken_seconds: number | null
+  }[]
 
   const subjectIds = new Set<string>()
-  const questions = (answersResponse.data ?? []).flatMap((sa) => {
-    const q = Array.isArray(sa.question) ? sa.question[0] : sa.question
-    if (!q) return []
-    subjectIds.add(q.subject_id)
+  const questions = reviewRows.map((row) => {
+    subjectIds.add(row.subject_id)
     return [{
-      questionId: q.id,
-      questionText: q.question_text,
-      options: q.options as { key: string; text: string }[],
-      subjectId: q.subject_id,
-      selectedAnswer: sa.selected_answer,
-      correctAnswer: q.correct_answer,
-      isCorrect: sa.is_correct,
-      explanation: q.explanation,
-      timeTakenSeconds: sa.time_taken_seconds,
+      questionId: row.question_id,
+      questionText: row.question_text,
+      options: row.options as { key: string; text: string }[],
+      subjectId: row.subject_id,
+      selectedAnswer: row.selected_answer,
+      correctAnswer: row.correct_answer,
+      isCorrect: row.is_correct,
+      explanation: row.explanation,
+      timeTakenSeconds: row.time_taken_seconds,
     }]
-  })
+  }).flat()
 
   const { data: subjects } = await supabase
     .from('subjects')

@@ -1,6 +1,14 @@
 import { type NextRequest, NextResponse } from 'next/server'
 import { createServerClient } from '@supabase/ssr'
 
+const PROTECTED_PREFIXES = ['/dashboard', '/results', '/history', '/leaderboard', '/practice', '/account', '/settings', '/admin']
+const EXACT_PROTECTED = ['/onboarding', '/support']
+
+function isProtectedPath(pathname: string): boolean {
+  if (EXACT_PROTECTED.includes(pathname)) return true
+  return PROTECTED_PREFIXES.some((prefix) => pathname === prefix || pathname.startsWith(prefix + '/'))
+}
+
 export async function middleware(request: NextRequest) {
   let response = NextResponse.next()
 
@@ -25,24 +33,18 @@ export async function middleware(request: NextRequest) {
     }
   )
 
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  let user
+  try {
+    const result = await supabase.auth.getUser()
+    user = result.data.user
+  } catch {
+    return response
+  }
 
   const isAuthPage = request.nextUrl.pathname === '/login' || request.nextUrl.pathname === '/signup'
   const isUsernamePage = request.nextUrl.pathname === '/auth/set-username'
-  const isProtected = request.nextUrl.pathname.startsWith('/dashboard') ||
-    request.nextUrl.pathname.startsWith('/results') ||
-    request.nextUrl.pathname.startsWith('/history') ||
-    request.nextUrl.pathname.startsWith('/leaderboard') ||
-    request.nextUrl.pathname.startsWith('/practice') ||
-    request.nextUrl.pathname.startsWith('/account') ||
-    request.nextUrl.pathname.startsWith('/settings') ||
-    request.nextUrl.pathname.startsWith('/admin') ||
-    request.nextUrl.pathname === '/onboarding' ||
-    request.nextUrl.pathname === '/support'
 
-  if (!user && (isProtected || isUsernamePage)) {
+  if (!user && (isProtectedPath(request.nextUrl.pathname) || isUsernamePage)) {
     const url = request.nextUrl.clone()
     url.pathname = '/login'
     url.searchParams.set('redirect', request.nextUrl.pathname)
@@ -59,5 +61,18 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/dashboard/:path*', '/results/:path*', '/history', '/leaderboard', '/practice/:path*', '/settings', '/admin/:path*', '/auth/set-username', '/login', '/signup', '/onboarding', '/support'],
+  matcher: [
+    '/dashboard', '/dashboard/:path*',
+    '/results', '/results/:path*',
+    '/history',
+    '/leaderboard',
+    '/practice', '/practice/:path*',
+    '/account', '/account/:path*',
+    '/settings',
+    '/admin', '/admin/:path*',
+    '/auth/set-username',
+    '/login', '/signup',
+    '/onboarding',
+    '/support',
+  ],
 }

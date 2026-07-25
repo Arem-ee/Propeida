@@ -15,7 +15,7 @@ export async function GET() {
       subjects: subjectsRes.data ?? [],
       schools: schoolsRes.data ?? [],
     })
-  } catch (err) {
-    return NextResponse.json({ error: err instanceof Error ? err.message : 'Unauthorized' }, { status: 401 })
+  } catch {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 }

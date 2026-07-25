@@ -108,7 +108,7 @@ export async function POST(request: Request) {
       if (inserts.length > 0) {
         const { error } = await supabase.from('questions').insert(inserts)
         if (error) {
-          allInsertErrors.push(`[${file.name}] DB insert error: ${error.message}`)
+          allInsertErrors.push(`[${file.name}] DB insert error: database operation failed`)
         } else {
           totalInserted += inserts.length
         }
@@ -120,7 +120,7 @@ export async function POST(request: Request) {
     }
 
     return NextResponse.json({ inserted: totalInserted, errors: allInsertErrors })
-  } catch (err) {
-    return NextResponse.json({ error: err instanceof Error ? err.message : 'Unauthorized' }, { status: 401 })
+  } catch {
+    return NextResponse.json({ error: 'Upload failed' }, { status: 500 })
   }
 }

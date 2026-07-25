@@ -14,6 +14,13 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
     }
 
+    if (question_count !== undefined && (typeof question_count !== 'number' || question_count < 1 || !Number.isInteger(question_count))) {
+      return NextResponse.json({ error: 'question_count must be a positive integer' }, { status: 400 })
+    }
+    if (time_limit_seconds !== undefined && (typeof time_limit_seconds !== 'number' || time_limit_seconds < 1 || !Number.isInteger(time_limit_seconds))) {
+      return NextResponse.json({ error: 'time_limit_seconds must be a positive integer' }, { status: 400 })
+    }
+
     const { data: exam, error: examError } = await supabase
       .from('exams')
       .insert({
@@ -28,7 +35,7 @@ export async function POST(request: Request) {
 
     if (examError) {
       if (examError.code === '23505') return NextResponse.json({ error: 'Slug already exists' }, { status: 409 })
-      return NextResponse.json({ error: examError.message }, { status: 500 })
+      return NextResponse.json({ error: 'Failed to create exam' }, { status: 500 })
     }
 
     if (subject_ids && subject_ids.length > 0) {
@@ -36,10 +43,9 @@ export async function POST(request: Request) {
         .from('exam_subjects')
         .insert(subject_ids.map((sid: string) => ({ exam_id: exam.id, subject_id: sid })))
 
-      if (linkError) return NextResponse.json({ error: linkError.message }, { status: 500 })
+      if (linkError) return NextResponse.json({ error: 'Failed to link subjects' }, { status: 500 })
     }
 
-    // Set mock defaults if provided
     if (question_count || time_limit_seconds) {
       const { data: config } = await supabase
         .from('app_config')
@@ -75,8 +81,8 @@ export async function POST(request: Request) {
     }
 
     return NextResponse.json({ success: true, id: exam.id })
-  } catch (err) {
-    return NextResponse.json({ error: err instanceof Error ? err.message : 'Unauthorized' }, { status: 401 })
+  } catch {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 }
 
@@ -92,6 +98,13 @@ export async function PUT(request: Request) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
     }
 
+    if (question_count !== undefined && (typeof question_count !== 'number' || question_count < 1 || !Number.isInteger(question_count))) {
+      return NextResponse.json({ error: 'question_count must be a positive integer' }, { status: 400 })
+    }
+    if (time_limit_seconds !== undefined && (typeof time_limit_seconds !== 'number' || time_limit_seconds < 1 || !Number.isInteger(time_limit_seconds))) {
+      return NextResponse.json({ error: 'time_limit_seconds must be a positive integer' }, { status: 400 })
+    }
+
     const { error: examError } = await supabase
       .from('exams')
       .update({
@@ -105,21 +118,19 @@ export async function PUT(request: Request) {
 
     if (examError) {
       if (examError.code === '23505') return NextResponse.json({ error: 'Slug already exists' }, { status: 409 })
-      return NextResponse.json({ error: examError.message }, { status: 500 })
+      return NextResponse.json({ error: 'Failed to update exam' }, { status: 500 })
     }
 
-    // Replace subject links
     if (subject_ids) {
       await supabase.from('exam_subjects').delete().eq('exam_id', id)
       if (subject_ids.length > 0) {
         const { error: linkError } = await supabase
           .from('exam_subjects')
           .insert(subject_ids.map((sid: string) => ({ exam_id: id, subject_id: sid })))
-        if (linkError) return NextResponse.json({ error: linkError.message }, { status: 500 })
+        if (linkError) return NextResponse.json({ error: 'Failed to link subjects' }, { status: 500 })
       }
     }
 
-    // Update mock defaults
     if (question_count !== undefined || time_limit_seconds !== undefined) {
       const { data: config } = await supabase
         .from('app_config')
@@ -139,7 +150,7 @@ export async function PUT(request: Request) {
     }
 
     return NextResponse.json({ success: true })
-  } catch (err) {
-    return NextResponse.json({ error: err instanceof Error ? err.message : 'Unauthorized' }, { status: 401 })
+  } catch {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 }

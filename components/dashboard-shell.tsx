@@ -45,7 +45,6 @@ export default function DashboardShell({ children, email, isAdmin, onLogout }: {
 
   return (
     <div className="min-h-screen bg-gray-50 flex">
-      {/* Desktop sidebar */}
       <aside className="hidden lg:flex lg:flex-col lg:w-64 lg:fixed lg:inset-y-0 border-r border-gray-100 bg-white z-40">
         <div className="flex items-center gap-2 px-6 h-16 border-b border-gray-100 shrink-0">
           <Link href="/dashboard" className="flex items-center gap-2 text-xl font-extrabold tracking-tight text-gray-900">
@@ -54,7 +53,6 @@ export default function DashboardShell({ children, email, isAdmin, onLogout }: {
           </Link>
         </div>
 
-        {/* Hub switcher */}
         <div className="px-4 pt-4 pb-2">
           <div className="flex rounded-xl border border-gray-200 overflow-hidden">
             <button
@@ -78,7 +76,6 @@ export default function DashboardShell({ children, email, isAdmin, onLogout }: {
           </div>
         </div>
 
-        {/* Main nav */}
         <nav className="flex-1 px-3 py-2 space-y-0.5 overflow-y-auto">
           {NAV_ITEMS.filter((i) => i.href !== '/account').map((item) => {
             const Icon = item.icon
@@ -97,7 +94,6 @@ export default function DashboardShell({ children, email, isAdmin, onLogout }: {
             )
           })}
 
-          {/* Account section with sub-items */}
           <div className="pt-4">
             <button
               onClick={() => setAccountExpanded(!accountExpanded)}
@@ -132,7 +128,6 @@ export default function DashboardShell({ children, email, isAdmin, onLogout }: {
           </div>
         </nav>
 
-        {/* Bottom of sidebar */}
         <div className="border-t border-gray-100 px-4 py-3 space-y-2">
           {isAdmin && (
             <Link
@@ -156,7 +151,6 @@ export default function DashboardShell({ children, email, isAdmin, onLogout }: {
         </div>
       </aside>
 
-      {/* Mobile header */}
       <div className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100">
         <div className="flex items-center justify-between h-14 px-4">
           <Link href="/dashboard" className="flex items-center gap-2 text-lg font-extrabold tracking-tight text-gray-900">
@@ -171,7 +165,6 @@ export default function DashboardShell({ children, email, isAdmin, onLogout }: {
           </button>
         </div>
 
-        {/* Mobile hub switcher */}
         <div className="px-4 pb-3">
           <div className="flex rounded-xl border border-gray-200 overflow-hidden">
             <button
@@ -195,7 +188,6 @@ export default function DashboardShell({ children, email, isAdmin, onLogout }: {
           </div>
         </div>
 
-        {/* Mobile menu overlay */}
         {mobileMenuOpen && (
           <div className="fixed inset-0 top-[113px] bg-white z-40 overflow-y-auto pb-24">
             <nav className="px-4 py-2 space-y-0.5">
@@ -261,14 +253,12 @@ export default function DashboardShell({ children, email, isAdmin, onLogout }: {
         )}
       </div>
 
-      {/* Main content area */}
       <main className="flex-1 lg:ml-64 pt-[113px] lg:pt-0 pb-20 lg:pb-0">
         <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:py-8">
           {children}
         </div>
       </main>
 
-      {/* Mobile bottom tab bar */}
       <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-100 safe-area-bottom">
         <div className="flex items-center justify-around h-16 px-2">
           {NAV_ITEMS.map((item) => {

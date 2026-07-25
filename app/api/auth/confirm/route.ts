@@ -55,7 +55,11 @@ export async function GET(request: NextRequest) {
       }
 
       if (next !== '/login?confirmed=true') {
-        // Specific redirect captured (e.g. from /pricing) — honour it directly
+        // Only allow relative paths to prevent open redirect
+        if (!next.startsWith('/')) {
+          const fallbackUrl = new URL('/login?confirmed=true', origin)
+          return NextResponse.redirect(fallbackUrl)
+        }
         const url = new URL(next, origin)
         return NextResponse.redirect(url)
       }

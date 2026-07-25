@@ -1,6 +1,10 @@
 import { createHmac } from 'node:crypto'
 
-export const PAYSTACK_AMOUNT = 150000
+const PAYSTACK_AMOUNT = 150000
+
+const FETCH_TIMEOUT_MS = 15000
+
+const VALID_PRODUCTS = ['putme_pro', 'jamb_pro', 'jamb_premium_ai'] as const
 
 const PRODUCT_AMOUNTS: Record<string, number> = {
   putme_pro: 150000,
@@ -8,14 +12,40 @@ const PRODUCT_AMOUNTS: Record<string, number> = {
   jamb_premium_ai: 300000,
 }
 
-export async function initializeTransaction(email: string, userId: string, product: string = 'putme_pro') {
+async function paystackFetch(url: string, options: RequestInit = {}): Promise<Response> {
+  const controller = new AbortController()
+  const timeout = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS)
+  try {
+    const response = await fetch(url, { ...options, signal: controller.signal })
+    return response
+  } finally {
+    clearTimeout(timeout)
+  }
+}
+
+function getSecretKey(): string {
+  const key = process.env.PAYSTACK_SECRET_KEY
+  if (!key) throw new Error('PAYSTACK_SECRET_KEY is not configured')
+  return key
+}
+
+export function isValidProduct(product: string): product is typeof VALID_PRODUCTS[number] {
+  return (VALID_PRODUCTS as readonly string[]).includes(product)
+}
+
+export async function initializeTransaction(email: string, userId: string, product: string = 'putme_pro', idempotencyKey?: string) {
   const amount = PRODUCT_AMOUNTS[product] ?? PAYSTACK_AMOUNT
-  const response = await fetch('https://api.paystack.co/transaction/initialize', {
+  const headers: Record<string, string> = {
+    Authorization: `Bearer ${getSecretKey()}`,
+    'Content-Type': 'application/json',
+  }
+  if (idempotencyKey) {
+    headers['X-Paystack-Idempotency-Key'] = idempotencyKey
+  }
+
+  const response = await paystackFetch('https://api.paystack.co/transaction/initialize', {
     method: 'POST',
-    headers: {
-      Authorization: `Bearer ${process.env.PAYSTACK_SECRET_KEY}`,
-      'Content-Type': 'application/json',
-    },
+    headers,
     body: JSON.stringify({
       email,
       amount,
@@ -24,6 +54,10 @@ export async function initializeTransaction(email: string, userId: string, produ
       callback_url: `${process.env.NEXT_PUBLIC_BASE_URL}/payment/callback`,
     }),
   })
+
+  if (!response.ok) {
+    throw new Error(`Paystack initialization failed with status ${response.status}`)
+  }
 
   const data = await response.json()
   if (!data.status) {
@@ -38,11 +72,18 @@ export async function initializeTransaction(email: string, userId: string, produ
 }
 
 export async function verifyTransaction(reference: string) {
-  const response = await fetch(`https://api.paystack.co/transaction/verify/${encodeURIComponent(reference)}`, {
-    headers: {
-      Authorization: `Bearer ${process.env.PAYSTACK_SECRET_KEY}`,
-    },
-  })
+  const response = await paystackFetch(
+    `https://api.paystack.co/transaction/verify/${encodeURIComponent(reference)}`,
+    {
+      headers: {
+        Authorization: `Bearer ${getSecretKey()}`,
+      },
+    }
+  )
+
+  if (!response.ok) {
+    throw new Error(`Paystack verification failed with status ${response.status}`)
+  }
 
   const data = await response.json()
   if (!data.status) {
@@ -62,7 +103,8 @@ export async function verifyTransaction(reference: string) {
 }
 
 export function verifyWebhookSignature(body: string, signature: string): boolean {
-  const hash = createHmac('sha512', process.env.PAYSTACK_SECRET_KEY!)
+  const key = getSecretKey()
+  const hash = createHmac('sha512', key)
     .update(body)
     .digest('hex')
   return hash === signature

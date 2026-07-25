@@ -50,16 +50,6 @@ export async function fetchQuestionsForSession(config: SessionConfig, sessionId:
   return questions as SessionQuestion[]
 }
 
-export async function insertSessionAnswers(sessionId: string, questions: SessionQuestion[]) {
-  const supabase = await createClient()
-  const rows = questions.map((q) => ({
-    session_id: sessionId,
-    question_id: q.id,
-  }))
-  const { error } = await supabase.from('session_answers').insert(rows)
-  if (error) throw new Error(`Failed to initialize session answers: ${error.message}`)
-}
-
 export async function createExamSession(
   userId: string,
   examId: string,
@@ -226,4 +216,4 @@ export async function getFirstMockQuestions(userId: string, examId: string): Pro
   return questions
 }
 
-export { hasEntitlement, hasExamAccess, getUsageCounters } from './entitlements'
+export { hasExamAccess, getUsageCounters } from './entitlements'

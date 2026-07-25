@@ -13,5 +13,6 @@ coverage/
 .env.production.local
 !.env.example
 next-env.d.ts
-
+tsconfig.tsbuildinfo
+supabase/.temp/
 propeida.zip

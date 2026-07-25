@@ -88,7 +88,6 @@ export default function AccountPage() {
         </div>
       )}
 
-      {/* Profile section */}
       <section className="mb-8">
         <div className="rounded-xl border border-gray-100 bg-white p-6">
           <div className="flex items-center gap-4 mb-6">
@@ -102,7 +101,6 @@ export default function AccountPage() {
         </div>
       </section>
 
-      {/* Subscription section */}
       <section className="mb-8">
         <h2 className="text-lg font-extrabold text-gray-900 mb-4">Subscriptions</h2>
         <div className="rounded-xl border border-gray-100 bg-white divide-y divide-gray-50">
@@ -136,7 +134,6 @@ export default function AccountPage() {
         )}
       </section>
 
-      {/* Quick links */}
       <section>
         <h2 className="text-lg font-extrabold text-gray-900 mb-4">Manage</h2>
         <div className="rounded-xl border border-gray-100 bg-white divide-y divide-gray-50">

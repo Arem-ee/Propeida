@@ -11,7 +11,7 @@ export async function POST(request: Request) {
 
     const { exam_id, subject_id, question_text, options, correct_answer, explanation, difficulty } = body
 
-    if (!exam_id || !subject_id || !question_text || !options || !correct_answer || !difficulty) {
+    if (!exam_id || typeof exam_id !== 'string' || !subject_id || typeof subject_id !== 'string' || !question_text || !options || !correct_answer || !difficulty) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
     }
 
@@ -33,10 +33,10 @@ export async function POST(request: Request) {
       difficulty,
     })
 
-    if (error) return NextResponse.json({ error: error.message }, { status: 500 })
+    if (error) return NextResponse.json({ error: 'Failed to create question' }, { status: 500 })
     return NextResponse.json({ success: true })
-  } catch (err) {
-    return NextResponse.json({ error: err instanceof Error ? err.message : 'Unauthorized' }, { status: 401 })
+  } catch {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 }
 
@@ -56,9 +56,9 @@ export async function PUT(request: Request) {
       .update({ exam_id, subject_id, question_text, options: normalizeOptions(options), correct_answer, explanation: explanation || null, difficulty })
       .eq('id', id)
 
-    if (error) return NextResponse.json({ error: error.message }, { status: 500 })
+    if (error) return NextResponse.json({ error: 'Failed to update question' }, { status: 500 })
     return NextResponse.json({ success: true })
-  } catch (err) {
-    return NextResponse.json({ error: err instanceof Error ? err.message : 'Unauthorized' }, { status: 401 })
+  } catch {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 }

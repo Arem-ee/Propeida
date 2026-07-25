@@ -3,7 +3,6 @@
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
 import { AVATAR_COUNT } from '@/lib/avatars'
-import { deterministicAvatarIndex } from '@/lib/avatars'
 
 export async function updateAvatarIndex(avatarIndex: number) {
   const supabase = await createClient()
@@ -25,21 +24,4 @@ export async function updateAvatarIndex(avatarIndex: number) {
   revalidatePath('/leaderboard')
 }
 
-export async function getProfileAvatar() {
-  const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
-  if (!user) return null
 
-  const { data } = await supabase
-    .from('profiles')
-    .select('username, avatar_index')
-    .eq('id', user.id)
-    .single()
-
-  if (!data) return null
-
-  return {
-    username: data.username,
-    avatarIndex: data.avatar_index ?? deterministicAvatarIndex(data.username, AVATAR_COUNT),
-  }
-}

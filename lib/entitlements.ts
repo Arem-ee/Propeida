@@ -29,11 +29,6 @@ export async function getEntitlement(userId: string, product: Product): Promise<
   return { source: data.source, expires_at: data.expires_at }
 }
 
-export async function hasEntitlement(userId: string, product: Product): Promise<boolean> {
-  const entry = await getEntitlement(userId, product)
-  return entry !== null
-}
-
 export async function hasExamAccess(userId: string, examId: string): Promise<boolean> {
   const supabase = await createClient()
 
