@@ -23,7 +23,12 @@ export default function DashboardPage() {
 
   const loadData = useCallback(async () => {
     try {
-      const data = await getDashboardData()
+      const data = await Promise.race([
+        getDashboardData(),
+        new Promise<never>((_, reject) =>
+          setTimeout(() => reject(new Error('Dashboard data timed out — check browser console for details')), 15000)
+        ),
+      ])
       setUsername(data.profile.username)
       setStreak(data.streak)
       setDailyQuestion(data.dailyQuestion)
