@@ -40,6 +40,8 @@ export default function DashboardLayoutClient({ children }: { children: React.Re
       } catch {}
 
       setLoading(false)
+    }).catch(() => {
+      setLoading(false)
     })
   }, [router])
 

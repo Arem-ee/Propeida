@@ -2,8 +2,9 @@ import { type NextRequest, NextResponse } from 'next/server'
 import { createServerClient } from '@supabase/ssr'
 
 export async function GET(request: NextRequest) {
-  const { searchParams, origin } = new URL(request.url)
+  const { searchParams } = new URL(request.url)
   const code = searchParams.get('code')
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? new URL(request.url).origin
 
   if (code) {
     const tempRes = NextResponse.next()
@@ -29,7 +30,7 @@ export async function GET(request: NextRequest) {
 
     if (!error) {
       const { data: { user } } = await supabase.auth.getUser()
-      let redirectUrl: URL
+      let redirectPath: string
       if (user) {
         const { data: profile } = await supabase
           .from('profiles')
@@ -37,14 +38,14 @@ export async function GET(request: NextRequest) {
           .eq('id', user.id)
           .single()
 
-        redirectUrl = profile && /^user_[a-f0-9]{8}$/.test(profile.username)
-          ? new URL('/auth/set-username', origin)
-          : new URL('/onboarding', origin)
+        redirectPath = profile && /^user_[a-f0-9]{8}$/.test(profile.username)
+          ? '/auth/set-username'
+          : '/onboarding'
       } else {
-        redirectUrl = new URL('/dashboard', origin)
+        redirectPath = '/dashboard'
       }
 
-      const response = NextResponse.redirect(redirectUrl)
+      const response = NextResponse.redirect(new URL(redirectPath, baseUrl))
       for (const cookie of tempRes.cookies.getAll()) {
         response.cookies.set(cookie.name, cookie.value)
       }
@@ -52,5 +53,5 @@ export async function GET(request: NextRequest) {
     }
   }
 
-  return NextResponse.redirect(new URL('/login?error=oauth_failed', origin))
+  return NextResponse.redirect(new URL('/login?error=oauth_failed', baseUrl))
 }

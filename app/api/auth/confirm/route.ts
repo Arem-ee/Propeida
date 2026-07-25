@@ -26,9 +26,10 @@ async function waitForProfile(supabase: ReturnType<typeof createServerClient>, u
 }
 
 export async function GET(request: NextRequest) {
-  const { searchParams, origin } = new URL(request.url)
+  const { searchParams } = new URL(request.url)
   const code = searchParams.get('code')
   const next = searchParams.get('next') ?? '/login?confirmed=true'
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? new URL(request.url).origin
 
   if (code) {
     const supabase = createServerClient(
@@ -55,22 +56,16 @@ export async function GET(request: NextRequest) {
       }
 
       if (next !== '/login?confirmed=true') {
-        // Only allow relative paths to prevent open redirect
         if (!next.startsWith('/')) {
-          const fallbackUrl = new URL('/login?confirmed=true', origin)
-          return NextResponse.redirect(fallbackUrl)
+          return NextResponse.redirect(new URL('/login?confirmed=true', baseUrl))
         }
-        const url = new URL(next, origin)
-        return NextResponse.redirect(url)
+        return NextResponse.redirect(new URL(next, baseUrl))
       }
 
-      // No specific redirect — sign out so the student lands on /login
       await supabase.auth.signOut()
-      const url = new URL('/login?confirmed=true', origin)
-      return NextResponse.redirect(url)
+      return NextResponse.redirect(new URL('/login?confirmed=true', baseUrl))
     }
   }
 
-  const url = new URL('/login?error=verification_failed', origin)
-  return NextResponse.redirect(url)
+  return NextResponse.redirect(new URL('/login?error=verification_failed', baseUrl))
 }
