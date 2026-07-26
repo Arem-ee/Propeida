@@ -47,6 +47,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  manifest: '/manifest.json',
+  themeColor: '#2563eb',
+  appleWebApp: { capable: true, title: 'Propeida' },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
