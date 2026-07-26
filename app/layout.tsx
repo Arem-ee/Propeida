@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Geist } from 'next/font/google'
 import './globals.css'
 
@@ -48,8 +48,11 @@ export const metadata: Metadata = {
     follow: true,
   },
   manifest: '/manifest.json',
-  themeColor: '#2563eb',
   appleWebApp: { capable: true, title: 'Propeida' },
+}
+
+export const viewport: Viewport = {
+  themeColor: '#2563eb',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
