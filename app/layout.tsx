@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: '%s | Propeida',
   },
   description:
-    'Pass your UNILORIN Post-UTME, JAMB, and WAEC with confidence. Practice real past questions with interactive CBT mock exams, topic drills, and performance analytics built for Nigerian students.',
+    'Practice UNILORIN Post-UTME past questions with interactive CBT mock exams. Real exam simulations, topic drills, and performance tracking. ₦1,500 one-time — no subscription.',
   keywords: [
     'UNILORIN Post UTME past questions',
     'Unilorin PUTME past question',
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
     'university entrance exam practice',
   ],
   openGraph: {
-    title: 'Propeida — Practice UNILORIN Post-UTME & JAMB Past Questions',
+    title: 'Propeida — Practice UNILORIN Post-UTME Past Questions Online',
     description:
-      'Pass your UNILORIN Post-UTME, JAMB, and WAEC with confidence. Practice real past questions with interactive CBT mock exams.',
+      'Ace your UNILORIN Post-UTME with real past questions, CBT mock exams, and performance analytics. ₦1,500 one-time — no subscription.',
     url: siteUrl,
     siteName: 'Propeida',
     type: 'website',
@@ -39,9 +39,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Propeida — Exam Prep for Nigerian Students',
+    title: 'Propeida — Practice UNILORIN Post-UTME Past Questions',
     description:
-      'Practice UNILORIN Post-UTME, JAMB, and WAEC past questions with interactive CBT mock exams.',
+      'Ace your UNILORIN Post-UTME with real past questions and CBT mock exams. ₦1,500 one-time payment.',
   },
   robots: {
     index: true,
