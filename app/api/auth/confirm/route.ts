@@ -28,10 +28,11 @@ async function waitForProfile(supabase: ReturnType<typeof createServerClient>, u
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url)
   const code = searchParams.get('code')
-  const next = searchParams.get('next') ?? '/login?confirmed=true'
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? new URL(request.url).origin
 
   if (code) {
+    const tempRes = NextResponse.next()
+
     const supabase = createServerClient(
       process.env.NEXT_PUBLIC_SUPABASE_URL!,
       process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
@@ -40,8 +41,10 @@ export async function GET(request: NextRequest) {
           getAll() {
             return request.cookies.getAll()
           },
-          setAll(cookiesToSet: { name: string; value: string }[]) {
-            cookiesToSet.forEach(({ name, value }) => request.cookies.set(name, value))
+          setAll(cookiesToSet: { name: string; value: string; options?: Record<string, unknown> }[]) {
+            cookiesToSet.forEach(({ name, value, options }) => {
+              tempRes.cookies.set(name, value, options)
+            })
           },
         },
       }
@@ -55,15 +58,12 @@ export async function GET(request: NextRequest) {
         await waitForProfile(supabase, user.id)
       }
 
-      if (next !== '/login?confirmed=true') {
-        if (!next.startsWith('/')) {
-          return NextResponse.redirect(new URL('/login?confirmed=true', baseUrl))
-        }
-        return NextResponse.redirect(new URL(next, baseUrl))
+      const redirectPath = user ? '/onboarding' : '/dashboard'
+      const response = NextResponse.redirect(new URL(redirectPath, baseUrl))
+      for (const cookie of tempRes.cookies.getAll()) {
+        response.cookies.set(cookie.name, cookie.value)
       }
-
-      await supabase.auth.signOut()
-      return NextResponse.redirect(new URL('/login?confirmed=true', baseUrl))
+      return response
     }
   }
 
