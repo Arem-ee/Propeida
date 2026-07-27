@@ -54,23 +54,46 @@ export default function OGImage() {
               width: 80,
               height: 80,
               borderRadius: 20,
-              background: 'white',
+              background: 'linear-gradient(145deg, #2563eb, #1e40af)',
               display: 'flex',
+              flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center',
+              position: 'relative',
               boxShadow: '0 8px 24px rgba(0,0,0,0.2)',
             }}
           >
-            <span
+            <div
               style={{
-                fontSize: 40,
-                fontWeight: 900,
-                color: '#2563eb',
-                lineHeight: 1,
+                width: 52,
+                height: 34,
+                borderRadius: 6,
+                background: 'white',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
               }}
             >
-              P
-            </span>
+              <span
+                style={{
+                  fontSize: 22,
+                  fontWeight: 900,
+                  color: '#2563eb',
+                  lineHeight: 1,
+                }}
+              >
+                P
+              </span>
+            </div>
+            <div
+              style={{
+                width: 60,
+                height: 3,
+                borderRadius: 2,
+                background: 'rgba(255,255,255,0.5)',
+                marginTop: 5,
+              }}
+            />
           </div>
           <span
             style={{
