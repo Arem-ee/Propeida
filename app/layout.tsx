@@ -36,12 +36,14 @@ export const metadata: Metadata = {
     siteName: 'Propeida',
     type: 'website',
     locale: 'en_NG',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Propeida — Practice UNILORIN Post-UTME Past Questions',
     description:
       'Ace your UNILORIN Post-UTME with real past questions and CBT mock exams. ₦1,500 one-time payment.',
+    images: ['/opengraph-image'],
   },
   robots: {
     index: true,
