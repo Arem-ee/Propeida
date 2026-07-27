@@ -117,7 +117,7 @@ export default function OGImage() {
             marginTop: 8,
           }}
         >
-          Practice UNILORIN Post-UTME & JAMB past questions with interactive CBT mock exams
+           Practice JAMB and Post-UTME past questions with interactive CBT mock exams
         </p>
         <div
           style={{

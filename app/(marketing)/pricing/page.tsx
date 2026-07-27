@@ -6,7 +6,7 @@ import MarketingPricing from '@/components/marketing-pricing'
 export const metadata: Metadata = {
   title: 'Pricing',
   description:
-    'Free practice questions and one mock exam per exam. Unlock unlimited UNILORIN Post-UTME and JAMB prep with PUTME Pro (₦1,500 one-time).',
+    'Free practice questions and one mock exam per exam. Unlock unlimited JAMB and Post-UTME prep with PUTME Pro (₦1,500 one-time).',
 }
 
 export default function PricingPage() {

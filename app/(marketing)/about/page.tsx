@@ -6,7 +6,7 @@ import MarketingFooter from '@/components/marketing-footer'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Propeida helps Nigerian students pass UNILORIN Post-UTME, JAMB, and WAEC with interactive CBT mock exams and real past questions.',
+    'Propeida helps Nigerian students pass JAMB and Post-UTME with interactive CBT mock exams and real past questions.',
 }
 
 export default function AboutPage() {

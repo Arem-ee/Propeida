@@ -41,7 +41,7 @@ export default function MarketingHero() {
             </h1>
 
             <p className="mt-6 text-lg text-gray-500 leading-relaxed max-w-lg">
-              Practice real UNILORIN Post-UTME past questions with interactive CBT mock exams. Track your performance and walk into your exam hall fully prepared.
+              Practice JAMB and Post-UTME past questions with interactive CBT mock exams. Track your performance and walk into your exam hall fully prepared.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-4 w-full sm:w-auto">
