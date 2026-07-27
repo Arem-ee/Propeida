@@ -112,7 +112,7 @@ export default function OGImage() {
               background: 'rgba(255,255,255,0.1)',
             }}
           >
-            ₦1,500 one-time
+            NGN 1,500 one-time
           </span>
           <span
             style={{

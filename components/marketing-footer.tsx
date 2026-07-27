@@ -1,15 +1,12 @@
+import Logo from '@/components/logo'
+
 export default function MarketingFooter() {
   return (
     <footer className="border-t border-gray-100 bg-white">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 text-xl font-extrabold tracking-tight text-gray-900">
-              <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-blue-600 text-white font-bold text-base">
-                P
-              </span>
-              Propeida
-            </div>
+            <Logo />
             <p className="mt-4 text-sm text-gray-500 max-w-sm leading-relaxed">
               The fastest, most efficient path to passing competitive exams in Nigeria. Built specifically for JAMB, WAEC, and Post-UTME preparation.
             </p>

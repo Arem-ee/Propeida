@@ -8,6 +8,7 @@ import {
 } from 'lucide-react'
 import { useState } from 'react'
 import { useHub } from '@/components/dashboard-hub-provider'
+import Logo from '@/components/logo'
 
 const NAV_ITEMS = [
   { href: '/dashboard', label: 'Home', icon: Home },
@@ -47,9 +48,8 @@ export default function DashboardShell({ children, email, isAdmin, onLogout }: {
     <div className="min-h-screen bg-gray-50 flex">
       <aside className="hidden lg:flex lg:flex-col lg:w-64 lg:fixed lg:inset-y-0 border-r border-gray-100 bg-white z-40">
         <div className="flex items-center gap-2 px-6 h-16 border-b border-gray-100 shrink-0">
-          <Link href="/dashboard" className="flex items-center gap-2 text-xl font-extrabold tracking-tight text-gray-900">
-            <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-blue-600 text-white font-bold text-base">P</span>
-            Propeida
+          <Link href="/dashboard">
+            <Logo />
           </Link>
         </div>
 
@@ -153,9 +153,8 @@ export default function DashboardShell({ children, email, isAdmin, onLogout }: {
 
       <div className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100">
         <div className="flex items-center justify-between h-14 px-4">
-          <Link href="/dashboard" className="flex items-center gap-2 text-lg font-extrabold tracking-tight text-gray-900">
-            <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-blue-600 text-white font-bold text-xs">P</span>
-            Propeida
+          <Link href="/dashboard" className="min-h-[44px] flex items-center">
+            <Logo size={28} />
           </Link>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

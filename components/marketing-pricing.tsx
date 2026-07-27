@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { Check, X, CreditCard, Landmark, Loader2, Clock, ShieldCheck } from 'lucide-react'
 import { createClient } from '@/lib/supabase/client'
+import Logo from '@/components/logo'
 
 const PRODUCTS = [
   {
@@ -243,9 +244,7 @@ export default function MarketingPricing() {
             </button>
 
             <div className="flex items-center gap-2 border-b border-gray-100 pb-4 mb-6">
-              <div className="h-8 w-8 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-sm">
-                P
-              </div>
+              <Logo size={32} showText={false} />
               <div>
                 <h4 className="text-sm font-bold text-gray-900">Pay Propeida</h4>
                 <p className="text-xs text-gray-400">Secured by Paystack</p>

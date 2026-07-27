@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { Menu, X, ArrowRight } from 'lucide-react'
+import Logo from '@/components/logo'
 
 export default function MarketingHeader() {
   const [isOpen, setIsOpen] = useState(false)
@@ -19,11 +20,8 @@ export default function MarketingHeader() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/95">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2 text-xl font-extrabold tracking-tight text-gray-900 min-h-[44px]">
-          <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-blue-600 text-white font-bold text-base">
-            P
-          </span>
-          Propeida
+        <Link href="/" className="min-h-[44px]">
+          <Logo />
         </Link>
 
         <nav className="hidden md:flex md:items-center md:gap-8">

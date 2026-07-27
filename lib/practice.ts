@@ -56,19 +56,26 @@ export async function fetchFreePoolQuestions(
   subjectIds: string[],
   count: number,
   _seed: string,
+  difficulty?: string | null,
 ): Promise<SessionQuestion[]> {
   const supabase = await createClient()
 
   const { data: poolIds } = await supabase.rpc('ensure_free_question_pool', { p_user_id: userId })
   if (!poolIds || poolIds.length === 0) throw new Error('No questions available')
 
-  const { data: questions, error } = await supabase
+  let query = supabase
     .from('questions')
     .select('id, subject_id, question_text, options')
     .in('id', poolIds)
     .in('subject_id', subjectIds)
     .eq('exam_id', examId)
     .limit(count)
+
+  if (difficulty) {
+    query = query.eq('difficulty', difficulty)
+  }
+
+  const { data: questions, error } = await query
 
   if (error) throw new Error(`Failed to fetch pool questions: ${error.message}`)
   if (!questions || questions.length === 0) throw new Error('No questions match the selected filters')

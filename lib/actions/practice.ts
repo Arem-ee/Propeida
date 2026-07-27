@@ -158,7 +158,7 @@ export async function createSession(params: CreateSessionParams) {
           )
     }
   } else if (!hasAccess && params.mode === 'practice') {
-    questions = await fetchFreePoolQuestions(user.id, params.examId, subjectIds, effectiveCount, session.id)
+    questions = await fetchFreePoolQuestions(user.id, params.examId, subjectIds, effectiveCount, session.id, params.difficulty)
   } else if (params.mode === 'mock' && params.examSlug === 'jamb') {
     const mockDefaults = await getMockDefaults('jamb')
     const roles = mockDefaults?.subject_roles
