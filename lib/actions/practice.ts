@@ -5,6 +5,7 @@ import { createClient } from '@/lib/supabase/server'
 import {
   getMockDefaults,
   fetchQuestionsForSession,
+  fetchFreePoolQuestions,
   createExamSession,
   getSessionById,
   getSessionQuestionsWithStatus,
@@ -99,11 +100,13 @@ export async function createSession(params: CreateSessionParams) {
 
   if (!hasAccess && params.mode === 'mock') {
     const freeMockAttempts = await getFreeMockAttempts(params.examSlug)
-    const { data: allowed } = await supabase.rpc('try_start_free_mock', {
+    const { data: allowed, error: freeMockError } = await supabase.rpc('try_start_free_mock', {
       p_user_id: user.id,
       p_exam_id: params.examId,
       p_max_mocks: freeMockAttempts,
     })
+
+    if (freeMockError) throw new Error(freeMockError.message)
 
     if (!allowed) {
       throw new Error(`Free tier limited to ${freeMockAttempts} mock${freeMockAttempts === 1 ? '' : 's'} per exam. Upgrade to Pro for unlimited mocks.`)
@@ -154,6 +157,8 @@ export async function createSession(params: CreateSessionParams) {
             session.id
           )
     }
+  } else if (!hasAccess && params.mode === 'practice') {
+    questions = await fetchFreePoolQuestions(user.id, params.examId, subjectIds, effectiveCount, session.id)
   } else if (params.mode === 'mock' && params.examSlug === 'jamb') {
     const mockDefaults = await getMockDefaults('jamb')
     const roles = mockDefaults?.subject_roles
@@ -251,13 +256,6 @@ export async function submitAnswer(
     throw new Error('Time has expired for this session')
   }
 
-  const { data: existingAnswer } = await supabase
-    .from('session_answers')
-    .select('selected_answer')
-    .eq('session_id', sessionId)
-    .eq('question_id', questionId)
-    .single()
-
   const { data: isCorrect, error: answerError } = await supabase.rpc('record_session_answer', {
     p_session_id: sessionId,
     p_question_id: questionId,
@@ -266,17 +264,6 @@ export async function submitAnswer(
   if (answerError || typeof isCorrect !== 'boolean') throw new Error('Failed to record answer')
 
   if (session.mode === 'practice') {
-    if (!existingAnswer?.selected_answer) {
-      const hasAccess = await hasExamAccess(user.id, session.exam_id)
-      if (!hasAccess) {
-        await supabase.rpc('increment_usage_counter', {
-          p_user_id: user.id,
-          p_exam_id: session.exam_id,
-          p_field: 'free_questions_answered',
-        })
-      }
-    }
-
     await supabase.rpc('update_streak', { p_user_id: user.id })
 
     const { data: reveal, error: revealError } = await supabase.rpc('get_session_answer_reveal', {

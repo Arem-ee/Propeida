@@ -50,6 +50,38 @@ export async function fetchQuestionsForSession(config: SessionConfig, sessionId:
   return questions as SessionQuestion[]
 }
 
+export async function fetchFreePoolQuestions(
+  userId: string,
+  examId: string,
+  subjectIds: string[],
+  count: number,
+  _seed: string,
+): Promise<SessionQuestion[]> {
+  const supabase = await createClient()
+
+  const { data: poolIds } = await supabase.rpc('ensure_free_question_pool', { p_user_id: userId })
+  if (!poolIds || poolIds.length === 0) throw new Error('No questions available')
+
+  const { data: questions, error } = await supabase
+    .from('questions')
+    .select('id, subject_id, question_text, options')
+    .in('id', poolIds)
+    .in('subject_id', subjectIds)
+    .eq('exam_id', examId)
+    .limit(count)
+
+  if (error) throw new Error(`Failed to fetch pool questions: ${error.message}`)
+  if (!questions || questions.length === 0) throw new Error('No questions match the selected filters')
+
+  return (questions as { id: string; subject_id: string; question_text: string; options: { key: string; text: string }[] }[])
+    .map((q) => ({
+      id: q.id,
+      subjectId: q.subject_id,
+      questionText: q.question_text,
+      options: q.options,
+    }))
+}
+
 export async function createExamSession(
   userId: string,
   examId: string,
