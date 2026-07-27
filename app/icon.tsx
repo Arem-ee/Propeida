@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og'
 
 export const size = { width: 192, height: 192 }
-export const contentType = 'image/svg+xml'
+export const contentType = 'image/png'
 
 export default function Icon() {
   return new ImageResponse(
@@ -43,11 +43,9 @@ export default function Icon() {
         />
         <span
           style={{
-            fontFamily: 'system-ui',
+            fontSize: 130,
             fontWeight: 900,
-            fontSize: 104,
             color: 'white',
-            letterSpacing: '-0.04em',
             lineHeight: 1,
           }}
         >
@@ -55,6 +53,6 @@ export default function Icon() {
         </span>
       </div>
     ),
-    size,
+    { ...size, fonts: [] },
   )
 }
