@@ -31,7 +31,7 @@ export default function SetUsernamePage() {
         .single()
         .then(({ data }) => {
           if (data && !/^user_[a-f0-9]{8}$/.test(data.username)) {
-            router.push('/onboarding')
+            router.push('/dashboard')
           } else {
             setLoading(false)
           }
@@ -89,7 +89,7 @@ export default function SetUsernamePage() {
       return
     }
 
-    router.push('/onboarding')
+    router.push('/dashboard')
     router.refresh()
   }
 

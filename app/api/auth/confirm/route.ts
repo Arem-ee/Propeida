@@ -58,7 +58,7 @@ export async function GET(request: NextRequest) {
         await waitForProfile(supabase, user.id)
       }
 
-      const redirectPath = user ? '/onboarding' : '/dashboard'
+      const redirectPath = '/dashboard'
       const response = NextResponse.redirect(new URL(redirectPath, baseUrl))
       for (const cookie of tempRes.cookies.getAll()) {
         response.cookies.set(cookie.name, cookie.value)

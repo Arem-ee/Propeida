@@ -40,7 +40,7 @@ export async function GET(request: NextRequest) {
 
         redirectPath = profile && /^user_[a-f0-9]{8}$/.test(profile.username)
           ? '/auth/set-username'
-          : '/onboarding'
+          : '/dashboard'
       } else {
         redirectPath = '/dashboard'
       }
