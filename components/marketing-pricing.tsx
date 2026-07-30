@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { Check, X, CreditCard, Landmark, Loader2, Clock, ShieldCheck } from 'lucide-react'
+import { Check, X, Loader2, Clock, ShieldCheck } from 'lucide-react'
 import { createClient } from '@/lib/supabase/client'
 import Logo from '@/components/logo'
 
@@ -84,7 +84,6 @@ const PRODUCTS = [
 export default function MarketingPricing() {
   const [showCheckout, setShowCheckout] = useState(false)
   const [checkoutProduct, setCheckoutProduct] = useState<string>('putme_pro')
-  const [paymentMethod, setPaymentMethod] = useState<'card' | 'transfer'>('card')
   const [isPaying, setIsPaying] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [user, setUser] = useState<{ email: string } | null>(null)
@@ -264,66 +263,12 @@ export default function MarketingPricing() {
                 />
               </div>
 
-              <div className="mb-6">
-                <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-3">
-                  Payment Method
-                </label>
-                <div className="grid grid-cols-2 gap-3">
-                  <button
-                    type="button"
-                    onClick={() => setPaymentMethod('card')}
-                    className={`flex items-center justify-center gap-2 rounded-xl border p-3.5 text-xs font-bold min-h-[44px] cursor-pointer ${
-                      paymentMethod === 'card'
-                        ? 'border-blue-600 bg-blue-50/10 text-blue-600'
-                        : 'border-gray-200 bg-white text-gray-600 hover:bg-gray-50'
-                    }`}
-                  >
-                    <CreditCard className="h-4 w-4" />
-                    Pay with Card
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setPaymentMethod('transfer')}
-                    className={`flex items-center justify-center gap-2 rounded-xl border p-3.5 text-xs font-bold min-h-[44px] cursor-pointer ${
-                      paymentMethod === 'transfer'
-                        ? 'border-blue-600 bg-blue-50/10 text-blue-600'
-                        : 'border-gray-200 bg-white text-gray-600 hover:bg-gray-50'
-                    }`}
-                  >
-                    <Landmark className="h-4 w-4" />
-                    Bank Transfer
-                  </button>
-                </div>
+              <div className="rounded-xl bg-gray-50 border border-gray-100 p-4 mb-6 flex items-center gap-3">
+                <ShieldCheck className="h-5 w-5 text-blue-600 shrink-0" />
+                <p className="text-xs text-gray-500 leading-normal">
+                  You will be redirected to Paystack&apos;s secure checkout page to complete your payment.
+                </p>
               </div>
-
-              {paymentMethod === 'transfer' ? (
-                <div className="rounded-xl bg-gray-50 border border-gray-100 p-4 mb-6">
-                  <p className="text-xs text-gray-500 leading-relaxed mb-2">
-                    Transfer exactly <strong>₦1,500</strong> to the account below:
-                  </p>
-                  <div className="space-y-1 bg-white p-3 rounded-xl border border-gray-100">
-                    <div className="flex justify-between text-xs">
-                      <span className="text-gray-400">Bank:</span>
-                      <span className="font-semibold text-gray-800">Wema Bank / Providus</span>
-                    </div>
-                    <div className="flex justify-between text-xs">
-                      <span className="text-gray-400">Account:</span>
-                      <span className="font-semibold text-gray-800">9948011242</span>
-                    </div>
-                    <div className="flex justify-between text-xs">
-                      <span className="text-gray-400">Beneficiary:</span>
-                      <span className="font-semibold text-gray-800">Propeida Simulator Ltd</span>
-                    </div>
-                  </div>
-                </div>
-              ) : (
-                <div className="rounded-xl bg-gray-50 border border-gray-100 p-4 mb-6 flex items-center gap-3">
-                  <ShieldCheck className="h-5 w-5 text-blue-600 shrink-0" />
-                  <p className="text-xs text-gray-500 leading-normal">
-                    You will be redirected to Paystack&apos;s secure checkout page to complete your payment.
-                  </p>
-                </div>
-              )}
 
               {error && (
                 <div className="rounded-xl bg-red-50 border border-red-100 px-4 py-3 mb-4 text-xs font-semibold text-red-700">
