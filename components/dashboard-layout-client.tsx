@@ -33,13 +33,13 @@ export default function DashboardLayoutClient({ children }: { children: React.Re
         return
       }
 
+      setLoading(false)
+
       try {
         const res = await fetch('/api/auth/check-admin')
         const data = await res.json()
         setIsAdmin(data.isAdmin)
       } catch {}
-
-      setLoading(false)
     }).catch(() => {
       setLoading(false)
     })
