@@ -3,30 +3,35 @@
 import { createClient } from '@/lib/supabase/server'
 import { revalidatePath } from 'next/cache'
 
-async function fetchProfileWithRetry(supabase: Awaited<ReturnType<typeof createClient>>, userId: string) {
-  const delays = [300, 600, 1200]
-  for (let attempt = 0; attempt <= 3; attempt++) {
-    const { data, error } = await supabase
-      .from('profiles')
-      .select('username, referral_code, school_id, ai_features_enabled, is_admin, avatar_index')
-      .eq('id', userId)
-      .single()
+interface DashboardPayload {
+  profile: {
+    username: string
+    referral_code: string
+    school_id: string | null
+    ai_features_enabled: boolean
+    is_admin: boolean
+    avatar_index: number | null
+  } | null
+  entitlements: { product: string; status: string; expires_at: string | null; source: string }[]
+  streak: { current_streak: number; longest_streak: number } | null
+  recent_sessions: {
+    id: string
+    mode: string
+    completed_at: string
+    exam_name: string
+    score: number
+    accuracy: number
+  }[]
+  daily_question: { id: string; attempt: { is_correct: boolean } | null } | null
+}
 
-    if (data) return data
-
-    if (error && error.code !== 'PGRST116') {
-      console.error(`[getDashboardData] Profile fetch attempt ${attempt + 1}/4 unexpected error:`, error)
-      throw error
-    }
-
-    console.error(`[getDashboardData] Profile fetch attempt ${attempt + 1}/4 failed (not found)`)
-
-    if (attempt < 3) {
-      await new Promise((r) => setTimeout(r, delays[attempt]))
-    }
-  }
-
-  throw new Error('Profile not found')
+async function fetchDashboardPayload(
+  supabase: Awaited<ReturnType<typeof createClient>>,
+  userId: string,
+): Promise<DashboardPayload | null> {
+  const { data, error } = await supabase.rpc('get_dashboard_data', { p_user_id: userId })
+  if (error) throw error
+  return data as DashboardPayload
 }
 
 function isActiveEntitlement(status: string, expiresAt: string | null): boolean {
@@ -40,84 +45,55 @@ export async function getDashboardData() {
   const { data: { user } } = await supabase.auth.getUser()
   if (!user) throw new Error('Not authenticated')
 
-  const today = new Date().toISOString().split('T')[0]!
+  let payload = await fetchDashboardPayload(supabase, user.id)
 
-  const [
-    profile,
-    entitlementsRes,
-    streakRes,
-    historyRes,
-    _dailyRes,
-    dailyQuestionRes,
-  ] = await Promise.all([
-    fetchProfileWithRetry(supabase, user.id),
-    supabase.from('entitlements').select('product, status, expires_at, source').eq('user_id', user.id),
-    supabase.from('streaks').select('current_streak, longest_streak').eq('user_id', user.id).maybeSingle(),
-    supabase.from('exam_sessions').select(`
-      id, mode, completed_at,
-      exams!inner(name),
-      results!inner(score, accuracy)
-    `).eq('user_id', user.id).eq('status', 'completed').order('completed_at', { ascending: false }).limit(5),
-    supabase.rpc('ensure_daily_question'),
-    supabase.from('daily_questions').select('id').eq('date', today).maybeSingle(),
-  ])
+  // Profile row can lag a signup by a moment; retry once before failing
+  if (!payload?.profile) {
+    await new Promise((r) => setTimeout(r, 500))
+    payload = await fetchDashboardPayload(supabase, user.id)
+  }
 
-  if (_dailyRes.error) console.error('[getDashboardData] ensure_daily_question RPC error:', _dailyRes.error)
+  if (!payload) throw new Error('Failed to load dashboard data')
+  if (!payload.profile) throw new Error('Profile not found')
 
-  const entitlements = entitlementsRes.data ?? []
+  const entitlements = payload.entitlements ?? []
   const activeEntitlements = entitlements.filter((e) => isActiveEntitlement(e.status, e.expires_at))
   const jambEntitlement = activeEntitlements.find((e) => e.product === 'jamb_pro') ?? null
   const isJambPro = !!(jambEntitlement || activeEntitlements.some((e) => e.product === 'jamb_premium_ai'))
   const isTrial = jambEntitlement?.source === 'referral_trial'
   const trialExpiresAt = jambEntitlement?.expires_at ?? null
 
-  const streakData = streakRes.data ?? { current_streak: 0, longest_streak: 0 }
+  const streakData = payload.streak ?? { current_streak: 0, longest_streak: 0 }
 
-  const dailyQuestionId = dailyQuestionRes.data?.id ?? null
-  let dailyQuestionAttempt = null
-  if (dailyQuestionId) {
-    const { data: attempt } = await supabase
-      .from('daily_question_attempts')
-      .select('is_correct')
-      .eq('user_id', user.id)
-      .eq('daily_question_id', dailyQuestionId)
-      .maybeSingle()
-    dailyQuestionAttempt = attempt
-  }
-
-  const recentSessions = (historyRes.data ?? []).map((row: Record<string, unknown>) => {
-    const e = Array.isArray(row.exams) ? row.exams[0] : row.exams
-    const r = Array.isArray(row.results) ? row.results[0] : row.results
-    return {
-      id: row.id as string,
-      mode: row.mode as string,
-      examName: (e as { name?: string })?.name ?? 'Unknown',
-      score: (r as { score?: number })?.score ?? 0,
-      accuracy: (r as { accuracy?: number })?.accuracy ?? 0,
-      completedAt: row.completed_at as string,
-    }
-  })
+  const recentSessions = payload.recent_sessions.map((row) => ({
+    id: row.id,
+    mode: row.mode,
+    examName: row.exam_name ?? 'Unknown',
+    score: row.score ?? 0,
+    accuracy: row.accuracy ?? 0,
+    completedAt: row.completed_at,
+  }))
 
   const badgeLabel = isJambPro ? (isTrial ? 'Pro Trial' : 'Pro') : 'Free'
   const badgeBg = isJambPro ? (isTrial ? 'bg-amber-50 text-amber-700' : 'bg-blue-50 text-blue-700') : 'bg-gray-50 text-gray-500'
 
   return {
     profile: {
-      username: profile.username,
+      username: payload.profile.username,
       email: user.email ?? '',
       isPro: isJambPro,
       isTrial,
       trialExpiresAt,
       badgeLabel,
       badgeBg,
-      referralCode: profile.referral_code,
-      schoolId: profile.school_id,
-      avatarIndex: profile.avatar_index,
+      referralCode: payload.profile.referral_code,
+      schoolId: payload.profile.school_id,
+      avatarIndex: payload.profile.avatar_index,
     },
     streak: streakData,
     dailyQuestion: {
-      id: dailyQuestionId,
-      attempt: dailyQuestionAttempt,
+      id: payload.daily_question?.id ?? null,
+      attempt: payload.daily_question?.attempt ?? null,
     },
     recentSessions,
   }
