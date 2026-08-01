@@ -8,7 +8,7 @@ export default function ComingSoon() {
       </div>
       <h1 className="text-2xl font-extrabold text-gray-900">JAMB prep is on the way.</h1>
       <p className="mt-3 text-sm text-gray-500 leading-relaxed">
-        We&apos;re crafting JAMB prep the Propeida way — real, verified questions you can actually trust, just like our Post-UTME bank. It&apos;ll be worth the wait. Check back soon.
+        Just like our Post-UTME material, we&apos;re taking the time to check every single question so you can actually trust them. Almost ready.
       </p>
     </div>
   )
