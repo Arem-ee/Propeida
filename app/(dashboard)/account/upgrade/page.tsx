@@ -8,7 +8,7 @@ export default function UpgradePage() {
       <Link href="/account" className="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700 mb-6 min-h-[36px]">
         <ArrowLeft className="h-4 w-4" /> Back to Account
       </Link>
-      <MarketingPricing />
+      <MarketingPricing variant="dashboard" />
     </div>
   )
 }

@@ -6,7 +6,7 @@ export default function MarketingSupportedExams() {
       icon: Compass,
       title: 'JAMB (UTME) Simulator',
       description:
-        'Familiarize yourself with the Joint Admissions and Matriculations Board CBT format. Practice questions and mock exams are being added — check back soon for the full subject catalogue.',
+        "We're building it the same way we built Post-UTME — real, verified questions, not just filler. Check back soon.",
       badge: 'Coming Soon',
     },
   ]

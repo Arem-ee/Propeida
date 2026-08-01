@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { Trophy, TrendingUp, School } from 'lucide-react'
 import { Avatar } from '@/components/avatar'
+import ComingSoon from '@/components/coming-soon'
 import { getLeaderboardData, getLeaderboardExams } from '@/lib/actions/leaderboard'
 
 interface LeaderboardEntry {
@@ -50,6 +51,10 @@ export default function LeaderboardPage() {
       .catch((err) => setError(err instanceof Error ? err.message : 'Failed to load'))
       .finally(() => setLoading(false))
   }, [period, examSlug])
+
+  if (hub === 'jamb') {
+    return <ComingSoon />
+  }
 
   return (
     <div className="mx-auto max-w-3xl">

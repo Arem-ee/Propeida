@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { Clock, Target, ArrowRight, BarChart3 } from 'lucide-react'
+import ComingSoon from '@/components/coming-soon'
 import { getSessionHistory } from '@/lib/actions/practice'
 
 interface HistoryItem {
@@ -36,6 +37,10 @@ export default function HistoryPage() {
     }
     load()
   }, [hub])
+
+  if (hub === 'jamb') {
+    return <ComingSoon />
+  }
 
   if (loading) {
     return (

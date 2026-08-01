@@ -6,6 +6,7 @@ import { Target, Flame, Zap, Check, X, ChevronRight, ArrowRight } from 'lucide-r
 import { getDashboardData, submitDailyQuestion } from '@/lib/actions/dashboard'
 import { claimReferral } from '@/lib/actions/referral'
 import { useHub } from '@/components/dashboard-hub-provider'
+import ComingSoon from '@/components/coming-soon'
 
 interface DailyQuestionData {
   id: string | null
@@ -56,6 +57,10 @@ export default function DashboardPage() {
       try { localStorage.removeItem('pending_ref') } catch {}
     }
   }, [])
+
+  if (hub === 'jamb') {
+    return <ComingSoon />
+  }
 
   if (loading) {
     return (

@@ -81,13 +81,15 @@ const PRODUCTS = [
   },
 ]
 
-export default function MarketingPricing() {
+export default function MarketingPricing({ variant = 'marketing' }: { variant?: 'marketing' | 'dashboard' }) {
   const [showCheckout, setShowCheckout] = useState(false)
   const [checkoutProduct, setCheckoutProduct] = useState<string>('putme_pro')
   const [isPaying, setIsPaying] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [user, setUser] = useState<{ email: string } | null>(null)
   const router = useRouter()
+
+  const products = variant === 'dashboard' ? PRODUCTS.filter((p) => !p.comingSoon) : PRODUCTS
 
   useEffect(() => {
     const supabase = createClient()
@@ -144,8 +146,8 @@ export default function MarketingPricing() {
           </p>
         </div>
 
-        <div className="mx-auto grid max-w-lg grid-cols-1 gap-8 lg:max-w-5xl lg:grid-cols-4">
-          {PRODUCTS.map((product, idx) => {
+        <div className={`mx-auto grid max-w-lg grid-cols-1 gap-8 ${variant === 'dashboard' ? 'lg:max-w-3xl lg:grid-cols-2' : 'lg:max-w-5xl lg:grid-cols-4'}`}>
+          {products.map((product, idx) => {
             const isPopular = idx === 1
 
             return (

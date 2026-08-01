@@ -1,6 +1,7 @@
 'use server'
 
 import { revalidatePath } from 'next/cache'
+import { redirect } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
 import {
   getMockDefaults,
@@ -28,6 +29,12 @@ interface SessionQuestion {
   subjectId: string
   questionText: string
   options: { key: string; text: string }[]
+}
+
+async function assertExamOpen(examId: string) {
+  const supabase = await createClient()
+  const { data } = await supabase.from('exams').select('slug').eq('id', examId).single()
+  if (data?.slug === 'jamb') redirect('/dashboard')
 }
 
 async function fetchWeightedQuestions(
@@ -95,6 +102,8 @@ export async function createSession(params: CreateSessionParams) {
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
   if (!user) throw new Error('Not authenticated')
+
+  await assertExamOpen(params.examId)
 
   const hasAccess = await hasExamAccess(user.id, params.examId)
 
@@ -252,6 +261,8 @@ export async function submitAnswer(
   if (session.user_id !== user.id) throw new Error('Session does not belong to user')
   if (session.status !== 'in_progress') throw new Error('Session is not active')
 
+  await assertExamOpen(session.exam_id)
+
   if (session.mode === 'mock' && isSessionExpired(session.started_at, session.time_limit_seconds)) {
     throw new Error('Time has expired for this session')
   }
@@ -294,6 +305,8 @@ export async function completeMockSession(sessionId: string) {
   if (session.mode !== 'mock') throw new Error('Session is not a mock exam')
   const expired = isSessionExpired(session.started_at, session.time_limit_seconds)
 
+  await assertExamOpen(session.exam_id)
+
   const { data: completion, error: completionError } = await supabase.rpc('complete_mock_session', {
     p_session_id: sessionId,
   })
@@ -318,6 +331,8 @@ export async function loadSessionData(sessionId: string) {
   const session = await getSessionById(sessionId)
   if (session.user_id !== user.id) throw new Error('Session does not belong to user')
   if (session.status !== 'in_progress') throw new Error('Session is not active')
+
+  await assertExamOpen(session.exam_id)
 
   const questions = await getSessionQuestionsWithStatus(sessionId)
   const mapped = questions.map((q) => ({
@@ -346,6 +361,8 @@ export async function getSessionResults(sessionId: string) {
   const session = await getSessionById(sessionId)
   if (session.user_id !== user.id) throw new Error('Session does not belong to user')
   if (session.status !== 'completed') throw new Error('Session is not completed')
+
+  await assertExamOpen(session.exam_id)
 
   const { data: result } = await supabase
     .from('results')
@@ -453,6 +470,8 @@ export async function getSessionHistory(hub?: 'jamb' | 'universities') {
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
   if (!user) throw new Error('Not authenticated')
+
+  if (hub === 'jamb' || hub === undefined) redirect('/dashboard')
 
   let query = supabase
     .from('exam_sessions')
