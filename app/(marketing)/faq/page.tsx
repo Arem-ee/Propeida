@@ -23,7 +23,7 @@ const faqs: FAQItem[] = [
       'Yes. Propeida is built for the network conditions and devices Nigerian students actually use. The platform uses text-only serialization, so a full mock exam uses under 2 MB of data. It works on Chrome, Samsung Internet, Opera, and Safari, including budget Android phones. There are no heavy animations, video content, or large assets that lag on 3G connections.',
   },
   {
-    question: 'What happens after the free 30 questions run out?',
+    question: 'What happens after the free 50 questions run out?',
     answer:
       'You can still access the platform, view your results, and use the dashboard. To continue practicing past the free limits, upgrade to Pro with a single payment of ₦1,500. The free tier exists to let you confirm the platform works on your device and network before you pay.',
   },
