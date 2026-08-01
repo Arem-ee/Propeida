@@ -23,7 +23,7 @@ export default function AdminQuestionsPage() {
     const supabase = createClient()
     const { data } = await supabase
       .from('questions')
-      .select('id, question_text, difficulty, exams(name), subjects(name)')
+      .select('id, question_text, difficulty, exams!questions_exam_id_fkey(name), subjects(name)')
       .order('created_at', { ascending: false })
     setQuestions(data ?? [])
   }, [])
