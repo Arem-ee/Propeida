@@ -89,6 +89,64 @@ export async function fetchFreePoolQuestions(
     }))
 }
 
+export async function isLockedPoolExam(
+  supabase: Awaited<ReturnType<typeof createClient>>,
+  examId: string,
+): Promise<boolean> {
+  const [{ data: exam }, { data: config }] = await Promise.all([
+    supabase.from('exams').select('slug').eq('id', examId).single(),
+    supabase.from('app_config').select('value').eq('key', 'subject_weighting').single(),
+  ])
+  if (!exam?.slug || !config) return false
+  const weighting = config.value as Record<string, unknown>
+  return Object.prototype.hasOwnProperty.call(weighting, exam.slug)
+}
+
+export async function fetchLockedPoolQuestions(
+  userId: string,
+  examId: string,
+  subjectIds: string[],
+  count: number,
+  difficulty?: string | null,
+): Promise<SessionQuestion[]> {
+  const supabase = await createClient()
+
+  const { data: poolIds, error: poolError } = await supabase.rpc('ensure_exam_free_pool', {
+    p_user_id: userId,
+    p_exam_id: examId,
+  })
+  if (poolError) throw new Error(`Failed to load question pool: ${poolError.message}`)
+  if (!poolIds || poolIds.length === 0) throw new Error('No questions available')
+
+  let query = supabase
+    .from('questions')
+    .select('id, subject_id, question_text, options')
+    .in('id', poolIds)
+    .eq('exam_id', examId)
+    .limit(count)
+
+  if (subjectIds.length > 0) {
+    query = query.in('subject_id', subjectIds)
+  }
+
+  if (difficulty) {
+    query = query.eq('difficulty', difficulty)
+  }
+
+  const { data: questions, error } = await query
+
+  if (error) throw new Error(`Failed to fetch pool questions: ${error.message}`)
+  if (!questions || questions.length === 0) throw new Error('No questions match the selected filters')
+
+  return (questions as { id: string; subject_id: string; question_text: string; options: { key: string; text: string }[] }[])
+    .map((q) => ({
+      id: q.id,
+      subjectId: q.subject_id,
+      questionText: q.question_text,
+      options: q.options,
+    }))
+}
+
 export async function createExamSession(
   userId: string,
   examId: string,

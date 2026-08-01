@@ -7,6 +7,8 @@ import {
   getMockDefaults,
   fetchQuestionsForSession,
   fetchFreePoolQuestions,
+  fetchLockedPoolQuestions,
+  isLockedPoolExam,
   createExamSession,
   getSessionById,
   getSessionQuestionsWithStatus,
@@ -152,22 +154,31 @@ export async function createSession(params: CreateSessionParams) {
 
   const session = await createExamSession(user.id, params.examId, params.mode, timeLimitSeconds)
 
+  const isFree = !hasAccess
+  const lockedPool = isFree ? await isLockedPoolExam(supabase, params.examId) : false
+
   let questions: SessionQuestion[]
 
   if (isFreeMock) {
-    const counter = await getUsageCounters(user.id, params.examId)
-    if (counter.free_mocks_started > 1) {
-      questions = await getFirstMockQuestions(user.id, params.examId)
+    if (lockedPool) {
+      questions = await fetchLockedPoolQuestions(user.id, params.examId, subjectIds, effectiveCount)
     } else {
-      questions = subjectIds.length > 1
-        ? await fetchWeightedQuestions(supabase, params.examId, subjectIds, effectiveCount, session.id)
-        : await fetchQuestionsForSession(
-            { ...params, subjectIds, questionCount: effectiveCount },
-            session.id
-          )
+      const counter = await getUsageCounters(user.id, params.examId)
+      if (counter.free_mocks_started > 1) {
+        questions = await getFirstMockQuestions(user.id, params.examId)
+      } else {
+        questions = subjectIds.length > 1
+          ? await fetchWeightedQuestions(supabase, params.examId, subjectIds, effectiveCount, session.id)
+          : await fetchQuestionsForSession(
+              { ...params, subjectIds, questionCount: effectiveCount },
+              session.id
+            )
+      }
     }
-  } else if (!hasAccess && params.mode === 'practice') {
-    questions = await fetchFreePoolQuestions(user.id, params.examId, subjectIds, effectiveCount, session.id, params.difficulty)
+  } else if (isFree && params.mode === 'practice') {
+    questions = lockedPool
+      ? await fetchLockedPoolQuestions(user.id, params.examId, subjectIds, effectiveCount, params.difficulty)
+      : await fetchFreePoolQuestions(user.id, params.examId, subjectIds, effectiveCount, session.id, params.difficulty)
   } else if (params.mode === 'mock' && params.examSlug === 'jamb') {
     const mockDefaults = await getMockDefaults('jamb')
     const roles = mockDefaults?.subject_roles
