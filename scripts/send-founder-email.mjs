@@ -41,7 +41,7 @@ const SMTP_HOST = process.env.SMTP_HOST
 const SMTP_PORT = parseInt(process.env.SMTP_PORT ?? '465', 10)
 const SMTP_USER = process.env.SMTP_USER
 const SMTP_PASS = process.env.SMTP_PASS
-const MAIL_FROM = process.env.MAIL_FROM ?? `Propeida <${SMTP_USER ?? 'propeida.help@gmail.com'}>`
+const MAIL_FROM = process.env.MAIL_FROM ?? 'The Propeida Team <propeida.help@gmail.com>'
 
 function valueOf(name) {
   const i = argv.indexOf(name)

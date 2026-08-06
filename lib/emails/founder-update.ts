@@ -1,13 +1,13 @@
 export const founderUpdateEmail = {
-  subject: 'A quick update from the founder of Propeida',
+  subject: 'A quick update from the Propeida team',
 
   text: `Hi,
 
-I'm the founder of Propeida, and I wanted to personally thank you for being one of the first people to use the platform.
+Thank you for being one of the first students to use Propeida.
 
-When you signed up, Propeida was mainly a CBT practice app for UNILORIN Post-UTME. Over the past few weeks, I've been working on something bigger.
+Over the past few weeks, we've been working on improving the platform, and we wanted to let you know what's changed.
 
-The goal is now simple: every Nigerian student should be able to prepare for JAMB and Post-UTME without a paywall getting in the way.
+Our goal is simple: every Nigerian student should be able to prepare for JAMB and Post-UTME without a paywall getting in the way.
 
 Here's what's new:
 
@@ -17,27 +17,27 @@ Here's what's new:
 - Improved exam simulation
 - A stronger focus on helping students actually prepare, not just answer questions
 
-I'm still building Propeida myself, and the platform is growing because of early users like you. If something feels confusing, broken, or missing, I genuinely want to hear about it.
-
 You can jump back in here:
 
 https://propeida.vercel.app
 
-I've also created a WhatsApp channel where I'll share Propeida updates, new features, exam coverage announcements, and important platform news as we build.
+We've also created an official WhatsApp channel where we share Propeida updates, new features, exam coverage announcements, and important platform news:
 
 https://whatsapp.com/channel/0029Vb7q1taHFxP1Dr5TSJ2V
 
-Thank you for being here early.
+If you know someone preparing for UNILORIN Post-UTME, JAMB, or any upcoming entrance exam, we'd really appreciate it if you shared Propeida with them. Most of our growth right now comes from students telling other students, and every share genuinely helps.
 
-— Arem
-Founder, Propeida`,
+Thank you for being part of the journey from the beginning.
+
+— The Propeida Team
+propeida.help@gmail.com`,
 
   html: `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>A quick update from the founder of Propeida</title>
+  <title>A quick update from the Propeida team</title>
 </head>
 <body style="margin: 0; padding: 0; background-color: #f3f4f6;">
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #f3f4f6; padding: 32px 16px;">
@@ -50,7 +50,7 @@ Founder, Propeida`,
                 Propeida
               </p>
               <h1 style="margin: 12px 0 0 0; font-family: Arial, Helvetica, sans-serif; font-size: 24px; line-height: 1.3; color: #111827;">
-                A quick update from the founder
+                A quick update from the Propeida team
               </h1>
             </td>
           </tr>
@@ -58,37 +58,37 @@ Founder, Propeida`,
             <td style="padding: 16px 32px 32px 32px; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.6; color: #374151;">
               <p style="margin: 0 0 16px 0;">Hi,</p>
               <p style="margin: 0 0 16px 0;">
-                I'm the founder of Propeida, and I wanted to personally thank you for being one of the first people to use the platform.
+                Thank you for being one of the first students to use <strong>Propeida</strong>.
               </p>
               <p style="margin: 0 0 16px 0;">
-                When you signed up, Propeida was mainly a CBT practice app for UNILORIN Post-UTME. Over the past few weeks, I've been working on something bigger.
+                Over the past few weeks, we've been working on improving the platform, and we wanted to let you know what's changed.
               </p>
               <p style="margin: 0 0 16px 0;">
-                The goal is now simple: every Nigerian student should be able to prepare for JAMB and Post-UTME without a paywall getting in the way.
+                Our goal is simple: <strong>every Nigerian student should be able to prepare for JAMB and Post-UTME without a paywall getting in the way.</strong>
               </p>
               <p style="margin: 0 0 8px 0;"><strong>Here's what's new:</strong></p>
               <ul style="margin: 0 0 16px 0; padding-left: 20px;">
                 <li style="margin-bottom: 6px;">A redesigned practice experience</li>
                 <li style="margin-bottom: 6px;">Better progress tracking</li>
-                <li style="margin-bottom: 6px;">A new Revision Notes section for quick topic-by-topic revision</li>
+                <li style="margin-bottom: 6px;">A new <strong>Revision Notes</strong> section for quick topic-by-topic revision</li>
                 <li style="margin-bottom: 6px;">Improved exam simulation</li>
                 <li>A stronger focus on helping students actually prepare, not just answer questions</li>
               </ul>
-              <p style="margin: 0 0 16px 0;">
-                I'm still building Propeida myself, and the platform is growing because of early users like you. If something feels confusing, broken, or missing, I genuinely want to hear about it.
-              </p>
               <p style="margin: 0 0 8px 0;">You can jump back in here:</p>
               <p style="margin: 0 0 16px 0;">
                 <a href="https://propeida.vercel.app" style="color: #2563eb; font-weight: bold; text-decoration: none;">https://propeida.vercel.app</a>
               </p>
               <p style="margin: 0 0 8px 0;">
-                I've also created a WhatsApp channel where I'll share Propeida updates, new features, exam coverage announcements, and important platform news as we build.
+                We've also created an official WhatsApp channel where we share <strong>Propeida updates, new features, exam coverage announcements, and important platform news</strong>:
               </p>
-              <p style="margin: 0 0 24px 0;">
+              <p style="margin: 0 0 16px 0;">
                 <a href="https://whatsapp.com/channel/0029Vb7q1taHFxP1Dr5TSJ2V" style="color: #2563eb; font-weight: bold; text-decoration: none;">https://whatsapp.com/channel/0029Vb7q1taHFxP1Dr5TSJ2V</a>
               </p>
-              <p style="margin: 0 0 4px 0;">Thank you for being here early.</p>
-              <p style="margin: 0;">— Arem<br />Founder, Propeida</p>
+              <p style="margin: 0 0 16px 0;">
+                If you know someone preparing for <strong>UNILORIN Post-UTME, JAMB, or any upcoming entrance exam</strong>, we'd really appreciate it if you shared Propeida with them. Most of our growth right now comes from students telling other students, and every share genuinely helps.
+              </p>
+              <p style="margin: 0 0 24px 0;">Thank you for being part of the journey from the beginning.</p>
+              <p style="margin: 0;">— <strong>The Propeida Team</strong><br /><a href="mailto:propeida.help@gmail.com" style="color: #2563eb; text-decoration: none;">propeida.help@gmail.com</a></p>
             </td>
           </tr>
         </table>
