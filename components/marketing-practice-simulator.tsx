@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Check, X, BookOpen, RotateCcw, AlertTriangle } from 'lucide-react'
+import { Check, X, BookOpen, RotateCcw, AlertTriangle, Timer, Gauge, CircleHelp, Crosshair, History } from 'lucide-react'
 
 interface QuestionData {
   id: string
@@ -111,12 +111,34 @@ export default function MarketingPracticeSimulator() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center mb-12">
           <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            Interactive practice simulator
+            Not a quiz app. A rehearsal.
           </h2>
           <p className="mt-4 text-lg text-gray-500 leading-relaxed">
-            See how Propeida helps you master difficult concepts. Select a subject below, choose your answer, and review the detailed post-exam explanation.
+            A real CBT simulator, not a casual quiz. Timed exams, real scoring, and a record of every attempt so you arrive prepared, not hopeful.
           </p>
         </div>
+
+        <div className="mx-auto mb-10 grid max-w-4xl grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-5">
+          {[
+            { icon: Timer, label: 'Timed like the real exam' },
+            { icon: Gauge, label: 'Real scoring & subject weighting' },
+            { icon: CircleHelp, label: 'Explanations after every question' },
+            { icon: Crosshair, label: 'Weak-topic detection' },
+            { icon: History, label: 'Permanent performance history' },
+          ].map((f, i) => {
+            const Icon = f.icon
+            return (
+              <div key={i} className="flex items-center gap-2 rounded-xl border border-gray-100 bg-gray-50/50 px-3.5 py-3">
+                <Icon className="h-4 w-4 text-blue-600 shrink-0" />
+                <span className="text-xs font-semibold text-gray-700">{f.label}</span>
+              </div>
+            )
+          })}
+        </div>
+
+        <p className="text-center text-sm text-gray-400 -mt-6 mb-8">
+          Try a real question below.
+        </p>
 
         <div className="flex flex-wrap justify-center gap-2 mb-8">
           {questions.map((q, idx) => (

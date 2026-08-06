@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { CheckCircle, AlertCircle, ArrowRight, ShieldCheck } from 'lucide-react'
+import { CheckCircle, AlertCircle, ArrowRight } from 'lucide-react'
 
 export default function MarketingHero() {
   const [selectedOption, setSelectedOption] = useState<string | null>(null)
@@ -32,16 +32,16 @@ export default function MarketingHero() {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-6 flex flex-col items-start">
             <div className="inline-flex items-center gap-1.5 rounded-xl bg-blue-50 px-3 py-1.5 text-sm font-semibold text-blue-600">
-              <ShieldCheck className="h-4 w-4" />
-              Direct path to exam success
+              Free exam preparation for every Nigerian candidate
             </div>
 
             <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl leading-tight">
-              Pass your next exam with absolute confidence
+              Every Nigerian candidate deserves a real chance.
             </h1>
 
             <p className="mt-6 text-lg text-gray-500 leading-relaxed max-w-lg">
-              Practice JAMB and Post-UTME past questions with interactive CBT mock exams. Track your performance and walk into your exam hall fully prepared.
+              Nearly a thousand verified questions. A real CBT simulator. Free for students — funded by schools,
+              foundations, and sponsors who believe preparation shouldn&apos;t be a privilege.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-4 w-full sm:w-auto">
@@ -49,22 +49,22 @@ export default function MarketingHero() {
                 href="/signup"
                 className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-4 text-base font-bold text-white transition-colors hover:bg-blue-700 active:bg-blue-800 shadow-sm min-h-[44px]"
               >
-                Start practicing free
+                Start Practicing Free
                 <ArrowRight className="h-5 w-5" />
               </Link>
 
               <Link
-                href="/#pricing"
+                href="/partner"
                 className="inline-flex w-full sm:w-auto items-center justify-center text-sm font-bold text-blue-600 hover:text-blue-700 active:text-blue-800 transition-colors py-3 px-4 min-h-[44px]"
               >
-                View pricing (₦1,500 PUTME Pro)
+                Partner with Propeida
               </Link>
             </div>
 
             <div className="mt-4 flex items-center gap-2 text-xs text-gray-400">
-              <span>Free tier includes 30 practice questions</span>
+              <span>Free for students — no paywall, no card required</span>
               <span>•</span>
-              <span>PUTME Pro is ₦1,500 one-time payment</span>
+              <span>Every question checked by a person</span>
             </div>
           </div>
 
@@ -77,7 +77,7 @@ export default function MarketingHero() {
                   <span className="h-3 w-3 rounded-full bg-green-400"></span>
                 </div>
                 <div className="rounded-xl bg-white px-3 py-1 text-xs font-semibold text-gray-500 border border-gray-100 shadow-2xs">
-                  JAMB Use of English — Practice Mode
+                  Practice Mode — Untimed
                 </div>
                 <div className="w-8"></div>
               </div>
@@ -85,7 +85,7 @@ export default function MarketingHero() {
               <div className="rounded-xl border border-gray-100 bg-white p-5 shadow-xs">
                 <div className="flex items-center justify-between text-xs font-semibold text-gray-400">
                   <span>Question 4 of 40</span>
-                  <span className="text-blue-600">Time: 38m 15s</span>
+                  <span className="text-blue-600">English</span>
                 </div>
 
                 <p className="mt-4 text-base font-bold text-gray-900 leading-snug">
@@ -93,7 +93,7 @@ export default function MarketingHero() {
                 </p>
 
                 <p className="mt-2 text-base text-gray-700">
-                  The examination committee was quite <strong className="text-gray-900 underline decoration-blue-600 decoration-2">SKEPTICAL</strong> about the candidate's explanation.
+                  The examination committee was quite <strong className="text-gray-900 underline decoration-blue-600 decoration-2">SKEPTICAL</strong> about the candidate&apos;s explanation.
                 </p>
 
                 <div className="mt-6 space-y-3">

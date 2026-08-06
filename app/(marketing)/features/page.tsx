@@ -103,7 +103,8 @@ export default function FeaturesPage() {
 
         <div className="mx-auto max-w-3xl mt-16 rounded-xl border border-gray-100 bg-gray-50/30 p-6 text-center">
           <p className="text-sm text-gray-500">
-            See the full list of <Link href="/#exams" className="font-bold text-blue-600 hover:text-blue-700">supported exams</Link> or check <Link href="/#pricing" className="font-bold text-blue-600 hover:text-blue-700">pricing</Link> to start.
+            See the full list of <Link href="/#exams" className="font-bold text-blue-600 hover:text-blue-700">supported exams</Link> or read{' '}
+            <Link href="/funding" className="font-bold text-blue-600 hover:text-blue-700">how Propeida is funded</Link> — free for students, always.
           </p>
         </div>
       </main>

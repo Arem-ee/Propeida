@@ -138,7 +138,7 @@ function CallbackContent() {
           </p>
           <div className="mt-6 flex flex-col gap-3">
             <Link
-              href="/#pricing"
+              href="/account"
               className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 py-3 text-sm font-bold text-white hover:bg-blue-700 min-h-[44px]"
             >
               Try again

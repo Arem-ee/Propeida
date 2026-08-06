@@ -13,44 +13,44 @@ interface FAQItem {
 
 const faqs: FAQItem[] = [
   {
-    question: 'Is the Pro upgrade really a one-time payment of ₦1,500?',
+    question: 'Is Propeida really free for students?',
     answer:
-      'Yes. You pay once and unlock unlimited access to all mock simulators, exam banks, and analytics forever. There are no monthly subscriptions, no renewal fees, and no hidden charges. The landing page FAQ has more detail on this.',
+      'Yes. Practice, full mock exams, explanations, streaks, leaderboards, and your performance history are all free — no trial, no paywall, no credit card. Students are never charged on Propeida.',
+  },
+  {
+    question: 'How does Propeida make money?',
+    answer:
+      'Schools, tutorial centers, foundations, alumni associations, and sponsors fund student access. They pay for tools like mock administration and progress reporting — and to widen access. The student is the beneficiary, not the customer.',
   },
   {
     question: 'Does Propeida work on slow networks and budget Android phones?',
     answer:
-      'Yes. Propeida is built for the network conditions and devices Nigerian students actually use. The platform uses text-only serialization, so a full mock exam uses under 2 MB of data. It works on Chrome, Samsung Internet, Opera, and Safari, including budget Android phones. There are no heavy animations, video content, or large assets that lag on 3G connections.',
-  },
-  {
-    question: 'What happens after the free 50 questions run out?',
-    answer:
-      'You can still access the platform, view your results, and use the dashboard. To continue practicing past the free limits, upgrade to Pro with a single payment of ₦1,500. The free tier exists to let you confirm the platform works on your device and network before you pay.',
+      'Yes. Propeida is built for the network conditions and devices Nigerian students actually use. The platform uses text-first serialization, so a full mock exam uses little data, and it works on Chrome, Samsung Internet, Opera, and Safari, including budget Android phones.',
   },
   {
     question: 'Where do the practice questions come from?',
     answer:
-      'The question bank is built from the recollections of past candidates who previously sat the University of Ilorin Post-UTME. These are not official past questions, and Propeida is not affiliated with the University of Ilorin, JAMB, WAEC, or any examination body. The full terms cover this in more detail.',
+      'The question bank is built from the recollections of past candidates who previously sat the University of Ilorin Post-UTME, then checked and reworked by hand. These are not official past questions, and Propeida is not affiliated with the University of Ilorin, JAMB, or any examination body.',
   },
   {
     question: 'Can I practice for multiple exams with one account?',
     answer:
-      'Yes. A single account lets you practice JAMB, Post-UTME, WAEC, scholarship, aptitude, and postgraduate papers. You do not pay separately per exam.',
+      'Yes. A single account lets you practice Post-UTME now, JAMB when it launches, and any university we add next. You never pay separately per exam.',
   },
   {
     question: 'How is Propeida different from practicing with past question PDFs?',
     answer:
-      'PDFs do not enforce CBT timing, track your accuracy by subject, or simulate the actual exam screen. Propeida gives you the real countdown clock, multi-subject navigation, and a report of which topics you need to improve. The landing page FAQ also covers this.',
-  },
-  {
-    question: 'What if I pay and my account is not activated?',
-    answer:
-      'Paystack triggers instant activation. If there is a network delay, use the contact form on this site to report the issue. Payments are resolved and accounts are activated manually if needed.',
+      'PDFs do not enforce CBT timing, track your accuracy by subject, or simulate the actual exam screen. Propeida gives you the real countdown clock, multi-subject navigation, explanations, and a report of which topics you need to improve.',
   },
   {
     question: 'Does Propeida track my performance over time?',
     answer:
-      'Yes. The dashboard shows your session history, accuracy by subject, current streak, and leaderboard ranking. Pro users get unlimited access to all analytics.',
+      'Yes. Your dashboard shows session history, accuracy by subject, current streak, and leaderboard ranking. Your performance history is permanent and belongs to you.',
+  },
+  {
+    question: 'Who owns my data?',
+    answer:
+      'You do. We never sell student data. Institutional partners see progress and results needed to run preparation — with consent — never personal information beyond that. We explain this fully on the funding page.',
   },
 ]
 
@@ -68,10 +68,11 @@ export default function FAQPage() {
         <div className="max-w-3xl">
           <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Frequently Asked Questions</h1>
           <p className="mt-4 text-lg text-gray-500 leading-relaxed">
-            Answers to common questions about Propeida, payments, and platform features.
+            Straight answers about Propeida, how it is funded, and how it works.
           </p>
           <p className="mt-2 text-sm text-gray-400">
-            Also see the <Link href="/#faq" className="font-bold text-blue-600 hover:text-blue-700">FAQ section on the homepage</Link> for additional questions.
+            Also see the <Link href="/#faq" className="font-bold text-blue-600 hover:text-blue-700">FAQ section on the homepage</Link> and{' '}
+            <Link href="/funding" className="font-bold text-blue-600 hover:text-blue-700">how Propeida is funded</Link>.
           </p>
         </div>
 

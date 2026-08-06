@@ -1,14 +1,28 @@
+import type { Metadata } from 'next'
 import { HomeJsonLd } from '@/components/json-ld'
 import MarketingHeader from '@/components/marketing-header'
 import MarketingHero from '@/components/marketing-hero'
-import MarketingBenefits from '@/components/marketing-benefits'
+import MarketingFundingBanner from '@/components/marketing-funding-banner'
+import MarketingTrustMetrics from '@/components/marketing-trust-metrics'
+import MarketingPracticeCategories from '@/components/marketing-practice-categories'
 import MarketingPracticeSimulator from '@/components/marketing-practice-simulator'
-import MarketingFeatures from '@/components/marketing-features'
-import MarketingHowItWorks from '@/components/marketing-how-it-works'
-import MarketingSupportedExams from '@/components/marketing-supported-exams'
-import MarketingPricing from '@/components/marketing-pricing'
+import MarketingLearningTools from '@/components/marketing-learning-tools'
+import MarketingCommunity from '@/components/marketing-community'
+import QuestionsCounter from '@/components/questions-counter'
+import MarketingSuccessStories from '@/components/marketing-success-stories'
+import MarketingSponsor from '@/components/marketing-sponsor'
+import MarketingPartner from '@/components/marketing-partner'
+import MarketingInstitutionalPreview from '@/components/marketing-institutional-preview'
+import MarketingReadinessStrip, { MarketingWhatsAppCta } from '@/components/marketing-readiness-strip'
 import MarketingFAQ from '@/components/marketing-faq'
 import MarketingFooter from '@/components/marketing-footer'
+import WhatsAppFloat from '@/components/whatsapp-float'
+
+export const metadata: Metadata = {
+  title: 'Propeida — Free exam preparation for every Nigerian candidate',
+  description:
+    'Every Nigerian candidate deserves a real chance. Free, verified JAMB and Post-UTME preparation — a real CBT simulator, human-checked questions, and progress tracking. Free for students.',
+}
 
 export default function HomePage() {
   return (
@@ -17,15 +31,23 @@ export default function HomePage() {
       <MarketingHeader />
       <main>
         <MarketingHero />
-        <MarketingBenefits />
+        <MarketingFundingBanner />
+        <MarketingTrustMetrics />
+        <MarketingPracticeCategories />
         <MarketingPracticeSimulator />
-        <MarketingFeatures />
-        <MarketingHowItWorks />
-        <MarketingSupportedExams />
-        <MarketingPricing />
+        <MarketingLearningTools />
+        <MarketingCommunity />
+        <QuestionsCounter />
+        <MarketingSuccessStories />
+        <MarketingSponsor />
+        <MarketingPartner />
+        <MarketingInstitutionalPreview />
+        <MarketingReadinessStrip />
+        <MarketingWhatsAppCta />
         <MarketingFAQ />
       </main>
       <MarketingFooter />
+      <WhatsAppFloat />
     </div>
   )
 }

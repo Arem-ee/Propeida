@@ -11,29 +11,34 @@ interface FAQItem {
 export default function MarketingFAQ() {
   const faqs: FAQItem[] = [
     {
-      question: 'How is this different from reading past questions on paper or PDF?',
+      question: 'Is it really free?',
       answer:
-        'Paper booklets and PDFs do not enforce strict computer-based test (CBT) timing, nor do they track your topic accuracy. Propeida simulates the actual digital exam screen, clock pressure, and multi-subject navigation. This helps you build the actual muscle memory of completing your paper before the official countdown hit zero.',
+        'Yes. Practice, full mock exams, explanations, streaks, leaderboards, and your performance history are all free — no trial, no paywall, no credit card. Learning on Propeida is never behind a payment.',
     },
     {
-      question: 'Is this really a one-time payment of ₦1,500? Are there monthly fees?',
+      question: 'How do you make money?',
       answer:
-        'Yes, it is strictly a one-time payment. Once you upgrade to Pro, you unlock unlimited access to all mock simulators and exam banks forever. There are absolutely no recurring monthly subscriptions or hidden upgrade fees.',
+        'Students are never charged. Propeida is funded by schools, tutorial centers, foundations, alumni associations, and sponsors, who pay to widen access and track real impact. Think of it like a national library: free for the reader, paid for by the community that benefits.',
     },
     {
-      question: 'Does the app work on slow network or budget data connections?',
+      question: 'Who owns my data?',
       answer:
-        'Yes. Propeida is optimized specifically for Nigerian mobile network constraints. The platform is lightweight, with text-only data serialization. This means pages load instantly on basic 3G connections, and completing a full-length, 180-question mock exam consumes less than 2MB of mobile data.',
+        'You do. We never sell student data. Institutional partners see progress and results needed to run preparation — with consent — never personal information beyond that. Your progress history belongs to you permanently.',
     },
     {
-      question: 'Can I practice for multiple exams or do I pay separately?',
+      question: 'Is the JAMB bank ready?',
       answer:
-        'PUTME Pro is a one-time purchase that covers every school we add — start with Unilorin today, and any school added later is included at no extra cost. JAMB tiers are sold separately and are not yet available.',
+        "Not yet. Just like our Post-UTME material, we're taking the time to check every single question so you can actually trust them. Almost ready — and when it arrives it will be free, like everything else on Propeida.",
     },
     {
-      question: 'What happens if I pay and my account does not activate immediately?',
+      question: 'What are Post-UTME questions? Are these official past questions?',
       answer:
-        'Our Paystack gateway integration triggers instant automated activation. However, if there is a network delay, our support team is available via a direct WhatsApp link. We resolve payment issues and manually activate accounts in under five minutes.',
+        'The question bank is built from the recollections of past candidates who sat the University of Ilorin Post-UTME, then checked and reworked by hand. These are not official past questions, and Propeida is not affiliated with the University of Ilorin, JAMB, or any examination body.',
+    },
+    {
+      question: 'Does it work on budget phones and slow networks?',
+      answer:
+        'Yes. Propeida is built for the network conditions and devices Nigerian students actually use. The platform is text-first, so a full mock exam uses little data, and it works on Chrome, Samsung Internet, Opera, and Safari on budget Android phones.',
     },
   ]
 
@@ -51,7 +56,7 @@ export default function MarketingFAQ() {
             Frequently asked questions
           </h2>
           <p className="mt-4 text-lg text-gray-500 leading-relaxed">
-            Everything you need to know about how the simulator operates, payments, and data usage.
+            Straight answers, because trust matters as much as preparation.
           </p>
         </div>
 

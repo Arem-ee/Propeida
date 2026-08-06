@@ -7,7 +7,7 @@ export function HomeJsonLd() {
     name: 'Propeida',
     url: baseUrl,
       description:
-        'Practice JAMB and Post-UTME past questions with interactive CBT mock exams, topic drills, and performance analytics built for Nigerian students.',
+        'Free, verified exam preparation for every Nigerian candidate. Practice JAMB and Post-UTME questions with a real CBT simulator, explanations, and performance tracking. Free for students.',
       applicationCategory: 'EducationalApplication',
       operatingSystem: 'Any',
       offers: {
