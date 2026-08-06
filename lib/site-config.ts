@@ -1,7 +1,8 @@
 export const siteConfig = {
   whatsapp: {
     channelUrl: 'https://whatsapp.com/channel/0029Vb7q1taHFxP1Dr5TSJ2V',
-    dailyQuestionCopy: 'Get a free exam question every day on WhatsApp.',
+    channelCopy:
+      'Follow Propeida on WhatsApp for product updates, new exam coverage, feature announcements, and important platform news.',
   },
   contact: {
     email: 'propeida.help@gmail.com',

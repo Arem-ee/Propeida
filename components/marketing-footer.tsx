@@ -22,7 +22,7 @@ export default function MarketingFooter() {
               className="mt-4 inline-flex items-center gap-2 rounded-xl bg-green-50 px-3 py-2 text-xs font-bold text-green-700"
             >
               <MessageCircle className="h-4 w-4" />
-              {siteConfig.whatsapp.dailyQuestionCopy}
+              {siteConfig.whatsapp.channelCopy}
             </a>
           </div>
 

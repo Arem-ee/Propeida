@@ -32,10 +32,10 @@ export function MarketingWhatsAppCta() {
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 py-10 sm:px-6 lg:flex-row lg:px-8">
         <div>
           <h2 className="text-xl font-extrabold tracking-tight text-gray-900 sm:text-2xl">
-            {siteConfig.whatsapp.dailyQuestionCopy}
+            {siteConfig.whatsapp.channelCopy}
           </h2>
           <p className="mt-1.5 text-sm text-gray-500">
-            One question, one explanation, every morning. Free, on the platform Nigerian students already use.
+            The official place to follow Propeida&apos;s progress, upcoming exam coverage, and important platform news.
           </p>
         </div>
         <a

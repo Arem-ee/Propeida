@@ -74,7 +74,7 @@ export default function MarketingHero() {
               className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-green-600 hover:text-green-700 active:text-green-800 min-h-[44px]"
             >
               <MessageCircle className="h-4 w-4" />
-              {siteConfig.whatsapp.dailyQuestionCopy}
+              {siteConfig.whatsapp.channelCopy}
             </a>
 
             <div className="mt-4 flex items-center gap-2 text-xs text-gray-400">

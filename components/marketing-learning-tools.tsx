@@ -1,4 +1,4 @@
-import { BookOpen, CalendarClock, Flame, Trophy, History, Users } from 'lucide-react'
+import { BookOpen, MessageCircle, Flame, Trophy, History, Users } from 'lucide-react'
 
 export default function MarketingLearningTools() {
   const tools = [
@@ -8,9 +8,9 @@ export default function MarketingLearningTools() {
       description: 'Every question has a clear, human-written explanation — why the right answer is right and how the wrong ones are wrong.',
     },
     {
-      icon: CalendarClock,
-      title: 'Daily Question',
-      description: 'One free exam question every day on WhatsApp, answered in seconds. A small habit that compounds into readiness.',
+      icon: MessageCircle,
+      title: 'WhatsApp Channel',
+      description: 'Follow the official Propeida channel for product updates, new exam coverage, feature announcements, and important platform news.',
     },
     {
       icon: Flame,
