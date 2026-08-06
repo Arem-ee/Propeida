@@ -35,6 +35,8 @@ export default function SelectionScreen({ exams, allSubjects, examSubjectMap, ac
   const router = useRouter()
   const searchParams = useSearchParams()
   const hubParam = searchParams.get('hub') === 'universities' ? '?hub=universities' : ''
+  const subjectParam = searchParams.get('subject')
+  const topicParam = searchParams.get('topic')
   const [selectedExamId, setSelectedExamId] = useState<string>('')
   const [selectedSubjectIds, setSelectedSubjectIds] = useState<string[]>([])
   const [questionCount, setQuestionCount] = useState(10)
@@ -47,6 +49,7 @@ export default function SelectionScreen({ exams, allSubjects, examSubjectMap, ac
   const isFixed = selectedExam?.subject_selection_mode === 'fixed'
   const isJambMock = selectedExam?.slug === 'jamb' && mode === 'mock'
   const englishSubject = allSubjects.find((s) => s.slug === 'english')
+  const notesSubjectName = subjectParam ? allSubjects.find((s) => s.slug === subjectParam)?.name ?? null : null
 
   // When JAMB mock is active, ensure English is always in selectedSubjectIds
   useEffect(() => {
@@ -65,6 +68,19 @@ export default function SelectionScreen({ exams, allSubjects, examSubjectMap, ac
       setSelectedSubjectIds(examSubjectMap[examId] ?? [])
     } else {
       setSelectedSubjectIds([])
+    }
+
+    // Revision Notes integration: pre-select the subject a note pointed to.
+    if (subjectParam) {
+      const presetSubject = allSubjects.find((s) => s.slug === subjectParam)
+      if (presetSubject) {
+        const examSubjects = examSubjectMap[examId] ?? []
+        if (exam?.subject_selection_mode === 'fixed') {
+          // Fixed exams include all linked subjects automatically; nothing to preselect.
+        } else if (examSubjects.length === 0 || examSubjects.includes(presetSubject.id)) {
+          setSelectedSubjectIds([presetSubject.id])
+        }
+      }
     }
   }
 
@@ -129,6 +145,14 @@ export default function SelectionScreen({ exams, allSubjects, examSubjectMap, ac
 
   return (
     <div className="mt-8 space-y-8">
+      {subjectParam && (
+        <div className="rounded-xl bg-blue-50 border border-blue-100 px-4 py-3 text-xs font-semibold text-blue-700">
+          {notesSubjectName ? `From your Revision Note: ${notesSubjectName} — ` : ''}choose an exam and the
+          subject will be pre-selected for you.
+          {topicParam && <span> Topic-level filtering is coming soon.</span>}
+        </div>
+      )}
+
       {activeSession && (
         <div className="flex items-start gap-3 rounded-xl border border-amber-200 bg-amber-50 p-4">
           <AlertCircle className="h-5 w-5 shrink-0 text-amber-600 mt-0.5" />

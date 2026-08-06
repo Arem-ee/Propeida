@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import {
   Home, BarChart3, Trophy, History, User, GraduationCap, School,
-  LogOut, Menu, X, ChevronDown, Settings, Gift, CreditCard, Mail,
+  LogOut, Menu, X, ChevronDown, Settings, Gift, CreditCard, Mail, BookOpen,
 } from 'lucide-react'
 import { useState } from 'react'
 import { useHub } from '@/components/dashboard-hub-provider'
@@ -13,6 +13,7 @@ import Logo from '@/components/logo'
 const NAV_ITEMS = [
   { href: '/dashboard', label: 'Home', icon: Home },
   { href: '/practice', label: 'Practice', icon: BarChart3 },
+  { href: '/notes', label: 'Revision Notes', icon: BookOpen },
   { href: '/leaderboard', label: 'Leaderboard', icon: Trophy },
   { href: '/history', label: 'History', icon: History },
   { href: '/account', label: 'Account', icon: User },
