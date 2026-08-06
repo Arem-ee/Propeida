@@ -17,6 +17,7 @@ export async function GET() {
   return Response.json({
     questionsAnswered: Number(stats?.questions_answered ?? 0),
     practiceSessions: Number(stats?.practice_sessions ?? 0),
+    mockSessions: Number(stats?.mock_sessions ?? 0),
     activeStudents30d: Number(stats?.active_students_30d ?? 0),
     studentsTotal: Number(stats?.students_total ?? 0),
     baselineQuestions: siteConfig.trustMetrics.verifiedQuestions,

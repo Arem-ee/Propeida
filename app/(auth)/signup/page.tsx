@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { createClient } from '@/lib/supabase/client'
 import { Check, X, Loader2 } from 'lucide-react'
 import Logo from '@/components/logo'
+import { track } from '@/lib/analytics'
 
 export default function SignupPage() {
   const [email, setEmail] = useState('')
@@ -16,7 +17,14 @@ export default function SignupPage() {
   const [loading, setLoading] = useState(false)
   const [verificationSent, setVerificationSent] = useState(false)
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const startedRef = useRef(false)
   const supabaseRef = useRef(createClient())
+
+  const markStarted = () => {
+    if (startedRef.current) return
+    startedRef.current = true
+    void track('signup-start')
+  }
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search)
@@ -71,6 +79,7 @@ export default function SignupPage() {
   }
 
   const handleUsernameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    markStarted()
     const value = e.target.value.replace(/[^a-zA-Z0-9_-]/g, '')
     setUsername(value)
 
@@ -88,6 +97,7 @@ export default function SignupPage() {
   const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault()
     setError(null)
+    markStarted()
 
     if (usernameStatus === 'taken') {
       setError(`Username "${username}" is already taken. Try "${suggestion}" instead.`)
@@ -120,6 +130,7 @@ export default function SignupPage() {
       return
     }
 
+    void track('signup-complete', { method: 'email' })
     setVerificationSent(true)
   }
 

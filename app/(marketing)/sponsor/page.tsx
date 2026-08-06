@@ -3,13 +3,35 @@ import MarketingHeader from '@/components/marketing-header'
 import MarketingFooter from '@/components/marketing-footer'
 import WhatsAppFloat from '@/components/whatsapp-float'
 import InquiryForm from '@/components/inquiry-form'
-import { School, GraduationCap, TrendingUp, ShieldCheck, HandHeart } from 'lucide-react'
+import PageTrack from '@/components/page-track'
+import { School, GraduationCap, TrendingUp, ShieldCheck, HandHeart, Scale, Wallet, Ruler } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Sponsor a school — sponsor student access to Propeida',
   description:
-    'Sponsor a school or a class of students on Propeida. We run their JAMB and Post-UTME preparation and report measurable impact back to you.',
+    'Sponsor a school or students on Propeida. We run their JAMB and Post-UTME preparation and report measurable impact back to you.',
+  keywords: [
+    'sponsor a school in Nigeria',
+    'fund student exam preparation',
+    'exam sponsorship foundations',
+    'measure education impact Nigeria',
+    'admission opportunities for students',
+  ],
+  openGraph: {
+    title: 'Sponsor a school — sponsor student access to Propeida',
+    description:
+      'Sponsor a school or students on Propeida. We run their JAMB and Post-UTME preparation and report measurable impact back to you.',
+    type: 'website',
+    locale: 'en_NG',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630 }],
+  },
 }
+
+const inequity = [
+  'A secondary-school student in a town with one tutorial center and no reliable electricity cannot compete with a Lagos student surrounded by prep academies.',
+  'Past questions and mock rehearsals are a paid market in Nigeria — often ₦5,000 to ₦50,000 per student in a single exam season.',
+  'The students who most need practice are the ones with the least access to it. Preparation has become a privilege, and privilege tracks money.',
+]
 
 const programs = [
   {
@@ -20,22 +42,30 @@ const programs = [
   },
   {
     icon: GraduationCap,
-    title: 'Sponsor a class',
+    title: 'Sponsor students',
     description:
-      'Target a specific graduating class preparing for JAMB or Post-UTME in a year — and follow that exact cohort to their admission results.',
+      'Target a specific graduating class preparing for JAMB or Post-UTME — and follow that exact cohort to their admission results.',
   },
-  {
-    icon: TrendingUp,
-    title: 'Measurable impact',
-    description:
-      'No vague receipts. You see questions practiced, mocks completed, score improvement, and admission stories from the students you funded.',
-  },
+]
+
+const programDetails = [
+  { icon: Wallet, title: 'Preparation, not promises', description: 'Every naira funds student practice — question access, mocks, and tracking on the platform. Your exact scope is agreed up front.' },
+  { icon: Scale, title: 'Reach', description: 'We match sponsorship to where access hurts most: schools without labs, centers without mock infrastructure, students without data.' },
+  { icon: Ruler, title: 'Nothing extra', description: 'Sponsorship covers preparation. It never covers marketing spend or overhead that inflates the cost of helping one student.' },
+]
+
+const impactMetrics = [
+  { value: 'Questions practiced', detail: 'Every session answer is counted. You see total practice volume for your cohort.' },
+  { value: 'Mocks completed', detail: 'Timed, scored mock exams — the exact CBT conditions students will face.' },
+  { value: 'Score improvement', detail: 'Before/after accuracy across sessions, question by question.' },
+  { value: 'Admission stories', detail: 'Which students earned admission, into which institutions, in which cycle.' },
 ]
 
 export default function SponsorPage() {
   return (
     <div className="min-h-screen bg-white text-gray-900 antialiased">
       <MarketingHeader />
+      <PageTrack event="visit-sponsor" />
       <main>
         <section className="bg-gray-50/30 py-16 sm:py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -61,8 +91,30 @@ export default function SponsorPage() {
 
         <section className="py-16 sm:py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-3xl">
+              <h2 className="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">
+                Why exam preparation is unequal
+              </h2>
+              <ul className="mt-8 space-y-4">
+                {inequity.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3 rounded-xl border border-gray-100 bg-white p-4">
+                    <Scale className="h-5 w-5 text-blue-600 shrink-0 mt-0.5" />
+                    <span className="text-sm font-semibold text-gray-700 leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-8 text-lg text-gray-500 leading-relaxed">
+                Sponsorship is the correction: an prepared student, discovered by a funder who believes access areas
+                should not follow income. On Propeida, that student practices free — and the change is measurable.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-t border-gray-100 bg-gray-50/30 py-16 sm:py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">Ways to sponsor</h2>
-            <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+            <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
               {programs.map((program, idx) => {
                 const Icon = program.icon
                 return (
@@ -76,8 +128,48 @@ export default function SponsorPage() {
                 )
               })}
             </div>
+          </div>
+        </section>
 
-            <div className="mt-12 rounded-xl border border-gray-100 bg-gray-50/30 p-6 sm:p-8">
+        <section className="py-16 sm:py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">What your sponsorship funds</h2>
+            <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+              {programDetails.map((item, idx) => {
+                const Icon = item.icon
+                return (
+                  <div key={idx} className="rounded-xl border border-gray-100 bg-white p-6 shadow-2xs hover:border-blue-100 transition-colors">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-600 mb-5">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <h3 className="font-bold text-gray-900">{item.title}</h3>
+                    <p className="mt-2 text-sm text-gray-500 leading-relaxed">{item.description}</p>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        </section>
+
+        <section className="border-t border-gray-100 bg-gray-50/30 py-16 sm:py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h2 className="flex items-center gap-2 text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">
+              <TrendingUp className="h-6 w-6 text-blue-600" />
+              How impact is measured
+            </h2>
+            <p className="mt-4 max-w-2xl text-lg text-gray-500 leading-relaxed">
+              No vague receipts. Sponsors receive quarterly reports built from live platform data — not projections.
+            </p>
+            <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+              {impactMetrics.map((metric, idx) => (
+                <div key={idx} className="rounded-xl border border-gray-100 bg-white p-6">
+                  <div className="text-lg font-extrabold text-gray-900">{metric.value}</div>
+                  <p className="mt-2 text-sm text-gray-500 leading-relaxed">{metric.detail}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-12 rounded-xl border border-gray-100 bg-white p-6 sm:p-8">
               <h3 className="flex items-center gap-2 font-bold text-gray-900">
                 <ShieldCheck className="h-5 w-5 text-blue-600" />
                 What we commit to
@@ -103,7 +195,7 @@ export default function SponsorPage() {
           <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8 lg:gap-16">
             <div>
               <h2 className="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">
-                Sponsor a school or a class
+                Sponsor a school or students
               </h2>
               <p className="mt-4 text-lg text-gray-500 leading-relaxed">
                 We are currently accepting sponsorship for the 2026/2027 admission cycle. If you represent a
@@ -119,6 +211,7 @@ export default function SponsorPage() {
               organizationPlaceholder="e.g. UNILORIN Alumni Association"
               messagePlaceholder="Which school or class would you like to sponsor, and how many students?"
               ctaLabel="Send inquiry"
+              full
             />
           </div>
         </section>

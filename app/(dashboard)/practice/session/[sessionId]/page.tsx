@@ -5,6 +5,7 @@ import { use } from 'react'
 import PracticeMode from '@/components/practice/practice-mode'
 import MockMode from '@/components/practice/mock-mode'
 import { loadSessionData } from '@/lib/actions/practice'
+import { track } from '@/lib/analytics'
 
 interface SessionData {
   id: string
@@ -32,6 +33,9 @@ export default function SessionPage({ params }: { params: Promise<{ sessionId: s
       try {
         const data = await loadSessionData(sessionId)
         setSession(data)
+        if (data.mode === 'mock') {
+          void track('mock-start', { questionCount: data.questions.length })
+        }
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Failed to load session')
       } finally {

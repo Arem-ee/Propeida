@@ -13,24 +13,22 @@ const siteUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://propeida.vercel.app
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Propeida — Practice JAMB & Post-UTME Past Questions with CBT Mock Exams',
+    default: 'Propeida — Free JAMB & Post-UTME Practice with CBT Mock Exams',
     template: '%s | Propeida',
   },
   description:
-    'Practice JAMB and Post-UTME past questions with interactive CBT mock exams. Real exam simulations, topic drills, and performance tracking. ₦1,500 one-time — no subscription.',
+    'Free exam preparation for every Nigerian candidate. Practice JAMB and UNILORIN Post-UTME questions with a real CBT simulator, explanations, and performance tracking. Free for students.',
   keywords: [
-    'JAMB past questions',
+    'free JAMB past questions',
     'Post UTME practice',
-    'CBT exam simulator Nigeria',
-    'WAEC past questions',
-    'Nigerian exam preparation',
-    'university entrance exam practice',
-    'practice past questions',
+    'free CBT exam simulator Nigeria',
+    'exam preparation app Nigeria',
+    'sponsor a school exam prep',
   ],
   openGraph: {
-    title: 'Propeida — Practice JAMB & Post-UTME Past Questions Online',
+    title: 'Propeida — Free JAMB & Post-UTME Practice with CBT Mock Exams',
     description:
-      'Ace your JAMB and Post-UTME with real past questions, CBT mock exams, and performance analytics. ₦1,500 one-time — no subscription.',
+      'Free exam preparation for every Nigerian candidate. Real CBT mock exams, human-checked questions, and progress tracking. Free for students.',
     url: siteUrl,
     siteName: 'Propeida',
     type: 'website',
@@ -39,9 +37,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Propeida — Practice JAMB & Post-UTME Past Questions',
+    title: 'Propeida — Free JAMB & Post-UTME Practice with CBT Mock Exams',
     description:
-      'Ace your JAMB and Post-UTME with real past questions and CBT mock exams. ₦1,500 one-time payment.',
+      'Free exam preparation for every Nigerian candidate. Real CBT mock exams, human-checked questions, and progress tracking. Free for students.',
     images: ['/opengraph-image'],
   },
   robots: {

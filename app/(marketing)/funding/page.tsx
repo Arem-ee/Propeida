@@ -3,12 +3,28 @@ import MarketingHeader from '@/components/marketing-header'
 import MarketingFooter from '@/components/marketing-footer'
 import WhatsAppFloat from '@/components/whatsapp-float'
 import InquiryForm from '@/components/inquiry-form'
+import PageTrack from '@/components/page-track'
 import { Landmark, Building2, HandHeart, ShieldCheck } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'How Propeida is funded',
   description:
     'Students never pay for learning on Propeida. Schools, tutorial centers, foundations, alumni associations, and sponsors fund student access.',
+  keywords: [
+    'how Propeida is funded',
+    'free exam prep for Nigerian students',
+    'education funding Nigeria',
+    'school partnership program',
+    'funding exam access for students',
+  ],
+  openGraph: {
+    title: 'How Propeida is funded',
+    description:
+      'Students never pay for learning on Propeida. Schools, tutorial centers, foundations, alumni associations, and sponsors fund student access.',
+    type: 'website',
+    locale: 'en_NG',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630 }],
+  },
 }
 
 const funders = [
@@ -42,6 +58,7 @@ export default function FundingPage() {
   return (
     <div className="min-h-screen bg-white text-gray-900 antialiased">
       <MarketingHeader />
+      <PageTrack event="visit-funding" />
       <main>
         <section className="bg-gray-50/30 py-16 sm:py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -52,6 +69,22 @@ export default function FundingPage() {
               <p className="mt-6 text-lg text-gray-500 leading-relaxed">
                 We say it plainly: <strong className="text-gray-900">students never pay for learning on Propeida.</strong>{' '}
                 Institutions and sponsors fund access — because every prepared student benefits the whole country.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-t border-gray-100 bg-blue-600 py-16 sm:py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+                The goal: every Nigerian student can prepare, free.
+              </h2>
+              <p className="mt-6 text-lg text-blue-100 leading-relaxed">
+                Not every student who deserves admission can afford a single past-question pack, let alone a mock
+                season. Our aim is a day when preparation on Propeida is as normal as carrying a phone — free
+                regardless of income, school, or where you live. We start with UNILORIN Post-UTME today. JAMB is
+                next. Then your university. Funding widens reach; it never narrows it.
               </p>
             </div>
           </div>

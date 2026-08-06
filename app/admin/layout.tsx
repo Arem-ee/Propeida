@@ -44,6 +44,12 @@ export default async function AdminLayout({ children }: { children: React.ReactN
                 Contact
               </Link>
               <Link
+                href="/admin/analytics"
+                className="rounded-xl px-3 py-2 text-xs font-bold text-gray-500 hover:text-gray-700 hover:bg-gray-50 min-h-[44px] flex items-center"
+              >
+                Analytics
+              </Link>
+              <Link
                 href="/dashboard"
                 className="rounded-xl px-3 py-2 text-xs font-bold text-blue-600 hover:bg-blue-50 min-h-[44px] flex items-center"
               >

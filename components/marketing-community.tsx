@@ -2,16 +2,17 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { Activity, Users, FileQuestion, Trophy } from 'lucide-react'
+import { Activity, FileQuestion, BookOpenCheck, GraduationCap } from 'lucide-react'
+import { siteConfig } from '@/lib/site-config'
 
 interface Stats {
   questionsAnswered: number
   practiceSessions: number
-  activeStudents30d: number
-  studentsTotal: number
+  mockSessions: number
 }
 
 function formatNumber(n: number): string {
+  if (n <= 0) return '—'
   return n.toLocaleString('en-NG')
 }
 
@@ -29,14 +30,14 @@ export default function MarketingCommunity() {
     ? [
         { icon: FileQuestion, value: formatNumber(stats.questionsAnswered), label: 'Questions answered' },
         { icon: Activity, value: formatNumber(stats.practiceSessions), label: 'Practice sessions completed' },
-        { icon: Users, value: formatNumber(stats.activeStudents30d), label: 'Active students, last 30 days' },
-        { icon: Trophy, value: formatNumber(stats.studentsTotal), label: 'Students on Propeida' },
+        { icon: GraduationCap, value: formatNumber(stats.mockSessions), label: 'Mock exams completed' },
+        { icon: BookOpenCheck, value: siteConfig.trustMetrics.verifiedQuestions, label: 'Verified questions' },
       ]
     : [
         { icon: FileQuestion, value: '—', label: 'Questions answered' },
         { icon: Activity, value: '—', label: 'Practice sessions completed' },
-        { icon: Users, value: '—', label: 'Active students, last 30 days' },
-        { icon: Trophy, value: '—', label: 'Students on Propeida' },
+        { icon: GraduationCap, value: '—', label: 'Mock exams completed' },
+        { icon: BookOpenCheck, value: siteConfig.trustMetrics.verifiedQuestions, label: 'Verified questions' },
       ]
 
   return (

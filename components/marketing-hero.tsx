@@ -2,7 +2,9 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { CheckCircle, AlertCircle, ArrowRight } from 'lucide-react'
+import { CheckCircle, AlertCircle, ArrowRight, MessageCircle } from 'lucide-react'
+import { siteConfig } from '@/lib/site-config'
+import { track } from '@/lib/analytics'
 
 export default function MarketingHero() {
   const [selectedOption, setSelectedOption] = useState<string | null>(null)
@@ -41,12 +43,14 @@ export default function MarketingHero() {
 
             <p className="mt-6 text-lg text-gray-500 leading-relaxed max-w-lg">
               Nearly a thousand verified questions. A real CBT simulator. Free for students — funded by schools,
-              foundations, and sponsors who believe preparation shouldn&apos;t be a privilege.
+              foundations, and sponsors who believe preparation shouldn&apos;t be a privilege. Start with UNILORIN
+              Post-UTME today. JAMB is next.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-4 w-full sm:w-auto">
               <Link
                 href="/signup"
+                onClick={() => void track('hero-cta-click', { cta: 'signup' })}
                 className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-4 text-base font-bold text-white transition-colors hover:bg-blue-700 active:bg-blue-800 shadow-sm min-h-[44px]"
               >
                 Start Practicing Free
@@ -55,11 +59,23 @@ export default function MarketingHero() {
 
               <Link
                 href="/partner"
+                onClick={() => void track('hero-cta-click', { cta: 'partner' })}
                 className="inline-flex w-full sm:w-auto items-center justify-center text-sm font-bold text-blue-600 hover:text-blue-700 active:text-blue-800 transition-colors py-3 px-4 min-h-[44px]"
               >
                 Partner with Propeida
               </Link>
             </div>
+
+            <a
+              href={siteConfig.whatsapp.channelUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => void track('whatsapp-click', { via: 'hero' })}
+              className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-green-600 hover:text-green-700 active:text-green-800 min-h-[44px]"
+            >
+              <MessageCircle className="h-4 w-4" />
+              {siteConfig.whatsapp.dailyQuestionCopy}
+            </a>
 
             <div className="mt-4 flex items-center gap-2 text-xs text-gray-400">
               <span>Free for students — no paywall, no card required</span>

@@ -1,14 +1,42 @@
-import { BookOpenCheck, Layers, Users, School } from 'lucide-react'
+'use client'
+
+import { useEffect, useState } from 'react'
+import { BookOpenCheck, FileQuestion, GraduationCap, School } from 'lucide-react'
 import { siteConfig } from '@/lib/site-config'
 
+interface Stats {
+  questionsAnswered: number
+  mockSessions: number
+}
+
+function formatNumber(n: number): string {
+  if (n <= 0) return '—'
+  return n.toLocaleString('en-NG')
+}
+
 export default function MarketingTrustMetrics() {
-  const m = siteConfig.trustMetrics
+  const [live, setLive] = useState<Stats | null>(null)
+
+  useEffect(() => {
+    fetch('/api/stats', { cache: 'no-store' })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => setLive(d))
+      .catch(() => setLive(null))
+  }, [])
 
   const metrics = [
-    { icon: BookOpenCheck, value: m.verifiedQuestions, note: m.verifiedQuestionsNote },
-    { icon: Layers, value: m.unilorinQuestions, note: m.unilorinNote },
-    { icon: Users, value: m.activeStudents, note: m.activeStudentsNote },
-    { icon: School, value: m.universitiesSupported, note: m.universitiesSupportedNote },
+    {
+      icon: FileQuestion,
+      value: live ? formatNumber(live.questionsAnswered) : '—',
+      note: 'questions answered on Propeida',
+    },
+    {
+      icon: GraduationCap,
+      value: live ? formatNumber(live.mockSessions) : '—',
+      note: 'mock exams completed',
+    },
+    { icon: BookOpenCheck, value: siteConfig.trustMetrics.verifiedQuestions, note: siteConfig.trustMetrics.verifiedQuestionsNote },
+    { icon: School, value: siteConfig.trustMetrics.universitiesSupported, note: siteConfig.trustMetrics.universitiesSupportedNote },
   ]
 
   return (
@@ -23,7 +51,7 @@ export default function MarketingTrustMetrics() {
                   <Icon className="h-5 w-5" />
                 </div>
                 <div>
-                  <div className="text-2xl font-extrabold tracking-tight text-gray-900">{item.value}</div>
+                  <div className="text-2xl font-extrabold tracking-tight text-gray-900 tabular-nums">{item.value}</div>
                   <div className="mt-0.5 text-sm text-gray-500">{item.note}</div>
                 </div>
               </div>

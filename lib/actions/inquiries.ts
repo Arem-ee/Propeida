@@ -3,6 +3,7 @@
 import { createClient } from '@/lib/supabase/server'
 import { headers } from 'next/headers'
 import { checkRateLimit, rateLimitKey } from '@/lib/rate-limit'
+import type { OrganizationType } from '@/lib/inquiries-config'
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const MAX_MESSAGE_LENGTH = 2000
@@ -34,7 +35,11 @@ function validateMessage(message: string): string | null {
 export async function submitInquiry(data: {
   type: InquiryType
   email: string
+  fullName?: string
+  phone?: string
   organization?: string
+  organizationType?: OrganizationType
+  studentCount?: number
   message: string
   honeypot?: string
 }) {
@@ -60,6 +65,7 @@ export async function submitInquiry(data: {
   const { data: { user } } = await supabase.auth.getUser()
 
   const parts: string[] = [`[${TYPE_LABELS[data.type] ?? data.type}]`]
+  if (data.fullName) parts.push(data.fullName)
   if (data.organization) parts.push(data.organization)
   parts.push(data.message)
 
@@ -69,6 +75,10 @@ export async function submitInquiry(data: {
       user_id: user?.id ?? null,
       email: data.email,
       message: parts.join(' — '),
+      full_name: data.fullName || null,
+      phone: data.phone || null,
+      student_count: data.studentCount != null && data.studentCount > 0 ? data.studentCount : null,
+      organization_type: data.organizationType || null,
     })
 
   if (error) {

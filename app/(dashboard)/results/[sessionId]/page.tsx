@@ -5,6 +5,7 @@ import { use } from 'react'
 import Link from 'next/link'
 import { Check, X, Clock, Target, ArrowLeft, ChevronDown, ChevronUp, BookOpen } from 'lucide-react'
 import { getSessionResults } from '@/lib/actions/practice'
+import { track } from '@/lib/analytics'
 
 interface QuestionReview {
   questionId: string
@@ -54,6 +55,12 @@ export default function ResultsPage({ params }: { params: Promise<{ sessionId: s
       try {
         const result = await getSessionResults(sessionId)
         setData(result)
+        if (result.session.mode === 'mock') {
+          void track('mock-complete', {
+            accuracy: Math.round(result.result.accuracy * 100),
+            questionCount: result.questions.length,
+          })
+        }
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Failed to load results')
       } finally {

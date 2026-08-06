@@ -3,12 +3,28 @@ import MarketingHeader from '@/components/marketing-header'
 import MarketingFooter from '@/components/marketing-footer'
 import WhatsAppFloat from '@/components/whatsapp-float'
 import InquiryForm from '@/components/inquiry-form'
+import PageTrack from '@/components/page-track'
 import { FileCheck, ClipboardList, Building2, Eye, Users, CalendarClock, ReceiptText } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Partner with Propeida — for schools and tutorial centers',
   description:
     'Run your students’ JAMB and Post-UTME preparation on Propeida. Mock exam administration, progress tracking, class reports, and institutional dashboards. Students pay nothing.',
+  keywords: [
+    'school exam prep platform Nigeria',
+    'tutorial center mock exam software',
+    'CBT mock exam for schools',
+    'institutional exam preparation',
+    'free exam prep for students',
+  ],
+  openGraph: {
+    title: 'Partner with Propeida — for schools and tutorial centers',
+    description:
+      'Run your students’ JAMB and Post-UTME preparation on Propeida. Mock exam administration, class reports, and institutional dashboards. Students pay nothing.',
+    type: 'website',
+    locale: 'en_NG',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630 }],
+  },
 }
 
 const benefits = [
@@ -54,6 +70,7 @@ export default function PartnerPage() {
   return (
     <div className="min-h-screen bg-white text-gray-900 antialiased">
       <MarketingHeader />
+      <PageTrack event="visit-partner" />
       <main>
         <section className="bg-gray-50/30 py-16 sm:py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -126,8 +143,9 @@ export default function PartnerPage() {
               description="We reply to every inquiry personally."
               organizationLabel="School or center name"
               organizationPlaceholder="e.g. ABC Model College"
-              messagePlaceholder="How many students are you preparing, and which exams are they targeting?"
+              messagePlaceholder="Which exams are your students targeting, and when?"
               ctaLabel="Send inquiry"
+              full
             />
           </div>
         </section>
