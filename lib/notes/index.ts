@@ -6,6 +6,7 @@ export type SubjectSlug = 'english' | 'mathematics' | 'current-affairs'
 
 export interface NoteSection {
   heading: string
+  paragraphs?: string[]
   bullets: string[]
 }
 
@@ -13,6 +14,7 @@ export interface RevisionNote {
   id: string
   subject: SubjectSlug
   topic: string
+  slug: string
   summary: string
   sections: NoteSection[]
   examTip: string
@@ -39,6 +41,19 @@ export function getNoteById(id: string): RevisionNote | null {
   return ALL_NOTES.find((note) => note.id === id) ?? null
 }
 
+export function isValidSubject(slug: string): slug is SubjectSlug {
+  return SUBJECTS.some((subject) => subject.slug === slug)
+}
+
+export function getNoteByPath(subject: string, topicSlug: string): RevisionNote | null {
+  if (!isValidSubject(subject)) return null
+  return ALL_NOTES.find((note) => note.subject === subject && note.slug === topicSlug) ?? null
+}
+
+export function getNoteUrl(note: RevisionNote): string {
+  return `/dashboard/notes/${note.subject}/${note.slug}`
+}
+
 export function searchNotes(query: string): RevisionNote[] {
   const q = query.trim().toLowerCase()
   if (!q) return ALL_NOTES
@@ -49,6 +64,7 @@ export function searchNotes(query: string): RevisionNote[] {
       note.sections.some(
         (section) =>
           section.heading.toLowerCase().includes(q) ||
+          (section.paragraphs ?? []).some((paragraph) => paragraph.toLowerCase().includes(q)) ||
           section.bullets.some((bullet) => bullet.toLowerCase().includes(q)),
       ),
   )
@@ -59,6 +75,10 @@ export function getWordCount(note: RevisionNote): number {
     (total, section) =>
       total +
       section.heading.split(/\s+/).filter(Boolean).length +
+      (section.paragraphs ?? []).reduce(
+        (sum, paragraph) => sum + paragraph.split(/\s+/).filter(Boolean).length,
+        0,
+      ) +
       section.bullets.reduce(
         (sum, bullet) => sum + bullet.split(/\s+/).filter(Boolean).length,
         0,

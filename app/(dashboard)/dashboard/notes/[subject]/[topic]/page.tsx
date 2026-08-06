@@ -1,24 +1,26 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { ArrowLeft, Clock, Lightbulb, Target, ArrowRight, RefreshCcw } from 'lucide-react'
+import { ArrowLeft, Clock, Lightbulb, Target, ArrowRight, RefreshCcw, ChevronRight, BookOpenCheck } from 'lucide-react'
 import {
-  getNoteById,
+  getNoteByPath,
   getReadingMinutes,
   getWordCount,
   getPracticeUrl,
   getSubjectLabel,
 } from '@/lib/notes'
+import { SUBJECTS } from '@/lib/notes'
 
 export default async function NotePage({
   params,
 }: {
-  params: Promise<{ noteId: string }>
+  params: Promise<{ subject: string; topic: string }>
 }) {
-  const { noteId } = await params
-  const note = getNoteById(noteId)
+  const { subject, topic } = await params
+  const note = getNoteByPath(subject, topic)
 
   if (!note) notFound()
 
+  const subjectDetails = SUBJECTS.find((s) => s.slug === note.subject)
   const readingMinutes = getReadingMinutes(note)
   const wordCount = getWordCount(note)
   const practiceUrl = getPracticeUrl(note)
@@ -32,6 +34,19 @@ export default async function NotePage({
         <ArrowLeft className="h-4 w-4" />
         All revision notes
       </Link>
+
+      <nav aria-label="Breadcrumb" className="mt-4 flex flex-wrap items-center gap-1.5 text-xs font-semibold text-gray-400">
+        <Link href="/dashboard/notes" className="inline-flex items-center gap-1.5 text-blue-600 hover:text-blue-700">
+          <BookOpenCheck className="h-3.5 w-3.5" />
+          Revision Notes
+        </Link>
+        <ChevronRight className="h-3.5 w-3.5" />
+        <Link href={`/dashboard/notes?subject=${note.subject}`} className="text-blue-600 hover:text-blue-700">
+          {subjectDetails?.label ?? getSubjectLabel(note.subject)}
+        </Link>
+        <ChevronRight className="h-3.5 w-3.5" />
+        <span className="text-gray-600">{note.topic}</span>
+      </nav>
 
       <header className="mt-4">
         <div className="flex flex-wrap items-center gap-2">
@@ -52,6 +67,9 @@ export default async function NotePage({
         {note.sections.map((section) => (
           <section key={section.heading}>
             <h2 className="text-lg font-extrabold text-gray-900">{section.heading}</h2>
+            {section.paragraphs?.length ? (
+              <p className="mt-3 text-[15px] text-gray-600 leading-relaxed">{section.paragraphs.join(' ')}</p>
+            ) : null}
             <ul className="mt-3 space-y-2.5">
               {section.bullets.map((bullet, idx) => (
                 <li key={idx} className="flex items-start gap-2.5 text-[15px] text-gray-600 leading-relaxed">
@@ -64,7 +82,15 @@ export default async function NotePage({
         ))}
       </div>
 
-      <div className="mt-10 rounded-xl border border-amber-100 bg-amber-50 p-5">
+      <div className="mt-10 rounded-xl border border-emerald-100 bg-emerald-50 p-5">
+        <div className="flex items-center gap-2 font-bold text-emerald-800">
+          <BookOpenCheck className="h-4 w-4" />
+          In short
+        </div>
+        <p className="mt-2 text-sm text-emerald-700 leading-relaxed">{note.summary}</p>
+      </div>
+
+      <div className="mt-6 rounded-xl border border-amber-100 bg-amber-50 p-5">
         <div className="flex items-center gap-2 font-bold text-amber-800">
           <Lightbulb className="h-4 w-4" />
           Exam tip

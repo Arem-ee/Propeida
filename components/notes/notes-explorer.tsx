@@ -17,6 +17,7 @@ import {
   searchNotes,
   getReadingMinutes,
   getSubjectLabel,
+  getNoteUrl,
   type SubjectSlug,
 } from '@/lib/notes'
 
@@ -97,7 +98,7 @@ export default function NotesExplorer({ initialSubject }: { initialSubject: Subj
           {filtered.map((note) => (
             <Link
               key={note.id}
-              href={`/dashboard/notes/${note.id}`}
+              href={getNoteUrl(note)}
               className="group flex flex-col rounded-xl border border-gray-100 bg-white p-5 transition-all hover:border-blue-200 hover:shadow-sm"
             >
               <div className="flex items-center gap-2 mb-3">

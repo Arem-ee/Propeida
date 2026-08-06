@@ -13,7 +13,7 @@ import Logo from '@/components/logo'
 const NAV_ITEMS = [
   { href: '/dashboard', label: 'Home', icon: Home },
   { href: '/practice', label: 'Practice', icon: BarChart3 },
-  { href: '/notes', label: 'Revision Notes', icon: BookOpen },
+  { href: '/dashboard/notes', label: 'Revision Notes', icon: BookOpen },
   { href: '/leaderboard', label: 'Leaderboard', icon: Trophy },
   { href: '/history', label: 'History', icon: History },
   { href: '/account', label: 'Account', icon: User },
