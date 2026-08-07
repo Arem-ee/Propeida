@@ -7,7 +7,7 @@ Thank you for being one of the first students to use Propeida.
 
 Over the past few weeks, we've been working on improving the platform, and we wanted to let you know what's changed.
 
-Our goal is simple: every Nigerian student should be able to prepare for JAMB and Post-UTME without a paywall getting in the way.
+Our goal is to make quality exam preparation more accessible for Nigerian students, and we're working toward expanding access while improving the platform.
 
 Here's what's new:
 
@@ -19,7 +19,7 @@ Here's what's new:
 
 You can jump back in here:
 
-https://propeida.vercel.app
+https://propeida.online
 
 We've also created an official WhatsApp channel where we share Propeida updates, new features, exam coverage announcements, and important platform news:
 
@@ -64,7 +64,7 @@ propeida.help@gmail.com`,
                 Over the past few weeks, we've been working on improving the platform, and we wanted to let you know what's changed.
               </p>
               <p style="margin: 0 0 16px 0;">
-                Our goal is simple: <strong>every Nigerian student should be able to prepare for JAMB and Post-UTME without a paywall getting in the way.</strong>
+                Our goal is to make quality exam preparation more accessible for Nigerian students, and we're working toward expanding access while improving the platform.
               </p>
               <p style="margin: 0 0 8px 0;"><strong>Here's what's new:</strong></p>
               <ul style="margin: 0 0 16px 0; padding-left: 20px;">
@@ -76,7 +76,7 @@ propeida.help@gmail.com`,
               </ul>
               <p style="margin: 0 0 8px 0;">You can jump back in here:</p>
               <p style="margin: 0 0 16px 0;">
-                <a href="https://propeida.vercel.app" style="color: #2563eb; font-weight: bold; text-decoration: none;">https://propeida.vercel.app</a>
+                <a href="https://propeida.online" style="color: #2563eb; font-weight: bold; text-decoration: none;">https://propeida.online</a>
               </p>
               <p style="margin: 0 0 8px 0;">
                 We've also created an official WhatsApp channel where we share <strong>Propeida updates, new features, exam coverage announcements, and important platform news</strong>:

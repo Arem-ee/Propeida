@@ -1,6 +1,12 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import MarketingHeader from '@/components/marketing-header'
 import MarketingFooter from '@/components/marketing-footer'
+
+export const metadata: Metadata = {
+  title: 'Terms of Service',
+  alternates: { canonical: '/terms' },
+}
 
 export default function TermsPage() {
   return (

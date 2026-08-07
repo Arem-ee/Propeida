@@ -1,4 +1,4 @@
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://propeida.vercel.app'
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://propeida.online'
 
 export function HomeJsonLd() {
   const jsonLd = {
@@ -7,7 +7,7 @@ export function HomeJsonLd() {
     name: 'Propeida',
     url: baseUrl,
       description:
-        'Free, verified exam preparation for every Nigerian candidate. Practice JAMB and Post-UTME questions with a real CBT simulator, explanations, and performance tracking. Free for students.',
+        'Verified exam preparation for every Nigerian candidate. Practice JAMB and Post-UTME questions with a real CBT simulator, explanations, and performance tracking.',
       applicationCategory: 'EducationalApplication',
       operatingSystem: 'Any',
       offers: {
@@ -37,17 +37,17 @@ const FAQ_CONTENT: { question: string; answer: string }[] = [
   {
     question: 'Is Propeida really free?',
     answer:
-      'Yes. Practice, full mock exams, explanations, streaks, leaderboards, and your performance history are all free — no trial, no paywall, no credit card. Learning on Propeida is never behind a payment.',
+      'Practicing is free — questions, explanations, streaks, leaderboards, and your performance history — no card required. An optional Pro upgrade unlocks unlimited mock exams and extra features for students who want more.',
   },
   {
     question: 'How does Propeida make money?',
     answer:
-      'Students are never charged. Propeida is funded by schools, tutorial centers, foundations, alumni associations, and sponsors, who pay to widen access and track real impact.',
+      'Propeida is funded by schools, tutorial centers, foundations, alumni associations, and sponsors, who pay to widen access and track real impact. We also offer an optional Pro upgrade for students who want more.',
   },
   {
     question: 'Is the JAMB question bank ready?',
     answer:
-      'Not yet. Just like our Post-UTME material, every question is checked by a person before it is published. Almost ready — and when it arrives it will be free, like everything else on Propeida.',
+      'Not yet. Just like our Post-UTME material, every question is checked by a person before it is published. Almost ready — when it arrives, students will be able to start with it the same way: free to practise, with optional upgrades.',
   },
   {
     question: 'What are Post-UTME questions? Are these official past questions?',

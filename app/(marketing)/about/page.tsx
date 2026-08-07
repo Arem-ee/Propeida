@@ -5,6 +5,7 @@ import MarketingFooter from '@/components/marketing-footer'
 
 export const metadata: Metadata = {
   title: 'About',
+  alternates: { canonical: '/about' },
   description:
     'Propeida helps Nigerian students pass JAMB and Post-UTME with interactive CBT mock exams and real past questions.',
 }

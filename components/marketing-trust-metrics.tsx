@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import { BookOpenCheck, FileQuestion, GraduationCap, School } from 'lucide-react'
 import { siteConfig } from '@/lib/site-config'
+import { getPlatformStats } from '@/lib/platform-stats'
 
 interface Stats {
   questionsAnswered: number
@@ -18,10 +19,17 @@ export default function MarketingTrustMetrics() {
   const [live, setLive] = useState<Stats | null>(null)
 
   useEffect(() => {
-    fetch('/api/stats', { cache: 'no-store' })
-      .then((r) => (r.ok ? r.json() : null))
-      .then((d) => setLive(d))
-      .catch(() => setLive(null))
+    let mounted = true
+    getPlatformStats()
+      .then((d) => {
+        if (mounted) setLive(d)
+      })
+      .catch(() => {
+        if (mounted) setLive(null)
+      })
+    return () => {
+      mounted = false
+    }
   }, [])
 
   const metrics = [

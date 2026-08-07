@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { getPlatformStats } from '@/lib/platform-stats'
 
 interface Stats {
   questionsAnswered: number
@@ -17,10 +18,17 @@ export default function QuestionsCounter() {
   const [stats, setStats] = useState<Stats | null>(null)
 
   useEffect(() => {
-    fetch('/api/stats', { cache: 'no-store' })
-      .then((r) => (r.ok ? r.json() : null))
-      .then((d) => setStats(d))
-      .catch(() => setStats(null))
+    let mounted = true
+    getPlatformStats()
+      .then((d) => {
+        if (mounted) setStats(d)
+      })
+      .catch(() => {
+        if (mounted) setStats(null)
+      })
+    return () => {
+      mounted = false
+    }
   }, [])
 
   return (

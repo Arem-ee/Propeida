@@ -13,6 +13,7 @@ export default function MarketingHeader() {
     { label: 'Practice', href: '/practice' },
     { label: 'Exams', href: '/#exams' },
     { label: 'Leaderboard', href: '/leaderboard' },
+    { label: 'Support', href: '/support' },
     { label: 'Partner with Propeida', href: '/partner' },
   ]
 

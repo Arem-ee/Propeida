@@ -14,13 +14,20 @@ export async function GET() {
 
   const stats = Array.isArray(data) ? data[0] : data
 
-  return Response.json({
-    questionsAnswered: Number(stats?.questions_answered ?? 0),
-    practiceSessions: Number(stats?.practice_sessions ?? 0),
-    mockSessions: Number(stats?.mock_sessions ?? 0),
-    activeStudents30d: Number(stats?.active_students_30d ?? 0),
-    studentsTotal: Number(stats?.students_total ?? 0),
-    baselineQuestions: siteConfig.trustMetrics.verifiedQuestions,
-    baselineStudents: siteConfig.trustMetrics.activeStudents,
-  })
+  return Response.json(
+    {
+      questionsAnswered: Number(stats?.questions_answered ?? 0),
+      practiceSessions: Number(stats?.practice_sessions ?? 0),
+      mockSessions: Number(stats?.mock_sessions ?? 0),
+      activeStudents30d: Number(stats?.active_students_30d ?? 0),
+      studentsTotal: Number(stats?.students_total ?? 0),
+      baselineQuestions: siteConfig.trustMetrics.verifiedQuestions,
+      baselineStudents: siteConfig.trustMetrics.activeStudents,
+    },
+    {
+      headers: {
+        'Cache-Control': 'public, max-age=60, stale-while-revalidate=300',
+      },
+    }
+  )
 }

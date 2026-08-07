@@ -7,7 +7,8 @@ import PageTrack from '@/components/page-track'
 import { School, GraduationCap, TrendingUp, ShieldCheck, HandHeart, Scale, Wallet, Ruler } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Sponsor a school — sponsor student access to Propeida',
+  title: 'Sponsor a school �?" sponsor student access to Propeida',
+  alternates: { canonical: '/sponsor' },
   description:
     'Sponsor a school or students on Propeida. We run their JAMB and Post-UTME preparation and report measurable impact back to you.',
   keywords: [

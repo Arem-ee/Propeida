@@ -3,6 +3,7 @@ import Logo from '@/components/logo'
 
 export const metadata: Metadata = {
   title: 'Offline',
+  alternates: { canonical: '/offline' },
   robots: { index: false, follow: false },
 }
 

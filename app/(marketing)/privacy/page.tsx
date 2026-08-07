@@ -1,5 +1,11 @@
+import type { Metadata } from 'next'
 import MarketingHeader from '@/components/marketing-header'
 import MarketingFooter from '@/components/marketing-footer'
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy',
+  alternates: { canonical: '/privacy' },
+}
 
 export default function PrivacyPage() {
   return (

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Gift, School, CreditCard, ArrowRight, X } from 'lucide-react'
+import { Gift, School, Heart, ArrowRight, X, CreditCard } from 'lucide-react'
 import { createClient } from '@/lib/supabase/client'
 import { Avatar } from '@/components/avatar'
 import { AvatarPicker } from '@/components/avatar-picker'
@@ -158,12 +158,22 @@ export default function AccountPage() {
             <ArrowRight className="h-4 w-4 text-gray-300" />
           </Link>
           <Link href="/account/upgrade" className="flex items-center gap-4 px-6 py-4 hover:bg-gray-50 transition-colors min-h-[44px]">
-            <div className="rounded-xl bg-indigo-100 p-2">
-              <CreditCard className="h-4 w-4 text-indigo-600" />
+            <div className="rounded-xl bg-blue-100 p-2">
+              <CreditCard className="h-4 w-4 text-blue-600" />
             </div>
             <div className="flex-1">
               <p className="text-sm font-bold text-gray-900">Upgrade</p>
-              <p className="text-xs text-gray-400">View pricing and purchase plans</p>
+              <p className="text-xs text-gray-400">Unlock PUTME Pro and unlimited mock access</p>
+            </div>
+            <ArrowRight className="h-4 w-4 text-gray-300" />
+          </Link>
+          <Link href="/support" className="flex items-center gap-4 px-6 py-4 hover:bg-gray-50 transition-colors min-h-[44px]">
+            <div className="rounded-xl bg-indigo-100 p-2">
+              <Heart className="h-4 w-4 text-indigo-600" />
+            </div>
+            <div className="flex-1">
+              <p className="text-sm font-bold text-gray-900">Support Propeida</p>
+              <p className="text-xs text-gray-400">Help improve and maintain the platform</p>
             </div>
             <ArrowRight className="h-4 w-4 text-gray-300" />
           </Link>

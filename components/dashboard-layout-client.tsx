@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
 import DashboardShell from '@/components/dashboard-shell'
+import SupportOverlay from '@/components/support-overlay'
 import { DashboardHubProvider } from '@/components/dashboard-hub-provider'
 
 export default function DashboardLayoutClient({ children }: { children: React.ReactNode }) {
@@ -65,6 +66,7 @@ export default function DashboardLayoutClient({ children }: { children: React.Re
       <DashboardShell email={email} isAdmin={isAdmin} onLogout={handleLogout}>
         {children}
       </DashboardShell>
+      <SupportOverlay />
     </DashboardHubProvider>
   )
 }

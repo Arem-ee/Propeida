@@ -8,6 +8,7 @@ import { Landmark, Building2, HandHeart, ShieldCheck } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'How Propeida is funded',
+  alternates: { canonical: '/funding' },
   description:
     'Students never pay for learning on Propeida. Schools, tutorial centers, foundations, alumni associations, and sponsors fund student access.',
   keywords: [

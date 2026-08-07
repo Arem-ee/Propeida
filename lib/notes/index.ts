@@ -4,6 +4,22 @@ import { currentAffairsNotes } from '@/lib/notes/content/current-affairs'
 
 export type SubjectSlug = 'english' | 'mathematics' | 'current-affairs'
 
+export type InstitutionId = 'unilorin'
+
+export interface Institution {
+  id: InstitutionId
+  label: string
+  available: boolean
+}
+
+export const INSTITUTIONS: Institution[] = [
+  { id: 'unilorin', label: 'University of Ilorin (UNILORIN)', available: true },
+]
+
+export function isValidInstitution(id: string): id is InstitutionId {
+  return INSTITUTIONS.some((institution) => institution.id === id && institution.available)
+}
+
 export interface NoteSection {
   heading: string
   paragraphs?: string[]
@@ -19,6 +35,7 @@ export interface RevisionNote {
   sections: NoteSection[]
   examTip: string
   practiceTopic: string
+  institution?: InstitutionId
 }
 
 export const SUBJECTS: { slug: SubjectSlug; label: string; description: string }[] = [
@@ -35,6 +52,10 @@ export function getAllNotes(): RevisionNote[] {
 
 export function getNotesBySubject(subject: SubjectSlug): RevisionNote[] {
   return ALL_NOTES.filter((note) => note.subject === subject)
+}
+
+export function getNotesForInstitution(institution: InstitutionId): RevisionNote[] {
+  return ALL_NOTES.filter((note) => (note.institution ?? 'unilorin') === institution)
 }
 
 export function getNoteById(id: string): RevisionNote | null {

@@ -17,9 +17,11 @@ import MarketingReadinessStrip, { MarketingWhatsAppCta } from '@/components/mark
 import MarketingFAQ from '@/components/marketing-faq'
 import MarketingFooter from '@/components/marketing-footer'
 import WhatsAppFloat from '@/components/whatsapp-float'
+import SupportOverlay from '@/components/support-overlay'
 
 export const metadata: Metadata = {
   title: 'Propeida — Free exam preparation for every Nigerian candidate',
+  alternates: { canonical: '/' },
   description:
     'Every Nigerian candidate deserves a real chance. Free, verified JAMB and Post-UTME preparation — a real CBT simulator, human-checked questions, and progress tracking. Free for students.',
   keywords: [
@@ -33,7 +35,7 @@ export const metadata: Metadata = {
     title: 'Propeida — Free exam preparation for every Nigerian candidate',
     description:
       'Free, verified UNILORIN Post-UTME and JAMB preparation with a real CBT simulator. Free for students. JAMB is next.',
-    url: process.env.NEXT_PUBLIC_BASE_URL ?? 'https://propeida.vercel.app',
+    url: process.env.NEXT_PUBLIC_BASE_URL ?? 'https://propeida.online',
     siteName: 'Propeida',
     type: 'website',
     locale: 'en_NG',
@@ -72,6 +74,7 @@ export default function HomePage() {
       </main>
       <MarketingFooter />
       <WhatsAppFloat />
+      <SupportOverlay />
     </div>
   )
 }

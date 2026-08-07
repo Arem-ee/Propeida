@@ -78,7 +78,7 @@ export default function MarketingHero() {
             </a>
 
             <div className="mt-4 flex items-center gap-2 text-xs text-gray-400">
-              <span>Free for students — no paywall, no card required</span>
+              <span>Start practicing free — no card required</span>
               <span>•</span>
               <span>Every question checked by a person</span>
             </div>

@@ -13,12 +13,12 @@ export default function MarketingFAQ() {
     {
       question: 'Is it really free?',
       answer:
-        'Yes. Practice, full mock exams, explanations, streaks, leaderboards, and your performance history are all free — no trial, no paywall, no credit card. Learning on Propeida is never behind a payment.',
+        'Practicing is free — questions, explanations, streaks, leaderboards, and your performance history — no card required. An optional Pro upgrade unlocks unlimited mock exams and extra features for students who want more, and we\'re working to expand free access as the platform grows.',
     },
     {
       question: 'How do you make money?',
       answer:
-        'Students are never charged. Propeida is funded by schools, tutorial centers, foundations, alumni associations, and sponsors, who pay to widen access and track real impact. Think of it like a national library: free for the reader, paid for by the community that benefits.',
+        'Propeida is funded by schools, tutorial centers, foundations, alumni associations, and sponsors, who pay to widen access and track real impact. We also offer an optional Pro upgrade for students who want more — that choice always stays theirs.',
     },
     {
       question: 'Who owns my data?',
@@ -28,7 +28,7 @@ export default function MarketingFAQ() {
     {
       question: 'Is the JAMB bank ready?',
       answer:
-        "Not yet. Just like our Post-UTME material, we're taking the time to check every single question so you can actually trust them. Almost ready — and when it arrives it will be free, like everything else on Propeida.",
+        "Not yet. Just like our Post-UTME material, we're taking the time to check every single question so you can actually trust them. Almost ready — when it arrives, students will be able to start with it the same way: free to practise, with optional upgrades.",
     },
     {
       question: 'What are Post-UTME questions? Are these official past questions?',

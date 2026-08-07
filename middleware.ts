@@ -2,7 +2,7 @@ import { type NextRequest, NextResponse } from 'next/server'
 import { createServerClient } from '@supabase/ssr'
 
 const PROTECTED_PREFIXES = ['/dashboard', '/results', '/history', '/leaderboard', '/practice', '/account', '/settings', '/admin']
-const EXACT_PROTECTED = ['/onboarding', '/support']
+const EXACT_PROTECTED = ['/onboarding']
 
 function isProtectedPath(pathname: string): boolean {
   if (EXACT_PROTECTED.includes(pathname)) return true
@@ -35,8 +35,8 @@ export async function middleware(request: NextRequest) {
 
   let user
   try {
-    const result = await supabase.auth.getUser()
-    user = result.data.user
+    const result = await supabase.auth.getSession()
+    user = result.data.session?.user ?? null
   } catch {
     return response
   }
@@ -73,6 +73,5 @@ export const config = {
     '/auth/set-username',
     '/login', '/signup',
     '/onboarding',
-    '/support',
   ],
 }

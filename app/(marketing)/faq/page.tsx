@@ -15,12 +15,12 @@ const faqs: FAQItem[] = [
   {
     question: 'Is Propeida really free for students?',
     answer:
-      'Yes. Practice, full mock exams, explanations, streaks, leaderboards, and your performance history are all free — no trial, no paywall, no credit card. Students are never charged on Propeida.',
+      'Practicing is free — questions, explanations, streaks, leaderboards, and your performance history — no card required. An optional Pro upgrade unlocks unlimited mock exams and extra features for students who want more, and we\'re working to expand free access as the platform grows.',
   },
   {
-    question: 'How does Propeida make money?',
+    question: 'How can Propeida make money?',
     answer:
-      'Schools, tutorial centers, foundations, alumni associations, and sponsors fund student access. They pay for tools like mock administration and progress reporting — and to widen access. The student is the beneficiary, not the customer.',
+      'Propeida is funded by schools, tutorial centers, foundations, alumni associations, and sponsors, who pay to widen access and track real impact. We also offer an optional Pro upgrade for students who want more — that choice always stays theirs.',
   },
   {
     question: 'Does Propeida work on slow networks and budget Android phones?',

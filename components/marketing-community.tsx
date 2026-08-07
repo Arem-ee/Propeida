@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { Activity, FileQuestion, BookOpenCheck, GraduationCap } from 'lucide-react'
 import { siteConfig } from '@/lib/site-config'
+import { getPlatformStats } from '@/lib/platform-stats'
 
 interface Stats {
   questionsAnswered: number
@@ -20,10 +21,17 @@ export default function MarketingCommunity() {
   const [stats, setStats] = useState<Stats | null>(null)
 
   useEffect(() => {
-    fetch('/api/stats', { cache: 'no-store' })
-      .then((r) => (r.ok ? r.json() : null))
-      .then((d) => setStats(d))
-      .catch(() => setStats(null))
+    let mounted = true
+    getPlatformStats()
+      .then((d) => {
+        if (mounted) setStats(d)
+      })
+      .catch(() => {
+        if (mounted) setStats(null)
+      })
+    return () => {
+      mounted = false
+    }
   }, [])
 
   const cards = stats

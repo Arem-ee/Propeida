@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import {
   Home, BarChart3, Trophy, History, User, GraduationCap, School,
-  LogOut, Menu, X, ChevronDown, Settings, Gift, CreditCard, Mail, BookOpen,
+  LogOut, Menu, X, ChevronDown, Settings, Gift, Heart, Mail, BookOpen, CreditCard,
 } from 'lucide-react'
 import { useState } from 'react'
 import { useHub } from '@/components/dashboard-hub-provider'
@@ -24,7 +24,8 @@ const ACCOUNT_SUB_ITEMS = [
   { href: '/account/institutions', label: 'Institutions', icon: School },
   { href: '/account/referrals', label: 'Refer & Earn', icon: Gift },
   { href: '/account/upgrade', label: 'Upgrade', icon: CreditCard },
-  { href: '/support', label: 'Contact & Support', icon: Mail },
+  { href: '/support', label: 'Support Propeida', icon: Heart },
+  { href: '/dashboard/support', label: 'Contact & Support', icon: Mail },
 ]
 
 export default function DashboardShell({ children, email, isAdmin, onLogout }: {

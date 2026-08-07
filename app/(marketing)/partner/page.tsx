@@ -7,7 +7,8 @@ import PageTrack from '@/components/page-track'
 import { FileCheck, ClipboardList, Building2, Eye, Users, CalendarClock, ReceiptText } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Partner with Propeida — for schools and tutorial centers',
+  title: 'Partner with Propeida �?" for schools and tutorial centers',
+  alternates: { canonical: '/partner' },
   description:
     'Run your students’ JAMB and Post-UTME preparation on Propeida. Mock exam administration, progress tracking, class reports, and institutional dashboards. Students pay nothing.',
   keywords: [

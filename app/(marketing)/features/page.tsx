@@ -6,6 +6,7 @@ import MarketingFooter from '@/components/marketing-footer'
 
 export const metadata: Metadata = {
   title: 'Features',
+  alternates: { canonical: '/features' },
   description:
     'Practice JAMB and Post-UTME past questions with CBT mock exam simulators, topic drills, and performance analytics built for Nigerian students.',
 }

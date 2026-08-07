@@ -14,20 +14,25 @@ import {
 import {
   SUBJECTS,
   getNotesBySubject,
+  getNotesForInstitution,
   searchNotes,
   getReadingMinutes,
   getSubjectLabel,
   getNoteUrl,
   type SubjectSlug,
+  type InstitutionId,
 } from '@/lib/notes'
+import InstitutionSelector from '@/components/notes/institution-selector'
 
 export default function NotesExplorer({ initialSubject }: { initialSubject: SubjectSlug }) {
   const router = useRouter()
   const [subject, setSubject] = useState<SubjectSlug>(initialSubject)
+  const [institution, setInstitution] = useState<InstitutionId>('unilorin')
   const [query, setQuery] = useState('')
 
-  const subjectNotes = getNotesBySubject(subject)
-  const filtered = query.trim() ? searchNotes(query) : subjectNotes
+  const institutionNotes = getNotesForInstitution(institution)
+  const subjectNotes = getNotesBySubject(subject).filter((note) => institutionNotes.includes(note))
+  const filtered = query.trim() ? searchNotes(query).filter((note) => institutionNotes.includes(note)) : subjectNotes
 
   const selectSubject = (next: SubjectSlug) => {
     setSubject(next)
@@ -53,6 +58,8 @@ export default function NotesExplorer({ initialSubject }: { initialSubject: Subj
           </span>
         </p>
       </div>
+
+      <InstitutionSelector selected={institution} onSelect={setInstitution} />
 
       <div className="relative mb-5">
         <Search className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />

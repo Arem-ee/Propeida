@@ -70,9 +70,9 @@ export default function AdminQuestionsPage() {
 
   return (
     <div>
-      <div className="flex items-center justify-between mb-8">
+      <div className="mb-8 flex flex-wrap items-center justify-between gap-3">
         <h1 className="text-2xl font-extrabold text-gray-900">Questions</h1>
-        <div className="flex gap-3">
+        <div className="flex flex-wrap gap-3">
           {selected.size > 0 && (
             <button
               onClick={() => setShowConfirm(true)}
@@ -99,7 +99,7 @@ export default function AdminQuestionsPage() {
         </div>
       </div>
 
-      <div className="overflow-hidden rounded-xl border border-gray-200 bg-white">
+      <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">
         <table className="min-w-full divide-y divide-gray-200">
           <thead className="bg-gray-50">
             <tr>
