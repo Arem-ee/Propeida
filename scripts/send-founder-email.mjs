@@ -21,10 +21,14 @@
  */
 
 import { Resend } from 'resend'
-import { writeFile } from 'node:fs/promises'
+import { mkdir, writeFile } from 'node:fs/promises'
+import { join } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { getFounderUpdateEmail } from '../lib/emails/founder-update.ts'
 
 const email = getFounderUpdateEmail()
+
+const LOG_DIR = fileURLToPath(new URL('../logs/', import.meta.url))
 
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL
 const SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY
@@ -82,8 +86,32 @@ function sendViaResend(resend, to) {
       text: email.text,
       html: email.html,
     })
-    .then((res) => ({ ok: true, id: res.data?.id ?? null }))
-    .catch((err) => ({ ok: false, error: err.message }))
+    .then((res) => {
+      if (res.error) {
+        return {
+          ok: false,
+          status: res.error.statusCode ?? null,
+          code: res.error.name ?? 'unknown',
+          message: res.error.message ?? 'Unknown Resend error',
+        }
+      }
+      return { ok: true, id: res.data?.id ?? null }
+    })
+    .catch((err) => ({
+      ok: false,
+      status: err?.statusCode ?? err?.cause?.statusCode ?? err?.cause?.status ?? null,
+      code: (err?.name && err.name !== 'Error' && err.name) || err?.cause?.name || 'exception',
+      message: err?.message ?? String(err),
+    }))
+}
+
+function testingDomainExplanation() {
+  if (!EMAIL_FROM.toLowerCase().includes('@resend.dev')) return null
+  return (
+    'Resend is currently using the onboarding testing domain. ' +
+    'Emails can only be sent to the account owner until propeida.online is verified. ' +
+    'Verify the domain in Resend and change EMAIL_FROM to an address using propeida.online.'
+  )
 }
 
 function logLine(entry) {
@@ -92,11 +120,12 @@ function logLine(entry) {
   logEntries.push(line)
 }
 
-function writeLogFile() {
+async function writeLogFile() {
   const stamp = new Date().toISOString().replace(/[:.]/g, '-')
-  const path = new URL(`../logs/send-founder-email-${stamp}.log`, import.meta.url)
-  return writeFile(path, `${logEntries.join('\n')}\n`).then(
-    () => path.pathname.replace(/^.*\/logs/, 'logs'),
+  await mkdir(LOG_DIR, { recursive: true })
+  const filePath = join(LOG_DIR, `send-founder-email-${stamp}.log`)
+  return writeFile(filePath, `${logEntries.join('\n')}\n`).then(
+    () => filePath,
     (err) => `(log file write failed: ${err.message})`,
   )
 }
@@ -155,10 +184,23 @@ async function main() {
     const stamp = new Date().toISOString()
     if (result.ok) {
       sent += 1
-      logLine([stamp, 'SENT', u.email, result.id])
+      logLine([stamp, 'SENT', u.email, result.id ?? '(no id)'])
     } else {
       failed += 1
-      logLine([stamp, 'FAILED', u.email, result.error.slice(0, 300)])
+      const status = result.status ?? 'unknown'
+      logLine([
+        stamp,
+        'FAILED',
+        u.email,
+        `HTTP ${status}`,
+        `code: ${result.code}`,
+        `message: ${result.message}`,
+        `from: ${EMAIL_FROM}`,
+        testingDomainExplanation() ?? 'no further explanation',
+      ])
+      console.log(
+        `  Explanation: ${testingDomainExplanation() ?? 'Check the Resend dashboard (https://resend.com) for details.'}`,
+      )
     }
     await new Promise((resolve) => setTimeout(resolve, DELAY_MS))
   }
