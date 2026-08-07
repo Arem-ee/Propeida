@@ -1,0 +1,182 @@
+'use client'
+
+import { Suspense, useState, useEffect, useCallback } from 'react'
+import { useSearchParams } from 'next/navigation'
+import Link from 'next/link'
+import { Check, X, Loader2, RefreshCw, ArrowRight, Heart } from 'lucide-react'
+import Logo from '@/components/logo'
+import { track } from '@/lib/analytics'
+
+const POLL_INTERVAL = 3000
+const MAX_POLL_MS = 60000
+
+function SupportCallbackContent() {
+  const searchParams = useSearchParams()
+  const reference = searchParams.get('reference')
+  const [status, setStatus] = useState<'verifying' | 'success' | 'processing' | 'cancelled'>('verifying')
+  const [cancelledTracked, setCancelledTracked] = useState(false)
+
+  const poll = useCallback(async () => {
+    if (!reference) {
+      setStatus('cancelled')
+      return
+    }
+
+    setStatus('verifying')
+
+    const startTime = Date.now()
+    let stopped = false
+
+    const tick = async () => {
+      if (stopped) return
+
+      try {
+        const res = await fetch(`/api/paystack/support/verify?reference=${reference}`)
+        const data = await res.json()
+
+        if (data.status === 'success') {
+          void track('support-payment-success', { reference })
+          setStatus('success')
+          return
+        }
+
+        if (data.status === 'failed') {
+          setStatus('cancelled')
+          return
+        }
+      } catch {}
+
+      if (Date.now() - startTime >= MAX_POLL_MS) {
+        setStatus('processing')
+        return
+      }
+
+      setTimeout(tick, POLL_INTERVAL)
+    }
+
+    tick()
+
+    return () => { stopped = true }
+  }, [reference])
+
+  useEffect(() => {
+    const cleanup = poll()
+    return () => { cleanup.then((fn) => fn?.()) }
+  }, [poll])
+
+  useEffect(() => {
+    if (status === 'cancelled' && !cancelledTracked) {
+      setCancelledTracked(true)
+      void track('support-payment-cancel', { reference })
+    }
+  }, [status, cancelledTracked, reference])
+
+  return (
+    <div className="w-full max-w-sm rounded-xl border border-gray-100 bg-white p-6 text-center shadow-xs">
+      {status === 'verifying' && (
+        <div>
+          <Loader2 className="mx-auto h-10 w-10 text-blue-600 animate-spin mb-4" />
+          <h1 className="text-lg font-extrabold text-gray-900">Confirming your support...</h1>
+          <p className="mt-2 text-sm text-gray-500">
+            Confirming your contribution with Paystack. This should only take a moment.
+          </p>
+        </div>
+      )}
+
+      {status === 'success' && (
+        <div>
+          <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-green-50 text-green-600 border border-green-100 mb-4">
+            <Check className="h-6 w-6" />
+          </div>
+          <h1 className="text-lg font-extrabold text-gray-900">Thank you!</h1>
+          <p className="mt-2 text-sm text-gray-500 leading-relaxed">
+            Your contribution helps Propeida keep improving content, notes, and the platform for students.
+          </p>
+          <Link
+            href="/dashboard"
+            className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 py-3 text-sm font-bold text-white hover:bg-blue-700 min-h-[44px]"
+          >
+            Back to dashboard
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+          <p className="mt-3 text-xs text-gray-400">
+            You can keep practicing with Propeida either way — thank you for supporting us.
+          </p>
+        </div>
+      )}
+
+      {status === 'processing' && (
+        <div>
+          <Loader2 className="mx-auto h-10 w-10 text-amber-500 mb-4" />
+          <h1 className="text-lg font-extrabold text-gray-900">Still confirming your support</h1>
+          <p className="mt-2 text-sm text-gray-500 leading-relaxed">
+            The confirmation from Paystack is taking longer than usual. Your contribution will be recorded
+            automatically once the confirmation arrives. You do not need to pay again.
+          </p>
+          <div className="mt-6 flex flex-col gap-3">
+            <button
+              onClick={poll}
+              className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 py-3 text-sm font-bold text-white hover:bg-blue-700 min-h-[44px] cursor-pointer"
+            >
+              <RefreshCw className="h-4 w-4" />
+              Check again
+            </button>
+            <Link
+              href="/dashboard"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-gray-200 bg-white py-3 text-sm font-bold text-gray-700 hover:bg-gray-50 min-h-[44px]"
+            >
+              Back to dashboard
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      )}
+
+      {status === 'cancelled' && (
+        <div>
+          <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-gray-50 text-gray-400 border border-gray-100 mb-4">
+            <X className="h-6 w-6" />
+          </div>
+          <h1 className="text-lg font-extrabold text-gray-900">Contribution not completed</h1>
+          <p className="mt-2 text-sm text-gray-500">
+            No charge was made. You can try again whenever you like — or simply keep preparing with Propeida.
+          </p>
+          <div className="mt-6 flex flex-col gap-3">
+            <Link
+              href="/support"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 py-3 text-sm font-bold text-white hover:bg-blue-700 min-h-[44px]"
+            >
+              <Heart className="h-4 w-4" />
+              Back to Support Propeida
+            </Link>
+            <Link
+              href="/dashboard"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-gray-200 bg-white py-3 text-sm font-bold text-gray-700 hover:bg-gray-50 min-h-[44px]"
+            >
+              Back to dashboard
+            </Link>
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
+
+export default function SupportCallbackPage() {
+  return (
+    <div className="flex min-h-screen flex-col items-center justify-center px-4 bg-gray-50">
+      <Link href="/" className="mb-8 min-h-[44px] flex items-center">
+        <Logo />
+      </Link>
+
+      <Suspense fallback={
+        <div className="w-full max-w-sm rounded-xl border border-gray-100 bg-white p-6 text-center shadow-xs">
+          <Loader2 className="mx-auto h-10 w-10 text-blue-600 animate-spin mb-4" />
+          <p className="text-sm text-gray-500">Loading...</p>
+        </div>
+      }>
+        <SupportCallbackContent />
+      </Suspense>
+    </div>
+  )
+}

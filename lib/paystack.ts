@@ -12,6 +12,11 @@ const PRODUCT_AMOUNTS: Record<string, number> = {
   jamb_premium_ai: 300000,
 }
 
+export const SUPPORT_PRODUCT = 'support'
+
+export const SUPPORT_MIN_AMOUNT = 100
+export const SUPPORT_MAX_AMOUNT = 10000000
+
 async function paystackFetch(url: string, options: RequestInit = {}): Promise<Response> {
   const controller = new AbortController()
   const timeout = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS)
@@ -52,6 +57,43 @@ export async function initializeTransaction(email: string, userId: string, produ
       currency: 'NGN',
       metadata: { user_id: userId, product },
       callback_url: `${process.env.NEXT_PUBLIC_BASE_URL}/payment/callback`,
+    }),
+  })
+
+  if (!response.ok) {
+    throw new Error(`Paystack initialization failed with status ${response.status}`)
+  }
+
+  const data = await response.json()
+  if (!data.status) {
+    throw new Error(data.message ?? 'Failed to initialize payment')
+  }
+
+  return {
+    authorizationUrl: data.data.authorization_url,
+    reference: data.data.reference,
+    accessCode: data.data.access_code,
+  }
+}
+
+export async function initializeSupportTransaction(email: string, amountKobo: number, userId: string | null, idempotencyKey?: string) {
+  const headers: Record<string, string> = {
+    Authorization: `Bearer ${getSecretKey()}`,
+    'Content-Type': 'application/json',
+  }
+  if (idempotencyKey) {
+    headers['X-Paystack-Idempotency-Key'] = idempotencyKey
+  }
+
+  const response = await paystackFetch('https://api.paystack.co/transaction/initialize', {
+    method: 'POST',
+    headers,
+    body: JSON.stringify({
+      email,
+      amount: amountKobo,
+      currency: 'NGN',
+      metadata: { user_id: userId, product: SUPPORT_PRODUCT },
+      callback_url: `${process.env.NEXT_PUBLIC_BASE_URL}/support/callback`,
     }),
   })
 
