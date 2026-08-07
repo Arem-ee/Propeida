@@ -34,17 +34,19 @@ export default function MarketingHero() {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-6 flex flex-col items-start">
             <div className="inline-flex items-center gap-1.5 rounded-xl bg-blue-50 px-3 py-1.5 text-sm font-semibold text-blue-600">
-              Free exam preparation for every Nigerian candidate
+              Verified exam preparation for Nigerian candidates
             </div>
 
             <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl leading-tight">
               Every Nigerian candidate deserves a real chance.
             </h1>
 
+            <p className="mt-4 text-lg text-gray-500 leading-relaxed max-w-lg">
+              A CBT practice platform with verified questions, mock exams, and short revision notes for Nigerian entrance exams.
+            </p>
+
             <p className="mt-6 text-lg text-gray-500 leading-relaxed max-w-lg">
-              Nearly a thousand verified questions. A real CBT simulator. Free for students — funded by schools,
-              foundations, and sponsors who believe preparation shouldn&apos;t be a privilege. Start with UNILORIN
-              Post-UTME today. JAMB is next.
+              Nearly a thousand verified questions. A real CBT simulator. Start with UNILORIN today. JAMB is next.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-4 w-full sm:w-auto">
@@ -53,7 +55,7 @@ export default function MarketingHero() {
                 onClick={() => void track('hero-cta-click', { cta: 'signup' })}
                 className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-4 text-base font-bold text-white transition-colors hover:bg-blue-700 active:bg-blue-800 shadow-sm min-h-[44px]"
               >
-                Start Practicing Free
+                Start practicing
                 <ArrowRight className="h-5 w-5" />
               </Link>
 
@@ -78,7 +80,7 @@ export default function MarketingHero() {
             </a>
 
             <div className="mt-4 flex items-center gap-2 text-xs text-gray-400">
-              <span>Start practicing free — no card required</span>
+              <span>No card required</span>
               <span>•</span>
               <span>Every question checked by a person</span>
             </div>

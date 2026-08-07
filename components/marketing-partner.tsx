@@ -37,13 +37,19 @@ export default function MarketingPartner() {
           })}
         </div>
 
-        <div className="mt-12 text-center">
+        <div className="mt-12 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <Link
             href="/partner"
             className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3.5 text-base font-bold text-white hover:bg-blue-700 active:bg-blue-800 min-h-[44px]"
           >
             Talk to Us
             <ArrowRight className="h-5 w-5" />
+          </Link>
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 rounded-xl border border-blue-200 bg-white px-6 py-3.5 text-base font-bold text-blue-700 hover:bg-blue-50 min-h-[44px]"
+          >
+            Book a 15-minute demo
           </Link>
         </div>
       </div>

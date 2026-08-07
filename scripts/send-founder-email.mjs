@@ -11,16 +11,17 @@
  *   node --env-file=.env scripts/send-founder-email.mjs --to user@mail.com    # preview/send one address
  *   node --env-file=.env scripts/send-founder-email.mjs --send --limit 5    # send to the first 5 recipients
  *
- * Delivery providers:
- *   1. SMTP — used when SMTP_HOST is set. Most Supabase projects can reuse
- *      their Auth SMTP settings. Expected env vars:
- *        SMTP_HOST, SMTP_PORT (default 465), SMTP_USER, SMTP_PASS, MAIL_FROM
- *   2. GoTrue admin raw-email — used when SMTP_HOST is unset. Posts to
- *      /auth/v1/admin/emails/send_raw_email (only available where the project
- *      enables it). If both are unavailable the script explains what to do.
+ * Delivery provider: Resend (https://resend.com). Expected env vars:
+ *   RESEND_API_KEY  — API key from Resend dashboard
+ *   EMAIL_FROM      — verified "From" address (e.g. "The Propeida Team <updates@propeida.online>")
+ *
+ * Each delivery attempt is paced 5 seconds apart, and every recipient is
+ * logged with a per-address success/failure line. The log is written to
+ *   logs/send-founder-email-YYYYMMDD-HHMMSS.log
  */
 
-import { createTransport } from 'nodemailer'
+import { Resend } from 'resend'
+import { writeFile } from 'node:fs/promises'
 import { getFounderUpdateEmail } from '../lib/emails/founder-update.ts'
 
 const email = getFounderUpdateEmail()
@@ -35,18 +36,17 @@ const INCLUDE_TEST = argv.includes('--include-test')
 const TO = valueOf('--to')
 const LIMIT = parseInt(valueOf('--limit') ?? '0', 10) || 0
 const PAGE_SIZE = parseInt(valueOf('--page-size') ?? '500', 10) || 500
-const DELAY_MS = 250
+const DELAY_MS = 5000
 
-const SMTP_HOST = process.env.SMTP_HOST
-const SMTP_PORT = parseInt(process.env.SMTP_PORT ?? '465', 10)
-const SMTP_USER = process.env.SMTP_USER
-const SMTP_PASS = process.env.SMTP_PASS
-const MAIL_FROM = process.env.MAIL_FROM ?? 'The Propeida Team <propeida.help@gmail.com>'
+const RESEND_API_KEY = process.env.RESEND_API_KEY
+const EMAIL_FROM = process.env.EMAIL_FROM ?? 'The Propeida Team <onboarding@resend.dev>'
 
 function valueOf(name) {
   const i = argv.indexOf(name)
   return i > -1 ? argv[i + 1] ?? null : null
 }
+
+const logEntries = []
 
 const authHeaders = {
   apikey: SERVICE_KEY,
@@ -73,37 +73,40 @@ async function listConfirmedUsers() {
   return users.filter((u) => u.role !== 'service_role' && !!u.email_confirmed_at && !u.banned_until)
 }
 
-async function sendViaGoTrue(to) {
-  const res = await fetch(`${SUPABASE_URL}/auth/v1/admin/emails/send_raw_email`, {
-    method: 'POST',
-    headers: authHeaders,
-    body: JSON.stringify({ email: to, options: { subject: email.subject, message: email.html } }),
-  })
-  return { status: res.status, body: await res.text() }
-}
-
-function sendViaSmtp(to) {
-  const transporter = createTransport({
-    host: SMTP_HOST,
-    port: SMTP_PORT,
-    secure: SMTP_PORT === 465,
-    auth: SMTP_USER && SMTP_PASS ? { user: SMTP_USER, pass: SMTP_PASS } : undefined,
-  })
-  return transporter
-    .sendMail({
-      from: MAIL_FROM,
+function sendViaResend(resend, to) {
+  return resend.emails
+    .send({
+      from: EMAIL_FROM,
       to,
       subject: email.subject,
       text: email.text,
       html: email.html,
     })
-    .then(() => ({ status: 250, body: 'sent' }))
-    .catch((err) => ({ status: 900, body: err.message }))
+    .then((res) => ({ ok: true, id: res.data?.id ?? null }))
+    .catch((err) => ({ ok: false, error: err.message }))
+}
+
+function logLine(entry) {
+  const line = entry.map((part) => String(part ?? '')).join(' | ')
+  console.log(line)
+  logEntries.push(line)
+}
+
+function writeLogFile() {
+  const stamp = new Date().toISOString().replace(/[:.]/g, '-')
+  const path = new URL(`../logs/send-founder-email-${stamp}.log`, import.meta.url)
+  return writeFile(path, `${logEntries.join('\n')}\n`).then(
+    () => path.pathname.replace(/^.*\/logs/, 'logs'),
+    (err) => `(log file write failed: ${err.message})`,
+  )
 }
 
 async function main() {
   if (!SUPABASE_URL || !SERVICE_KEY) {
     throw new Error('Missing NEXT_PUBLIC_SUPABASE_URL and/or SUPABASE_SERVICE_ROLE_KEY in the environment.')
+  }
+  if (SEND && !RESEND_API_KEY) {
+    throw new Error('Missing RESEND_API_KEY in the environment (required for --send).')
   }
 
   console.log('Preparing founder update email:')
@@ -112,7 +115,7 @@ async function main() {
   console.log(email.text)
   console.log('\n----- END PREVIEW -----\n')
 
-  const provider = SMTP_HOST ? `SMTP (${SMTP_HOST}:${SMTP_PORT})` : 'GoTrue admin raw email'
+  const provider = `Resend (from: ${EMAIL_FROM})`
 
   let recipients = await listConfirmedUsers()
   if (TO) {
@@ -143,31 +146,26 @@ async function main() {
     return
   }
 
+  const resend = new Resend(RESEND_API_KEY)
   console.log(`\nSending to ${recipients.length} recipient(s) via ${provider}…`)
   let sent = 0
   let failed = 0
   for (const u of recipients) {
-    const result = SMTP_HOST ? await sendViaSmtp(u.email) : await sendViaGoTrue(u.email)
-    if (result.status >= 200 && result.status < 300) {
+    const result = await sendViaResend(resend, u.email)
+    const stamp = new Date().toISOString()
+    if (result.ok) {
       sent += 1
-      console.log(`  ✓ ${u.email}`)
+      logLine([stamp, 'SENT', u.email, result.id])
     } else {
       failed += 1
-      console.log(`  ✗ ${u.email}  (${result.status}): ${result.body.slice(0, 200)}`)
-      if (!SMTP_HOST && result.status === 404) {
-        console.error(
-          '\nThe GoTrue admin-email endpoint (send_raw_email) is not available on this project.',
-          'Configure SMTP for this script by setting SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS',
-          '(and optionally MAIL_FROM), then re-run with --send. Most Supabase projects can reuse',
-          'the SMTP credentials under Project Settings → Auth → SMTP.',
-        )
-        process.exitCode = 1
-        break
-      }
+      logLine([stamp, 'FAILED', u.email, result.error.slice(0, 300)])
     }
     await new Promise((resolve) => setTimeout(resolve, DELAY_MS))
   }
+
+  const logPath = await writeLogFile()
   console.log(`\nDone: ${sent} sent, ${failed} failed.`)
+  console.log(`Log: ${logPath}`)
   if (failed) process.exitCode = 1
 }
 

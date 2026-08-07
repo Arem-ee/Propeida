@@ -20,21 +20,23 @@ import WhatsAppFloat from '@/components/whatsapp-float'
 import SupportOverlay from '@/components/support-overlay'
 
 export const metadata: Metadata = {
-  title: 'Propeida — Free exam preparation for every Nigerian candidate',
+  title: 'UNILORIN Post-UTME (PUTME) & JAMB Practice | Propeida',
   alternates: { canonical: '/' },
   description:
-    'Every Nigerian candidate deserves a real chance. Free, verified JAMB and Post-UTME preparation — a real CBT simulator, human-checked questions, and progress tracking. Free for students.',
+    'Practice UNILORIN Post-UTME (PUTME) past questions with a real CBT simulator, timed mock exams, and short revision notes. JAMB preparation is next.',
   keywords: [
-    'free JAMB past questions',
-    'UNILORIN Post-UTME practice',
-    'free CBT mock exam Nigeria',
+    'unilorin putme',
+    'unilorin post utme',
+    'post utme past questions',
+    'putme',
+    'JAMB',
+    'CBT mock exam Nigeria',
     'exam preparation app Nigeria',
-    'sponsor a school exam prep',
   ],
   openGraph: {
-    title: 'Propeida — Free exam preparation for every Nigerian candidate',
+    title: 'UNILORIN Post-UTME (PUTME) & JAMB Practice | Propeida',
     description:
-      'Free, verified UNILORIN Post-UTME and JAMB preparation with a real CBT simulator. Free for students. JAMB is next.',
+      'Practice UNILORIN Post-UTME (PUTME) past questions with a real CBT simulator, timed mock exams, and progress tracking. JAMB preparation is next.',
     url: process.env.NEXT_PUBLIC_BASE_URL ?? 'https://propeida.online',
     siteName: 'Propeida',
     type: 'website',
@@ -43,8 +45,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Propeida — Free exam preparation for every Nigerian candidate',
-    description: 'Free, verified UNILORIN Post-UTME and JAMB preparation with a real CBT simulator. Free for students.',
+    title: 'UNILORIN Post-UTME (PUTME) & JAMB Practice | Propeida',
+    description:
+      'Practice UNILORIN Post-UTME (PUTME) past questions with a real CBT simulator, timed mock exams, and progress tracking. JAMB preparation is next.',
     images: ['/opengraph-image'],
   },
 }

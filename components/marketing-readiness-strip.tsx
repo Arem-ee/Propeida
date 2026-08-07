@@ -8,17 +8,17 @@ export default function MarketingReadinessStrip() {
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 py-12 text-center sm:px-6 lg:flex-row lg:px-8 lg:text-left">
         <div>
           <h2 className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
-            JAMB is coming. Start practicing now — it&apos;s free.
+            JAMB is coming. Start practicing now.
           </h2>
           <p className="mt-2 text-blue-100">
-            The questions are checked. The simulator is ready. Preparation should never wait for money.
+            The questions are checked. The simulator is ready. Start now and build momentum.
           </p>
         </div>
         <Link
           href="/signup"
           className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-white px-6 py-3.5 text-base font-bold text-blue-700 hover:bg-blue-50 min-h-[44px]"
         >
-          Start Practicing Free
+          Start practicing
           <ArrowRight className="h-5 w-5" />
         </Link>
       </div>
@@ -32,10 +32,10 @@ export function MarketingWhatsAppCta() {
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 py-10 sm:px-6 lg:flex-row lg:px-8">
         <div>
           <h2 className="text-xl font-extrabold tracking-tight text-gray-900 sm:text-2xl">
-            {siteConfig.whatsapp.channelCopy}
+            Follow the official Propeida WhatsApp channel
           </h2>
           <p className="mt-1.5 text-sm text-gray-500">
-            The official place to follow Propeida&apos;s progress, upcoming exam coverage, and important platform news.
+            Get new feature updates, exam coverage announcements, and important platform news directly from the Propeida team.
           </p>
         </div>
         <a

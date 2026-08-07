@@ -52,7 +52,7 @@ export default function MarketingHeader() {
             href="/signup"
             className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-700 active:bg-blue-800 min-h-[44px]"
           >
-            Start Practicing Free
+            Start practicing
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
@@ -97,7 +97,7 @@ export default function MarketingHeader() {
                 onClick={close}
                 className="flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 py-3 text-base font-semibold text-white hover:bg-blue-700 transition-colors min-h-[44px]"
               >
-                Start Practicing Free
+                Start practicing
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>

@@ -13,7 +13,10 @@ export default function MarketingFooter() {
           <div className="lg:col-span-1">
             <Logo />
             <p className="mt-4 text-sm text-gray-500 leading-relaxed">
-              Every Nigerian candidate deserves a real chance. Free, verified exam preparation for JAMB and Post-UTME.
+              Every Nigerian candidate deserves a real chance. Verified exam preparation for JAMB and Post-UTME.
+            </p>
+            <p className="mt-2 text-sm font-semibold text-gray-600">
+              Building accessible exam preparation tools for Nigerian students.
             </p>
             <a
               href={siteConfig.whatsapp.channelUrl}
@@ -31,6 +34,12 @@ export default function MarketingFooter() {
             <ul className="space-y-3">
               <li>
                 <Link href="/practice" className={linkClass}>Practice</Link>
+              </li>
+              <li>
+                <Link href="/unilorin-putme" className={linkClass}>UNILORIN Post-UTME (PUTME)</Link>
+              </li>
+              <li>
+                <Link href="/post-utme-past-questions" className={linkClass}>Post-UTME Past Questions</Link>
               </li>
               <li>
                 <Link href="/#exams" className={linkClass}>Exams</Link>
@@ -90,7 +99,7 @@ export default function MarketingFooter() {
             &copy; 2026 Propeida. All rights reserved.
           </p>
           <p className="text-xs font-semibold text-gray-500">
-            Free for students. Funded by people who believe in prepared students.
+            Funded by people who believe in prepared students.
           </p>
         </div>
       </div>

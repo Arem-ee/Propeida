@@ -97,7 +97,7 @@ export default function MarketingPracticeCategories() {
                 href="/signup"
                 className="inline-flex items-center gap-1.5 text-sm font-bold text-blue-600 hover:text-blue-700 min-h-[44px]"
               >
-                Start practicing free
+                Start practicing
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
