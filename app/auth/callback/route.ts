@@ -1,5 +1,6 @@
 import { type NextRequest, NextResponse } from 'next/server'
 import { createServerClient } from '@supabase/ssr'
+import { maybeSendWelcomeEmail } from '@/lib/emails/send'
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url)
@@ -41,6 +42,10 @@ export async function GET(request: NextRequest) {
         redirectPath = profile && /^user_[a-f0-9]{8}$/.test(profile.username)
           ? '/auth/set-username'
           : '/dashboard'
+
+        if (profile && /^user_[a-f0-9]{8}$/.test(profile.username)) {
+          await maybeSendWelcomeEmail(user.id)
+        }
       } else {
         redirectPath = '/dashboard'
       }

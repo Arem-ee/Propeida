@@ -114,7 +114,7 @@ export default function SignupPage() {
     const redirectPath = typeof window !== 'undefined' ? localStorage.getItem('pending_redirect') || '/login?confirmed=true' : '/login?confirmed=true'
 
     const supabase = supabaseRef.current
-    const { error: authError } = await supabase.auth.signUp({
+    const { data: signUpData, error: authError } = await supabase.auth.signUp({
       email,
       password,
       options: {
@@ -128,6 +128,15 @@ export default function SignupPage() {
     if (authError) {
       setError(authError.message)
       return
+    }
+
+    if (signUpData?.user?.id) {
+      void fetch('/api/auth/welcome', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ userId: signUpData.user.id }),
+        keepalive: true,
+      }).catch(() => {})
     }
 
     void track('signup-complete', { method: 'email' })
