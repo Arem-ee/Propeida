@@ -5,7 +5,9 @@ import { maybeSendWelcomeEmail } from '@/lib/emails/send'
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url)
   const code = searchParams.get('code')
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? new URL(request.url).origin
+  // Redirect back to the exact host the user started from so auth never
+  // bounces users to a different domain (e.g. a Vercel deployment URL).
+  const baseUrl = new URL(request.url).origin
 
   if (code) {
     const tempRes = NextResponse.next()
