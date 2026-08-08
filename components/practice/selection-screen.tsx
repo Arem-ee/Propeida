@@ -248,12 +248,12 @@ export default function SelectionScreen({ exams, allSubjects, examSubjectMap, ac
             </div>
           )}
 
-          {isJambMock || isUnilorin ? (
+          {isJambMock ? (
             <div className="rounded-xl bg-blue-50 border border-blue-100 p-4 text-sm text-blue-700">
-              {isJambMock
-                ? 'JAMB mock exam: 180 questions across English (60) and 3 electives (40 each), 2-hour time limit.'
-                : 'UNILORIN Post-UTME: fixed-format sessions of 100 questions across English (34), Mathematics (34) and Current Affairs (32). Question count and difficulty are preset; mock exams are timed at 60 minutes.'}
+              JAMB mock exam: 180 questions across English (60) and 3 electives (40 each), 2-hour time limit.
             </div>
+          ) : isUnilorin ? (
+            <p className="text-xs text-gray-400">UNILORIN uses a fixed exam format.</p>
           ) : (
             <div className="grid grid-cols-2 gap-6">
               <div>
