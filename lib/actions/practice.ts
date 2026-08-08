@@ -13,9 +13,8 @@ import {
   getSessionById,
   getSessionQuestionsWithStatus,
   isSessionExpired,
-  getFirstMockQuestions,
 } from '@/lib/practice'
-import { hasExamAccess, getUsageCounters, getFreeMockAttempts } from '@/lib/entitlements'
+import { hasExamAccess } from '@/lib/entitlements'
 
 interface CreateSessionParams {
   examId: string
@@ -108,22 +107,6 @@ export async function createSession(params: CreateSessionParams) {
   await assertExamOpen(params.examId)
 
   const hasAccess = await hasExamAccess(user.id, params.examId)
-
-  if (!hasAccess && params.mode === 'mock') {
-    const freeMockAttempts = await getFreeMockAttempts(params.examSlug)
-    const { data: allowed, error: freeMockError } = await supabase.rpc('try_start_free_mock', {
-      p_user_id: user.id,
-      p_exam_id: params.examId,
-      p_max_mocks: freeMockAttempts,
-    })
-
-    if (freeMockError) throw new Error(freeMockError.message)
-
-    if (!allowed) {
-      throw new Error(`Free tier limited to ${freeMockAttempts} mock${freeMockAttempts === 1 ? '' : 's'} per exam. Upgrade to Pro for unlimited mocks.`)
-    }
-  }
-
   const isFreeMock = !hasAccess && params.mode === 'mock'
 
   let timeLimitSeconds: number | null = null
@@ -159,23 +142,7 @@ export async function createSession(params: CreateSessionParams) {
 
   let questions: SessionQuestion[]
 
-  if (isFreeMock) {
-    if (lockedPool) {
-      questions = await fetchLockedPoolQuestions(user.id, params.examId, subjectIds, effectiveCount)
-    } else {
-      const counter = await getUsageCounters(user.id, params.examId)
-      if (counter.free_mocks_started > 1) {
-        questions = await getFirstMockQuestions(user.id, params.examId)
-      } else {
-        questions = subjectIds.length > 1
-          ? await fetchWeightedQuestions(supabase, params.examId, subjectIds, effectiveCount, session.id)
-          : await fetchQuestionsForSession(
-              { ...params, subjectIds, questionCount: effectiveCount },
-              session.id
-            )
-      }
-    }
-  } else if (isFree && params.mode === 'practice') {
+  if (isFreeMock || (isFree && params.mode === 'practice')) {
     questions = lockedPool
       ? await fetchLockedPoolQuestions(user.id, params.examId, subjectIds, effectiveCount, params.difficulty)
       : await fetchFreePoolQuestions(user.id, params.examId, subjectIds, effectiveCount, session.id, params.difficulty)

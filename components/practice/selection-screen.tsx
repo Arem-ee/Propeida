@@ -48,6 +48,7 @@ export default function SelectionScreen({ exams, allSubjects, examSubjectMap, ac
   const selectedExam = exams.find((e) => e.id === selectedExamId)
   const isFixed = selectedExam?.subject_selection_mode === 'fixed'
   const isJambMock = selectedExam?.slug === 'jamb' && mode === 'mock'
+  const isUnilorinMock = selectedExam?.slug === 'unilorin-post-utme' && mode === 'mock'
   const englishSubject = allSubjects.find((s) => s.slug === 'english')
   const notesSubjectName = subjectParam ? allSubjects.find((s) => s.slug === subjectParam)?.name ?? null : null
 
@@ -247,9 +248,11 @@ export default function SelectionScreen({ exams, allSubjects, examSubjectMap, ac
             </div>
           )}
 
-          {isJambMock ? (
+          {isJambMock || isUnilorinMock ? (
             <div className="rounded-xl bg-blue-50 border border-blue-100 p-4 text-sm text-blue-700">
-              JAMB mock exam: 180 questions across English (60) and 3 electives (40 each), 2-hour time limit.
+              {isJambMock
+                ? 'JAMB mock exam: 180 questions across English (60) and 3 electives (40 each), 2-hour time limit.'
+                : 'UNILORIN Post-UTME mock exam: 100 questions across English (34), Mathematics (34) and Current Affairs (32), 60-minute time limit. Fixed format — questions and difficulty are preset.'}
             </div>
           ) : (
             <div className="grid grid-cols-2 gap-6">
