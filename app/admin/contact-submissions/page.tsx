@@ -8,7 +8,7 @@ export default async function AdminContactSubmissionsPage() {
 
   const { data: submissions } = await supabase
     .from('contact_submissions')
-    .select('id, email, full_name, phone, organization_type, student_count, message, created_at')
+    .select('id, email, full_name, phone, organization_type, student_count, requested_university, requested_course, message, created_at')
     .order('created_at', { ascending: false })
 
   return (
@@ -36,6 +36,7 @@ export default async function AdminContactSubmissionsPage() {
                 <th className="px-4 py-3 text-left text-xs font-bold text-gray-500 uppercase">Email / Phone</th>
                 <th className="px-4 py-3 text-left text-xs font-bold text-gray-500 uppercase">Organization</th>
                 <th className="px-4 py-3 text-left text-xs font-bold text-gray-500 uppercase">Type / Students</th>
+                <th className="px-4 py-3 text-left text-xs font-bold text-gray-500 uppercase">Requested University</th>
                 <th className="px-4 py-3 text-left text-xs font-bold text-gray-500 uppercase">Message</th>
                 <th className="px-4 py-3 text-right text-xs font-bold text-gray-500 uppercase">Submitted</th>
               </tr>
@@ -57,6 +58,12 @@ export default async function AdminContactSubmissionsPage() {
                     {s.student_count != null
                       ? `${s.student_count} student${s.student_count === 1 ? '' : 's'}`
                       : '—'}
+                  </td>
+                  <td className="px-4 py-3 text-sm font-semibold text-gray-900 whitespace-nowrap">
+                    {s.requested_university ?? '—'}
+                    {s.requested_course ? (
+                      <div className="text-xs font-normal text-gray-400">{s.requested_course}</div>
+                    ) : null}
                   </td>
                   <td className="px-4 py-3 text-sm text-gray-600 max-w-md truncate">{s.message ?? '—'}</td>
                   <td className="px-4 py-3 text-right text-sm text-gray-400 whitespace-nowrap">

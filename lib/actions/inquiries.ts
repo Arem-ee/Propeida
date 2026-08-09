@@ -40,6 +40,8 @@ export async function submitInquiry(data: {
   organization?: string
   organizationType?: OrganizationType
   studentCount?: number
+  universityName?: string
+  course?: string
   message: string
   honeypot?: string
 }) {
@@ -49,6 +51,10 @@ export async function submitInquiry(data: {
 
   const emailError = validateEmail(data.email)
   if (emailError) throw new Error(emailError)
+
+  if (data.type === 'school-request' && !data.universityName?.trim()) {
+    throw new Error('University name is required')
+  }
 
   const combined = [data.organization, data.message].filter(Boolean).join('.\n')
   const messageError = validateMessage(combined)
@@ -65,6 +71,8 @@ export async function submitInquiry(data: {
   const { data: { user } } = await supabase.auth.getUser()
 
   const parts: string[] = [`[${TYPE_LABELS[data.type] ?? data.type}]`]
+  if (data.universityName) parts.push(data.universityName)
+  if (data.course) parts.push(data.course)
   if (data.fullName) parts.push(data.fullName)
   if (data.organization) parts.push(data.organization)
   parts.push(data.message)
@@ -78,7 +86,9 @@ export async function submitInquiry(data: {
       full_name: data.fullName || null,
       phone: data.phone || null,
       student_count: data.studentCount != null && data.studentCount > 0 ? data.studentCount : null,
-      organization_type: data.organizationType || null,
+      organization_type: data.type === 'school-request' ? 'university_request' : data.organizationType || null,
+      requested_university: data.universityName?.trim() || null,
+      requested_course: data.course?.trim() || null,
     })
 
   if (error) {

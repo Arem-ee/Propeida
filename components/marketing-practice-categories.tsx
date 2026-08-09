@@ -7,6 +7,8 @@ import { siteConfig } from '@/lib/site-config'
 import { submitInquiry } from '@/lib/actions/inquiries'
 
 function SchoolRequestForm() {
+  const [universityName, setUniversityName] = useState('')
+  const [course, setCourse] = useState('')
   const [email, setEmail] = useState('')
   const [error, setError] = useState<string | null>(null)
   const [sending, setSending] = useState(false)
@@ -14,12 +16,18 @@ function SchoolRequestForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    if (!universityName.trim()) {
+      setError('University name is required')
+      return
+    }
     setError(null)
     setSending(true)
     try {
       await submitInquiry({
         type: 'school-request',
         email,
+        universityName: universityName.trim(),
+        course: course.trim() || undefined,
         message: 'Please add this university to Propeida.',
       })
       setSent(true)
@@ -33,14 +41,41 @@ function SchoolRequestForm() {
   if (sent) {
     return (
       <div className="flex items-center gap-2 rounded-xl bg-green-50 border border-green-100 p-3 text-sm font-semibold text-green-700">
-        <Check className="h-4 w-4" />
-        Noted. We build exam banks one university at a time — yours is on the list.
+        <Check className="h-4 w-4 shrink-0" />
+        Noted — {universityName.trim()} is on the list. We build exam banks one university at a time.
       </div>
     )
   }
 
   return (
-    <form onSubmit={handleSubmit} className="mt-4">
+    <form onSubmit={handleSubmit} className="mt-4 space-y-2">
+      <div>
+        <label htmlFor="university-name" className="mb-1 block text-xs font-bold text-white/60 uppercase tracking-wider">
+          University name
+        </label>
+        <input
+          id="university-name"
+          type="text"
+          required
+          value={universityName}
+          onChange={(e) => setUniversityName(e.target.value)}
+          placeholder="e.g. University of Ibadan"
+          className="w-full rounded-xl border border-gray-700 bg-gray-800 px-4 py-3 text-sm text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none min-h-[44px]"
+        />
+      </div>
+      <div>
+        <label htmlFor="course" className="mb-1 block text-xs font-bold text-white/60 uppercase tracking-wider">
+          Course <span className="normal-case font-medium text-white/40">(optional)</span>
+        </label>
+        <input
+          id="course"
+          type="text"
+          value={course}
+          onChange={(e) => setCourse(e.target.value)}
+          placeholder="e.g. Medicine and Surgery"
+          className="w-full rounded-xl border border-gray-700 bg-gray-800 px-4 py-3 text-sm text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none min-h-[44px]"
+        />
+      </div>
       <div className="flex flex-col sm:flex-row gap-2">
         <input
           type="email"
@@ -48,18 +83,18 @@ function SchoolRequestForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Your email"
-          className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm focus:border-blue-600 focus:outline-none min-h-[44px]"
+          className="w-full flex-1 rounded-xl border border-gray-700 bg-gray-800 px-4 py-3 text-sm text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none min-h-[44px]"
         />
         <button
           type="submit"
           disabled={sending}
-          className="shrink-0 rounded-xl bg-gray-900 px-5 py-3 text-sm font-bold text-white hover:bg-gray-800 disabled:bg-gray-400 min-h-[44px] cursor-pointer"
+          className="shrink-0 rounded-xl bg-blue-600 px-5 py-3 text-sm font-bold text-white hover:bg-blue-500 disabled:bg-gray-600 min-h-[44px] cursor-pointer"
         >
           {sending ? 'Sending...' : 'Request your school'}
         </button>
       </div>
       {error && (
-        <div className="mt-2 rounded-xl bg-red-50 border border-red-100 px-3 py-2 text-xs font-semibold text-red-700">
+        <div className="rounded-xl bg-red-50 border border-red-100 px-3 py-2 text-xs font-semibold text-red-700">
           {error}
         </div>
       )}
