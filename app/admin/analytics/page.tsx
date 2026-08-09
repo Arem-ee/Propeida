@@ -17,18 +17,22 @@ const EVENT_LABELS: Record<string, string> = {
 export default async function AdminAnalyticsPage() {
   const supabase = createAdminClient()
 
-  const [{ data: events }, { count: totalCount }] = await Promise.all([
+  const [{ data: events }, { data: eventCounts }] = await Promise.all([
     supabase
       .from('analytics_events')
       .select('event_name, event_data, url_path, created_at')
       .order('created_at', { ascending: false })
       .limit(500),
-    supabase.from('analytics_events').select('*', { count: 'exact', head: true }),
+    supabase.rpc('get_analytics_event_counts'),
   ])
 
+  const totalCount = (eventCounts ?? []).reduce(
+    (sum: number, e: { count?: number | null }) => sum + Number(e.count ?? 0),
+    0,
+  )
   const grouped = new Map<string, number>()
-  for (const event of events ?? []) {
-    grouped.set(event.event_name, (grouped.get(event.event_name) ?? 0) + 1)
+  for (const event of eventCounts ?? []) {
+    grouped.set(event.event_name, Number(event.count ?? 0))
   }
 
   return (
