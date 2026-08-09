@@ -1,4 +1,4 @@
-import { CAMPAIGN_CTA_URL } from '../campaign/messages'
+import { CAMPAIGN_CTA_URL } from '../campaign/messages.ts'
 
 export const campaignUnlockEmail = {
   subject: "You've been granted full access to Propeida for 24 hours",
