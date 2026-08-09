@@ -53,7 +53,7 @@ export async function getLeaderboardExams() {
   const { data } = await supabase
     .from('exams')
     .select('id, name, slug, school_id')
-    .or(`slug.eq.jamb,school_id.neq.null`)
+    .or('slug.eq.jamb,school_id.not.is.null')
     .order('name')
 
   return (data ?? []).filter(
