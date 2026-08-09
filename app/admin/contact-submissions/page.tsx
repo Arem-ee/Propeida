@@ -52,11 +52,13 @@ export default async function AdminContactSubmissionsPage() {
                   </td>
                   <td className="px-4 py-3 text-sm font-semibold text-gray-700 whitespace-nowrap">
                     {s.organization_type ? s.organization_type.replaceAll('_', ' ') : '—'}
-                    {s.student_count != null ? (
-                      <div className="text-xs text-gray-400">{s.student_count} students</div>
-                    ) : null}
                   </td>
-                  <td className="px-4 py-3 text-sm text-gray-600 max-w-md truncate">{s.message}</td>
+                  <td className="px-4 py-3 text-sm text-gray-600 whitespace-nowrap">
+                    {s.student_count != null
+                      ? `${s.student_count} student${s.student_count === 1 ? '' : 's'}`
+                      : '—'}
+                  </td>
+                  <td className="px-4 py-3 text-sm text-gray-600 max-w-md truncate">{s.message ?? '—'}</td>
                   <td className="px-4 py-3 text-right text-sm text-gray-400 whitespace-nowrap">
                     {new Date(s.created_at).toLocaleDateString('en-GB', {
                       day: 'numeric',
