@@ -1,6 +1,8 @@
 import { createClient } from '@/lib/supabase/server'
 import SelectionScreen from '@/components/practice/selection-screen'
 import ComingSoon from '@/components/coming-soon'
+import CampaignPanel from '@/components/campaign/campaign-panel'
+import { getCampaignStatus } from '@/lib/campaign'
 import { getUserActiveSessions } from '@/lib/practice'
 import Link from 'next/link'
 
@@ -47,10 +49,15 @@ export default async function PracticePage(props: { searchParams: Promise<{ hub?
   }
 
   const accessSet = new Set(userExamAccessIds)
-  const exams = allExams.filter((e) => e.school_id !== null && accessSet.has(e.id))
+  const campaign = user ? await getCampaignStatus() : null
+  const campaignAccess = campaign?.hasAccess ?? false
+  const exams = allExams.filter(
+    (e) => e.school_id !== null && (campaignAccess || accessSet.has(e.id))
+  )
 
   return (
     <div className="mx-auto max-w-2xl">
+      {campaign && <CampaignPanel status={campaign} />}
       <h1 className="text-2xl font-extrabold text-gray-900">University Practice & Mock Exams</h1>
       <p className="mt-1 text-sm text-gray-500">Select an exam, configure your session, and start practicing.</p>
 

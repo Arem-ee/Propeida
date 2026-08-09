@@ -1,4 +1,5 @@
 import { createClient } from './supabase/server'
+import { hasCampaignAccess } from './campaign'
 
 type Product = 'jamb_pro' | 'jamb_premium_ai' | 'putme_pro'
 
@@ -31,6 +32,11 @@ export async function getEntitlement(userId: string, product: Product): Promise<
 
 export async function hasExamAccess(userId: string, examId: string): Promise<boolean> {
   const supabase = await createClient()
+
+  // Temporary 24h campaign entitlement: grants full question-bank access to
+  // every exam. expires_at/ends_at arithmetic lives in the DB RPC, so this
+  // automatically stops being true once the window closes.
+  if (await hasCampaignAccess()) return true
 
   const { data: exam } = await supabase
     .from('exams')
