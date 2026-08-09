@@ -20,38 +20,22 @@ export async function getLeaderboardData(period: 'all_time' | 'weekly', examSlug
 
   if (!examId) return []
 
-  let query = supabase
-    .from('leaderboard_entries')
-    .select(`
-      user_id,
-      score,
-      profiles!inner(username, avatar_index, schools!left(name, slug))
-    `)
-    .eq('period', period)
-    .eq('exam_id', examId)
-    .order('score', { ascending: false })
-    .limit(100)
-
-  const { data, error } = await query
+  const { data, error } = await supabase.rpc('get_leaderboard', {
+    p_period: period,
+    p_exam_id: examId,
+  })
 
   if (error) throw new Error('Failed to load leaderboard')
 
-  const entries = (data ?? []).map((entry: Record<string, unknown>, index: number) => {
-    const profiles = Array.isArray(entry.profiles) ? entry.profiles[0] : entry.profiles
-    const schoolData = profiles?.schools
-    const school = Array.isArray(schoolData) ? schoolData[0] : schoolData
-    return {
-      rank: index + 1,
-      userId: entry.user_id as string,
-      username: (profiles as { username?: string })?.username ?? 'Unknown',
-      avatarIndex: (profiles as { avatar_index?: number | null })?.avatar_index ?? null,
-      score: entry.score as number,
-      schoolName: (school as { name?: string })?.name ?? null,
-      schoolSlug: (school as { slug?: string })?.slug ?? null,
-    }
-  })
-
-  return entries
+  return (data ?? []).map((row: Record<string, unknown>, index: number) => ({
+    rank: index + 1,
+    userId: row.user_id as string,
+    username: (row.username as string | null) ?? 'Unknown',
+    avatarIndex: (row.avatar_index as number | null) ?? null,
+    score: row.score as number,
+    schoolName: (row.school_name as string | null) ?? null,
+    schoolSlug: (row.school_slug as string | null) ?? null,
+  }))
 }
 
 export async function getLeaderboardExams() {
