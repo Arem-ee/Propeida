@@ -63,7 +63,18 @@ export async function GET(request: NextRequest) {
       const redirectPath = '/dashboard'
       const response = NextResponse.redirect(new URL(redirectPath, baseUrl))
       for (const cookie of tempRes.cookies.getAll()) {
-        response.cookies.set(cookie.name, cookie.value)
+        // Preserve attributes (maxAge, path, sameSite, ...) — dropping them
+        // turns the session cookies into session-only cookies that are lost
+        // when the browser closes.
+        response.cookies.set(cookie.name, cookie.value, {
+          domain: cookie.domain,
+          expires: cookie.expires,
+          httpOnly: cookie.httpOnly,
+          maxAge: cookie.maxAge,
+          path: cookie.path,
+          sameSite: cookie.sameSite,
+          secure: cookie.secure,
+        })
       }
       return response
     }

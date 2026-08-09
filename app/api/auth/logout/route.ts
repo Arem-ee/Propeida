@@ -2,6 +2,8 @@ import { type NextRequest, NextResponse } from 'next/server'
 import { createServerClient } from '@supabase/ssr'
 
 export async function POST(request: NextRequest) {
+  const response = NextResponse.redirect(new URL('/', request.url))
+
   const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
@@ -10,8 +12,10 @@ export async function POST(request: NextRequest) {
         getAll() {
           return request.cookies.getAll()
         },
-        setAll(cookiesToSet: { name: string; value: string }[]) {
-          cookiesToSet.forEach(({ name, value }) => request.cookies.set(name, value))
+        setAll(cookiesToSet: { name: string; value: string; options?: Record<string, unknown> }[]) {
+          cookiesToSet.forEach(({ name, value, options }) => {
+            response.cookies.set(name, value, options)
+          })
         },
       },
     }
@@ -24,5 +28,5 @@ export async function POST(request: NextRequest) {
     }
   } catch {}
 
-  return NextResponse.redirect(new URL('/login', request.url))
+  return response
 }

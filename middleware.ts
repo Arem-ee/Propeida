@@ -35,14 +35,17 @@ export async function middleware(request: NextRequest) {
 
   let user
   try {
-    const result = await supabase.auth.getSession()
-    user = result.data.session?.user ?? null
+    // getUser() validates the token against the auth server (and refreshes it
+    // when expired) instead of trusting the cookie like getSession() does.
+    const result = await supabase.auth.getUser()
+    user = result.data.user ?? null
   } catch {
     return response
   }
 
   const isAuthPage = request.nextUrl.pathname === '/login' || request.nextUrl.pathname === '/signup'
   const isUsernamePage = request.nextUrl.pathname === '/auth/set-username'
+  const isLandingPage = request.nextUrl.pathname === '/'
 
   if (!user && (isProtectedPath(request.nextUrl.pathname) || isUsernamePage)) {
     const url = request.nextUrl.clone()
@@ -51,7 +54,7 @@ export async function middleware(request: NextRequest) {
     return NextResponse.redirect(url)
   }
 
-  if (user && isAuthPage) {
+  if (user && (isAuthPage || isLandingPage)) {
     const url = request.nextUrl.clone()
     url.pathname = '/dashboard'
     return NextResponse.redirect(url)
@@ -62,6 +65,7 @@ export async function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
+    '/',
     '/dashboard', '/dashboard/:path*',
     '/results', '/results/:path*',
     '/history',
