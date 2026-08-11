@@ -153,6 +153,12 @@ export default function SetUsernamePage() {
           >
             {saving ? 'Saving...' : 'Continue'}
           </button>
+          <Link
+            href="/dashboard"
+            className="block w-full text-center text-xs font-semibold text-gray-500 hover:text-gray-700 mt-4"
+          >
+            Skip for now — practice first, choose a username later
+          </Link>
         </form>
       </div>
     </div>

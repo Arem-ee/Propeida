@@ -35,19 +35,10 @@ export async function GET(request: NextRequest) {
       const { data: { user } } = await supabase.auth.getUser()
       let redirectPath: string
       if (user) {
-        const { data: profile } = await supabase
-          .from('profiles')
-          .select('username')
-          .eq('id', user.id)
-          .single()
-
-        redirectPath = profile && /^user_[a-f0-9]{8}$/.test(profile.username)
-          ? '/auth/set-username'
-          : '/dashboard'
-
-        if (profile && /^user_[a-f0-9]{8}$/.test(profile.username)) {
-          await maybeSendWelcomeEmail(user.id)
-        }
+        // Placeholder user_* usernames no longer block the app: the user goes
+        // straight to the dashboard and is prompted to choose a username there.
+        redirectPath = '/dashboard'
+        await maybeSendWelcomeEmail(user.id)
       } else {
         redirectPath = '/dashboard'
       }
