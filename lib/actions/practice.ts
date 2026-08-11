@@ -144,7 +144,7 @@ export async function createSession(params: CreateSessionParams) {
 
   if (isFreeMock || (isFree && params.mode === 'practice')) {
     questions = lockedPool
-      ? await fetchLockedPoolQuestions(user.id, params.examId, subjectIds, effectiveCount, params.difficulty)
+      ? await fetchLockedPoolQuestions(user.id, params.examId, subjectIds, effectiveCount, session.id, params.difficulty)
       : await fetchFreePoolQuestions(user.id, params.examId, subjectIds, effectiveCount, session.id, params.difficulty)
   } else if (params.mode === 'mock' && params.examSlug === 'jamb') {
     const mockDefaults = await getMockDefaults('jamb')

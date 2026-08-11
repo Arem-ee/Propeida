@@ -107,44 +107,29 @@ export async function fetchLockedPoolQuestions(
   examId: string,
   subjectIds: string[],
   count: number,
+  seed: string,
   difficulty?: string | null,
 ): Promise<SessionQuestion[]> {
   const supabase = await createClient()
 
-  const { data: poolIds, error: poolError } = await supabase.rpc('ensure_exam_free_pool', {
+  const { error: poolError } = await supabase.rpc('ensure_exam_free_pool', {
     p_user_id: userId,
     p_exam_id: examId,
   })
   if (poolError) throw new Error(`Failed to load question pool: ${poolError.message}`)
-  if (!poolIds || poolIds.length === 0) throw new Error('No questions available')
 
-  let query = supabase
-    .from('questions')
-    .select('id, subject_id, question_text, options')
-    .in('id', poolIds)
-    .eq('exam_id', examId)
-    .limit(count)
-
-  if (subjectIds.length > 0) {
-    query = query.in('subject_id', subjectIds)
-  }
-
-  if (difficulty) {
-    query = query.eq('difficulty', difficulty)
-  }
-
-  const { data: questions, error } = await query
+  const { data: questions, error } = await supabase.rpc('get_session_questions', {
+    p_exam_id: examId,
+    p_subject_ids: subjectIds.length > 0 ? subjectIds : null,
+    p_difficulty: difficulty || null,
+    p_limit: count,
+    p_seed: seed,
+  })
 
   if (error) throw new Error(`Failed to fetch pool questions: ${error.message}`)
   if (!questions || questions.length === 0) throw new Error('No questions match the selected filters')
 
-  return (questions as { id: string; subject_id: string; question_text: string; options: { key: string; text: string }[] }[])
-    .map((q) => ({
-      id: q.id,
-      subjectId: q.subject_id,
-      questionText: q.question_text,
-      options: q.options,
-    }))
+  return questions as SessionQuestion[]
 }
 
 export async function createExamSession(
