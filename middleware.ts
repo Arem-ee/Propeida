@@ -35,10 +35,10 @@ export async function middleware(request: NextRequest) {
 
   let user
   try {
-    // getUser() validates the token against the auth server (and refreshes it
-    // when expired) instead of trusting the cookie like getSession() does.
-    const result = await supabase.auth.getUser()
-    user = result.data.user ?? null
+    // Local cookie decode — no network round-trip per navigation. Token
+    // refresh happens client-side (dashboard layout) and on auth routes.
+    const result = await supabase.auth.getSession()
+    user = result.data.session?.user ?? null
   } catch {
     return response
   }

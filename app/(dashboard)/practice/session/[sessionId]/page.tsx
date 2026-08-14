@@ -19,6 +19,8 @@ interface SessionData {
     questionText: string
     options: { key: string; text: string }[]
     selectedAnswer?: string | null
+    correctAnswer?: string | null
+    explanation?: string | null
   }[]
 }
 

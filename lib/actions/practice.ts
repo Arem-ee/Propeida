@@ -2,7 +2,7 @@
 
 import { revalidatePath } from 'next/cache'
 import { redirect } from 'next/navigation'
-import { createClient } from '@/lib/supabase/server'
+import { createClient, getAuthUser } from '@/lib/supabase/server'
 import {
   getMockDefaults,
   fetchQuestionsForSession,
@@ -101,26 +101,27 @@ async function fetchWeightedQuestions(
 
 export async function createSession(params: CreateSessionParams) {
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const user = await getAuthUser(supabase)
   if (!user) throw new Error('Not authenticated')
 
-  await assertExamOpen(params.examId)
+  const [, examAccess, mockDefaults] = await Promise.all([
+    assertExamOpen(params.examId),
+    hasExamAccess(user.id, params.examId),
+    params.mode === 'mock' ? getMockDefaults(params.examSlug) : Promise.resolve(null),
+  ])
 
-  const hasAccess = await hasExamAccess(user.id, params.examId)
+  const hasAccess = examAccess
   const isFreeMock = !hasAccess && params.mode === 'mock'
 
   let timeLimitSeconds: number | null = null
   let effectiveCount = params.questionCount
 
-  if (params.mode === 'mock') {
-    const mockDefaults = await getMockDefaults(params.examSlug)
-    if (mockDefaults) {
-      if (mockDefaults.time_limit_seconds !== null) {
-        timeLimitSeconds = mockDefaults.time_limit_seconds
-      }
-      if (mockDefaults.question_count !== null) {
-        effectiveCount = mockDefaults.question_count
-      }
+  if (mockDefaults) {
+    if (mockDefaults.time_limit_seconds !== null) {
+      timeLimitSeconds = mockDefaults.time_limit_seconds
+    }
+    if (mockDefaults.question_count !== null) {
+      effectiveCount = mockDefaults.question_count
     }
   }
 
@@ -135,10 +136,12 @@ export async function createSession(params: CreateSessionParams) {
     subjectIds = (examSubjects ?? []).map((es: { subject_id: string }) => es.subject_id)
   }
 
-  const session = await createExamSession(user.id, params.examId, params.mode, timeLimitSeconds)
-
   const isFree = !hasAccess
-  const lockedPool = isFree ? await isLockedPoolExam(supabase, params.examId) : false
+
+  const [session, lockedPool] = await Promise.all([
+    createExamSession(user.id, params.examId, params.mode, timeLimitSeconds),
+    isFree ? isLockedPoolExam(supabase, params.examId) : Promise.resolve(false),
+  ] as const)
 
   let questions: SessionQuestion[]
 
@@ -147,7 +150,6 @@ export async function createSession(params: CreateSessionParams) {
       ? await fetchLockedPoolQuestions(user.id, params.examId, subjectIds, effectiveCount, session.id, params.difficulty)
       : await fetchFreePoolQuestions(user.id, params.examId, subjectIds, effectiveCount, session.id, params.difficulty)
   } else if (params.mode === 'mock' && params.examSlug === 'jamb') {
-    const mockDefaults = await getMockDefaults('jamb')
     const roles = mockDefaults?.subject_roles
     if (!roles) {
       questions = await fetchWeightedQuestions(supabase, params.examId, subjectIds, effectiveCount, session.id)
@@ -232,7 +234,7 @@ export async function submitAnswer(
   selectedAnswer: string
 ) {
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const user = await getAuthUser(supabase)
   if (!user) throw new Error('Not authenticated')
 
   const session = await getSessionById(sessionId)
@@ -245,36 +247,44 @@ export async function submitAnswer(
     throw new Error('Time has expired for this session')
   }
 
-  const { data: isCorrect, error: answerError } = await supabase.rpc('record_session_answer', {
+  const recordCall = supabase.rpc('record_session_answer', {
     p_session_id: sessionId,
     p_question_id: questionId,
     p_selected_answer: selectedAnswer,
   })
-  if (answerError || typeof isCorrect !== 'boolean') throw new Error('Failed to record answer')
 
   if (session.mode === 'practice') {
-    await supabase.rpc('update_streak', { p_user_id: user.id })
+    const [recordRes, revealRes] = await Promise.all([
+      recordCall,
+      supabase.rpc('get_session_answer_reveal', {
+        p_session_id: sessionId,
+        p_question_id: questionId,
+      }),
+    ])
 
-    const { data: reveal, error: revealError } = await supabase.rpc('get_session_answer_reveal', {
-      p_session_id: sessionId,
-      p_question_id: questionId,
-    })
-    const revealRow = Array.isArray(reveal) ? reveal[0] : null
-    if (revealError || !revealRow) throw new Error('Failed to load answer feedback')
+    if (recordRes.error || typeof recordRes.data !== 'boolean') throw new Error('Failed to record answer')
+
+    const revealRow = Array.isArray(revealRes.data) ? revealRes.data[0] : null
+    if (revealRes.error || !revealRow) throw new Error('Failed to load answer feedback')
+
+    void Promise.resolve(supabase.rpc('update_streak', { p_user_id: user.id })).catch(() => {})
 
     return {
-      isCorrect,
+      isCorrect: recordRes.data,
       correctAnswer: revealRow.correct_answer,
       explanation: revealRow.explanation,
     }
   }
 
-  return { isCorrect }
+  const record = await recordCall
+  if (record.error || typeof record.data !== 'boolean') throw new Error('Failed to record answer')
+
+  return { isCorrect: record.data }
 }
 
 export async function completeMockSession(sessionId: string) {
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const user = await getAuthUser(supabase)
   if (!user) throw new Error('Not authenticated')
 
   const session = await getSessionById(sessionId)
@@ -303,7 +313,7 @@ export async function completeMockSession(sessionId: string) {
 
 export async function loadSessionData(sessionId: string) {
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const user = await getAuthUser(supabase)
   if (!user) throw new Error('Not authenticated')
 
   const session = await getSessionById(sessionId)
@@ -312,13 +322,15 @@ export async function loadSessionData(sessionId: string) {
 
   await assertExamOpen(session.exam_id)
 
-  const questions = await getSessionQuestionsWithStatus(sessionId)
+  const questions = await getSessionQuestionsWithStatus(sessionId, session.mode === 'practice')
   const mapped = questions.map((q) => ({
     id: q.questionId,
     subjectId: q.subjectId,
     questionText: q.questionText,
     options: q.options,
     selectedAnswer: q.selectedAnswer,
+    correctAnswer: q.correctAnswer,
+    explanation: q.explanation,
   }))
 
   return {
@@ -333,7 +345,7 @@ export async function loadSessionData(sessionId: string) {
 
 export async function getSessionResults(sessionId: string) {
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const user = await getAuthUser(supabase)
   if (!user) throw new Error('Not authenticated')
 
   const session = await getSessionById(sessionId)
@@ -342,26 +354,29 @@ export async function getSessionResults(sessionId: string) {
 
   await assertExamOpen(session.exam_id)
 
-  const { data: result } = await supabase
-    .from('results')
-    .select('*')
-    .eq('session_id', sessionId)
-    .single()
+  const [{ data: result }, { data: exam }, reviewRes] = await Promise.all([
+    supabase
+      .from('results')
+      .select('*')
+      .eq('session_id', sessionId)
+      .single(),
+    supabase
+      .from('exams')
+      .select('name, slug')
+      .eq('id', session.exam_id)
+      .single(),
+    supabase.rpc('get_session_review', {
+      p_session_id: sessionId,
+    }),
+  ])
 
   if (!result) throw new Error('Results not found')
 
   const startedAt = new Date(session.started_at).getTime()
   const completedAt = session.completed_at ? new Date(session.completed_at).getTime() : Date.now()
 
-  const { data: exam } = await supabase
-    .from('exams')
-    .select('name, slug')
-    .eq('id', session.exam_id)
-    .single()
-
-  const { data: review, error: reviewError } = await supabase.rpc('get_session_review', {
-    p_session_id: sessionId,
-  })
+  const reviewError = reviewRes.error
+  const review = reviewRes.data
   if (reviewError) throw new Error('Failed to load session review')
   const reviewRows = (review ?? []) as {
     question_id: string
@@ -446,7 +461,7 @@ export async function getSessionResults(sessionId: string) {
 
 export async function getSessionHistory(hub?: 'jamb' | 'universities') {
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const user = await getAuthUser(supabase)
   if (!user) throw new Error('Not authenticated')
 
   if (hub === 'jamb' || hub === undefined) redirect('/dashboard')

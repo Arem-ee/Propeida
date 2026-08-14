@@ -184,7 +184,7 @@ export async function getSessionById(sessionId: string) {
   }
 }
 
-export async function getSessionQuestionsWithStatus(sessionId: string) {
+export async function getSessionQuestionsWithStatus(sessionId: string, includeReveal = false) {
   const supabase = await createClient()
   const { data, error } = await supabase
     .from('session_answers')
@@ -197,7 +197,9 @@ export async function getSessionQuestionsWithStatus(sessionId: string) {
         id,
         subject_id,
         question_text,
-        options
+        options,
+        correct_answer,
+        explanation
       )
     `)
     .eq('session_id', sessionId)
@@ -216,6 +218,8 @@ export async function getSessionQuestionsWithStatus(sessionId: string) {
       options: q.options as { key: string; text: string }[],
       selectedAnswer: sa.selected_answer,
       isCorrect: sa.is_correct,
+      correctAnswer: includeReveal ? (q.correct_answer ?? null) : undefined,
+      explanation: includeReveal ? (q.explanation ?? null) : undefined,
     }]
   })
 

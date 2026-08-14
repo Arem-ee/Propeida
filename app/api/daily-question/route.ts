@@ -1,11 +1,11 @@
-import { createClient } from '@/lib/supabase/server'
+import { createClient, getAuthUser } from '@/lib/supabase/server'
 
 export const revalidate = 86400
 
 export async function GET() {
   const supabase = await createClient()
-  const { data: { user }, error: authError } = await supabase.auth.getUser()
-  if (authError || !user) {
+  const user = await getAuthUser(supabase)
+  if (!user) {
     return Response.json({ error: 'Not authenticated' }, { status: 401 })
   }
 

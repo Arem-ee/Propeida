@@ -11,6 +11,8 @@ interface SessionQuestion {
   questionText: string
   options: { key: string; text: string }[]
   selectedAnswer?: string | null
+  correctAnswer?: string | null
+  explanation?: string | null
 }
 
 interface PracticeModeProps {
@@ -40,6 +42,17 @@ export default function PracticeMode({ sessionId, questions }: PracticeModeProps
 
   const handleCheck = async () => {
     if (!selectedOption || !currentQuestion) return
+
+    if (currentQuestion.correctAnswer) {
+      setFeedback({
+        isCorrect: currentQuestion.correctAnswer === selectedOption,
+        correctAnswer: currentQuestion.correctAnswer,
+        explanation: currentQuestion.explanation ?? '',
+      })
+      setAnsweredCount((prev) => prev + 1)
+      void submitAnswer(sessionId, currentQuestion.id, selectedOption).catch(() => {})
+      return
+    }
 
     setSubmitting(true)
     try {

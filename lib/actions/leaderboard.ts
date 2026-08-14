@@ -1,24 +1,9 @@
 'use server'
 
-import { createClient } from '@/lib/supabase/server'
+import { createClient, getAuthUser } from '@/lib/supabase/server'
 
-export async function getLeaderboardData(period: 'all_time' | 'weekly', examSlug?: string | null) {
+export async function getLeaderboardData(period: 'all_time' | 'weekly', examId: string) {
   const supabase = await createClient()
-
-  let examId: string | null = null
-  if (examSlug) {
-    const { data: exam } = await supabase
-      .from('exams')
-      .select('id')
-      .eq('slug', examSlug)
-      .single()
-    examId = exam?.id ?? null
-  } else {
-    const { data: jamb } = await supabase.from('exams').select('id').eq('slug', 'jamb').single()
-    examId = jamb?.id ?? null
-  }
-
-  if (!examId) return []
 
   const { data, error } = await supabase.rpc('get_leaderboard', {
     p_period: period,
@@ -40,7 +25,7 @@ export async function getLeaderboardData(period: 'all_time' | 'weekly', examSlug
 
 export async function getLeaderboardExams() {
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const user = await getAuthUser(supabase)
   if (!user) return []
 
   const { data: access } = await supabase
@@ -67,7 +52,7 @@ export async function getLeaderboardExams() {
 
 export async function getUserExamAccess() {
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const user = await getAuthUser(supabase)
   if (!user) return null
 
   const { data: access } = await supabase
@@ -103,7 +88,7 @@ export async function getUserExamAccess() {
 
 export async function addUserExamAccess(examId: string) {
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const user = await getAuthUser(supabase)
   if (!user) throw new Error('Not authenticated')
 
   const { error } = await supabase
@@ -115,7 +100,7 @@ export async function addUserExamAccess(examId: string) {
 
 export async function removeUserExamAccess(examId: string) {
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const user = await getAuthUser(supabase)
   if (!user) throw new Error('Not authenticated')
 
   const { error } = await supabase

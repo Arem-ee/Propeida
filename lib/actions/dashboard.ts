@@ -1,6 +1,6 @@
 'use server'
 
-import { createClient } from '@/lib/supabase/server'
+import { createClient, getAuthUser } from '@/lib/supabase/server'
 import { revalidatePath } from 'next/cache'
 
 interface DashboardPayload {
@@ -42,7 +42,7 @@ function isActiveEntitlement(status: string, expiresAt: string | null): boolean 
 
 export async function getDashboardData() {
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const user = await getAuthUser(supabase)
   if (!user) throw new Error('Not authenticated')
 
   let payload = await fetchDashboardPayload(supabase, user.id)
@@ -101,7 +101,7 @@ export async function getDashboardData() {
 
 export async function submitDailyQuestion(dailyQuestionId: string, selectedAnswer: string) {
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const user = await getAuthUser(supabase)
   if (!user) throw new Error('Not authenticated')
 
   const { data: submission, error: submissionError } = await supabase.rpc('submit_daily_question_answer', {

@@ -20,10 +20,11 @@ export default async function PracticePage(props: { searchParams: Promise<{ hub?
 
   const supabase = await createClient()
 
-  const [examsRes, subjectsRes, examSubjectsRes] = await Promise.all([
+  const [examsRes, subjectsRes, examSubjectsRes, userRes] = await Promise.all([
     supabase.from('exams').select('id, name, slug, subject_selection_mode, school_id').order('name'),
     supabase.from('subjects').select('id, name, slug').order('name'),
     supabase.from('exam_subjects').select('exam_id, subject_id'),
+    supabase.auth.getSession(),
   ])
 
   const allExams = examsRes.data ?? []
@@ -36,7 +37,7 @@ export default async function PracticePage(props: { searchParams: Promise<{ hub?
     arr.push(es.subject_id)
   }
 
-  const { data: { user } } = await supabase.auth.getUser()
+  const user = userRes.data.session?.user ?? null
   let activeSession = null
   let userExamAccessIds: string[] = []
   if (user) {

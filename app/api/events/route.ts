@@ -1,4 +1,4 @@
-import { createClient } from '@/lib/supabase/server'
+import { createClient, getAuthUser } from '@/lib/supabase/server'
 import { headers } from 'next/headers'
 
 export const dynamic = 'force-dynamic'
@@ -36,7 +36,7 @@ export async function POST(req: Request) {
   const supabase = await createClient()
 
   try {
-    const { data: { user } } = await supabase.auth.getUser()
+    const user = await getAuthUser(supabase)
     const { error } = await supabase.from('analytics_events').insert({
       event_name: eventName,
       event_data: eventData,

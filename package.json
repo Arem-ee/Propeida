@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "measure": "node scripts/measure.mjs",
     "lint": "next lint"
   },
   "dependencies": {
@@ -27,6 +28,7 @@
     "@types/web-push": "^3.6.4",
     "pg": "^8.22.0",
     "postcss": "^8.5.0",
+    "puppeteer-core": "^24.7.0",
     "resend": "^6.18.1",
     "tailwindcss": "^4.1.14",
     "typescript": "~5.8.2"

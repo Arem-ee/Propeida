@@ -28,7 +28,10 @@ export default function LeaderboardPage() {
   const hub = searchParams.get('hub') === 'universities' ? 'universities' : 'jamb'
   const [period, setPeriod] = useState<'all_time' | 'weekly'>('all_time')
   const [examSlug, setExamSlug] = useState<string | null>(null)
-  const [entries, setEntries] = useState<LeaderboardEntry[]>([])
+  const [entriesCache, setEntriesCache] = useState<Record<'all_time' | 'weekly', LeaderboardEntry[]>>({
+    all_time: [],
+    weekly: [],
+  })
   const [exams, setExams] = useState<ExamOption[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -39,22 +42,35 @@ export default function LeaderboardPage() {
       if (hub === 'universities') {
         const firstSchool = data.find((e) => e.slug !== 'jamb')
         if (firstSchool) setExamSlug(firstSchool.slug)
+      } else if (!examSlug) {
+        const jamb = data.find((e) => e.slug === 'jamb')
+        if (jamb) setExamSlug(jamb.slug)
       }
-    }).catch(() => {})
+    }).catch(() => setError('Failed to load exams'))
   }, [hub])
 
+  const selectedExamId = exams.find((e) => e.slug === examSlug)?.id ?? null
+
   useEffect(() => {
+    if (!selectedExamId) return
     setLoading(true)
     setError(null)
-    getLeaderboardData(period, examSlug)
-      .then(setEntries)
+    Promise.all([
+      getLeaderboardData('all_time', selectedExamId),
+      getLeaderboardData('weekly', selectedExamId),
+    ])
+      .then(([allTime, weekly]) => {
+        setEntriesCache({ all_time: allTime, weekly: weekly })
+      })
       .catch((err) => setError(err instanceof Error ? err.message : 'Failed to load'))
       .finally(() => setLoading(false))
-  }, [period, examSlug])
+  }, [selectedExamId])
 
   if (hub === 'jamb') {
     return <ComingSoon />
   }
+
+  const entries = entriesCache[period]
 
   return (
     <div className="mx-auto max-w-3xl">
@@ -103,7 +119,7 @@ export default function LeaderboardPage() {
         </div>
       </div>
 
-      {loading ? (
+      {loading && entries.length === 0 ? (
         <div className="flex items-center justify-center py-20">
           <div className="h-8 w-8 animate-spin rounded-full border-4 border-blue-600 border-t-transparent" />
         </div>
@@ -116,7 +132,7 @@ export default function LeaderboardPage() {
           <p className="text-xs text-gray-400 mt-1">Complete exams to appear on the leaderboard.</p>
         </div>
       ) : (
-        <div className="space-y-2">
+        <div className={`space-y-2 ${loading ? 'opacity-60 pointer-events-none' : ''}`}>
           {entries.map((entry, i) => (
             <div key={entry.userId} className="flex items-center gap-4 rounded-xl border border-gray-100 bg-white px-5 py-3.5">
               <span className={`text-sm font-bold w-8 text-center ${i < 3 ? 'text-lg' : 'text-gray-400'}`}>
