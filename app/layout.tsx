@@ -17,7 +17,7 @@ const supabaseOrigin = process.env.NEXT_PUBLIC_SUPABASE_URL
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Propeida — Free JAMB & Post-UTME Practice with CBT Mock Exams',
+    default: 'Propeida | Free JAMB & Post-UTME Practice with CBT Mock Exams',
     template: '%s | Propeida',
   },
   description:
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     'sponsor a school exam prep',
   ],
   openGraph: {
-    title: 'Propeida — Free JAMB & Post-UTME Practice with CBT Mock Exams',
+    title: 'Propeida | Free JAMB & Post-UTME Practice with CBT Mock Exams',
     description:
       'Free exam preparation for every Nigerian candidate. Real CBT mock exams, human-checked questions, and progress tracking. Free for students.',
     url: siteUrl,
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Propeida — Free JAMB & Post-UTME Practice with CBT Mock Exams',
+    title: 'Propeida | Free JAMB & Post-UTME Practice with CBT Mock Exams',
     description:
       'Free exam preparation for every Nigerian candidate. Real CBT mock exams, human-checked questions, and progress tracking. Free for students.',
     images: ['/opengraph-image'],

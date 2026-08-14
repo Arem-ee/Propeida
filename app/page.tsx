@@ -1,29 +1,21 @@
 import type { Metadata } from 'next'
 import { HomeJsonLd, FaqJsonLd } from '@/components/json-ld'
-import MarketingHeader from '@/components/marketing-header'
-import MarketingHero from '@/components/marketing-hero'
-import MarketingFundingBanner from '@/components/marketing-funding-banner'
-import MarketingTrustMetrics from '@/components/marketing-trust-metrics'
-import MarketingPracticeCategories from '@/components/marketing-practice-categories'
-import MarketingPracticeSimulator from '@/components/marketing-practice-simulator'
-import MarketingLearningTools from '@/components/marketing-learning-tools'
-import MarketingCommunity from '@/components/marketing-community'
-import QuestionsCounter from '@/components/questions-counter'
-import MarketingSuccessStories from '@/components/marketing-success-stories'
-import MarketingSponsor from '@/components/marketing-sponsor'
-import MarketingPartner from '@/components/marketing-partner'
-import MarketingInstitutionalPreview from '@/components/marketing-institutional-preview'
-import MarketingReadinessStrip, { MarketingWhatsAppCta } from '@/components/marketing-readiness-strip'
-import MarketingFAQ from '@/components/marketing-faq'
-import MarketingFooter from '@/components/marketing-footer'
+import LandingHeader from '@/components/landing/header'
+import LandingHero from '@/components/landing/hero'
+import LandingWhy from '@/components/landing/why'
+import LandingFeatures from '@/components/landing/features'
+import LandingAdvantage from '@/components/landing/advantage'
+import LandingTestimonial from '@/components/landing/testimonial'
+import LandingFAQ from '@/components/landing/faq'
+import LandingFooter from '@/components/landing/footer'
 import WhatsAppFloat from '@/components/whatsapp-float'
 import SupportOverlay from '@/components/support-overlay'
 
 export const metadata: Metadata = {
-  title: 'UNILORIN Post-UTME (PUTME) & JAMB Practice | Propeida',
+  title: 'Practice JAMB and Post-UTME the way you will take the real exam | Propeida',
   alternates: { canonical: '/' },
   description:
-    'Practice UNILORIN Post-UTME (PUTME) past questions with a real CBT simulator, timed mock exams, and short revision notes. JAMB preparation is next.',
+    'Timed mock exams, verified questions, revision notes, and performance tracking that show exactly where to improve before exam day. Trusted by 250+ Nigerian students.',
   keywords: [
     'unilorin putme',
     'unilorin post utme',
@@ -34,9 +26,9 @@ export const metadata: Metadata = {
     'exam preparation app Nigeria',
   ],
   openGraph: {
-    title: 'UNILORIN Post-UTME (PUTME) & JAMB Practice | Propeida',
+    title: 'Practice JAMB and Post-UTME the way you will take the real exam | Propeida',
     description:
-      'Practice UNILORIN Post-UTME (PUTME) past questions with a real CBT simulator, timed mock exams, and progress tracking. JAMB preparation is next.',
+      'Timed mock exams, verified questions, revision notes, and performance tracking that show exactly where to improve before exam day.',
     url: process.env.NEXT_PUBLIC_BASE_URL ?? 'https://propeida.online',
     siteName: 'Propeida',
     type: 'website',
@@ -45,9 +37,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'UNILORIN Post-UTME (PUTME) & JAMB Practice | Propeida',
+    title: 'Practice JAMB and Post-UTME the way you will take the real exam | Propeida',
     description:
-      'Practice UNILORIN Post-UTME (PUTME) past questions with a real CBT simulator, timed mock exams, and progress tracking. JAMB preparation is next.',
+      'Timed mock exams, verified questions, revision notes, and performance tracking that show exactly where to improve before exam day.',
     images: ['/opengraph-image'],
   },
 }
@@ -57,25 +49,16 @@ export default function HomePage() {
     <div className="min-h-screen bg-white text-gray-900 antialiased selection:bg-blue-50 selection:text-blue-600">
       <HomeJsonLd />
       <FaqJsonLd />
-      <MarketingHeader />
+      <LandingHeader />
       <main>
-        <MarketingHero />
-        <MarketingFundingBanner />
-        <MarketingTrustMetrics />
-        <MarketingPracticeCategories />
-        <MarketingPracticeSimulator />
-        <MarketingLearningTools />
-        <MarketingCommunity />
-        <QuestionsCounter />
-        <MarketingSuccessStories />
-        <MarketingSponsor />
-        <MarketingPartner />
-        <MarketingInstitutionalPreview />
-        <MarketingReadinessStrip />
-        <MarketingWhatsAppCta />
-        <MarketingFAQ />
+        <LandingHero />
+        <LandingWhy />
+        <LandingFeatures />
+        <LandingAdvantage />
+        <LandingTestimonial />
+        <LandingFAQ />
       </main>
-      <MarketingFooter />
+      <LandingFooter />
       <WhatsAppFloat />
       <SupportOverlay />
     </div>

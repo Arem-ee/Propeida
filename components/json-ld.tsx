@@ -7,7 +7,7 @@ export function HomeJsonLd() {
     name: 'Propeida',
     url: baseUrl,
       description:
-        'Verified exam preparation for every Nigerian candidate. Practice JAMB and Post-UTME questions with a real CBT simulator, explanations, and performance tracking.',
+        'Free exam preparation for every Nigerian candidate. Timed mock exams, verified questions, revision notes, and performance tracking for JAMB and Post-UTME.',
       applicationCategory: 'EducationalApplication',
       operatingSystem: 'Any',
       offers: {
@@ -35,29 +35,24 @@ export function HomeJsonLd() {
 
 const FAQ_CONTENT: { question: string; answer: string }[] = [
   {
-    question: 'Is Propeida really free?',
+    question: 'Is Propeida free?',
     answer:
-      'Practicing is free — questions, explanations, streaks, leaderboards, and your performance history — no card required. An optional Pro upgrade unlocks unlimited mock exams and extra features for students who want more.',
+      'Yes, to practice. Questions, explanations, streaks, leaderboards and your history cost nothing, and no card is required. An optional Pro upgrade removes limits for students who want more.',
   },
   {
-    question: 'How does Propeida make money?',
+    question: 'Which universities are available?',
     answer:
-      'Propeida is funded by schools, tutorial centers, foundations, alumni associations, and sponsors, who pay to widen access and track real impact. We also offer an optional Pro upgrade for students who want more.',
+      'The University of Ilorin Post-UTME is live today, with JAMB practice close behind. Every question bank is checked by hand before it is published.',
   },
   {
-    question: 'Is the JAMB question bank ready?',
+    question: 'Are the questions verified?',
     answer:
-      'Not yet. Just like our Post-UTME material, every question is checked by a person before it is published. Almost ready — when it arrives, students will be able to start with it the same way: free to practise, with optional upgrades.',
+      'They start as recollections from past candidates, then are checked and reworked by hand. They are not official past questions, and Propeida is not affiliated with the University of Ilorin, JAMB, or any examination body.',
   },
   {
-    question: 'What are Post-UTME questions? Are these official past questions?',
+    question: 'Can I use it on my phone?',
     answer:
-      'The question bank is built from the recollections of past candidates who sat the University of Ilorin Post-UTME, then checked and reworked by hand. These are not official past questions, and Propeida is not affiliated with the University of Ilorin, JAMB, or any examination body.',
-  },
-  {
-    question: 'Does it work on budget phones and slow networks?',
-    answer:
-      'Yes. Propeida is built for the network conditions and devices Nigerian students actually use. The platform is text-first, so a full mock exam uses little data.',
+      'Yes. Propeida is text-first and light, so a full mock exam uses very little data. It works on Chrome, Samsung Internet, Opera and Safari on budget Android phones.',
   },
 ]
 
