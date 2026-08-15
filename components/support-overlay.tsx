@@ -46,7 +46,7 @@ export default function SupportOverlay() {
         <X className="h-4 w-4" />
       </button>
 
-      <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-navy-50 text-navy-700">
+      <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
         <Heart className="h-5 w-5" />
       </div>
 
@@ -60,14 +60,14 @@ export default function SupportOverlay() {
         <Link
           href="/support"
           onClick={dismiss}
-          className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-lg bg-navy-800 px-4 py-2.5 text-sm font-medium text-white hover:bg-navy-900 min-h-[44px]"
+          className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-xl bg-blue-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-blue-700 min-h-[44px]"
         >
           <Heart className="h-4 w-4" />
           Support Propeida
         </Link>
         <button
           onClick={dismiss}
-          className="flex-1 rounded-lg border border-gray-200 px-4 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50 min-h-[44px] cursor-pointer"
+          className="flex-1 rounded-xl border border-gray-200 px-4 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50 min-h-[44px] cursor-pointer"
         >
           Maybe later
         </button>

@@ -17,10 +17,10 @@ export default function LandingHeader() {
   const close = () => setIsOpen(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/95 backdrop-blur-[2px]">
+    <header className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/95">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
         <Link href="/" className="min-h-[44px]" aria-label="Propeida home">
-          <Logo textClassName="text-lg font-semibold tracking-tight text-gray-900" />
+          <Logo />
         </Link>
 
         <nav className="hidden md:flex md:items-center md:gap-8">
@@ -28,7 +28,7 @@ export default function LandingHeader() {
             <Link
               key={item.href}
               href={item.href}
-              className="flex min-h-[44px] items-center py-2 text-[13px] text-gray-500 transition-colors hover:text-navy-700"
+              className="flex min-h-[44px] items-center py-2 text-[13px] text-gray-500 transition-colors hover:text-gray-900"
             >
               {item.label}
             </Link>
@@ -38,7 +38,7 @@ export default function LandingHeader() {
         <div className="hidden md:block">
           <Link
             href="/signup"
-            className="inline-flex min-h-[44px] items-center rounded-lg bg-navy-800 px-4 py-2.5 text-[13px] font-medium text-white transition-colors hover:bg-navy-900"
+            className="inline-flex items-center rounded-xl bg-blue-600 px-4 py-2.5 text-[13px] font-medium text-white transition-colors hover:bg-blue-700 min-h-[44px]"
           >
             Start practicing
           </Link>
@@ -47,7 +47,7 @@ export default function LandingHeader() {
         <div className="md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-900"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-xl text-gray-500 hover:bg-gray-100 hover:text-gray-900"
             aria-expanded={isOpen}
             aria-label="Toggle menu"
           >
@@ -64,7 +64,7 @@ export default function LandingHeader() {
                 key={item.href}
                 href={item.href}
                 onClick={close}
-                className="flex min-h-[44px] items-center border-b border-gray-50 text-[14px] text-gray-600 hover:text-navy-700"
+                className="flex min-h-[44px] items-center border-b border-gray-50 text-[14px] text-gray-600 hover:text-blue-700"
               >
                 {item.label}
               </Link>
@@ -72,7 +72,7 @@ export default function LandingHeader() {
             <Link
               href="/signup"
               onClick={close}
-              className="mt-4 flex min-h-[44px] items-center justify-center rounded-lg bg-navy-800 text-[14px] font-medium text-white hover:bg-navy-900"
+              className="mt-4 flex min-h-[44px] items-center justify-center rounded-xl bg-blue-600 text-[14px] font-medium text-white hover:bg-blue-700"
             >
               Start practicing
             </Link>

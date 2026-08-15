@@ -33,13 +33,13 @@ const COLUMNS = [
 export default function LandingFooter() {
   return (
     <footer className="border-t border-gray-100 bg-white">
-      <div className="mx-auto max-w-6xl px-5 pb-12 pt-16 sm:px-8 sm:pb-14 sm:pt-20">
+      <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8">
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-5">
             <Link href="/" aria-label="Propeida home">
               <Logo />
             </Link>
-            <p className="mt-4 max-w-xs text-[13px] leading-relaxed text-gray-500">
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-gray-500">
               Real questions, real practice, no shortcuts. Built for Nigerian candidates preparing for JAMB and
               Post-UTME.
             </p>
@@ -47,16 +47,14 @@ export default function LandingFooter() {
 
           {COLUMNS.map((col) => (
             <div key={col.heading} className="md:col-span-2 lg:col-span-2">
-              <p className="text-[9.5px] font-semibold uppercase tracking-[0.22em] text-gray-400">
-                {col.heading}
-              </p>
-              <ul className="mt-5 space-y-2.5">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-gray-400">{col.heading}</p>
+              <ul className="mt-4 space-y-3">
                 {col.links.map((link) => (
                   <li key={link.label}>
                     <Link
                       href={link.href}
                       {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                      className="text-[13px] text-gray-500 transition-colors hover:text-navy-700"
+                      className="text-sm text-gray-600 transition-colors hover:text-blue-700"
                     >
                       {link.label}
                     </Link>
@@ -67,11 +65,8 @@ export default function LandingFooter() {
           ))}
         </div>
 
-        <div className="mt-16 flex flex-col items-center justify-between gap-2 border-t border-gray-100 pt-7 sm:flex-row">
-          <p className="text-[11.5px] text-gray-400">
-            &copy; {new Date().getFullYear()} Propeida. Built for Nigerian candidates.
-          </p>
-          <p className="font-serif text-[12px] italic text-gray-400">Practice the exam. Walk in prepared.</p>
+        <div className="mt-14 border-t border-gray-100 pt-6">
+          <p className="text-xs text-gray-400">© {new Date().getFullYear()} Propeida. Built for Nigerian candidates.</p>
         </div>
       </div>
     </footer>
