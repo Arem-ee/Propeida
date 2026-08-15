@@ -1,18 +1,16 @@
 export default function LandingWhy() {
   return (
-    <section className="bg-white py-28 sm:py-36">
+    <section className="bg-white py-28 sm:py-40">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <div className="mx-auto max-w-[36rem]">
-          <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-blue-600">
-            Why we built Propeida
-          </p>
-          <h2 className="mt-5 text-3xl font-medium leading-[1.16] tracking-tight text-gray-900 sm:text-4xl">
+        <div className="mx-auto max-w-[37rem]">
+          <p className="font-serif text-[13px] italic text-navy-700">Why we built Propeida</p>
+          <h2 className="mt-5 font-serif text-[30px] font-medium leading-[1.35] tracking-tight text-gray-900 sm:text-[36px]">
             The problem was never that students stopped dreaming.
           </h2>
         </div>
 
-        <div className="mx-auto mt-14 max-w-[36rem] space-y-8 text-[15px] leading-[1.95] text-gray-600">
-          <p>
+        <div className="mx-auto mt-16 max-w-[37rem] space-y-7 text-[14.5px] leading-[1.95] text-gray-600">
+          <p className="first-letter:float-left first-letter:mr-3 first-letter:font-serif first-letter:text-[54px] first-letter:font-medium first-letter:leading-[0.85] first-letter:text-navy-800">
             Every year, hundreds of thousands of Nigerian students write JAMB. Only a fraction receive admission.
             Most of the rest studied hard. They attended lessons, bought the past papers, stayed up late with
             their notes. It was not the effort that failed them.
@@ -37,6 +35,13 @@ export default function LandingWhy() {
           <p>
             The goal is simple: more Nigerian students, genuinely prepared before exam day, walking into the hall
             with the same confidence as the person who has already sat the paper once.
+          </p>
+        </div>
+
+        <div className="mx-auto mt-16 max-w-[37rem]">
+          <div className="h-px w-16 bg-navy-100" />
+          <p className="mt-5 text-[11px] font-semibold uppercase tracking-[0.22em] text-gray-400">
+            The Propeida team
           </p>
         </div>
       </div>
