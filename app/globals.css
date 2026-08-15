@@ -2,6 +2,7 @@
 
 @theme {
   --font-sans: var(--font-geist-sans), sans-serif;
+  --font-serif: var(--font-landing, Georgia, "Times New Roman"), serif;
 }
 
 html,

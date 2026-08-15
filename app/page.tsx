@@ -49,7 +49,6 @@ export default function HomePage() {
   return (
     <div
       className={`${spectral.variable} min-h-screen bg-white text-gray-900 antialiased selection:bg-blue-50 selection:text-blue-700`}
-      style={{ fontFamily: 'var(--font-landing), Georgia, "Times New Roman", serif' }}
     >
       <HomeJsonLd />
       <FaqJsonLd />

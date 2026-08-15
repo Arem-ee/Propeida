@@ -35,16 +35,16 @@ export default function LandingFAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <section id="faq" className="bg-gray-50/60 py-24 sm:py-32">
-      <div className="mx-auto max-w-3xl px-5 sm:px-8">
-        <div className="max-w-2xl">
+    <section id="faq" className="border-t border-gray-100 bg-white py-24 sm:py-32">
+      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+        <div className="mx-auto max-w-2xl text-center">
           <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-blue-600">FAQ</p>
           <h2 className="mt-5 text-3xl font-medium leading-[1.16] tracking-tight text-gray-900 sm:text-4xl">
             Questions students ask us
           </h2>
         </div>
 
-        <div className="mt-12 divide-y divide-gray-100 rounded-2xl border border-gray-100 bg-white px-6 sm:px-8">
+        <div className="mx-auto mt-12 max-w-2xl divide-y divide-gray-100">
           {FAQS.map((faq, index) => {
             const isOpen = openIndex === index
             return (
@@ -64,7 +64,7 @@ export default function LandingFAQ() {
                   </span>
                 </button>
                 {isOpen && (
-                  <p className="pb-6 pr-8 text-[15px] leading-relaxed text-gray-600">{faq.answer}</p>
+                  <p className="pb-6 pr-8 text-[14.5px] leading-[1.9] text-gray-600">{faq.answer}</p>
                 )}
               </div>
             )
