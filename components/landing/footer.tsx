@@ -47,14 +47,14 @@ export default function LandingFooter() {
 
           {COLUMNS.map((col) => (
             <div key={col.heading} className="md:col-span-2 lg:col-span-2">
-              <p className="text-xs font-bold uppercase tracking-wider text-gray-400">{col.heading}</p>
+              <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-gray-400">{col.heading}</p>
               <ul className="mt-4 space-y-3">
                 {col.links.map((link) => (
                   <li key={link.label}>
                     <Link
                       href={link.href}
                       {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                      className="text-sm text-gray-600 transition-colors hover:text-blue-600"
+                      className="text-sm text-gray-600 transition-colors hover:text-blue-700"
                     >
                       {link.label}
                     </Link>

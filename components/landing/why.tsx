@@ -1,15 +1,17 @@
 export default function LandingWhy() {
   return (
-    <section className="bg-white py-24 sm:py-32">
+    <section className="bg-white py-28 sm:py-36">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <div className="mx-auto max-w-2xl">
-          <p className="text-xs font-bold uppercase tracking-[0.14em] text-blue-600">Why we built Propeida</p>
-          <h2 className="mt-4 text-4xl font-extrabold leading-[1.12] tracking-tight text-gray-900 sm:text-[44px]">
+        <div className="mx-auto max-w-[36rem]">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-blue-600">
+            Why we built Propeida
+          </p>
+          <h2 className="mt-5 text-3xl font-medium leading-[1.16] tracking-tight text-gray-900 sm:text-4xl">
             The problem was never that students stopped dreaming.
           </h2>
         </div>
 
-        <div className="mx-auto mt-12 max-w-2xl space-y-6 text-[16px] leading-[1.85] text-gray-600">
+        <div className="mx-auto mt-14 max-w-[36rem] space-y-8 text-[15px] leading-[1.95] text-gray-600">
           <p>
             Every year, hundreds of thousands of Nigerian students write JAMB. Only a fraction receive admission.
             Most of the rest studied hard. They attended lessons, bought the past papers, stayed up late with

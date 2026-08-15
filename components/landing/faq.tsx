@@ -38,8 +38,8 @@ export default function LandingFAQ() {
     <section id="faq" className="bg-gray-50/60 py-24 sm:py-32">
       <div className="mx-auto max-w-3xl px-5 sm:px-8">
         <div className="max-w-2xl">
-          <p className="text-xs font-bold uppercase tracking-[0.14em] text-blue-600">FAQ</p>
-          <h2 className="mt-4 text-4xl font-extrabold leading-[1.12] tracking-tight text-gray-900 sm:text-[44px]">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-blue-600">FAQ</p>
+          <h2 className="mt-5 text-3xl font-medium leading-[1.16] tracking-tight text-gray-900 sm:text-4xl">
             Questions students ask us
           </h2>
         </div>
@@ -54,7 +54,7 @@ export default function LandingFAQ() {
                   aria-expanded={isOpen}
                   className="flex w-full items-center justify-between gap-4 py-5 text-left min-h-[48px] cursor-pointer"
                 >
-                  <span className="text-[15px] font-bold text-gray-900">{faq.question}</span>
+                  <span className="text-[15px] font-medium text-gray-900">{faq.question}</span>
                   <span
                     className={`shrink-0 text-gray-400 transition-transform duration-200 ${
                       isOpen ? 'rotate-45 text-blue-600' : ''

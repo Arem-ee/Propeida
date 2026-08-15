@@ -50,7 +50,7 @@ export default function SupportOverlay() {
         <Heart className="h-5 w-5" />
       </div>
 
-      <h2 className="text-base font-extrabold text-gray-900">Help improve Propeida</h2>
+      <h2 className="text-base font-semibold text-gray-900">Help improve Propeida</h2>
       <p className="mt-1.5 text-sm text-gray-500 leading-relaxed">
         We&apos;re expanding our question bank, building revision notes, and improving the platform. If
         you&apos;d like to support the work behind Propeida, you can help us keep building.
@@ -60,14 +60,14 @@ export default function SupportOverlay() {
         <Link
           href="/support"
           onClick={dismiss}
-          className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-xl bg-blue-600 px-4 py-2.5 text-sm font-bold text-white hover:bg-blue-700 min-h-[44px]"
+          className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-xl bg-blue-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-blue-700 min-h-[44px]"
         >
           <Heart className="h-4 w-4" />
           Support Propeida
         </Link>
         <button
           onClick={dismiss}
-          className="flex-1 rounded-xl border border-gray-200 px-4 py-2.5 text-sm font-bold text-gray-600 hover:bg-gray-50 min-h-[44px] cursor-pointer"
+          className="flex-1 rounded-xl border border-gray-200 px-4 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50 min-h-[44px] cursor-pointer"
         >
           Maybe later
         </button>

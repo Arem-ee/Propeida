@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { HomeJsonLd, FaqJsonLd } from '@/components/json-ld'
+import { spectral } from '@/components/landing/fonts'
 import LandingHeader from '@/components/landing/header'
 import LandingHero from '@/components/landing/hero'
 import LandingWhy from '@/components/landing/why'
@@ -46,7 +47,10 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-white text-gray-900 antialiased selection:bg-blue-50 selection:text-blue-600">
+    <div
+      className={`${spectral.variable} min-h-screen bg-white text-gray-900 antialiased selection:bg-blue-50 selection:text-blue-700`}
+      style={{ fontFamily: 'var(--font-landing), Georgia, "Times New Roman", serif' }}
+    >
       <HomeJsonLd />
       <FaqJsonLd />
       <LandingHeader />

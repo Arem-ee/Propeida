@@ -17,7 +17,7 @@ export default function LandingHeader() {
   const close = () => setIsOpen(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/90 backdrop-blur-md">
+    <header className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/95">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
         <Link href="/" className="min-h-[44px]" aria-label="Propeida home">
           <Logo />
@@ -28,7 +28,7 @@ export default function LandingHeader() {
             <Link
               key={item.href}
               href={item.href}
-              className="flex items-center py-2 text-sm font-medium text-gray-500 transition-colors hover:text-gray-900 min-h-[44px]"
+              className="flex min-h-[44px] items-center py-2 text-[13px] text-gray-500 transition-colors hover:text-gray-900"
             >
               {item.label}
             </Link>
@@ -38,7 +38,7 @@ export default function LandingHeader() {
         <div className="hidden md:block">
           <Link
             href="/signup"
-            className="inline-flex items-center rounded-xl bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-700 min-h-[44px]"
+            className="inline-flex items-center rounded-xl bg-blue-600 px-4 py-2.5 text-[13px] font-medium text-white transition-colors hover:bg-blue-700 min-h-[44px]"
           >
             Start practicing
           </Link>
@@ -64,7 +64,7 @@ export default function LandingHeader() {
                 key={item.href}
                 href={item.href}
                 onClick={close}
-                className="flex min-h-[44px] items-center border-b border-gray-50 text-sm font-medium text-gray-600 hover:text-blue-600"
+                className="flex min-h-[44px] items-center border-b border-gray-50 text-[14px] text-gray-600 hover:text-blue-700"
               >
                 {item.label}
               </Link>
@@ -72,7 +72,7 @@ export default function LandingHeader() {
             <Link
               href="/signup"
               onClick={close}
-              className="mt-4 flex min-h-[44px] items-center justify-center rounded-xl bg-blue-600 text-sm font-semibold text-white hover:bg-blue-700"
+              className="mt-4 flex min-h-[44px] items-center justify-center rounded-xl bg-blue-600 text-[14px] font-medium text-white hover:bg-blue-700"
             >
               Start practicing
             </Link>
