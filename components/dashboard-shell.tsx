@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import {
   Home, BarChart3, Trophy, History, User, GraduationCap, School,
-  LogOut, Menu, X, ChevronDown, Settings, Gift, Heart, Mail, BookOpen, CreditCard,
+  LogOut, Menu, X, ChevronDown, Settings, Gift, Heart, Mail, BookOpen, CreditCard, Compass,
 } from 'lucide-react'
 import { useState } from 'react'
 import { useHub } from '@/components/dashboard-hub-provider'
@@ -18,6 +18,8 @@ const NAV_ITEMS = [
   { href: '/history', label: 'History', icon: History },
   { href: '/account', label: 'Account', icon: User },
 ]
+
+const EXPLORE_ITEM = { href: '/explore', label: 'Explore', icon: Compass }
 
 const ACCOUNT_SUB_ITEMS = [
   { href: '/account', label: 'Profile', icon: User },
@@ -95,6 +97,23 @@ export default function DashboardShell({ children, email, isAdmin, onLogout }: {
               </Link>
             )
           })}
+
+          {(() => {
+            const Icon = EXPLORE_ITEM.icon
+            const active = isActive(EXPLORE_ITEM.href)
+            return (
+              <Link
+                key={EXPLORE_ITEM.href}
+                href={EXPLORE_ITEM.href}
+                className={`flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-bold min-h-[44px] transition-colors ${
+                  active ? 'bg-blue-50 text-blue-700' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                }`}
+              >
+                <Icon className={`h-5 w-5 ${active ? 'text-blue-600' : 'text-gray-400'}`} />
+                {EXPLORE_ITEM.label}
+              </Link>
+            )
+          })()}
 
           <div className="pt-4">
             <button
@@ -209,6 +228,24 @@ export default function DashboardShell({ children, email, isAdmin, onLogout }: {
                   </Link>
                 )
               })}
+
+              {(() => {
+                const Icon = EXPLORE_ITEM.icon
+                const active = isActive(EXPLORE_ITEM.href)
+                return (
+                  <Link
+                    key={EXPLORE_ITEM.href}
+                    href={EXPLORE_ITEM.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-bold min-h-[44px] transition-colors ${
+                      active ? 'bg-blue-50 text-blue-700' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                    }`}
+                  >
+                    <Icon className={`h-5 w-5 ${active ? 'text-blue-600' : 'text-gray-400'}`} />
+                    {EXPLORE_ITEM.label}
+                  </Link>
+                )
+              })()}
 
               <div className="border-t border-gray-100 pt-3 mt-3">
                 <p className="px-3 text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Account</p>

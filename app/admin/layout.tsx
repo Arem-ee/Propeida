@@ -38,6 +38,12 @@ export default async function AdminLayout({ children }: { children: React.ReactN
                 Exams
               </Link>
               <Link
+                href="/admin/explore"
+                className="rounded-xl px-3 py-2 text-xs font-bold text-gray-500 hover:text-gray-700 hover:bg-gray-50 min-h-[44px] flex items-center"
+              >
+                Explore
+              </Link>
+              <Link
                 href="/admin/contact-submissions"
                 className="rounded-xl px-3 py-2 text-xs font-bold text-gray-500 hover:text-gray-700 hover:bg-gray-50 min-h-[44px] flex items-center"
               >

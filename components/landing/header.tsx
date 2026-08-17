@@ -6,6 +6,7 @@ import { Menu, X } from 'lucide-react'
 import Logo from '@/components/logo'
 
 const NAV_ITEMS = [
+  { label: 'Explore', href: '/explore' },
   { label: 'Features', href: '/#features' },
   { label: 'About', href: '/about' },
   { label: 'FAQ', href: '/#faq' },
