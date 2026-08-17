@@ -168,7 +168,7 @@ values
    array['You must memorise programming languages before you can start', 'Only people who studied Computer Science can be software engineers', 'It is only about writing code all day'],
    'Junior developer, then mid-level, then senior, then team lead, then engineering manager or software architect. Many engineers also specialise in areas such as mobile development, data engineering, or security.',
    true),
-  ('medical-doctor', 'Medical Doctor', 'Medicine and Health',
+  ('medical-doctor', 'Medical Doctor', 'Medicine & Health',
    'Examines, diagnoses, and treats patients, and works to prevent and manage illness.',
    'A medical doctor examines patients, works out what is wrong, and treats or manages illness. The work combines deep knowledge of the human body with careful observation and clear communication. It is a long, structured path, and every stage of it involves working directly with people who are unwell and their families.',
    array['Take patient histories and carry out physical examinations', 'Order and interpret tests such as blood work and imaging', 'Diagnose conditions and plan treatment', 'Prescribe medication and monitor progress', 'Advise patients on prevention and healthy living', 'Work with nurses, pharmacists, and other clinicians'],
