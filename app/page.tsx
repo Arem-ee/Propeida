@@ -3,20 +3,25 @@ import { HomeJsonLd, FaqJsonLd } from '@/components/json-ld'
 import { spectral } from '@/components/landing/fonts'
 import LandingHeader from '@/components/landing/header'
 import LandingHero from '@/components/landing/hero'
-import LandingWhy from '@/components/landing/why'
-import LandingFeatures from '@/components/landing/features'
-import LandingAdvantage from '@/components/landing/advantage'
+import LandingPillars from '@/components/landing/pillars'
+import LandingExplorePreview from '@/components/landing/explore-preview'
+import LandingCareerPreview from '@/components/landing/career-preview'
+import LandingNigeria from '@/components/landing/nigeria'
+import LandingJourney from '@/components/landing/journey'
+import LandingPractice from '@/components/landing/practice'
+import LandingUncertainty from '@/components/landing/uncertainty'
 import LandingTestimonial from '@/components/landing/testimonial'
 import LandingFAQ from '@/components/landing/faq'
+import LandingFinalCta from '@/components/landing/final-cta'
 import LandingFooter from '@/components/landing/footer'
 import WhatsAppFloat from '@/components/whatsapp-float'
 import SupportOverlay from '@/components/support-overlay'
 
 export const metadata: Metadata = {
-  title: 'Practice JAMB and Post-UTME the way you will take the real exam | Propeida',
+  title: 'Your future is bigger than one exam',
   alternates: { canonical: '/' },
   description:
-    'Timed mock exams, verified questions, revision notes, and performance tracking that show exactly where to improve before exam day. Trusted by 250+ Nigerian students.',
+    'Free JAMB and Post-UTME practice in the real CBT format, plus careers, courses and universities to explore on the other side of the exam. Built for Nigerian students.',
   keywords: [
     'unilorin putme',
     'unilorin post utme',
@@ -25,11 +30,13 @@ export const metadata: Metadata = {
     'JAMB',
     'CBT mock exam Nigeria',
     'exam preparation app Nigeria',
+    'careers after JAMB',
+    'what can I study in Nigeria',
   ],
   openGraph: {
-    title: 'Practice JAMB and Post-UTME the way you will take the real exam | Propeida',
+    title: 'Your future is bigger than one exam | Propeida',
     description:
-      'Timed mock exams, verified questions, revision notes, and performance tracking that show exactly where to improve before exam day.',
+      'Free JAMB and Post-UTME practice in the real CBT format, plus careers, courses and universities to explore on the other side of the exam.',
     url: process.env.NEXT_PUBLIC_BASE_URL ?? 'https://propeida.online',
     siteName: 'Propeida',
     type: 'website',
@@ -38,9 +45,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Practice JAMB and Post-UTME the way you will take the real exam | Propeida',
+    title: 'Your future is bigger than one exam | Propeida',
     description:
-      'Timed mock exams, verified questions, revision notes, and performance tracking that show exactly where to improve before exam day.',
+      'Free JAMB and Post-UTME practice in the real CBT format, plus careers, courses and universities to explore on the other side of the exam.',
     images: ['/opengraph-image'],
   },
 }
@@ -55,11 +62,16 @@ export default function HomePage() {
       <LandingHeader />
       <main>
         <LandingHero />
-        <LandingWhy />
-        <LandingFeatures />
-        <LandingAdvantage />
+        <LandingPillars />
+        <LandingExplorePreview />
+        <LandingCareerPreview />
+        <LandingNigeria />
+        <LandingJourney />
+        <LandingPractice />
+        <LandingUncertainty />
         <LandingTestimonial />
         <LandingFAQ />
+        <LandingFinalCta />
       </main>
       <LandingFooter />
       <WhatsAppFloat />
