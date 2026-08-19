@@ -1,4 +1,5 @@
 import { getPublicClient } from './supabase'
+import { getCareerOpportunity } from './opportunity'
 import type {
   CareerDetail,
   CourseDetail,
@@ -68,6 +69,8 @@ export async function getCareerBySlug(slug: string): Promise<CareerDetail | null
   if (error || !row) return null
   const career = row as unknown as CareerRow
 
+  const opportunity = getCareerOpportunity(career.slug)
+
   const courses: LinkedCourse[] = sortByName(
     career.career_courses.map((cc) => ({
       id: cc.course.id,
@@ -103,6 +106,18 @@ export async function getCareerBySlug(slug: string): Promise<CareerDetail | null
     misconceptions: career.misconceptions,
     career_progression: career.career_progression,
     related_careers: career.related_careers,
+    demand_level: opportunity?.demand.level ?? null,
+    demand_summary: opportunity?.demand.summary ?? null,
+    demand_evidence: opportunity?.demand.evidenceNote ?? null,
+    outlook_level: opportunity?.outlook.level ?? null,
+    outlook_basis: opportunity?.outlook.basis ?? null,
+    outlook_summary: opportunity?.outlook.summary ?? null,
+    nigerian_reality: opportunity?.nigerianReality ?? null,
+    international_transferability: opportunity?.internationalTransferability.intro ?? null,
+    skill_stack: opportunity?.employability.skills ?? null,
+    learning_path: opportunity?.learningPath ?? null,
+    evidence: opportunity?.evidence ?? null,
+    last_reviewed: opportunity?.lastReviewed ?? null,
     courses,
     relatedCareerItems,
   }

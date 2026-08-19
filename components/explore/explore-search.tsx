@@ -150,7 +150,7 @@ export default function ExploreSearch() {
                 onClick={() => setOpen(false)}
                 className="block border-t border-gray-50 px-4 py-2.5 text-center text-xs font-bold text-blue-600 hover:bg-blue-50"
               >
-                View all career results →
+                View all career results
               </Link>
             </div>
           )}

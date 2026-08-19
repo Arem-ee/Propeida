@@ -57,6 +57,18 @@ export interface CareerDetail {
   misconceptions: string[]
   career_progression: string | null
   related_careers: string[]
+  demand_level: string | null
+  demand_summary: string | null
+  demand_evidence: string | null
+  outlook_level: string | null
+  outlook_basis: string | null
+  outlook_summary: string | null
+  nigerian_reality: string | null
+  international_transferability: string | null
+  skill_stack: unknown
+  learning_path: unknown
+  evidence: unknown
+  last_reviewed: string | null
   courses: LinkedCourse[]
   relatedCareerItems: LinkedCareer[]
 }
