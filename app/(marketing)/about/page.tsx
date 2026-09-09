@@ -22,7 +22,7 @@ export default function AboutPage() {
             Propeida is a Computer-Based Test (CBT) exam preparation platform built for Nigerian students preparing for JAMB and Post-UTME. It replaces paper booklets and PDFs with a timed digital exam environment that works on the phones and networks students actually use.
           </p>
           <p>
-            Our position is simple: <strong className="text-gray-900">every Nigerian candidate deserves a real chance.</strong> Preparation for the exam that decides a future should not depend on what a family can afford. So Propeida is free for students — the question bank, the simulator, the explanations, and the progress tracking. It is funded by schools, tutorial centers, foundations, alumni associations, and sponsors, who pay to widen access and measure real impact.
+            Our position is simple: <strong className="text-gray-900">every Nigerian candidate deserves a real chance.</strong> Propeida starts with a useful free tier, then offers paid subscriptions for students who want deeper practice, full mock access, and more personalised support.
           </p>
           <p>
             The question bank draws from the recollections of past candidates who have taken the University of Ilorin Post-UTME, with every question checked and reworked by hand. These are not official questions and Propeida has no affiliation with the University of Ilorin, JAMB, or any examination body. The platform provides practice and preparation material. It does not guarantee any specific exam score or admission outcome.

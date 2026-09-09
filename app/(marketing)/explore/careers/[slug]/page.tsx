@@ -146,9 +146,16 @@ export default async function CareerPage({
 
       {opportunity ? (
         <>
-          <SectorGallery career={career} opportunity={opportunity} accent={accent} visuals={visuals} />
-          <NigeriaSection career={career} opportunity={opportunity} accent={accent} visuals={visuals} />
-          <ForecastSection career={career} opportunity={opportunity} accent={accent} visuals={visuals} />
+          <div className="mt-8">
+            <SectorGallery career={career} opportunity={opportunity} accent={accent} visuals={visuals} />
+          </div>
+          <details className="group">
+            <summary className="mx-auto mt-2 flex max-w-6xl cursor-pointer list-none items-center justify-between px-4 text-sm font-bold text-blue-700 sm:px-6 [&::-webkit-details-marker]:hidden">
+              Keep exploring this path
+              <ChevronDown className="h-4 w-4 transition-transform group-open:rotate-180" />
+            </summary>
+            <NigeriaSection career={career} opportunity={opportunity} accent={accent} visuals={visuals} />
+            <ForecastSection career={career} opportunity={opportunity} accent={accent} visuals={visuals} />
 
           <Transition>But what does the work actually look like?</Transition>
           <DayInCareerSection career={career} opportunity={opportunity} accent={accent} visuals={visuals} />
@@ -202,7 +209,8 @@ export default async function CareerPage({
                 </p>
               </SectionCard>
             ) : null}
-          </div>
+            </div>
+          </details>
         </>
       ) : (
         <div className="mx-auto max-w-6xl px-4 sm:px-6">

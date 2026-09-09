@@ -135,7 +135,7 @@ export default function OGImage() {
               background: 'rgba(255,255,255,0.1)',
             }}
           >
-            NGN 1,500 one-time
+            Start free
           </span>
           <span
             style={{
@@ -146,7 +146,7 @@ export default function OGImage() {
               background: 'rgba(255,255,255,0.1)',
             }}
           >
-            No subscription
+            Upgrade for more
           </span>
         </div>
       </div>

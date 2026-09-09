@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { HomeJsonLd, FaqJsonLd } from '@/components/json-ld'
-import { spectral } from '@/components/landing/fonts'
 import LandingHeader from '@/components/landing/header'
 import LandingHero from '@/components/landing/hero'
 import LandingPillars from '@/components/landing/pillars'
@@ -15,7 +14,6 @@ import LandingFAQ from '@/components/landing/faq'
 import LandingFinalCta from '@/components/landing/final-cta'
 import LandingFooter from '@/components/landing/footer'
 import WhatsAppFloat from '@/components/whatsapp-float'
-import SupportOverlay from '@/components/support-overlay'
 
 export const metadata: Metadata = {
   title: 'Your future is bigger than one exam',
@@ -55,7 +53,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div
-      className={`${spectral.variable} min-h-screen bg-white text-gray-900 antialiased selection:bg-blue-50 selection:text-blue-700`}
+      className="min-h-screen bg-white text-gray-900 antialiased selection:bg-blue-50 selection:text-blue-700"
     >
       <HomeJsonLd />
       <FaqJsonLd />
@@ -75,7 +73,6 @@ export default function HomePage() {
       </main>
       <LandingFooter />
       <WhatsAppFloat />
-      <SupportOverlay />
     </div>
   )
 }

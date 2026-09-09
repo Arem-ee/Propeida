@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: '%s | Propeida',
   },
   description:
-    'Free exam preparation for every Nigerian candidate. Practice JAMB and UNILORIN Post-UTME questions with a real CBT simulator, explanations, and performance tracking. Free for students.',
+    'Prepare smarter for JAMB and Post-UTME with realistic CBT practice, clear explanations, and progress tracking. Start free, then upgrade when you need more.',
   keywords: [
     'free JAMB past questions',
     'Post UTME practice',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Propeida | Free JAMB & Post-UTME Practice with CBT Mock Exams',
     description:
-      'Free exam preparation for every Nigerian candidate. Real CBT mock exams, human-checked questions, and progress tracking. Free for students.',
+      'Real CBT mock exams, human-checked questions, and progress tracking for Nigerian students. Start free and upgrade for more practice.',
     url: siteUrl,
     siteName: 'Propeida',
     type: 'website',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Propeida | Free JAMB & Post-UTME Practice with CBT Mock Exams',
     description:
-      'Free exam preparation for every Nigerian candidate. Real CBT mock exams, human-checked questions, and progress tracking. Free for students.',
+      'Real CBT mock exams, human-checked questions, and progress tracking for Nigerian students. Start free and upgrade for more practice.',
     images: ['/opengraph-image'],
   },
   robots: {

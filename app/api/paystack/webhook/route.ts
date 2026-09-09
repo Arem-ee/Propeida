@@ -1,6 +1,6 @@
 import { NextRequest } from 'next/server'
 import { createAdminClient } from '@/lib/supabase/admin'
-import { verifyWebhookSignature, verifyTransaction, isValidProduct, SUPPORT_PRODUCT } from '@/lib/paystack'
+import { verifyWebhookSignature, verifyTransaction, isValidProduct } from '@/lib/paystack'
 
 const DEBUG = process.env.DEBUG === 'true'
 
@@ -37,39 +37,6 @@ export async function POST(request: NextRequest) {
   }
 
   const supabase = createAdminClient()
-
-  // Support contributions: guests allowed (no user_id), recorded separately from product payments.
-  if (product === SUPPORT_PRODUCT) {
-    let verification
-    try {
-      verification = await verifyTransaction(reference)
-    } catch (err) {
-      log('verifyTransaction failed', err)
-      return new Response('Transaction verification failed', { status: 502 })
-    }
-
-    if (verification.status !== 'success') {
-      return new Response('Transaction not successful', { status: 400 })
-    }
-
-    const { error: supportError } = await supabase.from('support_contributions').upsert(
-      {
-        reference,
-        user_id: userId ?? null,
-        email: verification.customerEmail ?? '',
-        amount: Math.floor(verification.amount / 100),
-        status: 'success',
-      },
-      { onConflict: 'reference' }
-    )
-
-    if (supportError) {
-      log('support_contributions upsert failed', supportError.message)
-      return new Response('Failed to process support contribution', { status: 500 })
-    }
-
-    return new Response('OK', { status: 200 })
-  }
 
   if (!userId) {
     return new Response('Missing user_id in metadata', { status: 400 })

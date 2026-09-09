@@ -27,7 +27,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-base font-extrabold text-gray-900 mb-3">Free Tier and Pro Upgrade</h2>
             <p>
-              Propeida offers a free tier with limited access to practice questions and mock exams. The free tier limits are clearly stated on the pricing page and within the application. The Pro upgrade is a one-time payment of ₦1,500 (fifteen hundred Nigerian Naira) processed through Paystack. Pro access is tied to your account and is non-transferable.
+              Propeida offers a free tier with limited access to practice questions and mock exams. Paid plans are subscriptions that renew on the billing schedule shown at checkout, unless you cancel before the next renewal. Access is tied to your account and is non-transferable. Plan prices, limits, renewal terms, and cancellation instructions are shown before payment.
             </p>
           </section>
 
@@ -62,7 +62,7 @@ export default function TermsPage() {
             <h2 className="text-base font-extrabold text-gray-900 mb-3">Refund Policy</h2>
             <p className="text-xs font-bold text-amber-600 mb-3 uppercase tracking-wider">Draft — pending legal review</p>
             <p>
-              PUTME Pro grants immediate access to the question bank and mock exam features on successful payment. Because access is instant, we don&apos;t offer refunds for change of mind once access has been granted.
+              Paid access begins when payment is successful. Your consumer cancellation and refund rights depend on the plan and applicable law; the terms shown at checkout apply to that purchase.
             </p>
             <p className="mt-3">
               You are entitled to a refund if: you were charged more than once for the same purchase, a genuine technical failure on our end prevented you from ever accessing what you paid for, or the service materially didn&apos;t match what was described at the time of purchase. Contact propeida.help@gmail.com if any of these apply.

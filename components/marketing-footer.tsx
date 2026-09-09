@@ -51,19 +51,16 @@ export default function MarketingFooter() {
           </div>
 
           <div>
-            <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">Partners</h4>
+            <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">Plans</h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/partner" className={linkClass}>Schools</Link>
+                <Link href="/pricing" className={linkClass}>Free tier</Link>
               </li>
               <li>
-                <Link href="/partner" className={linkClass}>Tutorial Centers</Link>
+                <Link href="/pricing" className={linkClass}>Pro subscription</Link>
               </li>
               <li>
-                <Link href="/sponsor" className={linkClass}>Sponsors</Link>
-              </li>
-              <li>
-                <Link href="/funding" className={linkClass}>Funding</Link>
+                <Link href="/pricing" className={linkClass}>Compare plans</Link>
               </li>
             </ul>
           </div>
@@ -99,7 +96,7 @@ export default function MarketingFooter() {
             &copy; 2026 Propeida. All rights reserved.
           </p>
           <p className="text-xs font-semibold text-gray-500">
-            Funded by people who believe in prepared students.
+            Start free. Upgrade when you need more.
           </p>
         </div>
       </div>

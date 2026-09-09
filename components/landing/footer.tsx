@@ -14,10 +14,10 @@ const COLUMNS = [
     ],
   },
   {
-    heading: 'Support',
+    heading: 'Help',
     links: [
       { label: 'Contact', href: '/contact' },
-      { label: 'Support Propeida', href: '/support' },
+      { label: 'Pricing', href: '/pricing' },
       { label: 'FAQ', href: '/#faq' },
       { label: 'WhatsApp channel', href: siteConfig.whatsapp.channelUrl, external: true },
     ],

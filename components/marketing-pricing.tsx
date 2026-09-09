@@ -30,7 +30,7 @@ const PRODUCTS = [
     name: 'PUTME Pro Pass',
     description: 'Unlock the question bank and mock simulations for any university you have added.',
     displayPrice: '₦1,500',
-    pricePill: 'One-time payment',
+    pricePill: 'Subscription',
     badge: null,
     features: [
       { text: 'Unlimited questions for any university', included: true },
@@ -142,7 +142,7 @@ export default function MarketingPricing({ variant = 'marketing' }: { variant?: 
             Plain, direct pricing
           </h2>
           <p className="mt-4 text-lg text-gray-500 leading-relaxed">
-            Free to start, with simple, affordable one-time upgrades when you are ready for more. No recurring subscriptions.
+            Start free, then subscribe when you need more practice, full mock access, and personalised support.
           </p>
         </div>
 

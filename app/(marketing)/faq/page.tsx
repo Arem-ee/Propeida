@@ -13,14 +13,14 @@ interface FAQItem {
 
 const faqs: FAQItem[] = [
   {
-    question: 'Is Propeida really free for students?',
+    question: 'Is there a free version of Propeida?',
     answer:
-      'Practicing is free — questions, explanations, streaks, leaderboards, and your performance history — no card required. An optional Pro upgrade unlocks unlimited mock exams and extra features for students who want more, and we\'re working to expand free access as the platform grows.',
+      'Yes. The free tier lets you experience Propeida before paying: limited practice and mock access, plus the core learning experience. A paid subscription unlocks more practice, full mock access, and premium learning features. No card is required to start.',
   },
   {
-    question: 'How can Propeida make money?',
+    question: 'How does Propeida make money?',
     answer:
-      'Propeida is funded by schools, tutorial centers, foundations, alumni associations, and sponsors, who pay to widen access and track real impact. We also offer an optional Pro upgrade for students who want more — that choice always stays theirs.',
+      'Propeida is supported by student subscriptions. The free tier remains available so students can try the platform before deciding whether to upgrade.',
   },
   {
     question: 'Does Propeida work on slow networks and budget Android phones?',
@@ -35,7 +35,7 @@ const faqs: FAQItem[] = [
   {
     question: 'Can I practice for multiple exams with one account?',
     answer:
-      'Yes. A single account lets you practice Post-UTME now, JAMB when it launches, and any university we add next. You never pay separately per exam.',
+      'Yes. One account keeps your practice history, plans, and access in one place across the exams and universities Propeida supports. Your exact access depends on your current plan.',
   },
   {
     question: 'How is Propeida different from practicing with past question PDFs?',
@@ -50,7 +50,7 @@ const faqs: FAQItem[] = [
   {
     question: 'Who owns my data?',
     answer:
-      'You do. We never sell student data. Institutional partners see progress and results needed to run preparation — with consent — never personal information beyond that. We explain this fully on the funding page.',
+      'You do. We never sell student data. We use your activity to provide your practice history, recommendations, and account access.',
   },
 ]
 
@@ -71,8 +71,8 @@ export default function FAQPage() {
             Straight answers about Propeida, how it is funded, and how it works.
           </p>
           <p className="mt-2 text-sm text-gray-400">
-            Also see the <Link href="/#faq" className="font-bold text-blue-600 hover:text-blue-700">FAQ section on the homepage</Link> and{' '}
-            <Link href="/funding" className="font-bold text-blue-600 hover:text-blue-700">how Propeida is funded</Link>.
+            Also see the <Link href="/#faq" className="font-bold text-blue-600 hover:text-blue-700">FAQ section on the homepage</Link> and our{' '}
+            <Link href="/pricing" className="font-bold text-blue-600 hover:text-blue-700">plans and pricing</Link>.
           </p>
         </div>
 

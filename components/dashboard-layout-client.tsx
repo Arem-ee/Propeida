@@ -4,7 +4,6 @@ import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/client'
 import DashboardShell from '@/components/dashboard-shell'
-import SupportOverlay from '@/components/support-overlay'
 import { DashboardHubProvider } from '@/components/dashboard-hub-provider'
 
 export default function DashboardLayoutClient({
@@ -40,7 +39,6 @@ export default function DashboardLayoutClient({
         )}
         {children}
       </DashboardShell>
-      <SupportOverlay />
     </DashboardHubProvider>
   )
 }

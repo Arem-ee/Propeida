@@ -5,7 +5,7 @@ import { createClient } from '@/lib/supabase/client'
 import { submitContactForm } from '@/lib/actions/contact'
 import { Check, Send } from 'lucide-react'
 
-export default function SupportPage() {
+export default function ContactPage() {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [error, setError] = useState<string | null>(null)
@@ -49,7 +49,7 @@ export default function SupportPage() {
 
   return (
     <div className="mx-auto max-w-lg">
-      <h1 className="text-2xl font-extrabold text-gray-900 mb-2">Contact & Support</h1>
+      <h1 className="text-2xl font-extrabold text-gray-900 mb-2">Contact us</h1>
       <p className="text-sm text-gray-500 mb-8">
         Send a message to the team, or email us directly at{' '}
         <a href="mailto:propeida.help@gmail.com" className="text-blue-600 hover:text-blue-700 font-semibold">

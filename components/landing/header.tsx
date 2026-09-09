@@ -10,7 +10,7 @@ const NAV_ITEMS = [
   { label: 'Features', href: '/#features' },
   { label: 'About', href: '/about' },
   { label: 'FAQ', href: '/#faq' },
-  { label: 'Support', href: '/support' },
+  { label: 'Pricing', href: '/pricing' },
 ]
 
 export default function LandingHeader() {

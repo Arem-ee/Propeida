@@ -115,9 +115,9 @@ export default function FeedCard({ item, saved, followed, copied, actions }: Fee
         <h3 className="text-xl font-extrabold leading-snug tracking-tight text-gray-900">
           {item.headline}
         </h3>
-        <p className="text-sm leading-relaxed text-gray-600">{item.body}</p>
+        <p className="line-clamp-3 text-sm leading-relaxed text-gray-600">{item.body}</p>
         <span className="inline-flex items-center gap-1.5 text-sm font-bold text-blue-600">
-          {item.ctaLabel}
+          {item.ctaLabel === 'Explore' ? 'See the quick take' : item.ctaLabel}
           <ArrowRight className="h-4 w-4" />
         </span>
       </Link>

@@ -19,16 +19,16 @@ export default function LandingHero() {
         <div className="grid items-center gap-14 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
             <h1 className="text-[40px] font-medium leading-[1.06] tracking-tight text-gray-900 sm:text-[52px]">
-              Your future is bigger than{' '}
-              <span className="font-serif italic text-blue-700 underline decoration-blue-200 decoration-[1.5px] underline-offset-[8px]">
-                one exam
+              Prepare for the exam.{' '}
+              <span className="font-semibold text-blue-700 underline decoration-blue-200 decoration-[1.5px] underline-offset-[8px]">
+                Build for what&apos;s next
               </span>
               .
             </h1>
 
             <p className="mt-8 max-w-md text-[14.5px] leading-[1.9] text-gray-600">
-              Prepare for the exam in front of you — and discover what comes after it. JAMB and Post-UTME
-              practice, plus the careers your course can lead to. Free for students.
+              Real CBT practice for JAMB and Post-UTME, with a clearer way to discover where your choices can lead.
+              Start free. Upgrade when you are ready for deeper preparation.
             </p>
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -46,7 +46,7 @@ export default function LandingHero() {
               </Link>
             </div>
 
-            <p className="mt-6 text-[12.5px] text-gray-400">Free for students · No card required</p>
+            <p className="mt-6 text-[12.5px] text-gray-400">Free tier available · No card required</p>
           </div>
 
           <div className="relative lg:col-span-7">

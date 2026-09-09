@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: 'How Propeida is funded',
   alternates: { canonical: '/funding' },
   description:
-    'Students never pay for learning on Propeida. Schools, tutorial centers, foundations, alumni associations, and sponsors fund student access.',
+    'Propeida combines student subscriptions with school, tutorial-center, foundation, alumni, and sponsorship partnerships.',
   keywords: [
     'how Propeida is funded',
     'free exam prep for Nigerian students',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'How Propeida is funded',
     description:
-      'Students never pay for learning on Propeida. Schools, tutorial centers, foundations, alumni associations, and sponsors fund student access.',
+      'Propeida combines student subscriptions with school, tutorial-center, foundation, alumni, and sponsorship partnerships.',
     type: 'website',
     locale: 'en_NG',
     images: [{ url: '/opengraph-image', width: 1200, height: 630 }],
@@ -68,8 +68,7 @@ export default function FundingPage() {
                 How Propeida is funded
               </h1>
               <p className="mt-6 text-lg text-gray-500 leading-relaxed">
-                We say it plainly: <strong className="text-gray-900">students never pay for learning on Propeida.</strong>{' '}
-                Institutions and sponsors fund access — because every prepared student benefits the whole country.
+                Start with the free tier, then subscribe for deeper preparation. Institutions and sponsors can also fund access for students and cohorts.
               </p>
             </div>
           </div>
@@ -79,13 +78,13 @@ export default function FundingPage() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-                The goal: every Nigerian student can prepare, free.
+                The goal: better preparation for every Nigerian student.
               </h2>
               <p className="mt-6 text-lg text-blue-100 leading-relaxed">
                 Not every student who deserves admission can afford a single past-question pack, let alone a mock
-                season. Our aim is a day when preparation on Propeida is as normal as carrying a phone — free
-                regardless of income, school, or where you live. We start with UNILORIN Post-UTME today. JAMB is
-                next. Then your university. Funding widens reach; it never narrows it.
+                season. Our aim is preparation that is genuinely useful from the free tier and powerful enough to
+                justify a subscription when students need more. We start with UNILORIN Post-UTME today. JAMB is
+                next. Then your university.
               </p>
             </div>
           </div>
@@ -116,8 +115,8 @@ export default function FundingPage() {
               <h2 className="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">The promise</h2>
               <ul className="mt-8 space-y-4">
                 {[
-                  'No student is ever charged for learning on Propeida.',
-                  'We do not sell student data. Partners fund access — they do not buy students.',
+                  'Every student can start with a useful free tier before subscribing.',
+                  'We do not sell student data. Partners fund access; they do not buy students.',
                   'Every question is checked by a person before it is published.',
                   'Sponsorship is measured: schools reached, questions practiced, scores improved, admissions gained.',
                 ].map((item, idx) => (
@@ -133,7 +132,7 @@ export default function FundingPage() {
                 <p className="mt-2 text-sm text-gray-500 leading-relaxed">
                   Infrastructure that keeps the platform fast on Nigerian networks. Compensation for the people who
                   check every question. And the work of building the next exam banks — JAMB is next, and your
-                  university could follow. Funding widens reach; it never narrows it.
+                  university could follow. Subscriptions sustain the product; partnerships help widen access.
                 </p>
               </div>
             </div>
@@ -148,8 +147,7 @@ export default function FundingPage() {
               </h2>
               <p className="mt-4 text-lg text-gray-500 leading-relaxed">
                 Whether you are a school running preparation, a foundation funding cohorts, or a sponsor following a
-                class to admission, the model is the same: students learn free, and the people who believe in
-                prepared students make it possible.
+                class to admission, partnerships can fund or subsidise access for the students they support.
               </p>
             </div>
             <InquiryForm

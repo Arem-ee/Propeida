@@ -1,10 +1,10 @@
 'use client'
 
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import {
   Home, BarChart3, Trophy, History, User, GraduationCap, School,
-  LogOut, Menu, X, ChevronDown, Settings, Gift, Heart, Mail, BookOpen, CreditCard, Compass,
+  LogOut, Menu, X, ChevronDown, Settings, Gift, Mail, BookOpen, CreditCard, Compass, ArrowLeft,
 } from 'lucide-react'
 import { useState } from 'react'
 import { useHub } from '@/components/dashboard-hub-provider'
@@ -20,14 +20,20 @@ const NAV_ITEMS = [
 ]
 
 const EXPLORE_ITEM = { href: '/explore', label: 'Explore', icon: Compass }
+const MOBILE_NAV_ITEMS = [
+  { href: '/dashboard', label: 'Home', icon: Home },
+  { href: '/practice', label: 'Practice', icon: BarChart3 },
+  EXPLORE_ITEM,
+  { href: '/history', label: 'History', icon: History },
+  { href: '/account', label: 'Account', icon: User },
+]
 
 const ACCOUNT_SUB_ITEMS = [
   { href: '/account', label: 'Profile', icon: User },
   { href: '/account/institutions', label: 'Institutions', icon: School },
   { href: '/account/referrals', label: 'Refer & Earn', icon: Gift },
   { href: '/account/upgrade', label: 'Upgrade', icon: CreditCard },
-  { href: '/support', label: 'Support Propeida', icon: Heart },
-  { href: '/dashboard/support', label: 'Contact & Support', icon: Mail },
+  { href: '/dashboard/support', label: 'Contact', icon: Mail },
 ]
 
 export default function DashboardShell({ children, email, isAdmin, onLogout }: {
@@ -37,11 +43,17 @@ export default function DashboardShell({ children, email, isAdmin, onLogout }: {
   onLogout: () => void
 }) {
   const pathname = usePathname()
+  const router = useRouter()
   const { hub, setHub } = useHub()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [accountExpanded, setAccountExpanded] = useState(false)
 
   const hubBase = hub === 'universities' ? '?hub=universities' : ''
+  const showBack = !['/dashboard', '/practice', '/leaderboard', '/history', '/explore'].includes(pathname)
+  const goBack = () => {
+    if (window.history.length > 1) router.back()
+    else router.push('/dashboard')
+  }
 
   const isActive = (href: string) => {
     if (href === '/dashboard') return pathname === '/dashboard' || (pathname === '/' && !pathname.startsWith('/account'))
@@ -174,9 +186,16 @@ export default function DashboardShell({ children, email, isAdmin, onLogout }: {
 
       <div className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100">
         <div className="flex items-center justify-between h-14 px-4">
-          <Link href="/dashboard" className="min-h-[44px] flex items-center">
-            <Logo size={28} />
-          </Link>
+          <div className="flex items-center gap-1">
+            {showBack && (
+              <button onClick={goBack} aria-label="Go back" className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-xl text-gray-500 hover:bg-gray-100">
+                <ArrowLeft className="h-5 w-5" />
+              </button>
+            )}
+            <Link href="/dashboard" className="min-h-[44px] flex items-center">
+              <Logo size={28} />
+            </Link>
+          </div>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="inline-flex items-center justify-center rounded-xl p-2 text-gray-500 hover:bg-gray-100 min-h-[44px] min-w-[44px] cursor-pointer"
@@ -293,13 +312,18 @@ export default function DashboardShell({ children, email, isAdmin, onLogout }: {
 
       <main className="flex-1 lg:ml-64 pt-[113px] lg:pt-0 pb-20 lg:pb-0">
         <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:py-8">
+          {showBack && (
+            <button onClick={goBack} className="mb-4 hidden min-h-[36px] items-center gap-1 text-sm font-semibold text-gray-500 hover:text-blue-700 lg:inline-flex">
+              <ArrowLeft className="h-4 w-4" /> Back
+            </button>
+          )}
           {children}
         </div>
       </main>
 
       <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-100 safe-area-bottom">
         <div className="flex items-center justify-around h-16 px-2">
-          {NAV_ITEMS.map((item) => {
+          {MOBILE_NAV_ITEMS.map((item) => {
             const Icon = item.icon
             const active = isActive(item.href)
             return (
