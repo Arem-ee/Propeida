@@ -3,7 +3,7 @@ import { headers } from 'next/headers'
 import { createClient } from '@/lib/supabase/server'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { isValidProduct, verifyTransaction } from '@/lib/paystack'
-import { checkRateLimit, rateLimitKey } from '@/lib/rate-limit'
+import { checkRateLimit, getClientIp, rateLimitKey } from '@/lib/rate-limit'
 
 export async function GET(request: NextRequest) {
   const reference = request.nextUrl.searchParams.get('reference')
@@ -18,8 +18,8 @@ export async function GET(request: NextRequest) {
   }
 
   const headersList = await headers()
-  const ip = headersList.get('x-forwarded-for') ?? headersList.get('x-real-ip') ?? 'unknown'
-  const { allowed } = checkRateLimit(rateLimitKey(ip, 'paystack-verify'), 10, 60000)
+  const ip = getClientIp((name) => headersList.get(name))
+  const { allowed } = await checkRateLimit(rateLimitKey(ip, 'paystack-verify'), 10, 60000)
   if (!allowed) {
     return NextResponse.json({ status: 'pending' })
   }

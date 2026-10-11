@@ -8,6 +8,7 @@ import LandingCareerPreview from '@/components/landing/career-preview'
 import LandingNigeria from '@/components/landing/nigeria'
 import LandingJourney from '@/components/landing/journey'
 import LandingPractice from '@/components/landing/practice'
+import LandingComparisonTable from '@/components/landing/comparison-table'
 import LandingUncertainty from '@/components/landing/uncertainty'
 import LandingTestimonial from '@/components/landing/testimonial'
 import LandingFAQ from '@/components/landing/faq'
@@ -66,6 +67,7 @@ export default function HomePage() {
         <LandingNigeria />
         <LandingJourney />
         <LandingPractice />
+        <LandingComparisonTable />
         <LandingUncertainty />
         <LandingTestimonial />
         <LandingFAQ />

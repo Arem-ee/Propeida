@@ -1,0 +1,469 @@
+import sharp from 'sharp';
+import fs from 'fs';
+
+// 1. Measure the exact map underside contour at 800x654
+const svg = fs.readFileSync('assets/nigeria-map.svg');
+const { data, info } = await sharp(svg).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+const w = info.width;
+const h = info.height;
+
+const contour = [];
+for (let x = 0; x < w; x++) {
+  let maxY = -1;
+  for (let y = h - 1; y >= 0; y--) {
+    const idx = (y * w + x) * 4;
+    if (data[idx + 3] > 30) {
+      maxY = y;
+      break;
+    }
+  }
+  contour.push(maxY);
+}
+
+function getContourY(x) {
+  const xi = Math.max(0, Math.min(w - 1, Math.round(x)));
+  return contour[xi] !== -1 ? contour[xi] : 550;
+}
+
+// 7 students positioned across the southern span of Nigeria
+// Each student's raised palms will meet the map underside contour at their specific x position:
+// Notice how fingertips follow the contour:
+// S1 (West / Lagos / Ogun): x ~ 100, contourY ~ 507
+// S2 (Ondo / Edo border): x ~ 170, contourY ~ 575
+// S3 (Niger Delta West / Delta): x ~ 240, contourY ~ 647 (deepest dip)
+// S4 (Niger Delta Center / Bayelsa-Rivers): x ~ 310, contourY ~ 640
+// S5 (Niger Delta East / Rivers-Akwa Ibom): x ~ 380, contourY ~ 625
+// S6 (Cross River / Southeast): x ~ 460, contourY ~ 501
+// S7 (East / Taraba south): x ~ 540, contourY ~ 480
+
+// Students drawn in high-fidelity Rafiki vector style:
+// Deep chocolate/brown skin tones with natural variation, distinct hairstyles, expressive upward faces,
+// anatomical hands with individual fingers, raised palms slightly overlapping the underside (by 3-5px),
+// tapered limbs, clothing folds, textured hair, low-angle perspective looking up.
+// No hard edge on the left (S1 starts inset at x=55, fully inside canvas).
+// Canvas size: 800 x 850 (allowing figures to extend naturally down to y=850, cut only at the bottom).
+
+const studentsSvg = `
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 850" width="800" height="850">
+  <defs>
+    <!-- Skin palettes: varied Nigerian chocolate & deep brown complexions -->
+    <linearGradient id="skin-s1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A2818" />
+      <stop offset="100%" stop-color="#341A0E" />
+    </linearGradient>
+    <linearGradient id="skin-s2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#734126" />
+      <stop offset="100%" stop-color="#552C16" />
+    </linearGradient>
+    <linearGradient id="skin-s3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#58311B" />
+      <stop offset="100%" stop-color="#3D1F0E" />
+    </linearGradient>
+    <linearGradient id="skin-s4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#804B2C" />
+      <stop offset="100%" stop-color="#60341B" />
+    </linearGradient>
+    <linearGradient id="skin-s5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#422212" />
+      <stop offset="100%" stop-color="#2D1509" />
+    </linearGradient>
+    <linearGradient id="skin-s6" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6E3E24" />
+      <stop offset="100%" stop-color="#4F2914" />
+    </linearGradient>
+    <linearGradient id="skin-s7" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#522C17" />
+      <stop offset="100%" stop-color="#381B0C" />
+    </linearGradient>
+
+    <!-- Clothing gradients -->
+    <linearGradient id="shirt-amber" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <linearGradient id="shirt-teal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0D9488" />
+      <stop offset="100%" stop-color="#0F766E" />
+    </linearGradient>
+    <linearGradient id="shirt-coral" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F43F5E" />
+      <stop offset="100%" stop-color="#E11D48" />
+    </linearGradient>
+    <linearGradient id="shirt-purple" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#7C3AED" />
+    </linearGradient>
+    <linearGradient id="shirt-emerald" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="shirt-indigo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#4F46E5" />
+    </linearGradient>
+    <linearGradient id="shirt-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#0369A1" />
+    </linearGradient>
+
+    <!-- Soft palm contact highlights -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- ========================================================
+       STUDENT 1 (Far West - Lagos / Ogun region)
+       Center: x = 100. Contour underside at x=90-110 is ~ y=506.
+       Palms raised to touch y=504 (overlapping by 2-3px).
+       Fully inside canvas (left edge x > 55, zero pixels touching left border).
+       ======================================================== -->
+  <g id="student-1" transform="translate(0, 0)">
+    <!-- Body / Torso (seen from low angle, leaning slightly right inward) -->
+    <path d="M 68 640 L 82 580 Q 98 572 118 580 L 132 640 L 126 850 L 74 850 Z" fill="url(#shirt-amber)" />
+    <!-- Collar and folds -->
+    <path d="M 88 582 Q 100 594 112 582" stroke="#B45309" stroke-width="3" fill="none" />
+    <path d="M 94 600 L 92 680" stroke="#B45309" stroke-width="2" stroke-linecap="round" />
+    <path d="M 108 610 L 111 670" stroke="#B45309" stroke-width="2" stroke-linecap="round" />
+    <!-- Neck -->
+    <path d="M 92 582 L 92 562 Q 100 560 108 562 L 108 582 Z" fill="url(#skin-s1)" />
+    <!-- Head seen from below (jaw prominent, tilted upward looking up) -->
+    <ellipse cx="100" cy="548" rx="16" ry="18" fill="url(#skin-s1)" />
+    <!-- Short textured fade hairstyle -->
+    <path d="M 83 544 Q 84 530 100 528 Q 116 530 117 544 Q 112 534 100 533 Q 88 534 83 544 Z" fill="#1C1917" />
+    <!-- Upward looking face features -->
+    <!-- Eyes looking up -->
+    <ellipse cx="94" cy="544" rx="2.2" ry="1.4" fill="#FFFFFF" />
+    <circle cx="94" cy="543.5" r="1.1" fill="#1C1917" />
+    <ellipse cx="106" cy="544" rx="2.2" ry="1.4" fill="#FFFFFF" />
+    <circle cx="106" cy="543.5" r="1.1" fill="#1C1917" />
+    <!-- Eyebrows raised -->
+    <path d="M 91 540 Q 94 538 98 540" stroke="#1C1917" stroke-width="1.2" fill="none" stroke-linecap="round" />
+    <path d="M 102 540 Q 106 538 109 540" stroke="#1C1917" stroke-width="1.2" fill="none" stroke-linecap="round" />
+    <!-- Nose from underside -->
+    <path d="M 98 546 Q 100 545 102 546" stroke="#2D1509" stroke-width="1.4" fill="none" />
+    <!-- Smile looking up at Nigeria -->
+    <path d="M 95 553 Q 100 557 105 553" stroke="#2D1509" stroke-width="1.6" fill="none" stroke-linecap="round" />
+
+    <!-- Left Arm & Hand reaching up to map underside (contour ~ 506 at x=86) -->
+    <path d="M 82 580 Q 75 540 84 515 L 90 517 Q 83 542 88 582 Z" fill="url(#shirt-amber)" />
+    <path d="M 84 515 L 86 504" stroke="url(#skin-s1)" stroke-width="6" stroke-linecap="round" />
+    <!-- Left Hand Palm flat against map underside touching y=504 -->
+    <ellipse cx="87" cy="505" rx="5" ry="3" fill="url(#skin-s1)" />
+    <line x1="84" y1="505" x2="84" y2="502" stroke="url(#skin-s1)" stroke-width="1.6" stroke-linecap="round" />
+    <line x1="86" y1="505" x2="86" y2="501" stroke="url(#skin-s1)" stroke-width="1.6" stroke-linecap="round" />
+    <line x1="88" y1="505" x2="88" y2="502" stroke="url(#skin-s1)" stroke-width="1.6" stroke-linecap="round" />
+    <line x1="90" y1="505" x2="90" y2="503" stroke="url(#skin-s1)" stroke-width="1.5" stroke-linecap="round" />
+
+    <!-- Right Arm & Hand reaching up to map underside (contour ~ 507 at x=114) -->
+    <path d="M 118 580 Q 125 540 114 515 L 108 517 Q 117 542 112 582 Z" fill="url(#shirt-amber)" />
+    <path d="M 114 515 L 112 505" stroke="url(#skin-s1)" stroke-width="6" stroke-linecap="round" />
+    <!-- Right Hand Palm flat against underside touching y=504 -->
+    <ellipse cx="112" cy="505" rx="5" ry="3" fill="url(#skin-s1)" />
+    <line x1="109" y1="505" x2="109" y2="503" stroke="url(#skin-s1)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="111" y1="505" x2="111" y2="502" stroke="url(#skin-s1)" stroke-width="1.6" stroke-linecap="round" />
+    <line x1="113" y1="505" x2="113" y2="501" stroke="url(#skin-s1)" stroke-width="1.6" stroke-linecap="round" />
+    <line x1="115" y1="505" x2="115" y2="503" stroke="url(#skin-s1)" stroke-width="1.6" stroke-linecap="round" />
+  </g>
+
+  <!-- ========================================================
+       STUDENT 2 (Ondo / Edo border region)
+       Center: x = 170. Contour underside at x=155-185 slopes down: y ~ 545 to 600.
+       Left hand at x=155 touches y=542. Right hand at x=185 touches y=596.
+       ======================================================== -->
+  <g id="student-2">
+    <!-- Torso -->
+    <path d="M 142 700 L 153 640 Q 170 630 188 638 L 199 695 L 194 850 L 147 850 Z" fill="url(#shirt-teal)" />
+    <!-- Collar & folds -->
+    <path d="M 160 642 Q 171 653 182 642" stroke="#0F766E" stroke-width="2.5" fill="none" />
+    <path d="M 165 660 L 163 740" stroke="#0F766E" stroke-width="2" stroke-linecap="round" />
+    <path d="M 178 670 L 180 735" stroke="#0F766E" stroke-width="2" stroke-linecap="round" />
+    <!-- Neck -->
+    <path d="M 163 642 L 163 622 Q 171 620 179 622 L 179 642 Z" fill="url(#skin-s2)" />
+    <!-- Head tilted up -->
+    <ellipse cx="171" cy="610" rx="16" ry="17" fill="url(#skin-s2)" />
+    <!-- Braided bun hairstyle -->
+    <ellipse cx="171" cy="593" rx="12" ry="7" fill="#1C1917" />
+    <path d="M 155 607 Q 156 596 171 595 Q 186 596 187 607 Q 180 600 171 599 Q 162 600 155 607 Z" fill="#1C1917" />
+    <!-- Glasses & Eyes looking up -->
+    <rect x="160" y="605" width="8" height="6" rx="2" fill="none" stroke="#D97706" stroke-width="1.4" />
+    <rect x="174" y="605" width="8" height="6" rx="2" fill="none" stroke="#D97706" stroke-width="1.4" />
+    <line x1="168" y1="608" x2="174" y2="608" stroke="#D97706" stroke-width="1.4" />
+    <circle cx="164" cy="607" r="1.2" fill="#1C1917" />
+    <circle cx="178" cy="607" r="1.2" fill="#1C1917" />
+    <!-- Nose & smile -->
+    <path d="M 169 614 Q 171 613 173 614" stroke="#4F2914" stroke-width="1.3" fill="none" />
+    <path d="M 166 619 Q 171 623 176 619" stroke="#4F2914" stroke-width="1.6" fill="none" stroke-linecap="round" />
+
+    <!-- Left hand reaches contour at x=155, where map y ~ 547 -> touches y=545 -->
+    <path d="M 153 640 Q 146 590 153 555 L 159 557 Q 154 592 158 642 Z" fill="url(#shirt-teal)" />
+    <path d="M 153 555 L 155 545" stroke="url(#skin-s2)" stroke-width="6" stroke-linecap="round" />
+    <ellipse cx="155" cy="545" rx="5" ry="3" fill="url(#skin-s2)" />
+    <line x1="152" y1="545" x2="152" y2="542" stroke="url(#skin-s2)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="154" y1="545" x2="154" y2="541" stroke="url(#skin-s2)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="156" y1="545" x2="156" y2="542" stroke="url(#skin-s2)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="158" y1="545" x2="158" y2="543" stroke="url(#skin-s2)" stroke-width="1.5" stroke-linecap="round" />
+
+    <!-- Right hand reaches contour at x=185, where map y ~ 602 -> touches y=600 -->
+    <path d="M 188 638 Q 194 620 188 607 L 182 609 Q 186 622 182 640 Z" fill="url(#shirt-teal)" />
+    <path d="M 188 607 L 186 600" stroke="url(#skin-s2)" stroke-width="6" stroke-linecap="round" />
+    <ellipse cx="186" cy="600" rx="5" ry="3" fill="url(#skin-s2)" />
+    <line x1="183" y1="600" x2="183" y2="597" stroke="url(#skin-s2)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="185" y1="600" x2="185" y2="596" stroke="url(#skin-s2)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="187" y1="600" x2="187" y2="597" stroke="url(#skin-s2)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="189" y1="600" x2="189" y2="598" stroke="url(#skin-s2)" stroke-width="1.5" stroke-linecap="round" />
+  </g>
+
+  <!-- ========================================================
+       STUDENT 3 (Niger Delta West / Delta State)
+       Center: x = 245. Contour is at lowest dip: y ~ 647.
+       Both hands sit low touching underside at y = 645-646.
+       ======================================================== -->
+  <g id="student-3">
+    <!-- Torso -->
+    <path d="M 215 750 L 226 695 Q 245 688 264 695 L 275 750 L 270 850 L 220 850 Z" fill="url(#shirt-coral)" />
+    <!-- Collar -->
+    <path d="M 234 697 Q 245 707 256 697" stroke="#BE123C" stroke-width="2.5" fill="none" />
+    <path d="M 240 715 L 238 780" stroke="#BE123C" stroke-width="2" stroke-linecap="round" />
+    <path d="M 252 720 L 253 775" stroke="#BE123C" stroke-width="2" stroke-linecap="round" />
+    <!-- Neck -->
+    <path d="M 238 697 L 238 680 Q 245 678 252 680 L 252 697 Z" fill="url(#skin-s3)" />
+    <!-- Head looking straight up -->
+    <ellipse cx="245" cy="670" rx="16" ry="17" fill="url(#skin-s3)" />
+    <!-- Neat short afro hair -->
+    <path d="M 228 667 Q 229 652 245 650 Q 261 652 262 667 Q 254 656 245 655 Q 236 656 228 667 Z" fill="#1C1917" />
+    <!-- Upward looking eyes -->
+    <ellipse cx="239" cy="666" rx="2.2" ry="1.4" fill="#FFFFFF" />
+    <circle cx="239" cy="665.5" r="1.1" fill="#1C1917" />
+    <ellipse cx="251" cy="666" rx="2.2" ry="1.4" fill="#FFFFFF" />
+    <circle cx="251" cy="665.5" r="1.1" fill="#1C1917" />
+    <!-- Brows -->
+    <path d="M 236 662 Q 239 660 243 662" stroke="#1C1917" stroke-width="1.2" fill="none" stroke-linecap="round" />
+    <path d="M 247 662 Q 251 660 254 662" stroke="#1C1917" stroke-width="1.2" fill="none" stroke-linecap="round" />
+    <!-- Nose & Smile -->
+    <path d="M 243 668 Q 245 667 247 668" stroke="#3D1F0E" stroke-width="1.3" fill="none" />
+    <path d="M 240 673 Q 245 677 250 673" stroke="#3D1F0E" stroke-width="1.6" fill="none" stroke-linecap="round" />
+
+    <!-- Left hand reaches contour at x=232 (y=647) -> touches y=645 -->
+    <path d="M 226 695 Q 224 668 230 652 L 235 654 Q 230 670 231 697 Z" fill="url(#shirt-coral)" />
+    <path d="M 230 652 L 232 646" stroke="url(#skin-s3)" stroke-width="6" stroke-linecap="round" />
+    <ellipse cx="232" cy="646" rx="5" ry="3" fill="url(#skin-s3)" />
+    <line x1="229" y1="646" x2="229" y2="643" stroke="url(#skin-s3)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="231" y1="646" x2="231" y2="642" stroke="url(#skin-s3)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="233" y1="646" x2="233" y2="643" stroke="url(#skin-s3)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="235" y1="646" x2="235" y2="644" stroke="url(#skin-s3)" stroke-width="1.5" stroke-linecap="round" />
+
+    <!-- Right hand reaches contour at x=258 (y=647) -> touches y=645 -->
+    <path d="M 264 695 Q 266 668 260 652 L 255 654 Q 260 670 259 697 Z" fill="url(#shirt-coral)" />
+    <path d="M 260 652 L 258 646" stroke="url(#skin-s3)" stroke-width="6" stroke-linecap="round" />
+    <ellipse cx="258" cy="646" rx="5" ry="3" fill="url(#skin-s3)" />
+    <line x1="255" y1="646" x2="255" y2="644" stroke="url(#skin-s3)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="257" y1="646" x2="257" y2="643" stroke="url(#skin-s3)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="259" y1="646" x2="259" y2="642" stroke="url(#skin-s3)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="261" y1="646" x2="261" y2="644" stroke="url(#skin-s3)" stroke-width="1.5" stroke-linecap="round" />
+  </g>
+
+  <!-- ========================================================
+       STUDENT 4 (Niger Delta Central / Bayelsa / Rivers)
+       Center: x = 320. Contour is at y ~ 640.
+       Palms raised to touch y = 638.
+       ======================================================== -->
+  <g id="student-4">
+    <!-- Torso -->
+    <path d="M 292 750 L 302 692 Q 320 684 338 692 L 348 750 L 342 850 L 298 850 Z" fill="url(#shirt-purple)" />
+    <!-- Collar & folds -->
+    <path d="M 310 694 Q 320 704 330 694" stroke="#6D28D9" stroke-width="2.5" fill="none" />
+    <path d="M 315 710 L 314 770" stroke="#6D28D9" stroke-width="2" stroke-linecap="round" />
+    <path d="M 326 715 L 327 765" stroke="#6D28D9" stroke-width="2" stroke-linecap="round" />
+    <!-- Neck -->
+    <path d="M 314 694 L 314 676 Q 320 674 326 676 L 326 694 Z" fill="url(#skin-s4)" />
+    <!-- Head looking up with warm smile -->
+    <ellipse cx="320" cy="664" rx="16" ry="17" fill="url(#skin-s4)" />
+    <!-- Headwrap / Gele styled compactly -->
+    <path d="M 303 661 Q 304 647 320 645 Q 336 647 337 661 Q 329 651 320 650 Q 311 651 303 661 Z" fill="#F59E0B" />
+    <path d="M 310 648 Q 320 642 330 648" stroke="#D97706" stroke-width="2" fill="none" />
+    <!-- Eyes looking up -->
+    <ellipse cx="314" cy="660" rx="2.2" ry="1.4" fill="#FFFFFF" />
+    <circle cx="314" cy="659.5" r="1.1" fill="#1C1917" />
+    <ellipse cx="326" cy="660" rx="2.2" ry="1.4" fill="#FFFFFF" />
+    <circle cx="326" cy="659.5" r="1.1" fill="#1C1917" />
+    <!-- Smile & nose -->
+    <path d="M 318 663 Q 320 662 322 663" stroke="#4F2914" stroke-width="1.3" fill="none" />
+    <path d="M 315 667 Q 320 671 325 667" stroke="#4F2914" stroke-width="1.6" fill="none" stroke-linecap="round" />
+
+    <!-- Left hand reaches contour at x=306 (y=641) -> touches y=639 -->
+    <path d="M 302 692 Q 300 665 304 646 L 309 648 Q 306 667 307 694 Z" fill="url(#shirt-purple)" />
+    <path d="M 304 646 L 306 639" stroke="url(#skin-s4)" stroke-width="6" stroke-linecap="round" />
+    <ellipse cx="306" cy="639" rx="5" ry="3" fill="url(#skin-s4)" />
+    <line x1="303" y1="639" x2="303" y2="636" stroke="url(#skin-s4)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="305" y1="639" x2="305" y2="635" stroke="url(#skin-s4)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="307" y1="639" x2="307" y2="636" stroke="url(#skin-s4)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="309" y1="639" x2="309" y2="637" stroke="url(#skin-s4)" stroke-width="1.5" stroke-linecap="round" />
+
+    <!-- Right hand reaches contour at x=334 (y=635) -> touches y=633 -->
+    <path d="M 338 692 Q 340 665 336 642 L 331 644 Q 334 667 333 694 Z" fill="url(#shirt-purple)" />
+    <path d="M 336 642 L 334 634" stroke="url(#skin-s4)" stroke-width="6" stroke-linecap="round" />
+    <ellipse cx="334" cy="634" rx="5" ry="3" fill="url(#skin-s4)" />
+    <line x1="331" y1="634" x2="331" y2="631" stroke="url(#skin-s4)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="333" y1="634" x2="333" y2="630" stroke="url(#skin-s4)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="335" y1="634" x2="335" y2="631" stroke="url(#skin-s4)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="337" y1="634" x2="337" y2="632" stroke="url(#skin-s4)" stroke-width="1.5" stroke-linecap="round" />
+  </g>
+
+  <!-- ========================================================
+       STUDENT 5 (Rivers / Akwa Ibom)
+       Center: x = 390. Contour rises from y ~ 632 (x=370) to y ~ 602 (x=400).
+       Left hand at x=375 touches y=628. Right hand at x=405 touches y=595.
+       ======================================================== -->
+  <g id="student-5">
+    <!-- Torso -->
+    <path d="M 365 730 L 374 670 Q 392 660 410 668 L 419 725 L 415 850 L 369 850 Z" fill="url(#shirt-emerald)" />
+    <!-- Collar & folds -->
+    <path d="M 382 672 Q 392 682 402 672" stroke="#047857" stroke-width="2.5" fill="none" />
+    <path d="M 386 690 L 385 750" stroke="#047857" stroke-width="2" stroke-linecap="round" />
+    <path d="M 398 695 L 399 745" stroke="#047857" stroke-width="2" stroke-linecap="round" />
+    <!-- Neck -->
+    <path d="M 386 672 L 386 654 Q 392 652 398 654 L 398 672 Z" fill="url(#skin-s5)" />
+    <!-- Head -->
+    <ellipse cx="392" cy="642" rx="16" ry="17" fill="url(#skin-s5)" />
+    <!-- Textured crop hair with parting -->
+    <path d="M 376 639 Q 377 624 392 623 Q 407 624 408 639 Q 400 629 392 628 Q 384 629 376 639 Z" fill="#1C1917" />
+    <line x1="390" y1="624" x2="390" y2="630" stroke="#44403C" stroke-width="1.2" />
+    <!-- Eyes looking up -->
+    <ellipse cx="386" cy="638" rx="2.2" ry="1.4" fill="#FFFFFF" />
+    <circle cx="386" cy="637.5" r="1.1" fill="#1C1917" />
+    <ellipse cx="398" cy="638" rx="2.2" ry="1.4" fill="#FFFFFF" />
+    <circle cx="398" cy="637.5" r="1.1" fill="#1C1917" />
+    <!-- Smile -->
+    <path d="M 390 642 Q 392 641 394 642" stroke="#2D1509" stroke-width="1.3" fill="none" />
+    <path d="M 387 647 Q 392 651 397 647" stroke="#2D1509" stroke-width="1.6" fill="none" stroke-linecap="round" />
+
+    <!-- Left hand reaches contour at x=375 (y=630) -> touches y=628 -->
+    <path d="M 374 670 Q 370 645 373 632 L 378 634 Q 376 650 379 672 Z" fill="url(#shirt-emerald)" />
+    <path d="M 373 632 L 375 628" stroke="url(#skin-s5)" stroke-width="6" stroke-linecap="round" />
+    <ellipse cx="375" cy="628" rx="5" ry="3" fill="url(#skin-s5)" />
+    <line x1="372" y1="628" x2="372" y2="625" stroke="url(#skin-s5)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="374" y1="628" x2="374" y2="624" stroke="url(#skin-s5)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="376" y1="628" x2="376" y2="625" stroke="url(#skin-s5)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="378" y1="628" x2="378" y2="626" stroke="url(#skin-s5)" stroke-width="1.5" stroke-linecap="round" />
+
+    <!-- Right hand reaches contour at x=405 (y=598) -> touches y=595 -->
+    <path d="M 410 668 Q 413 630 407 604 L 401 606 Q 406 635 405 670 Z" fill="url(#shirt-emerald)" />
+    <path d="M 407 604 L 405 595" stroke="url(#skin-s5)" stroke-width="6" stroke-linecap="round" />
+    <ellipse cx="405" cy="595" rx="5" ry="3" fill="url(#skin-s5)" />
+    <line x1="402" y1="595" x2="402" y2="592" stroke="url(#skin-s5)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="404" y1="595" x2="404" y2="591" stroke="url(#skin-s5)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="406" y1="595" x2="406" y2="592" stroke="url(#skin-s5)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="408" y1="595" x2="408" y2="593" stroke="url(#skin-s5)" stroke-width="1.5" stroke-linecap="round" />
+  </g>
+
+  <!-- ========================================================
+       STUDENT 6 (Southeast / Cross River region)
+       Center: x = 465. Contour underside is high: y ~ 501 at x=460.
+       Palms raised high to touch y = 498.
+       ======================================================== -->
+  <g id="student-6">
+    <!-- Torso -->
+    <path d="M 436 670 L 447 605 Q 465 595 483 605 L 494 668 L 488 850 L 442 850 Z" fill="url(#shirt-indigo)" />
+    <!-- Collar -->
+    <path d="M 455 607 Q 465 617 475 607" stroke="#4338CA" stroke-width="2.5" fill="none" />
+    <path d="M 460 625 L 458 695" stroke="#4338CA" stroke-width="2" stroke-linecap="round" />
+    <path d="M 471 630 L 473 690" stroke="#4338CA" stroke-width="2" stroke-linecap="round" />
+    <!-- Neck -->
+    <path d="M 459 607 L 459 587 Q 465 585 471 587 L 471 607 Z" fill="url(#skin-s6)" />
+    <!-- Head tilted back looking up -->
+    <ellipse cx="465" cy="573" rx="16" ry="17" fill="url(#skin-s6)" />
+    <!-- High top fade hairstyle -->
+    <path d="M 449 568 L 449 555 Q 465 550 481 555 L 481 568 Z" fill="#1C1917" />
+    <!-- Eyes looking up -->
+    <ellipse cx="459" cy="569" rx="2.2" ry="1.4" fill="#FFFFFF" />
+    <circle cx="459" cy="568.5" r="1.1" fill="#1C1917" />
+    <ellipse cx="471" cy="569" rx="2.2" ry="1.4" fill="#FFFFFF" />
+    <circle cx="471" cy="568.5" r="1.1" fill="#1C1917" />
+    <path d="M 463 573 Q 465 572 467 573" stroke="#4F2914" stroke-width="1.3" fill="none" />
+    <path d="M 460 578 Q 465 582 470 578" stroke="#4F2914" stroke-width="1.6" fill="none" stroke-linecap="round" />
+
+    <!-- Left hand reaches contour at x=450 (y=508) -> touches y=506 -->
+    <path d="M 447 605 Q 438 555 448 515 L 454 517 Q 447 558 452 607 Z" fill="url(#shirt-indigo)" />
+    <path d="M 448 515 L 450 506" stroke="url(#skin-s6)" stroke-width="6" stroke-linecap="round" />
+    <ellipse cx="450" cy="506" rx="5" ry="3" fill="url(#skin-s6)" />
+    <line x1="447" y1="506" x2="447" y2="503" stroke="url(#skin-s6)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="449" y1="506" x2="449" y2="502" stroke="url(#skin-s6)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="451" y1="506" x2="451" y2="503" stroke="url(#skin-s6)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="453" y1="506" x2="453" y2="504" stroke="url(#skin-s6)" stroke-width="1.5" stroke-linecap="round" />
+
+    <!-- Right hand reaches contour at x=480 (y=486) -> touches y=483 -->
+    <path d="M 483 605 Q 492 550 482 495 L 476 497 Q 484 552 478 607 Z" fill="url(#shirt-indigo)" />
+    <path d="M 482 495 L 480 483" stroke="url(#skin-s6)" stroke-width="6" stroke-linecap="round" />
+    <ellipse cx="480" cy="483" rx="5" ry="3" fill="url(#skin-s6)" />
+    <line x1="477" y1="483" x2="477" y2="480" stroke="url(#skin-s6)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="479" y1="483" x2="479" y2="479" stroke="url(#skin-s6)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="481" y1="483" x2="481" y2="480" stroke="url(#skin-s6)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="483" y1="483" x2="483" y2="481" stroke="url(#skin-s6)" stroke-width="1.5" stroke-linecap="round" />
+  </g>
+
+  <!-- ========================================================
+       STUDENT 7 (Eastern / Cameroon border highlands)
+       Center: x = 540. Contour is high at y ~ 478 to 482.
+       Both palms raised to touch y = 478.
+       ======================================================== -->
+  <g id="student-7">
+    <!-- Torso -->
+    <path d="M 510 650 L 522 585 Q 540 575 558 585 L 569 648 L 563 850 L 516 850 Z" fill="url(#shirt-sky)" />
+    <!-- Collar & details -->
+    <path d="M 530 587 Q 540 597 550 587" stroke="#0369A1" stroke-width="2.5" fill="none" />
+    <path d="M 535 605 L 533 675" stroke="#0369A1" stroke-width="2" stroke-linecap="round" />
+    <path d="M 546 610 L 548 670" stroke="#0369A1" stroke-width="2" stroke-linecap="round" />
+    <!-- Neck -->
+    <path d="M 534 587 L 534 567 Q 540 565 546 567 L 546 587 Z" fill="url(#skin-s7)" />
+    <!-- Head -->
+    <ellipse cx="540" cy="553" rx="16" ry="17" fill="url(#skin-s7)" />
+    <!-- Locs gathered at crown -->
+    <path d="M 524 548 Q 525 533 540 530 Q 555 533 556 548 Q 548 538 540 537 Q 532 538 524 548 Z" fill="#1C1917" />
+    <path d="M 536 530 Q 538 520 544 520 Q 548 525 544 532" stroke="#1C1917" stroke-width="4" fill="none" stroke-linecap="round" />
+    <!-- Eyes looking up -->
+    <ellipse cx="534" cy="549" rx="2.2" ry="1.4" fill="#FFFFFF" />
+    <circle cx="534" cy="548.5" r="1.1" fill="#1C1917" />
+    <ellipse cx="546" cy="549" rx="2.2" ry="1.4" fill="#FFFFFF" />
+    <circle cx="546" cy="548.5" r="1.1" fill="#1C1917" />
+    <!-- Nose & Smile -->
+    <path d="M 538 553 Q 540 552 542 553" stroke="#381B0C" stroke-width="1.3" fill="none" />
+    <path d="M 535 558 Q 540 562 545 558" stroke="#381B0C" stroke-width="1.6" fill="none" stroke-linecap="round" />
+
+    <!-- Left hand reaches contour at x=525 (y=477) -> touches y=475 -->
+    <path d="M 522 585 Q 515 530 523 472 L 529 490 Q 523 535 528 587 Z" fill="url(#shirt-sky)" />
+    <path d="M 523 488 L 525 464" stroke="url(#skin-s7)" stroke-width="6" stroke-linecap="round" />
+    <ellipse cx="525" cy="464" rx="5" ry="3" fill="url(#skin-s7)" />
+    <line x1="522" y1="465" x2="522" y2="460" stroke="url(#skin-s7)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="524" y1="465" x2="524" y2="459" stroke="url(#skin-s7)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="526" y1="465" x2="526" y2="459" stroke="url(#skin-s7)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="528" y1="465" x2="528" y2="461" stroke="url(#skin-s7)" stroke-width="1.5" stroke-linecap="round" />
+
+    <!-- Right hand reaches contour at x=555 (y=484) -> touches y=481 -->
+    <path d="M 558 585 Q 568 530 558 493 L 552 495 Q 560 535 553 587 Z" fill="url(#shirt-sky)" />
+    <path d="M 558 493 L 555 481" stroke="url(#skin-s7)" stroke-width="6" stroke-linecap="round" />
+    <ellipse cx="555" cy="481" rx="5" ry="3" fill="url(#skin-s7)" />
+    <line x1="552" y1="481" x2="552" y2="478" stroke="url(#skin-s7)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="554" y1="481" x2="554" y2="477" stroke="url(#skin-s7)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="556" y1="481" x2="556" y2="478" stroke="url(#skin-s7)" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="558" y1="481" x2="558" y2="479" stroke="url(#skin-s7)" stroke-width="1.5" stroke-linecap="round" />
+  </g>
+</svg>
+`;
+
+fs.writeFileSync('assets/map-students.svg', studentsSvg);
+console.log('Saved assets/map-students.svg');
+
+// Rasterize to PNG with crisp alpha channel
+await sharp(Buffer.from(studentsSvg))
+  .png()
+  .toFile('assets/map-students.png');
+console.log('Rasterized assets/map-students.png');
+
+// Copy to public/assets and dist/assets
+fs.copyFileSync('assets/map-students.png', 'public/assets/map-students.png');
+if (fs.existsSync('dist/assets')) {
+  fs.copyFileSync('assets/map-students.png', 'dist/assets/map-students.png');
+}
+console.log('Copied to public/assets and dist/assets');

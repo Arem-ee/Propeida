@@ -2,7 +2,7 @@
 
 import { createClient } from '@/lib/supabase/server'
 import { headers } from 'next/headers'
-import { checkRateLimit, rateLimitKey } from '@/lib/rate-limit'
+import { checkRateLimit, getClientIp, rateLimitKey } from '@/lib/rate-limit'
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const MAX_EMAIL_LENGTH = 254
@@ -35,8 +35,8 @@ export async function submitContactForm(data: { email: string; message: string; 
   if (messageError) throw new Error(messageError)
 
   const headersList = await headers()
-  const ip = headersList.get('x-forwarded-for') ?? headersList.get('x-real-ip') ?? 'unknown'
-  const { allowed } = checkRateLimit(rateLimitKey(ip, 'contact'), 3, 60000)
+  const ip = getClientIp((name) => headersList.get(name))
+  const { allowed } = await checkRateLimit(rateLimitKey(ip, 'contact'), 3, 60000)
   if (!allowed) throw new Error('Too many requests. Please try again later.')
 
   const supabase = await createClient()

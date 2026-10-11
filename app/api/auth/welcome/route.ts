@@ -1,12 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { headers } from 'next/headers'
 import { maybeSendWelcomeEmail } from '@/lib/emails/send'
-import { checkRateLimit, rateLimitKey } from '@/lib/rate-limit'
+import { checkRateLimit, getClientIp, rateLimitKey } from '@/lib/rate-limit'
 
 export async function POST(request: NextRequest) {
   const headersList = await headers()
-  const ip = headersList.get('x-forwarded-for') ?? headersList.get('x-real-ip') ?? 'unknown'
-  const { allowed } = checkRateLimit(rateLimitKey(ip, 'welcome'), 10, 60000)
+  const ip = getClientIp((name) => headersList.get(name))
+  const { allowed } = await checkRateLimit(rateLimitKey(ip, 'welcome'), 10, 60000)
   if (!allowed) {
     return NextResponse.json({ error: 'Too many requests. Please wait before trying again.' }, { status: 429 })
   }

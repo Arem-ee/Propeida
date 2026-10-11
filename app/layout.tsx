@@ -1,13 +1,7 @@
 import type { Metadata, Viewport } from 'next'
-import { Geist } from 'next/font/google'
 import './globals.css'
 import PwaInit from '@/components/pwa-init'
 import GoogleAnalytics from '@/components/analytics/google-analytics'
-
-const geist = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-})
 
 const siteUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://propeida.online'
 const supabaseOrigin = process.env.NEXT_PUBLIC_SUPABASE_URL
@@ -60,7 +54,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={geist.variable}>
+    <html lang="en">
       <head>
         {supabaseOrigin ? <link rel="preconnect" href={supabaseOrigin} crossOrigin="anonymous" /> : null}
       </head>

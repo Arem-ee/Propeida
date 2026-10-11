@@ -26,6 +26,9 @@ export async function createClient() {
 export async function getAuthUser(
   supabase: Awaited<ReturnType<typeof createClient>>,
 ): Promise<User | null> {
-  const { data } = await supabase.auth.getSession()
-  return data.session?.user ?? null
+  // getUser() verifies the JWT with the Supabase Auth server on every call.
+  // Never use getSession() here: it only decodes cookies locally and would
+  // accept a forged or revoked session.
+  const { data } = await supabase.auth.getUser()
+  return data.user
 }

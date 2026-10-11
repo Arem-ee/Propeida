@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 620" width="520" height="620">
+    
+    <defs>
+      <!-- Skin tone gradients: Diverse Nigerian deep chocolate & rich brown tones -->
+      <linearGradient id="skin-1" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#4E2B18"/>
+        <stop offset="100%" stop-color="#361B0E"/>
+      </linearGradient>
+      <linearGradient id="skin-2" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#5E351E"/>
+        <stop offset="100%" stop-color="#422212"/>
+      </linearGradient>
+      <linearGradient id="skin-3" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#703E22"/>
+        <stop offset="100%" stop-color="#522B15"/>
+      </linearGradient>
+      <linearGradient id="skin-4" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#402012"/>
+        <stop offset="100%" stop-color="#2C1409"/>
+      </linearGradient>
+      <linearGradient id="skin-5" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#64361C"/>
+        <stop offset="100%" stop-color="#492512"/>
+      </linearGradient>
+      <linearGradient id="skin-6" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#552C16"/>
+        <stop offset="100%" stop-color="#3B1C0E"/>
+      </linearGradient>
+      <linearGradient id="skin-7" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#7B4527"/>
+        <stop offset="100%" stop-color="#5C3018"/>
+      </linearGradient>
+
+      <!-- Clothing Gradients (Rafiki vibrant palette) -->
+      <linearGradient id="grad-amber" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#F59E0B"/><stop offset="100%" stop-color="#D97706"/>
+      </linearGradient>
+      <linearGradient id="grad-teal" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#0D9488"/><stop offset="100%" stop-color="#0F766E"/>
+      </linearGradient>
+      <linearGradient id="grad-coral" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#F43F5E"/><stop offset="100%" stop-color="#E11D48"/>
+      </linearGradient>
+      <linearGradient id="grad-indigo" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#4F46E5"/>
+      </linearGradient>
+      <linearGradient id="grad-emerald" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#10B981"/><stop offset="100%" stop-color="#059669"/>
+      </linearGradient>
+      <linearGradient id="grad-purple" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#7C3AED"/>
+      </linearGradient>
+      <linearGradient id="grad-blue" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#1D4ED8"/>
+      </linearGradient>
+      <linearGradient id="grad-orange" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#FB923C"/><stop offset="100%" stop-color="#EA580C"/>
+      </linearGradient>
+      <linearGradient id="grad-slate" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#475569"/><stop offset="100%" stop-color="#1E293B"/>
+      </linearGradient>
+
+      <!-- Soft hair shading -->
+      <linearGradient id="hair-dark" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#24140D"/><stop offset="100%" stop-color="#130B07"/>
+      </linearGradient>
+    </defs>
+  
+    <g id="student-3-figure">
+      <!-- Shadow on floor -->
+      <ellipse cx="260" cy="600" rx="160" ry="14" fill="#1E293B" opacity="0.08"/>
+
+      <!-- TALL STACK OF 5 VIBRANT COLORFUL TEXTBOOKS -->
+      <!-- Book 1 (bottom, Emerald) -->
+      <path d="M 140 560 L 380 560 L 375 595 L 135 595 Z" fill="url(#grad-emerald)"/>
+      <rect x="150" y="565" width="215" height="25" rx="3" fill="#FEF3C7"/>
+      <line x1="145" y1="560" x2="145" y2="595" stroke="#059669" stroke-width="4"/>
+
+      <!-- Book 2 (Indigo) -->
+      <path d="M 150 520 L 370 520 L 365 558 L 145 558 Z" fill="url(#grad-indigo)"/>
+      <rect x="160" y="525" width="195" height="26" rx="3" fill="#F8FAFC"/>
+      <line x1="155" y1="520" x2="155" y2="558" stroke="#4F46E5" stroke-width="4"/>
+
+      <!-- Book 3 (Coral Red) -->
+      <path d="M 135 480 L 385 480 L 380 518 L 130 518 Z" fill="url(#grad-coral)"/>
+      <rect x="145" y="485" width="225" height="26" rx="3" fill="#FEF3C7"/>
+      <line x1="140" y1="480" x2="140" y2="518" stroke="#E11D48" stroke-width="4"/>
+
+      <!-- Book 4 (Amber Gold) -->
+      <path d="M 155 440 L 365 440 L 360 478 L 150 478 Z" fill="url(#grad-amber)"/>
+      <rect x="165" y="445" width="185" height="26" rx="3" fill="#F8FAFC"/>
+      <line x1="160" y1="440" x2="160" y2="478" stroke="#D97706" stroke-width="4"/>
+
+      <!-- Book 5 (Top, Royal Blue) -->
+      <path d="M 145 400 L 375 400 L 370 438 L 140 438 Z" fill="url(#grad-blue)"/>
+      <rect x="155" y="405" width="205" height="26" rx="3" fill="#FEF3C7"/>
+      <line x1="150" y1="400" x2="150" y2="438" stroke="#1D4ED8" stroke-width="4"/>
+
+      <!-- Girl sitting on top of books -->
+      <!-- Legs dangling down in front of book stack -->
+      <g id="dangling-legs">
+        <!-- Left leg in fitted dark navy joggers -->
+        <path d="M 200 420 L 195 530 L 225 530 L 230 420 Z" fill="url(#grad-slate)"/>
+        <!-- Right leg -->
+        <path d="M 270 420 L 265 520 L 295 520 L 300 420 Z" fill="url(#grad-slate)"/>
+        <!-- Knee and fold shadows -->
+        <ellipse cx="212" cy="460" rx="16" ry="12" fill="#0F172A" opacity="0.3"/>
+        <ellipse cx="282" cy="460" rx="16" ry="12" fill="#0F172A" opacity="0.3"/>
+        <!-- White sneakers with purple trim -->
+        <path d="M 188 530 C 190 550 230 550 235 530 Z" fill="#FFFFFF"/>
+        <rect x="190" y="542" width="44" height="6" rx="2" fill="#8B5CF6"/>
+        <path d="M 258 520 C 260 540 300 540 305 520 Z" fill="#FFFFFF"/>
+        <rect x="260" y="532" width="44" height="6" rx="2" fill="#8B5CF6"/>
+      </g>
+
+      <!-- Torso in Lavender Hoodie -->
+      <path d="M 190 280 C 180 340 185 410 190 430 L 310 430 C 315 410 320 340 310 280 Z" fill="url(#grad-purple)"/>
+      <!-- Hoodie pouch pocket -->
+      <path d="M 215 360 L 285 360 L 295 405 L 205 405 Z" fill="#7C3AED"/>
+      <!-- Hoodie strings -->
+      <path d="M 235 290 Q 230 330 235 340" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M 265 290 Q 270 330 265 340" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+      <!-- Spiral Notebook on lap -->
+      <rect x="200" y="380" width="100" height="70" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2"/>
+      <!-- Spiral binding -->
+      <line x1="200" y1="385" x2="200" y2="445" stroke="#64748B" stroke-width="4" stroke-dasharray="2 4"/>
+      <line x1="215" y1="395" x2="285" y2="395" stroke="#94A3B8" stroke-width="2"/>
+      <line x1="215" y1="405" x2="275" y2="405" stroke="#94A3B8" stroke-width="2"/>
+      <line x1="215" y1="415" x2="280" y2="415" stroke="#94A3B8" stroke-width="2"/>
+
+      <!-- Arms: Left arm stabilizing notebook, Right arm holding pen -->
+      <!-- Left arm -->
+      <path d="M 190 290 Q 155 350 205 390" stroke="url(#skin-3)" stroke-width="28" stroke-linecap="round" fill="none"/>
+      <!-- Left hand on notebook edge -->
+      <ellipse cx="208" cy="390" rx="14" ry="10" fill="url(#skin-3)"/>
+      <path d="M 215 385 Q 225 390 228 400" stroke="url(#skin-3)" stroke-width="5" stroke-linecap="round" fill="none"/>
+
+      <!-- Right arm writing -->
+      <path d="M 310 290 Q 345 350 285 390" stroke="url(#skin-3)" stroke-width="28" stroke-linecap="round" fill="none"/>
+      <!-- Right hand holding pen -->
+      <ellipse cx="280" cy="390" rx="14" ry="10" fill="url(#skin-3)"/>
+      <!-- Blue sleek pen -->
+      <line x1="265" y1="375" x2="285" y2="410" stroke="#2563EB" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="285" cy="410" r="2" fill="#D97706"/>
+
+      <!-- Neck -->
+      <rect x="238" y="245" width="24" height="40" rx="6" fill="url(#skin-3)"/>
+
+      <!-- Head / Face (Warm caramel chocolate) -->
+      <ellipse cx="250" cy="205" rx="38" ry="46" fill="url(#skin-3)"/>
+
+      <!-- Expressive Face looking down at notes -->
+      <!-- Eyebrows -->
+      <path d="M 224 188 Q 236 182 245 187" stroke="#170F0B" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M 255 187 Q 264 182 276 188" stroke="#170F0B" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <!-- Eyes focused -->
+      <ellipse cx="234" cy="198" rx="5.5" ry="3.5" fill="#FFFFFF"/>
+      <circle cx="235" cy="199" r="3" fill="#170F0B"/>
+      <ellipse cx="266" cy="198" rx="5.5" ry="3.5" fill="#FFFFFF"/>
+      <circle cx="265" cy="199" r="3" fill="#170F0B"/>
+      <!-- Nose -->
+      <path d="M 248 206 Q 254 216 248 218" stroke="#422212" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <!-- Soft focused smile -->
+      <path d="M 240 230 Q 250 238 260 230" stroke="#361B0E" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+      <!-- Hair: Large Curly Afro Puff with purple ribbon -->
+      <ellipse cx="250" cy="135" rx="56" ry="48" fill="url(#hair-dark)"/>
+      <!-- Afro curl textures -->
+      <circle cx="210" cy="130" r="14" fill="url(#hair-dark)"/>
+      <circle cx="290" cy="130" r="14" fill="url(#hair-dark)"/>
+      <circle cx="230" cy="100" r="16" fill="url(#hair-dark)"/>
+      <circle cx="270" cy="100" r="16" fill="url(#hair-dark)"/>
+      <circle cx="250" cy="95" r="16" fill="url(#hair-dark)"/>
+      <!-- Lavender ribbon band holding the puff -->
+      <ellipse cx="250" cy="165" rx="36" ry="12" fill="#8B5CF6"/>
+      <circle cx="282" cy="165" r="6" fill="#F59E0B"/>
+    </g>
+  </svg>

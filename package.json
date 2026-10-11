@@ -7,11 +7,12 @@
     "build": "next build",
     "start": "next start",
     "measure": "node scripts/measure.mjs",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@supabase/ssr": "^0.6.0",
     "@supabase/supabase-js": "^2.49.0",
+    "@upstash/redis": "^1.39.0",
     "lucide-react": "^0.546.0",
     "next": "^15.3.0",
     "papaparse": "^5.5.4",
@@ -26,6 +27,8 @@
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "@types/web-push": "^3.6.4",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.0",
     "pg": "^8.22.0",
     "postcss": "^8.5.0",
     "puppeteer-core": "^24.7.0",

@@ -143,7 +143,7 @@ export function LearningPathSection({ opportunity }: { opportunity: CareerOpport
         <div className="mt-8 rounded-2xl border border-blue-200 bg-blue-50 p-5">
           <h3 className="mb-2 flex items-center gap-2 text-sm font-extrabold text-blue-900">
             <GraduationCap className="h-4 w-4" />
-            If you're starting from zero
+            If you&apos;re starting from zero
           </h3>
           <ul className="space-y-1.5">
             {learningPath.startHere.map((tip) => (

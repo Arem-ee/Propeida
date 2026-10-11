@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 640" width="440" height="640">
+    
+    <defs>
+      <!-- Skin tone gradients: Diverse Nigerian deep chocolate & rich brown tones -->
+      <linearGradient id="skin-1" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#4E2B18"/>
+        <stop offset="100%" stop-color="#361B0E"/>
+      </linearGradient>
+      <linearGradient id="skin-2" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#5E351E"/>
+        <stop offset="100%" stop-color="#422212"/>
+      </linearGradient>
+      <linearGradient id="skin-3" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#703E22"/>
+        <stop offset="100%" stop-color="#522B15"/>
+      </linearGradient>
+      <linearGradient id="skin-4" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#402012"/>
+        <stop offset="100%" stop-color="#2C1409"/>
+      </linearGradient>
+      <linearGradient id="skin-5" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#64361C"/>
+        <stop offset="100%" stop-color="#492512"/>
+      </linearGradient>
+      <linearGradient id="skin-6" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#552C16"/>
+        <stop offset="100%" stop-color="#3B1C0E"/>
+      </linearGradient>
+      <linearGradient id="skin-7" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#7B4527"/>
+        <stop offset="100%" stop-color="#5C3018"/>
+      </linearGradient>
+
+      <!-- Clothing Gradients (Rafiki vibrant palette) -->
+      <linearGradient id="grad-amber" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#F59E0B"/><stop offset="100%" stop-color="#D97706"/>
+      </linearGradient>
+      <linearGradient id="grad-teal" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#0D9488"/><stop offset="100%" stop-color="#0F766E"/>
+      </linearGradient>
+      <linearGradient id="grad-coral" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#F43F5E"/><stop offset="100%" stop-color="#E11D48"/>
+      </linearGradient>
+      <linearGradient id="grad-indigo" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#4F46E5"/>
+      </linearGradient>
+      <linearGradient id="grad-emerald" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#10B981"/><stop offset="100%" stop-color="#059669"/>
+      </linearGradient>
+      <linearGradient id="grad-purple" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#7C3AED"/>
+      </linearGradient>
+      <linearGradient id="grad-blue" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#1D4ED8"/>
+      </linearGradient>
+      <linearGradient id="grad-orange" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#FB923C"/><stop offset="100%" stop-color="#EA580C"/>
+      </linearGradient>
+      <linearGradient id="grad-slate" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#475569"/><stop offset="100%" stop-color="#1E293B"/>
+      </linearGradient>
+
+      <!-- Soft hair shading -->
+      <linearGradient id="hair-dark" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#24140D"/><stop offset="100%" stop-color="#130B07"/>
+      </linearGradient>
+    </defs>
+  
+    <g id="student-5-figure">
+      <!-- Ground shadow under feet -->
+      <ellipse cx="220" cy="620" rx="110" ry="12" fill="#1E293B" opacity="0.08"/>
+
+      <!-- Legs in cream socks & stylish black loafers -->
+      <g id="standing-legs">
+        <!-- Pleated school skirt (Navy) -->
+        <path d="M 160 360 L 280 360 L 295 440 L 145 440 Z" fill="url(#grad-indigo)"/>
+        <!-- Pleats -->
+        <line x1="175" y1="365" x2="170" y2="440" stroke="#3730A3" stroke-width="3"/>
+        <line x1="205" y1="365" x2="205" y2="440" stroke="#3730A3" stroke-width="3"/>
+        <line x1="235" y1="365" x2="240" y2="440" stroke="#3730A3" stroke-width="3"/>
+        <line x1="265" y1="365" x2="275" y2="440" stroke="#3730A3" stroke-width="3"/>
+
+        <!-- Legs (tapered calves, deep chocolate skin) -->
+        <path d="M 180 440 L 185 550 L 205 550 L 205 440 Z" fill="url(#skin-5)"/>
+        <path d="M 235 440 L 235 550 L 255 550 L 260 440 Z" fill="url(#skin-5)"/>
+        <!-- Cream knee socks -->
+        <rect x="180" y="510" width="27" height="70" rx="3" fill="#FEF3C7"/>
+        <line x1="180" y1="520" x2="207" y2="520" stroke="#D97706" stroke-width="2"/>
+        <rect x="233" y="510" width="27" height="70" rx="3" fill="#FEF3C7"/>
+        <line x1="233" y1="520" x2="260" y2="520" stroke="#D97706" stroke-width="2"/>
+
+        <!-- Loafers touching baseline -->
+        <path d="M 175 580 C 175 600 215 600 215 580 Z" fill="#1E293B"/>
+        <rect x="175" y="595" width="40" height="8" rx="2" fill="#0F172A"/>
+        <path d="M 228 580 C 228 600 268 600 268 580 Z" fill="#1E293B"/>
+        <rect x="228" y="595" width="40" height="8" rx="2" fill="#0F172A"/>
+      </g>
+
+      <!-- Torso: Burnt Orange Collared Blouse with Backpack Strap -->
+      <path d="M 170 230 C 160 270 160 320 165 365 L 275 365 C 280 320 280 270 270 230 Z" fill="url(#grad-orange)"/>
+      <!-- Backpack strap over right shoulder -->
+      <path d="M 180 235 Q 175 300 170 365" stroke="#1E293B" stroke-width="12" fill="none" stroke-linecap="round"/>
+      <rect x="168" y="290" width="14" height="8" rx="2" fill="#D97706"/>
+
+      <!-- Arms raised high holding open book up to face -->
+      <!-- Left arm -->
+      <path d="M 175 240 Q 140 290 195 240" stroke="url(#skin-5)" stroke-width="24" stroke-linecap="round" fill="none"/>
+      <!-- Right arm -->
+      <path d="M 265 240 Q 300 290 245 240" stroke="url(#skin-5)" stroke-width="24" stroke-linecap="round" fill="none"/>
+
+      <!-- Open Book held up high -->
+      <g transform="translate(160, 160)">
+        <path d="M 0 35 Q 60 50 120 35 L 125 75 Q 60 90 -5 75 Z" fill="#B91C1C"/>
+        <path d="M 3 38 Q 60 52 117 38 L 115 71 Q 60 85 5 71 Z" fill="#FFFBEB"/>
+        <line x1="60" y1="44" x2="60" y2="80" stroke="#B91C1C" stroke-width="2.5"/>
+        <!-- Text -->
+        <line x1="15" y1="50" x2="50" y2="52" stroke="#94A3B8" stroke-width="2"/>
+        <line x1="15" y1="58" x2="48" y2="60" stroke="#94A3B8" stroke-width="2"/>
+        <line x1="70" y1="52" x2="105" y2="50" stroke="#94A3B8" stroke-width="2"/>
+        <line x1="72" y1="60" x2="105" y2="58" stroke="#94A3B8" stroke-width="2"/>
+        <!-- Curled fingers clasping covers -->
+        <circle cx="10" cy="55" r="5" fill="url(#skin-5)"/>
+        <circle cx="12" cy="65" r="5" fill="url(#skin-5)"/>
+        <circle cx="110" cy="55" r="5" fill="url(#skin-5)"/>
+        <circle cx="108" cy="65" r="5" fill="url(#skin-5)"/>
+      </g>
+
+      <!-- Head visible behind book, eyes peeking intently over top edge -->
+      <ellipse cx="220" cy="145" rx="34" ry="40" fill="url(#skin-5)"/>
+      <!-- Stylish round spectacles -->
+      <circle cx="206" cy="142" r="10" fill="none" stroke="#CBD5E1" stroke-width="2.5"/>
+      <circle cx="234" cy="142" r="10" fill="none" stroke="#CBD5E1" stroke-width="2.5"/>
+      <line x1="216" y1="142" x2="224" y2="142" stroke="#CBD5E1" stroke-width="2.5"/>
+
+      <!-- Focused eyes behind glasses -->
+      <ellipse cx="206" cy="142" rx="4" ry="3" fill="#FFFFFF"/>
+      <circle cx="206" cy="143" r="2.5" fill="#170F0B"/>
+      <ellipse cx="234" cy="142" rx="4" ry="3" fill="#FFFFFF"/>
+      <circle cx="234" cy="143" r="2.5" fill="#170F0B"/>
+      <path d="M 198 132 Q 206 128 214 132" stroke="#170F0B" stroke-width="3" fill="none"/>
+      <path d="M 226 132 Q 234 128 242 132" stroke="#170F0B" stroke-width="3" fill="none"/>
+
+      <!-- Hair: Long elegant cornrows pulled back into high ponytail -->
+      <path d="M 185 140 C 185 95 255 95 255 140 Z" fill="url(#hair-dark)"/>
+      <path d="M 195 130 Q 220 110 245 130" stroke="#3D2114" stroke-width="3" fill="none"/>
+      <!-- Ponytail cascading back -->
+      <path d="M 245 110 Q 280 130 285 200" stroke="url(#hair-dark)" stroke-width="14" stroke-linecap="round" fill="none"/>
+      <circle cx="250" cy="112" r="6" fill="#F59E0B"/>
+    </g>
+  </svg>

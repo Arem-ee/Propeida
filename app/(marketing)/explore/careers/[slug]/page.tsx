@@ -173,7 +173,7 @@ export default async function CareerPage({
             <SkillMap opportunity={opportunity} accent={accent} />
           </SectionShell>
 
-          <Transition>And you don't have to take the same path as everyone else.</Transition>
+          <Transition>And you don&apos;t have to take the same path as everyone else.</Transition>
           <SectionShell
             id="branches"
             accent={accent}

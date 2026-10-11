@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+    
+    <defs>
+      <!-- Skin tone gradients: Diverse Nigerian deep chocolate & rich brown tones -->
+      <linearGradient id="skin-1" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#4E2B18"/>
+        <stop offset="100%" stop-color="#361B0E"/>
+      </linearGradient>
+      <linearGradient id="skin-2" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#5E351E"/>
+        <stop offset="100%" stop-color="#422212"/>
+      </linearGradient>
+      <linearGradient id="skin-3" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#703E22"/>
+        <stop offset="100%" stop-color="#522B15"/>
+      </linearGradient>
+      <linearGradient id="skin-4" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#402012"/>
+        <stop offset="100%" stop-color="#2C1409"/>
+      </linearGradient>
+      <linearGradient id="skin-5" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#64361C"/>
+        <stop offset="100%" stop-color="#492512"/>
+      </linearGradient>
+      <linearGradient id="skin-6" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#552C16"/>
+        <stop offset="100%" stop-color="#3B1C0E"/>
+      </linearGradient>
+      <linearGradient id="skin-7" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#7B4527"/>
+        <stop offset="100%" stop-color="#5C3018"/>
+      </linearGradient>
+
+      <!-- Clothing Gradients (Rafiki vibrant palette) -->
+      <linearGradient id="grad-amber" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#F59E0B"/><stop offset="100%" stop-color="#D97706"/>
+      </linearGradient>
+      <linearGradient id="grad-teal" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#0D9488"/><stop offset="100%" stop-color="#0F766E"/>
+      </linearGradient>
+      <linearGradient id="grad-coral" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#F43F5E"/><stop offset="100%" stop-color="#E11D48"/>
+      </linearGradient>
+      <linearGradient id="grad-indigo" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#4F46E5"/>
+      </linearGradient>
+      <linearGradient id="grad-emerald" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#10B981"/><stop offset="100%" stop-color="#059669"/>
+      </linearGradient>
+      <linearGradient id="grad-purple" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#7C3AED"/>
+      </linearGradient>
+      <linearGradient id="grad-blue" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#1D4ED8"/>
+      </linearGradient>
+      <linearGradient id="grad-orange" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#FB923C"/><stop offset="100%" stop-color="#EA580C"/>
+      </linearGradient>
+      <linearGradient id="grad-slate" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#475569"/><stop offset="100%" stop-color="#1E293B"/>
+      </linearGradient>
+
+      <!-- Soft hair shading -->
+      <linearGradient id="hair-dark" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#24140D"/><stop offset="100%" stop-color="#130B07"/>
+      </linearGradient>
+    </defs>
+  
+    <rect width="600" height="400" fill="#F8FAFC"/>
+    <!-- Decorative background geometric shapes (Rafiki style) -->
+    <circle cx="500" cy="100" r="120" fill="#EEF2FF"/>
+    <circle cx="80" cy="320" r="90" fill="#F0FDF4"/>
+    <rect x="420" y="240" width="140" height="120" rx="16" fill="#FEF3C7" opacity="0.5"/>
+
+    <!-- Modern Study Desk (Wooden surface) -->
+    <rect x="60" y="260" width="480" height="16" rx="4" fill="#B45309"/>
+    <line x1="100" y1="276" x2="90" y2="390" stroke="#78350F" stroke-width="10" stroke-linecap="round"/>
+    <line x1="500" y1="276" x2="510" y2="390" stroke="#78350F" stroke-width="10" stroke-linecap="round"/>
+
+    <!-- Desk Accessories: Potted plant, mug, desk lamp -->
+    <!-- Plant -->
+    <path d="M 90 260 L 110 260 L 105 235 L 95 235 Z" fill="#EA580C"/>
+    <circle cx="95" cy="225" r="12" fill="#10B981"/>
+    <circle cx="108" cy="220" r="10" fill="#059669"/>
+    <!-- Desk Lamp -->
+    <path d="M 480 260 L 490 260 L 485 160 L 440 180" stroke="#64748B" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M 430 170 L 450 190 L 420 200 Z" fill="#F59E0B"/>
+    <polygon points="420,200 450,190 520,260 380,260" fill="#FEF08A" opacity="0.25"/>
+
+    <!-- Open Textbook & Digital Tablet on desk -->
+    <path d="M 140 250 L 240 240 L 245 260 L 145 260 Z" fill="#1E3A8A"/>
+    <path d="M 145 248 L 235 242 L 238 258 L 148 258 Z" fill="#FFFBEB"/>
+    <!-- Tablet displaying quiz score -->
+    <rect x="360" y="220" width="80" height="55" rx="6" fill="#0284C7" transform="rotate(-6 400 247)"/>
+    <rect x="365" y="224" width="70" height="47" rx="4" fill="#FFFFFF" transform="rotate(-6 400 247)"/>
+    <circle cx="395" cy="245" r="12" fill="#10B981" transform="rotate(-6 400 247)"/>
+    <text x="390" y="250" font-family="sans-serif" font-size="10" font-weight="bold" fill="#FFFFFF" transform="rotate(-6 400 247)">A+</text>
+
+    <!-- Student Character seated behind desk studying -->
+    <g id="blog-student-1">
+      <!-- Torso in Amber hoodie -->
+      <path d="M 230 180 C 210 230 220 270 230 300 L 370 300 C 380 270 390 230 370 180 Z" fill="url(#grad-amber)"/>
+      <!-- Arms resting comfortably on desk -->
+      <path d="M 230 200 Q 200 260 270 260" stroke="url(#skin-1)" stroke-width="24" stroke-linecap="round" fill="none"/>
+      <path d="M 370 200 Q 400 260 330 260" stroke="url(#skin-1)" stroke-width="24" stroke-linecap="round" fill="none"/>
+      <circle cx="270" cy="258" r="10" fill="url(#skin-1)"/>
+      <circle cx="330" cy="258" r="10" fill="url(#skin-1)"/>
+      <!-- Pen in hand -->
+      <line x1="260" y1="245" x2="275" y2="265" stroke="#2563EB" stroke-width="4" stroke-linecap="round"/>
+
+      <!-- Head & Face (Chocolate complexion) -->
+      <rect x="288" y="145" width="24" height="35" rx="5" fill="url(#skin-1)"/>
+      <ellipse cx="300" cy="110" rx="36" ry="42" fill="url(#skin-1)"/>
+
+      <!-- Expressive Face -->
+      <path d="M 276 96 Q 286 90 296 95" stroke="#170F0B" stroke-width="3" fill="none"/>
+      <path d="M 304 95 Q 314 90 324 96" stroke="#170F0B" stroke-width="3" fill="none"/>
+      <ellipse cx="286" cy="104" rx="5" ry="3.5" fill="#FFFFFF"/>
+      <circle cx="287" cy="105" r="2.8" fill="#170F0B"/>
+      <ellipse cx="314" cy="104" rx="5" ry="3.5" fill="#FFFFFF"/>
+      <circle cx="313" cy="105" r="2.8" fill="#170F0B"/>
+      <path d="M 300 110 Q 306 120 300 122" stroke="#361B0E" stroke-width="2" fill="none"/>
+      <path d="M 290 132 Q 300 140 310 132" stroke="#241007" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+      <!-- Hair: High Braided Crown with beads -->
+      <ellipse cx="300" cy="65" rx="36" ry="24" fill="url(#hair-dark)"/>
+      <path d="M 265 100 C 265 65 335 65 335 100 Z" fill="url(#hair-dark)"/>
+      <circle cx="295" cy="55" r="5" fill="#F59E0B"/>
+    </g>
+  </svg>

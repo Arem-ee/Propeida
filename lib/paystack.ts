@@ -1,4 +1,4 @@
-import { createHmac } from 'node:crypto'
+import { createHmac, timingSafeEqual } from 'node:crypto'
 
 const PAYSTACK_AMOUNT = 150000
 
@@ -149,5 +149,7 @@ export function verifyWebhookSignature(body: string, signature: string): boolean
   const hash = createHmac('sha512', key)
     .update(body)
     .digest('hex')
-  return hash === signature
+  const expected = Buffer.from(hash, 'utf8')
+  const actual = Buffer.from(signature, 'utf8')
+  return expected.length === actual.length && timingSafeEqual(expected, actual)
 }

@@ -1,5 +1,6 @@
 import { Fragment } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ChevronRight } from 'lucide-react'
 import { SceneArt } from '@/components/explore/visuals/scene-art'
 import type { SceneKey } from '@/lib/explore/visual-scenes'
@@ -15,8 +16,8 @@ const JOURNEY = [
 export default function LandingHero() {
   return (
     <section className="relative overflow-hidden bg-white">
-      <div className="mx-auto max-w-6xl px-5 pb-16 pt-14 sm:px-8 sm:pb-24 sm:pt-24 lg:pt-32">
-        <div className="grid items-center gap-14 lg:grid-cols-12 lg:gap-16">
+      <div className="mx-auto max-w-6xl px-5 pb-12 pt-14 sm:px-8 sm:pb-16 sm:pt-20 lg:pt-24">
+        <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
             <h1 className="text-[40px] font-medium leading-[1.06] tracking-tight text-gray-900 sm:text-[52px]">
               Prepare for the exam.{' '}
@@ -95,6 +96,34 @@ export default function LandingHero() {
               <p className="mt-7 text-center text-[11.5px] text-gray-400">
                 The journey Propeida covers — from exam day to first job.
               </p>
+            </div>
+          </div>
+        </div>
+
+        {/* 12 Students Active Learning Banner */}
+        <div className="mt-16 sm:mt-20">
+          <div className="relative overflow-hidden rounded-3xl border border-gray-100 bg-gradient-to-b from-blue-50/30 via-white to-gray-50/40 p-4 sm:p-8">
+            <div className="mb-4 flex flex-col items-center justify-between gap-2 text-center sm:flex-row sm:text-left">
+              <div>
+                <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-blue-600">
+                  A Community of Builders & Learners
+                </span>
+                <h2 className="mt-1 text-base font-semibold text-gray-900 sm:text-lg">
+                  Every student on their own path. Every future connected.
+                </h2>
+              </div>
+              <span className="text-xs text-gray-400">12 diverse subjects &amp; skills</span>
+            </div>
+
+            <div className="relative mx-auto w-full overflow-hidden rounded-2xl bg-white shadow-2xs">
+              <Image
+                src="/images/landing/hero-students.jpg"
+                alt="12 Nigerian students engaged in reading, painting, sketching, math, and tech activities with soft shadows on ground"
+                width={1920}
+                height={1080}
+                priority
+                className="h-auto w-full object-contain"
+              />
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { headers } from 'next/headers'
 import { createClient } from '@/lib/supabase/server'
 import { initializeTransaction, isValidProduct } from '@/lib/paystack'
-import { checkRateLimit, rateLimitKey } from '@/lib/rate-limit'
+import { checkRateLimit, getClientIp, rateLimitKey } from '@/lib/rate-limit'
 
 export async function POST(request: NextRequest) {
   const supabase = await createClient()
@@ -12,8 +12,8 @@ export async function POST(request: NextRequest) {
   }
 
   const headersList = await headers()
-  const ip = headersList.get('x-forwarded-for') ?? headersList.get('x-real-ip') ?? 'unknown'
-  const { allowed } = checkRateLimit(rateLimitKey(ip, 'paystack-initialize'), 10, 60000)
+  const ip = getClientIp((name) => headersList.get(name))
+  const { allowed } = await checkRateLimit(rateLimitKey(ip, 'paystack-initialize'), 10, 60000)
   if (!allowed) {
     return NextResponse.json({ error: 'Too many requests. Please wait before trying again.' }, { status: 429 })
   }
