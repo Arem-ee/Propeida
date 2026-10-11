@@ -1,7 +1,7 @@
 import { type NextRequest, NextResponse } from 'next/server'
 import { createServerClient } from '@supabase/ssr'
 
-const PROTECTED_PREFIXES = ['/dashboard', '/results', '/history', '/practice', '/account', '/settings', '/admin']
+const PROTECTED_PREFIXES = ['/admin']
 const EXACT_PROTECTED = ['/onboarding']
 
 function isProtectedPath(pathname: string): boolean {
@@ -45,7 +45,6 @@ export async function middleware(request: NextRequest) {
 
   const isAuthPage = request.nextUrl.pathname === '/login' || request.nextUrl.pathname === '/signup'
   const isUsernamePage = request.nextUrl.pathname === '/auth/set-username'
-  const isLandingPage = request.nextUrl.pathname === '/'
 
   if (!user && (isProtectedPath(request.nextUrl.pathname) || isUsernamePage)) {
     const url = request.nextUrl.clone()
@@ -54,9 +53,9 @@ export async function middleware(request: NextRequest) {
     return NextResponse.redirect(url)
   }
 
-  if (user && (isAuthPage || isLandingPage)) {
+  if (user && isAuthPage) {
     const url = request.nextUrl.clone()
-    url.pathname = '/dashboard'
+    url.pathname = '/'
     return NextResponse.redirect(url)
   }
 
@@ -66,12 +65,6 @@ export async function middleware(request: NextRequest) {
 export const config = {
   matcher: [
     '/',
-    '/dashboard', '/dashboard/:path*',
-    '/results', '/results/:path*',
-    '/history',
-    '/practice', '/practice/:path*',
-    '/account', '/account/:path*',
-    '/settings',
     '/admin', '/admin/:path*',
     '/auth/set-username',
     '/login', '/signup',

@@ -16,7 +16,7 @@ function LoginForm() {
   const [googleLoading, setGoogleLoading] = useState(false)
   const router = useRouter()
   const searchParams = useSearchParams()
-  const redirect = searchParams.get('redirect') ?? '/dashboard'
+  const redirect = searchParams.get('redirect') ?? '/'
   const confirmed = searchParams.get('confirmed') === 'true'
   const errParam = searchParams.get('error')
 

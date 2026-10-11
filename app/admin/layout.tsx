@@ -13,7 +13,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
     .eq('id', user.id)
     .single()
 
-  if (!profile?.is_admin) redirect('/dashboard')
+  if (!profile?.is_admin) redirect('/')
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -63,3 +63,4 @@ export default async function AdminLayout({ children }: { children: React.ReactN
     </div>
   )
 }
+

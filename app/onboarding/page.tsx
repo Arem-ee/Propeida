@@ -40,7 +40,7 @@ export default function OnboardingPage() {
         .single()
 
       if (profile?.onboarding_completed) {
-        router.push('/dashboard')
+        router.push('/')
       }
       setLoading(false)
     }
@@ -53,7 +53,7 @@ export default function OnboardingPage() {
     } else {
       setSaving(true)
       try { await completeOnboarding() } catch {}
-      router.push('/dashboard')
+      router.push('/')
       router.refresh()
     }
   }, [step, router])
@@ -61,7 +61,7 @@ export default function OnboardingPage() {
   const handleSkip = useCallback(async () => {
     setSaving(true)
     try { await completeOnboarding() } catch {}
-    router.push('/dashboard')
+    router.push('/')
     router.refresh()
   }, [router])
 
@@ -143,3 +143,4 @@ export default function OnboardingPage() {
     </div>
   )
 }
+

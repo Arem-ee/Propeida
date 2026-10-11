@@ -30,7 +30,7 @@ export default function Logo({ size = 32, showText = true, className = '' }: Log
         <rect x={4} y={23} width={24} height={2} rx={1} fill="rgba(255,255,255,0.5)" />
       </svg>
       {showText && (
-        <span className="text-xl font-extrabold tracking-tight text-gray-900">Propeida</span>
+        <span className="font-display text-xl font-semibold tracking-tight text-ink">Propeida</span>
       )}
     </div>
   )

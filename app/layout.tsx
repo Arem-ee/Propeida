@@ -1,7 +1,24 @@
 import type { Metadata, Viewport } from 'next'
+import { Fredoka, Nunito } from 'next/font/google'
 import './globals.css'
 import PwaInit from '@/components/pwa-init'
 import GoogleAnalytics from '@/components/analytics/google-analytics'
+
+// Same voice as the landing page: Fredoka display + Nunito body,
+// self-hosted (works offline, no render-blocking Google Fonts request).
+const fredoka = Fredoka({
+  subsets: ['latin'],
+  weight: ['500', '600', '700'],
+  variable: '--font-display',
+  display: 'swap',
+})
+
+const nunito = Nunito({
+  subsets: ['latin'],
+  weight: ['400', '600', '700', '800'],
+  variable: '--font-sans',
+  display: 'swap',
+})
 
 const siteUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://propeida.online'
 const supabaseOrigin = process.env.NEXT_PUBLIC_SUPABASE_URL
@@ -54,7 +71,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${fredoka.variable} ${nunito.variable}`}>
       <head>
         {supabaseOrigin ? <link rel="preconnect" href={supabaseOrigin} crossOrigin="anonymous" /> : null}
       </head>

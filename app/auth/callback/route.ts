@@ -37,10 +37,10 @@ export async function GET(request: NextRequest) {
       if (user) {
         // Placeholder user_* usernames no longer block the app: the user goes
         // straight to the dashboard and is prompted to choose a username there.
-        redirectPath = '/dashboard'
+        redirectPath = '/'
         await maybeSendWelcomeEmail(user.id)
       } else {
-        redirectPath = '/dashboard'
+        redirectPath = '/'
       }
 
       const response = NextResponse.redirect(new URL(redirectPath, baseUrl))
