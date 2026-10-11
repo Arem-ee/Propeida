@@ -87,6 +87,20 @@ export async function recordSessionEvidence(
   }
   if (bySubject.size === 0) return
 
+  await applySubjectEvidence(supabase, userId, bySubject, sessionId)
+}
+
+/**
+ * Shared mastery updater: sessions and lessons fold evidence through the
+ * same rules. sourceSessionId links queue rows to their origin; lesson
+ * evidence passes null (its origin rows live in learning_attempts).
+ */
+export async function applySubjectEvidence(
+  supabase: SupabaseClient,
+  userId: string,
+  bySubject: Map<string, { correct: number; total: number }>,
+  sourceSessionId: string | null,
+): Promise<void> {
   const { data: existing } = await supabase
     .from('learner_topic_mastery')
     .select('subject_id, mastery_score, consecutive_successes')
@@ -151,7 +165,7 @@ export async function recordSessionEvidence(
         topic_id: null,
         due_at: nextReviewAt.toISOString(),
         state: 'due',
-        source_session_id: sessionId,
+        source_session_id: sourceSessionId,
       })
     }
   }
