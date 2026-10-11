@@ -72,6 +72,7 @@ export const config = {
     '/home',
     '/learn', '/learn/:path*',
     '/practice', '/practice/:path*',
+    '/results', '/results/:path*',
     '/mocks', '/mocks/:path*',
     '/progress',
     '/account', '/account/:path*',

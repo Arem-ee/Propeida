@@ -229,6 +229,83 @@ export interface SecuredSubject {
   subjectSlug: string
 }
 
+export interface ProgressSubject {
+  subjectId: string
+  subjectName: string
+  subjectSlug: string
+  status: MasteryStatus | 'not-started'
+}
+
+/**
+ * Progress map: every subject with content, each in exactly one honest
+ * state. Untracked subjects are "not-started" — shown calmly, never as
+ * a deficit. Sorted: secured, developing, fragile, then not-started.
+ */
+export async function getProgressMap(
+  supabase: SupabaseClient,
+  userId: string,
+): Promise<ProgressSubject[]> {
+  const [{ data: subjects }, { data: mastery }] = await Promise.all([
+    supabase.from('subjects').select('id, name, slug').order('name'),
+    supabase
+      .from('learner_topic_mastery')
+      .select('subject_id, status')
+      .eq('user_id', userId)
+      .is('topic_id', null),
+  ])
+
+  const bySubject = new Map(
+    ((mastery ?? []) as { subject_id: string; status: string }[]).map((m) => [m.subject_id, m.status as MasteryStatus]),
+  )
+  const order: Record<string, number> = { secured: 0, developing: 1, fragile: 2, 'not-started': 3 }
+
+  return ((subjects ?? []) as { id: string; name: string; slug: string }[])
+    .map((s) => ({
+      subjectId: s.id,
+      subjectName: s.name,
+      subjectSlug: s.slug,
+      status: (bySubject.get(s.id) ?? 'not-started') as MasteryStatus | 'not-started',
+    }))
+    .sort((a, b) => (order[a.status] ?? 3) - (order[b.status] ?? 3))
+}
+
+export interface WeakestSubject {
+  subjectId: string
+  subjectName: string
+  subjectSlug: string
+}
+
+/** Lowest non-secured mastery for "practise a skill" targeting. */
+export async function getWeakestSubject(
+  supabase: SupabaseClient,
+  userId: string,
+): Promise<WeakestSubject | null> {
+  const { data } = await supabase
+    .from('learner_topic_mastery')
+    .select(`
+      subject_id,
+      mastery_score,
+      subject:subject_id ( name, slug )
+    `)
+    .eq('user_id', userId)
+    .is('topic_id', null)
+    .neq('status', 'secured')
+    .order('mastery_score', { ascending: true })
+    .limit(1)
+
+  const row = (data ?? [])[0] as {
+    subject_id: string
+    subject?: { name?: string; slug?: string } | { name?: string; slug?: string }[] | null
+  } | undefined
+  if (!row) return null
+  const s = Array.isArray(row.subject) ? row.subject[0] : row.subject
+  return {
+    subjectId: row.subject_id,
+    subjectName: s?.name ?? 'Unknown',
+    subjectSlug: s?.slug ?? '',
+  }
+}
+
 /** The collection: subjects this learner has secured, for the home shelf. */
 export async function getSecuredSubjects(
   supabase: SupabaseClient,
