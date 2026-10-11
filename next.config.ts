@@ -2,16 +2,11 @@ import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
-  async rewrites() {
-    return {
-      beforeFiles: [
-        { source: '/', destination: '/landing/index.html' },
-      ],
-    }
-  },
   async redirects() {
     return [
-      // Removed app surfaces (UI wipe): no dead routes, no old UI.
+      // Removed surfaces (UI wipe): no dead routes, no old UI. The homepage
+      // is the React landing (app/page.tsx), not the legacy static file.
+      { source: '/explore/:path*', destination: '/', permanent: false },
       { source: '/dashboard/:path*', destination: '/', permanent: false },
       { source: '/practice/:path*', destination: '/', permanent: false },
       { source: '/history', destination: '/', permanent: false },
