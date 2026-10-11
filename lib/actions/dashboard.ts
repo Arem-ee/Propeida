@@ -4,6 +4,7 @@ import { createClient, getAuthUser } from '@/lib/supabase/server'
 import { revalidatePath } from 'next/cache'
 import { getDueReviews, getMasterySummary, getSecuredSubjects, getPresenceStats } from '@/lib/mastery'
 import { getUserActiveSessions } from '@/lib/practice'
+import { getNearestCohort } from '@/lib/cohort'
 
 interface DashboardPayload {
   profile: {
@@ -86,18 +87,27 @@ export async function getDashboardData() {
   let securedSubjects: { subjectId: string; subjectName: string; subjectSlug: string }[] = []
   let presence: { weeklyActiveStudents: number; sessionsThisWeek: number; securedThisWeek: number } | null = null
   let continueSession: { id: string; examName: string; mode: string } | null = null
+  let cohort: {
+    examName: string
+    year: number
+    daysLeft: number | null
+    verified: boolean
+    weeklyActive: number
+  } | null = null
   try {
-    const [due, summary, secured, presenceStats, active] = await Promise.all([
+    const [due, summary, secured, presenceStats, active, nearest] = await Promise.all([
       getDueReviews(supabase, user.id),
       getMasterySummary(supabase, user.id),
       getSecuredSubjects(supabase, user.id),
       getPresenceStats(supabase),
       getUserActiveSessions(user.id),
+      getNearestCohort(supabase),
     ])
     dueReviews = due
     mastery = summary
     securedSubjects = secured
     presence = presenceStats
+    cohort = nearest
     const first = active[0]
     if (first) {
       continueSession = { id: first.id, examName: first.exams.name, mode: first.mode }
@@ -133,6 +143,7 @@ export async function getDashboardData() {
     },
     presence,
     continueSession,
+    cohort,
   }
 }
 

@@ -1,30 +1,21 @@
 import { createClient } from '@/lib/supabase/server'
 import SelectionScreen from '@/components/practice/selection-screen'
-import ComingSoon from '@/components/coming-soon'
 import CampaignPanel from '@/components/campaign/campaign-panel'
 import { getCampaignStatus } from '@/lib/campaign'
 import { getUserActiveSessions } from '@/lib/practice'
 import Link from 'next/link'
 
-export default async function PracticePage(props: { searchParams: Promise<{ hub?: string }> }) {
-  const searchParams = await props.searchParams
-  const hub = searchParams.hub === 'universities' ? 'universities' : 'jamb'
-
-  if (hub === 'jamb') {
-    return (
-      <div className="mx-auto max-w-2xl">
-        <ComingSoon />
-      </div>
-    )
-  }
-
+export default async function PracticePage() {
   const supabase = await createClient()
 
-  const [examsRes, subjectsRes, examSubjectsRes, userRes] = await Promise.all([
+  const [examsRes, subjectsRes, examSubjectsRes, userRes, questionRows] = await Promise.all([
     supabase.from('exams').select('id, name, slug, subject_selection_mode, school_id').order('name'),
     supabase.from('subjects').select('id, name, slug').order('name'),
     supabase.from('exam_subjects').select('exam_id, subject_id'),
     supabase.auth.getSession(),
+    // Content-gating by presence, not permission: exams with no bank
+    // simply don't appear. No flags, no walls.
+    supabase.from('questions').select('exam_id').limit(20000),
   ])
 
   const allExams = examsRes.data ?? []
@@ -52,19 +43,20 @@ export default async function PracticePage(props: { searchParams: Promise<{ hub?
   const accessSet = new Set(userExamAccessIds)
   const campaign = user ? await getCampaignStatus() : null
   const campaignAccess = campaign?.hasAccess ?? false
+  const examsWithContent = new Set((questionRows.data ?? []).map((q) => q.exam_id))
   const exams = allExams.filter(
-    (e) => e.school_id !== null && (campaignAccess || accessSet.has(e.id))
+    (e) => examsWithContent.has(e.id) && (campaignAccess || accessSet.has(e.id) || e.school_id === null),
   )
 
   return (
     <div className="mx-auto max-w-2xl">
       {campaign && <CampaignPanel status={campaign} />}
-      <h1 className="text-2xl font-extrabold text-gray-900">University Practice & Mock Exams</h1>
+      <h1 className="text-2xl font-extrabold text-gray-900">Practice & Mock Exams</h1>
       <p className="mt-1 text-sm text-gray-500">Select an exam, configure your session, and start practicing.</p>
 
       {exams.length === 0 && (
         <div className="mt-4 rounded-xl bg-amber-50 border border-amber-100 p-4 text-sm text-amber-800">
-          You haven&apos;t added any universities yet.{' '}
+          No study material available yet.{' '}
           <Link href="/account/institutions" className="font-bold text-amber-900 underline">Add institutions</Link>
         </div>
       )}

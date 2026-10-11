@@ -28,6 +28,7 @@ The product should feel playful, warm, and encouraging—using Fredoka/Nunito ty
 5. **Fun supports effort.** Rewards celebrate productive learning behaviour, never endless tapping, logins, or time spent.
 6. **Trust is non-negotiable.** Answer keys, exam rules, and curriculum content are reviewed and versioned.
 7. **Science decides, evidence tunes.** Learning science and official standards determine what we build; local student evidence tunes it after launch. Engagement metrics never override either.
+8. **No gates before learning.** Subjects organize Propeida; exams merely configure it. Nothing — no path picker, no hub, no exam gate, no "coming soon" wall — may stand between a learner and their next learning action. An exam matters at exactly two moments: mock assembly (blueprint) and the countdown date. Any design that asks the learner who they are before letting them learn fails review, no matter how it is framed.
 
 ### The promise
 

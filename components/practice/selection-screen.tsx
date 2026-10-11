@@ -34,7 +34,6 @@ interface SelectionScreenProps {
 export default function SelectionScreen({ exams, allSubjects, examSubjectMap, activeSession }: SelectionScreenProps) {
   const router = useRouter()
   const searchParams = useSearchParams()
-  const hubParam = searchParams.get('hub') === 'universities' ? '?hub=universities' : ''
   const subjectParam = searchParams.get('subject')
   const topicParam = searchParams.get('topic')
   const [selectedExamId, setSelectedExamId] = useState<string>('')
@@ -138,7 +137,6 @@ export default function SelectionScreen({ exams, allSubjects, examSubjectMap, ac
       })
 
       const params = new URLSearchParams()
-      if (searchParams.get('hub') === 'universities') params.set('hub', 'universities')
       if (result.mode === 'practice') {
         if (result.warmupIds.length > 0) params.set('warmup', result.warmupIds.join(','))
         if (result.lessonNoteId) params.set('lesson', result.lessonNoteId)
@@ -170,7 +168,7 @@ export default function SelectionScreen({ exams, allSubjects, examSubjectMap, ac
               {activeSession.examName} ({activeSession.mode} mode)
             </p>
             <button
-              onClick={() => router.push(`/practice/session/${activeSession.id}${hubParam}`)}
+              onClick={() => router.push(`/practice/session/${activeSession.id}`)}
               className="mt-2 rounded-xl bg-amber-600 px-4 py-2 text-xs font-bold text-white hover:bg-amber-700 min-h-[44px] cursor-pointer"
             >
               Resume session

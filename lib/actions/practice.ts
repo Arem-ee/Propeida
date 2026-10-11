@@ -1,7 +1,6 @@
 'use server'
 
 import { revalidatePath } from 'next/cache'
-import { redirect } from 'next/navigation'
 import { createClient, getAuthUser } from '@/lib/supabase/server'
 import { createAdminClient } from '@/lib/supabase/admin'
 import {
@@ -34,12 +33,6 @@ interface SessionQuestion {
   subjectId: string
   questionText: string
   options: { key: string; text: string }[]
-}
-
-async function assertExamOpen(examId: string) {
-  const supabase = await createClient()
-  const { data } = await supabase.from('exams').select('slug').eq('id', examId).single()
-  if (data?.slug === 'jamb') redirect('/dashboard')
 }
 
 /**
@@ -129,8 +122,7 @@ export async function createSession(params: CreateSessionParams) {
   const user = await getAuthUser(supabase)
   if (!user) throw new Error('Not authenticated')
 
-  const [, examAccess, mockDefaults] = await Promise.all([
-    assertExamOpen(params.examId),
+  const [examAccess, mockDefaults] = await Promise.all([
     hasExamAccess(user.id, params.examId),
     params.mode === 'mock' ? getMockDefaults(params.examSlug) : Promise.resolve(null),
   ])
@@ -310,7 +302,6 @@ export async function submitAnswer(
   if (session.user_id !== user.id) throw new Error('Session does not belong to user')
   if (session.status !== 'in_progress') throw new Error('Session is not active')
 
-  await assertExamOpen(session.exam_id)
 
   if (session.mode === 'mock' && isSessionExpired(session.started_at, session.time_limit_seconds)) {
     throw new Error('Time has expired for this session')
@@ -390,7 +381,6 @@ export async function completePracticeSession(sessionId: string) {
   if (session.status !== 'in_progress') throw new Error('Session is not active')
   if (session.mode !== 'practice') throw new Error('Session is not a practice session')
 
-  await assertExamOpen(session.exam_id)
 
   const answers = await getSessionQuestionsWithStatus(sessionId, false)
   const attempted = answers.filter((a) => a.selectedAnswer != null)
@@ -449,7 +439,6 @@ export async function completeMockSession(sessionId: string) {
   if (session.mode !== 'mock') throw new Error('Session is not a mock exam')
   const expired = isSessionExpired(session.started_at, session.time_limit_seconds)
 
-  await assertExamOpen(session.exam_id)
 
   const { data: completion, error: completionError } = await supabase.rpc('complete_mock_session', {
     p_session_id: sessionId,
@@ -482,7 +471,6 @@ export async function loadSessionData(sessionId: string) {
   if (session.user_id !== user.id) throw new Error('Session does not belong to user')
   if (session.status !== 'in_progress') throw new Error('Session is not active')
 
-  await assertExamOpen(session.exam_id)
 
   const questions = await getSessionQuestionsWithStatus(sessionId, session.mode === 'practice')
   const mapped = questions.map((q) => ({
@@ -514,7 +502,6 @@ export async function getSessionResults(sessionId: string) {
   if (session.user_id !== user.id) throw new Error('Session does not belong to user')
   if (session.status !== 'completed') throw new Error('Session is not completed')
 
-  await assertExamOpen(session.exam_id)
 
   const [{ data: result }, { data: exam }, reviewRes] = await Promise.all([
     supabase
@@ -650,14 +637,12 @@ export async function getSessionResults(sessionId: string) {
   }
 }
 
-export async function getSessionHistory(hub?: 'jamb' | 'universities') {
+export async function getSessionHistory() {
   const supabase = await createClient()
   const user = await getAuthUser(supabase)
   if (!user) throw new Error('Not authenticated')
 
-  if (hub === 'jamb' || hub === undefined) redirect('/dashboard')
-
-  let query = supabase
+  const { data, error } = await supabase
     .from('exam_sessions')
     .select(`
       id,
@@ -671,21 +656,7 @@ export async function getSessionHistory(hub?: 'jamb' | 'universities') {
     `)
     .eq('user_id', user.id)
     .eq('status', 'completed')
-
-  if (hub === 'universities') {
-    const { data: schoolExams } = await supabase
-      .from('exams')
-      .select('id')
-      .not('school_id', 'is', null)
-    const schoolExamIds = (schoolExams ?? []).map((e) => e.id)
-    if (schoolExamIds.length > 0) {
-      query = query.in('exam_id', schoolExamIds)
-    } else {
-      query = query.is('exam_id', null)
-    }
-  }
-
-  const { data, error } = await query.order('started_at', { ascending: false })
+    .order('started_at', { ascending: false })
 
   if (error) throw new Error('Failed to fetch history')
 
@@ -705,3 +676,4 @@ export async function getSessionHistory(hub?: 'jamb' | 'universities') {
 
   return history
 }
+

@@ -9,6 +9,15 @@ The current application already has a secure exam-practice foundation: `exams`, 
 
 Do not replace the existing question/session/result model. Add a content graph, learner-model records, review queue, and path selection around it.
 
+### Organizing principle (binding)
+
+**Subjects organize; exams configure. There are no gates before learning.**
+
+- The library (practice, lessons, review, mastery, shelf) is organized by subject and topic, which belong to no exam. A learner never declares an identity to enter.
+- An exam record configures exactly two things: a mock blueprint (question counts, timing, subject roles) and a countdown/cohort date. It never grants, denies, or hides learning.
+- Empty shelves hide themselves by absence of content, never by permission walls or "coming soon" branches. A subject with no questions simply doesn't appear as practicable.
+- The review test for any navigation or onboarding design: *does this ask the learner who they are before letting them learn?* If yes, it is rejected regardless of framing.
+
 ## 2. Target shape
 
 ```text

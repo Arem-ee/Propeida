@@ -1,10 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { Clock, Target, ArrowRight, BarChart3 } from 'lucide-react'
-import ComingSoon from '@/components/coming-soon'
 import { getSessionHistory } from '@/lib/actions/practice'
 
 interface HistoryItem {
@@ -18,8 +16,6 @@ interface HistoryItem {
 }
 
 export default function HistoryPage() {
-  const searchParams = useSearchParams()
-  const hub = searchParams.get('hub') === 'universities' ? 'universities' : 'jamb'
   const [history, setHistory] = useState<HistoryItem[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -27,7 +23,7 @@ export default function HistoryPage() {
   useEffect(() => {
     async function load() {
       try {
-        const data = await getSessionHistory(hub)
+        const data = await getSessionHistory()
         setHistory(data)
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Failed to load history')
@@ -36,11 +32,7 @@ export default function HistoryPage() {
       }
     }
     load()
-  }, [hub])
-
-  if (hub === 'jamb') {
-    return <ComingSoon />
-  }
+  }, [])
 
   if (loading) {
     return (
@@ -63,12 +55,12 @@ export default function HistoryPage() {
       <div className="flex items-center justify-between mb-8">
         <div>
           <h1 className="text-2xl font-extrabold text-gray-900">
-            {hub === 'universities' ? 'University Session History' : 'Session History'}
+            Session History
           </h1>
           <p className="mt-1 text-sm text-gray-500">All your completed practice and mock exam sessions.</p>
         </div>
         <Link
-          href={`/practice${hub === 'universities' ? '?hub=universities' : ''}`}
+          href="/practice"
           className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-4 py-2.5 text-sm font-bold text-white hover:bg-blue-700 min-h-[44px]"
         >
           <Target className="h-4 w-4" />
@@ -82,7 +74,7 @@ export default function HistoryPage() {
           <h2 className="text-lg font-bold text-gray-900">No sessions yet</h2>
           <p className="mt-1 text-sm text-gray-500 mb-4">Complete a practice or mock exam to see your results here.</p>
           <Link
-            href={`/practice${hub === 'universities' ? '?hub=universities' : ''}`}
+            href="/practice"
             className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-bold text-white hover:bg-blue-700 min-h-[44px]"
           >
             Start your first session

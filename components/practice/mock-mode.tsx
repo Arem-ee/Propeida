@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useCallback, useEffect, useRef, memo } from 'react'
-import { useRouter, useSearchParams } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import { Check, ChevronLeft, ChevronRight, Send } from 'lucide-react'
 import QuestionCard from './question-card'
 import Timer from './timer'
@@ -24,8 +24,6 @@ interface MockModeProps {
 
 export default function MockMode({ sessionId, questions, timeLimitSeconds, startedAt }: MockModeProps) {
   const router = useRouter()
-  const searchParams = useSearchParams()
-  const hubParam = searchParams.get('hub') === 'universities' ? '?hub=universities' : ''
   const [currentIndex, setCurrentIndex] = useState(0)
   const [selections, setSelections] = useState<Record<string, string>>(() => {
     const persisted: Record<string, string> = {}
@@ -117,7 +115,7 @@ export default function MockMode({ sessionId, questions, timeLimitSeconds, start
           </button>
           <button
             type="button"
-            onClick={() => router.push(`/practice${hubParam}`)}
+            onClick={() => router.push(`/practice`)}
             className="rounded-xl border border-gray-200 bg-white px-6 py-3 text-sm font-bold text-gray-700 hover:bg-gray-50 min-h-[44px] touch-manipulation cursor-pointer"
           >
             Back to Practice

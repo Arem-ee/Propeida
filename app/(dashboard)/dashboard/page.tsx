@@ -5,8 +5,6 @@ import Link from 'next/link'
 import { Target, Flame, Zap, Check, X, ChevronRight, ArrowRight, CalendarCheck } from 'lucide-react'
 import { getDashboardData, submitDailyQuestion } from '@/lib/actions/dashboard'
 import { claimReferral } from '@/lib/actions/referral'
-import { useHub } from '@/components/dashboard-hub-provider'
-import ComingSoon from '@/components/coming-soon'
 
 interface DailyQuestionData {
   id: string | null
@@ -25,7 +23,6 @@ interface ReviewData {
 const PRESENCE_MIN_WEEKLY_ACTIVE = 10
 
 export default function DashboardPage() {
-  const { hub } = useHub()
   const [username, setUsername] = useState('')
   const [streak, setStreak] = useState({ current_streak: 0, longest_streak: 0 })
   const [dailyQuestion, setDailyQuestion] = useState<DailyQuestionData>({ id: null, attempt: null })
@@ -33,6 +30,7 @@ export default function DashboardPage() {
   const [review, setReview] = useState<ReviewData>({ due: [], securedCount: 0, trackedCount: 0, securedSubjects: [] })
   const [continueSession, setContinueSession] = useState<{ id: string; examName: string; mode: string } | null>(null)
   const [presence, setPresence] = useState<{ weeklyActiveStudents: number; sessionsThisWeek: number; securedThisWeek: number } | null>(null)
+  const [cohort, setCohort] = useState<{ examName: string; year: number; daysLeft: number | null; verified: boolean; weeklyActive: number } | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
@@ -50,6 +48,7 @@ export default function DashboardPage() {
       setReview(data.review ?? { due: [], securedCount: 0, trackedCount: 0, securedSubjects: [] })
       setContinueSession(data.continueSession ?? null)
       setPresence(data.presence ?? null)
+      setCohort(data.cohort ?? null)
       const first = data.recentSessions[0]
       if (first) {
         setLastSession({ id: first.id, examName: first.examName, score: first.score })
@@ -74,10 +73,6 @@ export default function DashboardPage() {
       try { localStorage.removeItem('pending_ref') } catch {}
     }
   }, [])
-
-  if (hub === 'jamb') {
-    return <ComingSoon />
-  }
 
   if (loading) {
     return (
@@ -105,7 +100,7 @@ export default function DashboardPage() {
           {username ? `Good ${getTimeOfDay()}, ${username}` : 'Welcome back'}
         </h1>
         <p className="mt-1 text-sm text-gray-500">
-          {hub === 'universities' ? 'University hub' : 'JAMB hub'} — pick up where you left off.
+          Pick up where you left off.
         </p>
         {presence && presence.weeklyActiveStudents >= PRESENCE_MIN_WEEKLY_ACTIVE && (
           <p className="mt-2 flex items-center gap-1.5 text-xs font-semibold text-gray-400">
@@ -119,9 +114,23 @@ export default function DashboardPage() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 auto-rows-min">
+        {cohort && (
+          <div className="sm:col-span-2 rounded-xl border border-blue-200 bg-blue-50/50 px-5 py-4">
+            <p className="text-[10px] font-bold uppercase tracking-wider text-blue-700">
+              Class of {cohort.examName} {cohort.year}
+            </p>
+            <p className="mt-1 text-sm font-bold text-gray-900">
+              {cohort.daysLeft !== null
+                ? `${cohort.daysLeft} day${cohort.daysLeft === 1 ? '' : 's'} to go.`
+                : 'Dates to be announced — study now, we count down when it is official.'}
+              {cohort.weeklyActive >= PRESENCE_MIN_WEEKLY_ACTIVE &&
+                ` ${cohort.weeklyActive.toLocaleString()} studying with you this week.`}
+            </p>
+          </div>
+        )}
         {continueSession && (
           <Link
-            href={`/practice/session/${continueSession.id}${hub === 'universities' ? '?hub=universities' : ''}`}
+            href={`/practice/session/${continueSession.id}`}
             className="sm:col-span-2 rounded-xl border border-emerald-200 bg-emerald-50/60 p-5 sm:p-6 hover:border-emerald-300 transition-all"
           >
             <div className="flex items-center justify-between">
@@ -135,7 +144,7 @@ export default function DashboardPage() {
           </Link>
         )}
         <Link
-          href={`/practice${hub === 'universities' ? '?hub=universities' : ''}`}
+          href={`/practice`}
           className="sm:col-span-2 rounded-xl border border-gray-100 bg-white p-5 sm:p-6 hover:border-blue-200 hover:bg-blue-50/10 transition-all"
         >
           <div className="flex items-center justify-between">
@@ -170,7 +179,7 @@ export default function DashboardPage() {
               {review.due.map((item) => (
                 <Link
                   key={item.subjectId}
-                  href={`/practice?subject=${encodeURIComponent(item.subjectSlug)}${hub === 'universities' ? '&hub=universities' : ''}`}
+                  href={`/practice?subject=${encodeURIComponent(item.subjectSlug)}`}
                   className="flex items-center justify-between gap-3 rounded-xl border border-gray-100 bg-white px-4 py-3 hover:border-violet-300 transition-colors min-h-[44px]"
                 >
                   <span className="text-sm font-bold text-gray-800">{item.subjectName}</span>
@@ -240,12 +249,10 @@ export default function DashboardPage() {
 
         <div className="sm:col-span-2 rounded-xl border border-gray-100 bg-white px-5 py-3 flex items-center justify-between">
           <p className="text-sm text-gray-500">
-            {hub === 'universities'
-              ? 'Practice for your target universities, one focused session at a time.'
-              : 'Practice JAMB questions, one focused session at a time.'}
+            One focused session at a time.
           </p>
           <Link
-            href={`/practice${hub === 'universities' ? '?hub=universities' : ''}`}
+            href={`/practice`}
             className="text-sm font-bold text-blue-600 hover:text-blue-700 shrink-0 min-h-[36px] flex items-center"
           >
             Practice
@@ -400,3 +407,4 @@ function DailyQuestionTile({
     </div>
   )
 }
+

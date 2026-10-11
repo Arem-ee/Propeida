@@ -3,11 +3,9 @@
 import { usePathname, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import {
-  Home, BarChart3, History, User, GraduationCap, School,
-  LogOut, Menu, X, ChevronDown, Settings, Gift, Mail, BookOpen, CreditCard, ArrowLeft,
+  Home, BarChart3, History, User, LogOut, Menu, X, ChevronDown, Settings, Gift, Mail, BookOpen, CreditCard, ArrowLeft,
 } from 'lucide-react'
 import { useState } from 'react'
-import { useHub } from '@/components/dashboard-hub-provider'
 import Logo from '@/components/logo'
 
 const NAV_ITEMS = [
@@ -27,7 +25,7 @@ const MOBILE_NAV_ITEMS = [
 
 const ACCOUNT_SUB_ITEMS = [
   { href: '/account', label: 'Profile', icon: User },
-  { href: '/account/institutions', label: 'Institutions', icon: School },
+  { href: '/account/institutions', label: 'Institutions', icon: BookOpen },
   { href: '/account/referrals', label: 'Refer & Earn', icon: Gift },
   { href: '/account/upgrade', label: 'Upgrade', icon: CreditCard },
   { href: '/dashboard/support', label: 'Contact', icon: Mail },
@@ -41,11 +39,9 @@ export default function DashboardShell({ children, email, isAdmin, onLogout }: {
 }) {
   const pathname = usePathname()
   const router = useRouter()
-  const { hub, setHub } = useHub()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [accountExpanded, setAccountExpanded] = useState(false)
 
-  const hubBase = hub === 'universities' ? '?hub=universities' : ''
   const showBack = !['/dashboard', '/practice', '/history'].includes(pathname)
   const goBack = () => {
     if (window.history.length > 1) router.back()
@@ -66,29 +62,6 @@ export default function DashboardShell({ children, email, isAdmin, onLogout }: {
           </Link>
         </div>
 
-        <div className="px-4 pt-4 pb-2">
-          <div className="flex rounded-xl border border-gray-200 overflow-hidden">
-            <button
-              onClick={() => setHub('jamb')}
-              className={`flex-1 flex items-center justify-center gap-1.5 py-2 text-xs font-bold min-h-[36px] cursor-pointer transition-colors ${
-                hub === 'jamb' ? 'bg-blue-600 text-white' : 'bg-white text-gray-500 hover:bg-gray-50'
-              }`}
-            >
-              <GraduationCap className="h-3.5 w-3.5" />
-              JAMB
-            </button>
-            <button
-              onClick={() => setHub('universities')}
-              className={`flex-1 flex items-center justify-center gap-1.5 py-2 text-xs font-bold min-h-[36px] cursor-pointer transition-colors ${
-                hub === 'universities' ? 'bg-blue-600 text-white' : 'bg-white text-gray-500 hover:bg-gray-50'
-              }`}
-            >
-              <School className="h-3.5 w-3.5" />
-              Universities
-            </button>
-          </div>
-        </div>
-
         <nav className="flex-1 px-3 py-2 space-y-0.5 overflow-y-auto">
           {NAV_ITEMS.filter((i) => i.href !== '/account').map((item) => {
             const Icon = item.icon
@@ -96,7 +69,7 @@ export default function DashboardShell({ children, email, isAdmin, onLogout }: {
             return (
               <Link
                 key={item.href}
-                href={item.href === '/dashboard' ? `/dashboard${hubBase}` : `${item.href}${hubBase}`}
+                href={item.href}
                 className={`flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-bold min-h-[44px] transition-colors ${
                   active ? 'bg-blue-50 text-blue-700' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                 }`}
@@ -184,31 +157,8 @@ export default function DashboardShell({ children, email, isAdmin, onLogout }: {
           </button>
         </div>
 
-        <div className="px-4 pb-3">
-          <div className="flex rounded-xl border border-gray-200 overflow-hidden">
-            <button
-              onClick={() => { setHub('jamb'); setMobileMenuOpen(false) }}
-              className={`flex-1 flex items-center justify-center gap-1.5 py-2 text-xs font-bold min-h-[36px] cursor-pointer transition-colors ${
-                hub === 'jamb' ? 'bg-blue-600 text-white' : 'bg-white text-gray-500'
-              }`}
-            >
-              <GraduationCap className="h-3.5 w-3.5" />
-              JAMB
-            </button>
-            <button
-              onClick={() => { setHub('universities'); setMobileMenuOpen(false) }}
-              className={`flex-1 flex items-center justify-center gap-1.5 py-2 text-xs font-bold min-h-[36px] cursor-pointer transition-colors ${
-                hub === 'universities' ? 'bg-blue-600 text-white' : 'bg-white text-gray-500'
-              }`}
-            >
-              <School className="h-3.5 w-3.5" />
-              Universities
-            </button>
-          </div>
-        </div>
-
         {mobileMenuOpen && (
-          <div className="fixed inset-0 top-[113px] bg-white z-40 overflow-y-auto pb-24">
+          <div className="fixed inset-0 top-14 bg-white z-40 overflow-y-auto pb-24">
             <nav className="px-4 py-2 space-y-0.5">
               {NAV_ITEMS.filter((i) => i.href !== '/account').map((item) => {
                 const Icon = item.icon
@@ -216,7 +166,7 @@ export default function DashboardShell({ children, email, isAdmin, onLogout }: {
                 return (
                   <Link
                     key={item.href}
-                    href={item.href === '/dashboard' ? `/dashboard${hubBase}` : `${item.href}${hubBase}`}
+                    href={item.href}
                     onClick={() => setMobileMenuOpen(false)}
                     className={`flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-bold min-h-[44px] transition-colors ${
                       active ? 'bg-blue-50 text-blue-700' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
@@ -272,7 +222,7 @@ export default function DashboardShell({ children, email, isAdmin, onLogout }: {
         )}
       </div>
 
-      <main className="flex-1 lg:ml-64 pt-[113px] lg:pt-0 pb-20 lg:pb-0">
+      <main className="flex-1 lg:ml-64 pt-14 lg:pt-0 pb-20 lg:pb-0">
         <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:py-8">
           {showBack && (
             <button onClick={goBack} className="mb-4 hidden min-h-[36px] items-center gap-1 text-sm font-semibold text-gray-500 hover:text-blue-700 lg:inline-flex">
@@ -291,7 +241,7 @@ export default function DashboardShell({ children, email, isAdmin, onLogout }: {
             return (
               <Link
                 key={item.href}
-                href={item.href === '/dashboard' ? `/dashboard${hubBase}` : `${item.href}${hubBase}`}
+                href={item.href}
                 className={`flex flex-col items-center justify-center gap-0.5 min-w-0 px-2 py-1 rounded-xl transition-colors min-h-[44px] ${
                   active ? 'text-blue-600' : 'text-gray-400 hover:text-gray-600'
                 }`}
