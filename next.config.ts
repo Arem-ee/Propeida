@@ -11,14 +11,6 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      // Removed surfaces (UI wipe): no dead routes, no old UI.
-      { source: '/explore/:path*', destination: '/', permanent: false },
-      { source: '/dashboard/:path*', destination: '/', permanent: false },
-      { source: '/practice/:path*', destination: '/', permanent: false },
-      { source: '/history', destination: '/', permanent: false },
-      { source: '/results/:path*', destination: '/', permanent: false },
-      { source: '/account/:path*', destination: '/', permanent: false },
-      { source: '/settings', destination: '/', permanent: false },
       { source: '/support', destination: '/pricing', permanent: true },
       { source: '/support/callback', destination: '/pricing', permanent: true },
       { source: '/funding', destination: '/pricing', permanent: true },
