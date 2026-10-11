@@ -55,7 +55,11 @@ export async function middleware(request: NextRequest) {
 
   if (user && isAuthPage) {
     const url = request.nextUrl.clone()
-    url.pathname = '/'
+    // Honor a safe internal destination (e.g. /login?redirect=/learn);
+    // otherwise signed-in users go home.
+    const redirect = request.nextUrl.searchParams.get('redirect')
+    url.pathname = redirect && redirect.startsWith('/') && !redirect.startsWith('//') ? redirect : '/'
+    url.search = ''
     return NextResponse.redirect(url)
   }
 
