@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 560" width="540" height="560">
+    
+    <defs>
+      <!-- Skin tone gradients: Diverse Nigerian deep chocolate & rich brown tones -->
+      <linearGradient id="skin-1" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#4E2B18"/>
+        <stop offset="100%" stop-color="#361B0E"/>
+      </linearGradient>
+      <linearGradient id="skin-2" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#5E351E"/>
+        <stop offset="100%" stop-color="#422212"/>
+      </linearGradient>
+      <linearGradient id="skin-3" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#703E22"/>
+        <stop offset="100%" stop-color="#522B15"/>
+      </linearGradient>
+      <linearGradient id="skin-4" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#402012"/>
+        <stop offset="100%" stop-color="#2C1409"/>
+      </linearGradient>
+      <linearGradient id="skin-5" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#64361C"/>
+        <stop offset="100%" stop-color="#492512"/>
+      </linearGradient>
+      <linearGradient id="skin-6" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#552C16"/>
+        <stop offset="100%" stop-color="#3B1C0E"/>
+      </linearGradient>
+      <linearGradient id="skin-7" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#7B4527"/>
+        <stop offset="100%" stop-color="#5C3018"/>
+      </linearGradient>
+
+      <!-- Clothing Gradients (Rafiki vibrant palette) -->
+      <linearGradient id="grad-amber" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#F59E0B"/><stop offset="100%" stop-color="#D97706"/>
+      </linearGradient>
+      <linearGradient id="grad-teal" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#0D9488"/><stop offset="100%" stop-color="#0F766E"/>
+      </linearGradient>
+      <linearGradient id="grad-coral" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#F43F5E"/><stop offset="100%" stop-color="#E11D48"/>
+      </linearGradient>
+      <linearGradient id="grad-indigo" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#4F46E5"/>
+      </linearGradient>
+      <linearGradient id="grad-emerald" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#10B981"/><stop offset="100%" stop-color="#059669"/>
+      </linearGradient>
+      <linearGradient id="grad-purple" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#7C3AED"/>
+      </linearGradient>
+      <linearGradient id="grad-blue" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#1D4ED8"/>
+      </linearGradient>
+      <linearGradient id="grad-orange" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#FB923C"/><stop offset="100%" stop-color="#EA580C"/>
+      </linearGradient>
+      <linearGradient id="grad-slate" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#475569"/><stop offset="100%" stop-color="#1E293B"/>
+      </linearGradient>
+
+      <!-- Soft hair shading -->
+      <linearGradient id="hair-dark" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#24140D"/><stop offset="100%" stop-color="#130B07"/>
+      </linearGradient>
+    </defs>
+  
+    <g id="student-11-figure">
+      <!-- Ground shadow under student and scattered books -->
+      <ellipse cx="270" cy="545" rx="240" ry="16" fill="#1E293B" opacity="0.08"/>
+
+      <!-- SCATTERED REFERENCE BOOKS ON FLOOR (Organic tapered floor layout) -->
+      <!-- Book 1 (Left, Indigo) -->
+      <path d="M 70 480 L 160 460 L 175 510 L 85 530 Z" fill="url(#grad-indigo)"/>
+      <path d="M 78 482 L 155 465 L 168 505 L 90 522 Z" fill="#F8FAFC"/>
+      <!-- Book 2 (Right, Amber) -->
+      <path d="M 380 460 L 470 480 L 455 530 L 365 510 Z" fill="url(#grad-amber)"/>
+      <path d="M 385 465 L 462 482 L 450 522 L 372 505 Z" fill="#FEF3C7"/>
+      <!-- Open notebook in front -->
+      <rect x="210" y="475" width="120" height="60" rx="4" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+      <line x1="270" y1="475" x2="270" y2="535" stroke="#CBD5E1" stroke-width="2"/>
+      <!-- Bright yellow highlight streak on page! -->
+      <rect x="220" y="495" width="40" height="8" rx="2" fill="#FDE047" opacity="0.8"/>
+      <rect x="220" y="510" width="35" height="8" rx="2" fill="#FDE047" opacity="0.8"/>
+      <!-- Index cards and mug -->
+      <rect x="175" y="490" width="30" height="20" rx="2" fill="#F1F5F9" stroke="#CBD5E1"/>
+      <ellipse cx="360" cy="490" rx="10" ry="8" fill="#F43F5E"/>
+      <ellipse cx="360" cy="488" rx="8" ry="6" fill="#451A03"/>
+
+      <!-- Girl sitting cross-legged in Mint Green knit & Navy leggings -->
+      <path d="M 170 450 C 150 490 200 520 270 520 C 340 520 390 490 370 450 Z" fill="url(#grad-slate)"/>
+      <ellipse cx="190" cy="495" rx="20" ry="12" fill="#FFFFFF"/>
+      <ellipse cx="350" cy="495" rx="20" ry="12" fill="#FFFFFF"/>
+
+      <!-- Torso: Mint Green Long-Sleeve Knit -->
+      <path d="M 210 300 C 195 360 200 420 220 460 L 320 460 C 340 420 345 360 330 300 Z" fill="url(#grad-emerald)"/>
+      <path d="M 235 340 Q 270 370 305 340" stroke="#059669" stroke-width="3" fill="none"/>
+
+      <!-- Left arm leaning forward holding book corner -->
+      <path d="M 210 310 Q 180 390 235 440" stroke="url(#skin-3)" stroke-width="26" stroke-linecap="round" fill="none"/>
+      <circle cx="235" cy="440" r="10" fill="url(#skin-3)"/>
+
+      <!-- Right arm holding Fluorescent Highlighter Pen -->
+      <path d="M 330 310 Q 350 400 285 450" stroke="url(#skin-3)" stroke-width="26" stroke-linecap="round" fill="none"/>
+      <!-- Right hand gripping highlighter -->
+      <ellipse cx="280" cy="455" rx="12" ry="10" fill="url(#skin-3)"/>
+      <!-- Neon yellow highlighter marker -->
+      <rect x="270" y="460" width="12" height="24" rx="3" fill="#FACC15" transform="rotate(-30 276 472)"/>
+      <polygon points="266,478 274,475 272,485" fill="#EAB308"/>
+
+      <!-- Head & Face (Golden chocolate skin) -->
+      <rect x="258" y="255" width="24" height="40" rx="5" fill="url(#skin-3)"/>
+      <ellipse cx="270" cy="215" rx="38" ry="46" fill="url(#skin-3)"/>
+
+      <!-- Facial features -->
+      <path d="M 244 200 Q 255 194 265 199" stroke="#170F0B" stroke-width="3" fill="none"/>
+      <path d="M 275 199 Q 285 194 296 200" stroke="#170F0B" stroke-width="3" fill="none"/>
+      <ellipse cx="254" cy="208" rx="5.5" ry="3.5" fill="#FFFFFF"/>
+      <circle cx="255" cy="209" r="3" fill="#170F0B"/>
+      <ellipse cx="286" cy="208" rx="5.5" ry="3.5" fill="#FFFFFF"/>
+      <circle cx="285" cy="209" r="3" fill="#170F0B"/>
+      <path d="M 270 216 Q 276 226 270 228" stroke="#422212" stroke-width="2" fill="none"/>
+      <path d="M 260 242 Q 270 250 280 242" stroke="#2B140A" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+      <!-- Hair: Shoulder-length twists with teal beads -->
+      <path d="M 230 220 C 230 145 310 145 310 220 Z" fill="url(#hair-dark)"/>
+      <path d="M 235 200 Q 215 250 220 300" stroke="url(#hair-dark)" stroke-width="8" stroke-linecap="round" fill="none"/>
+      <path d="M 305 200 Q 325 250 320 300" stroke="url(#hair-dark)" stroke-width="8" stroke-linecap="round" fill="none"/>
+      <circle cx="220" cy="295" r="5" fill="#14B8A6"/>
+      <circle cx="320" cy="295" r="5" fill="#14B8A6"/>
+    </g>
+  </svg>

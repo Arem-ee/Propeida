@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+    
+    <defs>
+      <!-- Skin tone gradients: Diverse Nigerian deep chocolate & rich brown tones -->
+      <linearGradient id="skin-1" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#4E2B18"/>
+        <stop offset="100%" stop-color="#361B0E"/>
+      </linearGradient>
+      <linearGradient id="skin-2" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#5E351E"/>
+        <stop offset="100%" stop-color="#422212"/>
+      </linearGradient>
+      <linearGradient id="skin-3" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#703E22"/>
+        <stop offset="100%" stop-color="#522B15"/>
+      </linearGradient>
+      <linearGradient id="skin-4" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#402012"/>
+        <stop offset="100%" stop-color="#2C1409"/>
+      </linearGradient>
+      <linearGradient id="skin-5" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#64361C"/>
+        <stop offset="100%" stop-color="#492512"/>
+      </linearGradient>
+      <linearGradient id="skin-6" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#552C16"/>
+        <stop offset="100%" stop-color="#3B1C0E"/>
+      </linearGradient>
+      <linearGradient id="skin-7" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#7B4527"/>
+        <stop offset="100%" stop-color="#5C3018"/>
+      </linearGradient>
+
+      <!-- Clothing Gradients (Rafiki vibrant palette) -->
+      <linearGradient id="grad-amber" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#F59E0B"/><stop offset="100%" stop-color="#D97706"/>
+      </linearGradient>
+      <linearGradient id="grad-teal" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#0D9488"/><stop offset="100%" stop-color="#0F766E"/>
+      </linearGradient>
+      <linearGradient id="grad-coral" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#F43F5E"/><stop offset="100%" stop-color="#E11D48"/>
+      </linearGradient>
+      <linearGradient id="grad-indigo" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#4F46E5"/>
+      </linearGradient>
+      <linearGradient id="grad-emerald" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#10B981"/><stop offset="100%" stop-color="#059669"/>
+      </linearGradient>
+      <linearGradient id="grad-purple" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#7C3AED"/>
+      </linearGradient>
+      <linearGradient id="grad-blue" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#1D4ED8"/>
+      </linearGradient>
+      <linearGradient id="grad-orange" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#FB923C"/><stop offset="100%" stop-color="#EA580C"/>
+      </linearGradient>
+      <linearGradient id="grad-slate" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#475569"/><stop offset="100%" stop-color="#1E293B"/>
+      </linearGradient>
+
+      <!-- Soft hair shading -->
+      <linearGradient id="hair-dark" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#24140D"/><stop offset="100%" stop-color="#130B07"/>
+      </linearGradient>
+    </defs>
+  
+    <rect width="600" height="400" fill="#F8FAFC"/>
+    <!-- Decorative background circles -->
+    <circle cx="120" cy="100" r="100" fill="#FEF3C7"/>
+    <circle cx="520" cy="300" r="110" fill="#EFF6FF"/>
+
+    <!-- LARGE EXAM REVISION TIMETABLE BOARD (Right Side) -->
+    <rect x="290" y="60" width="270" height="280" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="3"/>
+    <!-- Header -->
+    <rect x="290" y="60" width="270" height="44" rx="12" fill="#0D9488"/>
+    <rect x="290" y="80" width="270" height="24" fill="#0D9488"/>
+    <text x="320" y="88" font-family="sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">WAEC 30-DAY TIMETABLE</text>
+    <!-- Calendar grid boxes with colorful subject chips -->
+    <g transform="translate(310, 120)">
+      <rect x="0" y="0" width="50" height="45" rx="6" fill="#F0FDF4" stroke="#86EFAC"/>
+      <text x="6" y="16" font-family="sans-serif" font-size="10" font-weight="bold" fill="#15803D">MATH</text>
+      <circle cx="36" cy="32" r="7" fill="#22C55E"/>
+      <text x="33" y="35" font-family="sans-serif" font-size="9" fill="#FFFFFF">✓</text>
+
+      <rect x="60" y="0" width="50" height="45" rx="6" fill="#EFF6FF" stroke="#93C5FD"/>
+      <text x="66" y="16" font-family="sans-serif" font-size="10" font-weight="bold" fill="#1D4ED8">ENG</text>
+      <circle cx="96" cy="32" r="7" fill="#22C55E"/>
+      <text x="93" y="35" font-family="sans-serif" font-size="9" fill="#FFFFFF">✓</text>
+
+      <rect x="120" y="0" width="50" height="45" rx="6" fill="#FEF3C7" stroke="#FDE047"/>
+      <text x="126" y="16" font-family="sans-serif" font-size="10" font-weight="bold" fill="#B45309">PHYS</text>
+      <circle cx="156" cy="32" r="7" fill="#EAB308"/>
+      <text x="153" y="35" font-family="sans-serif" font-size="9" fill="#FFFFFF">⏱</text>
+
+      <rect x="180" y="0" width="50" height="45" rx="6" fill="#FDF2F8" stroke="#F472B6"/>
+      <text x="186" y="16" font-family="sans-serif" font-size="10" font-weight="bold" fill="#BE185D">CHEM</text>
+
+      <!-- Row 2 -->
+      <rect x="0" y="55" width="50" height="45" rx="6" fill="#F5F3FF" stroke="#C4B5FD"/>
+      <text x="6" y="71" font-family="sans-serif" font-size="10" font-weight="bold" fill="#6D28D9">BIO</text>
+
+      <rect x="60" y="55" width="50" height="45" rx="6" fill="#F0FDF4" stroke="#86EFAC"/>
+      <text x="66" y="71" font-family="sans-serif" font-size="10" font-weight="bold" fill="#15803D">ECON</text>
+
+      <rect x="120" y="55" width="50" height="45" rx="6" fill="#EFF6FF" stroke="#93C5FD"/>
+      <text x="126" y="71" font-family="sans-serif" font-size="10" font-weight="bold" fill="#1D4ED8">GOVT</text>
+
+      <rect x="180" y="55" width="50" height="45" rx="6" fill="#FEF3C7" stroke="#FDE047"/>
+      <text x="186" y="71" font-family="sans-serif" font-size="10" font-weight="bold" fill="#B45309">LIT</text>
+    </g>
+
+    <!-- Student Character (Left) pointing enthusiastically at timetable -->
+    <g id="blog-student-2">
+      <!-- Legs in khaki chinos -->
+      <path d="M 120 280 L 110 390 L 140 390 L 155 280 Z" fill="url(#grad-amber)"/>
+      <path d="M 165 280 L 175 390 L 205 390 L 195 280 Z" fill="url(#grad-amber)"/>
+      <ellipse cx="120" cy="390" rx="18" ry="8" fill="#1E293B"/>
+      <ellipse cx="195" cy="390" rx="18" ry="8" fill="#1E293B"/>
+
+      <!-- Torso in Teal polo shirt -->
+      <path d="M 110 160 C 100 210 105 250 115 285 L 205 285 C 215 250 220 210 210 160 Z" fill="url(#grad-teal)"/>
+
+      <!-- Left arm holding clipboard with checklist -->
+      <path d="M 115 170 Q 75 220 110 250" stroke="url(#skin-2)" stroke-width="22" stroke-linecap="round" fill="none"/>
+      <rect x="85" y="225" width="45" height="55" rx="4" fill="#92400E"/>
+      <rect x="90" y="230" width="35" height="45" rx="2" fill="#FFFFFF"/>
+      <circle cx="107" cy="223" r="4" fill="#64748B"/>
+      <!-- Checkmarks on sheet -->
+      <text x="94" y="244" font-family="sans-serif" font-size="9" fill="#15803D">✓ Task 1</text>
+      <text x="94" y="256" font-family="sans-serif" font-size="9" fill="#15803D">✓ Task 2</text>
+      <text x="94" y="268" font-family="sans-serif" font-size="9" fill="#15803D">✓ Task 3</text>
+
+      <!-- Right arm extended pointing finger at calendar -->
+      <path d="M 205 170 Q 250 160 295 145" stroke="url(#skin-2)" stroke-width="22" stroke-linecap="round" fill="none"/>
+      <!-- Hand with index finger pointing -->
+      <ellipse cx="295" cy="145" rx="9" ry="8" fill="url(#skin-2)"/>
+      <line x1="295" y1="145" x2="310" y2="140" stroke="url(#skin-2)" stroke-width="5" stroke-linecap="round"/>
+
+      <!-- Head & Face (Deep mahogany skin) -->
+      <rect x="148" y="115" width="22" height="35" rx="5" fill="url(#skin-2)"/>
+      <ellipse cx="160" cy="80" rx="34" ry="40" fill="url(#skin-2)"/>
+
+      <!-- Facial features -->
+      <path d="M 148 68 Q 158 62 168 68" stroke="#170F0B" stroke-width="3" fill="none"/>
+      <path d="M 176 68 Q 186 62 194 68" stroke="#170F0B" stroke-width="3" fill="none"/>
+      <ellipse cx="158" cy="76" rx="5" ry="3.5" fill="#FFFFFF"/>
+      <circle cx="160" cy="76" r="2.8" fill="#170F0B"/>
+      <ellipse cx="184" cy="76" rx="5" ry="3.5" fill="#FFFFFF"/>
+      <circle cx="186" cy="76" r="2.8" fill="#170F0B"/>
+      <path d="M 172 82 Q 178 92 174 94" stroke="#422212" stroke-width="2" fill="none"/>
+      <path d="M 162 102 Q 172 110 182 102" stroke="#241007" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+      <!-- Hair: Sharp fade cut -->
+      <path d="M 135 75 C 135 40 195 40 195 75 Z" fill="url(#hair-dark)"/>
+    </g>
+  </svg>
