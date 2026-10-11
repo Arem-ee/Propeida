@@ -13,7 +13,7 @@ const STEPS = [
   },
   {
     title: 'What to expect',
-    body: "Practice mode gives you instant feedback on every answer — so each question teaches you something, not just tests you. Mock mode runs a full timed exam simulation, just like the real thing. The free tier gives you a real taste of everything before you decide to upgrade. And your progress carries across sessions — streaks, leaderboard, all of it. Nothing resets.",
+    body: "Practice mode gives you instant feedback on every answer — so each question teaches you something, not just tests you. Mock mode runs a full timed exam simulation, just like the real thing. The free tier gives you a real taste of everything before you decide to upgrade. And your progress carries across sessions — streaks, history, all of it. Nothing resets.",
   },
   {
     title: 'One last thing',

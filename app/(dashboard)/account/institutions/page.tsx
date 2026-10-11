@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Check, Plus, X, School, ArrowLeft } from 'lucide-react'
-import { getUserExamAccess, addUserExamAccess, removeUserExamAccess } from '@/lib/actions/leaderboard'
+import { getUserExamAccess, addUserExamAccess, removeUserExamAccess } from '@/lib/actions/profile'
 
 interface SchoolExam {
   id: string

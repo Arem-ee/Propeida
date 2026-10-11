@@ -10,10 +10,8 @@ export default function MarketingHeader() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navItems = [
-    { label: 'Explore', href: '/explore' },
     { label: 'Practice', href: '/practice' },
     { label: 'Exams', href: '/#exams' },
-    { label: 'Leaderboard', href: '/leaderboard' },
     { label: 'Pricing', href: '/pricing' },
   ]
 

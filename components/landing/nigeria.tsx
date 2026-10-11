@@ -1,43 +1,19 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { BookOpen, Briefcase, Compass, FileText, GraduationCap, School } from 'lucide-react'
+import { FileText, School } from 'lucide-react'
 
 const ITEMS = [
   {
     icon: FileText,
     title: 'JAMB',
     body: 'The exam that opens the door.',
-    href: '/explore',
+    href: '/practice',
   },
   {
     icon: School,
     title: 'Post-UTME',
     body: 'The second hurdle, university by university.',
     href: '/post-utme-past-questions',
-  },
-  {
-    icon: GraduationCap,
-    title: 'Universities',
-    body: 'See what each one actually offers.',
-    href: '/explore/universities',
-  },
-  {
-    icon: BookOpen,
-    title: 'Courses',
-    body: 'Know what a course really leads to.',
-    href: '/explore/courses',
-  },
-  {
-    icon: Briefcase,
-    title: 'Job markets',
-    body: 'Where the work is, sector by sector.',
-    href: '/explore/careers',
-  },
-  {
-    icon: Compass,
-    title: 'Skills & careers',
-    body: 'What employers actually screen for.',
-    href: '/explore/careers',
   },
 ]
 

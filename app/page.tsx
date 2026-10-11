@@ -3,8 +3,6 @@ import { HomeJsonLd, FaqJsonLd } from '@/components/json-ld'
 import LandingHeader from '@/components/landing/header'
 import LandingHero from '@/components/landing/hero'
 import LandingPillars from '@/components/landing/pillars'
-import LandingExplorePreview from '@/components/landing/explore-preview'
-import LandingCareerPreview from '@/components/landing/career-preview'
 import LandingNigeria from '@/components/landing/nigeria'
 import LandingJourney from '@/components/landing/journey'
 import LandingPractice from '@/components/landing/practice'
@@ -20,7 +18,7 @@ export const metadata: Metadata = {
   title: 'Your future is bigger than one exam',
   alternates: { canonical: '/' },
   description:
-    'Free JAMB and Post-UTME practice in the real CBT format, plus careers, courses and universities to explore on the other side of the exam. Built for Nigerian students.',
+    'Free JAMB and Post-UTME practice in the real CBT format, with proof of what you have actually learned. Built for Nigerian students.',
   keywords: [
     'unilorin putme',
     'unilorin post utme',
@@ -29,13 +27,11 @@ export const metadata: Metadata = {
     'JAMB',
     'CBT mock exam Nigeria',
     'exam preparation app Nigeria',
-    'careers after JAMB',
-    'what can I study in Nigeria',
   ],
   openGraph: {
     title: 'Your future is bigger than one exam | Propeida',
     description:
-      'Free JAMB and Post-UTME practice in the real CBT format, plus careers, courses and universities to explore on the other side of the exam.',
+      'Free JAMB and Post-UTME practice in the real CBT format, with proof of what you have actually learned.',
     url: process.env.NEXT_PUBLIC_BASE_URL ?? 'https://propeida.online',
     siteName: 'Propeida',
     type: 'website',
@@ -46,7 +42,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Your future is bigger than one exam | Propeida',
     description:
-      'Free JAMB and Post-UTME practice in the real CBT format, plus careers, courses and universities to explore on the other side of the exam.',
+      'Free JAMB and Post-UTME practice in the real CBT format, with proof of what you have actually learned.',
     images: ['/opengraph-image'],
   },
 }
@@ -62,8 +58,6 @@ export default function HomePage() {
       <main>
         <LandingHero />
         <LandingPillars />
-        <LandingExplorePreview />
-        <LandingCareerPreview />
         <LandingNigeria />
         <LandingJourney />
         <LandingPractice />

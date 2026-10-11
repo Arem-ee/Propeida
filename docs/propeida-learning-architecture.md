@@ -26,7 +26,6 @@ Next.js web application
 │   ├── Target school + exam configuration
 │   ├── Learn / review / targeted practice
 │   └── School-style mocks and readiness
-├── Explore (courses, careers, institutions)
 ├── Account, entitlement, payment, and optional AI coach
 └── Admin content operations
 
@@ -67,7 +66,6 @@ Use routes, not `?hub=universities`, as the source of truth for the active study
 /post-utme/mock                school-style mock
 /post-utme/progress            readiness report
 
-/explore                       retained career/course/university discovery surface
 /account                       preferences, selected path, subscription, privacy
 ```
 
@@ -246,3 +244,27 @@ Before broad rollout, define a student cohort and compare the new flow with curr
 - cost per successful AI help action, where AI is enabled.
 
 Do not use raw screen time as a success metric.
+
+## 11. Curriculum authority and traceability
+
+Content truth flows one way: **standards body → syllabus objective → Propeida lesson/question**. Never the reverse, never from blogs. The model is curriculum-agnostic: JAMB below is the first binding, not the shape of the system. A WAEC, NECO, SAT, or professional-skills path reuses every table and service here and only supplies new standards documents, objectives, and items. Routes generalize the same way (`/<path>`, `/<path>/learn`, `/<path>/review` …); `/jamb` and `/post-utme` are the first two slugs in `learning_paths`, not special cases.
+
+### First binding: JAMB (proving ground)
+
+### Source hierarchy
+
+1. **JAMB IBASS** (`ibass.jamb.gov.ng`) — canonical for syllabus topics/objectives, recommended texts, brochure requirements, eligibility. It is a JavaScript SPA: extraction is a manual browser task, and every export is stamped with session year, URL, and access date.
+2. **NERDC e-Curriculum portal + FME press-release list** — canonical for what is taught (version-stamped; the 2025 revision renamed cores). JAMB selects from this space but is not a 1:1 copy — never assert alignment the data doesn't show.
+3. **University admission notices (per school, per year)** — canonical for Post-UTME mode, weights, cut-offs, sitting rules. Model as `school_screenings(school_id, year, mode, jamb_weight, screening_weight, olevel_weight, cutoff, sittings_allowed)`.
+4. **Mirrors and blogs** — convenience copies only. `jamb-gov.org` is not `jamb.gov.ng`. Never cite as authority in-app.
+
+### Verification convention
+
+Every exam fact in code, content, or UI carries a status: ✅ official source · 🔶 high-confidence secondary · 🔴 unverified — must not ship as fact. Current 🔴 list: verbatim 60/40/40/40 bulletin line; Biology/Government/Literature/CRS/Geography full topic tables; canonical 2026 Literature list; scoring formula and negative-marking policy; year-by-year NERDC schemes.
+
+### Content freshness rules
+
+- Prescribed texts are **year-tagged data**: *The Lekki Headmaster* is current for 2025/2026 Use of English; *The Life Changer* is a past text. A new JAMB announcement retires the old tag, never edits it in place.
+- Cut-offs, fees, dates, and screening modes are **year-tagged rows**, never constants.
+- Mock blueprints encode the verified format: 4 subjects, 2-hour single sitting, on-screen calculator available; per-question mark values are never displayed as official.
+- Distractor→misconception maps (`question_misconceptions`) are authored per distractor with a named misconception code and repair-lesson link, following Eedi's design rules: unambiguous, single-skill, and impossible to answer correctly while holding the target misconception.

@@ -137,7 +137,14 @@ export default function SelectionScreen({ exams, allSubjects, examSubjectMap, ac
         mode,
       })
 
-      router.push(`/practice/session/${result.sessionId}${hubParam}`)
+      const params = new URLSearchParams()
+      if (searchParams.get('hub') === 'universities') params.set('hub', 'universities')
+      if (result.mode === 'practice') {
+        if (result.warmupIds.length > 0) params.set('warmup', result.warmupIds.join(','))
+        if (result.lessonNoteId) params.set('lesson', result.lessonNoteId)
+      }
+      const qs = params.toString()
+      router.push(`/practice/session/${result.sessionId}${qs ? `?${qs}` : ''}`)
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to create session')
       setLoading(false)

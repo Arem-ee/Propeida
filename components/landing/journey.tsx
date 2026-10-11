@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
-import { SceneArt } from '@/components/explore/visuals/scene-art'
-import type { SceneKey } from '@/lib/explore/visual-scenes'
+import { SceneArt } from '@/components/illustrations/scene-art'
+import type { SceneKey } from '@/lib/illustrations/scene-art'
 
 const STEPS = [
   {
@@ -73,10 +73,10 @@ export default function LandingJourney() {
             <ArrowRight className="h-4 w-4" />
           </Link>
           <Link
-            href="/explore"
+            href="/practice"
             className="inline-flex min-h-[44px] items-center text-sm font-bold text-blue-600 transition-colors hover:text-blue-700"
           >
-            Or just start exploring
+            Or try a practice session
             <ArrowRight className="ml-1.5 h-4 w-4" />
           </Link>
         </div>

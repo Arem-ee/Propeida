@@ -31,7 +31,7 @@ const FAQ_ITEMS = [
   {
     question: 'Do I need to pay to practice post-UTME questions?',
     answer:
-      'Practicing is free — questions, explanations, streaks, leaderboards, and your performance history — no card required. An optional Pro upgrade unlocks unlimited mock exams and extra features for students who want more.',
+      'Practicing is free — questions, explanations, streaks, and your performance history — no card required. An optional Pro upgrade unlocks unlimited mock exams and extra features for students who want more.',
   },
 ]
 

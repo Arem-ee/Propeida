@@ -25,20 +25,20 @@ export default function LandingUncertainty() {
 
           <div className="rounded-2xl border border-blue-100 bg-blue-50/40 p-8 shadow-[0_1px_2px_rgba(15,23,42,0.02),0_12px_32px_-24px_rgba(15,23,42,0.10)] sm:p-10">
             <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-blue-700">
-              Where a few days of exploring takes you
+              Where a few weeks of real learning takes you
             </p>
             <p className="mt-5 font-serif text-[26px] italic leading-snug text-gray-900 sm:text-[30px]">
-              &ldquo;I know what interests me, what it can lead to, and what I can start learning.&rdquo;
+              &ldquo;I know what I know, what is coming back for review, and exactly what to do next.&rdquo;
             </p>
           </div>
         </div>
 
         <div className="mt-10">
           <Link
-            href="/explore"
+            href="/signup"
             className="inline-flex min-h-[44px] items-center gap-1.5 rounded-xl bg-blue-600 px-5 text-sm font-medium text-white transition-colors hover:bg-blue-700"
           >
-            See what your future could look like
+            Start learning for free
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>

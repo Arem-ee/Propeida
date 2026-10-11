@@ -2,8 +2,8 @@ import { Fragment } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { ChevronRight } from 'lucide-react'
-import { SceneArt } from '@/components/explore/visuals/scene-art'
-import type { SceneKey } from '@/lib/explore/visual-scenes'
+import { SceneArt } from '@/components/illustrations/scene-art'
+import type { SceneKey } from '@/lib/illustrations/scene-art'
 
 const JOURNEY = [
   { label: 'Student', scene: 'seedling' as SceneKey },
@@ -28,7 +28,7 @@ export default function LandingHero() {
             </h1>
 
             <p className="mt-8 max-w-md text-[14.5px] leading-[1.9] text-gray-600">
-              Real CBT practice for JAMB and Post-UTME, with a clearer way to discover where your choices can lead.
+              Real CBT practice for JAMB and Post-UTME that proves what you have actually learned.
               Start free. Upgrade when you are ready for deeper preparation.
             </p>
 
@@ -40,10 +40,10 @@ export default function LandingHero() {
                 Start preparing
               </Link>
               <Link
-                href="/explore"
+                href="/practice"
                 className="inline-flex min-h-[46px] items-center justify-center rounded-xl border border-gray-200 bg-white px-6 text-sm font-medium text-gray-700 transition-colors hover:border-gray-300 hover:bg-gray-50"
               >
-                Explore careers
+                Try a practice session
               </Link>
             </div>
 

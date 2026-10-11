@@ -1,7 +1,7 @@
 import { useId } from 'react'
-import type { SceneKey } from '@/lib/explore/visual-scenes'
-import { SCENE_NAMES } from '@/lib/explore/visual-scenes'
+import type { SceneKey } from '@/lib/illustrations/scene-art'
 
+import { SCENE_NAMES } from '@/lib/illustrations/scene-art'
 interface SceneProps {
   uid: string
 }

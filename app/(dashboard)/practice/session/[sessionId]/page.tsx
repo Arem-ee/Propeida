@@ -1,7 +1,8 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { Suspense, useState, useEffect } from 'react'
 import { use } from 'react'
+import { useSearchParams } from 'next/navigation'
 import PracticeMode from '@/components/practice/practice-mode'
 import MockMode from '@/components/practice/mock-mode'
 import { loadSessionData } from '@/lib/actions/practice'
@@ -25,7 +26,24 @@ interface SessionData {
 }
 
 export default function SessionPage({ params }: { params: Promise<{ sessionId: string }> }) {
+  return (
+    <Suspense
+      fallback={
+        <div className="flex items-center justify-center py-20">
+          <div className="h-8 w-8 animate-spin rounded-full border-4 border-blue-600 border-t-transparent" />
+        </div>
+      }
+    >
+      <SessionInner params={params} />
+    </Suspense>
+  )
+}
+
+function SessionInner({ params }: { params: Promise<{ sessionId: string }> }) {
   const { sessionId } = use(params)
+  const searchParams = useSearchParams()
+  const warmupIds = (searchParams.get('warmup') ?? '').split(',').filter(Boolean)
+  const lessonNoteId = searchParams.get('lesson')
   const [session, setSession] = useState<SessionData | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -67,7 +85,7 @@ export default function SessionPage({ params }: { params: Promise<{ sessionId: s
   if (!session || session.questions.length === 0) return null
 
   if (session.mode === 'practice') {
-    return <PracticeMode sessionId={session.id} questions={session.questions} />
+    return <PracticeMode sessionId={session.id} questions={session.questions} warmupIds={warmupIds} lessonNoteId={lessonNoteId} />
   }
 
   if (session.mode === 'mock' && session.timeLimitSeconds) {

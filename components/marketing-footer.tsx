@@ -44,9 +44,6 @@ export default function MarketingFooter() {
               <li>
                 <Link href="/#exams" className={linkClass}>Exams</Link>
               </li>
-              <li>
-                <Link href="/leaderboard" className={linkClass}>Leaderboard</Link>
-              </li>
             </ul>
           </div>
 

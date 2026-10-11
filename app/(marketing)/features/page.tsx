@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Timer, Target, BarChart3, BookOpen, Trophy, Zap, TrendingUp } from 'lucide-react'
+import { Timer, Target, BarChart3, BookOpen, NotebookPen, Zap, TrendingUp } from 'lucide-react'
 import MarketingHeader from '@/components/marketing-header'
 import MarketingFooter from '@/components/marketing-footer'
 
@@ -45,10 +45,10 @@ const featureTiles = [
     hero: false,
   },
   {
-    icon: Trophy,
-    title: 'Leaderboard',
+    icon: NotebookPen,
+    title: 'Revision Notes',
     description:
-      'See how you rank against other students on the all-time and weekly leaderboards. Filter by your school to see where you stand among classmates. Rankings use a fair formula that accounts for both accuracy and question volume.',
+      'Short, focused notes for core JAMB subjects live alongside practice. Read a topic, then prove you kept it with targeted questions — learning and testing in one loop.',
     color: 'bg-rose-100 text-rose-600',
     hero: false,
   },

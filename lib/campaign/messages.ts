@@ -10,7 +10,7 @@ export const CAMPAIGN_COUNTDOWN_SUB = 'You currently have full access to the Pro
 export const CAMPAIGN_WHATSAPP_CHANNEL_MESSAGE =
   '🎉 We’ve unlocked the full Propeida question bank for everyone who has already signed up. ' +
   'You now have 24 hours of complete access to all available questions. ' +
-  'Use this opportunity to practice more, improve your score, and climb the leaderboard before access expires. ' +
+  'Use this opportunity to practice more, improve your score, and secure more topics before access expires. ' +
   '⏰ Ends in 24 hours. 👉 https://propeida.online'
 
 export const CAMPAIGN_WHATSAPP_EXPIRY_MESSAGE =

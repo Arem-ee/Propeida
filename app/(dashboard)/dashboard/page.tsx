@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
-import { Target, Flame, Zap, Check, X, ChevronRight, ArrowRight } from 'lucide-react'
+import { Target, Flame, Zap, Check, X, ChevronRight, ArrowRight, CalendarCheck } from 'lucide-react'
 import { getDashboardData, submitDailyQuestion } from '@/lib/actions/dashboard'
 import { claimReferral } from '@/lib/actions/referral'
 import { useHub } from '@/components/dashboard-hub-provider'
@@ -13,12 +13,26 @@ interface DailyQuestionData {
   attempt: { is_correct: boolean } | null
 }
 
+interface ReviewData {
+  due: { subjectId: string; subjectName: string; subjectSlug: string; dueAt: string }[]
+  securedCount: number
+  trackedCount: number
+  securedSubjects: { subjectId: string; subjectName: string; subjectSlug: string }[]
+}
+
+// Minimum weekly actives before presence shows. Small cohorts see nothing
+// rather than an empty room.
+const PRESENCE_MIN_WEEKLY_ACTIVE = 10
+
 export default function DashboardPage() {
   const { hub } = useHub()
   const [username, setUsername] = useState('')
   const [streak, setStreak] = useState({ current_streak: 0, longest_streak: 0 })
   const [dailyQuestion, setDailyQuestion] = useState<DailyQuestionData>({ id: null, attempt: null })
   const [lastSession, setLastSession] = useState<{ id: string; examName: string; score: number } | null>(null)
+  const [review, setReview] = useState<ReviewData>({ due: [], securedCount: 0, trackedCount: 0, securedSubjects: [] })
+  const [continueSession, setContinueSession] = useState<{ id: string; examName: string; mode: string } | null>(null)
+  const [presence, setPresence] = useState<{ weeklyActiveStudents: number; sessionsThisWeek: number; securedThisWeek: number } | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
@@ -33,6 +47,9 @@ export default function DashboardPage() {
       setUsername(data.profile.username)
       setStreak(data.streak)
       setDailyQuestion(data.dailyQuestion)
+      setReview(data.review ?? { due: [], securedCount: 0, trackedCount: 0, securedSubjects: [] })
+      setContinueSession(data.continueSession ?? null)
+      setPresence(data.presence ?? null)
       const first = data.recentSessions[0]
       if (first) {
         setLastSession({ id: first.id, examName: first.examName, score: first.score })
@@ -90,9 +107,33 @@ export default function DashboardPage() {
         <p className="mt-1 text-sm text-gray-500">
           {hub === 'universities' ? 'University hub' : 'JAMB hub'} — pick up where you left off.
         </p>
+        {presence && presence.weeklyActiveStudents >= PRESENCE_MIN_WEEKLY_ACTIVE && (
+          <p className="mt-2 flex items-center gap-1.5 text-xs font-semibold text-gray-400">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+            </span>
+            {presence.weeklyActiveStudents.toLocaleString()} students studied this week
+          </p>
+        )}
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 auto-rows-min">
+        {continueSession && (
+          <Link
+            href={`/practice/session/${continueSession.id}${hub === 'universities' ? '?hub=universities' : ''}`}
+            className="sm:col-span-2 rounded-xl border border-emerald-200 bg-emerald-50/60 p-5 sm:p-6 hover:border-emerald-300 transition-all"
+          >
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-wider text-emerald-700">Continue learning</p>
+                <h2 className="mt-1 text-lg font-extrabold text-gray-900">{continueSession.examName}</h2>
+                <p className="text-sm text-gray-500 mt-0.5 capitalize">{continueSession.mode} session in progress.</p>
+              </div>
+              <ChevronRight className="h-6 w-6 text-emerald-500" />
+            </div>
+          </Link>
+        )}
         <Link
           href={`/practice${hub === 'universities' ? '?hub=universities' : ''}`}
           className="sm:col-span-2 rounded-xl border border-gray-100 bg-white p-5 sm:p-6 hover:border-blue-200 hover:bg-blue-50/10 transition-all"
@@ -115,6 +156,58 @@ export default function DashboardPage() {
             </div>
           )}
         </Link>
+
+        {review.due.length > 0 && (
+          <div className="sm:col-span-2 rounded-xl border border-violet-200 bg-violet-50/50 p-5 sm:p-6">
+            <div className="flex items-center gap-2">
+              <CalendarCheck className="h-5 w-5 text-violet-600" />
+              <h2 className="text-base font-extrabold text-gray-900">Today&apos;s review</h2>
+            </div>
+            <p className="mt-1 text-xs text-gray-500">
+              Retrieval due — prove it stuck. {review.securedCount > 0 && `${review.securedCount} subject${review.securedCount === 1 ? '' : 's'} secured so far.`}
+            </p>
+            <div className="mt-3 space-y-2">
+              {review.due.map((item) => (
+                <Link
+                  key={item.subjectId}
+                  href={`/practice?subject=${encodeURIComponent(item.subjectSlug)}${hub === 'universities' ? '&hub=universities' : ''}`}
+                  className="flex items-center justify-between gap-3 rounded-xl border border-gray-100 bg-white px-4 py-3 hover:border-violet-300 transition-colors min-h-[44px]"
+                >
+                  <span className="text-sm font-bold text-gray-800">{item.subjectName}</span>
+                  <span className="inline-flex items-center gap-1 text-xs font-bold text-violet-700 shrink-0">
+                    Review now
+                    <ChevronRight className="h-4 w-4" />
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {review.due.length === 0 && review.trackedCount > 0 && (
+          <div className="sm:col-span-2 rounded-xl border border-emerald-200 bg-emerald-50/50 px-5 py-4">
+            <p className="text-sm font-bold text-emerald-800">
+              All caught up — {review.securedCount} of {review.trackedCount} tracked subject{review.trackedCount === 1 ? '' : 's'} secured.
+            </p>
+          </div>
+        )}
+
+        {review.securedSubjects.length > 0 && (
+          <div className="sm:col-span-2 rounded-xl border border-gray-100 bg-white p-5">
+            <p className="text-[10px] font-bold uppercase tracking-wider text-gray-400">Your shelf</p>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {review.securedSubjects.map((s) => (
+                <span
+                  key={s.subjectId}
+                  className="inline-flex items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1.5 text-xs font-bold text-emerald-800"
+                >
+                  <Check className="h-3.5 w-3.5 text-emerald-600" />
+                  {s.subjectName}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
 
         <div className="rounded-xl border border-gray-100 bg-white p-5">
           <div className="flex items-center justify-between mb-2">
@@ -148,14 +241,14 @@ export default function DashboardPage() {
         <div className="sm:col-span-2 rounded-xl border border-gray-100 bg-white px-5 py-3 flex items-center justify-between">
           <p className="text-sm text-gray-500">
             {hub === 'universities'
-              ? 'Practice for your target universities and climb the leaderboard.'
-              : 'Practice JAMB questions and climb the leaderboard.'}
+              ? 'Practice for your target universities, one focused session at a time.'
+              : 'Practice JAMB questions, one focused session at a time.'}
           </p>
           <Link
-            href={`/leaderboard${hub === 'universities' ? '?hub=universities' : ''}`}
+            href={`/practice${hub === 'universities' ? '?hub=universities' : ''}`}
             className="text-sm font-bold text-blue-600 hover:text-blue-700 shrink-0 min-h-[36px] flex items-center"
           >
-            Leaderboard
+            Practice
             <ArrowRight className="h-3.5 w-3.5 ml-1" />
           </Link>
         </div>

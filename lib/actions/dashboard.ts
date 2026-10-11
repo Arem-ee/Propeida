@@ -2,6 +2,8 @@
 
 import { createClient, getAuthUser } from '@/lib/supabase/server'
 import { revalidatePath } from 'next/cache'
+import { getDueReviews, getMasterySummary, getSecuredSubjects, getPresenceStats } from '@/lib/mastery'
+import { getUserActiveSessions } from '@/lib/practice'
 
 interface DashboardPayload {
   profile: {
@@ -77,6 +79,33 @@ export async function getDashboardData() {
   const badgeLabel = isJambPro ? (isTrial ? 'Pro Trial' : 'Pro') : 'Free'
   const badgeBg = isJambPro ? (isTrial ? 'bg-amber-50 text-amber-700' : 'bg-blue-50 text-blue-700') : 'bg-gray-50 text-gray-500'
 
+  // Proof engine surface. Never throws the dashboard: no learner model yet
+  // (brand-new user) simply means no review card.
+  let dueReviews: { subjectId: string; subjectName: string; subjectSlug: string; dueAt: string }[] = []
+  let mastery = { securedCount: 0, totalCount: 0 }
+  let securedSubjects: { subjectId: string; subjectName: string; subjectSlug: string }[] = []
+  let presence: { weeklyActiveStudents: number; sessionsThisWeek: number; securedThisWeek: number } | null = null
+  let continueSession: { id: string; examName: string; mode: string } | null = null
+  try {
+    const [due, summary, secured, presenceStats, active] = await Promise.all([
+      getDueReviews(supabase, user.id),
+      getMasterySummary(supabase, user.id),
+      getSecuredSubjects(supabase, user.id),
+      getPresenceStats(supabase),
+      getUserActiveSessions(user.id),
+    ])
+    dueReviews = due
+    mastery = summary
+    securedSubjects = secured
+    presence = presenceStats
+    const first = active[0]
+    if (first) {
+      continueSession = { id: first.id, examName: first.exams.name, mode: first.mode }
+    }
+  } catch {
+    dueReviews = []
+  }
+
   return {
     profile: {
       username: payload.profile.username,
@@ -96,6 +125,14 @@ export async function getDashboardData() {
       attempt: payload.daily_question?.attempt ?? null,
     },
     recentSessions,
+    review: {
+      due: dueReviews,
+      securedCount: mastery.securedCount,
+      trackedCount: mastery.totalCount,
+      securedSubjects,
+    },
+    presence,
+    continueSession,
   }
 }
 

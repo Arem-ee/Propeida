@@ -31,7 +31,7 @@ const FAQ_ITEMS = [
   {
     question: 'Is practicing free?',
     answer:
-      'Practicing is free — questions, explanations, streaks, leaderboards, and your performance history — no card required. An optional Pro upgrade unlocks unlimited mock exams and extra features for students who want more, and we\u2019re working to expand free access as the platform grows.',
+      'Practicing is free — questions, explanations, streaks, and your performance history — no card required. An optional Pro upgrade unlocks unlimited mock exams and extra features for students who want more, and we\u2019re working to expand free access as the platform grows.',
   },
   {
     question: 'Does Propeida cover JAMB too?',

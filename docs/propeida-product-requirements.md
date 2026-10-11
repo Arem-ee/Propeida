@@ -1,8 +1,10 @@
 # Propeida product requirements
 
 **Status:** proposed product direction  
-**Audience:** Nigerian secondary-school and prospective university students  
-**First release paths:** JAMB UTME and Post-UTME
+**Vision:** the best learning platform for anyone — any subject, any level, any goal.  
+**First release paths:** JAMB UTME and Post-UTME (Nigerian secondary-school and prospective university students)
+
+> JAMB is the proving ground, not the boundary. Every system in this document — paths, lessons, mastery, review, feedback, AI coach — is curriculum-agnostic. A new path (WAEC, NECO, GCSE, SAT, professional exams, skills) binds a new syllabus to the same engine; nothing in the core is rebuilt.
 
 ## 1. Product thesis
 
@@ -25,6 +27,20 @@ The product should feel playful, warm, and encouraging—using Fredoka/Nunito ty
 4. **Different subjects need different experiences.** Mathematics is not English, and neither should use a generic card-and-quiz template.
 5. **Fun supports effort.** Rewards celebrate productive learning behaviour, never endless tapping, logins, or time spent.
 6. **Trust is non-negotiable.** Answer keys, exam rules, and curriculum content are reviewed and versioned.
+7. **Science decides, evidence tunes.** Learning science and official standards determine what we build; local student evidence tunes it after launch. Engagement metrics never override either.
+
+### The promise
+
+One sentence the student understands, the team builds to, and marketing can print:
+
+> **Every session ends with proof you learned something — and you only ever see the next step.**
+
+It stands on two pillars. Both are specified; neither is optional:
+
+- **Pillar A — proof of learning (the mechanism).** Retention engine, review scheduler, delayed checks, misconception repair. Engineering builds this. Success criterion: delayed recall and mock movement, never session counts.
+- **Pillar B — never behind (the feeling).** No mountains, no ranks, no streak threats; presence, shared struggle, and a close-out that always finishes something. Design protects this. Success criterion: return-after-failure and repair-attempt rates.
+
+Feature test: *does this give the student proof of learning, or protect them from the mountain?* If neither — cut it.
 
 ## 2. Product structure
 
@@ -51,7 +67,7 @@ Account, notifications, support, payment, and the path switcher are shared. The 
 | JAMB mock | School-style mock |
 | Progress | Readiness and progress |
 
-“Universities” is not a learning path label. It becomes **Post-UTME**. Course/career/university exploration remains a useful supporting feature, especially for students deciding where to apply.
+“Universities” is not a learning path label. It becomes **Post-UTME**. (Career/course/university discovery was removed: it is guidance, not learning, and a discovery feed actively works against the promise. School requirements and cut-offs return later as reference data inside the Post-UTME path — see the architecture's `school_screenings` — not as a browsing surface.)
 
 ## 3. The non-AI learning core
 
@@ -208,3 +224,119 @@ Students improve durable topic mastery and exam readiness.
 4. Reframe mocks, results, and history around actionable recovery.
 5. Build Post-UTME target-school configuration and its dedicated home.
 6. Add the paid AI coach only after reviewed content and the non-AI loop are validated.
+
+## 10. Scientific foundations
+
+This appendix is the authority behind the design above. Each entry states the finding precisely, cites the primary source, and names what it mandates in Propeida. Where evidence is vendor-claimed or single-study, it is flagged — see §12 for the verification convention.
+
+### Retrieval and spacing
+
+- **Practice testing and distributed practice are the two highest-utility strategies known** (rated "high utility" across ages, abilities, and materials; summarization, highlighting, rereading rated "low"). Dunlosky, Rawson, Marsh, Nathan & Willingham (2013), *Psychological Science in the Public Interest*. Mandate: every lesson ends in recall, every topic resurfaces on a schedule; no highlighter-first tools.
+- **Testing beats restudying on delayed tests despite identical exposure** — repeated study after one successful recall adds nothing measurable, while repeated testing more than doubles recall (Karpicke & Roediger, 2008, *Science*; combined d≈4.03). Students are overconfident after restudy (Roediger & Karpicke, 2006). Mandate: study → recall → feedback in every block; short-answer before MCQ.
+- **The optimal review gap grows with the retention interval** (roughly 20–40% of a 1-week interval down to 5–10% of a 1-year interval; Cepeda et al., 2006, 2008). **Equal spacing beats expanding spacing** for long-term retention (Karpicke & Roediger, 2007). Mandate: review gaps computed from exam date, not fixed "7 days"; scheduler logs interval pairs for later tuning.
+- **Testing potentiates future learning** (the forward effect): interpolated quizzes roughly double recall of subsequently studied material and cut interference (Szpunar, McDermott & Roediger, 2008). Mandate: 3-question checks between sub-topics, not just end-of-lesson quizzes.
+- **MCQ retrieval without feedback can entrench lures**; well-designed MCQs surface pre-existing misconceptions rather than implanting them, provided corrective feedback follows (Butler & Roediger, 2008; Butler, Karpicke & Roediger, 2007 — delayed feedback beats immediate on delayed tests). Mandate: every MCQ ships explanatory feedback; never bare answer keys.
+
+### Cognitive load and multimedia
+
+- **Novices learn procedures from worked examples, not from solving**; guidance that helps novices first shrinks, then *reverses* with expertise (Sweller, 1988; Kalyuga, Chandler & Sweller, 1998 — the expertise reversal effect). Mandate: worked example → faded completion → independent problems, with guidance fading as proficiency rises. This is real differentiation — not learning styles (see below).
+- **Twelve multimedia principles** (Mayer, *Multimedia Learning*, 3rd ed. 2021): coherence, signaling, redundancy (graphics + narration beats graphics + narration + on-screen text), spatial and temporal contiguity, segmenting, pre-training, modality, multimedia, personalization, voice. Strongest effects for low-prior-knowledge learners. Mandate: the lesson-block QA checklist in the architecture doc.
+- **Split-attention destroys the worked-example advantage** unless diagram and steps are physically integrated (Tarmizi & Sweller, 1988). Mandate: labels on diagrams, never legend-hunting.
+
+### Feedback, mastery, and desirable difficulty
+
+- **Frequent formative feedback with rule-governed corrective action** yields typical effects of 0.4–0.7 (Black & Wiliam, 1998, survey of ~250 studies; Fuchs & Fuchs, 1986: rule-governed review d≈0.92 vs. teacher-judgment d≈0.42). Later re-appraisals argue the headline range overstates (heterogeneous, dated base) — treat as directional, and follow the EEF Feedback guidance (+7 months, task-focused, specific, actionable). Mandate: the four-way feedback taxonomy (§4) plus auto-assigned repair, never score-only results.
+- **Feedback is not uniformly positive**: high-information feedback helps most (d≈0.99); bare reinforcement/punishment helps least (d≈0.24); ~17% of feedback interventions backfire (Wisniewski, Zierer & Hattie, 2020, meta-analysis revising Hattie's 0.73 down to 0.48). Person-praise ("you're smart") can harm (Kluger & DeNisi, 1996). Mandate: feedback shows correct reasoning, contrasts the learner's error, assigns one next step, requires re-attempt. Model ROI on 0.48, not 0.73.
+- **Mastery gating with correctives ≈ 1σ over conventional instruction; 1:1 tutoring ≈ 2σ** (Bloom, 1984 — based on two dissertations; modern tutoring effects are large but typically below 2σ, so cite Bloom as aspiration, mastery as benchmark). Mandate: ≥80% formative criterion with a *different* explanation + parallel re-test on failure, not same-item repetition.
+- **Difficulties that slow acquisition speed retention**: interleaving (Rohrer & Taylor, 2007: interleaved 63% vs. blocked 20% on new problems a week later), varied conditions, generation before presentation (Bjork & Bjork, 2011, 2020). But difficulty is only *desirable* when the learner has the prerequisites to succeed — otherwise it is just difficulty. Mandate: interleave only after basics exist; pre-teach prerequisites; show learners their own retention curves to counter the fluency illusion.
+- **Deliberate practice is teacher-designed, feedback-rich work at the edge of ability** — not hours logged (Ericsson, Krampe & Tesch-Römer, 1993; note the Macnamara replication debate: quality of practice explains far more than volume). Mandate: targeted weak-skill drills with explicit sub-goals; log error type and hint dependence, not just time.
+
+### Scaffolding and differentiation
+
+- **Scaffolding's six functions** (Wood, Bruner & Ross, 1976): recruit interest, reduce degrees of freedom, maintain direction, mark critical features, control frustration, demonstrate by completing the learner's partial attempt. Comprehension must precede production; all scaffolding fades. Mandate: encode each function as a system behavior; require unaided production before "mastered."
+- **No learning-styles matching.** Pashler, McDaniel, Rohrer & Bjork (2008/2009), commissioned by the Association for Psychological Science, found virtually no properly-designed study supporting the meshing hypothesis (visual learners learning best visually, etc.) and called style-based instruction a waste of resources. Mandate: no VAK tracks or quizzes, ever. Differentiate by prior knowledge, pace, and misconception profile; give *all* learners dual-coded, practice-varied instruction.
+- **For second-language readers, comprehension is lexical before it is intellectual**: ~95% known-word coverage is the minimum for supported reading, ~98% for independent reading (Laufer, 1989; Hu & Nation, 2000; Laufer & Ravenhorst-Kalovski, 2010; consensus formulation in Nation, 2001). Written English needs roughly 4,000 word families for 95% coverage, 8,000–9,000 for 98% (Nation, 2006). Thresholds are probabilistic and context-sensitive — apply as design guidance, not cutoffs. Mandate: pre-teach academic/subject vocabulary, in-text tap-glosses, graded simplified→authentic passages. Nigeria-specific vocabulary profiling is flagged follow-up research (§12).
+
+## 11. Where the field falls short
+
+Researched October 2026 against Nigerian platforms (uLesson, Myschool, TestDriller, ExamScholars, Prep50, Exambly, PassVerse, JambKit, O3Schools, JambSmartPrep) and global ones (Khan Academy, CENTURY, Eedi, Duolingo, IXL, Brilliant). These are the gaps Propeida is built to exploit:
+
+1. **No memory engineering.** The field drills massed past questions; Khan "masters" then lets decay; only Duolingo ships a trainable forgetting model (Half-Life Regression, Settles & Meeder, 2016) — for vocabulary only. Nobody schedules JAMB-subject retention.
+2. **Generic feedback instead of misconception diagnosis.** One explanation per question everywhere in Nigeria. Eedi proves distractor→misconception mapping for MCQ (Barton; Butler & Roediger, 2008; hypercorrection effect, Barton et al., 2021) — but is maths-only, UK-only, teacher-mediated. JAMB is almost entirely MCQ: the method transfers, and nobody has transferred it.
+3. **Scores without mastery.** % correct, predicted scores (models unpublished), grind-gated thresholds — nobody certifies durable skill mastery (correct now + correct later + transfer variant).
+4. **Engagement metrics as learning.** Streaks, XP, leaderboards, battles, prize challenges — Duolingo's own misuse literature documents minimal-effort farming and streak-loss churn. Gate rewards on mastery events, never on logins.
+5. **Ungrounded AI tutors.** Every Nigerian "AI tutor" found is an unconstrained LLM wrapper with no published grounding corpus, syllabus constraint, or evals. Khanmigo's pilots show students route around Socratic design toward answer-getting. Constrain to syllabus, cite the item acted on, eval or it didn't happen.
+6. **Watch-then-quiz with no hinge point.** Video nuggets never reroute on *which* wrong answer was picked. Every Propeida lesson opens with a diagnostic, branches on misconception, closes with a retention probe.
+7. **No prerequisite repair or Post-UTME specificity.** Nobody models dependency chains or per-school screening modes. Own the behind-but-can-catch-up segment and the school-specific screen.
+
+Standing correction: uLesson's own blog endorses "learning styles" — a live example of Gap 0 (myth-based personalization) in our home market.
+
+## 12. Standards and exam facts inventory (first instantiation: JAMB)
+
+Canonical sources only. The inventory model is universal — every future path gets its own instantiation with the same verification discipline. **Verification convention used throughout:** ✅ confirmed from official source · 🔶 high-confidence secondary (multiple independent sources + historical official statement) · 🔴 unverified — do not hard-code, flagged for manual extraction.
+
+- **JAMB syllabus is official and per-subject**, living in IBASS (`ibass.jamb.gov.ng/e-syllabus`), 25 subjects ✅. Uniform structure: General Objectives → Topics/Contents/Notes with "Candidates should be able to…" objectives → Recommended Texts ✅ (verified from JAMB-formatted PDFs). Traceability model: `NERDC topic → JAMB objective → Propeida item`.
+- **IBASS is a JavaScript SPA** — automated extraction fails; manual browser export of the 10 priority-subject PDFs (with session year + URL + access date) is required follow-up 🔴. Full verbatim tables still pending for Biology, Government, Literature, CRS/IRS, Geography 🔴. Mirrors (`jamb-gov.org`, syllabuses sites) are convenience copies, never canonical.
+- **CBT format**: 4 subjects (English compulsory + 3), 2-hour single sitting ✅. Question counts 60 English + 40×3 = 180 total, pacing 40/27/27/26 🔶 (multiple independent secondaries + 2017 Registrar announcement; no verbatim bulletin line found). Total 400 (4×100); per-question weights are inferred, **never present as official** 🔶. On-screen calculator provided; physical calculators/phones/watches banned ✅. Mock is optional, paid, familiarisation-only ✅. 2026 UTME: 16–22 April, ~2.2m candidates ✅.
+- **Current Use-of-English novel (2025, 2026): *The Lekki Headmaster* (Garba)** ✅ — replaces *The Life Changer*. Any bank content tagged otherwise is stale. Content freshness rule: prescribed texts are year-tagged data, never assumptions.
+- **NERDC** publishes the taught curriculum (e-Curriculum portal + 2025 revised list: English, General Maths, one Trade subject, Citizenship & Heritage Studies, Digital Technologies as core) ✅ — but NERDC itself warns fake subject lists circulate; version-stamp curriculum year. **JAMB syllabus ≠ NERDC curriculum**: JAMB selects examinable topics and adds prescribed texts. Never assert 1:1 alignment.
+- **Post-UTME modes vary by school and year** (all 2025/2026-cycle, official notices): UNILORIN in-person CBT (aggregate 50/30/20) ✅ · UNILAG online proctored 30-min test (50/20/30) ✅ · OAU online screening ✅ · UI in-person exam ✅ · FUTA/UNN documentary screening in observed cycles ✅. Model screening-mode per school per year; cut-offs year-tagged (UNILAG/OAU/UI 200; UNILORIN/FUTA 180; UNN 160; JAMB floors 150 universities / 100 poly ✅ 2026 Policy Meeting).
+- **Never assert**: negative-marking policy 🔴 · exact scaling/rounding 🔴 · "JAMB-approved prep app" (no such endorsement exists) 🔴 · vendor efficacy claims without published methodology (Prep50 95%, JambKit +39, CENTURY UCL 30%, Eedi 90%+) 🔴.
+
+## 13. Belonging without leaderboards
+
+A learner on any path must feel they are not alone in Propeida. Leaderboards answer this need toxically — they prove others exist by ranking the reader below them. This section specifies affiliative social mechanics (presence, shared struggle, cooperation) and forbids competitive ones. It is load-bearing for the product thesis: a public rank would violate "never makes you feel behind," which is why competitors cannot copy these mechanics without breaking their own model.
+
+### Grounding
+
+- The need to belong is a fundamental human motivation, comparable in force to basic drives; thwarted belonging impairs persistence and performance (Baumeister & Leary, 1995, *Psychological Bulletin*).
+- Descriptive social norms — evidence that *people like me do this* — move behavior more reliably than exhortation (Cialdini; "the library is full" beats "you should study").
+- Normalizing error reduces performance anxiety, which itself blocks learning: a student told their mistake is common attempts the repair; a student told they rank 4,000th avoids the topic.
+
+### The four mechanics
+
+1. **Ambient presence.** Live and weekly aggregates, never names or ranks: students online now, students who studied this week, topics secured by the cohort. The building always feels full. Ships with launch; trivially cheap.
+2. **Shared struggle.** Every misconception-level feedback moment carries its prevalence: *"63% of students also picked this on their first try — here's why it's tempting."* Requires the misconception maps (§10–11 of the architecture's `question_misconceptions`); prevalence is computed from attempts data and shown only above a minimum sample. Failure becomes communal, not isolating.
+3. **Cohort journey.** Each exam cohort (e.g., Class of JAMB 2027) shares a timeline with collective milestones and seasonal moments (mock weeks, countdowns). Others' progress reassures because the goal is shared. Collective counters only ("the class secured 100,000 topics"); no per-student comparisons, ever.
+4. **Witnessed achievement (phase two).** Opt-in stories of real learners overcoming hard topics — inspiration, not scores. Gated on explicit consent; never automatic.
+
+### Forbidden anti-patterns
+
+- Public ranks, percentile displays, or score comparisons between named or identifiable students.
+- Streak-loss shaming, demotion mechanics, or any countdown that punishes absence.
+- "Friends leaderboard" or school-vs-school ranking, however framed — cooperation between schools, never competition against them.
+- Publishing any individual's activity, accuracy, or pace without explicit opt-in consent.
+
+### Privacy and safety rules
+
+- All presence and prevalence figures are aggregates with minimum-sample thresholds; small cohorts show no figures rather than revealing individuals.
+- No direct messaging between minors at launch. Any future peer-help surface is moderated, reportable, and off by default.
+- Belonging metrics measure the right thing: return-after-failure rate, repair-attempt rate, and self-reported belonging — never time-spent or tap counts.
+
+## 14. One complete session
+
+The atomic unit of Propeida. Not a fixed duration — a completable loop with a low floor and no ceiling. **Design target: the core loop feels finished at ~15 minutes** (a queue, a bus ride) and extends naturally to 45+ for whoever stays. That target is an assumption to validate after launch, not a fact; real session lengths tune entry points later.
+
+```text
+Open → one screen: "Continue: <lesson> (<n> min left)"
+  No decisions, no dashboard of doom. One tap to start.
+
+Warm-up retrieval (2–3 questions on last session)
+  "Still got it?" — the proof engine warming up, and the first
+  retention data point of the day.
+
+One micro-lesson: single idea, worked example, one try
+  Teach → supported attempt. Finishable standing in a queue.
+
+Targeted practice (5–7 questions, misconception-aware feedback)
+  Wrong answers get named repairs, not red X's. Shared-struggle
+  prevalence appears here (§13).
+
+The close-out (the hobby mechanic)
+  "Session complete: <topic> → Secured ✓ · Review in <n> days ·
+   <n> topics secured this week."
+  A finished thing, a growing collection, a scheduled return —
+  not a streak threatening to break, but a garden growing.
+```
+
+Rules: every session must be able to end with something secured; the close-out always states what was proven and when it returns; nothing in the session displays total remaining scope. Presence signals (§13.1) may appear at open and close — never as interruption mid-lesson.

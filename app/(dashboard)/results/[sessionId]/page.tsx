@@ -17,6 +17,7 @@ interface QuestionReview {
   isCorrect: boolean | null
   explanation: string
   timeTakenSeconds: number | null
+  misconception: { name: string; explanation: string } | null
 }
 
 interface SubjectBreakdown {
@@ -45,10 +46,13 @@ export default function ResultsPage({ params }: { params: Promise<{ sessionId: s
     questions: QuestionReview[]
     subjectBreakdown: SubjectBreakdown[]
     weakestSubject: WeakestSubject | null
+    nextReview: Record<string, string | null>
   } | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [expandedQuestions, setExpandedQuestions] = useState<Set<string>>(new Set())
+  // Frozen at first render: "review in N days" must not shift under re-renders.
+  const [nowMs] = useState(() => Date.now())
 
   useEffect(() => {
     async function load() {
@@ -104,6 +108,23 @@ export default function ResultsPage({ params }: { params: Promise<{ sessionId: s
   const accuracyPct = Math.round(data.result.accuracy * 100)
   const timeMinutes = Math.floor(data.timeTakenMs / 60000)
   const timeSeconds = Math.floor((data.timeTakenMs % 60000) / 1000)
+  const isPractice = data.session.mode === 'practice'
+
+  // Close-out, honest v1: subject-level verdicts only (topic mapping arrives
+  // with the mastery model). Secured means durable-looking accuracy this
+  // session — not a retention claim; retention checks come later.
+  const securedSubjects = isPractice
+    ? data.subjectBreakdown.filter((sb) => sb.total > 0 && sb.accuracy >= 80)
+    : []
+  const developingSubjects = isPractice
+    ? data.subjectBreakdown.filter((sb) => sb.total > 0 && sb.accuracy >= 50 && sb.accuracy < 80)
+    : []
+
+  const daysUntil = (iso: string | null | undefined): string | null => {
+    if (!iso) return null
+    const days = Math.max(0, Math.round((new Date(iso).getTime() - nowMs) / 86400000))
+    return days === 0 ? 'today' : `in ${days} day${days === 1 ? '' : 's'}`
+  }
 
   return (
     <div className="mx-auto max-w-3xl space-y-8">
@@ -112,10 +133,54 @@ export default function ResultsPage({ params }: { params: Promise<{ sessionId: s
           <ArrowLeft className="h-5 w-5" />
         </Link>
         <div>
-          <h1 className="text-2xl font-extrabold text-gray-900">{data.exam.name} Results</h1>
-          <p className="text-sm text-gray-500 capitalize">{data.session.mode} mode</p>
+          <h1 className="text-2xl font-extrabold text-gray-900">
+            {isPractice ? 'Session complete' : `${data.exam.name} Results`}
+          </h1>
+          <p className="text-sm text-gray-500 capitalize">
+            {isPractice ? `${data.exam.name} · practice mode` : `${data.session.mode} mode`}
+          </p>
         </div>
       </div>
+
+      {isPractice && (
+        <div className="rounded-2xl border border-emerald-200 bg-emerald-50/60 p-5 sm:p-6">
+          <h2 className="text-base font-extrabold text-gray-900">Here&apos;s what stuck</h2>
+          {securedSubjects.length > 0 ? (
+            <ul className="mt-3 space-y-2">
+              {securedSubjects.map((sb) => (
+                <li key={sb.subjectId} className="flex items-center gap-2 text-sm font-semibold text-emerald-800">
+                  <Check className="h-4 w-4 shrink-0 text-emerald-600" />
+                  {sb.name} — secured ({sb.correct}/{sb.total})
+                </li>
+              ))}
+              {developingSubjects.map((sb) => {
+                const when = daysUntil(data.nextReview[sb.subjectId])
+                return (
+                  <li key={sb.subjectId} className="flex items-center gap-2 text-sm font-semibold text-amber-800">
+                    <Clock className="h-4 w-4 shrink-0 text-amber-600" />
+                    {sb.name} — developing ({sb.correct}/{sb.total})
+                    {when ? `, back for review ${when}` : ', worth another round'}
+                  </li>
+                )
+              })}
+            </ul>
+          ) : (
+            <p className="mt-2 text-sm leading-relaxed text-gray-600">
+              Nothing secured yet — that&apos;s what practice is for. The review below shows exactly where
+              to focus next.
+            </p>
+          )}
+          {data.weakestSubject && (
+            <Link
+              href="/practice"
+              className="mt-4 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-bold text-white hover:bg-blue-700 min-h-[44px]"
+            >
+              <Target className="h-4 w-4" />
+              Work on {data.weakestSubject.name} next
+            </Link>
+          )}
+        </div>
+      )}
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 text-center">
@@ -246,6 +311,15 @@ export default function ResultsPage({ params }: { params: Promise<{ sessionId: s
                       </div>
                       <p className="text-xs text-gray-600 leading-relaxed">{q.explanation}</p>
                     </div>
+
+                    {!q.isCorrect && q.misconception && (
+                      <div className="rounded-lg bg-amber-50 border border-amber-200 p-3">
+                        <p className="text-xs font-bold text-amber-800 mb-1">
+                          Why this tempts: {q.misconception.name}
+                        </p>
+                        <p className="text-xs text-gray-600 leading-relaxed">{q.misconception.explanation}</p>
+                      </div>
+                    )}
                   </div>
                 )}
               </div>

@@ -257,6 +257,83 @@ export function isSessionExpired(startedAt: string, timeLimitSeconds: number | n
   return new Date() > deadline
 }
 
+/**
+ * Warm-up retrieval: the most recent questions this user got wrong (or skipped)
+ * in the same exam, for re-attempt at the start of a new practice session.
+ * Returns at most `limit` questions, incorrect-first, most-recent-first.
+ * Never throws — warm-up is enhancement, and its absence must be silent.
+ */
+export async function fetchWarmupQuestions(
+  supabase: Awaited<ReturnType<typeof createClient>>,
+  userId: string,
+  examId: string,
+  subjectIds: string[],
+  excludeIds: string[],
+  limit = 3,
+): Promise<SessionQuestion[]> {
+  try {
+    const { data: recentSessions } = await supabase
+      .from('exam_sessions')
+      .select('id')
+      .eq('user_id', userId)
+      .eq('exam_id', examId)
+      .eq('status', 'completed')
+      .order('started_at', { ascending: false })
+      .limit(5)
+
+    const sessionIds = (recentSessions ?? []).map((s) => s.id)
+    if (sessionIds.length === 0) return []
+
+    const { data: answers } = await supabase
+      .from('session_answers')
+      .select(`
+        id,
+        is_correct,
+        question:question_id (
+          id,
+          subject_id,
+          question_text,
+          options
+        )
+      `)
+      .in('session_id', sessionIds)
+      .order('id', { ascending: false })
+      .limit(40)
+
+    const seen = new Set(excludeIds)
+    const picked: SessionQuestion[] = []
+    const skipped: SessionQuestion[] = []
+
+    for (const sa of answers ?? []) {
+      const q = Array.isArray(sa.question) ? sa.question[0] : sa.question
+      if (!q || seen.has(q.id)) continue
+      if (subjectIds.length > 0 && !subjectIds.includes(q.subject_id)) continue
+      seen.add(q.id)
+      const item: SessionQuestion = {
+        id: q.id,
+        subjectId: q.subject_id,
+        questionText: q.question_text,
+        options: q.options as { key: string; text: string }[],
+      }
+      if (sa.is_correct === false) {
+        if (picked.length < limit) picked.push(item)
+      } else if (sa.is_correct === null || sa.is_correct === undefined) {
+        skipped.push(item)
+      }
+      if (picked.length >= limit) break
+    }
+
+    for (const item of skipped) {
+      if (picked.length >= limit) break
+      picked.push(item)
+    }
+
+    return picked
+  } catch {
+    return []
+  }
+}
+
 export async function getFirstMockQuestions(userId: string, examId: string): Promise<SessionQuestion[]> {
   const supabase = await createClient()
 

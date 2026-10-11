@@ -1,6 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, ClipboardList, Compass, TrendingUp } from 'lucide-react'
-import { SceneArt } from '@/components/explore/visuals/scene-art'
+import { ArrowRight, ClipboardList, BadgeCheck } from 'lucide-react'
 
 export default function LandingPillars() {
   return (
@@ -10,11 +9,11 @@ export default function LandingPillars() {
           Two jobs, one app
         </p>
         <h2 className="mt-4 font-serif text-[30px] font-medium leading-tight text-gray-900 sm:text-[36px]">
-          Practise for the exam. Explore what comes after.
+          Practise for the exam. Prove what you know.
         </h2>
         <p className="mt-4 max-w-xl text-[14.5px] leading-[1.9] text-gray-600">
-          Propeida does two things. It gets you ready for the exams that matter, and it shows you what those
-          exams can lead to.
+          Propeida does two things. It gets you ready for the exams that matter, and it proves the
+          learning actually stuck.
         </p>
 
         <div className="mt-12 grid gap-5 lg:grid-cols-2">
@@ -58,34 +57,31 @@ export default function LandingPillars() {
 
           <div className="flex flex-col rounded-2xl border border-gray-100 bg-white p-7 shadow-[0_1px_2px_rgba(15,23,42,0.02),0_12px_32px_-24px_rgba(15,23,42,0.10)] sm:p-8">
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-700">
-              <Compass className="h-5 w-5" />
+              <BadgeCheck className="h-5 w-5" />
             </div>
-            <h3 className="mt-5 text-lg font-semibold text-gray-900">Figure out what comes after</h3>
+            <h3 className="mt-5 text-lg font-semibold text-gray-900">Know exactly what you know</h3>
             <p className="mt-2.5 text-[13.5px] leading-relaxed text-gray-600">
-              A feed of careers, courses and universities — built around the questions Nigerian students
-              actually ask.
+              Every session ends with proof — topics secured, reviews scheduled, and a clear next step.
+              Never a mountain of syllabus, never a rank against anyone.
             </p>
 
             <div className="mt-6 rounded-xl border border-gray-100 bg-white p-3.5">
               <div className="flex items-center justify-between">
                 <span className="rounded-full bg-emerald-50 px-2.5 py-1 text-[9px] font-bold uppercase tracking-wide text-emerald-700">
-                  Demand check
+                  Secured
                 </span>
-                <TrendingUp className="h-4 w-4 text-emerald-600" />
+                <span className="text-[10px] tabular-nums text-gray-500">Review in 6 days</span>
               </div>
               <p className="mt-2.5 text-[12px] font-extrabold leading-snug text-gray-900">
-                Is Software Engineering still worth studying in 2026?
+                Quadratic roots — recalled correctly twice, one week apart.
               </p>
-              <div className="mt-2 overflow-hidden rounded-lg">
-                <SceneArt scene="code" className="h-14 w-full" label="Career preview illustration" />
-              </div>
             </div>
 
             <Link
-              href="/explore"
+              href="/practice"
               className="mt-auto inline-flex items-center gap-1.5 pt-7 text-sm font-bold text-blue-600 transition-colors hover:text-blue-700"
             >
-              Explore your possibilities
+              Try a practice session
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>

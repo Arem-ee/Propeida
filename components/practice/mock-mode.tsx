@@ -107,13 +107,22 @@ export default function MockMode({ sessionId, questions, timeLimitSeconds, start
         <p className="mt-2 text-sm text-gray-500 mb-6">
           Your answers have been recorded.
         </p>
-        <button
-          type="button"
-          onClick={() => router.push(`/practice${hubParam}`)}
-          className="rounded-xl bg-blue-600 px-6 py-3 text-sm font-bold text-white hover:bg-blue-700 min-h-[44px] touch-manipulation cursor-pointer"
-        >
-          Back to Practice
-        </button>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <button
+            type="button"
+            onClick={() => router.push(`/results/${sessionId}`)}
+            className="rounded-xl bg-blue-600 px-6 py-3 text-sm font-bold text-white hover:bg-blue-700 min-h-[44px] touch-manipulation cursor-pointer"
+          >
+            See results
+          </button>
+          <button
+            type="button"
+            onClick={() => router.push(`/practice${hubParam}`)}
+            className="rounded-xl border border-gray-200 bg-white px-6 py-3 text-sm font-bold text-gray-700 hover:bg-gray-50 min-h-[44px] touch-manipulation cursor-pointer"
+          >
+            Back to Practice
+          </button>
+        </div>
       </div>
     )
   }

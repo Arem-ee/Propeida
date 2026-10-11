@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
+import MisconceptionFields, { collectMisconceptions, type MisconceptionInitial } from '../../misconception-fields'
 
 interface Question {
   id: string
@@ -26,14 +27,17 @@ export default function EditQuestionForm({
   question,
   exams,
   subjects,
+  initialMisconceptions,
 }: {
   question: Question
   exams: { id: string; name: string }[]
   subjects: { id: string; name: string }[]
+  initialMisconceptions: Record<string, MisconceptionInitial>
 }) {
   const router = useRouter()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [correctAnswer, setCorrectAnswer] = useState(question.correct_answer)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -55,6 +59,7 @@ export default function EditQuestionForm({
       correct_answer: form.get('correct_answer') as string,
       explanation: form.get('explanation') as string,
       difficulty: form.get('difficulty') as string,
+      misconceptions: collectMisconceptions(form),
     }
 
     try {
@@ -127,7 +132,7 @@ export default function EditQuestionForm({
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Correct Answer</label>
-            <select name="correct_answer" defaultValue={question.correct_answer} required className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm min-h-[44px]">
+            <select name="correct_answer" value={correctAnswer} onChange={(e) => setCorrectAnswer(e.target.value)} required className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm min-h-[44px]">
               <option value="a">A</option>
               <option value="b">B</option>
               <option value="c">C</option>
@@ -148,6 +153,8 @@ export default function EditQuestionForm({
           <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Explanation (optional)</label>
           <textarea name="explanation" defaultValue={question.explanation ?? ''} rows={2} className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm resize-y" />
         </div>
+
+        <MisconceptionFields correctAnswer={correctAnswer} initial={initialMisconceptions} />
 
         {error && (
           <div className="rounded-xl bg-red-50 border border-red-100 p-4">

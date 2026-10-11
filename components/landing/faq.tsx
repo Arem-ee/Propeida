@@ -12,7 +12,7 @@ const FAQS: FAQItem[] = [
   {
     question: 'Is Propeida free?',
     answer:
-      'Yes, to practice. Questions, explanations, streaks, leaderboards and your history cost nothing, and no card is required. An optional Pro upgrade removes limits for students who want more.',
+      'Yes, to practice. Questions, explanations, streaks and your history cost nothing, and no card is required. An optional Pro upgrade removes limits for students who want more.',
   },
   {
     question: 'Which universities are available?',

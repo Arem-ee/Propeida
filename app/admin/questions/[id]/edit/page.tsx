@@ -14,16 +14,31 @@ export default async function EditQuestionPage({ params }: { params: Promise<{ i
 
   if (!question) redirect('/admin/questions')
 
-  const [examsRes, subjectsRes] = await Promise.all([
+  const [examsRes, subjectsRes, misconceptionsRes] = await Promise.all([
     supabase.from('exams').select('id, name').order('name'),
     supabase.from('subjects').select('id, name').order('name'),
+    supabase
+      .from('question_misconceptions')
+      .select('option_key, misconception_code, misconception_name, explanation, repair_note_id')
+      .eq('question_id', id),
   ])
+
+  const initialMisconceptions: Record<string, { misconception_code: string; misconception_name: string; explanation: string; repair_note_id: string }> = {}
+  for (const m of misconceptionsRes.data ?? []) {
+    initialMisconceptions[m.option_key] = {
+      misconception_code: m.misconception_code,
+      misconception_name: m.misconception_name,
+      explanation: m.explanation,
+      repair_note_id: m.repair_note_id ?? '',
+    }
+  }
 
   return (
     <EditQuestionForm
       question={question}
       exams={examsRes.data ?? []}
       subjects={subjectsRes.data ?? []}
+      initialMisconceptions={initialMisconceptions}
     />
   )
 }

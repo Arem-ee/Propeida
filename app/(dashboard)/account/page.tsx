@@ -157,7 +157,7 @@ export default function AccountPage() {
           <div className="flex items-center justify-between px-6 py-4">
             <div>
               <p className="text-sm font-bold text-gray-900">JAMB Access</p>
-              <p className="text-xs text-gray-400">Practice, mocks, and leaderboard</p>
+              <p className="text-xs text-gray-400">Practice, mocks, and revision notes</p>
             </div>
             <span className={`rounded-full px-2.5 py-0.5 text-xs font-bold ${hasJambPro ? 'bg-blue-50 text-blue-700' : 'bg-gray-50 text-gray-500'}`}>
               {hasJambPro ? 'Active' : 'Free'}

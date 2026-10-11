@@ -66,7 +66,7 @@ const signupFinishReminder = {
 
 Your Propeida account is ready to use — there's just one small step left.
 
-Pick a username (it's how you'll appear on the leaderboard) and then start your first UNILORIN Post-UTME mock: 100 real-style questions under real exam timing, free.
+Pick a username for your profile and then start your first UNILORIN Post-UTME mock: 100 real-style questions under real exam timing, free.
 
 Open Propeida:
 ${SIGNUP_APP_URL}
@@ -98,7 +98,7 @@ propeida.help@gmail.com`,
             <td style="padding: 16px 32px 32px 32px; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.6; color: #374151;">
               <p style="margin: 0 0 16px 0;">Hi,</p>
               <p style="margin: 0 0 16px 0;">Your Propeida account is ready to use — there's just one small step left.</p>
-              <p style="margin: 0 0 16px 0;">Pick a <strong>username</strong> (it's how you'll appear on the leaderboard), then start your first <strong>UNILORIN Post-UTME mock</strong>: 100 real-style questions under real exam timing, free.</p>
+              <p style="margin: 0 0 16px 0;">Pick a <strong>username</strong> for your profile, then start your first <strong>UNILORIN Post-UTME mock</strong>: 100 real-style questions under real exam timing, free.</p>
               <p style="margin: 0 0 20px 0;">
                 <a href="${SIGNUP_APP_URL}" style="display: inline-block; background-color: #2563eb; color: #ffffff; font-weight: bold; text-decoration: none; border-radius: 8px; padding: 12px 24px;">Open Propeida</a>
               </p>

@@ -22,7 +22,7 @@ export default function PrivacyPage() {
               When you create an account, Propeida stores your email address and a randomly generated username. No real name, phone number, or address is required to use the platform.
             </p>
             <p className="mt-3">
-              While using the platform, Propeida records your answers to practice questions and mock exams, your session timings, your score and accuracy data, and your daily question responses. This data is used solely to calculate your performance statistics, update your streak, and determine your leaderboard ranking.
+              While using the platform, Propeida records your answers to practice questions and mock exams, your session timings, your score and accuracy data, and your daily question responses. This data is used solely to calculate your performance statistics, update your streak, and schedule your reviews.
             </p>
           </section>
 
@@ -43,14 +43,14 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-base font-extrabold text-gray-900 mb-3">Data sharing</h2>
             <p>
-              Propeida does not sell, rent, or share your personal data with third parties. Your practice data and performance statistics are visible to you on your dashboard. Your username, score, and school affiliation are visible on the public leaderboard. No email addresses or other contact information are shown on the leaderboard or anywhere else publicly.
+              Propeida does not sell, rent, or share your personal data with third parties. Your practice data and performance statistics are visible only to you on your dashboard. No email addresses or other contact information are shown publicly anywhere.
             </p>
           </section>
 
           <section>
             <h2 className="text-base font-extrabold text-gray-900 mb-3">Data retention and deletion</h2>
             <p>
-              Your data is retained for as long as your account remains active. If you wish to delete your account and all associated data, contact the team using the contact form on this site. Account deletion removes your profile, session history, results, streak, and leaderboard entries. Payment records are retained for financial record-keeping purposes.
+              Your data is retained for as long as your account remains active. If you wish to delete your account and all associated data, contact the team using the contact form on this site. Account deletion removes your profile, session history, results, and streak. Payment records are retained for financial record-keeping purposes.
             </p>
           </section>
 

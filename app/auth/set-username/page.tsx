@@ -137,7 +137,7 @@ export default function SetUsernamePage() {
               </span>
             </div>
             <p className="mt-1.5 text-xs text-gray-400 leading-relaxed">
-              This will be shown publicly on the leaderboard — use your real name or a nickname, whichever you&apos;re comfortable with.
+              This will be shown on your profile — use your real name or a nickname, whichever you&apos;re comfortable with.
             </p>
             {usernameStatus === 'taken' && suggestion && (
               <p className="mt-1 text-xs text-red-600">

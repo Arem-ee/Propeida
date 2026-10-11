@@ -3,11 +3,13 @@
 import { revalidatePath } from 'next/cache'
 import { redirect } from 'next/navigation'
 import { createClient, getAuthUser } from '@/lib/supabase/server'
+import { createAdminClient } from '@/lib/supabase/admin'
 import {
   getMockDefaults,
   fetchQuestionsForSession,
   fetchFreePoolQuestions,
   fetchLockedPoolQuestions,
+  fetchWarmupQuestions,
   isLockedPoolExam,
   createExamSession,
   getSessionById,
@@ -15,6 +17,8 @@ import {
   isSessionExpired,
 } from '@/lib/practice'
 import { hasExamAccess } from '@/lib/entitlements'
+import { getNotesBySubject, isValidSubject } from '@/lib/notes'
+import { recordSessionEvidence, getNextReviews } from '@/lib/mastery'
 
 interface CreateSessionParams {
   examId: string
@@ -36,6 +40,27 @@ async function assertExamOpen(examId: string) {
   const supabase = await createClient()
   const { data } = await supabase.from('exams').select('slug').eq('id', examId).single()
   if (data?.slug === 'jamb') redirect('/dashboard')
+}
+
+/**
+ * Shared struggle: what share of all recorded picks for this question chose
+ * the same wrong option. Aggregate counts only (never who) via the
+ * service-role client, since row RLS restricts learners to their own rows.
+ * Returns null below the minimum sample — small cohorts show nothing
+ * rather than noise.
+ */
+async function sharedStrugglePct(
+  questionId: string,
+  optionKey: string,
+): Promise<number | null> {
+  const MIN_SAMPLE = 20
+  const admin = createAdminClient()
+  const [{ count: total }, { count: same }] = await Promise.all([
+    admin.from('session_answers').select('id', { count: 'exact', head: true }).eq('question_id', questionId),
+    admin.from('session_answers').select('id', { count: 'exact', head: true }).eq('question_id', questionId).eq('selected_answer', optionKey),
+  ])
+  if (!total || total < MIN_SAMPLE || !same) return null
+  return Math.round((same / total) * 100)
 }
 
 async function fetchWeightedQuestions(
@@ -206,6 +231,48 @@ export async function createSession(params: CreateSessionParams) {
     session_id: session.id,
     question_id: q.id,
   }))
+
+  // Warm-up retrieval (practice mode only — mocks stay pure exam simulation):
+  // re-attempt the user's most recent mistakes first. Silent when no history.
+  // Warm-up ids travel in the session URL: session_answers rows carry random
+  // UUIDs, so DB order cannot preserve warm-up-first positioning.
+  let warmupIds: string[] = []
+  let finalQuestions = questions
+  if (params.mode === 'practice') {
+    const warmup = await fetchWarmupQuestions(
+      supabase,
+      user.id,
+      params.examId,
+      subjectIds,
+      questions.map((q) => q.id),
+      3,
+    )
+    if (warmup.length > 0) {
+      warmupIds = warmup.map((q) => q.id)
+      finalQuestions = [...warmup, ...questions]
+      rows.unshift(...warmup.map((q) => ({ session_id: session.id, question_id: q.id })))
+    }
+  }
+
+  // Micro-lesson binding (practice mode only): attach one authored note whose
+  // subject matches the session's first note-covered subject. Silent when none.
+  let lessonNoteId: string | null = null
+  if (params.mode === 'practice' && subjectIds.length > 0) {
+    const { data: sessionSubjects } = await supabase
+      .from('subjects')
+      .select('id, slug')
+      .in('id', subjectIds)
+    for (const s of sessionSubjects ?? []) {
+      if (isValidSubject(s.slug)) {
+        const firstNote = getNotesBySubject(s.slug)[0]
+        if (firstNote) {
+          lessonNoteId = firstNote.id
+          break
+        }
+      }
+    }
+  }
+
   const { error: answersError } = await supabase.from('session_answers').insert(rows)
   if (answersError) {
     await supabase.from('exam_sessions').delete().eq('id', session.id)
@@ -216,7 +283,7 @@ export async function createSession(params: CreateSessionParams) {
 
   return {
     sessionId: session.id,
-    questions: questions.map((q) => ({
+    questions: finalQuestions.map((q) => ({
       id: q.id,
       subjectId: q.subjectId,
       questionText: q.questionText,
@@ -225,6 +292,8 @@ export async function createSession(params: CreateSessionParams) {
     mode: params.mode,
     timeLimitSeconds,
     startedAt: session.started_at,
+    warmupIds,
+    lessonNoteId,
   }
 }
 
@@ -269,10 +338,32 @@ export async function submitAnswer(
 
     void Promise.resolve(supabase.rpc('update_streak', { p_user_id: user.id })).catch(() => {})
 
+    // Misconception repair: when the picked wrong option is mapped, append
+    // its named repair to the feedback. Silent when unmapped — the generic
+    // explanation always stands alone.
+    let misconception: { code: string; name: string; explanation: string; sharedPct: number | null } | null = null
+    if (recordRes.data === false) {
+      const { data: mc } = await supabase
+        .from('question_misconceptions')
+        .select('misconception_code, misconception_name, explanation')
+        .eq('question_id', questionId)
+        .eq('option_key', selectedAnswer)
+        .maybeSingle()
+      if (mc) {
+        misconception = {
+          code: mc.misconception_code,
+          name: mc.misconception_name,
+          explanation: mc.explanation,
+          sharedPct: await sharedStrugglePct(questionId, selectedAnswer),
+        }
+      }
+    }
+
     return {
       isCorrect: recordRes.data,
       correctAnswer: revealRow.correct_answer,
       explanation: revealRow.explanation,
+      misconception,
     }
   }
 
@@ -280,6 +371,71 @@ export async function submitAnswer(
   if (record.error || typeof record.data !== 'boolean') throw new Error('Failed to record answer')
 
   return { isCorrect: record.data }
+}
+
+/**
+ * Close-out for practice sessions. Practice previously ended client-side only
+ * (no completion row, no results page); finishing now records the session and
+ * routes to the results close-out. RLS grants users no INSERT on `results`,
+ * so the privileged write goes through the service-role client after the
+ * same ownership checks used everywhere else.
+ */
+export async function completePracticeSession(sessionId: string) {
+  const supabase = await createClient()
+  const user = await getAuthUser(supabase)
+  if (!user) throw new Error('Not authenticated')
+
+  const session = await getSessionById(sessionId)
+  if (session.user_id !== user.id) throw new Error('Session does not belong to user')
+  if (session.status !== 'in_progress') throw new Error('Session is not active')
+  if (session.mode !== 'practice') throw new Error('Session is not a practice session')
+
+  await assertExamOpen(session.exam_id)
+
+  const answers = await getSessionQuestionsWithStatus(sessionId, false)
+  const attempted = answers.filter((a) => a.selectedAnswer != null)
+  const correct = attempted.filter((a) => a.isCorrect === true).length
+  const accuracy = attempted.length > 0 ? correct / attempted.length : 0
+
+  const perfBySubject: Record<string, { correct: number; total: number }> = {}
+  for (const a of attempted) {
+    const entry = perfBySubject[a.subjectId] ?? { correct: 0, total: 0 }
+    entry.total += 1
+    if (a.isCorrect === true) entry.correct += 1
+    perfBySubject[a.subjectId] = entry
+  }
+
+  const { createAdminClient } = await import('@/lib/supabase/admin')
+  const admin = createAdminClient()
+  const { error: sessionError } = await admin
+    .from('exam_sessions')
+    .update({ status: 'completed', completed_at: new Date().toISOString() })
+    .eq('id', sessionId)
+    .eq('user_id', user.id)
+  if (sessionError) throw new Error('Failed to complete session')
+
+  const { error: resultsError } = await admin.from('results').insert({
+    session_id: sessionId,
+    score: correct,
+    accuracy,
+    performance_by_subject: perfBySubject,
+  })
+  if (resultsError) throw new Error('Failed to record results')
+
+  // Proof engine: fold this session into the learner model. Best-effort —
+  // completion already succeeded, so a mastery write failure must not
+  // unravel it.
+  try {
+    await recordSessionEvidence(supabase, user.id, sessionId)
+  } catch (err) {
+    console.error('[mastery] recordSessionEvidence failed:', err)
+  }
+
+  revalidatePath('/practice')
+  revalidatePath(`/practice/session/${sessionId}`)
+  revalidatePath('/history')
+
+  return { sessionId }
 }
 
 export async function completeMockSession(sessionId: string) {
@@ -302,6 +458,12 @@ export async function completeMockSession(sessionId: string) {
   if (completionError || !completionRow) throw new Error('Failed to complete session')
 
   await supabase.rpc('update_streak', { p_user_id: user.id })
+
+  try {
+    await recordSessionEvidence(supabase, user.id, sessionId)
+  } catch (err) {
+    console.error('[mastery] recordSessionEvidence failed:', err)
+  }
 
   revalidatePath('/practice')
   revalidatePath(`/practice/session/${sessionId}`)
@@ -391,8 +553,36 @@ export async function getSessionResults(sessionId: string) {
   }[]
 
   const subjectIds = new Set<string>()
-  const questions = reviewRows.map((row) => {
+  const questionIds: string[] = []
+  for (const row of reviewRows) {
     subjectIds.add(row.subject_id)
+    questionIds.push(row.question_id)
+  }
+
+  const { data: subjects } = await supabase
+    .from('subjects')
+    .select('id, name')
+    .in('id', Array.from(subjectIds))
+
+  const subjectNames = new Map((subjects ?? []).map((s) => [s.id, s.name]))
+
+  // Misconception repairs for review: keyed by question, matched to the
+  // picked wrong option per item below. Empty when nothing is mapped.
+  const repairs = new Map<string, { name: string; explanation: string }>()
+  if (questionIds.length > 0) {
+    const { data: mcRows } = await supabase
+      .from('question_misconceptions')
+      .select('question_id, option_key, misconception_name, explanation')
+      .in('question_id', questionIds)
+    for (const m of (mcRows ?? []) as { question_id: string; option_key: string; misconception_name: string; explanation: string }[]) {
+      repairs.set(`${m.question_id}:${m.option_key}`, { name: m.misconception_name, explanation: m.explanation })
+    }
+  }
+
+  const questions = reviewRows.map((row) => {
+    const repair = row.selected_answer
+      ? repairs.get(`${row.question_id}:${row.selected_answer}`) ?? null
+      : null
     return [{
       questionId: row.question_id,
       questionText: row.question_text,
@@ -403,15 +593,9 @@ export async function getSessionResults(sessionId: string) {
       isCorrect: row.is_correct,
       explanation: row.explanation,
       timeTakenSeconds: row.time_taken_seconds,
+      misconception: repair,
     }]
   }).flat()
-
-  const { data: subjects } = await supabase
-    .from('subjects')
-    .select('id, name')
-    .in('id', Array.from(subjectIds))
-
-  const subjectNames = new Map((subjects ?? []).map((s) => [s.id, s.name]))
 
   const perfBySubject = result.performance_by_subject as Record<string, { correct: number; total: number }> | undefined
   let weakestSubject: { subjectId: string; name: string; correct: number; total: number; accuracy: number } | null = null
@@ -439,6 +623,12 @@ export async function getSessionResults(sessionId: string) {
     accuracy: data.total > 0 ? Math.round((data.correct / data.total) * 10000) / 100 : 0,
   }))
 
+  const nextReview = await getNextReviews(
+    supabase,
+    user.id,
+    subjectBreakdown.map((sb) => sb.subjectId),
+  )
+
   return {
     session: {
       id: session.id,
@@ -456,6 +646,7 @@ export async function getSessionResults(sessionId: string) {
     questions,
     subjectBreakdown,
     weakestSubject,
+    nextReview,
   }
 }
 

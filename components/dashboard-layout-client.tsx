@@ -31,7 +31,7 @@ export default function DashboardLayoutClient({
       <DashboardShell email={email} isAdmin={isAdmin} onLogout={handleLogout}>
         {needsUsername && (
           <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 border-b border-blue-100 bg-blue-50 px-4 py-2 text-center text-xs font-medium text-blue-800">
-            <span>Your username is temporary — pick one for the leaderboard.</span>
+            <span>Your username is temporary — pick one for your profile.</span>
             <Link href="/auth/set-username" className="font-bold text-blue-700 underline hover:text-blue-900">
               Choose a username
             </Link>

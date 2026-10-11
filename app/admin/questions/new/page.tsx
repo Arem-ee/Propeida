@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
+import MisconceptionFields, { collectMisconceptions } from '../misconception-fields'
 
 export default function NewQuestionPage() {
   const router = useRouter()
@@ -11,6 +12,7 @@ export default function NewQuestionPage() {
   const [error, setError] = useState<string | null>(null)
   const [exams, setExams] = useState<{ id: string; name: string }[]>([])
   const [subjects, setSubjects] = useState<{ id: string; name: string }[]>([])
+  const [correctAnswer, setCorrectAnswer] = useState('')
 
   useEffect(() => {
     fetch('/api/admin/refs')
@@ -40,6 +42,7 @@ export default function NewQuestionPage() {
       correct_answer: form.get('correct_answer') as string,
       explanation: form.get('explanation') as string,
       difficulty: form.get('difficulty') as string,
+      misconceptions: collectMisconceptions(form),
     }
 
     try {
@@ -114,7 +117,7 @@ export default function NewQuestionPage() {
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Correct Answer</label>
-            <select name="correct_answer" required className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm min-h-[44px]">
+            <select name="correct_answer" required value={correctAnswer} onChange={(e) => setCorrectAnswer(e.target.value)} className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm min-h-[44px]">
               <option value="">Select answer</option>
               <option value="a">A</option>
               <option value="b">B</option>
@@ -137,6 +140,8 @@ export default function NewQuestionPage() {
           <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Explanation (optional)</label>
           <textarea name="explanation" rows={2} className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm resize-y" />
         </div>
+
+        <MisconceptionFields correctAnswer={correctAnswer} />
 
         {error && (
           <div className="rounded-xl bg-red-50 border border-red-100 p-4">

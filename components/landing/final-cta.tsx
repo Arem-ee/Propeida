@@ -10,7 +10,7 @@ export default function LandingFinalCta() {
             Start with Propeida.
           </h2>
           <p className="mx-auto mt-4 max-w-md text-[14.5px] leading-[1.9] text-blue-100">
-            It&apos;s free. It works on your phone. And it shows you what comes after the exam.
+            It&apos;s free. It works on your phone. And every session ends with proof you learned something.
           </p>
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link
@@ -21,10 +21,10 @@ export default function LandingFinalCta() {
               <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
-              href="/explore"
+              href="/practice"
               className="inline-flex min-h-[46px] items-center justify-center rounded-xl border border-blue-300/70 px-6 text-sm font-medium text-white transition-colors hover:bg-blue-700"
             >
-              Explore careers
+              Try a practice session
             </Link>
           </div>
         </div>

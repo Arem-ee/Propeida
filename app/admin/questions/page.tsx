@@ -18,6 +18,7 @@ export default function AdminQuestionsPage() {
   const [selected, setSelected] = useState<Set<string>>(new Set())
   const [deleting, setDeleting] = useState(false)
   const [showConfirm, setShowConfirm] = useState(false)
+  const [coverage, setCoverage] = useState<{ total: number; mapped: number; pct: number } | null>(null)
 
   const loadQuestions = useCallback(async () => {
     const supabase = createClient()
@@ -29,6 +30,15 @@ export default function AdminQuestionsPage() {
   }, [])
 
   useEffect(() => { loadQuestions() }, [loadQuestions])
+
+  useEffect(() => {
+    fetch('/api/admin/questions/coverage')
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => {
+        if (data && typeof data.total === 'number') setCoverage(data)
+      })
+      .catch(() => {})
+  }, [])
 
   const toggleSelect = (id: string) => {
     setSelected((prev) => {
@@ -71,7 +81,14 @@ export default function AdminQuestionsPage() {
   return (
     <div>
       <div className="mb-8 flex flex-wrap items-center justify-between gap-3">
-        <h1 className="text-2xl font-extrabold text-gray-900">Questions</h1>
+        <div>
+          <h1 className="text-2xl font-extrabold text-gray-900">Questions</h1>
+          {coverage && (
+            <p className="mt-1 text-xs font-semibold text-gray-500">
+              Misconception maps: {coverage.mapped}/{coverage.total} questions ({coverage.pct}%)
+            </p>
+          )}
+        </div>
         <div className="flex flex-wrap gap-3">
           {selected.size > 0 && (
             <button
