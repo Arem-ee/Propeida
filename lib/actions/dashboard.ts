@@ -5,6 +5,7 @@ import { revalidatePath } from 'next/cache'
 import { getDueReviews, getMasterySummary, getSecuredSubjects, getPresenceStats, getProgressMap, getWeakestSubject } from '@/lib/mastery'
 import { getUserActiveSessions } from '@/lib/practice'
 import { getNearestCohort } from '@/lib/cohort'
+import { getNoteById } from '@/lib/notes'
 
 interface DashboardPayload {
   profile: {
@@ -87,6 +88,7 @@ export async function getDashboardData() {
   let securedSubjects: { subjectId: string; subjectName: string; subjectSlug: string }[] = []
   let presence: { weeklyActiveStudents: number; sessionsThisWeek: number; securedThisWeek: number } | null = null
   let continueSession: { id: string; examName: string; mode: string } | null = null
+  let continueLesson: { noteId: string; subject: string; slug: string; topic: string } | null = null
   let cohort: {
     examName: string
     year: number
@@ -117,6 +119,24 @@ export async function getDashboardData() {
     const first = active[0]
     if (first) {
       continueSession = { id: first.id, examName: first.exams.name, mode: first.mode }
+    }
+    // Last engaged lesson (teach-first ordering is resolved client-side;
+    // here we only supply the candidate).
+    const { data: lastAttempts } = await supabase
+      .from('learning_attempts')
+      .select('lesson_id')
+      .eq('user_id', user.id)
+      .not('lesson_id', 'is', null)
+      .order('created_at', { ascending: false })
+      .limit(10)
+    for (const row of lastAttempts ?? []) {
+      const note = (row as { lesson_id: string }).lesson_id
+        ? getNoteById((row as { lesson_id: string }).lesson_id)
+        : null
+      if (note) {
+        continueLesson = { noteId: note.id, subject: note.subject, slug: note.slug, topic: note.topic }
+        break
+      }
     }
   } catch {
     dueReviews = []
@@ -149,6 +169,7 @@ export async function getDashboardData() {
     },
     presence,
     continueSession,
+    continueLesson,
     cohort,
     progressMap,
     weakest,

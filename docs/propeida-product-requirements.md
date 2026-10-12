@@ -76,7 +76,9 @@ Account, notifications, support, payment, and the path switcher are shared. The 
 
 The home screen must answer one question: **what is the best next thing for this student to do?**
 
-Its primary modules, in order:
+One hero next-action, computed in this priority — timed mock in progress, due review, continue lesson, weakest-topic practice, first lesson — rendered large above the fold. Everything else (remaining modules, shelf, presence) lives below as secondary. Never five co-equal cards; never a dashboard of options.
+
+Its modules, in order:
 
 1. **Continue learning** — resume the active lesson or recovery path.
 2. **Today’s review** — due retrieval prompts, capped at an achievable daily set.
@@ -91,11 +93,12 @@ Streaks and leaderboards are secondary. A streak means “completed the planned 
 Every lesson is short, structured, and authored against a defined learning objective:
 
 1. **Warm-up / diagnostic:** one question that exposes prior knowledge.
-2. **Teach:** a concise explanation, visual, or reading segment.
+2. **Teach:** a concise explanation, visual, or reading segment — biased toward doing: summary plus core points up front, full text expandable on demand, never a wall before the first attempt.
 3. **Worked example:** an annotated solution or model response.
 4. **Supported attempt:** one prompt with hints/scaffolding.
 5. **Independent attempt:** one or two questions without support.
-6. **Feedback and next action:** identify the misconception or success, then schedule review.
+6. **Checkout twin:** an incorrect independent answer earns one isomorphic follow-up (same skill, different question) — the two-attempt discipline. Transfer proven, not memorised.
+7. **Feedback and next action:** identify the misconception or success, then schedule review.
 
 The system never call a topic “mastered” from one correct answer. The initial standard is: correct independent retrieval on more than one occasion, with a delay between attempts and sufficient confidence/accuracy.
 

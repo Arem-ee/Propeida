@@ -7,6 +7,7 @@ import { celebrate } from '@/lib/celebrate'
 import {
   recordLessonAttempt,
   completeLesson,
+  getTwinQuestion,
   type LessonQuestion,
 } from '@/lib/actions/lessons'
 import type { RevisionNote } from '@/lib/notes'
@@ -61,6 +62,7 @@ function BankQuestion({
   subjectId,
   lessonId,
   onAnswered,
+  onWrong,
   ctaLabel,
 }: {
   question: LessonQuestion
@@ -68,6 +70,7 @@ function BankQuestion({
   subjectId: string
   lessonId: string
   onAnswered: (correct: boolean) => void
+  onWrong?: (questionId: string) => void
   ctaLabel: string
 }) {
   const [selected, setSelected] = useState<string | null>(null)
@@ -89,6 +92,7 @@ function BankQuestion({
       })
       setFeedback(result)
       onAnswered(result.isCorrect)
+      if (!result.isCorrect) onWrong?.(question.id)
     } catch {
       setChecking(false)
     }
@@ -221,6 +225,10 @@ export default function LessonPlayer({
   const [results, setResults] = useState<boolean[]>([])
   const [diagnosticDone, setDiagnosticDone] = useState(false)
   const [independentDone, setIndependentDone] = useState(0)
+  const [twins, setTwins] = useState<LessonQuestion[]>([])
+  const [twinnedIds, setTwinnedIds] = useState<Set<string>>(new Set())
+  const [twinOffers, setTwinOffers] = useState<Set<string>>(new Set())
+  const [twinLoading, setTwinLoading] = useState(false)
   const [finishing, setFinishing] = useState(false)
   const [closeout, setCloseout] = useState<{ nextReviewAt: string | null } | null>(null)
   // Frozen at first render: "review in N days" must not shift under re-renders.
@@ -242,6 +250,37 @@ export default function LessonPlayer({
       })
     } catch {
       // engagement logging must never block learning
+    }
+  }
+
+  const requestTwin = async (questionId: string) => {
+    if (twinLoading || twinnedIds.has(questionId)) return
+    setTwinLoading(true)
+    try {
+      const twin = await getTwinQuestion(
+        subjectId,
+        [...independent.map((q) => q.id), ...twins.map((q) => q.id), questionId],
+      )
+      if (twin) {
+        setTwins((t) => [...t, twin])
+        setTwinnedIds((s) => new Set(s).add(questionId))
+        setTwinOffers((s) => {
+          const next = new Set(s)
+          next.delete(questionId)
+          return next
+        })
+      } else {
+        // Bank exhausted: withdraw the offer silently, keep the repair.
+        setTwinOffers((s) => {
+          const next = new Set(s)
+          next.delete(questionId)
+          return next
+        })
+      }
+    } catch {
+      // twins are enhancement; failure degrades to the repair already shown
+    } finally {
+      setTwinLoading(false)
     }
   }
 
@@ -311,29 +350,46 @@ export default function LessonPlayer({
         </div>
       )}
 
-      {/* 2 — Teach: one idea, Mayer-checked segments */}
+      {/* 2 — Teach: core points up front, full text on demand.
+          Doing starts as fast as possible; reading never walls it. */}
       {phase === 'teach' && (
         <div className="rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-7 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)]">
-          <p className="font-display text-[22px] font-medium text-black">The idea</p>
-          <p className="mt-2 text-[16px] font-semibold leading-relaxed text-ink-soft">{note.summary}</p>
-          <div className="mt-5 space-y-5">
-            {note.sections.map((section) => (
-              <div key={section.heading}>
-                <h3 className="font-display text-lg font-medium text-black">{section.heading}</h3>
-                {section.paragraphs?.map((p, i) => (
-                  <p key={i} className="mt-1.5 text-[15px] font-semibold leading-[1.65] text-ink-soft">{p}</p>
-                ))}
-                <ul className="mt-2.5 space-y-2">
-                  {section.bullets.map((b, i) => (
-                    <li key={i} className="flex gap-2.5 text-[15px] font-semibold leading-[1.65] text-ink-soft">
-                      <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-600" />
-                      {b}
-                    </li>
+          <p className="font-display text-[22px] font-medium text-black">The idea in 30 seconds</p>
+          <p className="mt-2 text-[15px] font-semibold leading-relaxed text-ink-soft">{note.summary}</p>
+          <ul className="mt-3.5 space-y-2">
+            {note.sections.flatMap((section) =>
+              section.bullets.slice(0, 1).map((b) => (
+                <li key={`${section.heading}:${b.slice(0, 24)}`} className="flex gap-2.5 text-sm font-bold leading-relaxed text-black">
+                  <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-600" />
+                  {b}
+                </li>
+              )),
+            )}
+          </ul>
+          <details className="group mt-4 rounded-2xl border border-gray-200 bg-gray-50/50">
+            <summary className="cursor-pointer list-none px-4 py-3.5 text-sm font-extrabold text-blue-700 min-h-[48px] flex items-center justify-between">
+              Read the full lesson
+              <span className="text-gray-400 transition-transform group-open:rotate-180">▾</span>
+            </summary>
+            <div className="px-4 pb-4 space-y-5">
+              {note.sections.map((section) => (
+                <div key={section.heading}>
+                  <h3 className="font-display text-lg font-medium text-black">{section.heading}</h3>
+                  {section.paragraphs?.map((p, i) => (
+                    <p key={i} className="mt-1.5 text-sm font-semibold leading-[1.65] text-ink-soft">{p}</p>
                   ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+                  <ul className="mt-2 space-y-1.5">
+                    {section.bullets.map((b, i) => (
+                      <li key={i} className="flex gap-2 text-sm font-semibold leading-[1.65] text-ink-soft">
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400" />
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </details>
           {note.examTip && (
             <div className="mt-6 rounded-2xl border-2 border-amber-200 bg-amber-50 p-4">
               <p className="font-display text-base font-medium text-amber-900">Exam tip</p>
@@ -449,12 +505,13 @@ export default function LessonPlayer({
         </div>
       )}
 
-      {/* 5 — Independent: no support, with calibration */}
+      {/* 5 — Independent: no support, with calibration. A wrong answer
+          earns one checkout twin (same skill, new question). */}
       {phase === 'independent' && (
         <div className="rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-7 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)]">
           <p className="font-display text-[22px] font-medium text-black">Prove it — no help this time</p>
           <div className="mt-4 space-y-6">
-            {independent.map((q, i) => (
+            {[...independent, ...twins].map((q, i) => (
               <div key={q.id} className={i > 0 ? 'border-t border-gray-100 pt-6' : ''}>
                 <BankQuestion
                   question={q}
@@ -463,18 +520,32 @@ export default function LessonPlayer({
                   lessonId={note.id}
                   ctaLabel="Check"
                   onAnswered={(correct) => { setResults((r) => [...r, correct]); setIndependentDone((n) => n + 1) }}
+                  onWrong={(qid) => {
+                    if (!twinnedIds.has(qid)) {
+                      setTwinOffers((s) => new Set(s).add(qid))
+                    }
+                  }}
                 />
+                {twinOffers.has(q.id) && (
+                  <button
+                    onClick={() => void requestTwin(q.id)}
+                    disabled={twinLoading}
+                    className="mt-3 w-full rounded-2xl border-2 border-dashed border-violet-300 py-3 text-sm font-extrabold text-violet-700 min-h-[52px] cursor-pointer disabled:opacity-50"
+                  >
+                    {twinLoading ? 'Finding a twin...' : 'Not yet — try a twin question'}
+                  </button>
+                )}
               </div>
             ))}
           </div>
           <button
             onClick={finish}
-            disabled={finishing || independentDone < independent.length}
+            disabled={finishing || independentDone < independent.length + twins.length}
             className={`mt-5 inline-flex w-full items-center justify-center gap-2 rounded-2xl py-3.5 text-[15px] font-extrabold text-white min-h-[52px] transition-all ${
-              finishing || independentDone < independent.length ? 'bg-gray-300 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'
+              finishing || independentDone < independent.length + twins.length ? 'bg-gray-300 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'
             }`}
           >
-            {finishing ? 'Wrapping up...' : `Finish lesson${independentDone < independent.length ? ` (${independentDone}/${independent.length} checked)` : ''}`} <ArrowRight className="h-4 w-4" />
+            {finishing ? 'Wrapping up...' : `Finish lesson${independentDone < independent.length + twins.length ? ` (${independentDone}/${independent.length + twins.length} checked)` : ''}`} <ArrowRight className="h-4 w-4" />
           </button>
         </div>
       )}
@@ -496,15 +567,21 @@ export default function LessonPlayer({
           )}
           <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
             <Link
-              href={`/learn/${note.subject}`}
+              href={`/practice?subject=${encodeURIComponent(note.subject)}`}
               className="inline-flex items-center justify-center gap-2 rounded-2xl bg-blue-600 px-6 py-3 text-sm font-extrabold text-white hover:bg-blue-700 min-h-[48px]"
             >
               <Target className="h-4 w-4" />
+              Practise this topic
+            </Link>
+            <Link
+              href={`/learn/${note.subject}`}
+              className="inline-flex items-center justify-center gap-2 rounded-2xl border-2 border-gray-200 bg-white px-6 py-3 text-sm font-extrabold text-ink-soft min-h-[48px]"
+            >
               Next lesson
             </Link>
             <Link
               href="/learn"
-              className="inline-flex items-center justify-center rounded-2xl border-2 border-gray-200 bg-white px-6 py-3 text-sm font-extrabold text-ink-soft min-h-[48px]"
+              className="inline-flex items-center justify-center rounded-2xl px-6 py-3 text-sm font-extrabold text-gray-400 min-h-[48px]"
             >
               All subjects
             </Link>

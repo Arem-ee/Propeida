@@ -93,6 +93,49 @@ export async function getLessonQuestions(subjectId: string): Promise<{
   return { examId, diagnostic: diagnostic ?? null, independent }
 }
 
+/**
+ * Checkout twin: one isomorphic follow-up (same subject, unseen here)
+ * after an incorrect independent answer. Transfer proven, not memorised.
+ * Returns null when the bank has nothing fresh to offer.
+ */
+export async function getTwinQuestion(
+  subjectId: string,
+  excludeIds: string[],
+): Promise<LessonQuestion | null> {
+  const supabase = await createClient()
+  const user = await getAuthUser(supabase)
+  if (!user) throw new Error('Not authenticated')
+
+  const examId = await resolveExamForSubject(supabase, subjectId)
+  if (!examId) return null
+
+  const { data, error } = await supabase.rpc('get_session_questions', {
+    p_exam_id: examId,
+    p_subject_ids: [subjectId],
+    p_difficulty: null,
+    p_limit: 5,
+    p_seed: randomUUID(),
+  })
+  if (error) return null
+
+  const rows = ((data ?? []) as {
+    id: string
+    subjectId?: string
+    subject_id?: string
+    questionText?: string
+    question_text?: string
+    options: { key: string; text: string }[]
+  }[])
+  const fresh = rows.find((q) => !excludeIds.includes(q.id))
+  if (!fresh) return null
+  return {
+    id: fresh.id,
+    subjectId: fresh.subjectId ?? fresh.subject_id ?? subjectId,
+    questionText: fresh.questionText ?? fresh.question_text ?? '',
+    options: fresh.options,
+  }
+}
+
 export async function recordLessonAttempt(input: AttemptInput): Promise<{
   isCorrect: boolean
   correctAnswer: string
