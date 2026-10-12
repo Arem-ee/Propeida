@@ -50,7 +50,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-base font-extrabold text-gray-900 mb-3">Data retention and deletion</h2>
             <p>
-              Your data is retained for as long as your account remains active. If you wish to delete your account and all associated data, contact the team using the contact form on this site. Account deletion removes your profile, session history, results, and streak. Payment records are retained for financial record-keeping purposes.
+              Your data is retained for as long as your account remains active. If you delete your account in Settings, everything goes with it: profile, session history, results, streak, learning records, and payment records. This cannot be undone.
             </p>
           </section>
 

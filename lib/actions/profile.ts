@@ -19,8 +19,7 @@ export async function updateAvatarIndex(avatarIndex: number) {
   if (error) throw new Error('Failed to update avatar')
 
   revalidatePath('/account')
-  revalidatePath('/settings')
-  revalidatePath('/dashboard')
+  revalidatePath('/home')
 }
 
 export async function getUserExamAccess() {

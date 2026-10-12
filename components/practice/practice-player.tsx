@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { ArrowRight, RotateCcw, CheckCircle, Flame, BookOpen, Play, Check, X } from 'lucide-react'
 import { submitAnswer, completePracticeSession } from '@/lib/actions/practice'
 import { getNoteById } from '@/lib/notes'
+import { celebrate } from '@/lib/celebrate'
 
 export interface PlayerQuestion {
   id: string
@@ -105,6 +106,7 @@ export default function PracticePlayer({
     setFinishError(null)
     try {
       const result = await completePracticeSession(sessionId)
+      celebrate()
       router.push(`/results/${result.sessionId}`)
     } catch (err) {
       setFinishError(err instanceof Error ? err.message : 'Could not finish session')

@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
 import AppShell from '@/components/app-shell'
+import SettingsApplier from '@/components/settings-applier'
 
 export default function AppShellHost({
   children,
@@ -24,6 +25,7 @@ export default function AppShellHost({
 
   return (
     <AppShell email={email} isAdmin={isAdmin} onLogout={handleLogout}>
+      <SettingsApplier />
       {children}
     </AppShell>
   )

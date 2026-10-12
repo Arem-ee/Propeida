@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle, Eye, Lightbulb, Wrench, Target } from 'lucide-react'
+import { celebrate } from '@/lib/celebrate'
 import {
   recordLessonAttempt,
   completeLesson,
@@ -18,7 +19,7 @@ interface AttemptFeedback {
   isCorrect: boolean
   correctAnswer: string
   explanation: string
-  misconception: { name: string; explanation: string } | null
+  misconception: { name: string; explanation: string; repeatCount: number; repairHref: string | null } | null
 }
 
 function PhaseDots({ phases, current }: { phases: string[]; current: number }) {
@@ -166,7 +167,20 @@ function BankQuestion({
                 <Wrench className="h-4 w-4" />
                 Why this tempts: {feedback.misconception.name}
               </p>
+              {feedback.misconception.repeatCount > 0 && (
+                <p className="mt-1 text-xs font-extrabold text-red-700">
+                  This exact error has come up {feedback.misconception.repeatCount + 1} times — time to fix the root, not retry harder.
+                </p>
+              )}
               <p className="mt-1 text-sm font-semibold leading-relaxed text-ink-soft">{feedback.misconception.explanation}</p>
+              {feedback.misconception.repairHref && (
+                <Link
+                  href={feedback.misconception.repairHref}
+                  className="mt-2 inline-flex items-center gap-1 text-[13px] font-extrabold text-blue-700 min-h-[40px]"
+                >
+                  Open the repair lesson <ArrowRight className="h-3.5 w-3.5" />
+                </Link>
+              )}
             </div>
           )}
         </div>
@@ -246,6 +260,7 @@ export default function LessonPlayer({
       const correct = results.filter(Boolean).length
       const summary = await completeLesson({ subjectId, correct, total: results.length })
       setCloseout(summary)
+      celebrate()
     } catch {
       setCloseout({ nextReviewAt: null })
     } finally {
@@ -323,6 +338,26 @@ export default function LessonPlayer({
             <div className="mt-6 rounded-2xl border-2 border-amber-200 bg-amber-50 p-4">
               <p className="font-display text-base font-medium text-amber-900">Exam tip</p>
               <p className="mt-1 text-sm font-semibold leading-relaxed text-amber-900">{note.examTip}</p>
+            </div>
+          )}
+          {enhancement?.vocabulary && enhancement.vocabulary.length > 0 && (
+            <div className="mt-6">
+              <p className="font-display text-lg font-medium text-black">Words to own</p>
+              <p className="mt-1 text-[13px] font-semibold text-ink-soft">
+                Plain meaning, contrast word, and a sentence each — say each sentence aloud once.
+              </p>
+              <div className="mt-3 grid gap-2.5 sm:grid-cols-2">
+                {enhancement.vocabulary.map((w) => (
+                  <div key={w.word} className="rounded-2xl border border-blue-100 bg-blue-50/40 p-3.5">
+                    <p className="font-display text-base font-medium text-black">{w.word}</p>
+                    <p className="mt-0.5 text-[13px] font-semibold text-ink-soft">{w.definition}</p>
+                    <p className="mt-1.5 text-xs font-bold text-gray-400">
+                      Not: {w.contrast}
+                    </p>
+                    <p className="mt-1 text-[13px] italic font-semibold text-blue-900">“{w.sentence}”</p>
+                  </div>
+                ))}
+              </div>
             </div>
           )}
           <button

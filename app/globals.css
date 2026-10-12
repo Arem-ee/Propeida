@@ -36,6 +36,20 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Display preferences (local-first; see lib/settings.ts). */
+html[data-font='large'] {
+  font-size: 112.5%;
+}
+
+body[data-theme='cream'] {
+  background-color: #faf5ea;
+}
+
+body[data-theme='sunlight'] {
+  background-color: #ffffff;
+  color: #000000;
+}
+
 ::selection {
   background-color: #dbeafe;
 }

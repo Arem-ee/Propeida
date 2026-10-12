@@ -3,6 +3,7 @@
 import { randomUUID } from 'node:crypto'
 import { createClient, getAuthUser } from '@/lib/supabase/server'
 import { applySubjectEvidence, getNextReviews } from '@/lib/mastery'
+import { getNoteById } from '@/lib/notes'
 
 export interface LessonQuestion {
   id: string
@@ -96,7 +97,7 @@ export async function recordLessonAttempt(input: AttemptInput): Promise<{
   isCorrect: boolean
   correctAnswer: string
   explanation: string
-  misconception: { name: string; explanation: string } | null
+  misconception: { name: string; explanation: string; repeatCount: number; repairHref: string | null } | null
 }> {
   const supabase = await createClient()
   const user = await getAuthUser(supabase)
@@ -134,15 +135,32 @@ export async function recordLessonAttempt(input: AttemptInput): Promise<{
 
   const isCorrect = question.correct_answer === input.selectedAnswer
 
-  let misconception: { name: string; explanation: string } | null = null
+  let misconception: { name: string; explanation: string; repeatCount: number; repairHref: string | null } | null = null
+  let misconceptionCode: string | null = null
   if (!isCorrect && input.selectedAnswer) {
     const { data: mc } = await supabase
       .from('question_misconceptions')
-      .select('misconception_name, explanation')
+      .select('misconception_code, misconception_name, explanation, repair_note_id')
       .eq('question_id', input.questionId)
       .eq('option_key', input.selectedAnswer)
       .maybeSingle()
-    if (mc) misconception = { name: mc.misconception_name, explanation: mc.explanation }
+    if (mc) {
+      misconceptionCode = mc.misconception_code
+      // Repeat detection: how many times has this exact error appeared
+      // before for this learner? A repeat routes to root-fix, not retry.
+      const { count: repeats } = await supabase
+        .from('learning_attempts')
+        .select('id', { count: 'exact', head: true })
+        .eq('user_id', user.id)
+        .eq('misconception_code', mc.misconception_code)
+      const repairNote = mc.repair_note_id ? getNoteById(mc.repair_note_id) : null
+      misconception = {
+        name: mc.misconception_name,
+        explanation: mc.explanation,
+        repeatCount: repeats ?? 0,
+        repairHref: repairNote ? `/learn/${repairNote.subject}/${repairNote.slug}` : null,
+      }
+    }
   }
 
   const { error: insertError } = await supabase.from('learning_attempts').insert({
@@ -153,6 +171,7 @@ export async function recordLessonAttempt(input: AttemptInput): Promise<{
     attempt_type: input.attemptType,
     is_correct: isCorrect,
     confidence: input.confidence,
+    misconception_code: misconceptionCode,
   })
   if (insertError) throw new Error('Failed to record attempt')
 

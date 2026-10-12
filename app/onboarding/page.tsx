@@ -2,29 +2,30 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
+import { ArrowRight, Check, X } from 'lucide-react'
 import { createClient } from '@/lib/supabase/client'
-import { completeOnboarding } from '@/lib/actions/onboarding'
-import { ChevronLeft, ArrowRight, Sparkles } from 'lucide-react'
+import {
+  completeOnboarding,
+  getOnboardingCheck,
+  submitOnboardingCheck,
+  type CheckQuestion,
+} from '@/lib/actions/onboarding'
 
-const STEPS = [
-  {
-    title: 'Welcome to Propeida',
-    body: "We built this because passing JAMB or your Post-UTME shouldn't come down to luck, or to grinding through past questions with no idea what you actually know. Whichever one you're preparing for, everything here is built around one thing: walking into that exam hall already knowing what to expect.",
-  },
-  {
-    title: 'What to expect',
-    body: "Practice mode gives you instant feedback on every answer — so each question teaches you something, not just tests you. Mock mode runs a full timed exam simulation, just like the real thing. The free tier gives you a real taste of everything before you decide to upgrade. And your progress carries across sessions — streaks, history, all of it. Nothing resets.",
-  },
-  {
-    title: 'One last thing',
-    body: "You've got this. Good luck — we'll be here the whole way.",
-  },
-]
+type Confidence = 'sure' | 'unsure' | null
 
 export default function OnboardingPage() {
   const router = useRouter()
-  const [step, setStep] = useState(0)
   const [loading, setLoading] = useState(true)
+  const [started, setStarted] = useState(false)
+  const [questions, setQuestions] = useState<CheckQuestion[]>([])
+  const [index, setIndex] = useState(0)
+  const [selected, setSelected] = useState<string | null>(null)
+  const [confidence, setConfidence] = useState<Confidence>(null)
+  const [answers, setAnswers] = useState<{ questionId: string; subjectId: string; selectedAnswer: string; confidence: 'sure' | 'unsure' }[]>([])
+  const [loadError, setLoadError] = useState(false)
+  const [finishing, setFinishing] = useState(false)
+  const [summary, setSummary] = useState<{ subjectName: string; correct: number; total: number }[] | null>(null)
   const [saving, setSaving] = useState(false)
 
   useEffect(() => {
@@ -40,105 +41,190 @@ export default function OnboardingPage() {
         .single()
 
       if (profile?.onboarding_completed) {
-        router.push('/')
+        router.push('/home')
+        return
       }
       setLoading(false)
     }
     check()
   }, [router])
 
-  const handleNext = useCallback(async () => {
-    if (step < STEPS.length - 1) {
-      setStep((s) => s + 1)
-    } else {
-      setSaving(true)
-      try { await completeOnboarding() } catch {}
-      router.push('/')
-      router.refresh()
+  const begin = useCallback(async () => {
+    setStarted(true)
+    try {
+      const qs = await getOnboardingCheck()
+      setQuestions(qs)
+    } catch {
+      setLoadError(true)
     }
-  }, [step, router])
+  }, [])
 
   const handleSkip = useCallback(async () => {
     setSaving(true)
     try { await completeOnboarding() } catch {}
-    router.push('/')
+    router.push('/home')
     router.refresh()
   }, [router])
 
+  const answer = () => {
+    const q = questions[index]
+    if (!q || !selected) return
+    setAnswers((prev) => [...prev, { questionId: q.id, subjectId: q.subjectId, selectedAnswer: selected, confidence: confidence ?? 'unsure' }])
+    if (index < questions.length - 1) {
+      setIndex((i) => i + 1)
+      setSelected(null)
+      setConfidence(null)
+    } else {
+      void finish([...answers, { questionId: q.id, subjectId: q.subjectId, selectedAnswer: selected, confidence: confidence ?? 'unsure' }])
+    }
+  }
+
+  const finish = async (all: { questionId: string; subjectId: string; selectedAnswer: string; confidence: 'sure' | 'unsure' }[]) => {
+    setFinishing(true)
+    try {
+      const result = await submitOnboardingCheck(all)
+      setSummary(result.summary)
+    } catch {
+      await handleSkip()
+    }
+  }
+
   if (loading) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-gray-50">
+      <div className="flex min-h-screen items-center justify-center bg-paper">
         <div className="h-8 w-8 animate-spin rounded-full border-4 border-blue-600 border-t-transparent" />
       </div>
     )
   }
 
-  const current = STEPS[step]!
-
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-50 px-4 py-12">
-      <div className="relative w-full max-w-lg">
+    <div className="flex min-h-screen items-center justify-center bg-paper px-4 py-12">
+      <div className="w-full max-w-xl">
         <div className="flex justify-end mb-2">
           <button
             onClick={handleSkip}
             disabled={saving}
-            className="text-sm font-semibold text-gray-400 hover:text-gray-600 transition-colors min-h-[44px] px-3 cursor-pointer disabled:opacity-50"
+            className="text-sm font-bold text-gray-400 hover:text-gray-600 min-h-[44px] px-3 cursor-pointer disabled:opacity-50"
           >
             {saving ? 'Loading...' : 'Skip'}
           </button>
         </div>
 
-        <div className="rounded-2xl border border-gray-100 bg-white p-8 sm:p-10 shadow-sm">
-          <div className="flex items-center gap-1.5 mb-8">
-            {STEPS.map((_, i) => (
-              <div
-                key={i}
-                className={`h-1.5 flex-1 rounded-full transition-colors ${
-                  i <= step ? 'bg-blue-600' : 'bg-gray-200'
-                }`}
-              />
-            ))}
-            <span className="ml-3 text-xs font-bold text-gray-400 tabular-nums">
-              {step + 1}/{STEPS.length}
-            </span>
-          </div>
-
-          {step === 0 && (
-            <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100">
-              <Sparkles className="h-6 w-6 text-blue-600" />
-            </div>
-          )}
-
-          <h2 className="text-xl font-extrabold text-gray-900 mb-3">
-            {current.title}
-          </h2>
-
-          <p className="text-sm text-gray-600 leading-relaxed whitespace-pre-line">
-            {current.body}
-          </p>
-
-          <div className="mt-8 flex items-center gap-3">
-            {step > 0 && (
-              <button
-                onClick={() => setStep((s) => s - 1)}
-                disabled={saving}
-                className="inline-flex items-center gap-1.5 rounded-xl border border-gray-200 px-4 py-2.5 text-sm font-bold text-gray-600 hover:bg-gray-50 transition-colors min-h-[44px] cursor-pointer disabled:opacity-50"
-              >
-                <ChevronLeft className="h-4 w-4" />
-                Back
-              </button>
-            )}
-            <div className="flex-1" />
+        {!started ? (
+          <div className="rounded-3xl border border-blue-100/70 bg-white p-8 sm:p-10 text-center shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)]">
+            <h1 className="font-display text-3xl sm:text-4xl font-semibold leading-tight text-black">
+              Let&apos;s see where you stand.
+            </h1>
+            <p className="mx-auto mt-3 max-w-sm text-[15px] font-semibold leading-relaxed text-ink-soft">
+              Five quick questions — no teaching, no pressure. Wrong answers just show us where to start.
+            </p>
             <button
-              onClick={handleNext}
-              disabled={saving}
-              className="inline-flex items-center gap-1.5 rounded-xl bg-blue-600 px-6 py-2.5 text-sm font-bold text-white hover:bg-blue-700 transition-colors min-h-[44px] cursor-pointer disabled:bg-blue-300"
+              onClick={begin}
+              className="mt-7 inline-flex items-center gap-2 rounded-2xl bg-blue-600 px-8 py-4 text-[16px] font-extrabold text-white hover:bg-blue-700 shadow-[0_12px_28px_-12px_rgba(37,99,235,0.7)] min-h-[56px] cursor-pointer transition-all"
             >
-              {step < STEPS.length - 1 ? 'Continue' : 'Go to Dashboard'}
-              {step < STEPS.length - 1 && <ArrowRight className="h-4 w-4" />}
+              Start my 5-minute check
+              <ArrowRight className="h-5 w-5" />
             </button>
           </div>
-        </div>
+        ) : summary ? (
+          <div className="rounded-3xl border-2 border-emerald-200 bg-emerald-50/60 p-8 sm:p-10 text-center animate-pop">
+            <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100 mb-4">
+              <Check className="h-8 w-8 text-emerald-600" strokeWidth={3} />
+            </span>
+            <h1 className="font-display text-3xl font-medium text-black">Placed.</h1>
+            <div className="mx-auto mt-4 max-w-sm space-y-2 text-left">
+              {summary.map((s) => (
+                <div key={s.subjectName} className="flex items-center justify-between rounded-2xl bg-white/70 border border-emerald-200 px-4 py-3">
+                  <span className="text-sm font-extrabold text-black">{s.subjectName}</span>
+                  <span className="text-sm font-extrabold text-emerald-700">{s.correct}/{s.total}</span>
+                </div>
+              ))}
+            </div>
+            <p className="mx-auto mt-4 max-w-sm text-sm font-semibold text-ink-soft">
+              Your home is set up around this — weakest first, reviews scheduled.
+            </p>
+            <Link
+              href="/home"
+              className="mt-6 inline-flex items-center justify-center gap-2 rounded-2xl bg-blue-600 px-8 py-4 text-[16px] font-extrabold text-white hover:bg-blue-700 min-h-[56px]"
+            >
+              Go to my home
+              <ArrowRight className="h-5 w-5" />
+            </Link>
+          </div>
+        ) : loadError || questions.length === 0 ? (
+          <div className="rounded-3xl border border-blue-100/70 bg-white p-8 text-center">
+            <p className="text-[15px] font-semibold text-ink-soft">
+              {loadError ? 'The check could not load — your home works without it.' : 'Preparing your check...'}
+            </p>
+            <button
+              onClick={handleSkip}
+              className="mt-5 inline-flex items-center justify-center rounded-2xl bg-blue-600 px-7 py-3.5 text-[15px] font-extrabold text-white min-h-[52px] cursor-pointer"
+            >
+              Continue to home
+            </button>
+          </div>
+        ) : (
+          (() => {
+            const q = questions[index]!
+            const total = questions.length
+            return (
+              <div className="rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-7 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)]">
+                <div className="mb-4 flex items-center justify-between">
+                  <span className="rounded-full bg-white border border-blue-100 px-3.5 py-1.5 text-xs font-extrabold text-ink-soft shadow-sm">
+                    Check {index + 1} of {total} · {q.subjectName}
+                  </span>
+                </div>
+                <p className="font-display text-lg sm:text-xl font-medium leading-snug text-black">{q.questionText}</p>
+                <div className="mt-4 space-y-2.5">
+                  {q.options.map((opt) => (
+                    <button
+                      key={opt.key}
+                      onClick={() => setSelected(opt.key)}
+                      className={`flex w-full items-center gap-3 rounded-2xl border-2 p-3.5 text-left min-h-[56px] transition-all cursor-pointer ${
+                        selected === opt.key
+                          ? 'border-blue-600 bg-blue-50/60 shadow-[0_0_0_3px_rgba(37,99,235,0.12)]'
+                          : 'border-gray-200 bg-white'
+                      }`}
+                    >
+                      <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-xl text-sm font-extrabold border-2 ${
+                        selected === opt.key ? 'bg-blue-600 border-blue-600 text-white' : 'border-gray-300 text-gray-500 bg-white'
+                      }`}>
+                        {opt.key}
+                      </span>
+                      <span className="text-[15px] font-bold text-black">{opt.text}</span>
+                    </button>
+                  ))}
+                </div>
+                <div className="mt-4 flex gap-2">
+                  {(['sure', 'unsure'] as const).map((c) => (
+                    <button
+                      key={c}
+                      onClick={() => setConfidence(c)}
+                      className={`flex-1 rounded-2xl border-2 px-4 py-2.5 text-sm font-extrabold min-h-[48px] cursor-pointer transition-all ${
+                        confidence === c ? 'border-blue-600 bg-blue-50 text-blue-700' : 'border-gray-200 bg-white text-gray-500'
+                      }`}
+                    >
+                      {c === 'sure' ? 'Sure' : 'Unsure'}
+                    </button>
+                  ))}
+                </div>
+                <button
+                  onClick={answer}
+                  disabled={!selected || !confidence || finishing}
+                  className={`mt-3 w-full rounded-2xl py-3.5 text-[15px] font-extrabold text-white min-h-[52px] transition-all ${
+                    selected && confidence && !finishing ? 'bg-blue-600 hover:bg-blue-700 cursor-pointer' : 'bg-gray-300'
+                  }`}
+                >
+                  {finishing ? 'Placing you...' : index < total - 1 ? 'Next' : 'See my placement'}
+                </button>
+                <p className="mt-3 text-center text-xs font-semibold text-gray-400">
+                  <X className="mr-1 inline h-3 w-3" />
+                  Guessing is fine — unsure answers place you best.
+                </p>
+              </div>
+            )
+          })()
+        )}
       </div>
     </div>
   )
