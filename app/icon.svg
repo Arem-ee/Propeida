@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <defs>
+    <!-- Main Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1d5adb" />
+      <stop offset="50%" stop-color="#1a52d1" />
+      <stop offset="100%" stop-color="#123eb3" />
+    </linearGradient>
+
+    <!-- Top-Right Soft Radial Glow -->
+    <radialGradient id="topRightGlow" cx="85%" cy="20%" r="55%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#1d5adb" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Bottom-Left Soft Radial Glow -->
+    <radialGradient id="bottomLeftGlow" cx="15%" cy="85%" r="50%">
+      <stop offset="0%" stop-color="#2563eb" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#123eb3" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1000" height="1000" fill="url(#bgGrad)" />
+  <rect width="1000" height="1000" fill="url(#topRightGlow)" />
+  <rect width="1000" height="1000" fill="url(#bottomLeftGlow)" />
+
+  <!-- White Main Container (Wide top, smooth rounded bottom bowl) -->
+  <path d="M 260 312 
+           H 740 
+           V 455 
+           C 740 565, 650 618, 540 618 
+           H 460 
+           C 350 618, 260 565, 260 455 
+           Z" 
+        fill="#ffffff" />
+
+  <!-- Center Letter 'P' -->
+  <text x="500" y="542" 
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" 
+        font-weight="600" 
+        font-size="235" 
+        fill="#2563eb" 
+        text-anchor="middle">P</text>
+
+  <!-- Bottom Horizontal Accent Line -->
+  <rect x="215" y="642" width="570" height="24" rx="12" fill="#dbeabe" opacity="0.75" fill-opacity="0.8" fill="#c7d2fe" />
+</svg>

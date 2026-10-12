@@ -62,6 +62,10 @@ export const metadata: Metadata = {
     follow: true,
   },
   manifest: '/manifest.json',
+  icons: {
+    icon: [{ url: '/icon', type: 'image/svg+xml' }],
+    apple: [{ url: '/icon', type: 'image/svg+xml' }],
+  },
   appleWebApp: { capable: true, title: 'Propeida' },
 }
 
