@@ -59,6 +59,7 @@ export async function getOnboardingCheck(): Promise<CheckQuestion[]> {
         .select('id', { count: 'exact', head: true })
         .eq('exam_id', l.exam_id)
         .eq('subject_id', subject.id)
+        .eq('status', 'published')
       if ((c ?? 0) > bestCount) {
         bestCount = c ?? 0
         best = l.exam_id

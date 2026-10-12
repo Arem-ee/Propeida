@@ -17,6 +17,9 @@ interface Question {
   explanation: string | null
   difficulty: string
   cognitive_level: string | null
+  status: string
+  verified_state: string
+  review_note: string | null
 }
 
 function optionsRecord(options: { key: string; text: string }[]): Record<string, string> {
@@ -67,6 +70,9 @@ export default function EditQuestionForm({
       misconceptions: collectMisconceptions(form),
       topics: collectTopics(form),
       cognitive_level: (form.get('cognitive_level') as string) || null,
+      status: form.get('status') as string,
+      verified_state: form.get('verified_state') as string,
+      review_note: (form.get('review_note') as string) || null,
     }
 
     try {
@@ -169,6 +175,34 @@ export default function EditQuestionForm({
         <div>
           <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Explanation (optional)</label>
           <textarea name="explanation" defaultValue={question.explanation ?? ''} rows={2} className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm resize-y" />
+        </div>
+
+        <div className="rounded-2xl border border-gray-200 bg-gray-50/60 p-4">
+          <p className="text-xs font-extrabold text-gray-500 uppercase tracking-wider mb-3">Editorial state</p>
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Status</label>
+              <select name="status" defaultValue={question.status ?? 'draft'} required className="w-full rounded-xl border border-gray-200 bg-white px-4 py-2.5 text-sm min-h-[44px]">
+                <option value="draft">Draft</option>
+                <option value="in_review">In review</option>
+                <option value="published">Published</option>
+                <option value="rejected">Rejected</option>
+              </select>
+            </div>
+            <div>
+              <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Verification</label>
+              <select name="verified_state" defaultValue={question.verified_state ?? 'unverified'} required className="w-full rounded-xl border border-gray-200 bg-white px-4 py-2.5 text-sm min-h-[44px]">
+                <option value="unverified">Unverified 🔴</option>
+                <option value="source_cited">Source-cited 🔶</option>
+                <option value="human_verified">Human-verified ✅</option>
+              </select>
+            </div>
+          </div>
+          <div className="mt-4">
+            <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Review note (optional)</label>
+            <textarea name="review_note" defaultValue={question.review_note ?? ''} rows={2} placeholder="What did you check? Source page, answer-key cross-check…" className="w-full rounded-xl border border-gray-200 bg-white px-4 py-2.5 text-sm resize-y" />
+          </div>
+          <p className="mt-2 text-xs font-semibold text-gray-400">Publishing requires a verification state — unverified items stay out of learner sessions.</p>
         </div>
 
         <MisconceptionFields correctAnswer={correctAnswer} subjectId={subjectId} initial={initialMisconceptions} />

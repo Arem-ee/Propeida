@@ -139,7 +139,7 @@ export async function POST(request: Request) {
 
 export async function PUT(request: Request) {
   try {
-    await requireAdmin()
+    const { user } = await requireAdmin()
     const supabase = createAdminClient()
     const body = await request.json()
     const { id, exam_id, subject_id, question_text, options, correct_answer, explanation, difficulty } = body
@@ -158,6 +158,46 @@ export async function PUT(request: Request) {
         return NextResponse.json({ error: 'cognitive_level must be remember, understand, apply, or analyze' }, { status: 400 })
       }
       update.cognitive_level = body.cognitive_level
+    }
+
+    // Editorial workflow: status and verification travel with the edit.
+    // The gate: nothing publishes while still unverified.
+    if (body.status !== undefined) {
+      if (!['draft', 'in_review', 'published', 'rejected'].includes(body.status)) {
+        return NextResponse.json({ error: 'Invalid status' }, { status: 400 })
+      }
+      update.status = body.status
+    }
+    if (body.verified_state !== undefined) {
+      if (!['unverified', 'source_cited', 'human_verified'].includes(body.verified_state)) {
+        return NextResponse.json({ error: 'Invalid verified_state' }, { status: 400 })
+      }
+      update.verified_state = body.verified_state
+      if (body.verified_state !== 'unverified') {
+        update.verified_by = user.id
+        update.verified_at = new Date().toISOString()
+      }
+    }
+    if (body.review_note !== undefined) {
+      update.review_note = body.review_note || null
+    }
+
+    if (update.status === 'published') {
+      const state = update.verified_state as string | undefined
+      if (state === 'unverified') {
+        return NextResponse.json({ error: 'Verify the question before publishing' }, { status: 400 })
+      }
+      if (state === undefined) {
+        // Status change without a verification change: check the stored state.
+        const { data: current } = await supabase
+          .from('questions')
+          .select('verified_state')
+          .eq('id', id)
+          .single()
+        if (!current || current.verified_state === 'unverified') {
+          return NextResponse.json({ error: 'Verify the question before publishing' }, { status: 400 })
+        }
+      }
     }
 
     let misconceptions: MisconceptionInput[] | null = null

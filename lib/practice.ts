@@ -69,6 +69,7 @@ export async function fetchFreePoolQuestions(
     .in('id', poolIds)
     .in('subject_id', subjectIds)
     .eq('exam_id', examId)
+    .eq('status', 'published')
     .limit(count)
 
   if (difficulty) {

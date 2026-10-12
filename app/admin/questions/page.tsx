@@ -10,8 +10,23 @@ interface Question {
   id: string
   question_text: string
   difficulty: string
+  status: string
+  verified_state: string
   exams: { name: string } | { name: string }[] | null
   subjects: { name: string } | { name: string }[] | null
+}
+
+const STATUS_STYLES: Record<string, string> = {
+  draft: 'bg-gray-100 text-gray-600',
+  in_review: 'bg-amber-100 text-amber-800',
+  published: 'bg-emerald-100 text-emerald-800',
+  rejected: 'bg-red-100 text-red-700',
+}
+
+const VERIFIED_DOT: Record<string, string> = {
+  unverified: 'bg-red-500',
+  source_cited: 'bg-amber-500',
+  human_verified: 'bg-emerald-500',
 }
 
 export default function AdminQuestionsPage() {
@@ -29,15 +44,22 @@ export default function AdminQuestionsPage() {
   const [tagRole, setTagRole] = useState('practice')
   const [tagging, setTagging] = useState(false)
   const [tagResult, setTagResult] = useState<string | null>(null)
+  const [statusFilter, setStatusFilter] = useState('needs_review')
 
   const loadQuestions = useCallback(async () => {
     const supabase = createClient()
     const { data } = await supabase
       .from('questions')
-      .select('id, question_text, difficulty, exams!questions_exam_id_fkey(name), subjects(name)')
+      .select('id, question_text, difficulty, status, verified_state, exams!questions_exam_id_fkey(name), subjects(name)')
       .order('created_at', { ascending: false })
-    setQuestions(data ?? [])
+    setQuestions((data ?? []) as Question[])
   }, [])
+
+  const visible = questions.filter((q) => {
+    if (statusFilter === 'all') return true
+    if (statusFilter === 'needs_review') return q.status === 'draft' || q.status === 'in_review'
+    return q.status === statusFilter
+  })
 
   useEffect(() => { loadQuestions() }, [loadQuestions])
 
@@ -117,11 +139,11 @@ export default function AdminQuestionsPage() {
     })
   }
 
-  const toggleSelectAll = () => {
-    if (selected.size === questions.length) {
+  const toggleSelectAllVisible = () => {
+    if (selected.size === visible.length) {
       setSelected(new Set())
     } else {
-      setSelected(new Set(questions.map((q) => q.id)))
+      setSelected(new Set(visible.map((q) => q.id)))
     }
   }
 
@@ -234,6 +256,36 @@ export default function AdminQuestionsPage() {
         </div>
       )}
 
+      <div className="mb-4 flex flex-wrap items-center gap-2">
+        {([
+          ['needs_review', 'Needs review'],
+          ['all', 'All'],
+          ['published', 'Published'],
+          ['rejected', 'Rejected'],
+        ] as const).map(([value, label]) => (
+          <button
+            key={value}
+            onClick={() => setStatusFilter(value)}
+            className={`rounded-full px-4 py-2 text-xs font-extrabold min-h-[40px] cursor-pointer ${
+              statusFilter === value
+                ? 'bg-gray-900 text-white'
+                : 'bg-white text-gray-600 border border-gray-200 hover:bg-gray-50'
+            }`}
+          >
+            {label}
+            {value === 'needs_review' && (
+              <> ({questions.filter((q) => q.status === 'draft' || q.status === 'in_review').length})</>
+            )}
+          </button>
+        ))}
+        <Link
+          href="/admin/questions/review"
+          className="ml-auto rounded-full px-4 py-2 text-xs font-extrabold min-h-[40px] inline-flex items-center bg-blue-600 text-white hover:bg-blue-700"
+        >
+          Open review queue
+        </Link>
+      </div>
+
       <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">
         <table className="min-w-full divide-y divide-gray-200">
           <thead className="bg-gray-50">
@@ -241,8 +293,8 @@ export default function AdminQuestionsPage() {
               <th className="w-10 px-4 py-3">
                 <input
                   type="checkbox"
-                  checked={questions.length > 0 && selected.size === questions.length}
-                  onChange={toggleSelectAll}
+                  checked={visible.length > 0 && selected.size === visible.length}
+                  onChange={toggleSelectAllVisible}
                   className="h-4 w-4 rounded border-gray-300 text-blue-600 cursor-pointer"
                 />
               </th>
@@ -250,11 +302,12 @@ export default function AdminQuestionsPage() {
               <th className="px-4 py-3 text-left text-xs font-bold text-gray-500 uppercase">Exam</th>
               <th className="px-4 py-3 text-left text-xs font-bold text-gray-500 uppercase">Subject</th>
               <th className="px-4 py-3 text-left text-xs font-bold text-gray-500 uppercase">Difficulty</th>
+              <th className="px-4 py-3 text-left text-xs font-bold text-gray-500 uppercase">Status</th>
               <th className="px-4 py-3 text-right text-xs font-bold text-gray-500 uppercase">Actions</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-100">
-            {questions.map((q) => {
+            {visible.map((q) => {
               const exam = Array.isArray(q.exams) ? q.exams[0] : q.exams
               const subject = Array.isArray(q.subjects) ? q.subjects[0] : q.subjects
               return (
@@ -273,6 +326,12 @@ export default function AdminQuestionsPage() {
                   <td className="px-4 py-3">
                     <span className="inline-flex items-center rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-semibold text-blue-700">
                       {q.difficulty as string}
+                    </span>
+                  </td>
+                  <td className="px-4 py-3">
+                    <span className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs font-bold ${STATUS_STYLES[q.status] ?? STATUS_STYLES.draft}`}>
+                      <span className={`h-1.5 w-1.5 rounded-full ${VERIFIED_DOT[q.verified_state] ?? VERIFIED_DOT.unverified}`} />
+                      {q.status.replace('_', ' ')}
                     </span>
                   </td>
                   <td className="px-4 py-3 text-right">
@@ -296,10 +355,10 @@ export default function AdminQuestionsPage() {
                 </tr>
               )
             })}
-            {questions.length === 0 && (
+            {visible.length === 0 && (
               <tr>
-                <td colSpan={6} className="px-4 py-12 text-center text-sm text-gray-500">
-                  No questions found. Create your first question.
+                <td colSpan={7} className="px-4 py-12 text-center text-sm text-gray-500">
+                  {questions.length === 0 ? 'No questions found. Create your first question.' : 'Nothing in this state.'}
                 </td>
               </tr>
             )}

@@ -268,6 +268,7 @@ async function resolveExamForSubject(
       .select('id', { count: 'exact', head: true })
       .eq('exam_id', examId)
       .eq('subject_id', subjectId)
+      .eq('status', 'published')
     if ((count ?? 0) > bestCount) {
       bestCount = count ?? 0
       best = examId

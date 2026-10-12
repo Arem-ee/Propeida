@@ -23,8 +23,9 @@ Everything deliberately postponed, with its unblock condition. Nothing here is f
 - [ ] **Streak redefinition**: planned actions, not logins (behavior change — decide + migrate carefully).
 - [ ] **Bulk misconception import**: per-distractor judgment can't batch safely; revisit only with a review queue.
 - [ ] **Bulk block operations** in the lesson editor (duplicate lesson, move blocks across lessons).
-- [ ] **Mock calculator affordance**: docs demand on-screen calculator parity with the hall; mock player lacks it.
-- [ ] **Question editorial workflow**: lessons have draft→review→published; questions don't yet.
+- [x] **Mock calculator affordance**: SafeCalculator already in the mock player (safe arithmetic, no eval, ÷0 handling); fixed silent second-decimal-point misparse.
+- [x] **Question editorial workflow**: `status` (draft/in_review/published/rejected) + `verified_state` (unverified 🔴/source_cited 🔶/human_verified ✅) on questions; `get_session_questions`, `ensure_free_question_pool`, and all direct selection queries serve published-only (probe-verified); publish gate refuses unverified items; admin list filter + `/admin/questions/review` queue + edit-form fields. Existing bank backfilled published/human_verified.
+- [ ] **Question editorial follow-ups**: bulk publish from the queue; `review_note` history (currently last-note-wins).
 - [ ] **Asset storage + signed delivery**: needed when first instructional media exists.
 - [ ] **Realtime presence heartbeat**: only if weekly aggregates ever feel insufficient.
 - [ ] **AI coach**: server gateway, closed actions, quotas, evals — after non-AI retention is proven AND self-hosting is affordable. Suggest endpoint drafts against the registry when that day comes.

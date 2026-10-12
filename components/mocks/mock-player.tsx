@@ -13,6 +13,8 @@ function SafeCalculator({ onClose }: { onClose: () => void }) {
   const [fresh, setFresh] = useState(true)
 
   const input = (d: string) => {
+    // A second decimal point would silently parse wrong — refuse it.
+    if (d === '.' && !fresh && display.includes('.')) return
     setDisplay((prev) => (fresh || prev === '0' ? d : prev.length >= 12 ? prev : prev + d))
     setFresh(false)
   }
