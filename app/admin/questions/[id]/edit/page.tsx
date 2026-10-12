@@ -14,12 +14,16 @@ export default async function EditQuestionPage({ params }: { params: Promise<{ i
 
   if (!question) redirect('/admin/questions')
 
-  const [examsRes, subjectsRes, misconceptionsRes] = await Promise.all([
+  const [examsRes, subjectsRes, misconceptionsRes, topicsRes] = await Promise.all([
     supabase.from('exams').select('id, name').order('name'),
     supabase.from('subjects').select('id, name').order('name'),
     supabase
       .from('question_misconceptions')
       .select('option_key, misconception_code, misconception_name, explanation, repair_note_id')
+      .eq('question_id', id),
+    supabase
+      .from('question_topics')
+      .select('topic_id, role')
       .eq('question_id', id),
   ])
 
@@ -39,6 +43,7 @@ export default async function EditQuestionPage({ params }: { params: Promise<{ i
       exams={examsRes.data ?? []}
       subjects={subjectsRes.data ?? []}
       initialMisconceptions={initialMisconceptions}
+      initialTopics={(topicsRes.data ?? []).map((t) => ({ topic_id: t.topic_id, role: t.role }))}
     />
   )
 }

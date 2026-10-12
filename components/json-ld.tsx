@@ -37,7 +37,7 @@ const FAQ_CONTENT: { question: string; answer: string }[] = [
   {
     question: 'Is Propeida free?',
     answer:
-      'Yes, to practice. Questions, explanations, streaks and your history cost nothing, and no card is required. An optional Pro upgrade removes limits for students who want more.',
+      'Yes, to practice. Questions, explanations, learning days and your history cost nothing, and no card is required. An optional Pro upgrade removes limits for students who want more.',
   },
   {
     question: 'Which universities are available?',
@@ -77,3 +77,4 @@ export function FaqJsonLd() {
     />
   )
 }
+

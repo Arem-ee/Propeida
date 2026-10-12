@@ -4,12 +4,239 @@ import { randomUUID } from 'node:crypto'
 import { createClient, getAuthUser } from '@/lib/supabase/server'
 import { applySubjectEvidence, getNextReviews } from '@/lib/mastery'
 import { getNoteById } from '@/lib/notes'
+import type { RevisionNote } from '@/lib/notes'
+import type { LessonEnhancement } from '@/lib/lessons'
 
 export interface LessonQuestion {
   id: string
   subjectId: string
   questionText: string
   options: { key: string; text: string }[]
+}
+
+/**
+ * Lesson content, DB-first. Published DB rows win; the static library is
+ * the fallback (and remains the seed source). Returns null when neither
+ * has the lesson.
+ */
+export interface LessonEnglish {
+  passages: {
+    title: string
+    purpose: string
+    paragraphs: string[]
+    questions: {
+      question: string
+      skill: string
+      options: { key: string; text: string }[]
+      answer: string
+      explanation: string
+      evidence: { paragraph: number; start: number; end: number }[]
+    }[]
+  }[]
+  pairs: { pair: [string, string]; correctIndex: 0 | 1; rule: string; counterexample: string }[]
+  rebuilds: { prompt: string; answer: string; rule: string }[]
+  reflections: { prompt: string; modelResponse: string }[]
+}
+
+function toEnglishBlocks(
+  byType: (t: string) => { block_type: string; content: Record<string, unknown> }[],
+): LessonEnglish {
+  const str = (v: unknown): string => (typeof v === 'string' ? v : '')
+  const english: LessonEnglish = { passages: [], pairs: [], rebuilds: [], reflections: [] }
+
+  for (const b of byType('passage')) {
+    const c = b.content
+    const paragraphs = (Array.isArray(c.paragraphs) ? c.paragraphs : []).map(String)
+    if (paragraphs.length === 0) continue
+    english.passages.push({
+      title: str(c.title),
+      purpose: str(c.purpose),
+      paragraphs,
+      questions: (Array.isArray(c.questions) ? c.questions : []).map((q) => {
+        const o = q as Record<string, unknown>
+        return {
+          question: str(o.question),
+          skill: str(o.skill) || 'comprehension',
+          options: (Array.isArray(o.options) ? o.options : []).map((op) => {
+            const oo = op as Record<string, unknown>
+            return { key: str(oo.key), text: str(oo.text) }
+          }),
+          answer: str(o.answer),
+          explanation: str(o.explanation),
+          evidence: (Array.isArray(o.evidence) ? o.evidence : []).map((e) => {
+            const ee = e as Record<string, unknown>
+            return {
+              paragraph: typeof ee.paragraph === 'number' ? ee.paragraph : 0,
+              start: typeof ee.start === 'number' ? ee.start : 0,
+              end: typeof ee.end === 'number' ? ee.end : 0,
+            }
+          }),
+        }
+      }),
+    })
+  }
+
+  for (const b of byType('minimal_pair')) {
+    const c = b.content
+    const pair = Array.isArray(c.pair) ? c.pair.map(String) : []
+    if (pair.length < 2) continue
+    english.pairs.push({
+      pair: [pair[0] ?? '', pair[1] ?? ''],
+      correctIndex: c.correctIndex === 1 ? 1 : 0,
+      rule: str(c.rule),
+      counterexample: str(c.counterexample),
+    })
+  }
+
+  for (const b of byType('sentence_rebuild')) {
+    const c = b.content
+    if (!str(c.prompt) || !str(c.answer)) continue
+    english.rebuilds.push({ prompt: str(c.prompt), answer: str(c.answer), rule: str(c.rule) })
+  }
+
+  for (const b of byType('reflection')) {
+    const c = b.content
+    if (!str(c.prompt)) continue
+    english.reflections.push({
+      prompt: str(c.prompt),
+      modelResponse: str(c.modelResponse ?? c.model_response),
+    })
+  }
+
+  return english
+}
+
+/**
+ * Lesson content, DB-first. Published DB rows win; the static library is
+ * the fallback (and remains the seed source). Returns null when neither
+ * has the lesson.
+ */
+export async function getLessonByPath(
+  subjectSlug: string,
+  lessonSlug: string,
+): Promise<{
+  note: RevisionNote
+  enhancement: LessonEnhancement | null
+  english: LessonEnglish
+  subjectId: string
+} | null> {
+  const supabase = await createClient()
+
+  const { data: subject } = await supabase
+    .from('subjects')
+    .select('id, slug')
+    .eq('slug', subjectSlug)
+    .single()
+
+  if (subject) {
+    const { data: lesson } = await supabase
+      .from('lessons')
+      .select('id, slug, title, objective')
+      .eq('subject_id', subject.id)
+      .eq('slug', lessonSlug)
+      .eq('status', 'published')
+      .single()
+
+    if (lesson) {
+      const { data: blocks } = await supabase
+        .from('lesson_blocks')
+        .select('block_type, content')
+        .eq('lesson_id', lesson.id)
+        .order('position')
+
+      const byType = (t: string) =>
+        ((blocks ?? []) as { block_type: string; content: Record<string, unknown> }[]).filter(
+          (b) => b.block_type === t,
+        )
+
+      const texts = byType('text')
+      const first = texts[0]
+      const sections = texts.slice(1).map((b) => ({
+        heading: String(b.content.heading ?? ''),
+        paragraphs: (b.content.paragraphs ?? []) as string[],
+        bullets: (b.content.bullets ?? []) as string[],
+      }))
+      const callout = byType('callout')[0]
+      const worked = byType('worked_example')[0]
+      const guided = byType('guided_question')[0]
+      const vocab = byType('vocabulary_card')[0]
+
+      const firstParagraphs = (first?.content.paragraphs ?? []) as string[]
+      const note: RevisionNote = {
+        id: `${subject.slug}-${lesson.slug}`,
+        subject: subject.slug as RevisionNote['subject'],
+        topic: lesson.title,
+        slug: lesson.slug,
+        summary: firstParagraphs[0] ?? String(lesson.objective ?? ''),
+        sections,
+        examTip: callout ? String(callout.content.body ?? '') : '',
+        practiceTopic: lesson.slug,
+      }
+
+      const enhancement: LessonEnhancement | null =
+        worked || guided || vocab
+          ? {
+              noteId: note.id,
+              ...(worked
+                ? {
+                    workedExample: {
+                      problem: String(worked.content.problem ?? ''),
+                      steps: ((worked.content.steps ?? []) as {
+                        operation: string
+                        reason: string
+                        result: string
+                        predictPrompt: string
+                        visual?: { kind: 'number-line' | 'fraction-bars' | 'balance' | 'plane'; props: Record<string, unknown> } | null
+                      }[]).map((s) => ({
+                        operation: String(s.operation ?? ''),
+                        reason: String(s.reason ?? ''),
+                        result: String(s.result ?? ''),
+                        predictPrompt: String(s.predictPrompt ?? ''),
+                        ...(s.visual && typeof s.visual === 'object' ? { visual: s.visual } : {}),
+                      })),
+                    },
+                  }
+                : {}),
+              ...(guided
+                ? {
+                    supported: {
+                      question: String(guided.content.question ?? ''),
+                      hints: ((guided.content.hints ?? []) as unknown[]).map(String),
+                    },
+                  }
+                : {}),
+              ...(vocab
+                ? {
+                    vocabulary: ((vocab.content.words ?? []) as {
+                      word: string
+                      definition: string
+                      contrast: string
+                      sentence: string
+                    }[]).map((w) => ({
+                      word: String(w.word ?? ''),
+                      definition: String(w.definition ?? ''),
+                      contrast: String(w.contrast ?? ''),
+                      sentence: String(w.sentence ?? ''),
+                    })),
+                  }
+                : {}),
+            }
+          : null
+
+      return { note, enhancement, english: toEnglishBlocks(byType), subjectId: subject.id }
+    }
+  }
+
+  const { getNoteByPath } = await import('@/lib/notes')
+  const { getEnhancement } = await import('@/lib/lessons')
+  const staticNote = getNoteByPath(subjectSlug, lessonSlug)
+  if (!staticNote) return null
+  return {
+    note: staticNote,
+    enhancement: getEnhancement(staticNote.id),
+    english: { passages: [], pairs: [], rebuilds: [], reflections: [] },
+    subjectId: subject?.id ?? '',
+  }
 }
 
 interface AttemptInput {
@@ -94,13 +321,15 @@ export async function getLessonQuestions(subjectId: string): Promise<{
 }
 
 /**
- * Checkout twin: one isomorphic follow-up (same subject, unseen here)
- * after an incorrect independent answer. Transfer proven, not memorised.
- * Returns null when the bank has nothing fresh to offer.
+ * Checkout twin: one isomorphic follow-up (same topic where mapped, else
+ * same subject, always unseen here) after an incorrect independent answer.
+ * Transfer proven, not memorised. Returns null when the bank has nothing
+ * fresh to offer.
  */
 export async function getTwinQuestion(
   subjectId: string,
   excludeIds: string[],
+  sourceQuestionId?: string,
 ): Promise<LessonQuestion | null> {
   const supabase = await createClient()
   const user = await getAuthUser(supabase)
@@ -113,7 +342,7 @@ export async function getTwinQuestion(
     p_exam_id: examId,
     p_subject_ids: [subjectId],
     p_difficulty: null,
-    p_limit: 5,
+    p_limit: 8,
     p_seed: randomUUID(),
   })
   if (error) return null
@@ -126,13 +355,35 @@ export async function getTwinQuestion(
     question_text?: string
     options: { key: string; text: string }[]
   }[])
-  const fresh = rows.find((q) => !excludeIds.includes(q.id))
-  if (!fresh) return null
+  const fresh = rows.filter((q) => !excludeIds.includes(q.id))
+  if (fresh.length === 0) return null
+
+  // Prefer the same topic as the missed question when mappings exist.
+  let pick = fresh[0]!
+  if (sourceQuestionId) {
+    const { data: sourceTopics } = await supabase
+      .from('question_topics')
+      .select('topic_id')
+      .eq('question_id', sourceQuestionId)
+    const topicIds = (sourceTopics ?? []).map((t) => t.topic_id)
+    if (topicIds.length > 0) {
+      const { data: sameTopic } = await supabase
+        .from('question_topics')
+        .select('question_id')
+        .in('topic_id', topicIds)
+        .in('question_id', fresh.map((q) => q.id))
+        .limit(1)
+      const match = (sameTopic ?? [])[0]
+      const found = match && fresh.find((q) => q.id === match.question_id)
+      if (found) pick = found
+    }
+  }
+
   return {
-    id: fresh.id,
-    subjectId: fresh.subjectId ?? fresh.subject_id ?? subjectId,
-    questionText: fresh.questionText ?? fresh.question_text ?? '',
-    options: fresh.options,
+    id: pick.id,
+    subjectId: pick.subjectId ?? pick.subject_id ?? subjectId,
+    questionText: pick.questionText ?? pick.question_text ?? '',
+    options: pick.options,
   }
 }
 
@@ -141,6 +392,7 @@ export async function recordLessonAttempt(input: AttemptInput): Promise<{
   correctAnswer: string
   explanation: string
   misconception: { name: string; explanation: string; repeatCount: number; repairHref: string | null } | null
+  prerequisite: { name: string; href: string } | null
 }> {
   const supabase = await createClient()
   const user = await getAuthUser(supabase)
@@ -166,7 +418,7 @@ export async function recordLessonAttempt(input: AttemptInput): Promise<{
       confidence: input.confidence,
     })
     if (insertError) throw new Error('Failed to record attempt')
-    return { isCorrect: false, correctAnswer: '', explanation: '', misconception: null }
+    return { isCorrect: false, correctAnswer: '', explanation: '', misconception: null, prerequisite: null }
   }
 
   const { data: question, error: qError } = await supabase
@@ -180,6 +432,7 @@ export async function recordLessonAttempt(input: AttemptInput): Promise<{
 
   let misconception: { name: string; explanation: string; repeatCount: number; repairHref: string | null } | null = null
   let misconceptionCode: string | null = null
+  let prerequisite: { name: string; href: string } | null = null
   if (!isCorrect && input.selectedAnswer) {
     const { data: mc } = await supabase
       .from('question_misconceptions')
@@ -203,6 +456,49 @@ export async function recordLessonAttempt(input: AttemptInput): Promise<{
         repeatCount: repeats ?? 0,
         repairHref: repairNote ? `/learn/${repairNote.subject}/${repairNote.slug}` : null,
       }
+      // Prerequisite routing: on a repeat, walk down the missed
+      // question's topic chain to a published foundation lesson.
+      if ((repeats ?? 0) > 0) {
+        const { data: qTopics } = await supabase
+          .from('question_topics')
+          .select('topic_id')
+          .eq('question_id', input.questionId)
+        const tids = (qTopics ?? []).map((t) => t.topic_id)
+        if (tids.length > 0) {
+          const { data: edges } = await supabase
+            .from('topic_prerequisites')
+            .select('prerequisite_topic_id')
+            .in('topic_id', tids)
+            .limit(1)
+          const preId = (edges ?? [])[0]?.prerequisite_topic_id
+          if (preId) {
+            const [{ data: preLesson }, { data: preTopic }] = await Promise.all([
+              supabase
+                .from('lessons')
+                .select('slug, subject_id')
+                .eq('topic_id', preId)
+                .eq('status', 'published')
+                .limit(1)
+                .maybeSingle(),
+              supabase.from('topics').select('name').eq('id', preId).single(),
+            ])
+            const lessonRow = preLesson as { slug: string; subject_id: string } | null
+            if (lessonRow) {
+              const { data: lessonSubject } = await supabase
+                .from('subjects')
+                .select('slug')
+                .eq('id', lessonRow.subject_id)
+                .single()
+              if (lessonSubject) {
+                prerequisite = {
+                  name: preTopic?.name ?? 'Foundation lesson',
+                  href: `/learn/${lessonSubject.slug}/${lessonRow.slug}`,
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 
@@ -223,6 +519,7 @@ export async function recordLessonAttempt(input: AttemptInput): Promise<{
     correctAnswer: question.correct_answer,
     explanation: question.explanation ?? '',
     misconception,
+    prerequisite,
   }
 }
 
@@ -251,6 +548,14 @@ export async function completeLesson(input: {
     await applySubjectEvidence(supabase, user.id, bySubject, null)
   } catch (err) {
     console.error('[mastery] completeLesson failed:', err)
+  }
+
+  // A finished lesson is a completed planned action: it extends the
+  // streak. Best-effort, like all post-completion writes.
+  try {
+    await supabase.rpc('update_streak', { p_user_id: user.id })
+  } catch (err) {
+    console.error('[streak] update_streak failed:', err)
   }
 
   const reviews = await getNextReviews(supabase, user.id, [input.subjectId])

@@ -2,9 +2,129 @@
 
 import { useState, useMemo, useEffect, useCallback, useRef } from 'react'
 import { useRouter } from 'next/navigation'
-import { Flag, Send, CheckCircle } from 'lucide-react'
+import { Flag, Send, CheckCircle, Calculator } from 'lucide-react'
 import { submitAnswer, completeMockSession } from '@/lib/actions/practice'
 import { celebrate } from '@/lib/celebrate'
+
+function SafeCalculator({ onClose }: { onClose: () => void }) {
+  const [display, setDisplay] = useState('0')
+  const [stored, setStored] = useState<number | null>(null)
+  const [op, setOp] = useState<string | null>(null)
+  const [fresh, setFresh] = useState(true)
+
+  const input = (d: string) => {
+    setDisplay((prev) => (fresh || prev === '0' ? d : prev.length >= 12 ? prev : prev + d))
+    setFresh(false)
+  }
+
+  const compute = (a: number, b: number, operation: string): number | null => {
+    switch (operation) {
+      case '+': return a + b
+      case '−': return a - b
+      case '×': return a * b
+      case '÷': return b === 0 ? null : a / b
+      default: return null
+    }
+  }
+
+  const applyOp = (next: string) => {
+    const current = parseFloat(display)
+    if (Number.isNaN(current)) return
+    if (stored !== null && op && !fresh) {
+      const result = compute(stored, current, op)
+      if (result === null || !Number.isFinite(result)) {
+        setDisplay('Error')
+        setStored(null)
+        setOp(null)
+        setFresh(true)
+        return
+      }
+      const rounded = Math.round(result * 1e10) / 1e10
+      setDisplay(String(rounded))
+      setStored(rounded)
+    } else {
+      setStored(current)
+    }
+    setOp(next)
+    setFresh(true)
+  }
+
+  const equals = () => {
+    if (stored === null || !op) return
+    const current = parseFloat(display)
+    if (Number.isNaN(current)) return
+    const result = compute(stored, current, op)
+    if (result === null || !Number.isFinite(result)) {
+      setDisplay('Error')
+    } else {
+      setDisplay(String(Math.round(result * 1e10) / 1e10))
+    }
+    setStored(null)
+    setOp(null)
+    setFresh(true)
+  }
+
+  const clear = () => {
+    setDisplay('0')
+    setStored(null)
+    setOp(null)
+    setFresh(true)
+  }
+
+  const backspace = () => {
+    setDisplay((prev) => (prev.length <= 1 || fresh ? '0' : prev.slice(0, -1)))
+  }
+
+  const keys: { label: string; action: () => void; wide?: boolean; tone?: 'op' | 'danger' }[] = [
+    { label: 'C', action: clear, tone: 'danger' },
+    { label: '⌫', action: backspace, tone: 'danger' },
+    { label: '÷', action: () => applyOp('÷'), tone: 'op' },
+    { label: '7', action: () => input('7') },
+    { label: '8', action: () => input('8') },
+    { label: '9', action: () => input('9') },
+    { label: '×', action: () => applyOp('×'), tone: 'op' },
+    { label: '4', action: () => input('4') },
+    { label: '5', action: () => input('5') },
+    { label: '6', action: () => input('6') },
+    { label: '−', action: () => applyOp('−'), tone: 'op' },
+    { label: '1', action: () => input('1') },
+    { label: '2', action: () => input('2') },
+    { label: '3', action: () => input('3') },
+    { label: '+', action: () => applyOp('+'), tone: 'op' },
+    { label: '0', action: () => input('0'), wide: true },
+    { label: '.', action: () => input('.') },
+    { label: '=', action: equals, tone: 'op' },
+  ]
+
+  return (
+    <div className="rounded-3xl border-2 border-gray-200 bg-white p-4 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.4)] w-[260px]" role="dialog" aria-label="Calculator">
+      <div className="flex items-center justify-between mb-2">
+        <span className="text-[11px] font-extrabold uppercase tracking-wider text-gray-400">Calculator</span>
+        <button onClick={onClose} className="text-xs font-bold text-gray-400 min-h-[36px] px-2 cursor-pointer" aria-label="Close calculator">Close</button>
+      </div>
+      <div className="rounded-2xl bg-ink text-white px-4 py-3 font-display text-2xl font-medium text-right tabular-nums truncate" aria-live="polite">
+        {display}
+      </div>
+      <div className="mt-2.5 grid grid-cols-4 gap-1.5">
+        {keys.map((k) => (
+          <button
+            key={k.label}
+            onClick={k.action}
+            className={`rounded-xl py-2.5 text-base font-extrabold min-h-[48px] cursor-pointer transition-colors ${
+              k.tone === 'op'
+                ? 'bg-blue-600 text-white'
+                : k.tone === 'danger'
+                  ? 'bg-gray-100 text-red-600'
+                  : 'bg-gray-100 text-black hover:bg-gray-200'
+            } ${k.wide ? 'col-span-2' : ''}`}
+          >
+            {k.label}
+          </button>
+        ))}
+      </div>
+    </div>
+  )
+}
 
 export interface MockQuestion {
   id: string
@@ -68,6 +188,7 @@ export default function MockPlayer({
   const [finalizing, setFinalizing] = useState(false)
   const [done, setDone] = useState(false)
   const [timedOut, setTimedOut] = useState(false)
+  const [calculatorOpen, setCalculatorOpen] = useState(false)
 
   const total = questions.length
   const current = questions[index]
@@ -185,6 +306,17 @@ export default function MockPlayer({
               {s.name}
             </button>
           ))}
+          <button
+            onClick={() => setCalculatorOpen((v) => !v)}
+            aria-pressed={calculatorOpen}
+            aria-label="Toggle calculator"
+            className={`shrink-0 inline-flex items-center gap-1.5 rounded-full px-3.5 py-2 text-xs font-extrabold min-h-[40px] cursor-pointer transition-all ${
+              calculatorOpen ? 'bg-blue-600 text-white' : 'bg-blue-50 text-blue-700'
+            }`}
+          >
+            <Calculator className="h-3.5 w-3.5" />
+            Calc
+          </button>
           <span className={`ml-auto shrink-0 rounded-full px-3.5 py-2 font-display text-base font-semibold tabular-nums min-h-[40px] inline-flex items-center ${
             urgent ? 'bg-red-100 text-red-700 animate-pulse' : 'bg-ink text-white'
           }`}>
@@ -192,6 +324,12 @@ export default function MockPlayer({
           </span>
         </div>
       </div>
+
+      {calculatorOpen && (
+        <div className="fixed bottom-[150px] lg:bottom-24 right-4 z-40 animate-pop">
+          <SafeCalculator onClose={() => setCalculatorOpen(false)} />
+        </div>
+      )}
 
       {/* Question */}
       <div className="mt-5 rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-7 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)]">

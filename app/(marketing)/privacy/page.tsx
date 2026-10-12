@@ -22,7 +22,7 @@ export default function PrivacyPage() {
               When you create an account, Propeida stores your email address and a randomly generated username. No real name, phone number, or address is required to use the platform.
             </p>
             <p className="mt-3">
-              While using the platform, Propeida records your answers to practice questions and mock exams, your session timings, your score and accuracy data, and your daily question responses. This data is used solely to calculate your performance statistics, update your streak, and schedule your reviews.
+              While using the platform, Propeida records your answers to practice questions and mock exams, your session timings, and your score and accuracy data. This data is used solely to calculate your performance statistics and schedule your reviews.
             </p>
           </section>
 

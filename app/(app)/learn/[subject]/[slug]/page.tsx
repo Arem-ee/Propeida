@@ -1,16 +1,14 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { ArrowLeft } from 'lucide-react'
-import { createClient } from '@/lib/supabase/server'
-import { getNoteByPath, SUBJECTS } from '@/lib/notes'
-import { getEnhancement } from '@/lib/lessons'
-import { getLessonQuestions } from '@/lib/actions/lessons'
+import { SUBJECTS } from '@/lib/notes'
+import { getLessonByPath, getLessonQuestions } from '@/lib/actions/lessons'
 import LessonPlayer from '@/components/lessons/lesson-player'
 
 export async function generateMetadata({ params }: { params: Promise<{ subject: string; slug: string }> }) {
   const { subject, slug } = await params
-  const note = getNoteByPath(subject, slug)
-  return { title: note ? note.topic : 'Lesson' }
+  const lesson = await getLessonByPath(subject, slug)
+  return { title: lesson ? lesson.note.topic : 'Lesson' }
 }
 
 export default async function LessonPage({
@@ -19,22 +17,14 @@ export default async function LessonPage({
   params: Promise<{ subject: string; slug: string }>
 }) {
   const { subject, slug } = await params
-  const note = getNoteByPath(subject, slug)
-  if (!note) notFound()
+  const lesson = await getLessonByPath(subject, slug)
+  if (!lesson) notFound()
 
+  const { note, enhancement, english, subjectId } = lesson
   const subjectLabel = SUBJECTS.find((s) => s.slug === note.subject)?.label ?? note.subject
-  const enhancement = getEnhancement(note.id)
-
-  const supabase = await createClient()
-  const { data: subjectRow } = await supabase
-    .from('subjects')
-    .select('id')
-    .eq('slug', note.subject)
-    .single()
 
   let diagnostic = null
   let independent: Awaited<ReturnType<typeof getLessonQuestions>>['independent'] = []
-  let subjectId: string | null = subjectRow?.id ?? null
   if (subjectId) {
     try {
       const set = await getLessonQuestions(subjectId)
@@ -44,8 +34,6 @@ export default async function LessonPage({
       diagnostic = null
       independent = []
     }
-  } else {
-    subjectId = null
   }
 
   return (
@@ -62,6 +50,7 @@ export default async function LessonPage({
           note={note}
           subjectLabel={subjectLabel}
           enhancement={enhancement}
+          english={english}
           diagnostic={diagnostic}
           independent={independent}
           subjectId={subjectId}

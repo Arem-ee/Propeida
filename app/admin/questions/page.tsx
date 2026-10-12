@@ -2,7 +2,8 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
-import { Plus, Upload, Trash2, X, AlertTriangle } from 'lucide-react'
+import { useRouter } from 'next/navigation'
+import { Plus, Upload, Trash2, X, AlertTriangle, Tags } from 'lucide-react'
 import { createClient } from '@/lib/supabase/client'
 
 interface Question {
@@ -14,11 +15,20 @@ interface Question {
 }
 
 export default function AdminQuestionsPage() {
+  const router = useRouter()
   const [questions, setQuestions] = useState<Question[]>([])
   const [selected, setSelected] = useState<Set<string>>(new Set())
   const [deleting, setDeleting] = useState(false)
   const [showConfirm, setShowConfirm] = useState(false)
-  const [coverage, setCoverage] = useState<{ total: number; mapped: number; pct: number } | null>(null)
+  const [coverage, setCoverage] = useState<{ total: number; mapped: number; pct: number; topics: number; topicMapped: number; topicPct: number } | null>(null)
+  const [cloningId, setCloningId] = useState<string | null>(null)
+  const [tagSubjects, setTagSubjects] = useState<{ id: string; name: string }[]>([])
+  const [tagSubjectId, setTagSubjectId] = useState('')
+  const [tagTopics, setTagTopics] = useState<{ id: string; name: string }[]>([])
+  const [tagTopicId, setTagTopicId] = useState('')
+  const [tagRole, setTagRole] = useState('practice')
+  const [tagging, setTagging] = useState(false)
+  const [tagResult, setTagResult] = useState<string | null>(null)
 
   const loadQuestions = useCallback(async () => {
     const supabase = createClient()
@@ -38,7 +48,66 @@ export default function AdminQuestionsPage() {
         if (data && typeof data.total === 'number') setCoverage(data)
       })
       .catch(() => {})
+    fetch('/api/admin/refs')
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => {
+        if (data?.subjects) setTagSubjects(data.subjects)
+      })
+      .catch(() => {})
   }, [])
+
+  useEffect(() => {
+    if (!tagSubjectId) {
+      setTagTopics([])
+      setTagTopicId('')
+      return
+    }
+    fetch(`/api/admin/topics?subject_id=${encodeURIComponent(tagSubjectId)}`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => setTagTopics(data?.topics ?? []))
+      .catch(() => setTagTopics([]))
+  }, [tagSubjectId])
+
+  const handleClone = async (id: string) => {
+    setCloningId(id)
+    try {
+      const res = await fetch('/api/admin/questions/clone', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id }),
+      })
+      const data = await res.json()
+      if (!res.ok) throw new Error(data.error ?? 'Clone failed')
+      router.push(`/admin/questions/${data.id}/edit`)
+    } catch (err) {
+      alert(err instanceof Error ? err.message : 'Clone failed')
+      setCloningId(null)
+    }
+  }
+
+  const handleBulkTag = async () => {
+    if (!tagTopicId || selected.size === 0 || tagging) return
+    setTagging(true)
+    setTagResult(null)
+    try {
+      const res = await fetch('/api/admin/questions/bulk-tag', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ids: Array.from(selected), topic_id: tagTopicId, role: tagRole }),
+      })
+      const data = await res.json()
+      if (!res.ok) throw new Error(data.error ?? 'Bulk tagging failed')
+      setTagResult(
+        `Applied to ${data.applied} question(s)` +
+        (data.skipped > 0 ? `, skipped ${data.skipped} (different subject)` : ''),
+      )
+      setSelected(new Set())
+    } catch (err) {
+      setTagResult(err instanceof Error ? err.message : 'Bulk tagging failed')
+    } finally {
+      setTagging(false)
+    }
+  }
 
   const toggleSelect = (id: string) => {
     setSelected((prev) => {
@@ -85,7 +154,7 @@ export default function AdminQuestionsPage() {
           <h1 className="text-2xl font-extrabold text-gray-900">Questions</h1>
           {coverage && (
             <p className="mt-1 text-xs font-semibold text-gray-500">
-              Misconception maps: {coverage.mapped}/{coverage.total} questions ({coverage.pct}%)
+              Misconception maps: {coverage.mapped}/{coverage.total} questions ({coverage.pct}%) · Topic maps: {coverage.topicMapped}/{coverage.total} ({coverage.topicPct}%) · {coverage.topics} topics
             </p>
           )}
         </div>
@@ -115,6 +184,55 @@ export default function AdminQuestionsPage() {
           </Link>
         </div>
       </div>
+
+      {selected.size > 0 && (
+        <div className="mb-4 rounded-xl border border-violet-200 bg-violet-50/60 p-4">
+          <div className="flex flex-wrap items-center gap-2.5">
+            <span className="inline-flex items-center gap-1.5 text-sm font-extrabold text-violet-800">
+              <Tags className="h-4 w-4" />
+              Tag {selected.size} selected
+            </span>
+            <select
+              value={tagSubjectId}
+              onChange={(e) => { setTagSubjectId(e.target.value); setTagTopicId('') }}
+              className="rounded-xl border border-gray-200 bg-white px-3 py-2 text-xs font-bold text-gray-700 min-h-[44px]"
+            >
+              <option value="">Subject...</option>
+              {tagSubjects.map((s) => (
+                <option key={s.id} value={s.id}>{s.name}</option>
+              ))}
+            </select>
+            <select
+              value={tagTopicId}
+              onChange={(e) => setTagTopicId(e.target.value)}
+              disabled={!tagSubjectId || tagTopics.length === 0}
+              className="rounded-xl border border-gray-200 bg-white px-3 py-2 text-xs font-bold text-gray-700 min-h-[44px] disabled:opacity-50"
+            >
+              <option value="">{tagTopics.length === 0 ? 'No topics' : 'Topic...'}</option>
+              {tagTopics.map((t) => (
+                <option key={t.id} value={t.id}>{t.name}</option>
+              ))}
+            </select>
+            <select
+              value={tagRole}
+              onChange={(e) => setTagRole(e.target.value)}
+              className="rounded-xl border border-gray-200 bg-white px-3 py-2 text-xs font-bold text-gray-700 min-h-[44px]"
+            >
+              {['diagnostic', 'practice', 'review', 'mock'].map((r) => (
+                <option key={r} value={r}>{r}</option>
+              ))}
+            </select>
+            <button
+              onClick={() => void handleBulkTag()}
+              disabled={!tagTopicId || tagging}
+              className="rounded-xl bg-violet-600 px-4 py-2 text-xs font-bold text-white hover:bg-violet-700 min-h-[44px] cursor-pointer disabled:opacity-50"
+            >
+              {tagging ? 'Applying...' : 'Apply'}
+            </button>
+          </div>
+          {tagResult && <p className="mt-2 text-xs font-bold text-violet-800">{tagResult}</p>}
+        </div>
+      )}
 
       <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">
         <table className="min-w-full divide-y divide-gray-200">
@@ -159,6 +277,14 @@ export default function AdminQuestionsPage() {
                   </td>
                   <td className="px-4 py-3 text-right">
                     <div className="flex items-center justify-end gap-2">
+                      <button
+                        onClick={() => void handleClone(q.id)}
+                        disabled={cloningId === q.id}
+                        title="Duplicate this question with its maps"
+                        className="rounded-lg px-3 py-1.5 text-xs font-semibold text-gray-500 hover:bg-gray-100 disabled:opacity-50 min-h-[36px] cursor-pointer"
+                      >
+                        {cloningId === q.id ? 'Cloning...' : 'Clone'}
+                      </button>
                       <Link
                         href={`/admin/questions/${q.id}/edit`}
                         className="rounded-lg px-3 py-1.5 text-xs font-semibold text-blue-600 hover:bg-blue-50"

@@ -1,7 +1,6 @@
 'use server'
 
 import { createClient, getAuthUser } from '@/lib/supabase/server'
-import { revalidatePath } from 'next/cache'
 import { getDueReviews, getMasterySummary, getSecuredSubjects, getPresenceStats, getProgressMap, getWeakestSubject } from '@/lib/mastery'
 import { getUserActiveSessions } from '@/lib/practice'
 import { getNearestCohort } from '@/lib/cohort'
@@ -67,7 +66,44 @@ export async function getDashboardData() {
   const isTrial = jambEntitlement?.source === 'referral_trial'
   const trialExpiresAt = jambEntitlement?.expires_at ?? null
 
-  const streakData = payload.streak ?? { current_streak: 0, longest_streak: 0 }
+  // Redefined streak (docs §3): consecutive days with a completed planned
+  // action — finished session or lesson attempts — not logins. Computed
+  // from evidence, so it can never reward mere opens.
+  let learningDays = 0
+  try {
+    const [sessionsRes, attemptsRes] = await Promise.all([
+      supabase
+        .from('exam_sessions')
+        .select('completed_at')
+        .eq('user_id', user.id)
+        .eq('status', 'completed')
+        .order('completed_at', { ascending: false })
+        .limit(400),
+      supabase
+        .from('learning_attempts')
+        .select('created_at')
+        .eq('user_id', user.id)
+        .order('created_at', { ascending: false })
+        .limit(1000),
+    ])
+    const days = new Set<string>()
+    const dayKey = (iso: string) => new Date(iso).toISOString().slice(0, 10)
+    for (const r of (sessionsRes.data ?? []) as { completed_at: string | null }[]) {
+      if (r.completed_at) days.add(dayKey(r.completed_at))
+    }
+    for (const r of (attemptsRes.data ?? []) as { created_at: string }[]) {
+      days.add(dayKey(r.created_at))
+    }
+    const today = new Date().toISOString().slice(0, 10)
+    const cursor = new Date(`${today}T00:00:00.000Z`)
+    if (!days.has(today)) cursor.setUTCDate(cursor.getUTCDate() - 1)
+    while (days.has(cursor.toISOString().slice(0, 10))) {
+      learningDays += 1
+      cursor.setUTCDate(cursor.getUTCDate() - 1)
+    }
+  } catch {
+    learningDays = 0
+  }
 
   const recentSessions = payload.recent_sessions.map((row) => ({
     id: row.id,
@@ -155,11 +191,7 @@ export async function getDashboardData() {
       schoolId: payload.profile.school_id,
       avatarIndex: payload.profile.avatar_index,
     },
-    streak: streakData,
-    dailyQuestion: {
-      id: payload.daily_question?.id ?? null,
-      attempt: payload.daily_question?.attempt ?? null,
-    },
+    streak: { current_streak: learningDays, longest_streak: 0 },
     recentSessions,
     review: {
       due: dueReviews,
@@ -174,21 +206,4 @@ export async function getDashboardData() {
     progressMap,
     weakest,
   }
-}
-
-export async function submitDailyQuestion(dailyQuestionId: string, selectedAnswer: string) {
-  const supabase = await createClient()
-  const user = await getAuthUser(supabase)
-  if (!user) throw new Error('Not authenticated')
-
-  const { data: submission, error: submissionError } = await supabase.rpc('submit_daily_question_answer', {
-    p_daily_question_id: dailyQuestionId,
-    p_selected_answer: selectedAnswer,
-  })
-  const submissionRow = Array.isArray(submission) ? submission[0] : null
-  if (submissionError || !submissionRow) throw new Error('Failed to submit answer')
-
-  revalidatePath('/dashboard')
-
-  return { isCorrect: submissionRow.is_correct, correctAnswer: submissionRow.correct_answer }
 }

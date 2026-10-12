@@ -39,6 +39,7 @@ export default async function HomePage() {
   const cohort = data.cohort
   const progressMap = data.progressMap ?? []
   const weakest = data.weakest
+  const learningDays = data.streak?.current_streak ?? 0
 
   const practiseHref =
     weakest && ['english', 'mathematics', 'current-affairs'].includes(weakest.subjectSlug)
@@ -76,6 +77,11 @@ export default async function HomePage() {
             {presence.weeklyActiveStudents.toLocaleString()} students studied this week
           </p>
         )}
+        {learningDays > 0 && (
+          <p className="mt-2.5 ml-2 inline-flex items-center gap-1.5 rounded-full bg-amber-50 border border-amber-200 px-3 py-1.5 text-xs font-extrabold text-amber-800">
+            {learningDays} learning {learningDays === 1 ? 'day' : 'days'} — pauses change nothing
+          </p>
+        )}
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 auto-rows-min">
@@ -99,6 +105,18 @@ export default async function HomePage() {
               Next: prove it stuck
             </p>
             <h2 className="mt-1.5 font-display text-3xl sm:text-4xl font-medium leading-tight">Today&apos;s review</h2>
+            {review.due.length > 1 && (
+              <Link
+                href={`/practice?subjects=${review.due.map((d) => encodeURIComponent(d.subjectSlug)).join(',')}`}
+                className="mt-3 flex items-center justify-between gap-3 rounded-2xl bg-white px-4 py-3.5 transition-all min-h-[52px] hover:shadow-lg"
+              >
+                <span className="text-[15px] font-extrabold text-violet-700">Mixed review — all {review.due.length} subjects, interleaved</span>
+                <span className="inline-flex items-center gap-1 rounded-full bg-violet-600 px-3 py-1.5 text-xs font-extrabold text-white shrink-0">
+                  Start
+                  <ChevronRight className="h-3.5 w-3.5" />
+                </span>
+              </Link>
+            )}
             <div className="mt-4 space-y-2">
               {review.due.map((item) => (
                 <Link

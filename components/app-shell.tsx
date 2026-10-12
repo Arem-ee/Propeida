@@ -3,7 +3,7 @@
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import {
-  Home, BookOpen, BarChart3, Timer, TrendingUp, User, LogOut, Settings, X, Download,
+  Home, BookOpen, BarChart3, Timer, TrendingUp, User, LogOut, Settings, X, Download, Crosshair,
 } from 'lucide-react'
 import { useState } from 'react'
 import Logo from '@/components/logo'
@@ -18,6 +18,7 @@ const TABS = [
 
 const ACCOUNT_LINKS = [
   { href: '/account', label: 'Profile', icon: User },
+  { href: '/target', label: 'My target', icon: Crosshair },
   { href: '/account/downloads', label: 'Downloads', icon: Download },
   { href: '/account/settings', label: 'Settings', icon: Settings },
 ]

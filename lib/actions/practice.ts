@@ -16,7 +16,7 @@ import {
   isSessionExpired,
 } from '@/lib/practice'
 import { hasExamAccess } from '@/lib/entitlements'
-import { getNotesBySubject, isValidSubject } from '@/lib/notes'
+import { getNotesBySubject, isValidSubject, getNoteById } from '@/lib/notes'
 import { recordSessionEvidence, getNextReviews } from '@/lib/mastery'
 
 interface CreateSessionParams {
@@ -224,6 +224,34 @@ export async function createSession(params: CreateSessionParams) {
     question_id: q.id,
   }))
 
+  // Interleaving (practice mode, multi-subject): round-robin the main set
+  // by subject so retrieval mixes topics instead of blocking them
+  // (Rohrer & Taylor). Single-subject sets pass through untouched.
+  if (params.mode === 'practice') {
+    const bySubject = new Map<string, SessionQuestion[]>()
+    for (const q of questions) {
+      const group = bySubject.get(q.subjectId) ?? []
+      group.push(q)
+      bySubject.set(q.subjectId, group)
+    }
+    if (bySubject.size > 1) {
+      const groups = [...bySubject.values()]
+      const mixed: SessionQuestion[] = []
+      for (let i = 0; ; i++) {
+        let took = false
+        for (const g of groups) {
+          const item = g[i]
+          if (item) {
+            mixed.push(item)
+            took = true
+          }
+        }
+        if (!took) break
+      }
+      questions = mixed
+    }
+  }
+
   // Warm-up retrieval (practice mode only — mocks stay pure exam simulation):
   // re-attempt the user's most recent mistakes first. Silent when no history.
   // Warm-up ids travel in the session URL: session_answers rows carry random
@@ -327,25 +355,29 @@ export async function submitAnswer(
     const revealRow = Array.isArray(revealRes.data) ? revealRes.data[0] : null
     if (revealRes.error || !revealRow) throw new Error('Failed to load answer feedback')
 
-    void Promise.resolve(supabase.rpc('update_streak', { p_user_id: user.id })).catch(() => {})
+    // No streak update here by design (docs §3): streaks count completed
+    // planned actions, and those are recorded at session completion below —
+    // never per answer, never per login.
 
     // Misconception repair: when the picked wrong option is mapped, append
     // its named repair to the feedback. Silent when unmapped — the generic
     // explanation always stands alone.
-    let misconception: { code: string; name: string; explanation: string; sharedPct: number | null } | null = null
+    let misconception: { code: string; name: string; explanation: string; sharedPct: number | null; repairHref: string | null } | null = null
     if (recordRes.data === false) {
       const { data: mc } = await supabase
         .from('question_misconceptions')
-        .select('misconception_code, misconception_name, explanation')
+        .select('misconception_code, misconception_name, explanation, repair_note_id')
         .eq('question_id', questionId)
         .eq('option_key', selectedAnswer)
         .maybeSingle()
       if (mc) {
+        const repairNote = mc.repair_note_id ? getNoteById(mc.repair_note_id) : null
         misconception = {
           code: mc.misconception_code,
           name: mc.misconception_name,
           explanation: mc.explanation,
           sharedPct: await sharedStrugglePct(questionId, selectedAnswer),
+          repairHref: repairNote ? `/learn/${repairNote.subject}/${repairNote.slug}` : null,
         }
       }
     }
@@ -419,6 +451,14 @@ export async function completePracticeSession(sessionId: string) {
     await recordSessionEvidence(supabase, user.id, sessionId)
   } catch (err) {
     console.error('[mastery] recordSessionEvidence failed:', err)
+  }
+
+  // Streak counts the completed session (a planned action done), never
+  // the answers inside it. Best-effort like everything post-completion.
+  try {
+    await supabase.rpc('update_streak', { p_user_id: user.id })
+  } catch (err) {
+    console.error('[streak] update_streak failed:', err)
   }
 
   revalidatePath('/practice')
@@ -555,14 +595,19 @@ export async function getSessionResults(sessionId: string) {
 
   // Misconception repairs for review: keyed by question, matched to the
   // picked wrong option per item below. Empty when nothing is mapped.
-  const repairs = new Map<string, { name: string; explanation: string }>()
+  const repairs = new Map<string, { name: string; explanation: string; repairHref: string | null }>()
   if (questionIds.length > 0) {
     const { data: mcRows } = await supabase
       .from('question_misconceptions')
-      .select('question_id, option_key, misconception_name, explanation')
+      .select('question_id, option_key, misconception_name, explanation, repair_note_id')
       .in('question_id', questionIds)
-    for (const m of (mcRows ?? []) as { question_id: string; option_key: string; misconception_name: string; explanation: string }[]) {
-      repairs.set(`${m.question_id}:${m.option_key}`, { name: m.misconception_name, explanation: m.explanation })
+    for (const m of (mcRows ?? []) as { question_id: string; option_key: string; misconception_name: string; explanation: string; repair_note_id: string | null }[]) {
+      const repairNote = m.repair_note_id ? getNoteById(m.repair_note_id) : null
+      repairs.set(`${m.question_id}:${m.option_key}`, {
+        name: m.misconception_name,
+        explanation: m.explanation,
+        repairHref: repairNote ? `/learn/${repairNote.subject}/${repairNote.slug}` : null,
+      })
     }
   }
 

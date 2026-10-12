@@ -1,5 +1,7 @@
 'use client'
 
+import { useState, useEffect } from 'react'
+
 export interface MisconceptionDraft {
   option_key: string
   misconception_code: string
@@ -23,11 +25,25 @@ export interface MisconceptionInitial {
  */
 export default function MisconceptionFields({
   correctAnswer,
+  subjectId,
   initial = {},
 }: {
   correctAnswer: string
+  subjectId: string
   initial?: Record<string, MisconceptionInitial>
 }) {
+  const [codes, setCodes] = useState<{ code: string; name: string }[]>([])
+
+  useEffect(() => {
+    if (!subjectId) {
+      setCodes([])
+      return
+    }
+    fetch(`/api/admin/codes?subject_id=${encodeURIComponent(subjectId)}`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => setCodes(data?.codes ?? []))
+      .catch(() => setCodes([]))
+  }, [subjectId])
   return (
     <div className="rounded-2xl border border-gray-200 p-5 space-y-5">
       <div>
@@ -50,13 +66,35 @@ export default function MisconceptionFields({
             <div className="grid grid-cols-2 gap-3">
               <div>
                 <label className="block text-xs font-bold text-gray-500 mb-1">Code</label>
-                <input
-                  name={`mc_code_${key}`}
-                  defaultValue={prev?.misconception_code ?? ''}
-                  disabled={isCorrect}
-                  placeholder="e.g. sign-error"
-                  className="w-full rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm min-h-[44px]"
-                />
+                {codes.length > 0 ? (
+                  <select
+                    name={`mc_code_${key}`}
+                    defaultValue={prev?.misconception_code ?? ''}
+                    disabled={isCorrect}
+                    className="w-full rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm min-h-[44px] font-mono"
+                  >
+                    <option value="">Select code</option>
+                    {codes.map((c) => (
+                      <option key={c.code} value={c.code}>
+                        {c.code} — {c.name}
+                      </option>
+                    ))}
+                  </select>
+                ) : (
+                  <>
+                    <input
+                      name={`mc_code_${key}`}
+                      defaultValue={prev?.misconception_code ?? ''}
+                      disabled={isCorrect}
+                      placeholder="e.g. sign-error"
+                      className="w-full rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm min-h-[44px] font-mono"
+                    />
+                    <p className="mt-1 text-[11px] text-amber-600">
+                      No codes for this subject yet —{' '}
+                      <a href="/admin/codes" className="underline font-bold">add them first</a>.
+                    </p>
+                  </>
+                )}
               </div>
               <div>
                 <label className="block text-xs font-bold text-gray-500 mb-1">Name</label>

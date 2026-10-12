@@ -54,17 +54,17 @@ const featureTiles = [
   },
   {
     icon: Zap,
-    title: 'Streak Tracking',
+    title: 'Learning Days',
     description:
-      'A daily streak counter rewards consistent practice. Complete a session or answer the daily question every day to keep your streak alive. The dashboard shows your current streak and your longest streak.',
+      'Propeida counts days with a finished session or lesson — never mere logins. Pauses do not erase anything; only new learning extends the count.',
     color: 'bg-cyan-100 text-cyan-600',
     hero: false,
   },
   {
     icon: TrendingUp,
-    title: 'Daily Question',
+    title: 'Spaced Review',
     description:
-      'One fresh question every day, the same for every user. Answer it to keep your streak going and see how you compare. The daily question is cached and loads instantly even on slow connections.',
+      'Topics you have seen return on a schedule tuned to your exam date. Each review is a small retrieval check that proves the knowledge stuck.',
     color: 'bg-indigo-100 text-indigo-600',
     hero: false,
   },

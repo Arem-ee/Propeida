@@ -45,7 +45,7 @@ const faqs: FAQItem[] = [
   {
     question: 'Does Propeida track my performance over time?',
     answer:
-      'Yes. Your dashboard shows session history, accuracy by subject, and current streak. Your performance history is permanent and belongs to you.',
+      'Yes. Your home shows session history, accuracy by subject, and learning days. Your performance history is permanent and belongs to you.',
   },
   {
     question: 'Who owns my data?',

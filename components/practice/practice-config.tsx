@@ -40,10 +40,22 @@ export default function PracticeConfig({
   const searchParams = useSearchParams()
   const presetSlug = searchParams.get('subject')
 
-  const presetSubject = useMemo(
-    () => allSubjects.find((s) => s.slug === presetSlug) ?? null,
-    [allSubjects, presetSlug],
+  // Multi-preselect for mixed review (?subjects=a,b). Singular stays
+  // backward-compatible with existing deep links.
+  const presetSlugs = useMemo(() => {
+    const multi = searchParams.get('subjects')
+    if (multi) return multi.split(',').map((s) => s.trim()).filter(Boolean)
+    return presetSlug ? [presetSlug] : []
+  }, [searchParams, presetSlug])
+
+  const presetSubjects = useMemo(
+    () =>
+      presetSlugs
+        .map((slug) => allSubjects.find((s) => s.slug === slug))
+        .filter((s): s is { id: string; name: string; slug: string } => Boolean(s)),
+    [allSubjects, presetSlugs],
   )
+  const presetSubject = presetSubjects[0] ?? null
   const presetExamId = useMemo(() => {
     if (!presetSubject) return null
     return exams.find((e) => (examSubjectMap[e.id] ?? []).includes(presetSubject.id))?.id ?? null
@@ -51,7 +63,7 @@ export default function PracticeConfig({
 
   const [selectedExamId, setSelectedExamId] = useState<string>(presetExamId ?? exams[0]?.id ?? '')
   const [selectedSubjectIds, setSelectedSubjectIds] = useState<string[]>(
-    presetSubject ? [presetSubject.id] : [],
+    presetSubjects.map((s) => s.id),
   )
   const [questionCount, setQuestionCount] = useState(10)
   const [difficulty, setDifficulty] = useState('')
@@ -100,9 +112,11 @@ export default function PracticeConfig({
 
   return (
     <div className="space-y-5">
-      {presetSubject && (
+      {presetSubjects.length > 0 && (
         <div className="rounded-2xl bg-blue-50 border border-blue-100 px-4 py-3 text-[13px] font-bold text-blue-700">
-          From your review: {presetSubject.name} — pre-selected below.
+          {presetSubjects.length > 1
+            ? `Mixed review: ${presetSubjects.map((s) => s.name).join(' + ')} — pre-selected below.`
+            : `From your review: ${presetSubjects[0]!.name} — pre-selected below.`}
         </div>
       )}
 

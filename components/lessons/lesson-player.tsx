@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle, Eye, Lightbulb, Wrench, Target } from 'lucide-react'
 import { celebrate } from '@/lib/celebrate'
+import StepVisual from '@/components/lessons/step-visual'
 import {
   recordLessonAttempt,
   completeLesson,
@@ -12,6 +13,8 @@ import {
 } from '@/lib/actions/lessons'
 import type { RevisionNote } from '@/lib/notes'
 import type { LessonEnhancement } from '@/lib/lessons'
+import type { LessonEnglish } from '@/lib/actions/lessons'
+import PassageReader, { PairComparator, RebuildCard, ReflectionCard } from './english-blocks'
 
 type Phase = 'diagnostic' | 'teach' | 'worked' | 'supported' | 'independent' | 'done'
 type Confidence = 'sure' | 'unsure' | null
@@ -21,6 +24,7 @@ interface AttemptFeedback {
   correctAnswer: string
   explanation: string
   misconception: { name: string; explanation: string; repeatCount: number; repairHref: string | null } | null
+  prerequisite: { name: string; href: string } | null
 }
 
 function PhaseDots({ phases, current }: { phases: string[]; current: number }) {
@@ -185,6 +189,17 @@ function BankQuestion({
                   Open the repair lesson <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
               )}
+              {feedback.prerequisite && (
+                <Link
+                  href={feedback.prerequisite.href}
+                  className="mt-2 flex items-center gap-2 rounded-2xl border-2 border-violet-300 bg-violet-50 px-4 py-3 min-h-[52px] transition-all hover:bg-violet-100"
+                >
+                  <span className="text-[13px] font-extrabold text-violet-800">
+                    Strengthen the foundation first: {feedback.prerequisite.name}
+                  </span>
+                  <ArrowRight className="ml-auto h-4 w-4 shrink-0 text-violet-700" />
+                </Link>
+              )}
             </div>
           )}
         </div>
@@ -197,6 +212,7 @@ export default function LessonPlayer({
   note,
   subjectLabel,
   enhancement,
+  english,
   diagnostic,
   independent,
   subjectId,
@@ -204,6 +220,7 @@ export default function LessonPlayer({
   note: RevisionNote
   subjectLabel: string
   enhancement: LessonEnhancement | null
+  english?: LessonEnglish | null
   diagnostic: LessonQuestion | null
   independent: LessonQuestion[]
   subjectId: string
@@ -260,6 +277,7 @@ export default function LessonPlayer({
       const twin = await getTwinQuestion(
         subjectId,
         [...independent.map((q) => q.id), ...twins.map((q) => q.id), questionId],
+        questionId,
       )
       if (twin) {
         setTwins((t) => [...t, twin])
@@ -416,6 +434,31 @@ export default function LessonPlayer({
               </div>
             </div>
           )}
+          {english && (english.passages.length > 0 || english.pairs.length > 0 || english.rebuilds.length > 0 || english.reflections.length > 0) && (
+            <div className="mt-8 space-y-4">
+              <p className="font-display text-lg font-medium text-black">Now use it</p>
+              {english.passages.map((p, i) => (
+                <PassageReader
+                  key={i}
+                  passage={p}
+                  onAnswered={(ok) => setResults((prev) => [...prev, ok])}
+                />
+              ))}
+              {english.pairs.map((pair, i) => (
+                <PairComparator
+                  key={i}
+                  pair={pair}
+                  onAnswered={(ok) => setResults((prev) => [...prev, ok])}
+                />
+              ))}
+              {english.rebuilds.map((item, i) => (
+                <RebuildCard key={i} item={item} />
+              ))}
+              {english.reflections.map((item, i) => (
+                <ReflectionCard key={i} item={item} />
+              ))}
+            </div>
+          )}
           <button
             onClick={next}
             className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-blue-600 py-3.5 text-[15px] font-extrabold text-white hover:bg-blue-700 min-h-[52px]"
@@ -441,7 +484,10 @@ export default function LessonPlayer({
                   <p className="text-sm font-extrabold text-black">{i + 1}. {step.operation}</p>
                   <p className="mt-1 text-[13px] font-semibold text-ink-soft">{step.reason}</p>
                   {revealed ? (
-                    <p className="mt-2 rounded-xl bg-white border border-emerald-200 px-3 py-2.5 text-sm font-bold text-emerald-800">{step.result}</p>
+                    <>
+                      <p className="mt-2 rounded-xl bg-white border border-emerald-200 px-3 py-2.5 text-sm font-bold text-emerald-800">{step.result}</p>
+                      <StepVisual visual={step.visual ?? null} />
+                    </>
                   ) : isNext ? (
                     <div className="mt-2">
                       {step.predictPrompt && (

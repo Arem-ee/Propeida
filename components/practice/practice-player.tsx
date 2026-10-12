@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 import { ArrowRight, RotateCcw, CheckCircle, Flame, BookOpen, Play, Check, X } from 'lucide-react'
 import { submitAnswer, completePracticeSession } from '@/lib/actions/practice'
 import { getNoteById } from '@/lib/notes'
@@ -21,7 +22,7 @@ interface Feedback {
   isCorrect: boolean
   correctAnswer: string
   explanation: string
-  misconception?: { code: string; name: string; explanation: string; sharedPct: number | null } | null
+  misconception?: { code: string; name: string; explanation: string; sharedPct: number | null; repairHref: string | null } | null
 }
 
 export default function PracticePlayer({
@@ -290,6 +291,14 @@ export default function PracticePlayer({
                   </p>
                 )}
                 <p className="text-sm text-ink-soft leading-relaxed font-semibold">{feedback.misconception.explanation}</p>
+                {feedback.misconception.repairHref && (
+                  <Link
+                    href={feedback.misconception.repairHref}
+                    className="mt-2 inline-flex items-center gap-1 text-[13px] font-extrabold text-blue-700 min-h-[40px]"
+                  >
+                    Open the repair lesson
+                  </Link>
+                )}
               </div>
             )}
           </div>

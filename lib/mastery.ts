@@ -1,4 +1,5 @@
 import { createClient } from './supabase/server'
+import { getExamHorizonDays } from './cohort'
 
 /**
  * Step 2 proof engine: an explainable rules engine, not ML.
@@ -25,9 +26,18 @@ export const MASTERY_CONFIG = {
   developingThreshold: 0.5,
   securedScore: 80,
   developingScore: 50,
-  // Indexed by consecutive successes; capped at the last rung.
+  // Fixed ladder, used when no verified exam date exists.
   intervalDays: [1, 3, 7, 14, 30],
   maxDuePerUser: 5,
+  // Cepeda bands: optimal gap as a share of the retention interval.
+  // Long horizon → small share; imminent exam → review tomorrow.
+  horizonBands: [
+    { minDays: 180, share: 0.08 },
+    { minDays: 90, share: 0.12 },
+    { minDays: 30, share: 0.2 },
+    { minDays: 7, share: 0.3 },
+  ] as { minDays: number; share: number }[],
+  maxGapDays: 30,
 } as const
 
 export type MasteryStatus = 'fragile' | 'developing' | 'secured'
@@ -38,9 +48,18 @@ export function statusForScore(score: number): MasteryStatus {
   return 'fragile'
 }
 
-export function nextReviewInDays(consecutiveSuccesses: number): number {
-  const ladder = MASTERY_CONFIG.intervalDays
-  return ladder[Math.min(consecutiveSuccesses, ladder.length - 1)] ?? ladder[ladder.length - 1] ?? 30
+export function nextReviewInDays(consecutiveSuccesses: number, horizonDays: number | null = null): number {
+  if (horizonDays === null || horizonDays <= 0) {
+    const ladder = MASTERY_CONFIG.intervalDays
+    return ladder[Math.min(consecutiveSuccesses, ladder.length - 1)] ?? ladder[ladder.length - 1] ?? 30
+  }
+  // Exam-anchored: gap as a share of days-to-exam, widened by streak,
+  // always landing strictly before the exam, never beyond 30 days.
+  const band = MASTERY_CONFIG.horizonBands.find((b) => horizonDays >= b.minDays)
+  const share = band?.share ?? 0
+  const base = share > 0 ? Math.max(1, Math.round(horizonDays * share)) : 1
+  const grown = Math.round(base * Math.pow(1.6, Math.min(consecutiveSuccesses, 4)))
+  return Math.max(1, Math.min(grown, MASTERY_CONFIG.maxGapDays, horizonDays - 1))
 }
 
 export interface SubjectEvidence {
@@ -101,6 +120,14 @@ export async function applySubjectEvidence(
   bySubject: Map<string, { correct: number; total: number }>,
   sourceSessionId: string | null,
 ): Promise<void> {
+  // Verified exam horizon, once per completion. Unverified or absent →
+  // null, and the fixed ladder carries scheduling honestly.
+  let horizonDays: number | null = null
+  try {
+    horizonDays = await getExamHorizonDays(supabase)
+  } catch {
+    horizonDays = null
+  }
   const { data: existing } = await supabase
     .from('learner_topic_mastery')
     .select('subject_id, mastery_score, consecutive_successes')
@@ -123,7 +150,7 @@ export async function applySubjectEvidence(
     )
     const success = accuracy >= MASTERY_CONFIG.successThreshold
     const successes = success ? (prev?.consecutive_successes ?? 0) + 1 : 0
-    const nextReviewAt = new Date(now.getTime() + nextReviewInDays(successes) * 86400000)
+    const nextReviewAt = new Date(now.getTime() + nextReviewInDays(successes, horizonDays) * 86400000)
 
     // Explicit update-or-insert: the uniqueness lives in a partial index
     // (topic_id IS NULL), which upsert arbiters cannot address.
@@ -234,6 +261,7 @@ export interface ProgressSubject {
   subjectName: string
   subjectSlug: string
   status: MasteryStatus | 'not-started'
+  score: number | null
 }
 
 /**
@@ -249,23 +277,30 @@ export async function getProgressMap(
     supabase.from('subjects').select('id, name, slug').order('name'),
     supabase
       .from('learner_topic_mastery')
-      .select('subject_id, status')
+      .select('subject_id, status, mastery_score')
       .eq('user_id', userId)
       .is('topic_id', null),
   ])
 
   const bySubject = new Map(
-    ((mastery ?? []) as { subject_id: string; status: string }[]).map((m) => [m.subject_id, m.status as MasteryStatus]),
+    ((mastery ?? []) as { subject_id: string; status: string; mastery_score: number }[]).map((m) => [
+      m.subject_id,
+      { status: m.status as MasteryStatus, score: m.mastery_score },
+    ]),
   )
   const order: Record<string, number> = { secured: 0, developing: 1, fragile: 2, 'not-started': 3 }
 
   return ((subjects ?? []) as { id: string; name: string; slug: string }[])
-    .map((s) => ({
-      subjectId: s.id,
-      subjectName: s.name,
-      subjectSlug: s.slug,
-      status: (bySubject.get(s.id) ?? 'not-started') as MasteryStatus | 'not-started',
-    }))
+    .map((s) => {
+      const m = bySubject.get(s.id)
+      return {
+        subjectId: s.id,
+        subjectName: s.name,
+        subjectSlug: s.slug,
+        status: (m?.status ?? 'not-started') as MasteryStatus | 'not-started',
+        score: m ? m.score : null,
+      }
+    })
     .sort((a, b) => (order[a.status] ?? 3) - (order[b.status] ?? 3))
 }
 

@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { ChevronRight, Check, Clock, CircleDashed, History } from 'lucide-react'
 import { createClient, getAuthUser } from '@/lib/supabase/server'
 import { getProgressMap, getMasterySummary, getNextReviews } from '@/lib/mastery'
+import MasteryBar from '@/components/mastery-bar'
 import { getSessionHistory } from '@/lib/actions/practice'
 import { EmptyState } from '@/components/ui-states'
 
@@ -113,6 +114,9 @@ export default async function ProgressPage() {
                           ? `Back for review around ${reviewDate}.`
                           : 'Tracked. Keep going.'}
                     </p>
+                    <div className="mt-2.5">
+                      <MasteryBar score={s.score} />
+                    </div>
                   </div>
                 )
               })}

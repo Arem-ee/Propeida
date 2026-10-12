@@ -59,3 +59,24 @@ export async function getNearestCohort(
     weeklyActive,
   }
 }
+
+/**
+ * Exam horizon for scheduling: whole days until the nearest VERIFIED
+ * future cycle start. Null when no verified date exists — the scheduler
+ * falls back to its fixed ladder rather than planning around a rumor.
+ */
+export async function getExamHorizonDays(
+  supabase: SupabaseClient,
+): Promise<number | null> {
+  const { data, error } = await supabase.rpc('get_upcoming_cycles')
+  if (error || !data) return null
+
+  const now = Date.now()
+  let best: number | null = null
+  for (const row of data as { starts_at: string | null; verified: boolean }[]) {
+    if (!row.verified || !row.starts_at) continue
+    const diff = Math.round((new Date(row.starts_at).getTime() - now) / 86400000)
+    if (diff > 0 && (best === null || diff < best)) best = diff
+  }
+  return best
+}

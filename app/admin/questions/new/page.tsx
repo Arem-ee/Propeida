@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 import MisconceptionFields, { collectMisconceptions } from '../misconception-fields'
+import TopicFields, { collectTopics } from '../topic-fields'
 
 export default function NewQuestionPage() {
   const router = useRouter()
@@ -13,6 +14,7 @@ export default function NewQuestionPage() {
   const [exams, setExams] = useState<{ id: string; name: string }[]>([])
   const [subjects, setSubjects] = useState<{ id: string; name: string }[]>([])
   const [correctAnswer, setCorrectAnswer] = useState('')
+  const [subjectId, setSubjectId] = useState('')
 
   useEffect(() => {
     fetch('/api/admin/refs')
@@ -43,6 +45,8 @@ export default function NewQuestionPage() {
       explanation: form.get('explanation') as string,
       difficulty: form.get('difficulty') as string,
       misconceptions: collectMisconceptions(form),
+      topics: collectTopics(form),
+      cognitive_level: (form.get('cognitive_level') as string) || null,
     }
 
     try {
@@ -81,7 +85,7 @@ export default function NewQuestionPage() {
           </div>
           <div>
             <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Subject</label>
-            <select name="subject_id" required className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm min-h-[44px]">
+            <select name="subject_id" required value={subjectId} onChange={(e) => setSubjectId(e.target.value)} className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm min-h-[44px]">
               <option value="">Select subject</option>
               {subjects.map((s) => (
                 <option key={s.id} value={s.id}>{s.name}</option>
@@ -134,6 +138,16 @@ export default function NewQuestionPage() {
               <option value="hard">Hard</option>
             </select>
           </div>
+          <div>
+            <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Cognitive level (optional)</label>
+            <select name="cognitive_level" className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm min-h-[44px]">
+              <option value="">Unrated</option>
+              <option value="remember">Remember</option>
+              <option value="understand">Understand</option>
+              <option value="apply">Apply</option>
+              <option value="analyze">Analyze</option>
+            </select>
+          </div>
         </div>
 
         <div>
@@ -141,7 +155,9 @@ export default function NewQuestionPage() {
           <textarea name="explanation" rows={2} className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm resize-y" />
         </div>
 
-        <MisconceptionFields correctAnswer={correctAnswer} />
+        <MisconceptionFields correctAnswer={correctAnswer} subjectId={subjectId} />
+
+        <TopicFields subjectId={subjectId} initial={[]} />
 
         {error && (
           <div className="rounded-xl bg-red-50 border border-red-100 p-4">

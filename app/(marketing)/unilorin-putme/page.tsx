@@ -31,7 +31,7 @@ const FAQ_ITEMS = [
   {
     question: 'Is practicing free?',
     answer:
-      'Practicing is free — questions, explanations, streaks, and your performance history — no card required. An optional Pro upgrade unlocks unlimited mock exams and extra features for students who want more, and we\u2019re working to expand free access as the platform grows.',
+      'Practicing is free — questions, explanations, learning days, and your performance history — no card required. An optional Pro upgrade unlocks unlimited mock exams and extra features for students who want more, and we\u2019re working to expand free access as the platform grows.',
   },
   {
     question: 'Does Propeida cover JAMB too?',
@@ -73,7 +73,7 @@ export default function UnilorinPutmePage() {
             <li><strong className="text-gray-900">Practice mode</strong> — learn question by question, with explanations for every answer.</li>
             <li><strong className="text-gray-900">Timed mock exams</strong> — full CBT sessions under real exam conditions.</li>
             <li><strong className="text-gray-900">Revision notes</strong> — short, topic-by-topic notes for quick review.</li>
-            <li><strong className="text-gray-900">Progress tracking</strong> — accuracy by subject, streaks, and session history.</li>
+            <li><strong className="text-gray-900">Progress tracking</strong> — accuracy by subject, learning days, and session history.</li>
           </ul>
         </div>
 

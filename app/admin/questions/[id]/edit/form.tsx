@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 import MisconceptionFields, { collectMisconceptions, type MisconceptionInitial } from '../../misconception-fields'
+import TopicFields, { collectTopics } from '../../topic-fields'
 
 interface Question {
   id: string
@@ -15,6 +16,7 @@ interface Question {
   correct_answer: string
   explanation: string | null
   difficulty: string
+  cognitive_level: string | null
 }
 
 function optionsRecord(options: { key: string; text: string }[]): Record<string, string> {
@@ -28,16 +30,19 @@ export default function EditQuestionForm({
   exams,
   subjects,
   initialMisconceptions,
+  initialTopics,
 }: {
   question: Question
   exams: { id: string; name: string }[]
   subjects: { id: string; name: string }[]
   initialMisconceptions: Record<string, MisconceptionInitial>
+  initialTopics: { topic_id: string; role: string }[]
 }) {
   const router = useRouter()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [correctAnswer, setCorrectAnswer] = useState(question.correct_answer)
+  const [subjectId, setSubjectId] = useState(question.subject_id)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -60,6 +65,8 @@ export default function EditQuestionForm({
       explanation: form.get('explanation') as string,
       difficulty: form.get('difficulty') as string,
       misconceptions: collectMisconceptions(form),
+      topics: collectTopics(form),
+      cognitive_level: (form.get('cognitive_level') as string) || null,
     }
 
     try {
@@ -97,7 +104,7 @@ export default function EditQuestionForm({
           </div>
           <div>
             <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Subject</label>
-            <select name="subject_id" defaultValue={question.subject_id} required className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm min-h-[44px]">
+            <select name="subject_id" value={subjectId} onChange={(e) => setSubjectId(e.target.value)} required className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm min-h-[44px]">
               {subjects.map((s) => (
                 <option key={s.id} value={s.id}>{s.name}</option>
               ))}
@@ -147,6 +154,16 @@ export default function EditQuestionForm({
               <option value="hard">Hard</option>
             </select>
           </div>
+          <div>
+            <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Cognitive level (optional)</label>
+            <select name="cognitive_level" defaultValue={question.cognitive_level ?? ''} className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm min-h-[44px]">
+              <option value="">Unrated</option>
+              <option value="remember">Remember</option>
+              <option value="understand">Understand</option>
+              <option value="apply">Apply</option>
+              <option value="analyze">Analyze</option>
+            </select>
+          </div>
         </div>
 
         <div>
@@ -154,7 +171,9 @@ export default function EditQuestionForm({
           <textarea name="explanation" defaultValue={question.explanation ?? ''} rows={2} className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm resize-y" />
         </div>
 
-        <MisconceptionFields correctAnswer={correctAnswer} initial={initialMisconceptions} />
+        <MisconceptionFields correctAnswer={correctAnswer} subjectId={subjectId} initial={initialMisconceptions} />
+
+        <TopicFields subjectId={subjectId} initial={initialTopics} />
 
         {error && (
           <div className="rounded-xl bg-red-50 border border-red-100 p-4">

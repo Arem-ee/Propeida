@@ -17,7 +17,7 @@ interface QuestionReview {
   isCorrect: boolean | null
   explanation: string
   timeTakenSeconds: number | null
-  misconception: { name: string; explanation: string } | null
+  misconception: { name: string; explanation: string; repairHref: string | null } | null
 }
 
 interface SubjectBreakdown {
@@ -198,6 +198,14 @@ export default function ResultsPage({ params }: { params: Promise<{ sessionId: s
                             Why this tempts: {q.misconception.name}
                           </p>
                           <p className="text-[13px] font-semibold text-ink-soft leading-relaxed">{q.misconception.explanation}</p>
+                          {q.misconception.repairHref && (
+                            <Link
+                              href={q.misconception.repairHref}
+                              className="mt-1.5 inline-flex items-center gap-1 text-[13px] font-extrabold text-blue-700 min-h-[40px]"
+                            >
+                              Open the repair lesson
+                            </Link>
+                          )}
                         </div>
                       )}
                     </div>

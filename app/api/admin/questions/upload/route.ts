@@ -87,6 +87,12 @@ export async function POST(request: Request) {
           fileErrorCount++
           continue
         }
+        const level = (row.cognitive_level ?? '').trim().toLowerCase()
+        if (level && !['remember', 'understand', 'apply', 'analyze'].includes(level)) {
+          allInsertErrors.push(`[${file.name}:${i + 2}] cognitive_level must be remember/understand/apply/analyze`)
+          fileErrorCount++
+          continue
+        }
 
         inserts.push({
           exam_id: examMap.get(examSlug),
@@ -101,6 +107,7 @@ export async function POST(request: Request) {
           correct_answer: correctAnswer,
           explanation: row.explanation.trim(),
           difficulty: diff,
+          cognitive_level: level || null,
           source: row.source?.trim() || 'csv_upload',
         })
       }

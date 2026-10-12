@@ -14,6 +14,15 @@ export interface WorkedStep {
   reason: string
   result: string
   predictPrompt: string
+  /**
+   * Optional instructional visual, rendered with the result.
+   * Must expose the step's relationship (docs: label, don't decorate).
+   * { kind: 'number-line', props: { min, max, points[{value,label,color?}], step? } }
+   * { kind: 'fraction-bars', props: { fractions[{numerator,denominator,color?,label?}] } }
+   * { kind: 'balance', props: { left[string], right[string], tilt? } }
+   * { kind: 'plane', props: { points[{x,y,label?,color?}], range? } }
+   */
+  visual?: { kind: 'number-line' | 'fraction-bars' | 'balance' | 'plane'; props: Record<string, unknown> } | null
 }
 
 export interface WorkedExample {
