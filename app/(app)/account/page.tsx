@@ -13,7 +13,7 @@ export default async function AccountPage() {
 
   const { data: profile } = await supabase
     .from('profiles')
-    .select('username, avatar_index')
+    .select('username')
     .eq('id', user.id)
     .single()
 
@@ -33,7 +33,6 @@ export default async function AccountPage() {
       <ProfileEditor
         username={profile?.username ?? 'Student'}
         email={user.email ?? ''}
-        avatarIndex={profile?.avatar_index ?? null}
       />
     </div>
   )

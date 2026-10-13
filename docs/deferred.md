@@ -43,6 +43,7 @@ Everything deliberately postponed, with its unblock condition. Nothing here is f
 ## Hygiene (no product impact, do opportunistically)
 
 - [ ] Dead `get_leaderboard` RPC and dormant explore tables in prod DB.
+- [ ] Dead `profiles.avatar_index` column (avatar picker removed; identity is now the username initial).
 - [ ] `tsconfig.tsbuildinfo` is tracked despite gitignore (untrack it).
 - [ ] `.landing-source/` bulk committed — consider removal now the static site is gone.
 - [ ] Daily-question engine has no UI surface since the wipe.
