@@ -22,7 +22,15 @@ interface Feedback {
   isCorrect: boolean
   correctAnswer: string
   explanation: string
-  misconception?: { code: string; name: string; explanation: string; sharedPct: number | null; repairHref: string | null } | null
+  misconception?: {
+    code: string
+    name: string
+    explanation: string
+    sharedPct: number | null
+    repairHref: string | null
+    repeatCount: number
+    prerequisite: { name: string; href: string } | null
+  } | null
 }
 
 export default function PracticePlayer({
@@ -291,12 +299,28 @@ export default function PracticePlayer({
                   </p>
                 )}
                 <p className="text-sm text-ink-soft leading-relaxed font-semibold">{feedback.misconception.explanation}</p>
+                {feedback.misconception.repeatCount > 0 && (
+                  <p className="mt-1.5 text-xs font-extrabold text-red-700">
+                    This exact error has come up {feedback.misconception.repeatCount + 1} times — time to fix the root, not retry harder.
+                  </p>
+                )}
                 {feedback.misconception.repairHref && (
                   <Link
                     href={feedback.misconception.repairHref}
                     className="mt-2 inline-flex items-center gap-1 text-[13px] font-extrabold text-blue-700 min-h-[40px]"
                   >
                     Open the repair lesson
+                  </Link>
+                )}
+                {feedback.misconception.prerequisite && (
+                  <Link
+                    href={feedback.misconception.prerequisite.href}
+                    className="mt-2 flex items-center gap-2 rounded-2xl border-2 border-violet-300 bg-violet-50 px-4 py-3 min-h-[52px] transition-all hover:bg-violet-100"
+                  >
+                    <span className="text-[13px] font-extrabold text-violet-800">
+                      Strengthen the foundation first: {feedback.misconception.prerequisite.name}
+                    </span>
+                    <ArrowRight className="ml-auto h-4 w-4 shrink-0 text-violet-700" />
                   </Link>
                 )}
               </div>

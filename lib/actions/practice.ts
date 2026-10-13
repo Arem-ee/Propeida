@@ -14,6 +14,8 @@ import {
   getSessionById,
   getSessionQuestionsWithStatus,
   isSessionExpired,
+  findPrerequisiteRepair,
+  countCodeRepeats,
 } from '@/lib/practice'
 import { hasExamAccess } from '@/lib/entitlements'
 import { getNotesBySubject, isValidSubject, getNoteById } from '@/lib/notes'
@@ -362,7 +364,15 @@ export async function submitAnswer(
     // Misconception repair: when the picked wrong option is mapped, append
     // its named repair to the feedback. Silent when unmapped — the generic
     // explanation always stands alone.
-    let misconception: { code: string; name: string; explanation: string; sharedPct: number | null; repairHref: string | null } | null = null
+    let misconception: {
+      code: string
+      name: string
+      explanation: string
+      sharedPct: number | null
+      repairHref: string | null
+      repeatCount: number
+      prerequisite: { name: string; href: string } | null
+    } | null = null
     if (recordRes.data === false) {
       const { data: mc } = await supabase
         .from('question_misconceptions')
@@ -372,12 +382,17 @@ export async function submitAnswer(
         .maybeSingle()
       if (mc) {
         const repairNote = mc.repair_note_id ? getNoteById(mc.repair_note_id) : null
+        // Repeat detection: the code was just recorded on this answer by
+        // record_session_answer, so a repeat means it appeared before.
+        const repeatCount = await countCodeRepeats(supabase, user.id, mc.misconception_code)
         misconception = {
           code: mc.misconception_code,
           name: mc.misconception_name,
           explanation: mc.explanation,
           sharedPct: await sharedStrugglePct(questionId, selectedAnswer),
           repairHref: repairNote ? `/learn/${repairNote.subject}/${repairNote.slug}` : null,
+          repeatCount,
+          prerequisite: repeatCount > 0 ? await findPrerequisiteRepair(supabase, questionId) : null,
         }
       }
     }

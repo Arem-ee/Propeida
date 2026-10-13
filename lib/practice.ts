@@ -381,3 +381,75 @@ export async function getFirstMockQuestions(userId: string, examId: string): Pro
 }
 
 export { hasExamAccess, getUsageCounters } from './entitlements'
+
+type SupabaseClient = Awaited<ReturnType<typeof createClient>>
+
+/**
+ * Root-fix routing shared by lessons and practice: on a repeated error,
+ * walk down the missed question's topic chain to a published foundation
+ * lesson. Silent (null) when unmapped — the repair link already shown
+ * stands alone.
+ */
+export async function findPrerequisiteRepair(
+  supabase: SupabaseClient,
+  questionId: string,
+): Promise<{ name: string; href: string } | null> {
+  const { data: qTopics } = await supabase
+    .from('question_topics')
+    .select('topic_id')
+    .eq('question_id', questionId)
+  const tids = (qTopics ?? []).map((t) => t.topic_id)
+  if (tids.length === 0) return null
+
+  const { data: edges } = await supabase
+    .from('topic_prerequisites')
+    .select('prerequisite_topic_id')
+    .in('topic_id', tids)
+    .limit(1)
+  const preId = (edges ?? [])[0]?.prerequisite_topic_id
+  if (!preId) return null
+
+  const [{ data: preLesson }, { data: preTopic }] = await Promise.all([
+    supabase
+      .from('lessons')
+      .select('slug, subject_id')
+      .eq('topic_id', preId)
+      .eq('status', 'published')
+      .limit(1)
+      .maybeSingle(),
+    supabase.from('topics').select('name').eq('id', preId).single(),
+  ])
+  const lessonRow = preLesson as { slug: string; subject_id: string } | null
+  if (!lessonRow) return null
+
+  const { data: lessonSubject } = await supabase
+    .from('subjects')
+    .select('slug')
+    .eq('id', lessonRow.subject_id)
+    .single()
+  if (!lessonSubject) return null
+
+  return {
+    name: (preTopic as { name?: string } | null)?.name ?? 'Foundation lesson',
+    href: `/learn/${(lessonSubject as { slug: string }).slug}/${lessonRow.slug}`,
+  }
+}
+
+/**
+ * How many times this learner has hit the same misconception code before,
+ * across practice/mock sessions. Lessons count learning_attempts; the
+ * session path counts session_answers — same signal, both stores.
+ */
+export async function countCodeRepeats(
+  supabase: SupabaseClient,
+  userId: string,
+  code: string,
+): Promise<number> {
+  const { count } = await supabase
+    .from('session_answers')
+    .select('id, exam_sessions!inner(user_id)', { count: 'exact', head: true })
+    .eq('misconception_code', code)
+    .eq('exam_sessions.user_id', userId)
+  // The just-recorded answer is included; a repeat means it appeared before.
+  return Math.max(0, (count ?? 1) - 1)
+}

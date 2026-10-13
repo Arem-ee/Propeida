@@ -3,6 +3,7 @@
 import { randomUUID } from 'node:crypto'
 import { createClient, getAuthUser } from '@/lib/supabase/server'
 import { applySubjectEvidence, getNextReviews } from '@/lib/mastery'
+import { findPrerequisiteRepair } from '@/lib/practice'
 import { getNoteById } from '@/lib/notes'
 import type { RevisionNote } from '@/lib/notes'
 import type { LessonEnhancement } from '@/lib/lessons'
@@ -457,48 +458,9 @@ export async function recordLessonAttempt(input: AttemptInput): Promise<{
         repeatCount: repeats ?? 0,
         repairHref: repairNote ? `/learn/${repairNote.subject}/${repairNote.slug}` : null,
       }
-      // Prerequisite routing: on a repeat, walk down the missed
-      // question's topic chain to a published foundation lesson.
+      // Prerequisite routing: on a repeat, walk down to root-fix.
       if ((repeats ?? 0) > 0) {
-        const { data: qTopics } = await supabase
-          .from('question_topics')
-          .select('topic_id')
-          .eq('question_id', input.questionId)
-        const tids = (qTopics ?? []).map((t) => t.topic_id)
-        if (tids.length > 0) {
-          const { data: edges } = await supabase
-            .from('topic_prerequisites')
-            .select('prerequisite_topic_id')
-            .in('topic_id', tids)
-            .limit(1)
-          const preId = (edges ?? [])[0]?.prerequisite_topic_id
-          if (preId) {
-            const [{ data: preLesson }, { data: preTopic }] = await Promise.all([
-              supabase
-                .from('lessons')
-                .select('slug, subject_id')
-                .eq('topic_id', preId)
-                .eq('status', 'published')
-                .limit(1)
-                .maybeSingle(),
-              supabase.from('topics').select('name').eq('id', preId).single(),
-            ])
-            const lessonRow = preLesson as { slug: string; subject_id: string } | null
-            if (lessonRow) {
-              const { data: lessonSubject } = await supabase
-                .from('subjects')
-                .select('slug')
-                .eq('id', lessonRow.subject_id)
-                .single()
-              if (lessonSubject) {
-                prerequisite = {
-                  name: preTopic?.name ?? 'Foundation lesson',
-                  href: `/learn/${lessonSubject.slug}/${lessonRow.slug}`,
-                }
-              }
-            }
-          }
-        }
+        prerequisite = await findPrerequisiteRepair(supabase, input.questionId)
       }
     }
   }

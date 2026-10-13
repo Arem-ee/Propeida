@@ -18,8 +18,8 @@ Everything deliberately postponed, with its unblock condition. Nothing here is f
 - [ ] **Exam-date-anchored scheduling**: gaps as function of days-to-exam (Cepeda mandate). Blocked on: verified dates above.
 - [ ] **Prerequisite consumption**: route repeats down `topic_prerequisites` chains. Needs mapping volume first.
 - [ ] **Interleaving**: mixed-topic sets after basics exist. Needs mapping volume first.
-- [ ] **`session_answers.misconception_code`**: practice-path repeat detection needs an RPC change; lessons already track codes.
-- [ ] **Repair-note links in practice feedback**: lesson feedback has them; practice feedback doesn't yet.
+- [x] **`session_answers.misconception_code`**: recorded at write time by `record_session_answer` (mapped picks only), backfilled for history; practice feedback now shows repeat counts and routes repeats to root-fix via the shared `findPrerequisiteRepair` helper (lessons refactored onto it).
+- [x] **Repair-note links in practice feedback**: already shipped earlier (misconception card + shared-struggle + repair link in the player and results review).
 - [ ] **Streak redefinition**: planned actions, not logins (behavior change — decide + migrate carefully).
 - [ ] **Bulk misconception import**: per-distractor judgment can't batch safely; revisit only with a review queue.
 - [ ] **Bulk block operations** in the lesson editor (duplicate lesson, move blocks across lessons).
