@@ -16,7 +16,7 @@ export default async function EditLessonPage({ params }: { params: Promise<{ id:
     .single()
   if (!lesson) notFound()
 
-  const [{ data: blocks }, { data: topics }] = await Promise.all([
+  const [{ data: blocks }, { data: topics }, { data: siblings }] = await Promise.all([
     supabase
       .from('lesson_blocks')
       .select('id, block_type, content')
@@ -27,6 +27,12 @@ export default async function EditLessonPage({ params }: { params: Promise<{ id:
       .select('id, name')
       .eq('subject_id', lesson.subject_id)
       .order('sort_order'),
+    supabase
+      .from('lessons')
+      .select('id, title, status')
+      .eq('subject_id', lesson.subject_id)
+      .neq('id', id)
+      .order('title'),
   ])
 
   return (
@@ -47,6 +53,8 @@ export default async function EditLessonPage({ params }: { params: Promise<{ id:
         />
         <BlockEditor
           lessonId={lesson.id}
+          lessonStatus={lesson.status}
+          moveTargets={(siblings ?? []).map((s) => ({ id: s.id, title: s.title, status: s.status }))}
           initial={(blocks ?? []).map((b) => ({
             id: b.id,
             block_type: b.block_type,

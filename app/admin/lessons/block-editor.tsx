@@ -225,9 +225,13 @@ const BLOCK_LABELS: Record<string, string> = {
 
 export default function BlockEditor({
   lessonId,
+  lessonStatus,
+  moveTargets,
   initial,
 }: {
   lessonId: string
+  lessonStatus: string
+  moveTargets: { id: string; title: string; status: string }[]
   initial: Block[]
 }) {
   const [blocks, setBlocks] = useState<Block[]>(initial)
@@ -236,6 +240,9 @@ export default function BlockEditor({
   const [newType, setNewType] = useState('text')
   const [adding, setAdding] = useState(false)
   const [notice, setNotice] = useState<string | null>(null)
+  const [selected, setSelected] = useState<Set<string>>(new Set())
+  const [moveTo, setMoveTo] = useState('')
+  const [moving, setMoving] = useState(false)
 
   const patch = (id: string, p: Record<string, unknown> | string) => {
     setBlocks((prev) =>
@@ -310,6 +317,69 @@ export default function BlockEditor({
     }
   }
 
+  const toggleSelect = (id: string) => {
+    setSelected((prev) => {
+      const next = new Set(prev)
+      if (next.has(id)) next.delete(id)
+      else next.add(id)
+      return next
+    })
+  }
+
+  const moveSelected = async () => {
+    if (selected.size === 0 || !moveTo || moving) return
+    const target = moveTargets.find((t) => t.id === moveTo)
+    if (
+      (lessonStatus === 'published' || target?.status === 'published') &&
+      !window.confirm(
+        `This changes a PUBLISHED lesson — learners see it immediately. Move ${selected.size} block(s)${
+          target?.status === 'published' ? ` into "${target.title}"` : ''
+        }${lessonStatus === 'published' ? ' out of this lesson' : ''}?`,
+      )
+    ) {
+      return
+    }
+    setMoving(true)
+    try {
+      const res = await fetch('/api/admin/lesson-blocks/move', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ids: Array.from(selected), to_lesson_id: moveTo }),
+      })
+      const data = await res.json()
+      if (!res.ok) throw new Error(data.error ?? 'Move failed')
+      setBlocks((prev) => prev.filter((b) => !selected.has(b.id)))
+      setSelected(new Set())
+      setNotice(`Moved ${data.moved} block(s).`)
+    } catch (err) {
+      setNotice(err instanceof Error ? err.message : 'Move failed')
+    } finally {
+      setMoving(false)
+    }
+  }
+
+  const deleteSelected = async () => {
+    if (selected.size === 0 || moving) return
+    if (!window.confirm(`Delete ${selected.size} block(s)? This cannot be undone.`)) return
+    setMoving(true)
+    try {
+      const res = await fetch('/api/admin/lesson-blocks/bulk-delete', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ids: Array.from(selected) }),
+      })
+      const data = await res.json()
+      if (!res.ok) throw new Error(data.error ?? 'Delete failed')
+      setBlocks((prev) => prev.filter((b) => !selected.has(b.id)))
+      setSelected(new Set())
+      setNotice(`Deleted ${data.deleted} block(s).`)
+    } catch (err) {
+      setNotice(err instanceof Error ? err.message : 'Delete failed')
+    } finally {
+      setMoving(false)
+    }
+  }
+
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -317,9 +387,52 @@ export default function BlockEditor({
         {notice && <p className="text-xs font-bold text-green-700">{notice}</p>}
       </div>
 
+      {selected.size > 0 && (
+        <div className="flex flex-wrap items-center gap-2 rounded-2xl border border-violet-200 bg-violet-50/60 p-3">
+          <span className="text-xs font-extrabold text-violet-800">{selected.size} selected</span>
+          <select
+            value={moveTo}
+            onChange={(e) => setMoveTo(e.target.value)}
+            className="rounded-xl border border-gray-200 bg-white px-3 py-2 text-xs font-bold text-gray-700 min-h-[44px]"
+          >
+            <option value="">Move to lesson…</option>
+            {moveTargets.map((t) => (
+              <option key={t.id} value={t.id}>{t.title}{t.status === 'published' ? ' (published)' : ''}</option>
+            ))}
+          </select>
+          <button
+            onClick={() => void moveSelected()}
+            disabled={!moveTo || moving}
+            className="rounded-xl bg-violet-600 px-4 py-2 text-xs font-bold text-white hover:bg-violet-700 min-h-[44px] cursor-pointer disabled:opacity-50"
+          >
+            {moving ? 'Moving…' : 'Move'}
+          </button>
+          <button
+            onClick={() => void deleteSelected()}
+            disabled={moving}
+            className="rounded-xl border border-red-200 px-4 py-2 text-xs font-bold text-red-600 hover:bg-red-50 min-h-[44px] cursor-pointer disabled:opacity-50"
+          >
+            Delete selected
+          </button>
+          <button
+            onClick={() => setSelected(new Set())}
+            className="rounded-xl px-3 py-2 text-xs font-bold text-gray-500 hover:bg-white min-h-[44px] cursor-pointer"
+          >
+            Clear
+          </button>
+        </div>
+      )}
+
       {blocks.map((block, i) => (
         <div key={block.id} className="rounded-2xl border border-gray-200 bg-white p-4 space-y-3">
           <div className="flex items-center gap-2">
+            <input
+              type="checkbox"
+              checked={selected.has(block.id)}
+              onChange={() => toggleSelect(block.id)}
+              aria-label="Select block"
+              className="h-4 w-4 rounded border-gray-300 text-violet-600 cursor-pointer"
+            />
             <span className="rounded-lg bg-blue-50 px-2.5 py-1 text-[11px] font-extrabold text-blue-700 uppercase">
               {BLOCK_LABELS[block.block_type] ?? block.block_type}
             </span>
