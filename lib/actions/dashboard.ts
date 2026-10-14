@@ -24,7 +24,6 @@ interface DashboardPayload {
     score: number
     accuracy: number
   }[]
-  daily_question: { id: string; attempt: { is_correct: boolean } | null } | null
 }
 
 async function fetchDashboardPayload(

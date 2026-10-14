@@ -40,11 +40,11 @@ Everything deliberately postponed, with its unblock condition. Nothing here is f
 - [ ] **Downloads offline packs**: meter + install prompt live; subject packs need a sync design.
 - [ ] **Evaluation cohort runs**: 7/21-day delayed recall study per docs §10 (process + instrumentation, not just code).
 
-## Hygiene (no product impact, do opportunistically)
+## Hygiene (done 2026-10-14; keep at zero)
 
-- [ ] Dead `get_leaderboard` RPC and dormant explore tables in prod DB.
-- [ ] Dead `profiles.avatar_index` column (avatar picker removed; identity is now the username initial).
-- [ ] `tsconfig.tsbuildinfo` is tracked despite gitignore (untrack it).
-- [ ] `.landing-source/` bulk committed — consider removal now the static site is gone.
-- [ ] Daily-question engine has no UI surface since the wipe.
-- [ ] Campaign system still references the UNILORIN unlock era — reconcile or retire.
+- [x] Dead `get_leaderboard` RPC (+ rank/update/recompute fns, trigger, `public_leaderboard_top10` view, table) and `explore_interactions` dropped.
+- [x] `profiles.avatar_index` dropped (picker removed).
+- [x] Daily-question engine dropped entirely (tables + 3 RPCs + dashboard block + bulk-delete cascade): product forbids daily questions, and no UI rendered it. `get_platform_stats` active-leg is completed-sessions only.
+- [x] `tsconfig.tsbuildinfo` untracked (gitignored); `.landing-source/` untracked but kept on disk (designer material, static site lives in `public/landing`).
+- [x] Verification script updated to the post-drop inventory.
+- [ ] Campaign system: live and functional (practice gating, admin start/end) — left alone; reconcile only if the unlock model changes.

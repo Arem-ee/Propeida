@@ -18,3 +18,7 @@ supabase/.temp/
 *.zip
 logs/
 .vercel
+
+# Designer source material (static site lives in public/landing)
+.landing-source/
+tsconfig.tsbuildinfo
