@@ -25,7 +25,7 @@ Everything deliberately postponed, with its unblock condition. Nothing here is f
 - [ ] **Bulk block operations** in the lesson editor (duplicate lesson, move blocks across lessons).
 - [x] **Mock calculator affordance**: SafeCalculator already in the mock player (safe arithmetic, no eval, ÷0 handling); fixed silent second-decimal-point misparse.
 - [x] **Question editorial workflow**: `status` (draft/in_review/published/rejected) + `verified_state` (unverified 🔴/source_cited 🔶/human_verified ✅) on questions; `get_session_questions`, `ensure_free_question_pool`, and all direct selection queries serve published-only (probe-verified); publish gate refuses unverified items; admin list filter + `/admin/questions/review` queue + edit-form fields. Existing bank backfilled published/human_verified.
-- [ ] **Question editorial follow-ups**: bulk publish from the queue; `review_note` history (currently last-note-wins).
+- [x] **Question editorial follow-ups**: bulk publish from the queue (batch refused with names if any item is unverified — gate holds under volume); `question_reviews` append-only trail (who/when/state/note) with backfill, shown in queue + edit form.
 - [ ] **Asset storage + signed delivery**: needed when first instructional media exists.
 - [ ] **Realtime presence heartbeat**: only if weekly aggregates ever feel insufficient.
 - [ ] **AI coach**: server gateway, closed actions, quotas, evals — after non-AI retention is proven AND self-hosting is affordable. Suggest endpoint drafts against the registry when that day comes.

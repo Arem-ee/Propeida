@@ -233,6 +233,20 @@ export async function PUT(request: Request) {
 
     if (error) return NextResponse.json({ error: 'Failed to update question' }, { status: 500 })
 
+    // Verification trail: every explicit verification stamps history.
+    if (
+      body.verified_state !== undefined &&
+      body.verified_state !== 'unverified' &&
+      ['source_cited', 'human_verified'].includes(body.verified_state)
+    ) {
+      await supabase.from('question_reviews').insert({
+        question_id: id,
+        reviewer: user.id,
+        verified_state: body.verified_state,
+        note: (body.review_note as string) || null,
+      })
+    }
+
     if (misconceptions !== null) {
       try {
         await saveMisconceptions(supabase, id, misconceptions)

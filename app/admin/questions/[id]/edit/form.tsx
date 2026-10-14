@@ -34,12 +34,14 @@ export default function EditQuestionForm({
   subjects,
   initialMisconceptions,
   initialTopics,
+  history,
 }: {
   question: Question
   exams: { id: string; name: string }[]
   subjects: { id: string; name: string }[]
   initialMisconceptions: Record<string, MisconceptionInitial>
   initialTopics: { topic_id: string; role: string }[]
+  history: { verified_state: string; note: string | null; created_at: string }[]
 }) {
   const router = useRouter()
   const [loading, setLoading] = useState(false)
@@ -203,6 +205,16 @@ export default function EditQuestionForm({
             <textarea name="review_note" defaultValue={question.review_note ?? ''} rows={2} placeholder="What did you check? Source page, answer-key cross-check…" className="w-full rounded-xl border border-gray-200 bg-white px-4 py-2.5 text-sm resize-y" />
           </div>
           <p className="mt-2 text-xs font-semibold text-gray-400">Publishing requires a verification state — unverified items stay out of learner sessions.</p>
+          {history.length > 0 && (
+            <ul className="mt-3 space-y-1.5">
+              {history.map((h, i) => (
+                <li key={i} className="rounded-lg bg-white border border-gray-200 px-3 py-2 text-xs font-semibold text-gray-600">
+                  {h.verified_state.replace('_', ' ')} · {new Date(h.created_at).toLocaleDateString('en-NG', { day: 'numeric', month: 'short', year: 'numeric' })}
+                  {h.note ? ` — ${h.note}` : ''}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
 
         <MisconceptionFields correctAnswer={correctAnswer} subjectId={subjectId} initial={initialMisconceptions} />

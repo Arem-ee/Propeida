@@ -27,10 +27,21 @@ function optionsList(options: ReviewItem['options']): { key: string; text: strin
   return Object.entries(options ?? {}).map(([key, text]) => ({ key, text: String(text) }))
 }
 
+interface ReviewHistory {
+  question_id: string
+  verified_state: string
+  note: string | null
+  created_at: string
+}
+
 export default function QuestionReviewPage() {
   const [items, setItems] = useState<ReviewItem[]>([])
+  const [history, setHistory] = useState<Record<string, ReviewHistory[]>>({})
+  const [selected, setSelected] = useState<Set<string>>(new Set())
   const [acting, setActing] = useState<string | null>(null)
+  const [publishing, setPublishing] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [refused, setRefused] = useState<{ id: string; text: string }[]>([])
 
   const load = useCallback(async () => {
     const supabase = createClient()
@@ -39,10 +50,65 @@ export default function QuestionReviewPage() {
       .select('id, exam_id, subject_id, question_text, options, correct_answer, explanation, difficulty, cognitive_level, status, verified_state, review_note, exams!questions_exam_id_fkey(name), subjects(name)')
       .in('status', ['draft', 'in_review'])
       .order('created_at', { ascending: true })
-    setItems((data ?? []) as ReviewItem[])
+    const rows = (data ?? []) as ReviewItem[]
+    setItems(rows)
+    setSelected((prev) => new Set([...prev].filter((id) => rows.some((r) => r.id === id))))
+    if (rows.length > 0) {
+      const { data: hist } = await supabase
+        .from('question_reviews')
+        .select('question_id, verified_state, note, created_at')
+        .in('question_id', rows.map((r) => r.id))
+        .order('created_at', { ascending: false })
+      const grouped: Record<string, ReviewHistory[]> = {}
+      for (const h of (hist ?? []) as ReviewHistory[]) {
+        if (!grouped[h.question_id]) grouped[h.question_id] = []
+        grouped[h.question_id]!.push(h)
+      }
+      setHistory(grouped)
+    } else {
+      setHistory({})
+    }
   }, [])
 
   useEffect(() => { void load() }, [load])
+
+  const toggleSelect = (id: string) => {
+    setSelected((prev) => {
+      const next = new Set(prev)
+      if (next.has(id)) next.delete(id)
+      else next.add(id)
+      return next
+    })
+  }
+
+  const toggleSelectAll = () => {
+    setSelected((prev) => (prev.size === items.length ? new Set() : new Set(items.map((i) => i.id))))
+  }
+
+  const bulkPublish = async () => {
+    if (selected.size === 0 || publishing) return
+    setPublishing(true)
+    setError(null)
+    setRefused([])
+    try {
+      const res = await fetch('/api/admin/questions/bulk-publish', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ids: Array.from(selected) }),
+      })
+      const data = await res.json()
+      if (!res.ok) {
+        setRefused(data.refused ?? [])
+        throw new Error(data.error ?? 'Bulk publish failed')
+      }
+      setSelected(new Set())
+      await load()
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Bulk publish failed')
+    } finally {
+      setPublishing(false)
+    }
+  }
 
   const transition = async (item: ReviewItem, change: { status?: string; verified_state?: string }) => {
     setActing(item.id)
@@ -90,6 +156,38 @@ export default function QuestionReviewPage() {
       {error && (
         <p className="mt-4 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-bold text-red-700">{error}</p>
       )}
+      {refused.length > 0 && (
+        <div className="mt-4 rounded-xl border border-amber-300 bg-amber-50 px-4 py-3">
+          <p className="text-sm font-extrabold text-amber-800">Still unverified — verify these first, then re-publish:</p>
+          <ul className="mt-1.5 list-disc pl-5 text-[13px] font-semibold text-amber-900">
+            {refused.map((r) => (
+              <li key={r.id}>{r.text}…</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {items.length > 0 && (
+        <div className="mt-6 flex flex-wrap items-center gap-2.5 rounded-2xl border border-blue-200 bg-blue-50/60 p-3.5">
+          <label className="inline-flex cursor-pointer items-center gap-2 text-xs font-extrabold text-blue-900 min-h-[44px]">
+            <input
+              type="checkbox"
+              checked={selected.size === items.length}
+              onChange={toggleSelectAll}
+              className="h-4 w-4 rounded border-gray-300 text-blue-600 cursor-pointer"
+            />
+            Select all ({items.length})
+          </label>
+          <span className="text-xs font-bold text-blue-700">{selected.size} selected</span>
+          <button
+            onClick={() => void bulkPublish()}
+            disabled={selected.size === 0 || publishing}
+            className="ml-auto rounded-xl bg-blue-600 px-5 py-2.5 text-xs font-extrabold text-white hover:bg-blue-700 min-h-[44px] cursor-pointer disabled:opacity-50"
+          >
+            {publishing ? 'Publishing…' : `Publish selected (${selected.size})`}
+          </button>
+        </div>
+      )}
 
       <div className="mt-6 space-y-4">
         {items.map((item) => {
@@ -99,6 +197,13 @@ export default function QuestionReviewPage() {
           return (
             <article key={item.id} className="rounded-2xl border border-gray-200 bg-white p-5">
               <div className="flex flex-wrap items-center gap-2 text-xs font-bold text-gray-500">
+                <input
+                  type="checkbox"
+                  checked={selected.has(item.id)}
+                  onChange={() => toggleSelect(item.id)}
+                  aria-label="Select for bulk publish"
+                  className="h-4 w-4 rounded border-gray-300 text-blue-600 cursor-pointer"
+                />
                 <span>{(exam as { name?: string })?.name ?? '-'}</span>
                 <span aria-hidden>·</span>
                 <span>{(subject as { name?: string })?.name ?? '-'}</span>
@@ -139,6 +244,21 @@ export default function QuestionReviewPage() {
                 <p className="mt-2 rounded-xl bg-amber-50 border border-amber-200 px-3 py-2 text-[13px] font-bold text-amber-800">
                   Note: {item.review_note}
                 </p>
+              )}
+              {(history[item.id] ?? []).length > 0 && (
+                <details className="mt-2 text-[13px]">
+                  <summary className="cursor-pointer font-extrabold text-gray-500 min-h-[32px]">
+                    Verification trail ({(history[item.id] ?? []).length})
+                  </summary>
+                  <ul className="mt-1.5 space-y-1.5">
+                    {(history[item.id] ?? []).map((h, i) => (
+                      <li key={i} className="rounded-lg bg-gray-50 border border-gray-100 px-3 py-2 font-semibold text-gray-600">
+                        {h.verified_state.replace('_', ' ')} · {new Date(h.created_at).toLocaleDateString('en-NG', { day: 'numeric', month: 'short', year: 'numeric' })}
+                        {h.note ? ` — ${h.note}` : ''}
+                      </li>
+                    ))}
+                  </ul>
+                </details>
               )}
 
               <div className="mt-4 flex flex-wrap gap-2">

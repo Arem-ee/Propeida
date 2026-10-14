@@ -14,7 +14,7 @@ export default async function EditQuestionPage({ params }: { params: Promise<{ i
 
   if (!question) redirect('/admin/questions')
 
-  const [examsRes, subjectsRes, misconceptionsRes, topicsRes] = await Promise.all([
+  const [examsRes, subjectsRes, misconceptionsRes, topicsRes, historyRes] = await Promise.all([
     supabase.from('exams').select('id, name').order('name'),
     supabase.from('subjects').select('id, name').order('name'),
     supabase
@@ -25,6 +25,11 @@ export default async function EditQuestionPage({ params }: { params: Promise<{ i
       .from('question_topics')
       .select('topic_id, role')
       .eq('question_id', id),
+    supabase
+      .from('question_reviews')
+      .select('verified_state, note, created_at')
+      .eq('question_id', id)
+      .order('created_at', { ascending: false }),
   ])
 
   const initialMisconceptions: Record<string, { misconception_code: string; misconception_name: string; explanation: string; repair_note_id: string }> = {}
@@ -44,6 +49,11 @@ export default async function EditQuestionPage({ params }: { params: Promise<{ i
       subjects={subjectsRes.data ?? []}
       initialMisconceptions={initialMisconceptions}
       initialTopics={(topicsRes.data ?? []).map((t) => ({ topic_id: t.topic_id, role: t.role }))}
+      history={(historyRes.data ?? []).map((h) => ({
+        verified_state: h.verified_state as string,
+        note: h.note as string | null,
+        created_at: h.created_at as string,
+      }))}
     />
   )
 }
