@@ -8,7 +8,8 @@ Everything deliberately postponed, with its unblock condition. Nothing here is f
 - [ ] **WAEC bank**: content import only; code already exam-agnostic.
 - [ ] **Question→topic mappings**: grow via admin tagging; unlock quality for interleaving + prerequisite routing at volume.
 - [ ] **Misconception maps**: grow via admin authoring; shared-struggle activates per question at ≥20 picks.
-- [ ] **Worked examples / vocab beyond seed**: trig/probability accuracy check against notes; more English vocab sets; comprehension evidence-tapping; minimal-pair grammar; interactive maths diagrams.
+- [x] **Worked examples / vocab beyond seed (wave 1, 2026-10-14)**: probability with-replacement (fraction-bars visuals) + trig angle-of-elevation (plane visual) as second worked blocks — renderer now serves full worked sets; 12-word vocab expansion (phrasal verbs + idioms, merged word lists). Comprehension wave 2: 3 passages + 6 minimal pairs live.
+- [ ] **Worked examples wave 2**: surds/indices/quadratics second problems; concord/parts-of-speech minimal-pair coverage.
 - [ ] **Piano-tense explanation fix**: claims "has practiced" is present perfect continuous — it is present perfect simple. Needs content review, not code.
 - [ ] **IBASS manual extraction**: verbatim topic tables (Biology, Government, Literature, CRS/IRS, Geography), canonical 2026 Literature list, 60/40/40/40 bulletin line, scoring formula, negative-marking policy. See docs §12 🔴 list.
 - [ ] **Verified JAMB 2027 dates**: March 15–25 (FG proposed) vs April 16–25 (reported) still disputed; countdowns stay honest until a bulletin confirms.

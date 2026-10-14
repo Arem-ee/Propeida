@@ -158,9 +158,9 @@ export async function getLessonByPath(
         bullets: (b.content.bullets ?? []) as string[],
       }))
       const callout = byType('callout')[0]
-      const worked = byType('worked_example')[0]
+      const workedBlocks = byType('worked_example')
       const guided = byType('guided_question')[0]
-      const vocab = byType('vocabulary_card')[0]
+      const vocabBlocks = byType('vocabulary_card')
 
       const firstParagraphs = (first?.content.paragraphs ?? []) as string[]
       const note: RevisionNote = {
@@ -175,12 +175,12 @@ export async function getLessonByPath(
       }
 
       const enhancement: LessonEnhancement | null =
-        worked || guided || vocab
+        workedBlocks.length > 0 || guided || vocabBlocks.length > 0
           ? {
               noteId: note.id,
-              ...(worked
+              ...(workedBlocks.length > 0
                 ? {
-                    workedExample: {
+                    workedExamples: workedBlocks.map((worked) => ({
                       problem: String(worked.content.problem ?? ''),
                       steps: ((worked.content.steps ?? []) as {
                         operation: string
@@ -195,7 +195,7 @@ export async function getLessonByPath(
                         predictPrompt: String(s.predictPrompt ?? ''),
                         ...(s.visual && typeof s.visual === 'object' ? { visual: s.visual } : {}),
                       })),
-                    },
+                    })),
                   }
                 : {}),
               ...(guided
@@ -206,20 +206,22 @@ export async function getLessonByPath(
                     },
                   }
                 : {}),
-              ...(vocab
+              ...(vocabBlocks.length > 0
                 ? {
-                    vocabulary: ((vocab.content.words ?? []) as {
-                      word: string
-                      definition: string
-                      contrast: string
-                      sentence: string
-                    }[]).map((w) => ({
-                      word: String(w.word ?? ''),
-                      definition: String(w.definition ?? ''),
-                      contrast: String(w.contrast ?? ''),
-                      sentence: String(w.sentence ?? ''),
-                    })),
-                  }
+                    vocabulary: vocabBlocks.flatMap(
+                      (vocab) =>
+                        ((vocab.content.words ?? []) as {
+                          word: string
+                          definition: string
+                          contrast: string
+                          sentence: string
+                        }[]).map((w) => ({
+                          word: String(w.word ?? ''),
+                          definition: String(w.definition ?? ''),
+                          contrast: String(w.contrast ?? ''),
+                          sentence: String(w.sentence ?? ''),
+                        }))),
+                    }
                 : {}),
             }
           : null

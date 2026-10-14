@@ -37,7 +37,7 @@ export interface SupportedPrompt {
 
 export interface LessonEnhancement {
   noteId: string
-  workedExample?: WorkedExample
+  workedExamples?: WorkedExample[]
   supported?: SupportedPrompt
   vocabulary?: WordCard[]
 }
@@ -54,7 +54,7 @@ export interface WordCard {
 const ENHANCEMENTS: Record<string, LessonEnhancement> = {
   'mathematics-quadratic-equations': {
     noteId: 'mathematics-quadratic-equations',
-    workedExample: {
+    workedExamples: [{
       problem: 'Solve x² − 5x + 6 = 0 by factorization.',
       steps: [
         {
@@ -88,7 +88,7 @@ const ENHANCEMENTS: Record<string, LessonEnhancement> = {
           predictPrompt: '',
         },
       ],
-    },
+    }],
     supported: {
       question: 'Now you try with scaffolding: solve x² − 7x + 12 = 0 by factorization.',
       hints: [
@@ -107,7 +107,7 @@ export function getEnhancement(noteId: string): LessonEnhancement | null {
 const EXTRA_ENHANCEMENTS: Record<string, LessonEnhancement> = {
   'mathematics-surds': {
     noteId: 'mathematics-surds',
-    workedExample: {
+    workedExamples: [{
       problem: 'Simplify √50 − √18.',
       steps: [
         {
@@ -129,7 +129,7 @@ const EXTRA_ENHANCEMENTS: Record<string, LessonEnhancement> = {
           predictPrompt: '',
         },
       ],
-    },
+    }],
     supported: {
       question: 'Now you try with scaffolding: simplify √75 + √27 − √12.',
       hints: [
@@ -141,7 +141,7 @@ const EXTRA_ENHANCEMENTS: Record<string, LessonEnhancement> = {
   },
   'mathematics-indices': {
     noteId: 'mathematics-indices',
-    workedExample: {
+    workedExamples: [{
       problem: 'Evaluate 32^(2/5) without a calculator.',
       steps: [
         {
@@ -163,7 +163,7 @@ const EXTRA_ENHANCEMENTS: Record<string, LessonEnhancement> = {
           predictPrompt: '',
         },
       ],
-    },
+    }],
     supported: {
       question: 'Now you try with scaffolding: evaluate 16^(3/4).',
       hints: [
@@ -175,7 +175,7 @@ const EXTRA_ENHANCEMENTS: Record<string, LessonEnhancement> = {
   },
   'mathematics-trigonometry': {
     noteId: 'mathematics-trigonometry',
-    workedExample: {
+    workedExamples: [{
       problem: 'If sin θ = 3/5 and θ is acute, find cos θ.',
       steps: [
         {
@@ -197,7 +197,7 @@ const EXTRA_ENHANCEMENTS: Record<string, LessonEnhancement> = {
           predictPrompt: '',
         },
       ],
-    },
+    }],
     supported: {
       question: 'Now you try with scaffolding: if cos θ = 12/13 (θ acute), find sin θ.',
       hints: [
@@ -209,7 +209,7 @@ const EXTRA_ENHANCEMENTS: Record<string, LessonEnhancement> = {
   },
   'mathematics-probability': {
     noteId: 'mathematics-probability',
-    workedExample: {
+    workedExamples: [{
       problem: 'A bag holds 3 red and 2 blue balls. Two are drawn one after another without replacement. Find P(both red).',
       steps: [
         {
@@ -231,7 +231,7 @@ const EXTRA_ENHANCEMENTS: Record<string, LessonEnhancement> = {
           predictPrompt: '',
         },
       ],
-    },
+    }],
     supported: {
       question: 'Now you try with scaffolding: a box has 4 green and 6 yellow pens. Two drawn without replacement — P(both green)?',
       hints: [

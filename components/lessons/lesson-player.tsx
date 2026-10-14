@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle, Eye, Lightbulb, Wrench, Target } from 'lucide-react'
 import { celebrate } from '@/lib/celebrate'
@@ -208,6 +208,74 @@ function BankQuestion({
   )
 }
 
+function WorkedCard({
+  example,
+  index,
+  total,
+  onDone,
+}: {
+  example: NonNullable<LessonEnhancement['workedExamples']>[number]
+  index: number
+  total: number
+  onDone: () => void
+}) {
+  const [revealed, setRevealed] = useState(0)
+  const doneFired = useRef(false)
+
+  useEffect(() => {
+    if (revealed >= example.steps.length && !doneFired.current) {
+      doneFired.current = true
+      onDone()
+    }
+  }, [revealed, example.steps.length, onDone])
+
+  return (
+    <div className="rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-7 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)]">
+      {total > 1 && (
+        <p className="text-[11px] font-extrabold uppercase tracking-wider text-gray-400">
+          Worked example {index + 1} of {total}
+        </p>
+      )}
+      <p className="mt-2 rounded-2xl bg-ink p-4 font-display text-lg font-medium leading-snug text-white">
+        {example.problem}
+      </p>
+      <div className="mt-4 space-y-3">
+        {example.steps.map((step, i) => {
+          const isRevealed = i < revealed
+          const isNext = i === revealed
+          return (
+            <div key={i} className={`rounded-2xl border p-4 ${isRevealed ? 'border-emerald-200 bg-emerald-50/50' : 'border-gray-200 bg-white'}`}>
+              <p className="text-sm font-extrabold text-black">{i + 1}. {step.operation}</p>
+              <p className="mt-1 text-[13px] font-semibold text-ink-soft">{step.reason}</p>
+              {isRevealed ? (
+                <>
+                  <p className="mt-2 rounded-xl bg-white border border-emerald-200 px-3 py-2.5 text-sm font-bold text-emerald-800">{step.result}</p>
+                  <StepVisual visual={step.visual ?? null} />
+                </>
+              ) : isNext ? (
+                <div className="mt-2">
+                  {step.predictPrompt && (
+                    <p className="text-[13px] font-bold italic text-blue-700">{step.predictPrompt}</p>
+                  )}
+                  <button
+                    onClick={() => setRevealed((n) => n + 1)}
+                    className="mt-2 inline-flex items-center gap-1.5 rounded-xl border-2 border-blue-600 px-4 py-2 text-[13px] font-extrabold text-blue-700 min-h-[44px] cursor-pointer"
+                  >
+                    <Eye className="h-4 w-4" />
+                    {step.predictPrompt ? 'Predict, then reveal' : 'Reveal'}
+                  </button>
+                </div>
+              ) : (
+                <p className="mt-2 text-xs font-bold text-gray-300">Locked — reveal the step above first.</p>
+              )}
+            </div>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
+
 export default function LessonPlayer({
   note,
   subjectLabel,
@@ -228,7 +296,7 @@ export default function LessonPlayer({
   const phases: Phase[] = [
     ...(diagnostic ? (['diagnostic'] as Phase[]) : []),
     'teach',
-    ...(enhancement?.workedExample ? (['worked'] as Phase[]) : []),
+    ...((enhancement?.workedExamples?.length ?? 0) > 0 ? (['worked'] as Phase[]) : []),
     ...(enhancement?.supported ? (['supported'] as Phase[]) : []),
     ...(independent.length > 0 ? (['independent'] as Phase[]) : []),
     'done',
@@ -236,8 +304,8 @@ export default function LessonPlayer({
   const [phaseIdx, setPhaseIdx] = useState(0)
   const phase = phases[phaseIdx] ?? 'done'
 
-  const [revealedSteps, setRevealedSteps] = useState(0)
   const [revealedHints, setRevealedHints] = useState(0)
+  const [workedDone, setWorkedDone] = useState<number[]>([])
   const [supportedDone, setSupportedDone] = useState(false)
   const [results, setResults] = useState<boolean[]>([])
   const [diagnosticDone, setDiagnosticDone] = useState(false)
@@ -463,55 +531,28 @@ export default function LessonPlayer({
             onClick={next}
             className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-blue-600 py-3.5 text-[15px] font-extrabold text-white hover:bg-blue-700 min-h-[52px]"
           >
-            {enhancement?.workedExample ? 'See it worked' : 'Try it yourself'} <ArrowRight className="h-4 w-4" />
+            {(enhancement?.workedExamples?.length ?? 0) > 0 ? 'See it worked' : 'Try it yourself'} <ArrowRight className="h-4 w-4" />
           </button>
         </div>
       )}
 
-      {/* 3 — Worked example: predict before reveal */}
-      {phase === 'worked' && enhancement?.workedExample && (
-        <div className="rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-7 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)]">
+      {/* 3 — Worked examples: predict before reveal, one problem at a time */}
+      {phase === 'worked' && (enhancement?.workedExamples?.length ?? 0) > 0 && (
+        <div className="space-y-4">
           <p className="font-display text-[22px] font-medium text-black">Watch it worked</p>
-          <p className="mt-2 rounded-2xl bg-ink p-4 font-display text-lg font-medium leading-snug text-white">
-            {enhancement.workedExample.problem}
-          </p>
-          <div className="mt-4 space-y-3">
-            {enhancement.workedExample.steps.map((step, i) => {
-              const revealed = i < revealedSteps
-              const isNext = i === revealedSteps
-              return (
-                <div key={i} className={`rounded-2xl border p-4 ${revealed ? 'border-emerald-200 bg-emerald-50/50' : 'border-gray-200 bg-white'}`}>
-                  <p className="text-sm font-extrabold text-black">{i + 1}. {step.operation}</p>
-                  <p className="mt-1 text-[13px] font-semibold text-ink-soft">{step.reason}</p>
-                  {revealed ? (
-                    <>
-                      <p className="mt-2 rounded-xl bg-white border border-emerald-200 px-3 py-2.5 text-sm font-bold text-emerald-800">{step.result}</p>
-                      <StepVisual visual={step.visual ?? null} />
-                    </>
-                  ) : isNext ? (
-                    <div className="mt-2">
-                      {step.predictPrompt && (
-                        <p className="text-[13px] font-bold italic text-blue-700">{step.predictPrompt}</p>
-                      )}
-                      <button
-                        onClick={() => setRevealedSteps((n) => n + 1)}
-                        className="mt-2 inline-flex items-center gap-1.5 rounded-xl border-2 border-blue-600 px-4 py-2 text-[13px] font-extrabold text-blue-700 min-h-[44px] cursor-pointer"
-                      >
-                        <Eye className="h-4 w-4" />
-                        {step.predictPrompt ? 'Predict, then reveal' : 'Reveal'}
-                      </button>
-                    </div>
-                  ) : (
-                    <p className="mt-2 text-xs font-bold text-gray-300">Locked — reveal the step above first.</p>
-                  )}
-                </div>
-              )
-            })}
-          </div>
-          {revealedSteps >= enhancement.workedExample.steps.length && (
+          {enhancement!.workedExamples!.map((example, ei) => (
+            <WorkedCard
+              key={ei}
+              example={example}
+              index={ei}
+              total={enhancement!.workedExamples!.length}
+              onDone={() => setWorkedDone((prev) => (prev.includes(ei) ? prev : [...prev, ei]))}
+            />
+          ))}
+          {workedDone.length >= enhancement!.workedExamples!.length && (
             <button
               onClick={next}
-              className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-blue-600 py-3.5 text-[15px] font-extrabold text-white hover:bg-blue-700 min-h-[52px] animate-pop"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-blue-600 py-3.5 text-[15px] font-extrabold text-white hover:bg-blue-700 min-h-[52px] animate-pop"
             >
               Try one with help <ArrowRight className="h-4 w-4" />
             </button>
