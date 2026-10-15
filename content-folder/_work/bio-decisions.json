@@ -1,0 +1,348 @@
+[
+ {
+  "id": "4215cd96-abe0-4d30-a2b9-3229149b881a",
+  "action": "explain",
+  "explanation": "Administrative instruction: the correct paper type is printed on your own script \u2014 for this 2010 set it was Type C."
+ },
+ {
+  "id": "c134299e-eeea-4031-b05d-7c21afc1f47a",
+  "action": "explain",
+  "explanation": "By elimination: a young cell has dense cytoplasm and a central nucleus, so (a) and (b) describe immature cells; only the cellulose wall (c) is true of the mature plant cell here.",
+  "note": "AI-solving: answer by elimination among flawed options \u2014 verify against source."
+ },
+ {
+  "id": "517ab25a-efcd-40d2-bf58-ef7102ab493a",
+  "action": "delete"
+ },
+ {
+  "id": "e15f0963-cfd1-4f68-a88e-21dc666d5045",
+  "action": "delete"
+ },
+ {
+  "id": "884b7b7c-188e-4464-8815-46b0726e8c36",
+  "action": "delete"
+ },
+ {
+  "id": "8bebf5eb-9a22-4a3e-bcd7-3b889952064b",
+  "action": "delete"
+ },
+ {
+  "id": "7bc601e0-6450-4b16-a4ee-cb1567480d5a",
+  "action": "repair",
+  "options": {
+   "c": "sucrose",
+   "d": "amino acid"
+  },
+  "explanation": "Benedict\u2019s solution turns brick-red on warming only with reducing sugars.",
+  "note": "AI-solving: options C/D were fused as sucrose amisno/acid \u2014 split certain; verify."
+ },
+ {
+  "id": "703b20fc-2779-4b7c-a884-8e52dcf4585d",
+  "action": "explain",
+  "explanation": "Everything except the lungs runs on the systemic circuit \u2014 the pulmonary vessels serve the lungs alone."
+ },
+ {
+  "id": "613d94af-3861-4e2f-a5b4-a5659e9452b6",
+  "action": "explain",
+  "explanation": "Anaerobic respiration of sugar in yeast (fermentation) yields carbon(IV) oxide and alcohol."
+ },
+ {
+  "id": "61ce842b-49af-4a2d-b338-9bdc0c428320",
+  "action": "explain",
+  "explanation": "The diaphragm \u2014 the muscular floor of the thorax \u2014 separates chest from abdomen."
+ },
+ {
+  "id": "cba6849a-7e51-4994-b9d7-9674642ab6f9",
+  "action": "explain",
+  "explanation": "Sebaceous glands oil the hair for flexibility and water repellence.",
+  "note": "AI-solving: source typo sweet for sweat in option A; verify wording."
+ },
+ {
+  "id": "b1bd2e9d-b53d-4cdd-927d-76a1ff0b9512",
+  "action": "explain",
+  "explanation": "Bowman\u2019s capsules sit in the cortex, the kidney\u2019s outer layer \u2014 medulla and pelvis lie beneath."
+ },
+ {
+  "id": "422c962d-0677-4b56-8562-d244314318ca",
+  "action": "flag",
+  "note": "AI-solving: touch, light, chemicals and gravity all trigger nastic responses; publisher key (c) \u2014 verify intended answer."
+ },
+ {
+  "id": "f92091da-528c-446c-a155-0c1f710d5d6e",
+  "action": "explain",
+  "explanation": "Every food chain starts with the maker \u2014 the green-plant producer."
+ },
+ {
+  "id": "0463d8f8-14d0-449e-be71-3dfc9d4260be",
+  "action": "explain",
+  "explanation": "Mycorrhizal fungi extend the root\u2019s reach, absorbing inorganic ions the plant then takes up."
+ },
+ {
+  "id": "00f25984-bdbe-4d7d-a7e4-eeb6e0d54a0b",
+  "action": "explain",
+  "explanation": "The placenta is the exchange barrier between maternal and foetal blood.",
+  "note": "AI-solving: source typos ibarrier/b lood; verify wording."
+ },
+ {
+  "id": "38e91493-392c-4242-b927-ad531e5e115f",
+  "action": "delete"
+ },
+ {
+  "id": "ce15f13b-45c9-40b3-86bd-ea71f7410bb1",
+  "action": "explain",
+  "explanation": "Administrative instruction: the correct type is printed on your own script \u2014 for this 2013 set it was Type B."
+ },
+ {
+  "id": "6b083ceb-87be-479b-b0ed-eb84bc18f55c",
+  "action": "explain",
+  "explanation": "Breaking complex substances into simpler ones is catabolism \u2014 anabolism builds up."
+ },
+ {
+  "id": "c0cb6617-6812-4b93-a6fb-e55a018dd2cb",
+  "action": "flag",
+  "note": "AI-solving: spermatheca, cocoon, clitellum and chaetae are all annelid traits \u2014 no option names an arthropod trait; publisher key (d) \u2014 verify stem and key."
+ },
+ {
+  "id": "575ded51-df2d-492c-86d1-4b5287520a03",
+  "action": "flag",
+  "note": "AI-solving: butterflies rest wings upright and moths flat, so key (a) inverts posture while (d) is true \u2014 verify key against source."
+ },
+ {
+  "id": "db1c2b7f-cc55-4d59-94e9-f5fe1aed9544",
+  "action": "explain",
+  "explanation": "Quill (flight) feathers bear the wing\u2019s aerodynamic surface \u2014 down, filoplume and covert do not power flight."
+ },
+ {
+  "id": "0dee33bd-59c3-482e-9bb4-d9766b817b08",
+  "action": "explain",
+  "explanation": "Dry-habitat plants are xerophytes \u2014mesophytes need average water, hydrophytes live in it."
+ },
+ {
+  "id": "5ac4c225-82c4-4fed-ab02-b22f2de1ffd6",
+  "action": "flag",
+  "note": "AI-solving: simplest points to virus (b); publisher key (c) Amoeba \u2014 verify against source."
+ },
+ {
+  "id": "850850f5-5557-404c-a45d-c443b0e7b688",
+  "action": "explain",
+  "explanation": "The sucking proboscis is the insect feeding organ (butterflies, mosquitoes)."
+ },
+ {
+  "id": "dbd3ec8a-f6a9-493e-a4c7-16459962c537",
+  "action": "delete"
+ },
+ {
+  "id": "66149560-1303-4605-83b8-42791e4e2a22",
+  "action": "explain",
+  "explanation": "Plants that trap and digest insects supplement poor soils \u2014 carnivorous plants.",
+  "note": "AI-solving: source typo minsects; verify wording."
+ },
+ {
+  "id": "5b5da7ec-9266-4203-a441-80d18e672f17",
+  "action": "explain",
+  "explanation": "Cellular respiration converts fuel energy into ATP\u2019s high-energy bonds.",
+  "note": "AI-solving: source typo proce ss; verify wording."
+ },
+ {
+  "id": "83cae569-826f-4515-851f-105774730959",
+  "action": "explain",
+  "explanation": "Plasmodium, the malaria parasite, lives at its host\u2019s expense \u2014 the parasitic protozoan here."
+ },
+ {
+  "id": "522b86d2-25e1-456d-837c-06365923c337",
+  "action": "flag",
+  "note": "AI-solving: lymphocytes (b) are the textbook immune cells; publisher key (a) with typo Phagoecytes \u2014 verify."
+ },
+ {
+  "id": "d3773a5a-cce2-49b9-81d1-61d694dde976",
+  "action": "repair",
+  "options": {
+   "d": "phloem"
+  },
+  "explanation": "Water and dissolved minerals rise through xylem vessels \u2014 phloem carries food down.",
+  "note": "AI-solving: option D tail trimmed (next-stem leak); verify."
+ },
+ {
+  "id": "b6d6e743-f039-4d97-a6f3-3f40e916c72d",
+  "action": "delete"
+ },
+ {
+  "id": "fc47dc69-9689-4428-a100-21d36980fe1d",
+  "action": "delete"
+ },
+ {
+  "id": "b6bec5b9-5e2d-473f-a127-537400f1f5e4",
+  "action": "explain",
+  "explanation": "Spirogyra\u2019s filament is a chain of many cells \u2014 Chlamydomonas, Amoeba and Euglena are single-celled."
+ },
+ {
+  "id": "dfb11ede-7a72-4e3a-8744-148c7e6cd0df",
+  "action": "explain",
+  "explanation": "In bryophytes the gametophyte generation carries the sex organs."
+ },
+ {
+  "id": "0d6b5229-9cc8-4388-9a55-631071c85c0c",
+  "action": "explain",
+  "explanation": "Seeds protect the embryo and travel far \u2014 efficient dispersal made seed plants dominant on land."
+ },
+ {
+  "id": "7bef36f2-2408-40f3-9925-3529ddbb8af3",
+  "action": "explain",
+  "explanation": "Arboreal means tree-dwelling \u2014 the bird, not elephant, fish or antelope."
+ },
+ {
+  "id": "92d3fc51-0c7e-4226-87ee-887aa86e5b24",
+  "action": "delete"
+ },
+ {
+  "id": "dd16eb3b-3833-410c-8ad2-fd1309897755",
+  "action": "explain",
+  "explanation": "Floating leaves need little root or xylem \u2014 poor root and tissue development marks hydrophytes."
+ },
+ {
+  "id": "f4ebad5a-b172-4fbc-b5bb-3b085b48a6c8",
+  "action": "delete"
+ },
+ {
+  "id": "93241d24-1f68-4111-ae34-c253e95064d1",
+  "action": "explain",
+  "explanation": "Bird flu is viral \u2014 hence vaccines and culling, not antibiotics.",
+  "note": "AI-solving: source typos virus ./bacteriu m; verify wording."
+ },
+ {
+  "id": "2c875fd0-90a9-4dd6-8612-d0fd29cc5c4a",
+  "action": "delete"
+ },
+ {
+  "id": "b1c1fc26-3ba9-47f0-b333-830ee7b8aabc",
+  "action": "explain",
+  "explanation": "Facial hair in adult males follows the Y chromosome line \u2014 a sex-linked trait; tongue-rolling is autosomal."
+ },
+ {
+  "id": "a9eb7951-1c06-487f-8021-5298960d3f8b",
+  "action": "delete"
+ },
+ {
+  "id": "4a312a4a-6baf-498f-a9da-9fb40d65e8a2",
+  "action": "explain",
+  "explanation": "Cloning needs only one somatic cell from the donor \u2014 (c) is backwards: the clone is genetically identical, not merely similar."
+ },
+ {
+  "id": "7da8af29-e81c-4f8e-8622-ffaa4d031087",
+  "action": "flag",
+  "note": "AI-solving: ecdysis (a) is correct for moulting, but option B is leaked text \u2014 verify or reject."
+ },
+ {
+  "id": "93b3103c-fa85-465c-8112-0ae2a30f48e8",
+  "action": "explain",
+  "explanation": "Roughage (fibre) adds bulk that keeps food moving \u2014 its lack constipates."
+ },
+ {
+  "id": "9e148d9f-ee72-420e-9b2c-99d31bac2614",
+  "action": "delete"
+ },
+ {
+  "id": "ee968023-562b-42cb-9b8b-8b207482b0ab",
+  "action": "explain",
+  "explanation": "Underground, eyes are useless \u2014 vibrissae (whiskers) feel the way through the dark.",
+  "note": "AI-solving: source typos wimll/vibrissae .; verify wording."
+ },
+ {
+  "id": "40f4fd1c-5327-4cd6-9fcc-404e212be068",
+  "action": "explain",
+  "explanation": "Filtrate flows glomerulus \u2192 Bowman\u2019s capsule \u2192 convoluted tubule \u2192 Henle\u2019s loop \u2192 collecting duct.",
+  "note": "AI-solving: options truncated as collecti/collectin in source; verify wording."
+ },
+ {
+  "id": "aa9a48e0-da3f-42aa-96d8-3aaad16cc2ea",
+  "action": "flag",
+  "note": "AI-solving: gular display serves mating/territory (a/b) as much as fright (c) \u2014 verify publisher key."
+ },
+ {
+  "id": "96623179-52b5-4984-8f6b-fa589689157c",
+  "action": "explain",
+  "explanation": "Chlorophyll plus carotenoid helpers harvest light \u2014 melanin and haemoglobin are animal pigments."
+ },
+ {
+  "id": "76677270-2d99-43c2-afbd-55d596696542",
+  "action": "repair",
+  "options": {
+   "b": "clay - silt - sand - gravel"
+  },
+  "explanation": "Particle size runs clay < silt < sand < gravel.",
+  "note": "AI-solving: typos repaired (silt sand/gramvel); verify."
+ },
+ {
+  "id": "fba43199-5573-4584-a6fa-9efbc8f7d567",
+  "action": "delete"
+ },
+ {
+  "id": "e88ba697-3e1f-4248-b4fc-bc7f221027ab",
+  "action": "delete"
+ },
+ {
+  "id": "dd26b83b-1744-4c73-8b23-5574841dd170",
+  "action": "delete"
+ },
+ {
+  "id": "3cd2740c-f949-4f62-98cc-b0ba688319de",
+  "action": "explain",
+  "explanation": "Polio is a virus you catch \u2014 sickle-cell and haemophilia are inherited, so polio is the non-inheritable one."
+ },
+ {
+  "id": "f6cdf83b-8cd8-461f-be32-6f410df48ef8",
+  "action": "delete"
+ },
+ {
+  "id": "e4070ea9-cf89-4111-94f0-b3cb7abbe9c8",
+  "action": "delete"
+ },
+ {
+  "id": "0c0a8aa3-d416-413d-ada4-f3967aaf0d94",
+  "action": "flag",
+  "note": "AI-solving: common descent is Darwin (b); publisher key (c) Lamarck contradicts \u2014 verify stem and key."
+ },
+ {
+  "id": "2cc3f8bb-a8ad-44cf-86d0-95a918eae95f",
+  "action": "explain",
+  "explanation": "Fibre holds water and adds bulk, speeding food through the gut \u2014 easing digestion."
+ },
+ {
+  "id": "7268ad9e-22ee-4625-8fdc-bcb699d76b61",
+  "action": "explain",
+  "explanation": "Cross fertilisation shuffles two parents\u2019 genes into each zygote \u2014 the engine of variation."
+ },
+ {
+  "id": "1fd7b1be-45d9-4a43-8d05-53adb308d05d",
+  "action": "delete"
+ },
+ {
+  "id": "b71c3bef-b15a-4d43-a629-f58105968a4b",
+  "action": "delete"
+ },
+ {
+  "id": "4037e390-243c-4ee0-9d5d-581767e8d6f1",
+  "action": "delete"
+ },
+ {
+  "id": "26ee2d60-3ae5-4d59-acdf-3880bad013dc",
+  "action": "delete"
+ },
+ {
+  "id": "7297bdb0-cc38-469d-ae42-9aa1234304a7",
+  "action": "flag",
+  "note": "AI-solving: cholera (a) fits the symptoms; publisher key (d) glycolysis contradicts \u2014 verify."
+ },
+ {
+  "id": "58a9e7f9-d75a-4140-bf4c-2e60567202af",
+  "action": "delete"
+ },
+ {
+  "id": "f2c07652-6906-46be-b742-8aff7c03f500",
+  "action": "delete"
+ },
+ {
+  "id": "1c674d98-bc01-4d8c-ada3-75e89e47c193",
+  "action": "delete"
+ }
+]
