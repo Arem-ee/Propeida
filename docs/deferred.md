@@ -1,10 +1,11 @@
 # Deferred work ledger
 
-Everything deliberately postponed, with its unblock condition. Nothing here is forgotten — items leave this list only by being built or explicitly rejected. Updated 2026-10-12.
+Everything deliberately postponed, with its unblock condition. Nothing here is forgotten — items leave this list only by being built or explicitly rejected. Updated 2026-10-15.
 
 ## Content (authoring labor, not code)
 
 - [ ] **JAMB bank**: English → Maths → electives → Lekki Headmaster set. Unblocks: JAMB mocks, cohort countdown meaning, exam-date scheduling relevance.
+- [ ] **JAMB core-booklet hand-rescue pile** (before banking from core booklets): Bio 5 polish items (2000 Q10 blob, 1994 Q30 data, 1992 Q40 D / 1998 Q35 D tails) + Chem list in `content-folder/_work/chem-rescue-notes.md` (1983 Q16 list misparse, 2002 Q1 watermark dup, 2003 Q1/Q9, 1990 Q2 figure flag, missing-number spot-checks).
 - [ ] **WAEC bank**: content import only; code already exam-agnostic.
 - [ ] **Question→topic mappings**: grow via admin tagging; unlock quality for interleaving + prerequisite routing at volume.
 - [ ] **Misconception maps**: grow via admin authoring; shared-struggle activates per question at ≥20 picks.

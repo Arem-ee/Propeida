@@ -29,18 +29,21 @@ else:
 # can tell them from question text even when watermark letters scramble
 # the banner ('Bioloog o y 1 l 9 g 95 i').
 BANNER_SENTINEL = '\x01BANNER\x01'
-BANNER_YEAR_FUZZ_RE = re.compile(
-    r'(?<!\d)[12](?:\s*[A-Za-z])?\s*[0-9](?:\s*[A-Za-z])?\s*[0-9](?:\s*[A-Za-z])?\s*[0-9](?!\d)'
-)
 
 
 def banner_year(s: str) -> str | None:
-    """Recover 'YYYY' from a watermark-scrambled banner line."""
-    m = BANNER_YEAR_FUZZ_RE.search(s)
-    if not m:
-        return None
-    y = re.sub(r'\D', '', m.group(0))
-    return y if 1980 <= int(y) <= 2035 else None
+    """Recover 'YYYY' from a watermark-scrambled banner line.
+
+    Banner text interleaves with watermark letters giving '20dec0om3'
+    for 2003; the year's digits keep their order, so scan the digit
+    sequence for the first window that reads as a plausible year.
+    """
+    digits = re.sub(r'\D', '', s)
+    for i in range(len(digits) - 3):
+        y = int(digits[i:i + 4])
+        if 1980 <= y <= 2035:
+            return str(y)
+    return None
 
 
 def strip_watermark_chars(page):
@@ -86,20 +89,31 @@ def page_text(page) -> str:
     w, h = page.width, page.height
     mid = w / 2
 
-    bands: list[tuple[float, float]] = []
+    # Only true banner rects (their text still carries a year) may split
+    # the page into bands. Wide shallow rects also decorate ordinary
+    # question and option rows ('A. 22.4 dm3 B. 33.6 dm3'); treating
+    # those as banners excised their text from the flow, so anything
+    # without a year in its crop text is ignored entirely.
+    bands: list[tuple[float, float, str]] = []
     for r in page.rects:
         rw = r.get('width') or 0
         rh = r.get('height') or 0
         if rw > 0.7 * w and rh < 0.2 * h:
-            bands.append((r['top'], r['bottom']))
+            crop = page.crop((0, max(0.0, r['top'] - 2), w, min(h, r['bottom'] + 2)))
+            txt = crop.extract_text() or ''
+            if banner_year(txt):
+                bands.append((r['top'], r['bottom'], txt))
     bands.sort()
 
     out: list[str] = []
     y = 0.0
-    for top, bottom in bands:
+    for top, bottom, banner in bands:
         if top > y + 1:
-            _emit_band(page, out, y, top, mid, w)
-        banner = page.crop((0, max(0.0, top - 2), w, min(h, bottom + 2))).extract_text() or ''
+            # Stop 0.5pt above the banner: leaked banner-text tops sit
+            # ~0.1pt above the rect edge and would re-fire the year as
+            # a plain line downstream ('stry 1990'), while genuine text
+            # lines sit further above and must stay in.
+            _emit_band(page, out, y, top - 0.5, mid, w)
         for bl in banner.split('\n'):
             if bl.strip():
                 out.append(BANNER_SENTINEL + bl.strip())
@@ -247,6 +261,12 @@ def parse(pages_text: list[str]):
     def new_section(year):
         nonlocal sec, in_keys, data_collect, data_lines
         nonlocal blocks, order, cur
+        if (sec is not None and sec['year'] == year
+                and not order and not sec['qblocks']):
+            # Banner text leaked into the band above its own rect and
+            # re-fired the same year as a plain line; the real banner
+            # sentinel line follows immediately. Keep the one section.
+            return
         finalize()
         sec = {'year': year, 'qblocks': [], 'keys': {}}
         pending_data.clear()
