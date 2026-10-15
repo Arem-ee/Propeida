@@ -1,0 +1,417 @@
+"""Parse JAMB past-question PDFs into structured JSON.
+
+Two-column layouts interleave in raw extraction, so columns are split by
+word x-position before reading order is restored. Watermark litter
+(vertical single letters, download lines, bare page numbers) is stripped.
+
+Usage: python scripts/jamb-parse.py <pdf-path> [subject-hint]
+Writes content-folder/_parsed/<stem>.json + prints a coverage report.
+
+Output: [{year, number, text, options{a,b,c,d}, answer|null, source}]
+answer is null when no key matched — those rows never reach the DB
+(correct_answer is NOT NULL), they wait for a key.
+"""
+import json
+import re
+import sys
+import pdfplumber
+from pathlib import Path
+
+SRC = Path(sys.argv[1]) if len(sys.argv) > 1 else Path('__none__')
+
+if SRC.name != '__none__':
+    with pdfplumber.open(SRC) as _pdf:
+        NPAGES = len(_pdf.pages)
+else:
+    NPAGES = 0
+
+
+def page_text(page) -> str:
+    words = page.extract_words()
+    if not words:
+        return ''
+    mid = page.width / 2
+    rows: dict[int, list] = {}
+    for w in words:
+        rows.setdefault(round(w['top']), []).append(w)
+
+    out: list[str] = []
+    left_buf: list[str] = []
+    right_buf: list[str] = []
+
+    def flush():
+        out.extend(left_buf)
+        out.extend(right_buf)
+        left_buf.clear()
+        right_buf.clear()
+
+    for top in sorted(rows):
+        row = sorted(rows[top], key=lambda w: w['x0'])
+        line = ' '.join(w['text'] for w in row)
+        spans = row[0]['x0'] < mid and row[-1]['x1'] > mid
+        if spans:
+            # Same-y lines from both columns fuse into one spanning row.
+            # Split at the widest inter-word gap near the page middle;
+            # true full-width headers have even spacing and stay whole.
+            gaps = []
+            for a, b in zip(row, row[1:]):
+                gaps.append((b['x0'] - a['x1'], (a['x1'] + b['x0']) / 2))
+            width, at = max(gaps, key=lambda g: g[0]) if gaps else (0, 0)
+            if width > 20 and abs(at - mid) < 80:
+                left_part = ' '.join(w['text'] for w in row if (w['x0'] + w['x1']) / 2 < at)
+                right_part = ' '.join(w['text'] for w in row if (w['x0'] + w['x1']) / 2 >= at)
+                if left_part.strip():
+                    left_buf.append(left_part)
+                if right_part.strip():
+                    right_buf.append(right_part)
+                continue
+            # Full-width row (headers, key titles): boundary, flush columns.
+            flush()
+            out.append(line)
+        elif (row[0]['x0'] + row[-1]['x1']) / 2 < mid:
+            left_buf.append(line)
+        else:
+            right_buf.append(line)
+    flush()
+    return '\n'.join(out)
+
+
+WM_LETTERS = set('myschoolgistcomwww')
+
+# A number/option marker alone on a line: column geometry detached it from
+# its text ('10.' then 'from'; 'o11.' fused with a watermark letter).
+DETACHED_RE = re.compile(r'^[a-z\.]*(\d{1,3}|[A-D])\.\s*$', re.IGNORECASE)
+
+
+def clean(lines: list[str]) -> list[str]:
+    out = []
+    for ln in lines:
+        s = ln.strip()
+        if not s:
+            continue
+        # Vertical watermark letters: lone alphanumerics without a period.
+        if re.fullmatch(r'[A-Za-z0-9]', s):
+            continue
+        if 'myschoolgist' in s.lower() or s.startswith('http'):
+            continue
+        if re.fullmatch(r'\d{1,3}', s):  # bare page numbers
+            continue
+        # Watermark letter fused to a line start ('ythe', 'oD.', 'hA.'):
+        # strip one leading watermark letter when what follows is a word
+        # or an option/number marker.
+        m = re.match(r'^([a-z\.])(.*)$', s)
+        if m and m.group(1).lower() in WM_LETTERS:
+            rest = m.group(2)
+            if re.match(r'^(\d+\.|[A-D]\.|[A-Z][a-z]{2,})', rest):
+                s = rest.strip()
+                if not s:
+                    continue
+        out.append(s)
+
+    # Reattach detached markers: 'o11.' + 'Consumer surplus…' → one line.
+    # Never swallow a following option/number line.
+    merged: list[str] = []
+    i = 0
+    while i < len(out):
+        m = DETACHED_RE.match(out[i])
+        nxt = out[i + 1] if i + 1 < len(out) else ''
+        if m and nxt and not Q_RE.match(nxt) and not OPT_RE.match(nxt):
+            merged.append(out[i] + ' ' + nxt)
+            i += 2
+        else:
+            merged.append(out[i])
+            i += 1
+    return merged
+
+
+YEAR_RE = re.compile(r'UTME\s+(19\d{2}|20\d{2}).*QUESTIONS', re.IGNORECASE)
+# Older booklets: a bare '<Subject> YYYY' line ('Commerce 1994').
+YEAR_BARE_RE = re.compile(r'^[A-Za-z][A-Za-z &\/\'\-]{2,40}\s+(19\d{2}|20\d{2})$')
+Q_RE = re.compile(r'^(\d{1,3})(\.\s*|\s+)(.*)')
+OPT_RE = re.compile(r'^([A-D])\.\s+(.*)')
+KEY_RE = re.compile(r'^(\d{1,3})\.\s*([A-D])\b')
+# 'Use the data below to answer questions 9 and 10.' / '...questions 9 to 12.'
+DATA_REF_RE = re.compile(
+    r'use the (data|informationm?|table|diagram|graph|histogram|chart|figure|extract|passage) below to answer questions?\s+(\d{1,3})\s*(?:and|to|-|\u2013)?\s*(\d{1,3})?',
+    re.IGNORECASE,
+)
+FIGURE_KINDS = {'diagram', 'graph', 'histogram', 'chart', 'figure'}
+# Literature set-text bindings: 'Questions 2 to 5 are based on De Graft's
+# Sons and Daughters'. Without the binding, 'The play can be referred to
+# as…' is unanswerable — prepend it like shared data.
+SET_TEXT_RE = re.compile(
+    r'questions?\s+(\d{1,3})\s*(?:to|-|–|and)\s*(\d{1,3})?\s*(?:are|is)\s+based on\s+(.+)',
+    re.IGNORECASE,
+)
+# The number range often wraps to the next line ('…to answer' / 'questions
+# 9 and 10.') — glue those back together before parsing.
+ANSWER_WRAP_RE = re.compile(
+    r'use the (data|informationm?|table|diagram|graph|histogram|chart|figure|extract|passage) below to answer\s*$',
+    re.IGNORECASE,
+)
+
+
+def parse(pages_text: list[str]):
+    sections: list[dict] = []  # {year, qblocks, keys}
+    cur = None
+
+    def new_section(year):
+        nonlocal cur, data_collect, data_lines
+        cur = {'year': year, 'qblocks': [], 'keys': {}}
+        pending_data.clear()
+        pending_figure.clear()
+        pending_settext.clear()
+        data_collect = None
+        data_lines = []
+        sections.append(cur)
+
+    in_keys = False
+    cur_q = None
+    pending_data: dict[int, str] = {}  # q number -> shared data text
+    pending_figure: set[int] = set()  # q numbers whose data is a figure
+    pending_settext: dict[int, str] = {}  # q number -> set-text binding
+    data_collect: list[int] | None = None
+    data_kind = ''
+    data_lines: list[str] = []
+
+    def flush_q():
+        nonlocal cur_q
+        if cur is not None and cur_q is not None and cur_q.get('options'):
+            text = ' '.join(cur_q['lines']).strip()
+            shared = pending_data.pop(cur_q['number'], None)
+            if shared:
+                text = '[Use the data below]\n' + shared + '\n[Question]\n' + text
+            settext = pending_settext.pop(cur_q['number'], None)
+            if settext:
+                text = f'[Based on: {settext}]\n' + text
+            cur_q['text'] = text
+            cur_q['needs_figure'] = cur_q['number'] in pending_figure
+            pending_figure.discard(cur_q['number'])
+            cur['qblocks'].append(cur_q)
+        cur_q = None
+
+    for text in pages_text:
+        raw = clean(text.split('\n'))
+        # Glue wrapped data references back together.
+        lines: list[str] = []
+        skip_next = False
+        for idx, ln in enumerate(raw):
+            if skip_next:
+                skip_next = False
+                continue
+            if ANSWER_WRAP_RE.search(ln) and idx + 1 < len(raw):
+                lines.append(ln + ' ' + raw[idx + 1])
+                skip_next = True
+            else:
+                lines.append(ln)
+        # Inline options ('A. … B. … C. … D. …' on one line): split into
+        # parts first. Single stray markers ('D. 24%' inside a stem) stay.
+        expanded: list[str] = []
+        for ln in lines:
+            marks = re.findall(r'(?:^|\s)([A-D])\.\s', ln)
+            if len(set(marks)) >= 3 or (len(set(marks)) == 2 and re.match(r'^[A-D]\.', ln)):
+                parts = re.split(r'(?<=\s)(?=[A-D]\.\s)', ln)
+                expanded.extend(p for p in parts if p.strip())
+            else:
+                expanded.append(ln)
+        i = 0
+        # Pre-pass: set-text bindings ('Questions 2 to 5 are based on…').
+        # Register ranges first (with wrapped author names glued), strip the
+        # clause, then parse the remainder normally.
+        preprocessed: list[str] = []
+        idx = 0
+        while idx < len(expanded):
+            ln = expanded[idx]
+            m_pre = SET_TEXT_RE.search(ln)
+            if m_pre and 'ANSWER KEY' not in ln.upper():
+                a = int(m_pre.group(1))
+                b = int(m_pre.group(2) or m_pre.group(1))
+                lo, hi = min(a, b), max(a, b)
+                binding = m_pre.group(3).strip()
+                j = idx + 1
+                insertions: list[tuple[int, str]] = []
+                incomplete = bool(re.search(r'\b[A-Z]\.$', binding) or re.fullmatch(r'[A-Z][a-z]+', binding))
+                listed = bool(re.search(r'(selected|following|prescribed)\s+(poems?|texts?|passages?|works?|plays?|novels?)\s*:?\s*$', binding, re.IGNORECASE))
+                while (incomplete or listed) and j < len(expanded):
+                    nxt = expanded[j]
+                    if Q_RE.match(nxt) or OPT_RE.match(nxt) or YEAR_RE.search(nxt) or 'ANSWER KEY' in nxt.upper():
+                        break
+                    if listed:
+                        # A list of set texts runs line by line; join with ';'.
+                        binding = (binding.rstrip(':') + '; ' + nxt).strip()
+                        j += 1
+                        continue
+                    # Watermark letter fused to the continuation ('wOrwell's').
+                    m_fuse = re.match(r'^([a-z\.])(?=[A-Z])', nxt)
+                    if m_fuse and m_fuse.group(1).lower() in WM_LETTERS:
+                        nxt = nxt[1:]
+                    m_end = re.search(r'\.(?:\s|$)', nxt)
+                    if m_end:
+                        # Title ends mid-line; the tail is live content.
+                        binding = (binding + ' ' + nxt[:m_end.end()]).strip()
+                        tail = nxt[m_end.end():].strip()
+                        if tail:
+                            insertions.append((j, tail))
+                        j += 1
+                        break
+                    binding = (binding + ' ' + nxt).strip()
+                    j += 1
+                    # A binding naming author + work is complete; stop
+                    # before swallowing the question stem.
+                    incomplete = False
+                for pos, tail in insertions:
+                    expanded.insert(pos, tail)
+                # Watermark letter fused inside the binding ('wOrwell's').
+                binding = re.sub(
+                    r'\b([a-z\.])(?=[A-Z])',
+                    lambda m: '' if m.group(1).lower() in WM_LETTERS else m.group(1),
+                    binding,
+                )
+                for n in range(lo, hi + 1):
+                    pending_settext[n] = binding
+                rest = (ln[:m_pre.start()] + ' ' + ln[m_pre.end():]).strip()
+                if rest and len(rest) >= 4:
+                    preprocessed.append(rest)
+                idx += 1
+                continue
+            preprocessed.append(ln)
+            idx += 1
+        for ln in preprocessed:
+            m_year = YEAR_RE.search(ln)
+            if not m_year:
+                m_bare = YEAR_BARE_RE.match(ln)
+                if m_bare and len(ln) < 45:
+                    flush_q()
+                    new_section(m_bare.group(1))
+                    in_keys = False
+                    continue
+            else:
+                flush_q()
+                new_section(m_year.group(1))
+                in_keys = False
+                continue
+            if 'ANSWER KEY' in ln.upper():
+                flush_q()
+                in_keys = True
+                continue
+            if cur is None:
+                continue
+            if in_keys:
+                m = KEY_RE.match(ln)
+                if m:
+                    cur['keys'][int(m.group(1))] = m.group(2)
+                continue
+            if data_collect is not None:
+                # Data lines run until the first dependent question number.
+                m_q0 = Q_RE.match(ln)
+                if m_q0 and int(m_q0.group(1)) in data_collect:
+                    data_text = ' '.join(data_lines).strip()
+                    for n in data_collect:
+                        pending_data[n] = data_text
+                    data_collect = None
+                    data_lines = []
+                    # fall through to normal handling of this line
+                else:
+                    data_lines.append(ln)
+                    continue
+            m_data = DATA_REF_RE.search(ln)
+            if m_data and not in_keys:
+                # A data reference doubles as a question number ('9. Use the
+                # data below…') while the real Q9 follows the data table.
+                # Swallow the line, collect the table, let the real number
+                # open its block.
+                a, b = int(m_data.group(2)), int(m_data.group(3) or m_data.group(2))
+                lo, hi = min(a, b), max(a, b)
+                flush_q()
+                data_collect = list(range(lo, hi + 1))
+                data_kind = (m_data.group(1) or '').lower()
+                if data_kind in FIGURE_KINDS:
+                    for n in data_collect:
+                        pending_figure.add(n)
+                data_lines = []
+                continue
+            m_q = Q_RE.match(ln)
+            # A question number restarts only past option A of current block
+            # (stems can contain '12. something' mid-sentence — those lines
+            # don't start with a bare number... they do. Guard: a new block
+            # starts only if we already collected option A for cur_q, or the
+            # number is exactly prev+1. Simpler: number must be > prev number
+            # in this section, else treat as continuation.)
+            # Bare numbers without a period ('10 What is…') are weaker
+            # evidence: they open only in strict sequence or with no open
+            # block, so table figures ('31st December') can't hijack.
+            if m_q:
+                n = int(m_q.group(1))
+                has_period = '.' in (m_q.group(2) or '')
+                prev = cur_q['number'] if cur_q else 0
+                has_a = cur_q and 'A' in cur_q.get('options', {})
+                strict_ok = cur_q is None or (has_a and n == prev + 1)
+                loose_ok = cur_q is None or (has_a and n > prev)
+                if (has_period and loose_ok) or (not has_period and strict_ok):
+                    flush_q()
+                    cur_q = {'number': n, 'lines': [m_q.group(3)], 'options': {}, 'opt': None}
+                    continue
+            m_o = OPT_RE.match(ln)
+            if m_o and cur_q is not None:
+                key = m_o.group(1)
+                cur_q['options'][key] = m_o.group(2)
+                cur_q['opt'] = key
+                continue
+            if cur_q is not None:
+                if cur_q.get('opt') and cur_q['opt'] not in ('done',):
+                    # continuation of the last option line
+                    cur_q['options'][cur_q['opt']] += ' ' + ln
+                else:
+                    cur_q['lines'].append(ln)
+    flush_q()
+    return sections
+
+
+def main():
+    with pdfplumber.open(SRC) as pdf:
+        texts = [page_text(p) for p in pdf.pages]
+
+    sections = parse(texts)
+    rows = []
+    stats = {'sections': 0, 'questions': 0, 'with_keys': 0, 'short_options': 0, 'dup_numbers': 0}
+    for sec in sections:
+        stats['sections'] += 1
+        seen = set()
+        for qb in sec['qblocks']:
+            stats['questions'] += 1
+            if qb['number'] in seen:
+                stats['dup_numbers'] += 1
+            seen.add(qb['number'])
+            opts = qb['options']
+            if len(opts) < 4:
+                stats['short_options'] += 1
+            ans = sec['keys'].get(qb['number'])
+            if ans:
+                stats['with_keys'] += 1
+            rows.append({
+                'year': sec['year'],
+                'number': qb['number'],
+                'text': qb.get('text', ' '.join(qb['lines']).strip()),
+                'options': {k: opts.get(k, '') for k in 'ABCD'},
+                'answer': ans,
+                'needs_figure': bool(qb.get('needs_figure')),
+                'source': f'{SRC.stem} [{sec["year"]}]',
+            })
+
+    out_dir = Path('content-folder/_parsed')
+    out_dir.mkdir(exist_ok=True)
+    out = out_dir / (SRC.stem + '.json')
+    out.write_text(json.dumps(rows, indent=1, ensure_ascii=False), encoding='utf-8')
+    print(f'wrote {out} ({len(rows)} rows)')
+    print('report:', json.dumps(stats))
+    # show one sample row per section
+    shown = set()
+    for r in rows:
+        if r['year'] not in shown and r['answer']:
+            shown.add(r['year'])
+            print(f"--- {r['year']} Q{r['number']}: {r['text'][:110]}")
+            print(f"    A) {r['options']['A'][:60]} | ans={r['answer']}")
+
+
+if __name__ == '__main__':
+    main()
