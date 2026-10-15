@@ -73,7 +73,7 @@ export function parsePastedQuestions(text: string): { questions: PastedQuestion[
         lastKey = null
         continue
       }
-      const optionMatch = line.match(/^([A-Da-d])\s*[).:]\s*(.+)$/)
+      const optionMatch = line.match(/^([A-Ea-e])\s*[).:]\s*(.+)$/)
       if (optionMatch) {
         const optKey = `option_${optionMatch[1]!.toLowerCase()}`
         fields[optKey] = optionMatch[2]!.trim()
@@ -104,10 +104,13 @@ export function parsePastedQuestions(text: string): { questions: PastedQuestion[
     const difficulty = (defaults.difficulty || '').toLowerCase()
 
     if (!questionText) return fail('missing Q: line')
-    const options = ['a', 'b', 'c', 'd'].map((k) => ({ key: k, text: fields[`option_${k}`] ?? '' }))
-    const missing = options.filter((o) => !o.text).map((o) => o.key.toUpperCase())
+    const options = ['a', 'b', 'c', 'd', 'e']
+      .map((k) => ({ key: k, text: fields[`option_${k}`] ?? '' }))
+      .filter((o) => o.key !== 'e' || o.text)
+    const missing = ['a', 'b', 'c', 'd'].map((k) => ({ key: k, text: fields[`option_${k}`] ?? '' })).filter((o) => !o.text).map((o) => o.key.toUpperCase())
     if (missing.length > 0) return fail(`missing option(s): ${missing.join(', ')}`)
-    if (!['a', 'b', 'c', 'd'].includes(answer)) return fail('Answer: must be A, B, C, or D')
+    if (!['a', 'b', 'c', 'd', 'e'].includes(answer)) return fail('Answer: must be A, B, C, D, or E')
+    if (answer === 'e' && !fields.option_e) return fail('Answer E needs an option E line')
     if (!(fields.explanation ?? '').trim()) return fail('missing Explanation: line')
     if (!defaults.subject) return fail('no subject set — add a # subject: <slug> header above')
     if (!defaults.exam) return fail('no exam set — add a # exam: <slug> header above')

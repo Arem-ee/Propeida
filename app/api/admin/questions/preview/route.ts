@@ -57,7 +57,7 @@ function validateFile(
     if (!subjectSlug || !subjectMap.has(subjectSlug)) errors.push('unknown subject_slug')
     if (!row.question_text?.trim()) errors.push('empty question_text')
     if (!row.option_a?.trim() || !row.option_b?.trim() || !row.option_c?.trim() || !row.option_d?.trim()) errors.push('missing options')
-    if (!['a', 'b', 'c', 'd'].includes(correctAnswer)) errors.push('correct_answer must be a/b/c/d')
+    if (!['a', 'b', 'c', 'd', 'e'].includes(correctAnswer)) errors.push('correct_answer must be a/b/c/d/e')
     if (!['easy', 'medium', 'hard'].includes(diff)) errors.push('difficulty must be easy/medium/hard')
     if (!row.explanation?.trim()) errors.push('explanation is required')
 
@@ -97,3 +97,4 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Preview failed' }, { status: 500 })
   }
 }
+

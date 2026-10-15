@@ -65,6 +65,7 @@ export default function EditQuestionForm({
         { key: 'b', text: form.get('option_b') as string },
         { key: 'c', text: form.get('option_c') as string },
         { key: 'd', text: form.get('option_d') as string },
+        { key: 'e', text: ((form.get('option_e') as string) ?? '').trim() },
       ],
       correct_answer: form.get('correct_answer') as string,
       explanation: form.get('explanation') as string,
@@ -142,6 +143,10 @@ export default function EditQuestionForm({
             <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Option D</label>
             <input name="option_d" defaultValue={optionsRecord(question.options).d} required className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm min-h-[44px]" />
           </div>
+          <div>
+            <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Option E (legacy 5-option questions only)</label>
+            <input name="option_e" defaultValue={optionsRecord(question.options).e ?? ''} className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm min-h-[44px]" />
+          </div>
         </div>
 
         <div className="grid grid-cols-2 gap-4">
@@ -152,6 +157,7 @@ export default function EditQuestionForm({
               <option value="b">B</option>
               <option value="c">C</option>
               <option value="d">D</option>
+              <option value="e">E (legacy only)</option>
             </select>
           </div>
           <div>

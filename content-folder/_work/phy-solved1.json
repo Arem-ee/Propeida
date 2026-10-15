@@ -1,0 +1,197 @@
+[
+ {
+  "year": "1983",
+  "number": 7,
+  "text": "The refractive index of a liquid is 1.5. If the velocity of light in vacuum is 3.0 x 108m s-1, the velocity of following equation is/are CORRECT? Oy I. P cos 0 = P cos 1 1 1 2 II. P = P cos O + P cos O 3 1 1 2 2 m= III. P sin O P sin O 1 1 2 2",
+  "options": {
+   "A": "1.5 x 103m s-1",
+   "B": "2.0 x 103m s-1",
+   "C": "3.0 x 103m s-1",
+   "D": "4.5 x 103m s-1 E. 9.0 x 103m s-1"
+  },
+  "answer": "B",
+  "explanation": "v = c/n = 3.0×10⁸/1.5 = 2.0×10⁸ m/s.",
+  "note": "AI-solved; exponents lost in source (10³ for 10⁸); stem tail fused — verify.",
+  "source": "Physics-JAMB-Past-Questions [1983]"
+ },
+ {
+  "year": "1983",
+  "number": 8,
+  "text": "If the relative density of a metal is 19, what will be the mass of 20cm3 of the metal when immersed in water?",
+  "options": {
+   "A": "380g",
+   "B": "400g",
+   "C": "360g",
+   "D": "39g E. 180g"
+  },
+  "answer": "A",
+  "explanation": "Mass is intrinsic: RD × volume = 19 × 20 = 380 g whether immersed or not.",
+  "note": "AI-solved; immersion is a red herring — verify.",
+  "source": "Physics-JAMB-Past-Questions [1983]"
+ },
+ {
+  "year": "1983",
+  "number": 39,
+  "text": "The difference of potential between the terminals of a cell is 2.2 volts. When a 4 ohm resistor is connected across the terminals of this cell, the potential difference is 2 volts. What is the internal resistance of the cell?",
+  "options": {
+   "A": "0.10 ohms",
+   "B": "0.25 ohms",
+   "C": "0.40 ohms",
+   "D": "2.50 ohms E. 4.00 ohms."
+  },
+  "answer": "C",
+  "explanation": "I = V/R = 2.0/4 = 0.5 A; r = (E−V)/I = 0.2/0.5 = 0.4 Ω.",
+  "note": "AI-solved; stem head cut — verify.",
+  "source": "Physics-JAMB-Past-Questions [1983]"
+ },
+ {
+  "year": "1984",
+  "number": 10,
+  "text": "Two cells, each of e.m.f. 1.5V and an internal resistance 2Ohms are connected in parallel. Calculate the current flowing when the cells are connected to a 1 Ohms resistor.",
+  "options": {
+   "A": "0.75 Ohms",
+   "B": "1.5 Ohms",
+   "C": "0.5 Ohms",
+   "D": "1.0 Ohms E. 0.6 Ohms"
+  },
+  "answer": "A",
+  "explanation": "Parallel pair: 1.5 V with 1 Ω internal; plus 1 Ω load = 2 Ω; I = 1.5/2 = 0.75 A.",
+  "note": "AI-solved; options wrongly unitised as Ohms — verify.",
+  "source": "Physics-JAMB-Past-Questions [1984]"
+ },
+ {
+  "year": "1984",
+  "number": 13,
+  "text": "All the heat generated in a 5 ohms resistor by 2A flowing for 30 seconds is used to evaporate 5g of liquid at its boiling point. Which of the following is the correct value of the specific latent heat of the liquid?",
+  "options": {
+   "A": "120 J",
+   "B": "60 J g-1",
+   "C": "120 J g-1",
+   "D": "1 500 J E. 1 500 J g-1"
+  },
+  "answer": "C",
+  "explanation": "Heat = I²Rt = 4×5×30 = 600 J vaporises 5 g: L = 600/5 = 120 J/g.",
+  "note": "AI-solved — verify answer and explanation against source.",
+  "source": "Physics-JAMB-Past-Questions [1984]"
+ },
+ {
+  "year": "1984",
+  "number": 27,
+  "text": "Heat is supplied uniformly at the mrate of 100W to 1.0 x 10 -2kg of a liquid for 20 seconds. If the temperature of the liquid rises by 5 0C, then the specific heat capacity of the liquid is",
+  "options": {
+   "A": "2.0 x 102J kg-1 K-1",
+   "B": "2.0 x 102J kg-1",
+   "C": "4.0 x 104J kg-1 K-1",
+   "D": "4.0 x 104J kg-1 . E. 8.4 x 103J ktg-1 K-1"
+  },
+  "answer": "C",
+  "explanation": "c = Q/(mΔT) = (100×20)/(0.01×5) = 2000/0.05 = 4.0×10⁴ J/kg/K.",
+  "note": "AI-solved; typos mrate/5 0C/ktg — verify.",
+  "source": "Physics-JAMB-Past-Questions [1984]"
+ },
+ {
+  "year": "1984",
+  "number": 37,
+  "text": "Normal atmospheric pressure at sea-level is 105N m-2 and the acceleration due to gravity is approximately 10m s-1. If the atmosphere has a uniform density of 1kg m-3, its height is",
+  "options": {
+   "A": "100 m",
+   "B": "1000 m",
+   "C": "10 000 m",
+   "D": "100 000 m E. 1000 000 m"
+  },
+  "answer": "C",
+  "explanation": "h = P/(ρg) = 10⁵/(1×10) = 10,000 m.",
+  "note": "AI-solved; 105N and 10m s-1 read as powers — verify.",
+  "source": "Physics-JAMB-Past-Questions [1984]"
+ },
+ {
+  "year": "1984",
+  "number": 43,
+  "text": "A device that converts sound energy into electrical energy is",
+  "options": {
+   "A": "The horn of a motor car",
+   "B": "An A.C. generator",
+   "C": "A microphone",
+   "D": "The telephone earpiece E. A loudspeaker."
+  },
+  "answer": "C",
+  "explanation": "A microphone turns sound into electrical signals — the reverse of a loudspeaker.",
+  "note": "AI-solved — verify answer and explanation against source.",
+  "source": "Physics-JAMB-Past-Questions [1984]"
+ },
+ {
+  "year": "1984",
+  "number": 47,
+  "text": "What is the cost of running five 50W lamps and four 100W lamps for 10 hours if electrical energy costs 2 kobo per kWh?",
+  "options": {
+   "A": "N 0.65",
+   "B": "N 0.13",
+   "C": "N 3.90",
+   "D": "N 39.00 E N 234.00"
+  },
+  "answer": "B",
+  "explanation": "650 W × 10 h = 6.5 kWh at 2 kobo = 13 kobo = N0.13.",
+  "note": "AI-solved — verify answer and explanation against source.",
+  "source": "Physics-JAMB-Past-Questions [1984]"
+ },
+ {
+  "year": "1985",
+  "number": 2,
+  "text": "A simple pendulum with a period of 2.0s has its length doubled. Its new period is",
+  "options": {
+   "A": "1.00 s",
+   "B": "1.41 s",
+   "C": "0.35 s",
+   "D": "2.83 s E. 4.00 s"
+  },
+  "answer": "D",
+  "explanation": "T scales with √L: doubling length multiplies period by √2 — 2.0 × 1.414 = 2.83 s.",
+  "note": "AI-solved — verify answer and explanation against source.",
+  "source": "Physics-JAMB-Past-Questions [1985]"
+ },
+ {
+  "year": "1985",
+  "number": 18,
+  "text": "A thin aluminum plate has a surface area of 1,5002m at 200C. What will be its surface area when it is cooled to – 200C? (Take the linear expansivity of aluminium to be 2.5 x 10-5 K-1)",
+  "options": {
+   "A": "1.503 m2",
+   "B": "1.500 m2",
+   "C": "1.498 m2",
+   "D": "1.497 m2 E. 1.490 m2 E. 2"
+  },
+  "answer": "D",
+  "explanation": "ΔA = 2αAΔT = 2 × 2.5×10⁻⁵ × 1.5 × (−40) = −0.003 m²; A = 1.497 m².",
+  "note": "AI-solved; 1,5002m and -200C read as 1.500 m² and −20°C — verify.",
+  "source": "Physics-JAMB-Past-Questions [1985]"
+ },
+ {
+  "year": "1985",
+  "number": 35,
+  "text": "A charge of one coulomb liberates 0.0033g of copper in an electrolytic process. How long will it take a current of 2A to liberate 1.98g of copper in such a process.",
+  "options": {
+   "A": "5 minutes",
+   "B": "30 minutes",
+   "C": "50 minutes",
+   "D": "60 minutes E. 120 minutes"
+  },
+  "answer": "A",
+  "explanation": "600 C liberates the copper (1.98/0.0033); at 2 A that is 300 s = 5 minutes.",
+  "note": "AI-solved — verify answer and explanation against source.",
+  "source": "Physics-JAMB-Past-Questions [1985]"
+ },
+ {
+  "year": "1985",
+  "number": 46,
+  "text": "A transformer has a primary coil with 500 turns and secondary coil with 2500 turns. When the voltage input to the primary coil is 120V, the output is",
+  "options": {
+   "A": "6 000 V",
+   "B": "600 V",
+   "C": "240 V",
+   "D": "60 V E. 24 V"
+  },
+  "answer": "B",
+  "explanation": "Vs/Vp = Ns/Np: 120 × 2500/500 = 600 V.",
+  "note": "AI-solved — verify answer and explanation against source.",
+  "source": "Physics-JAMB-Past-Questions [1985]"
+ }
+]

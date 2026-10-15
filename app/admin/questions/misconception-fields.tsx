@@ -54,7 +54,7 @@ export default function MisconceptionFields({
         </p>
       </div>
 
-      {['a', 'b', 'c', 'd'].map((key) => {
+      {['a', 'b', 'c', 'd', 'e'].map((key) => {
         const prev = initial[key]
         const isCorrect = key === correctAnswer
         return (
@@ -141,7 +141,7 @@ export default function MisconceptionFields({
  */
 export function collectMisconceptions(form: FormData): MisconceptionDraft[] {
   const rows: MisconceptionDraft[] = []
-  for (const key of ['a', 'b', 'c', 'd']) {
+  for (const key of ['a', 'b', 'c', 'd', 'e']) {
     const code = ((form.get(`mc_code_${key}`) as string | null) ?? '').trim()
     const name = ((form.get(`mc_name_${key}`) as string | null) ?? '').trim()
     const explanation = ((form.get(`mc_explanation_${key}`) as string | null) ?? '').trim()
@@ -157,3 +157,4 @@ export function collectMisconceptions(form: FormData): MisconceptionDraft[] {
   }
   return rows
 }
+

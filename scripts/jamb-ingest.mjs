@@ -46,9 +46,12 @@ function strictClean(r) {
   if (stem.length < 25) reject.push('stem too short — likely a fragment')
   if (/(^|\s)\d{1,3}\.\s/.test(stem)) reject.push('fused question number inside stem')
   if (/[�]/.test(stem)) reject.push('unreadable characters from the PDF')
-  for (const k of ['A', 'B', 'C', 'D']) {
+  for (const k of ['A', 'B', 'C', 'D', 'E']) {
     const o = (r.options[k] ?? '').trim()
-    if (o.length < 2) reject.push(`option ${k} missing`)
+    if (!o) {
+      if (k !== 'E') reject.push(`option ${k} missing`)
+      continue
+    }
     if (/(^|\s)\d{1,3}\.\s/.test(o)) reject.push(`fused number inside option ${k}`)
     if (/\.\s+[A-Z][a-z]/.test(o)) reject.push(`option ${k} runs into neighbouring text`)
   }
@@ -86,7 +89,7 @@ const insertedIds = []
 }
 
 for (const r of rows) {
-  if (!r.answer || !['A', 'B', 'C', 'D'].includes(r.answer)) {
+  if (!r.answer || !['A', 'B', 'C', 'D', 'E'].includes(r.answer)) {
     skippedIncomplete++
     continue
   }
@@ -99,7 +102,8 @@ for (const r of rows) {
     continue
   }
 
-  const options = ['A', 'B', 'C', 'D'].map((k) => ({ key: k.toLowerCase(), text: r.options[k].trim() }))
+  const present = ['A', 'B', 'C', 'D', 'E'].filter((k) => (r.options[k] ?? '').trim())
+  const options = present.map((k) => ({ key: k.toLowerCase(), text: r.options[k].trim() }))
   const answer = r.answer.toLowerCase()
 
   // Exact-text dedupe against the live JAMB bank for this subject.

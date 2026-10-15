@@ -72,8 +72,8 @@ export async function POST(request: Request) {
           fileErrorCount++
           continue
         }
-        if (!['a', 'b', 'c', 'd'].includes(correctAnswer)) {
-          allInsertErrors.push(`[${file.name}:${i + 2}] correct_answer must be a/b/c/d`)
+        if (!['a', 'b', 'c', 'd', 'e'].includes(correctAnswer)) {
+          allInsertErrors.push(`[${file.name}:${i + 2}] correct_answer must be a/b/c/d/e`)
           fileErrorCount++
           continue
         }
@@ -94,16 +94,24 @@ export async function POST(request: Request) {
           continue
         }
 
+        const uploadOptions = [
+          { key: 'a', text: row.option_a?.trim() ?? '' },
+          { key: 'b', text: row.option_b?.trim() ?? '' },
+          { key: 'c', text: row.option_c?.trim() ?? '' },
+          { key: 'd', text: row.option_d?.trim() ?? '' },
+        ]
+        const optionE = row.option_e?.trim() ?? ''
+        if (optionE) uploadOptions.push({ key: 'e', text: optionE })
+        if (correctAnswer === 'e' && !optionE) {
+          allInsertErrors.push(`[${file.name}:${i + 2}] correct_answer e needs option_e`)
+          fileErrorCount++
+          continue
+        }
         inserts.push({
           exam_id: examMap.get(examSlug),
           subject_id: subjectMap.get(subjectSlug),
           question_text: row.question_text?.trim() ?? '',
-          options: [
-            { key: 'a', text: row.option_a?.trim() ?? '' },
-            { key: 'b', text: row.option_b?.trim() ?? '' },
-            { key: 'c', text: row.option_c?.trim() ?? '' },
-            { key: 'd', text: row.option_d?.trim() ?? '' },
-          ],
+          options: uploadOptions,
           correct_answer: correctAnswer,
           explanation: row.explanation.trim(),
           difficulty: diff,

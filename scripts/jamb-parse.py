@@ -80,7 +80,7 @@ WM_LETTERS = set('myschoolgistcomwww')
 
 # A number/option marker alone on a line: column geometry detached it from
 # its text ('10.' then 'from'; 'o11.' fused with a watermark letter).
-DETACHED_RE = re.compile(r'^[a-z\.]*(\d{1,3}|[A-D])\.\s*$', re.IGNORECASE)
+DETACHED_RE = re.compile(r'^[a-z\.]*(\d{1,3}|[A-E])\.\s*$', re.IGNORECASE)
 
 
 def clean(lines: list[str]) -> list[str]:
@@ -102,7 +102,7 @@ def clean(lines: list[str]) -> list[str]:
         m = re.match(r'^([a-z\.])(.*)$', s)
         if m and m.group(1).lower() in WM_LETTERS:
             rest = m.group(2)
-            if re.match(r'^(\d+\.|[A-D]\.|[A-Z][a-z]{2,})', rest):
+            if re.match(r'^(\d+\.|[A-E]\.|[A-Z][a-z]{2,})', rest):
                 s = rest.strip()
                 if not s:
                     continue
@@ -128,8 +128,8 @@ YEAR_RE = re.compile(r'UTME\s+(19\d{2}|20\d{2}).*QUESTIONS', re.IGNORECASE)
 # Older booklets: a bare '<Subject> YYYY' line ('Commerce 1994').
 YEAR_BARE_RE = re.compile(r'^[A-Za-z][A-Za-z &\/\'\-]{2,40}\s+(19\d{2}|20\d{2})$')
 Q_RE = re.compile(r'^(\d{1,3})(\.\s*|\s+)(.*)')
-OPT_RE = re.compile(r'^([A-D])\.\s+(.*)')
-KEY_RE = re.compile(r'^(\d{1,3})\.\s*([A-D])\b')
+OPT_RE = re.compile(r'^([A-E])\.\s+(.*)')
+KEY_RE = re.compile(r'^(\d{1,3})\.\s*([A-E])\b')
 # 'Use the data below to answer questions 9 and 10.' / '...questions 9 to 12.'
 DATA_REF_RE = re.compile(
     r'use the (data|informationm?|table|diagram|graph|histogram|chart|figure|extract|passage) below to answer questions?\s+(\d{1,3})\s*(?:and|to|-|\u2013)?\s*(\d{1,3})?',
@@ -208,9 +208,9 @@ def parse(pages_text: list[str]):
         # parts first. Single stray markers ('D. 24%' inside a stem) stay.
         expanded: list[str] = []
         for ln in lines:
-            marks = re.findall(r'(?:^|\s)([A-D])\.\s', ln)
-            if len(set(marks)) >= 3 or (len(set(marks)) == 2 and re.match(r'^[A-D]\.', ln)):
-                parts = re.split(r'(?<=\s)(?=[A-D]\.\s)', ln)
+            marks = re.findall(r'(?:^|\s)([A-E])\.\s', ln)
+            if len(set(marks)) >= 2:
+                parts = re.split(r'(?<=\s)(?=[A-E]\.\s)', ln)
                 expanded.extend(p for p in parts if p.strip())
             else:
                 expanded.append(ln)
@@ -392,7 +392,7 @@ def main():
                 'year': sec['year'],
                 'number': qb['number'],
                 'text': qb.get('text', ' '.join(qb['lines']).strip()),
-                'options': {k: opts.get(k, '') for k in 'ABCD'},
+                'options': {k: opts.get(k, '') for k in 'ABCDE'},
                 'answer': ans,
                 'needs_figure': bool(qb.get('needs_figure')),
                 'source': f'{SRC.stem} [{sec["year"]}]',

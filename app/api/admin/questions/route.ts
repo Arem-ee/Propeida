@@ -80,8 +80,8 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
     }
 
-    if (!['a', 'b', 'c', 'd'].includes(correct_answer)) {
-      return NextResponse.json({ error: 'correct_answer must be a, b, c, or d' }, { status: 400 })
+    if (!['a', 'b', 'c', 'd', 'e'].includes(correct_answer)) {
+      return NextResponse.json({ error: 'correct_answer must be a, b, c, d, or e' }, { status: 400 })
     }
 
     if (!['easy', 'medium', 'hard'].includes(difficulty)) {
@@ -111,11 +111,18 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: err instanceof Error ? err.message : 'Invalid topics' }, { status: 400 })
     }
 
+    const normalized = normalizeOptions(options).filter(
+      (o) => o.key !== 'e' || (o.text ?? '').trim(),
+    )
+    if (correct_answer === 'e' && !normalized.some((o) => o.key === 'e')) {
+      return NextResponse.json({ error: 'correct_answer e needs a non-empty option E' }, { status: 400 })
+    }
+
     const { data: created, error } = await supabase.from('questions').insert({
       exam_id,
       subject_id,
       question_text,
-      options: normalizeOptions(options),
+      options: normalized,
       correct_answer,
       explanation: explanation || null,
       difficulty,
@@ -150,7 +157,9 @@ export async function PUT(request: Request) {
 
     const update: Record<string, unknown> = {
       exam_id, subject_id, question_text,
-      options: normalizeOptions(options),
+      options: normalizeOptions(options).filter(
+        (o) => o.key !== 'e' || ((o.text ?? '') as string).trim(),
+      ),
       correct_answer, explanation: explanation || null, difficulty,
     }
     if (body.cognitive_level !== undefined) {
