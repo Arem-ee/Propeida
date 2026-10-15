@@ -136,11 +136,24 @@ def overlap_salvage(s: str):
     Returns (number, fixed) or None; the caller gates on section state."""
     if Q_RE.match(s):
         return None
+    # Option lines and continuations ('A. 5N in the direction of East',
+    # 'B. 55.9 Ohms') are never interleaved-marker damage.
+    if re.match(r'^[A-Ea-e][\.\s"\']', s):
+        return None
     m_stem = re.search(r'(?<![A-Za-z])(?:[A-Z][a-z]{2,}|[A-Z] [a-z]{2,})', s)
     if not (m_stem and 0 < m_stem.start() <= 20):
         return None
     junk = s[:m_stem.start()]
     if not re.search(r'\d', junk) or re.search(r'[A-Z][a-z]', junk):
+        return None
+    # Marker damage always leaves punctuation at the junk tail ('e33.',
+    # '5?0.', 'rel3a1x..'); a bare trailing digit is a quantity ('30.0',
+    # 'the 7', '2V, 6') that merely sits before a capitalised word.
+    if not re.search(r'[.?]\s*$', junk):
+        return None
+    # Real junk is fused fragments ('growt4h0?.', 'rior.35.', 'other10.');
+    # a standalone English word ('in 6 seconds. ') is a stem tail.
+    if re.search(r'[a-z]{3,}(\.\s|\s)', junk):
         return None
     dotted = re.findall(r'(\d{1,3})\.', junk)
     if dotted and 1 <= int(dotted[-1]) <= 55:
@@ -564,7 +577,32 @@ def parse(pages_text: list[str]):
                 has_period = '.' in (m_q.group(2) or '')
                 rest = (m_q.group(3) or '').strip()
                 if has_period:
-                    open_number(n, rest)
+                    # Figure labels masquerade as numbered markers: '0.1N
+                    # 0.4N' (decimal read as n=0), '2. 2Ohms', '9. 10cm',
+                    # '31. 60o'. Opening a block for them steals the
+                    # neighbouring question's stem and options (Physics
+                    # 1984: '0.1N 0.4N' swallowed Q2's metre-rule stem;
+                    # '2. 2Ohms' orphaned Q9). Drop the line; the real
+                    # stem and options then flow to the true block.
+                    toks = rest.split()
+                    figlab0 = (
+                        n == 0 and bool(toks) and all(
+                            any(c.isdigit() for c in t)
+                            or (len(t) == 1 and t.isupper())
+                            for t in toks
+                        )
+                    )
+                    # A figure echo of an already-seen number ('46.
+                    # 4Ohms' after Q46's real marker) is never a fresh
+                    # question; a fresh number fused with figure text
+                    # ('9. 10cm') is the real marker and must open.
+                    figlab_n = (
+                        bool(blocks.get(n))
+                        and bool(re.match(r'^\d', rest))
+                        and ' ' not in rest and len(rest) < 15
+                    )
+                    if not (figlab0 or figlab_n):
+                        open_number(n, rest)
                     continue
                 if len(rest) > 12:
                     open_number(n, rest)
