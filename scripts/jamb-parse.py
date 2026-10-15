@@ -129,6 +129,12 @@ YEAR_RE = re.compile(r'UTME\s+(19\d{2}|20\d{2}).*QUESTIONS', re.IGNORECASE)
 YEAR_BARE_RE = re.compile(r'^[A-Za-z][A-Za-z &\/\'\-]{2,40}\s+(19\d{2}|20\d{2})$')
 Q_RE = re.compile(r'^(\d{1,3})(\.\s*|\s+)(.*)')
 OPT_RE = re.compile(r'^([A-E])\.\s+(.*)')
+# Some booklets print options without periods ('A the economy').
+# A bare letter opens an option only when the letter is fresh for this
+# block AND (a run of letter-lines follows, or it is the expected next
+# letter). This keeps stems like 'A sovereign state is one' (letter
+# already used above) out of the option set.
+OPT_BARE_RE = re.compile(r'^([A-E])\s+(.*)')
 KEY_RE = re.compile(r'^(\d{1,3})\.\s*([A-E])\b')
 # 'Use the data below to answer questions 9 and 10.' / '...questions 9 to 12.'
 DATA_REF_RE = re.compile(
@@ -153,42 +159,99 @@ ANSWER_WRAP_RE = re.compile(
 
 def parse(pages_text: list[str]):
     sections: list[dict] = []  # {year, qblocks, keys}
-    cur = None
-
-    def new_section(year):
-        nonlocal cur, data_collect, data_lines
-        cur = {'year': year, 'qblocks': [], 'keys': {}}
-        pending_data.clear()
-        pending_figure.clear()
-        pending_settext.clear()
-        data_collect = None
-        data_lines = []
-        sections.append(cur)
+    sec = None
 
     in_keys = False
-    cur_q = None
     pending_data: dict[int, str] = {}  # q number -> shared data text
     pending_figure: set[int] = set()  # q numbers whose data is a figure
     pending_settext: dict[int, str] = {}  # q number -> set-text binding
     data_collect: list[int] | None = None
     data_kind = ''
     data_lines: list[str] = []
+    # Registry model: blocks keyed by question number, so out-of-order
+    # segments (facing-column bleed, split columns) complete the same
+    # block instead of collapsing into neighbours. A number reopens its
+    # block while option-less; once it holds options, a repeat starts a
+    # variant (paper Type variants reuse numbers).
+    blocks: dict[int, list[dict]] = {}
+    order: list[tuple[int, int]] = []
+    cur: tuple[int, int] | None = None
 
-    def flush_q():
-        nonlocal cur_q
-        if cur is not None and cur_q is not None and cur_q.get('options'):
-            text = ' '.join(cur_q['lines']).strip()
-            shared = pending_data.pop(cur_q['number'], None)
-            if shared:
-                text = '[Use the data below]\n' + shared + '\n[Question]\n' + text
-            settext = pending_settext.pop(cur_q['number'], None)
-            if settext:
-                text = f'[Based on: {settext}]\n' + text
-            cur_q['text'] = text
-            cur_q['needs_figure'] = cur_q['number'] in pending_figure
-            pending_figure.discard(cur_q['number'])
-            cur['qblocks'].append(cur_q)
-        cur_q = None
+    def new_section(year):
+        nonlocal sec, in_keys, data_collect, data_lines
+        nonlocal blocks, order, cur
+        finalize()
+        sec = {'year': year, 'qblocks': [], 'keys': {}}
+        pending_data.clear()
+        pending_figure.clear()
+        pending_settext.clear()
+        data_collect = None
+        data_lines = []
+        blocks = {}
+        order = []
+        cur = None
+        in_keys = False
+        sections.append(sec)
+
+    def open_number(n, stem):
+        """Open (or re-enter) the block for question number n."""
+        nonlocal cur
+        variants = blocks.get(n)
+        if variants is None:
+            variants = []
+            blocks[n] = variants
+        if variants and not variants[-1].get('options'):
+            if stem:
+                variants[-1]['lines'].append(stem)
+            cur = (n, len(variants) - 1)
+        elif variants and len((stem or '').strip()) <= 15:
+            # Bare/short repeat of a completed number (facing-column
+            # bleed like '13.'): not a variant, fold into current text.
+            b = current()
+            if b is not None and stem:
+                b['lines'].append(stem)
+        else:
+            variants.append({'number': n, 'lines': [stem] if stem else [], 'options': {}, 'opt': None})
+            order.append((n, len(variants) - 1))
+            cur = (n, len(variants) - 1)
+
+    def current():
+        if cur is None:
+            return None
+        n, vi = cur
+        return blocks[n][vi]
+
+    def finalize():
+        if sec is None:
+            return
+        for (n, vi) in order:
+            b = blocks[n][vi]
+            if not b.get('lines') and not b.get('options'):
+                continue  # empty reopen, nothing captured
+            if b.get('options'):
+                text = ' '.join(b['lines']).strip()
+                shared = pending_data.pop(n, None)
+                if shared:
+                    text = '[Use the data below]\n' + shared + '\n[Question]\n' + text
+                settext = pending_settext.pop(n, None)
+                if settext:
+                    text = f'[Based on: {settext}]\n' + text
+                b['text'] = text
+                b['needs_figure'] = n in pending_figure
+                pending_figure.discard(n)
+                sec['qblocks'].append(b)
+            else:
+                orphan_lines = list(b['lines'])
+                for k, v in (b.get('options') or {}).items():
+                    orphan_lines.append(f'[{k}. {v}]')
+                sec['qblocks'].append({
+                    'number': n,
+                    'lines': orphan_lines,
+                    'options': {},
+                    'opt': None,
+                    'text': '[ORPHAN — RECOVER BY HAND] ' + ' '.join(orphan_lines).strip(),
+                    'orphan': True,
+                })
 
     for text in pages_text:
         raw = clean(text.split('\n'))
@@ -206,6 +269,9 @@ def parse(pages_text: list[str]):
                 lines.append(ln)
         # Inline options ('A. … B. … C. … D. …' on one line): split into
         # parts first. Single stray markers ('D. 24%' inside a stem) stay.
+        # Inline question numbers ('…and 13.' — facing-column bleed): split
+        # off too; the main loop's guards admit real ones and re-attach
+        # spurious fragments as continuations.
         expanded: list[str] = []
         for ln in lines:
             marks = re.findall(r'(?:^|\s)([A-E])\.\s', ln)
@@ -213,7 +279,11 @@ def parse(pages_text: list[str]):
                 parts = re.split(r'(?<=\s)(?=[A-E]\.\s)', ln)
                 expanded.extend(p for p in parts if p.strip())
             else:
-                expanded.append(ln)
+                qparts = re.split(r'(?<=\s)(?=\d{1,3}\.\s)', ln)
+                if len(qparts) > 1:
+                    expanded.extend(p for p in qparts if p.strip())
+                else:
+                    expanded.append(ln)
         i = 0
         # Pre-pass: set-text bindings ('Questions 2 to 5 are based on…').
         # Register ranges first (with wrapped author names glued), strip the
@@ -276,30 +346,34 @@ def parse(pages_text: list[str]):
                 continue
             preprocessed.append(ln)
             idx += 1
-        for ln in preprocessed:
+        # Lookahead: a bare letter-line ('A text') is an option only if
+        # more letter-lines follow (option runs) — computed up front.
+        OPT_LETTER_RE = re.compile(r'^[A-E][\.\s]')
+        run_ahead = [False] * len(preprocessed)
+        for _i, _ln in enumerate(preprocessed):
+            for _j in (_i + 1, _i + 2):
+                if _j < len(preprocessed) and OPT_LETTER_RE.match(preprocessed[_j]):
+                    run_ahead[_i] = True
+                    break
+        for _li, ln in enumerate(preprocessed):
             m_year = YEAR_RE.search(ln)
             if not m_year:
                 m_bare = YEAR_BARE_RE.match(ln)
                 if m_bare and len(ln) < 45:
-                    flush_q()
                     new_section(m_bare.group(1))
-                    in_keys = False
                     continue
             else:
-                flush_q()
                 new_section(m_year.group(1))
-                in_keys = False
                 continue
             if 'ANSWER KEY' in ln.upper():
-                flush_q()
                 in_keys = True
                 continue
-            if cur is None:
+            if sec is None:
                 continue
             if in_keys:
                 m = KEY_RE.match(ln)
                 if m:
-                    cur['keys'][int(m.group(1))] = m.group(2)
+                    sec['keys'][int(m.group(1))] = m.group(2)
                 continue
             if data_collect is not None:
                 # Data lines run until the first dependent question number.
@@ -322,7 +396,6 @@ def parse(pages_text: list[str]):
                 # open its block.
                 a, b = int(m_data.group(2)), int(m_data.group(3) or m_data.group(2))
                 lo, hi = min(a, b), max(a, b)
-                flush_q()
                 data_collect = list(range(lo, hi + 1))
                 data_kind = (m_data.group(1) or '').lower()
                 if data_kind in FIGURE_KINDS:
@@ -331,39 +404,50 @@ def parse(pages_text: list[str]):
                 data_lines = []
                 continue
             m_q = Q_RE.match(ln)
-            # A question number restarts only past option A of current block
-            # (stems can contain '12. something' mid-sentence — those lines
-            # don't start with a bare number... they do. Guard: a new block
-            # starts only if we already collected option A for cur_q, or the
-            # number is exactly prev+1. Simpler: number must be > prev number
-            # in this section, else treat as continuation.)
-            # Bare numbers without a period ('10 What is…') are weaker
-            # evidence: they open only in strict sequence or with no open
-            # block, so table figures ('31st December') can't hijack.
+            # Registry model: periods always (re)open their number — empty
+            # spurious opens merge harmlessly when the real lines arrive.
+            # Bare numbers need substantial text (kills '2 2' fragments).
             if m_q:
                 n = int(m_q.group(1))
                 has_period = '.' in (m_q.group(2) or '')
-                prev = cur_q['number'] if cur_q else 0
-                has_a = cur_q and 'A' in cur_q.get('options', {})
-                strict_ok = cur_q is None or (has_a and n == prev + 1)
-                loose_ok = cur_q is None or (has_a and n > prev)
-                if (has_period and loose_ok) or (not has_period and strict_ok):
-                    flush_q()
-                    cur_q = {'number': n, 'lines': [m_q.group(3)], 'options': {}, 'opt': None}
+                rest = (m_q.group(3) or '').strip()
+                if has_period:
+                    open_number(n, rest)
+                    continue
+                if len(rest) > 12:
+                    open_number(n, rest)
                     continue
             m_o = OPT_RE.match(ln)
-            if m_o and cur_q is not None:
+            b = current()
+            if m_o and b is not None:
                 key = m_o.group(1)
-                cur_q['options'][key] = m_o.group(2)
-                cur_q['opt'] = key
+                b['options'][key] = m_o.group(2)
+                b['opt'] = key
                 continue
-            if cur_q is not None:
-                if cur_q.get('opt') and cur_q['opt'] not in ('done',):
+            m_bare = OPT_BARE_RE.match(ln)
+            if m_bare and b is not None:
+                letter, rest = m_bare.group(1), m_bare.group(2)
+                used = b.get('options', {})
+                cur_opt = b.get('opt')
+                okey_order = 'ABCDE'
+                fresh = letter not in used
+                expected = (
+                    cur_opt is not None
+                    and cur_opt in okey_order
+                    and okey_order.index(cur_opt) < 4
+                    and letter == okey_order[okey_order.index(cur_opt) + 1]
+                )
+                if fresh and (run_ahead[_li] or expected):
+                    b['options'][letter] = rest
+                    b['opt'] = letter
+                    continue
+            if b is not None:
+                if b.get('opt') and b.get('opt') not in ('done',):
                     # continuation of the last option line
-                    cur_q['options'][cur_q['opt']] += ' ' + ln
+                    b['options'][b['opt']] += ' ' + ln
                 else:
-                    cur_q['lines'].append(ln)
-    flush_q()
+                    b['lines'].append(ln)
+    finalize()
     return sections
 
 
@@ -378,6 +462,9 @@ def main():
         stats['sections'] += 1
         seen = set()
         for qb in sec['qblocks']:
+            if qb['number'] < 1 or qb['number'] > 60:
+                stats['junk_numbers'] = stats.get('junk_numbers', 0) + 1
+                continue
             stats['questions'] += 1
             if qb['number'] in seen:
                 stats['dup_numbers'] += 1
@@ -395,6 +482,8 @@ def main():
                 'options': {k: opts.get(k, '') for k in 'ABCDE'},
                 'answer': ans,
                 'needs_figure': bool(qb.get('needs_figure')),
+                'recovered': bool(qb.get('recovered')),
+                'orphan': bool(qb.get('orphan')),
                 'source': f'{SRC.stem} [{sec["year"]}]',
             })
 

@@ -61,6 +61,7 @@ function strictClean(r) {
 function flagsFor(r) {
   const flags = []
   if (r.text.startsWith('[Use the data')) flags.push('shared data table prepended — verify boundary')
+  if (r.recovered) flags.push('contains recovered orphan text — verify block boundary')
   return flags
 }
 
@@ -70,6 +71,7 @@ let skippedIncomplete = 0
 let rejected = 0
 const rejectReasons = {}
 const rejectPile = []
+const seenNumbers = new Map()
 const insertedIds = []
 
 // Fresh re-ingest per subject: remove this subject's drafts first so
@@ -89,6 +91,22 @@ const insertedIds = []
 }
 
 for (const r of rows) {
+  if (r.orphan) {
+    rejected++
+    rejectReasons['orphan block — recover by hand'] = (rejectReasons['orphan block — recover by hand'] ?? 0) + 1
+    rejectPile.push({ ...r, reject_reasons: ['orphan block — recover by hand'] })
+    continue
+  }
+  // Duplicate (year, number) with different stems: at most one can own
+  // the key. Never guess — hand rescue decides.
+  const twinKey = `${r.year}::${r.number}`
+  if (seenNumbers.has(twinKey) && seenNumbers.get(twinKey) !== r.text) {
+    rejected++
+    rejectReasons['duplicate number, different stem — verify key'] = (rejectReasons['duplicate number, different stem — verify key'] ?? 0) + 1
+    rejectPile.push({ ...r, reject_reasons: ['duplicate number, different stem — verify key'] })
+    continue
+  }
+  seenNumbers.set(twinKey, r.text);
   if (!r.answer || !['A', 'B', 'C', 'D', 'E'].includes(r.answer)) {
     skippedIncomplete++
     continue
