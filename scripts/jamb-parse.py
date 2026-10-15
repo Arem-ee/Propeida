@@ -25,58 +25,122 @@ if SRC.name != '__none__':
 else:
     NPAGES = 0
 
+# Year banners are emitted by page_text() with this sentinel so parse()
+# can tell them from question text even when watermark letters scramble
+# the banner ('Bioloog o y 1 l 9 g 95 i').
+BANNER_SENTINEL = '\x01BANNER\x01'
+BANNER_YEAR_FUZZ_RE = re.compile(
+    r'(?<!\d)[12](?:\s*[A-Za-z])?\s*[0-9](?:\s*[A-Za-z])?\s*[0-9](?:\s*[A-Za-z])?\s*[0-9](?!\d)'
+)
+
+
+def banner_year(s: str) -> str | None:
+    """Recover 'YYYY' from a watermark-scrambled banner line."""
+    m = BANNER_YEAR_FUZZ_RE.search(s)
+    if not m:
+        return None
+    y = re.sub(r'\D', '', m.group(0))
+    return y if 1980 <= int(y) <= 2035 else None
+
+
+def strip_watermark_chars(page):
+    """Drop the giant diagonal watermark glyphs.
+
+    Booklets carry 'www.myschoolgist.com' drawn diagonally at 80-110pt in
+    AdobeArabic-Italic. Their glyph boxes overlap neighbouring text lines,
+    so pdfplumber interleaves the letters into words ('o46', 'eh47.',
+    's5?0.', 'and1 0f.') and column crops pick them up by bbox overlap.
+    Removing them at char level fixes question markers everywhere.
+    """
+    def keep(obj):
+        if obj.get('object_type') != 'char':
+            return True
+        if (obj.get('size') or 0) > 50:
+            return False
+        return 'AdobeArabic' not in (obj.get('fontname') or '')
+
+    return page.filter(keep)
+
+
+def _emit_band(page, out: list[str], y0: float, y1: float, mid: float, w: float) -> None:
+    left = page.crop((0, y0, mid, y1)).extract_text() or ''
+    right = page.crop((mid, y0, w, y1)).extract_text() or ''
+    if left.strip():
+        out.append(left)
+    if right.strip():
+        out.append(right)
+
 
 def page_text(page) -> str:
-    words = page.extract_words()
-    if not words:
-        return ''
-    mid = page.width / 2
-    rows: dict[int, list] = {}
-    for w in words:
-        rows.setdefault(round(w['top']), []).append(w)
+    """Restore reading order for two-column pages.
+
+    Naive extraction interleaves the columns line by line, collapsing
+    questions; word-row heuristics still fuse rows when the mid-page gap
+    is small. Instead: detect full-width black banner rects (year
+    headers), split the page into vertical bands at those banners, and
+    read each band left column fully, then right column fully. The
+    banner is emitted between bands (sentinel-prefixed per line) so its
+    year header lands in the right reading position even when watermark
+    letters scramble the banner text.
+    """
+    w, h = page.width, page.height
+    mid = w / 2
+
+    bands: list[tuple[float, float]] = []
+    for r in page.rects:
+        rw = r.get('width') or 0
+        rh = r.get('height') or 0
+        if rw > 0.7 * w and rh < 0.2 * h:
+            bands.append((r['top'], r['bottom']))
+    bands.sort()
 
     out: list[str] = []
-    left_buf: list[str] = []
-    right_buf: list[str] = []
-
-    def flush():
-        out.extend(left_buf)
-        out.extend(right_buf)
-        left_buf.clear()
-        right_buf.clear()
-
-    for top in sorted(rows):
-        row = sorted(rows[top], key=lambda w: w['x0'])
-        line = ' '.join(w['text'] for w in row)
-        spans = row[0]['x0'] < mid and row[-1]['x1'] > mid
-        if spans:
-            # Same-y lines from both columns fuse into one spanning row.
-            # Split at the widest inter-word gap near the page middle;
-            # true full-width headers have even spacing and stay whole.
-            gaps = []
-            for a, b in zip(row, row[1:]):
-                gaps.append((b['x0'] - a['x1'], (a['x1'] + b['x0']) / 2))
-            width, at = max(gaps, key=lambda g: g[0]) if gaps else (0, 0)
-            if width > 20 and abs(at - mid) < 80:
-                left_part = ' '.join(w['text'] for w in row if (w['x0'] + w['x1']) / 2 < at)
-                right_part = ' '.join(w['text'] for w in row if (w['x0'] + w['x1']) / 2 >= at)
-                if left_part.strip():
-                    left_buf.append(left_part)
-                if right_part.strip():
-                    right_buf.append(right_part)
-                continue
-            # Full-width row (headers, key titles): boundary, flush columns.
-            flush()
-            out.append(line)
-        elif (row[0]['x0'] + row[-1]['x1']) / 2 < mid:
-            left_buf.append(line)
-        else:
-            right_buf.append(line)
-    flush()
+    y = 0.0
+    for top, bottom in bands:
+        if top > y + 1:
+            _emit_band(page, out, y, top, mid, w)
+        banner = page.crop((0, max(0.0, top - 2), w, min(h, bottom + 2))).extract_text() or ''
+        for bl in banner.split('\n'):
+            if bl.strip():
+                out.append(BANNER_SENTINEL + bl.strip())
+        y = bottom
+    if y < h - 1:
+        _emit_band(page, out, y, h, mid, w)
     return '\n'.join(out)
 
 
 WM_LETTERS = set('myschoolgistcomwww')
+
+# Every overlap-salvage rewrite (original, fixed) for review.
+SALVAGE_LOG: list[tuple[str, str]] = []
+
+
+def overlap_salvage(s: str):
+    """Left-column tail interleaved with the right column's marker at the
+    same y ('es rel3a1x..' = 'relax.' + '31.'; 's5?0.' = 's' + '50.';
+    'nd 8.13.' = 'nd 8.' + '13.'): rebuild '<n>. <stem>' from the junk.
+    Returns (number, fixed) or None; the caller gates on section state."""
+    if Q_RE.match(s):
+        return None
+    m_stem = re.search(r'(?<![A-Za-z])(?:[A-Z][a-z]{2,}|[A-Z] [a-z]{2,})', s)
+    if not (m_stem and 0 < m_stem.start() <= 20):
+        return None
+    junk = s[:m_stem.start()]
+    if not re.search(r'\d', junk) or re.search(r'[A-Z][a-z]', junk):
+        return None
+    dotted = re.findall(r'(\d{1,3})\.', junk)
+    if dotted and 1 <= int(dotted[-1]) <= 55:
+        cand = int(dotted[-1])
+    else:
+        # Interleaved markers only ('5?0' / '4h0' / 'and1 0f'); a clean
+        # 2+ digit run is a real quantity ('24g', '35ml'), not a marker.
+        if re.search(r'\d\d', junk):
+            return None
+        digs = ''.join(re.findall(r'\d', junk))
+        if not digs or not 1 <= int(digs) <= 55:
+            return None
+        cand = int(digs)
+    return cand, f'{cand}. ' + s[m_stem.start():]
 
 # A number/option marker alone on a line: column geometry detached it from
 # its text ('10.' then 'from'; 'o11.' fused with a watermark letter).
@@ -96,6 +160,8 @@ def clean(lines: list[str]) -> list[str]:
             continue
         if re.fullmatch(r'\d{1,3}', s):  # bare page numbers
             continue
+        # Overlap split a single digit off the marker ('3 0. Items' → '30.').
+        s = re.sub(r'^(\d{1,2})\s+(\d)(?=\.\s)', r'\1\2', s)
         # Watermark letter fused to a line start ('ythe', 'oD.', 'hA.'):
         # strip one leading watermark letter when what follows is a word
         # or an option/number marker.
@@ -115,7 +181,8 @@ def clean(lines: list[str]) -> list[str]:
     while i < len(out):
         m = DETACHED_RE.match(out[i])
         nxt = out[i + 1] if i + 1 < len(out) else ''
-        if m and nxt and not Q_RE.match(nxt) and not OPT_RE.match(nxt):
+        if (m and nxt and not Q_RE.match(nxt) and not OPT_RE.match(nxt)
+                and not nxt.startswith(BANNER_SENTINEL)):
             merged.append(out[i] + ' ' + nxt)
             i += 2
         else:
@@ -267,6 +334,17 @@ def parse(pages_text: list[str]):
                 skip_next = True
             else:
                 lines.append(ln)
+        # Merge banner runs (year label split across lines by watermark
+        # letters) into a single sentinel line.
+        if any(ln.startswith(BANNER_SENTINEL) for ln in lines):
+            merged_banners: list[str] = []
+            for ln in lines:
+                if (merged_banners and ln.startswith(BANNER_SENTINEL)
+                        and merged_banners[-1].startswith(BANNER_SENTINEL)):
+                    merged_banners[-1] += ' ' + ln[len(BANNER_SENTINEL):]
+                else:
+                    merged_banners.append(ln)
+            lines = merged_banners
         # Inline options ('A. … B. … C. … D. …' on one line): split into
         # parts first. Single stray markers ('D. 24%' inside a stem) stay.
         # Inline question numbers ('…and 13.' — facing-column bleed): split
@@ -356,6 +434,20 @@ def parse(pages_text: list[str]):
                     run_ahead[_i] = True
                     break
         for _li, ln in enumerate(preprocessed):
+            if ln.startswith(BANNER_SENTINEL):
+                body = ln[len(BANNER_SENTINEL):].strip()
+                m_year = YEAR_RE.search(body)
+                if m_year:
+                    new_section(m_year.group(1))
+                else:
+                    m_bare = YEAR_BARE_RE.match(body)
+                    if m_bare and len(body) < 45:
+                        new_section(m_bare.group(1))
+                    else:
+                        y = banner_year(body)
+                        if y:
+                            new_section(y)
+                continue
             m_year = YEAR_RE.search(ln)
             if not m_year:
                 m_bare = YEAR_BARE_RE.match(ln)
@@ -375,6 +467,19 @@ def parse(pages_text: list[str]):
                 if m:
                     sec['keys'][int(m.group(1))] = m.group(2)
                 continue
+            # Column-overlap salvage, gated by section state: recover only
+            # a number with no block yet, or one the active data-collect
+            # awaits (its marker was mangled too).
+            sal = overlap_salvage(ln)
+            if sal:
+                cand, fixed = sal
+                if data_collect is None:
+                    if not blocks.get(cand):
+                        SALVAGE_LOG.append((ln, fixed))
+                        ln = fixed
+                elif cand in data_collect or cand == data_collect[0] - 1:
+                    SALVAGE_LOG.append((ln, fixed))
+                    ln = fixed
             if data_collect is not None:
                 # Data lines run until the first dependent question number.
                 m_q0 = Q_RE.match(ln)
@@ -382,6 +487,24 @@ def parse(pages_text: list[str]):
                     data_text = ' '.join(data_lines).strip()
                     for n in data_collect:
                         pending_data[n] = data_text
+                    data_collect = None
+                    data_lines = []
+                    # fall through to normal handling of this line
+                elif (m_q0 and '.' in (m_q0.group(2) or '')
+                        and int(m_q0.group(1)) == data_collect[0] - 1
+                        and len((m_q0.group(3) or '').strip()) > 12
+                        and len(data_lines) <= 6):
+                    # The ref's first number is the question AFTER this one
+                    # ('Use the figure…questions 24 to 26' printed above Q23
+                    # in the facing column). A full question line interrupts
+                    # the collect: drop the (near-empty) blob and parse the
+                    # line normally.
+                    data_collect = None
+                    data_lines = []
+                    # fall through to normal handling of this line
+                elif len(data_lines) >= 200:
+                    # Runaway collection (a dangling ref the skip-check
+                    # missed): abandon it and parse this line normally.
                     data_collect = None
                     data_lines = []
                     # fall through to normal handling of this line
@@ -396,6 +519,15 @@ def parse(pages_text: list[str]):
                 # open its block.
                 a, b = int(m_data.group(2)), int(m_data.group(3) or m_data.group(2))
                 lo, hi = min(a, b), max(a, b)
+                # A dangling ref whose range is already answered (the book
+                # prints the wrong numbers, e.g. 'questions 27 and 28'
+                # against the Q33 figure) would swallow every following
+                # line up to the next banner: skip it.
+                if any(
+                    blocks.get(n) and any(v.get('options') for v in blocks[n])
+                    for n in range(lo, hi + 1)
+                ):
+                    continue
                 data_collect = list(range(lo, hi + 1))
                 data_kind = (m_data.group(1) or '').lower()
                 if data_kind in FIGURE_KINDS:
@@ -453,7 +585,7 @@ def parse(pages_text: list[str]):
 
 def main():
     with pdfplumber.open(SRC) as pdf:
-        texts = [page_text(p) for p in pdf.pages]
+        texts = [page_text(strip_watermark_chars(p)) for p in pdf.pages]
 
     sections = parse(texts)
     rows = []
@@ -493,6 +625,10 @@ def main():
     out.write_text(json.dumps(rows, indent=1, ensure_ascii=False), encoding='utf-8')
     print(f'wrote {out} ({len(rows)} rows)')
     print('report:', json.dumps(stats))
+    if SALVAGE_LOG:
+        print(f'salvage rewrites ({len(SALVAGE_LOG)}):')
+        for orig, fixed in SALVAGE_LOG:
+            print(f'  {orig[:90]!r} -> {fixed[:90]!r}')
     # show one sample row per section
     shown = set()
     for r in rows:
