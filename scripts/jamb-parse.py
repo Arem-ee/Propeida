@@ -199,6 +199,19 @@ def clean(lines: list[str]) -> list[str]:
                 s = rest.strip()
                 if not s:
                     continue
+        # Watermark letters split a marker's two digits apart ('th1e5.'
+        # = '15.'): rebuild '<n>. <Text>' when the digits glue to a short
+        # fragment and a capitalised sentence follows. Both digits and
+        # the interleaved letters are required — a single digit fused to
+        # a unit ('dm3.') is stem text, not marker damage.
+        m_rep = re.match(
+            r'^([a-z]{1,4}(?:\s+[a-z]{1,4})*)(\d)([a-z]{1,2})(\d)\.\s+([A-Z].*)$',
+            s,
+        )
+        if m_rep:
+            num = int(m_rep.group(2) + m_rep.group(4))
+            if 1 <= num <= 60:
+                s = f'{num}. {m_rep.group(5)}'
         out.append(s)
 
     # Reattach detached markers: 'o11.' + 'Consumer surplus…' → one line.
@@ -229,10 +242,17 @@ OPT_RE = re.compile(r'^([A-E])\.\s+(.*)')
 # letter). This keeps stems like 'A sovereign state is one' (letter
 # already used above) out of the option set.
 OPT_BARE_RE = re.compile(r'^([A-E])\s+(.*)')
+# Lower-case option runs ('a. planning…', Commerce 2000/2001 papers).
+OPT_LOW_RE = re.compile(r'^([a-e])\.\s+(.*)')
+# Phantom number welded onto a live option by column overlap
+# ('4. B. make available goods and services').
+FUSED_MARKER_RE = re.compile(r'^(\d{1,3})\.\s+([A-E])\.\s+(.*)')
+# Two mis-printed option slots fused on one line ('F. Profit-making G. Sales').
+FUSED_FG_RE = re.compile(r'^([E-G])\.\s+(.*?)\s+([E-G])\.\s+(.*)')
 KEY_RE = re.compile(r'^(\d{1,3})\.\s*([A-E])\b')
 # 'Use the data below to answer questions 9 and 10.' / '...questions 9 to 12.'
 DATA_REF_RE = re.compile(
-    r'use the (data|informationm?|table|diagram|graph|histogram|chart|figure|extract|passage) below to answer questions?\s+(\d{1,3})\s*(?:and|to|-|\u2013)?\s*(\d{1,3})?',
+    r'use the (data|informationm?|table|diagram|graph|histogram|chart|figure|extract|passage|balance\s+sheet) below to answer questions?\s+(\d{1,3})\s*(?:and|to|-|\u2013)?\s*(\d{1,3})?',
     re.IGNORECASE,
 )
 FIGURE_KINDS = {'diagram', 'graph', 'histogram', 'chart', 'figure'}
@@ -246,7 +266,7 @@ SET_TEXT_RE = re.compile(
 # The number range often wraps to the next line ('…to answer' / 'questions
 # 9 and 10.') — glue those back together before parsing.
 ANSWER_WRAP_RE = re.compile(
-    r'use the (data|informationm?|table|diagram|graph|histogram|chart|figure|extract|passage) below to answer\s*$',
+    r'use the (data|informationm?|table|diagram|graph|histogram|chart|figure|extract|passage|balance\s+sheet) below to answer\s*$',
     re.IGNORECASE,
 )
 
@@ -568,6 +588,28 @@ def parse(pages_text: list[str]):
                         pending_figure.add(n)
                 data_lines = []
                 continue
+            # Column overlap welded a phantom number onto a live option
+            # ('4. B. make available goods and services'): re-attach the
+            # option when the number names another block and the letter is
+            # exactly the current block's next option.
+            m_fuse = FUSED_MARKER_RE.match(ln)
+            if m_fuse:
+                b = current()
+                fn = int(m_fuse.group(1))
+                fl = m_fuse.group(2)
+                okey = 'ABCDE'
+                cur_opt = b.get('opt') if b is not None else None
+                if (
+                    b is not None
+                    and fn != cur[0]
+                    and blocks.get(fn)
+                    and cur_opt is not None
+                    and cur_opt in okey
+                    and okey.index(cur_opt) < 4
+                    and fl == okey[okey.index(cur_opt) + 1]
+                    and fl not in (b.get('options') or {})
+                ):
+                    ln = fl + '. ' + m_fuse.group(3)
             m_q = Q_RE.match(ln)
             # Registry model: periods always (re)open their number — empty
             # spurious opens merge harmlessly when the real lines arrive.
@@ -611,6 +653,18 @@ def parse(pages_text: list[str]):
             b = current()
             if m_o and b is not None:
                 key = m_o.group(1)
+                # Mis-printed 4-option sets label slots E/F/G instead of
+                # B/C/D (Commerce 2003 Q15): slide back when the letter
+                # sits exactly three ahead of the expected slot.
+                if key in ('E', 'F', 'G'):
+                    cur_opt = b.get('opt')
+                    ext = 'ABCDEFG'
+                    if (
+                        cur_opt in ('A', 'B', 'C')
+                        and ext[ext.index(cur_opt) + 4] == key
+                        and ext[ext.index(cur_opt) + 1] not in (b.get('options') or {})
+                    ):
+                        key = ext[ext.index(cur_opt) + 1]
                 b['options'][key] = m_o.group(2)
                 b['opt'] = key
                 continue
@@ -631,6 +685,42 @@ def parse(pages_text: list[str]):
                     b['options'][letter] = rest
                     b['opt'] = letter
                     continue
+            m_low = OPT_LOW_RE.match(ln)
+            if m_low and b is not None:
+                letter = m_low.group(1).upper()
+                used = b.get('options', {})
+                cur_opt = b.get('opt')
+                okey = 'ABCDE'
+                expected = (
+                    letter == 'A' if cur_opt is None
+                    else (
+                        cur_opt in okey
+                        and okey.index(cur_opt) < 4
+                        and letter == okey[okey.index(cur_opt) + 1]
+                    )
+                )
+                if letter not in used and expected:
+                    b['options'][letter] = m_low.group(2)
+                    b['opt'] = letter
+                    continue
+            m_fg = FUSED_FG_RE.match(ln)
+            if m_fg and b is not None:
+                cur_opt = b.get('opt')
+                ext = 'ABCDEFG'
+                if cur_opt in ('A', 'B'):
+                    t1 = ext[ext.index(cur_opt) + 1]
+                    t2 = ext[ext.index(cur_opt) + 2]
+                    used = b.get('options') or {}
+                    if (
+                        m_fg.group(1) == ext[ext.index(t1) + 3]
+                        and t1 not in used
+                        and m_fg.group(3) == ext[ext.index(t2) + 3]
+                        and t2 not in used
+                    ):
+                        b['options'][t1] = m_fg.group(2)
+                        b['options'][t2] = m_fg.group(4)
+                        b['opt'] = t2
+                        continue
             if b is not None:
                 if b.get('opt') and b.get('opt') not in ('done',):
                     # continuation of the last option line
