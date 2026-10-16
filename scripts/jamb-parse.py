@@ -505,8 +505,21 @@ def parse(pages_text: list[str]):
             if not m_year:
                 m_bare = YEAR_BARE_RE.match(ln)
                 if m_bare and len(ln) < 45:
-                    new_section(m_bare.group(1))
-                    continue
+                    # A bare '<Subject> YYYY' line opens a section only when
+                    # its pre-year text reads as a subject title or as a
+                    # short banner fragment. Question/option prose that
+                    # merely ends in a year must not start one — e.g. the
+                    # Government option 'B London conference of 1953' and
+                    # the stem 'the Republican Constitution in October
+                    # 1963' each split the real 1989 paper into phantom
+                    # years. Short fragments ('ics 1985', 'Physi 1998') are
+                    # scrambled banner remains and are still consumed.
+                    if not (OPT_RE.match(ln) or OPT_BARE_RE.match(ln)):
+                        _pre = ln[:m_bare.start(1)].rstrip()
+                        _lead = ln.split(None, 1)[0]
+                        if len(_pre) <= 12 or (len(_lead) >= 2 and _lead[0].isupper()):
+                            new_section(m_bare.group(1))
+                            continue
             else:
                 new_section(m_year.group(1))
                 continue
