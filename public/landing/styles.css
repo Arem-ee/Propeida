@@ -328,136 +328,7 @@ h1, h2, h3 {
   overflow: hidden;
 }
 
-/* Continuous Ground Plane across full hero width */
-.hero-ground-plane {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 60%;
-  background: linear-gradient(to bottom, rgba(243, 237, 226, 0.45) 0%, rgba(243, 237, 226, 0.95) 70%, #FAF8F5 100%);
-  border-top-left-radius: 50% 18px;
-  border-top-right-radius: 50% 18px;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.hero-students-field {
-  position: relative;
-  width: 100%;
-  max-width: 1440px;
-  height: clamp(520px, 48vw, 680px);
-  margin: 0 auto;
-  z-index: 5;
-}
-
-.hero-student-item {
-  position: absolute;
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 700ms var(--ease-standard), transform 700ms var(--ease-standard);
-  will-change: transform, opacity;
-  user-select: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.hero-student-item.is-entered {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.student-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  pointer-events: none;
-}
-
-/* Soft flat oval ground shadow directly under character feet touching character */
-.student-shadow {
-  width: 70%;
-  height: 12px;
-  background: radial-gradient(ellipse at center, rgba(30, 20, 15, 0.24) 0%, rgba(30, 20, 15, 0) 70%);
-  border-radius: 50%;
-  margin-top: -6px; /* touches feet directly with zero gap */
-  pointer-events: none;
-  flex-shrink: 0;
-}
-
-/* 3 Depth Layers */
-.depth-back {
-  z-index: 2;
-  filter: brightness(1.02) contrast(0.96);
-}
-
-.depth-mid {
-  z-index: 5;
-}
-
-.depth-front {
-  z-index: 8;
-}
-
-/* Idle float */
-.hero-student-item.has-idle {
-  animation: hero-idle-float var(--idle-dur, 6s) ease-in-out var(--idle-delay, 0s) infinite alternate;
-}
-
-@keyframes hero-idle-float {
-  0% {
-    transform: translate3d(var(--px-x, 0), var(--px-y, 0), 0) rotate(0deg);
-  }
-  100% {
-    transform: translate3d(var(--px-x, 0), calc(var(--px-y, 0) - 7px), 0) rotate(1.2deg);
-  }
-}
-
-/* Desktop layout: spread across full width with 3% margin on both sides (3% to 97%), light depth overlap */
-/* Back layer (smaller, high up near headline, closing empty gap) */
-.student-pos-4  { left: 5%;  bottom: 44%; width: clamp(140px, 14vw, 200px); }
-.student-pos-7  { left: 38%; bottom: 43%; width: clamp(155px, 15vw, 220px); }
-.student-pos-12 { left: 76%; bottom: 43%; width: clamp(150px, 15vw, 215px); }
-
-/* Mid layer (medium scale, mid field) */
-.student-pos-3  { left: 14%; bottom: 22%; width: clamp(155px, 15vw, 220px); }
-.student-pos-5  { left: 38%; bottom: 24%; width: clamp(125px, 12vw, 180px); }
-.student-pos-9  { left: 62%; bottom: 21%; width: clamp(155px, 15vw, 220px); }
-.student-pos-11 { left: 81%; bottom: 18%; width: clamp(150px, 15vw, 215px); }
-
-/* Front layer (largest scale, forefront, 3% left margin) */
-.student-pos-1  { left: 3%;  bottom: 2%;  width: clamp(180px, 18vw, 260px); }
-.student-pos-2  { left: 25%; bottom: 1%;  width: clamp(200px, 20vw, 290px); }
-.student-pos-6  { left: 49%; bottom: 2%;  width: clamp(175px, 17vw, 250px); }
-.student-pos-8  { left: 71%; bottom: 1%;  width: clamp(185px, 18vw, 265px); }
-
-/* Responsive layout: 390px mobile viewport without clipping, 3% margin */
-@media (max-width: 768px) {
-  .hero-students-field {
-    height: 480px;
-    max-width: 100%;
-    overflow: hidden;
-  }
-  /* Back layer */
-  .student-pos-4  { left: 3%;  bottom: 48%; width: 105px; }
-  .student-pos-7  { left: 36%; bottom: 46%; width: 115px; }
-  .student-pos-12 { left: 71%; bottom: 47%; width: 105px; }
-
-  /* Mid layer */
-  .student-pos-3  { left: 11%; bottom: 25%; width: 110px; }
-  .student-pos-5  { left: 35%; bottom: 27%; width: 95px; }
-  .student-pos-9  { left: 57%; bottom: 25%; width: 110px; }
-  .student-pos-11 { left: 74%; bottom: 24%; width: 100px; }
-
-  /* Front layer */
-  .student-pos-1  { left: 3%;  bottom: 2%;  width: 125px; }
-  .student-pos-2  { left: 24%; bottom: 1%;  width: 135px; }
-  .student-pos-6  { left: 47%; bottom: 2%;  width: 125px; }
-  .student-pos-8  { left: 67%; bottom: 1%;  width: 125px; }
-}
-
-/* Hero Banner Container & 12 Students Art */
+/* Hero Banner Container & Student Art */
 .hero-banner-container {
   width: 100%;
   max-width: 1400px;
@@ -472,10 +343,9 @@ h1, h2, h3 {
 .hero-students-banner-img {
   width: 100%;
   height: auto;
-  max-height: 520px;
+  max-height: 560px;
   object-fit: contain;
   display: block;
-  filter: drop-shadow(0 12px 24px rgba(15, 23, 42, 0.06));
 }
 
 /* Map Showcase Artwork */
@@ -504,7 +374,7 @@ h1, h2, h3 {
    ========================================================================== */
 .section-map-story {
   background-color: #FDFBF7;
-  padding: clamp(3rem, 6vw, 5.5rem) 0;
+  padding: clamp(2.5rem, 4.5vw, 4rem) 0;
 }
 
 .map-story-grid {
@@ -625,7 +495,7 @@ h1, h2, h3 {
    ========================================================================== */
 .section-screenshots {
   background-color: #F3F7F5;
-  padding: clamp(3rem, 6vw, 5.5rem) 0 clamp(4rem, 7vw, 6rem);
+  padding: clamp(2.5rem, 4.5vw, 4rem) 0 clamp(3rem, 5vw, 4.5rem);
   overflow: hidden;
 }
 
@@ -671,7 +541,7 @@ h1, h2, h3 {
    ========================================================================== */
 .section-exams {
   background-color: #FFFDF4;
-  padding: clamp(3.5rem, 6.5vw, 6rem) 0;
+  padding: clamp(3rem, 5vw, 4.5rem) 0;
 }
 
 .exams-header {
@@ -730,7 +600,7 @@ h1, h2, h3 {
    ========================================================================== */
 .section-blog {
   background-color: #FFF9F5;
-  padding: clamp(3.5rem, 6.5vw, 6rem) 0;
+  padding: clamp(3rem, 5vw, 4.5rem) 0;
 }
 
 .blog-grid {
@@ -818,7 +688,7 @@ h1, h2, h3 {
    ========================================================================== */
 .section-comparison {
   background-color: #F8FAFC;
-  padding: clamp(3.5rem, 6.5vw, 6rem) 0;
+  padding: clamp(3rem, 5vw, 4.5rem) 0;
 }
 
 .table-responsive-container {
@@ -947,7 +817,7 @@ body:not(.js-observer-ready) .table-cross-icon path {
    ========================================================================== */
 .section-cta {
   background-color: #FFFBEB;
-  padding: clamp(6rem, 12vw, 10rem) 0;
+  padding: clamp(4rem, 7vw, 6rem) 0;
 }
 
 .cta-container {
@@ -1088,13 +958,12 @@ body:not(.js-observer-ready) .table-cross-icon path {
     scroll-behavior: auto !important;
   }
 
-  .hero-student-item.has-idle,
   .map-stage.has-sway {
     animation: none !important;
   }
 
   .screenshots-track-wrapper {
-    overflow-x: auto !important;
+    overflow: hidden !important;
   }
 
   .screenshots-track {

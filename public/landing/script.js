@@ -4,7 +4,6 @@
 
 function init() {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const isFinePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
   /* ==========================================================================
      1. NAVBAR: Scroll 40px Border + Mobile Menu + Smooth Scroll
@@ -62,13 +61,9 @@ function init() {
   }
 
   /* ==========================================================================
-     2. HERO ANIMATIONS: Word-by-Word + Character Entrance + Mouse Parallax
+     2. HERO: Word-by-Word Headline Reveal
      ========================================================================== */
   const heroHeadline = document.getElementById('heroHeadline');
-  const studentItems = document.querySelectorAll('.hero-student-item');
-
-  // Ensure all student items are marked entered immediately
-  studentItems.forEach(item => item.classList.add('is-entered'));
 
   if (heroHeadline) {
     const rawText = heroHeadline.textContent.trim();
@@ -82,54 +77,6 @@ function init() {
         span.textContent = word;
         heroHeadline.appendChild(span);
       });
-    }
-  }
-
-  // Stagger idle float animation
-  if (!prefersReducedMotion) {
-    studentItems.forEach((item, index) => {
-      setTimeout(() => {
-        item.classList.add('has-idle');
-      }, 300 + index * 60);
-    });
-  }
-
-  // Hero Mouse Parallax (4-14px shift; disabled on touch devices)
-  const heroSection = document.getElementById('hero');
-  if (isFinePointer && !prefersReducedMotion && heroSection) {
-    let mouseX = 0, mouseY = 0;
-    let targetX = 0, targetY = 0;
-    let parallaxRaf = null;
-
-    heroSection.addEventListener('mousemove', (e) => {
-      const rect = heroSection.getBoundingClientRect();
-      const relX = (e.clientX - rect.left) / rect.width - 0.5;
-      const relY = (e.clientY - rect.top) / rect.height - 0.5;
-      targetX = relX;
-      targetY = relY;
-
-      if (!parallaxRaf) {
-        parallaxRaf = requestAnimationFrame(updateParallax);
-      }
-    });
-
-    function updateParallax() {
-      mouseX += (targetX - mouseX) * 0.1;
-      mouseY += (targetY - mouseY) * 0.1;
-
-      studentItems.forEach((item) => {
-        const depth = parseFloat(item.getAttribute('data-depth') || '0.08');
-        const shiftX = (mouseX * depth * 80).toFixed(2);
-        const shiftY = (mouseY * depth * 65).toFixed(2);
-        item.style.setProperty('--px-x', `${shiftX}px`);
-        item.style.setProperty('--px-y', `${shiftY}px`);
-      });
-
-      if (Math.abs(targetX - mouseX) > 0.001 || Math.abs(targetY - mouseY) > 0.001) {
-        parallaxRaf = requestAnimationFrame(updateParallax);
-      } else {
-        parallaxRaf = null;
-      }
     }
   }
 
