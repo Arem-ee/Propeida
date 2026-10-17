@@ -24,6 +24,12 @@ if (!jsonPath || !subjectSlug) {
 
 const rows = JSON.parse(readFileSync(jsonPath, 'utf8'))
 
+// The parsed JSON's `source` field is '<SRC.stem> [<year>]', and the parser
+// writes it from the PDF filename, so the basename of <parsed.json> is the
+// booklet identifier. Wipes below are scoped to this stem so re-ingesting
+// one booklet never deletes drafts that came from a different source.
+const stem = jsonPath.replace(/\\/g, '/').split('/').pop().replace(/\.json$/, '')
+
 const { data: exam } = await db.from('exams').select('id').eq('slug', 'jamb').single()
 if (!exam) throw new Error('jamb exam missing')
 const { data: subject } = await db.from('subjects').select('id').eq('slug', subjectSlug).single()
@@ -74,9 +80,10 @@ const rejectPile = []
 const seenNumbers = new Map()
 const insertedIds = []
 
-// Fresh re-ingest per subject: remove this subject's drafts first so
-// rejected rows from an earlier loose pass leave no residue. Published
-// rows are never touched.
+// Scoped re-ingest: remove only the rows THIS booklet previously produced
+// (matched via the source marker '<stem> [<year>]'), so ingesting a second
+// booklet into the same subject never wipes the first. Published rows are
+// never touched.
 {
   const { data: existing } = await db
     .from('questions')
@@ -84,9 +91,12 @@ const insertedIds = []
     .eq('exam_id', exam.id)
     .eq('subject_id', subject.id)
     .eq('status', 'draft')
+    .ilike('source', `%(${stem} [%`)
   if (existing && existing.length > 0) {
     await db.from('questions').delete().in('id', existing.map((r) => r.id))
-    console.log(`cleared ${existing.length} prior drafts for re-ingest`)
+    console.log(`cleared ${existing.length} prior drafts for '${stem}' re-ingest`)
+  } else {
+    console.log(`no prior drafts for '${stem}' — nothing to clear`)
   }
 }
 
