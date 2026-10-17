@@ -231,6 +231,46 @@ def clean(lines: list[str]) -> list[str]:
     return merged
 
 
+def split_fused(first: str, text: str) -> list[tuple[str, str]]:
+    """Re-segment a line that packed several options together.
+
+    The booklets print 2-4 options on one baseline with no break between
+    them ('A. Fashion.B. Innovation.C. Fad D. Attribute.'). OPT_RE
+    matches only the first marker and dumps the rest into that slot.
+    Split at each embedded marker that is the EXPECTED next letter in
+    the A->B->C->D->E run, so a stray capital inside an option stays put.
+    Returns [(letter, value), ...] starting at ``first``.
+    """
+    okey = 'ABCDE'
+    segs: list[tuple[str, str]] = []
+    cur, pos = first, 0
+    for m in FUSE_SPLIT_RE.finditer(text):
+        letter = m.group(1)
+        i = okey.index(cur) if cur in okey else -1
+        if 0 <= i < 4 and letter == okey[i + 1]:
+            segs.append((cur, text[pos:m.start()].strip()))
+            cur, pos = letter, m.end()
+    segs.append((cur, text[pos:].strip()))
+    return segs
+
+
+def put_option(opts: dict, ltr: str, val: str) -> None:
+    """Assign an option value, appending when the slot is already taken.
+
+    A fused split can target a slot that already holds text (usually in an
+    already-scrambled block); appending keeps every fragment instead of
+    silently dropping one.
+    """
+    val = val.strip()
+    if not val:
+        return
+    cur = (opts.get(ltr) or '').strip()
+    if not cur:
+        opts[ltr] = val
+    elif val not in cur and cur not in val:
+        opts[ltr] = cur + ' ' + val
+
+
 YEAR_RE = re.compile(r'UTME\s+(19\d{2}|20\d{2}).*QUESTIONS', re.IGNORECASE)
 # Older booklets: a bare '<Subject> YYYY' line ('Commerce 1994').
 YEAR_BARE_RE = re.compile(r'^[A-Za-z][A-Za-z &\/\'\-]{2,40}\s+(19\d{2}|20\d{2})$')
@@ -249,6 +289,15 @@ OPT_LOW_RE = re.compile(r'^([a-e])\.\s+(.*)')
 FUSED_MARKER_RE = re.compile(r'^(\d{1,3})\.\s+([A-E])\.\s+(.*)')
 # Two mis-printed option slots fused on one line ('F. Profit-making G. Sales').
 FUSED_FG_RE = re.compile(r'^([E-G])\.\s+(.*?)\s+([E-G])\.\s+(.*)')
+# Several options packed onto one line with no break between them
+# ('A. privatizationB. commercialization', 'B. limited liability
+# companies C. public companies'). OPT_RE claims the whole line for the
+# first letter; split_fused() re-segments it at the embedded markers.
+# The marker must be glued to a lower-case letter/digit (optionally a
+# closing paren) or to a period that itself follows a lower-case letter or
+# digit, so acronyms ('N.P.C.', 'A.C.', 'AB.') are never split while real
+# packed options ('limbs C. development', 'Fashion.B. Innovation') still are.
+FUSE_SPLIT_RE = re.compile(r'(?:(?<=[a-z0-9\)])|(?<=[a-z0-9]\.)) ?([A-E])\.\s+')
 KEY_RE = re.compile(r'^(\d{1,3})\.\s*([A-E])\b')
 # 'Use the data below to answer questions 9 and 10.' / '...questions 9 to 12.'
 DATA_REF_RE = re.compile(
@@ -691,8 +740,29 @@ def parse(pages_text: list[str]):
                         and ext[ext.index(cur_opt) + 1] not in (b.get('options') or {})
                     ):
                         key = ext[ext.index(cur_opt) + 1]
-                b['options'][key] = m_o.group(2)
-                b['opt'] = key
+                seeded = key in b.get('_seeded', ())
+                segs = split_fused(key, m_o.group(2))
+                if len(segs) == 1:
+                    # No embedded marker: keep the original text verbatim
+                    # so untouched rows stay byte-identical across runs --
+                    # unless a prior fused split already seeded this letter
+                    # (a scrambled block whose option continues on its own
+                    # line), in which case append instead of overwriting.
+                    if seeded and (b['options'].get(key) or '').strip():
+                        put_option(b['options'], key, m_o.group(2))
+                        b['_seeded'].discard(key)
+                    else:
+                        b['options'][key] = m_o.group(2)
+                    b['opt'] = key
+                else:
+                    if seeded and (b['options'].get(key) or '').strip():
+                        put_option(b['options'], key, segs[0][1])
+                    else:
+                        b['options'][key] = segs[0][1]
+                    for ltr, val in segs[1:]:
+                        put_option(b['options'], ltr, val)
+                        b.setdefault('_seeded', set()).add(ltr)
+                    b['opt'] = segs[-1][0]
                 continue
             m_bare = OPT_BARE_RE.match(ln)
             if m_bare and b is not None:
@@ -749,8 +819,23 @@ def parse(pages_text: list[str]):
                         continue
             if b is not None:
                 if b.get('opt') and b.get('opt') not in ('done',):
-                    # continuation of the last option line
-                    b['options'][b['opt']] += ' ' + ln
+                    # Continuation line. It may itself carry fused option
+                    # markers ('tough. C. the fruit is succulent'): split
+                    # those off into their own options instead of piling
+                    # them onto the current one.
+                    segs = split_fused(b['opt'], ln)
+                    if len(segs) > 1:
+                        head = segs[0][1]
+                        b['options'][b['opt']] = (
+                            (b['options'].get(b['opt']) or '').rstrip()
+                            + ((' ' + head) if head else '')
+                        )
+                        for ltr, val in segs[1:]:
+                            put_option(b['options'], ltr, val)
+                            b.setdefault('_seeded', set()).add(ltr)
+                        b['opt'] = segs[-1][0]
+                    else:
+                        b['options'][b['opt']] += ' ' + ln
                 else:
                     b['lines'].append(ln)
     finalize()
