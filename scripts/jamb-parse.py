@@ -291,13 +291,24 @@ FUSED_MARKER_RE = re.compile(r'^(\d{1,3})\.\s+([A-E])\.\s+(.*)')
 FUSED_FG_RE = re.compile(r'^([E-G])\.\s+(.*?)\s+([E-G])\.\s+(.*)')
 # Several options packed onto one line with no break between them
 # ('A. privatizationB. commercialization', 'B. limited liability
-# companies C. public companies'). OPT_RE claims the whole line for the
-# first letter; split_fused() re-segments it at the embedded markers.
+# companies C. public companies', and the dot-no-space form
+# 'Paul C.Simon' / 'Number of 5 D.Presence of 3'). OPT_RE claims the
+# whole line for the first letter; split_fused() re-segments it at the
+# embedded markers.
 # The marker must be glued to a lower-case letter/digit (optionally a
-# closing paren) or to a period that itself follows a lower-case letter or
-# digit, so acronyms ('N.P.C.', 'A.C.', 'AB.') are never split while real
-# packed options ('limbs C. development', 'Fashion.B. Innovation') still are.
-FUSE_SPLIT_RE = re.compile(r'(?:(?<=[a-z0-9\)])|(?<=[a-z0-9]\.)) ?([A-E])\.\s+')
+# closing paren or list punctuation) or to a period that itself follows a
+# lower-case letter or digit, or it may open the fragment (a fused marker
+# at the start of a continuation line, 'C.produce cork'). This keeps
+# acronyms ('N.P.C.', 'A.C.', 'AB.') from splitting while real packed
+# options ('limbs C. development', 'Fashion.B. Innovation',
+# 'N4,400, D.N6,400') still split. It is followed either by whitespace or
+# directly by a letter that does not begin another initialism fragment —
+# so the dot-no-space form 'C.Simon'/'D.N6,400' splits while 'E.E.C.'
+# stays intact ('D. E.E.C. E. UNESCO' keeps 'E.E.C.').
+FUSE_SPLIT_RE = re.compile(
+    r'(?:^|(?<=[a-z0-9\(\),;:\[\]])|(?<=[a-z0-9]\.)) ?([A-E])\.'
+    r'(?:\s+|(?![A-Z]\.)(?=[A-Za-z]))'
+)
 KEY_RE = re.compile(r'^(\d{1,3})\.\s*([A-E])\b')
 # 'Use the data below to answer questions 9 and 10.' / '...questions 9 to 12.'
 DATA_REF_RE = re.compile(
