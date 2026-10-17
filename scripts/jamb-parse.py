@@ -585,6 +585,19 @@ def parse(pages_text: list[str]):
                 # open its block.
                 a, b = int(m_data.group(2)), int(m_data.group(3) or m_data.group(2))
                 lo, hi = min(a, b), max(a, b)
+                if hi > 60 or lo < 1:
+                    # Mis-printed reference number (Accounts 2001 prints
+                    # 'questions 241 and 42' for '41 and 42', splitting the
+                    # ref across a wrap so group(3) is lost). A question
+                    # number above 60 is impossible; salvage the last two
+                    # digits (241 -> 41). If that is still implausible, drop
+                    # the ref — otherwise the dangling collect swallows
+                    # every following question up to the next section and
+                    # discards them (Q41-50 of 2001 were lost this way).
+                    a, b = int(str(a)[-2:]), int(str(b)[-2:])
+                    lo, hi = min(a, b), max(a, b)
+                    if hi > 60 or lo < 1:
+                        continue
                 # A dangling ref whose range is already answered (the book
                 # prints the wrong numbers, e.g. 'questions 27 and 28'
                 # against the Q33 figure) would swallow every following
