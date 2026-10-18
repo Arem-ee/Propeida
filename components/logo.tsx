@@ -17,7 +17,7 @@ export default function Logo({ size = 32, showText = true, className = '' }: Log
         style={{ width: size, height: size, borderRadius: Math.max(6, Math.round(size * 0.24)) }}
       >
         <Image
-          src="/propeida-logo.svg"
+          src="/logo.svg"
           alt="Propeida"
           width={size}
           height={size}
