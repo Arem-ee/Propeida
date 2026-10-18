@@ -72,7 +72,7 @@ export function getNoteByPath(subject: string, topicSlug: string): RevisionNote 
 }
 
 export function getNoteUrl(note: RevisionNote): string {
-  return `/dashboard/notes/${note.subject}/${note.slug}`
+  return `/learn/${note.subject}/${note.slug}`
 }
 
 export function searchNotes(query: string): RevisionNote[] {

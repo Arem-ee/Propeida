@@ -43,7 +43,7 @@ export default function LearnPage() {
                 <span className="mt-0.5 block truncate text-[13px] font-semibold text-ink-soft">
                   {subject.description}
                 </span>
-                <span className="mt-1 block text-xs font-extrabold text-gray-400">
+                <span className="mt-1 block text-xs font-extrabold text-gray-500">
                   {count} lesson{count === 1 ? '' : 's'}
                 </span>
               </span>

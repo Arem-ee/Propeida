@@ -189,9 +189,9 @@ async function login(page) {
   await page.type('input[type=email]', account.email)
   await page.type('input[type=password]', account.password)
   await page.click('button[type=submit]')
-  await page.waitForFunction(() => window.location.pathname.startsWith('/dashboard'), { timeout: 25000 })
+  await page.waitForFunction(() => window.location.pathname.startsWith('/home'), { timeout: 25000 })
   await page.waitForSelector('h1', { timeout: 15000 })
-  step('login → dashboard', { ms: now() - t0, totalRequests: page._reqCount - before, postRequests: page._postCount - before })
+  step('login → home', { ms: now() - t0, totalRequests: page._reqCount - before, postRequests: page._postCount - before })
   return true
 }
 
@@ -238,47 +238,12 @@ async function measureSoftNav(page, title, label, fallbackPath, contentText) {
   step(`${title} (soft nav)`, { ms: now() - t0, totalRequests: page._reqCount - beforeReq, postRequests: page._postCount - beforePost, ...(usedFallback ? { info: 'fallback to direct nav' } : {}) })
 }
 
-async function measureLeaderboard(page) {
-  await page.goto(`${BASE_URL}/leaderboard?hub=universities`, { waitUntil: 'domcontentloaded' })
-  await page.waitForFunction(() => document.body.innerText.includes('University Leaderboard'), { timeout: 20000 })
-  await page.waitForFunction(() => document.querySelectorAll('select').length > 0, { timeout: 15000 })
-  await page.waitForFunction(() => document.body.innerText.includes('score'), { timeout: 20000 }).catch(() => {})
-
-  const t0 = now()
-  const beforeReq = page._reqCount
-  const beforePost = page._postCount
-  await page.evaluate(() => { [...document.querySelectorAll('button')].find((b) => b.innerText.includes('Weekly'))?.click() })
-  await waitForPaint(page)
-  step('leaderboard period switch (all→weekly)', { ms: now() - t0, totalRequests: page._reqCount - beforeReq, postRequests: page._postCount - beforePost })
-
-  await page.evaluate(() => { [...document.querySelectorAll('button')].find((b) => b.innerText.includes('All Time'))?.click() })
-  await waitForPaint(page)
-
-  const select = await page.$('select')
-  if (!select) {
-    step('leaderboard exam switch', { ms: 0, info: 'skipped — exam dropdown not rendered' })
-    return
-  }
-  const optionValues = await page.evaluate(() => [...document.querySelectorAll('select option')].map((o) => o.value).filter(Boolean))
-  const second = optionValues.find((v) => v !== (optionValues[0] ?? ''))
-  if (!second) {
-    step('leaderboard exam switch', { ms: 0, info: 'skipped — only one exam option' })
-    return
-  }
-  const t1 = now()
-  const beforeReq2 = page._reqCount
-  const beforePost2 = page._postCount
-  await select.select(second)
-  await waitForPaint(page)
-  step('leaderboard exam switch', { ms: now() - t1, totalRequests: page._reqCount - beforeReq2, postRequests: page._postCount - beforePost2 })
-}
-
 async function openSession(page) {
   if (SESSION_URL) {
     await page.goto(SESSION_URL, { waitUntil: 'domcontentloaded' })
   } else {
-    await page.goto(`${BASE_URL}/practice?hub=universities`, { waitUntil: 'domcontentloaded' })
-    await page.waitForFunction(() => document.body.innerText.includes('University Practice'), { timeout: 20000 })
+    await page.goto(`${BASE_URL}/practice`, { waitUntil: 'domcontentloaded' })
+    await page.waitForFunction(() => document.body.innerText.includes('Practice'), { timeout: 20000 })
     const resume = await page.evaluate(() => {
       const b = [...document.querySelectorAll('button')].find((x) => x.innerText.includes('Continue exam') || x.innerText.includes('Resume session'))
       if (b) { b.click(); return true }
@@ -393,14 +358,13 @@ async function main() {
 
   const loggedIn = await login(page)
   if (!loggedIn) {
-    console.log('SKIPPING authenticated scenarios (dashboard, practice, session, leaderboard).')
+    console.log('SKIPPING authenticated scenarios (home, practice, session).')
   } else {
-    await measureHardNav(page, 'dashboard', '/dashboard', 'h1')
-    await page.goto(`${BASE_URL}/dashboard?hub=universities`, { waitUntil: 'domcontentloaded' })
+    await measureHardNav(page, 'home', '/home', 'h1')
+    await page.goto(`${BASE_URL}/home`, { waitUntil: 'domcontentloaded' })
     await page.waitForFunction((s) => document.querySelector(s), { timeout: 20000 }, 'h1')
-    await measureSoftNav(page, 'dashboard → leaderboard', 'Leaderboard', '/leaderboard?hub=universities', 'University Leaderboard')
-    await measureLeaderboard(page)
-    await measureSoftNav(page, 'leaderboard → practice', 'Practice', '/practice?hub=universities', 'University Practice')
+    await measureSoftNav(page, 'home → progress', 'Progress', '/progress', 'Progress')
+    await measureSoftNav(page, 'progress → practice', 'Practice', '/practice', 'Practice')
     try {
       const sessionUrl = await openSession(page)
       console.log(`   (session: ${sessionUrl})`)

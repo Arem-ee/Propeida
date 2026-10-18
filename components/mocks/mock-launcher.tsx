@@ -95,7 +95,7 @@ export default function MockLauncher({
     <div className="space-y-5">
       <div className="rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-6 shadow-[0_2px_12px_-6px_rgba(16,28,51,0.12)] space-y-5">
         <div>
-          <p className="mb-2 text-[11px] font-extrabold uppercase tracking-[0.14em] text-gray-400">Exam</p>
+          <p className="mb-2 text-[11px] font-extrabold uppercase tracking-[0.14em] text-gray-500">Exam</p>
           <div className="flex flex-wrap gap-2">
             {exams.map((e) => (
               <button
@@ -127,7 +127,7 @@ export default function MockLauncher({
         )}
 
         <div>
-          <p className="mb-2 text-[11px] font-extrabold uppercase tracking-[0.14em] text-gray-400">
+          <p className="mb-2 text-[11px] font-extrabold uppercase tracking-[0.14em] text-gray-500">
             Subjects {isJamb ? '(English + any 3)' : '(optional — all by default)'}
           </p>
           <div className="flex flex-wrap gap-2">
@@ -151,7 +151,7 @@ export default function MockLauncher({
             })}
           </div>
           {isJamb && (
-            <p className="mt-2 text-xs font-bold text-gray-400">
+            <p className="mt-2 text-xs font-bold text-gray-500">
               JAMB rule: English is compulsory — pick exactly 3 more. {electives.length}/3 chosen.
             </p>
           )}
@@ -169,7 +169,7 @@ export default function MockLauncher({
           <Play className="h-5 w-5" />
           {starting ? 'Opening the hall...' : 'Enter mock exam'}
         </button>
-        <p className="text-center text-xs font-semibold text-gray-400">
+        <p className="text-center text-xs font-semibold text-gray-500">
           Timed, no pauses. Answers autosave as you go.
         </p>
       </div>

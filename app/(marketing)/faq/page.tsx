@@ -70,7 +70,7 @@ export default function FAQPage() {
           <p className="mt-4 text-lg text-gray-500 leading-relaxed">
             Straight answers about Propeida, how it is funded, and how it works.
           </p>
-          <p className="mt-2 text-sm text-gray-400">
+          <p className="mt-2 text-sm text-gray-500">
             Also see the <Link href="/#faq" className="font-bold text-blue-600 hover:text-blue-700">FAQ section on the homepage</Link> and our{' '}
             <Link href="/pricing" className="font-bold text-blue-600 hover:text-blue-700">plans and pricing</Link>.
           </p>
@@ -90,7 +90,7 @@ export default function FAQPage() {
                   aria-expanded={isOpen}
                 >
                   <span className="pr-4">{faq.question}</span>
-                  <span className="shrink-0 text-gray-400">
+                  <span className="shrink-0 text-gray-500">
                     {isOpen ? <ChevronUp className="h-5 w-5 text-blue-600" /> : <ChevronDown className="h-5 w-5" />}
                   </span>
                 </button>

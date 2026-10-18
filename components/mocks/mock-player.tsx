@@ -101,8 +101,8 @@ function SafeCalculator({ onClose }: { onClose: () => void }) {
   return (
     <div className="rounded-3xl border-2 border-gray-200 bg-white p-4 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.4)] w-[260px]" role="dialog" aria-label="Calculator">
       <div className="flex items-center justify-between mb-2">
-        <span className="text-[11px] font-extrabold uppercase tracking-wider text-gray-400">Calculator</span>
-        <button onClick={onClose} className="text-xs font-bold text-gray-400 min-h-[36px] px-2 cursor-pointer" aria-label="Close calculator">Close</button>
+        <span className="text-[11px] font-extrabold uppercase tracking-wider text-gray-500">Calculator</span>
+        <button onClick={onClose} className="text-xs font-bold text-gray-500 min-h-[36px] px-2 cursor-pointer" aria-label="Close calculator">Close</button>
       </div>
       <div className="rounded-2xl bg-ink text-white px-4 py-3 font-display text-2xl font-medium text-right tabular-nums truncate" aria-live="polite">
         {display}
@@ -401,7 +401,7 @@ export default function MockPlayer({
       {/* Palette */}
       <div className="mt-5 rounded-3xl border border-blue-100/70 bg-white p-5 shadow-[0_2px_12px_-6px_rgba(16,28,51,0.12)]">
         <div className="mb-3 flex items-center justify-between">
-          <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-gray-400">
+          <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-gray-500">
             {answeredCount}/{total} answered
           </p>
           <button
@@ -439,7 +439,7 @@ export default function MockPlayer({
             )
           })}
         </div>
-        <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-[11px] font-bold text-gray-400">
+        <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-[11px] font-bold text-gray-500">
           <span className="inline-flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded bg-emerald-500" /> Attempted</span>
           <span className="inline-flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded bg-gray-200" /> Unattempted</span>
           <span className="inline-flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded bg-blue-600" /> Current</span>

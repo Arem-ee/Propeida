@@ -14,7 +14,7 @@ export default function TermsPage() {
       <MarketingHeader />
       <main className="mx-auto max-w-3xl px-4 py-20 sm:py-24">
         <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Terms of Service</h1>
-        <p className="mt-4 text-sm text-gray-400">Last updated: July 2026</p>
+        <p className="mt-4 text-sm text-gray-500">Last updated: July 2026</p>
 
         <div className="mt-10 space-y-8 text-sm text-gray-500 leading-relaxed">
           <section>

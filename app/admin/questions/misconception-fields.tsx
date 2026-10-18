@@ -61,7 +61,7 @@ export default function MisconceptionFields({
           <div key={key} className={`rounded-xl border p-4 space-y-3 ${isCorrect ? 'border-gray-100 bg-gray-50 opacity-60' : 'border-gray-100 bg-gray-50/50'}`}>
             <p className="text-xs font-extrabold text-gray-700 uppercase tracking-wider">
               Option {key.toUpperCase()}
-              {isCorrect && <span className="ml-2 font-semibold normal-case text-gray-400">correct — no misconception needed</span>}
+              {isCorrect && <span className="ml-2 font-semibold normal-case text-gray-500">correct — no misconception needed</span>}
             </p>
             <div className="grid grid-cols-2 gap-3">
               <div>

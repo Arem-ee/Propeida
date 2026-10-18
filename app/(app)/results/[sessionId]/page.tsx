@@ -158,13 +158,13 @@ export default function ResultsPage({ params }: { params: Promise<{ sessionId: s
                   >
                     <span className="flex items-center gap-3 min-w-0">
                       <span className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-lg text-xs font-extrabold ${
-                        unanswered ? 'bg-gray-100 text-gray-400' : q.isCorrect ? 'bg-emerald-100 text-emerald-700' : 'bg-red-100 text-red-700'
+                        unanswered ? 'bg-gray-100 text-gray-500' : q.isCorrect ? 'bg-emerald-100 text-emerald-700' : 'bg-red-100 text-red-700'
                       }`}>
                         {unanswered ? <Clock className="h-3.5 w-3.5" /> : q.isCorrect ? <Check className="h-3.5 w-3.5" strokeWidth={3} /> : <X className="h-3.5 w-3.5" strokeWidth={3} />}
                       </span>
                       <span className="text-sm font-extrabold text-black">Question {idx + 1}</span>
                     </span>
-                    {open ? <ChevronUp className="h-4 w-4 shrink-0 text-gray-400" /> : <ChevronDown className="h-4 w-4 shrink-0 text-gray-400" />}
+                    {open ? <ChevronUp className="h-4 w-4 shrink-0 text-gray-500" /> : <ChevronDown className="h-4 w-4 shrink-0 text-gray-500" />}
                   </button>
 
                   {open && (

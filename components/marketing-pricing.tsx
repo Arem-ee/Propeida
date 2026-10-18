@@ -1,9 +1,8 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Check, X, Loader2, Clock, ShieldCheck } from 'lucide-react'
-import { createClient } from '@/lib/supabase/client'
 import Logo from '@/components/logo'
 
 const PRODUCTS = [
@@ -81,29 +80,21 @@ const PRODUCTS = [
   },
 ]
 
-export default function MarketingPricing({ variant = 'marketing' }: { variant?: 'marketing' | 'dashboard' }) {
+export default function MarketingPricing({ variant = 'marketing', authEmail = null }: { variant?: 'marketing' | 'dashboard'; authEmail?: string | null }) {
   const [showCheckout, setShowCheckout] = useState(false)
   const [checkoutProduct, setCheckoutProduct] = useState<string>('putme_pro')
   const [isPaying, setIsPaying] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const [user, setUser] = useState<{ email: string } | null>(null)
   const router = useRouter()
 
   const products = variant === 'dashboard' ? PRODUCTS.filter((p) => !p.comingSoon) : PRODUCTS
-
-  useEffect(() => {
-    const supabase = createClient()
-    supabase.auth.getUser().then(({ data: { user: u } }) => {
-      if (u?.email) setUser({ email: u.email })
-    })
-  }, [])
 
   const handleBuyClick = (productKey: string) => {
     if (productKey === 'free') {
       router.push('/signup')
       return
     }
-    if (!user) {
+    if (!authEmail) {
       router.push('/signup?redirect=/#pricing')
       return
     }
@@ -172,7 +163,7 @@ export default function MarketingPricing({ variant = 'marketing' }: { variant?: 
 
                   <div className="mt-6 flex items-baseline flex-wrap gap-2">
                     {product.comingSoon ? (
-                      <span className="text-base font-bold text-gray-400 uppercase tracking-wider">Coming Soon</span>
+                      <span className="text-base font-bold text-gray-500 uppercase tracking-wider">Coming Soon</span>
                     ) : (
                       <>
                         <span className="text-4xl font-extrabold tracking-tight text-gray-900">{product.displayPrice}</span>
@@ -215,7 +206,7 @@ export default function MarketingPricing({ variant = 'marketing' }: { variant?: 
                       className={`block w-full rounded-xl px-4 py-3 text-center text-sm font-bold min-h-[44px] ${
                         product.key === 'free'
                           ? 'border border-gray-200 bg-white text-gray-700 transition-colors hover:bg-gray-50 active:bg-gray-100 cursor-pointer'
-                          : 'border border-gray-200 bg-gray-50 text-gray-400 cursor-default'
+                          : 'border border-gray-200 bg-gray-50 text-gray-500 cursor-default'
                       }`}
                     >
                       {product.cta}
@@ -239,7 +230,7 @@ export default function MarketingPricing({ variant = 'marketing' }: { variant?: 
           <div className="relative w-full max-w-md rounded-xl bg-white border border-gray-100 p-6 shadow-xl">
             <button
               onClick={() => { setShowCheckout(false); setError(null) }}
-              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 min-h-[44px] min-w-[44px] flex items-center justify-center"
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-600 min-h-[44px] min-w-[44px] flex items-center justify-center"
             >
               <X className="h-6 w-6" />
             </button>
@@ -248,7 +239,7 @@ export default function MarketingPricing({ variant = 'marketing' }: { variant?: 
               <Logo size={32} showText={false} />
               <div>
                 <h4 className="text-sm font-bold text-gray-900">Pay Propeida</h4>
-                <p className="text-xs text-gray-400">Secured by Paystack</p>
+                <p className="text-xs text-gray-500">Secured by Paystack</p>
               </div>
             </div>
 
@@ -260,7 +251,7 @@ export default function MarketingPricing({ variant = 'marketing' }: { variant?: 
                 <input
                   type="email"
                   readOnly
-                  value={user?.email ?? ''}
+                  value={authEmail ?? ''}
                   className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm bg-gray-50 text-gray-500 min-h-[44px]"
                 />
               </div>

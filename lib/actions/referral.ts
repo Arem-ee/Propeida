@@ -44,7 +44,7 @@ export async function claimReferral(code: string) {
       status: 'pending',
     })
 
-  revalidatePath('/dashboard')
+  revalidatePath('/home')
   return { referrerUsername: referrer.username }
 }
 

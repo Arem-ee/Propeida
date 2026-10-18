@@ -132,7 +132,7 @@ export default function CyclesManager({ exams }: { exams: { id: string; name: st
       ))}
 
       {cycles.length === 0 && (
-        <p className="rounded-2xl border-2 border-dashed border-gray-200 p-6 text-center text-sm text-gray-400">
+        <p className="rounded-2xl border-2 border-dashed border-gray-200 p-6 text-center text-sm text-gray-500">
           No exam cycles yet. Add the first one below.
         </p>
       )}
@@ -173,7 +173,7 @@ export default function CyclesManager({ exams }: { exams: { id: string; name: st
             className="h-5 w-5 rounded border-gray-300 text-blue-600 cursor-pointer"
           />
           <span className="text-sm font-bold text-gray-800">
-            Verified <span className="font-semibold text-gray-400">— only checked with an official source. This switch turns countdowns on.</span>
+            Verified <span className="font-semibold text-gray-500">— only checked with an official source. This switch turns countdowns on.</span>
           </span>
         </label>
         <div>

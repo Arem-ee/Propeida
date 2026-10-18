@@ -39,7 +39,7 @@ export default async function AdminAnalyticsPage() {
     <div>
       <div className="flex items-center justify-between mb-8">
         <h1 className="text-2xl font-extrabold text-gray-900">Analytics</h1>
-        <span className="text-xs font-semibold text-gray-400 bg-gray-100 rounded-full px-3 py-1">
+        <span className="text-xs font-semibold text-gray-500 bg-gray-100 rounded-full px-3 py-1">
           {totalCount ?? 0} total events
         </span>
       </div>
@@ -59,7 +59,7 @@ export default async function AdminAnalyticsPage() {
 
       {!events || events.length === 0 ? (
         <div className="rounded-xl border border-gray-200 bg-white p-12 text-center">
-          <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-gray-50 text-gray-400 mb-4">
+          <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-gray-50 text-gray-500 mb-4">
             <BarChart3 className="h-6 w-6" />
           </div>
           <p className="text-sm font-semibold text-gray-500">No events yet</p>
@@ -84,12 +84,12 @@ export default async function AdminAnalyticsPage() {
                   <td className="px-4 py-3 text-sm text-gray-500 whitespace-nowrap max-w-[180px] truncate">
                     {event.url_path ?? '—'}
                   </td>
-                  <td className="px-4 py-3 text-sm text-gray-400 max-w-[280px] truncate">
+                  <td className="px-4 py-3 text-sm text-gray-500 max-w-[280px] truncate">
                     {event.event_data && Object.keys(event.event_data).length > 0
                       ? JSON.stringify(event.event_data)
                       : '—'}
                   </td>
-                  <td className="px-4 py-3 text-right text-sm text-gray-400 whitespace-nowrap">
+                  <td className="px-4 py-3 text-right text-sm text-gray-500 whitespace-nowrap">
                     {new Date(event.created_at).toLocaleDateString('en-GB', {
                       day: 'numeric',
                       month: 'short',
@@ -102,7 +102,7 @@ export default async function AdminAnalyticsPage() {
             </tbody>
           </table>
           {totalCount && totalCount > 500 ? (
-            <div className="border-t border-gray-100 px-4 py-3 text-center text-xs font-semibold text-gray-400">
+            <div className="border-t border-gray-100 px-4 py-3 text-center text-xs font-semibold text-gray-500">
               Showing the 500 most recent of {totalCount} events
             </div>
           ) : null}

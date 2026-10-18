@@ -86,23 +86,23 @@ try {
     const anonRoot = await request('/')
     check('anon / -> 200 landing', anonRoot.status === 200, `status=${anonRoot.status}`)
 
-    const anonDash = await request('/dashboard')
-    check('anon /dashboard -> 307 /login', anonDash.status === 307 && anonDash.location?.startsWith('/login'), `status=${anonDash.status} location=${anonDash.location}`)
+    const anonDash = await request('/home')
+    check('anon /home -> 307 /login', anonDash.status === 307 && anonDash.location?.startsWith('/login'), `status=${anonDash.status} location=${anonDash.location}`)
 
     const anonOnboarding = await request('/onboarding')
     check('anon /onboarding -> 307 /login', anonOnboarding.status === 307, `status=${anonOnboarding.status}`)
 
     const authedRoot = await request('/', cookie)
-    check('authed / -> 307 /dashboard', authedRoot.status === 307 && authedRoot.location === '/dashboard', `status=${authedRoot.status} location=${authedRoot.location}`)
+    check('authed / -> 200 landing', authedRoot.status === 200, `status=${authedRoot.status} location=${authedRoot.location}`)
 
     const authedLogin = await request('/login', cookie)
-    check('authed /login -> 307 /dashboard', authedLogin.status === 307 && authedLogin.location === '/dashboard', `status=${authedLogin.status} location=${authedLogin.location}`)
+    check('authed /login -> 307 /home', authedLogin.status === 307 && authedLogin.location === '/home', `status=${authedLogin.status} location=${authedLogin.location}`)
 
     const authedSignup = await request('/signup', cookie)
-    check('authed /signup -> 307 /dashboard', authedSignup.status === 307, `status=${authedSignup.status}`)
+    check('authed /signup -> 307 /home', authedSignup.status === 307 && authedSignup.location === '/home', `status=${authedSignup.status} location=${authedSignup.location}`)
 
-    const authedDash = await request('/settings', cookie)
-    check('authed /settings -> 200', authedDash.status === 200, `status=${authedDash.status}`)
+    const authedDash = await request('/account/settings', cookie)
+    check('authed /account/settings -> 200', authedDash.status === 200, `status=${authedDash.status}`)
 
     const logoutRes = await fetch(`${ORIGIN}/api/auth/logout`, { method: 'POST', headers: { Cookie: cookie }, redirect: 'manual' })
     const cleared = logoutRes.headers.get('set-cookie') ?? ''

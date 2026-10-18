@@ -371,7 +371,7 @@ export default function AdminQuestionsPage() {
           <div className="relative w-full max-w-md rounded-xl bg-white border border-gray-100 p-6 shadow-xl">
             <button
               onClick={() => !deleting && setShowConfirm(false)}
-              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 min-h-[44px] min-w-[44px] flex items-center justify-center"
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-600 min-h-[44px] min-w-[44px] flex items-center justify-center"
             >
               <X className="h-6 w-6" />
             </button>

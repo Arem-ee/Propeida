@@ -328,7 +328,7 @@ export default async function HomePage() {
         {/* 5 — Progress map: calm states, never a mountain */}
         {progressMap.length > 0 && (
           <div className="sm:col-span-2 rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-6 shadow-[0_2px_12px_-6px_rgba(16,28,51,0.12)]">
-            <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-gray-400">Progress map</p>
+            <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-gray-500">Progress map</p>
             <div className="mt-3 flex flex-wrap gap-2">
               {progressMap.map((s) => {
                 const style = STATUS_STYLE[s.status] ?? STATUS_STYLE['not-started']!

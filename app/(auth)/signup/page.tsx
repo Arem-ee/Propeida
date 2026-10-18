@@ -51,7 +51,7 @@ export default function SignupPage() {
 
     setUsernameStatus('checking')
 
-    const { data, error: _err } = await supabaseRef.current
+    const { data } = await supabaseRef.current
       .from('profiles')
       .select('username')
       .ilike('username', value)
@@ -179,7 +179,7 @@ export default function SignupPage() {
 
         <form onSubmit={handleSignup} className="mt-6 space-y-4">
           {error && (
-            <div className="rounded-xl bg-red-50 px-4 py-3 text-xs font-semibold text-red-700">{error}</div>
+            <div role="alert" className="rounded-xl bg-red-50 px-4 py-3 text-xs font-semibold text-red-700">{error}</div>
           )}
 
           <div>
@@ -198,12 +198,12 @@ export default function SignupPage() {
                 className="w-full rounded-xl border border-gray-200 px-4 py-3 pr-10 text-sm focus:border-blue-600 focus:outline-none min-h-[44px]"
               />
               <span className="absolute right-3 top-1/2 -translate-y-1/2">
-                {usernameStatus === 'checking' && <Loader2 className="h-4 w-4 text-gray-400 animate-spin" />}
+                {usernameStatus === 'checking' && <Loader2 className="h-4 w-4 text-gray-500 animate-spin" />}
                 {usernameStatus === 'available' && <Check className="h-4 w-4 text-green-500" />}
                 {usernameStatus === 'taken' && <X className="h-4 w-4 text-red-500" />}
               </span>
             </div>
-            <p className="mt-1.5 text-xs text-gray-400 leading-relaxed">
+            <p className="mt-1.5 text-xs text-gray-500 leading-relaxed">
               This will be shown on your profile — use your real name or a nickname, whichever you&apos;re comfortable with.
             </p>
             {usernameStatus === 'taken' && suggestion && (
@@ -258,7 +258,7 @@ export default function SignupPage() {
             <div className="w-full border-t border-gray-200" />
           </div>
           <div className="relative flex justify-center text-xs">
-            <span className="bg-white px-2 text-gray-400">or sign up with</span>
+            <span className="bg-white px-2 text-gray-500">or sign up with</span>
           </div>
         </div>
 

@@ -67,6 +67,7 @@ export default function PracticePlayer({
   const [selected, setSelected] = useState<string | null>(null)
   const [feedback, setFeedback] = useState<Feedback | null>(null)
   const [checking, setChecking] = useState(false)
+  const [checkError, setCheckError] = useState<string | null>(null)
   const [finished, setFinished] = useState(false)
   const [finishing, setFinishing] = useState(false)
   const [finishError, setFinishError] = useState<string | null>(null)
@@ -88,12 +89,13 @@ export default function PracticePlayer({
       return
     }
     setChecking(true)
+    setCheckError(null)
     try {
       const result = await submitAnswer(sessionId, q.id, selected)
       setFeedback(result as Feedback)
       setAnswered((n) => n + 1)
     } catch {
-      // network failure: stay on the question, allow retry
+      setCheckError('We could not check that answer. Check your connection and try again.')
     } finally {
       setChecking(false)
     }
@@ -104,6 +106,7 @@ export default function PracticePlayer({
       setIndex((i) => i + 1)
       setSelected(null)
       setFeedback(null)
+      setCheckError(null)
     } else {
       setFinished(true)
     }
@@ -162,7 +165,7 @@ export default function PracticePlayer({
           <div className="mt-8 flex items-center justify-between gap-3">
             <button
               onClick={() => setShowLearn(false)}
-              className="text-xs font-bold text-gray-400 hover:text-gray-600 min-h-[44px] cursor-pointer"
+              className="text-xs font-bold text-gray-500 hover:text-gray-600 min-h-[44px] cursor-pointer"
             >
               Skip to questions
             </button>
@@ -200,7 +203,7 @@ export default function PracticePlayer({
             <ArrowRight className="h-4 w-4" />
           </button>
           <button
-            onClick={() => { setIndex(0); setSelected(null); setFeedback(null); setFinished(false); setAnswered(0) }}
+            onClick={() => { setIndex(0); setSelected(null); setFeedback(null); setFinished(false); setAnswered(0); setCheckError(null) }}
             className="inline-flex items-center gap-2 rounded-2xl border-2 border-gray-200 bg-white px-6 py-3 text-sm font-extrabold text-ink-soft min-h-[52px] cursor-pointer"
           >
             <RotateCcw className="h-4 w-4" />
@@ -216,7 +219,10 @@ export default function PracticePlayer({
   return (
     <div className="mx-auto max-w-2xl">
       <div className="mb-5 flex items-center justify-between">
-        <span className="rounded-full bg-white border border-blue-100 px-3.5 py-1.5 text-xs font-extrabold text-ink-soft shadow-sm">
+        <span
+          aria-live="polite"
+          className="rounded-full bg-white border border-blue-100 px-3.5 py-1.5 text-xs font-extrabold text-ink-soft shadow-sm"
+        >
           {isWarmup ? `Warm-up ${index + 1} of ${warmupCount}` : `Question ${index + 1 - warmupCount} of ${ordered.length - warmupCount}`}
         </span>
         <span className="rounded-full bg-blue-600 px-3.5 py-1.5 text-xs font-extrabold text-white">Practice</span>
@@ -232,8 +238,8 @@ export default function PracticePlayer({
       )}
 
       <div className="rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-7 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)]">
-        <h3 className="font-display text-lg sm:text-xl font-medium leading-snug text-black mb-6">{q.questionText}</h3>
-        <div className="space-y-3">
+        <h3 id="practice-question" className="font-display text-lg sm:text-xl font-medium leading-snug text-black mb-6">{q.questionText}</h3>
+        <div className="space-y-3" role="group" aria-labelledby="practice-question">
           {q.options.map((opt) => {
             const isSel = selected === opt.key
             const revealed = feedback !== null
@@ -241,8 +247,9 @@ export default function PracticePlayer({
             return (
               <button
                 key={opt.key}
-                disabled={revealed}
-                onClick={() => setSelected(opt.key)}
+                aria-pressed={isSel}
+                aria-disabled={revealed}
+                onClick={() => { if (!revealed) setSelected(opt.key) }}
                 className={`flex w-full items-center gap-3.5 rounded-2xl border-2 p-4 text-left min-h-[56px] transition-all ${
                   revealed
                     ? isCorrectOpt
@@ -328,6 +335,20 @@ export default function PracticePlayer({
           </div>
         )}
       </div>
+
+      <p className="sr-only" role="status" aria-live="polite">
+        {feedback
+          ? feedback.isCorrect
+            ? `Correct. ${feedback.explanation}`
+            : `Not quite. The correct answer is ${feedback.correctAnswer}. ${feedback.explanation}`
+          : ''}
+      </p>
+
+      {checkError && (
+        <p role="alert" className="mt-4 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-bold text-red-700">
+          {checkError}
+        </p>
+      )}
 
       <div className="mt-6 flex justify-between items-center">
         <span className="font-display text-sm font-medium text-ink-soft/70">{answered} answered</span>

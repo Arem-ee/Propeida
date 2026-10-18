@@ -301,9 +301,9 @@ export default function AdminUploadPage() {
             handleFiles(e.dataTransfer.files)
           }}
         >
-          <Upload className="h-10 w-10 text-gray-400 mb-4" />
+          <Upload className="h-10 w-10 text-gray-500 mb-4" />
           <p className="text-sm font-semibold text-gray-700 mb-1">Drop one or more CSV files here, or click to browse</p>
-          <p className="text-xs text-gray-400 mb-4">CSV files only</p>
+          <p className="text-xs text-gray-500 mb-4">CSV files only</p>
           <input
             ref={fileInputRef}
             type="file"

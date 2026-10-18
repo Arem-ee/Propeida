@@ -88,7 +88,7 @@ function CallbackContent() {
             Your Pro account is now active. You have unlimited access to all features.
           </p>
           <Link
-            href="/dashboard"
+            href="/home"
             className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 py-3 text-sm font-bold text-white hover:bg-blue-700 min-h-[44px]"
           >
             Go to dashboard
@@ -105,7 +105,7 @@ function CallbackContent() {
             The confirmation from Paystack is taking longer than usual. Your payment was received, and your Pro access
             will be activated automatically once the confirmation arrives. You do not need to pay again.
           </p>
-          <p className="mt-3 text-xs text-gray-400 leading-relaxed">
+          <p className="mt-3 text-xs text-gray-500 leading-relaxed">
             If you go to the dashboard now, your account will update to Pro once the confirmation is complete.
           </p>
           <div className="mt-6 flex flex-col gap-3">
@@ -117,7 +117,7 @@ function CallbackContent() {
               Check again
             </button>
             <Link
-              href="/dashboard"
+              href="/home"
               className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-gray-200 bg-white py-3 text-sm font-bold text-gray-700 hover:bg-gray-50 min-h-[44px]"
             >
               Go to dashboard

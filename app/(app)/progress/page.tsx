@@ -86,7 +86,7 @@ export default async function ProgressPage() {
       ) : (
         <div className="space-y-5">
           <div>
-            <p className="mb-3 text-[11px] font-extrabold uppercase tracking-[0.14em] text-gray-400">
+            <p className="mb-3 text-[11px] font-extrabold uppercase tracking-[0.14em] text-gray-500">
               Your shelf
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -125,8 +125,8 @@ export default async function ProgressPage() {
 
           <div>
             <div className="mb-3 flex items-center gap-2">
-              <History className="h-4 w-4 text-gray-400" />
-              <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-gray-400">
+              <History className="h-4 w-4 text-gray-500" />
+              <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-gray-500">
                 Session history
               </p>
             </div>
@@ -151,7 +151,7 @@ export default async function ProgressPage() {
                     </span>
                     <span className="min-w-0 flex-1">
                       <span className="block truncate text-[15px] font-extrabold text-black">{item.examName}</span>
-                      <span className="block text-xs font-bold text-gray-400 capitalize">
+                      <span className="block text-xs font-bold text-gray-500 capitalize">
                         {item.mode} · {new Date(item.completedAt).toLocaleDateString('en-NG', { day: 'numeric', month: 'short' })}
                       </span>
                     </span>

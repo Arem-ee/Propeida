@@ -144,7 +144,7 @@ export default function ScreeningsManager({
       ))}
 
       {rows.length === 0 && (
-        <p className="rounded-2xl border-2 border-dashed border-gray-200 p-6 text-center text-sm text-gray-400">
+        <p className="rounded-2xl border-2 border-dashed border-gray-200 p-6 text-center text-sm text-gray-500">
           No screening facts yet. Add the first year below — unknowns stay blank, never guessed.
         </p>
       )}

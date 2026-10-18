@@ -16,7 +16,10 @@ function LoginForm() {
   const [googleLoading, setGoogleLoading] = useState(false)
   const router = useRouter()
   const searchParams = useSearchParams()
-  const redirect = searchParams.get('redirect') ?? '/'
+  const requestedRedirect = searchParams.get('redirect')
+  const redirect = requestedRedirect && requestedRedirect.startsWith('/') && !requestedRedirect.startsWith('//')
+    ? requestedRedirect
+    : '/home'
   const confirmed = searchParams.get('confirmed') === 'true'
   const errParam = searchParams.get('error')
 
@@ -74,20 +77,20 @@ function LoginForm() {
   return (
     <>
       {confirmed && (
-        <div className="flex items-start gap-2.5 rounded-xl bg-green-50 px-4 py-3 text-xs font-semibold text-green-700">
+        <div role="status" className="flex items-start gap-2.5 rounded-xl bg-green-50 px-4 py-3 text-xs font-semibold text-green-700">
           <CheckCircle className="h-4 w-4 shrink-0 mt-0.5 text-green-500" />
           Email confirmed — log in to continue.
         </div>
       )}
 
       {errParam === 'verification_failed' && (
-        <div className="rounded-xl bg-red-50 px-4 py-3 text-xs font-semibold text-red-700">
+        <div role="alert" className="rounded-xl bg-red-50 px-4 py-3 text-xs font-semibold text-red-700">
           Verification failed. The link may have expired.
         </div>
       )}
 
       {error && (
-        <div className="rounded-xl bg-red-50 px-4 py-3 text-xs font-semibold text-red-700">{error}</div>
+        <div role="alert" className="rounded-xl bg-red-50 px-4 py-3 text-xs font-semibold text-red-700">{error}</div>
       )}
 
       <button
@@ -110,7 +113,7 @@ function LoginForm() {
           <div className="w-full border-t border-gray-200" />
         </div>
         <div className="relative flex justify-center text-xs">
-          <span className="bg-white px-2 text-gray-400">or continue with email</span>
+          <span className="bg-white px-2 text-gray-500">or continue with email</span>
         </div>
       </div>
 
@@ -168,7 +171,7 @@ export default function LoginPage() {
         <h1 className="text-xl font-extrabold text-gray-900">Sign in</h1>
         <p className="mt-1 text-sm text-gray-500">Enter your email and password to continue.</p>
 
-        <Suspense fallback={<div className="mt-6 text-sm text-gray-400">Loading...</div>}>
+        <Suspense fallback={<div className="mt-6 text-sm text-gray-500">Loading...</div>}>
           <LoginForm />
         </Suspense>
 

@@ -65,7 +65,7 @@ export default function DownloadsClient() {
           <p className="mt-2 font-display text-3xl font-semibold text-black">
             {usage === null ? '—' : formatMB(usage)}
             {quota !== null && (
-              <span className="ml-2 align-middle text-sm font-bold text-gray-400">of {formatMB(quota)}</span>
+              <span className="ml-2 align-middle text-sm font-bold text-gray-500">of {formatMB(quota)}</span>
             )}
           </p>
           <p className="mt-1.5 text-[13px] font-semibold leading-relaxed text-ink-soft">
@@ -89,7 +89,7 @@ export default function DownloadsClient() {
               Install app
             </button>
           ) : (
-            <p className="mt-3 flex items-center gap-2 text-[13px] font-bold text-gray-400">
+            <p className="mt-3 flex items-center gap-2 text-[13px] font-bold text-gray-500">
               <WifiOff className="h-4 w-4" />
               Use your browser&apos;s “Add to Home screen” — or you&apos;re already installed.
             </p>

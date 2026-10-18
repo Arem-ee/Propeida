@@ -210,7 +210,7 @@ export default function EditQuestionForm({
             <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Review note (optional)</label>
             <textarea name="review_note" defaultValue={question.review_note ?? ''} rows={2} placeholder="What did you check? Source page, answer-key cross-check…" className="w-full rounded-xl border border-gray-200 bg-white px-4 py-2.5 text-sm resize-y" />
           </div>
-          <p className="mt-2 text-xs font-semibold text-gray-400">Publishing requires a verification state — unverified items stay out of learner sessions.</p>
+          <p className="mt-2 text-xs font-semibold text-gray-500">Publishing requires a verification state — unverified items stay out of learner sessions.</p>
           {history.length > 0 && (
             <ul className="mt-3 space-y-1.5">
               {history.map((h, i) => (

@@ -74,7 +74,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
                 Analytics
               </Link>
               <Link
-                href="/dashboard"
+                href="/home"
                 className="rounded-xl px-3 py-2 text-xs font-bold text-blue-600 hover:bg-blue-50 min-h-[44px] flex items-center"
               >
                 Back to Dashboard

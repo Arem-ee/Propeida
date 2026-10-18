@@ -30,7 +30,7 @@ export default function MarketingFooter() {
           </div>
 
           <div>
-            <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">Students</h4>
+            <h4 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-4">Students</h4>
             <ul className="space-y-3">
               <li>
                 <Link href="/practice" className={linkClass}>Practice</Link>
@@ -48,7 +48,7 @@ export default function MarketingFooter() {
           </div>
 
           <div>
-            <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">Plans</h4>
+            <h4 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-4">Plans</h4>
             <ul className="space-y-3">
               <li>
                 <Link href="/pricing" className={linkClass}>Free tier</Link>
@@ -63,7 +63,7 @@ export default function MarketingFooter() {
           </div>
 
           <div>
-            <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">Community</h4>
+            <h4 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-4">Community</h4>
             <ul className="space-y-3">
               <li>
                 <a
@@ -89,7 +89,7 @@ export default function MarketingFooter() {
         </div>
 
         <div className="mt-12 border-t border-gray-100 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-gray-400">
+          <p className="text-xs text-gray-500">
             &copy; 2026 Propeida. All rights reserved.
           </p>
           <p className="text-xs font-semibold text-gray-500">

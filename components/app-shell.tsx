@@ -5,7 +5,7 @@ import Link from 'next/link'
 import {
   Home, BookOpen, BarChart3, Timer, TrendingUp, User, LogOut, Settings, X, Download, Crosshair,
 } from 'lucide-react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Logo from '@/components/logo'
 
 const TABS = [
@@ -32,11 +32,26 @@ export default function AppShell({ children, email, isAdmin, onLogout }: {
   const pathname = usePathname()
   const [accountOpen, setAccountOpen] = useState(false)
 
+  useEffect(() => {
+    if (!accountOpen) return
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setAccountOpen(false)
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [accountOpen])
+
   const isActive = (href: string) => pathname === href || pathname.startsWith(href + '/')
   const initial = (email?.[0] ?? '?').toUpperCase()
 
   return (
     <div className="min-h-screen flex">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-xl focus:bg-blue-600 focus:px-4 focus:py-3 focus:text-sm focus:font-extrabold focus:text-white focus:shadow-lg"
+      >
+        Skip to content
+      </a>
       {/* Desktop sidebar */}
       <aside className="hidden lg:flex lg:flex-col lg:w-68 lg:fixed lg:inset-y-0 border-r border-blue-100/60 bg-white/80 backdrop-blur z-40">
         <div className="flex items-center px-6 h-20 shrink-0">
@@ -77,7 +92,7 @@ export default function AppShell({ children, email, isAdmin, onLogout }: {
               href="/admin/questions"
               className="flex items-center gap-3 rounded-xl px-3 py-2 text-sm font-bold text-ink-soft hover:text-black hover:bg-blue-50/70 min-h-[40px]"
             >
-              <Settings className="h-4 w-4 text-gray-400" />
+              <Settings className="h-4 w-4 text-gray-500" />
               Admin
             </Link>
           )}
@@ -85,6 +100,7 @@ export default function AppShell({ children, email, isAdmin, onLogout }: {
             onClick={() => setAccountOpen((v) => !v)}
             className="flex w-full items-center gap-3 rounded-2xl bg-cream px-3.5 py-2.5 text-left cursor-pointer"
             aria-expanded={accountOpen}
+            aria-controls="account-menu-desktop"
           >
             <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-blue-600 font-display text-[15px] text-white">
               {initial}
@@ -95,7 +111,7 @@ export default function AppShell({ children, email, isAdmin, onLogout }: {
             </span>
           </button>
           {accountOpen && (
-            <div className="mt-1.5 space-y-0.5 rounded-2xl border border-blue-100/70 bg-white p-1.5">
+            <div id="account-menu-desktop" className="mt-1.5 space-y-0.5 rounded-2xl border border-blue-100/70 bg-white p-1.5">
               {ACCOUNT_LINKS.map((item) => {
                 const Icon = item.icon
                 return (
@@ -104,7 +120,7 @@ export default function AppShell({ children, email, isAdmin, onLogout }: {
                     href={item.href}
                     className="flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm font-bold text-ink-soft hover:text-black hover:bg-blue-50/70 min-h-[44px]"
                   >
-                    <Icon className="h-4 w-4 text-gray-400" />
+                    <Icon className="h-4 w-4 text-gray-500" />
                     {item.label}
                   </Link>
                 )
@@ -132,12 +148,13 @@ export default function AppShell({ children, email, isAdmin, onLogout }: {
             className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 font-display text-base text-white cursor-pointer"
             aria-label="Account menu"
             aria-expanded={accountOpen}
+            aria-controls="account-menu-mobile"
           >
             {initial}
           </button>
         </div>
         {accountOpen && (
-          <div className="border-t border-blue-100/60 bg-paper px-4 py-3">
+          <div id="account-menu-mobile" className="border-t border-blue-100/60 bg-paper px-4 py-3">
             <p className="truncate px-1 text-xs font-extrabold text-black">{email}</p>
             <div className="mt-1 space-y-0.5">
               {ACCOUNT_LINKS.map((item) => {
@@ -149,7 +166,7 @@ export default function AppShell({ children, email, isAdmin, onLogout }: {
                     onClick={() => setAccountOpen(false)}
                     className="flex items-center gap-3 rounded-2xl px-3 py-3 text-sm font-bold text-ink-soft min-h-[48px]"
                   >
-                    <Icon className="h-5 w-5 text-gray-400" />
+                    <Icon className="h-5 w-5 text-gray-500" />
                     {item.label}
                   </Link>
                 )
@@ -160,7 +177,7 @@ export default function AppShell({ children, email, isAdmin, onLogout }: {
                   onClick={() => setAccountOpen(false)}
                   className="flex items-center gap-3 rounded-2xl px-3 py-3 text-sm font-bold text-ink-soft min-h-[48px]"
                 >
-                  <Settings className="h-5 w-5 text-gray-400" />
+                  <Settings className="h-5 w-5 text-gray-500" />
                   Admin
                 </Link>
               )}
@@ -173,7 +190,7 @@ export default function AppShell({ children, email, isAdmin, onLogout }: {
               </button>
               <button
                 onClick={() => setAccountOpen(false)}
-                className="flex w-full items-center justify-center gap-2 rounded-2xl px-3 py-2 text-xs font-bold text-gray-400 min-h-[40px] cursor-pointer"
+                className="flex w-full items-center justify-center gap-2 rounded-2xl px-3 py-2 text-xs font-bold text-gray-500 min-h-[40px] cursor-pointer"
               >
                 <X className="h-4 w-4" />
                 Close
@@ -183,7 +200,7 @@ export default function AppShell({ children, email, isAdmin, onLogout }: {
         )}
       </div>
 
-      <main className="flex-1 lg:ml-68 pt-16 lg:pt-0 pb-24 lg:pb-0">
+      <main id="main-content" tabIndex={-1} className="flex-1 lg:ml-68 pt-16 lg:pt-0 pb-24 lg:pb-0 focus:outline-none">
         <div className="mx-auto max-w-3xl px-4 py-6 sm:px-6 lg:py-10">
           {children}
         </div>
@@ -201,7 +218,7 @@ export default function AppShell({ children, email, isAdmin, onLogout }: {
                 href={item.href}
                 aria-current={active ? 'page' : undefined}
                 className={`relative flex flex-col items-center justify-center gap-1 min-w-0 flex-1 px-1 py-1.5 rounded-2xl transition-colors min-h-[52px] ${
-                  active ? 'text-blue-700' : 'text-gray-400 hover:text-gray-600'
+                  active ? 'text-blue-700' : 'text-gray-500 hover:text-gray-600'
                 }`}
               >
                 <Icon className="h-[22px] w-[22px]" strokeWidth={active ? 2.5 : 2} />

@@ -133,7 +133,7 @@ export default function PracticeConfig({
 
       <div className="rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-6 shadow-[0_2px_12px_-6px_rgba(16,28,51,0.12)] space-y-5">
         <div>
-          <p className="mb-2 text-[11px] font-extrabold uppercase tracking-[0.14em] text-gray-400">Exam</p>
+          <p className="mb-2 text-[11px] font-extrabold uppercase tracking-[0.14em] text-gray-500">Exam</p>
           <div className="flex flex-wrap gap-2">
             {exams.map((exam) => (
               <button
@@ -152,9 +152,9 @@ export default function PracticeConfig({
         </div>
 
         <div>
-          <p className="mb-2 text-[11px] font-extrabold uppercase tracking-[0.14em] text-gray-400">Subjects</p>
+          <p className="mb-2 text-[11px] font-extrabold uppercase tracking-[0.14em] text-gray-500">Subjects</p>
           {examSubjects.length === 0 ? (
-            <p className="text-sm font-semibold text-gray-400">No subjects linked to this exam yet.</p>
+            <p className="text-sm font-semibold text-gray-500">No subjects linked to this exam yet.</p>
           ) : (
             <div className="flex flex-wrap gap-2">
               {examSubjects.map((subject) => {
@@ -180,7 +180,7 @@ export default function PracticeConfig({
 
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <p className="mb-2 text-[11px] font-extrabold uppercase tracking-[0.14em] text-gray-400">Questions</p>
+            <p className="mb-2 text-[11px] font-extrabold uppercase tracking-[0.14em] text-gray-500">Questions</p>
             <div className="flex gap-2">
               {COUNTS.map((n) => (
                 <button
@@ -196,7 +196,7 @@ export default function PracticeConfig({
             </div>
           </div>
           <div>
-            <p className="mb-2 text-[11px] font-extrabold uppercase tracking-[0.14em] text-gray-400">Difficulty</p>
+            <p className="mb-2 text-[11px] font-extrabold uppercase tracking-[0.14em] text-gray-500">Difficulty</p>
             <select
               value={difficulty}
               onChange={(e) => setDifficulty(e.target.value)}

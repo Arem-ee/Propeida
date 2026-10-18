@@ -65,7 +65,7 @@ export default function LessonMetaForm({
     <div className="rounded-2xl border border-gray-200 bg-white p-5 space-y-4">
       <div className="flex items-center justify-between">
         <h2 className="text-base font-extrabold text-gray-900">Lesson</h2>
-        <span className="text-xs font-bold text-gray-400">v{lesson.version}</span>
+        <span className="text-xs font-bold text-gray-500">v{lesson.version}</span>
       </div>
       <div>
         <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Title</label>

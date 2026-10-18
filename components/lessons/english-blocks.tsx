@@ -155,7 +155,7 @@ function PassageReader({
       </div>
 
       <div className="mt-4 rounded-2xl bg-white border border-blue-100 p-4">
-        <p className="text-[11px] font-extrabold uppercase tracking-wider text-gray-400">
+        <p className="text-[11px] font-extrabold uppercase tracking-wider text-gray-500">
           {q.skill} · Q{qi + 1} of {passage.questions.length}
         </p>
         <p className="mt-1.5 font-display text-lg font-medium text-black">{q.question}</p>
@@ -254,7 +254,7 @@ export function PairComparator({ pair, onAnswered }: { pair: MinimalPair; onAnsw
 
   return (
     <div className="rounded-2xl border-2 border-blue-100 bg-blue-50/40 p-4">
-      <p className="text-[11px] font-extrabold uppercase tracking-wider text-gray-400">Which stands?</p>
+      <p className="text-[11px] font-extrabold uppercase tracking-wider text-gray-500">Which stands?</p>
       <div className="mt-2.5 grid gap-2">
         {pair.pair.map((sentence, i) => {
           const right = done && i === pair.correctIndex
@@ -291,7 +291,7 @@ export function RebuildCard({ item }: { item: SentenceRebuild }) {
   const [open, setOpen] = useState(false)
   return (
     <div className="rounded-2xl border-2 border-blue-100 bg-blue-50/40 p-4">
-      <p className="text-[11px] font-extrabold uppercase tracking-wider text-gray-400">Rebuild it</p>
+      <p className="text-[11px] font-extrabold uppercase tracking-wider text-gray-500">Rebuild it</p>
       <p className="mt-1.5 text-[15px] font-bold text-black">{item.prompt}</p>
       {!open ? (
         <button

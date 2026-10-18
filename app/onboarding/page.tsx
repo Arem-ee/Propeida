@@ -104,7 +104,7 @@ export default function OnboardingPage() {
           <button
             onClick={handleSkip}
             disabled={saving}
-            className="text-sm font-bold text-gray-400 hover:text-gray-600 min-h-[44px] px-3 cursor-pointer disabled:opacity-50"
+            className="text-sm font-bold text-gray-500 hover:text-gray-600 min-h-[44px] px-3 cursor-pointer disabled:opacity-50"
           >
             {saving ? 'Loading...' : 'Skip'}
           </button>
@@ -217,7 +217,7 @@ export default function OnboardingPage() {
                 >
                   {finishing ? 'Placing you...' : index < total - 1 ? 'Next' : 'See my placement'}
                 </button>
-                <p className="mt-3 text-center text-xs font-semibold text-gray-400">
+                <p className="mt-3 text-center text-xs font-semibold text-gray-500">
                   <X className="mr-1 inline h-3 w-3" />
                   Guessing is fine — unsure answers place you best.
                 </p>

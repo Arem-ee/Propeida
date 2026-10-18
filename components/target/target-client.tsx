@@ -121,7 +121,7 @@ export default function TargetClient({ initial }: { initial: TargetState }) {
             ].map(([label, w]) => (
               <div key={label as string} className="rounded-2xl bg-white border border-blue-100 px-3 py-2.5 text-center">
                 <p className="font-display text-xl font-semibold text-black">{w === null ? '—' : `${w}%`}</p>
-                <p className="text-[11px] font-extrabold text-gray-400">{label}</p>
+                <p className="text-[11px] font-extrabold text-gray-500">{label}</p>
               </div>
             ))}
           </div>
@@ -130,7 +130,7 @@ export default function TargetClient({ initial }: { initial: TargetState }) {
             {screeningFacts.sittingsAllowed !== null && <span>O-level sittings: {screeningFacts.sittingsAllowed}</span>}
           </div>
           {screeningFacts.source && (
-            <p className="mt-2 text-[11px] font-semibold text-gray-400">Source: {screeningFacts.source}</p>
+            <p className="mt-2 text-[11px] font-semibold text-gray-500">Source: {screeningFacts.source}</p>
           )}
         </div>
       ) : (
@@ -151,21 +151,21 @@ export default function TargetClient({ initial }: { initial: TargetState }) {
           </p>
           <div className="mt-3.5 grid grid-cols-3 gap-2.5">
             <div>
-              <label className="block text-[11px] font-extrabold text-gray-400 mb-1.5">JAMB /400</label>
+              <label className="block text-[11px] font-extrabold text-gray-500 mb-1.5">JAMB /400</label>
               <input value={jamb} onChange={(e) => setJamb(e.target.value)} inputMode="decimal" placeholder="240" className={inputClass} />
             </div>
             <div>
-              <label className="block text-[11px] font-extrabold text-gray-400 mb-1.5">Screening %</label>
+              <label className="block text-[11px] font-extrabold text-gray-500 mb-1.5">Screening %</label>
               <input value={screening} onChange={(e) => setScreening(e.target.value)} inputMode="decimal" placeholder="70" className={inputClass} />
             </div>
             <div>
-              <label className="block text-[11px] font-extrabold text-gray-400 mb-1.5">O-level /20</label>
+              <label className="block text-[11px] font-extrabold text-gray-500 mb-1.5">O-level /20</label>
               <input value={olevel} onChange={(e) => setOlevel(e.target.value)} inputMode="decimal" placeholder="16" className={inputClass} />
             </div>
           </div>
           <div className={`mt-4 rounded-2xl px-4 py-3.5 text-center ${
             aggregate === null
-              ? 'bg-gray-50 text-gray-400'
+              ? 'bg-gray-50 text-gray-500'
               : 'bg-blue-50 text-blue-800'
           }`}>
             {aggregate === null ? (

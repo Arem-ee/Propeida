@@ -436,7 +436,7 @@ export default function BlockEditor({
             <span className="rounded-lg bg-blue-50 px-2.5 py-1 text-[11px] font-extrabold text-blue-700 uppercase">
               {BLOCK_LABELS[block.block_type] ?? block.block_type}
             </span>
-            <span className="text-[11px] font-bold text-gray-400">#{i + 1}</span>
+            <span className="text-[11px] font-bold text-gray-500">#{i + 1}</span>
             <div className="flex-1" />
             <button onClick={() => void move(i, -1)} disabled={i === 0} className="rounded-lg border border-gray-200 px-2.5 py-1.5 text-xs font-bold text-gray-500 disabled:opacity-40 min-h-[36px] cursor-pointer">↑</button>
             <button onClick={() => void move(i, 1)} disabled={i === blocks.length - 1} className="rounded-lg border border-gray-200 px-2.5 py-1.5 text-xs font-bold text-gray-500 disabled:opacity-40 min-h-[36px] cursor-pointer">↓</button>

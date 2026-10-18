@@ -1,7 +1,17 @@
 import { type NextRequest, NextResponse } from 'next/server'
 import { createServerClient } from '@supabase/ssr'
 
-const PROTECTED_PREFIXES = ['/admin']
+const PROTECTED_PREFIXES = [
+  '/home',
+  '/learn',
+  '/practice',
+  '/mocks',
+  '/progress',
+  '/results',
+  '/account',
+  '/target',
+  '/admin',
+]
 const EXACT_PROTECTED = ['/onboarding']
 
 function isProtectedPath(pathname: string): boolean {
@@ -11,6 +21,24 @@ function isProtectedPath(pathname: string): boolean {
 
 export async function middleware(request: NextRequest) {
   let response = NextResponse.next()
+
+  const pathname = request.nextUrl.pathname
+  const needsAuth = isProtectedPath(pathname) || pathname === '/auth/set-username'
+  const hasAuthCookie = request.cookies
+    .getAll()
+    .some(({ name }) => name.startsWith('sb-') && name.includes('auth-token'))
+
+  // No session cookie: protected routes bounce immediately and anonymous
+  // visitors never pay for a Supabase client on the edge.
+  if (!hasAuthCookie) {
+    if (needsAuth) {
+      const url = request.nextUrl.clone()
+      url.pathname = '/login'
+      url.searchParams.set('redirect', pathname)
+      return NextResponse.redirect(url)
+    }
+    return response
+  }
 
   const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -43,22 +71,21 @@ export async function middleware(request: NextRequest) {
     return response
   }
 
-  const isAuthPage = request.nextUrl.pathname === '/login' || request.nextUrl.pathname === '/signup'
-  const isUsernamePage = request.nextUrl.pathname === '/auth/set-username'
+  const isAuthPage = pathname === '/login' || pathname === '/signup'
 
-  if (!user && (isProtectedPath(request.nextUrl.pathname) || isUsernamePage)) {
+  if (!user && needsAuth) {
     const url = request.nextUrl.clone()
     url.pathname = '/login'
-    url.searchParams.set('redirect', request.nextUrl.pathname)
+    url.searchParams.set('redirect', pathname)
     return NextResponse.redirect(url)
   }
 
   if (user && isAuthPage) {
     const url = request.nextUrl.clone()
     // Honor a safe internal destination (e.g. /login?redirect=/learn);
-    // otherwise signed-in users go home.
+    // otherwise signed-in users land in the app, not the marketing page.
     const redirect = request.nextUrl.searchParams.get('redirect')
-    url.pathname = redirect && redirect.startsWith('/') && !redirect.startsWith('//') ? redirect : '/'
+    url.pathname = redirect && redirect.startsWith('/') && !redirect.startsWith('//') ? redirect : '/home'
     url.search = ''
     return NextResponse.redirect(url)
   }

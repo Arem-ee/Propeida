@@ -96,7 +96,7 @@ export default function SetUsernamePage() {
   if (loading) {
     return (
       <div className="flex min-h-screen items-center justify-center">
-        <Loader2 className="h-6 w-6 animate-spin text-gray-400" />
+        <Loader2 className="h-6 w-6 animate-spin text-gray-500" />
       </div>
     )
   }
@@ -131,12 +131,12 @@ export default function SetUsernamePage() {
                 className="w-full rounded-xl border border-gray-200 px-4 py-3 pr-10 text-sm focus:border-blue-600 focus:outline-none min-h-[44px]"
               />
               <span className="absolute right-3 top-1/2 -translate-y-1/2">
-                {usernameStatus === 'checking' && <Loader2 className="h-4 w-4 text-gray-400 animate-spin" />}
+                {usernameStatus === 'checking' && <Loader2 className="h-4 w-4 text-gray-500 animate-spin" />}
                 {usernameStatus === 'available' && <Check className="h-4 w-4 text-green-500" />}
                 {usernameStatus === 'taken' && <X className="h-4 w-4 text-red-500" />}
               </span>
             </div>
-            <p className="mt-1.5 text-xs text-gray-400 leading-relaxed">
+            <p className="mt-1.5 text-xs text-gray-500 leading-relaxed">
               This will be shown on your profile — use your real name or a nickname, whichever you&apos;re comfortable with.
             </p>
             {usernameStatus === 'taken' && suggestion && (
@@ -154,7 +154,7 @@ export default function SetUsernamePage() {
             {saving ? 'Saving...' : 'Continue'}
           </button>
           <Link
-            href="/dashboard"
+            href="/home"
             className="block w-full text-center text-xs font-semibold text-gray-500 hover:text-gray-700 mt-4"
           >
             Skip for now — practice first, choose a username later

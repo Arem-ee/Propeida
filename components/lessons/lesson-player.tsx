@@ -232,7 +232,7 @@ function WorkedCard({
   return (
     <div className="rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-7 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)]">
       {total > 1 && (
-        <p className="text-[11px] font-extrabold uppercase tracking-wider text-gray-400">
+        <p className="text-[11px] font-extrabold uppercase tracking-wider text-gray-500">
           Worked example {index + 1} of {total}
         </p>
       )}
@@ -455,7 +455,7 @@ export default function LessonPlayer({
           <details className="group mt-4 rounded-2xl border border-gray-200 bg-gray-50/50">
             <summary className="cursor-pointer list-none px-4 py-3.5 text-sm font-extrabold text-blue-700 min-h-[48px] flex items-center justify-between">
               Read the full lesson
-              <span className="text-gray-400 transition-transform group-open:rotate-180">▾</span>
+              <span className="text-gray-500 transition-transform group-open:rotate-180">▾</span>
             </summary>
             <div className="px-4 pb-4 space-y-5">
               {note.sections.map((section) => (
@@ -493,7 +493,7 @@ export default function LessonPlayer({
                   <div key={w.word} className="rounded-2xl border border-blue-100 bg-blue-50/40 p-3.5">
                     <p className="font-display text-base font-medium text-black">{w.word}</p>
                     <p className="mt-0.5 text-[13px] font-semibold text-ink-soft">{w.definition}</p>
-                    <p className="mt-1.5 text-xs font-bold text-gray-400">
+                    <p className="mt-1.5 text-xs font-bold text-gray-500">
                       Not: {w.contrast}
                     </p>
                     <p className="mt-1 text-[13px] italic font-semibold text-blue-900">“{w.sentence}”</p>
@@ -580,7 +580,7 @@ export default function LessonPlayer({
                 Need a hint? ({revealedHints}/{enhancement.supported.hints.length} used)
               </button>
             ) : (
-              <p className="text-xs font-bold text-gray-400">All hints used — work it through, then move on.</p>
+              <p className="text-xs font-bold text-gray-500">All hints used — work it through, then move on.</p>
             )}
           </div>
           <button
@@ -668,7 +668,7 @@ export default function LessonPlayer({
             </Link>
             <Link
               href="/learn"
-              className="inline-flex items-center justify-center rounded-2xl px-6 py-3 text-sm font-extrabold text-gray-400 min-h-[48px]"
+              className="inline-flex items-center justify-center rounded-2xl px-6 py-3 text-sm font-extrabold text-gray-500 min-h-[48px]"
             >
               All subjects
             </Link>
