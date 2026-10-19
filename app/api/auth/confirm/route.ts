@@ -60,7 +60,7 @@ export async function GET(request: NextRequest) {
         await waitForProfile(supabase, user.id)
       }
 
-      const redirectPath = '/'
+      const redirectPath = '/home'
       const response = NextResponse.redirect(new URL(redirectPath, baseUrl))
       for (const cookie of tempRes.cookies.getAll()) {
         // Preserve attributes (maxAge, path, sameSite, ...) — dropping them
