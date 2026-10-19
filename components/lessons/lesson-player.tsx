@@ -585,19 +585,21 @@ export default function LessonPlayer({
         <div className="rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-7 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)]">
           <p className="font-display text-[22px] font-medium text-black">Your turn — with scaffolding</p>
           <p className="mt-2 text-[15px] font-semibold leading-relaxed text-ink-soft">{enhancement.supported.question}</p>
-          <div className="mt-4 space-y-2.5">
-            {enhancement.supported.hints.slice(0, revealedHints).map((hint, i) => (
-              <div key={i} className="flex gap-2.5 rounded-2xl bg-blue-50/60 border border-blue-100 p-3.5 animate-pop">
-                <Lightbulb className="h-4 w-4 shrink-0 text-blue-600 mt-0.5" />
-                <p className="text-sm font-bold text-blue-900">Hint {i + 1}: {hint}</p>
+          <div className="mt-4 space-y-3">
+            {revealedHints > 0 && revealedHints <= enhancement.supported.hints.length && (
+              <div className="rounded-2xl bg-blue-50/60 border border-blue-100 p-3.5 animate-pop">
+                <div className="flex gap-2.5">
+                  <Lightbulb className="h-4 w-4 shrink-0 text-blue-600 mt-0.5" />
+                  <p className="text-sm font-bold text-blue-900">Hint {revealedHints}: {enhancement.supported.hints[revealedHints - 1]}</p>
+                </div>
               </div>
-            ))}
+            )}
             {revealedHints < enhancement.supported.hints.length ? (
               <button
                 onClick={() => setRevealedHints((n) => n + 1)}
                 className="w-full rounded-2xl border-2 border-dashed border-blue-300 py-3 text-sm font-extrabold text-blue-700 min-h-[52px] cursor-pointer"
               >
-                Need a hint? ({revealedHints}/{enhancement.supported.hints.length} used)
+                {revealedHints === 0 ? 'Need a hint?' : 'Next hint →'} ({revealedHints}/{enhancement.supported.hints.length} used)
               </button>
             ) : (
               <p className="text-xs font-bold text-gray-500">All hints used — work it through, then move on.</p>
