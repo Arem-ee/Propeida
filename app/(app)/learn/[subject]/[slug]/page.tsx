@@ -25,14 +25,17 @@ export default async function LessonPage({
 
   let diagnostic = null
   let independent: Awaited<ReturnType<typeof getLessonQuestions>>['independent'] = []
+  let microCheck: Awaited<ReturnType<typeof getLessonQuestions>>['independent'][number] | null = null
   if (subjectId) {
     try {
       const set = await getLessonQuestions(subjectId)
       diagnostic = set.diagnostic
-      independent = set.independent
+      microCheck = set.independent[0] ?? null
+      independent = set.independent.slice(1)
     } catch {
       diagnostic = null
       independent = []
+      microCheck = null
     }
   }
 
@@ -53,6 +56,7 @@ export default async function LessonPage({
           english={english}
           diagnostic={diagnostic}
           independent={independent}
+          microCheck={microCheck}
           subjectId={subjectId}
         />
       ) : (

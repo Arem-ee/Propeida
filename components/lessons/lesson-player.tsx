@@ -70,7 +70,7 @@ function BankQuestion({
   ctaLabel,
 }: {
   question: LessonQuestion
-  attemptType: 'diagnostic' | 'independent'
+  attemptType: 'diagnostic' | 'independent' | 'supported'
   subjectId: string
   lessonId: string
   onAnswered: (correct: boolean) => void
@@ -283,6 +283,7 @@ export default function LessonPlayer({
   english,
   diagnostic,
   independent,
+  microCheck,
   subjectId,
 }: {
   note: RevisionNote
@@ -291,6 +292,7 @@ export default function LessonPlayer({
   english?: LessonEnglish | null
   diagnostic: LessonQuestion | null
   independent: LessonQuestion[]
+  microCheck: LessonQuestion | null
   subjectId: string
 }) {
   const phases: Phase[] = [
@@ -310,6 +312,7 @@ export default function LessonPlayer({
   const [results, setResults] = useState<boolean[]>([])
   const [diagnosticDone, setDiagnosticDone] = useState(false)
   const [independentDone, setIndependentDone] = useState(0)
+  const [microCheckDone, setMicroCheckDone] = useState(false)
   const [twins, setTwins] = useState<LessonQuestion[]>([])
   const [twinnedIds, setTwinnedIds] = useState<Set<string>>(new Set())
   const [twinOffers, setTwinOffers] = useState<Set<string>>(new Set())
@@ -414,6 +417,7 @@ export default function LessonPlayer({
         <div className="rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-7 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)]">
           <p className="font-display text-[22px] font-medium text-black">First — what do you already know?</p>
           <p className="mt-1 text-sm font-semibold text-ink-soft">One question, no teaching yet. Wrong answers just show us where to start.</p>
+          <p className="mt-3 text-xs font-bold text-blue-700">Bet on your answer: mark Sure or Unsure. If you&apos;re Sure and wrong, we flag it as a misconception to fix — not a mistake to retry.</p>
           <div className="mt-5">
             <BankQuestion
               question={diagnostic}
@@ -452,30 +456,21 @@ export default function LessonPlayer({
               )),
             )}
           </ul>
-          <details className="group mt-4 rounded-2xl border border-gray-200 bg-gray-50/50">
-            <summary className="cursor-pointer list-none px-4 py-3.5 text-sm font-extrabold text-blue-700 min-h-[48px] flex items-center justify-between">
-              Read the full lesson
-              <span className="text-gray-500 transition-transform group-open:rotate-180">▾</span>
-            </summary>
-            <div className="px-4 pb-4 space-y-5">
-              {note.sections.map((section) => (
-                <div key={section.heading}>
-                  <h3 className="font-display text-lg font-medium text-black">{section.heading}</h3>
-                  {section.paragraphs?.map((p, i) => (
-                    <p key={i} className="mt-1.5 text-sm font-semibold leading-[1.65] text-ink-soft">{p}</p>
-                  ))}
-                  <ul className="mt-2 space-y-1.5">
-                    {section.bullets.map((b, i) => (
-                      <li key={i} className="flex gap-2 text-sm font-semibold leading-[1.65] text-ink-soft">
-                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400" />
-                        {b}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+          {microCheck && !microCheckDone && (
+            <div className="mt-6">
+              <p className="text-[11px] font-extrabold uppercase tracking-wider text-gray-500">Check your understanding</p>
+              <BankQuestion
+                question={microCheck}
+                attemptType="supported"
+                subjectId={subjectId}
+                lessonId={note.id}
+                ctaLabel="Check"
+                onAnswered={(correct) => {
+                  if (correct) setMicroCheckDone(true)
+                }}
+              />
             </div>
-          </details>
+          )}
           {note.examTip && (
             <div className="mt-6 rounded-2xl border-2 border-amber-200 bg-amber-50 p-4">
               <p className="font-display text-base font-medium text-amber-900">Exam tip</p>
@@ -529,7 +524,12 @@ export default function LessonPlayer({
           )}
           <button
             onClick={next}
-            className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-blue-600 py-3.5 text-[15px] font-extrabold text-white hover:bg-blue-700 min-h-[52px]"
+            disabled={microCheck ? !microCheckDone : false}
+            className={`mt-6 inline-flex w-full items-center justify-center gap-2 rounded-2xl py-3.5 text-[15px] font-extrabold text-white min-h-[52px] transition-all ${
+              microCheck && !microCheckDone
+                ? 'bg-gray-300 cursor-not-allowed'
+                : 'bg-blue-600 hover:bg-blue-700'
+            }`}
           >
             {(enhancement?.workedExamples?.length ?? 0) > 0 ? 'See it worked' : 'Try it yourself'} <ArrowRight className="h-4 w-4" />
           </button>
