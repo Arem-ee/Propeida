@@ -220,7 +220,12 @@ function WorkedCard({
   onDone: () => void
 }) {
   const [revealed, setRevealed] = useState(0)
+  const [predictionInput, setPredictionInput] = useState('')
   const doneFired = useRef(false)
+
+  useEffect(() => {
+    setPredictionInput('')
+  }, [revealed])
 
   useEffect(() => {
     if (revealed >= example.steps.length && !doneFired.current) {
@@ -253,20 +258,35 @@ function WorkedCard({
                   <StepVisual visual={step.visual ?? null} />
                 </>
               ) : isNext ? (
-                <div className="mt-2">
+                <div className="mt-2 space-y-2">
                   {step.predictPrompt && (
-                    <p className="text-[13px] font-bold italic text-blue-700">{step.predictPrompt}</p>
+                    <>
+                      <p className="text-[13px] font-bold italic text-blue-700">{step.predictPrompt}</p>
+                      <input
+                        value={predictionInput}
+                        onChange={(e) => setPredictionInput(e.target.value)}
+                        placeholder="Type your prediction..."
+                        className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm min-h-[44px] focus:border-blue-600 focus:outline-none"
+                      />
+                      {predictionInput.trim() === '' && (
+                        <p className="text-xs font-bold text-red-600">Type your prediction before revealing.</p>
+                      )}
+                    </>
                   )}
                   <button
-                    onClick={() => setRevealed((n) => n + 1)}
-                    className="mt-2 inline-flex items-center gap-1.5 rounded-xl border-2 border-blue-600 px-4 py-2 text-[13px] font-extrabold text-blue-700 min-h-[44px] cursor-pointer"
+                    onClick={() => {
+                      setRevealed((n) => n + 1)
+                      setPredictionInput('')
+                    }}
+                    disabled={!!step.predictPrompt && predictionInput.trim() === ''}
+                    className="mt-2 inline-flex items-center gap-1.5 rounded-xl border-2 border-blue-600 px-4 py-2 text-[13px] font-extrabold text-blue-700 min-h-[44px] cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <Eye className="h-4 w-4" />
-                    {step.predictPrompt ? 'Predict, then reveal' : 'Reveal'}
+                    {step.predictPrompt ? 'Submit prediction, then reveal' : 'Reveal'}
                   </button>
                 </div>
               ) : (
-                <p className="mt-2 text-xs font-bold text-gray-300">Locked — reveal the step above first.</p>
+                <p className="mt-2 text-xs font-bold text-gray-300">Locked — submit the prediction above first.</p>
               )}
             </div>
           )
