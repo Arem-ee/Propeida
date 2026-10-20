@@ -545,3 +545,66 @@ export async function saveLessonReflection(input: {
   })
   if (error) throw new Error('Failed to save reflection')
 }
+
+export async function getNextRecommendedLesson(subjectSlug: string): Promise<{
+  note: { id: string; topic: string; slug: string; summary: string; subject: string; responseType: 'mcq' | 'text' | 'derivation' } | null;
+  completed: boolean;
+}> {
+  const supabase = await createClient()
+  const user = await getAuthUser(supabase)
+  if (!user) throw new Error('Not authenticated')
+
+  // Get subject ID
+  const { data: subject } = await supabase
+    .from('subjects')
+    .select('id')
+    .eq('slug', subjectSlug)
+    .single()
+
+  if (!subject) return { note: null, completed: true }
+
+  // Get all notes for this subject
+  const { data: notes } = await supabase
+    .from('lessons')
+    .select('id, title, slug, objective, status')
+    .eq('subject_id', subject.id)
+    .eq('status', 'published')
+    .order('created_at', { ascending: true })
+
+  if (!notes || notes.length === 0) return { note: null, completed: true }
+
+  // Get user's completed lesson IDs for this subject
+  const { data: attempts } = await supabase
+    .from('learning_attempts')
+    .select('lesson_id, is_correct, attempt_type')
+    .eq('user_id', user.id)
+    .eq('subject_id', subject.id)
+    .not('lesson_id', 'is', null)
+
+  // Build a map of lesson_id -> has_correct_independent
+  const completedLessonIds = new Set<string>()
+  for (const a of attempts ?? []) {
+    if (a.lesson_id && a.is_correct === true && a.attempt_type === 'independent') {
+      completedLessonIds.add(a.lesson_id)
+    }
+  }
+
+  // Find first incomplete lesson
+  for (const lesson of notes) {
+    if (!completedLessonIds.has(lesson.id)) {
+      return {
+        note: {
+          id: lesson.id,
+          topic: lesson.title,
+          slug: lesson.slug,
+          summary: lesson.objective ?? '',
+          subject: subjectSlug,
+          responseType: 'mcq' as const, // DB doesn't have response_type yet; default to mcq
+        },
+        completed: false,
+      }
+    }
+  }
+
+return { note: null, completed: true }
+}
