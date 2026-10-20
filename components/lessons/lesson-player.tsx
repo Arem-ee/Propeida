@@ -335,7 +335,6 @@ export default function LessonPlayer({
   const [microCheckDone, setMicroCheckDone] = useState(false)
   const [twins, setTwins] = useState<LessonQuestion[]>([])
   const [twinnedIds, setTwinnedIds] = useState<Set<string>>(new Set())
-  const [twinOffers, setTwinOffers] = useState<Set<string>>(new Set())
   const [twinLoading, setTwinLoading] = useState(false)
   const [finishing, setFinishing] = useState(false)
   const [closeout, setCloseout] = useState<{ nextReviewAt: string | null } | null>(null)
@@ -373,18 +372,8 @@ export default function LessonPlayer({
       if (twin) {
         setTwins((t) => [...t, twin])
         setTwinnedIds((s) => new Set(s).add(questionId))
-        setTwinOffers((s) => {
-          const next = new Set(s)
-          next.delete(questionId)
-          return next
-        })
       } else {
         // Bank exhausted: withdraw the offer silently, keep the repair.
-        setTwinOffers((s) => {
-          const next = new Set(s)
-          next.delete(questionId)
-          return next
-        })
       }
     } catch {
       // twins are enhancement; failure degrades to the repair already shown
@@ -630,20 +619,9 @@ export default function LessonPlayer({
                   ctaLabel="Check"
                   onAnswered={(correct) => { setResults((r) => [...r, correct]); setIndependentDone((n) => n + 1) }}
                   onWrong={(qid) => {
-                    if (!twinnedIds.has(qid)) {
-                      setTwinOffers((s) => new Set(s).add(qid))
-                    }
+                    requestTwin(qid)
                   }}
                 />
-                {twinOffers.has(q.id) && (
-                  <button
-                    onClick={() => void requestTwin(q.id)}
-                    disabled={twinLoading}
-                    className="mt-3 w-full rounded-2xl border-2 border-dashed border-violet-300 py-3 text-sm font-extrabold text-violet-700 min-h-[52px] cursor-pointer disabled:opacity-50"
-                  >
-                    {twinLoading ? 'Finding a twin...' : 'Not yet — try a twin question'}
-                  </button>
-                )}
               </div>
             ))}
           </div>
