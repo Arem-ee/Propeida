@@ -13,6 +13,7 @@ export interface LessonQuestion {
   subjectId: string
   questionText: string
   options: { key: string; text: string }[]
+  responseType: 'mcq' | 'text' | 'derivation'
 }
 
 /**
@@ -318,6 +319,7 @@ export async function getLessonQuestions(subjectId: string): Promise<{
     subjectId: q.subjectId ?? q.subject_id ?? subjectId,
     questionText: q.questionText ?? q.question_text ?? '',
     options: q.options,
+    responseType: (q.options && q.options.length > 0 ? 'mcq' : 'text') as 'mcq' | 'text' | 'derivation',
   }))
 
   const [diagnostic, ...independent] = rows
@@ -388,6 +390,7 @@ export async function getTwinQuestion(
     subjectId: pick.subjectId ?? pick.subject_id ?? subjectId,
     questionText: pick.questionText ?? pick.question_text ?? '',
     options: pick.options,
+    responseType: (pick.options && pick.options.length > 0 ? 'mcq' : 'text') as 'mcq' | 'text' | 'derivation',
   }
 }
 

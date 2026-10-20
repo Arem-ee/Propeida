@@ -79,19 +79,22 @@ function BankQuestion({
   ctaLabel: string
 }) {
   const [selected, setSelected] = useState<string | null>(null)
+  const [textInput, setTextInput] = useState<string | null>(null)
   const [confidence, setConfidence] = useState<Confidence>(null)
   const [feedback, setFeedback] = useState<AttemptFeedback | null>(null)
   const [checking, setChecking] = useState(false)
 
   const check = async () => {
-    if (!selected || !confidence || checking || feedback) return
+    const isMcq = question.responseType === 'mcq'
+    const answer = isMcq ? selected : textInput
+    if ((isMcq && !selected) || (!isMcq && !textInput) || !confidence || checking || feedback) return
     setChecking(true)
     try {
       const result = await recordLessonAttempt({
         subjectId,
         lessonId,
         questionId: question.id,
-        selectedAnswer: selected,
+        selectedAnswer: answer,
         confidence,
         attemptType,
       })
@@ -107,42 +110,51 @@ function BankQuestion({
     <div>
       <p className="font-display text-lg sm:text-xl font-medium leading-snug text-black">{question.questionText}</p>
       <div className="mt-4 space-y-2.5">
-        {question.options.map((opt) => {
-          const isSel = selected === opt.key
-          const revealed = feedback !== null
-          const isCorrectOpt = feedback !== null && opt.key === feedback.correctAnswer
-          return (
-            <button
-              key={opt.key}
-              disabled={revealed}
-              onClick={() => setSelected(opt.key)}
-              className={`flex w-full items-center gap-3 rounded-2xl border-2 p-3.5 text-left min-h-[56px] transition-all ${
-                revealed
-                  ? isCorrectOpt
-                    ? 'border-emerald-500 bg-emerald-50/60'
-                    : isSel
-                      ? 'border-red-400 bg-red-50/60'
-                      : 'border-gray-200 bg-white opacity-70'
-                  : isSel
-                    ? 'border-blue-600 bg-blue-50/60 shadow-[0_0_0_3px_rgba(37,99,235,0.12)]'
-                    : 'border-gray-200 bg-white'
-              }`}
-            >
-              <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-xl text-sm font-extrabold border-2 ${
-                revealed && isCorrectOpt
-                  ? 'bg-emerald-500 border-emerald-500 text-white'
-                  : revealed && isSel
-                    ? 'bg-red-500 border-red-500 text-white'
-                    : isSel
-                      ? 'bg-blue-600 border-blue-600 text-white'
-                      : 'border-gray-300 text-gray-500 bg-white'
-              }`}>
-                {opt.key}
-              </span>
-              <span className="text-[15px] font-bold text-black">{opt.text}</span>
-            </button>
-          )
-        })}
+        {question.responseType === 'mcq' && question.options ? (
+          question.options.map((opt) => {
+            const isSel = selected === opt.key
+            const revealed = feedback !== null
+            const isCorrectOpt = feedback !== null && opt.key === feedback.correctAnswer
+            return (
+              <button
+                key={opt.key}
+                disabled={revealed}
+                onClick={() => setSelected(opt.key)}
+                className={`flex w-full items-center gap-3 rounded-2xl border-2 p-3.5 text-left min-h-[56px] transition-all ${
+                  revealed
+                    ? isCorrectOpt
+                      ? 'border-emerald-500 bg-emerald-50/60'
+                      : isSel
+                        ? 'border-red-400 bg-red-50/60'
+                        : 'border-gray-200 bg-white opacity-70'
+                      : isSel
+                        ? 'border-blue-600 bg-blue-50/60 shadow-[0_0_0_3px_rgba(37,99,235,0.12)]'
+                        : 'border-gray-200 bg-white'
+                }`}
+              >
+                <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-xl text-sm font-extrabold border-2 ${
+                  revealed && isCorrectOpt
+                    ? 'bg-emerald-500 border-emerald-500 text-white'
+                    : revealed && isSel
+                      ? 'bg-red-500 border-red-500 text-white'
+                      : isSel
+                        ? 'bg-blue-600 border-blue-600 text-white'
+                        : 'border-gray-300 text-gray-500 bg-white'
+                }`}>
+                  {opt.key}
+                </span>
+                <span className="text-[15px] font-bold text-black">{opt.text}</span>
+              </button>
+            )
+          })
+        ) : (
+          <textarea
+            value={textInput ?? ''}
+            onChange={(e) => setTextInput(e.target.value)}
+            placeholder="Type your answer..."
+            className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm min-h-[56px] focus:border-blue-600 focus:outline-none"
+          />
+        )}
       </div>
 
       {!feedback && (
