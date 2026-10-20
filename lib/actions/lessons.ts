@@ -526,3 +526,19 @@ export async function completeLesson(input: {
   const reviews = await getNextReviews(supabase, user.id, [input.subjectId])
   return { nextReviewAt: reviews[input.subjectId] ?? null, status: 'recorded' }
 }
+
+export async function saveLessonReflection(input: {
+  lessonId: string
+  explanation: string
+}): Promise<void> {
+  const supabase = await createClient()
+  const user = await getAuthUser(supabase)
+  if (!user) throw new Error('Not authenticated')
+
+  const { error } = await supabase.from('lesson_reflections').insert({
+    user_id: user.id,
+    lesson_id: input.lessonId,
+    explanation_text: input.explanation,
+  })
+  if (error) throw new Error('Failed to save reflection')
+}

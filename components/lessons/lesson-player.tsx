@@ -9,6 +9,7 @@ import {
   recordLessonAttempt,
   completeLesson,
   getTwinQuestion,
+  saveLessonReflection,
   type LessonQuestion,
 } from '@/lib/actions/lessons'
 import type { RevisionNote } from '@/lib/notes'
@@ -338,6 +339,8 @@ export default function LessonPlayer({
   const [twinLoading, setTwinLoading] = useState(false)
   const [finishing, setFinishing] = useState(false)
   const [closeout, setCloseout] = useState<{ nextReviewAt: string | null } | null>(null)
+  const [reflectionText, setReflectionText] = useState('')
+  const [reflectionSubmitted, setReflectionSubmitted] = useState(false)
   // Frozen at first render: "review in N days" must not shift under re-renders.
   const [nowMs] = useState(() => Date.now())
 
@@ -651,6 +654,41 @@ export default function LessonPlayer({
             <p className="mt-1 text-sm font-bold text-emerald-700">
               Back for review {daysUntil(closeout.nextReviewAt)}.
             </p>
+          )}
+          {!reflectionSubmitted && (
+            <div className="mt-6">
+              <p className="font-display text-lg font-medium text-black">Teach it to someone else</p>
+              <p className="mt-1 text-sm font-semibold text-ink-soft">
+                Explain this concept in your own words, as if teaching it to a friend who missed class.
+              </p>
+              <textarea
+                value={reflectionText}
+                onChange={(e) => setReflectionText(e.target.value)}
+                placeholder="Write your explanation here..."
+                className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm min-h-[56px] focus:border-blue-600 focus:outline-none"
+                rows={3}
+              />
+              <button
+                onClick={async () => {
+                  if (!reflectionText.trim()) return
+                  try {
+                    await saveLessonReflection({ lessonId: note.id, explanation: reflectionText })
+                    setReflectionSubmitted(true)
+                  } catch {
+                    // swallow; reflection is best-effort and must not block navigation
+                  }
+                }}
+                disabled={!reflectionText.trim()}
+                className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-blue-600 py-3.5 text-[15px] font-extrabold text-white hover:bg-blue-700 min-h-[52px] disabled:bg-gray-400"
+              >
+                Save explanation
+              </button>
+            </div>
+          )}
+          {reflectionSubmitted && (
+            <div className="mt-6 rounded-2xl border-2 border-emerald-200 bg-emerald-50/60 p-4">
+              <p className="text-sm font-semibold text-emerald-700">Saved — thanks for putting it in your own words.</p>
+            </div>
           )}
           <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
             <Link
