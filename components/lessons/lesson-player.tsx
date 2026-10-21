@@ -45,20 +45,24 @@ function PhaseDots({ phases, current }: { phases: string[]; current: number }) {
 
 function ConfidencePicker({ value, onChange }: { value: Confidence; onChange: (c: Confidence) => void }) {
   return (
-    <div className="flex gap-2">
-      {(['sure', 'unsure'] as const).map((c) => (
-        <button
-          key={c}
-          onClick={() => onChange(c)}
-          className={`flex-1 rounded-2xl border-2 px-4 py-2.5 text-sm font-extrabold min-h-[48px] cursor-pointer transition-all ${
-            value === c
-              ? 'border-blue-600 bg-blue-50 text-blue-700'
-              : 'border-gray-200 bg-white text-gray-500'
-          }`}
-        >
-          {c === 'sure' ? 'Sure' : 'Unsure'}
-        </button>
-      ))}
+    <div className="flex items-center gap-2">
+      <span className="text-xs font-bold text-gray-500">How sure?</span>
+      <div className="flex gap-1.5">
+        {(['sure', 'unsure'] as const).map((c) => (
+          <button
+            key={c}
+            onClick={() => onChange(c)}
+            aria-pressed={value === c}
+            className={`rounded-xl px-3.5 py-1.5 text-xs font-extrabold min-h-[36px] cursor-pointer transition-all ${
+              value === c
+                ? 'bg-blue-600 text-white'
+                : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
+            }`}
+          >
+            {c === 'sure' ? 'Sure' : 'Unsure'}
+          </button>
+        ))}
+      </div>
     </div>
   )
 }
@@ -85,6 +89,9 @@ function BankQuestion({
   const [confidence, setConfidence] = useState<Confidence>(null)
   const [feedback, setFeedback] = useState<AttemptFeedback | null>(null)
   const [checking, setChecking] = useState(false)
+  // The confidence bet only means something once the learner has read the
+  // options, so it appears only after an answer is chosen.
+  const hasAnswer = question.responseType === 'mcq' ? !!selected : !!textInput
 
   const check = async () => {
     const isMcq = question.responseType === 'mcq'
@@ -163,16 +170,16 @@ function BankQuestion({
 
       {!feedback && (
         <div className="mt-4 space-y-3">
-          <ConfidencePicker value={confidence} onChange={setConfidence} />
+          {hasAnswer && <ConfidencePicker value={confidence} onChange={setConfidence} />}
           <button
             onClick={check}
             disabled={
-              (question.responseType === 'mcq' ? !selected : !textInput) ||
+              !hasAnswer ||
               !confidence ||
               checking
             }
             className={`w-full rounded-2xl py-3.5 text-[15px] font-extrabold text-white min-h-[52px] transition-all ${
-              (question.responseType === 'mcq' ? selected : textInput) && confidence && !checking
+              hasAnswer && confidence && !checking
                 ? 'bg-blue-600 hover:bg-blue-700 shadow-[0_12px_28px_-12px_rgba(37,99,235,0.7)]'
                 : 'bg-gray-300'
             }`}
@@ -466,8 +473,7 @@ export default function LessonPlayer({
       {phase === 'diagnostic' && diagnostic && (
         <div className="rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-7 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)]">
           <p className="font-display text-[22px] font-medium text-black">First — what do you already know?</p>
-          <p className="mt-1 text-sm font-semibold text-ink-soft">One question, no teaching yet. Wrong answers just show us where to start.</p>
-          <p className="mt-3 text-xs font-bold text-blue-700">Bet on your answer: mark Sure or Unsure. If you&apos;re Sure and wrong, we flag it as a misconception to fix — not a mistake to retry.</p>
+          <p className="mt-1 text-sm font-semibold text-ink-soft">One question. No teaching yet.</p>
           <div className="mt-5">
             <BankQuestion
               question={diagnostic}
