@@ -213,9 +213,7 @@ export async function getSessionQuestionsWithStatus(sessionId: string, includeRe
         id,
         subject_id,
         question_text,
-        options,
-        correct_answer,
-        explanation
+        options
       )
     `)
     .eq('session_id', sessionId)
@@ -223,9 +221,24 @@ export async function getSessionQuestionsWithStatus(sessionId: string, includeRe
 
   if (error) throw new Error('Failed to fetch session questions')
 
+  // The answer key lives in question_answers, which the learner role
+  // cannot read. It is fetched separately with the service-role client.
+  let answerByQuestion = new Map<string, { correct_answer: string; explanation: string | null }>()
+  if (includeReveal) {
+    const questionIds = (data ?? []).map((sa) => sa.question_id)
+    if (questionIds.length > 0) {
+      const { data: answerRows } = await admin
+        .from('question_answers')
+        .select('question_id, correct_answer, explanation')
+        .in('question_id', questionIds)
+      answerByQuestion = new Map((answerRows ?? []).map((r) => [r.question_id, r]))
+    }
+  }
+
   const questions = data.flatMap((sa) => {
     const q = Array.isArray(sa.question) ? sa.question[0] : sa.question
     if (!q) return []
+    const answer = answerByQuestion.get(q.id)
     return [{
       answerId: sa.id,
       questionId: q.id,
@@ -234,8 +247,8 @@ export async function getSessionQuestionsWithStatus(sessionId: string, includeRe
       options: q.options as { key: string; text: string }[],
       selectedAnswer: sa.selected_answer,
       isCorrect: sa.is_correct,
-      correctAnswer: includeReveal ? (q.correct_answer ?? null) : undefined,
-      explanation: includeReveal ? (q.explanation ?? null) : undefined,
+      correctAnswer: includeReveal ? (answer?.correct_answer ?? null) : undefined,
+      explanation: includeReveal ? (answer?.explanation ?? null) : undefined,
     }]
   })
 

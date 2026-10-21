@@ -442,17 +442,24 @@ export async function recordLessonAttempt(input: AttemptInput): Promise<{
     return { isCorrect: false, graded: false, correctAnswer: '', explanation: '', misconception: null, prerequisite: null }
   }
 
-  // The answer key is not readable by a signed-in learner, so it is read
-  // with the service-role client. The caller's identity was already
-  // proven above with the caller's own session, and only the fields this
-  // action chooses to return ever leave the server.
+  // The answer key lives in question_answers, a table the learner role
+  // cannot read at all. It is read with the service-role client, inside
+  // an action that has already proven the caller's identity with the
+  // caller's own session, and only what this action chooses to return
+  // ever leaves the server.
   const admin = createAdminClient()
   const { data: question, error: qError } = await admin
     .from('questions')
-    .select('id, correct_answer, explanation, response_type')
+    .select('id, response_type')
     .eq('id', input.questionId)
     .single()
   if (qError || !question) throw new Error('Question not found')
+
+  const { data: answer } = await admin
+    .from('question_answers')
+    .select('correct_answer, explanation')
+    .eq('question_id', input.questionId)
+    .maybeSingle()
 
   const responseType = question.response_type ?? 'mcq'
   // Free-response and derivation items are not graded by key match. The
@@ -460,7 +467,7 @@ export async function recordLessonAttempt(input: AttemptInput): Promise<{
   // compared — so these attempts record is_correct null (unknown), never
   // a false that would drag the mastery score down.
   const isFreeResponse = responseType === 'text' || responseType === 'derivation'
-  const isCorrect = isFreeResponse ? false : question.correct_answer === input.selectedAnswer
+  const isCorrect = isFreeResponse ? false : answer?.correct_answer === input.selectedAnswer
 
   let misconception: { name: string; explanation: string; repeatCount: number; repairHref: string | null } | null = null
   let misconceptionCode: string | null = null
@@ -513,8 +520,8 @@ export async function recordLessonAttempt(input: AttemptInput): Promise<{
   return {
     isCorrect,
     graded: !isFreeResponse,
-    correctAnswer: question.correct_answer ?? '',
-    explanation: question.explanation ?? '',
+    correctAnswer: answer?.correct_answer ?? '',
+    explanation: answer?.explanation ?? '',
     misconception,
     prerequisite,
   }

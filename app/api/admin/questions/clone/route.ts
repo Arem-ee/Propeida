@@ -18,12 +18,20 @@ export async function POST(request: Request) {
 
     const { data: question, error: qError } = await supabase
       .from('questions')
-      .select('exam_id, subject_id, question_text, options, correct_answer, explanation, difficulty, source')
+      .select('exam_id, subject_id, question_text, options, difficulty, source')
       .eq('id', id)
       .single()
     if (qError || !question) {
       return NextResponse.json({ error: 'Question not found' }, { status: 404 })
     }
+
+    // The answer key lives in question_answers; the clone gets it through
+    // the same mirror trigger every other write uses.
+    const { data: answer } = await supabase
+      .from('question_answers')
+      .select('correct_answer, explanation')
+      .eq('question_id', id)
+      .maybeSingle()
 
     const [{ data: mcs }, { data: topics }] = await Promise.all([
       supabase
@@ -43,8 +51,8 @@ export async function POST(request: Request) {
         subject_id: question.subject_id,
         question_text: question.question_text,
         options: question.options,
-        correct_answer: question.correct_answer,
-        explanation: question.explanation,
+        correct_answer: answer?.correct_answer ?? '',
+        explanation: answer?.explanation ?? null,
         difficulty: question.difficulty,
         source: question.source ?? 'clone',
       })

@@ -95,14 +95,19 @@ export async function submitOnboardingCheck(
   if (!user) throw new Error('Not authenticated')
   if (answers.length === 0 || answers.length > 5) throw new Error('Invalid submission')
 
-  // The answer key is not readable by a signed-in learner, so grading
-  // reads it with the service-role client. The caller's identity was
-  // already proven above with the caller's own session.
+  // The answer key lives in question_answers, which the learner role
+  // cannot read. Grading reads it with the service-role client, inside
+  // an action that has already proven the caller's identity.
   const admin = createAdminClient()
   const { data: questions } = await admin
     .from('questions')
-    .select('id, correct_answer, subjects!inner(name)')
+    .select('id, subjects!inner(name)')
     .in('id', answers.map((a) => a.questionId))
+  const { data: answerRows } = await admin
+    .from('question_answers')
+    .select('question_id, correct_answer')
+    .in('question_id', answers.map((a) => a.questionId))
+  const answerById = new Map((answerRows ?? []).map((r) => [r.question_id, r.correct_answer]))
   const keyById = new Map((questions ?? []).map((q) => [q.id, q]))
 
   const bySubject = new Map<string, { name: string; correct: number; total: number }>()
@@ -118,10 +123,10 @@ export async function submitOnboardingCheck(
 
   for (const a of answers) {
     const q = keyById.get(a.questionId) as
-      | { correct_answer: string; subjects: { name: string } | { name: string }[] | null }
+      | { subjects: { name: string } | { name: string }[] | null }
       | undefined
     if (!q) continue
-    const correct = q.correct_answer === a.selectedAnswer
+    const correct = answerById.get(a.questionId) === a.selectedAnswer
     const s = Array.isArray(q.subjects) ? q.subjects[0] : q.subjects
     const entry = bySubject.get(a.subjectId) ?? { name: s?.name ?? 'Subject', correct: 0, total: 0 }
     entry.total += 1

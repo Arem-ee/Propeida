@@ -14,6 +14,19 @@ export default async function EditQuestionPage({ params }: { params: Promise<{ i
 
   if (!question) redirect('/admin/questions')
 
+  // The answer key lives in question_answers; questions holds the body.
+  const { data: answer } = await supabase
+    .from('question_answers')
+    .select('correct_answer, explanation')
+    .eq('question_id', id)
+    .maybeSingle()
+
+  const editable = {
+    ...question,
+    correct_answer: answer?.correct_answer ?? question.correct_answer ?? '',
+    explanation: answer?.explanation ?? question.explanation ?? null,
+  }
+
   const [examsRes, subjectsRes, misconceptionsRes, topicsRes, historyRes] = await Promise.all([
     supabase.from('exams').select('id, name').order('name'),
     supabase.from('subjects').select('id, name').order('name'),
@@ -44,7 +57,7 @@ export default async function EditQuestionPage({ params }: { params: Promise<{ i
 
   return (
     <EditQuestionForm
-      question={question}
+      question={editable}
       exams={examsRes.data ?? []}
       subjects={subjectsRes.data ?? []}
       initialMisconceptions={initialMisconceptions}
