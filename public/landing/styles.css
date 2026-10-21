@@ -407,6 +407,46 @@ h1, h2, h3 {
   display: block;
 }
 
+/* The map and the students holding it are one SVG, so the hands always
+   meet the map's underside. The map is drawn after the students, so a
+   cropped hand would tuck behind it. */
+.map-floating-element {
+  width: 100%;
+  position: relative;
+  filter: drop-shadow(0 20px 24px rgba(15, 23, 42, 0.12));
+}
+
+#nigeria-map-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: transparent;
+}
+
+/* State names sit on the shapes themselves. The white halo keeps them
+   readable on top of every state colour. */
+.state-label {
+  fill: #1e293b;
+  font-family: var(--font-body);
+  font-weight: 800;
+  paint-order: stroke fill;
+  stroke: rgba(255, 255, 255, 0.92);
+  stroke-width: 2.6px;
+  stroke-linejoin: round;
+  pointer-events: none;
+  user-select: none;
+}
+
+.nigeria-state {
+  transition: fill 200ms ease, opacity 200ms ease;
+  cursor: pointer;
+}
+
+.nigeria-state:hover {
+  filter: brightness(1.1);
+  stroke-width: 2.5;
+}
+
 /* ==========================================================================
    SECTION 2: MAP + PROBLEM / SOLUTION
    ========================================================================== */
@@ -453,13 +493,6 @@ h1, h2, h3 {
 
 /* The map and the students holding it are one artwork, so the hands
    always meet the map's underside exactly. */
-.map-scene-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  filter: drop-shadow(0 20px 24px rgba(15, 23, 42, 0.12));
-}
-
 .map-story-content {
   display: flex;
   flex-direction: column;
