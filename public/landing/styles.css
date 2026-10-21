@@ -2,6 +2,44 @@
    EDTECH PLATFORM LANDING PAGE - VANILLA STYLES
    ========================================================================== */
 
+/* Self-hosted fonts. The page used to pull these from fonts.googleapis.com,
+   which is unreliable in Nigeria: when that request failed the page
+   silently fell back to a system geometric sans and the brand voice
+   changed. The same two families are served from the app itself, so the
+   landing page vendors them too. */
+@font-face {
+  font-family: 'Fredoka';
+  font-style: normal;
+  font-weight: 300..700;
+  font-display: swap;
+  src: url('/landing/fonts/fredoka-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Fredoka';
+  font-style: normal;
+  font-weight: 300..700;
+  font-display: swap;
+  src: url('/landing/fonts/fredoka-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 200..1000;
+  font-display: swap;
+  src: url('/landing/fonts/nunito-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 200..1000;
+  font-display: swap;
+  src: url('/landing/fonts/nunito-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root {
   --brand-blue: #2563EB;
   --brand-blue-hover: #1D4ED8;
@@ -411,60 +449,13 @@ h1, h2, h3 {
   position: relative;
 }
 
-.map-floating-element {
-  width: 100%;
-  transform: rotateX(24deg); /* 3D low-angle tilt */
-  transform-origin: center bottom;
-  position: relative;
-  filter: drop-shadow(0 20px 24px rgba(15, 23, 42, 0.12));
-}
-
-#nigeria-map-svg {
+/* The map and the students holding it are one artwork, so the hands
+   always meet the map's underside exactly. */
+.map-scene-img {
   width: 100%;
   height: auto;
   display: block;
-  background: transparent;
-}
-
-.nigeria-state {
-  transition: fill 200ms ease, opacity 200ms ease;
-  cursor: pointer;
-}
-
-.nigeria-state:hover {
-  filter: brightness(1.1);
-  stroke-width: 2.5;
-}
-
-/* Students supporting map: layer in FRONT of map (z-index: 10), hands flat against underside contour */
-.map-students-support {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10; /* in FRONT of the map */
-  pointer-events: none;
-}
-
-.students-support-img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: contain;
-}
-
-/* Flat offset shadow under map */
-.map-ground-shadow {
-  position: absolute;
-  left: 8%;
-  bottom: 0px;
-  width: 84%;
-  height: 24px;
-  background: radial-gradient(ellipse at center, rgba(15, 23, 42, 0.15) 0%, rgba(15, 23, 42, 0) 70%);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 1;
+  filter: drop-shadow(0 20px 24px rgba(15, 23, 42, 0.12));
 }
 
 .map-story-content {
