@@ -304,6 +304,7 @@ export async function getLessonQuestions(subjectId: string): Promise<{
     p_difficulty: null,
     p_limit: 3,
     p_seed: randomUUID(),
+    p_response_types: ['mcq', 'text', 'derivation'],
   })
   if (error) throw new Error('Failed to load lesson questions')
 
@@ -313,13 +314,18 @@ export async function getLessonQuestions(subjectId: string): Promise<{
     subject_id?: string
     questionText?: string
     question_text?: string
-    options: { key: string; text: string }[]
+    options: { key: string; text: string }[] | null
+    responseType?: string
+    response_type?: string
   }[]).map((q) => ({
     id: q.id,
     subjectId: q.subjectId ?? q.subject_id ?? subjectId,
     questionText: q.questionText ?? q.question_text ?? '',
-    options: q.options,
-    responseType: (q.options && q.options.length > 0 ? 'mcq' : 'text') as 'mcq' | 'text' | 'derivation',
+    options: q.options ?? [],
+    responseType: (q.responseType ?? q.response_type ?? (q.options && q.options.length > 0 ? 'mcq' : 'text')) as
+      | 'mcq'
+      | 'text'
+      | 'derivation',
   }))
 
   const [diagnostic, ...independent] = rows
@@ -350,6 +356,7 @@ export async function getTwinQuestion(
     p_difficulty: null,
     p_limit: 8,
     p_seed: randomUUID(),
+    p_response_types: ['mcq', 'text', 'derivation'],
   })
   if (error) return null
 
@@ -359,7 +366,9 @@ export async function getTwinQuestion(
     subject_id?: string
     questionText?: string
     question_text?: string
-    options: { key: string; text: string }[]
+    options: { key: string; text: string }[] | null
+    responseType?: string
+    response_type?: string
   }[])
   const fresh = rows.filter((q) => !excludeIds.includes(q.id))
   if (fresh.length === 0) return null
@@ -389,13 +398,17 @@ export async function getTwinQuestion(
     id: pick.id,
     subjectId: pick.subjectId ?? pick.subject_id ?? subjectId,
     questionText: pick.questionText ?? pick.question_text ?? '',
-    options: pick.options,
-    responseType: (pick.options && pick.options.length > 0 ? 'mcq' : 'text') as 'mcq' | 'text' | 'derivation',
+    options: pick.options ?? [],
+    responseType: (pick.responseType ?? pick.response_type ?? (pick.options && pick.options.length > 0 ? 'mcq' : 'text')) as
+      | 'mcq'
+      | 'text'
+      | 'derivation',
   }
 }
 
 export async function recordLessonAttempt(input: AttemptInput): Promise<{
   isCorrect: boolean
+  graded: boolean
   correctAnswer: string
   explanation: string
   misconception: { name: string; explanation: string; repeatCount: number; repairHref: string | null } | null
@@ -425,22 +438,28 @@ export async function recordLessonAttempt(input: AttemptInput): Promise<{
       confidence: input.confidence,
     })
     if (insertError) throw new Error('Failed to record attempt')
-    return { isCorrect: false, correctAnswer: '', explanation: '', misconception: null, prerequisite: null }
+    return { isCorrect: false, graded: false, correctAnswer: '', explanation: '', misconception: null, prerequisite: null }
   }
 
   const { data: question, error: qError } = await supabase
     .from('questions')
-    .select('id, correct_answer, explanation')
+    .select('id, correct_answer, explanation, response_type')
     .eq('id', input.questionId)
     .single()
   if (qError || !question) throw new Error('Question not found')
 
-  const isCorrect = question.correct_answer === input.selectedAnswer
+  const responseType = question.response_type ?? 'mcq'
+  // Free-response and derivation items are not graded by key match. The
+  // same column carries the model answer, which is revealed rather than
+  // compared — so these attempts record is_correct null (unknown), never
+  // a false that would drag the mastery score down.
+  const isFreeResponse = responseType === 'text' || responseType === 'derivation'
+  const isCorrect = isFreeResponse ? false : question.correct_answer === input.selectedAnswer
 
   let misconception: { name: string; explanation: string; repeatCount: number; repairHref: string | null } | null = null
   let misconceptionCode: string | null = null
   let prerequisite: { name: string; href: string } | null = null
-  if (!isCorrect && input.selectedAnswer) {
+  if (!isFreeResponse && !isCorrect && input.selectedAnswer) {
     const { data: mc } = await supabase
       .from('question_misconceptions')
       .select('misconception_code, misconception_name, explanation, repair_note_id')
@@ -476,15 +495,19 @@ export async function recordLessonAttempt(input: AttemptInput): Promise<{
     question_id: input.questionId,
     lesson_id: input.lessonId,
     attempt_type: input.attemptType,
-    is_correct: isCorrect,
+    // Unknown, not false: an ungraded attempt must not count against the
+    // learner in the mastery model.
+    is_correct: isFreeResponse ? null : isCorrect,
     confidence: input.confidence,
     misconception_code: misconceptionCode,
+    ...(isFreeResponse ? { response_text: input.selectedAnswer } : {}),
   })
   if (insertError) throw new Error('Failed to record attempt')
 
   return {
     isCorrect,
-    correctAnswer: question.correct_answer,
+    graded: !isFreeResponse,
+    correctAnswer: question.correct_answer ?? '',
     explanation: question.explanation ?? '',
     misconception,
     prerequisite,

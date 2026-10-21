@@ -22,6 +22,8 @@ type Confidence = 'sure' | 'unsure' | null
 
 interface AttemptFeedback {
   isCorrect: boolean
+  /** False when the item is free-response: correctness was not determined. */
+  graded: boolean
   correctAnswer: string
   explanation: string
   misconception: { name: string; explanation: string; repeatCount: number; repairHref: string | null } | null
@@ -74,7 +76,7 @@ function BankQuestion({
   attemptType: 'diagnostic' | 'independent' | 'supported'
   subjectId: string
   lessonId: string
-  onAnswered: (correct: boolean) => void
+  onAnswered: (correct: boolean, graded: boolean) => void
   onWrong?: (questionId: string) => void
   ctaLabel: string
 }) {
@@ -99,8 +101,10 @@ function BankQuestion({
         attemptType,
       })
       setFeedback(result)
-      onAnswered(result.isCorrect)
-      if (!result.isCorrect) onWrong?.(question.id)
+      onAnswered(result.isCorrect, result.graded)
+      // An ungraded item is not a wrong answer — it earns no twin, and it
+      // must not trigger the wrong-answer repair path.
+      if (!result.isCorrect && result.graded) onWrong?.(question.id)
     } catch {
       setChecking(false)
     }
@@ -162,9 +166,15 @@ function BankQuestion({
           <ConfidencePicker value={confidence} onChange={setConfidence} />
           <button
             onClick={check}
-            disabled={!selected || !confidence || checking}
+            disabled={
+              (question.responseType === 'mcq' ? !selected : !textInput) ||
+              !confidence ||
+              checking
+            }
             className={`w-full rounded-2xl py-3.5 text-[15px] font-extrabold text-white min-h-[52px] transition-all ${
-              selected && confidence && !checking ? 'bg-blue-600 hover:bg-blue-700 shadow-[0_12px_28px_-12px_rgba(37,99,235,0.7)]' : 'bg-gray-300'
+              (question.responseType === 'mcq' ? selected : textInput) && confidence && !checking
+                ? 'bg-blue-600 hover:bg-blue-700 shadow-[0_12px_28px_-12px_rgba(37,99,235,0.7)]'
+                : 'bg-gray-300'
             }`}
           >
             {checking ? 'Checking...' : ctaLabel}
@@ -174,11 +184,25 @@ function BankQuestion({
 
       {feedback && (
         <div className="mt-4 space-y-3 animate-pop">
-          <div className={`rounded-2xl border px-4 py-3.5 font-display text-lg font-medium ${
-            feedback.isCorrect ? 'bg-emerald-50 border-emerald-200 text-emerald-700' : 'bg-red-50 border-red-200 text-red-700'
-          }`}>
-            {feedback.isCorrect ? 'Correct — nice.' : `Not quite — it was ${feedback.correctAnswer}`}
-          </div>
+          {feedback.graded ? (
+            <div className={`rounded-2xl border px-4 py-3.5 font-display text-lg font-medium ${
+              feedback.isCorrect ? 'bg-emerald-50 border-emerald-200 text-emerald-700' : 'bg-red-50 border-red-200 text-red-700'
+            }`}>
+              {feedback.isCorrect ? 'Correct — nice.' : `Not quite — it was ${feedback.correctAnswer}`}
+            </div>
+          ) : (
+            <>
+              <div className="rounded-2xl border border-blue-200 bg-blue-50 px-4 py-3.5 font-display text-lg font-medium text-blue-800">
+                Submitted. Here&apos;s the model answer.
+              </div>
+              {feedback.correctAnswer && (
+                <div className="rounded-2xl border border-emerald-200 bg-emerald-50/60 p-4">
+                  <p className="text-[11px] font-extrabold uppercase tracking-wider text-emerald-800">Model answer</p>
+                  <p className="mt-1 text-sm font-semibold leading-relaxed text-ink-soft">{feedback.correctAnswer}</p>
+                </div>
+              )}
+            </>
+          )}
           <div className="rounded-2xl bg-blue-50/50 border border-blue-100 p-4">
             <p className="text-sm font-semibold leading-relaxed text-ink-soft">{feedback.explanation}</p>
           </div>
@@ -451,7 +475,12 @@ export default function LessonPlayer({
               subjectId={subjectId}
               lessonId={note.id}
               ctaLabel="Check"
-              onAnswered={(correct) => { setResults((r) => [...r, correct]); setDiagnosticDone(true) }}
+              onAnswered={(correct, graded) => {
+                // Ungraded free-response attempts are recorded but must not
+                // count as wrong in the mastery model.
+                if (graded) setResults((r) => [...r, correct])
+                setDiagnosticDone(true)
+              }}
             />
           </div>
           <button
@@ -491,8 +520,10 @@ export default function LessonPlayer({
                 subjectId={subjectId}
                 lessonId={note.id}
                 ctaLabel="Check"
-                onAnswered={(correct) => {
-                  if (correct) setMicroCheckDone(true)
+                onAnswered={(correct, graded) => {
+                  // A free-response micro-check cannot be gated on
+                  // correctness, so the gate becomes "attempted".
+                  if (graded ? correct : true) setMicroCheckDone(true)
                 }}
               />
             </div>
@@ -634,7 +665,10 @@ export default function LessonPlayer({
                   subjectId={subjectId}
                   lessonId={note.id}
                   ctaLabel="Check"
-                  onAnswered={(correct) => { setResults((r) => [...r, correct]); setIndependentDone((n) => n + 1) }}
+                  onAnswered={(correct, graded) => {
+                    setIndependentDone((n) => n + 1)
+                    if (graded) setResults((r) => [...r, correct])
+                  }}
                   onWrong={(qid) => {
                     requestTwin(qid)
                   }}
