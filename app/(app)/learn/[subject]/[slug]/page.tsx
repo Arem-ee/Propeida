@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { ArrowLeft } from 'lucide-react'
-import { SUBJECTS } from '@/lib/notes'
+import { SUBJECTS, getNotesBySubject } from '@/lib/notes'
 import { getLessonByPath, getLessonQuestions } from '@/lib/actions/lessons'
 import LessonPlayer from '@/components/lessons/lesson-player'
 
@@ -39,6 +39,15 @@ export default async function LessonPage({
     }
   }
 
+  // Onward path: the next lesson in authoring order. Authoring order is
+  // prerequisite order, so this is the pedagogically correct next step.
+  const subjectNotes = getNotesBySubject(note.subject)
+  const currentIndex = subjectNotes.findIndex((n) => n.slug === note.slug)
+  const nextNote = currentIndex >= 0 ? subjectNotes[currentIndex + 1] ?? null : null
+  const nextLesson = nextNote
+    ? { topic: nextNote.topic, href: `/learn/${nextNote.subject}/${nextNote.slug}` }
+    : null
+
   return (
     <div className="mx-auto max-w-2xl">
       <Link
@@ -57,6 +66,7 @@ export default async function LessonPage({
           diagnostic={diagnostic}
           independent={independent}
           microCheck={microCheck}
+          nextLesson={nextLesson}
           subjectId={subjectId}
         />
       ) : (

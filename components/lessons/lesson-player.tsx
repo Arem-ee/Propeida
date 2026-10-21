@@ -317,6 +317,7 @@ export default function LessonPlayer({
   diagnostic,
   independent,
   microCheck,
+  nextLesson,
   subjectId,
 }: {
   note: RevisionNote
@@ -326,6 +327,7 @@ export default function LessonPlayer({
   diagnostic: LessonQuestion | null
   independent: LessonQuestion[]
   microCheck: LessonQuestion | null
+  nextLesson: { topic: string; href: string } | null
   subjectId: string
 }) {
   const phases: Phase[] = [
@@ -710,18 +712,21 @@ export default function LessonPlayer({
               <Target className="h-4 w-4" />
               Practise this topic
             </Link>
-            <Link
-              href={`/learn/${note.subject}`}
-              className="inline-flex items-center justify-center gap-2 rounded-2xl border-2 border-gray-200 bg-white px-6 py-3 text-sm font-extrabold text-ink-soft min-h-[48px]"
-            >
-              Next lesson
-            </Link>
-            <Link
-              href="/learn"
-              className="inline-flex items-center justify-center rounded-2xl px-6 py-3 text-sm font-extrabold text-gray-500 min-h-[48px]"
-            >
-              All subjects
-            </Link>
+            {nextLesson ? (
+              <Link
+                href={nextLesson.href}
+                className="inline-flex items-center justify-center gap-2 rounded-2xl border-2 border-gray-200 bg-white px-6 py-3 text-sm font-extrabold text-ink-soft min-h-[48px]"
+              >
+                Next: {nextLesson.topic}
+              </Link>
+            ) : (
+              <Link
+                href={`/learn/${note.subject}`}
+                className="inline-flex items-center justify-center gap-2 rounded-2xl border-2 border-gray-200 bg-white px-6 py-3 text-sm font-extrabold text-ink-soft min-h-[48px]"
+              >
+                Back to {note.subject === 'current-affairs' ? 'Current Affairs' : note.subject === 'mathematics' ? 'Mathematics' : 'English'}
+              </Link>
+            )}
           </div>
         </div>
       )}
