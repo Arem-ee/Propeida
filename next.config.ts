@@ -39,6 +39,15 @@ const nextConfig: NextConfig = {
           { key: 'Content-Security-Policy', value: `default-src 'self'; script-src ${scriptSrc}; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https://www.google-analytics.com https://www.googletagmanager.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://api.paystack.co https://*.supabase.co https://*.google-analytics.com https://www.googletagmanager.com; frame-src https://standard.paystack.co; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'self'` },
         ],
       },
+      {
+        // The service worker must never be served stale: a cached script
+        // keeps its old caching strategy alive and pins the whole site to
+        // whatever was cached first.
+        source: '/sw.js',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=0, must-revalidate, no-cache' },
+        ],
+      },
     ]
   },
 }

@@ -14,7 +14,13 @@ export default function PwaInit() {
 
     if (!('serviceWorker' in navigator)) return
 
-    navigator.serviceWorker.register('/sw.js').catch(() => {})
+    // updateViaCache: 'none' — the browser must always revalidate the
+    // service worker script against the network. Otherwise a cached sw.js
+    // can keep an old caching strategy alive indefinitely, which is how
+    // stale landing assets survived a deploy.
+    navigator.serviceWorker
+      .register('/sw.js', { updateViaCache: 'none' })
+      .catch(() => {})
 
     if (!VAPID_PUBLIC_KEY) return
 
