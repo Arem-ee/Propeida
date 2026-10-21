@@ -45,12 +45,11 @@ export default function QuestionReviewPage() {
 
   const load = useCallback(async () => {
     const supabase = createClient()
-    const { data } = await supabase
-      .from('questions')
-      .select('id, exam_id, subject_id, question_text, options, correct_answer, explanation, difficulty, cognitive_level, status, verified_state, review_note, exams!questions_exam_id_fkey(name), subjects(name)')
-      .in('status', ['draft', 'in_review'])
-      .order('created_at', { ascending: true })
-    const rows = (data ?? []) as ReviewItem[]
+    // The answer key is not readable by a signed-in learner. The review
+    // queue is served by a definer function that checks the caller is an
+    // admin, so a reviewer can still see the key they are verifying.
+    const { data } = await supabase.rpc('get_question_review_queue')
+    const rows = (data ?? []) as unknown as ReviewItem[]
     setItems(rows)
     setSelected((prev) => new Set([...prev].filter((id) => rows.some((r) => r.id === id))))
     if (rows.length > 0) {

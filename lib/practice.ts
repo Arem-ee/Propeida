@@ -1,4 +1,5 @@
 import { createClient } from './supabase/server'
+import { createAdminClient } from './supabase/admin'
 
 interface SessionConfig {
   examId: string
@@ -187,7 +188,21 @@ export async function getSessionById(sessionId: string) {
 
 export async function getSessionQuestionsWithStatus(sessionId: string, includeReveal = false) {
   const supabase = await createClient()
-  const { data, error } = await supabase
+  const { data: { user } } = await supabase.auth.getUser()
+  if (!user) throw new Error('Not authenticated')
+
+  // The answer columns are not readable by a signed-in learner, so the
+  // read runs with the service-role client. That bypasses RLS, so
+  // ownership is proven here rather than by policy.
+  const { data: session } = await supabase
+    .from('exam_sessions')
+    .select('user_id')
+    .eq('id', sessionId)
+    .maybeSingle()
+  if (!session || session.user_id !== user.id) throw new Error('Session not found')
+
+  const admin = createAdminClient()
+  const { data, error } = await admin
     .from('session_answers')
     .select(`
       id,

@@ -2,6 +2,7 @@
 
 import { randomUUID } from 'node:crypto'
 import { createClient, getAuthUser } from '@/lib/supabase/server'
+import { createAdminClient } from '@/lib/supabase/admin'
 import { revalidatePath } from 'next/cache'
 import { applySubjectEvidence } from '@/lib/mastery'
 
@@ -94,7 +95,11 @@ export async function submitOnboardingCheck(
   if (!user) throw new Error('Not authenticated')
   if (answers.length === 0 || answers.length > 5) throw new Error('Invalid submission')
 
-  const { data: questions } = await supabase
+  // The answer key is not readable by a signed-in learner, so grading
+  // reads it with the service-role client. The caller's identity was
+  // already proven above with the caller's own session.
+  const admin = createAdminClient()
+  const { data: questions } = await admin
     .from('questions')
     .select('id, correct_answer, subjects!inner(name)')
     .in('id', answers.map((a) => a.questionId))

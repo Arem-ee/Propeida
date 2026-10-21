@@ -2,6 +2,7 @@
 
 import { randomUUID } from 'node:crypto'
 import { createClient, getAuthUser } from '@/lib/supabase/server'
+import { createAdminClient } from '@/lib/supabase/admin'
 import { applySubjectEvidence, getNextReviews } from '@/lib/mastery'
 import { findPrerequisiteRepair } from '@/lib/practice'
 import { getNoteById } from '@/lib/notes'
@@ -441,7 +442,12 @@ export async function recordLessonAttempt(input: AttemptInput): Promise<{
     return { isCorrect: false, graded: false, correctAnswer: '', explanation: '', misconception: null, prerequisite: null }
   }
 
-  const { data: question, error: qError } = await supabase
+  // The answer key is not readable by a signed-in learner, so it is read
+  // with the service-role client. The caller's identity was already
+  // proven above with the caller's own session, and only the fields this
+  // action chooses to return ever leave the server.
+  const admin = createAdminClient()
+  const { data: question, error: qError } = await admin
     .from('questions')
     .select('id, correct_answer, explanation, response_type')
     .eq('id', input.questionId)

@@ -2,6 +2,9 @@ import type { NextConfig } from 'next'
 
 const isDev = process.env.NODE_ENV === 'development'
 const scriptSrc = `'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ''} https://js.paystack.co https://www.googletagmanager.com`
+// Which build is live. Vercel sets the commit sha at build time, so this
+// identifies the running deployment without guessing.
+const commit = process.env.VERCEL_GIT_COMMIT_SHA ?? 'local'
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
@@ -26,6 +29,7 @@ const nextConfig: NextConfig = {
       {
         source: '/(.*)',
         headers: [
+          { key: 'X-App-Commit', value: commit },
           { key: 'X-Content-Type-Options', value: 'nosniff' },
           { key: 'X-Frame-Options', value: 'DENY' },
           { key: 'X-DNS-Prefetch-Control', value: 'on' },
