@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next'
+import { articles } from '@/lib/blog'
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://propeida.online'
 
@@ -7,6 +8,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: baseUrl, lastModified: new Date(), changeFrequency: 'weekly', priority: 1 },
     { url: `${baseUrl}/unilorin-putme`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/post-utme-past-questions`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${baseUrl}/blog`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
+    ...articles.map((article) => ({
+      url: `${baseUrl}/blog/${article.slug}`,
+      lastModified: new Date(article.publishedAt),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    })),
     { url: `${baseUrl}/features`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/pricing`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/about`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },

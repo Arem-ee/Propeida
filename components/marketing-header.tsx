@@ -12,6 +12,7 @@ export default function MarketingHeader() {
   const navItems = [
     { label: 'Practice', href: '/practice' },
     { label: 'Exams', href: '/#exams' },
+    { label: 'Guides', href: '/blog' },
     { label: 'Pricing', href: '/pricing' },
   ]
 

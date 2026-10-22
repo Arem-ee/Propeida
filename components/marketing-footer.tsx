@@ -108,7 +108,7 @@ export default function MarketingFooter() {
                 <Link href="/#exams" className={linkClass}>Exams we cover</Link>
               </li>
               <li>
-                <Link href="/#blog" className={linkClass}>Guides</Link>
+                <Link href="/blog" className={linkClass}>Guides</Link>
               </li>
             </ul>
           </div>
