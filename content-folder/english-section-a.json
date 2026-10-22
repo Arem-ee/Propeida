@@ -1,0 +1,1356 @@
+{
+  "_note": "Authoring source for Use of English Section A (JAMB: Comprehension and Summary). Seeded into lesson_blocks by scripts/seed-english-section-a.mjs. Evidence is declared as substrings and resolved to character offsets at seed time, so a passage edit can never leave a question pointing at the wrong sentence.",
+  "lessons": [
+    {
+      "slug": "passage-description",
+      "title": "Description Passages",
+      "objective": "identify main points/topic sentences in passages",
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "What a description passage does",
+            "paragraphs": [
+              "A description passage paints a picture of a person, a place, a thing or a moment. It is not telling you a story and it is not arguing a case. Its whole job is to make you see and feel something accurately, and everything in it — the order of details, the sensory words, the exact size and shape — is chosen to serve that single purpose.",
+              "Because the passage has no plot and no argument, its centre of gravity is the topic sentence. That is the sentence doing the describing, and everything after it is detail hanging off that sentence. Find the topic sentence and you have already answered most of the questions about the whole passage before you read a single option."
+            ],
+            "bullets": [
+              "A description passage has no story and no argument — it makes you see something accurately.",
+              "Its topic sentence is the one doing the describing; the rest is detail hanging off it.",
+              "Find the topic sentence first and the 'about the whole passage' questions fall before you read the options."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "How to recognise one",
+            "paragraphs": [
+              "Description passages almost always open with a wide shot and then narrow: the whole thing first, then the parts. The first sentence gives you the subject and its scale — a mound, a market, a particular street — and each following sentence tightens the focus until you are looking at something small and exact.",
+              "They also lean hard on sensory language. Not decorative language — precise language. A description will tell you the colour, the texture, the temperature, the sound, the number. If a passage gives you measurements, colours, directions and temperatures, it is a description. If it gives you a sequence of events, it is narration. If it gives you signposting words like first, then, finally and as a result, it is exposition."
+            ],
+            "bullets": [
+              "Description opens wide and narrows: the whole subject first, then the parts.",
+              "It leans on sensory and precise language — colour, texture, temperature, sound, number.",
+              "Sequence of events means narration. Signposting words means exposition. Neither means description."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Where the answers sit",
+            "paragraphs": [
+              "Three question types dominate a description passage, and each has a predictable home.",
+              "Questions about the whole passage ask for the main point, and the answer is the topic sentence or the idea it supports. Questions about a part ask for a detail, and the answer is stated flatly somewhere in the paragraph — you find it by scanning for the noun in the question. Inference questions ask for something the passage does not say outright, and the answer is the one option that the passage makes more likely without asserting it."
+            ],
+            "bullets": [
+              "About-the-passage questions answer to the topic sentence or the idea it supports.",
+              "Detail questions are stated flatly — scan for the noun in the question.",
+              "Inference answers are the option the passage makes more likely without asserting."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "How JAMB uses it",
+            "paragraphs": [
+              "JAMB sets one passage of about two hundred words that reflects some discipline — science, history, agriculture, economics — and asks five questions on it. The discipline is there to stop you guessing from prior knowledge and to make you read what is in front of you. That is the trap: candidates who recognise the subject think they know the answer, and then miss the detail the passage actually gives.",
+              "Your method should be the same whether or not you know the discipline. Read once for the topic sentence. Read again for the details the questions name. Then answer."
+            ],
+            "bullets": [
+              "One ~200-word passage from some discipline, five questions on it.",
+              "The discipline is there to stop you guessing from knowledge instead of reading.",
+              "Read once for the topic sentence, once for the details, then answer."
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "In a description passage, the first sentence is usually the topic sentence and the last sentence usually carries the writer's attitude. Read those two twice, and the middle once. If you can name the subject from the first line, you already know what every question is about."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A description passage opens: 'The old market hall is a wide, low building of red brick, its roofline broken by a row of small ventilator turrets.' Below it: 'Inside, the noise is constant... The traders have occupied the same pitch for three generations.' A question asks: 'The passage mainly describes' — A the history of the market, B the physical and sensory character of the market hall, C how the traders are supervised, D why the market is closing.",
+            "steps": [
+              {
+                "operation": "Decide what kind of passage this is",
+                "reason": "There is no sequence of events to follow and no case being argued, so it cannot be narration or exposition.",
+                "result": "It is a description: a building, what it looks like, what it is like inside.",
+                "predictPrompt": "What does the first sentence actually give you — a picture, an event, or an argument?"
+              },
+              {
+                "operation": "Find the topic sentence",
+                "reason": "The sentence doing the describing is the one that names the subject and its character.",
+                "result": "'The old market hall is a wide, low building of red brick...' — that is the whole passage in one line.",
+                "predictPrompt": "Now which option says the same thing as that line?"
+              },
+              {
+                "operation": "Eliminate the options that describe something else",
+                "reason": "An option can be true of the passage without being what the passage is about. History appears later; supervision appears nowhere.",
+                "result": "A is true of the passage but is not its main purpose. C is not in the passage at all. D is not in the passage at all.",
+                "predictPrompt": "Which surviving option describes the subject rather than one detail of it?"
+              },
+              {
+                "operation": "Choose the option that matches the topic sentence",
+                "reason": "The main-point option always restates what the topic sentence describes, not what it mentions.",
+                "result": "B — the physical and sensory character of the market hall.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Try this one: a passage opens, 'The Weaver's workshop is long and narrow, and every surface in it is grey with dust — the bench, the walls, the open windows.' It continues, 'By nine, the place is loudest...' A question asks which statement about the writer's attitude to the workshop is best supported. What do the details of grey dust and the noise suggest?",
+            "hints": [
+              "The details are all about one thing: what it is like to be there.",
+              "Grey, long, narrow, loud — is the writer selling the workshop or describing it honestly?",
+              "The answer is the one option the passage makes more likely without ever saying it outright."
+            ]
+          }
+        },
+        {
+          "type": "passage",
+          "content": {
+            "title": "The Termite Mound",
+            "purpose": "what the mound looks like, and what the old man meant by 'a process'",
+            "paragraphs": [
+              "The mound stands at the edge of the farm like a small hill, four metres high and wider at the base than a two-storey house. Its walls are grey-brown and fired hard by the sun, and the surface is furrowed into vertical ribs that catch the light. Inside, the temperature holds steady at around thirty degrees whatever the weather outside, and the air moves in slow currents through vents near the top.",
+              "What looks like a lump of earth is a city. It holds thousands of workers, a queen who may live for a decade, and a nursery where the young are tended. There are no doors and no corridors in the ordinary sense; the tunnels widen into chambers and narrow again, and the whole structure breathes. Air drawn in through lower openings at the foot of the mound cools as it descends, which is why the temperature at the base can be twenty degrees lower than on the bare ground outside.",
+              "An old man in the village told me that his grandfather used to break open a small mound to take the clay for his walls, and that the colony rebuilt what was taken within a season. He was not boasting about the termites. He was telling me that the mound was not a thing but a process — something that keeps happening as long as nobody stops it."
+            ],
+            "questions": [
+              {
+                "question": "The writer's main purpose in describing the mound is to",
+                "skill": "main idea",
+                "options": [
+                  { "key": "A", "text": "show that a mound is far more complex than its appearance suggests" },
+                  { "key": "B", "text": "warn readers against disturbing termite mounds on farmland" },
+                  { "key": "C", "text": "explain step by step how termites build their mounds" },
+                  { "key": "D", "text": "compare termite mounds with the houses of the village" }
+                ],
+                "answer": "A",
+                "explanation": "The passage is not a warning and not a comparison. The third paragraph drives the point home: the mound is 'not a thing but a process'. Everything from 'four metres high' to 'a nursery where the young are tended' builds the contrast between plain appearance and hidden complexity.",
+                "evidenceStrings": [
+                  { "paragraph": 1, "text": "What looks like a lump of earth is a city" },
+                  { "paragraph": 2, "text": "the mound was not a thing but a process" }
+                ]
+              },
+              {
+                "question": "According to paragraph 2, the temperature inside the mound stays steady because",
+                "skill": "detail",
+                "options": [
+                  { "key": "A", "text": "air drawn in through openings near the base cools as it descends" },
+                  { "key": "B", "text": "the outer walls reflect the heat of the sun away from the interior" },
+                  { "key": "C", "text": "the queen controls the temperature of the whole colony" },
+                  { "key": "D", "text": "the tunnels are dug deep enough to reach damp ground" }
+                ],
+                "answer": "A",
+                "explanation": "The passage gives the mechanism explicitly: air enters low and cools on the way down. There is nothing about reflection, a regulating queen, or damp ground.",
+                "evidenceStrings": [
+                  { "paragraph": 1, "text": "Air drawn in through lower openings at the foot of the mound cools as it descends" }
+                ]
+              },
+              {
+                "question": "The old man's remark that the mound was 'not a thing but a process' suggests that he",
+                "skill": "inference",
+                "options": [
+                  { "key": "A", "text": "regards the colony's capacity to rebuild as more important than the structure" },
+                  { "key": "B", "text": "had never seen a termite mound before the writer arrived" },
+                  { "key": "C", "text": "wanted the writer to move on so that the mound would not be disturbed" },
+                  { "key": "D", "text": "believes termite mounds are dangerous to village farmland" }
+                ],
+                "answer": "A",
+                "explanation": "He had just described his grandfather taking clay and the colony replacing it within a season. 'Not a thing but a process' is the conclusion he draws from that rebuilding — the point is what keeps happening, not what stands there.",
+                "evidenceStrings": [
+                  { "paragraph": 2, "text": "the colony rebuilt what was taken within a season" },
+                  { "paragraph": 2, "text": "the mound was not a thing but a process" }
+                ]
+              },
+              {
+                "question": "The word 'furrowed' in paragraph 1 is closest in meaning to",
+                "skill": "vocabulary in context",
+                "options": [
+                  { "key": "A", "text": "grooved" },
+                  { "key": "B", "text": "flooded" },
+                  { "key": "C", "text": "split open" },
+                  { "key": "D", "text": "polished" }
+                ],
+                "answer": "A",
+                "explanation": "The sentence continues 'into vertical ribs that catch the light'. Ribs are grooves, and grooves catch light on their edges.",
+                "evidenceStrings": [
+                  { "paragraph": 0, "text": "the surface is furrowed into vertical ribs" }
+                ]
+              },
+              {
+                "question": "The writer's phrase 'What looks like a lump of earth is a city' works by",
+                "skill": "figures of speech",
+                "options": [
+                  { "key": "A", "text": "setting the plain appearance against the complexity underneath" },
+                  { "key": "B", "text": "hiding the writer's opinion behind plain words" },
+                  { "key": "C", "text": "repeating a sound for effect" },
+                  { "key": "D", "text": "claiming the mound is literally a town" }
+                ],
+                "answer": "A",
+                "explanation": "It is a contrast, not a literal claim: 'looks like' sets up the plain appearance, and the second half reveals what it actually contains. The following paragraph supplies the evidence for that contrast.",
+                "evidenceStrings": [
+                  { "paragraph": 1, "text": "What looks like a lump of earth is a city" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "type": "reflection",
+          "content": {
+            "prompt": "In The Termite Mound, you had to infer what the old man meant by 'not a thing but a process'. Write down the exact sentence you tapped as evidence, and the exact sentence you would have needed instead if your tap had been wrong. Which one did you find faster — the evidence sentence or the answer option?",
+            "modelResponse": "A strong answer names the sentence you tapped ('the colony rebuilt what was taken within a season'), the reason that sentence settles the question (it shows rebuilding, so the mound is an ongoing activity), and a fallback — what you would look for if the tap had failed (the phrase 'not a thing but a process' itself). If you also noticed that you read the options faster than the passage, that is worth knowing: it means you are at risk of choosing the option you recognise rather than the one the passage supports."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "passage-narration",
+      "title": "Narration Passages",
+      "objective": "identify main points/topic sentences in passages",
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "What a narration passage does",
+            "paragraphs": [
+              "A narration passage tells a story: something happens, in an order, to someone. Its defining feature is not the events themselves but the order they arrive in. The passage is built around a turning point — the moment the situation changes — and the questions are usually about what caused it and what it led to.",
+              "Because the events are ordered, a narration passage rewards a different reading strategy than a description. You are not looking for one topic sentence that holds the whole thing; you are building a chain, and the questions ask you where a link in the chain sits."
+            ],
+            "bullets": [
+              "Narration tells a story: something happens, in an order, to someone.",
+              "Its spine is the turning point — the moment the situation changes.",
+              "Build the chain of events; the questions ask where a link sits."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "How to recognise one",
+            "paragraphs": [
+              "Look for time moving. Words like one day, at six, by nine, when the, until, after that and at last mark a passage as narrative even when no explicit dates appear. Then look for cause and effect: because, so, until, which is why.",
+              "Narrations also carry a narrator, and the narrator's view is the passage's opinion. Whether that narrator is a character inside the story or a voice outside it, the attitudes in the passage belong to them, and the questions about mood and opinion are asking about that voice."
+            ],
+            "bullets": [
+              "Time words — one day, at six, by nine, at last — mark a passage as narrative.",
+              "Cause and effect words — because, so, until — mark the chain.",
+              "Every narration has a narrator, and the questions about mood are asking about that voice."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Where the answers sit",
+            "paragraphs": [
+              "Three questions come up again and again in narrations. Which came first? Which event caused the change? And what does the ending suggest the writer wants you to feel?",
+              "The first two are answered by the order of the sentences. Read the passage once as a list of events with no detail, and the order is usually obvious. The third is answered by the final image, which is nearly always doing the work the whole passage has been setting up. In a narration, the last paragraph is not decoration — it is the point of the passage."
+            ],
+            "bullets": [
+              "Order questions: read the passage once as a bare list of events and the order is obvious.",
+              "Cause questions: find the sentence whose consequence the next sentence describes.",
+              "Mood questions: the final image is the point of the whole passage, not decoration."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "How JAMB uses it",
+            "paragraphs": [
+              "JAMB's narration is usually a story of ordinary life — a journey, a family, a school, a piece of luck or misfortune — rather than history or politics. Around two hundred words, and again from some discipline: a passage about a flooded road is a narrative; a passage about how a flood forms is exposition, even though both mention water.",
+              "The distinction is worth holding firmly, because the questions in the two are different. In a narration the answer to 'why did this happen' is an event. In an exposition it is a process."
+            ],
+            "bullets": [
+              "JAMB's narrations are usually ordinary life — a journey, a family, a school.",
+              "A story about a flooded road is narrative; a passage about how floods form is exposition.",
+              "In narration 'why did this happen' is answered by an event, in exposition by a process."
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "In a narration, the last paragraph is the answer to the mood question. Read it on its own — as a paragraph about nothing but the ending — and ask what it makes you feel. Then match that feeling to the options."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A narration passage runs: 'The lorry had been due at dawn... By the time the driver finally turned onto the road, the market had already started without him.' Then: 'He unloaded what he had and went home.' A question asks what the ending suggests about the driver's feelings.",
+            "steps": [
+              {
+                "operation": "Find the turning point",
+                "reason": "The change happens where the lorry's arrival is missed, not where the driver finally comes.",
+                "result": "The market started without him — that is the moment the situation changes.",
+                "predictPrompt": "Which sentence actually changes the situation?"
+              },
+              {
+                "operation": "Read the last paragraph alone",
+                "reason": "In a narration the closing paragraph carries the mood, and it is easier to judge in isolation.",
+                "result": "'He unloaded what he had and went home.' Flat, no comment, no complaint.",
+                "predictPrompt": "Does the writer say how he felt, or does the telling do it?"
+              },
+              {
+                "operation": "Read the flatness as the feeling",
+                "reason": "Writers of simple narrations rarely announce an emotion; they describe the action and let the absence of comment carry the weight.",
+                "result": "The feeling is resignation — he does the job, says nothing, goes home.",
+                "predictPrompt": "Which option says resignation rather than anger, indifference or relief?"
+              },
+              {
+                "operation": "Match it to the option",
+                "reason": "The correct option states the feeling the passage supports, not one it merely permits.",
+                "result": "The option about quiet disappointment or resignation.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A narration ends like this: 'She counted the money twice, put it in the tin, and turned the key.' The question asks what the ending mainly suggests. What has the writer told you about her that the ending depends on — and what has he not told you that the question is therefore not asking?",
+            "hints": [
+              "Counting twice tells you something about the state of her mind.",
+              "Now ask what the passage never explains — is she saving, paying, stealing, or being careful?",
+              "The right option is the one the ending supports without needing that missing fact."
+            ]
+          }
+        },
+        {
+          "type": "passage",
+          "content": {
+            "title": "The Night the Road Flooded",
+            "purpose": "why the writer remembers that night, and what the final image means",
+            "paragraphs": [
+              "The rain started at four in the afternoon and did not stop. By six, the road out of Ijebu-Ode had become a shallow river running brown between the grass verges, and the buses had stopped climbing it. My mother decided we would walk. She tied my books in a plastic bag, put the bag over her head, and told me to hold her sleeve.",
+              "We got perhaps two hundred metres before the light went. The transformer had failed earlier in the day, and the whole street sat in the dark while the rain hammered the zinc roofs. Then the generators started, one after another, and the street filled with a ragged orange light that made everything look like a photograph of itself. We waited under a woman's awning for an hour, watching the water carry a plastic chair past us.",
+              "At nine o'clock my father came back for us in a borrowed pickup, and we rode home with the water breaking around the wheels. I remember thinking, absurdly, that the exam on Thursday was the problem to be worried about. My mother said nothing. She was holding the plastic bag very tightly, and the books inside it were already wet."
+            ],
+            "questions": [
+              {
+                "question": "The turning point of the narrative comes when",
+                "skill": "sequence",
+                "options": [
+                  { "key": "A", "text": "the family sets out walking in the failing light" },
+                  { "key": "B", "text": "the rain finally eases" },
+                  { "key": "C", "text": "the pickup arrives at nine o'clock" },
+                  { "key": "D", "text": "the transformer fails during the afternoon" }
+                ],
+                "answer": "A",
+                "explanation": "The transformer failing is what made the walk necessary, and the pickup only reverses the difficulty. The moment the situation actually changes for the family is the decision to walk, which is also the last thing they can control.",
+                "evidenceStrings": [
+                  { "paragraph": 0, "text": "My mother decided we would walk" },
+                  { "paragraph": 1, "text": "We got perhaps two hundred metres before the light went" }
+                ]
+              },
+              {
+                "question": "Why did the mother put the books in a plastic bag over her head?",
+                "skill": "detail",
+                "options": [
+                  { "key": "A", "text": "to keep the books dry" },
+                  { "key": "B", "text": "to carry more than she could hold" },
+                  { "key": "C", "text": "to keep the books out of sight" },
+                  { "key": "D", "text": "to weigh the bag down against the wind" }
+                ],
+                "answer": "A",
+                "explanation": "The bag goes over her head in heavy rain, and at the end the books inside it are wet. The intention is unambiguous even though the outcome fails.",
+                "evidenceStrings": [
+                  { "paragraph": 0, "text": "She tied my books in a plastic bag, put the bag over her head" },
+                  { "paragraph": 2, "text": "the books inside it were already wet" }
+                ]
+              },
+              {
+                "question": "The final image of the wet books mainly suggests",
+                "skill": "inference",
+                "options": [
+                  { "key": "A", "text": "the family's preparation has been damaged, and something larger is at stake" },
+                  { "key": "B", "text": "the books were of little value to the family" },
+                  { "key": "C", "text": "the family did not care about the coming examination" },
+                  { "key": "D", "text": "the rain will stop before Thursday" }
+                ],
+                "answer": "A",
+                "explanation": "The narrator calls the worry about Thursday's exam 'absurd', and the mother says nothing while gripping the bag. The books being wet is the concrete loss; the 'absurdly' and the silence are what tell you the real subject of the passage is not the exam.",
+                "evidenceStrings": [
+                  { "paragraph": 2, "text": "the exam on Thursday was the problem to be worried about" },
+                  { "paragraph": 2, "text": "She was holding the plastic bag very tightly" }
+                ]
+              },
+              {
+                "question": "The writer's attitude towards the mother's silence at the end is best described as",
+                "skill": "tone",
+                "options": [
+                  { "key": "A", "text": "affectionate and rueful" },
+                  { "key": "B", "text": "resentful" },
+                  { "key": "C", "text": "indifferent" },
+                  { "key": "D", "text": "anxious" }
+                ],
+                "answer": "A",
+                "explanation": "He notices exactly what she did and did not do, calls his own worry 'absurdly', and remembers the image. That is fondness looking back, not resentment.",
+                "evidenceStrings": [
+                  { "paragraph": 2, "text": "I remember thinking, absurdly" },
+                  { "paragraph": 2, "text": "My mother said nothing" }
+                ]
+              },
+              {
+                "question": "In paragraph 2, 'a ragged orange light' is used to suggest the light was",
+                "skill": "vocabulary in context",
+                "options": [
+                  { "key": "A", "text": "uneven and unsteady" },
+                  { "key": "B", "text": "bright and clear" },
+                  { "key": "C", "text": "the colour of the sky" },
+                  { "key": "D", "text": "dangerous to look at" }
+                ],
+                "answer": "A",
+                "explanation": "'Ragged' is the giveaway, and the cause is given in the previous clause: many generators starting one after another, each throwing a slightly different light.",
+                "evidenceStrings": [
+                  { "paragraph": 1, "text": "the generators started, one after another" },
+                  { "paragraph": 1, "text": "a ragged orange light" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "type": "reflection",
+          "content": {
+            "prompt": "In The Night the Road Flooded, the writer says the exam was 'the problem to be worried about' — absurdly. Write the ending of the story in one sentence, as you would summarise it, and say whether your summary kept or lost what the final image is really about. Then name one question you would ask if you were the examiner.",
+            "modelResponse": "A strong answer summarises the events in order (flood, walk in the dark, rescue, wet books), then admits which part the summary lost — the fact that the narrator's worry was 'absurd' because the real worry was his mother's silence and the family's preparation. A strong examiner question would ask which detail in paragraph 1 is the writer's judgement rather than the scene, because that tests whether the candidate can hear a narrator's voice inside a narration. If your summary kept the emotional turn, your examiner question will be sharper."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "passage-exposition",
+      "title": "Exposition Passages",
+      "objective": "identify the grammatical functions of words, phrases, clauses and figurative/idiomatic expressions",
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "What an exposition passage does",
+            "paragraphs": [
+              "An exposition passage explains how something works, why something happens, or how two things compare. Its purpose is to make a reader understand a mechanism, and it does that by taking the reader through the steps in a deliberate order.",
+              "The passage is organised, not merely arranged. Every paragraph does one job, and the order of the paragraphs is the argument. That is why the questions in an exposition passage so often ask about order and connection rather than about facts."
+            ],
+            "bullets": [
+              "Exposition explains a mechanism — how it works, why it happens, how two things compare.",
+              "Each paragraph does one job, and the order of the paragraphs is the argument.",
+              "The questions ask about order and connection, not just facts."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "How to recognise one",
+            "paragraphs": [
+              "Signposting words are the giveaway: first, then, next, finally, as a result, consequently, in contrast, likewise, for example. Expositions use them heavily because the writer knows the reader is following a sequence and needs to be told where they are in it.",
+              "Second giveaway: the passage defines things. An exposition almost always names a term and then explains it — a solar cooker is defined and then explained; a process is named and then traced. If you find yourself reading definitions and cause-and-effect chains, you are in an exposition."
+            ],
+            "bullets": [
+              "Signposting words — first, then, finally, as a result, in contrast — are the giveaway.",
+              "Expositions name a term and then explain it.",
+              "Definitions and cause-and-effect chains mean exposition, not narration."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Where the answers sit",
+            "paragraphs": [
+              "Detail questions in an exposition are answered flatly from the relevant paragraph. Order questions are answered by where a step sits in the signposted sequence. And the hardest type — the coherence question — asks you why one step has to come before another, which means you have to hold two paragraphs in mind at once.",
+              "The coherence questions are where expository passages earn their difficulty. The answer is always the one that names a real dependency: you cannot measure the effect before you have described the cause, you cannot compare two things before you have described either."
+            ],
+            "bullets": [
+              "Detail questions: flatly stated in the relevant paragraph.",
+              "Order questions: where the step sits in the signposted sequence.",
+              "Coherence questions: the option naming a real dependency — cause before effect, both before comparison."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "How JAMB uses it",
+            "paragraphs": [
+              "JAMB's expository passages are usually about a scientific, technical or economic process — how something works or how something is made. Two hundred words, and quite dense, because an exposition cannot waste a word.",
+              "The questions follow the structure: one on the main idea, one or two on detail, one on vocabulary in context, and one on the order or connection between steps. Learn to read the signposts: they are not decoration, they are the structure of the passage and they are where the order question is answered."
+            ],
+            "bullets": [
+              "JAMB's expositions are usually scientific, technical or economic processes.",
+              "One main-idea question, one or two details, one vocabulary, one on order or connection.",
+              "The signposts are the structure — that is where the order question is answered."
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Write the signposting words down as you read an exposition — first, then, as a result — and number the steps. When the order question comes, you will have the answer before you read the options, and you can rule out every option that puts a later step before an earlier one."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "An exposition passage runs: 'First, the tube is filled with water... Next, the flame is placed beneath it... As a result, the water rises in the tube.' A question asks: 'Why must the filling step come before the heating step?'",
+            "steps": [
+              {
+                "operation": "Locate the steps",
+                "reason": "The signposting words mark them: first, next, as a result.",
+                "result": "Three steps — fill, heat, rise.",
+                "predictPrompt": "What does 'as a result' tell you about the relationship between step three and the others?"
+              },
+              {
+                "operation": "Name the dependency",
+                "reason": "You cannot heat what is not there, and you cannot see a rise in an empty tube. The cause has to exist before the effect can be observed.",
+                "result": "Filling must precede heating, which must precede the observed rise.",
+                "predictPrompt": "So what is the rule the correct option will state?"
+              },
+              {
+                "operation": "Test the options against the rule",
+                "reason": "An option that says heating may come first, or that the order does not matter, contradicts the passage's own causal chain.",
+                "result": "Only the option saying the tube must contain water before heating can produce the described result survives.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "An exposition explains how a water pump lifts water from a borehole. It says, 'First, the piston descends, drawing water into the cylinder. Then the valves close and the piston rises, pushing the water up the pipe.' A question asks why the valves must close before the piston rises. Work out the dependency before you look at any option.",
+            "hints": [
+              "What happens if the valves stayed open while the piston rose?",
+              "The piston rising pushes water up the pipe — but what does it push it into if the valve is still open?",
+              "The correct option states the dependency, not just the sequence."
+            ]
+          }
+        },
+        {
+          "type": "passage",
+          "content": {
+            "title": "How a Solar Cooker Works",
+            "purpose": "how the cooker traps heat, and why the design is shaped the way it is",
+            "paragraphs": [
+              "A solar cooker does not burn fuel. It traps the heat of the sun and traps it well enough to boil water, and the whole device is an exercise in controlling where that heat goes. The simplest type, the box cooker, is built from a wooden or cardboard frame, a sheet of glass for a lid, and black-painted metal plates inside. Sunlight passes through the glass and lands on the dark plates; the glass lets the short, visible wavelengths in and holds back the longer, infrared ones, so the temperature inside climbs past what it would be in an open pan.",
+              "The second part of the design is insulation. The box is lined with a material that conducts heat poorly, so the heat the plates have collected is not lost quickly through the sides. Reflection plays its part too: a polished mirror or a sheet of aluminium foil on the lid bounces stray light back down onto the food instead of letting it escape through the glass.",
+              "For most of the day the cooker stores more heat than it uses. That surplus is why solar cooking is done at midday rather than at night, and why a pot in a solar cooker must be dark on the outside and have a tight-fitting lid: the heat must go into the food, not into the kitchen."
+            ],
+            "questions": [
+              {
+                "question": "The main idea of the passage is that",
+                "skill": "main idea",
+                "options": [
+                  { "key": "A", "text": "a solar cooker works by trapping and directing solar heat" },
+                  { "key": "B", "text": "solar cooking is cheaper than cooking with gas" },
+                  { "key": "C", "text": "the glass lid is the most important part of a cooker" },
+                  { "key": "D", "text": "solar cookers cannot be used in hot countries" }
+                ],
+                "answer": "A",
+                "explanation": "The opening sentence states it — 'the whole device is an exercise in controlling where that heat goes' — and each paragraph then explains one way of controlling it: trapping, insulation and reflection.",
+                "evidenceStrings": [
+                  { "paragraph": 0, "text": "the whole device is an exercise in controlling where that heat goes" }
+                ]
+              },
+              {
+                "question": "The phrase 'The second part of the design' tells the reader that",
+                "skill": "coherence",
+                "options": [
+                  { "key": "A", "text": "the writer is moving to another stage of the explanation" },
+                  { "key": "B", "text": "a solar cooker is made of exactly two parts" },
+                  { "key": "C", "text": "the writer disagrees with the paragraph before it" },
+                  { "key": "D", "text": "the cooker described here is incomplete" }
+                ],
+                "answer": "A",
+                "explanation": "It is a signpost. It tells you the writer is continuing the explanation and moving on to another aspect of it — trapping was the first part, insulation is the second. The cooker is not two parts; it is a frame, a lid, plates and lining.",
+                "evidenceStrings": [
+                  { "paragraph": 1, "text": "The second part of the design is insulation" }
+                ]
+              },
+              {
+                "question": "The glass lid helps the cooker work because",
+                "skill": "detail",
+                "options": [
+                  { "key": "A", "text": "it allows visible light in while holding back infrared heat" },
+                  { "key": "B", "text": "it reflects sunlight down onto the plates" },
+                  { "key": "C", "text": "it keeps rain off the food" },
+                  { "key": "D", "text": "it prevents the pot from being knocked" }
+                ],
+                "answer": "A",
+                "explanation": "Stated directly: 'the glass lets the short, visible wavelengths in and holds back the longer, infrared ones'. Reflection is the job of the mirror or foil, which the passage gives separately.",
+                "evidenceStrings": [
+                  { "paragraph": 0, "text": "the glass lets the short, visible wavelengths in and holds back the longer, infrared ones" }
+                ]
+              },
+              {
+                "question": "The instruction that the pot must be 'dark on the outside' is best understood as",
+                "skill": "inference",
+                "options": [
+                  { "key": "A", "text": "dark surfaces absorb heat rather than reflecting it away" },
+                  { "key": "B", "text": "dark pots are cheaper to manufacture" },
+                  { "key": "C", "text": "it makes the food look more appetising" },
+                  { "key": "D", "text": "it prevents the heat from scorching the food" }
+                ],
+                "answer": "A",
+                "explanation": "The passage has already set up the principle in paragraph 1: sunlight lands on black-painted plates, which then get hot. The same principle explains the instruction, and the closing line confirms the purpose — 'the heat must go into the food, not into the kitchen'.",
+                "evidenceStrings": [
+                  { "paragraph": 0, "text": "Sunlight passes through the glass and lands on the dark plates" },
+                  { "paragraph": 2, "text": "the heat must go into the food, not into the kitchen" }
+                ]
+              },
+              {
+                "question": "Solar cooking is recommended for midday mainly because",
+                "skill": "detail",
+                "options": [
+                  { "key": "A", "text": "the cooker stores surplus heat during the day" },
+                  { "key": "B", "text": "people are free to cook at midday" },
+                  { "key": "C", "text": "the wind is usually calmer at midday" },
+                  { "key": "D", "text": "solar cookers cannot work at night" }
+                ],
+                "answer": "A",
+                "explanation": "The passage says exactly this: 'For most of the day the cooker stores more heat than it uses. That surplus is why solar cooking is done at midday rather than at night.' D is wrong — the cooker works at night using stored heat, which is why the surplus matters.",
+                "evidenceStrings": [
+                  { "paragraph": 2, "text": "the cooker stores more heat than it uses" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "type": "reflection",
+          "content": {
+            "prompt": "In How a Solar Cooker Works, the passage explains trapping, then insulation, then reflection — but the order of explanation is not the order of importance. Which of the three would you put first if you were explaining a solar cooker to a beginner, and which sentence in the passage tells you the writer's own priority? Write the one-sentence rule you will use to spot order questions in expository passages.",
+            "modelResponse": "A strong answer names a rule that is a rule and not a preference — for example: 'in an exposition the signpost before a step tells you the writer's order, and the cause must come before the effect.' It should also acknowledge that trapping comes first because without trapping there is nothing to conserve, so the passage's order is defensible even if a teacher would start with the whole idea. If your answer says 'read carefully', that is not yet a rule — a rule has to tell you what to do with a specific word on the page."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "passage-argumentation",
+      "title": "Argumentation and Persuasion",
+      "objective": "deduce or infer the writers’ intentions including mood, attitude to the subject matter and opinion",
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "What an argumentation passage does",
+            "paragraphs": [
+              "An argumentation passage defends a position. It is not balanced — it is written to move you — and it works by taking a position, conceding the strongest objection, and then defeating that objection.",
+              "This is the structure that catches candidates. A passage that opens by praising a policy can still be arguing against it. And a passage that agrees with an option you like can still be arguing for the opposite. The structure tells you the verdict; the surface tells you the topic."
+            ],
+            "bullets": [
+              "Argumentation defends a position — it is not balanced.",
+              "The structure is: take a position, concede the strongest objection, defeat the objection.",
+              "Opening praise does not mean the writer supports the policy; the structure gives the verdict."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "How to recognise one",
+            "paragraphs": [
+              "Look for the argumentative move words. 'However', 'but', 'yet', 'in fact', 'the point is', 'the real question is', 'it is true that' are the writer telling you where the argument turns. A concession usually arrives in its own sentence, introduced by 'it is true that' or 'the difficulty is' — and it is followed by the killing move.",
+              "Then look at the closing. An argumentation passage almost always ends with the writer's recommendation, often as an instruction — 'build this first', 'stop doing that', 'change the rule'. The last sentence is the verdict."
+            ],
+            "bullets": [
+              "'However', 'but', 'yet', 'the point is' mark where the argument turns.",
+              "A concession arrives with 'it is true that' and is followed by the killing move.",
+              "The closing sentence is usually the verdict, often phrased as an instruction."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Where the answers sit",
+            "paragraphs": [
+              "The central claim question is answered by the last paragraph, not the first. The first paragraph sets up the problem; the last one tells you which side the writer is on. The concession question is answered by the sentence that introduces the objection. The mood question is answered by the words the writer uses about the opposing side — contempt, grudging respect, or plain statement.",
+              "The most valuable skill here is reading the writer's opinion rather than your own. If you think congestion charging is unfair, and the passage thinks it is right, you must still answer from the passage. Underline the writer's evaluative words — reasonable, wrong, absurd, cannot — and the position becomes visible."
+            ],
+            "bullets": [
+              "The central claim is in the last paragraph, not the first.",
+              "The concession question points to the sentence introducing the objection.",
+              "Read the writer's opinion, not yours: underline their evaluative words."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "How JAMB uses it",
+            "paragraphs": [
+              "JAMB's argumentative passages take a position on a civic, educational or social question — school uniforms, exam reform, road safety, money in politics. Around two hundred words, from some discipline, and usually on a question with a defensible answer on both sides.",
+              "Because both sides are defensible, the distractors are built from the other side. An option arguing the opposite case will sound perfectly reasonable, and you reject it because the writer did not argue it."
+            ],
+            "bullets": [
+              "JAMB's arguments are civic, educational or social questions with defensible answers on both sides.",
+              "Distractors are built from the other side — reasonable-sounding, but not the writer's argument.",
+              "You reject an option because the writer did not argue it, not because it is wrong."
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Write down the writer's position in your own words before you look at the options. If your sentence says 'the writer wants', you have found the claim. Options that argue the opposite case will then be obvious, even when they are reasonable."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A passage opens: 'There is no doubt that our roads are overcrowded and that something must change.' It continues: 'It is also true that the change must be affordable...' and ends: 'Improve the alternative first. Then restrict.' A question asks: 'The writer's purpose is to' — A argue that nothing should change, B show that a cheap charge alone cannot fix congestion, C prove that city centres should be closed to traffic, D explain how a particular road project was funded.",
+            "steps": [
+              {
+                "operation": "Mark the concession",
+                "reason": "The sentence beginning 'It is also true' grants something to the other side. That is the concession, not the claim.",
+                "result": "The concession is that the change must be affordable.",
+                "predictPrompt": "Is that sentence granting a point, or making the argument?"
+              },
+              {
+                "operation": "Read the closing as the verdict",
+                "reason": "An argumentation passage ends with the recommendation.",
+                "result": "'Improve the alternative first. Then restrict.' The priority is the alternative.",
+                "predictPrompt": "Which option puts the alternative first, as the closing does?"
+              },
+              {
+                "operation": "Test the remaining options",
+                "reason": "A contradicts the passage, C is an extreme position the writer never takes, D is a detail the passage does not contain.",
+                "result": "Only B survives: a cheap charge alone cannot fix congestion.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "An argumentative passage says: 'It would be easy to say the scheme has failed. The figures tell a different story, but they do not tell the whole one.' A question asks what the writer is doing at that point. Before you look at the options, decide: is the writer conceding, rebutting, or setting up a qualification?",
+            "hints": [
+              "'It would be easy to say' is not the writer's own view — whose view is it?",
+              "Then: the writer disagrees, but the disagreement is qualified by 'but they do not tell the whole one'.",
+              "So the writer is not simply refuting — the concession is doing real work. Which option says that?"
+            ]
+          }
+        },
+        {
+          "type": "passage",
+          "content": {
+            "title": "Banning Cars Is Not the Answer",
+            "purpose": "what the writer thinks cities should do first, and who the policy is really aimed at",
+            "paragraphs": [
+              "Every major city eventually reaches the same conclusion: the streets are full, the air is foul, and traffic has to be cut. The usual remedy is a ban or a charge — congestion charging, low-emission zones, odd-even restrictions. It is a reasonable-looking answer, and in several cities it has worked well.",
+              "It is also the wrong answer for most of the world. A ban assumes that the people who drive are the people who chose to drive, and that they can simply stop. In Lagos, a trader who drives between two markets at six in the morning, carrying goods that would cost more to move any other way, cannot be asked to take a bus that does not run at six. The policy is not aimed at the traffic; it is aimed at the schedule, and the schedule is not in the room.",
+              "That is not an argument against clean air. It is an argument against a single instrument. If the air in a city must improve, then the change has to reach the vehicles that cause the problem at the moment they cause it — and the cheapest way to do that in most cities is not to ban the car but to price the journey and to make the alternative a real one. Build the bus lane first. Then charge."
+            ],
+            "questions": [
+              {
+                "question": "The writer's central argument is that",
+                "skill": "main idea",
+                "options": [
+                  { "key": "A", "text": "cities should improve the alternative before they restrict driving" },
+                  { "key": "B", "text": "cities should ban private cars entirely" },
+                  { "key": "C", "text": "congestion charging has never worked anywhere" },
+                  { "key": "D", "text": "air quality in large cities cannot be improved" }
+                ],
+                "answer": "A",
+                "explanation": "The final paragraph is the verdict: 'not to ban the car but to price the journey and to make the alternative a real one. Build the bus lane first. Then charge.' The order of those two clauses is the argument.",
+                "evidenceStrings": [
+                  { "paragraph": 2, "text": "Build the bus lane first. Then charge." }
+                ]
+              },
+              {
+                "question": "The sentence 'It is also a reasonable-looking answer' shows the writer is",
+                "skill": "concession",
+                "options": [
+                  { "key": "A", "text": "granting a point in order to dispute it" },
+                  { "key": "B", "text": "changing his position" },
+                  { "key": "C", "text": "criticising the cities that adopted it" },
+                  { "key": "D", "text": "being deliberately sarcastic" }
+                ],
+                "answer": "A",
+                "explanation": "'Also' adds to what came before, and 'reasonable-looking' carefully marks the answer as appearing reasonable rather than being reasonable. The next sentence — 'It is also the wrong answer' — turns the concession against it.",
+                "evidenceStrings": [
+                  { "paragraph": 0, "text": "It is a reasonable-looking answer" },
+                  { "paragraph": 1, "text": "It is also the wrong answer for most of the world" }
+                ]
+              },
+              {
+                "question": "The phrase 'the schedule is not in the room' suggests that",
+                "skill": "inference",
+                "options": [
+                  { "key": "A", "text": "the people who set the policy do not understand the timings of the people it affects" },
+                  { "key": "B", "text": "the meeting at which the policy was made was badly organised" },
+                  { "key": "C", "text": "market traders are not permitted to attend public meetings" },
+                  { "key": "D", "text": "the policy ignores the volume of traffic" }
+                ],
+                "answer": "A",
+                "explanation": "'Room' is doing the work of 'the room where decisions are made'. The point being made is that the timetable of the traders — the schedule — has no voice in the decision that rearranges their day.",
+                "evidenceStrings": [
+                  { "paragraph": 1, "text": "The policy is not aimed at the traffic; it is aimed at the schedule, and the schedule is not in the room" }
+                ]
+              },
+              {
+                "question": "The closing 'Build the bus lane first. Then charge.' works by",
+                "skill": "figures of speech",
+                "options": [
+                  { "key": "A", "text": "reversing the expected order to make the writer's priority vivid" },
+                  { "key": "B", "text": "repeating a word purely for rhythm" },
+                  { "key": "C", "text": "offering the reader two equal options" },
+                  { "key": "D", "text": "quoting a government policy document" }
+                ],
+                "answer": "A",
+                "explanation": "The expected order is 'charge first, then provide the alternative'. Putting the bus lane first makes the priority unmistakable — and the short, blunt sentences give it the force of an instruction.",
+                "evidenceStrings": [
+                  { "paragraph": 2, "text": "Build the bus lane first. Then charge." }
+                ]
+              },
+              {
+                "question": "The overall tone of the passage is best described as",
+                "skill": "tone",
+                "options": [
+                  { "key": "A", "text": "reasoned and firm" },
+                  { "key": "B", "text": "angry" },
+                  { "key": "C", "text": "light-hearted" },
+                  { "key": "D", "text": "apologetic" }
+                ],
+                "answer": "A",
+                "explanation": "The writer concedes properly, gives a concrete case, and ends with a recommendation. There is no exclamation, no insult and no apology — the force comes from the reasoning, not the temperature.",
+                "evidenceStrings": [
+                  { "paragraph": 1, "text": "It is also the wrong answer for most of the world" },
+                  { "paragraph": 2, "text": "That is not an argument against clean air. It is an argument against a single instrument." }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "type": "reflection",
+          "content": {
+            "prompt": "The writer concedes that bans have 'worked well' in several cities, then argues against them for most of the world. Write down one reason the concession might make the argument stronger rather than weaker. Then find the sentence in the passage that proves the writer is not writing about Lagos alone.",
+            "modelResponse": "A strong answer identifies the risk of the concession — 'by admitting the policy works elsewhere, the writer makes it harder to dismiss the objection as ignorant' — and then quotes the scope phrase, 'It is also the wrong answer for most of the world'. A strong answer also notes that the concession makes the writer sound fair, which is why the closing instruction lands. If your reason was only 'it makes him look nice', push further: the concession is doing argumentative work, not just reputational work."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "summary-writing",
+      "title": "Summary Writing",
+      "objective": "synthesis of ideas from the passages",
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "What a summary question asks for",
+            "paragraphs": [
+              "Section A of Use of English gives you a passage of about two hundred words and five questions. One of them asks you to summarise it. The other four are ordinary comprehension questions on the same passage.",
+              "A summary question asks you to restate the passage's main points in your own words, as briefly as the question allows. It is not a question about a detail, and it is not an opinion question. It is a test of whether you can tell which parts of a passage carry the weight."
+            ],
+            "bullets": [
+              "One of the five questions on the Section A passage asks for a summary.",
+              "A summary restates the main points in your own words, as briefly as the question allows.",
+              "It is neither a detail question nor an opinion question."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "What JAMB actually asks you to write",
+            "paragraphs": [
+              "The instruction is usually: 'Summarise the passage in one sentence' or 'in two sentences' or 'in not more than ten words'. The number in the instruction is a hard limit, and JAMB marks against it.",
+              "The four marks for a summary question come from four things, roughly: the right number of sentences, the right length, the main point of each paragraph, and accurate wording. Losing a mark for writing three sentences when one was asked for is common and entirely avoidable."
+            ],
+            "bullets": [
+              "The instruction gives a number — one sentence, two sentences, ten words. Treat it as a hard limit.",
+              "The marks come from: right number of sentences, right length, main point per paragraph, accurate wording.",
+              "Writing three sentences when one was asked for is a mark lost for free."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "How to build one",
+            "paragraphs": [
+              "Do it in three moves. First, mark the main point of each paragraph in the margin — a single phrase, not a sentence, and never a quotation. Second, look at which paragraph carries the passage. In most passages it is the last one, because the passage usually ends by saying what it has been arguing towards, but not always, and the ones that do not are exactly the ones that catch people.",
+              "Third, write. One sentence per main point, using your own words, using the count you were given. If you are writing one sentence, you must cover the whole passage in one sentence, which means a subordinate clause is your friend: the passage is about X, but the writer argues Y."
+            ],
+            "bullets": [
+              "Mark one phrase per paragraph in the margin — never a quotation.",
+              "Find the paragraph that carries the passage; usually the last, but not always.",
+              "One sentence per main point, in your own words, in the number you were given."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "What loses marks",
+            "paragraphs": [
+              "Four things lose marks reliably. Quoting the passage instead of summarising it, because a summary must be in your own words. Listing every detail, because a summary drops what the passage mentions in passing. Adding your own opinion, because the summary question is not an opinion question. And adding information the passage does not contain, which is the same mistake as adding opinion and is marked the same way.",
+              "There is one more trap. If the passage's last paragraph is a quote from a character, a summary that reports the quote rather than what the passage is about will miss the mark that matters most."
+            ],
+            "bullets": [
+              "Quoting instead of summarising — a summary must be your own words.",
+              "Listing every detail instead of dropping what is mentioned in passing.",
+              "Adding opinion or outside information — both are marked the same way.",
+              "Reporting a character's final quote instead of what the passage is about."
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Count the sentences in your summary before you submit. If the instruction said one sentence and you have written two, cut the less important one. If it said two and you have one, add the paragraph you skipped. Most lost summary marks are counting errors, not comprehension errors."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A three-paragraph passage about a night market: how it grew, why it grew, and an uncertain future because the land is needed for a road. The instruction says: 'Summarise the passage in one sentence.'",
+            "steps": [
+              {
+                "operation": "Mark each paragraph's main point",
+                "reason": "You cannot choose what to keep until you know what each paragraph contributes.",
+                "result": "P1: the market has grown large. P2: it grew because it is cheap. P3: its future is uncertain — the land is needed for a road.",
+                "predictPrompt": "Which of those three is the passage about, rather than merely containing?"
+              },
+              {
+                "operation": "Find the paragraph that carries the passage",
+                "reason": "The passage usually ends by telling you what it has been driving at — here, the unresolved problem.",
+                "result": "The third paragraph carries it: the market works but may not survive.",
+                "predictPrompt": "So the summary must end where the passage ends. What must it say?"
+              },
+              {
+                "operation": "Compress into one sentence",
+                "reason": "One sentence with two halves lets you carry both the growth and the uncertainty.",
+                "result": "A fast-growing night market has drawn traders because it is cheap, but its future is uncertain because the land is needed for a road.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Here is a one-sentence summary: 'The passage describes a night market, its traders, its growth and its problems.' Which of the four things that lose marks does this commit, and what would you add to fix it?",
+            "hints": [
+              "Does the sentence say what happened, or does it just say what the passage is about?",
+              "The market's growth and the threat to the land are two different things — is either in your sentence?",
+              "Rewrite it with the market's situation and its uncertainty, in one sentence."
+            ]
+          }
+        },
+        {
+          "type": "passage",
+          "content": {
+            "title": "The Return of the Night Market",
+            "purpose": "what the market is, why it grew, and what could end it",
+            "paragraphs": [
+              "In the last four years, a night market has appeared on an unused strip of land behind the neighbourhood's old bus depot. It opens at seven in the evening and closes around two in the morning. On a Friday in March, a count by the market association found 214 stalls trading food, tailoring, phone repairs, hairdressing and second-hand clothes.",
+              "The market's organisers say its growth has been driven by the cost of rent elsewhere. A trader who paid forty thousand naira a month for a shop on the main road in 2023 pays six thousand for a table at the market. The market charges a small daily fee, which is collected by a rotating committee of traders rather than by the landowner, who has so far declined to sell the land.",
+              "Whether it lasts is unclear. The council has said the land is earmarked for a road project, and the traders have asked for a formal agreement. For now the market continues, and the planners have begun referring to it, slightly ruefully, as the thing that showed up before they did."
+            ],
+            "questions": [
+              {
+                "question": "Which of the following best summarises the passage?",
+                "skill": "summary",
+                "options": [
+                  { "key": "A", "text": "A night market has grown quickly because it is cheap, but its future is uncertain because the land is needed for a road." },
+                  { "key": "B", "text": "The council's road plans are being obstructed by traders who have refused to move." },
+                  { "key": "C", "text": "Traders at the market pay more for space than they would pay for a shop on the main road." },
+                  { "key": "D", "text": "Night markets are a common feature of Nigerian cities and cannot be regulated by councils." }
+                ],
+                "answer": "A",
+                "explanation": "A summary must carry the passage's main points in order: the market exists and is large, it grew because it is cheap, and its future is threatened by the road project. B misstates the passage — the council has not been obstructed, the traders have asked for an agreement. C inverts the rent figures. D is a generalisation the passage never makes.",
+                "evidenceStrings": [
+                  { "paragraph": 0, "text": "a count by the market association found 214 stalls" },
+                  { "paragraph": 1, "text": "its growth has been driven by the cost of rent elsewhere" },
+                  { "paragraph": 2, "text": "the land is earmarked for a road project" }
+                ]
+              },
+              {
+                "question": "The daily fee at the market is collected by",
+                "skill": "detail",
+                "options": [
+                  { "key": "A", "text": "a rotating committee of traders" },
+                  { "key": "B", "text": "the landowner who owns the land" },
+                  { "key": "C", "text": "the council" },
+                  { "key": "D", "text": "the old bus depot authority" }
+                ],
+                "answer": "A",
+                "explanation": "Stated directly, and with a deliberate contrast: 'collected by a rotating committee of traders rather than by the landowner'.",
+                "evidenceStrings": [
+                  { "paragraph": 1, "text": "collected by a rotating committee of traders rather than by the landowner" }
+                ]
+              },
+              {
+                "question": "The figure 214 in paragraph 1 refers to",
+                "skill": "detail",
+                "options": [
+                  { "key": "A", "text": "the number of stalls trading on that Friday" },
+                  { "key": "B", "text": "the number of separate traders" },
+                  { "key": "C", "text": "the market's income for the month" },
+                  { "key": "D", "text": "the number of customers counted" }
+                ],
+                "answer": "A",
+                "explanation": "'A count by the market association found 214 stalls trading food, tailoring, phone repairs...' The count is of stalls, and the list that follows are the kinds of trade at those stalls.",
+                "evidenceStrings": [
+                  { "paragraph": 0, "text": "a count by the market association found 214 stalls" }
+                ]
+              },
+              {
+                "question": "The phrase 'slightly ruefully' in the last paragraph suggests that the planners are",
+                "skill": "inference",
+                "options": [
+                  { "key": "A", "text": "annoyed that something appeared before they had planned for it" },
+                  { "key": "B", "text": "amused by the traders who built the market" },
+                  { "key": "C", "text": "sarcastic about the market's importance" },
+                  { "key": "D", "text": "relieved that the market will move on" }
+                ],
+                "answer": "A",
+                "explanation": "'Ruefully' means with regret. The regret is at being outmanoeuvred: the market 'showed up before they did'. The planners are not amused by the traders — they are rueful that a market arrived without their plan.",
+                "evidenceStrings": [
+                  { "paragraph": 2, "text": "the planners have begun referring to it, slightly ruefully, as the thing that showed up before they did" }
+                ]
+              },
+              {
+                "question": "In paragraph 3, 'earmarked' most nearly means",
+                "skill": "vocabulary in context",
+                "options": [
+                  { "key": "A", "text": "set aside for a particular purpose" },
+                  { "key": "B", "text": "measured" },
+                  { "key": "C", "text": "sold" },
+                  { "key": "D", "text": "disputed" }
+                ],
+                "answer": "A",
+                "explanation": "'The land is earmarked for a road project' means the land has been set aside for the road. The context — the council has said so, and the traders have asked for a formal agreement — confirms it.",
+                "evidenceStrings": [
+                  { "paragraph": 2, "text": "the land is earmarked for a road project" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "type": "reflection",
+          "content": {
+            "prompt": "Take the summary question in The Return of the Night Market. Write your own one-sentence summary now, before you look at the option. Then compare: which of your facts did option A carry that yours missed, and which did yours carry that A left out? An option that is correct is usually slightly longer than a candidate's first attempt — what was missing from yours?",
+            "modelResponse": "A strong answer identifies one specific missing element — usually the uncertainty ('the land is needed for a road') or the cause of the growth ('because it is cheap') — and explains why it matters: without the third paragraph, the summary reports a success story instead of the passage's actual subject, which is a market whose success may be temporary. If your summary was longer than the option, that is not a fault; but if it was longer and still missed the uncertainty, the summary was drifting into detail instead of tracking the passage's argument."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "cloze-test-technique",
+      "title": "The Cloze Test",
+      "objective": "identify the grammatical functions of words, phrases, clauses and figurative/idiomatic expressions",
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "What a cloze test is",
+            "paragraphs": [
+              "A cloze passage has gaps in it. Each gap is one missing word, and you decide which word belongs there. Ten gaps, ten marks, from a single passage of about two hundred words.",
+              "The trap is that a cloze passage looks like a comprehension passage and invites you to read it as one. You cannot. You do not know what the story is about until you have filled the gaps, and you cannot fill the gaps by understanding the story unless you already know the grammar."
+            ],
+            "bullets": [
+              "Ten gaps, ten marks, from one passage of about two hundred words.",
+              "You cannot read a cloze as a comprehension passage — the gaps have to be filled first.",
+              "Understanding the passage only helps once you already know the grammar."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "How to attack each gap",
+            "paragraphs": [
+              "Do not read the whole passage for meaning. Go to the gap. Read the sentence it sits in, and only that sentence, and ask what the sentence needs: a subject or a verb, an article or no article, a preposition, a particular tense, a singular or plural noun.",
+              "Then check the whole clause. Look left and right of the gap for the subject and the verb, and decide which of them the missing word must be. A gap that needs a verb is a gap you solve by finding the subject; a gap that needs a noun is a gap you solve by finding the verb. Deciding which one you need is most of the work."
+            ],
+            "bullets": [
+              "Go to the gap, not to the passage. Read the one sentence the gap sits in.",
+              "Ask what the sentence needs: a verb, a noun, an article, a preposition, a tense.",
+              "Find the subject to place a verb; find the verb to place a noun."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The seven gap types that cover almost everything",
+            "paragraphs": [
+              "Most JAMB cloze gaps fall into a small number of types, and if you can name the type you can usually solve the gap even when you do not know the word.",
+              "Verb form and tense, including the passive. Subject-verb agreement, especially where a phrase sits between the two. Articles — a, an, the, or none. Prepositions, especially of and for. Relative pronouns, and participles used as adjectives. Conjunctions, where the gap joins two clauses and the meaning of the second depends on the first. And comparatives, where one word in the sentence sets the standard."
+            ],
+            "bullets": [
+              "Verb form and tense, including the passive.",
+              "Subject-verb agreement with a phrase between subject and verb.",
+              "Articles, prepositions, relative pronouns, participles, conjunctions, comparatives.",
+              "If you can name the gap type, you can often solve it without knowing the word."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The trap in gap 7 and its cousins",
+            "paragraphs": [
+              "One type appears over and over because it is the one candidates cannot do: a negative or limiting word in a sentence that already contains a negative. 'Does not show', 'never showed', 'hardly showed' — these are not interchangeable. 'Does not show' means the passage does not do the thing. 'Never showed' says it never happened at all, which is a stronger and different claim.",
+              "When you see a gap that could be a negative of any strength, decide which one the sentence can support. A gap after 'does not' cannot also be 'never'. Read the whole clause and check that your word fits it logically, not just grammatically."
+            ],
+            "bullets": [
+              "'Does not show', 'never showed' and 'hardly showed' make different claims.",
+              "A gap after 'does not' cannot also be 'never' — check the logic, not just the grammar.",
+              "The negative must fit what the sentence can support."
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Underline the subject and the verb of the sentence around each gap before you choose. The moment you know whether the gap needs a verb or a noun, half the options disappear — and the ones left are usually wrong on tense or agreement, not on meaning."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A gap in a cloze passage: 'The leaves were (1)____ blue-black when the iodine solution was applied.' Options: A turned, B grew, C dried, D fell.",
+            "steps": [
+              {
+                "operation": "Name what the gap needs",
+                "reason": "There is no auxiliary like 'were to be' doing the work, so the gap is the main verb of the clause.",
+                "result": "The gap needs a verb, in the past tense, agreeing with 'the leaves'.",
+                "predictPrompt": "Which of the four options is a verb that can describe a change of colour?"
+              },
+              {
+                "operation": "Test each option for sense",
+                "reason": "Grammar narrows the field but sense decides among the survivors.",
+                "result": "Grew, dried and fell cannot be followed by 'blue-black' as a description of an iodine test. 'Turned blue-black' can.",
+                "predictPrompt": "So which one survives both the grammar and the sense?"
+              },
+              {
+                "operation": "Choose",
+                "reason": "One option survives both tests.",
+                "result": "A — turned.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A cloze sentence: 'The results were (1)____ positive in every case.' Options: A remain, B remained, C remains, D remaining. Before you look for the reasoning, find the subject and the verb already in the sentence.",
+            "hints": [
+              "The subject is 'the results' — plural. The verb is 'were' — also plural, and past.",
+              "Now: which option agrees with a plural past subject and follows 'were'?",
+              "Check the last one — a participle cannot follow 'were' as a main verb."
+            ]
+          }
+        },
+        {
+          "type": "passage",
+          "content": {
+            "title": "The Light and the Starch Test",
+            "purpose": "each gap is a grammar decision inside a working experiment",
+            "paragraphs": [
+              "This experiment was (1)____ out twice. In the first run, the samples were kept in the dark; in the second, they were (2)____ in daylight for six hours each day. The amount of starch in each leaf was then (3)____ with iodine solution, and any leaf which (4)____ blue-black was recorded as positive.",
+              "The results were (5)____. Leaves from the second run were positive in every case, while those from the first run (6)____ negative throughout. The conclusion was that light is (7)____ for the formation of starch, although the experiment does not (8)____ show that light is the only factor involved.",
+              "The class discussed (9)____ the experiment could be improved. One suggestion was to use more (10)____ plants, so that an accident affecting one would not affect the whole result."
+            ],
+            "questions": [
+              {
+                "question": "Gap 1: 'This experiment was (1)____ out twice.'",
+                "skill": "passive and past tense",
+                "options": [
+                  { "key": "A", "text": "carry" },
+                  { "key": "B", "text": "carried" },
+                  { "key": "C", "text": "carrying" },
+                  { "key": "D", "text": "carries" }
+                ],
+                "answer": "B",
+                "explanation": "'Was' takes a past participle: was carried out. 'Carry' needs 'has been carried'; 'carrying' cannot follow 'was'; 'carries' is a present-tense third person form.",
+                "evidenceStrings": [
+                  { "paragraph": 0, "text": "This experiment was (1)____ out twice" }
+                ]
+              },
+              {
+                "question": "Gap 2: 'in the second, they were (2)____ in daylight for six hours each day.'",
+                "skill": "verb form and collocation",
+                "options": [
+                  { "key": "A", "text": "left" },
+                  { "key": "B", "text": "put" },
+                  { "key": "C", "text": "poured" },
+                  { "key": "D", "text": "kept" }
+                ],
+                "answer": "A",
+                "explanation": "'Put' would need a destination: they were put in daylight. 'Poured' needs a liquid. 'Kept in daylight' contradicts the first run, where they were kept in the dark. 'Left in daylight' is the only one that fits both the grammar and the contrast.",
+                "evidenceStrings": [
+                  { "paragraph": 0, "text": "In the first run, the samples were kept in the dark" },
+                  { "paragraph": 0, "text": "they were (2)____ in daylight" }
+                ]
+              },
+              {
+                "question": "Gap 3: 'The amount of starch in each leaf was then (3)____ with iodine solution.'",
+                "skill": "passive voice",
+                "options": [
+                  { "key": "A", "text": "tested" },
+                  { "key": "B", "text": "testing" },
+                  { "key": "C", "text": "tests" },
+                  { "key": "D", "text": "test" }
+                ],
+                "answer": "A",
+                "explanation": "'Was then' takes a past participle. And the meaning is passive: the starch was tested by someone else, with the solution applied to it.",
+                "evidenceStrings": [
+                  { "paragraph": 0, "text": "The amount of starch in each leaf was then (3)____ with iodine solution" }
+                ]
+              },
+              {
+                "question": "Gap 4: 'any leaf which (4)____ blue-black was recorded as positive.'",
+                "skill": "conditional structure",
+                "options": [
+                  { "key": "A", "text": "turned" },
+                  { "key": "B", "text": "turns" },
+                  { "key": "C", "text": "turning" },
+                  { "key": "D", "text": "was turned" }
+                ],
+                "answer": "A",
+                "explanation": "This is a zero relative clause: 'which' stands in for the subject of 'turned', and 'turned' is the verb of the whole clause. It has to be past tense to match the reporting clause 'was recorded'.",
+                "evidenceStrings": [
+                  { "paragraph": 0, "text": "any leaf which (4)____ blue-black was recorded as positive" }
+                ]
+              },
+              {
+                "question": "Gap 5: 'The results were (5)____.'",
+                "skill": "subject-verb agreement and tense",
+                "options": [
+                  { "key": "A", "text": "consistent" },
+                  { "key": "B", "text": "consistently" },
+                  { "key": "C", "text": "consistenting" },
+                  { "key": "D", "text": "consists" }
+                ],
+                "answer": "A",
+                "explanation": "'Were' needs an adjective here, not an adverb or a verb. 'Consistently' would need a verb ('were consistently showing'). 'Consists' does not agree with the plural 'results' and is the wrong tense.",
+                "evidenceStrings": [
+                  { "paragraph": 1, "text": "The results were (5)____" }
+                ]
+              },
+              {
+                "question": "Gap 6: 'those from the first run (6)____ negative throughout.'",
+                "skill": "past tense and agreement",
+                "options": [
+                  { "key": "A", "text": "remained" },
+                  { "key": "B", "text": "remain" },
+                  { "key": "C", "text": "remains" },
+                  { "key": "D", "text": "remaining" }
+                ],
+                "answer": "A",
+                "explanation": "The subject 'those' is plural and the context is past — 'throughout' refers to the whole experimental period. So a plural past verb: remained.",
+                "evidenceStrings": [
+                  { "paragraph": 1, "text": "those from the first run (6)____ negative throughout" }
+                ]
+              },
+              {
+                "question": "Gap 7: 'light is (7)____ for the formation of starch'",
+                "skill": "adjective choice",
+                "options": [
+                  { "key": "A", "text": "necessary" },
+                  { "key": "B", "text": "possible" },
+                  { "key": "C", "text": "visible" },
+                  { "key": "D", "text": "rare" }
+                ],
+                "answer": "A",
+                "explanation": "The passage's conclusion is that light is required for starch to form — the leaves only went positive when they received light. 'Possible', 'visible' and 'rare' would each weaken or contradict that conclusion.",
+                "evidenceStrings": [
+                  { "paragraph": 1, "text": "The conclusion was that light is (7)____ for the formation of starch" }
+                ]
+              },
+              {
+                "question": "Gap 8: 'although the experiment does not (8)____ show that light is the only factor involved.'",
+                "skill": "negative strength",
+                "options": [
+                  { "key": "A", "text": "not" },
+                  { "key": "B", "text": "never" },
+                  { "key": "C", "text": "hardly" },
+                  { "key": "D", "text": "barely" }
+                ],
+                "answer": "A",
+                "explanation": "'Does not' is already in the sentence, so the gap cannot be 'never' — 'does not never show' is ungrammatical. 'Hardly' and 'barely' would mean the experiment almost failed to show the claim, which is not what is being said. The sentence means the experiment does not prove light is the only factor — so the missing word is simply 'not'.",
+                "evidenceStrings": [
+                  { "paragraph": 1, "text": "although the experiment does not (8)____ show that light is the only factor involved" }
+                ]
+              },
+              {
+                "question": "Gap 9: 'The class discussed (9)____ the experiment could be improved.'",
+                "skill": "question word",
+                "options": [
+                  { "key": "A", "text": "how" },
+                  { "key": "B", "text": "why" },
+                  { "key": "C", "text": "when" },
+                  { "key": "D", "text": "where" }
+                ],
+                "answer": "A",
+                "explanation": "The class was working out the way to improve it — and the next sentence shows the suggestions were about method: more plants, and so on. 'Why' would ask for a reason the experiment was poor; 'when' and 'where' make no sense.",
+                "evidenceStrings": [
+                  { "paragraph": 2, "text": "The class discussed (9)____ the experiment could be improved" },
+                  { "paragraph": 2, "text": "One suggestion was to use more" }
+                ]
+              },
+              {
+                "question": "Gap 10: 'One suggestion was to use more (10)____ plants, so that an accident affecting one would not affect the whole result.'",
+                "skill": "word choice",
+                "options": [
+                  { "key": "A", "text": "individual" },
+                  { "key": "B", "text": "identical" },
+                  { "key": "C", "text": "tropical" },
+                  { "key": "D", "text": "wild" }
+                ],
+                "answer": "A",
+                "explanation": "The reason given is that an accident affecting one plant should not affect the whole result. That only works if the plants are separate individuals. 'Identical' would make an accident more likely to affect them all.",
+                "evidenceStrings": [
+                  { "paragraph": 2, "text": "so that an accident affecting one would not affect the whole result" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "type": "reflection",
+          "content": {
+            "prompt": "Go back to the ten gaps in The Light and the Starch Test and label each one with its gap type — verb form, agreement, article, preposition, relative, participle, conjunction, comparative, negative, or word choice. Then write the one rule you will run on every gap: what do you underline first, and what do you check second?",
+            "modelResponse": "A strong answer names a repeatable procedure rather than a tactic: 'I underline the subject and the verb of the sentence around the gap first; if the gap is where the verb goes, I check the subject for number and the sentence for tense; if the gap is where the noun goes, I check the verb for what it is doing.' It should also show that the labelling worked — that most of the ten gaps fell into two or three types, which is the point: the types repeat, so the practice compounds. If your ten labels are all different, you were probably labelling the individual words rather than the type."
+          }
+        }
+      ]
+    }
+  ]
+}
