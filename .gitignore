@@ -22,3 +22,7 @@ logs/
 # Designer source material (static site lives in public/landing)
 .landing-source/
 tsconfig.tsbuildinfo
+
+# Python bytecode
+__pycache__/
+*.pyc
