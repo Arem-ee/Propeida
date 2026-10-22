@@ -407,11 +407,12 @@ h1, h2, h3 {
   display: block;
 }
 
-/* The map and the students holding it are one SVG, so the hands always
-   meet the map's underside. The map is drawn after the students, so a
-   cropped hand would tuck behind it. */
+/* The map is a floating object seen from below, so it is tilted and
+   lifted off the page. */
 .map-floating-element {
   width: 100%;
+  transform: rotateX(24deg); /* 3D low-angle tilt */
+  transform-origin: center bottom;
   position: relative;
   filter: drop-shadow(0 20px 24px rgba(15, 23, 42, 0.12));
 }
