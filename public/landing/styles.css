@@ -698,7 +698,20 @@ h1, h2, h3 {
   font-size: 1rem;
   color: var(--color-text-muted);
   line-height: 1.6;
-}
+  }
+
+.blog-cta {
+  margin-top: 0.35rem;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--brand-blue);
+  transition: transform 250ms var(--ease-standard);
+  }
+
+.blog-card:hover .blog-cta {
+  transform: translateX(4px);
+  }
 
 @media (max-width: 900px) {
   .blog-grid {
