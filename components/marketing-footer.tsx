@@ -8,7 +8,7 @@ const colTitleClass = 'text-xs font-bold text-gray-500 uppercase tracking-wider 
 
 function SoonBadge() {
   return (
-    <span className="ml-1.5 inline-block rounded-full border border-blue-200 bg-blue-50 px-2 py-0.5 align-middle text-[10px] font-bold uppercase tracking-wide text-blue-600">
+    <span className="ml-1.5 inline-block rounded-full border border-blue-200 bg-blue-50 px-2 py-0.5 align-baseline text-[10px] font-bold uppercase tracking-wide text-blue-600">
       Soon
     </span>
   )
