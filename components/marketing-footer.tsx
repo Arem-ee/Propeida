@@ -8,7 +8,7 @@ const colTitleClass = 'text-xs font-bold text-gray-500 uppercase tracking-wider 
 
 function SoonBadge() {
   return (
-    <span className="ml-2 inline-block rounded-full border border-blue-200 bg-blue-50 px-2 py-0.5 align-middle text-[10px] font-bold uppercase tracking-wide text-blue-600">
+    <span className="ml-1.5 inline-block rounded-full border border-blue-200 bg-blue-50 px-2 py-0.5 align-middle text-[10px] font-bold uppercase tracking-wide text-blue-600">
       Soon
     </span>
   )
@@ -36,7 +36,7 @@ export default function MarketingFooter() {
                 href={siteConfig.whatsapp.channelUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl bg-green-50 px-3 py-2 text-xs font-bold text-green-700 min-h-[44px]"
+                className="inline-flex w-fit items-center gap-2 rounded-xl bg-green-50 px-3 py-2 text-xs font-bold text-green-700 min-h-[44px]"
               >
                 <MessageCircle className="h-4 w-4 shrink-0" />
                 WhatsApp channel
@@ -81,8 +81,10 @@ export default function MarketingFooter() {
                 <Link href="/features" className={linkClass}>Features</Link>
               </li>
               <li>
-                <Link href="/pricing" className={linkClass}>Pricing</Link>
-                <SoonBadge />
+                <Link href="/pricing" className={linkClass}>
+                  Pricing
+                  <SoonBadge />
+                </Link>
               </li>
               <li>
                 <Link href="/faq" className={linkClass}>FAQ</Link>
