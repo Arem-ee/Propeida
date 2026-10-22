@@ -599,12 +599,14 @@ export async function getNextRecommendedLesson(subjectSlug: string): Promise<{
 
   if (!subject) return { note: null, completed: true }
 
-  // Get all notes for this subject
+  // Curriculum order: a lesson's place in the syllabus. Rows without a
+  // place fall back to the order they were created, so nothing is lost.
   const { data: notes } = await supabase
     .from('lessons')
-    .select('id, title, slug, objective, status')
+    .select('id, title, slug, objective, status, sort_order, created_at')
     .eq('subject_id', subject.id)
     .eq('status', 'published')
+    .order('sort_order', { ascending: true, nullsFirst: false })
     .order('created_at', { ascending: true })
 
   if (!notes || notes.length === 0) return { note: null, completed: true }
@@ -642,5 +644,132 @@ export async function getNextRecommendedLesson(subjectSlug: string): Promise<{
     }
   }
 
-return { note: null, completed: true }
+  return { note: null, completed: true }
+}
+
+export interface CurriculumLesson {
+  id: string
+  slug: string
+  title: string
+  objective: string
+  estimatedMinutes: number | null
+}
+
+export interface CurriculumTopicNode {
+  id: string
+  slug: string
+  name: string
+  description: string
+  order: number
+  section: string
+  sectionTitle: string
+  lesson: CurriculumLesson | null
+}
+
+export interface CurriculumSection {
+  key: string
+  title: string
+  topics: CurriculumTopicNode[]
+}
+
+/**
+ * The subject curriculum map: syllabus sections, the topics under them, and
+ * the lesson that teaches each topic.
+ *
+ * A topic with no published lesson is still listed — the learner sees the
+ * shape of what they are working towards, and that the topic is still to
+ * come.
+ */
+export async function getSubjectCurriculum(subjectSlug: string): Promise<{
+  sections: CurriculumSection[]
+  recommendedLessonId: string | null
+}> {
+  const supabase = await createClient()
+
+  const { data: subject } = await supabase
+    .from('subjects')
+    .select('id')
+    .eq('slug', subjectSlug)
+    .single()
+  if (!subject) return { sections: [], recommendedLessonId: null }
+
+  const { data: topics } = await supabase
+    .from('topics')
+    .select('id, slug, name, description, sort_order, section_key, section_title')
+    .eq('subject_id', subject.id)
+    .eq('published', true)
+    .order('sort_order', { ascending: true })
+
+  const { data: lessons } = await supabase
+    .from('lessons')
+    .select('id, slug, title, objective, topic_id, estimated_minutes')
+    .eq('subject_id', subject.id)
+    .eq('status', 'published')
+
+  const lessonByTopic = new Map<string, CurriculumLesson>()
+  for (const l of lessons ?? []) {
+    if (!l.topic_id) continue
+    lessonByTopic.set(l.topic_id, {
+      id: l.id,
+      slug: l.slug,
+      title: l.title,
+      objective: l.objective ?? '',
+      estimatedMinutes: l.estimated_minutes ?? null,
+    })
+  }
+
+  const bySection = new Map<string, CurriculumSection>()
+  for (const t of topics ?? []) {
+    const key = t.section_key ?? 'A'
+    if (!bySection.has(key)) {
+      bySection.set(key, {
+        key,
+        title: t.section_title ?? key,
+        topics: [],
+      })
+    }
+    bySection.get(key)!.topics.push({
+      id: t.id,
+      slug: t.slug,
+      name: t.name,
+      description: t.description ?? '',
+      order: t.sort_order ?? 0,
+      section: key,
+      sectionTitle: t.section_title ?? key,
+      lesson: lessonByTopic.get(t.id) ?? null,
+    })
+  }
+
+  // The recommended lesson is the first one in curriculum order that the
+  // learner has not yet answered correctly on the independent attempt.
+  let recommendedLessonId: string | null = null
+  try {
+    const user = await getAuthUser(supabase)
+    if (user) {
+      const { data: attempts } = await supabase
+        .from('learning_attempts')
+        .select('lesson_id, is_correct, attempt_type')
+        .eq('user_id', user.id)
+        .eq('subject_id', subject.id)
+        .not('lesson_id', 'is', null)
+      const done = new Set(
+        (attempts ?? [])
+          .filter((a) => a.is_correct === true && a.attempt_type === 'independent')
+          .map((a) => a.lesson_id),
+      )
+      const ordered = (lessons ?? [])
+        .filter((l) => l.topic_id)
+        .sort((a, b) => {
+          const ta = topics?.find((t) => t.id === a.topic_id)?.sort_order ?? 0
+          const tb = topics?.find((t) => t.id === b.topic_id)?.sort_order ?? 0
+          return ta - tb
+        })
+      recommendedLessonId = ordered.find((l) => !done.has(l.id))?.id ?? null
+    }
+  } catch {
+    // An unauthenticated visitor still gets the map; only the highlight is
+    // missing.
+  }
+
+  return { sections: [...bySection.values()], recommendedLessonId }
 }
