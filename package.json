@@ -16,7 +16,7 @@
     "@supabase/supabase-js": "^2.49.0",
     "@upstash/redis": "^1.39.0",
     "lucide-react": "^0.546.0",
-    "next": "^15.3.0",
+    "next": "15.5.28",
     "papaparse": "^5.5.4",
     "react": "^19.0.1",
     "react-dom": "^19.0.1",
@@ -30,13 +30,16 @@
     "@types/react-dom": "^19.0.0",
     "@types/web-push": "^3.6.4",
     "eslint": "^9.39.5",
-    "eslint-config-next": "15.5.20",
+    "eslint-config-next": "15.5.28",
     "eslint-plugin-react-hooks": "^7.1.1",
     "pg": "^8.22.0",
-    "postcss": "^8.5.0",
+    "postcss": "8.5.32",
     "puppeteer-core": "^24.7.0",
     "resend": "^6.18.1",
     "tailwindcss": "^4.1.14",
     "typescript": "~5.8.2"
+  },
+  "overrides": {
+    "postcss": "$postcss"
   }
 }
