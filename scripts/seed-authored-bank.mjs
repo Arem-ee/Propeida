@@ -146,7 +146,7 @@ for (const q of source.questions) {
       correct_answer: q.answer,
       explanation: q.explanation.trim(),
       difficulty: q.difficulty ?? 'medium',
-      source: source.source ?? 'authored',
+      source: q.source_ref ? `${source.source ?? 'authored'} — ${q.source_ref}` : (source.source ?? 'authored'),
       status: 'draft',
       verified_state: 'unverified',
       response_type: 'mcq',
