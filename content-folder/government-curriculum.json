@@ -2,18 +2,90 @@
   "subject": "government",
   "source": "JAMB UTME Government syllabus (IBASS)",
   "topics": [
-    { "slug": "definition-scope-government", "name": "Definition and Scope of Government", "section": "Elements of Government", "order": 1, "description": "What government is, what it does, and how it differs from the state." },
-    { "slug": "basic-concepts", "name": "Basic Concepts of Government", "section": "Elements of Government", "order": 2, "description": "Power, authority, legitimacy, sovereignty, state, nation and political processes." },
-    { "slug": "forms-systems-government", "name": "Forms and Systems of Government", "section": "Elements of Government", "order": 3, "description": "Democracy, monarchy, aristocracy, and presidential versus parliamentary systems." },
-    { "slug": "arms-of-government", "name": "Arms of Government", "section": "Elements of Government", "order": 4, "description": "The legislature, executive and judiciary: functions, powers and checks." },
-    { "slug": "structures-of-governance", "name": "Structures of Governance", "section": "Elements of Government", "order": 5, "description": "Unitary, federal and confederal arrangements." },
-    { "slug": "political-ideologies", "name": "Political Ideologies", "section": "Elements of Government", "order": 6, "description": "Communalism, feudalism, capitalism, socialism, communism and fascism." },
-    { "slug": "constitution-rule-of-law", "name": "Constitution and the Rule of Law", "section": "Principles of Government", "order": 7, "description": "Sources and types of constitutions; supremacy, rule of law and separation of powers." },
-    { "slug": "political-parties-elections", "name": "Political Parties and Elections", "section": "Principles of Government", "order": 8, "description": "Parties, pressure groups, constituencies, referendums and electoral participation." },
-    { "slug": "citizenship", "name": "Citizenship", "section": "Principles of Government", "order": 9, "description": "Acquisition of citizenship and the duties and obligations of a citizen." },
-    { "slug": "pre-colonial-colonial-administration", "name": "Pre-colonial and Colonial Administration", "section": "Nigerian Government", "order": 10, "description": "Yoruba, Igbo and Hausa/Fulani systems; colonial rule and the independence constitutions." },
-    { "slug": "nigerian-federalism-military-rule", "name": "Nigerian Federalism and Military Rule", "section": "Nigerian Government", "order": 11, "description": "State creation, local government reform, coups and military regimes." },
-    { "slug": "foreign-policy-international-organisations", "name": "Foreign Policy and International Organisations", "section": "Nigerian Government", "order": 12, "description": "Nigeria's foreign policy and the UN, AU/OAU and ECOWAS." }
+    {
+      "slug": "definition-scope-government",
+      "name": "Definition and Scope of Government",
+      "section": "Elements of Government",
+      "order": 1,
+      "description": "What government is, what it does, and how it differs from the state."
+    },
+    {
+      "slug": "basic-concepts",
+      "name": "Basic Concepts of Government",
+      "section": "Elements of Government",
+      "order": 2,
+      "description": "Power, authority, legitimacy, sovereignty, state, nation and political processes."
+    },
+    {
+      "slug": "forms-systems-government",
+      "name": "Forms and Systems of Government",
+      "section": "Elements of Government",
+      "order": 3,
+      "description": "Democracy, monarchy, aristocracy, and presidential versus parliamentary systems."
+    },
+    {
+      "slug": "arms-of-government",
+      "name": "Arms of Government",
+      "section": "Elements of Government",
+      "order": 4,
+      "description": "The legislature, executive and judiciary: functions, powers and checks."
+    },
+    {
+      "slug": "structures-of-governance",
+      "name": "Structures of Governance",
+      "section": "Elements of Government",
+      "order": 5,
+      "description": "Unitary, federal and confederal arrangements."
+    },
+    {
+      "slug": "political-ideologies",
+      "name": "Political Ideologies",
+      "section": "Elements of Government",
+      "order": 6,
+      "description": "Communalism, feudalism, capitalism, socialism, communism and fascism."
+    },
+    {
+      "slug": "constitution-rule-of-law",
+      "name": "Constitution and the Rule of Law",
+      "section": "Principles of Government",
+      "order": 7,
+      "description": "Sources and types of constitutions; supremacy, rule of law and separation of powers."
+    },
+    {
+      "slug": "political-parties-elections",
+      "name": "Political Parties and Elections",
+      "section": "Principles of Government",
+      "order": 8,
+      "description": "Parties, pressure groups, constituencies, referendums and electoral participation."
+    },
+    {
+      "slug": "citizenship",
+      "name": "Citizenship",
+      "section": "Principles of Government",
+      "order": 9,
+      "description": "Acquisition of citizenship and the duties and obligations of a citizen."
+    },
+    {
+      "slug": "pre-colonial-colonial-administration",
+      "name": "Pre-colonial and Colonial Administration",
+      "section": "Nigerian Government",
+      "order": 10,
+      "description": "Yoruba, Igbo and Hausa/Fulani systems; colonial rule and the independence constitutions."
+    },
+    {
+      "slug": "nigerian-federalism-military-rule",
+      "name": "Nigerian Federalism and Military Rule",
+      "section": "Nigerian Government",
+      "order": 11,
+      "description": "State creation, local government reform, coups and military regimes."
+    },
+    {
+      "slug": "foreign-policy-international-organisations",
+      "name": "Foreign Policy and International Organisations",
+      "section": "Nigerian Government",
+      "order": 12,
+      "description": "Nigeria's foreign policy and the UN, AU/OAU and ECOWAS."
+    }
   ],
   "lessons": [
     {
@@ -505,6 +577,172 @@
               "The Yoruba had a central Oba; the Igbo governed through village assemblies and consensus.",
               "Indirect rule needed a single ruler to deal with — that was easier where a monarchy existed.",
               "A strong answer contrasts centralised monarchy with acephalous consensus and links it to indirect rule."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "topic": "political-parties-elections",
+      "slug": "political-parties-elections",
+      "title": "Political Parties, Pressure Groups and Elections",
+      "objective": "Explain what parties do, compare party systems, distinguish parties from pressure groups, and describe free elections.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Parties and party systems",
+            "paragraphs": [
+              "A political party is an organised group that seeks to win elections and control government. Its manifesto sets out what it would do in office."
+            ],
+            "bullets": [
+              "Functions: aggregate interests, recruit and train leaders, formulate policy, mobilise voters, organise government and provide opposition scrutiny.",
+              "A national party draws members from across ethnic and regional lines, not just branches in many places.",
+              "One-party system: only one party is legal or effective. Two-party system: two parties alternate in power. Multi-party system: several parties compete, often in coalitions.",
+              "A dominant-party system is competitive in law but one party wins repeatedly in practice."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Pressure groups and elections",
+            "paragraphs": [
+              "Pressure groups try to influence policy without seeking to govern. Elections are the main channel through which citizens choose who governs."
+            ],
+            "bullets": [
+              "Pressure-group methods: lobbying, petitions, publicity, dialogue, strikes and, as a last resort, an ultimatum with a deadline.",
+              "Franchise is the right to vote; a constituency is the area that elects a representative.",
+              "A referendum is a direct vote on a specific issue; a plebiscite is similar but often advisory.",
+              "Free and fair elections need an independent electoral commission, a credible register, a secret ballot and an impartial judiciary to settle disputes."
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam trap",
+            "tone": "tip",
+            "body": "Parties contest elections in order to govern. Pressure groups influence whoever governs but do not put up a government of their own."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Market traders demand that a new levy be withdrawn and threaten a strike if it is not done within seven days. Are they acting as a party or a pressure group, and which tactic are they using?",
+            "steps": [
+              {
+                "operation": "Ask whether they seek office",
+                "reason": "A party contests elections to govern; a pressure group only wants to change a decision.",
+                "result": "The traders are acting as a pressure group.",
+                "predictPrompt": "Which of their actions is the final tactic?"
+              },
+              {
+                "operation": "Identify the tactic",
+                "reason": "A demand with a deadline and a threatened strike is the strongest pressure-group step.",
+                "result": "They have issued an ultimatum.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Distinguish the next step",
+                "reason": "If the deadline passes, the threatened strike becomes the action; dialogue and lobbying come earlier.",
+                "result": "The sequence runs lobbying → dialogue → ultimatum → strike."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why does a party need membership across ethnic lines to be truly national, and why is having branches everywhere not enough?",
+            "hints": [
+              "Branches can exist in every state while membership and leadership remain tied to one ethnic or regional group.",
+              "A national party must be able to aggregate interests from many groups, not just represent one.",
+              "A strong answer links ethnic breadth to winning a national majority and to legitimacy."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "topic": "foreign-policy-international-organisations",
+      "slug": "foreign-policy-international-organisations",
+      "title": "Foreign Policy and International Organisations",
+      "objective": "Explain Nigeria’s foreign-policy goals and the roles and decision rules of ECOWAS, the African Union and the United Nations.",
+      "estimatedMinutes": 12,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Nigeria’s foreign policy",
+            "paragraphs": [
+              "Foreign policy is a state’s strategy for dealing with other states and international organisations. Nigeria’s has been Afrocentric since independence."
+            ],
+            "bullets": [
+              "Goals: defend sovereignty and territory, promote African decolonisation and unity, support peace and security, and pursue economic development.",
+              "Principles: Afrocentrism, non-alignment, sovereign equality, non-interference and peaceful settlement of disputes.",
+              "Instruments: diplomacy, foreign aid, military support, trade and membership of multilateral bodies.",
+              "The Murtala/Obasanjo era reviewed policy toward a more assertive, Africa-centred stance; the Bakassi dispute with Cameroon was decided by the International Court of Justice in 2002."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "International organisations",
+            "paragraphs": [
+              "Nigeria belongs to global and regional bodies. Each has different members, powers and decision rules."
+            ],
+            "bullets": [
+              "UN: the General Assembly is the most representative organ, with one vote per member. The Security Council has five permanent members with a veto and primary responsibility for peace and security. The ICJ settles legal disputes between states; the Secretariat administers the UN.",
+              "African Union: replaced the OAU in 2002. The Executive Council generally decides by consensus, falling back on a two-thirds majority.",
+              "ECOWAS: founded in 1975 by the Treaty of Lagos to promote trade, free movement and regional peacekeeping (ECOMOG). Its chairmanship rotates.",
+              "Commonwealth and OPEC: the Commonwealth links former British colonies; OPEC coordinates oil-exporting states to stabilise prices."
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam trap",
+            "tone": "tip",
+            "body": "The General Assembly is the most representative UN organ because every member has one vote. The Security Council is the most powerful, not the most representative."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Nigeria has a legal boundary dispute with a neighbour and wants a binding judgment. Which UN organ should hear it, and why not the Security Council?",
+            "steps": [
+              {
+                "operation": "Identify the kind of dispute",
+                "reason": "A boundary dispute is a legal question between states, not a threat to peace requiring enforcement.",
+                "result": "It belongs to judicial settlement.",
+                "predictPrompt": "Which organ decides legal disputes between states?"
+              },
+              {
+                "operation": "Choose the organ",
+                "reason": "The International Court of Justice hears contentious cases between states and gives binding judgments.",
+                "result": "Nigeria should take the case to the ICJ.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Explain the limit of the Security Council",
+                "reason": "The Security Council deals with peace and security and can impose sanctions, but it does not adjudicate boundary law.",
+                "result": "The ICJ supplies the legal ruling; the Security Council may later help enforce peace if needed."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Name two benefits of ECOWAS membership to Nigeria and one cost, then say whether the benefits outweigh the cost.",
+            "hints": [
+              "Benefits: a larger market for Nigerian goods, free movement of people, and joint peacekeeping that stabilises the region.",
+              "Costs: contributions to the community budget, pressure from migration, and limits on unilateral policy.",
+              "A strong answer weighs the market and security gains against funding and sovereignty costs."
             ]
           }
         }

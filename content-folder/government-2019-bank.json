@@ -1,0 +1,842 @@
+{
+  "_note": "Audited Government 2019 batch. Every key was checked; the imported key was wrong on several rows (Q1 democracy, Q8 party function, Q12 reshuffle, Q33 4th-republic parties, Q40 ECOWAS chair) and those were corrected or rejected. Truncated and fused stems were repaired. Eight rows were rejected rather than guessed; see docs/deferred.md.",
+  "subject": "government",
+  "exam": "jamb",
+  "source": "JAMB Government 2019 (audited)",
+  "status": "draft",
+  "verified_state": "unverified",
+  "questions": [
+    {
+      "topic": "basic-concepts",
+      "difficulty": "easy",
+      "question": "A key principle of democracy is that ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "the minority may vote but the majority decides"
+        },
+        {
+          "key": "b",
+          "text": "only the majority vote is counted"
+        },
+        {
+          "key": "c",
+          "text": "legal sovereignty is unquestionable"
+        },
+        {
+          "key": "d",
+          "text": "an electoral college is always necessary"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Democracy combines majority rule with the right of the minority to participate and dissent. The majority’s decision prevails, but minority votes are counted and minority rights protected.",
+      "source_ref": "JAMB 2019 Q1 (key corrected, wording repaired)"
+    },
+    {
+      "topic": "basic-concepts",
+      "difficulty": "medium",
+      "question": "Sovereignty that rests on the consent and mandate of the people is called ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "external sovereignty"
+        },
+        {
+          "key": "b",
+          "text": "popular sovereignty"
+        },
+        {
+          "key": "c",
+          "text": "legal sovereignty"
+        },
+        {
+          "key": "d",
+          "text": "parliamentary sovereignty"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Popular sovereignty locates ultimate authority in the people. Legal sovereignty locates it in the constitution or parliament.",
+      "source_ref": "JAMB 2019 Q2 (wording repaired)"
+    },
+    {
+      "topic": "constitution-rule-of-law",
+      "difficulty": "medium",
+      "question": "The right of a citizen to seek redress means the right to ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "free access to legal materials"
+        },
+        {
+          "key": "b",
+          "text": "appeal against every judgement"
+        },
+        {
+          "key": "c",
+          "text": "approach a court for a remedy"
+        },
+        {
+          "key": "d",
+          "text": "exercise political liberty without restraint"
+        }
+      ],
+      "answer": "c",
+      "explanation": "Seeking redress means asking a court or tribunal to remedy a wrong. It is not a licence to appeal every decision or to act outside the law.",
+      "source_ref": "JAMB 2019 Q3 (wording repaired)"
+    },
+    {
+      "topic": "constitution-rule-of-law",
+      "difficulty": "medium",
+      "question": "An order compelling a lower court or public authority to perform its public duty is called ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "the great writ"
+        },
+        {
+          "key": "b",
+          "text": "the writ of ombudsman"
+        },
+        {
+          "key": "c",
+          "text": "none of the above"
+        },
+        {
+          "key": "d",
+          "text": "the writ of mandamus"
+        }
+      ],
+      "answer": "d",
+      "explanation": "Mandamus requires a public body to perform a duty it has refused or failed to perform. Habeas corpus concerns unlawful detention; certiorari quashes a decision.",
+      "source_ref": "JAMB 2019 Q4 (wording repaired)"
+    },
+    {
+      "topic": "basic-concepts",
+      "difficulty": "easy",
+      "question": "A form of government whose guiding principle is “rule of the best” is ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "aristocracy"
+        },
+        {
+          "key": "b",
+          "text": "democracy"
+        },
+        {
+          "key": "c",
+          "text": "timocracy"
+        },
+        {
+          "key": "d",
+          "text": "plutocracy"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Aristocracy means rule by a small group regarded as the best qualified. Plutocracy is rule by the wealthy and timocracy by property owners.",
+      "source_ref": "JAMB 2019 Q5 (wording repaired)"
+    },
+    {
+      "topic": "basic-concepts",
+      "difficulty": "hard",
+      "question": "Deconcentration of power means ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "the sharing of powers among tiers of government"
+        },
+        {
+          "key": "b",
+          "text": "the transfer of administrative authority to central-government officials stationed in the regions"
+        },
+        {
+          "key": "c",
+          "text": "the creation of semi-autonomous units to govern parts of the state"
+        },
+        {
+          "key": "d",
+          "text": "the delegation of powers to component units that already exist in the state"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Deconcentration shifts administrative authority from the capital to field offices of the same central government. Sharing power among tiers is federalism; transferring it to separate units is devolution.",
+      "source_ref": "JAMB 2019 Q6 (wording repaired)"
+    },
+    {
+      "topic": "arms-of-government",
+      "difficulty": "medium",
+      "question": "The independence of the judiciary means that ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "the judiciary must not concern itself with legislative or executive affairs"
+        },
+        {
+          "key": "b",
+          "text": "court decisions cannot be reviewed by the executive"
+        },
+        {
+          "key": "c",
+          "text": "legislative and executive influence on judicial decision-making must be prevented"
+        },
+        {
+          "key": "d",
+          "text": "the dignity of judges must be preserved"
+        }
+      ],
+      "answer": "c",
+      "explanation": "Judicial independence protects judges from external pressure so they decide on law and evidence. It does not mean courts never interact with the other arms; judicial review is part of the checks.",
+      "source_ref": "JAMB 2019 Q7 (wording repaired)"
+    },
+    {
+      "topic": "political-parties-elections",
+      "difficulty": "medium",
+      "question": "A political party can be said to have a national outlook if ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "it is ethnic-based but has branches across the country"
+        },
+        {
+          "key": "b",
+          "text": "it is registered by the electoral commission as a national party"
+        },
+        {
+          "key": "c",
+          "text": "it is led by people who are famous at home and abroad"
+        },
+        {
+          "key": "d",
+          "text": "its membership cuts across ethnic boundaries"
+        }
+      ],
+      "answer": "d",
+      "explanation": "A national party draws members from many ethnic and regional groups. Registration or famous leaders do not by themselves give it a national character.",
+      "source_ref": "JAMB 2019 Q9"
+    },
+    {
+      "topic": "arms-of-government",
+      "difficulty": "easy",
+      "question": "Argument, negotiation and deliberation on the subject matter of a bill begin at the ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "second reading"
+        },
+        {
+          "key": "b",
+          "text": "third reading"
+        },
+        {
+          "key": "c",
+          "text": "first reading"
+        },
+        {
+          "key": "d",
+          "text": "committee stage"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The second reading is where the principle of the bill is debated. The first reading is formal introduction, the committee stage examines details, and the third reading is final approval.",
+      "source_ref": "JAMB 2019 Q10"
+    },
+    {
+      "topic": "forms-systems-government",
+      "difficulty": "medium",
+      "question": "A vote of no confidence means ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "the same thing as impeachment in a presidential system"
+        },
+        {
+          "key": "b",
+          "text": "disapproval of the government which, if carried, requires the ministers and their head to resign"
+        },
+        {
+          "key": "c",
+          "text": "the power of the head of state to dissolve parliament"
+        },
+        {
+          "key": "d",
+          "text": "disapproval of the prime minister for breaching collective responsibility"
+        }
+      ],
+      "answer": "b",
+      "explanation": "In a parliamentary system the executive depends on the legislature’s confidence. If a no-confidence motion passes, the government resigns or seeks a dissolution and election.",
+      "source_ref": "JAMB 2019 Q11 (wording repaired)"
+    },
+    {
+      "topic": "political-parties-elections",
+      "difficulty": "easy",
+      "question": "Popular political participation refers to ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "the majority of the people holding public office"
+        },
+        {
+          "key": "b",
+          "text": "a large number of voters turning out at elections"
+        },
+        {
+          "key": "c",
+          "text": "the total activities through which citizens actively take part in political life"
+        },
+        {
+          "key": "d",
+          "text": "the efforts of more than half the citizens to join public debate"
+        }
+      ],
+      "answer": "c",
+      "explanation": "Participation covers voting, campaigning, contacting officials, protesting and standing for office — not only election turnout or office-holding.",
+      "source_ref": "JAMB 2019 Q13 (wording repaired)"
+    },
+    {
+      "topic": "political-parties-elections",
+      "difficulty": "easy",
+      "question": "The area from which one or more members are elected to a public office is called an electoral ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "college"
+        },
+        {
+          "key": "b",
+          "text": "ward"
+        },
+        {
+          "key": "c",
+          "text": "district"
+        },
+        {
+          "key": "d",
+          "text": "constituency"
+        }
+      ],
+      "answer": "d",
+      "explanation": "A constituency is the electoral area represented by an elected member. An electoral college is a body that elects someone indirectly.",
+      "source_ref": "JAMB 2019 Q14"
+    },
+    {
+      "topic": "citizenship",
+      "difficulty": "medium",
+      "question": "Citizenship by naturalisation is ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "the process by which a non-citizen who satisfies constitutional criteria becomes a legal member of the state"
+        },
+        {
+          "key": "b",
+          "text": "the same as citizenship by marriage and registration"
+        },
+        {
+          "key": "c",
+          "text": "attaining citizenship through honorary means"
+        },
+        {
+          "key": "d",
+          "text": "the process by which an alien receives a certificate from the judiciary and becomes a citizen by birth"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Naturalisation is a legal process: an adult foreigner who meets residence, character and other constitutional conditions applies and takes an oath of allegiance.",
+      "source_ref": "JAMB 2019 Q15 (wording repaired)"
+    },
+    {
+      "topic": "political-parties-elections",
+      "difficulty": "easy",
+      "question": "The last measure used by a pressure group when it issues a condition to be met within a fixed time is called ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "lobbying"
+        },
+        {
+          "key": "b",
+          "text": "an ultimatum"
+        },
+        {
+          "key": "c",
+          "text": "dialogue"
+        },
+        {
+          "key": "d",
+          "text": "a strike"
+        }
+      ],
+      "answer": "b",
+      "explanation": "An ultimatum is a final demand with a deadline, warning of action if it is not met. Lobbying and dialogue are earlier, softer tactics.",
+      "source_ref": "JAMB 2019 Q16 (wording repaired)"
+    },
+    {
+      "topic": "forms-systems-government",
+      "difficulty": "easy",
+      "question": "A form of government organised by a council of military officers is called a ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "militocracy"
+        },
+        {
+          "key": "b",
+          "text": "stratocracy"
+        },
+        {
+          "key": "c",
+          "text": "military junta"
+        },
+        {
+          "key": "d",
+          "text": "mobocracy"
+        }
+      ],
+      "answer": "c",
+      "explanation": "A junta is a small group, typically military officers, ruling after seizing power. The council-of-officers form is specifically a junta.",
+      "source_ref": "JAMB 2019 Q18"
+    },
+    {
+      "topic": "pre-colonial-colonial-administration",
+      "difficulty": "medium",
+      "question": "The non-stratified society in the pre-colonial era was that of the ______, where decisions were made by ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "Yoruba; the Oyomesi"
+        },
+        {
+          "key": "b",
+          "text": "Hausa/Fulani; the Emir"
+        },
+        {
+          "key": "c",
+          "text": "Igbo; the Okpara"
+        },
+        {
+          "key": "d",
+          "text": "Igbo; consensus"
+        }
+      ],
+      "answer": "d",
+      "explanation": "Igbo society was largely acephalous: village assemblies and age grades decided issues by consensus. The Okpara headed the council of elders, but consensus characterised the system.",
+      "source_ref": "JAMB 2019 Q19"
+    },
+    {
+      "topic": "nigerian-federalism-military-rule",
+      "difficulty": "easy",
+      "question": "The creation of twelve states was an achievement of the ______ regime.",
+      "options": [
+        {
+          "key": "a",
+          "text": "Yakubu Gowon"
+        },
+        {
+          "key": "b",
+          "text": "Abdulsalami Abubakar"
+        },
+        {
+          "key": "c",
+          "text": "Ibrahim Babangida"
+        },
+        {
+          "key": "d",
+          "text": "Murtala Mohammed"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Gowon created twelve states in 1967, replacing the four regions. Murtala created seven more in 1976 and Babangida created eleven in 1987 and 1991.",
+      "source_ref": "JAMB 2019 Q21 (wording repaired)"
+    },
+    {
+      "topic": "foreign-policy-international-organisations",
+      "difficulty": "medium",
+      "question": "The basis of Nigeria’s foreign policy during the Independence Constitution era was ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "Eurocentric"
+        },
+        {
+          "key": "b",
+          "text": "Afrocentric"
+        },
+        {
+          "key": "c",
+          "text": "neo-colonialist"
+        },
+        {
+          "key": "d",
+          "text": "anti-apartheid"
+        }
+      ],
+      "answer": "b",
+      "explanation": "From independence, Nigeria put Africa at the centre of its foreign policy — decolonisation, African unity and support for liberation movements — while remaining non-aligned in the Cold War.",
+      "source_ref": "JAMB 2019 Q22"
+    },
+    {
+      "topic": "pre-colonial-colonial-administration",
+      "difficulty": "medium",
+      "question": "The Brussels Conference of 1889–90 was primarily concerned with ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "the scramble for Africa"
+        },
+        {
+          "key": "b",
+          "text": "implementing the decisions of the Berlin Conference"
+        },
+        {
+          "key": "c",
+          "text": "ending the slave trade"
+        },
+        {
+          "key": "d",
+          "text": "planning how to penetrate Africa economically"
+        }
+      ],
+      "answer": "c",
+      "explanation": "The Brussels Anti-Slavery Conference of 1889–90 focused on suppressing the slave trade, especially in Africa. The Berlin Conference (1884–85) dealt with the rules of colonial partition.",
+      "source_ref": "JAMB 2019 Q23 (wording repaired)"
+    },
+    {
+      "topic": "political-ideologies",
+      "difficulty": "hard",
+      "question": "According to Lewis Samuel, imperialism identified with pure conquest and unequivocal exploitation is ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "neo-colonialism"
+        },
+        {
+          "key": "b",
+          "text": "progressive imperialism"
+        },
+        {
+          "key": "c",
+          "text": "colonialism"
+        },
+        {
+          "key": "d",
+          "text": "regressive imperialism"
+        }
+      ],
+      "answer": "d",
+      "explanation": "Lewis Samuel Feuer distinguished progressive imperialism, which claims to spread civilisation, from regressive imperialism, which seeks conquest and exploitation for its own sake.",
+      "source_ref": "JAMB 2019 Q24 (wording repaired)"
+    },
+    {
+      "topic": "pre-colonial-colonial-administration",
+      "difficulty": "medium",
+      "question": "One major defect of the Nigerian Council that led to its replacement was that it was ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "unrepresentative"
+        },
+        {
+          "key": "b",
+          "text": "poorly attended"
+        },
+        {
+          "key": "c",
+          "text": "able to make law only for the Southern Protectorate"
+        },
+        {
+          "key": "d",
+          "text": "less powerful than the Executive Council"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The Nigerian Council (1922) was largely advisory and nominated, with no elected Nigerian members, so it did not represent public opinion. It was replaced under the Richards Constitution.",
+      "source_ref": "JAMB 2019 Q25 (wording repaired)"
+    },
+    {
+      "topic": "pre-colonial-colonial-administration",
+      "difficulty": "medium",
+      "question": "An important provision of the 1946 Constitution was that it ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "introduced federalism in Nigeria"
+        },
+        {
+          "key": "b",
+          "text": "conceived federalism for Nigeria"
+        },
+        {
+          "key": "c",
+          "text": "introduced an official majority in the Legislative Council for the first time"
+        },
+        {
+          "key": "d",
+          "text": "created the office of head of government at regional level"
+        }
+      ],
+      "answer": "b",
+      "explanation": "The Richards Constitution of 1946 divided Nigeria into three regions and is credited with conceiving a federal structure. Full federalism with regional premiers came later, under Lyttleton (1954).",
+      "source_ref": "JAMB 2019 Q26"
+    },
+    {
+      "topic": "arms-of-government",
+      "difficulty": "medium",
+      "question": "Implementation of government programmes is the primary duty of the ______, which is part of the ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "courts; judiciary"
+        },
+        {
+          "key": "b",
+          "text": "public service; civil service"
+        },
+        {
+          "key": "c",
+          "text": "civil service; public service"
+        },
+        {
+          "key": "d",
+          "text": "ministers; Ministry of Works"
+        }
+      ],
+      "answer": "c",
+      "explanation": "The civil service is the permanent administrative arm that implements policy, and it is one component of the wider public service, which also includes boards, corporations and the armed forces.",
+      "source_ref": "JAMB 2019 Q28 (wording repaired)"
+    },
+    {
+      "topic": "foreign-policy-international-organisations",
+      "difficulty": "easy",
+      "question": "The most recent target plans and agenda of the United Nations are known as the ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "Resolution 2020"
+        },
+        {
+          "key": "b",
+          "text": "Millennium Development Goals"
+        },
+        {
+          "key": "c",
+          "text": "Agenda 2063"
+        },
+        {
+          "key": "d",
+          "text": "Sustainable Development Goals"
+        }
+      ],
+      "answer": "d",
+      "explanation": "The Sustainable Development Goals (2015–2030) succeeded the Millennium Development Goals. Agenda 2063 is the African Union’s plan.",
+      "source_ref": "JAMB 2019 Q29"
+    },
+    {
+      "topic": "constitution-rule-of-law",
+      "difficulty": "hard",
+      "question": "Under the 1963 Constitution, a federal judge could be removed by ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "a two-thirds majority of the National Assembly"
+        },
+        {
+          "key": "b",
+          "text": "the Federal Judicial Service Commission"
+        },
+        {
+          "key": "c",
+          "text": "the Nigerian Judicial Council"
+        },
+        {
+          "key": "d",
+          "text": "the executive president"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The 1963 Constitution required an address supported by a two-thirds majority of the federal legislature before a judge could be removed, protecting the judiciary from unilateral executive action.",
+      "source_ref": "JAMB 2019 Q30"
+    },
+    {
+      "topic": "constitution-rule-of-law",
+      "difficulty": "easy",
+      "question": "Under the 1999 Constitution, the Chief Law Officer and the head of the Supreme Court are respectively the ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "Chief Justice; Chief Judge"
+        },
+        {
+          "key": "b",
+          "text": "Attorney-General; Chief Justice"
+        },
+        {
+          "key": "c",
+          "text": "Minister of Justice; Chief Judge"
+        },
+        {
+          "key": "d",
+          "text": "Chief Registrar; Chief Justice"
+        }
+      ],
+      "answer": "b",
+      "explanation": "The Attorney-General of the Federation is the Chief Law Officer. The Chief Justice of Nigeria heads the Supreme Court.",
+      "source_ref": "JAMB 2019 Q31 (wording repaired)"
+    },
+    {
+      "topic": "constitution-rule-of-law",
+      "difficulty": "medium",
+      "question": "The scope of the EFCC’s duties does not extend to ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "arresting suspects of cybercrime and online fraud"
+        },
+        {
+          "key": "b",
+          "text": "arresting both the giver and the taker in a corruption case"
+        },
+        {
+          "key": "c",
+          "text": "conducting trials and punishing persons involved in corruption"
+        },
+        {
+          "key": "d",
+          "text": "investigating drug-related money laundering"
+        }
+      ],
+      "answer": "c",
+      "explanation": "The EFCC investigates and prosecutes economic and financial crimes; only courts can try and punish. That separation is itself an aspect of the rule of law.",
+      "source_ref": "JAMB 2019 Q34 (wording repaired)"
+    },
+    {
+      "topic": "political-parties-elections",
+      "difficulty": "easy",
+      "question": "The Green Revolution programme was the flagship manifesto of the ______ in 1979.",
+      "options": [
+        {
+          "key": "a",
+          "text": "UPN"
+        },
+        {
+          "key": "b",
+          "text": "NPP"
+        },
+        {
+          "key": "c",
+          "text": "GNPP"
+        },
+        {
+          "key": "d",
+          "text": "NPN"
+        }
+      ],
+      "answer": "d",
+      "explanation": "The National Party of Nigeria (NPN) campaigned on the Green Revolution to boost food production and won the 1979 presidential election.",
+      "source_ref": "JAMB 2019 Q35"
+    },
+    {
+      "topic": "structures-of-governance",
+      "difficulty": "medium",
+      "question": "Nigeria’s federalism is often measured against the classical federal principle associated with ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "K. C. Wheare"
+        },
+        {
+          "key": "b",
+          "text": "Abraham Lincoln"
+        },
+        {
+          "key": "c",
+          "text": "Thomas Hobbes"
+        },
+        {
+          "key": "d",
+          "text": "Aristotle"
+        }
+      ],
+      "answer": "a",
+      "explanation": "K. C. Wheare defined the federal principle as a division of powers between general and regional governments, each independent within its sphere — the benchmark used to judge Nigeria’s system.",
+      "source_ref": "JAMB 2019 Q36 (wording repaired)"
+    },
+    {
+      "topic": "foreign-policy-international-organisations",
+      "difficulty": "easy",
+      "question": "The most representative organ of the United Nations is the ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "Security Council"
+        },
+        {
+          "key": "b",
+          "text": "General Assembly"
+        },
+        {
+          "key": "c",
+          "text": "Economic and Social Council"
+        },
+        {
+          "key": "d",
+          "text": "International Court of Justice"
+        }
+      ],
+      "answer": "b",
+      "explanation": "The General Assembly includes all member states, each with one vote. The Security Council has limited membership and primary responsibility for peace and security.",
+      "source_ref": "JAMB 2019 Q37"
+    },
+    {
+      "topic": "foreign-policy-international-organisations",
+      "difficulty": "medium",
+      "question": "The Executive Council of the African Union makes decisions by ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "a one-third majority vote"
+        },
+        {
+          "key": "b",
+          "text": "discretion"
+        },
+        {
+          "key": "c",
+          "text": "consensus"
+        },
+        {
+          "key": "d",
+          "text": "a veto of the General Secretariat"
+        }
+      ],
+      "answer": "c",
+      "explanation": "The AU Executive Council generally proceeds by consensus; where consensus fails, a two-thirds majority of members may decide substantive questions.",
+      "source_ref": "JAMB 2019 Q38"
+    },
+    {
+      "topic": "foreign-policy-international-organisations",
+      "difficulty": "medium",
+      "question": "Amendment of the United Nations Charter is the duty of the ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "Security Council"
+        },
+        {
+          "key": "b",
+          "text": "Secretariat"
+        },
+        {
+          "key": "c",
+          "text": "Trusteeship Council"
+        },
+        {
+          "key": "d",
+          "text": "General Assembly"
+        }
+      ],
+      "answer": "d",
+      "explanation": "Under Article 108, amendments are adopted by a two-thirds vote of the General Assembly and then ratified by member states, including all permanent members of the Security Council.",
+      "source_ref": "JAMB 2019 Q39"
+    }
+  ]
+}
