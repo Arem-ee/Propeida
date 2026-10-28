@@ -1,4 +1,5 @@
 import { createClient } from './supabase/server'
+import { createAdminClient } from './supabase/admin'
 import { getExamHorizonDays } from './cohort'
 
 /**
@@ -86,7 +87,17 @@ export async function recordSessionEvidence(
   userId: string,
   sessionId: string,
 ): Promise<void> {
-  const { data: answers } = await supabase
+  // The grading columns are service-role only. Prove ownership with the
+  // caller's client first, then read the grades with the privileged one.
+  const { data: session } = await supabase
+    .from('exam_sessions')
+    .select('user_id')
+    .eq('id', sessionId)
+    .maybeSingle()
+  if (!session || session.user_id !== userId) return
+
+  const admin = createAdminClient()
+  const { data: answers } = await admin
     .from('session_answers')
     .select(`
       is_correct,
@@ -128,7 +139,12 @@ export async function applySubjectEvidence(
   } catch {
     horizonDays = null
   }
-  const { data: existing } = await supabase
+
+  // Mastery and the review queue are server-authored state: the client role
+  // can read its own rows but holds no INSERT/UPDATE. Every caller has
+  // already established the user above, so the privileged client is safe.
+  const admin = createAdminClient()
+  const { data: existing } = await admin
     .from('learner_topic_mastery')
     .select('subject_id, mastery_score, consecutive_successes')
     .eq('user_id', userId)
@@ -166,19 +182,19 @@ export async function applySubjectEvidence(
       updated_at: now.toISOString(),
     }
     if (prev) {
-      await supabase
+      await admin
         .from('learner_topic_mastery')
         .update(row)
         .eq('user_id', userId)
         .eq('subject_id', subjectId)
         .is('topic_id', null)
     } else {
-      await supabase.from('learner_topic_mastery').insert(row)
+      await admin.from('learner_topic_mastery').insert(row)
     }
 
     // The queue reflects the current model, not history: supersede stale due
     // rows for this subject, then schedule fresh work only where needed.
-    await supabase
+    await admin
       .from('review_queue')
       .update({ state: 'done', completed_at: now.toISOString() })
       .eq('user_id', userId)
@@ -186,7 +202,7 @@ export async function applySubjectEvidence(
       .eq('state', 'due')
 
     if (!success) {
-      await supabase.from('review_queue').insert({
+      await admin.from('review_queue').insert({
         user_id: userId,
         subject_id: subjectId,
         topic_id: null,
