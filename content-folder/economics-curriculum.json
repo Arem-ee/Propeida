@@ -594,6 +594,593 @@
           }
         }
       ]
+    },
+    {
+      "topic": "consumer-behaviour",
+      "slug": "consumer-behaviour",
+      "title": "Utility, Diminishing Marginal Utility and Consumer Choice",
+      "objective": "Distinguish total, average and marginal utility, apply diminishing marginal utility, and compute consumer surplus.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Utility and the margin",
+            "paragraphs": [
+              "Utility is the satisfaction a consumer derives from a good. It is subjective: the same good can give different satisfaction to different people, or to the same person at different times."
+            ],
+            "bullets": [
+              "Total utility (TU) is the satisfaction from all units consumed.",
+              "Average utility is total utility divided by the number of units.",
+              "Marginal utility (MU) is the extra satisfaction from one more unit.",
+              "The law of diminishing marginal utility says MU falls as consumption of a good increases in a given period.",
+              "Total utility is maximised when MU = 0; a negative MU reduces total utility."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Consumer surplus and indifference curves",
+            "paragraphs": [
+              "Consumers often pay less than the maximum they were willing to pay. That gap is consumer surplus, and it is one reason market exchange creates gains."
+            ],
+            "bullets": [
+              "Consumer surplus = willingness to pay − price actually paid.",
+              "An indifference curve shows combinations of two goods that give equal total satisfaction.",
+              "A budget line shows the combinations a consumer can afford at given prices and income.",
+              "Consumer equilibrium occurs where the highest attainable indifference curve is tangent to the budget line.",
+              "The water–diamond paradox: water is vital but cheap because its marginal utility is low; diamonds are frivolous but expensive because their marginal utility is high."
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam trap",
+            "tone": "tip",
+            "body": "Utility is satisfaction, not usefulness. A useless ornament can give high utility, while a useful tool may give little."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A student’s total utility from 1, 2, 3 and 4 bottles of water is 10, 18, 24 and 28. Find the marginal utility of each bottle, and say where diminishing marginal utility begins.",
+            "steps": [
+              {
+                "operation": "Compute marginal utility",
+                "reason": "MU is the change in total utility from one more unit.",
+                "result": "MU = 10, 8, 6 and 4 for bottles 1–4.",
+                "predictPrompt": "Is marginal utility rising or falling?"
+              },
+              {
+                "operation": "Locate the fall",
+                "reason": "Diminishing marginal utility means each extra unit adds less than the previous one.",
+                "result": "MU falls from 10 to 8 at the second bottle, so the law applies from there.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Check total utility",
+                "reason": "TU is still rising because every MU is positive.",
+                "result": "TU rises to 28; it would stop rising only when MU reaches zero."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A thirsty student drinks three bottles of water. Explain why the third may give less satisfaction than the first, and what happens to total utility if a fourth bottle makes her sick.",
+            "hints": [
+              "The first bottle removes the strongest thirst; later bottles meet weaker wants.",
+              "A bottle that makes her sick has negative marginal utility.",
+              "A strong answer says total utility falls when marginal utility turns negative."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "topic": "national-income",
+      "slug": "national-income",
+      "title": "National Income and Its Measurement",
+      "objective": "Define GDP and GNP, convert nominal to real income, compute per capita income, and explain what is excluded.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Measuring output",
+            "paragraphs": [
+              "National income is the total value of goods and services produced in an economy over a year. It can be measured by output, income or expenditure, and the three should agree."
+            ],
+            "bullets": [
+              "GDP counts output produced within a country’s borders, whoever owns the producer.",
+              "GNP = GDP + net factor income from abroad. It counts income earned by a country’s citizens.",
+              "The expenditure approach adds consumption, investment, government spending and net exports: C + I + G + (X − M).",
+              "Only final goods are counted; intermediate goods would double-count the same output.",
+              "Transfer payments, second-hand sales and purely financial transactions are excluded because they create no new output."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Real income, per capita income and development",
+            "paragraphs": [
+              "Nominal income is measured at current prices; real income is measured at constant prices, so it shows whether output actually grew."
+            ],
+            "bullets": [
+              "Real GDP = (nominal GDP ÷ price index) × 100.",
+              "Per capita income = national income ÷ population. It is an average, so it hides inequality.",
+              "Economic growth is a sustained rise in real output; economic development also includes health, education and structural change.",
+              "A rise in nominal GDP can be pure inflation, so it is not proof of better living standards."
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "GDP is about where output is produced; GNP is about who earns the income. Read the question for “within the country” versus “by citizens”."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Nominal GDP is N200 billion, the price index is 125, and the population is 40 million. Find real GDP and per capita real income.",
+            "steps": [
+              {
+                "operation": "Deflate nominal GDP",
+                "reason": "Divide by the price index and multiply by 100 to remove price changes.",
+                "result": "Real GDP = (200 ÷ 125) × 100 = N160 billion.",
+                "predictPrompt": "Now divide by population — in what units?"
+              },
+              {
+                "operation": "Compute per capita income",
+                "reason": "Per capita income is national income per person.",
+                "result": "N160 billion ÷ 40 million = N4,000 per person.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Interpret",
+                "reason": "The average is not a measure of distribution.",
+                "result": "Average real income is N4,000; many people may still be far below it."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why is a rise in nominal GDP not proof that living standards improved? Give two reasons.",
+            "hints": [
+              "Prices may have risen, so the same output is worth more in naira.",
+              "Population may have grown faster, leaving income per head unchanged or lower.",
+              "A strong answer also mentions distribution and unpaid/non-market production."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "topic": "financial-institutions",
+      "slug": "financial-institutions",
+      "title": "Financial Institutions and the Central Bank",
+      "objective": "Distinguish the Central Bank, deposit money banks and development banks, and explain the CBN’s main functions.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "The banking system",
+            "paragraphs": [
+              "Financial institutions move funds from savers to borrowers. The Central Bank sits at the top, with commercial and development banks below it."
+            ],
+            "bullets": [
+              "Deposit money banks (commercial banks) accept deposits, create credit and lend, mainly short term.",
+              "Development banks supply medium- and long-term finance for agriculture, industry and infrastructure.",
+              "Merchant banks handle wholesale banking and corporate finance.",
+              "Microfinance banks serve small borrowers who cannot meet commercial-bank collateral requirements.",
+              "Non-bank institutions include insurance companies and pension funds."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Functions of the Central Bank",
+            "paragraphs": [
+              "The CBN is the apex financial institution. It does not compete with commercial banks for retail customers; it regulates and supports them."
+            ],
+            "bullets": [
+              "Issues currency notes and coins.",
+              "Acts as banker to the federal government and manages its accounts.",
+              "Acts as banker to banks and lender of last resort.",
+              "Formulates and implements monetary policy, including interest rates and reserve requirements.",
+              "Manages external reserves and the exchange rate, and supervises banks."
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam trap",
+            "tone": "tip",
+            "body": "The CBN is banker to the government and to the banks. A commercial bank is banker to the public."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A commercial bank faces a sudden wave of withdrawals and cannot borrow from other banks. Who can help it, and under which function?",
+            "steps": [
+              {
+                "operation": "Identify the lender of last resort",
+                "reason": "When no other bank will lend, the apex bank can provide emergency liquidity.",
+                "result": "The Central Bank of Nigeria can lend to it.",
+                "predictPrompt": "Why not let the bank fail?"
+              },
+              {
+                "operation": "Name the function",
+                "reason": "This is the CBN’s lender-of-last-resort role, part of its financial-stability mandate.",
+                "result": "The CBN acts as lender of last resort.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Explain the condition",
+                "reason": "Emergency lending is not free money; the bank must be solvent and provide collateral.",
+                "result": "Support is temporary and supervised, to stop panic without rewarding bad management."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A new factory needs finance for ten years. Distinguish what the CBN and a development bank can each do.",
+            "hints": [
+              "The CBN sets monetary policy and supports the banking system; it does not normally lend to individual firms.",
+              "Development banks provide long-term project finance, often at concessional rates.",
+              "A strong answer says the CBN creates the environment and the development bank supplies the loan."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "topic": "public-finance",
+      "slug": "public-finance",
+      "title": "Government Revenue, Taxation and the Budget",
+      "objective": "Classify taxes, explain budget outcomes, and distinguish fiscal policy from monetary policy.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Government revenue and spending",
+            "paragraphs": [
+              "Public finance studies how government raises and spends money. Revenue comes from oil and non-oil sources; spending is recurrent or capital."
+            ],
+            "bullets": [
+              "Revenue: taxes, fees, licences, fines, dividends from state enterprises, grants, aid and borrowing.",
+              "Recurrent expenditure: salaries, allowances, debt service and day-to-day running costs.",
+              "Capital expenditure: roads, schools, hospitals, power and other long-term assets.",
+              "Borrowing is not revenue in the true sense; it creates a future obligation."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Taxes and the budget",
+            "paragraphs": [
+              "A tax is a compulsory payment to government. Taxes can be classified by how they are collected and by how the burden falls."
+            ],
+            "bullets": [
+              "Direct tax: levied on income or wealth, e.g. personal income tax and company tax.",
+              "Indirect tax: levied on goods and services, e.g. VAT, import duty and excise duty.",
+              "Progressive tax: the rate rises with income. Proportional: the same rate. Regressive: the rate falls as income rises.",
+              "Budget surplus: revenue exceeds expenditure. Deficit: expenditure exceeds revenue. Balanced: the two are equal.",
+              "Fiscal policy uses taxation and government spending; monetary policy uses interest rates and money supply."
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam trap",
+            "tone": "tip",
+            "body": "VAT is indirect even though the seller hands it over. The tax is on the sale, and the seller passes it to government."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Classify each tax and say whether it is direct or indirect: personal income tax, VAT, import duty, company tax.",
+            "steps": [
+              {
+                "operation": "Ask what is taxed",
+                "reason": "Direct taxes fall on income or wealth; indirect taxes fall on goods and services.",
+                "result": "Personal income tax and company tax are direct; VAT and import duty are indirect.",
+                "predictPrompt": "Who ultimately bears the burden of VAT?"
+              },
+              {
+                "operation": "Trace the burden",
+                "reason": "VAT is collected by sellers but added to prices.",
+                "result": "Consumers bear most of the VAT burden, which is why it can be regressive.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Check the classification",
+                "reason": "Import duty is charged on imported goods, so it is indirect.",
+                "result": "Direct: personal income tax, company tax. Indirect: VAT, import duty."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Government wants to reduce a budget deficit without cutting capital projects. Name two options and one risk of each.",
+            "hints": [
+              "It can raise tax revenue or cut recurrent spending.",
+              "It can also borrow, but that adds debt-service costs and may crowd out private investment.",
+              "A strong answer notes the trade-off between short-term relief and long-term growth."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "topic": "agriculture-and-industry",
+      "slug": "agriculture-and-industry",
+      "title": "Agriculture, Industry and the Oil Sector",
+      "objective": "Explain agriculture’s role, the factors that locate industry, and the difference between upstream and downstream oil.",
+      "estimatedMinutes": 12,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Agriculture",
+            "paragraphs": [
+              "Agriculture supplies food, employs labour and provides raw materials for industry. In Nigeria it remains the largest employer even though oil dominates foreign exchange."
+            ],
+            "bullets": [
+              "Provides food and improves food security.",
+              "Employs a large share of the population.",
+              "Supplies raw materials to agro-processing industries.",
+              "Earns foreign exchange through cash crops and provides a market for industrial goods.",
+              "Problems: low mechanisation, insecure land tenure, weak credit, poor storage and transport, and climate risk."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Industry and the oil sector",
+            "paragraphs": [
+              "Industrial location depends on costs. Firms balance proximity to raw materials, markets, power, transport, labour and government incentives."
+            ],
+            "bullets": [
+              "A weight-losing industry locates near its raw material; a weight-gaining or bulky product locates near its market.",
+              "Upstream oil: exploration and extraction of crude oil.",
+              "Downstream oil: refining, distribution and marketing of petroleum products.",
+              "Over-dependence on oil exposes the economy to price shocks, neglects agriculture and manufacturing, and can cause Dutch disease."
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam trap",
+            "tone": "tip",
+            "body": "Upstream is finding and extracting; downstream is refining and selling. Refining is never upstream."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A cement factory locates beside a limestone deposit rather than in the city. Which location factor dominates, and what trade-off does the firm accept?",
+            "steps": [
+              {
+                "operation": "Identify the input",
+                "reason": "Limestone is bulky and expensive to transport, so proximity lowers cost.",
+                "result": "The firm is raw-material oriented.",
+                "predictPrompt": "What does it give up by moving away from customers?"
+              },
+              {
+                "operation": "State the trade-off",
+                "reason": "Locating near the deposit raises the distance to the market.",
+                "result": "The firm accepts higher transport costs for finished cement.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Conclude",
+                "reason": "The choice depends on which transport cost is larger.",
+                "result": "When the raw material loses weight in processing, locating near the deposit usually wins."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Name two ways over-dependence on oil weakens the Nigerian economy.",
+            "hints": [
+              "Oil prices are volatile, so revenue and the exchange rate swing with them.",
+              "Easy oil revenue can crowd out agriculture and manufacturing, and imported goods can make local production uncompetitive.",
+              "A strong answer mentions price shocks and the neglect of other sectors (or Dutch disease)."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "topic": "business-organisations",
+      "slug": "business-organisations",
+      "title": "Business Organisations",
+      "objective": "Compare sole proprietorships, partnerships, companies and co-operatives on ownership, liability and finance.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Unincorporated businesses",
+            "paragraphs": [
+              "A sole proprietorship has one owner; a partnership has two to twenty. Neither is a separate legal person from its owners."
+            ],
+            "bullets": [
+              "Sole proprietorship: easy and cheap to start, owner keeps all profit, but has unlimited liability and limited capital.",
+              "Partnership: pooled capital and skills, shared workload, but unlimited liability and possible disagreement.",
+              "Unlimited liability means business debts can be recovered from the owner’s personal assets.",
+              "Both end when the owner dies or leaves, so they lack perpetual succession."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Companies and co-operatives",
+            "paragraphs": [
+              "Incorporation creates a separate legal person. The company owns assets, signs contracts and bears liability in its own name."
+            ],
+            "bullets": [
+              "Private limited company: shares restricted, often family-owned, limited liability, separate legal entity.",
+              "Public limited company: shares freely transferable and traded, can raise large capital, subject to stricter disclosure.",
+              "Both companies have perpetual succession: they continue when shareholders change.",
+              "Co-operative: owned and controlled by members, usually one member one vote, surplus shared according to members’ patronage."
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Incorporation is the dividing line. A company is a separate legal person; a sole trader is not."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Two friends need N50 million and want to limit their personal risk. Which business form should they choose, and why not a partnership?",
+            "steps": [
+              {
+                "operation": "Identify the risk problem",
+                "reason": "A partnership leaves owners personally liable for business debts.",
+                "result": "A partnership does not cap personal risk.",
+                "predictPrompt": "Which form limits liability and can raise outside capital?"
+              },
+              {
+                "operation": "Choose the form",
+                "reason": "A limited liability company is a separate legal person and can issue shares.",
+                "result": "A private limited company fits; it can later become public to raise more capital.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Check the trade-off",
+                "reason": "Incorporation brings registration, disclosure and compliance costs.",
+                "result": "They accept formalities in exchange for limited liability and easier capital raising."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why might a co-operative charge members lower prices than a private shop selling the same goods?",
+            "hints": [
+              "A co-operative is owned by its members, not by outside shareholders seeking maximum profit.",
+              "Any surplus is returned to members, so the effective price is lower.",
+              "A strong answer links ownership and surplus distribution to the price members pay."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "topic": "population",
+      "slug": "population",
+      "title": "Population, Census and the Labour Force",
+      "objective": "Interpret population structure, explain the uses of a census, and calculate dependency and participation ratios.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Population structure",
+            "paragraphs": [
+              "Population structure describes how a population is distributed by age, sex, occupation and location. It determines how many people work and how many depend on them."
+            ],
+            "bullets": [
+              "Working population (labour force): people of working age who are able and willing to work.",
+              "Dependency ratio = dependants ÷ working-age population. Children and the elderly are the main dependants.",
+              "A youthful population needs schools and jobs; an ageing population needs health and pension spending.",
+              "Migration is pushed by low wages, insecurity and unemployment, and pulled by jobs and services."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Census and planning",
+            "paragraphs": [
+              "A census is an official count of a country’s population. Accurate figures are a planning tool, not just a statistic."
+            ],
+            "bullets": [
+              "Uses: planning schools, hospitals, housing, roads and jobs; allocating revenue; estimating the labour force; delimiting constituencies.",
+              "Problems: cost, illiteracy, difficult terrain, religious and ethnic sensitivity, poor logistics and political manipulation.",
+              "A census counts people; a survey samples them. Both need clear definitions to be comparable."
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam trap",
+            "tone": "tip",
+            "body": "The labour force excludes people of working age who are not able or willing to work — full-time students, retirees and some carers."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A country has 120 million people: 45 million under 15, 5 million over 64, and a labour force of 50 million. Find the working-age population, the dependency ratio and the participation rate.",
+            "steps": [
+              {
+                "operation": "Find the working-age population",
+                "reason": "Subtract the dependent age groups from the total.",
+                "result": "120 − 45 − 5 = 70 million people of working age.",
+                "predictPrompt": "Which group is counted as dependants?"
+              },
+              {
+                "operation": "Compute the dependency ratio",
+                "reason": "Dependants are the under-15 and over-64 groups: 45 + 5 = 50 million.",
+                "result": "50 ÷ 70 ≈ 0.71 dependants per working-age person.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Compute participation",
+                "reason": "The labour force is those working or actively seeking work, not everyone of working age.",
+                "result": "50 ÷ 70 ≈ 71.4% participation."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "How can a country’s population grow while its labour force falls? Give two reasons.",
+            "hints": [
+              "Population growth can come from children, who do not join the labour force for years.",
+              "More young people staying in school, more retirements, or emigration can shrink the labour force.",
+              "A strong answer separates total population from the number able and willing to work."
+            ]
+          }
+        }
+      ]
     }
   ]
 }

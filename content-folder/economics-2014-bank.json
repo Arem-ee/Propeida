@@ -1,0 +1,426 @@
+{
+  "_note": "Second audited Economics batch, from the 2014 paper. The 2014 parse had an offset answer key and fused options, so every key was re-derived; six keys were corrected (demand shift, supply-function quantity, fixed costs, stagflation, money market, quota). Figure-dependent, ambiguous and unrecoverable rows were rejected and are listed in docs/deferred.md.",
+  "subject": "economics",
+  "exam": "jamb",
+  "source": "JAMB Economics 2014 (audited)",
+  "status": "draft",
+  "verified_state": "unverified",
+  "questions": [
+    {
+      "topic": "demand-and-supply",
+      "difficulty": "medium",
+      "question": "A change in demand for a normal good implies that there is ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "a shift in the demand curve"
+        },
+        {
+          "key": "b",
+          "text": "a change in the quantity demanded as price changes"
+        },
+        {
+          "key": "c",
+          "text": "a movement along a given demand curve"
+        },
+        {
+          "key": "d",
+          "text": "a change in the price elasticity of demand"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A change in demand means the whole relationship has changed, so the curve shifts. A change in the good’s own price causes a movement along the existing curve.",
+      "source_ref": "JAMB 2014 Q9 (key corrected)"
+    },
+    {
+      "topic": "demand-and-supply",
+      "difficulty": "medium",
+      "question": "Given the supply function P = ¼(Qs + 10), when P = N10, Qs is ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "20"
+        },
+        {
+          "key": "b",
+          "text": "30"
+        },
+        {
+          "key": "c",
+          "text": "15"
+        },
+        {
+          "key": "d",
+          "text": "50"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Substitute P = 10: 10 = ¼(Qs + 10). Multiply both sides by 4 to get 40 = Qs + 10, so Qs = 30.",
+      "source_ref": "JAMB 2014 Q13 (key corrected)"
+    },
+    {
+      "topic": "demand-and-supply",
+      "difficulty": "easy",
+      "question": "The price mechanism determines the prices of commodities through ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "auctioning"
+        },
+        {
+          "key": "b",
+          "text": "the sale of treasury bills"
+        },
+        {
+          "key": "c",
+          "text": "market forces"
+        },
+        {
+          "key": "d",
+          "text": "government legislation"
+        }
+      ],
+      "answer": "c",
+      "explanation": "In a market economy, the interaction of demand and supply — market forces — sets price. Treasury bills and legislation are not price-setting mechanisms for goods.",
+      "source_ref": "JAMB 2014 Q16"
+    },
+    {
+      "topic": "production-and-costs",
+      "difficulty": "easy",
+      "question": "Rent and administrative expenses are examples of ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "average fixed costs"
+        },
+        {
+          "key": "b",
+          "text": "average variable costs"
+        },
+        {
+          "key": "c",
+          "text": "variable costs"
+        },
+        {
+          "key": "d",
+          "text": "fixed costs"
+        }
+      ],
+      "answer": "d",
+      "explanation": "Rent and administrative salaries are paid even when output is zero, so they are fixed costs. Average fixed cost is a per-unit figure, not the cost itself.",
+      "source_ref": "JAMB 2014 Q21 (key corrected)"
+    },
+    {
+      "topic": "national-income",
+      "difficulty": "hard",
+      "question": "If the marginal propensity to consume is 2/3 and investment is N100 million, the level of national income is ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "N300 million"
+        },
+        {
+          "key": "b",
+          "text": "N30 million"
+        },
+        {
+          "key": "c",
+          "text": "N40 million"
+        },
+        {
+          "key": "d",
+          "text": "N150 million"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The multiplier is 1 ÷ (1 − MPC) = 1 ÷ (1/3) = 3. National income = 3 × N100 million = N300 million.",
+      "source_ref": "JAMB 2014 Q26 (options rebuilt)"
+    },
+    {
+      "topic": "money-and-inflation",
+      "difficulty": "medium",
+      "question": "Inflation that co-exists with a high rate of unemployment is called ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "hyperinflation"
+        },
+        {
+          "key": "b",
+          "text": "stagflation"
+        },
+        {
+          "key": "c",
+          "text": "demand-pull inflation"
+        },
+        {
+          "key": "d",
+          "text": "cost-push inflation"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Stagflation combines rising prices with stagnant output and high unemployment. Demand-pull and cost-push inflation describe causes, not the unemployment combination.",
+      "source_ref": "JAMB 2014 Q28 (key corrected)"
+    },
+    {
+      "topic": "financial-institutions",
+      "difficulty": "medium",
+      "question": "Short-term loans for investment are usually obtained through the ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "stock market"
+        },
+        {
+          "key": "b",
+          "text": "development banks"
+        },
+        {
+          "key": "c",
+          "text": "money market"
+        },
+        {
+          "key": "d",
+          "text": "capital market"
+        }
+      ],
+      "answer": "c",
+      "explanation": "The money market handles short-term funds such as treasury bills and commercial paper. The capital market and development banks supply medium- and long-term finance.",
+      "source_ref": "JAMB 2014 Q30 (key corrected)"
+    },
+    {
+      "topic": "money-and-inflation",
+      "difficulty": "easy",
+      "question": "A wage freeze is a policy measure aimed at ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "encouraging investors"
+        },
+        {
+          "key": "b",
+          "text": "regulating the standard of living"
+        },
+        {
+          "key": "c",
+          "text": "curbing deflation"
+        },
+        {
+          "key": "d",
+          "text": "curbing inflation"
+        }
+      ],
+      "answer": "d",
+      "explanation": "A wage freeze holds down labour costs and disposable income, which slows cost-push and demand-pull pressure on prices. It is an anti-inflation measure.",
+      "source_ref": "JAMB 2014 Q32"
+    },
+    {
+      "topic": "national-income",
+      "difficulty": "easy",
+      "question": "A major feature of an underdeveloped economy is ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "a low level of standard of living"
+        },
+        {
+          "key": "b",
+          "text": "excess capacity utilisation"
+        },
+        {
+          "key": "c",
+          "text": "a low rate of population growth"
+        },
+        {
+          "key": "d",
+          "text": "a low level of unemployment"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Underdeveloped economies are characterised by low income per head and therefore a low standard of living, alongside low capital formation and high underemployment.",
+      "source_ref": "JAMB 2014 Q34"
+    },
+    {
+      "topic": "agriculture-and-industry",
+      "difficulty": "easy",
+      "question": "An important role of agriculture in an economy is ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "processing of raw materials"
+        },
+        {
+          "key": "b",
+          "text": "provision of employment"
+        },
+        {
+          "key": "c",
+          "text": "regulation of the price system"
+        },
+        {
+          "key": "d",
+          "text": "provision of infrastructure"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Agriculture employs a large share of the labour force and supplies food and raw materials. Processing raw materials is manufacturing, not farming.",
+      "source_ref": "JAMB 2014 Q35"
+    },
+    {
+      "topic": "agriculture-and-industry",
+      "difficulty": "medium",
+      "question": "An advantage of large-scale farming over peasant farming is ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "redistributing national income across regions"
+        },
+        {
+          "key": "b",
+          "text": "encouraging the use of traditional implements"
+        },
+        {
+          "key": "c",
+          "text": "conducting research and employing labour on a large scale"
+        },
+        {
+          "key": "d",
+          "text": "encouraging urban-rural migration"
+        }
+      ],
+      "answer": "c",
+      "explanation": "Large-scale farms can afford research, machinery and specialised labour, which raise yields. Traditional implements and income redistribution are not advantages of scale.",
+      "source_ref": "JAMB 2014 Q36 (wording repaired)"
+    },
+    {
+      "topic": "agriculture-and-industry",
+      "difficulty": "easy",
+      "question": "One major factor that determines the location of an industry is ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "a tax exemption grant"
+        },
+        {
+          "key": "b",
+          "text": "the capital base of the firm"
+        },
+        {
+          "key": "c",
+          "text": "the social responsibility of the firm"
+        },
+        {
+          "key": "d",
+          "text": "its proximity to the market"
+        }
+      ],
+      "answer": "d",
+      "explanation": "Firms locate near markets to cut transport costs and reach customers, especially when the product is bulky or perishable. Capital base affects scale, not location.",
+      "source_ref": "JAMB 2014 Q38"
+    },
+    {
+      "topic": "international-trade",
+      "difficulty": "easy",
+      "question": "The major contribution of OPEC to the Nigerian economy is the provision of ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "stabilisation of oil prices"
+        },
+        {
+          "key": "b",
+          "text": "social infrastructure"
+        },
+        {
+          "key": "c",
+          "text": "subsidies on petroleum products"
+        },
+        {
+          "key": "d",
+          "text": "refineries"
+        }
+      ],
+      "answer": "a",
+      "explanation": "OPEC coordinates production among oil-exporting countries to stabilise prices. It does not build infrastructure, pay subsidies or refine crude oil.",
+      "source_ref": "JAMB 2014 Q39"
+    },
+    {
+      "topic": "production-and-costs",
+      "difficulty": "medium",
+      "question": "The short-run average variable cost of a firm will rise owing to ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "the expansion of factory space"
+        },
+        {
+          "key": "b",
+          "text": "an increase in the cost of labour"
+        },
+        {
+          "key": "c",
+          "text": "the building of a new warehouse"
+        },
+        {
+          "key": "d",
+          "text": "an increase in the salaries of directors"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Variable costs change with output, and labour is a variable input. Factory space, warehouses and directors’ salaries are fixed costs in the short run.",
+      "source_ref": "JAMB 2014 Q41"
+    },
+    {
+      "topic": "business-organisations",
+      "difficulty": "medium",
+      "question": "Firms embark on vertical integration in order to ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "take over markets formerly controlled by other firms"
+        },
+        {
+          "key": "b",
+          "text": "prevent other firms from entering the market"
+        },
+        {
+          "key": "c",
+          "text": "enjoy economies of large-scale production"
+        },
+        {
+          "key": "d",
+          "text": "reduce advertisement and management costs"
+        }
+      ],
+      "answer": "c",
+      "explanation": "Vertical integration combines stages of production or distribution, which can lower costs and secure supply. Taking over a competitor’s market is horizontal integration.",
+      "source_ref": "JAMB 2014 Q42"
+    },
+    {
+      "topic": "international-trade",
+      "difficulty": "medium",
+      "question": "A trade control measure that limits imports to a definite quantity is called a ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "excise duty"
+        },
+        {
+          "key": "b",
+          "text": "import duty"
+        },
+        {
+          "key": "c",
+          "text": "tariff"
+        },
+        {
+          "key": "d",
+          "text": "quota"
+        }
+      ],
+      "answer": "d",
+      "explanation": "A quota sets a physical limit on the quantity imported. A tariff is a tax on imports, and an excise duty is a tax on domestic production.",
+      "source_ref": "JAMB 2014 Q47 (key corrected, stem repaired)"
+    }
+  ]
+}
