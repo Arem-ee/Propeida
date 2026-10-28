@@ -747,6 +747,350 @@
           }
         }
       ]
+    },
+    {
+      "topic": "citizenship",
+      "slug": "citizenship",
+      "title": "Citizenship: Acquisition, Rights and Loss",
+      "objective": "Distinguish birth, descent, registration and naturalisation, separate rights from duties, and explain how citizenship is lost.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Four ways to become a citizen",
+            "paragraphs": [
+              "Citizenship is the legal bond between a person and a state. It carries rights, duties and protection, and it is not the same as residence.",
+              "The Nigerian Constitution recognises four routes: birth, descent, registration and naturalisation."
+            ],
+            "bullets": [
+              "By birth: born in Nigeria, with a parent or grandparent belonging to a community indigenous to Nigeria (before independence) or a citizen (after independence).",
+              "By descent: born outside Nigeria, where either parent is a Nigerian citizen.",
+              "By registration: for example a woman who is or has been married to a Nigerian citizen, or a person of full age who meets the constitutional residence conditions.",
+              "By naturalisation: a foreigner who satisfies the constitutional conditions and takes the oath of allegiance."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Rights, duties and loss",
+            "paragraphs": [
+              "Citizenship is two-sided: it protects the person and it obliges the person. Exams often ask you to separate the two."
+            ],
+            "bullets": [
+              "Rights include life, fair hearing, freedom of expression, association, movement and religion.",
+              "Duties include obeying the law, paying taxes, respecting national symbols, protecting public property and defending the country when required.",
+              "A citizen by registration or naturalisation loses citizenship if he or she voluntarily acquires another country’s citizenship.",
+              "Citizens by birth do not lose Nigerian citizenship merely by taking another citizenship."
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam trap",
+            "tone": "tip",
+            "body": "Residence is not citizenship. A foreigner who has lived in Nigeria for years remains an alien until registered or naturalised."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Classify each case: (a) a child born in Lagos to Nigerian parents; (b) an adult born in Chad who has lived in Kano for twelve years; (c) a Ghanaian woman married to a Nigerian citizen.",
+            "steps": [
+              {
+                "operation": "Classify the child",
+                "reason": "Birth in Nigeria to citizen parents is citizenship by birth.",
+                "result": "(a) Citizen by birth.",
+                "predictPrompt": "Does twelve years of residence confer citizenship?"
+              },
+              {
+                "operation": "Classify the long-term resident",
+                "reason": "Residence alone does not create the legal bond; the person must apply and qualify.",
+                "result": "(b) Still an alien unless naturalised.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Classify the spouse",
+                "reason": "Marriage to a citizen opens the registration route, but she must apply.",
+                "result": "(c) Eligible for citizenship by registration."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A Nigerian woman by birth becomes a Canadian citizen. Does she lose Nigerian citizenship? Explain the rule, and contrast her with a naturalised citizen in the same position.",
+            "hints": [
+              "The rule on acquiring another citizenship applies to registration and naturalisation, not birth.",
+              "A citizen by birth keeps Nigerian citizenship; a naturalised citizen who takes another citizenship loses it.",
+              "A strong answer cites the constitutional distinction rather than treating all citizens alike."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "topic": "political-ideologies",
+      "slug": "political-ideologies",
+      "title": "Political Ideologies: Capitalism, Socialism and the Rest",
+      "objective": "Define ideology and distinguish capitalism, socialism, communism, liberalism, conservatism, feudalism and fascism.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "What an ideology is",
+            "paragraphs": [
+              "An ideology is an organised set of beliefs about how political and economic life should be arranged: who should own wealth, how much the state should do, and how change should happen.",
+              "Most ideologies are placed on a spectrum by two questions: how much equality they want, and how much individual liberty they protect."
+            ],
+            "bullets": [
+              "The left generally favours greater equality, public ownership and state action.",
+              "The right generally favours private property, markets and limited government.",
+              "The spectrum is a guide, not a law: parties mix positions in practice."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The main ideologies",
+            "paragraphs": [
+              "Exams test recognition: a short definition must map to the right label."
+            ],
+            "bullets": [
+              "Capitalism: private ownership of the means of production, market prices and the profit motive.",
+              "Socialism: social or state ownership and planning, with equality as a central aim.",
+              "Communism: common ownership, a classless society, and in Marxist theory the eventual withering away of the state.",
+              "Liberalism: individual liberty, consent, limited government and gradual reform.",
+              "Conservatism: tradition, order, inherited institutions and caution about rapid change.",
+              "Feudalism: land held by a noble class and worked by peasants in return for service.",
+              "Fascism: extreme nationalism, a single leader and the subordination of the individual to the state, often resting on force."
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam trap",
+            "tone": "tip",
+            "body": "Socialism and communism are not the same answer. Socialism allows private property and elections; communism envisages common ownership and a classless, stateless society."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Name the ideology behind each statement: (a) “the state should own the banks and plan output”; (b) “we should keep our inherited institutions and change slowly”; (c) “land belongs to lords who grant it to peasants for service”.",
+            "steps": [
+              {
+                "operation": "Read the ownership claim",
+                "reason": "State ownership plus planning is the socialist position.",
+                "result": "(a) Socialism.",
+                "predictPrompt": "Which statement stresses inherited institutions?"
+              },
+              {
+                "operation": "Read the attitude to change",
+                "reason": "Defending tradition and slow change is conservatism.",
+                "result": "(b) Conservatism.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Read the land relationship",
+                "reason": "Land-for-service between lords and peasants is feudalism.",
+                "result": "(c) Feudalism."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A country has extreme inequality. Which ideology would prescribe higher taxes and public ownership, and what is the strongest criticism of that prescription?",
+            "hints": [
+              "Higher taxes and public ownership point to socialism or social democracy.",
+              "The criticism is usually about incentives, efficiency and state power.",
+              "A strong answer names the ideology and weighs the equality gain against the efficiency cost."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "topic": "structures-of-governance",
+      "slug": "structures-of-governance",
+      "title": "The Civil Service, Public Corporations and Local Government",
+      "objective": "Explain the civil service, public corporations and local government, and distinguish political from administrative leadership.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "The civil service",
+            "paragraphs": [
+              "The civil service is the permanent administrative arm of government. It turns policy into action and advises ministers."
+            ],
+            "bullets": [
+              "Permanence: officials stay in post when governments change.",
+              "Neutrality: they serve whichever party is in power, without favour.",
+              "Anonymity: ministers take public credit and blame for policy.",
+              "Merit: recruitment and promotion are based on qualification, not party loyalty.",
+              "The minister is the political head of a ministry; the permanent secretary is its administrative head.",
+              "The Civil Service Commission handles appointment, promotion and discipline."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Public corporations and local government",
+            "paragraphs": [
+              "Not all public business is done through ministries. Corporations and councils have their own legal standing and functions."
+            ],
+            "bullets": [
+              "A public corporation is created by statute as a separate legal person with its own board, accounts and powers.",
+              "It delivers services such as water, power or transport where a ministry would be too rigid.",
+              "Local government is the third tier, with elected councils and functions such as markets, local roads and sanitation.",
+              "Its largest revenue source since the 1976 reforms is statutory allocation from the Federation Account.",
+              "Traditional rulers exercise an advisory role in the modern system; they do not hold executive power."
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam trap",
+            "tone": "tip",
+            "body": "The minister is the political head; the permanent secretary is the administrative head. A question that says “administrative head” wants the permanent secretary."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A state water board needs to sign a contract, and the ministry of water resources must brief the governor. Who has legal capacity to sign for the board, and who advises the governor?",
+            "steps": [
+              {
+                "operation": "Identify the board’s status",
+                "reason": "A public corporation is a separate legal person, so it contracts in its own name.",
+                "result": "The board signs through its management, not the ministry.",
+                "predictPrompt": "Who gives the governor administrative advice?"
+              },
+              {
+                "operation": "Identify the adviser",
+                "reason": "The permanent secretary heads the ministry’s administration and advises on policy.",
+                "result": "The permanent secretary briefs the governor through the commissioner or minister.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Separate the roles",
+                "reason": "Political direction and administrative execution are different functions.",
+                "result": "The board executes; the ministry advises and supervises."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why does democracy need a politically neutral civil service, and what happens when it is not neutral?",
+            "hints": [
+              "Governments change, but administration must continue without disruption.",
+              "A partisan service rewards loyalty over competence and politicises advice.",
+              "A strong answer links neutrality to continuity, impartial advice and public trust."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "topic": "nigerian-federalism-military-rule",
+      "slug": "nigerian-federalism-military-rule",
+      "title": "Nigerian Federalism and Military Rule",
+      "objective": "Apply the federal principle, use the legislative lists, and explain how military rule shaped Nigeria’s federal structure.",
+      "estimatedMinutes": 12,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "The federal principle",
+            "paragraphs": [
+              "K. C. Wheare defined the federal principle as a division of powers between a general government and regional governments, each coordinate and independent within its own sphere.",
+              "Nigeria divides power using legislative lists, and the courts police the boundary."
+            ],
+            "bullets": [
+              "Exclusive legislative list: only the federal government may legislate — defence, currency, foreign affairs.",
+              "Concurrent legislative list: both federal and state governments may legislate — education, health.",
+              "Residual list: matters left to the states.",
+              "Where federal and state laws conflict on a concurrent matter, the federal law prevails.",
+              "Other federal features: a written constitution, a bicameral legislature and a supreme court that arbitrates disputes."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "How Nigeria got here, and what military rule did",
+            "paragraphs": [
+              "Nigerian federalism was built in stages and then reshaped by soldiers. Knowing the sequence answers most history questions."
+            ],
+            "bullets": [
+              "1914: amalgamation of the Northern and Southern Protectorates.",
+              "1946 Richards Constitution: conceived a federal structure with three regions.",
+              "1954 Lyttleton Constitution: established federalism with regional autonomy.",
+              "1960 independence, 1963 republic; 1967 twelve states, 1976 nineteen, 1987 twenty-one, 1991 thirty, 1996 thirty-six.",
+              "Military rule ran from 1966 to 1979 and from 1983 to 1999.",
+              "Military governments ruled by decree, suspended the constitution, ousted court jurisdiction and centralised power, which is why Nigeria is often called a federation with strong centralising tendencies.",
+              "The 1976 local government reforms gave councils a guaranteed share of the Federation Account."
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam trap",
+            "tone": "tip",
+            "body": "The 1946 Richards Constitution conceived federalism; the 1954 Lyttleton Constitution established it. Do not swap the two."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "The federal government sets a national minimum standard for secondary schools. A state passes a lower standard. Which law prevails, and on what basis?",
+            "steps": [
+              {
+                "operation": "Locate the subject",
+                "reason": "Education is on the concurrent legislative list, so both levels may legislate.",
+                "result": "Both laws are within power.",
+                "predictPrompt": "What happens when they conflict?"
+              },
+              {
+                "operation": "Apply the conflict rule",
+                "reason": "On a concurrent matter, the federal law prevails to the extent of the inconsistency.",
+                "result": "The federal minimum standard prevails.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "State the limit",
+                "reason": "Federal supremacy is not unlimited: it applies only where the two laws are inconsistent.",
+                "result": "The state may add stricter rules that do not contradict the federal standard."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why is Nigeria often described as a federation with strong centralising tendencies? Give two reasons and one consequence.",
+            "hints": [
+              "Military rule concentrated power and governed by decree.",
+              "Oil revenue and the Federation Account give the centre fiscal leverage over states.",
+              "A consequence is weaker state autonomy or persistent tension over revenue and jurisdiction."
+            ]
+          }
+        }
+      ]
     }
   ]
 }

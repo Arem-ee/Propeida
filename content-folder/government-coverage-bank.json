@@ -1,0 +1,530 @@
+{
+  "_note": "Government coverage batch for the four topics that had no lesson: citizenship, political ideologies, structures of governance, and Nigerian federalism and military rule. Three rows come from the 2018/2020 papers (2020 Q15 key corrected); the rest are authored because those papers are thin here. 2020 Q7 (feudalism) and 2018 Q9 (state creation) were rejected rather than corrected.",
+  "subject": "government",
+  "exam": "jamb",
+  "source": "JAMB Government coverage batch (audited)",
+  "status": "draft",
+  "verified_state": "unverified",
+  "questions": [
+    {
+      "topic": "citizenship",
+      "difficulty": "medium",
+      "question": "A person born outside Nigeria acquires Nigerian citizenship by descent if ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "either of the person’s parents is a Nigerian citizen"
+        },
+        {
+          "key": "b",
+          "text": "a grandparent was born in Nigeria"
+        },
+        {
+          "key": "c",
+          "text": "the person has lived in Nigeria for at least five years"
+        },
+        {
+          "key": "d",
+          "text": "the person holds a Nigerian passport"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Section 25(1)(c) of the 1999 Constitution grants citizenship to a person born outside Nigeria either of whose parents is a citizen. A grandparent’s birthplace, residence or a passport does not by itself confer citizenship on someone born abroad.",
+      "source_ref": "JAMB 2018 Q39 (key corrected: imported key used grandparents; s.25(1)(c) requires a parent)"
+    },
+    {
+      "topic": "citizenship",
+      "difficulty": "medium",
+      "question": "A woman who is married to a Nigerian citizen but is not a citizen by birth or descent may acquire Nigerian citizenship by ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "descent"
+        },
+        {
+          "key": "b",
+          "text": "registration"
+        },
+        {
+          "key": "c",
+          "text": "conquest"
+        },
+        {
+          "key": "d",
+          "text": "adoption"
+        }
+      ],
+      "answer": "b",
+      "explanation": "The Constitution allows a woman who is or has been married to a Nigerian citizen to be registered as a citizen. Descent depends on parentage, while conquest and adoption are not modes of acquiring citizenship.",
+      "source_ref": "Authored (1999 Constitution, citizenship by registration)"
+    },
+    {
+      "topic": "citizenship",
+      "difficulty": "hard",
+      "question": "A person who became a Nigerian citizen by registration or naturalisation loses that citizenship if he or she ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "marries a foreign national"
+        },
+        {
+          "key": "b",
+          "text": "lives outside Nigeria for more than one year"
+        },
+        {
+          "key": "c",
+          "text": "voluntarily acquires the citizenship of another country"
+        },
+        {
+          "key": "d",
+          "text": "fails to obtain a national identity card"
+        }
+      ],
+      "answer": "c",
+      "explanation": "A citizen by registration or naturalisation may not hold another citizenship; acquiring one voluntarily ends Nigerian citizenship. Marriage, residence abroad and failure to register do not. Citizens by birth are not affected by this rule.",
+      "source_ref": "Authored (1999 Constitution, loss of citizenship)"
+    },
+    {
+      "topic": "citizenship",
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a way of acquiring Nigerian citizenship?",
+      "options": [
+        {
+          "key": "a",
+          "text": "birth within Nigeria"
+        },
+        {
+          "key": "b",
+          "text": "descent from Nigerian parents or grandparents"
+        },
+        {
+          "key": "c",
+          "text": "naturalisation"
+        },
+        {
+          "key": "d",
+          "text": "purchasing landed property in Nigeria"
+        }
+      ],
+      "answer": "d",
+      "explanation": "Citizenship is acquired by birth, descent, registration or naturalisation. Buying property, however valuable, creates no legal bond of citizenship.",
+      "source_ref": "Authored (modes of acquiring citizenship)"
+    },
+    {
+      "topic": "political-ideologies",
+      "difficulty": "medium",
+      "question": "A system in which land is controlled by a noble class that grants its use to peasants in return for labour and military service is called ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "feudalism"
+        },
+        {
+          "key": "b",
+          "text": "capitalism"
+        },
+        {
+          "key": "c",
+          "text": "socialism"
+        },
+        {
+          "key": "d",
+          "text": "communalism"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Feudalism ties land, service and loyalty together: lords grant land to vassals, and peasants work it in return for protection. Communalism describes shared ownership by a community, not a hierarchy of lords and tenants.",
+      "source_ref": "Authored (replaces 2020 Q7, which described feudalism but omitted it from the options)"
+    },
+    {
+      "topic": "political-ideologies",
+      "difficulty": "easy",
+      "question": "A defining feature of capitalism is ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "state ownership of all means of production"
+        },
+        {
+          "key": "b",
+          "text": "private ownership of the means of production and the profit motive"
+        },
+        {
+          "key": "c",
+          "text": "central planning of prices and output"
+        },
+        {
+          "key": "d",
+          "text": "equal distribution of income by the state"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Capitalism rests on private property, market exchange and profit. State ownership and central planning belong to socialism, and equal distribution is a socialist aim rather than a capitalist feature.",
+      "source_ref": "Authored (capitalism)"
+    },
+    {
+      "topic": "political-ideologies",
+      "difficulty": "medium",
+      "question": "Socialism differs from capitalism mainly because socialism ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "guarantees an immediate classless society"
+        },
+        {
+          "key": "b",
+          "text": "rejects all forms of economic planning"
+        },
+        {
+          "key": "c",
+          "text": "places the means of production under social or state ownership"
+        },
+        {
+          "key": "d",
+          "text": "is driven by the profit motive"
+        }
+      ],
+      "answer": "c",
+      "explanation": "The dividing line is ownership and control of production. Socialism favours social or state ownership and planning; a classless society is an ideal, not an automatic result, and the profit motive is characteristic of capitalism.",
+      "source_ref": "Authored (socialism versus capitalism)"
+    },
+    {
+      "topic": "political-ideologies",
+      "difficulty": "easy",
+      "question": "A political outlook that stresses individual liberty, limited government and gradual reform is called ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "conservatism"
+        },
+        {
+          "key": "b",
+          "text": "fascism"
+        },
+        {
+          "key": "c",
+          "text": "feudalism"
+        },
+        {
+          "key": "d",
+          "text": "liberalism"
+        }
+      ],
+      "answer": "d",
+      "explanation": "Liberalism prioritises individual rights, consent and limits on state power. Conservatism stresses tradition and order, fascism exalts the nation over the individual, and feudalism is a social order rather than a modern ideology.",
+      "source_ref": "Authored (liberalism)"
+    },
+    {
+      "topic": "political-ideologies",
+      "difficulty": "easy",
+      "question": "The ideology that seeks to preserve existing institutions and resist rapid change is ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "conservatism"
+        },
+        {
+          "key": "b",
+          "text": "liberalism"
+        },
+        {
+          "key": "c",
+          "text": "socialism"
+        },
+        {
+          "key": "d",
+          "text": "communism"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Conservatism values inherited institutions, order and gradual change. Liberalism and the socialist ideologies are oriented toward reform or transformation of the existing order.",
+      "source_ref": "Authored (conservatism)"
+    },
+    {
+      "topic": "structures-of-governance",
+      "difficulty": "medium",
+      "question": "Under the 1979 Constitution, the Civil Service Commission was responsible for ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "appointing its own commissioners"
+        },
+        {
+          "key": "b",
+          "text": "appointment, promotion and discipline of civil servants"
+        },
+        {
+          "key": "c",
+          "text": "negotiating conditions of service with trade unions"
+        },
+        {
+          "key": "d",
+          "text": "trying civil servants for criminal offences"
+        }
+      ],
+      "answer": "b",
+      "explanation": "The Commission handled appointment, promotion and discipline. Its members were appointed through the constitutional process, negotiation with unions was a separate function, and criminal trials belong to the courts.",
+      "source_ref": "JAMB 2020 Q15 (key corrected: imported key was C)"
+    },
+    {
+      "topic": "structures-of-governance",
+      "difficulty": "easy",
+      "question": "The administrative head of a ministry is the ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "minister"
+        },
+        {
+          "key": "b",
+          "text": "accountant-general"
+        },
+        {
+          "key": "c",
+          "text": "permanent secretary"
+        },
+        {
+          "key": "d",
+          "text": "auditor-general"
+        }
+      ],
+      "answer": "c",
+      "explanation": "The minister is the political head who answers to the executive, while the permanent secretary is the senior civil servant who runs the ministry day to day. The accountant-general and auditor-general head separate offices.",
+      "source_ref": "Authored (civil service structure)"
+    },
+    {
+      "topic": "structures-of-governance",
+      "difficulty": "medium",
+      "question": "The civil service is expected to be politically neutral because ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "civil servants are barred from voting in elections"
+        },
+        {
+          "key": "b",
+          "text": "it is appointed by the ruling party"
+        },
+        {
+          "key": "c",
+          "text": "it is headed by the president"
+        },
+        {
+          "key": "d",
+          "text": "it must serve whichever party is in power without favour"
+        }
+      ],
+      "answer": "d",
+      "explanation": "Neutrality means loyal service to the government of the day, whatever its party, and advice given without partisanship. Civil servants keep the right to vote; they are appointed on merit, not by a party.",
+      "source_ref": "Authored (civil service neutrality)"
+    },
+    {
+      "topic": "structures-of-governance",
+      "difficulty": "medium",
+      "question": "The civil service is described as permanent because ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "its officials keep their posts when governments change"
+        },
+        {
+          "key": "b",
+          "text": "its officials can never be dismissed"
+        },
+        {
+          "key": "c",
+          "text": "it is established directly by the constitution"
+        },
+        {
+          "key": "d",
+          "text": "it is funded from the Consolidated Revenue Fund"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Permanence means continuity across changes of government, so experienced administrators remain while ministers come and go. It does not mean life tenure: officials can be retired or dismissed for cause.",
+      "source_ref": "Authored (civil service permanence)"
+    },
+    {
+      "topic": "structures-of-governance",
+      "difficulty": "medium",
+      "question": "A public corporation differs from a government ministry because it ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "is funded only by taxes"
+        },
+        {
+          "key": "b",
+          "text": "is a separate legal person with its own board and accounts"
+        },
+        {
+          "key": "c",
+          "text": "is staffed entirely by politicians"
+        },
+        {
+          "key": "d",
+          "text": "cannot make a surplus"
+        }
+      ],
+      "answer": "b",
+      "explanation": "A public corporation is created by statute as a body corporate, so it can sue, be sued, own property and keep its own accounts. A ministry is a department of government with no separate legal personality.",
+      "source_ref": "Authored (public corporations)"
+    },
+    {
+      "topic": "structures-of-governance",
+      "difficulty": "easy",
+      "question": "Local governments are best described as ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "committees of the state house of assembly"
+        },
+        {
+          "key": "b",
+          "text": "private companies delivering public services"
+        },
+        {
+          "key": "c",
+          "text": "the third tier of government, created to bring administration closer to the people"
+        },
+        {
+          "key": "d",
+          "text": "traditional councils without constitutional status"
+        }
+      ],
+      "answer": "c",
+      "explanation": "Local government is the third tier, with elected councils and defined functions such as primary education support, markets, roads and sanitation. It is a constitutional tier, not a committee or a private body.",
+      "source_ref": "Authored (local government)"
+    },
+    {
+      "topic": "nigerian-federalism-military-rule",
+      "difficulty": "medium",
+      "question": "The highest decision-making body under the Buhari military regime was the ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "Armed Forces Ruling Council"
+        },
+        {
+          "key": "b",
+          "text": "National Council of States"
+        },
+        {
+          "key": "c",
+          "text": "Federal Executive Council"
+        },
+        {
+          "key": "d",
+          "text": "Supreme Military Council"
+        }
+      ],
+      "answer": "d",
+      "explanation": "Buhari governed through the Supreme Military Council from 1983 to 1985. Babangida replaced it with the Armed Forces Ruling Council, while the National Council of States and Federal Executive Council are civilian-era bodies.",
+      "source_ref": "JAMB 2018 Q24"
+    },
+    {
+      "topic": "nigerian-federalism-military-rule",
+      "difficulty": "medium",
+      "question": "The main source of local government finance since the 1976 reforms has been ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "statutory allocations from the Federation Account"
+        },
+        {
+          "key": "b",
+          "text": "local rates"
+        },
+        {
+          "key": "c",
+          "text": "court fines and licences"
+        },
+        {
+          "key": "d",
+          "text": "market and motor-park levies"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The 1976 reforms gave local governments a guaranteed share of the Federation Account, which remains their largest revenue source. Rates, fines and levies are internally generated and much smaller.",
+      "source_ref": "JAMB 2018 Q26 (wording repaired)"
+    },
+    {
+      "topic": "nigerian-federalism-military-rule",
+      "difficulty": "medium",
+      "question": "The exclusive legislative list contains subjects on which ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "only state governments may legislate"
+        },
+        {
+          "key": "b",
+          "text": "only the federal government may legislate"
+        },
+        {
+          "key": "c",
+          "text": "the federal and state governments may both legislate"
+        },
+        {
+          "key": "d",
+          "text": "only local governments may legislate"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Exclusive-list matters such as defence, currency and foreign affairs are reserved to the federal legislature. Subjects shared by federal and state governments are on the concurrent list; purely state matters are residual.",
+      "source_ref": "Authored (legislative lists)"
+    },
+    {
+      "topic": "nigerian-federalism-military-rule",
+      "difficulty": "medium",
+      "question": "Subjects on which both the federal and state governments may legislate are listed in the ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "exclusive legislative list"
+        },
+        {
+          "key": "b",
+          "text": "residual list"
+        },
+        {
+          "key": "c",
+          "text": "concurrent legislative list"
+        },
+        {
+          "key": "d",
+          "text": "federal character list"
+        }
+      ],
+      "answer": "c",
+      "explanation": "The concurrent list covers shared subjects such as education and health. If federal and state laws conflict there, the federal law prevails, which is why the list is a frequent source of federal-state tension.",
+      "source_ref": "Authored (legislative lists)"
+    },
+    {
+      "topic": "nigerian-federalism-military-rule",
+      "difficulty": "easy",
+      "question": "A characteristic of military rule is that ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "governments are changed through periodic elections"
+        },
+        {
+          "key": "b",
+          "text": "all decrees are subject to judicial review"
+        },
+        {
+          "key": "c",
+          "text": "the constitution cannot be suspended"
+        },
+        {
+          "key": "d",
+          "text": "laws are made by decree rather than by an elected legislature"
+        }
+      ],
+      "answer": "d",
+      "explanation": "Military governments rule by decree, suspend or replace the constitution, and often oust the jurisdiction of courts. Elections and judicial review of decrees are features military rule suppresses, not preserves.",
+      "source_ref": "Authored (military rule)"
+    }
+  ]
+}
