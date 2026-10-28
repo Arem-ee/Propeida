@@ -1,6 +1,7 @@
 'use server'
 
 import { createClient } from '@/lib/supabase/server'
+import { createAdminClient } from '@/lib/supabase/admin'
 import { headers } from 'next/headers'
 import { checkRateLimit, getClientIp, rateLimitKey } from '@/lib/rate-limit'
 
@@ -42,7 +43,10 @@ export async function submitContactForm(data: { email: string; message: string; 
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
 
-  const { error } = await supabase
+  // Inbox rows are server-authored: clients hold no INSERT grant on
+  // contact_submissions. The honeypot and rate limit above run first.
+  const admin = createAdminClient()
+  const { error } = await admin
     .from('contact_submissions')
     .insert({
       user_id: user?.id ?? null,

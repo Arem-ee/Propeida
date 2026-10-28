@@ -1,6 +1,7 @@
 'use server'
 
 import { createClient } from '@/lib/supabase/server'
+import { createAdminClient } from '@/lib/supabase/admin'
 import { revalidatePath } from 'next/cache'
 
 export async function claimReferral(code: string) {
@@ -29,20 +30,29 @@ export async function claimReferral(code: string) {
 
   if (!referrer) throw new Error('Invalid referral code')
 
-  const { error: updateError } = await supabase
+  // referred_by is server-managed: clients hold no UPDATE grant on it and the
+  // guard trigger rejects any client write. Apply it with the service role
+  // after the ownership, self-referral and duplicate-claim checks above.
+  const admin = createAdminClient()
+  const { error: updateError } = await admin
     .from('profiles')
     .update({ referred_by: referrer.id })
     .eq('id', user.id)
 
   if (updateError) throw new Error('Failed to apply referral')
 
-  await supabase
+  // Referral claims are server-authored: referrals has a read-only own-row
+  // policy and no client INSERT grant. The checks above established that the
+  // claim is valid, so record it with the service role.
+  const { error: referralError } = await admin
     .from('referrals')
     .insert({
       referrer_id: referrer.id,
       referred_id: user.id,
       status: 'pending',
     })
+
+  if (referralError) throw new Error('Failed to record referral')
 
   revalidatePath('/home')
   return { referrerUsername: referrer.username }

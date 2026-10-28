@@ -13,6 +13,7 @@ interface DashboardPayload {
     school_id: string | null
     ai_features_enabled: boolean
     is_admin: boolean
+    onboarding_completed: boolean
   } | null
   entitlements: { product: string; status: string; expires_at: string | null; source: string }[]
   streak: { current_streak: number; longest_streak: number } | null
@@ -187,6 +188,7 @@ export async function getDashboardData() {
       badgeBg,
       referralCode: payload.profile.referral_code,
       schoolId: payload.profile.school_id,
+      onboarding_completed: payload.profile.onboarding_completed,
     },
     streak: { current_streak: learningDays, longest_streak: 0 },
     recentSessions,

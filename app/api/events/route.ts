@@ -1,9 +1,12 @@
 import { createClient, getAuthUser } from '@/lib/supabase/server'
+import { createAdminClient } from '@/lib/supabase/admin'
+import { checkRateLimit, getClientIp, rateLimitKey } from '@/lib/rate-limit'
 import { headers } from 'next/headers'
 
 export const dynamic = 'force-dynamic'
 
 const MAX_EVENT_DATA_LENGTH = 4000
+const MAX_EVENTS_PER_MINUTE = 120
 
 export async function POST(req: Request) {
   let body: { event_name?: unknown; data?: unknown; path?: unknown }
@@ -17,6 +20,10 @@ export async function POST(req: Request) {
   if (!eventName) return Response.json({ ok: false })
 
   const headersList = await headers()
+  const ip = getClientIp((name) => headersList.get(name))
+  const { allowed } = await checkRateLimit(rateLimitKey(ip, 'events'), MAX_EVENTS_PER_MINUTE, 60000)
+  if (!allowed) return Response.json({ ok: true })
+
   const urlPath =
     typeof body.path === 'string' && body.path.length > 0 && body.path.length <= 512
       ? body.path
@@ -33,11 +40,15 @@ export async function POST(req: Request) {
     }
   }
 
+  // Analytics rows are server-authored: clients hold no INSERT grant on
+  // analytics_events, so attribute the caller here and write with the service
+  // role. The event payload is already size-clamped above.
   const supabase = await createClient()
 
   try {
     const user = await getAuthUser(supabase)
-    const { error } = await supabase.from('analytics_events').insert({
+    const admin = createAdminClient()
+    const { error } = await admin.from('analytics_events').insert({
       event_name: eventName,
       event_data: eventData,
       user_id: user?.id ?? null,
