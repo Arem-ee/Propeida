@@ -1,0 +1,1414 @@
+{
+  "_note": "Audited JAMB Economics starter bank. 33 items come from the 2017 and 2018 papers: every key was checked against the economics, and stems/options were rewritten where the source parse fused them. 21 authored items fill the topics those papers do not reach, so every topic has at least four questions. Defective rows and wrong keys were rejected, not guessed; they are recorded in docs/deferred.md.",
+  "subject": "economics",
+  "exam": "jamb",
+  "source": "JAMB Economics 2017/2018 (audited) + authored foundations",
+  "status": "draft",
+  "verified_state": "unverified",
+  "questions": [
+    {
+      "topic": "population",
+      "difficulty": "medium",
+      "question": "The occupational distribution of a population is mainly influenced by ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "economic factors"
+        },
+        {
+          "key": "b",
+          "text": "religious factors"
+        },
+        {
+          "key": "c",
+          "text": "geographical factors"
+        },
+        {
+          "key": "d",
+          "text": "social factors"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Occupational distribution reflects the structure of the economy — the mix of agriculture, industry and services — so economic factors such as the level of development, technology and income dominate.",
+      "source_ref": "JAMB 2018 Q1"
+    },
+    {
+      "topic": "basic-concepts",
+      "difficulty": "medium",
+      "question": "In a capitalist economy, the factors of production are owned and controlled by ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "the citizens"
+        },
+        {
+          "key": "b",
+          "text": "private individuals"
+        },
+        {
+          "key": "c",
+          "text": "the government"
+        },
+        {
+          "key": "d",
+          "text": "foreigners"
+        }
+      ],
+      "answer": "b",
+      "explanation": "A capitalist (free-enterprise) economy leaves land, labour, capital and entrepreneurship in private hands. Government ownership of the factors of production is a feature of a centrally planned economy.",
+      "source_ref": "JAMB 2018 Q5"
+    },
+    {
+      "topic": "agriculture-and-industry",
+      "difficulty": "easy",
+      "question": "The establishment of industries in rural areas will help to reduce ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "urban-rural migration"
+        },
+        {
+          "key": "b",
+          "text": "rural-rural migration"
+        },
+        {
+          "key": "c",
+          "text": "rural-urban migration"
+        },
+        {
+          "key": "d",
+          "text": "urban-urban migration"
+        }
+      ],
+      "answer": "c",
+      "explanation": "Rural industries create jobs and income where people already live, reducing the pressure to move from villages to cities.",
+      "source_ref": "JAMB 2018 Q6"
+    },
+    {
+      "topic": "population",
+      "difficulty": "easy",
+      "question": "The number of people who are qualified to work and who offer themselves for employment is called the ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "migrant labour"
+        },
+        {
+          "key": "b",
+          "text": "labour turnover"
+        },
+        {
+          "key": "c",
+          "text": "mobility of labour"
+        },
+        {
+          "key": "d",
+          "text": "working population"
+        }
+      ],
+      "answer": "d",
+      "explanation": "The working population, or labour force, consists of people of working age who are able and willing to work.",
+      "source_ref": "JAMB 2018 Q8"
+    },
+    {
+      "topic": "business-organisations",
+      "difficulty": "easy",
+      "question": "In which business unit are the owners usually also the customers?",
+      "options": [
+        {
+          "key": "a",
+          "text": "co-operatives"
+        },
+        {
+          "key": "b",
+          "text": "limited liability companies"
+        },
+        {
+          "key": "c",
+          "text": "partnerships"
+        },
+        {
+          "key": "d",
+          "text": "public corporations"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A co-operative is owned and controlled by its members, who are usually also its customers; any surplus is shared among them.",
+      "source_ref": "JAMB 2018 Q12"
+    },
+    {
+      "topic": "international-trade",
+      "difficulty": "medium",
+      "question": "The formula (index of export prices ÷ index of import prices) × 100 is used to measure the ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "volume of trade between countries"
+        },
+        {
+          "key": "b",
+          "text": "commodity terms of trade"
+        },
+        {
+          "key": "c",
+          "text": "direction of international trade"
+        },
+        {
+          "key": "d",
+          "text": "volume of imports"
+        }
+      ],
+      "answer": "b",
+      "explanation": "The ratio of export prices to import prices is the commodity terms of trade. A rise means a country obtains more imports for the same quantity of exports.",
+      "source_ref": "JAMB 2018 Q13"
+    },
+    {
+      "topic": "international-trade",
+      "difficulty": "easy",
+      "question": "Which of the following is an invisible item in international trade?",
+      "options": [
+        {
+          "key": "a",
+          "text": "petroleum"
+        },
+        {
+          "key": "b",
+          "text": "processed rice"
+        },
+        {
+          "key": "c",
+          "text": "banking services"
+        },
+        {
+          "key": "d",
+          "text": "processed milk"
+        }
+      ],
+      "answer": "c",
+      "explanation": "Invisible trade covers services such as banking, shipping, insurance and tourism. Petroleum, rice and milk are visible goods.",
+      "source_ref": "JAMB 2018 Q15"
+    },
+    {
+      "topic": "basic-concepts",
+      "difficulty": "medium",
+      "question": "The main concern of economists is to ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "control the growth of population"
+        },
+        {
+          "key": "b",
+          "text": "redistribute income between the rich and the poor"
+        },
+        {
+          "key": "c",
+          "text": "satisfy all human wants"
+        },
+        {
+          "key": "d",
+          "text": "allocate scarce resources to satisfy human wants"
+        }
+      ],
+      "answer": "d",
+      "explanation": "Economics studies how scarce resources are allocated among competing wants. Wants are unlimited, so satisfying all of them is impossible.",
+      "source_ref": "JAMB 2018 Q17"
+    },
+    {
+      "topic": "production-and-costs",
+      "difficulty": "easy",
+      "question": "Productive resources can also be called ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "factors of production"
+        },
+        {
+          "key": "b",
+          "text": "principles of production"
+        },
+        {
+          "key": "c",
+          "text": "items of production"
+        },
+        {
+          "key": "d",
+          "text": "labour and material resources"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Land, labour, capital and entrepreneurship are the factors of production — the productive resources used to make goods and services.",
+      "source_ref": "JAMB 2018 Q18"
+    },
+    {
+      "topic": "basic-concepts",
+      "difficulty": "easy",
+      "question": "The study of Economics becomes necessary because of the ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "large population size of the world"
+        },
+        {
+          "key": "b",
+          "text": "scarcity of resources"
+        },
+        {
+          "key": "c",
+          "text": "opportunity cost of goods and services"
+        },
+        {
+          "key": "d",
+          "text": "need to satisfy every desire of man"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Scarcity — limited resources against unlimited wants — is the fundamental economic problem that makes choice, and therefore Economics, necessary.",
+      "source_ref": "JAMB 2018 Q19"
+    },
+    {
+      "topic": "demand-and-supply",
+      "difficulty": "easy",
+      "question": "The type of demand that exists between a torchlight and its battery is ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "competitive demand"
+        },
+        {
+          "key": "b",
+          "text": "composite demand"
+        },
+        {
+          "key": "c",
+          "text": "complementary demand"
+        },
+        {
+          "key": "d",
+          "text": "derived demand"
+        }
+      ],
+      "answer": "c",
+      "explanation": "Goods used together to satisfy one want are in joint, or complementary, demand: a torchlight is useless without a battery.",
+      "source_ref": "JAMB 2018 Q20"
+    },
+    {
+      "topic": "international-trade",
+      "difficulty": "medium",
+      "question": "The principle of comparative cost advantage was propounded by ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "Alfred Marshall"
+        },
+        {
+          "key": "b",
+          "text": "J. S. Mill"
+        },
+        {
+          "key": "c",
+          "text": "Adam Smith"
+        },
+        {
+          "key": "d",
+          "text": "David Ricardo"
+        }
+      ],
+      "answer": "d",
+      "explanation": "David Ricardo showed that countries gain from specialising in goods where their opportunity cost is lower, even if one country is more efficient at everything.",
+      "source_ref": "JAMB 2018 Q28"
+    },
+    {
+      "topic": "international-trade",
+      "difficulty": "medium",
+      "question": "The rate at which a country's exports are exchanged for its imports is called the ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "terms of trade"
+        },
+        {
+          "key": "b",
+          "text": "balance of trade"
+        },
+        {
+          "key": "c",
+          "text": "balance of payments"
+        },
+        {
+          "key": "d",
+          "text": "current account balance"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The terms of trade express export prices relative to import prices. An improvement means exports now buy more imports.",
+      "source_ref": "JAMB 2018 Q29"
+    },
+    {
+      "topic": "production-and-costs",
+      "difficulty": "medium",
+      "question": "The efficiency of labour is determined by all of the following except ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "social attitude to work"
+        },
+        {
+          "key": "b",
+          "text": "total population"
+        },
+        {
+          "key": "c",
+          "text": "education and training"
+        },
+        {
+          "key": "d",
+          "text": "working conditions"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Efficiency depends on skill, health, motivation and working conditions. A larger population does not by itself make each worker more productive.",
+      "source_ref": "JAMB 2018 Q30"
+    },
+    {
+      "topic": "international-trade",
+      "difficulty": "easy",
+      "question": "A situation in which a commodity is sold abroad below its cost of production in the home country is known as ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "counter trade"
+        },
+        {
+          "key": "b",
+          "text": "bilateral trade"
+        },
+        {
+          "key": "c",
+          "text": "dumping"
+        },
+        {
+          "key": "d",
+          "text": "trade liberalisation"
+        }
+      ],
+      "answer": "c",
+      "explanation": "Dumping is selling exports below home cost or below the home price, often to clear surplus or drive competitors out of a foreign market.",
+      "source_ref": "JAMB 2018 Q33"
+    },
+    {
+      "topic": "agriculture-and-industry",
+      "difficulty": "easy",
+      "question": "The most important function of agriculture to the Nigerian economy is ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "technical skill development"
+        },
+        {
+          "key": "b",
+          "text": "technological development"
+        },
+        {
+          "key": "c",
+          "text": "industrial development"
+        },
+        {
+          "key": "d",
+          "text": "guaranteeing food security"
+        }
+      ],
+      "answer": "d",
+      "explanation": "Agriculture supplies most of Nigeria’s food and employs a large share of the population, so food security is its most direct contribution.",
+      "source_ref": "JAMB 2017 Q2"
+    },
+    {
+      "topic": "demand-and-supply",
+      "difficulty": "medium",
+      "question": "Given that Qd = 15 − 2P and Qs = 5 + 3P, the equilibrium price is ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "N2.00"
+        },
+        {
+          "key": "b",
+          "text": "N3.00"
+        },
+        {
+          "key": "c",
+          "text": "N5.00"
+        },
+        {
+          "key": "d",
+          "text": "N6.00"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Set Qd = Qs: 15 − 2P = 5 + 3P, so 10 = 5P and P = 2.",
+      "source_ref": "JAMB 2017 Q3"
+    },
+    {
+      "topic": "market-structures",
+      "difficulty": "medium",
+      "question": "One of the basic features of a monopoly is ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "perfect information about market conditions"
+        },
+        {
+          "key": "b",
+          "text": "the ability to control either price or output"
+        },
+        {
+          "key": "c",
+          "text": "perfect mobility of factors of production"
+        },
+        {
+          "key": "d",
+          "text": "a large number of buyers and sellers"
+        }
+      ],
+      "answer": "b",
+      "explanation": "A monopolist is the sole seller, so it can set price or output because no close substitute exists. A large number of buyers and sellers describes perfect competition.",
+      "source_ref": "JAMB 2017 Q5"
+    },
+    {
+      "topic": "business-organisations",
+      "difficulty": "medium",
+      "question": "The major advantage of a public limited liability company over a private limited liability company is ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "limited liability for owners"
+        },
+        {
+          "key": "b",
+          "text": "separate legal personality"
+        },
+        {
+          "key": "c",
+          "text": "easy transferability of shares"
+        },
+        {
+          "key": "d",
+          "text": "perpetual existence"
+        }
+      ],
+      "answer": "c",
+      "explanation": "Shares of a public limited company are freely transferable and traded on the stock exchange, while a private company restricts transfer. Limited liability and separate personality apply to both.",
+      "source_ref": "JAMB 2017 Q6"
+    },
+    {
+      "topic": "agriculture-and-industry",
+      "difficulty": "easy",
+      "question": "The main activity in the upstream oil sector in Nigeria is ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "marketing of petroleum products"
+        },
+        {
+          "key": "b",
+          "text": "distribution of petroleum products"
+        },
+        {
+          "key": "c",
+          "text": "refining of crude oil"
+        },
+        {
+          "key": "d",
+          "text": "extraction of crude oil"
+        }
+      ],
+      "answer": "d",
+      "explanation": "Upstream operations cover exploration and extraction of crude oil. Refining, distribution and marketing are downstream activities.",
+      "source_ref": "JAMB 2017 Q7"
+    },
+    {
+      "topic": "population",
+      "difficulty": "medium",
+      "question": "The study of the age structure of a population is important because it ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "provides the government with statistics on the size of the labour force"
+        },
+        {
+          "key": "b",
+          "text": "determines the exchange rate"
+        },
+        {
+          "key": "c",
+          "text": "provides the government with statistics on the prevailing interest rate"
+        },
+        {
+          "key": "d",
+          "text": "reveals the cost of living"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Age structure shows how many people fall in working ages, which helps government plan employment, education and social services.",
+      "source_ref": "JAMB 2017 Q9"
+    },
+    {
+      "topic": "demand-and-supply",
+      "difficulty": "medium",
+      "question": "If palm oil is demanded both for soap production and for cooking, the demand is said to be ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "competitive"
+        },
+        {
+          "key": "b",
+          "text": "composite"
+        },
+        {
+          "key": "c",
+          "text": "complementary"
+        },
+        {
+          "key": "d",
+          "text": "derived"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Composite demand arises when one commodity is wanted for several different uses. An increase in one use raises its price and reduces availability for the others.",
+      "source_ref": "JAMB 2017 Q10"
+    },
+    {
+      "topic": "international-trade",
+      "difficulty": "medium",
+      "question": "The institution established to enhance Nigeria's exports is the ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "Nigerian Export and Import Bank"
+        },
+        {
+          "key": "b",
+          "text": "import-substitution strategy"
+        },
+        {
+          "key": "c",
+          "text": "Nigeria Export Promotion Council"
+        },
+        {
+          "key": "d",
+          "text": "Bank of Industry"
+        }
+      ],
+      "answer": "c",
+      "explanation": "The Nigeria Export Promotion Council was set up to promote and develop exports. NEXIM Bank finances trade, but promoting exports is NEPC’s mandate.",
+      "source_ref": "JAMB 2017 Q11"
+    },
+    {
+      "topic": "production-and-costs",
+      "difficulty": "easy",
+      "question": "The reward for capital as a factor of production is ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "rent"
+        },
+        {
+          "key": "b",
+          "text": "profit"
+        },
+        {
+          "key": "c",
+          "text": "wages"
+        },
+        {
+          "key": "d",
+          "text": "interest"
+        }
+      ],
+      "answer": "d",
+      "explanation": "Land earns rent, labour earns wages, capital earns interest and the entrepreneur earns profit.",
+      "source_ref": "JAMB 2017 Q14"
+    },
+    {
+      "topic": "money-and-inflation",
+      "difficulty": "easy",
+      "question": "The type of inflation that arises from excess demand over supply is ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "demand-pull inflation"
+        },
+        {
+          "key": "b",
+          "text": "galloping inflation"
+        },
+        {
+          "key": "c",
+          "text": "cost-push inflation"
+        },
+        {
+          "key": "d",
+          "text": "imported inflation"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Demand-pull inflation occurs when aggregate demand grows faster than output, pulling prices up.",
+      "source_ref": "JAMB 2017 Q15"
+    },
+    {
+      "topic": "financial-institutions",
+      "difficulty": "easy",
+      "question": "Foreign exchange control in Nigeria is administered by the ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "money deposit banks"
+        },
+        {
+          "key": "b",
+          "text": "Central Bank of Nigeria"
+        },
+        {
+          "key": "c",
+          "text": "discount houses"
+        },
+        {
+          "key": "d",
+          "text": "Securities and Exchange Commission"
+        }
+      ],
+      "answer": "b",
+      "explanation": "The CBN manages the country’s external reserves and administers exchange-control regulations; banks act as authorised dealers under its rules.",
+      "source_ref": "JAMB 2017 Q19"
+    },
+    {
+      "topic": "demand-and-supply",
+      "difficulty": "hard",
+      "question": "Given Qd = 30 − 3P and Qs = 9P − 18, the equilibrium quantity is ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "20"
+        },
+        {
+          "key": "b",
+          "text": "25"
+        },
+        {
+          "key": "c",
+          "text": "18"
+        },
+        {
+          "key": "d",
+          "text": "27"
+        }
+      ],
+      "answer": "c",
+      "explanation": "Equilibrium requires 30 − 3P = 9P − 18, so 48 = 12P and P = 4. Then Q = 30 − 3(4) = 18.",
+      "source_ref": "JAMB 2017 Q22"
+    },
+    {
+      "topic": "agriculture-and-industry",
+      "difficulty": "medium",
+      "question": "In Nigeria, industrial development can be enhanced by ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "ensuring stable prices for manufactured goods"
+        },
+        {
+          "key": "b",
+          "text": "reducing government expenditure on imported goods"
+        },
+        {
+          "key": "c",
+          "text": "increasing the rate of interest"
+        },
+        {
+          "key": "d",
+          "text": "providing efficient infrastructure"
+        }
+      ],
+      "answer": "d",
+      "explanation": "Reliable power, transport and water lower production costs and attract investment. High interest rates discourage investment.",
+      "source_ref": "JAMB 2017 Q23"
+    },
+    {
+      "topic": "public-finance",
+      "difficulty": "medium",
+      "question": "All of the following are sources of government revenue except ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "personal income, disposable income and transfer earnings"
+        },
+        {
+          "key": "b",
+          "text": "taxes, fees, licences and fines"
+        },
+        {
+          "key": "c",
+          "text": "interest, dividends, profits and earnings"
+        },
+        {
+          "key": "d",
+          "text": "grants, aid and borrowing"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Personal income and transfer earnings are received by individuals, not by government. Taxes, state earnings, grants and borrowing are government revenue.",
+      "source_ref": "JAMB 2017 Q26"
+    },
+    {
+      "topic": "money-and-inflation",
+      "difficulty": "easy",
+      "question": "One of the important qualities that money must possess is ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "heterogeneity"
+        },
+        {
+          "key": "b",
+          "text": "homogeneity"
+        },
+        {
+          "key": "c",
+          "text": "easy availability"
+        },
+        {
+          "key": "d",
+          "text": "technological know-how"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Money must be homogeneous so that every unit is identical and can be counted and valued. Heterogeneity would make exchange difficult.",
+      "source_ref": "JAMB 2017 Q27"
+    },
+    {
+      "topic": "financial-institutions",
+      "difficulty": "medium",
+      "question": "One of the functions of money deposit banks in economic development is ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "acting as banker to the government"
+        },
+        {
+          "key": "b",
+          "text": "the formulation of monetary policy"
+        },
+        {
+          "key": "c",
+          "text": "the provision of credit facilities"
+        },
+        {
+          "key": "d",
+          "text": "issuing of currency notes"
+        }
+      ],
+      "answer": "c",
+      "explanation": "Deposit money banks mobilise savings and lend to households and firms. Being banker to government, making monetary policy and issuing currency are CBN functions.",
+      "source_ref": "JAMB 2017 Q32"
+    },
+    {
+      "topic": "market-structures",
+      "difficulty": "medium",
+      "question": "One of the arguments against the practice of monopoly is ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "merging of producers"
+        },
+        {
+          "key": "b",
+          "text": "competition"
+        },
+        {
+          "key": "c",
+          "text": "non-government ownership"
+        },
+        {
+          "key": "d",
+          "text": "exploitation"
+        }
+      ],
+      "answer": "d",
+      "explanation": "A monopolist faces no competitive pressure and may charge high prices, restrict output and exploit consumers.",
+      "source_ref": "JAMB 2017 Q33"
+    },
+    {
+      "topic": "population",
+      "difficulty": "easy",
+      "question": "A well-conducted census is important for ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "economic planning"
+        },
+        {
+          "key": "b",
+          "text": "providing economic opportunities in rural areas"
+        },
+        {
+          "key": "c",
+          "text": "distributing educational materials in cities"
+        },
+        {
+          "key": "d",
+          "text": "generating revenue"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Census data on population size and structure guide planning of schools, hospitals, roads, jobs and revenue allocation.",
+      "source_ref": "JAMB 2017 Q37"
+    },
+    {
+      "topic": "basic-concepts",
+      "difficulty": "easy",
+      "question": "The next best alternative forgone when a choice is made is called ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "money cost"
+        },
+        {
+          "key": "b",
+          "text": "opportunity cost"
+        },
+        {
+          "key": "c",
+          "text": "social cost"
+        },
+        {
+          "key": "d",
+          "text": "fixed cost"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Opportunity cost is the value of the next best alternative you give up. It is the real cost of any choice, measured in forgone options rather than naira.",
+      "source_ref": "Authored"
+    },
+    {
+      "topic": "production-and-costs",
+      "difficulty": "medium",
+      "question": "The law of diminishing returns states that as more units of a variable factor are added to a fixed factor, ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "total output eventually falls"
+        },
+        {
+          "key": "b",
+          "text": "average cost always falls"
+        },
+        {
+          "key": "c",
+          "text": "marginal product eventually falls"
+        },
+        {
+          "key": "d",
+          "text": "fixed cost rises"
+        }
+      ],
+      "answer": "c",
+      "explanation": "With at least one factor fixed, each extra unit of the variable factor eventually adds less to output, so marginal product falls. Total output can still rise, and fixed cost does not change.",
+      "source_ref": "Authored"
+    },
+    {
+      "topic": "business-organisations",
+      "difficulty": "easy",
+      "question": "The owner of a sole proprietorship has ______ liability for the debts of the business.",
+      "options": [
+        {
+          "key": "a",
+          "text": "limited"
+        },
+        {
+          "key": "b",
+          "text": "no"
+        },
+        {
+          "key": "c",
+          "text": "shared"
+        },
+        {
+          "key": "d",
+          "text": "unlimited"
+        }
+      ],
+      "answer": "d",
+      "explanation": "A sole proprietor and the business are not separate in law, so the owner is personally liable for all business debts. Limited liability belongs to registered companies.",
+      "source_ref": "Authored"
+    },
+    {
+      "topic": "business-organisations",
+      "difficulty": "medium",
+      "question": "The maximum number of persons allowed in an ordinary partnership under Nigerian law is ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "20"
+        },
+        {
+          "key": "b",
+          "text": "2"
+        },
+        {
+          "key": "c",
+          "text": "10"
+        },
+        {
+          "key": "d",
+          "text": "50"
+        }
+      ],
+      "answer": "a",
+      "explanation": "An ordinary partnership must have at least 2 and at most 20 persons. Larger groups must incorporate as a company.",
+      "source_ref": "Authored"
+    },
+    {
+      "topic": "market-structures",
+      "difficulty": "easy",
+      "question": "Which of the following is a feature of perfect competition?",
+      "options": [
+        {
+          "key": "a",
+          "text": "a single seller"
+        },
+        {
+          "key": "b",
+          "text": "homogeneous products"
+        },
+        {
+          "key": "c",
+          "text": "heavy advertising"
+        },
+        {
+          "key": "d",
+          "text": "barriers to entry"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Under perfect competition many firms sell identical products, so no firm can influence price. A single seller, heavy advertising and barriers to entry belong to monopoly or oligopoly.",
+      "source_ref": "Authored"
+    },
+    {
+      "topic": "market-structures",
+      "difficulty": "easy",
+      "question": "A market structure dominated by a few large firms is called ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "perfect competition"
+        },
+        {
+          "key": "b",
+          "text": "monopoly"
+        },
+        {
+          "key": "c",
+          "text": "oligopoly"
+        },
+        {
+          "key": "d",
+          "text": "monopsony"
+        }
+      ],
+      "answer": "c",
+      "explanation": "Oligopoly is a market with a few large firms whose decisions affect one another. Monopoly has one seller, and monopsony has one buyer.",
+      "source_ref": "Authored"
+    },
+    {
+      "topic": "money-and-inflation",
+      "difficulty": "medium",
+      "question": "The function of money that allows goods to be valued and compared is ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "medium of exchange"
+        },
+        {
+          "key": "b",
+          "text": "store of value"
+        },
+        {
+          "key": "c",
+          "text": "standard of deferred payment"
+        },
+        {
+          "key": "d",
+          "text": "unit of account"
+        }
+      ],
+      "answer": "d",
+      "explanation": "As a unit of account, money provides a common measure in which prices are expressed, so goods can be compared. A medium of exchange is used to buy and sell.",
+      "source_ref": "Authored"
+    },
+    {
+      "topic": "money-and-inflation",
+      "difficulty": "easy",
+      "question": "Inflation is best defined as ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "a persistent rise in the general price level"
+        },
+        {
+          "key": "b",
+          "text": "a rise in the price of one good"
+        },
+        {
+          "key": "c",
+          "text": "a fall in the value of output"
+        },
+        {
+          "key": "d",
+          "text": "an increase in the money supply"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Inflation is a sustained rise in the general price level, which reduces the purchasing power of money. A rise in one price is not inflation.",
+      "source_ref": "Authored"
+    },
+    {
+      "topic": "financial-institutions",
+      "difficulty": "medium",
+      "question": "The Central Bank of Nigeria acts as lender of last resort to ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "the federal government only"
+        },
+        {
+          "key": "b",
+          "text": "commercial banks"
+        },
+        {
+          "key": "c",
+          "text": "foreign investors"
+        },
+        {
+          "key": "d",
+          "text": "co-operative societies"
+        }
+      ],
+      "answer": "b",
+      "explanation": "When a bank faces a temporary shortage of funds and cannot borrow elsewhere, the CBN can lend to it, which protects the banking system from collapse.",
+      "source_ref": "Authored"
+    },
+    {
+      "topic": "financial-institutions",
+      "difficulty": "easy",
+      "question": "Development banks in Nigeria are mainly established to provide ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "short-term consumer loans"
+        },
+        {
+          "key": "b",
+          "text": "currency notes"
+        },
+        {
+          "key": "c",
+          "text": "long-term finance for development projects"
+        },
+        {
+          "key": "d",
+          "text": "insurance cover"
+        }
+      ],
+      "answer": "c",
+      "explanation": "Development banks such as the Bank of Industry supply medium- and long-term finance for agriculture, industry and infrastructure, which commercial banks are reluctant to fund.",
+      "source_ref": "Authored"
+    },
+    {
+      "topic": "public-finance",
+      "difficulty": "easy",
+      "question": "Which of the following is a direct tax?",
+      "options": [
+        {
+          "key": "a",
+          "text": "value added tax"
+        },
+        {
+          "key": "b",
+          "text": "import duty"
+        },
+        {
+          "key": "c",
+          "text": "excise duty"
+        },
+        {
+          "key": "d",
+          "text": "personal income tax"
+        }
+      ],
+      "answer": "d",
+      "explanation": "A direct tax is levied on the income or wealth of a person and paid directly to government. VAT, import duty and excise duty are indirect taxes on goods and services.",
+      "source_ref": "Authored"
+    },
+    {
+      "topic": "public-finance",
+      "difficulty": "easy",
+      "question": "Value added tax is an example of ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "indirect tax"
+        },
+        {
+          "key": "b",
+          "text": "direct tax"
+        },
+        {
+          "key": "c",
+          "text": "capital tax"
+        },
+        {
+          "key": "d",
+          "text": "progressive tax"
+        }
+      ],
+      "answer": "a",
+      "explanation": "VAT is charged on goods and services and collected by sellers on behalf of government, so it is an indirect tax. It is also regressive in effect.",
+      "source_ref": "Authored"
+    },
+    {
+      "topic": "public-finance",
+      "difficulty": "medium",
+      "question": "A budget deficit occurs when ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "revenue exceeds expenditure"
+        },
+        {
+          "key": "b",
+          "text": "expenditure exceeds revenue"
+        },
+        {
+          "key": "c",
+          "text": "taxes exceed subsidies"
+        },
+        {
+          "key": "d",
+          "text": "exports exceed imports"
+        }
+      ],
+      "answer": "b",
+      "explanation": "A deficit means government plans to spend more than it expects to receive, so it must borrow. Revenue exceeding expenditure is a surplus.",
+      "source_ref": "Authored"
+    },
+    {
+      "topic": "consumer-behaviour",
+      "difficulty": "easy",
+      "question": "Utility in economics means the ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "usefulness of a commodity"
+        },
+        {
+          "key": "b",
+          "text": "price of a commodity"
+        },
+        {
+          "key": "c",
+          "text": "satisfaction derived from consuming a commodity"
+        },
+        {
+          "key": "d",
+          "text": "quantity of a commodity consumed"
+        }
+      ],
+      "answer": "c",
+      "explanation": "Utility is the satisfaction a consumer gets from a good, not its physical usefulness. A good can be useful but give little satisfaction, or give satisfaction with little practical use.",
+      "source_ref": "Authored"
+    },
+    {
+      "topic": "consumer-behaviour",
+      "difficulty": "medium",
+      "question": "Total utility is at its maximum when marginal utility is ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "positive"
+        },
+        {
+          "key": "b",
+          "text": "negative"
+        },
+        {
+          "key": "c",
+          "text": "rising"
+        },
+        {
+          "key": "d",
+          "text": "zero"
+        }
+      ],
+      "answer": "d",
+      "explanation": "As consumption rises, total utility grows while marginal utility falls. When marginal utility reaches zero, total utility stops rising and is at its maximum; a negative marginal utility would reduce it.",
+      "source_ref": "Authored"
+    },
+    {
+      "topic": "consumer-behaviour",
+      "difficulty": "medium",
+      "question": "Consumer surplus is the difference between the price a consumer is willing to pay and ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "the price actually paid"
+        },
+        {
+          "key": "b",
+          "text": "the cost of production"
+        },
+        {
+          "key": "c",
+          "text": "the marginal utility"
+        },
+        {
+          "key": "d",
+          "text": "the total utility"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Consumer surplus measures the gain from paying less than the maximum one was willing to pay. If a buyer would pay N500 and pays N350, the surplus is N150.",
+      "source_ref": "Authored"
+    },
+    {
+      "topic": "consumer-behaviour",
+      "difficulty": "medium",
+      "question": "An indifference curve shows combinations of two goods that give a consumer ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "maximum profit"
+        },
+        {
+          "key": "b",
+          "text": "equal total satisfaction"
+        },
+        {
+          "key": "c",
+          "text": "equal cost"
+        },
+        {
+          "key": "d",
+          "text": "zero satisfaction"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Every point on an indifference curve yields the same level of satisfaction, so the consumer is indifferent between the combinations. Higher curves represent greater satisfaction.",
+      "source_ref": "Authored"
+    },
+    {
+      "topic": "national-income",
+      "difficulty": "easy",
+      "question": "Gross domestic product measures the total value of goods and services produced ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "by a country’s citizens anywhere in the world"
+        },
+        {
+          "key": "b",
+          "text": "by the government only"
+        },
+        {
+          "key": "c",
+          "text": "within a country in a year"
+        },
+        {
+          "key": "d",
+          "text": "and consumed in a year"
+        }
+      ],
+      "answer": "c",
+      "explanation": "GDP counts output produced inside a country’s borders in a year, regardless of the producer’s nationality. Output by citizens abroad belongs to GNP, not GDP.",
+      "source_ref": "Authored"
+    },
+    {
+      "topic": "national-income",
+      "difficulty": "medium",
+      "question": "Real gross domestic product is measured at ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "current market prices"
+        },
+        {
+          "key": "b",
+          "text": "factor cost only"
+        },
+        {
+          "key": "c",
+          "text": "consumer prices"
+        },
+        {
+          "key": "d",
+          "text": "constant prices"
+        }
+      ],
+      "answer": "d",
+      "explanation": "Real GDP uses constant base-year prices, so changes reflect actual output rather than inflation. Nominal GDP uses current prices.",
+      "source_ref": "Authored"
+    },
+    {
+      "topic": "national-income",
+      "difficulty": "easy",
+      "question": "Per capita income is obtained by dividing national income by ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "total population"
+        },
+        {
+          "key": "b",
+          "text": "the labour force"
+        },
+        {
+          "key": "c",
+          "text": "the number of households"
+        },
+        {
+          "key": "d",
+          "text": "government expenditure"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Per capita income is national income per head of population. It is a rough measure of average living standards and ignores how income is distributed.",
+      "source_ref": "Authored"
+    },
+    {
+      "topic": "national-income",
+      "difficulty": "medium",
+      "question": "Transfer payments are excluded from national income because they ______.",
+      "options": [
+        {
+          "key": "a",
+          "text": "are paid by government"
+        },
+        {
+          "key": "b",
+          "text": "do not represent current production"
+        },
+        {
+          "key": "c",
+          "text": "are taxed"
+        },
+        {
+          "key": "d",
+          "text": "reduce consumption"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Transfer payments such as pensions and unemployment benefits move income between people without producing new goods or services. Counting them would double-count.",
+      "source_ref": "Authored"
+    }
+  ]
+}
