@@ -1,6 +1,6 @@
 # Deferred work ledger
 
-Everything deliberately postponed, with its unblock condition. Nothing here is forgotten — items leave this list only by being built or explicitly rejected. Updated 2026-10-15.
+Everything deliberately postponed, with its unblock condition. Nothing here is forgotten — items leave this list only by being built or explicitly rejected. Updated 2026-10-27.
 
 ## Content (authoring labor, not code)
 
@@ -54,3 +54,14 @@ Everything deliberately postponed, with its unblock condition. Nothing here is f
 - [x] `tsconfig.tsbuildinfo` untracked (gitignored); `.landing-source/` untracked but kept on disk (designer material, static site lives in `public/landing`).
 - [x] Verification script updated to the post-drop inventory.
 - [ ] Campaign system: live and functional (practice gating, admin start/end) — left alone; reconcile only if the unlock model changes.
+
+## Security hardening (done 2026-10-27; keep at zero)
+
+- [x] Phase 1: revoked client writes on `profiles` (12 app-editable columns re-granted), `exam_sessions` and `session_answers`; added the `guard_profile_privileges` trigger; session/answer writes moved to the service role.
+- [x] Phase 2: `record_session_answer` returns void; practice feedback derives correctness from the mode-gated reveal; free-pool tables have no client writes.
+- [x] Phase 3: push subscriptions are own-row only; misconception maps are server-only; learning state is read-only for clients; dead grants removed from financial/review tables.
+- [x] Phase 4: analytics and inquiry rows are server-authored; every remaining client write grant is on a reviewed table (`push_subscriptions`, `lesson_reflections`, `student_targets`, `user_exam_access`, plus the profile columns); added `contact_submissions(created_at)` and wrapped hot own-row policies in `(select auth.uid())`.
+- [x] Regression harnesses: `npm run verify:security` runs the phase 1-4 scripts; `.github/workflows/security.yml` lints on every PR and runs the live suite on a schedule or manually.
+- [x] Full `tsc --noEmit` CI gate: the pre-existing errors in `app/diagnostic/page.tsx`, `app/(app)/home/page.tsx` and `components/account/onboarding-preferences-editor.tsx` are fixed, and `npm run typecheck` now runs in the lint job. `get_dashboard_data` returns `onboarding_completed`, so the home page no longer needs a second profile query.
+- [x] Remaining `auth.uid()` wrapping: `20261027000006` wrapped the lower-traffic own-row policies (`entitlements`, `payments`, `referrals`, `campaign_access`, `support_contributions`, `usage_counters`, `user_exam_access`, `push_subscriptions`, `student_targets`, `lesson_reflections`); `20261027000007` wrapped the `questions` access policy and `question_reviews` admin policy. No public policy now calls `auth.uid()` outside `(select auth.uid())`, asserted by the reconciliation script.
+- [x] Reconciliation in CI: the scheduled live job runs `supabase/verification/verify_reconciliation.sql` through `psql` when `SUPABASE_DB_URL` is configured, failing on any `FAIL` row (37 assertions).
