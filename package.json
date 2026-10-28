@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "measure": "node scripts/measure.mjs",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "verify:security": "node --env-file-if-exists=.env scripts/verify-phase1-security.mjs && node --env-file-if-exists=.env scripts/verify-phase2-security.mjs && node --env-file-if-exists=.env scripts/verify-phase3-security.mjs && node --env-file-if-exists=.env scripts/verify-phase4-security.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.6.0",
@@ -28,7 +30,8 @@
     "@types/react-dom": "^19.0.0",
     "@types/web-push": "^3.6.4",
     "eslint": "^9.39.5",
-    "eslint-config-next": "^16.4.0",
+    "eslint-config-next": "15.5.20",
+    "eslint-plugin-react-hooks": "^7.1.1",
     "pg": "^8.22.0",
     "postcss": "^8.5.0",
     "puppeteer-core": "^24.7.0",

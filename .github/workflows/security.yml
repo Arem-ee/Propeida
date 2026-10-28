@@ -1,0 +1,72 @@
+name: Security
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: '0 4 * * 1'
+  workflow_dispatch:
+
+concurrency:
+  group: security-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: Lint and types
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+
+  privilege-regression:
+    name: Privilege regression (live)
+    runs-on: ubuntu-latest
+    # The phase scripts create disposable users and rows in the linked project,
+    # so run them on a schedule or on demand rather than on every PR.
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Run phase 1-4 regressions
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          if [ -z "$NEXT_PUBLIC_SUPABASE_URL" ] || [ -z "$NEXT_PUBLIC_SUPABASE_ANON_KEY" ] || [ -z "$SUPABASE_SERVICE_ROLE_KEY" ]; then
+            echo "Supabase secrets are not configured; skipping the live regression."
+            exit 0
+          fi
+          npm run verify:security
+      - name: Run SQL reconciliation
+        env:
+          SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+        run: |
+          if [ -z "$SUPABASE_DB_URL" ]; then
+            echo "SUPABASE_DB_URL is not configured; skipping SQL reconciliation."
+            exit 0
+          fi
+          output="$(psql "$SUPABASE_DB_URL" -X -v ON_ERROR_STOP=1 -A -t -f supabase/verification/verify_reconciliation.sql)"
+          printf '%s\n' "$output"
+          if grep -q '|FAIL|' <<<"$output"; then
+            echo "::error::Reconciliation assertions failed."
+            exit 1
+          fi
+          passes="$(grep -c '|PASS|' <<<"$output" || true)"
+          if [ "$passes" -lt 37 ]; then
+            echo "::error::Expected at least 37 passing assertions, saw $passes."
+            exit 1
+          fi
+          echo "$passes reconciliation assertions passed."
