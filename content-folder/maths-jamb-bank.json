@@ -1,0 +1,713 @@
+{
+  "_note": "JAMB UTME Mathematics starter bank. Written to the official JAMB syllabus and matched to the five published Maths topics (indices, surds, quadratic-equations, trigonometry, probability). Every item has four options, one key, a worked explanation, and a topic tag. Seeded as draft/unverified: the owner reviews it before it is published.",
+  "subject": "mathematics",
+  "source": "JAMB UTME syllabus (authored — Maths starter)",
+  "status": "draft",
+  "verified_state": "unverified",
+  "questions": [
+    {
+      "topic": "indices",
+      "skill": "laws of indices",
+      "difficulty": "easy",
+      "question": "Simplify 2^5 × 2^-3 ÷ 2^2.",
+      "options": [
+        { "key": "a", "text": "1" },
+        { "key": "b", "text": "2" },
+        { "key": "c", "text": "4" },
+        { "key": "d", "text": "8" }
+      ],
+      "answer": "a",
+      "explanation": "For the product add the powers: 5 + (−3) = 2. For the division subtract the power: 2 − 2 = 0. So the result is 2^0 = 1."
+    },
+    {
+      "topic": "indices",
+      "skill": "exponential equations",
+      "difficulty": "easy",
+      "question": "Solve for x: 3^(x + 1) = 81.",
+      "options": [
+        { "key": "a", "text": "2" },
+        { "key": "b", "text": "3" },
+        { "key": "c", "text": "4" },
+        { "key": "d", "text": "5" }
+      ],
+      "answer": "b",
+      "explanation": "Write 81 as a power of 3: 81 = 3^4. Then x + 1 = 4, so x = 3."
+    },
+    {
+      "topic": "indices",
+      "skill": "fractional powers",
+      "difficulty": "medium",
+      "question": "Evaluate 27^(2/3).",
+      "options": [
+        { "key": "a", "text": "3" },
+        { "key": "b", "text": "6" },
+        { "key": "c", "text": "9" },
+        { "key": "d", "text": "18" }
+      ],
+      "answer": "c",
+      "explanation": "27 = 3^3, so 27^(2/3) = (3^3)^(2/3) = 3^2 = 9. The denominator of the fraction is the root; the numerator is the power."
+    },
+    {
+      "topic": "indices",
+      "skill": "negative indices",
+      "difficulty": "easy",
+      "question": "If 2^x = 1/8, what is x?",
+      "options": [
+        { "key": "a", "text": "−4" },
+        { "key": "b", "text": "−3" },
+        { "key": "c", "text": "3" },
+        { "key": "d", "text": "4" }
+      ],
+      "answer": "b",
+      "explanation": "1/8 = 1/2^3 = 2^−3. Since the bases are equal, x = −3."
+    },
+    {
+      "topic": "indices",
+      "skill": "simplifying algebraic powers",
+      "difficulty": "medium",
+      "question": "Simplify (x^3)^2 × x^−4, for x ≠ 0.",
+      "options": [
+        { "key": "a", "text": "x" },
+        { "key": "b", "text": "x^2" },
+        { "key": "c", "text": "x^4" },
+        { "key": "d", "text": "x^6" }
+      ],
+      "answer": "b",
+      "explanation": "First multiply the powers inside the bracket: (x^3)^2 = x^6. Then add the exponents for the product: x^6 × x^−4 = x^(6 − 4) = x^2."
+    },
+    {
+      "topic": "indices",
+      "skill": "fractional powers",
+      "difficulty": "medium",
+      "question": "Evaluate 16^(3/4).",
+      "options": [
+        { "key": "a", "text": "4" },
+        { "key": "b", "text": "6" },
+        { "key": "c", "text": "8" },
+        { "key": "d", "text": "12" }
+      ],
+      "answer": "c",
+      "explanation": "16^(1/4) = 2 because 2^4 = 16. Then raise that to the third power: 2^3 = 8."
+    },
+    {
+      "topic": "indices",
+      "skill": "exponential equations",
+      "difficulty": "medium",
+      "question": "Solve 5^(2x − 1) = 125.",
+      "options": [
+        { "key": "a", "text": "1" },
+        { "key": "b", "text": "3/2" },
+        { "key": "c", "text": "2" },
+        { "key": "d", "text": "5/2" }
+      ],
+      "answer": "c",
+      "explanation": "125 = 5^3, so 2x − 1 = 3. Then 2x = 4 and x = 2."
+    },
+    {
+      "topic": "indices",
+      "skill": "negative fractional powers",
+      "difficulty": "hard",
+      "question": "Simplify (8/27)^(−1/3).",
+      "options": [
+        { "key": "a", "text": "2/3" },
+        { "key": "b", "text": "3/2" },
+        { "key": "c", "text": "9/4" },
+        { "key": "d", "text": "27/8" }
+      ],
+      "answer": "b",
+      "explanation": "A negative power flips the fraction: (8/27)^(−1/3) = (27/8)^(1/3). The cube root of 27 is 3 and of 8 is 2, so the answer is 3/2."
+    },
+    {
+      "topic": "indices",
+      "skill": "exponential equations",
+      "difficulty": "medium",
+      "question": "If 9^x = 27, find x.",
+      "options": [
+        { "key": "a", "text": "1/2" },
+        { "key": "b", "text": "3/2" },
+        { "key": "c", "text": "2" },
+        { "key": "d", "text": "3" }
+      ],
+      "answer": "b",
+      "explanation": "Write both sides to base 3: 9^x = (3^2)^x = 3^(2x) and 27 = 3^3. So 2x = 3 and x = 3/2."
+    },
+    {
+      "topic": "indices",
+      "skill": "fractional powers",
+      "difficulty": "easy",
+      "question": "Simplify 4^(1/2) × 8^(1/3).",
+      "options": [
+        { "key": "a", "text": "2" },
+        { "key": "b", "text": "4" },
+        { "key": "c", "text": "6" },
+        { "key": "d", "text": "8" }
+      ],
+      "answer": "b",
+      "explanation": "4^(1/2) = 2 and 8^(1/3) = 2. Their product is 2 × 2 = 4."
+    },
+
+    {
+      "topic": "surds",
+      "skill": "simplifying surds",
+      "difficulty": "easy",
+      "question": "Simplify √50.",
+      "options": [
+        { "key": "a", "text": "2√5" },
+        { "key": "b", "text": "5√2" },
+        { "key": "c", "text": "10√5" },
+        { "key": "d", "text": "25√2" }
+      ],
+      "answer": "b",
+      "explanation": "Look for the largest square factor: 50 = 25 × 2. Then √50 = √25 × √2 = 5√2."
+    },
+    {
+      "topic": "surds",
+      "skill": "rationalising denominators",
+      "difficulty": "easy",
+      "question": "Rationalise 1/√3.",
+      "options": [
+        { "key": "a", "text": "√3/3" },
+        { "key": "b", "text": "1/3" },
+        { "key": "c", "text": "√3" },
+        { "key": "d", "text": "3√3" }
+      ],
+      "answer": "a",
+      "explanation": "Multiply numerator and denominator by √3: (1 × √3)/(√3 × √3) = √3/3."
+    },
+    {
+      "topic": "surds",
+      "skill": "adding surds",
+      "difficulty": "medium",
+      "question": "Simplify √18 + √8.",
+      "options": [
+        { "key": "a", "text": "5√2" },
+        { "key": "b", "text": "6√2" },
+        { "key": "c", "text": "2√13" },
+        { "key": "d", "text": "13√2" }
+      ],
+      "answer": "a",
+      "explanation": "Simplify each term first: √18 = 3√2 and √8 = 2√2. Then 3√2 + 2√2 = 5√2."
+    },
+    {
+      "topic": "surds",
+      "skill": "difference of squares with surds",
+      "difficulty": "easy",
+      "question": "Simplify (√5 + 2)(√5 − 2).",
+      "options": [
+        { "key": "a", "text": "1" },
+        { "key": "b", "text": "3" },
+        { "key": "c", "text": "9" },
+        { "key": "d", "text": "2√5" }
+      ],
+      "answer": "a",
+      "explanation": "This is the difference of two squares: (a + b)(a − b) = a² − b². So (√5)² − 2² = 5 − 4 = 1."
+    },
+    {
+      "topic": "surds",
+      "skill": "rationalising binomial denominators",
+      "difficulty": "hard",
+      "question": "Rationalise 2/(√7 − √3).",
+      "options": [
+        { "key": "a", "text": "(√7 + √3)/2" },
+        { "key": "b", "text": "(√7 − √3)/2" },
+        { "key": "c", "text": "2(√7 + √3)" },
+        { "key": "d", "text": "√7 + √3" }
+      ],
+      "answer": "a",
+      "explanation": "Multiply by the conjugate (√7 + √3)/(√7 + √3). The denominator becomes 7 − 3 = 4, so the expression is 2(√7 + √3)/4 = (√7 + √3)/2."
+    },
+    {
+      "topic": "surds",
+      "skill": "multiplying surds",
+      "difficulty": "easy",
+      "question": "Simplify √12 × √3.",
+      "options": [
+        { "key": "a", "text": "3√2" },
+        { "key": "b", "text": "6" },
+        { "key": "c", "text": "6√2" },
+        { "key": "d", "text": "36" }
+      ],
+      "answer": "b",
+      "explanation": "Multiply under one root: √12 × √3 = √36 = 6."
+    },
+    {
+      "topic": "surds",
+      "skill": "comparing surds",
+      "difficulty": "medium",
+      "question": "Which of the following is the largest?",
+      "options": [
+        { "key": "a", "text": "√3" },
+        { "key": "b", "text": "√5" },
+        { "key": "c", "text": "2" },
+        { "key": "d", "text": "√7" }
+      ],
+      "answer": "d",
+      "explanation": "Approximate: √3 ≈ 1.73, √5 ≈ 2.24, 2 = 2.00 and √7 ≈ 2.65. So √7 is the largest."
+    },
+    {
+      "topic": "surds",
+      "skill": "adding surds",
+      "difficulty": "medium",
+      "question": "Simplify √75 − √48.",
+      "options": [
+        { "key": "a", "text": "√3" },
+        { "key": "b", "text": "3√3" },
+        { "key": "c", "text": "7√3" },
+        { "key": "d", "text": "9√3" }
+      ],
+      "answer": "a",
+      "explanation": "√75 = 5√3 and √48 = 4√3. Subtracting gives 5√3 − 4√3 = √3."
+    },
+    {
+      "topic": "surds",
+      "skill": "rationalising binomial denominators",
+      "difficulty": "hard",
+      "question": "Simplify (√2 + 1)/(√2 − 1).",
+      "options": [
+        { "key": "a", "text": "1" },
+        { "key": "b", "text": "3" },
+        { "key": "c", "text": "3 + 2√2" },
+        { "key": "d", "text": "3 − 2√2" }
+      ],
+      "answer": "c",
+      "explanation": "Multiply by (√2 + 1)/(√2 + 1). The denominator becomes 2 − 1 = 1, and the numerator becomes (√2 + 1)² = 2 + 2√2 + 1 = 3 + 2√2."
+    },
+    {
+      "topic": "surds",
+      "skill": "solving surd equations",
+      "difficulty": "medium",
+      "question": "If √x = 3√2, find x.",
+      "options": [
+        { "key": "a", "text": "6" },
+        { "key": "b", "text": "9" },
+        { "key": "c", "text": "12" },
+        { "key": "d", "text": "18" }
+      ],
+      "answer": "d",
+      "explanation": "Square both sides: x = (3√2)² = 9 × 2 = 18."
+    },
+
+    {
+      "topic": "quadratic-equations",
+      "skill": "factorising quadratics",
+      "difficulty": "easy",
+      "question": "Solve x² − 5x + 6 = 0.",
+      "options": [
+        { "key": "a", "text": "x = 2 or x = 3" },
+        { "key": "b", "text": "x = −2 or x = −3" },
+        { "key": "c", "text": "x = 1 or x = 6" },
+        { "key": "d", "text": "x = −1 or x = −6" }
+      ],
+      "answer": "a",
+      "explanation": "Find two numbers that multiply to 6 and add to −5: −2 and −3. So (x − 2)(x − 3) = 0, giving x = 2 or x = 3."
+    },
+    {
+      "topic": "quadratic-equations",
+      "skill": "factorising quadratics",
+      "difficulty": "easy",
+      "question": "Solve x² + 7x + 12 = 0.",
+      "options": [
+        { "key": "a", "text": "x = −3 or x = −4" },
+        { "key": "b", "text": "x = 3 or x = 4" },
+        { "key": "c", "text": "x = −2 or x = −6" },
+        { "key": "d", "text": "x = 2 or x = 6" }
+      ],
+      "answer": "a",
+      "explanation": "The numbers −3 and −4 multiply to 12 and add to 7. So (x + 3)(x + 4) = 0, giving x = −3 or x = −4."
+    },
+    {
+      "topic": "quadratic-equations",
+      "skill": "factorising quadratics",
+      "difficulty": "medium",
+      "question": "Solve 2x² − 5x + 2 = 0.",
+      "options": [
+        { "key": "a", "text": "x = 1/2 or x = 2" },
+        { "key": "b", "text": "x = −1/2 or x = −2" },
+        { "key": "c", "text": "x = 1 or x = 4" },
+        { "key": "d", "text": "x = −1 or x = −4" }
+      ],
+      "answer": "a",
+      "explanation": "Factorise: 2x² − 5x + 2 = (2x − 1)(x − 2). Setting each factor to zero gives x = 1/2 or x = 2."
+    },
+    {
+      "topic": "quadratic-equations",
+      "skill": "solving by square root",
+      "difficulty": "easy",
+      "question": "Solve x² = 9.",
+      "options": [
+        { "key": "a", "text": "x = 3 only" },
+        { "key": "b", "text": "x = −3 only" },
+        { "key": "c", "text": "x = 3 or x = −3" },
+        { "key": "d", "text": "x = 9 or x = −9" }
+      ],
+      "answer": "c",
+      "explanation": "Both 3² and (−3)² equal 9, so the equation has two solutions: x = 3 or x = −3."
+    },
+    {
+      "topic": "quadratic-equations",
+      "skill": "discriminant",
+      "difficulty": "medium",
+      "question": "If x² − 4x + k = 0 has equal roots, find k.",
+      "options": [
+        { "key": "a", "text": "−4" },
+        { "key": "b", "text": "0" },
+        { "key": "c", "text": "2" },
+        { "key": "d", "text": "4" }
+      ],
+      "answer": "d",
+      "explanation": "Equal roots mean the discriminant b² − 4ac is zero. Here b = −4, a = 1 and c = k, so 16 − 4k = 0 and k = 4."
+    },
+    {
+      "topic": "quadratic-equations",
+      "skill": "sum of roots",
+      "difficulty": "medium",
+      "question": "Find the sum of the roots of 3x² − 9x + 6 = 0.",
+      "options": [
+        { "key": "a", "text": "−3" },
+        { "key": "b", "text": "−1" },
+        { "key": "c", "text": "1" },
+        { "key": "d", "text": "3" }
+      ],
+      "answer": "d",
+      "explanation": "For ax² + bx + c = 0, the sum of the roots is −b/a. Here −(−9)/3 = 9/3 = 3."
+    },
+    {
+      "topic": "quadratic-equations",
+      "skill": "product of roots",
+      "difficulty": "medium",
+      "question": "Find the product of the roots of 2x² + 5x − 3 = 0.",
+      "options": [
+        { "key": "a", "text": "−3/2" },
+        { "key": "b", "text": "−5/2" },
+        { "key": "c", "text": "3/2" },
+        { "key": "d", "text": "5/2" }
+      ],
+      "answer": "a",
+      "explanation": "For ax² + bx + c = 0, the product of the roots is c/a. Here c = −3 and a = 2, so the product is −3/2."
+    },
+    {
+      "topic": "quadratic-equations",
+      "skill": "solving factorised equations",
+      "difficulty": "easy",
+      "question": "Solve (x − 3)(x + 2) = 0.",
+      "options": [
+        { "key": "a", "text": "x = 3 or x = −2" },
+        { "key": "b", "text": "x = −3 or x = 2" },
+        { "key": "c", "text": "x = 3 or x = 2" },
+        { "key": "d", "text": "x = −3 or x = −2" }
+      ],
+      "answer": "a",
+      "explanation": "A product is zero when either factor is zero. x − 3 = 0 gives x = 3; x + 2 = 0 gives x = −2."
+    },
+    {
+      "topic": "quadratic-equations",
+      "skill": "factorising quadratics",
+      "difficulty": "medium",
+      "question": "Solve x² − 2x − 15 = 0.",
+      "options": [
+        { "key": "a", "text": "x = 5 or x = −3" },
+        { "key": "b", "text": "x = −5 or x = 3" },
+        { "key": "c", "text": "x = 5 or x = 3" },
+        { "key": "d", "text": "x = −5 or x = −3" }
+      ],
+      "answer": "a",
+      "explanation": "The numbers 5 and −3 multiply to −15 and add to −2. So (x − 5)(x + 3) = 0, giving x = 5 or x = −3."
+    },
+    {
+      "topic": "quadratic-equations",
+      "skill": "roots of quadratics",
+      "difficulty": "medium",
+      "question": "If one root of x² − 7x + 10 = 0 is 2, find the other root.",
+      "options": [
+        { "key": "a", "text": "3" },
+        { "key": "b", "text": "4" },
+        { "key": "c", "text": "5" },
+        { "key": "d", "text": "7" }
+      ],
+      "answer": "c",
+      "explanation": "Factorise: x² − 7x + 10 = (x − 2)(x − 5). The other root is x = 5. You can also use the sum of roots: 2 + r = 7, so r = 5."
+    },
+
+    {
+      "topic": "trigonometry",
+      "skill": "special angles",
+      "difficulty": "easy",
+      "question": "Find sin 30°.",
+      "options": [
+        { "key": "a", "text": "1/2" },
+        { "key": "b", "text": "√3/2" },
+        { "key": "c", "text": "1/√3" },
+        { "key": "d", "text": "1" }
+      ],
+      "answer": "a",
+      "explanation": "In a 30°–60°–90° triangle the side opposite 30° is half the hypotenuse, so sin 30° = 1/2."
+    },
+    {
+      "topic": "trigonometry",
+      "skill": "special angles",
+      "difficulty": "easy",
+      "question": "Find cos 60°.",
+      "options": [
+        { "key": "a", "text": "1/2" },
+        { "key": "b", "text": "√3/2" },
+        { "key": "c", "text": "1/√2" },
+        { "key": "d", "text": "0" }
+      ],
+      "answer": "a",
+      "explanation": "cos 60° = 1/2. It is the same as sin 30° because 60° and 30° are complementary angles."
+    },
+    {
+      "topic": "trigonometry",
+      "skill": "special angles",
+      "difficulty": "easy",
+      "question": "Find tan 45°.",
+      "options": [
+        { "key": "a", "text": "0" },
+        { "key": "b", "text": "1/2" },
+        { "key": "c", "text": "1" },
+        { "key": "d", "text": "√3" }
+      ],
+      "answer": "c",
+      "explanation": "In a 45°–45°–90° triangle the two shorter sides are equal, so tan 45° = opposite/adjacent = 1."
+    },
+    {
+      "topic": "trigonometry",
+      "skill": "right-triangle ratios",
+      "difficulty": "easy",
+      "question": "In a right-angled triangle, the side opposite angle θ is 3 cm and the hypotenuse is 5 cm. Find sin θ.",
+      "options": [
+        { "key": "a", "text": "3/5" },
+        { "key": "b", "text": "4/5" },
+        { "key": "c", "text": "3/4" },
+        { "key": "d", "text": "5/3" }
+      ],
+      "answer": "a",
+      "explanation": "sin θ = opposite/hypotenuse. The opposite side is 3 and the hypotenuse is 5, so sin θ = 3/5."
+    },
+    {
+      "topic": "trigonometry",
+      "skill": "trigonometric identities",
+      "difficulty": "easy",
+      "question": "Which identity is true for every angle θ?",
+      "options": [
+        { "key": "a", "text": "sin²θ + cos²θ = 1" },
+        { "key": "b", "text": "sin θ + cos θ = 1" },
+        { "key": "c", "text": "sin²θ − cos²θ = 1" },
+        { "key": "d", "text": "tan θ = sin θ cos θ" }
+      ],
+      "answer": "a",
+      "explanation": "For any point on the unit circle, the coordinates are (cos θ, sin θ) and the radius is 1. Pythagoras gives sin²θ + cos²θ = 1."
+    },
+    {
+      "topic": "trigonometry",
+      "skill": "Pythagorean identity",
+      "difficulty": "medium",
+      "question": "If sin θ = 3/5 and θ is acute, find cos θ.",
+      "options": [
+        { "key": "a", "text": "2/5" },
+        { "key": "b", "text": "3/5" },
+        { "key": "c", "text": "4/5" },
+        { "key": "d", "text": "5/4" }
+      ],
+      "answer": "c",
+      "explanation": "Use sin²θ + cos²θ = 1: (3/5)² + cos²θ = 1, so cos²θ = 1 − 9/25 = 16/25. Since θ is acute, cos θ = 4/5."
+    },
+    {
+      "topic": "trigonometry",
+      "skill": "special angles",
+      "difficulty": "medium",
+      "question": "Find tan 30°.",
+      "options": [
+        { "key": "a", "text": "1/2" },
+        { "key": "b", "text": "1/√3" },
+        { "key": "c", "text": "√3/2" },
+        { "key": "d", "text": "√3" }
+      ],
+      "answer": "b",
+      "explanation": "tan 30° = sin 30°/cos 30° = (1/2)/(√3/2) = 1/√3, which is the same as √3/3."
+    },
+    {
+      "topic": "trigonometry",
+      "skill": "cosine rule",
+      "difficulty": "hard",
+      "question": "In triangle ABC, a = 7 cm, b = 5 cm and angle C = 60°. Find c².",
+      "options": [
+        { "key": "a", "text": "19" },
+        { "key": "b", "text": "24" },
+        { "key": "c", "text": "39" },
+        { "key": "d", "text": "74" }
+      ],
+      "answer": "c",
+      "explanation": "By the cosine rule, c² = a² + b² − 2ab cos C = 49 + 25 − 2(7)(5)(1/2) = 74 − 35 = 39."
+    },
+    {
+      "topic": "trigonometry",
+      "skill": "special angles",
+      "difficulty": "easy",
+      "question": "Find sin 45°.",
+      "options": [
+        { "key": "a", "text": "1/2" },
+        { "key": "b", "text": "√2/2" },
+        { "key": "c", "text": "√3/2" },
+        { "key": "d", "text": "1" }
+      ],
+      "answer": "b",
+      "explanation": "In a 45°–45°–90° triangle the sides are in the ratio 1 : 1 : √2, so sin 45° = 1/√2 = √2/2."
+    },
+    {
+      "topic": "trigonometry",
+      "skill": "Pythagorean identity",
+      "difficulty": "medium",
+      "question": "If cos θ = 0.6 and θ is acute, find sin θ.",
+      "options": [
+        { "key": "a", "text": "0.4" },
+        { "key": "b", "text": "0.6" },
+        { "key": "c", "text": "0.8" },
+        { "key": "d", "text": "1.0" }
+      ],
+      "answer": "c",
+      "explanation": "sin²θ = 1 − cos²θ = 1 − 0.36 = 0.64. Since θ is acute, sin θ = √0.64 = 0.8."
+    },
+
+    {
+      "topic": "probability",
+      "skill": "single-event probability",
+      "difficulty": "easy",
+      "question": "A fair die is thrown once. What is the probability of getting an even number?",
+      "options": [
+        { "key": "a", "text": "1/6" },
+        { "key": "b", "text": "1/3" },
+        { "key": "c", "text": "1/2" },
+        { "key": "d", "text": "2/3" }
+      ],
+      "answer": "c",
+      "explanation": "The even outcomes are 2, 4 and 6 — three out of six equally likely outcomes. So P(even) = 3/6 = 1/2."
+    },
+    {
+      "topic": "probability",
+      "skill": "independent events",
+      "difficulty": "easy",
+      "question": "A fair coin is tossed twice. What is the probability of getting two heads?",
+      "options": [
+        { "key": "a", "text": "1/8" },
+        { "key": "b", "text": "1/4" },
+        { "key": "c", "text": "1/2" },
+        { "key": "d", "text": "3/4" }
+      ],
+      "answer": "b",
+      "explanation": "The tosses are independent, so multiply: P(H) × P(H) = 1/2 × 1/2 = 1/4."
+    },
+    {
+      "topic": "probability",
+      "skill": "single-event probability",
+      "difficulty": "easy",
+      "question": "A bag contains 3 red and 2 blue balls. One ball is picked at random. What is the probability that it is red?",
+      "options": [
+        { "key": "a", "text": "2/5" },
+        { "key": "b", "text": "1/2" },
+        { "key": "c", "text": "3/5" },
+        { "key": "d", "text": "3/2" }
+      ],
+      "answer": "c",
+      "explanation": "There are 3 red balls out of 5 balls in total, so P(red) = 3/5."
+    },
+    {
+      "topic": "probability",
+      "skill": "complementary events",
+      "difficulty": "easy",
+      "question": "If P(A) = 0.3, find P(not A).",
+      "options": [
+        { "key": "a", "text": "0.3" },
+        { "key": "b", "text": "0.6" },
+        { "key": "c", "text": "0.7" },
+        { "key": "d", "text": "1.3" }
+      ],
+      "answer": "c",
+      "explanation": "An event and its complement cover all outcomes, so P(not A) = 1 − P(A) = 1 − 0.3 = 0.7."
+    },
+    {
+      "topic": "probability",
+      "skill": "two-dice sample space",
+      "difficulty": "medium",
+      "question": "Two fair dice are thrown. What is the probability that the sum is 7?",
+      "options": [
+        { "key": "a", "text": "1/12" },
+        { "key": "b", "text": "1/9" },
+        { "key": "c", "text": "1/6" },
+        { "key": "d", "text": "7/36" }
+      ],
+      "answer": "c",
+      "explanation": "There are 36 equally likely outcomes. The pairs that sum to 7 are (1,6), (2,5), (3,4), (4,3), (5,2) and (6,1) — six outcomes. So P(sum 7) = 6/36 = 1/6."
+    },
+    {
+      "topic": "probability",
+      "skill": "mutually exclusive events",
+      "difficulty": "medium",
+      "question": "A and B are mutually exclusive events with P(A) = 1/3 and P(B) = 1/4. Find P(A or B).",
+      "options": [
+        { "key": "a", "text": "1/12" },
+        { "key": "b", "text": "1/7" },
+        { "key": "c", "text": "7/12" },
+        { "key": "d", "text": "3/4" }
+      ],
+      "answer": "c",
+      "explanation": "Mutually exclusive means they cannot happen together, so add: 1/3 + 1/4 = 4/12 + 3/12 = 7/12."
+    },
+    {
+      "topic": "probability",
+      "skill": "independent events",
+      "difficulty": "medium",
+      "question": "A and B are independent events with P(A) = 1/2 and P(B) = 1/3. Find P(A and B).",
+      "options": [
+        { "key": "a", "text": "1/6" },
+        { "key": "b", "text": "1/3" },
+        { "key": "c", "text": "1/2" },
+        { "key": "d", "text": "5/6" }
+      ],
+      "answer": "a",
+      "explanation": "For independent events, P(A and B) = P(A) × P(B) = 1/2 × 1/3 = 1/6."
+    },
+    {
+      "topic": "probability",
+      "skill": "single-event probability",
+      "difficulty": "easy",
+      "question": "A card is drawn at random from a standard pack of 52 cards. What is the probability that it is an ace?",
+      "options": [
+        { "key": "a", "text": "1/52" },
+        { "key": "b", "text": "1/26" },
+        { "key": "c", "text": "1/13" },
+        { "key": "d", "text": "1/4" }
+      ],
+      "answer": "c",
+      "explanation": "There are 4 aces in a pack of 52 cards, so P(ace) = 4/52 = 1/13."
+    },
+    {
+      "topic": "probability",
+      "skill": "without replacement",
+      "difficulty": "hard",
+      "question": "A bag contains 5 white and 3 black balls. Two balls are drawn without replacement. What is the probability that both are white?",
+      "options": [
+        { "key": "a", "text": "5/14" },
+        { "key": "b", "text": "25/64" },
+        { "key": "c", "text": "5/8" },
+        { "key": "d", "text": "3/8" }
+      ],
+      "answer": "a",
+      "explanation": "The first draw is white with probability 5/8. After removing one white ball, 4 white balls remain out of 7, so the second is white with probability 4/7. Multiply: 5/8 × 4/7 = 20/56 = 5/14."
+    },
+    {
+      "topic": "probability",
+      "skill": "at least one",
+      "difficulty": "medium",
+      "question": "A fair coin is tossed twice. What is the probability of getting at least one head?",
+      "options": [
+        { "key": "a", "text": "1/4" },
+        { "key": "b", "text": "1/2" },
+        { "key": "c", "text": "2/3" },
+        { "key": "d", "text": "3/4" }
+      ],
+      "answer": "d",
+      "explanation": "The only way to fail is to get two tails: P(TT) = 1/2 × 1/2 = 1/4. So P(at least one head) = 1 − 1/4 = 3/4."
+    }
+  ]
+}

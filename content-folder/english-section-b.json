@@ -1,0 +1,553 @@
+{
+  "lessons": [
+    {
+      "slug": "synonyms",
+      "title": "Synonyms",
+      "responseType": "mcq",
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "What Are Synonyms?",
+            "paragraphs": [
+              "A synonym is a word that has the same or nearly the same meaning as another word. For example, big and large mean almost the same thing, so they are synonyms.",
+              "Synonyms give writers and speakers options. Instead of saying happy every time, you can say joyful, delighted, pleased, or cheerful, depending on the exact shade of meaning you want.",
+              "But synonyms are rarely exact duplicates. Each word carries its own shade of meaning, tone, and level of formality. That is why choosing the right synonym matters in exams."
+            ],
+            "bullets": [
+              "A synonym is a word that has the same or nearly the same meaning as another word.",
+              "Synonyms give writers and speakers options.",
+              "No two synonyms are exactly identical in meaning, tone, or formality."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Why Synonyms Matter in JAMB English",
+            "paragraphs": [
+              "JAMB setters test synonyms because they want to see whether you understand vocabulary in context, not just whether you can memorise word lists. They will ask you to replace a word in a sentence with another word that keeps the meaning intact.",
+              "To do this well, you must look at the whole sentence, not just the target word. A word that is a synonym in one context may be wrong in another.",
+              "For example, bright can mean clever, cheerful, or luminous depending on context. You must choose the synonym that fits the sentence."
+            ],
+            "bullets": [
+              "JAMB tests whether you understand vocabulary in context.",
+              "You must choose the synonym that fits the sentence.",
+              "Context determines which synonym is correct."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "How to Choose the Right Synonym",
+            "paragraphs": [
+              "Follow these steps when answering synonym questions:",
+              "1. Read the whole sentence carefully.",
+              "2. Identify the word or phrase being tested.",
+              "3. Think of what that word means in this exact sentence.",
+              "4. Try each option in the sentence and see which one fits.",
+              "5. Eliminate options that change the meaning or do not fit grammatically."
+            ],
+            "bullets": [
+              "Read the whole sentence before choosing.",
+              "Identify the word being tested and its meaning in context.",
+              "Try each option in the sentence.",
+              "Eliminate options that change meaning or do not fit grammatically."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Common Synonym Traps to Avoid",
+            "paragraphs": [
+              "Beware of near-synonyms – words that look similar but have different meanings. For example, emigrate (leave a country) vs immigrate (come into a country).",
+              "Another trap is choosing a word that sounds similar but means something different, like affect (verb: to influence) vs effect (noun: result). These sound similar but have different meanings and functions.",
+              "Always read the full sentence. A word that is a synonym in isolation may not work in context."
+            ],
+            "bullets": [
+              "Beware of near-synonyms – words that look similar but have different meanings.",
+              "Watch for easily confused words like emigrate vs immigrate.",
+              "Context determines the correct synonym."
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam Tip",
+            "body": "When you see a synonym question, read the sentence with each option inserted. The word that fits naturally without changing the meaning is usually correct. If an option sounds right but changes the meaning even slightly, it is wrong.",
+            "tone": "tip"
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Choose the word that is nearest in meaning to the word in capital letters: The teacher was PLEASED with the students’ performance.",
+            "steps": [
+              {
+                "step": "Read the sentence to understand the context",
+                "prediction": "The teacher was proud of the students’ performance = the teacher was happy with how students performed."
+              },
+              {
+                "step": "Test each option in the sentence",
+                "prediction": "The teacher was delighted with... works. The teacher was angry with... does not."
+              },
+              {
+                "step": "Select the best synonym",
+                "prediction": "The best synonym is the one that fits naturally and keeps the meaning."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Choose the word that is nearest in meaning to the word in capital letters: The crowd at the market was ENORMOUS.",
+            "hints": [
+              "Enormous describes something very large in size.",
+              "Look for a word that means very big.",
+              "Huge is the closest synonym."
+            ]
+          }
+        },
+        {
+          "type": "passage",
+          "content": {
+            "title": "The Village Market",
+            "paragraphs": [
+              "Every Saturday morning, the village market comes alive with activity. Traders spread their goods on mats: ripe mangoes, crisp vegetables, aromatic spices, and colourful fabrics. Buyers move from stall to stall, examining goods carefully and haggling over prices.",
+              "The air is filled with the aroma of roasted maize and fresh bread. Children weave through the crowd, while elders sit under trees discussing politics. By noon, the market is at its busiest, and by evening, it is quiet once more, waiting for the next market day."
+            ],
+            "questions": [
+              {
+                "question": "Which word is nearest in meaning to aroma as used in the passage?",
+                "options": [
+                  {
+                    "key": "a",
+                    "text": "taste"
+                  },
+                  {
+                    "key": "b",
+                    "text": "smell"
+                  },
+                  {
+                    "key": "c",
+                    "text": "sound"
+                  },
+                  {
+                    "key": "d",
+                    "text": "sight"
+                  }
+                ],
+                "answer": "b",
+                "explanation": "Aroma means a pleasant smell. The context mentions the aroma of roasted maize and fresh bread.",
+                "evidenceStrings": [
+                  {
+                    "paragraph": 1,
+                    "text": "The air is filled with the aroma of roasted maize and fresh bread."
+                  }
+                ]
+              },
+              {
+                "question": "Which word is nearest in meaning to examining as used in the passage?",
+                "options": [
+                  {
+                    "key": "a",
+                    "text": "buying"
+                  },
+                  {
+                    "key": "b",
+                    "text": "checking carefully"
+                  },
+                  {
+                    "key": "c",
+                    "text": "selling"
+                  },
+                  {
+                    "key": "d",
+                    "text": "ignoring"
+                  }
+                ],
+                "answer": "b",
+                "explanation": "Examining means looking at carefully to check quality or condition.",
+                "evidenceStrings": [
+                  {
+                    "paragraph": 0,
+                    "text": "Buyers move from stall to stall, examining goods carefully and haggling over prices."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "type": "reflection",
+          "content": {
+            "prompt": "Think about a word you often use. Can you think of three synonyms for it? Are they exactly the same, or do they have slightly different meanings? Write down your thoughts.",
+            "modelResponse": "A strong answer names a word and lists at least two synonyms, noting whether they are exactly the same or have slightly different meanings. For example: happy = joyful, pleased, delighted. Each has a slightly different shade of meaning."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "antonyms",
+      "title": "Antonyms",
+      "responseType": "mcq",
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "What Are Antonyms?",
+            "paragraphs": [
+              "An antonym is a word that means the opposite of another word. For example, hot and cold are antonyms. Happy and sad are antonyms.",
+              "Antonyms are useful because they help you describe things precisely. Instead of saying something is not big, you can say it is small. Instead of saying it is not happy, you can say it is sad or miserable.",
+              "Learning antonyms helps you express yourself precisely and understand passages better."
+            ],
+            "bullets": [
+              "An antonym is a word that means the opposite of another word.",
+              "Antonyms help you express yourself precisely.",
+              "Antonyms appear often in JAMB questions."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "How to Find Antonyms",
+            "paragraphs": [
+              "To find an antonym, first understand what the word means. Then think of a word with the opposite meaning.",
+              "For example, if the word is hot, the opposite could be cold. If the word is rich, the opposite could be poor. If the word is honest, the opposite could be dishonest.",
+              "Be careful: some words have multiple meanings. The antonym depends on which meaning is being used. For example, light could mean dark (absence of light) or heavy (lack of weight). Context matters."
+            ],
+            "bullets": [
+              "First understand what the word means.",
+              "Then think of a word with the opposite meaning.",
+              "Remember that some words have multiple meanings."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Common Antonym Traps",
+            "paragraphs": [
+              "Beware of near-antonyms - words that look similar but mean different things.",
+              "Also, some words do not have clear opposites. What is the opposite of table or chair? There is no single opposite word for these.",
+              "And remember: context matters. The opposite of light could be dark (absence of light) or heavy (lack of weight). Context determines which antonym is correct."
+            ],
+            "bullets": [
+              "Beware of near-antonyms - words that look similar but mean different things.",
+              "Some words do not have clear antonyms.",
+              "Context determines which antonym is correct."
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam Tip",
+            "body": "When you see an antonym question, read the whole sentence first. The context tells you which meaning of the word is being used, and therefore which opposite is correct.",
+            "tone": "tip"
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Choose the word that is nearly opposite in meaning to the word in capital letters: The politician gave an HONEST account of the events.",
+            "steps": [
+              {
+                "step": "Read the sentence to understand the context",
+                "prediction": "The politician gave an honest account = the politician told the truth."
+              },
+              {
+                "step": "Test each option in the sentence",
+                "prediction": "The politician gave a dishonest account = the politician lied. This fits."
+              },
+              {
+                "step": "Select the best antonym",
+                "prediction": "The best antonym is dishonest."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Choose the word that is nearly opposite in meaning to the word in capital letters: The student was HESITANT to answer the question in front of the class.",
+            "hints": [
+              "Think about what hesitant means: unsure, reluctant, uncertain.",
+              "Look for a word that means unsure or unwilling.",
+              "A confident person is the opposite of hesitant."
+            ]
+          }
+        },
+        {
+          "type": "passage",
+          "content": {
+            "title": "The Village Market",
+            "paragraphs": [
+              "Every Saturday morning, the village market comes alive with activity. Traders spread their goods on mats: ripe mangoes, crisp vegetables, aromatic spices, and colourful fabrics. Buyers move from stall to stall, examining goods carefully and haggling over prices.",
+              "The air is filled with the aroma of roasted maize and fresh bread. Children weave through the crowd, while elders sit under trees discussing politics. By noon, the market is at its busiest, and by evening, it is quiet once more, waiting for the next market day."
+            ],
+            "questions": [
+              {
+                "question": "Which word is most nearly opposite in meaning to busiest as used in the passage?",
+                "options": [
+                  {
+                    "key": "a",
+                    "text": "quietest"
+                  },
+                  {
+                    "key": "b",
+                    "text": "liveliest"
+                  },
+                  {
+                    "key": "c",
+                    "text": "noisiest"
+                  },
+                  {
+                    "key": "d",
+                    "text": "fullest"
+                  }
+                ],
+                "answer": "a",
+                "explanation": "Busiest means most active or crowded. The passage contrasts it with quiet, so quietest is the opposite.",
+                "evidenceStrings": [
+                  {
+                    "paragraph": 1,
+                    "text": "By noon, the market is at its busiest, and by evening, it is quiet once more, waiting for the next market day."
+                  }
+                ]
+              },
+              {
+                "question": "Which word is most nearly opposite in meaning to ripe as used in the passage?",
+                "options": [
+                  {
+                    "key": "a",
+                    "text": "unripe"
+                  },
+                  {
+                    "key": "b",
+                    "text": "fresh"
+                  },
+                  {
+                    "key": "c",
+                    "text": "sweet"
+                  },
+                  {
+                    "key": "d",
+                    "text": "soft"
+                  }
+                ],
+                "answer": "a",
+                "explanation": "Ripe describes fruit that is ready to eat. Unripe is its opposite.",
+                "evidenceStrings": [
+                  {
+                    "paragraph": 0,
+                    "text": "Traders spread their goods on mats: ripe mangoes, crisp vegetables, aromatic spices, and colourful fabrics."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "type": "reflection",
+          "content": {
+            "prompt": "Think of a word you use often. What is its opposite? Does the opposite change with context? Write down your thoughts.",
+            "modelResponse": "A strong answer names a word and gives an opposite, noting any context dependence. For example: light = dark when talking about illumination, but light = heavy when talking about weight."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "build-reading-comprehension-skills",
+      "title": "Build Reading Comprehension Skills",
+      "responseType": "mcq",
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "What Is Reading Comprehension?",
+            "paragraphs": [
+              "Reading comprehension is the ability to read a text, understand it, and answer questions about it. It involves understanding vocabulary, grammar, main ideas, details, and inferences.",
+              "To read well, you need to focus on the text, think about what you are reading, and connect new information to what you already know."
+            ],
+            "bullets": [
+              "Reading comprehension means understanding what you read.",
+              "It involves understanding vocabulary, grammar, main ideas, details, and inferences.",
+              "Good readers think about what they read as they read it."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "How to Read for Comprehension",
+            "paragraphs": [
+              "Read the title first to get an idea of what the passage is about. Then read the first paragraph to understand the topic. Read each paragraph carefully, asking yourself: What is this paragraph about? What is the main point?",
+              "After reading, ask yourself: What did I learn? What was the author’s main point? What evidence supports the main point?"
+            ],
+            "bullets": [
+              "Read the title first to get an idea of the topic.",
+              "Read each paragraph carefully, asking what it is about.",
+              "After reading, ask what you learned and what the main point was."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Answering Comprehension Questions",
+            "paragraphs": [
+              "When answering comprehension questions, read the question carefully first. Then go back to the passage to find the answer. Do not guess or use your own knowledge unless the passage supports it.",
+              "If you are not sure, eliminate the wrong answers first. Then choose the best answer from the remaining options."
+            ],
+            "bullets": [
+              "Read the question carefully before looking for the answer.",
+              "Go back to the passage to find the answer.",
+              "Eliminate wrong answers and choose the best remaining option."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Common Mistakes",
+            "paragraphs": [
+              "Common mistakes include choosing an answer that sounds right but is not in the passage, choosing an answer that is true but not mentioned in the passage, and choosing an answer that is too broad or too narrow.",
+              "Always base your answers on what the passage says, not on what you think or assume."
+            ],
+            "bullets": [
+              "Base answers on the passage, not personal opinions.",
+              "Avoid answers that sound right but are not in the text.",
+              "Avoid answers that are too general or too specific."
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam Tip",
+            "body": "Read the questions first, then read the passage to find the answers. This helps you focus on what to look for.",
+            "tone": "tip"
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Read the passage and answer the question: The teacher was HONEST with the students.\nWhat does the word honest mean in this context?",
+            "steps": [
+              {
+                "step": "Read the sentence to understand the context",
+                "prediction": "The teacher told students the truth."
+              },
+              {
+                "step": "Test each option in the sentence",
+                "prediction": "The teacher told students the truth = the politician told the truth."
+              },
+              {
+                "step": "Select the best synonym",
+                "prediction": "Honest means truthful."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Read the passage and answer the question: She worked hard all week to finish the project on time.\nWhat does the word worked mean in this sentence?",
+            "hints": [
+              "Think about what working hard means in the context.",
+              "Working hard means putting in effort and effort over time.",
+              "The word worked here means to complete or finish work."
+            ]
+          }
+        },
+        {
+          "type": "passage",
+          "content": {
+            "title": "The City Market",
+            "paragraphs": [
+              "Every Saturday morning, the village market comes alive with activity. Traders spread their goods on mats: ripe mangoes, crisp vegetables, aromatic spices, and colourful fabrics. Buyers move from stall to stall, examining goods carefully and haggling over prices.",
+              "The air is filled with the aroma of roasted maize and fresh bread. Children weave through the crowd, while elders sit under trees discussing politics. By noon, the market is at its busiest, and by evening, it is quiet once more, waiting for the next market day."
+            ],
+            "questions": [
+              {
+                "question": "Which word is nearest in meaning to aroma as used in the passage?",
+                "options": [
+                  {
+                    "key": "a",
+                    "text": "taste"
+                  },
+                  {
+                    "key": "b",
+                    "text": "smell"
+                  },
+                  {
+                    "key": "c",
+                    "text": "sound"
+                  },
+                  {
+                    "key": "d",
+                    "text": "sight"
+                  }
+                ],
+                "answer": "b",
+                "explanation": "Aroma means a pleasant smell. The context mentions the aroma of roasted maize and fresh bread.",
+                "evidenceStrings": [
+                  {
+                    "paragraph": 2,
+                    "text": "The air is filled with the aroma of roasted maize and fresh bread."
+                  }
+                ]
+              },
+              {
+                "question": "Which word is nearest in meaning to examining as used in the passage?",
+                "options": [
+                  {
+                    "key": "a",
+                    "text": "buying"
+                  },
+                  {
+                    "key": "b",
+                    "text": "checking carefully"
+                  },
+                  {
+                    "key": "c",
+                    "text": "selling"
+                  },
+                  {
+                    "key": "d",
+                    "text": "ignoring"
+                  }
+                ],
+                "answer": "b",
+                "explanation": "Examining means looking at carefully to check quality or condition.",
+                "evidenceStrings": [
+                  {
+                    "paragraph": 1,
+                    "text": "Traders spread their goods on mats..."
+                  },
+                  {
+                    "paragraph": 1,
+                    "text": "Buyers move from stall to stall, examining goods carefully and haggling over prices."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "type": "reflection",
+          "content": {
+            "prompt": "Think about a word you often use. Can you think of three synonyms for it? Are they exactly the same, or do they have slightly different meanings? Write down your thoughts.",
+            "modelResponse": "A strong answer names a word and lists at least two synonyms, noting whether they are exactly the same or have slightly different meanings. For example: happy = joyful, pleased, delighted. Each has a slightly different shade of meaning."
+          }
+        }
+      ]
+    }
+  ]
+}
