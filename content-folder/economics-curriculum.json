@@ -94,5 +94,506 @@
       "description": "Comparative advantage, terms of trade, balance of payments, ECOWAS and other organisations."
     }
   ],
-  "lessons": []
+  "lessons": [
+    {
+      "topic": "basic-concepts",
+      "slug": "basic-concepts",
+      "title": "Scarcity, Choice and Opportunity Cost",
+      "objective": "Explain scarcity, choice and opportunity cost, and rank competing wants with a scale of preference.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "The economic problem",
+            "paragraphs": [
+              "Economics begins with a mismatch: human wants are unlimited, but the resources used to satisfy them are limited. That gap is scarcity, and it forces everyone — households, firms and governments — to choose."
+            ],
+            "bullets": [
+              "Scarcity means resources are insufficient to satisfy every want at once. It is not the same as shortage, which is temporary.",
+              "Because resources are scarce, choosing one use means giving up another.",
+              "A scale of preference ranks wants in order of importance, so limited income goes to the most pressing wants first.",
+              "Opportunity cost is the next best alternative forgone — not the money paid."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "How societies answer three questions",
+            "paragraphs": [
+              "Every economy must decide what to produce, how to produce it, and for whom. The way it answers those questions defines its economic system."
+            ],
+            "bullets": [
+              "Free enterprise (capitalist): private individuals own the factors of production and prices coordinate most decisions.",
+              "Centrally planned (socialist): the government owns and directs resources through a plan.",
+              "Mixed economy: markets and government both allocate resources. Nigeria is a mixed economy — private firms dominate production while government regulates and provides public goods.",
+              "The production possibility frontier shows the maximum combinations of two goods an economy can produce; a point inside the curve is inefficient."
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam trap",
+            "tone": "tip",
+            "body": "Opportunity cost is the alternative you gave up, not the naira you spent. If you spend N2,000 on data instead of a textbook, the opportunity cost is the textbook."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A student has N2,000. She ranks a textbook first, a data bundle second and a cinema ticket third. She buys the textbook. What is her opportunity cost?",
+            "steps": [
+              {
+                "operation": "Identify the chosen option",
+                "reason": "Opportunity cost is measured against what was actually chosen.",
+                "result": "She chose the textbook.",
+                "predictPrompt": "Which want came next on her scale of preference?"
+              },
+              {
+                "operation": "Take the next best alternative",
+                "reason": "Only the highest-ranked forgone option counts, not every option she skipped.",
+                "result": "The data bundle is the next best alternative.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Reject the money price",
+                "reason": "The N2,000 is the money cost; it is not the forgone alternative.",
+                "result": "Opportunity cost = the data bundle she did not buy."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Nigeria is usually described as a mixed economy. Name one decision left mainly to markets and one left mainly to government, then explain why scarcity makes the choice necessary.",
+            "hints": [
+              "Markets decide most prices and what private firms produce; government provides defence, roads and regulates utilities.",
+              "Scarcity means not every want can be met, so someone must decide which wants come first.",
+              "A strong answer links the two sectors to the three questions — what, how and for whom — and names opportunity cost."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "topic": "demand-and-supply",
+      "slug": "demand-and-supply",
+      "title": "Demand, Supply and Equilibrium",
+      "objective": "Apply the laws of demand and supply, distinguish shifts from movements, and solve for equilibrium price and quantity.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Demand and its determinants",
+            "paragraphs": [
+              "The law of demand says that, all else equal, quantity demanded falls as price rises. The demand curve therefore slopes downward."
+            ],
+            "bullets": [
+              "A change in the good’s own price moves you along the demand curve — a change in quantity demanded.",
+              "A change in income, tastes, population, expectations or the price of a related good shifts the whole curve — a change in demand.",
+              "Normal goods: demand rises with income. Inferior goods: demand falls as income rises.",
+              "Types of demand: complementary (used together), competitive (substitutes), composite (one good, many uses), derived (demand for a factor from demand for its product)."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Supply and equilibrium",
+            "paragraphs": [
+              "The law of supply says quantity supplied rises with price, so the supply curve slopes upward. Equilibrium is where quantity demanded equals quantity supplied."
+            ],
+            "bullets": [
+              "Above equilibrium price there is a surplus, which pushes price down.",
+              "Below equilibrium price there is a shortage, which pushes price up.",
+              "An increase in demand raises both equilibrium price and quantity; an increase in supply lowers price and raises quantity.",
+              "Elasticity measures how strongly quantity responds to price; demand is elastic when the percentage change in quantity exceeds the percentage change in price."
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam trap",
+            "tone": "tip",
+            "body": "Own price moves you along the curve. Every other determinant shifts the curve. Read the question for which one changed."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Given Qd = 15 − 2P and Qs = 5 + 3P, find the equilibrium price and quantity.",
+            "steps": [
+              {
+                "operation": "Set quantity demanded equal to quantity supplied",
+                "reason": "At equilibrium the market clears, so Qd = Qs.",
+                "result": "15 − 2P = 5 + 3P",
+                "predictPrompt": "How do you collect the P terms on one side?"
+              },
+              {
+                "operation": "Solve for price",
+                "reason": "Subtract 5 from both sides and add 2P to both sides.",
+                "result": "10 = 5P, so P = 2.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Substitute back for quantity",
+                "reason": "Either equation gives the equilibrium quantity at P = 2.",
+                "result": "Qd = 15 − 2(2) = 11, and Qs = 5 + 3(2) = 11. Equilibrium is P = 2, Q = 11."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "The price of petrol rises. Explain why this shifts the demand curve for large cars rather than moving along it.",
+            "hints": [
+              "Petrol is not the price of the car itself; it is the price of a complementary good used with the car.",
+              "A change in the price of a complement changes demand at every car price, so the whole curve shifts left.",
+              "A strong answer distinguishes the own-price movement from a shift caused by a related good."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "topic": "production-and-costs",
+      "slug": "production-and-costs",
+      "title": "Production, Factors and Diminishing Returns",
+      "objective": "Match each factor of production to its reward and explain why marginal product eventually falls.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Factors of production and their rewards",
+            "paragraphs": [
+              "Production combines four factors of production. Each is paid a reward that reflects its contribution."
+            ],
+            "bullets": [
+              "Land — all natural resources; reward is rent.",
+              "Labour — human effort, physical and mental; reward is wages or salaries.",
+              "Capital — man-made goods used to produce other goods, such as machines and buildings; reward is interest.",
+              "Entrepreneurship — organises the other factors and bears risk; reward is profit (which can be negative).",
+              "Division of labour splits work into specialised tasks. It raises output per worker but can cause boredom, over-dependence and coordination costs."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Diminishing returns and costs",
+            "paragraphs": [
+              "In the short run at least one factor is fixed. Adding more of a variable factor to it eventually yields smaller extra output — the law of diminishing returns."
+            ],
+            "bullets": [
+              "Marginal product is the extra output from one more unit of the variable factor.",
+              "Diminishing returns sets in when marginal product starts to fall, even though total output may still be rising.",
+              "Fixed costs do not change with output (rent, machinery). Variable costs do (raw materials, hourly labour).",
+              "Total cost = fixed cost + variable cost. Average fixed cost falls continuously as output rises."
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam trap",
+            "tone": "tip",
+            "body": "Marginal product falls before total product does. Total output can keep rising while each extra worker adds less than the one before."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A farm has fixed land. With 1, 2, 3 and 4 workers, total output is 10, 25, 35 and 40 tonnes. At which worker do diminishing returns set in?",
+            "steps": [
+              {
+                "operation": "Compute marginal product",
+                "reason": "Marginal product is the change in total output when one more worker is added.",
+                "result": "MP = 10, 15, 10, 5 tonnes for workers 1–4.",
+                "predictPrompt": "Which is the first fall in marginal product?"
+              },
+              {
+                "operation": "Find the first fall",
+                "reason": "Diminishing returns begin when marginal product turns downward.",
+                "result": "MP rises from 10 to 15, then falls to 10 at the third worker.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "State the answer",
+                "reason": "The third worker adds less than the second, so the law has set in.",
+                "result": "Diminishing returns set in at the third worker, even though total output rises to 35 tonnes."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A bakery pays N200,000 a month in rent and N5,000 per worker per day. Classify each cost and explain what happens to average fixed cost as output rises.",
+            "hints": [
+              "Rent is paid whether or not bread is baked, so it is fixed. Daily wages vary with the number of workers, so they are variable.",
+              "Average fixed cost is fixed cost divided by output.",
+              "A strong answer notes that average fixed cost falls as output rises, while average variable cost may fall and then rise."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "topic": "market-structures",
+      "slug": "market-structures",
+      "title": "Market Structures",
+      "objective": "Distinguish perfect competition, monopoly, oligopoly and monopolistic competition by sellers, products and entry.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Perfect competition",
+            "paragraphs": [
+              "Perfect competition is a benchmark market with many small firms selling an identical product. No single firm can influence the market price."
+            ],
+            "bullets": [
+              "Many buyers and many sellers, each too small to affect price.",
+              "Homogeneous (identical) products, so buyers have no reason to prefer one seller.",
+              "Free entry and exit, and perfect information about prices.",
+              "The firm is a price taker: its demand curve is horizontal at the market price."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Imperfect markets",
+            "paragraphs": [
+              "When a firm can influence price, the market is imperfect. The three main forms differ by how many firms there are and whether products are differentiated."
+            ],
+            "bullets": [
+              "Monopoly: one seller, no close substitute, high barriers to entry; the firm is a price maker.",
+              "Oligopoly: a few large firms whose decisions depend on one another; advertising and non-price competition are common.",
+              "Monopolistic competition: many firms selling differentiated products, with easy entry.",
+              "A monopsony is the mirror image — one buyer facing many sellers."
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Ask three questions: how many sellers, is the product identical or differentiated, and can new firms enter? Those three answers identify almost every market structure."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A single firm supplies electricity to a city and no other firm can enter the market. Which market structure is this, and why does government usually regulate its price?",
+            "steps": [
+              {
+                "operation": "Count the sellers",
+                "reason": "One seller is the defining feature of monopoly.",
+                "result": "The market is a monopoly.",
+                "predictPrompt": "Why can no rival enter?"
+              },
+              {
+                "operation": "Check substitutes and entry",
+                "reason": "Electricity has no close substitute for most users, and the grid is a natural barrier to entry.",
+                "result": "The firm can set price without competitive pressure.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Explain regulation",
+                "reason": "A price-making monopolist may restrict output and charge high prices.",
+                "result": "Government regulates the tariff to protect consumers while allowing the firm to cover costs."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why do firms in an oligopoly advertise heavily while perfectly competitive firms do not?",
+            "hints": [
+              "Perfectly competitive firms sell identical products at the market price, so advertising cannot raise their price.",
+              "Oligopolists sell differentiated products and compete for market share; advertising can shift demand toward them.",
+              "A strong answer links advertising to product differentiation and interdependence."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "topic": "money-and-inflation",
+      "slug": "money-and-inflation",
+      "title": "Money and Inflation",
+      "objective": "Name the functions and qualities of money and distinguish demand-pull from cost-push inflation.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Functions and qualities of money",
+            "paragraphs": [
+              "Money is anything generally accepted as a means of payment. It removes the double coincidence of wants that makes barter difficult."
+            ],
+            "bullets": [
+              "Functions: medium of exchange, unit of account, store of value and standard of deferred payment.",
+              "Qualities: generally acceptable, divisible, portable, durable, homogeneous and limited in supply.",
+              "Homogeneity matters because every unit must be identical, so values can be counted and compared.",
+              "Anything that fails these qualities — cattle, cowries, cocoa — is a poor money even if it is valuable."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Inflation",
+            "paragraphs": [
+              "Inflation is a persistent rise in the general price level, which reduces the purchasing power of money. Deflation is the opposite."
+            ],
+            "bullets": [
+              "Demand-pull inflation: aggregate demand grows faster than output.",
+              "Cost-push inflation: rising costs of inputs such as fuel, wages or imported raw materials push prices up.",
+              "Imported inflation: higher prices of imported goods enter the domestic price level.",
+              "Fixed-income earners, savers and creditors lose purchasing power; borrowers gain because debts are repaid in cheaper money."
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam trap",
+            "tone": "tip",
+            "body": "Demand-pull starts with buyers; cost-push starts with sellers’ costs. Excess demand over supply is always demand-pull."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Government pays a large cash transfer, households spend it quickly, but output is unchanged. Which type of inflation follows, and who loses most?",
+            "steps": [
+              {
+                "operation": "Identify the source",
+                "reason": "The extra spending raises aggregate demand, while output has not risen.",
+                "result": "Demand exceeds supply, so prices are pulled up.",
+                "predictPrompt": "Does this originate with buyers or with costs?"
+              },
+              {
+                "operation": "Name the type",
+                "reason": "Inflation caused by excess demand is demand-pull.",
+                "result": "The economy experiences demand-pull inflation.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Identify the losers",
+                "reason": "People whose incomes are fixed in naira can buy less as prices rise.",
+                "result": "Fixed-income earners and savers lose the most; borrowers gain."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A farmer’s diesel, fertiliser and transport costs all rise, and food prices follow. Identify the inflation type and one policy response, noting its limitation.",
+            "hints": [
+              "The increase begins on the cost side, not with excess demand.",
+              "A central bank can raise interest rates to reduce demand, but that does not lower fuel or fertiliser costs directly.",
+              "A strong answer names cost-push inflation and explains the trade-off between fighting inflation and protecting output."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "topic": "international-trade",
+      "slug": "international-trade",
+      "title": "International Trade and Comparative Advantage",
+      "objective": "Explain the gains from trade, compute opportunity cost, and distinguish the terms of trade from the balances.",
+      "estimatedMinutes": 12,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Why countries trade",
+            "paragraphs": [
+              "Countries trade because they differ in resources, technology and costs. Specialising where opportunity cost is lowest raises total output, and both sides can gain."
+            ],
+            "bullets": [
+              "Absolute advantage: a country can produce more of a good with the same resources.",
+              "Comparative advantage: a country can produce a good at a lower opportunity cost. This, not absolute advantage, is the basis of beneficial trade.",
+              "David Ricardo showed that even a country that is better at everything gains by specialising where its disadvantage is smallest.",
+              "Other gains: economies of scale, wider consumer choice and access to goods a country cannot produce."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Terms of trade and the balances",
+            "paragraphs": [
+              "The terms of trade measure the rate at which exports exchange for imports. The two balances measure different things and are often confused."
+            ],
+            "bullets": [
+              "Terms of trade = (index of export prices ÷ index of import prices) × 100. A rise means exports buy more imports.",
+              "Balance of trade = visible exports − visible imports. It covers goods only.",
+              "Balance of payments = all receipts and payments, including services, income and transfers. It can balance even when trade does not.",
+              "Invisible trade covers services such as banking, shipping, insurance and tourism.",
+              "ECOWAS promotes trade and free movement among West African states; its slow progress is often blamed on weak political will and inadequate resources."
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam trap",
+            "tone": "tip",
+            "body": "A trade deficit is not the same as a payments deficit. Services, remittances and capital inflows can close a goods gap."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "With the same resources, Country A can produce 10 tonnes of cocoa or 5 tonnes of coffee; Country B can produce 4 tonnes of cocoa or 8 tonnes of coffee. Who should produce which?",
+            "steps": [
+              {
+                "operation": "Compute opportunity costs for A",
+                "reason": "Giving up 10 cocoa frees resources for 5 coffee, so 1 coffee costs 2 cocoa.",
+                "result": "A: 1 coffee = 2 cocoa, or 1 cocoa = 0.5 coffee.",
+                "predictPrompt": "Now do the same for B."
+              },
+              {
+                "operation": "Compute opportunity costs for B",
+                "reason": "Giving up 4 cocoa frees resources for 8 coffee, so 1 coffee costs 0.5 cocoa.",
+                "result": "B: 1 coffee = 0.5 cocoa, or 1 cocoa = 2 coffee.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Compare and specialise",
+                "reason": "Each country should produce the good for which it gives up less.",
+                "result": "A has the lower cocoa cost (0.5 coffee vs 2), so A produces cocoa; B has the lower coffee cost (0.5 cocoa vs 2), so B produces coffee."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Explain dumping and one reason it harms local producers, then name one trade remedy a government could use.",
+            "hints": [
+              "Dumping is selling exports below home cost or below the price charged at home.",
+              "Foreign goods priced below local production cost can take market share and force local firms to cut prices or close.",
+              "A government can impose an anti-dumping duty or a tariff to raise the imported price."
+            ]
+          }
+        }
+      ]
+    }
+  ]
 }
