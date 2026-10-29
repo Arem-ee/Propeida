@@ -37,6 +37,15 @@ PAGE_RANGE_RE = re.compile(r"\b\d+\s*[-–]\s*\d+\s*$")
 TOPIC_TITLE_FIXES = {
     ("physics", "37"): "Conduction of Electricity Through Liquids and Gases",
 }
+TITLE_TEXT_FIXES = {
+    # The Igbo PDF drops a letter in this heading.
+    "Ekele dị iche ice": "Ekele dị iche iche",
+    # The Government PDF wraps "Countries" onto its own line.
+    "Nigeria’s Relations with African": "Nigeria’s Relations with African Countries",
+}
+TITLE_ITEM_DROPS = {
+    "Nigeria’s Relations with African": {"Countries"},
+}
 SECTION_TITLE_FIXES = {
     "Agriculture Economics and Extension": "Agricultural Economics and Extension",
 }
@@ -279,8 +288,13 @@ def main():
                         number = str(value)
                     used_numbers.add(value)
                     max_number = max(max_number, value)
-                title = tidy(topic["title"])
-                title = TOPIC_TITLE_FIXES.get((meta["key"], number), title)
+                raw_title = tidy(topic["title"])
+                title = TOPIC_TITLE_FIXES.get((meta["key"], number), raw_title)
+                title = TITLE_TEXT_FIXES.get(title, title)
+                items = [tidy(i) for i in topic["items"] if tidy(i)]
+                drops = TITLE_ITEM_DROPS.get(raw_title)
+                if drops:
+                    items = [item for item in items if item not in drops]
                 base = slugify(title)
                 slug = base
                 n = 2
@@ -293,7 +307,7 @@ def main():
                         "slug": slug,
                         "number": number,
                         "title": title,
-                        "items": [tidy(i) for i in topic["items"] if tidy(i)],
+                        "items": items,
                         "objectives": [tidy(o) for o in topic["objectives"] if tidy(o)],
                     }
                 )

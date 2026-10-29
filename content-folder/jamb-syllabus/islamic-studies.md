@@ -186,7 +186,7 @@
 - (i) demonstrate the teachings of the verses and the Hadīth in their daily lives.
 - (i) apply the teachings of the verses and the ahadīth in their daily lives.
 
-### 8. PART II: TAWHĪD AND FIQH
+### 8. TAWHĪD AND FIQH
 
 **Topics and notes**
 
@@ -371,7 +371,7 @@
 - (ii) The concept of Shurah (consultation) (Q.3:159) (Q.42:38)
 - (iii) The concept of Adalah (justice) (Q.5.9) (Q.4:58 and 135) and Mas’uliyah (accountability)(Q.17:36) (Q..102:8)
 - (iv) The rights of non-Muslims in an Islamic state (Q.2:256) (Q.6:108)
-- (v) Differences between the Islamic political system and the Western political system. PART III: ISLAMIC HISTORY AND CIVILIZATION
+- (v) Differences between the Islamic political system and the Western political system.
 
 **Candidates should be able to**
 
@@ -380,6 +380,8 @@
 - (iii) evaluate the concept of justice and accountability;
 - (iv) examine the rights of non-Muslims in an Islamic state;
 - (v) differentiate between the Islamic and Western political systems.
+
+## ISLAMIC HISTORY AND CIVILIZATION
 
 ### 15. Pre-Islamic Arabia (Jahiliyyah)
 
@@ -420,7 +422,11 @@
 - (i) examine the farewell pilgrimage of the Prophet and its lessons;
 - (i) analyse the qualities of Muhammad (SAW) their relevance to the life of a Muslim.
 
-### 17. The Rightly Guided Caliphs (al-Khulafa’u rashidun) – the lives and contributions of the four Rightly Guided Caliphs
+### 17. The Rightly Guided Caliphs (al-Khulafa’u
+
+**Topics and notes**
+
+- rashidun) – the lives and contributions of the four Rightly Guided Caliphs
 
 **Candidates should be able to**
 

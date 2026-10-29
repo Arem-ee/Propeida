@@ -290,11 +290,11 @@
 - (x) examine the significance of activation energy to chemical reactions; and
 - (xi) deduce the value of activation energy(Ea) from reaction rate curves.
 
-### 13. Chemical Equilibra Reversible reactions and factors governing the equilibrium position. Dynamic equilibrium.
+### 13. Chemical Equilibra Reversible reactions and factors
 
 **Topics and notes**
 
-- Le Chatelier’s principle and its industrial applications, equilibrium constant. Simple examples to include action of steam on iron and N 2 O 4 2NO 2 No calculation will be required
+- governing the equilibrium position. Dynamic equilibrium. Le Chatelier’s principle and its industrial applications, equilibrium constant. Simple examples to include action of steam on iron and N 2 O 4 2NO 2 No calculation will be required
 
 **Candidates should be able to**
 
@@ -480,11 +480,11 @@
 - (xlii) classify natural and commercial polymers and their uses; and
 - (xliii) distinguish between thermoplastics and thermosetting plastics.
 
-### 17. Chemistry and Industry Chemical industries: Types, raw materials and relevance. Biotechnology 18.Astronomical Chemistry
+### 17. Chemistry and Industry
 
 **Topics and notes**
 
-- Solar system, planets, satellite and the composition of the earth - atmosphere, lithosphere and hydrosphere
+- Chemical industries: Types, raw materials and relevance. Biotechnology
 
 **Candidates should be able to**
 
@@ -493,7 +493,17 @@
 - (ii) identify raw materials for each industry;
 - (iii) distinguish between fine and heavy chemicals;
 - (iv) enumerate the relevance of each of these industries; and
-- (v) relate industrial processes to biotechnology. Candidates should be able to :
+- (v) relate industrial processes to biotechnology.
+
+### 18. Astronomical Chemistry
+
+**Topics and notes**
+
+- Solar system, planets, satellite and the composition of the earth - atmosphere, lithosphere and hydrosphere
+
+**Candidates should be able to**
+
+- Candidates should be able to :
 - (i) state the composition of the solar system;
 - (ii) list the planets;
 

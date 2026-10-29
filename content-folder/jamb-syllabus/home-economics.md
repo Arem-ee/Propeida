@@ -55,11 +55,11 @@
 - iv. identify current vocations in Home Economics;
 - v. identify sources of career information.
 
-### 3. Interrelationship of Home Economics with
+### 3. Interrelationship of Home Economics with other subjects
 
 **Topics and notes**
 
-- other subjects: Biology, Geography, Chemistry, Physics, Agricultural Science, Fine Arts, Economics, Mathematics, Civic education, etc.
+- Biology, Geography, Chemistry, Physics, Agricultural Science, Fine Arts, Economics, Mathematics, Civic education, etc.
 
 **Candidates should be able to**
 

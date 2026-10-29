@@ -253,7 +253,9 @@
 - i. Floral parts and their functions
 - ii. Pollination and fertilization
 - iii. products of sexual reproduction
-- c. Reproduction in mammals TOPICS / CONTENTS / NOTES
+- c. Reproduction in mammals
+- i. Structures and functions of the male and female
+- ii. Fertilization and development.
 
 **Candidates should be able to**
 
@@ -266,6 +268,53 @@
 - vii. differentiate between male and female reproductive organs.
 - viii. relate their structure and function to the production of offspring.
 - ix. describe the fusion of gametes as a process of fertilization.
+- x. relate the effects of the mother’s health, nutrition
+- xi. explain the modern methods of regulating reproduction on
+
+### 8. Growth
+
+**Topics and notes**
+
+- a. Meaning of growth
+- b. Germination of seeds and condition
+
+**Candidates should be able to**
+
+- i. apply the knowledge of the conditions necessary for
+- ii. differentiate between epigeal and hypogeal germination.
+
+### 9. Co-ordination and control
+
+**Topics and notes**
+
+- a. Nervous coordination:
+- i. the components, structure and functions
+- ii. The components and functions of the
+- iii. Mechanism of transmission of impulses
+- iv. Reflex action
+- b. The sense organs
+- i. Skin (tactile)
+- ii. Nose (olfactory)
+- iii. Tongue (taste)
+- iv. Eye (sight)
+- v. Ear (auditory)
+- c. Hormonal control
+- i. animal hormonal system (Pituitary, thyroid,
+- ii. Plant hormones (phytohormones)
+- d. Homeostasis
+- i. Body temperature regulation
+- ii. Salt and water regulation TOPICS / CONTENTS / NOTES
+
+**Candidates should be able to**
+
+- i. apply the knowledge of the structure and function of the central nervous system in the coordination of body
+- ii. illustrate reflex actions such as blinking of the eyes, knee
+- iii. differentiate between reflex and voluntary actions as well as conditioned reflexes such as salivation, riding a bicycle and
+- iv. relate the listed sense organs with their functions.
+- v. apply the knowledge of the structure and functions of these sense organs in detecting and correcting their defects.
+- vi. state the location of the listed endocrine glands in animals.
+- vii. relate the hormone produced by each of these glands to their functions.
+- viii. examine the effects of various phytohormones (e.g., auxins, flowering, fruit ripening and leaf abscission.
 
 ### 1. Factors affecting the distribution of Organisms
 
@@ -280,11 +329,10 @@
 - ii. use appropriate equipment ( secchi disc, thermometer, rain gauge) to measure abiotic factors.
 - iii. describe how the activities of plants/animals (particularly human) affect the distribution of organisms.
 
-### 2. Symbiotic interactions of plants
+### 2. Symbiotic interactions of plants and animals
 
 **Topics and notes**
 
-- and animals
 - (a) Energy flow in the ecosystem: food chains, food webs and trophic levels.
 - (b) Nutrient cycling in nature.
 - i. carbon cycle
@@ -394,7 +442,7 @@
 - (i) Sources, types, effects and methods of control.
 - (ii) Sanitation and sewage
 - d. Conservation of Natural Resources
-- e. Game reserves and National parks D: HEREDITY AND VARIATIONS
+- e. Game reserves and National parks
 
 **Candidates should be able to**
 
@@ -414,9 +462,10 @@
 - xiv. outline the benefits of conserving natural resources, prevention of desertification.
 - xv. identify the bodies responsible for the conservation of resources at the national and international levels e.g. Nigerian Conservation Foundation (NCF), Federal Ministry of Environment, Nigeria National Parks, World Wildlife Foundation (WWF), International Union for Conservation of Nature (IUCN), United Nations Environmental Programme (UNEP) and their activities.
 - xvi identify and state the location and importance of game reserves and National parks in Nigeria
-- i. differentiate between continuous and discontinuous
 
-### I. Variation In Population
+## HEREDITY AND VARIATIONS
+
+### 1. Variation In Population
 
 **Topics and notes**
 
@@ -510,40 +559,16 @@
 - Biology
 - Biology
 - Biology
-- i. Structures and functions of the male and female x. relate the effects of the mother’s health, nutrition
 - reproductive organs and indiscriminate use of drugs on the developmental
 - stages of the embryo up to birth.
-- ii. Fertilization and development. xi. explain the modern methods of regulating reproduction on
 - (Fusion of gametes) e.g., invitro fertilization and birth control
-- 8. Growth Candidates should be able to:
-- a. Meaning of growth i. apply the knowledge of the conditions necessary for
 - germination on plant growth.
-- b. Germination of seeds and condition ii. differentiate between epigeal and hypogeal germination.
 - necessary for germination of seeds.
-- 9. Co-ordination and control Candidates should be able to:
-- a. Nervous coordination: i. apply the knowledge of the structure and function of the
-- i. the components, structure and functions central nervous system in the coordination of body
 - of the central nervous system functions in organisms.
-- ii. The components and functions of the ii. illustrate reflex actions such as blinking of the eyes, knee
 - peripheral nervous system jerk etc.
-- iii. Mechanism of transmission of impulses iii. differentiate between reflex and voluntary actions as well as
-- iv. Reflex action conditioned reflexes such as salivation, riding a bicycle and
 - swimming.
-- iv. relate the listed sense organs with their functions.
-- b. The sense organs v. apply the knowledge of the structure and functions of these
-- i. Skin (tactile) sense organs in detecting and correcting their defects.
-- ii. Nose (olfactory) vi. state the location of the listed endocrine glands in animals.
-- iii. Tongue (taste) vii. relate the hormone produced by each of these glands to their
-- iv. Eye (sight) functions.
-- v. Ear (auditory) viii. examine the effects of various phytohormones (e.g., auxins,
 - gibberellin, cytokinin, and ethylene) on growth, tropism,
-- c. Hormonal control flowering, fruit ripening and leaf abscission.
-- i. animal hormonal system (Pituitary, thyroid,
 - parathyroid, adrenal gland, pancreas, gonads) ix. relate the function of hormones in homeostasis.
-- ii. Plant hormones (phytohormones)
-- d. Homeostasis
-- i. Body temperature regulation
-- ii. Salt and water regulation
 - C: ECOLOGY
 - Biology
 - Biology

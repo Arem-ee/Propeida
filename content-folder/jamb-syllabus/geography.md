@@ -29,7 +29,7 @@
 
 - A i. define and identify different types and uses of maps
 
-### B. Scale and measurement of distances, areas reduction and enlargement, directions, bearings and gradients with reference to topographical maps.
+### B. Scale and measurement of distances, areas reduction and enlargement, directions, bearings and gradients with reference to topographical maps
 
 **Candidates should be able to**
 
@@ -38,32 +38,44 @@
 - iii. apply the knowledge of scale to gradients, map reduction and enlargement;
 - iv. apply the knowledge of directions and bearings to geographical features.
 
-### C. Map reading and interpretation; drawing of cross profiles, recognition of intervisibility, recognition and description of physical and human features and relationship as depicted on topographical maps.
+### C. Map reading and interpretation
+
+**Topics and notes**
+
+- drawing of cross profiles, recognition of intervisibility, recognition and description of physical and human features and relationship as depicted on topographical maps.
 
 **Candidates should be able to**
 
 - C i. illustrate the relief of an area through profile drawing;
 - ii. interpret physical and human features from topographical maps.
 
-### D. Interpretation of statistical data; maps and
+### D. Interpretation of statistical data
 
 **Topics and notes**
 
-- diagrams
+- maps and diagrams
 
 **Candidates should be able to**
 
 - D i. Compute quantitative information from statistical data, diagrams and maps,
 - ii. interpret statistical data, diagrams and maps.
 
-### E. Elementary Surveying; chain and prismatic, open and close traverse, procedure, problems, advantages and disadvantages.
+### E. Elementary Surveying
+
+**Topics and notes**
+
+- chain and prismatic, open and close traverse, procedure, problems, advantages and disadvantages.
 
 **Candidates should be able to**
 
 - E i. analyse the principle and procedure of each technique;
 - ii. compare the advantages and disadvantages of the two techniques.
 
-### F. Geographic Information System (GIS): components, techniques, data sources, applications
+### F. Geographic Information System (GIS)
+
+**Topics and notes**
+
+- components, techniques, data sources, applications
 
 **Candidates should be able to**
 
@@ -222,7 +234,7 @@
 - vi. assess the impact of human activities on soils.
 - I i. interpret the concept of environmental
 
-### I. Environmental Resources;
+### I. Environmental Resources
 
 **Topics and notes**
 
@@ -235,7 +247,7 @@
 - ii. relate environmental resources to their uses;
 - iii. differentiate between the concepts of renewable and non-renewable resources. J i. identify the components of land
 
-### J. Environmental interaction:
+### J. Environmental interaction
 
 **Topics and notes**
 
@@ -250,7 +262,7 @@
 - iii. interpret the concept of environmental balance;
 - iv. analyse the effects of human activities on land ecosystem. K i. identify the natural hazards and their causes;
 
-### K. Environmental hazards:
+### K. Environmental hazards
 
 **Topics and notes**
 
@@ -265,7 +277,7 @@
 - iv. recommend possible methods of prevention and control.
 - L i. explain with examples environmental
 
-### L. Environmental Conservation:
+### L. Environmental Conservation
 
 **Topics and notes**
 
@@ -302,11 +314,10 @@
 - v. relate the types of migration to their causes and effects;
 - vi. account for the ways population constitute a resource.
 
-### B. Settlement with particular reference to
+### B. Settlement with particular reference to Western Europe, the USA, Middle East and West Africa
 
 **Topics and notes**
 
-- Western Europe, the USA, Middle East and West Africa:
 - i. Types and patterns: rural and urban, dispersed, nucleated and linear;
 - ii. Rural settlement: classification, factors of growth and functions;
 - iii. Urban settlement – classification, factors of growth and functions.
@@ -374,7 +385,7 @@
 - vii. identify the types of natural resources and their distribution;
 - viii. indicate the uses and conservation of natural resources.
 
-### B. Economic and Human Geography:
+### B. Economic and Human Geography
 
 **Topics and notes**
 
@@ -396,7 +407,22 @@
 - viii. identify the importance of tourism and tourist centres;
 - ix. account for the problems of tourisim and their solutions.
 
-## ECOWAS
+### C. ECOWAS
+
+**Topics and notes**
+
+- i. Meaning and objectives
+- ii. Member states
+- iii. Purpose/mandate
+- iv. Advantages and disadvantages
+- v. Problems and solutions.
+
+**Candidates should be able to**
+
+- C i. State the meaning, purpose and objectives;
+- ii. identify and locate the member countries;
+- iii. understand the purpose/mandate of the organization;
+- iv. evaluate the prospects and problems of the organization.
 
 ## Recommended texts and additional notes
 

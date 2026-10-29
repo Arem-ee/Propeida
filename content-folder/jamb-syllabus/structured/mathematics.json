@@ -24,11 +24,10 @@
           ]
         },
         {
-          "slug": "fractions-decimals-approximations",
+          "slug": "fractions-decimals-approximations-and-percentages",
           "number": "2",
-          "title": "Fractions, Decimals, Approximations",
+          "title": "Fractions, Decimals, Approximations and Percentages",
           "items": [
-            "and Percentages",
             "(a) fractions and decimals",
             "(b) significant figures",
             "(c) decimal places",
@@ -282,6 +281,19 @@
       "letter": "IV",
       "title": "CALCULUS",
       "topics": [
+        {
+          "slug": "differentiation",
+          "number": "1",
+          "title": "Differentiation",
+          "items": [
+            "(a) limit of a function",
+            "(b) differentiation of explicit algebraic and simple trigonometrical functions – sine, cosine and tangent"
+          ],
+          "objectives": [
+            "i. find the limit of a function",
+            "ii. differentiate explicit algebraic and simple trigonometrical functions"
+          ]
+        },
         {
           "slug": "application-of-differentiation",
           "number": "2",

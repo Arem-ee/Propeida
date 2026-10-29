@@ -27,11 +27,11 @@
 
 ## Themes from Creation to the Division of the Kingdom
 
-### 1. The Sovereignty of God God as Creator and Controller of the Universe (Gen. 1 and 2) cf. Amos 9:5-6; Is. 45:5-12
+### 1. The Sovereignty of God
 
 **Topics and notes**
 
-- Ps. 19:1-6; Jer. 18:1-16; Rom. 8:28.
+- God as Creator and Controller of the Universe (Gen. 1 and 2) cf. Amos 9:5-6; Is. 45:5-12 Ps. 19:1-6; Jer. 18:1-16; Rom. 8:28.
 
 **Candidates should be able to**
 
@@ -130,21 +130,14 @@
 
 - (a) The early life of David (1 Sam. 16:1-13; 17; 18:17-30; 22:1-5; 24:1-23; II Sam. 2:1-7; 3:1-39)
 - (b) David’s submission to the will of God
+- (I Sam. 26:1-25, II Sam 12:15-25)
+- (c) David’s repentance and forgiveness (II Sam. 11; 12:1-15, cf. Ps. 51:130)
 
 **Candidates should be able to**
 
 - i. identify David’s anointing experience;
 - ii. specify how David submitted to the will of God;
 - iii. examine the situations that led to David’s sin and repentance;
-
-### I. Sam. 26:1-25, II Sam 12:15-25)
-
-**Topics and notes**
-
-- (c) David’s repentance and forgiveness (II Sam. 11; 12:1-15, cf. Ps. 51:130)
-
-**Candidates should be able to**
-
 - iv. identify the consequences of David’s sin;
 - v. identify why God forgave David.
 
@@ -176,7 +169,11 @@
 
 - iii. analyse the consequences of Ahab and Gehazi’s greed.
 
-### 2. The Supremacy of God Religious tension and the power of God on Mount Carmel (I Kings 16:29-34; 17:1-7; 18; 19:1-18)
+### 2. The Supremacy of God
+
+**Topics and notes**
+
+- Religious tension and the power of God on Mount Carmel (I Kings 16:29-34; 17:1-7; 18; 19:1-18)
 
 **Candidates should be able to**
 
@@ -221,7 +218,11 @@
 - iii. analyse the effects of the faith of the four men on the Babylonians;
 - iv. identify the qualities of faith by four men worthy of emulation
 
-### 6. God’s message to Nineveh Jonah and his message (Jonah 1; 2; 3 and 4)
+### 6. God’s message to Nineveh
+
+**Topics and notes**
+
+- Jonah and his message (Jonah 1; 2; 3 and 4)
 
 **Candidates should be able to**
 
@@ -254,7 +255,11 @@
 - iii. compare the assignments given to these prophets;
 - iv. determine the need for God’s people to be holy.
 
-### 9. Punishment and Hope (Jer. 3:11-18; 32:26-35; Ezek. 18; 37:1-14; Isaiah 61; Jer. 4:5-8)
+### 9. Punishment and Hope
+
+**Topics and notes**
+
+- (Jer. 3:11-18; 32:26-35; Ezek. 18; 37:1-14; Isaiah 61; Jer. 4:5-8)
 
 **Candidates should be able to**
 
@@ -268,7 +273,9 @@
 
 **Topics and notes**
 
-- (a) John, the forerunner of Jesus (Lk. 1:5-25; 57-66; 3:1-20; 7:18-35; Mk. 1:1-8; 6:14- 29; Mt. 3:1-12: Matt.11:2-19; Jn. 1:6-8; 19-37; 3:22-36)
+- (a) John, the forerunner of Jesus (Lk. 1:5-25;
+- 57-66; 3:1-20; 7:18-35; Mk. 1:1-8; 6:14- 29; Mt. 3:1-12: Matt.11:2-19; Jn. 1:6-8;
+- 19-37; 3:22-36)
 - (b) The birth and boyhood of Jesus (Mt. 1:18- 25; 2; Lk. 1:26-45;2 )
 
 **Candidates should be able to**
@@ -276,7 +283,11 @@
 - ii. assess the importance of John as the forerunner of Jesus;
 - iii. describe the boyhood of Jesus.
 
-### 2. The baptism and temptation of Jesus (Mt. 3:13-17; 4:1-11; Mk. 1:9-13; Lk. 3:21-22; 4:1-13)
+### 2. The baptism and temptation of Jesus
+
+**Topics and notes**
+
+- (Mt. 3:13-17; 4:1-11; Mk. 1:9-13; Lk. 3:21-22; 4:1-13)
 
 **Candidates should be able to**
 
@@ -347,11 +358,7 @@
 - iv. interpret the meaning of each parable;
 - v. give reasons why Jesus taught in parables.
 
-### 6. Sermon on the Mount
-
-**Topics and notes**
-
-- (Mt. 5; 6; Lk. 6:17-26)
+### 6. Sermon on the Mount (Mt. 5; 6; Lk. 6:17-26)
 
 **Candidates should be able to**
 
@@ -372,11 +379,7 @@
 - ii. specify the instructions to the disciples;
 - iii. assess the outcomes of the missions.
 
-### 8. The Great Confession
-
-**Topics and notes**
-
-- (Mt. 16:13-20; Mk. 8:27-30; Lk. 9:18-22)
+### 8. The Great Confession (Mt. 16:13-20; Mk. 8:27-30; Lk. 9:18-22)
 
 **Candidates should be able to**
 
@@ -384,11 +387,7 @@
 - ii. identify the occasion of the Great Confession;
 - iii. examine the significance of the Great Confession.
 
-### 9. The Transfiguration
-
-**Topics and notes**
-
-- (Mt. 17:1-13; Mk. 9:2-13; Lk. 9:28-36)
+### 9. The Transfiguration (Mt. 17:1-13; Mk. 9:2-13; Lk. 9:28-36)
 
 **Candidates should be able to**
 
@@ -396,11 +395,7 @@
 - ii. identify the personalities involved in the Transfiguration account.
 - iii. determine the significance of the Transfiguration to the disciples;
 
-### 10. The Triumphal Entry and the
-
-**Topics and notes**
-
-- cleansing of the Temple (Mt. 21:1-17; Mk. 11:1-19; Lk. 19:29-48)
+### 10. The Triumphal Entry and the cleansing of the Temple (Mt. 21:1-17; Mk. 11:1-19; Lk. 19:29-48)
 
 **Candidates should be able to**
 
@@ -436,11 +431,11 @@
 - iii. deduce the lessons of the death of Jesus.
 - iv. recount the statements of Jesus on the cross
 
-### 13. Resurrection, appearances
+### 13. Resurrection, appearances and ascension of Jesus
 
 **Topics and notes**
 
-- and ascension of Jesus (Mt. 28:1-20; Mk. 16:1-20; Lk. 24:1-53; Jn. 20:1-31; Acts 1:1-11)
+- (Mt. 28:1-20; Mk. 16:1-20; Lk. 24:1-53; Jn. 20:1-31; Acts 1:1-11)
 
 **Candidates should be able to**
 
@@ -492,11 +487,10 @@
 - (ii) identify the problems of communal living and their solutions;
 - (iii) examine how communal living helped the growth of the Early Church.
 
-### 17. The Holy Spirit and the mission
+### 17. The Holy Spirit and the mission of the Church
 
 **Topics and notes**
 
-- of the Church
 - (a) The Pentecost (Acts 1:8; 2:1-41)
 - (b) The mission of the Church (Acts 8:4-40)
 
@@ -572,24 +566,16 @@
 **Topics and notes**
 
 - (Rom. 6:1-4; 12-14; Col. 3:1-17; Gals. 5:16-26; II Cor. 5:16-19;
+- I Thess. 4:1-8; Rom. 12)
 
 **Candidates should be able to**
 
 - (i) describe the characteristics of the old life;
-
-### I. Thess. 4:1-8; Rom. 12)
-
-**Candidates should be able to**
-
 - (ii) analyse the new life in Christ;
 - (iii) identify the conditions of the new life;
 - (iv) examine the benefits of the new life.
 
-### 4. Christians as joint heirs with Christ
-
-**Topics and notes**
-
-- (Gal. 3:23-29; 4:1-7)
+### 4. Christians as joint heirs with Christ (Gal. 3:23-29; 4:1-7)
 
 **Candidates should be able to**
 
@@ -597,11 +583,7 @@
 - (ii) recognize that males and females are all children of God;
 - (iii) indicate the benefits of being joint heirs with Christ.
 
-### 5. Humility
-
-**Topics and notes**
-
-- (Phil. 2:1-11; I Pet. 5:5-11) (James 4;10; Matt. 23:12)
+### 5. Humility (Phil. 2:1-11; I Pet. 5:5-11) (James 4;10; Matt. 23:12)
 
 **Candidates should be able to**
 
@@ -619,7 +601,9 @@
 
 ### 7. Spiritual gifts
 
-### I. Cor. 12; Rom. 12:3-18; I Cor. 14)
+**Topics and notes**
+
+- (I Cor. 12; Rom. 12:3-18; I Cor. 14)
 
 **Candidates should be able to**
 
@@ -639,11 +623,7 @@
 - (ii) relate the teachings of Paul on Christian giving;
 - (iii) identify the importance of Christian giving.
 
-### 9. Civic responsibility
-
-**Topics and notes**
-
-- (Rom. 13; I Tim. 2:1-4; 1Peter 2;13-17)
+### 9. Civic responsibility (Rom. 13; I Tim. 2:1-4; 1Peter 2;13-17)
 
 **Candidates should be able to**
 
@@ -662,11 +642,11 @@
 - (ii) analyse the benefits of labour;
 - (iii) recognize that no particular kind of work leads to loss of respect for personal dignity.
 
-### 11. The second coming of Christ a) The signs of the Coming of Christ
+### 11. The second coming of Christ
 
 **Topics and notes**
 
-- (1 Thess. 4:13-18; II Thess. 2:1-12) b) Preparation for His coming (Matt. 25;31-46; I Thess. 5:1-11; II Pet. 3:1-13)
+- a) The signs of the Coming of Christ (1 Thess. 4:13-18; II Thess. 2:1-12) b) Preparation for His coming (Matt. 25;31-46; I Thess. 5:1-11; II Pet. 3:1-13)
 
 **Candidates should be able to**
 
@@ -706,36 +686,19 @@
 
 - (a) Interpersonal relationships among Christians (I Pet. 5:1-4; Rom. 12:3-21; 2 Pet. 1:3-11; Heb.13:1-21)
 - (b) Christians living among non- Christians
+- (I Pet. 2:3-25; Rom. 15:1-2)
+- (c) Christian attitude to persecution
+- (I Pet. 1:5-9; 4:1-19; 1 Pet. 3:13-22)
+- (d) Relationship in the Christian family (Eph. 6: 1-9; Col. 3:18-21;
+- I Pet. 3:1-7)
 
 **Candidates should be able to**
 
 - (i) determine interpersonal relationships among Christians;
 - (ii) analyse Christian living among non-Christians;
 - (iii) relate Christian attitude to persecution;
-- (iv) determine the relationship in the Christian
-
-### I. Pet. 2:3-25; Rom. 15:1-2)
-
-**Topics and notes**
-
-- (c) Christian attitude to persecution
-
-**Candidates should be able to**
-
-- family;
-- (v) examine the importance of maintaining good
-
-### I. Pet. 1:5-9; 4:1-19; 1 Pet. 3:13-22)
-
-**Topics and notes**
-
-- (d) Relationship in the Christian family (Eph. 6: 1-9; Col. 3:18-21;
-
-**Candidates should be able to**
-
-- relationships.
-
-### I. Pet. 3:1-7)
+- (iv) determine the relationship in the Christian family;
+- (v) examine the importance of maintaining good relationships.
 
 ### 15. Corruption
 

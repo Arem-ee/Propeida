@@ -19,19 +19,19 @@
 - 5. use Arabic as a living world language in communication where necessary.
 - DETAILED SYLLABUS
 
-## COMPREHENSION It consists of a passage of seventy (70) words. Five multiple-choice questions are to be set on the passage. The contents should be within the experience of the candidates e.g. current affairs, sports, education, politics, economy, health, culture and ethics.
+## COMPREHENSION
 
-## TRANSLATION This section consists of ten (10) questions. Five of them are on translation from English into Arabic while the other five are on translation from Arabic into English. Translation into English includes key words and phrases in a sentence. Translated questions are to be based on standard Arabic and English usages.
+## TRANSLATION
 
-## GRAMMAR Major grammatical features in Arabic to be examined include:
+## GRAMMAR
 
-### 1. Demonstrative, relative pronouns, conditional and interrogative.
+### 1. Demonstrative, relative pronouns, conditional and interrogative
 
 **Topics and notes**
 
 - .ثنؤملاو ركذملا .2
 
-### 2. Gender (Masculine and Feminine).
+### 2. Gender (Masculine and Feminine)
 
 **Topics and notes**
 
@@ -42,7 +42,7 @@
 - iii. identify the characteristics of Arabic nouns;
 - iv. differentiate between singular and dual forms of
 
-### 3. Characteristics of noun.
+### 3. Characteristics of noun
 
 **Topics and notes**
 
@@ -53,7 +53,7 @@
 - nouns;
 - v. construct plural forms of singular nouns;
 
-### 4. Dual.
+### 4. Dual
 
 **Topics and notes**
 
@@ -73,7 +73,7 @@
 - vi. identify construct phrases and their usages;
 - vii. differentiate between separable and inseparable
 
-### 6. Construct phrase.
+### 6. Construct phrase
 
 **Topics and notes**
 
@@ -84,7 +84,7 @@
 - pronouns;
 - viii. identify correct usage of adjectives, conjunctions,
 
-### 7. Separable and inseparable pronouns.
+### 7. Separable and inseparable pronouns
 
 **Topics and notes**
 
@@ -108,7 +108,7 @@
 - ix. apply correct preposition particles in a given sentence;
 - x. differentiate between transitive and intransitive
 
-### 9. Prepositions.
+### 9. Prepositions
 
 **Topics and notes**
 
@@ -119,7 +119,7 @@
 - verbs and use them in sentences;
 - xi. identify the perfect verbs and their forms;
 
-### 10. Transitive & Intransitive verbs.
+### 10. Transitive & Intransitive verbs
 
 **Topics and notes**
 
@@ -129,7 +129,7 @@
 
 - xii. identify the imperfect verbs and their grammatical
 
-### 11. The perfect verb.
+### 11. The perfect verb
 
 **Topics and notes**
 
@@ -152,7 +152,7 @@
 - xiii. identify the imperative verbs and their forms;
 - xiv. identify the kinds of modifiers and apply them in
 
-### 13. The imperative verb.
+### 13. The imperative verb
 
 **Topics and notes**
 
@@ -175,7 +175,7 @@
 
 - xv. differentiate between trilateral and derived verbs;
 
-### 15. Trilateral and derived verb.
+### 15. Trilateral and derived verb
 
 **Topics and notes**
 
@@ -185,11 +185,17 @@
 
 - xvi. identify the types of derivatives;
 
-### 16. Verbal noun.
+### 16. Verbal noun
 
 **Topics and notes**
 
-- :تاقتشملا -17 17- Derivatives: .لعافلا مسا - أ
+- :تاقتشملا -17
+
+### 17. Derivatives
+
+**Topics and notes**
+
+- .لعافلا مسا - أ
 - a. active participle. .لوعفملا مسا -ب
 - b. passive participle. .ليضفتلا مسا -ج
 - c. comparative/superlative. .ةللآا مسا - ـه
@@ -204,7 +210,7 @@
 - xviii. recognise and count Arabic numerals from 1 to 1000 and identify the intricacies involved in their usage;
 - xix. distinguish between doer and doer-substitute and apply them in sentences;
 
-### 18. Conditional sentence.
+### 18. Conditional sentence
 
 **Topics and notes**
 
@@ -214,19 +220,19 @@
 
 - xx. identify different types of adverbial clause, the exempted, specification and the vocative and use them in standard Arabic;
 
-### 19. Numeral (1 – 1000).
+### 19. Numeral (1 – 1000)
 
 **Topics and notes**
 
 - .لعافلا بئان و لعافلا .20
 
-### 20. Active and passive voice.
+### 20. Active and passive voice
 
 **Topics and notes**
 
 - .ربخلاو أدتبملا .21
 
-### 21. Subject and predicate.
+### 21. Subject and predicate
 
 **Topics and notes**
 
@@ -244,9 +250,9 @@
 - e. the specification. .ىدانملا – و
 - f. the vocative.
 
-## COMPOSITION This section consists of five (5) questions on subjects relating to the lives and environment of the candidates, e.g. education, culture, health, politics, economy, sports and current affairs.
+## COMPOSITION
 
-## ARABIC LITERATURE This section consists of ten (10) questions on notable literary figures and their works cutting across the various periods which include the following:
+## ARABIC LITERATURE
 
 ## Recommended texts and additional notes
 

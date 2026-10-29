@@ -155,7 +155,7 @@
 - ii. Explain the process of digitalization(manual, heads-up, interactive tracing, automatic)
 - iii. List different formats of digitized data (image, audio, video, motion, text, multimedia, etc.)
 
-## 
+## Computer Application Packages
 
 ### 1. Word Processing package
 
@@ -317,7 +317,7 @@
 - iii. Use different methods of securing data and maintaining its integrity - Backup - Antivirus - Personal Identification Number - Biometrics - Passwords - Proper labelling of storage devices - CCTV - Physical Security - Fire Extinguisher - Smoke Alarms - etc.
 - v. Compare the advantages and disadvantages of computer and manual file (security, speed of access and creation, cost of setup and maintenance, electricity supply, etc.)
 
-## Computer
+## Computer Maintenance and Safety Measures
 
 ### 1. Booting and shutting down process
 
@@ -349,7 +349,7 @@
 - v. Keep liquid away from computer room
 - vi. Keep strictly to laboratory rules and regulations
 
-## Information
+## Information &Communication Technology (ICT)
 
 ### 1. Communication Systems
 
@@ -465,7 +465,7 @@
 - i. Identify different network cables and connectors: - Cables (Twisted Pair, Coaxial, Fibre Optics, etc.) Connectors (RJ45, RJ11, T-Connectors
 - ii. Identify different types of Computer Cables and Connectors - Cables: Power Cables, Data Cables, Printer Cable, Universal Serial Bus (USB), Monitor Cable, Serial Cable, Parallel Cable, etc. - Connectors: Male and Female.
 
-## 
+## Developing Problem-Solving Skills
 
 ### 1. Programming Language (PL)
 
@@ -562,7 +562,7 @@
 - iii. Explain stages in SDLC - Preliminary study (Identification of the problem, Recognition of the Need) - Feasibility - Analysis - Design - Implementation (coding, testing, documentation and delivery) - Maintenance - Review
 - iv. Draw diagram of a SDLC
 
-## Artificial
+## Artificial Intelligence (AI) and Robotics
 
 ### 1. Definition of AI
 
@@ -602,7 +602,7 @@
 - v. Itemise application areas of Robots - Logistics - Manufacturing - Home - Travel - Healthcare - Security - Space exploration - Entertainment - Agriculture - Food Preparation - Manufacturing - Military - Customer Service etc.
 - vi. State advantages and disadvantages of using Robots
 
-## Computer
+## Computer Ethics and Human Issues
 
 ### 1. Ethical issues
 
@@ -641,11 +641,11 @@
 - xiii. List Types of cyber security threats (Cybercrime, cyber-attack, cyberterrorism, malware, virus, trojans, spyware, Ransomware, Adware, Botnets, SQL injection, Phishing, Man-in-the-middle attack, Denial of Service, Dridex, Romance scams, Emotet malware,
 - xiv. List Cyber security safety tips - Regular update of software and operating systems - Use of anti-virus software - Use of strong passwords - Do not open email attachments from unknown senders - Do not click on links in emails from unknown senders or unfamiliar websites, avoid use of unsecure WIFI networks in public places etc.
 
-### 4. Potentials for Higher Studies in Computing 4. 5. 6. 7. 8. 9. 10. 11. 12. 13. 14.
+### 4. Potentials for Higher Studies in Computing
 
 **Candidates should be able to**
 
-- i. List possible career paths in computing - Software Developer - Software Test Engineer - Programme Analyst - System Developer - Web Developer - Software Development Engineer, - Computer System Analyst - Database Administrator - System Administrator - System Engineer - System Analyst - Network Engineer - Business Analyst - Program Manager - IT Specialist - Data Analyst/Scientist - AI and Robotics - System Security Analyst - Digital Forensic Analyst - Mobile App Developer - ICT Manager - Blogger - E- Marketer - Social Media Manager - ICT Educator - Career in Academia - Private Entrepreneurship - Internet Police - IT User Support/Desk Officer - ICT Librarian - Computer Instructor etc. R_STUDIES Adedapo F. O. Mitchell A. S. and Agunbiade D. A. (Assessed on August 6, 2021): Online with Computer Senior Secondary 2; rasmedpublications.com Brookshear, J. G. (1991). Computer Science: An Overview. Benjamin-Cummings Publishing Co. Inc. Chiemeke Stella C., Souley Boukari, Olumide B. Longe (Assessede on August 6, 2021); Computer Studies for Senior Secondary Schools; University Press Plc., upssbookshop.com Doyle, S (1995). Computer Studies for You, USA: Nelson Thomas Ltd, 2nd Edition. Available at https://www.amazon.com/GCSC-Computer-Studies-You/dp/0748703810 Driscoll, T. & Dolden R. (1998). Computer Studies and Information Technology (The Motivate Series), Nigeria: Macmillan Education, Available at https://amazon.com/ComputerStudies-Information-Technology-Motivate/dp/0333598342 Henderson, P. (1987, February), Modern Introductory Computer Science. In Proceedings of the eighteen SIGCSE technical symposium on Computer Science education (pp. 183-190). HiiT@School (Assessed on August 6, 2021); Computer Studies for Senior Secondary Education; HiiT Ojo D. J. (2018). Senior Secondary School Certificate Examination on Data Processing. Past Questions and Answers (2014 - 2020). Published by TONAD Publishers Limited. (Theory, Objectives and Practical) Otuka J. O. E. Akande A. F. and Iginla S. I. (2019): New Computer Studies 1-3; LearnAfrica Senior School Certificate Examinations/National Examination Council (SSCE/NECO). Past Questions and Answers on Computer Studies (Theory/Objectives). Sloan, R. H., & Troy, P. (2008). CS 0.5: a better approach to introductory computer science
+- i. List possible career paths in computing
 
 ## Recommended texts and additional notes
 

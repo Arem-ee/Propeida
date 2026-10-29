@@ -21,7 +21,7 @@
 - 6. Relate the past to the present and plan for the future.
 - DETAILED SYLLABUS
 
-## THE NIGERIA AREA UP
+## THE NIGERIA AREA UP TO 1800
 
 ### 1. Land and Peoples of the Nigeria Area
 
@@ -247,7 +247,7 @@
 
 ## NIGERIA 1900 – 1960
 
-### 1. The Establishment of Colonial Rule up to 1914:
+### 1. The Establishment of Colonial Rule up to 1914
 
 **Topics and notes**
 
@@ -271,7 +271,7 @@
 
 - i. examine the reasons for the 1914 Amalgamation and its effects.
 
-### 3. Colonial Administration After the Amalgamation:
+### 3. Colonial Administration After the Amalgamation
 
 **Topics and notes**
 
@@ -319,7 +319,7 @@
 - ii. examine the impact of urbanization on the people;
 - iii. examine the level of social integration among the people.
 
-### 6. Constitutional Developments, Nationalism and Independence:
+### 6. Constitutional Developments, Nationalism and Independence
 
 **Topics and notes**
 
@@ -343,7 +343,7 @@
 - vi. examine the impact of the constitutional conferences on the move towards independence;
 - vii. determine the factors that aided the attainment of independence;
 
-## NIGERIA SINCE
+## NIGERIA SINCE INDEPENDENCE
 
 ### 1. The Politics of the First Republic and Military intervention
 
@@ -382,7 +382,7 @@
 - ii. examine the course;
 - iii. assess the effects of the war;
 
-### 3. The Gowon Regime.
+### 3. The Gowon Regime
 
 **Candidates should be able to**
 
@@ -431,7 +431,7 @@
 - i. assess challenges and achievements of the Abdulsalami Regime;
 - ii. examine the role of the key actors in the transition process and the growth and development of the Fourth Republic.
 
-### 11. Nigeria in International Organizations;
+### 11. Nigeria in International Organizations
 
 **Topics and notes**
 
@@ -439,7 +439,7 @@
 - b. African Union (AU)
 - c. Commonwealth of Nations
 - d. Organization of Petroleum Exporting Countries (OPEC)
-- e. United Nations Organization. PART II: AFRICA AND THE WIDER WORLD SINCE 1800
+- e. United Nations Organization.
 
 **Candidates should be able to**
 
@@ -450,12 +450,15 @@
 - v. examine the role of Nigeria in the UN
 - vi. examine the role of Nigeria in conflict resolutions in the Congo, Chad, Liberia, Sierra Leone, Guinea and the Sudan.
 
+## AFRICA AND THE WIDER WORLD SINCE 1800
+
 ## WEST AND NORTH AFRICA
 
-### 1. Islamic Reform Movements and State Building in West Africa:
+### 1. Islamic Reform Movements and State
 
 **Topics and notes**
 
+- Building in West Africa:
 - a. Relationship between Sokoto and other Jihads.
 - b. The Jihads of Seku Ahmadu and Al-Hajj Umar
 - c. The activities of Samori Toure.
@@ -479,10 +482,11 @@
 - ii. examine the importance of Sierra Leone and Liberia in the spread and impact of Christianity in West Africa.
 - iii. assess the impact of Christian missionary activities in West Africa.
 
-### 3. Egypt under Mohammed Ali and Khedive Ismail:
+### 3. Egypt under Mohammed Ali and Khedive
 
 **Topics and notes**
 
+- Ismail:
 - a. The rise of Mohammad Ali and his reforms
 - b. Mohammad Ali’s relations with the Europeans
 - c. Ismail’s fiscal policies
@@ -495,7 +499,7 @@
 - iii. account for the fiscal policies of Ismail;
 - iv. examine the reasons for the British occupation of Egypt.
 
-## HORN OF AFRICA AND
+## HORN OF AFRICA AND SOUTHERN AFRICA
 
 ### 1. Ethiopia in the 19th century
 
@@ -538,7 +542,7 @@
 - iii. describe the nature of the Great Trek;
 - iv. examine its consequences.
 
-## IMPERIALISM, COLONIALISM
+## IMPERIALISM, COLONIALISM AND PROBLEMS OF NATION- BUILDING IN AFRICA
 
 ### 1. The New Imperialism and European Occupation of Africa
 

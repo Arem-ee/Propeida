@@ -50,7 +50,11 @@
 - ii. analyse various political processes;
 - iii. explain the relationship of the state to Government.
 
-### 3. Forms of Government Monarchy, Aristocracy, Oligarchy, Autocracy, Republicanism, Democracy- definitions, features, merits and demerits.
+### 3. Forms of Government
+
+**Topics and notes**
+
+- Monarchy, Aristocracy, Oligarchy, Autocracy, Republicanism, Democracy- definitions, features, merits and demerits.
 
 **Candidates should be able to**
 
@@ -85,35 +89,55 @@
 - i. compare the various political structures of governance;
 - ii. understand the reasons for the adoption of any of these structures of governance.
 
-### 6. Systems of Governance Presidential, Parliamentary and Monarchical, features, merits and demerits.
+### 6. Systems of Governance
+
+**Topics and notes**
+
+- Presidential, Parliamentary and Monarchical, features, merits and demerits.
 
 **Candidates should be able to**
 
 - i. distinguish between the different systems of governance;
 - ii. analyse the features, merits and demerits of each system of governance.
 
-### 7. Political Ideologies Communalism, Feudalism, Capitalism, Socialism, Communism, Totalitarianism, Fascism, Nazism, Liberalism.
+### 7. Political Ideologies
+
+**Topics and notes**
+
+- Communalism, Feudalism, Capitalism, Socialism, Communism, Totalitarianism, Fascism, Nazism, Liberalism.
 
 **Candidates should be able to**
 
 - i. differentiate between the major political ideologies;
 - ii. contrast their modes of production.
 
-### 8. Constitution Meaning, Sources, Functions, Types - Written, Unwritten, Rigid and Flexible.
+### 8. Constitution
+
+**Topics and notes**
+
+- Meaning, Sources, Functions, Types - Written, Unwritten, Rigid and Flexible.
 
 **Candidates should be able to**
 
 - i. Define and identify sources and functions of constitutions;
 - ii. compare the nature of constitutions.
 
-### 9. Principles of Democratic Government Ethics and Accountability in Public Office, Separation of Power, Checks and Balances, Individual and Collective Responsibility, Constitutionalism, Rule of Law, Representative Government, Centralization and Decentralization of Government.
+### 9. Principles of Democratic Government
+
+**Topics and notes**
+
+- Ethics and Accountability in Public Office, Separation of Power, Checks and Balances, Individual and Collective Responsibility, Constitutionalism, Rule of Law, Representative Government, Centralization and Decentralization of Government.
 
 **Candidates should be able to**
 
 - i. identify the principles of democratic government;
 - ii. determine the application of these principles;
 
-### 10. Processes of Legislation Legislative Enactments – Acts, Edicts, Bye-laws, Delegated Legislation, Decrees.
+### 10. Processes of Legislation
+
+**Topics and notes**
+
+- Legislative Enactments – Acts, Edicts, Bye-laws, Delegated Legislation, Decrees.
 
 **Candidates should be able to**
 
@@ -192,17 +216,20 @@
 **Topics and notes**
 
 - a. Definition, characteristics, functions, structure, control and problems of the civil service.
-- b. Definition, characteristics, functions, structure, control and problems of the public service. PART II POLITICAL DEVELOPMENT IN NIGERIA
+- b. Definition, characteristics, functions, structure, control and problems of the public service.
 
 **Candidates should be able to**
 
 - i. analyse the significance of civil service in governance;
 - ii. distinguish between the civil service and public service.
 
-### 1. Pre – colonial Polities Pre-jihad Hausa/Fulani Emirate, Tiv, Igbo, Yoruba
+## POLITICAL DEVELOPMENT IN NIGERIA
+
+### 1. Pre – colonial Polities
 
 **Topics and notes**
 
+- Pre-jihad Hausa/Fulani Emirate, Tiv, Igbo, Yoruba
 - a. Their structural organization;
 - b. The functions of their various political institutions.
 
@@ -258,14 +285,18 @@
 - i. compare the various constitutional developments;
 - ii. analyse the merits and demerits of each of the constitutions.
 
-### 5. Post – Independence Constitutions 1963, 1979, 1989 and 1999 (As Amended) characteristics and shortcomings.
+### 5. Post – Independence Constitutions
+
+**Topics and notes**
+
+- 1963, 1979, 1989 and 1999 (As Amended) characteristics and shortcomings.
 
 **Candidates should be able to**
 
 - i. assess the workings of the various Constitutions;
 - ii. analyse the merits and demerits of the Post- Independence Constitutions in Nigeria.
 
-### 6. Institutions of Government in the Post – Independence Nigeria:
+### 6. Institutions of Government in the Post – Independence Nigeria
 
 **Topics and notes**
 
@@ -277,14 +308,18 @@
 
 - i. evaluate the operations of the Arms of government and their agencies, e.g., the Civil Service, Armed Forces, Police, Courts and others.
 
-### 7. Public Commissions Established by the 1979 and Subsequent Constitutions: The Civil Service Commission, the Public Complaints Commission, Electoral Commissions, National Boundary Commission, Independent Corrupt Practices and Other Related Offences Commission, Economic and Financial Crimes Commission and Others – objectives functions and problems.
+### 7. Public Commissions Established by the 1979 and Subsequent Constitutions
+
+**Topics and notes**
+
+- The Civil Service Commission, the Public Complaints Commission, Electoral Commissions, National Boundary Commission, Independent Corrupt Practices and Other Related Offences Commission, Economic and Financial Crimes Commission and Others – objectives functions and problems.
 
 **Candidates should be able to**
 
 - i. evaluate the operations of Public Commissions;
 - ii. assess the problems of the Public Commissions and their constraints.
 
-### 8. Political Parties and Party Politics in Post-Independence Nigeria:
+### 8. Political Parties and Party Politics in Post-Independence Nigeria
 
 **Topics and notes**
 
@@ -298,7 +333,7 @@
 - i. contrast political processes in the republics;
 - ii. evaluate the ideologies, structure and composition of the political parties.
 
-### 9. The Structure and Workings of Nigerian Federalism:
+### 9. The Structure and Workings of Nigerian Federalism
 
 **Topics and notes**
 
@@ -350,7 +385,7 @@
 - a. Factors that led to military intervention;
 - b. Structure of military regimes;
 - c. Impact of military rule – political, e.g. creation of states, NYSC, introduction of unitary system (Unification Decree NO. 34) etc. economic, e.g. SAP, DFRRI, Peoples Bank, MAMSER, etc.
-- d. Processes of military disengagement. PART III: FOREIGN POLICY AND NIGERIA’S RELATIONSHIP WITH THE INTERNATIONAL COMMUNITY
+- d. Processes of military disengagement.
 
 **Candidates should be able to**
 
@@ -358,11 +393,13 @@
 - ii. assess the achievements of military rule;
 - iii. determine the conditions that necessitated withdrawal from the political scene.
 
-### 1. Foreign Policy - Definition, purpose, determining factors;
+## FOREIGN POLICY AND NIGERIA’S RELATIONSHIP WITH THE INTERNATIONAL COMMUNITY
+
+### 1. Foreign Policy
 
 **Topics and notes**
 
-- formulation and implementation.
+- - Definition, purpose, determining factors; formulation and implementation.
 
 **Candidates should be able to**
 
@@ -381,10 +418,11 @@
 - i. identify the major objectives of Nigeria’s foreign policy.
 - ii. analyse Nigeria’s non-aligned posture during the cold war.
 
-### 3. Nigeria’s Relations with African Countries:
+### 3. Nigeria’s Relations with African
 
 **Topics and notes**
 
+- Countries:
 - a. Africa as the “centre piece” of Nigeria’s foreign policy – guiding principles, implementation and implications;
 - b. NEPAD – origin, objectives and implications.
 
@@ -402,12 +440,14 @@
 - c. The Organization of African Unity;
 - d. The African Union;
 - e. The Economic Community of West African States (ECOWAS);
-- f. The Organization of Petroleum Exporting Countries (OPEC). PART IV: INTERNATIONAL ORGANIZATIONS:
+- f. The Organization of Petroleum Exporting Countries (OPEC).
 
 **Candidates should be able to**
 
 - i. analyse the dynamics of Nigeria’s involvement in international organizations;
 - ii. assess their contribution to the development of Nigeria.
+
+## INTERNATIONAL ORGANIZATIONS:
 
 ### 1. International Organizations
 

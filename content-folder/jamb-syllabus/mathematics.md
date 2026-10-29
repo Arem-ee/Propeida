@@ -23,7 +23,7 @@
 - V. Statistics.
 - DETAILED SYLLABUS
 
-## NUMBER AND
+## NUMBER AND NUMERATION
 
 ### 1. Number bases/Modular Arithmetic
 
@@ -39,11 +39,10 @@
 - ii. convert one base to another;
 - iii. perform operations in modulo arithmetic.
 
-### 2. Fractions, Decimals, Approximations
+### 2. Fractions, Decimals, Approximations and Percentages
 
 **Topics and notes**
 
-- and Percentages:
 - (a) fractions and decimals;
 - (b) significant figures;
 - (c) decimal places;
@@ -221,7 +220,11 @@
 - iii. calculate total surface areas and volumes of cuboids, cylinders. cones, pyramids, prisms, spheres and composite figures;
 - iv. determine the distance between two points on the earth’s surface.
 
-### 3. Loci locus in 2 dimensions based on geometric principles relating to lines and curves.
+### 3. Loci
+
+**Topics and notes**
+
+- locus in 2 dimensions based on geometric principles relating to lines and curves.
 
 **Candidates should be able to**
 
@@ -265,19 +268,28 @@
 
 ## CALCULUS
 
-### I. Differentiation:
+### 1. Differentiation
 
 **Topics and notes**
 
 - (a) limit of a function;
-- (b) differentiation of explicit algebraic and simple trigonometrical functions – sine, cosine and tangent. 2.Application of differentiation:
+- (b) differentiation of explicit algebraic and simple trigonometrical functions – sine, cosine and tangent.
+
+**Candidates should be able to**
+
+- i. find the limit of a function;
+- ii. differentiate explicit algebraic and simple trigonometrical functions.
+
+### 2. Application of differentiation
+
+**Topics and notes**
+
 - (a) rate of change;
 - (b) maxima and minima.
 
 **Candidates should be able to**
 
-- i. find the limit of a function;
-- ii. differentiate explicit algebraic and simple trigonometrical functions. solve problems involving applications of rate of change, maxima and minima.
+- solve problems involving applications of rate of change, maxima and minima.
 
 ### 3. Integration
 

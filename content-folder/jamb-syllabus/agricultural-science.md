@@ -93,11 +93,10 @@
 
 - classify different types of farm inputs and their uses.
 
-### 6. History of Agricultural Development in
+### 6. History of Agricultural Development in West Africa
 
 **Topics and notes**
 
-- West Africa
 - a. Agricultural systems e.g., shifting cultivation, bush fallowing, etc.
 - b. Problems of Agricultural development e.g., land tenure systems, inadequate infrastructures, inadequate finance for agriculture, environmental degradation, etc.
 - c. Establishment of national research institutes e.g., NCRI, IAR, IAR&T, CRIN, NIFOR, FRIN, RRI, NRCRI, NIHORT, LCRI, etc. and international research institutes e.g., IITA, ILRI, ICRISAT, WARDA, etc., leading to increased application of science to the development of agriculture.
@@ -110,22 +109,23 @@
 - i. trace the history of research institutes from past to present.
 - ii. assess their role in the development of agriculture. give reasons for the establishment of ADPs. evaluate the contributions of national agricultural programmes.
 
-### 7. Roles of Government and NGOs in
+### 7. Roles of Government and NGOs in Agricultural Development
 
 **Topics and notes**
 
-- Agricultural Development
 - a. Development of fiscal policies favourable to agricultural production e.g. import duties, ban on importation, e.t.c.
 - b. Agricultural laws and reforms e.g. Land Use Act.
 - c. Government programmes aimed at agricultural development e.g. subsidies, credit facilities, e.t.c.
 - d. Provision of infrastructures e.g. transport systems, communication systems, e.t.c.
-- e. Contribution of NGOs to agricultural development SECTION
+- e. Contribution of NGOs to agricultural development
 
 **Candidates should be able to**
 
 - evaluate the effects of government policies on agricultural development. identify agricultural laws and their effect on agricultural production.
 - i. identify the various agricultural incentives provided by the government.
-- ii. assess their effects on agricultural development. compare the various infrastructural facilities provided by government and their uses. examine the roles of NGOs in the development of agriculture. B: Agronomy
+- ii. assess their effects on agricultural development. compare the various infrastructural facilities provided by government and their uses. examine the roles of NGOs in the development of agriculture.
+
+## Agronomy
 
 ### 1. Rocks and Soil formation
 
@@ -211,11 +211,10 @@
 - ii. distinguish between monocot and dicot crop plants.
 - iii. identify various storage organs of crop plants.
 
-### 6. Growth, Development and
+### 6. Growth, Development and Reproduction
 
 **Topics and notes**
 
-- Reproduction
 - a. Gametogenesis
 - b. Pollination
 - c. Fertilization
@@ -242,11 +241,10 @@
 - i. determine appropriate nursery sites, types; their advantages and disadvantages.
 - ii. apply the techniques of transplanting seedlings
 
-### 8. Cropping Systems, Planting Patterns
+### 8. Cropping Systems, Planting Patterns and Plant Densities
 
 **Topics and notes**
 
-- and Plant Densities
 - a. Cropping systems: Monocropping, mixed-, multiple-, inter-, relay-, strip- and rotational cropping
 - b. Planting patterns: Broadcasting, row spacing and drilling
 - c. Plant densities: single, double and multiple stands
@@ -346,13 +344,15 @@
 **Topics and notes**
 
 - a. Importance: Source of wood, pulp, fibre and other forest products
-- b. Conservation: regulation, exploitation, regeneration, afforestation, agro- forestry and management systems; taungya, alley, ley, e.t.c. SECTION
+- b. Conservation: regulation, exploitation, regeneration, afforestation, agro- forestry and management systems; taungya, alley, ley, e.t.c.
 
 **Candidates should be able to**
 
 - relate various forest products to their uses.
 - i. compare different forest conservation methods.
-- ii. apply the various methods appropriately. C: Animal Production
+- ii. apply the various methods appropriately.
+
+## Animal Production
 
 ### 1. Forms and classification of major farm
 
@@ -489,7 +489,7 @@
 
 - relate bee-keeping to economic development. differentiate between various types of bees. classify methods of bee-keeping. identify bee-keeping equipment, their uses and necessary precautionary measures.
 
-## Agriculture
+## Agriculture Economics and Extension
 
 ### 1. Factors of agricultural production
 
@@ -514,10 +514,33 @@
 
 - a. Demand and supply
 - b. Production function: Input/input, Output/output Input/output relationships; stages of production, concepts of diminishing returns, scale of preference and choice.
-- c. Characteristic Features of Agricultural Production; Smallness of farm holdings: biological limits of farm production and susceptibility of farm production to climate, seasonality of farm productions, price elasticity in demand and supply of agricultural produce. 3 Labour Management
+- c. Characteristic Features of Agricultural Production; Smallness of farm holdings: biological limits of farm production and susceptibility of farm production to climate, seasonality of farm productions, price elasticity in demand and supply of agricultural produce.
+
+**Candidates should be able to**
+
+- i. relate demand to supply in agricultural production.
+- ii. interpret graphical representation of demand and supply.
+- i. relate input to output.
+- ii. deduce economic concepts from graphic representation.
+- i. distinguish between the common features of agricultural production and produce.
+- ii. compute elasticity of demand and supply.
+
+### 3. Labour Management
+
+**Topics and notes**
+
 - a. Labour relations: Supervision, etc.
 - b. Types of labour: Permanent labour etc.
-- c. National labour laws and regulations. 4 Farm Management
+- c. National labour laws and regulations.
+
+**Candidates should be able to**
+
+- identify the various ways of achieving labour efficiency. differentiate between the various types and sources of labour. apply national labour laws and regulations.
+
+### 4. Farm Management
+
+**Topics and notes**
+
 - a. Qualities, functions and problems of a farm manager.
 - b. Records and record-keeping: Types and importance of record-keeping – livestock records, profit and loss account book.
 - c. Stock evaluation:
@@ -528,10 +551,36 @@
 - ii. Problems of agricultural insurance
 - e. Agricultural financing:
 - i. meaning, importance and types of agricultural financing.
-- ii. Problems of agricultural finance. 5 Marketing of Agricultural Produce
+- ii. Problems of agricultural finance.
+
+**Candidates should be able to**
+
+- identify the qualities, functions and problems of a farm manager.
+- i. differentiate between the types of farm records.
+- ii. give reasons for keeping farm records. determine gross and net margins, appreciation, depreciation and salvage value
+- i. examine the relevance of agricultural insurance
+- ii. determine the appropriate agricultural insurance scheme determine the problems associated with agricultural insurance.
+- i. identify the relevance of agricultural finance.
+- ii. determine the problems of agricultural finance.
+
+### 5. Marketing of Agricultural Produce
+
+**Topics and notes**
+
 - a. Importance of Marketing.
 - b. Marketing channels.
-- c. Characteristics of agricultural products affecting their marketing. 6 Agricultural Extension
+- c. Characteristics of agricultural products affecting their marketing.
+
+**Candidates should be able to**
+
+- evaluate the importance of agricultural marketing
+- i. classify marketing agents and their functions.
+- ii. determine the various ways in which marketing channels pose problems in agricultural production. determine the characteristics of agricultural products affecting their marketing.
+
+### 6. Agricultural Extension
+
+**Topics and notes**
+
 - a. Meaning and importance.
 - b. The role of Agricultural Development programmes, universities, research institutes and farmers’ organizations (Cooperative societies).
 - c. Extension methods including demonstration plots, use of visual aids, mass media, etc.
@@ -539,20 +588,7 @@
 
 **Candidates should be able to**
 
-- i. relate demand to supply in agricultural production.
-- ii. interpret graphical representation of demand and supply.
-- i. relate input to output.
-- ii. deduce economic concepts from graphic representation.
-- i. distinguish between the common features of agricultural production and produce.
-- ii. compute elasticity of demand and supply. identify the various ways of achieving labour efficiency. differentiate between the various types and sources of labour. apply national labour laws and regulations. identify the qualities, functions and problems of a farm manager.
-- i. differentiate between the types of farm records.
-- ii. give reasons for keeping farm records. determine gross and net margins, appreciation, depreciation and salvage value
-- i. examine the relevance of agricultural insurance
-- ii. determine the appropriate agricultural insurance scheme determine the problems associated with agricultural insurance.
-- i. identify the relevance of agricultural finance.
-- ii. determine the problems of agricultural finance. evaluate the importance of agricultural marketing
-- i. classify marketing agents and their functions.
-- ii. determine the various ways in which marketing channels pose problems in agricultural production. determine the characteristics of agricultural products affecting their marketing. identify the importance of agricultural extension. analyse the roles of government and non- governmental organizations in agricultural extension education. differentiate between the various extension methods.
+- identify the importance of agricultural extension. analyse the roles of government and non- governmental organizations in agricultural extension education. differentiate between the various extension methods.
 - i. examine the problems of agricultural extension in West Africa.
 - ii. provide possible solutions.
 
@@ -645,11 +681,10 @@
 
 - identify the various components of a computer. use the computer to enhance agricultural practices. use communication gadgets to improve agricultural production.
 
-### 8. Introduction to agricultural research
+### 8. Introduction to agricultural research and statistics
 
 **Topics and notes**
 
-- and statistics
 - a. Basic concepts in planning agricultural experiments e.g. hypothesis, treatment and control, etc.
 - b. Interpretation of results, e.g. measures of central tendency and experimental errors.
 

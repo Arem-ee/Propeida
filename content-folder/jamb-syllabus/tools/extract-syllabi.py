@@ -56,6 +56,7 @@ NUM_TOPIC_RE = re.compile(r"^\s*(\d{1,2})\s*[\.\-–—]\s*(\S.*)$")
 PAREN_NUM_TOPIC_RE = re.compile(r"^\s*\((\d{1,2})([a-z]?)[\.\)]\s*(\S.*)$")
 BARE_NUM_TOPIC_RE = re.compile(r"^\s*(\d{1,2})\s+([A-Z][^\s].*)$")
 PAREN_ROMAN_ONE_RE = re.compile(r"^\s*\(I\)\.?\s+(\S.*)$")
+BARE_ROMAN_ONE_RE = re.compile(r"^\s*I\.\s+(\S.*)$")
 LETTER_TOPIC_RE = re.compile(r"^\s*\(?([A-Z])\)?\.?\s+([A-Z]\S.*)$")
 # A section heading that JAMB left inside the table, e.g. "D: HEREDITY AND VARIATIONS".
 LETTER_COLON_RE = re.compile(r"^\s*([A-Z])\s*:\s+([A-Z][^\t]{2,})$")
@@ -323,6 +324,18 @@ def merge_items(lines):
     return items
 
 
+def demote_bare_roman(kind, text, mode, previous_topic):
+    """A bare "I." mid-topic is a list item, not the mangled topic "1"."""
+    if (
+        kind == "topic"
+        and mode == "numeric"
+        and previous_topic is not None
+        and BARE_ROMAN_ONE_RE.match(text)
+    ):
+        return "item"
+    return kind
+
+
 def starts_marker(text):
     """True when a line opens a new item rather than continuing one."""
     return bool(
@@ -353,7 +366,7 @@ PARENTHETICAL_RE = re.compile(r"^[\(\[]\s*.+\s*[\)\]]$")
 CONNECTOR_TAIL_RE = re.compile(
     r"(?:\b(?:of|and|the|in|to|for|with|a|an|at|by|from|on|or|as|into|through|"
     r"between|under|over|its|their|his|her|this|these|those|up|down|since|before|"
-    r"after|during|against|within|without|towards?|among|per|via|versus|vs)|[:;,])$",
+    r"after|during|against|within|without|towards?|among|per|via|versus|vs)|[:;,\-–—])$",
     re.IGNORECASE,
 )
 
@@ -371,14 +384,43 @@ def section_title(text):
     return title
 
 
+def split_heading_colon(text):
+    """Split "Topic: descriptor" at the first colon or semicolon outside brackets.
+
+    Returns (title, descriptor). The descriptor is empty when the separator
+    closes the heading or sits inside a reference such as "(Isaiah 6:1-13)".
+    """
+    depth = 0
+    for index, char in enumerate(text):
+        if char in "([":
+            depth += 1
+        elif char in ")]":
+            depth = max(0, depth - 1)
+        elif char in ":;" and depth == 0:
+            head = text[:index].strip(" .,:;-")
+            tail = text[index + 1 :].strip()
+            if len(head) >= 3 and tail:
+                return head, tail
+            break
+    return text.strip(" .,:;-"), ""
+
+
 def is_parenthetical(text):
     return bool(PARENTHETICAL_RE.match(text.strip()))
 
 
-def heading_continues(heading, nxt):
+def heading_continues(heading, nxt, stop_at_colon=False):
     """True when nxt is the wrapped remainder of a heading, not body text."""
     heading = heading.strip()
     if not heading:
+        return True
+    # A topic colon ends the heading: what follows is the descriptor list, not
+    # the title. Section lines keep their colon ("SECTION A:" + title).
+    if stop_at_colon and heading.endswith(":"):
+        return False
+    # A wrapped heading can resume on a lowercase connector: "Middle East" +
+    # "and West Africa:". Body text starts with a capital.
+    if re.match(r"^(?:and|or|of|the|in|to|for|with|at|by|from|on|as)\s", nxt):
         return True
     if is_parenthetical(nxt):
         return True
@@ -430,7 +472,7 @@ def classify(text, mode, x0=None, topic_indent=None):
 
     # A bare "I." inside a numeric document is a mangled "1.".
     if mode == "numeric":
-        m = PAREN_ROMAN_ONE_RE.match(text)
+        m = PAREN_ROMAN_ONE_RE.match(text) or BARE_ROMAN_ONE_RE.match(text)
         if m:
             return "topic", "1", section_title(clean(m.group(1)))
 
@@ -681,6 +723,7 @@ def build_subject(doc, meta):
         if NOISE_RE.match(text) or is_formula_junk(text):
             continue
         kind, number, rest = classify(text, mode, line["x0"], indent)
+        kind = demote_bare_roman(kind, text, mode, previous_topic)
         if kind == "topic" and is_citation(rest):
             kind = "item"
         if kind == "topic" and mode == "numeric" and not plausible_topic(number, previous_topic):
@@ -691,8 +734,11 @@ def build_subject(doc, meta):
         # The heading may wrap onto the following lines, but only onto
         # lines that complete the title rather than open a new item.
         heading = rest
+        colon_terminated = kind == "topic" and text.rstrip().endswith(":")
         j = i + 1
         while j < len(left):
+            if colon_terminated:
+                break
             nxt = left[j]["text"]
             if NOISE_RE.match(nxt) or is_formula_junk(nxt):
                 j += 1
@@ -701,11 +747,32 @@ def build_subject(doc, meta):
                 break
             if classify(nxt, mode, left[j]["x0"], indent)[0] != "item":
                 break
+            # "Chemical industries: Types, raw materials" is a descriptor,
+            # not the rest of "Chemistry and Industry".
+            _nxt_title, nxt_descriptor = split_heading_colon(nxt)
+            if (
+                kind == "topic"
+                and nxt_descriptor
+                and not CONNECTOR_TAIL_RE.search(heading)
+            ):
+                break
             near = abs(left[j]["x0"] - line["x0"]) <= 18
             connector = bool(CONNECTOR_TAIL_RE.search(heading))
-            if not (near or connector or is_parenthetical(nxt) or is_all_caps(nxt)):
+            lower_connector = bool(
+                re.match(
+                    r"^(?:and|or|of|the|in|to|for|with|at|by|from|on|as)\s",
+                    nxt,
+                )
+            )
+            if not (
+                near
+                or connector
+                or lower_connector
+                or is_parenthetical(nxt)
+                or is_all_caps(nxt)
+            ):
                 break
-            if not heading_continues(heading, nxt):
+            if not heading_continues(heading, nxt, stop_at_colon=(kind == "topic")):
                 break
             heading = clean(heading + " " + nxt)
             j += 1
@@ -724,16 +791,21 @@ def build_subject(doc, meta):
             previous_topic = None
             continue
 
+        # A topic often reads "Topic: descriptor". Keep the topic name and
+        # move the descriptor into the notes so the name stays short.
+        heading, descriptor = split_heading_colon(heading)
+
         # Topic: collect the items that belong to it. A topic owns every
         # line up to the next heading, however deeply those lines are
         # indented, including any that run onto the next page.
-        items = []
+        items = [descriptor] if descriptor else []
         band_bottom = None
         for k in range(j, len(left)):
             nxt = left[k]["text"]
             if NOISE_RE.match(nxt):
                 continue
             next_kind, next_number, _next_rest = classify(nxt, mode, left[k]["x0"], indent)
+            next_kind = demote_bare_roman(next_kind, nxt, mode, number)
             if next_kind in ("section", "topic"):
                 bogus = (
                     next_kind == "topic"

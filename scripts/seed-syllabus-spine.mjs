@@ -156,9 +156,14 @@ for (const file of files) {
   }
 
   const existingTopics = subjectId
-    ? (await db.from('topics').select('id, slug').eq('subject_id', subjectId)).data ?? []
+    ? (await db.from('topics').select('id, slug, section_key, syllabus_ref').eq('subject_id', subjectId)).data ?? []
     : []
   const bySlug = new Map(existingTopics.map((t) => [t.slug, t.id]))
+  const byRef = new Map(
+    existingTopics
+      .filter((t) => t.syllabus_ref)
+      .map((t) => [`${t.section_key}|${t.syllabus_ref}`, t.id]),
+  )
 
   let order = 0
   let subjectInserted = 0
@@ -187,10 +192,12 @@ for (const file of files) {
         objectives: topic.objectives,
       }
 
-      if (bySlug.has(topic.slug)) {
+      const refKey = `${section.key}|${section.letter}.${topic.number}`
+      const targetId = byRef.get(refKey) ?? bySlug.get(topic.slug)
+      if (targetId) {
         subjectUpdated += 1
         if (!dryRun) {
-          const { error } = await db.from('topics').update(row).eq('id', bySlug.get(topic.slug))
+          const { error } = await db.from('topics').update(row).eq('id', targetId)
           if (error) throw new Error(`update topic ${slug}/${topic.slug}: ${error.message}`)
         }
       } else {

@@ -21,31 +21,22 @@
 
 ## Syllabus
 
-### 1. Written Comprehension in French Text 1: Text 2:
+### 1. Written Comprehension in French
 
 **Topics and notes**
 
-- - topics of general and emergent interest e.g., love, life, death, politics, marriage, health, communication, child trafficking, cultism, travel, corruption, money-laundering, etc.
+- Text 1: Text 2: - topics of general and emergent interest e.g., love, life, death, politics, marriage, health, communication, child trafficking, cultism, travel, corruption, money-laundering, etc.
 
 **Candidates should be able to**
 
 - (i) deduce answers to questions on the content, intent and style of proposed texts (Text1, Text 2),
 - (ii) apply reasoning skills.
 
-### 2. Principles Governing the Structure and
+### 2. Principles Governing the Structure and Use of Written French
 
 **Topics and notes**
 
-- Use of Written French:
-
-**Candidates should be able to**
-
-- i. identify what constitutes the basic structures
-
-### I. Identification of basic form classes:
-
-**Topics and notes**
-
+- I. Identification of basic form classes:
 - (a) Nouns: simple/compound, Singular/plural, masculine/feminine.
 - (b) Pronouns: personal, impersonal, demonstrative, possessive and relative.
 - (c) Verbs: reflexive and non-reflexive, their moods and tenses.
@@ -71,21 +62,7 @@
 - (c) agreement (e.g. les beaux arts, il les a vues, les photos.)
 - (d) pluralisation (e.g. cheval/chevaux, beau/beaux, belle/belles.)
 - (e) derivation: -from adj, to adv – e.g., lent-lentement, -from adj. to adj. e.g. un – premier, -from adj. to noun – e.g. bon-bonté, riche-richesse, etc -from one degree of comparison to another (using plus…que, moins…que, aussi….que e.g. plus grand que.) NB –special forms- (e.g. bon, meilleur, le meilleur, la meilleure, mauvais, pire, le pire.)
-
-**Candidates should be able to**
-
-- of written French,
-- ii. use the principles governing the structure of written French to determine acceptability, e.g., to transform one form; one class into another,
-- iii. apply the structure to convey diverse messages.
-- i. identify meaning of words
-- ii. identify meaningful constructed sentences.
-- iii) apply communicative skills
-
-### V. Use of French in set
-
-**Topics and notes**
-
-- expressions such as in proverbs, idioms and conventional structures as provided for in common speech acts:
+- V. Use of French in set expressions such as in proverbs, idioms and conventional structures as provided for in common speech acts:
 - (a) proverbs (e.g. tel père tel fils, petit à petit l’oiseau fait son nid.)
 - (b) idioms (e.g. avoir une faim de loup, crier sur le toit, mourir de peur.)
 - (c) conventional stretches (e.g. enchanté, c’est dommage, c’est formidable, stationnement interdit, etc.)
@@ -94,6 +71,12 @@
 
 **Candidates should be able to**
 
+- i. identify what constitutes the basic structures of written French,
+- ii. use the principles governing the structure of written French to determine acceptability, e.g., to transform one form; one class into another,
+- iii. apply the structure to convey diverse messages.
+- i. identify meaning of words
+- ii. identify meaningful constructed sentences.
+- iii) apply communicative skills
 - i. complete common proverbs and idioms in French
 - ii. deduce the meaning of idioms and proverbs in French
 - iii. make appropriate use of these special terms
@@ -117,7 +100,11 @@
 - (iii) use the above to enhance effective communication,
 - (iv) assess sound groupings in terms of how they are affected by such features as syllabification, liaison, e-caduc; pause, intonation, etc.
 
-### 4. Culture and Civilization Characteristics, (aspects, similarities and differences) of the educational system, socio-economic life, political organization and cultural life of Francophone Africa and France, with reference (where possible) to home country i.e. Nigeria.
+### 4. Culture and Civilization
+
+**Topics and notes**
+
+- Characteristics, (aspects, similarities and differences) of the educational system, socio-economic life, political organization and cultural life of Francophone Africa and France, with reference (where possible) to home country i.e. Nigeria.
 
 **Candidates should be able to**
 

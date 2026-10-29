@@ -43,7 +43,11 @@
 - (v) compare different types of essay;
 - (vi) criticize other people’s essays.
 
-### 2. Comprehension (Aghọtaazaa) One passage of about one hundred and fifty (150) words.
+### 2. Comprehension (Aghọtaazaa)
+
+**Topics and notes**
+
+- One passage of about one hundred and fifty (150) words.
 
 **Candidates should be able to**
 
@@ -99,7 +103,11 @@
 - (i) differentiate between standard Igbo and dialects;
 - (ii) use standard Igbo in their writings.
 
-### 7. Igbo Word Derivation (Usoro Mmụbaokwu n’Igbo) Processes of word derivation processes: coinages, loans and loans- blends (Mmụbawanye mkpụrụokwu site n’usoro mmepụta, mkpụpụta, mbite na mbiọgwa).
+### 7. Igbo Word Derivation (Usoro Mmụbaokwu n’Igbo)
+
+**Topics and notes**
+
+- Processes of word derivation processes: coinages, loans and loans- blends (Mmụbawanye mkpụrụokwu site n’usoro mmepụta, mkpụpụta, mbite na mbiọgwa).
 
 **Candidates should be able to**
 
@@ -133,9 +141,13 @@
 - (i) translate English into Igbo and vice versa;
 - (ii) communicate effectively in Igbo and English.
 
-## LITERATURE
+## LITERATURE (AGỤMAGỤ)
 
-### 1. Literary devices (Atụmatụokwu) dịka alliteration (bịambia mgbochiume), assonance (bịambịa ụdaume), parallelism (kwunkwugha), metaphor (mbụrụ), simile (myiri), hyperbole (egbeokwu), personification (mmemmadụ) proverbs (ilu), dgz.
+### 1. Literary devices (Atụmatụokwu)
+
+**Topics and notes**
+
+- dịka alliteration (bịambia mgbochiume), assonance (bịambịa ụdaume), parallelism (kwunkwugha), metaphor (mbụrụ), simile (myiri), hyperbole (egbeokwu), personification (mmemmadụ) proverbs (ilu), dgz.
 
 **Candidates should be able to**
 
@@ -144,7 +156,11 @@
 - (iii) differentiate between types of literary devices;
 - (iv) use Igbo literary devices appropriately (v)
 
-### 2. Oral Literature: Agụmagụ Ọnụ/ Agụmagụ Ọdịnala: Folktales (ifo), myths (nkọmịrịkọ), legends (nkọkịrịkọ), poems (abụ), songs (uri), chants (mbem), riddles (agwụgwa), oral drama (ejije ọnụ), tongue-twister (okwuntụhị) dgz.
+### 2. Oral Literature
+
+**Topics and notes**
+
+- Agụmagụ Ọnụ/ Agụmagụ Ọdịnala: Folktales (ifo), myths (nkọmịrịkọ), legends (nkọkịrịkọ), poems (abụ), songs (uri), chants (mbem), riddles (agwụgwa), oral drama (ejije ọnụ), tongue-twister (okwuntụhị) dgz.
 
 **Candidates should be able to**
 
@@ -232,16 +248,11 @@
 **Topics and notes**
 
 - (c) DRAMA (EJIJE)
+- J. C. Maduekwe (1979). Otu Mkpịsị Aka. Longman Nigeria (Learn Africa)
 
 **Candidates should be able to**
 
-- (i) identify the type of drama the text
-
-### J. C. Maduekwe (1979). Otu Mkpịsị Aka. Longman Nigeria (Learn Africa)
-
-**Candidates should be able to**
-
-- belongs to;
+- (i) identify the type of drama the text belongs to;
 - (ii) determine the themes in the text;
 - (iii) identify the story lines;
 - (iv) find out the characters in the book;
@@ -250,9 +261,13 @@
 - (vii) apply acquired knowledge to their personal lives.
 - (viii) Identify the moral lessons from the drama text.
 
-## CUSTOMS AND
+## CUSTOMS AND INSTITUTIONS (Omenala na Ewumewu)
 
-### 1. Ekele dị iche ice ekele ụtụtụ, ehihie, anyasị, nri, onye nọ n’ọrịa, nlakpu, ọrụ dg.
+### 1. Ekele dị iche ice
+
+**Topics and notes**
+
+- ekele ụtụtụ, ehihie, anyasị, nri, onye nọ n’ọrịa, nlakpu, ọrụ dg.
 
 **Candidates should be able to**
 
@@ -260,65 +275,133 @@
 - (iii) describe the importance of the aspects of Igbo culture;
 - (iv) identify changes that have occurred
 
-### 2. Alụmdi na nwunye, ịgba alụkwaghịm.
+### 2. Alụmdi na nwunye, ịgba alụkwaghịm
 
 **Candidates should be able to**
 
 - as a result of civilization;
 - (v) explore their environment for a
 
-### 3. Ọmụmụ na ile ọmụgwọ, ikupụta nwa, ibi ugwu, ịgụ aha, ịzụ ahịa nwa, ịhụ eze.
+### 3. Ọmụmụ na ile ọmụgwọ, ikupụta nwa
+
+**Topics and notes**
+
+- ibi ugwu, ịgụ aha, ịzụ ahịa nwa, ịhụ eze.
 
 **Candidates should be able to**
 
 - better appreciation of their culture.
 
-### 4. Echichi: Nze na Ọzọ, Eze/Obi/Igwe, Iyọm/Lọọlọ
+### 4. Echichi
 
-### 5. Ike ekpe, iri ekpe, ịkwa ozu, ịgba mkpe.
+**Topics and notes**
 
-### 6. Ụmụnna, ụmụọkpụ/ụmụada, iyomdi, nwadiala.
+- Nze na Ọzọ, Eze/Obi/Igwe Iyọm/Lọọlọ
+
+### 5. Ike ekpe, iri ekpe, ịkwa ozu, ịgba
+
+**Topics and notes**
+
+- mkpe.
+
+### 6. Ụmụnna, ụmụọkpụ/ụmụada, iyomdi
+
+**Topics and notes**
+
+- nwadiala.
 
 ### 7. Ọgbọ/ebiri/uke, ọhanaeze, ezinaụlọ
 
-### 8. Arụ na nsọala: Ihe nsọ, anụ nsọ, osisi nsọ, ebe nsọ.
+### 8. Arụ na nsọala
 
-### 9. Ọchịchị Ọdịnala: Igwe/Eze, Nze na Ọzọ, ụmụnna, ezinaụlọ, ụmụọkpụ/ ụmụada, otu ọgbọ.
+**Topics and notes**
 
-### 10. Nnabata ọbịa, ọji na ịtu nzu, itu aha, ịkwọ aka ụtụtụ, ịgọ ọfọ.
+- Ihe nsọ, anụ nsọ, osisi nsọ, ebe nsọ.
 
-### 11. Ihe ofufe: Ịgba afa, ịchụ aja, ịgọ mmụọ, ofufe.
+### 9. Ọchịchị Ọdịnala
 
-### 12. Ngwa ofufe: Ọfọ, ikenga,okpesi.
+**Topics and notes**
 
-### 13. Nkwenye: ịdụ isi/ịṅụ iyi, ịgba ndụ, orikọ, ịlọ ụwa, ọgbanje, nrọ, ihi anụ, ịha/ịchụ mmiri, dg.
+- Igwe/Eze, Nze na Ọzọ, ụmụnna, ezinaụlọ, ụmụọkpụ/ ụmụada, otu ọgbọ.
 
-### 14. Akụnaụba: inwe ala, ike ala, iri ekpe, elulu (ịkpa ọkụkọ, ewu, dg).
+### 10. Nnabata ọbịa, ọji na ịtu nzu, itu aha
 
-### 15. Abamaba: Mmọnwụ, ọkọnkọ, ekpe, ọmabe, odo, dibịa, dg.
+**Topics and notes**
 
-### 16. Egwuregwu: mgba, egwu ọnwa, ikpọ ọga, ịzụ ǹchọ, ịzụ okwe, ịgba/ịchọ oro, dg.
+- ịkwọ aka ụtụtụ, ịgọ ọfọ.
 
-### 17. Akaọrụ ndị Igbo: Ọrụ ugbo, ịkụ azụ, ịkpụ ụzụ, ịzụ ahịa, ịtụ ihe ọtụtụ, ịchụ nta, ime dibịa, ịkpụ ite, dg.
+### 11. Ihe ofufe
 
-### 18. Emume: Ọfala, ịbọ ụzọ, ịwa ji/iri ji, igbu ewu ukwu,iru mgbede,ịwa akwa, akwamozu, ịgụ afọ, dg.
+**Topics and notes**
+
+- Ịgba afa, ịchụ aja, ịgọ mmụọ, ofufe.
+
+### 12. Ngwa ofufe
+
+**Topics and notes**
+
+- Ọfọ, ikenga,okpesi
+
+### 13. Nkwenye
+
+**Topics and notes**
+
+- ịdụ isi/ịṅụ iyi, ịgba ndụ orikọ, ịlọ ụwa, ọgbanje, nrọ, ihi anụ, ịha/ịchụ mmiri, dg.
+
+### 14. Akụnaụba
+
+**Topics and notes**
+
+- inwe ala, ike ala, iri ekpe elulu (ịkpa ọkụkọ, ewu, dg).
+
+### 15. Abamaba
+
+**Topics and notes**
+
+- Mmọnwụ, ọkọnkọ, ekpe ọmabe, odo, dibịa, dg.
+
+### 16. Egwuregwu
+
+**Topics and notes**
+
+- mgba, egwu ọnwa, ikpọ ọga, ịzụ ǹchọ, ịzụ okwe, ịgba/ịchọ oro, dg.
+
+### 17. Akaọrụ ndị Igbo
+
+**Topics and notes**
+
+- Ọrụ ugbo, ịkụ azụ ịkpụ ụzụ, ịzụ ahịa, ịtụ ihe ọtụtụ, ịchụ nta, ime dibịa, ịkpụ ite, dg.
+
+### 18. Emume
+
+**Topics and notes**
+
+- Ọfala, ịbọ ụzọ, ịwa ji/iri ji igbu ewu ukwu,iru mgbede,ịwa akwa, akwamozu, ịgụ afọ, dg.
 
 ## General and Current Affairs (Ihe Ndị na-eme Ugbua)
 
-### 1. Topical issues in the Igbo language, literature and culture e.g., Ahịajiọkụ, Odenigbo lectures and Ọhaneze Ndị Igbo.
+### 1. Topical issues in the Igbo language
+
+**Topics and notes**
+
+- literature and culture e.g., Ahịajiọkụ, Odenigbo lectures and Ọhaneze Ndị Igbo.
 
 **Candidates should be able to**
 
 - functions of Ahịajiọkụ, Odenigbo and Ọhaneze Ndi Igbo Lectures;
 - (ii) identify authors, publishers and dates of publication of various textbooks in Igbo;
 
-### 2. Authors, Publishers, dates and places of publication of works in Igbo.
+### 2. Authors, Publishers, dates and places of publication of works in Igbo
 
 **Candidates should be able to**
 
 - (iii) acquaint themselves with the functions and contributions of the
 
-### 3. Igbo Studies Association (ISA) CURRENT ISSUES (Okwuakpụnọnụ) Note: Item writers should also choose their topics for comprehension exercises from such current issues as the following:
+### 3. Igbo Studies Association (ISA)
+
+**Topics and notes**
+
+- CURRENT ISSUES (Okwuakpụnọnụ) Note: Item writers should also choose their topics for comprehension exercises from such current issues as the following:
 
 **Candidates should be able to**
 
@@ -327,11 +410,11 @@
 - (ii) examine their effects;
 - (iii) suggest remedies to the problems.
 
-### 1. HIV/AIDS, Cancer and Corona Virus (Ọrịa Mmịnwụ/Obirinaajaọcha,
+### 1. HIV/AIDS, Cancer and Corona Virus
 
 **Topics and notes**
 
-- Awa eto na Ọrịa koro
+- (Ọrịa Mmịnwụ/Obirinaajaọcha, Awa eto na Ọrịa koro
 
 ### 2. Drug Abuse (Ịṅu Ọgwụ Agharaaghara)
 

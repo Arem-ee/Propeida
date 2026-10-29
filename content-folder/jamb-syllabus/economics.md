@@ -435,7 +435,11 @@
 - (vi) identify the types of exchange rates;
 - (vii) examine how exchange rates are determined.
 
-### 22. International Economic Organizations Roles and relevance of international organizations e.g. ECOWAS, AU, EU, ECA, IMF, EEC, OECD, World Bank, IBRD, WTO, ADB and UNCTAD etc. to Nigeria.
+### 22. International Economic Organizations Roles and relevance of international
+
+**Topics and notes**
+
+- organizations e.g. ECOWAS, AU, EU, ECA, IMF, EEC, OECD, World Bank, IBRD, WTO, ADB and UNCTAD etc. to Nigeria.
 
 **Candidates should be able to**
 

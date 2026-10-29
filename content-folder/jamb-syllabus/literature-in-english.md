@@ -48,10 +48,15 @@
 - viii. Acts/Scenes
 - ix. Soliloquy/aside
 - x. Figures of Speech.
+- c. Interpretation of the Prescribed Texts
+- i. Theme
+- ii. Plot
+- iii. Socio-political context
+- iv. Setting
 
 **Candidates should be able to**
 
-- a.i. identify the various types of drama; a.ii. analyse the contents of the various types of drama; a.iii. compare and contrast the features of different types of drama. b.i. demonstrate adequate knowledge of dramatic techniques and stage directions used in each prescribed text; b.ii. differentiate between styles of selected playwrights;
+- a.i. identify the various types of drama; a.ii. analyse the contents of the various types of drama; a.iii. compare and contrast the features of different types of drama. b.i. demonstrate adequate knowledge of dramatic techniques and stage directions used in each prescribed text; b.ii. differentiate between styles of selected playwrights; c.i determine the theme of any prescribed text; c.ii. identify the plot of the play;
 
 ### 2. PROSE
 
@@ -65,6 +70,29 @@
 - i. Point of view b.ii. • Omniscient • First Person • Second person • Third person • Stream of consciousness • Epiphany
 - ii. Characterisation b.iii. • Round, flat, foil, hero, antihero villain, heroine. etc
 - iii. Language b.iv.
+- c. Textual Analysis
+- i. Theme
+- ii. Plot
+- iii. Setting (Temporal/Spatial)
+- iv. Socio-political context
+
+**Candidates should be able to**
+
+- differentiate between types of novel. identify the category that each prescribed text belongs to; analyse the components of each type of prose; identify the balance of facts and fiction literary faction. identify the narrative techniques used in each of the prescribed texts; determine an author’s narrative style; distinguish between one type of character from another; Grammar, diction and clarity of expression. c.i. determine the thematic pre-occupation of the prescribed text; c.ii. indicate the plot of the novel;
+
+### 3. POETRY
+
+**Topics and notes**
+
+- a. Types:
+- i. Sonnet
+- ii. Ode
+- iii. Lyrics
+- iv. Elegy
+- v. Ballad
+- vi. Panegyric
+- vii. Epic
+- viii. Blank Verse, etc.
 - b. Poetic devices
 - i. Imagery
 - ii. Sound (Rhyme/Rhythm, repetition, pun, onomatopoeia, etc.)
@@ -77,7 +105,7 @@
 
 **Candidates should be able to**
 
-- differentiate between types of novel. identify the category that each prescribed text belongs to; analyse the components of each type of prose; identify the balance of facts and fiction literary faction. identify the narrative techniques used in each of the prescribed texts; determine an author’s narrative style; distinguish between one type of character from another; Grammar, diction and clarity of expression. b.i. determine the devices used by various poets; b.ii. show how poetic devices are used for aesthetic effect in each poem; b.iii. identify the figure of speech in the texts. b.iv. Show how poetic devices convey message and meaning. c.i. Deduce the poet’s thematic preoccupation from the poem; c.ii. appraise poetry as an art with moral values; c.iii. apply the lessons from the poem to social reality.
+- a.i. identify different types of poetry; a.ii. identify the distinctive features of the poetic types. b.i. determine the devices used by various poets; b.ii. show how poetic devices are used for aesthetic effect in each poem; b.iii. identify the figure of speech in the texts. b.iv. Show how poetic devices convey message and meaning. c.i. Deduce the poet’s thematic preoccupation from the poem; c.ii. appraise poetry as an art with moral values; c.iii. apply the lessons from the poem to social reality.
 
 ### 4. GENERAL LITERARY TERMS AND PRINCIPLES
 
@@ -89,38 +117,18 @@
 
 - a.i. identify literary terms that are specific to drama, prose and poetry; a.ii. identify areas of overlap in all the genres e.g. verse in drama and poetry, narration in all the genres.
 
-### 5. LITERARY APPRECIATION Unseen passages/extracts from Drama, Prose and Poetry.
+### 5. LITERARY APPRECIATION Unseen passages/extracts from Drama, Prose and Poetry
 
 ## Recommended texts and additional notes
 
-- c. Interpretation of the Prescribed Texts
-- i. Theme c.i determine the theme of any
-- ii. Plot prescribed text;
-- iii. Socio-political context
-- iv. Setting c.ii. identify the plot of the play;
 - c.iii. apply the lessons of the play to
 - social reality.
 - c.iv. identify the spatial setting and
 - temporal period of the play.
-- c. Textual Analysis c.i. determine the thematic pre-occupation of
-- i. Theme the prescribed text;
-- ii. Plot
-- iii. Setting (Temporal/Spatial) c.ii. indicate the plot of the novel;
-- iv. Socio-political context
 - c.iii. identify the setting and period/timing of
 - the novel.
 - c.iv. relate the prescribed text to social
 - reality.
-- 3. POETRY Candidates should be able to:
-- a. Types:
-- i. Sonnet a.i. identify different types of poetry;
-- ii. Ode
-- iii. Lyrics a.ii. identify the distinctive features of the
-- iv. Elegy poetic types.
-- v. Ballad
-- vi. Panegyric
-- vii. Epic
-- viii. Blank Verse, etc.
 - A LIST OF SELECTED AFRICAN AND NON-AFRICAN PLAYS, NOVELS AND
 - POEMS
 - Drama:

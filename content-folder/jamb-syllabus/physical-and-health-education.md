@@ -23,11 +23,10 @@
 
 ## Syllabus
 
-### 1. Principles, meaning, scope and philosophy of
+### 1. Principles, meaning, scope and philosophy of Physical Education (PE)
 
 **Topics and notes**
 
-- Physical Education (PE)
 - a. Definition, nature, scope and objectives of PE.
 - b. Philosophy of the Founding Fathers of PE (Hetherington, Dudley Sergent, Thomas Wood, John Dewey).
 - c. History and Development of PE in
@@ -131,7 +130,7 @@
 
 - a. Structure and functions of the heart and vessels;
 - b. Composition and functions of blood
-- c. Types of blood circulation (Systemic and pulmonary) S/N TOPICS/CONTENTS/NOTES
+- c. Types of blood circulation (Systemic and pulmonary)
 
 **Candidates should be able to**
 
@@ -139,6 +138,45 @@
 - ii. compare the specific functions of the arteries, veins and capillaries;
 - iii. identify the components of blood;
 - iv. state the functions of blood;
+- v. describe the systemic and pulmonary
+
+### 6. Respiratory System
+
+**Topics and notes**
+
+- a. Structure and functions of the
+- b. Process of respiration –inspiration and
+- c. Tissue and cellular respiration
+
+**Candidates should be able to**
+
+- i. describe the structure of the respiratory expiration;
+
+### 7. Excretory System
+
+**Topics and notes**
+
+- a. Structure and functions of the kidney,
+- b. Formation of excretory products –urine,
+
+**Candidates should be able to**
+
+- i. identify the structure of the kidney, skin; and excretory functions of lungs;
+
+### 8. Somatotypes and Posture
+
+**Topics and notes**
+
+- a. Description of endomorph, mesomorph
+- b. Relationship between body types and
+- c. Definition and characteristics of correct
+- d. Types of postural defect –flatfoot,
+- e. Causes and corrective measures of S/N TOPICS/CONTENTS/NOTES
+
+**Candidates should be able to**
+
+- i. describe the various body types; physical activities; good posture.
+- v. state the causes of postural defects, for and disease;
 
 ### 1. Athletics (Track and Field Events)
 
@@ -151,7 +189,7 @@
 - iv. Flight over hurdles and distancing in high and low hurdle events.
 - v. The start, stride and finish in middle distance races -800m and 1,500m.
 - vi. The start, stride and finish in long distance races -3,000m, 5,000m, 10,000m, marathon and cross-country.
-- vii. Rules, regulation and officiating. SECTION 2. 3. S/N TOPICS/CONTENTS/NOTES
+- vii. Rules, regulation and officiating.
 
 **Candidates should be able to**
 
@@ -162,18 +200,9 @@
 - v. explain the different distances and clearance in hurdling;
 - vi. describe the start, stride and finish in middle and long distance races.
 - vii. name the events which make up the middle distance and long distance races;
-- viii. differentiate the rules, regulations and officiating as applicable to each track events. D: FOOD, NUTRITION AND DRUGS
-- b. Field Events Candidates should be able to:
-- i. Throwing events –discus, javelin and i. name the events which make up shotput. throwing and jumping events; -Facilities and equipment with ii. identity various facilities, equipment specification and specifications; -Styles and techniques iii. explain the styles and techniques in -Rules, regulations and officiating throwing and jumping events; -Safety measures. iv. explain the rules and regulations in
-- ii. Jumping events –high jump, long throwing and jumping events; jump, pole vault and triple jump v. discuss safety precautions in throwing -Facilities and equipment with events. specification -Style and techniques -Rule, regulations and officiating. Ball Games -Football and basketball Candidates should be able to:
-- a. Skills in football and basketball i. describe the skills in football and
-- b. Facilities and equipment in football and basketball; basketball ii. identify various facilities and
-- c. Rules, regulations and officiating in equipment in football and basketball; football and basketball. iii. identify the officials of the games of football and basketball and their functions;
-- iv. differentiate the rules and regulations of football and basketball. Racket Games –Table tennis and badminton Candidates should be able to:
-- a. Skills in table tennis and badminton i. describe the skills in table tennis and
-- b. Specification of facilities and badminton; equipment in table tennis and ii. identify various facilities and badminton equipment in table tennis and
-- c. Rules, regulation and officiating in badminton; table tennis and badminton. iii. identify the officials in table tennis and badminton and state their functions.
-- iv. differentiate the rules and regulations of table tennis and badminton.
+- viii. differentiate the rules, regulations and officiating as applicable to each track events.
+
+## FOOD, NUTRITION AND DRUGS
 
 ### 1. Food
 
@@ -222,7 +251,7 @@
 - iii. state causes and prevention of drug misuse and abuse;
 - iv. explain the effects of drug misuse, abuse and self-medication on the body.
 
-## PHYSICAL FITNESS AND CONDITIONING S/N TOPICS/CONTENTS/NOTES
+## PHYSICAL FITNESS AND CONDITIONING PROGRAMMES S/N TOPICS/CONTENTS/NOTES
 
 ### 1. Physical fitness
 
@@ -327,7 +356,7 @@
 - iv. identify various disaster relief activities;
 - v. explain safety measures at home, workplace, school and community.
 
-## NATIONAL AND INTERNATIONAL S/N TOPIC/CONTENT/NOTES
+## NATIONAL AND INTERNATIONAL SPORTS COMPETITIONS S/N TOPIC/CONTENT/NOTES
 
 ### 1. Sports competitions at national level
 
@@ -358,11 +387,10 @@
 
 - i. state the names and roles of the different institutional games;
 
-### 3. International sports competitions and the
+### 3. International sports competitions and the governing bodies
 
 **Topics and notes**
 
-- governing bodies
 - a. All Africa Games
 - i. History and evolution of All Africa Games
 - ii. Aims of All Africa Games
@@ -385,22 +413,14 @@
 
 - i. define disability and describe people with special needs;
 
-### 2. Adapted physical activities for people with
-
-**Topics and notes**
-
-- disabilities and special needs
+### 2. Adapted physical activities for people with disabilities and special needs
 
 **Candidates should be able to**
 
 - ii. identify types of disability and special need;
 - iii. identify physical activities for people
 
-### 3. Social and emotional problems of people with
-
-**Topics and notes**
-
-- special needs
+### 3. Social and emotional problems of people with special needs
 
 **Candidates should be able to**
 
@@ -414,17 +434,13 @@
 - v. state preventive measures of disability;
 - vi. state corrective exercise to rehabilitate
 
-### 5. Corrective exercises to rehabilitate people with
-
-**Topics and notes**
-
-- special needs
+### 5. Corrective exercises to rehabilitate people with special needs
 
 **Candidates should be able to**
 
 - people with special needs.
 
-## PERSONAL, COMMUNITY AND S/N TOPICS/CONTENTS/NOTES
+## PERSONAL, COMMUNITY AND ENVIRONMENTAL HEALTH S/N TOPICS/CONTENTS/NOTES
 
 ### 1. Personal Health
 
@@ -456,7 +472,7 @@
 - c. Aging and death education
 - i. Characteristics of elderly persons
 - ii. Ways of relating with the elderly
-- iii. Common causes of death S/N TOPICS/CONTENTS/NOTES
+- iii. Common causes of death
 
 **Candidates should be able to**
 
@@ -464,6 +480,36 @@
 - ii. different among various aspects of maternal and child health services;
 - iii. identify the characteristics of elderly persons and state the ways of relating with them;
 - iv. identify common causes of death.
+
+### 3. Environmental health
+
+**Topics and notes**
+
+- a. Housing
+- i. Characteristics of good housing –
+- ii. Town planning regulations (spacing,
+- b. Water Supply
+- i. Importance and sources
+- ii. Methods of purification
+- c. Waste disposal
+- i. Types –refuge, sewage
+- ii. Methods
+- d. Pollution
+- i. Meaning and types –air, water, soil and
+- ii. Prevention and control
+- e. Pest and vector control
+- i. Differences between pest and vector
+- ii. Harmful effects of pest and vector
+- iii. Prevention and control S/N TOPICS/CONTENTS/NOTES
+
+**Candidates should be able to**
+
+- i. state the characteristics of good housing; and list the sources;
+- v. differentiate between refuse and sewage disposal methods;
+- vi. define pollution and state its types
+- vii. Outline the prevention and control measure of pollution;
+- viii. Differentiate between pest and vector and state their habits;
+- ix. Explain the harmful effects of pest and and control measures.
 
 ### 1. Disease – Meaning and causes
 
@@ -534,59 +580,28 @@
 ## Recommended texts and additional notes
 
 - SECTION B: HUMAN ANATOMY AND PHYSIOLOGY IN RELATION TO PHE
-- v. describe the systemic and pulmonary
 - circulations;
-- 6. Respiratory System Candidates should be able to:
-- a. Structure and functions of the i. describe the structure of the respiratory
 - respiratory organs –nose, trachea and organs and state their functions;
 - lungs; ii. explain the processes of inspiration and
-- b. Process of respiration –inspiration and expiration;
 - expiration iii. explain cellular and tissue respiration.
-- c. Tissue and cellular respiration
-- 7. Excretory System Candidates should be able to:
-- a. Structure and functions of the kidney, i. identify the structure of the kidney, skin;
 - skin and excretory functions of lungs; ii. state the functions of the kidney, skin
-- b. Formation of excretory products –urine, and excretory functions of lungs;
 - sweat and carbon-dioxide. iii. explain the processes of formation of
 - urine, sweat and carbon-dioxide.
-- 8. Somatotypes and Posture Candidates should be able to:
-- a. Description of endomorph, mesomorph i. describe the various body types;
 - and ectomorph; ii. relate body types to performance of
-- b. Relationship between body types and physical activities;
 - physical activities. iii. define and state the characteristics of
-- c. Definition and characteristics of correct good posture.
 - posture; iv. explain the types of postural defects;
-- d. Types of postural defect –flatfoot, v. state the causes of postural defects, for
 - scoliosis, kyphosis, lordosis; example: poor habits, accident, heredity
-- e. Causes and corrective measures of and disease;
 - postural defects. vi. explain the role of exercise, nutrition,
 - good habits and medical intervention in
 - the correction of postural defects.
 - SECTION C: THEORY OF PRACTICE OF SPORTS AND GAMES
 - SECTION F: RECREATION, LEISURE AND DANCE
 - SECTION I: CORRECTIVE AND ADAPTED PHYSICAL EDUCATION PROGRAMME
-- 3. Environmental health Candidates should be able to:
-- a. Housing i. state the characteristics of good
-- i. Characteristics of good housing – housing;
 - location, ventilation, lighting and ii. state the town planning regulations;
 - sanitation iii. state the importance of water supply
-- ii. Town planning regulations (spacing, and list the sources;
 - overcrowding) iv. explain methods of water purification
-- b. Water Supply v. differentiate between refuse and
-- i. Importance and sources sewage disposal methods;
-- ii. Methods of purification vi. define pollution and state its types
-- c. Waste disposal vii. Outline the prevention and control
-- i. Types –refuge, sewage measure of pollution;
-- ii. Methods viii. Differentiate between pest and vector
-- d. Pollution and state their habits;
-- i. Meaning and types –air, water, soil and ix. Explain the harmful effects of pest and
 - noise vectors and highlight their prevention
-- ii. Prevention and control and control measures.
-- e. Pest and vector control
-- i. Differences between pest and vector
 - and their habits
-- ii. Harmful effects of pest and vector
-- iii. Prevention and control
 - SECTION K: COMMUNICABLE AND NON-COMMUNICABLE DISEASES
 - vii. Presentation and control measures –
 - immunization, sterilization, isolation

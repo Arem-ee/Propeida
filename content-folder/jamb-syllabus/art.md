@@ -33,11 +33,10 @@
 
 - i. differentiate between the three branches of art;
 
-### 2. ELEMENTS AND PRINCIPLES OF
+### 2. ELEMENTS AND PRINCIPLES OF DESIGN
 
 **Topics and notes**
 
-- DESIGN:
 - a. Elements: line, colour, shape, form, texture, tone, value, space etc.
 - b. Principles: balance, rhythm, proportion, harmony, contrast, repetition, dominance, variety, etc.
 
@@ -106,11 +105,10 @@
 
 - viii. trace the origins, locations and styles;
 
-### 5. DEVELOPMENT IN CONTEMPORARY
+### 5. DEVELOPMENT IN CONTEMPORARY NIGERIAN ARTS AND ARTISTS
 
 **Topics and notes**
 
-- NIGERIAN ARTS AND ARTISTS:
 - a. Art Schools: Zaria, Nsukka, Osogbo group etc.
 - b. Nigerian artists and art educators; Aina Onabolu, Ben Enwonwu, S. I. Wangboje, Jimoh Akolo, Dele Jegede etc.
 - c. Museums, galleries and art centres;
@@ -147,11 +145,10 @@
 - iv. techniques, skills and processes;
 - v. the basic tools of designs
 
-### 2. TOOLS, MATERIALS AND
+### 2. TOOLS, MATERIALS AND EQUIPMENT
 
 **Topics and notes**
 
-- EQUIPMENT
 - a. Two-Dimensional Art Tools: brushes, lino cutters, drawing instruments, calligraphic pens, sharpeners etc.
 - b. Two-dimensional Art Materials: pencils charcoal, pastel, crayon, fixative, fabric, dyes, lino, wood blocks etc.
 - c. Two-Dimensional Art Equipment: Light table, spray gun, enlarger, computer etc.
@@ -179,11 +176,10 @@
 - i. identify the aesthetic qualities of natural and man-made phenomena in Nigerian environment;
 - ii. differentiate between natural and man-made aesthetic phenomena;
 
-### 2. MEANING AND FUNCTIONS OF ART
+### 2. MEANING AND FUNCTIONS OF ART IN SOCIETY
 
 **Topics and notes**
 
-- IN SOCIETY
 - a. Functions of art in the society: religious, social, cultural, political, therapeutic and economic needs.
 - b. Functions of art in electronic and print media: advertisement, education, recreation etc.
 

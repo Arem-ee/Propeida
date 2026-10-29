@@ -22,11 +22,11 @@
 
 ## Syllabus
 
-### 1. MEASUREMENTS AND UNITS (ai) Fundamental Units:
+### 1. MEASUREMENTS AND UNITS
 
 **Topics and notes**
 
-- Length, mass, time, electric charge, temperature, luminous intensity, amount of substance. (aii) Derived Units: Weight, area, volume, force, speed etc.
+- (ai) Fundamental Units: Length, mass, time, electric charge, temperature, luminous intensity, amount of substance. (aii) Derived Units: Weight, area, volume, force, speed etc.
 - (b) Measuring Instruments: venier caliper, metre rule, micrometer screw gauge, measuring cylinder, stop watch and beam balance.
 - (c) Fundamental physical quantities
 - (d) Derived physical quantities and their units
@@ -38,15 +38,66 @@
 - (i) accuracy of measuring instruments;
 - (ii) simple estimation of errors;
 - (iii) significant figures;
-- (iv) standard form. (2a) Scalars and Vectors
+- (iv) standard form.
+
+**Candidates should be able to**
+
+- i. identify the units of length, area and volume;
+- ii. use different measuring instruments;
+- iii. determine the lengths, surface areas and volume of regular and irregular bodies;
+- iv. identify the unit of mass;
+- v. use simple beam balance, e.g. Buchart’s balance and chemical balance;
+- vi. identify the unit of time;
+- vii. use different time-measuring devices;
+- viii. relate the fundamental physical quantities to their units;
+- ix. deduce the units of derived physical quantities;
+- x. determine the dimensions of physical quantities;
+- xi. use the dimensions to determine the units of physical quantities;
+- xii. test the homogeneity of an equation;
+- xiii. determine the accuracy of measuring instruments;
+- xiv. estimate simple errors;
+- xv. express measurements in standard form.
+
+### 2a. Scalars and Vectors
+
+**Topics and notes**
+
 - (i) definition of scalar and vector quantities;
 - (ii) examples of scalar and vector quantities;
 - (iii) relative velocity;
-- (iv) resolution of vectors into two perpendicular directions including graphical methods of solution. (2b) Measurement, position, distance and displacement
+- (iv) resolution of vectors into two perpendicular directions including graphical methods of solution.
+
+**Candidates should be able to**
+
+- i. distinguish between scalar and vector quantities;
+- ii. give examples of scalar and vector quantities;
+- iii. determine the resultant of two or more vectors;
+- iv. determine relative velocity;
+- v. resolve vectors into two perpendicular components;
+- vi. use graphical methods to solve vector problems.
+
+### 2b. Measurement, position, distance and displacement
+
+**Topics and notes**
+
 - (a) concept of displacement;
 - (ii) distinction between distance and displacement;
 - (iii) concept of position and coordinates;
-- (iv) frame of reference. (3.) Motion
+- (iv) frame of reference.
+
+**Candidates should be able to**
+
+- i. use strings, meter rule and engineering calipers, vernier calipers and micrometer, screw guage;
+- ii. note the degree of accuracy;
+- iii. identify distance travel in a specified direction;
+- iv. use compass and protractor to locate points/directions;
+- v. use Cartesians systems to locate positions in x-y plane;
+- vi. plot graph and draw inference from the graph.
+
+### 3. ) Motion
+
+**Topics and notes**
+
 - (a) Newton’s laws of motion:
 - (i) inertia, mass and force;
 - (ii) relationship between mass and acceleration;
@@ -77,44 +128,11 @@
 - (iii) period, frequency and amplitude of S.H.M;
 - (iv) velocity and acceleration of S.H.M;
 - (i) simple treatment of energy change in S.H.M;
-- (ii) force vibration and resonance (simple treatment). 4 Gravitational field
-- (i) Newton’s law of universal gravitation;
-- (ii) gravitational potential;
-- (iii) conservative and non-conservative fields;
-- (iv) acceleration due to gravity;
-- (v) variation of g on the earth’s surface;
-- (vi) distinction between mass and weight escape velocity;
-- (vii) parking orbit and weightlessness.
+- (ii) force vibration and resonance (simple treatment).
 
 **Candidates should be able to**
 
-- i. identify the units of length, area and volume;
-- ii. use different measuring instruments;
-- iii. determine the lengths, surface areas and volume of regular and irregular bodies;
-- iv. identify the unit of mass;
-- v. use simple beam balance, e.g. Buchart’s balance and chemical balance;
-- vi. identify the unit of time;
-- vii. use different time-measuring devices;
-- viii. relate the fundamental physical quantities to their units;
-- ix. deduce the units of derived physical quantities;
-- x. determine the dimensions of physical quantities;
-- xi. use the dimensions to determine the units of physical quantities;
-- xii. test the homogeneity of an equation;
-- xiii. determine the accuracy of measuring instruments;
-- xiv. estimate simple errors;
-- xv. express measurements in standard form.
-- i. distinguish between scalar and vector quantities;
-- ii. give examples of scalar and vector quantities;
-- iii. determine the resultant of two or more vectors;
-- iv. determine relative velocity;
-- v. resolve vectors into two perpendicular components;
-- vi. use graphical methods to solve vector problems.
-- i. use strings, meter rule and engineering calipers, vernier calipers and micrometer, screw guage;
-- ii. note the degree of accuracy;
-- iii. identify distance travel in a specified direction;
-- iv. use compass and protractor to locate points/directions;
-- v. use Cartesians systems to locate positions in x-y plane;
-- vi. plot graph and draw inference from the graph. Candidates should be able to;
+- Candidates should be able to;
 - i. identify different types of motion;
 - ii. solve numerical problem on collinear motion;
 - iii. identify force as cause of motion;
@@ -139,6 +157,21 @@
 - xxii. analyse the energy changes occurring during S.H.M;
 - xxiii. identify different types of forced vibration;
 - xxiv. enumerate applications of resonance.
+
+### 4. Gravitational field
+
+**Topics and notes**
+
+- (i) Newton’s law of universal gravitation;
+- (ii) gravitational potential;
+- (iii) conservative and non-conservative fields;
+- (iv) acceleration due to gravity;
+- (v) variation of g on the earth’s surface;
+- (vi) distinction between mass and weight escape velocity;
+- (vii) parking orbit and weightlessness.
+
+**Candidates should be able to**
+
 - i. identify the expression for gravitational force between two bodies;
 - ii. apply Newton’s law of universal gravitation;
 - iii. give examples of conservative and non- conservative fields;
@@ -165,13 +198,44 @@
 - (i) resolution and composition of forces in two perpendicular directions;
 - (ii) resultant and equilibrant.
 - (d) centre of gravity and stability
-- (i) stable, unstable and neutral equilibra. (6) Friction
+- (i) stable, unstable and neutral equilibra.
+
+**Candidates should be able to**
+
+- i. apply the conditions for the equilibrium of coplanar forces to solve problems;
+- ii. use triangle and polygon laws of forces to solve equilibrium problems;
+- iii. use Lami’s theorem to solve problems;
+- iv. analyse the principle of moment of a force;
+- v. determine moment of a force and couple;
+- vi. describe some applications of moment of a force and couple;
+- vii. apply the conditions for the equilibrium of rigid bodies to solve problems;
+- viii. resolve forces into two perpendicular directions;
+- ix. determine the resultant and equilibrant of forces;
+- x. differentiate between stable, unstable and neutral equilibra.
+
+### 6. Friction
+
+**Topics and notes**
+
 - (i) static and dynamic friction;
 - (ii) coefficient of limiting friction and its determination;
 - (iii) advantages and disadvantages of friction
 - (iv) reduction of friction;
 - (v) qualitative treatment of viscosity and terminal velocity;
-- (vi) Stoke’s law. (7) (a) Work, Energy and Power
+- (vi) Stoke’s law.
+
+**Candidates should be able to**
+
+- i. differentiate between static and dynamic friction;
+- ii. determine the coefficient of limiting friction;
+- iii. compare the advantages and disadvantages of friction;
+- iv. suggest ways by which friction can be reduced;
+- v. analyse factors that affect viscosity and terminal velocity;
+
+### 7. Work, Energy and Power
+
+**Topics and notes**
+
 - (i) definition of work, energy and power;
 - (ii) forms of energy;
 - (iii) conservation of energy;
@@ -198,21 +262,6 @@
 
 **Candidates should be able to**
 
-- i. apply the conditions for the equilibrium of coplanar forces to solve problems;
-- ii. use triangle and polygon laws of forces to solve equilibrium problems;
-- iii. use Lami’s theorem to solve problems;
-- iv. analyse the principle of moment of a force;
-- v. determine moment of a force and couple;
-- vi. describe some applications of moment of a force and couple;
-- vii. apply the conditions for the equilibrium of rigid bodies to solve problems;
-- viii. resolve forces into two perpendicular directions;
-- ix. determine the resultant and equilibrant of forces;
-- x. differentiate between stable, unstable and neutral equilibra.
-- i. differentiate between static and dynamic friction;
-- ii. determine the coefficient of limiting friction;
-- iii. compare the advantages and disadvantages of friction;
-- iv. suggest ways by which friction can be reduced;
-- v. analyse factors that affect viscosity and terminal velocity;
 - vi. apply Stoke’s law.
 - i. differentiate between work, energy and power;
 - ii. compare different forms of energy, giving examples;
@@ -247,10 +296,11 @@
 - i. identify different types of simple machines;
 - ii. solve problems involving simple machines.
 
-### 9. Elasticity: Hooke’s law and Young’s modulus;
+### 9. Elasticity
 
 **Topics and notes**
 
+- Hooke’s law and Young’s modulus
 - (i) elastic limit, yield point, breaking point,
 - (ii) the spring balance as a device for measuring force; (iii.) work done per unit volume in springs and elastic strings;
 
@@ -572,11 +622,10 @@
 - iv. determine the linear magnification;
 - v. apply the laws of reflection of light to the working of periscope, kaleidoscope and the sextant.
 
-### 25. Refraction of Light Through at Plane and
+### 25. Refraction of Light Through at Plane and Curved Surfaces
 
 **Topics and notes**
 
-- Curved Surfaces
 - (i) laws of refraction;
 - (ii) explanation of refraction in terms of velocity of light in the media;
 - (iii) definition of refractive index of a medium;
@@ -772,11 +821,10 @@
 - x. determine the variation of earth’s magnetic field on the earth’s surface;
 - xi. examine the applications of the earth’s magnetic field.
 
-### 34. Force on a Current-Carrying Conductor in a
+### 34. Force on a Current-Carrying Conductor in a Magnetic Field
 
 **Topics and notes**
 
-- Magnetic Field
 - (i) quantitative treatment of force between two parallel current-carrying conductors;
 - (ii) force on a charge moving in a magnetic field;
 - (iii) the d. c. motor;
