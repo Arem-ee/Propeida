@@ -100,6 +100,8 @@ Every lesson is short, structured, and authored against a defined learning objec
 6. **Checkout twin:** an incorrect independent answer earns one isomorphic follow-up (same skill, different question) — the two-attempt discipline. Transfer proven, not memorised.
 7. **Feedback and next action:** identify the misconception or success, then schedule review.
 
+Every lesson is authored in two tiers: a 500–700 word core that carries the syllabus point and the exam discrimination, plus optional 600–900 word `Go deeper:` sections for mechanism, context and edge cases. Depth is collapsed in the player and never gates progress. The full budget, structure and quality checklist live in [lesson-authoring-standard.md](./lesson-authoring-standard.md).
+
 The system never call a topic “mastered” from one correct answer. The initial standard is: correct independent retrieval on more than one occasion, with a delay between attempts and sufficient confidence/accuracy.
 
 ### Subject-specific learning patterns

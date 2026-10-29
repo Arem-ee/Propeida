@@ -180,30 +180,84 @@
         {
           "type": "text",
           "content": {
-            "heading": "Power, authority and legitimacy",
+            "heading": "Power, authority and the state",
             "paragraphs": [
-              "Power is the ability to influence others, even against their resistance. Authority is power that is accepted as rightful. Legitimacy is the belief that a government has the right to rule."
+              "Power is the ability to make others act; authority is power accepted as rightful; legitimacy is the belief that justifies it. Sovereignty is supreme power, and a state is the political organisation that holds it over a territory and people."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Power and influence",
+            "paragraphs": [
+              "Power is the ability to affect others' behaviour, even against their will. It may rest on force, wealth, office, information or persuasion. Influence is the quieter form: shaping what others think or do without commanding them."
             ],
             "bullets": [
-              "Power can rest on force, wealth or persuasion.",
-              "Authority rests on consent, law or tradition.",
-              "Legitimacy turns raw power into stable rule — people obey because they believe they should.",
-              "Sovereignty is supreme power. Legal sovereignty belongs to the constitution; popular sovereignty belongs to the people."
+              "Power is the capacity to compel; influence is the capacity to shape without compulsion.",
+              "Sources of power include force, wealth, office, knowledge, charisma and numbers.",
+              "Power need not be legitimate: a coup leader may hold power while lacking authority."
             ]
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "State, nation and society",
+            "heading": "Authority and legitimacy",
             "paragraphs": [
-              "A state has four elements: territory, population, government and sovereignty. A nation is a group of people who share a common identity. A nation-state exists when the two largely coincide."
+              "Authority is power accepted as rightful. A teacher may be able to punish, but authority exists when students accept that the punishment is deserved. Authority therefore rests on belief, not simply on force.",
+              "Legitimacy is that belief. A government is legitimate when people accept that it has the right to rule, even when they disagree with it. Legitimacy turns obedience from fear into duty, so legitimate governments need less coercion.",
+              "By source, authority is traditional (custom), charismatic (personal appeal) or legal-rational (law and office); modern states rely mainly on the last, so authority attaches to the office."
+            ],
+            "bullets": [
+              "Power is ability; authority is accepted right; legitimacy is the belief that the right is real.",
+              "Traditional, charismatic and legal-rational authority differ by source.",
+              "A government can hold power without legitimacy — the usual position after an unpopular coup."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Sovereignty",
+            "paragraphs": [
+              "Sovereignty is supreme and final authority within a territory. Internal sovereignty means the state is the highest authority over its people and institutions; external sovereignty means it is independent of other states.",
+              "Legal sovereignty belongs to the body that makes final law — the constitution or parliament. Popular sovereignty belongs to the people, exercised through elections and referendums; the constitution organises how that power is used."
+            ],
+            "bullets": [
+              "Internal sovereignty is supremacy at home; external sovereignty is independence abroad.",
+              "Legal sovereignty sits with the constitution or parliament; popular sovereignty sits with the people.",
+              "Sovereignty is limited in practice by treaties, international law and economic dependence."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "State, nation and nation-state",
+            "paragraphs": [
+              "A state has four elements: territory, population, government and sovereignty. A nation is a group of people sharing an identity — language, history, culture or belonging. A nation-state exists when borders roughly match a nation’s identity.",
+              "The two often diverge. Nigeria is a state containing many nations; the Kurds are a nation without a state. Society is the wider web of relationships; the state is its political organisation."
             ],
             "bullets": [
               "State = territory + population + government + sovereignty.",
-              "Nation = a people with a shared identity, history or culture.",
-              "Society is the wider web of relationships; the state is its political organisation.",
-              "Political socialisation is how people learn political attitudes; participation is how they take part; political culture is their shared orientation."
+              "Nation = shared identity; state = political organisation; nation-state = both coincide.",
+              "A state can contain many nations; a nation can exist without a state."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Political processes",
+            "paragraphs": [
+              "Political socialisation is how people learn political attitudes and behaviour. Family, school, media, religion, peers and parties are its agents. It is how a child born without political opinions becomes a citizen who holds them.",
+              "Political participation is activity through which people take part: voting, campaigning, protesting, contacting officials and standing for office. Political culture is the pattern of beliefs and values a society holds about politics — for example, whether authority is trusted or suspected."
+            ],
+            "bullets": [
+              "Socialisation forms attitudes; participation expresses them; culture is the shared pattern they form.",
+              "Agents of socialisation include family, school, media, religion, peers and parties."
             ]
           }
         },
@@ -212,7 +266,7 @@
           "content": {
             "title": "Exam tip",
             "tone": "tip",
-            "body": "When a question asks where authority is vested, answer with the source of legitimacy — the state or the people — not with an agent such as the judiciary or the police."
+            "body": "When a question asks where authority is vested, name the source of legitimacy — the state or the people — not an agent such as the judiciary or the police."
           }
         },
         {
@@ -223,20 +277,73 @@
               {
                 "operation": "Define authority",
                 "reason": "Authority is legitimate power — the right to command.",
-                "result": "It must be located in the body that owns political power, not one of its agents.",
+                "result": "Find the body that owns political power, not one of its agents.",
                 "predictPrompt": "Is the judiciary the source of authority or an arm that exercises it?"
               },
               {
-                "operation": "Identify the source",
-                "reason": "The state is the political organisation that holds sovereign authority.",
+                "operation": "Identify the owner",
+                "reason": "The state holds sovereign authority over the political community.",
                 "result": "Authority is vested in the state.",
                 "predictPrompt": ""
               },
               {
-                "operation": "Eliminate the agents",
-                "reason": "The judiciary, government and armed forces exercise authority; they do not own it.",
-                "result": "The correct answer is the state."
+                "operation": "Reject the agents",
+                "reason": "The judiciary, executive and armed forces exercise authority but do not own it.",
+                "result": "The state is the answer."
               }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why legitimacy is harder to keep than to win",
+            "paragraphs": [
+              "Legality and legitimacy are not the same. A law can be passed correctly and still be rejected as illegitimate if the process or the rulers are seen as unfair. Courts decide legality; people decide legitimacy. A government that confuses the two keeps winning cases while losing obedience.",
+              "Legitimacy has several sources. Input legitimacy comes from how power is won and exercised: free elections, the rule of law, consent. Output legitimacy comes from what government delivers: security, schools, roads, economic stability. A government can survive a deficit in one if the other is strong, but rarely both.",
+              "Coups expose the difference. A coup leader may control the army, the radio and the treasury — full power — yet lack authority, because no accepted rule makes his command rightful. To convert power into authority he must win recognition: from citizens, from other states, and often from an election.",
+              "Legitimacy is also cheaper than coercion. A legitimate government collects taxes, enforces court orders and recruits soldiers with less force, because people comply voluntarily. Once legitimacy erodes, every policy costs more to enforce."
+            ],
+            "bullets": [
+              "Legality is decided by courts; legitimacy is decided by belief and consent.",
+              "Input legitimacy comes from how power is won; output legitimacy from what it delivers.",
+              "A coup can seize power without acquiring authority.",
+              "Legitimacy lowers the cost of governing because compliance becomes voluntary."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Sovereignty in a world of interdependence",
+            "paragraphs": [
+              "Sovereignty sounds absolute, but no modern state exercises it without limits. A state joins the United Nations and accepts its charter; it signs treaties that bind future governments; it borrows money on conditions set by lenders. Each commitment is a voluntary limit on external sovereignty.",
+              "Pooled sovereignty is the formal name for this. Members of ECOWAS, the African Union and the United Nations delegate some decisions to collective bodies in exchange for influence and protection. Nigeria can shape ECOWAS decisions, but it must also accept decisions it dislikes.",
+              "Internal sovereignty is constrained too. Federalism divides authority between national and state governments; constitutions entrench rights that no majority may remove; independent courts can strike down laws. These are not failures of sovereignty but its organisation.",
+              "Economic dependence adds a harder limit. Debt service, import dependence and foreign investment give outsiders leverage over budgets and policy. A state may be legally sovereign and still have little room to choose."
+            ],
+            "bullets": [
+              "Treaties and international organisations voluntarily limit external sovereignty.",
+              "Federalism, entrenched rights and judicial review divide internal sovereignty by design.",
+              "Legal sovereignty does not guarantee policy freedom when the economy is dependent."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Reading political culture and participation",
+            "paragraphs": [
+              "Political culture is not opinion polling. It is the durable pattern of beliefs about authority, participation and the state. Almond and Verba distinguished parochial culture, where people barely identify with the state; subject culture, where they obey but do not participate; and participant culture, where they expect to influence decisions.",
+              "Most states mix the three. A village may be parochial about national politics while a capital city is participant. The mix explains why the same constitution produces different behaviour in different places.",
+              "Participation is shaped by resources and institutions. Educated, urban and organised citizens vote, lobby and protest more; proportional systems and strong parties raise turnout; repression lowers it. Low turnout is therefore not always apathy — it can be a rational response to institutions that do not respond.",
+              "For exams, keep the map clean: socialisation explains how attitudes form, culture describes the pattern, participation describes the action."
+            ],
+            "bullets": [
+              "Parochial, subject and participant cultures differ in whether people identify, obey or engage.",
+              "Most states contain a mixture of cultures rather than one pure type.",
+              "Participation tracks resources and institutions, not just individual interest.",
+              "Socialisation → culture → participation is the causal chain to remember."
             ]
           }
         },

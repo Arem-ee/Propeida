@@ -19,6 +19,47 @@ import PassageReader, { PairComparator, RebuildCard, ReflectionCard } from './en
 
 type Phase = 'diagnostic' | 'teach' | 'worked' | 'supported' | 'independent' | 'done'
 type Confidence = 'sure' | 'unsure' | null
+type NoteSection = RevisionNote['sections'][number]
+
+/**
+ * Depth sections carry the heading prefix `Go deeper:`. They are optional
+ * extra reading: kept out of the 30-second summary and the core disclosure,
+ * and rendered collapsed so the core lesson remains the main path.
+ */
+const DEPTH_PREFIX = /^go deeper\s*:\s*/i
+
+function isDepthSection(section: NoteSection): boolean {
+  return DEPTH_PREFIX.test(section.heading.trim())
+}
+
+function depthTitle(heading: string): string {
+  return heading.trim().replace(DEPTH_PREFIX, '') || 'Go deeper'
+}
+
+function SectionText({ section }: { section: NoteSection }) {
+  return (
+    <section>
+      {section.heading && (
+        <h3 className="font-display text-base font-medium text-black">{section.heading}</h3>
+      )}
+      {(section.paragraphs ?? []).map((paragraph, i) => (
+        <p key={i} className="mt-2 text-[15px] font-semibold leading-relaxed text-ink">
+          {paragraph}
+        </p>
+      ))}
+      {section.bullets.length > 0 && (
+        <ul className="mt-2 space-y-1.5">
+          {section.bullets.map((b, i) => (
+            <li key={i} className="flex gap-2.5 text-sm font-semibold leading-relaxed text-ink-soft">
+              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400" />
+              {b}
+            </li>
+          ))}
+        </ul>
+      )}
+    </section>
+  )
+}
 
 interface AttemptFeedback {
   isCorrect: boolean
@@ -463,6 +504,11 @@ export default function LessonPlayer({
     return days === 0 ? 'today' : `in ${days} day${days === 1 ? '' : 's'}`
   }
 
+  // Core sections are the lesson proper; `Go deeper:` sections are optional
+  // depth and never contribute to the 30-second preview.
+  const coreSections = note.sections.filter((section) => !isDepthSection(section))
+  const depthSections = note.sections.filter(isDepthSection)
+
   return (
     <div className="mx-auto max-w-2xl">
       <div className="mb-5 flex items-center justify-between gap-3">
@@ -511,7 +557,7 @@ export default function LessonPlayer({
           <p className="font-display text-[22px] font-medium text-black">The idea in 30 seconds</p>
           <p className="mt-2 text-[15px] font-semibold leading-relaxed text-ink-soft">{note.summary}</p>
           <ul className="mt-3.5 space-y-2">
-            {note.sections.flatMap((section, sectionIndex) =>
+            {coreSections.flatMap((section, sectionIndex) =>
               section.bullets.slice(0, 1).map((b, bulletIndex) => (
                 <li key={`${sectionIndex}:${bulletIndex}`} className="flex gap-2.5 text-sm font-bold leading-relaxed text-black">
                   <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-600" />
@@ -520,34 +566,34 @@ export default function LessonPlayer({
               )),
             )}
           </ul>
-          {note.sections.length > 0 && (
+          {coreSections.length > 0 && (
             <details className="group mt-4 rounded-2xl border border-blue-100 bg-blue-50/30 px-4 py-3">
               <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-extrabold text-blue-900">
                 <span>Read the full explanation</span>
                 <span className="text-xs font-bold text-blue-700 transition-transform group-open:rotate-180">⌄</span>
               </summary>
               <div className="mt-4 space-y-5">
-                {note.sections.map((section, sectionIndex) => (
-                  <section key={sectionIndex}>
-                    {section.heading && (
-                      <h3 className="font-display text-base font-medium text-black">{section.heading}</h3>
-                    )}
-                    {(section.paragraphs ?? []).map((paragraph, i) => (
-                      <p key={i} className="mt-2 text-[15px] font-semibold leading-relaxed text-ink">
-                        {paragraph}
-                      </p>
-                    ))}
-                    {section.bullets.length > 0 && (
-                      <ul className="mt-2 space-y-1.5">
-                        {section.bullets.map((b, i) => (
-                          <li key={i} className="flex gap-2.5 text-sm font-semibold leading-relaxed text-ink-soft">
-                            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400" />
-                            {b}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </section>
+                {coreSections.map((section, sectionIndex) => (
+                  <SectionText key={sectionIndex} section={section} />
+                ))}
+              </div>
+            </details>
+          )}
+          {depthSections.length > 0 && (
+            <details className="group mt-3 rounded-2xl border border-amber-200 bg-amber-50/40 px-4 py-3">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-extrabold text-amber-900">
+                <span>Go deeper — optional</span>
+                <span className="text-xs font-bold text-amber-700 transition-transform group-open:rotate-180">⌄</span>
+              </summary>
+              <p className="mt-3 text-[13px] font-semibold leading-relaxed text-amber-900/80">
+                Extra context for the same topic. Skip it now and come back when you want the full picture.
+              </p>
+              <div className="mt-4 space-y-5">
+                {depthSections.map((section, sectionIndex) => (
+                  <SectionText
+                    key={sectionIndex}
+                    section={{ ...section, heading: depthTitle(section.heading) }}
+                  />
                 ))}
               </div>
             </details>
