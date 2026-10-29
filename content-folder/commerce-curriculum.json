@@ -1,0 +1,371 @@
+{
+  "subject": "commerce",
+  "source": "JAMB UTME Commerce syllabus (IBASS)",
+  "sourceRef": "jamb-utme-commerce#authored",
+  "lessons": [
+    {
+      "slug": "meaning-scope-commerce",
+      "topic": "commerce",
+      "title": "Commerce: Meaning, Scope and Functions",
+      "objective": "Define commerce and e-commerce, distinguish them from related subjects, and name the functions and aids to trade.",
+      "estimatedMinutes": 12,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Commerce",
+            "paragraphs": [
+              "Commerce is the organised exchange of goods and services, together with the services that make exchange possible. It covers trade and the aids to trade, from transport and banking to insurance and advertising."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "What commerce covers",
+            "paragraphs": [
+              "Commerce is the branch of production that moves goods and services from producers to consumers. It begins where production ends: the farmer grows yam, but commerce carries it to market, stores it, insures it, pays for it and persuades people to buy it.",
+              "Its scope has two parts. Trade is the buying and selling itself — home trade within a country and foreign trade across borders. Aids to trade are the services that support it: transport, warehousing, banking, insurance, advertising and communication. Without them, trade would be slower, riskier and more expensive."
+            ],
+            "bullets": [
+              "Trade = buying and selling; aids to trade = services that make trade possible.",
+              "Home trade is internal; foreign trade is import, export or entrepot.",
+              "Commerce links production to consumption; it does not create the goods itself."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "E-commerce and e-business",
+            "paragraphs": [
+              "E-commerce is the buying and selling of goods and services over electronic networks, especially the internet. E-business is wider: it covers every business process done electronically, including stock control, payroll, supplier records and customer service.",
+              "The difference matters in exams. Every e-commerce transaction is e-business, but not every e-business activity is e-commerce. A firm that keeps its accounts in the cloud is doing e-business; it is doing e-commerce only when it buys or sells online.",
+              "E-commerce takes several forms: business-to-consumer (B2C), business-to-business (B2B), consumer-to-consumer (C2C) and business-to-government (B2G)."
+            ],
+            "bullets": [
+              "E-commerce = online exchange; e-business = all electronic business processes.",
+              "B2C sells to households; B2B sells to other firms; C2C uses a platform to connect consumers.",
+              "E-commerce lowers distance costs but adds delivery, trust and fraud risks."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Characteristics of commerce",
+            "paragraphs": [
+              "Commerce is an intermediary activity. It stands between producer and consumer and creates place, time and possession utility: the good is in the right place, available at the right time, and owned by the person who wants it.",
+              "It deals in both goods and services, depends on specialisation, and carries risk. A trader who buys stock before finding a buyer bears the risk of unsold goods; insurance and credit are ways of sharing that risk."
+            ],
+            "bullets": [
+              "Commerce creates place, time and possession utility.",
+              "It depends on specialisation: traders, transporters, insurers and bankers each do one job.",
+              "Risk-bearing is central; profit rewards the trader who accepts it."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Functions of commerce",
+            "paragraphs": [
+              "Commerce performs several functions at once. It exchanges goods and services, distributes them, stores them until demand appears, finances trade, spreads risk, and supplies information about prices and products.",
+              "It also creates employment and raises living standards by making a wider variety of goods available. Advertising and communication complete the chain by telling buyers what exists and where to find it."
+            ],
+            "bullets": [
+              "Exchange, distribution and storage move goods from producer to consumer.",
+              "Banking finances trade; insurance spreads its risks.",
+              "Advertising informs buyers; transport and communication connect markets.",
+              "Commerce creates jobs and widens consumer choice."
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "An aid to trade supports buying and selling but is not trade itself. Insurance, transport and banking are aids; the actual exchange of goods is trade."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Which of these is an aid to trade? A. Mining B. Insurance C. Farming D. Manufacturing",
+            "steps": [
+              {
+                "operation": "Read the term",
+                "reason": "Trade is buying and selling; an aid makes it possible.",
+                "result": "Look for a service that supports exchange, not a producer of goods.",
+                "predictPrompt": "Which option does not create a physical good?"
+              },
+              {
+                "operation": "Classify each option",
+                "reason": "Mining, farming and manufacturing produce goods; insurance covers risk in transit and storage.",
+                "result": "Insurance is the service.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Reject production",
+                "reason": "Production creates goods; commerce moves and supports them.",
+                "result": "The answer is B, insurance."
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Commerce, economics and industry — where the boundaries lie",
+            "paragraphs": [
+              "The three subjects overlap but ask different questions. Economics studies how scarce resources are allocated: what to produce, how, and for whom. Commerce studies the institutions and services that carry out exchange. Industry studies production itself — extraction, manufacturing and construction.",
+              "A factory that turns cocoa into chocolate is industry. The bank that finances the cocoa purchase, the ship that carries it and the insurer that covers the cargo are commerce. The economist asks why cocoa prices rose; the commerce student asks which channel moves the beans to the buyer.",
+              "This is why 'industry' and 'commerce' are not synonyms in JAMB questions. Industry produces; commerce distributes and supports. A question that names farming, mining or manufacturing is pointing at production, not trade.",
+              "Within commerce, trade is narrower than the subject. Trade is the exchange act; commerce includes trade plus aids. A useful test: if the activity earns money by moving, storing, financing, protecting or informing trade, it is an aid; if it earns money by buying and reselling, it is trade."
+            ],
+            "bullets": [
+              "Economics explains allocation; commerce explains exchange institutions; industry explains production.",
+              "Trade is the exchange act; commerce is trade plus aids to trade.",
+              "Farming, mining and manufacturing are production, not aids to trade."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: What makes e-commerce work in Nigeria",
+            "paragraphs": [
+              "An online sale needs four things beyond a website: a payment route, a delivery route, trust, and a way to reverse failure. Nigeria's payment route matured with bank transfers, cards and mobile money; logistics firms now cover many cities; and marketplaces use ratings, escrow-style holds and return policies to build trust.",
+              "Each layer carries a local constraint. Addresses are often descriptive rather than postal, so delivery depends on phone calls and landmarks. Power and data costs raise the price of running a store. Fraud and fake products make buyers cautious, which raises the cost of convincing them.",
+              "Regulation matters too. Consumer protection, data protection and payment rules determine what a platform must disclose and how it must handle complaints. A business that ignores them faces chargebacks, sanctions and reputational loss.",
+              "The exam link is direct: e-commerce is not just 'selling on the internet'. It is the whole chain of payment, fulfilment, trust and redress. That is why a question about the main challenge of e-commerce in Nigeria may point to logistics or trust rather than to website design."
+            ],
+            "bullets": [
+              "E-commerce needs payment, fulfilment, trust and redress, not just a website.",
+              "Nigerian constraints include descriptive addresses, power costs, data costs and fraud.",
+              "Consumer and data-protection rules shape what platforms must disclose."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: The chain from production to consumption",
+            "paragraphs": [
+              "Trace a bag of rice. The farmer produces paddy; a miller processes it; a wholesaler buys in bulk; a retailer breaks the bulk; a transporter moves it; a warehouse stores it; a bank finances each purchase; an insurer covers the stock; an advertiser creates demand. Each link adds utility or lowers the cost of the next link.",
+              "Commerce is the coordination of that chain. When one link fails — a bad road, a closed bank, an uninsured fire — the whole chain slows. This is why traders care about infrastructure and credit even though they do not produce the rice.",
+              "The chain also explains margins. Each intermediary earns a return for a service: bulk-breaking, storage, transport, risk-bearing or information. A question that asks why prices rise between farm and market is usually asking which link added a cost."
+            ],
+            "bullets": [
+              "Each intermediary adds utility or lowers the cost of the next link.",
+              "A failure at one link slows the whole chain.",
+              "Intermediary margins pay for bulk-breaking, storage, transport, risk and information."
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A trader buys 200 bags of rice, stores them for two months and insures the warehouse. Identify one trade activity and two aids to trade in the story.",
+            "hints": [
+              "Trade is the buying and selling itself — here, buying the rice to resell.",
+              "Storage and insurance support the trade without being the exchange.",
+              "A strong answer names the purchase as trade, then warehousing and insurance as aids."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "occupation-types-choice",
+      "topic": "occupation",
+      "title": "Occupation: Types and Choice",
+      "objective": "Classify occupations as industrial, commercial or service, and explain the factors that shape occupational choice.",
+      "estimatedMinutes": 12,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Occupation",
+            "paragraphs": [
+              "An occupation is the work a person does regularly for a reward, usually a livelihood. Occupations are grouped as industrial, commercial or services, and the choice depends on skills, interest, capital and demand."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "What an occupation is",
+            "paragraphs": [
+              "An occupation is the regular work through which a person earns a living. It is wider than a single job: a teacher may change schools, but teaching remains the occupation. Employment is the contract under which the work is done; occupation is the kind of work itself.",
+              "The syllabus groups occupations by what they do. Industrial occupations produce goods, commercial occupations move and support trade, and service occupations provide direct help or expertise to people."
+            ],
+            "bullets": [
+              "Occupation = regular work for a reward; employment = the contract to do it.",
+              "Industrial produces goods, commercial supports exchange, services serve people directly.",
+              "A person can change jobs without changing occupation."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Industrial occupations",
+            "paragraphs": [
+              "Industrial occupations create physical goods. Extractive work takes raw materials from nature: farming, fishing, mining, quarrying and forestry. Manufacturing turns those materials into finished or intermediate goods, such as flour, cement or textiles. Construction builds houses, roads and bridges.",
+              "These three stages are linked. A quarry supplies limestone, a cement factory turns it into cement, and a construction firm uses the cement to build a road."
+            ],
+            "bullets": [
+              "Extractive: farming, fishing, mining, quarrying, forestry.",
+              "Manufacturing: turning raw materials into goods.",
+              "Construction: building fixed assets such as roads and houses."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Commercial and service occupations",
+            "paragraphs": [
+              "Commercial occupations make exchange possible. They include traders — wholesalers and retailers — and the aids to trade: bankers, insurers, transporters, warehouse keepers, advertisers and communication workers. A banker does not sell the goods, but without the bank the sale may not happen.",
+              "Service occupations provide direct help, skill or expertise. Teaching, medicine, law, accounting, civil service, catering and entertainment are services. The output is not a physical good; it is an improvement in the customer’s condition or capability.",
+              "The exam distinction is purpose. Commercial work exists to support trade; service work exists to serve the person who needs it. Both sell something, but only commercial work is an aid to trade."
+            ],
+            "bullets": [
+              "Commercial = trade plus aids to trade.",
+              "Services are rendered directly; they are not aids to trade.",
+              "A banker is commercial; a teacher is service."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Why occupations matter",
+            "paragraphs": [
+              "Occupations produce the goods and services people use, create income for households, and generate tax revenue for government. They also give people identity, structure and a way to use their talents.",
+              "A country with diverse occupations is less exposed to a single shock. When one sector fails, workers with transferable skills can move, and the economy keeps producing."
+            ],
+            "bullets": [
+              "Occupations create income, output and tax revenue.",
+              "They give people purpose and use their talents.",
+              "Diversity reduces dependence on one sector."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Choosing an occupation",
+            "paragraphs": [
+              "Choice is shaped by qualifications and skills, interest and aptitude, expected income, the demand for workers, the capital needed, location, family influence and government policy. Health and age also limit some options.",
+              "In practice the factors interact. A high salary cannot compensate for a job a person cannot do or does not want; a strong interest cannot create demand where no jobs exist. Good choices align ability, interest and opportunity."
+            ],
+            "bullets": [
+              "Skills and qualifications decide what is possible.",
+              "Interest and aptitude decide what is sustainable.",
+              "Demand, capital and location decide what is available.",
+              "Family, health and government policy also shape choice."
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "A transporter has a commercial occupation because transport supports trade; the trade itself is the buying and selling. Do not call every worker a trader."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A woman buys tomatoes from farmers and resells them in the city. Which type of occupation is she in? A. Extractive B. Manufacturing C. Commercial D. Service",
+            "steps": [
+              {
+                "operation": "Identify the activity",
+                "reason": "She buys in order to resell, which is trade.",
+                "result": "The occupation is commercial.",
+                "predictPrompt": "Does she grow or process the tomatoes herself?"
+              },
+              {
+                "operation": "Reject the producers",
+                "reason": "Extractive and manufacturing occupations create or process goods; she does neither.",
+                "result": "A and B are wrong."
+              },
+              {
+                "operation": "Reject service",
+                "reason": "A service is rendered directly to a client; she sells goods to buyers.",
+                "result": "The answer is C, commercial."
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Occupation, employment, career and profession",
+            "paragraphs": [
+              "Four terms are often confused. An occupation is the kind of work; employment is the contract under which it is done; a career is the sequence of jobs and roles a person holds over time; a profession is an occupation that requires specialised training, a licence and a code of conduct.",
+              "The distinctions explain odd-sounding facts. A self-employed tailor has an occupation but no employer. An unemployed nurse still has an occupation, because the work type has not disappeared. A lawyer who moves from private practice to government has changed employment and maybe her career path, but not her profession.",
+              "Professions are regulated because their work carries risk or trust: medicine, law, accounting and engineering. Entry requires recognised training, and misconduct can lead to loss of the licence. A trade such as carpentry can be skilled without being a profession in this strict sense.",
+              "For exams, remember the test: occupation names the work, employment names the contract, career names the progression, and profession names the licensed specialism."
+            ],
+            "bullets": [
+              "Occupation = work type; employment = contract; career = sequence; profession = licensed specialism.",
+              "A self-employed person has an occupation but no employer.",
+              "Unemployment removes the job, not the occupation."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Specialisation and the labour market",
+            "paragraphs": [
+              "Occupations multiply because of division of labour. When work is split into tasks, each task can be done by someone who does it often and well. Specialisation raises output, but it also makes workers dependent on exchange: the tailor needs the farmer, and the farmer needs the tailor.",
+              "The labour market matches people to work. Employers hire by skill and experience; workers invest in training to raise their value; wages move with demand and supply. A shortage of engineers raises their pay, while a surplus of a narrow skill lowers it.",
+              "Two kinds of skill matter differently. Specific skills are useful in one firm or industry; transferable skills move across employers. Automation and new technology shift demand toward transferable and technical skills, which is why training policy focuses on adaptability rather than a single job.",
+              "In Nigeria, apprenticeships and informal training carry much of the skill formation that formal institutions do not reach. That makes the quality of training uneven, but it also keeps practical trades alive."
+            ],
+            "bullets": [
+              "Specialisation raises output and creates dependence on exchange.",
+              "Wages respond to the demand for and supply of each skill.",
+              "Transferable skills protect workers when technology or demand shifts."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: The informal sector in Nigeria",
+            "paragraphs": [
+              "A large share of Nigerian work is informal: street trading, repairs, transport, artisanal production and personal services. Informal work is not the same as illegal work. It is work that is not registered, regulated or recorded in the same way as formal employment.",
+              "Its advantages are easy entry, low starting capital and flexibility. A trader can start with small capital, set her own hours and keep the income close to the household. It absorbs workers when formal jobs are scarce.",
+              "Its disadvantages are protection and finance. Informal workers usually lack pensions, health insurance and written contracts, and lenders cannot easily assess their income. Because records are thin, the tax base is narrow too.",
+              "Policy therefore faces a trade-off. Registering and taxing the informal sector can widen revenue, but heavy-handed collection can push fragile businesses out of operation. The usual prescription is to lower the cost of formalising and to pair registration with access to credit and social protection."
+            ],
+            "bullets": [
+              "Informal work is unregistered, not necessarily illegal.",
+              "It offers easy entry and flexibility but weak protection and credit access.",
+              "Formalisation works best when paired with credit and social protection."
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Classify each occupation and give one reason: (a) a fisherman, (b) an insurance broker, (c) a secondary-school teacher.",
+            "hints": [
+              "Ask whether the work extracts, supports exchange, or serves a person directly.",
+              "The fisherman extracts from nature; the broker supports trade; the teacher renders a service."
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
