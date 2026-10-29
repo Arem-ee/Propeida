@@ -350,6 +350,7 @@ export default function LessonPlayer({
   microCheck,
   nextLesson,
   subjectId,
+  examId,
 }: {
   note: RevisionNote
   subjectLabel: string
@@ -360,6 +361,7 @@ export default function LessonPlayer({
   microCheck: LessonQuestion | null
   nextLesson: { topic: string; href: string } | null
   subjectId: string
+  examId: string | null
 }) {
   const phases: Phase[] = [
     ...(diagnostic ? (['diagnostic'] as Phase[]) : []),
@@ -416,6 +418,7 @@ export default function LessonPlayer({
         subjectId,
         [...independent.map((q) => q.id), ...twins.map((q) => q.id), questionId],
         questionId,
+        examId,
       )
       if (twin) {
         setTwins((t) => [...t, twin])
@@ -508,15 +511,47 @@ export default function LessonPlayer({
           <p className="font-display text-[22px] font-medium text-black">The idea in 30 seconds</p>
           <p className="mt-2 text-[15px] font-semibold leading-relaxed text-ink-soft">{note.summary}</p>
           <ul className="mt-3.5 space-y-2">
-            {note.sections.flatMap((section) =>
-              section.bullets.slice(0, 1).map((b) => (
-                <li key={`${section.heading}:${b.slice(0, 24)}`} className="flex gap-2.5 text-sm font-bold leading-relaxed text-black">
+            {note.sections.flatMap((section, sectionIndex) =>
+              section.bullets.slice(0, 1).map((b, bulletIndex) => (
+                <li key={`${sectionIndex}:${bulletIndex}`} className="flex gap-2.5 text-sm font-bold leading-relaxed text-black">
                   <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-600" />
                   {b}
                 </li>
               )),
             )}
           </ul>
+          {note.sections.length > 0 && (
+            <details className="group mt-4 rounded-2xl border border-blue-100 bg-blue-50/30 px-4 py-3">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-extrabold text-blue-900">
+                <span>Read the full explanation</span>
+                <span className="text-xs font-bold text-blue-700 transition-transform group-open:rotate-180">⌄</span>
+              </summary>
+              <div className="mt-4 space-y-5">
+                {note.sections.map((section, sectionIndex) => (
+                  <section key={sectionIndex}>
+                    {section.heading && (
+                      <h3 className="font-display text-base font-medium text-black">{section.heading}</h3>
+                    )}
+                    {(section.paragraphs ?? []).map((paragraph, i) => (
+                      <p key={i} className="mt-2 text-[15px] font-semibold leading-relaxed text-ink">
+                        {paragraph}
+                      </p>
+                    ))}
+                    {section.bullets.length > 0 && (
+                      <ul className="mt-2 space-y-1.5">
+                        {section.bullets.map((b, i) => (
+                          <li key={i} className="flex gap-2.5 text-sm font-semibold leading-relaxed text-ink-soft">
+                            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400" />
+                            {b}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </section>
+                ))}
+              </div>
+            </details>
+          )}
           {microCheck && !microCheckDone && (
             <div className="mt-6">
               <p className="text-[11px] font-extrabold uppercase tracking-wider text-gray-500">Check your understanding</p>
