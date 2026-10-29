@@ -128,6 +128,25 @@ fewer than two depth sections, mis-typed `Go deeper` headings, duplicate
 headings, or a missing worked example or guided prompt. With no argument it
 checks every `content-folder/*-curriculum.json`.
 
+### Seeding a subject
+
+```bash
+node --env-file=.env scripts/seed-curriculum.mjs government --dry-run
+node --env-file=.env scripts/seed-curriculum.mjs government
+```
+
+The seeder matches a topic by `syllabus_ref` first and slug second, so an
+authored topic lands on its spine row even when the two names differ. It
+publishes a topic only when the file supplies a lesson for it (or the row is
+already published, or the topic sets `published: true`). Lessons are matched by
+`(subject, slug)`, linked through `topic` (defaults to the lesson slug), and
+their blocks are replaced, never duplicated. Reviewer and source refs already on
+a lesson row are preserved.
+
+The older `scripts/seed-government-curriculum.mjs` and
+`scripts/seed-economics-curriculum.mjs` remain as thin wrappers around this
+command.
+
 ## Quality checklist
 
 Before a lesson is seeded:
