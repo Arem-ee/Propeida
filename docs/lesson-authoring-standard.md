@@ -4,7 +4,44 @@ Every published topic must have a lesson. This standard defines what "a lesson"
 means so that 500+ topics can be authored consistently without turning into
 essays.
 
-A lesson has two tiers:
+## One concept per lesson
+
+A lesson teaches **one concept**. The unit of authoring is not the syllabus
+topic; it is the single thing a learner should be able to explain after three
+minutes. Broad syllabus topics are therefore split into several narrow lessons
+rather than inflated into one long one. "Basic Concepts of Government" stays one
+lesson because power, authority and legitimacy are taught as one contrast;
+"Occupation" splits into types of occupation and factors in choosing one.
+
+The test is simple: if a lesson needs the word "also" to connect two sections
+that could each carry their own exam question, it is two lessons.
+
+## Reading flow
+
+A lesson is read as section cards, not as a wall of text. The player shows one
+card at a time, with progress ("Section 2 of 3"), an estimated reading time,
+and a **Read it all at once** toggle for learners who prefer continuous prose.
+Depth stays collapsed and outside this flow.
+
+### The seven rules
+
+1. **One concept per lesson.** Split anything broader.
+2. **At most three sections.** Three is the ceiling, not a target.
+3. **120–180 words per section.** Long enough to teach, short enough to finish
+   in one sitting.
+4. **Open with a situation.** Start with a concrete case, decision or mistake,
+   then name the concept. Never open with a dictionary definition.
+5. **One-line takeaway per section.** A single sentence the learner could repeat
+   in the exam hall. It becomes a recap bullet.
+6. **One ten-second check per section.** A single multiple-choice question that
+   tests the section's claim, with a one-line reason. Answering is retrieval
+   practice, not a grade; the check explains the right answer either way.
+7. **No paragraph over three sentences; three-bullet recap.** The recap is the
+   sections' takeaways, one line each.
+
+A lesson that breaks rule 1 cannot be fixed by shortening its prose. Split it.
+
+## Two tiers
 
 | Tier | Required | Length | Purpose |
 |---|---|---|---|
@@ -36,11 +73,16 @@ answer a standard JAMB question on the topic.
 Structure, in order:
 
 1. **Summary** — 25–40 words. The single claim the lesson exists to teach.
-2. **Teaching sections** — 3–5 sections, 100–200 words each.
-   - Each section has a heading, 1–3 short paragraphs, and 2–4 bullets.
+2. **Teaching sections** — exactly 1–3 sections, 120–180 words each.
+   - Each section opens with a situation, then names and explains the concept.
+   - Each section has a heading, 1–3 short paragraphs (three sentences max),
+     and 2–4 bullets.
+   - Each section ends with `takeaway`: one sentence, under 20 words.
+   - Each section carries one `check`: a four-option question on that section's
+     claim, plus a one-line `why`.
    - The first section may have an empty heading; it renders as the intro.
-   - One section should name the exam discrimination: the pair of ideas
-     students confuse and how to tell them apart.
+   - Where the lesson has a confusable pair, name it in a section and give the
+     discrimination rule.
 3. **Exam tip** — 1–2 sentences, 30–50 words. A decision rule, not a summary.
 4. **Worked example** — one exam-style item, 3–5 named steps. Each step says
    what was done and why, not just the arithmetic or the answer.
@@ -89,8 +131,8 @@ Rules:
 - Depth may be read out of order; each section should make sense alone.
 
 The player keeps depth collapsed behind **Go deeper — optional**, excludes it
-from the 30-second preview, and never gates progress on it. No other change to
-the lesson flow is needed.
+from the section cards, and never gates progress on it. No other change to the
+lesson flow is needed.
 
 ## JSON shape
 
@@ -102,12 +144,24 @@ expressed only through the heading prefix:
 {
   "type": "text",
   "content": {
-    "heading": "Go deeper: Why the doctrine of covering the field matters",
+    "heading": "Why covering the field matters",
     "paragraphs": ["…"],
-    "bullets": ["…"]
+    "bullets": ["…"],
+    "takeaway": "A vote is only free when the voter can choose without fear or payment.",
+    "check": {
+      "question": "Which situation best shows a free vote?",
+      "options": ["A voter is paid…", "A voter is watched…", "A voter marks the ballot alone…", "A voter is threatened…"],
+      "answer": 2,
+      "why": "Secrecy removes the fear that makes a vote unfree."
+    }
   }
 }
 ```
+
+`takeaway` is one sentence. `check.answer` is the zero-based index of the
+correct option, and `why` is shown after any answer. Checks are retrieval
+practice inside the reading flow; they are not written to the question bank or
+the mastery model.
 
 Do not add a new block type for depth. The mapping layer
 (`lib/actions/lessons.ts`) already turns `text` blocks into note sections, and
@@ -115,7 +169,7 @@ the player splits on the heading prefix.
 
 ### The first text block is special
 
-The mapping uses the first paragraph of the first `text` block as the 30-second
+The mapping uses the first paragraph of the first `text` block as the lesson
 summary and renders any later paragraphs as an untitled intro. Its bullets are
 not shown. Keep the first block to one summary paragraph, with no bullets, and
 start the taught sections in the second block.
@@ -155,6 +209,11 @@ command.
 Before a lesson is seeded:
 
 - [ ] Every `syllabus_items` entry on the linked topic is taught by the core.
+- [ ] The lesson teaches one concept; a second testable idea has its own lesson.
+- [ ] No more than three sections, each 120–180 words.
+- [ ] Each section opens with a situation, ends with a one-line takeaway, and
+      carries one check with a stated `why`.
+- [ ] No paragraph is longer than three sentences.
 - [ ] Core is 500–700 words; depth, if present, is 600–900 words.
 - [ ] Summary states one claim, not a table of contents.
 - [ ] At least one section names a confusable pair and the discrimination rule.
@@ -182,6 +241,10 @@ depth explains the part that makes the definitions stick.
 
 ## Anti-patterns
 
+- A broad syllabus topic crammed into one lesson: split it into one-concept
+  lessons instead of writing a longer one.
+- A section that is really two ideas joined by "also".
+- A check that asks about a detail the section did not teach.
 - A 900-word core with no depth: the learner gets a wall before the first
   attempt.
 - Depth that is only "more examples" of the core: no new understanding.

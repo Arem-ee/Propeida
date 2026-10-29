@@ -20,10 +20,23 @@ export function isValidInstitution(id: string): id is InstitutionId {
   return INSTITUTIONS.some((institution) => institution.id === id && institution.available)
 }
 
+export interface SectionCheck {
+  question: string
+  options: string[]
+  /** Index of the correct option. */
+  answer: number
+  /** One-line reason, shown after answering. */
+  why?: string
+}
+
 export interface NoteSection {
   heading: string
   paragraphs?: string[]
   bullets: string[]
+  /** One-sentence claim the section exists to teach; becomes a recap bullet. */
+  takeaway?: string
+  /** Optional ten-second retrieval check, answered inline. */
+  check?: SectionCheck
 }
 
 export interface RevisionNote {

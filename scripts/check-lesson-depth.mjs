@@ -2,6 +2,9 @@
 //
 // Core (everything outside `Go deeper:` headings) must be 500–700 words.
 // Depth must be 600–900 words when present, in at least two sections.
+// Teach cards are checked for the one-concept shape: max three cards,
+// 120–180 words each, a one-line takeaway and an inline check. Those shape
+// issues stay warnings until the existing lessons are upgraded.
 // Also checks required blocks and the depth heading convention.
 //
 // Usage:
@@ -33,7 +36,8 @@ function blockWords(block) {
     return (
       words(c.heading) +
       (c.paragraphs ?? []).reduce((n, p) => n + words(p), 0) +
-      (c.bullets ?? []).reduce((n, b) => n + words(b), 0)
+      (c.bullets ?? []).reduce((n, b) => n + words(b), 0) +
+      words(c.takeaway)
     )
   }
   if (block.type === 'callout') return words(c.title) + words(c.body)
@@ -95,6 +99,42 @@ function checkLesson(lesson, file) {
   if (coreBlocks.filter((b) => b.type === 'text').length < 3) {
     warnings.push('core has fewer than 3 teaching sections')
   }
+
+  // The first text block is the summary; the rest are teach cards.
+  const sectionBlocks = coreTexts.slice(1)
+  if (sectionBlocks.length > 3) {
+    warnings.push(`${sectionBlocks.length} section cards (max 3) — split the lesson`)
+  }
+  sectionBlocks.forEach((block, i) => {
+    const c = block.content ?? {}
+    const label = String(c.heading ?? '').trim() || `section ${i + 1}`
+    const w = blockWords(block)
+    if (w < 120 || w > 180) {
+      warnings.push(`"${label}" is ${w} words (need 120–180)`)
+    }
+    if (!String(c.takeaway ?? '').trim()) {
+      warnings.push(`"${label}" has no takeaway`)
+    } else if (words(c.takeaway) > 20) {
+      warnings.push(`"${label}" takeaway is ${words(c.takeaway)} words (keep it under 20)`)
+    }
+    const check = c.check
+    if (!check || typeof check !== 'object') {
+      warnings.push(`"${label}" has no inline check`)
+      return
+    }
+    const options = Array.isArray(check.options) ? check.options : []
+    if (!String(check.question ?? '').trim()) warnings.push(`"${label}" check has no question`)
+    if (options.length < 2) warnings.push(`"${label}" check needs at least two options`)
+    if (
+      typeof check.answer !== 'number' ||
+      check.answer < 0 ||
+      check.answer >= options.length
+    ) {
+      warnings.push(`"${label}" check answer must be a valid option index`)
+    }
+    if (!String(check.why ?? '').trim()) warnings.push(`"${label}" check has no why`)
+  })
+
   for (const type of ['worked_example', 'guided_question']) {
     if (!blocks.some((b) => b.type === type)) errors.push(`missing ${type}`)
   }

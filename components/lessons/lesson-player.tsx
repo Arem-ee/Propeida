@@ -16,6 +16,7 @@ import type { RevisionNote } from '@/lib/notes'
 import type { LessonEnhancement } from '@/lib/lessons'
 import type { LessonEnglish } from '@/lib/actions/lessons'
 import PassageReader, { PairComparator, RebuildCard, ReflectionCard } from './english-blocks'
+import TeachSections from './teach-sections'
 
 type Phase = 'diagnostic' | 'teach' | 'worked' | 'supported' | 'independent' | 'done'
 type Confidence = 'sure' | 'unsure' | null
@@ -422,6 +423,7 @@ export default function LessonPlayer({
   const [diagnosticDone, setDiagnosticDone] = useState(false)
   const [independentDone, setIndependentDone] = useState(0)
   const [microCheckDone, setMicroCheckDone] = useState(false)
+  const [sectionsDone, setSectionsDone] = useState(false)
   const [twins, setTwins] = useState<LessonQuestion[]>([])
   const [twinnedIds, setTwinnedIds] = useState<Set<string>>(new Set())
   const [twinLoading, setTwinLoading] = useState(false)
@@ -505,9 +507,13 @@ export default function LessonPlayer({
   }
 
   // Core sections are the lesson proper; `Go deeper:` sections are optional
-  // depth and never contribute to the 30-second preview.
+  // depth and never contribute to the section cards.
   const coreSections = note.sections.filter((section) => !isDepthSection(section))
   const depthSections = note.sections.filter(isDepthSection)
+  // A lesson with checks inside its section cards does not also need the
+  // separate micro-check: the last card already retrieved the idea.
+  const hasSectionChecks = coreSections.some((section) => Boolean(section.check))
+  const teachGate = (hasSectionChecks && !sectionsDone) || (Boolean(microCheck) && !microCheckDone)
 
   return (
     <div className="mx-auto max-w-2xl">
@@ -550,35 +556,17 @@ export default function LessonPlayer({
         </div>
       )}
 
-      {/* 2 — Teach: core points up front, full text on demand.
+      {/* 2 — Teach: one concept per card, checks inline, full text on demand.
           Doing starts as fast as possible; reading never walls it. */}
       {phase === 'teach' && (
         <div className="rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-7 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)]">
-          <p className="font-display text-[22px] font-medium text-black">The idea in 30 seconds</p>
+          <p className="font-display text-[22px] font-medium text-black">The idea in one line</p>
           <p className="mt-2 text-[15px] font-semibold leading-relaxed text-ink-soft">{note.summary}</p>
-          <ul className="mt-3.5 space-y-2">
-            {coreSections.flatMap((section, sectionIndex) =>
-              section.bullets.slice(0, 1).map((b, bulletIndex) => (
-                <li key={`${sectionIndex}:${bulletIndex}`} className="flex gap-2.5 text-sm font-bold leading-relaxed text-black">
-                  <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-600" />
-                  {b}
-                </li>
-              )),
-            )}
-          </ul>
-          {coreSections.length > 0 && (
-            <details className="group mt-4 rounded-2xl border border-blue-100 bg-blue-50/30 px-4 py-3">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-extrabold text-blue-900">
-                <span>Read the full explanation</span>
-                <span className="text-xs font-bold text-blue-700 transition-transform group-open:rotate-180">⌄</span>
-              </summary>
-              <div className="mt-4 space-y-5">
-                {coreSections.map((section, sectionIndex) => (
-                  <SectionText key={sectionIndex} section={section} />
-                ))}
-              </div>
-            </details>
-          )}
+          <TeachSections
+            summary={note.summary}
+            sections={coreSections}
+            onComplete={() => setSectionsDone(true)}
+          />
           {depthSections.length > 0 && (
             <details className="group mt-3 rounded-2xl border border-amber-200 bg-amber-50/40 px-4 py-3">
               <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-extrabold text-amber-900">
@@ -598,7 +586,7 @@ export default function LessonPlayer({
               </div>
             </details>
           )}
-          {microCheck && !microCheckDone && (
+          {microCheck && !hasSectionChecks && !microCheckDone && (
             <div className="mt-6">
               <p className="text-[11px] font-extrabold uppercase tracking-wider text-gray-500">Check your understanding</p>
               <BankQuestion
@@ -668,9 +656,9 @@ export default function LessonPlayer({
           )}
           <button
             onClick={next}
-            disabled={microCheck ? !microCheckDone : false}
+            disabled={teachGate}
             className={`mt-6 inline-flex w-full items-center justify-center gap-2 rounded-2xl py-3.5 text-[15px] font-extrabold text-white min-h-[52px] transition-all ${
-              microCheck && !microCheckDone
+              teachGate
                 ? 'bg-gray-300 cursor-not-allowed'
                 : 'bg-blue-600 hover:bg-blue-700'
             }`}
