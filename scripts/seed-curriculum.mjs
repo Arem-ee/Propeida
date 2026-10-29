@@ -142,9 +142,23 @@ let blocksWritten = 0
 
 for (const lesson of lessons) {
   const topicSlug = lesson.topic ?? lesson.slug
-  const topic = topicRowBySourceSlug.get(topicSlug)
+  const topic =
+    topicRowBySourceSlug.get(topicSlug) ??
+    bySlug.get(topicSlug) ??
+    (lesson.syllabus_ref ? byRef.get(lesson.syllabus_ref) : undefined)
   if (!topic) throw new Error(`lesson ${lesson.slug} has no topic (${topicSlug})`)
   if (!lesson.blocks?.length) throw new Error(`lesson ${lesson.slug} has no blocks`)
+
+  // A lesson can be authored against an existing spine row without repeating
+  // the topic in this file. Publishing its first lesson makes the topic live.
+  if (!topic.published) {
+    if (!dryRun) {
+      const { error } = await db.from('topics').update({ published: true }).eq('id', topic.id)
+      if (error) throw new Error(`publish topic ${topicSlug}: ${error.message}`)
+    }
+    topic.published = true
+    console.log(`  topic ${topicSlug} published by its first lesson`)
+  }
 
   const existing = lessonBySlug.get(lesson.slug)
   const row = {
@@ -154,7 +168,8 @@ for (const lesson of lessons) {
     title: lesson.title,
     objective: lesson.objective,
     estimated_minutes: lesson.estimatedMinutes ?? 10,
-    sort_order: source.topics?.find((t) => t.slug === topicSlug)?.order ?? null,
+    sort_order:
+      source.topics?.find((t) => t.slug === topicSlug)?.order ?? topic.sort_order ?? null,
     status: 'published',
     reviewer: existing?.reviewer ?? source.reviewer ?? `${source.subject}-curriculum`,
     source_ref: existing?.source_ref ?? source.sourceRef ?? `jamb-utme-${source.subject}#authored`,

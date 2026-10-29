@@ -126,7 +126,7 @@ for (const file of files) {
     )
     for (const e of errors) console.log(`       error: ${e}`)
     for (const w of warnings) console.log(`       warn:  ${w}`)
-    if (!topics.has(lesson.slug)) console.log(`       warn:  no topic with this slug in ${basename(file)}`)
+    if (topics.size > 0 && !topics.has(lesson.slug)) console.log(`       warn:  no topic with this slug in ${basename(file)}`)
     if (errors.length > 0) failures += 1
   }
 }

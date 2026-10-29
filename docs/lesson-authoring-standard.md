@@ -136,12 +136,15 @@ node --env-file=.env scripts/seed-curriculum.mjs government
 ```
 
 The seeder matches a topic by `syllabus_ref` first and slug second, so an
-authored topic lands on its spine row even when the two names differ. It
-publishes a topic only when the file supplies a lesson for it (or the row is
-already published, or the topic sets `published: true`). Lessons are matched by
-`(subject, slug)`, linked through `topic` (defaults to the lesson slug), and
-their blocks are replaced, never duplicated. Reviewer and source refs already on
-a lesson row are preserved.
+authored topic lands on its spine row even when the two names differ. A lesson
+can name an existing spine topic with `topic` (its slug) or `syllabus_ref`
+without repeating the topic in the file; a file may contain only `lessons`.
+Publishing a topic's first lesson also publishes the topic. A topic is otherwise
+published only when the file supplies a lesson for it, when the row is already
+published, or when the topic sets `published: true` explicitly. Lessons are
+matched by `(subject, slug)`, linked through `topic` (defaults to the lesson
+slug), and their blocks are replaced, never duplicated. Reviewer and source refs
+already on a lesson row are preserved.
 
 The older `scripts/seed-government-curriculum.mjs` and
 `scripts/seed-economics-curriculum.mjs` remain as thin wrappers around this
