@@ -214,7 +214,34 @@
               "Power is ability; authority is accepted right; legitimacy is the belief that the right is real.",
               "Traditional, charismatic and legal-rational authority differ by source.",
               "A government can hold power without legitimacy — the usual position after an unpopular coup."
-            ]
+            ],
+            "visual": {
+              "kind": "compare",
+              "caption": "Legitimacy is the belief that turns power into authority.",
+              "columns": ["Power", "Authority"],
+              "rows": [
+                {
+                  "feature": "What it is",
+                  "left": "The ability to make others act",
+                  "right": "Power accepted as rightful"
+                },
+                {
+                  "feature": "What it rests on",
+                  "left": "Force, wealth, office or persuasion",
+                  "right": "Belief that the right to command is real"
+                },
+                {
+                  "feature": "Test",
+                  "left": "Can it compel without consent?",
+                  "right": "Do people obey because they accept the right?"
+                },
+                {
+                  "feature": "Example",
+                  "left": "A coup leader with the army",
+                  "right": "A government whose orders are accepted"
+                }
+              ]
+            }
           }
         },
         {
@@ -394,7 +421,34 @@
               "Parliamentary: prime minister leads, cabinet ministers are usually MPs, and a vote of no confidence can bring the government down.",
               "Monarchical systems may be absolute (the monarch rules) or constitutional (the monarch reigns but does not rule).",
               "The key exam difference is separation of powers: presidential systems separate the executive from the legislature; parliamentary systems fuse them."
-            ]
+            ],
+            "visual": {
+              "kind": "compare",
+              "caption": "Where the executive comes from decides how it can be removed.",
+              "columns": ["Presidential", "Parliamentary"],
+              "rows": [
+                {
+                  "feature": "Executive comes from",
+                  "left": "A separate election",
+                  "right": "The legislature"
+                },
+                {
+                  "feature": "Term",
+                  "left": "Fixed; hard to remove mid-term",
+                  "right": "Lasts while it holds the legislature's confidence"
+                },
+                {
+                  "feature": "Separation of powers",
+                  "left": "Executive and legislature are separate",
+                  "right": "Executive and legislature are fused"
+                },
+                {
+                  "feature": "Example",
+                  "left": "Nigeria's president and National Assembly",
+                  "right": "The UK's prime minister and Parliament"
+                }
+              ]
+            }
           }
         },
         {

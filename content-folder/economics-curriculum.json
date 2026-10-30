@@ -105,6 +105,16 @@
         {
           "type": "text",
           "content": {
+            "heading": "Scarcity, choice and opportunity cost",
+            "paragraphs": [
+              "Scarcity is the gap between unlimited wants and limited resources. It forces a choice, and every choice has an opportunity cost: the next best alternative forgone."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
             "heading": "The economic problem",
             "paragraphs": [
               "Economics begins with a mismatch: human wants are unlimited, but the resources used to satisfy them are limited. That gap is scarcity, and it forces everyone — households, firms and governments — to choose."
@@ -114,7 +124,17 @@
               "Because resources are scarce, choosing one use means giving up another.",
               "A scale of preference ranks wants in order of importance, so limited income goes to the most pressing wants first.",
               "Opportunity cost is the next best alternative forgone — not the money paid."
-            ]
+            ],
+            "visual": {
+              "kind": "flow",
+              "caption": "Scarcity forces a choice, and every choice carries an opportunity cost.",
+              "steps": [
+                { "label": "Wants exceed resources", "detail": "Unlimited wants, limited means" },
+                { "label": "Scarcity", "detail": "The gap forces a decision" },
+                { "label": "Choice", "detail": "Rank wants; pick one use" },
+                { "label": "Opportunity cost", "detail": "The next best use forgone" }
+              ]
+            }
           }
         },
         {
@@ -188,6 +208,16 @@
         {
           "type": "text",
           "content": {
+            "heading": "Demand",
+            "paragraphs": [
+              "Demand is the quantity buyers are willing and able to buy at each price. The good's own price moves quantity demanded along the curve; every other determinant shifts the whole curve."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
             "heading": "Demand and its determinants",
             "paragraphs": [
               "The law of demand says that, all else equal, quantity demanded falls as price rises. The demand curve therefore slopes downward."
@@ -197,7 +227,34 @@
               "A change in income, tastes, population, expectations or the price of a related good shifts the whole curve — a change in demand.",
               "Normal goods: demand rises with income. Inferior goods: demand falls as income rises.",
               "Types of demand: complementary (used together), competitive (substitutes), composite (one good, many uses), derived (demand for a factor from demand for its product)."
-            ]
+            ],
+            "visual": {
+              "kind": "compare",
+              "caption": "Own price moves you along the curve; every other determinant shifts it.",
+              "columns": ["Movement along the curve", "Shift of the curve"],
+              "rows": [
+                {
+                  "feature": "What changed",
+                  "left": "The good's own price",
+                  "right": "Income, tastes, population or a related price"
+                },
+                {
+                  "feature": "What happens",
+                  "left": "Quantity demanded changes",
+                  "right": "Demand changes at every price"
+                },
+                {
+                  "feature": "Example",
+                  "left": "Beans rise from N1,000 to N1,500",
+                  "right": "A pay rise raises demand for rice"
+                },
+                {
+                  "feature": "Exam wording",
+                  "left": "A fall in quantity demanded",
+                  "right": "A fall in demand"
+                }
+              ]
+            }
           }
         },
         {
