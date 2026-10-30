@@ -1202,73 +1202,165 @@
         }
       ]
     },
-    {
-      "topic": "citizenship",
+        {
       "slug": "citizenship",
       "title": "Citizenship: Acquisition, Rights and Loss",
-      "objective": "Distinguish birth, descent, registration and naturalisation, separate rights from duties, and explain how citizenship is lost.",
+      "objective": "Differentiate the routes to citizenship, separate rights from duties, state what the state owes, and explain dual citizenship, renunciation and deprivation.",
       "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "heading": "Four ways to become a citizen",
+            "heading": "Citizenship in one sentence",
             "paragraphs": [
-              "Citizenship is the legal bond between a person and a state. It carries rights, duties and protection, and it is not the same as residence.",
-              "The Nigerian Constitution recognises four routes: birth, descent, registration and naturalisation."
+              "Citizenship is the legal bond between a person and a state, and it carries rights, duties and protection that residence alone never creates."
             ],
-            "bullets": [
-              "By birth: born in Nigeria, with a parent or grandparent belonging to a community indigenous to Nigeria (before independence) or a citizen (after independence).",
-              "By descent: born outside Nigeria, where either parent is a Nigerian citizen.",
-              "By registration: for example a woman who is or has been married to a Nigerian citizen, or a person of full age who meets the constitutional residence conditions.",
-              "By naturalisation: a foreigner who satisfies the constitutional conditions and takes the oath of allegiance."
-            ]
+            "bullets": []
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Rights, duties and loss",
+            "heading": "A girl born in Lagos, a woman married in Kano",
             "paragraphs": [
-              "Citizenship is two-sided: it protects the person and it obliges the person. Exams often ask you to separate the two."
+              "A girl is born in Lagos to parents from Enugu, and a woman marries a Nigerian in Kano; both are citizens. A trader from Chad has lived in Nigeria for twenty years, yet he remains an alien, because citizenship follows law rather than length of stay.",
+              "Section 25 grants citizenship by birth: born in Nigeria before independence to a parent or grandparent from an indigenous community, or born in Nigeria after independence to a citizen parent or grandparent. The fourth route, descent, covers a person born outside Nigeria to a citizen parent.",
+              "Registration covers a woman married to a citizen; naturalisation covers an adult foreigner of good character who has lived in Nigeria for fifteen years and takes the oath of allegiance."
             ],
             "bullets": [
-              "Rights include life, fair hearing, freedom of expression, association, movement and religion.",
-              "Duties include obeying the law, paying taxes, respecting national symbols, protecting public property and defending the country when required.",
-              "A citizen by registration or naturalisation loses citizenship if he or she voluntarily acquires another country’s citizenship.",
-              "Citizens by birth do not lose Nigerian citizenship merely by taking another citizenship."
-            ]
+              "Birth: born in Nigeria to a citizen parent or grandparent.",
+              "Descent: born abroad to a citizen parent.",
+              "Registration for marriage; naturalisation after fifteen years."
+            ],
+            "takeaway": "Citizenship is acquired by law, not by residence or property.",
+            "check": {
+              "question": "A man born in Ghana to Nigerian parents has never lived in Nigeria. His status is ______.",
+              "options": [
+                "an alien until naturalised",
+                "a citizen by descent",
+                "a citizen by registration",
+                "a citizen only after fifteen years"
+              ],
+              "answer": 1,
+              "why": "A person born outside Nigeria to a citizen parent is a citizen by descent; residence is irrelevant."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The right to speak, the duty to pay",
+            "paragraphs": [
+              "A trader criticises a governor on radio, then pays his market levy. The criticism is protected by Chapter IV of the Constitution; the levy is a duty under section 24.",
+              "Chapter IV rights include life, dignity, personal liberty, fair hearing, private and family life, thought and conscience, expression, peaceful assembly, movement, property and freedom from discrimination. They bind government and can be enforced in court.",
+              "Section 24 duties are to respect the Constitution and national symbols, respect other people's rights, assist lawful agencies, pay taxes and defend Nigeria when required. The state must also protect rights and pursue welfare and security under Chapter II, though those goals are not directly enforceable."
+            ],
+            "bullets": [
+              "Rights are claims the citizen can enforce against the state.",
+              "Duties are obligations owed to the state and to other citizens.",
+              "Freedom of conscience is a right, not a civil obligation."
+            ],
+            "takeaway": "Rights protect the person; duties protect the state and other citizens.",
+            "check": {
+              "question": "Which of these is a duty of a Nigerian citizen?",
+              "options": [
+                "Freedom of conscience",
+                "Right to fair hearing",
+                "Payment of tax",
+                "Freedom of movement"
+              ],
+              "answer": 2,
+              "why": "Paying tax is a section 24 duty; conscience, fair hearing and movement are Chapter IV rights."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "A Canadian passport, a renunciation",
+            "paragraphs": [
+              "A naturalised citizen acquires Canadian citizenship and loses Nigerian citizenship; a citizen by birth who does the same keeps it. Section 28 protects dual citizenship for citizens by birth; a new nationality ends the other routes.",
+              "Renunciation is voluntary: a citizen of full age declares that he or she is giving up the status, and the President registers the declaration, though he may refuse during a war. Deprivation is imposed by the state, mainly for disloyalty, trading with the enemy, or a long prison sentence soon after naturalisation.",
+              "The state's side is protection: security at home, consular help abroad, and welfare, education and health under Chapter II. A person who loses citizenship loses its rights, though many Chapter IV rights protect everyone in Nigeria."
+            ],
+            "bullets": [
+              "Birth citizenship allows a second passport.",
+              "A new nationality ends citizenship by registration or naturalisation.",
+              "Renunciation is voluntary; deprivation is imposed for disloyalty or crime."
+            ],
+            "takeaway": "Birth citizenship survives a second passport; registration and naturalisation do not.",
+            "check": {
+              "question": "A Nigerian who became a citizen by registration takes the citizenship of another country. What happens?",
+              "options": [
+                "Citizenship continues",
+                "Citizenship is forfeited",
+                "Citizenship is suspended for five years",
+                "Only the passport is cancelled"
+              ],
+              "answer": 1,
+              "why": "Section 28: voluntarily taking a new nationality ends citizenship by registration or naturalisation, not birth."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "Both end citizenship, but renunciation is the citizen's choice and deprivation is the state's decision.",
+              "columns": [
+                "Renunciation",
+                "Deprivation"
+              ],
+              "rows": [
+                {
+                  "feature": "Who acts",
+                  "left": "The citizen, by declaration",
+                  "right": "The state, through the President"
+                },
+                {
+                  "feature": "Why",
+                  "left": "The citizen no longer wants the status",
+                  "right": "Disloyalty, enemy trade or a long prison term"
+                },
+                {
+                  "feature": "Who it affects",
+                  "left": "A citizen of full age",
+                  "right": "Mainly the registered or naturalised"
+                },
+                {
+                  "feature": "Exam test",
+                  "left": "Did the citizen choose to give it up?",
+                  "right": "Did the state withdraw it?"
+                }
+              ]
+            }
           }
         },
         {
           "type": "callout",
           "content": {
-            "title": "Exam trap",
+            "title": "Exam tip",
             "tone": "tip",
-            "body": "Residence is not citizenship. A foreigner who has lived in Nigeria for years remains an alien until registered or naturalised."
+            "body": "Property, residence and marriage do not by themselves make a citizen. Marriage opens registration; fifteen years' residence opens naturalisation; buying land opens nothing. Read the stem closely too: a civil obligation is a duty, so an option naming a right such as freedom of conscience is the exception."
           }
         },
         {
           "type": "worked_example",
           "content": {
-            "problem": "Classify each case: (a) a child born in Lagos to Nigerian parents; (b) an adult born in Chad who has lived in Kano for twelve years; (c) a Ghanaian woman married to a Nigerian citizen.",
+            "problem": "Classify each person: (a) a child born in Ibadan to parents from Ogun State; (b) a Lebanese trader born in Beirut who has lived in Kano for sixteen years and takes the oath; (c) a Nigerian-born engineer who also holds a British passport.",
             "steps": [
               {
                 "operation": "Classify the child",
-                "reason": "Birth in Nigeria to citizen parents is citizenship by birth.",
+                "reason": "Birth in Nigeria to citizen parents is citizenship by birth under section 25.",
                 "result": "(a) Citizen by birth.",
-                "predictPrompt": "Does twelve years of residence confer citizenship?"
+                "predictPrompt": "Does residence alone ever confer citizenship?"
               },
               {
-                "operation": "Classify the long-term resident",
-                "reason": "Residence alone does not create the legal bond; the person must apply and qualify.",
-                "result": "(b) Still an alien unless naturalised.",
+                "operation": "Classify the trader",
+                "reason": "Sixteen years' residence, good character and the oath meet the naturalisation conditions.",
+                "result": "(b) Citizen by naturalisation.",
                 "predictPrompt": ""
               },
               {
-                "operation": "Classify the spouse",
-                "reason": "Marriage to a citizen opens the registration route, but she must apply.",
-                "result": "(c) Eligible for citizenship by registration."
+                "operation": "Classify the engineer",
+                "reason": "A citizen by birth may hold another citizenship without losing Nigerian citizenship.",
+                "result": "(c) Still a Nigerian citizen."
               }
             ]
           }
@@ -1276,11 +1368,63 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "A Nigerian woman by birth becomes a Canadian citizen. Does she lose Nigerian citizenship? Explain the rule, and contrast her with a naturalised citizen in the same position.",
+            "question": "A Nigerian citizen by birth takes a British passport. A naturalised Nigerian does the same. Explain what happens to each, and name one duty each still owes while a citizen.",
             "hints": [
-              "The rule on acquiring another citizenship applies to registration and naturalisation, not birth.",
-              "A citizen by birth keeps Nigerian citizenship; a naturalised citizen who takes another citizenship loses it.",
-              "A strong answer cites the constitutional distinction rather than treating all citizens alike."
+              "Section 28 permits dual citizenship for citizens by birth.",
+              "Registration and naturalisation end when another citizenship is voluntarily acquired.",
+              "Duties continue while citizenship lasts: obey the law, pay tax, respect national symbols, defend the country."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: The sections that decide citizenship",
+            "paragraphs": [
+              "Chapter III of the 1999 Constitution is short but precise. Section 25 defines citizenship by birth; section 26 provides registration, chiefly for a woman married to a citizen and for a person of full age born outside Nigeria any of whose grandparents is a citizen; section 27 sets naturalisation. Sections 28 to 30 deal with dual citizenship, renunciation and deprivation.",
+              "Naturalisation is not a formality. The applicant must be of full age and capacity, of good character, intend to be domiciled in Nigeria, be acceptable to the local community, be capable of contributing to national development, take the oath and show fifteen years' continuous residence or fifteen years in the aggregate over the preceding twenty. The President grants the certificate.",
+              "The rules are not gender-neutral. A foreign woman married to a Nigerian may register, while a foreign husband must naturalise, and the 1999 text makes no provision for foundlings or adopted children to acquire citizenship. Statelessness monitors have criticised both gaps.",
+              "Renunciation is the citizen's own act under section 29: an adult declares the intention, and the President registers it, though registration may be refused during a war or where it is contrary to public policy.",
+              "Section 28 withdraws citizenship from a registered or naturalised citizen who acquires or keeps a nationality of which he is not a citizen by birth, and section 30 allows deprivation for disloyalty, trading with the enemy, or a prison sentence of three years or more within seven years of naturalisation. A citizen by birth keeps Nigerian citizenship after taking a second passport."
+            ],
+            "bullets": [
+              "Sections 25 to 27 create the routes; 28 to 30 regulate dual status, renunciation and deprivation.",
+              "Naturalisation needs fifteen years' residence, good character, the oath and a contribution to development.",
+              "Foreign wives register; foreign husbands naturalise, an asymmetry critics want removed."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Dual citizenship and public office",
+            "paragraphs": [
+              "Dual citizenship is lawful in Nigeria, but not for everyone on the same terms. A citizen by birth may hold another nationality and travel on either passport; a citizen by registration or naturalisation cannot, because voluntary acquisition of another nationality ends the Nigerian status.",
+              "Public office sharpens the question. The President and state governors must be citizens by birth under sections 131 and 177, so a naturalised citizen cannot contest those offices even after decades of service. For other offices the Constitution requires citizenship, and election petitions have turned on whether a candidate lost it.",
+              "The practical trap is documentary. A candidate who naturalised abroad, or who renounced Nigerian citizenship and later reacquired it by registration, may satisfy the age and party tests yet fail the citizenship test. Read the constitutional text, not the passport in hand.",
+              "Dual citizenship also affects duties. A citizen abroad still owes allegiance, may be called to defend Nigeria, and remains liable to tax on Nigerian-source income. A second passport does not switch off section 24."
+            ],
+            "bullets": [
+              "Birth citizens may hold a second passport; registered and naturalised citizens may not.",
+              "The President and governors must be citizens by birth.",
+              "A second passport does not cancel the duties of citizenship."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: What the state owes the citizen",
+            "paragraphs": [
+              "The syllabus asks you to assess the obligations of the state, and the Constitution splits them in two. Chapter IV rights, from life and fair hearing to expression, movement and property, are enforceable: a citizen can sue a public officer who violates them. Chapter II duties, covering security, welfare, education and health, are directive principles that guide government but are not directly enforceable.",
+              "That distinction explains why an underfunded school rarely produces a successful lawsuit, while a detention without trial can be challenged at once. Section 14(2) still declares that the security and welfare of the people shall be the primary purpose of government, but section 6(6)(c) keeps Chapter II out of the courts.",
+              "Abroad, the state owes diplomatic and consular protection. A Nigerian arrested in another country can ask the embassy for help, though the embassy cannot override that country's courts. At home, the police and armed forces carry the duty to protect life and property, and their failure can ground a claim in damages.",
+              "The bargain is unequal but real: the citizen pays tax, obeys the law and may be conscripted; the state protects rights, provides security and pursues welfare. Exams reward the student who can say which side is enforceable."
+            ],
+            "bullets": [
+              "Chapter IV rights are enforceable; Chapter II goals are not directly justiciable.",
+              "Section 14(2) makes security and welfare the primary purpose of government.",
+              "Consular protection abroad is part of the state's duty, but it cannot overturn foreign courts."
             ]
           }
         }
