@@ -16,6 +16,35 @@ lesson because power, authority and legitimacy are taught as one contrast;
 The test is simple: if a lesson needs the word "also" to connect two sections
 that could each carry their own exam question, it is two lessons.
 
+## Nigerian curriculum verification
+
+The authoring standard controls shape; the Nigerian curriculum controls content.
+Every lesson is checked against the official JAMB/IBASS topic before it is seeded:
+
+- **Cover every objective and item on the linked topic.** The structured syllabus
+  (`content-folder/jamb-syllabus/structured/<subject>.json`) is the checklist. A
+  topic with empty `items` still has `objectives`, and those must be taught in
+  the core. *Definition and Scope of Government*, for example, requires the
+  definition, the characteristics and the functions of government, not the
+  definition and functions alone.
+- **Use Nigerian law and institutions as the authority.** For Government, cite
+  the 1999 Constitution (as amended), the Federal Republic of Nigeria, the
+  federal, state and local tiers, and the named institutions. Never describe a
+  foreign system as if it were Nigerian.
+- **Use Nigerian examples where the syllabus is Nigerian**, and say when an
+  example is foreign. Generic situations are acceptable when they are plausible
+  in Nigeria; dates, constitutions and institutions must be Nigerian and
+  checkable.
+- **Keep Nigerian and British spelling and terminology**: government,
+  recognise, organisation, programme, Naira, Federal Government, National
+  Assembly, State House of Assembly, local government council.
+- **Match JAMB question style**: four options, one defensible key, plausible
+  distractors from the same concept, and no "all of the above" unless the
+  syllabus item requires it.
+- **Check the exam discrimination.** If two concepts are commonly confused —
+  state vs government, power vs authority, characteristics vs functions — the
+  core must name the pair and give the rule.
+
 ## Reading flow
 
 A lesson is read as section cards, not as a wall of text. The player shows one
@@ -277,7 +306,8 @@ command.
 
 Before a lesson is seeded:
 
-- [ ] Every `syllabus_items` entry on the linked topic is taught by the core.
+- [ ] Every `syllabus_items` entry **and every syllabus objective** on the linked
+      topic is taught by the core.
 - [ ] The lesson teaches one concept; a second testable idea has its own lesson.
 - [ ] No more than three sections, each 120–180 words.
 - [ ] Each section opens with a situation, ends with a one-line takeaway, and
