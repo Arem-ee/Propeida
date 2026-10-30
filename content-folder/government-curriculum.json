@@ -93,6 +93,14 @@
       "section": "Nigerian Government",
       "order": 13,
       "description": "Nigeria's foreign policy and the UN, AU/OAU and ECOWAS."
+    },
+    {
+      "slug": "the-civil-service-public-service",
+      "name": "The Civil Service and Public Service",
+      "syllabus_ref": "A.16",
+      "section": "Principles of Government",
+      "order": 16,
+      "description": "The civil service and public service: features, control, problems and the difference between them."
     }
   ],
   "lessons": [
@@ -1700,75 +1708,166 @@
         }
       ]
     },
-    {
-      "topic": "structures-of-governance",
+            {
       "slug": "structures-of-governance",
-      "title": "The Civil Service, Public Corporations and Local Government",
-      "objective": "Explain the civil service, public corporations and local government, and distinguish political from administrative leadership.",
+      "title": "Structures of Governance: Unitary, Federal and Confederal",
+      "objective": "Compare unitary, federal and confederal structures, explain why each is adopted, and give its merits and demerits.",
       "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "heading": "The civil service",
+            "heading": "Structure in one sentence",
             "paragraphs": [
-              "The civil service is the permanent administrative arm of government. It turns policy into action and advises ministers."
+              "A structure of government describes how power is shared between the centre and the regions, not who holds the top office."
             ],
-            "bullets": [
-              "Permanence: officials stay in post when governments change.",
-              "Neutrality: they serve whichever party is in power, without favour.",
-              "Anonymity: ministers take public credit and blame for policy.",
-              "Merit: recruitment and promotion are based on qualification, not party loyalty.",
-              "The minister is the political head of a ministry; the permanent secretary is its administrative head.",
-              "The Civil Service Commission handles appointment, promotion and discipline."
-            ]
+            "bullets": []
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Public corporations and local government",
+            "heading": "One parliament, one police force",
             "paragraphs": [
-              "Not all public business is done through ministries. Corporations and councils have their own legal standing and functions."
+              "A teacher in Sokoto and a teacher in Port Harcourt are paid from the same national payroll under the same curriculum, because one parliament and one ministry set the rule for the whole country. That is a unitary structure.",
+              "In a unitary state the central government holds all legal power. It may create local councils and give them duties, but it can also abolish them, because their powers come from an ordinary law and not from the constitution. There is one constitution, one citizenship and usually one police force.",
+              "Its merits are uniform standards, cheaper administration and quick decisions. Its demerits are an overloaded centre, neglect of local needs, and the risk that a single national government becomes remote or tyrannical. Britain, France, Ghana and Japan are unitary; Nigeria was unitary before the 1946 Richards Constitution."
             ],
             "bullets": [
-              "A public corporation is created by statute as a separate legal person with its own board, accounts and powers.",
-              "It delivers services such as water, power or transport where a ministry would be too rigid.",
-              "Local government is the third tier, with elected councils and functions such as markets, local roads and sanitation.",
-              "Its largest revenue source since the 1976 reforms is statutory allocation from the Federation Account.",
-              "Traditional rulers exercise an advisory role in the modern system; they do not hold executive power."
-            ]
+              "One constitution, one citizenship, one centre.",
+              "Local councils exist at the centre's pleasure.",
+              "Examples: Britain, France, Ghana."
+            ],
+            "takeaway": "In a unitary state the centre can reorganise the local tier at will.",
+            "check": {
+              "question": "Which feature marks a unitary state?",
+              "options": [
+                "Local councils have constitutionally protected powers",
+                "The centre may abolish local councils by ordinary law",
+                "Two levels of government are coordinate",
+                "The units hold residual powers"
+              ],
+              "answer": 1,
+              "why": "In a unitary state local councils are created by statute, so the centre can also abolish them; protected units are the federal marker."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Two governments, each with its own sphere",
+            "paragraphs": [
+              "A state government builds a feeder road while the federal government builds the expressway, each from its own budget and its own legal power. Neither can abolish the other, because the constitution divides power between them. That is a federation.",
+              "A federal state has two levels of government, each coordinate and independent within its sphere. A written constitution lists what each may do, a supreme court settles disputes, and the units have their own legislatures. Nigeria divides power into exclusive, concurrent and residual lists, and federal law prevails where the two conflict on concurrent matters.",
+              "Federalism is adopted in large or diverse countries to hold different peoples together without smothering them. Its merits are local autonomy and a check on central power; its demerits are costly duplication, revenue and boundary disputes, and slow decisions.",
+              "Nigeria, the United States, India and Canada are federal."
+            ],
+            "bullets": [
+              "Power divided by a written constitution.",
+              "Neither level can abolish the other.",
+              "Examples: Nigeria, the United States, India."
+            ],
+            "takeaway": "A federation is a bargain the centre cannot cancel on its own.",
+            "check": {
+              "question": "What makes a division of power federal rather than merely decentralised?",
+              "options": [
+                "Local councils are created by statute",
+                "The constitution protects the lower tier's powers",
+                "The centre appoints state governors",
+                "The centre may dissolve state assemblies"
+              ],
+              "answer": 1,
+              "why": "Constitutional protection is the federal test; a centre that can abolish or appoint the units is still unitary."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "The test is not how many tiers exist but whether the constitution protects the lower tier's power.",
+              "columns": [
+                "Unitary",
+                "Federal"
+              ],
+              "rows": [
+                {
+                  "feature": "Constitution",
+                  "left": "One constitution for all",
+                  "right": "One that divides power"
+                },
+                {
+                  "feature": "Sub-units",
+                  "left": "Created by the centre",
+                  "right": "Protected by the constitution"
+                },
+                {
+                  "feature": "Law and order",
+                  "left": "One police and court system",
+                  "right": "State courts and police"
+                },
+                {
+                  "feature": "Examples",
+                  "left": "Britain, France, Ghana",
+                  "right": "Nigeria, United States, India"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "A centre that cannot command",
+            "paragraphs": [
+              "A league of states opens a joint secretariat for defence and trade, but each member keeps its own army, currency and veto, and may leave at will. The secretariat can propose, not command. That is a confederation.",
+              "A confederation is a union of sovereign states that delegate a few powers to a weak central body. Decisions need unanimity, citizens owe their main allegiance to their own state, and the right of withdrawal is real. It is adopted to secure common defence or trade without surrendering independence.",
+              "Its merit is that it protects each state's independence and makes cooperation voluntary. Its demerits are weakness in war and economic policy, slow decisions and easy collapse. The Articles of Confederation and the Swiss union before 1848 are the standard examples.",
+              "A confederation is a structure, not a system: it says how centre and units share power, not how the executive meets the legislature."
+            ],
+            "bullets": [
+              "Sovereign units, weak centre, right of withdrawal.",
+              "Decisions need agreement, not command."
+            ],
+            "takeaway": "A confederation is a treaty among states, not a government over them.",
+            "check": {
+              "question": "Which statement describes a confederation?",
+              "options": [
+                "The units keep sovereign powers and may withdraw",
+                "The centre may abolish the units",
+                "One parliament legislates for all the units",
+                "The centre appoints the unit governors"
+              ],
+              "answer": 0,
+              "why": "Sovereign units with a right of withdrawal are the confederal marker; the other options describe a unitary or federal centre."
+            }
           }
         },
         {
           "type": "callout",
           "content": {
-            "title": "Exam trap",
+            "title": "Exam tip",
             "tone": "tip",
-            "body": "The minister is the political head; the permanent secretary is the administrative head. A question that says “administrative head” wants the permanent secretary."
+            "body": "Form asks who rules; system asks how the executive and legislature relate; structure asks how the centre and the units share power. Nigeria is a federal republic with a presidential system."
           }
         },
         {
           "type": "worked_example",
           "content": {
-            "problem": "A state water board needs to sign a contract, and the ministry of water resources must brief the governor. Who has legal capacity to sign for the board, and who advises the governor?",
+            "problem": "Classify each case: (a) Britain, where Parliament at Westminster can abolish any local council; (b) Nigeria, where the constitution lists federal and state powers; (c) the American league of 1781, where each state kept its sovereignty.",
             "steps": [
               {
-                "operation": "Identify the board’s status",
-                "reason": "A public corporation is a separate legal person, so it contracts in its own name.",
-                "result": "The board signs through its management, not the ministry.",
-                "predictPrompt": "Who gives the governor administrative advice?"
+                "operation": "Classify Britain",
+                "reason": "A centre that can abolish local councils by ordinary law holds all legal power.",
+                "result": "(a) Unitary.",
+                "predictPrompt": "Which case has a constitutionally protected lower tier?"
               },
               {
-                "operation": "Identify the adviser",
-                "reason": "The permanent secretary heads the ministry’s administration and advises on policy.",
-                "result": "The permanent secretary briefs the governor through the commissioner or minister.",
+                "operation": "Classify Nigeria",
+                "reason": "Two levels are coordinate and the constitution divides power between them.",
+                "result": "(b) Federal.",
                 "predictPrompt": ""
               },
               {
-                "operation": "Separate the roles",
-                "reason": "Political direction and administrative execution are different functions.",
-                "result": "The board executes; the ministry advises and supervises."
+                "operation": "Classify the American league",
+                "reason": "Sovereign states delegating a few powers to a weak centre form a confederation.",
+                "result": "(c) Confederal."
               }
             ]
           }
@@ -1776,11 +1875,11 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "Why does democracy need a politically neutral civil service, and what happens when it is not neutral?",
+            "question": "Nigeria has 36 states and 774 local government areas, yet it is called a federation with a strong centre. Explain two features that make it federal and one that pulls power to the centre.",
             "hints": [
-              "Governments change, but administration must continue without disruption.",
-              "A partisan service rewards loyalty over competence and politicises advice.",
-              "A strong answer links neutrality to continuity, impartial advice and public trust."
+              "Federal features: a written constitution, coordinate levels, a supreme court, state legislatures.",
+              "Centralising features: oil revenue and the Federation Account, federal roads and police, military-era decrees.",
+              "A strong answer pairs each feature with the effect it has on state autonomy."
             ]
           }
         }
@@ -1824,7 +1923,8 @@
               "1960 independence, 1963 republic; 1967 twelve states, 1976 nineteen, 1987 twenty-one, 1991 thirty, 1996 thirty-six.",
               "Military rule ran from 1966 to 1979 and from 1983 to 1999.",
               "Military governments ruled by decree, suspended the constitution, ousted court jurisdiction and centralised power, which is why Nigeria is often called a federation with strong centralising tendencies.",
-              "The 1976 local government reforms gave councils a guaranteed share of the Federation Account."
+              "The 1976 local government reforms gave councils a guaranteed share of the Federation Account.",
+          "Local government is the third tier, created to bring administration closer to the people."
             ]
           }
         },
@@ -2015,6 +2115,175 @@
               "Separate election of the executive and legislature is the presidential marker.",
               "The Senate confirms ministers, and the National Assembly can override a veto.",
               "A strong answer names the system and a specific check, not just 'checks and balances'."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "the-civil-service-public-service",
+      "title": "The Civil Service and Public Service",
+      "objective": "Explain the civil service, its control and problems, and distinguish it from the wider public service.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Civil service in one sentence",
+            "paragraphs": [
+              "The civil service is the permanent staff of ministries; the public service is wider and includes corporations and councils."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The ministry that outlasts the minister",
+            "paragraphs": [
+              "A new minister arrives with a reform plan and finds the same files, the same procedures and the same officials who served the last government. That continuity is the civil service.",
+              "The civil service is the permanent administrative arm of government, organised into ministries and departments and headed by a permanent secretary. Its defining features are permanence (officials stay when governments change), political neutrality (they serve whichever party wins), anonymity (ministers take public credit and blame), merit (recruitment by qualification) and hierarchy (orders pass down a chain).",
+              "Its functions are to advise ministers on policy, implement decisions, keep records, prepare budgets and estimates, and provide continuity between governments. It also supplies the information on which parliament and the public judge policy."
+            ],
+            "bullets": [
+              "Permanence: officials stay when governments change.",
+              "Neutrality: they serve whichever party is in power.",
+              "Anonymity and merit: ministers answer publicly; recruitment is by qualification."
+            ],
+            "takeaway": "The civil service is the part of government that does not change at an election.",
+            "check": {
+              "question": "The civil service is described as permanent because ______.",
+              "options": [
+                "its officials keep their posts when governments change",
+                "its officials can never be dismissed",
+                "it is established directly by the constitution",
+                "it is funded from the Consolidated Revenue Fund"
+              ],
+              "answer": 0,
+              "why": "Permanence means continuity across governments, not life tenure: officials can still be dismissed for misconduct."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Two heads at the top of a ministry",
+            "paragraphs": [
+              "A minister announces a new policy; the permanent secretary turns it into instructions, staffing and a budget. One is the political head, the other the administrative head, and a question that asks for the administrative head wants the permanent secretary.",
+              "Control over the service is layered. Internally, hierarchy and written rules check each officer. Externally, the minister and cabinet direct policy, the legislature votes funds and questions spending, the courts review illegal acts, and the Auditor-General audits accounts.",
+              "The Civil Service Commission handles appointment, promotion and discipline, while the Public Complaints Commission investigates maladministration.",
+              "The service is also expected to be impartial: it may explain the costs of a party's promise, but it may not campaign for that party. When it is politicised, appointments reward loyalty, advice is shaped to please the minister, and the service loses public trust."
+            ],
+            "bullets": [
+              "Minister: political head. Permanent secretary: administrative head.",
+              "Civil Service Commission: appointment, promotion and discipline.",
+              "Auditor-General: accounts. Public Complaints Commission: maladministration."
+            ],
+            "takeaway": "Political direction stops where administration begins.",
+            "check": {
+              "question": "The administrative head of a ministry is the ______.",
+              "options": [
+                "minister",
+                "accountant-general",
+                "permanent secretary",
+                "auditor-general"
+              ],
+              "answer": 2,
+              "why": "The minister is the political head; the permanent secretary runs the ministry's administration and advises on policy."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The civil service is not the whole public service",
+            "paragraphs": [
+              "A ministry, a state water corporation and a local council all pay staff from public funds, but only the ministry's staff are civil servants. The public service is the wider category.",
+              "The public service includes the civil service, employees of public corporations and parastatals, local government staff and other public bodies. A public corporation is created by statute as a separate legal person with its own board, accounts and powers, which lets it deliver water, power or transport more flexibly. Its staff are public servants but not civil servants.",
+              "The service's problems are red tape, corruption, poor pay, overstaffing, weak record-keeping and political interference. Reform usually targets pay, training, digital records and audit rather than abolition, because a modern state cannot run without a career administration."
+            ],
+            "bullets": [
+              "Public service = civil service + corporations + councils.",
+              "Public corporation: separate legal person with its own board and accounts.",
+              "Problems: red tape, corruption, poor pay, political interference."
+            ],
+            "takeaway": "Every civil servant is a public servant, but not every public servant is a civil servant.",
+            "check": {
+              "question": "A public corporation differs from a government ministry because it ______.",
+              "options": [
+                "is funded only by taxes",
+                "is a separate legal person with its own board and accounts",
+                "is staffed entirely by politicians",
+                "cannot make a surplus"
+              ],
+              "answer": 1,
+              "why": "A corporation is created by statute with its own legal personality, board and accounts; a ministry is a department of the government itself."
+            },
+            "visual": {
+              "kind": "flow",
+              "caption": "Political direction travels down the administrative line, and reports travel back up.",
+              "steps": [
+                {
+                  "label": "Minister sets policy",
+                  "detail": "Political decision"
+                },
+                {
+                  "label": "Permanent secretary directs",
+                  "detail": "Turns policy into instructions"
+                },
+                {
+                  "label": "Directors allocate work",
+                  "detail": "Departments and units"
+                },
+                {
+                  "label": "Officers implement",
+                  "detail": "And report results upward"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam trap",
+            "tone": "tip",
+            "body": "A public corporation is not a ministry, and its staff are not civil servants. The Civil Service Commission appoints, promotes and disciplines civil servants; it does not appoint a corporation's board."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Classify each worker: (a) an administrative officer in a federal ministry; (b) an accountant in a state water corporation; (c) a revenue officer employed by a local government council.",
+            "steps": [
+              {
+                "operation": "Classify the ministry officer",
+                "reason": "Staff of a ministry are the core civil service.",
+                "result": "(a) Civil servant and public servant.",
+                "predictPrompt": "Is the corporation's accountant a civil servant?"
+              },
+              {
+                "operation": "Classify the corporation accountant",
+                "reason": "A public corporation is a separate legal person, so its staff are public servants but not civil servants.",
+                "result": "(b) Public servant, not a civil servant.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Classify the council officer",
+                "reason": "Local government staff belong to the public service, not the civil service.",
+                "result": "(c) Public servant, not a civil servant."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why does democracy need a politically neutral civil service, and what happens when it is not neutral?",
+            "hints": [
+              "Governments change, but administration must continue without disruption.",
+              "A partisan service rewards loyalty over competence and politicises advice.",
+              "A strong answer links neutrality to continuity, impartial advice and public trust."
             ]
           }
         }
