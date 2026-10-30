@@ -269,6 +269,33 @@
               ],
               "answer": 1,
               "why": "Electronic processes are e-business; an online sale is needed for e-commerce."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "E-commerce is the online sale; e-business is every process behind and around it.",
+              "columns": ["E-commerce", "E-business"],
+              "rows": [
+                {
+                  "feature": "What it covers",
+                  "left": "The buying and selling",
+                  "right": "Every business process, online"
+                },
+                {
+                  "feature": "Example",
+                  "left": "Paying for cloth on WhatsApp",
+                  "right": "Cloud payroll and stock records"
+                },
+                {
+                  "feature": "Test",
+                  "left": "Did a sale happen online?",
+                  "right": "Was a business process done electronically?"
+                },
+                {
+                  "feature": "Relationship",
+                  "left": "A subset of e-business",
+                  "right": "The wider category"
+                }
+              ]
             }
           }
         },
@@ -454,6 +481,33 @@
               ],
               "answer": 1,
               "why": "The work type remains; only the contract has ended."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "A change of employer changes the employment, not the occupation.",
+              "columns": ["Occupation", "Employment"],
+              "rows": [
+                {
+                  "feature": "What it names",
+                  "left": "The kind of work",
+                  "right": "The paid contract to do it"
+                },
+                {
+                  "feature": "Changes when",
+                  "left": "The worker changes trade",
+                  "right": "The employer or contract changes"
+                },
+                {
+                  "feature": "Example",
+                  "left": "Teaching, in any school",
+                  "right": "Her post at one private school"
+                },
+                {
+                  "feature": "Exam test",
+                  "left": "Would it survive a change of employer?",
+                  "right": "Does it end with the contract?"
+                }
+              ]
             }
           }
         },
@@ -638,6 +692,15 @@
               "options": ["A flour mill", "A quarry", "A road builder", "A furniture shop"],
               "answer": 1,
               "why": "A quarry takes stone from the ground; the mill and builder process or use it."
+            },
+            "visual": {
+              "kind": "flow",
+              "caption": "Each industrial stage hands its output to the next, from nature to a fixed asset.",
+              "steps": [
+                { "label": "Extractive", "detail": "Quarry takes limestone" },
+                { "label": "Manufacturing", "detail": "Cement plant grinds it" },
+                { "label": "Construction", "detail": "Firm pours the road" }
+              ]
             }
           }
         },
