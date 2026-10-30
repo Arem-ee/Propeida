@@ -91,38 +91,131 @@
     {
       "slug": "definition-scope-government",
       "title": "Definition and Scope of Government",
-      "objective": "Define government, distinguish it from the state, and name its core functions.",
+      "objective": "Define government, distinguish it from the state, and explain why its scope covers the functions only public authority can perform.",
       "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "heading": "What government is",
+            "heading": "Government in one sentence",
             "paragraphs": [
-              "Government is the institution that makes, enforces and interprets the rules of a society. It is the machinery through which a state is governed.",
-              "The word also names the process of governing and the academic subject that studies it. In exams, the institution meaning is the one being tested."
+              "Government is the set of institutions that make, enforce and interpret binding rules for a society. Its scope is the work that needs public authority: keeping order, providing public goods and acting for the state."
             ],
-            "bullets": [
-              "Government is an institution with the authority to make and enforce laws.",
-              "It is not the same as the state: the state is the permanent political community, while government is its temporary machinery.",
-              "A government can change without the state changing — a coup replaces the government, not Nigeria."
-            ]
+            "bullets": []
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Functions of government",
+            "heading": "A bridge no business will rebuild",
             "paragraphs": [
-              "Government exists to do for the community what individuals cannot do safely or fairly for themselves. The syllabus expects you to name these functions quickly."
+              "A bridge on a rural road collapses after heavy rain. Drivers cannot cross, farmers cannot move produce, and no private firm will rebuild it because it cannot charge every user. The responsibility passes to government: the council, state or federal agency with the road in its budget.",
+              "Government is the institution that makes, enforces and interprets the rules of a society. It acts through three arms: the legislature makes law, the executive carries it out, and the judiciary settles disputes and interprets the law.",
+              "Government is not the state. The state is the permanent political community of territory, population, government and sovereignty, while government is the replaceable machinery that rules it."
             ],
             "bullets": [
-              "Maintain law and order and protect life and property.",
-              "Defend the territory and conduct foreign relations.",
-              "Provide public goods such as roads, schools, health care and security.",
-              "Protect rights, manage the economy and settle disputes.",
-              "Raise revenue through taxes to pay for these functions."
-            ]
+              "Government makes, enforces and interprets binding rules.",
+              "Its three arms are the legislature, executive and judiciary.",
+              "The state is permanent; a government can be replaced."
+            ],
+            "takeaway": "Government is the ruling machinery of a permanent state.",
+            "check": {
+              "question": "Which statement best defines government?",
+              "options": [
+                "The permanent political community of a country",
+                "The institution that makes and enforces rules for a society",
+                "The territory and population of a state",
+                "The organised economy of a country"
+              ],
+              "answer": 1,
+              "why": "Government is the rule-making and rule-enforcing machinery, not the permanent community it serves."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Why the bridge is not a business",
+            "paragraphs": [
+              "Markets supply most of what people want: traders sell food, builders put up houses and banks lend money. Some goods are different. A defence force, a street light or a drainage system cannot easily be sold to one buyer, and everyone benefits whether they pay or not.",
+              "Government keeps law and order and protects life and property. It defends the territory, conducts relations with other states and provides public goods such as roads, schools, health care, water and security.",
+              "It also protects rights, regulates the economy and settles disputes. Taxes pay for these functions, which is why government must raise revenue."
+            ],
+            "bullets": [
+              "Public goods are shared and hard to charge for, so markets under-supply them.",
+              "Government also protects rights and limits harm that markets ignore.",
+              "Taxes turn private income into shared public functions."
+            ],
+            "takeaway": "Government does what markets cannot do fairly or profitably.",
+            "check": {
+              "question": "A private firm will not build a rural bridge because it cannot charge every user. Which function does this illustrate?",
+              "options": [
+                "Protecting private property",
+                "Providing public goods",
+                "Conducting foreign relations",
+                "Settling commercial disputes"
+              ],
+              "answer": 1,
+              "why": "The bridge is shared and hard to charge for, so government supplies it as a public good."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The coup that changed the government",
+            "paragraphs": [
+              "In January 1966, soldiers took over Nigeria's government. The flag, territory, population and international borders stayed; the rulers changed. A coup replaces a government, not the state.",
+              "The state is the permanent political community: territory, population, government and sovereignty. Government is the temporary set of institutions that exercises the state's authority, which is why one state can have many governments.",
+              "The distinction also fixes the scope. Government acts for the state but does not own it, and its powers are limited by the constitution. A president who treats public money as private has confused the office with the person."
+            ],
+            "bullets": [
+              "The state is permanent; a government is replaceable.",
+              "Government exercises the state's authority within constitutional limits.",
+              "Public office is not private ownership."
+            ],
+            "takeaway": "The state outlives the government that acts for it.",
+            "check": {
+              "question": "A coup removes a president and his ministers. What has changed?",
+              "options": [
+                "The state and its sovereignty",
+                "The government, not the state",
+                "The territory and population",
+                "The state's international borders"
+              ],
+              "answer": 1,
+              "why": "A coup replaces rulers; the state's territory, population and sovereignty remain."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "The state is the permanent community; the government is the machinery that rules it.",
+              "columns": [
+                "State",
+                "Government"
+              ],
+              "rows": [
+                {
+                  "feature": "What it is",
+                  "left": "The permanent political community",
+                  "right": "The machinery that rules it"
+                },
+                {
+                  "feature": "What it contains",
+                  "left": "Territory, population, sovereignty",
+                  "right": "Legislature, executive, judiciary"
+                },
+                {
+                  "feature": "Lifespan",
+                  "left": "Continuous; survives coups",
+                  "right": "Replaced by election or coup"
+                },
+                {
+                  "feature": "Exam test",
+                  "left": "Does it survive a change of rulers?",
+                  "right": "Does it make and enforce rules?"
+                }
+              ]
+            }
           }
         },
         {
@@ -130,30 +223,30 @@
           "content": {
             "title": "Exam tip",
             "tone": "tip",
-            "body": "Separate the state from government first. Many wrong options describe the state (permanent, sovereign) when the question asks about government (the ruling machinery)."
+            "body": "When a question asks about government, reject options that describe the state: permanent, sovereign, or defined by territory and population. Government is the replaceable machinery that makes and enforces rules for a society."
           }
         },
         {
           "type": "worked_example",
           "content": {
-            "problem": "Which statement best describes government?",
+            "problem": "Which statement best distinguishes government from the state? A. Government is permanent while the state changes B. The state is the ruling machinery while government is the community C. Government is the machinery that rules the state, which is permanent D. Government and the state are the same thing",
             "steps": [
               {
-                "operation": "Locate the subject",
-                "reason": "The question asks about government, not the state or the economy.",
-                "result": "Look for an option about the institution that makes and enforces rules.",
-                "predictPrompt": "Which three arms make up that institution?"
+                "operation": "Define both terms",
+                "reason": "The state is the permanent political community; government is the machinery that rules it.",
+                "result": "Look for an option that keeps that direction.",
+                "predictPrompt": "Which term survives a change of rulers?"
               },
               {
-                "operation": "Use the definition",
-                "reason": "Government is the machinery through which a state is ruled.",
-                "result": "It includes the legislature, executive and judiciary plus their agencies.",
+                "operation": "Test permanence",
+                "reason": "The state survives changes of rulers, so any option calling government permanent is wrong.",
+                "result": "Options A and D fail.",
                 "predictPrompt": ""
               },
               {
-                "operation": "Reject the state option",
-                "reason": "The state is permanent; government is replaceable.",
-                "result": "Any option saying government is the permanent political community is wrong."
+                "operation": "Test the direction",
+                "reason": "Government acts for the state; the state is not the machinery of government.",
+                "result": "Option C is correct."
               }
             ]
           }
@@ -161,11 +254,62 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "In one sentence, explain the difference between the state and government. Then name two functions that only government can perform.",
+            "question": "A newly elected government promises to build roads, fund schools and defend the border. Explain why these are government functions rather than ordinary business activities. Then state one function that a private firm could perform.",
             "hints": [
-              "The state has territory, population, government and sovereignty. Government is the ruling machinery inside it.",
-              "Think of functions that need legal authority: making laws, defending the territory, collecting taxes.",
-              "A strong answer names the state's permanence and the government's role in making and enforcing rules."
+              "Ask whether the service can be sold to one buyer and withheld from others.",
+              "Defence and roads benefit people who do not pay, so markets under-supply them.",
+              "A private firm can build houses, sell food or run a bus service, but it needs the legal order that government maintains."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why the state outlives its government",
+            "paragraphs": [
+              "Permanence is a legal idea, not a physical one. A state continues when its government falls because its territory, population, constitution and international obligations continue. Other states recognise the state, not the regime.",
+              "This continuity matters in practice. Treaties signed by one government bind its successors, public debt survives a change of government, and civil servants, courts and police remain when ministers leave. A new government inherits both assets and obligations.",
+              "Sovereignty belongs to the state, not to the officeholder. The government exercises it for the time being: it makes treaties, declares war and passes laws, but it does not own the state's territory or people. That is why a coup can be illegal and still leave the state intact.",
+              "Exam questions often test this by asking what changes after a coup. The rulers change; the state's territory, population and sovereignty do not. The same logic explains why a country can lose its government without losing its statehood."
+            ],
+            "bullets": [
+              "Treaties, debts and borders survive a change of government.",
+              "Sovereignty belongs to the state; the government exercises it temporarily.",
+              "A coup changes rulers, not statehood."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Public goods and the limits of markets",
+            "paragraphs": [
+              "A public good has two features: one person's use does not reduce another's, and non-payers cannot easily be excluded. Defence, street lighting and flood control are close examples. Because a firm cannot charge every beneficiary, it cannot recover the cost, so the good is under-supplied without public funding.",
+              "Some goods are not pure public goods but create externalities. A factory that pollutes imposes a cost on neighbours who did not agree to it. Government can tax the pollution, regulate the factory or require compensation, so that the private decision faces its social cost.",
+              "Other functions rest on coordination and trust. Courts settle disputes because private enforcement invites revenge, and standards for weights, measures and money reduce the cost of every transaction. Regulation of banks protects depositors who cannot inspect a balance sheet.",
+              "The scope is not unlimited. Government may fail too: monopolies can be inefficient, officials can be corrupt, and subsidies can outlive their purpose. The exam point is not that government should do everything, but that some functions cannot be left to a market alone."
+            ],
+            "bullets": [
+              "Public goods are non-rival and non-excludable, so markets under-supply them.",
+              "Externalities and information gaps justify regulation.",
+              "Government failure limits what the state should attempt."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Who does what in a federation",
+            "paragraphs": [
+              "Nigeria divides government functions between federal, state and local tiers. The constitution lists exclusive functions for the federal government, such as defence, currency and foreign affairs. It lists concurrent functions for federal and state governments, such as education and health.",
+              "Residual functions go to the states, and local governments handle local services such as markets and refuse. The division is a scope rule. When a road is federal, a state government that rebuilds it may be acting outside its lane; when a market is local, the federal government should not run it directly.",
+              "In practice the tiers share costs and responsibilities, which blurs the line. States with more people and land may need more roads, while states with more taxable activity can raise more revenue. Federal transfers try to close the gap, but they also create dependence.",
+              "For exams, separate the two questions. First ask what the function is; then ask which tier has the power to perform it. A question about local government is usually testing the second."
+            ],
+            "bullets": [
+              "Exclusive, concurrent and residual functions divide the tiers' scope.",
+              "The tier with the power may still share the cost.",
+              "Ask what the function is before asking who performs it."
             ]
           }
         }
