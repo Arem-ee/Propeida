@@ -17,6 +17,7 @@ import type { LessonEnhancement } from '@/lib/lessons'
 import type { LessonEnglish } from '@/lib/actions/lessons'
 import PassageReader, { PairComparator, RebuildCard, ReflectionCard } from './english-blocks'
 import TeachSections from './teach-sections'
+import LessonVisualBlock from './visuals'
 
 type Phase = 'diagnostic' | 'teach' | 'worked' | 'supported' | 'independent' | 'done'
 type Confidence = 'sure' | 'unsure' | null
@@ -58,6 +59,7 @@ function SectionText({ section }: { section: NoteSection }) {
           ))}
         </ul>
       )}
+      {section.visual && <LessonVisualBlock visual={section.visual} />}
     </section>
   )
 }
@@ -372,7 +374,7 @@ function WorkedCard({
                   </button>
                 </div>
               ) : (
-                <p className="mt-2 text-xs font-bold text-gray-300">Locked — submit the prediction above first.</p>
+                <p className="mt-2 text-xs font-bold text-gray-500">Locked — submit the prediction above first.</p>
               )}
             </div>
           )

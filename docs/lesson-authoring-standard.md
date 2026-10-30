@@ -174,6 +174,75 @@ summary and renders any later paragraphs as an untitled intro. Its bullets are
 not shown. Keep the first block to one summary paragraph, with no bullets, and
 start the taught sections in the second block.
 
+## Visuals
+
+A visual earns its place only when it carries a relationship prose handles
+badly: a chain, an order, or a two-way contrast. It is never decoration, never
+a restatement of one sentence, and never more than one per section card.
+
+Two primitives ship:
+
+| `kind` | Use it for | Shape |
+|---|---|---|
+| `flow` | a process that runs in reading order | 2–7 labelled steps, one optional second line each |
+| `compare` | two alternatives judged against the same features | exactly 2 columns, 1–4 rows |
+
+Put the figure in the section's `visual` field. It renders after the prose and
+before the takeaway, in both section-card and read-all modes.
+
+```json
+"visual": {
+  "kind": "flow",
+  "caption": "Commerce carries the good from producer to consumer; each link adds a service.",
+  "steps": [
+    { "label": "Producer", "detail": "Grows the good" },
+    { "label": "Trader", "detail": "Buys and resells" },
+    { "label": "Consumer", "detail": "Buys to use" }
+  ]
+}
+```
+
+```json
+"visual": {
+  "kind": "compare",
+  "caption": "The groups are separated by purpose, not by job title.",
+  "columns": ["Commercial occupations", "Service occupations"],
+  "rows": [
+    { "feature": "Examples", "left": "Trader, banker, insurer", "right": "Teacher, doctor, lawyer" },
+    { "feature": "Exam test", "left": "Does it move or finance goods?", "right": "Does it serve the person?" }
+  ]
+}
+```
+
+Rules:
+
+- **One figure per section.** If a section needs two, it is two sections.
+- **Seven nodes, four rows, maximum.** More than that means the lesson is
+  teaching two ideas; split it.
+- **Labels are text in the page**, not baked into an image. Label each node
+  directly; no keys, legends or arrow numbers.
+- **The caption states the relationship**, not the diagram type: "each link
+  adds a service", not "a flow chart".
+- **Keep nodes short.** Step labels under about six words and compare cells
+  under fifteen, because they wrap first on a 360px phone. The compare table
+  keeps both values side by side at that width.
+- **Colour carries no meaning.** Every distinction must survive in the wording;
+  the palette is semantic (ink, accent, rule), never per subject. Text meets
+  4.5:1 and lines meet 3:1 against their background.
+- **Do not count figure text in the word budget.** Captions and labels restate a
+  relationship already taught; `scripts/check-lesson-depth.mjs` ignores them.
+- **Prefer CSS and inline SVG.** A diagram built from DOM text stays crisp,
+  themeable, searchable, translatable and readable by screen readers. Raster
+  figures are not supported by this contract yet; when one is unavoidable it
+  must be a real photograph or scan, not an AI-generated factual visual, and it
+  must declare its dimensions, lazy-load, stay under about 60 KB, and carry a
+  credit and licence.
+
+The checker warns on an unknown `kind`, a missing caption, a flow outside 2–7
+steps, repeated or over-long step labels, a compare that is not exactly two
+columns, and more than four compare rows. Malformed figures are dropped at
+render time, so a bad row never breaks a lesson.
+
 ### Checking a curriculum file
 
 `node scripts/check-lesson-depth.mjs content-folder/<subject>-curriculum.json`
@@ -217,6 +286,8 @@ Before a lesson is seeded:
 - [ ] Core is 500–700 words; depth, if present, is 600–900 words.
 - [ ] Summary states one claim, not a table of contents.
 - [ ] At least one section names a confusable pair and the discrimination rule.
+- [ ] A visual, if present, is one figure, carries a relationship, has a
+      relationship-stating caption, and fits the node limits above.
 - [ ] Worked example is answerable from the core alone and has a stated answer.
 - [ ] Guided prompt practices the same skill as the worked example.
 - [ ] Facts, dates and figures are checkable; no placeholders or TODOs.

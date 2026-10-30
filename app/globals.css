@@ -11,6 +11,20 @@
   --color-paper: #fffdf8;
   --color-cream: #fef6e9;
 
+  /* Lesson visuals: one ink, one accent, one warning, one confirmation.
+     Diagram lines use vis-rule (4.8:1 on white), not a decorative hairline. */
+  --color-vis-ink: #0b1220;
+  --color-vis-ink-soft: #3d4b63;
+  --color-vis-accent: #1d4ed8;
+  --color-vis-accent-strong: #1e40af;
+  --color-vis-tint: #eff6ff;
+  --color-vis-tint-strong: #dbeafe;
+  --color-vis-warning: #b45309;
+  --color-vis-warning-tint: #fffbeb;
+  --color-vis-confirm: #047857;
+  --color-vis-error: #be123c;
+  --color-vis-rule: #64748b;
+
   --animate-pop: pop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) both;
   --animate-float-slow: floatSlow 7s ease-in-out infinite;
 

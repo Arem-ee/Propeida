@@ -65,6 +65,18 @@
               ],
               "answer": 1,
               "why": "Trade is buying and selling; the others are services that support it."
+            },
+            "visual": {
+              "kind": "flow",
+              "caption": "Commerce carries the yam from producer to consumer; each link adds a service, not another good.",
+              "steps": [
+                { "label": "Producer", "detail": "Farmer harvests yam" },
+                { "label": "Trader", "detail": "Buys and resells" },
+                { "label": "Transporter", "detail": "Moves the load" },
+                { "label": "Warehouse", "detail": "Stores until demand" },
+                { "label": "Retailer", "detail": "Sells at the market" },
+                { "label": "Consumer", "detail": "Buys to eat" }
+              ]
             }
           }
         },
@@ -805,6 +817,33 @@
               ],
               "answer": 2,
               "why": "The customer buys personal transport; moving goods for trade would make it commercial."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "The two groups are separated by purpose, not by job title or workplace.",
+              "columns": ["Commercial occupations", "Service occupations"],
+              "rows": [
+                {
+                  "feature": "What the customer buys",
+                  "left": "A step in moving or financing goods",
+                  "right": "Help with their own condition or task"
+                },
+                {
+                  "feature": "Examples",
+                  "left": "Trader, banker, insurer, transporter",
+                  "right": "Teacher, doctor, lawyer, musician"
+                },
+                {
+                  "feature": "How the worker earns",
+                  "left": "A trading margin, fee or interest",
+                  "right": "A salary or a fee for expertise"
+                },
+                {
+                  "feature": "Exam test",
+                  "left": "Does it move or finance goods for sale?",
+                  "right": "Does it serve the person directly?"
+                }
+              ]
             }
           }
         },

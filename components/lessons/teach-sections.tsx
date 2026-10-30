@@ -3,6 +3,7 @@
 import { useMemo, useState } from 'react'
 import { ArrowRight, CheckCircle2, Lightbulb, RotateCcw } from 'lucide-react'
 import type { NoteSection, SectionCheck } from '@/lib/notes'
+import LessonVisualBlock from './visuals'
 
 /**
  * The core reading flow: one concept per lesson, split into at most three
@@ -241,6 +242,7 @@ export default function TeachSections({
                 <h3 className="font-display text-base font-medium text-black">{s.heading}</h3>
               )}
               <SectionBody section={s} />
+              {s.visual && <LessonVisualBlock visual={s.visual} />}
               <Takeaways section={s} />
             </section>
           ))}
@@ -264,7 +266,7 @@ export default function TeachSections({
                 setFinished(true)
                 onComplete?.()
               }}
-              className="text-[11px] font-extrabold text-gray-400 underline underline-offset-2 hover:text-gray-600"
+              className="text-[11px] font-extrabold text-gray-500 underline underline-offset-2 hover:text-gray-700"
             >
               Skip to recap
             </button>
@@ -280,6 +282,7 @@ export default function TeachSections({
               </h3>
             )}
             <SectionBody section={section} />
+            {section.visual && <LessonVisualBlock visual={section.visual} />}
             <Takeaways section={section} />
             {section.check && (
               <CheckBlock

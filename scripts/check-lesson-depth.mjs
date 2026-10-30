@@ -23,11 +23,70 @@ const DEPTH_MAX = 900
 const DEPTH_PREFIX = /^go deeper\s*:\s*/i
 const NEAR_DEPTH = /^go\s*deeper\b/i
 
+// Figures are capped so they still read on a 360px phone: a chain longer than
+// seven stops or a contrast with more than four rows is a lesson-shaped hole,
+// not a bigger diagram.
+const MAX_FLOW_STEPS = 7
+const MAX_COMPARE_ROWS = 4
+
 function words(text) {
   return String(text ?? '')
     .trim()
     .split(/\s+/)
     .filter(Boolean).length
+}
+
+function visualIssues(visual, label) {
+  if (!visual || typeof visual !== 'object') return [`"${label}" visual is not an object`]
+  const issues = []
+  const caption = String(visual.caption ?? '').trim()
+  if (!caption) {
+    issues.push(`"${label}" visual has no caption`)
+  } else if (words(caption) > 30) {
+    issues.push(`"${label}" visual caption is ${words(caption)} words (keep it under 30)`)
+  }
+
+  if (visual.kind === 'flow') {
+    const steps = Array.isArray(visual.steps) ? visual.steps : []
+    if (steps.length < 2 || steps.length > MAX_FLOW_STEPS) {
+      issues.push(`"${label}" flow has ${steps.length} steps (need 2–${MAX_FLOW_STEPS})`)
+    }
+    const labels = steps.map((step) =>
+      String(typeof step === 'string' ? step : (step?.label ?? '')).trim(),
+    )
+    if (labels.some((text) => !text)) issues.push(`"${label}" flow has an unlabelled step`)
+    if (new Set(labels).size !== labels.length) {
+      issues.push(`"${label}" flow repeats a step label`)
+    }
+    labels.forEach((text) => {
+      if (words(text) > 6) issues.push(`"${label}" flow step "${text}" is too long for a node`)
+    })
+    return issues
+  }
+
+  if (visual.kind === 'compare') {
+    const columns = Array.isArray(visual.columns) ? visual.columns : []
+    if (columns.length !== 2 || columns.some((c) => !String(c ?? '').trim())) {
+      issues.push(`"${label}" compare needs exactly two column headings`)
+    }
+    const rows = Array.isArray(visual.rows) ? visual.rows : []
+    if (rows.length < 1 || rows.length > MAX_COMPARE_ROWS) {
+      issues.push(`"${label}" compare has ${rows.length} rows (need 1–${MAX_COMPARE_ROWS})`)
+    }
+    rows.forEach((row, i) => {
+      for (const field of ['feature', 'left', 'right']) {
+        if (!String(row?.[field] ?? '').trim()) {
+          issues.push(`"${label}" compare row ${i + 1} has no ${field}`)
+        } else if (words(row[field]) > 15) {
+          issues.push(`"${label}" compare row ${i + 1} ${field} is over 15 words`)
+        }
+      }
+    })
+    return issues
+  }
+
+  issues.push(`"${label}" visual kind "${visual.kind}" is not supported`)
+  return issues
 }
 
 function blockWords(block) {
@@ -117,6 +176,7 @@ function checkLesson(lesson, file) {
     } else if (words(c.takeaway) > 20) {
       warnings.push(`"${label}" takeaway is ${words(c.takeaway)} words (keep it under 20)`)
     }
+    if (c.visual) warnings.push(...visualIssues(c.visual, label))
     const check = c.check
     if (!check || typeof check !== 'object') {
       warnings.push(`"${label}" has no inline check`)

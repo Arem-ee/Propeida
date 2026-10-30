@@ -29,6 +29,32 @@ export interface SectionCheck {
   why?: string
 }
 
+export interface FlowStep {
+  label: string
+  /** Optional second line; keep it short, it wraps first on a phone. */
+  detail?: string
+}
+
+/**
+ * A relationship that prose handles badly. Two primitives only: a chain
+ * (`flow`) and a two-way contrast (`compare`). Every label is real text, so
+ * the figures scale, translate and read aloud without a raster.
+ */
+export type LessonVisual =
+  | {
+      kind: 'flow'
+      /** States the relationship, not the shape: "Each link adds a service." */
+      caption: string
+      steps: FlowStep[]
+    }
+  | {
+      kind: 'compare'
+      caption: string
+      /** The two alternatives being contrasted, in reading order. */
+      columns: [string, string]
+      rows: { feature: string; left: string; right: string }[]
+    }
+
 export interface NoteSection {
   heading: string
   paragraphs?: string[]
@@ -37,6 +63,8 @@ export interface NoteSection {
   takeaway?: string
   /** Optional ten-second retrieval check, answered inline. */
   check?: SectionCheck
+  /** Optional figure, at most one per section, placed after the prose. */
+  visual?: LessonVisual
 }
 
 export interface RevisionNote {
