@@ -646,37 +646,131 @@
     {
       "slug": "arms-of-government",
       "title": "Arms of Government",
-      "objective": "Match each arm to its functions and explain how the arms check one another.",
+      "objective": "Match each arm to its types, functions and powers, and explain how the three arms check one another.",
       "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "heading": "The legislature",
+            "heading": "Three arms, one government",
             "paragraphs": [
-              "The legislature makes laws. It may be unicameral (one chamber) or bicameral (two chambers). In Nigeria the National Assembly has a Senate and a House of Representatives."
+              "The legislature makes law, the executive implements it, and the judiciary interprets it. Separation of powers also lets each arm check the others, so no arm governs alone."
             ],
-            "bullets": [
-              "Makes, amends and repeals laws.",
-              "Controls public funds through appropriation and oversight.",
-              "Represents constituencies and debates public issues.",
-              "Can check the executive through questions, motions, investigations and, in a parliamentary system, a vote of no confidence."
-            ]
+            "bullets": []
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "The executive and the judiciary",
+            "heading": "A bill on rural roads",
             "paragraphs": [
-              "The executive implements laws and runs the country day to day. The judiciary interprets laws and settles disputes."
+              "A senator proposes a bill to fund rural roads. It is introduced, debated, examined in committee and passed by both chambers. Assent turns it into an Act; a veto can be overridden.",
+              "The legislature is the law-making arm. It may be unicameral, with one chamber, or bicameral, with two. Nigeria's National Assembly has a Senate and a House of Representatives, and each state has a House of Assembly.",
+              "It makes, amends and repeals laws, approves the budget, oversees public spending and represents constituencies; the Senate confirms appointments. A bill passes first reading, second reading, committee stage and third reading before assent.",
+              "In Britain Parliament is supreme; in Nigeria the Constitution is supreme, so the National Assembly cannot make any law it likes."
             ],
             "bullets": [
-              "Executive: head of state, head of government, ministers, civil service, police and armed forces.",
-              "The executive checks the legislature through assent, veto and delegated legislation.",
-              "Judiciary: interprets the constitution and laws, protects rights and reviews government action.",
-              "Judicial independence means judges decide without executive or legislative pressure."
-            ]
+              "The legislature makes, amends and repeals laws.",
+              "Nigeria has a bicameral National Assembly: Senate and House of Representatives.",
+              "Debate begins at second reading; assent makes a bill an Act."
+            ],
+            "takeaway": "The legislature makes law, but assent and the Constitution limit it.",
+            "check": {
+              "question": "At which stage does debate on a bill begin?",
+              "options": [
+                "First reading",
+                "Second reading",
+                "Committee stage",
+                "Third reading"
+              ],
+              "answer": 1,
+              "why": "First reading is a formal introduction; debate begins at second reading."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The ministry must build the road",
+            "paragraphs": [
+              "The Act is law, but the road is still unbuilt. A ministry plans it, the civil service drafts the contract, and the police keep order. The executive turns law into action.",
+              "The executive implements laws and runs the country day to day. It may be presidential, with a president who is both head of state and government, or parliamentary, with a prime minister leading a cabinet from the legislature.",
+              "It conducts foreign relations, defends the territory, prepares the budget and appoints officials. It checks the legislature through assent and veto, and it makes delegated legislation under statute.",
+              "The civil service is the permanent body of officials in ministries; it is part of the wider public service, which also includes the police, armed forces and parastatals. Implementing government programmes is its primary duty."
+            ],
+            "bullets": [
+              "The executive implements laws and runs government day to day.",
+              "Political executive = elected ministers; administrative executive = civil service.",
+              "Civil service = permanent ministry officials; public service = the wider body."
+            ],
+            "takeaway": "The executive turns law into administration.",
+            "check": {
+              "question": "The executive checks the legislature mainly through ______.",
+              "options": [
+                "ratifying treaties",
+                "assent or veto",
+                "issuing orders",
+                "judicial review"
+              ],
+              "answer": 1,
+              "why": "The president can sign or withhold assent; treaties and orders are other executive powers."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The court reads the Act",
+            "paragraphs": [
+              "A contractor is denied payment and sues the ministry. The court reads the Act, examines the minister's decision and orders payment. It interpreted the law and checked the executive.",
+              "The judiciary interprets laws and settles disputes. Its components are the courts: the Supreme Court, Court of Appeal, Federal High Court, State High Courts, Sharia and Customary Courts of Appeal, and tribunals.",
+              "It interprets the Constitution, protects rights, punishes offenders and reviews government action. Judicial review lets it declare a law or executive act unconstitutional, which checks both other arms.",
+              "Judicial independence means judges decide without legislative or executive pressure. Security of tenure, salaries charged to the Consolidated Revenue Fund and appointment through the Federal Judicial Service Commission and National Judicial Council protect it."
+            ],
+            "bullets": [
+              "The judiciary interprets laws, protects rights and reviews government action.",
+              "Judicial review can void an unconstitutional law or executive act.",
+              "Independence means no legislative or executive pressure on decisions.",
+              "FJSC nominates federal judges; NJC recommends them to the President."
+            ],
+            "takeaway": "The judiciary interprets the law and checks both other arms.",
+            "check": {
+              "question": "The independence of the judiciary means that ______.",
+              "options": [
+                "judges must ignore legislative and executive affairs",
+                "court decisions cannot be reviewed by any higher court",
+                "legislative and executive influence on judicial decisions must be prevented",
+                "judges must be protected from public criticism"
+              ],
+              "answer": 2,
+              "why": "Independence protects the decision, not the judge from criticism or appeal."
+            },
+            "visual": {
+              "kind": "flow",
+              "caption": "A bill crosses all three arms: the legislature passes it, the executive assents and implements, the courts interpret.",
+              "steps": [
+                {
+                  "label": "Bill introduced",
+                  "detail": "First reading"
+                },
+                {
+                  "label": "Debated and passed",
+                  "detail": "Second reading to third"
+                },
+                {
+                  "label": "President assents",
+                  "detail": "Signs it into law"
+                },
+                {
+                  "label": "Executive implements",
+                  "detail": "Ministry and civil service"
+                },
+                {
+                  "label": "Courts interpret",
+                  "detail": "Judicial review"
+                }
+              ]
+            }
           }
         },
         {
@@ -684,30 +778,30 @@
           "content": {
             "title": "Exam tip",
             "tone": "tip",
-            "body": "A bill becomes an Act only after the head of state assents to it. Debate, committee stage and passage are steps on the way, not the finish line."
+            "body": "In Nigeria the Constitution is supreme, not the legislature. A bill needs both chambers and presidential assent, or an override of a veto; a court can later strike down the Act if it conflicts with the Constitution."
           }
         },
         {
           "type": "worked_example",
           "content": {
-            "problem": "A bill becomes an Act of Parliament after it has been ______.",
+            "problem": "A bill passes both chambers but the president refuses assent. What happens next? A. It becomes law after thirty days B. It fails unless the National Assembly overrides the veto C. The Supreme Court signs it D. State governors assent",
             "steps": [
               {
-                "operation": "Trace the stages",
-                "reason": "A bill is introduced, debated, sent to committee, read again and passed.",
-                "result": "Passing the legislature is necessary but not sufficient.",
-                "predictPrompt": "Who must sign before it becomes law?"
+                "operation": "Identify the stage",
+                "reason": "The bill has passed both chambers but lacks assent.",
+                "result": "It is not yet an Act.",
+                "predictPrompt": "Who signs a federal bill into law?"
               },
               {
-                "operation": "Apply assent",
-                "reason": "The head of state signs the bill into law.",
-                "result": "Assent turns the bill into an Act.",
+                "operation": "Apply the veto rule",
+                "reason": "A two-thirds majority of each chamber can override a presidential veto.",
+                "result": "The bill can still become law.",
                 "predictPrompt": ""
               },
               {
-                "operation": "Reject the earlier stages",
-                "reason": "Debate, committee work and passage are earlier steps.",
-                "result": "Choose the option about signature or assent."
+                "operation": "Reject the alternatives",
+                "reason": "Courts do not sign bills and governors do not assent to federal bills.",
+                "result": "Option B is correct."
               }
             ]
           }
@@ -715,11 +809,64 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "The judiciary interprets laws. Name two ways it can check the other arms.",
+            "question": "Name the arm that makes laws and the arm that implements them. Then explain one check each arm has on the other.",
             "hints": [
-              "Courts can declare a law unconstitutional.",
-              "Courts can review executive action and order a public body to act lawfully.",
-              "A strong answer mentions judicial review and the protection of rights."
+              "The legislature makes law; the executive implements it.",
+              "The executive can assent to or veto a bill; the legislature can override a veto or refuse to confirm appointments.",
+              "The judiciary can review both laws and executive action."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: How a bill becomes law in Nigeria",
+            "paragraphs": [
+              "A bill is a proposed law. In Nigeria, it may be introduced in either chamber of the National Assembly, except a money bill, which starts in the House of Representatives.",
+              "The first reading is a formal introduction; no debate takes place. Debate begins at the second reading, where members discuss the general principles. The committee stage then examines the clauses in detail, and the report stage brings the amended bill back to the chamber.",
+              "The third reading is the final passage vote. The other chamber must concur, and any disagreement is resolved by a conference committee. The bill then goes to the president for assent.",
+              "If the president withholds assent, he returns it with reasons. The National Assembly can override the veto by a two-thirds majority of each chamber, and the bill becomes law. A state bill follows the same path through the State House of Assembly and the governor.",
+              "Courts do not make the bill law, but they may later interpret it or declare it unconstitutional. That is why the process is a chain across the three arms, not a single legislative act."
+            ],
+            "bullets": [
+              "First reading introduces; second reading debates; committee stage examines clauses.",
+              "Both chambers must agree before assent.",
+              "A two-thirds majority in each chamber can override a presidential veto."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Presidential and parliamentary executives",
+            "paragraphs": [
+              "In a presidential system, the president is both head of state and head of government, and the executive is separately elected from the legislature. In a parliamentary system, the prime minister is head of government while a monarch or ceremonial president is head of state.",
+              "The parliamentary executive is drawn from the legislature and survives only while it holds the confidence of the majority. A vote of no confidence can bring it down, and the prime minister may dissolve parliament and call an election. The presidential executive has a fixed term and cannot be removed by a simple vote of no confidence.",
+              "Nigeria operates a presidential system: the president is elected separately, appoints ministers with Senate confirmation, and serves a fixed four-year term. Britain operates a parliamentary system: the prime minister normally leads the party with a majority in the House of Commons.",
+              "The difference shapes the checks. A presidential president can veto legislation but may face an override; a prime minister usually controls the legislative programme because the executive sits in the legislature. Neither system removes the need for judicial review."
+            ],
+            "bullets": [
+              "Presidential: separate election, fixed term, president is head of state and government.",
+              "Parliamentary: executive from the legislature; a confidence vote can remove it.",
+              "Nigeria is presidential; Britain is parliamentary."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Judicial independence and the appointment of judges",
+            "paragraphs": [
+              "Judicial independence has two sides: the courts must be free from interference, and judges must be accountable to the law. Nigeria protects the first through security of tenure, salaries charged to the Consolidated Revenue Fund, and a disciplined removal process.",
+              "Federal judicial appointments begin with the Federal Judicial Service Commission, which advises the National Judicial Council on nominees. The NJC recommends candidates to the President, and the Senate confirms the senior federal appointments, including the Chief Justice of Nigeria and the justices of the Supreme Court.",
+              "State appointments follow a similar path through the State Judicial Service Commission and the governor, with the NJC involved and the State House of Assembly confirming the Chief Judge. The process is designed to keep patronage out of the bench, though critics say it remains political.",
+              "Independence does not mean judges ignore the law or answer to no one. They can be removed for misconduct, and their decisions can be appealed. What it forbids is a president or legislature punishing a judge for an unpopular ruling.",
+              "The judiciary also checks the other arms through judicial review. It can declare a statute unconstitutional, quash an executive action, or order a public body to act lawfully. That power is strongest when judges are seen to be independent, because a ruling that looks politically dictated loses authority."
+            ],
+            "bullets": [
+              "Tenure, protected salaries and a removal process shield judges from pressure.",
+              "The FJSC advises; the NJC recommends; the Senate confirms senior appointments.",
+              "Independence means freedom from interference, not freedom from the law."
             ]
           }
         }
