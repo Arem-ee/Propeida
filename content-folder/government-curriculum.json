@@ -18,10 +18,10 @@
     },
     {
       "slug": "forms-systems-government",
-      "name": "Forms and Systems of Government",
+      "name": "Forms of Government",
       "section": "Elements of Government",
       "order": 3,
-      "description": "Democracy, monarchy, aristocracy, and presidential versus parliamentary systems."
+      "description": "Democracy, monarchy, aristocracy, oligarchy, autocracy and the republic."
     },
     {
       "slug": "arms-of-government",
@@ -38,52 +38,60 @@
       "description": "Unitary, federal and confederal arrangements."
     },
     {
+      "slug": "systems-of-government",
+      "name": "Systems of Government",
+      "syllabus_ref": "A.6",
+      "section": "Elements of Government",
+      "order": 6,
+      "description": "Presidential, parliamentary and monarchical systems, and how they differ from structures."
+    },
+    {
       "slug": "political-ideologies",
       "name": "Political Ideologies",
       "section": "Elements of Government",
-      "order": 6,
+      "order": 7,
       "description": "Communalism, feudalism, capitalism, socialism, communism and fascism."
     },
     {
       "slug": "constitution-rule-of-law",
       "name": "Constitution and the Rule of Law",
       "section": "Principles of Government",
-      "order": 7,
+      "order": 8,
       "description": "Sources and types of constitutions; supremacy, rule of law and separation of powers."
     },
     {
       "slug": "political-parties-elections",
       "name": "Political Parties and Elections",
       "section": "Principles of Government",
-      "order": 8,
+      "order": 9,
       "description": "Parties, pressure groups, constituencies, referendums and electoral participation."
     },
     {
       "slug": "citizenship",
       "name": "Citizenship",
       "section": "Principles of Government",
-      "order": 9,
+      "order": 10,
       "description": "Acquisition of citizenship and the duties and obligations of a citizen."
     },
     {
       "slug": "pre-colonial-colonial-administration",
       "name": "Pre-colonial and Colonial Administration",
       "section": "Nigerian Government",
-      "order": 10,
+      "order": 11,
       "description": "Yoruba, Igbo and Hausa/Fulani systems; colonial rule and the independence constitutions."
     },
     {
       "slug": "nigerian-federalism-military-rule",
       "name": "Nigerian Federalism and Military Rule",
       "section": "Nigerian Government",
-      "order": 11,
+      "order": 12,
       "description": "State creation, local government reform, coups and military regimes."
     },
     {
       "slug": "foreign-policy-international-organisations",
       "name": "Foreign Policy and International Organisations",
       "section": "Nigerian Government",
-      "order": 12,
+      "order": 13,
       "description": "Nigeria's foreign policy and the UN, AU/OAU and ECOWAS."
     }
   ],
@@ -533,67 +541,103 @@
         }
       ]
     },
-    {
+        {
       "slug": "forms-systems-government",
-      "title": "Forms and Systems of Government",
-      "objective": "Tell forms of government apart and distinguish presidential from parliamentary systems.",
+      "title": "Forms of Government: Who Rules?",
+      "objective": "Distinguish democracy, monarchy, aristocracy, oligarchy, autocracy and the republic, and give the features, merits and demerits of each.",
       "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "heading": "Forms of government",
+            "heading": "Form in one sentence",
             "paragraphs": [
-              "A form of government answers the question: who rules? A system of government answers: how do the organs relate?"
+              "A form of government answers one question: who holds ruling power, and on what claim?"
             ],
-            "bullets": [
-              "Democracy: rule by the people, usually through elected representatives.",
-              "Monarchy: rule by a king or queen; absolute or constitutional.",
-              "Aristocracy: rule by a small group considered the best.",
-              "Oligarchy: rule by a few powerful people; plutocracy is rule by the wealthy.",
-              "Autocracy: one person holds unlimited power; republicanism has an elected head, not a hereditary one."
-            ]
+            "bullets": []
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Presidential and parliamentary systems",
+            "heading": "A ballot box and an elected president",
             "paragraphs": [
-              "In a presidential system the executive and legislature are separate and separately elected. In a parliamentary system the executive comes from the legislature and depends on its confidence."
+              "One country elects a president every four years; another keeps a king who reigns but does not rule. Both can be democratic, because the test is whether the people choose and can remove their rulers, not the title at the top.",
+              "Democracy is rule by the people, exercised directly in a town meeting or, more commonly, through elected representatives. Its features are free and fair elections, majority rule with minority rights, the rule of law, accountability and a free press.",
+              "Its merits are participation, legitimacy and peaceful change; its demerits are slow decisions, the risk of majority tyranny and the cost of elections. Republicanism is narrower: an elected head of state instead of a hereditary monarch, and a republic may still be undemocratic."
             ],
             "bullets": [
-              "Presidential: fixed term, separation of powers, president is both head of state and government.",
-              "Parliamentary: prime minister leads, cabinet ministers are usually MPs, and a vote of no confidence can bring the government down.",
-              "Monarchical systems may be absolute (the monarch rules) or constitutional (the monarch reigns but does not rule).",
-              "The key exam difference is separation of powers: presidential systems separate the executive from the legislature; parliamentary systems fuse them."
+              "Democracy: the people choose and can remove their rulers.",
+              "Features: free elections, rule of law, accountability, minority rights.",
+              "Republic: an elected head of state, not a hereditary monarch."
             ],
-            "visual": {
-              "kind": "compare",
-              "caption": "Where the executive comes from decides how it can be removed.",
-              "columns": ["Presidential", "Parliamentary"],
-              "rows": [
-                {
-                  "feature": "Executive comes from",
-                  "left": "A separate election",
-                  "right": "The legislature"
-                },
-                {
-                  "feature": "Term",
-                  "left": "Fixed; hard to remove mid-term",
-                  "right": "Lasts while it holds the legislature's confidence"
-                },
-                {
-                  "feature": "Separation of powers",
-                  "left": "Executive and legislature are separate",
-                  "right": "Executive and legislature are fused"
-                },
-                {
-                  "feature": "Example",
-                  "left": "Nigeria's president and National Assembly",
-                  "right": "The UK's prime minister and Parliament"
-                }
-              ]
+            "takeaway": "Democracy is measured by choice and removal, not by the ruler's title.",
+            "check": {
+              "question": "A state has an elected president and no hereditary monarch. Its form is a ______.",
+              "options": [
+                "monarchy",
+                "republic",
+                "oligarchy",
+                "theocracy"
+              ],
+              "answer": 1,
+              "why": "An elected head of state without a hereditary monarch is a republic; whether it is democratic depends on elections and rights."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "A crown, a council of nobles, a wealthy few",
+            "paragraphs": [
+              "A king inherits the throne, a council of nobles claims to rule because of birth and virtue, and a handful of wealthy families controls the state. The first is monarchy, the second aristocracy, the third oligarchy.",
+              "Monarchy is rule by one person, usually hereditary; it is absolute when the monarch rules and constitutional when the monarch reigns but a parliament governs. Aristocracy is rule by a small group claiming superior birth or education. Oligarchy is rule by a few, often through wealth, family or force; plutocracy is rule by the rich.",
+              "Monarchy offers continuity and clear succession, but suffers disputed successions and weak accountability. Aristocracy can draw on experience, yet excludes outsiders; oligarchy can decide quickly, but serves a narrow interest."
+            ],
+            "bullets": [
+              "Monarchy: one hereditary ruler; absolute or constitutional.",
+              "Aristocracy: the few who claim to be best.",
+              "Oligarchy: the few who hold wealth or force."
+            ],
+            "takeaway": "The three differ in who rules and on what claim.",
+            "check": {
+              "question": "Rule by a small group considered the best is called ______.",
+              "options": [
+                "aristocracy",
+                "democracy",
+                "autocracy",
+                "gerontocracy"
+              ],
+              "answer": 0,
+              "why": "Aristocracy claims rule by the best; oligarchy is rule by a few without that claim, and gerontocracy is rule by the old."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "One man, the elders, the priests",
+            "paragraphs": [
+              "One man rules by decree; elsewhere only elders may hold office; in another state, priests interpret the law. Autocracy, gerontocracy and theocracy each concentrate power, but they justify it differently.",
+              "Autocracy is one person with unlimited power, checked by no institution; dictatorship is its modern form. Gerontocracy gives power to the oldest, theocracy to religious authority, and a military junta to a council of officers. Mobocracy is rule by an unruly crowd, which is disorder rather than a constitution.",
+              "Autocracy can act quickly in a crisis, but it lacks accountability and peaceful succession. Gerontocracy respects age and memory, but excludes the young; theocracy offers divine legitimacy, but narrows dissent; a junta can restore order, but rarely wins legitimacy."
+            ],
+            "bullets": [
+              "Autocracy: one ruler with unlimited power.",
+              "Gerontocracy: rule by the old; theocracy: rule by religious authority.",
+              "Military junta: a council of officers; mobocracy: rule by the crowd."
+            ],
+            "takeaway": "Concentrated power differs in who holds it and how it is justified.",
+            "check": {
+              "question": "A form of government organised by a council of military officers is called a ______.",
+              "options": [
+                "militocracy",
+                "stratocracy",
+                "military junta",
+                "mobocracy"
+              ],
+              "answer": 2,
+              "why": "The officers' council in power is a junta; stratocracy is the wider term for military rule."
             }
           }
         },
@@ -602,30 +646,30 @@
           "content": {
             "title": "Exam tip",
             "tone": "tip",
-            "body": "Form = who rules. System = how the arms relate. Read the question carefully before choosing."
+            "body": "Form = who rules. System = how the executive and legislature relate. A republic is not automatically a democracy, and a constitutional monarch reigns but does not rule."
           }
         },
         {
           "type": "worked_example",
           "content": {
-            "problem": "The major difference between the presidential and parliamentary systems is ______.",
+            "problem": "Classify each case: (a) a queen whose parliament makes the laws; (b) a council of elders who hold office because of their age; (c) a general who suspends the constitution and rules by decree.",
             "steps": [
               {
-                "operation": "Compare the executives",
-                "reason": "In a presidential system the president is elected separately from the legislature.",
-                "result": "The executive does not sit in the legislature or depend on its confidence.",
-                "predictPrompt": "What happens to a prime minister who loses a vote of no confidence?"
+                "operation": "Classify the queen",
+                "reason": "A hereditary head of state who reigns while parliament governs is a constitutional monarch.",
+                "result": "(a) Constitutional monarchy.",
+                "predictPrompt": "Who holds office because of age?"
               },
               {
-                "operation": "Compare accountability",
-                "reason": "A parliamentary executive is drawn from and answerable to parliament.",
-                "result": "The executive and legislature are fused, not separated.",
+                "operation": "Classify the elders",
+                "reason": "Power reserved for the oldest is gerontocracy.",
+                "result": "(b) Gerontocracy.",
                 "predictPrompt": ""
               },
               {
-                "operation": "Name the principle",
-                "reason": "The difference is the separation of powers.",
-                "result": "Choose the option that says separation of powers."
+                "operation": "Classify the general",
+                "reason": "A council of officers ruling without the constitution is a military junta.",
+                "result": "(c) Military junta."
               }
             ]
           }
@@ -633,11 +677,11 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "Nigeria uses a presidential system. Name one advantage and one disadvantage of separating the executive from the legislature.",
+            "question": "Nigeria is a republic with an elected president. Explain why it is also a democracy, and name one feature that would be missing under a military junta.",
             "hints": [
-              "Separation can protect liberty and prevent one arm from dominating.",
-              "It can also produce gridlock when the president and legislature belong to different parties.",
-              "A strong answer gives one benefit (checks and balances) and one cost (deadlock)."
+              "A republic names the head of state; democracy describes how rulers are chosen and removed.",
+              "Elections, accountability and minority rights are the democratic tests.",
+              "A junta would remove free elections and accountability to the legislature."
             ]
           }
         }
@@ -1825,6 +1869,152 @@
               "Military rule concentrated power and governed by decree.",
               "Oil revenue and the Federation Account give the centre fiscal leverage over states.",
               "A consequence is weaker state autonomy or persistent tension over revenue and jurisdiction."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "systems-of-government",
+      "title": "Systems of Government: Presidential, Parliamentary and Monarchical",
+      "objective": "Distinguish presidential, parliamentary and monarchical systems, and separate systems from structures of government.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "System in one sentence",
+            "paragraphs": [
+              "A system of government describes how the executive and legislature relate, not who holds the title of ruler."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "A president elected on a separate ballot",
+            "paragraphs": [
+              "A president is elected separately from the assembly, appoints ministers who need not sit in it, and serves a fixed four-year term. When the assembly rejects his budget, neither side falls; they negotiate or wait for the next election.",
+              "This is the presidential system: the executive and legislature are separately elected, the president is both head of state and head of government, and ministers answer to him rather than to parliament. Nigeria and the United States work this way.",
+              "Its merits are stability, clear accountability and strong checks between the arms. Its demerits are gridlock when the president and the majority differ, the risk of a personality cult, and the cost of separate elections."
+            ],
+            "bullets": [
+              "Executive elected separately from the legislature.",
+              "President is head of state and head of government.",
+              "Fixed term; removal only by impeachment."
+            ],
+            "takeaway": "A presidential executive stands or falls on its own election.",
+            "check": {
+              "question": "A system in which the president is both head of state and head of government is ______.",
+              "options": [
+                "presidential",
+                "parliamentary",
+                "confederal",
+                "unitary"
+              ],
+              "answer": 0,
+              "why": "In a presidential system one elected president carries both titles; a parliamentary system separates the two roles."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "A prime minister who must keep the House",
+            "paragraphs": [
+              "A prime minister sits in parliament, builds a cabinet from MPs, and resigns when the House defeats the budget or passes a vote of no confidence. The head of state, a monarch or ceremonial president, stays out of the fight.",
+              "This is the parliamentary system: the executive is drawn from and answerable to the legislature, ministers are usually MPs, and the government survives only while it holds the confidence of the majority. Britain and India work this way.",
+              "Its merits are unity between executive and legislature, fast legislation and flexible removal of a failing government. Its demerits are instability when coalitions break, a weak separation of powers, and executive dominance of the chamber."
+            ],
+            "bullets": [
+              "Executive drawn from the legislature.",
+              "Survives only while it holds the majority's confidence.",
+              "A vote of no confidence can bring it down."
+            ],
+            "takeaway": "A parliamentary executive holds office at the pleasure of the legislature.",
+            "check": {
+              "question": "In a parliamentary system, the executive is ______.",
+              "options": [
+                "drawn from and answerable to the legislature",
+                "elected separately from the legislature",
+                "appointed by the judiciary",
+                "chosen by the armed forces"
+              ],
+              "answer": 0,
+              "why": "The prime minister and cabinet come from the legislature and fall if they lose its confidence."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "A king who rules, a king who reigns",
+            "paragraphs": [
+              "A king rules by decree in one state; in another, the king opens parliament but does not choose the government. The first is an absolute monarchy, the second a constitutional monarchy.",
+              "In a constitutional monarchy the monarch is head of state while a prime minister drawn from parliament governs; the monarch reigns but does not rule. In an absolute monarchy the monarch is both head of state and government, and little limits him.",
+              "Systems are not structures. Unitary, federal and confederal describe how power is shared between centre and regions: a confederal union keeps the centre weak, so political stability is usually low. Nigeria is a federal republic with a presidential system."
+            ],
+            "bullets": [
+              "Absolute monarchy: the monarch rules; constitutional: the monarch reigns.",
+              "Presidential and parliamentary describe the executive.",
+              "Unitary, federal and confederal describe the centre-region structure."
+            ],
+            "takeaway": "Systems describe the executive; structures describe the centre-region split.",
+            "check": {
+              "question": "A major feature of a confederal state is that ______.",
+              "options": [
+                "political stability is usually low",
+                "there is supremacy of the constitution",
+                "the centre overrides the regions",
+                "citizens owe allegiance to the centre"
+              ],
+              "answer": 0,
+              "why": "A confederation keeps the centre weak and the units sovereign, which makes stability hard to hold."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Form = who rules; system = how the executive and legislature relate; structure = how centre and regions share power. A country can be a constitutional monarchy and a parliamentary democracy at once."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Classify each case: (a) Nigeria, where the president is elected separately from the National Assembly; (b) the United Kingdom, where the prime minister leads the majority party in Parliament under a monarch; (c) a league of states whose centre cannot tax or command them.",
+            "steps": [
+              {
+                "operation": "Classify Nigeria",
+                "reason": "A separately elected president who is head of state and government is presidential.",
+                "result": "(a) Presidential system.",
+                "predictPrompt": "Where does the executive sit in the United Kingdom?"
+              },
+              {
+                "operation": "Classify the United Kingdom",
+                "reason": "A prime minister drawn from Parliament, under a ceremonial monarch, is a parliamentary system and a constitutional monarchy.",
+                "result": "(b) Parliamentary system.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Classify the league",
+                "reason": "A centre that cannot tax or command its units is confederal, a structure rather than a system.",
+                "result": "(c) Confederal structure."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Nigeria's president is both head of state and government, and the National Assembly is separately elected. Name the system and one check the legislature has on the executive.",
+            "hints": [
+              "Separate election of the executive and legislature is the presidential marker.",
+              "The Senate confirms ministers, and the National Assembly can override a veto.",
+              "A strong answer names the system and a specific check, not just 'checks and balances'."
             ]
           }
         }
