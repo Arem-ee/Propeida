@@ -129,10 +129,18 @@
     },
     {
       "slug": "foreign-policy-international-organisations",
-      "name": "Foreign Policy and International Organisations",
+      "name": "Foreign Policy",
       "section": "Nigerian Government",
       "order": 21,
-      "description": "Nigeria's foreign policy and the UN, AU/OAU and ECOWAS."
+      "description": "Goals, principles, instruments and cases in Nigeria's Afrocentric foreign policy."
+    },
+    {
+      "slug": "nigeria-in-international-organizations",
+      "name": "Nigeria in International Organisations",
+      "syllabus_ref": "C.4",
+      "section": "Nigerian Government",
+      "order": 22,
+      "description": "The UN, African Union, ECOWAS, Commonwealth and OPEC, and the decision rules of each."
     },
     {
       "slug": "the-civil-service-public-service",
@@ -1360,72 +1368,157 @@
         }
       ]
     },
-    {
-      "topic": "foreign-policy-international-organisations",
+        {
       "slug": "foreign-policy-international-organisations",
-      "title": "Foreign Policy and International Organisations",
-      "objective": "Explain Nigeria’s foreign-policy goals and the roles and decision rules of ECOWAS, the African Union and the United Nations.",
-      "estimatedMinutes": 12,
+      "title": "Foreign Policy: Goals and Instruments",
+      "objective": "Explain what foreign policy is, Nigeria's Afrocentric goals and principles, the instruments states use, and the cases that show them.",
+      "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "heading": "Nigeria’s foreign policy",
+            "heading": "Foreign policy in one sentence",
             "paragraphs": [
-              "Foreign policy is a state’s strategy for dealing with other states and international organisations. Nigeria’s has been Afrocentric since independence."
+              "Foreign policy is a state's strategy for dealing with other states and international organisations."
             ],
-            "bullets": [
-              "Goals: defend sovereignty and territory, promote African decolonisation and unity, support peace and security, and pursue economic development.",
-              "Principles: Afrocentrism, non-alignment, sovereign equality, non-interference and peaceful settlement of disputes.",
-              "Instruments: diplomacy, foreign aid, military support, trade and membership of multilateral bodies.",
-              "The Murtala/Obasanjo era reviewed policy toward a more assertive, Africa-centred stance; the Bakassi dispute with Cameroon was decided by the International Court of Justice in 2002."
-            ]
+            "bullets": []
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "International organisations",
+            "heading": "What foreign policy is",
             "paragraphs": [
-              "Nigeria belongs to global and regional bodies. Each has different members, powers and decision rules."
+              "A boundary dispute with a neighbour moves from a local skirmish to a case at the International Court of Justice. How a state handles that dispute, and every other dealing beyond its borders, is its foreign policy.",
+              "Foreign policy is the set of goals and methods a state uses in its relations with other states and international organisations. Its objectives are usually security, economic advantage, national prestige and the promotion of an ideology or values.",
+              "The instruments are diplomacy, trade, foreign aid, military force, propaganda and membership of multilateral bodies. Geography, history, the economy, domestic politics and the character of leaders all shape which instruments a state reaches for."
             ],
             "bullets": [
-              "UN: the General Assembly is the most representative organ, with one vote per member. The Security Council has five permanent members with a veto and primary responsibility for peace and security. The ICJ settles legal disputes between states; the Secretariat administers the UN.",
-              "African Union: replaced the OAU in 2002. The Executive Council generally decides by consensus, falling back on a two-thirds majority.",
-              "ECOWAS: founded in 1975 by the Treaty of Lagos to promote trade, free movement and regional peacekeeping (ECOMOG). Its chairmanship rotates.",
-              "Commonwealth and OPEC: the Commonwealth links former British colonies; OPEC coordinates oil-exporting states to stabilise prices."
-            ]
+              "Goals: security, economy, prestige, values.",
+              "Instruments: diplomacy, trade, aid, force, multilateralism.",
+              "Determinants: geography, history, economy, politics, leadership."
+            ],
+            "takeaway": "Foreign policy is domestic policy continued abroad, with fewer courts to enforce it.",
+            "check": {
+              "question": "Which of these is an instrument rather than an objective of foreign policy?",
+              "options": [
+                "national security",
+                "economic advantage",
+                "diplomacy",
+                "national prestige"
+              ],
+              "answer": 2,
+              "why": "Diplomacy is a method a state uses; security, economic advantage and prestige are goals it pursues."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Nigeria's Afrocentric goals",
+            "paragraphs": [
+              "At independence in 1960 Nigeria declared itself Afrocentric, but Balewa's government was cautious: it opposed apartheid and supported decolonisation without breaking with Britain.",
+              "The goals were to defend sovereignty and territory, promote African decolonisation and unity, support peace and security, and pursue economic development. The principles were Afrocentrism, non-alignment, sovereign equality, non-interference and peaceful settlement of disputes.",
+              "The Murtala/Obasanjo regime reviewed foreign policy from 1975 and made it more assertive against apartheid and white minority rule. The review was conducted by the Adedeji Commission, and later governments added economic diplomacy to the older political goals."
+            ],
+            "bullets": [
+              "Afrocentrism: Africa at the centre.",
+              "Principles: non-alignment, equality, non-interference.",
+              "1975 review: Adedeji Commission under Murtala/Obasanjo."
+            ],
+            "takeaway": "Nigeria's foreign policy has been Afrocentric in rhetoric and pragmatic about where the money comes from.",
+            "check": {
+              "question": "The basis of Nigeria's foreign policy during the Independence Constitution era was ______.",
+              "options": [
+                "Eurocentric",
+                "Afrocentric",
+                "neo-colonialist",
+                "anti-apartheid"
+              ],
+              "answer": 1,
+              "why": "Afrocentrism was declared at independence; anti-apartheid was one part of it, and the other options misdescribe the declared basis."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Instruments and cases",
+            "paragraphs": [
+              "Nigeria took the Bakassi Peninsula dispute with Cameroon to the International Court of Justice, which ruled in 2002, and the Greentree Agreement of 2006 implemented the handover.",
+              "In 1986 Nigeria withdrew from the Edinburgh Commonwealth Games to protest Britain's failure to impose sanctions on apartheid South Africa. Both cases show the same instruments: law where it can bind, and symbolic withdrawal where it cannot.",
+              "Nigeria also uses peacekeeping, as with ECOMOG in Liberia and Sierra Leone, and aid to African states. Military force is the last instrument, because it is costly and invites retaliation."
+            ],
+            "bullets": [
+              "Bakassi: ICJ 2002, Greentree 2006.",
+              "Edinburgh 1986: protest at Britain over apartheid.",
+              "Peacekeeping: ECOMOG in Liberia and Sierra Leone."
+            ],
+            "takeaway": "Law and symbolism are instruments too; a state uses the cheapest one that can work.",
+            "check": {
+              "question": "Nigeria's withdrawal from the Edinburgh Commonwealth Games in July 1986 was in protest against British ______.",
+              "options": [
+                "supply of arms to Rhodesia",
+                "negative utterances about Nigeria",
+                "support for UNITA rebels in Angola",
+                "failure to impose sanctions on South Africa's apartheid government"
+              ],
+              "answer": 3,
+              "why": "The boycott was over Britain's refusal to sanction apartheid South Africa, not over arms, words or Angola."
+            },
+            "visual": {
+              "kind": "flow",
+              "caption": "Nigeria's foreign policy moved from cautious Afrocentrism to assertion and then economic diplomacy.",
+              "steps": [
+                {
+                  "label": "1960: cautious Afrocentrism",
+                  "detail": "Balewa"
+                },
+                {
+                  "label": "1975: assertive review",
+                  "detail": "Murtala/Obasanjo"
+                },
+                {
+                  "label": "1986: anti-apartheid protest",
+                  "detail": "Edinburgh"
+                },
+                {
+                  "label": "1999: economic diplomacy",
+                  "detail": "Fourth Republic"
+                }
+              ]
+            }
           }
         },
         {
           "type": "callout",
           "content": {
-            "title": "Exam trap",
+            "title": "Exam tip",
             "tone": "tip",
-            "body": "The General Assembly is the most representative UN organ because every member has one vote. The Security Council is the most powerful, not the most representative."
+            "body": "Afrocentrism is the centre of gravity, not a promise to ignore other interests. Nigeria traded with Britain and later courted investors while insisting on African liberation."
           }
         },
         {
           "type": "worked_example",
           "content": {
-            "problem": "Nigeria has a legal boundary dispute with a neighbour and wants a binding judgment. Which UN organ should hear it, and why not the Security Council?",
+            "problem": "Classify each instrument: (a) Nigeria sues Cameroon at the ICJ over Bakassi; (b) Nigeria withdraws from the Edinburgh Games; (c) Nigeria sends troops to ECOMOG in Liberia; (d) Nigeria gives aid to a drought-hit African state.",
             "steps": [
               {
-                "operation": "Identify the kind of dispute",
-                "reason": "A boundary dispute is a legal question between states, not a threat to peace requiring enforcement.",
-                "result": "It belongs to judicial settlement.",
-                "predictPrompt": "Which organ decides legal disputes between states?"
+                "operation": "Classify (a) and (b)",
+                "reason": "A court case uses legal settlement; a Games boycott uses symbolic withdrawal.",
+                "result": "(a) Legal instrument; (b) symbolic instrument.",
+                "predictPrompt": "What kind of instrument is a peacekeeping deployment?"
               },
               {
-                "operation": "Choose the organ",
-                "reason": "The International Court of Justice hears contentious cases between states and gives binding judgments.",
-                "result": "Nigeria should take the case to the ICJ.",
+                "operation": "Classify (c)",
+                "reason": "Sending troops under a regional mandate is a military and peacekeeping instrument.",
+                "result": "(c) Military/peacekeeping instrument.",
                 "predictPrompt": ""
               },
               {
-                "operation": "Explain the limit of the Security Council",
-                "reason": "The Security Council deals with peace and security and can impose sanctions, but it does not adjudicate boundary law.",
-                "result": "The ICJ supplies the legal ruling; the Security Council may later help enforce peace if needed."
+                "operation": "Classify (d)",
+                "reason": "Aid is an economic instrument intended to build influence and goodwill.",
+                "result": "(d) Economic instrument."
               }
             ]
           }
@@ -1433,11 +1526,11 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "Name two benefits of ECOWAS membership to Nigeria and one cost, then say whether the benefits outweigh the cost.",
+            "question": "Why did a militarily weaker Nigeria rely on law and symbolism against stronger states, and when would military force have been the wrong instrument?",
             "hints": [
-              "Benefits: a larger market for Nigerian goods, free movement of people, and joint peacekeeping that stabilises the region.",
-              "Costs: contributions to the community budget, pressure from migration, and limits on unilateral policy.",
-              "A strong answer weighs the market and security gains against funding and sovereignty costs."
+              "The ICJ gave Nigeria a binding forum it could not get through force.",
+              "A Games boycott cost little but spoke to the Commonwealth and to domestic opinion.",
+              "Military force is costly, invites retaliation and needs regional or international cover."
             ]
           }
         }
@@ -3408,6 +3501,152 @@
               "In each constituency the highest scorer takes the seat, so a party with a spread of narrow wins can convert a minority of votes into a majority of seats.",
               "PR shares seats by vote share, so small parties win seats they would lose under FPTP.",
               "Link the change to coalition government and to the constituency link."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "nigeria-in-international-organizations",
+      "title": "Nigeria in International Organisations",
+      "objective": "Explain Nigeria's membership of the UN, the African Union, ECOWAS, the Commonwealth and OPEC, and the decision rules that shape each body.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "International organisations in one sentence",
+            "paragraphs": [
+              "Nigeria belongs to global and regional bodies, and each one gives it a different platform and a different set of rules."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The United Nations",
+            "paragraphs": [
+              "Joseph Garba presided over the UN General Assembly in 1989, and for that year Nigeria spoke from the most representative rostrum in the world. Nigeria joined the UN at independence in 1960.",
+              "The General Assembly has one vote per member, admits new members, approves the budget, elects the non-permanent Security Council members and amends the Charter. The Security Council has five permanent members with a veto and primary responsibility for peace and security; the ICJ settles legal disputes between states; the Secretariat administers the organisation.",
+              "The UN replaced the League of Nations in 1945. Its current development targets are the Sustainable Development Goals, adopted in 2015 to replace the Millennium Development Goals and run to 2030."
+            ],
+            "bullets": [
+              "General Assembly: one vote each, most representative.",
+              "Security Council: five permanent vetoes, peace and security.",
+              "ICJ: legal disputes. Secretariat: administration."
+            ],
+            "takeaway": "The General Assembly is the most representative organ; the Security Council is the most powerful.",
+            "check": {
+              "question": "The most representative organ of the United Nations is the ______.",
+              "options": [
+                "Security Council",
+                "General Assembly",
+                "Economic and Social Council",
+                "International Court of Justice"
+              ],
+              "answer": 1,
+              "why": "Every member has one vote in the General Assembly, so it represents all members; the Security Council is more powerful but far smaller."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The African Union",
+            "paragraphs": [
+              "The OAU was founded in 1963 and replaced by the African Union in 2002. Nigeria was a founding member of the OAU and has used the AU to press for African solutions to African problems.",
+              "The AU's Assembly of heads of state sets direction, the Executive Council of ministers prepares decisions, and the Commission runs the secretariat. The Executive Council generally decides by consensus and falls back on a two-thirds majority.",
+              "The AU's long-term plan is Agenda 2063, and its Peace and Security Council handles conflicts. Nigeria's leverage comes from its size, its peacekeeping record and its role in the OAU."
+            ],
+            "bullets": [
+              "OAU 1963 → AU 2002.",
+              "Executive Council: consensus, then two-thirds.",
+              "Agenda 2063; Peace and Security Council."
+            ],
+            "takeaway": "In the AU, consensus is the norm and a two-thirds vote is the fallback.",
+            "check": {
+              "question": "The Executive Council of the African Union makes decisions by ______.",
+              "options": [
+                "a one-third majority vote",
+                "discretion",
+                "consensus",
+                "a veto of the General Secretariat"
+              ],
+              "answer": 2,
+              "why": "The Executive Council works by consensus and turns to a two-thirds majority only if consensus fails; there is no veto in the AU."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "ECOWAS, the Commonwealth and OPEC",
+            "paragraphs": [
+              "ECOWAS was founded in 1975 by the Treaty of Lagos to promote trade, free movement and regional peacekeeping. Its chairmanship rotates, and its Commission sits in Abuja.",
+              "Nigeria is not a member of NATO, but it belongs to the Commonwealth, which links former British colonies, and to OPEC, which coordinates oil-exporting states to stabilise prices. Nigeria joined OPEC in 1971.",
+              "Mauritania withdrew from ECOWAS in 2000, and Nigeria was suspended from the Commonwealth from 1995 to 1999 after the execution of Ken Saro-Wiwa. Membership is therefore a tool that can be withdrawn as well as used."
+            ],
+            "bullets": [
+              "ECOWAS 1975: trade, free movement, ECOMOG.",
+              "Commonwealth: former British colonies; OPEC: oil prices.",
+              "Mauritania left ECOWAS in 2000."
+            ],
+            "takeaway": "Each organisation gives Nigeria a different platform, and each can take it away.",
+            "check": {
+              "question": "The country that withdrew her membership of ECOWAS is ______.",
+              "options": [
+                "Guinea Bissau",
+                "Burkina Faso",
+                "Mauritania",
+                "Senegal"
+              ],
+              "answer": 2,
+              "why": "Mauritania left ECOWAS in 2000; the other three remain members."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "The General Assembly is representative, the Security Council is powerful, and the ICJ is judicial. Do not confuse the three."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Match each action to the body that handles it: (a) a legal boundary dispute with a neighbour; (b) peacekeeping in Liberia; (c) a quota to stabilise oil prices; (d) suspending a member over human-rights abuses.",
+            "steps": [
+              {
+                "operation": "Match (a) and (b)",
+                "reason": "The ICJ decides legal disputes between states; ECOWAS ran the ECOMOG peacekeeping mission in Liberia.",
+                "result": "(a) ICJ; (b) ECOWAS.",
+                "predictPrompt": "Which body coordinates oil production?"
+              },
+              {
+                "operation": "Match (c)",
+                "reason": "OPEC coordinates oil-exporting states on production and prices.",
+                "result": "(c) OPEC.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Match (d)",
+                "reason": "The Commonwealth can suspend a member over human-rights abuses, as it did to Nigeria in 1995.",
+                "result": "(d) The Commonwealth."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why does Nigeria carry more weight in ECOWAS and the African Union than in the UN Security Council?",
+            "hints": [
+              "In ECOWAS and the AU Nigeria is one of the largest economies and contributors.",
+              "The Security Council has five permanent veto-holding members, and Nigeria is not one of them.",
+              "Link formal voting power to informal influence and regional leadership."
             ]
           }
         }
