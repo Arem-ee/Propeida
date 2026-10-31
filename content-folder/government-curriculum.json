@@ -68,11 +68,27 @@
       "description": "Rule of law, separation of powers, checks and balances, responsibility and constitutionalism."
     },
     {
+      "slug": "the-electoral-process",
+      "name": "The Electoral Process",
+      "syllabus_ref": "A.12",
+      "section": "Principles of Government",
+      "order": 12,
+      "description": "Suffrage and participation, election types, free and fair elections, electoral systems and INEC."
+    },
+    {
       "slug": "political-parties-elections",
-      "name": "Political Parties and Elections",
+      "name": "Political Parties and Party Systems",
       "section": "Principles of Government",
       "order": 13,
-      "description": "Parties, pressure groups, constituencies, referendums and electoral participation."
+      "description": "Party organisation and functions, party systems, candidate selection and finance."
+    },
+    {
+      "slug": "pressure-groups",
+      "name": "Pressure Groups",
+      "syllabus_ref": "A.14",
+      "section": "Principles of Government",
+      "order": 14,
+      "description": "Types of pressure group, modes of operation, and the difference from political parties."
     },
     {
       "slug": "citizenship",
@@ -1198,72 +1214,135 @@
         }
       ]
     },
-    {
-      "topic": "political-parties-elections",
+        {
       "slug": "political-parties-elections",
-      "title": "Political Parties, Pressure Groups and Elections",
-      "objective": "Explain what parties do, compare party systems, distinguish parties from pressure groups, and describe free elections.",
+      "title": "Political Parties and Party Systems",
+      "objective": "Explain what parties do, how they are organised, and how one-party, two-party, multi-party and dominant-party systems differ.",
       "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "heading": "Parties and party systems",
+            "heading": "Parties in one sentence",
             "paragraphs": [
-              "A political party is an organised group that seeks to win elections and control government. Its manifesto sets out what it would do in office."
+              "A political party is an organised group that seeks to win elections and control government."
             ],
-            "bullets": [
-              "Functions: aggregate interests, recruit and train leaders, formulate policy, mobilise voters, organise government and provide opposition scrutiny.",
-              "A national party draws members from across ethnic and regional lines, not just branches in many places.",
-              "One-party system: only one party is legal or effective. Two-party system: two parties alternate in power. Multi-party system: several parties compete, often in coalitions.",
-              "A dominant-party system is competitive in law but one party wins repeatedly in practice."
-            ]
+            "bullets": []
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Pressure groups and elections",
+            "heading": "What a party is for",
             "paragraphs": [
-              "Pressure groups try to influence policy without seeking to govern. Elections are the main channel through which citizens choose who governs."
+              "A group of professionals registers a party, opens a ward office and publishes a manifesto before the primaries. That combination of organisation, programme and ambition to govern is what separates a party from a discussion club.",
+              "A party has a formal name, a membership roll and a constitution. It is organised from the ward through the local government and state to the national convention, which is its highest decision-making body, while the national executive committee runs it between conventions.",
+              "Its functions are to aggregate interests, recruit and train leaders, turn its manifesto into policy, mobilise voters, organise government after victory and scrutinise the government when it loses."
             ],
             "bullets": [
-              "Pressure-group methods: lobbying, petitions, publicity, dialogue, strikes and, as a last resort, an ultimatum with a deadline.",
-              "Franchise is the right to vote; a constituency is the area that elects a representative.",
-              "A referendum is a direct vote on a specific issue; a plebiscite is similar but often advisory.",
-              "Free and fair elections need an independent electoral commission, a credible register, a secret ballot and an impartial judiciary to settle disputes."
-            ]
+              "Ward → local government → state → national.",
+              "Manifesto: what the party would do in office.",
+              "Aggregate, recruit, formulate, mobilise, govern, oppose."
+            ],
+            "takeaway": "A party is judged by whether it can turn many interests into one programme and then govern.",
+            "check": {
+              "question": "A political party can be said to have a national outlook if ______.",
+              "options": [
+                "it is ethnic-based but has branches across the country",
+                "it is registered by the electoral commission as a national party",
+                "it is led by people who are famous at home and abroad",
+                "its membership cuts across ethnic boundaries"
+              ],
+              "answer": 3,
+              "why": "A national outlook is about the spread of membership and leadership, not the number of branches or the fact of registration."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Party systems",
+            "paragraphs": [
+              "In one election two parties take almost every seat. In another, six parties enter parliament and three of them form a coalition. The difference is the party system, not the number of parties registered.",
+              "A one-party system allows only one legal or effective party and offers stability without choice. A two-party system lets two parties alternate in power, as Nigeria's First Republic did with the NPC and NCNC, and as the PDP and APC have done since 2015.",
+              "A multi-party system lets several parties compete and usually govern through coalitions, which represents more views but can be unstable. A dominant-party system is competitive in law yet one party wins repeatedly, as the NPN did from 1979 to 1983 and the PDP from 1999 to 2015."
+            ],
+            "bullets": [
+              "One-party: no choice. Two-party: alternation.",
+              "Multi-party: coalitions. Dominant-party: repeated wins.",
+              "Nigeria 2015: the first opposition victory at federal level."
+            ],
+            "takeaway": "The number of parties matters less than whether power can actually change hands.",
+            "check": {
+              "question": "A party system in which several parties compete but one wins every election is best described as ______.",
+              "options": [
+                "one-party",
+                "two-party",
+                "dominant-party",
+                "multi-party"
+              ],
+              "answer": 2,
+              "why": "Other parties are legal and contest, but one party's repeated victory makes the system dominant-party rather than multi-party in practice."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Organisation, candidates and money",
+            "paragraphs": [
+              "A national chairman overrules a state chapter's choice of candidate, and the loser defects to another party. Both incidents show that party organisation and candidate selection decide who reaches the ballot.",
+              "Candidates are chosen through primaries, direct or indirect, and the national executive can sometimes impose a candidate. Internal democracy is weak when a few leaders control the list, and defections follow.",
+              "Parties are financed by dues, levies, donations and, in some countries, public funds. Without disclosure, wealthy sponsors can capture the party and its manifesto."
+            ],
+            "bullets": [
+              "Primaries: direct or indirect.",
+              "Finance: dues, levies, donations, public funds.",
+              "Weak internal democracy produces defections."
+            ],
+            "takeaway": "Party organisation decides who gets on the ballot; party finance decides who can afford to.",
+            "check": {
+              "question": "The party body that runs the party between national conventions is the ______.",
+              "options": [
+                "national executive committee",
+                "board of trustees",
+                "national caucus",
+                "ward executive"
+              ],
+              "answer": 0,
+              "why": "The convention is supreme but meets occasionally; the national executive committee carries on the day-to-day work between conventions."
+            }
           }
         },
         {
           "type": "callout",
           "content": {
-            "title": "Exam trap",
+            "title": "Exam tip",
             "tone": "tip",
-            "body": "Parties contest elections in order to govern. Pressure groups influence whoever governs but do not put up a government of their own."
+            "body": "Registration does not make a party national. A national outlook means membership and leadership cut across ethnic and regional lines, not merely branches in every state."
           }
         },
         {
           "type": "worked_example",
           "content": {
-            "problem": "Market traders demand that a new levy be withdrawn and threaten a strike if it is not done within seven days. Are they acting as a party or a pressure group, and which tactic are they using?",
+            "problem": "Classify each case: (a) only one party is legal; (b) two parties alternate in power; (c) five parties win seats and three form a coalition; (d) one party wins every election while others compete.",
             "steps": [
               {
-                "operation": "Ask whether they seek office",
-                "reason": "A party contests elections to govern; a pressure group only wants to change a decision.",
-                "result": "The traders are acting as a pressure group.",
-                "predictPrompt": "Which of their actions is the final tactic?"
+                "operation": "Classify (a)",
+                "reason": "Only one legal party means there is no electoral choice.",
+                "result": "(a) One-party system.",
+                "predictPrompt": "What happens when two parties alternate?"
               },
               {
-                "operation": "Identify the tactic",
-                "reason": "A demand with a deadline and a threatened strike is the strongest pressure-group step.",
-                "result": "They have issued an ultimatum.",
+                "operation": "Classify (b)",
+                "reason": "Two parties taking turns in government is the defining feature of a two-party system.",
+                "result": "(b) Two-party system.",
                 "predictPrompt": ""
               },
               {
-                "operation": "Distinguish the next step",
-                "reason": "If the deadline passes, the threatened strike becomes the action; dialogue and lobbying come earlier.",
-                "result": "The sequence runs lobbying → dialogue → ultimatum → strike."
+                "operation": "Classify (c) and (d)",
+                "reason": "Several parties winning seats and forming coalitions is multi-party; repeated victory by one competitor is dominant-party.",
+                "result": "(c) Multi-party system; (d) dominant-party system."
               }
             ]
           }
@@ -1271,11 +1350,11 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "Why does a party need membership across ethnic lines to be truly national, and why is having branches everywhere not enough?",
+            "question": "Why is a national outlook about membership rather than the number of branch offices, and what does that imply for a party that wants to win a national majority?",
             "hints": [
-              "Branches can exist in every state while membership and leadership remain tied to one ethnic or regional group.",
-              "A national party must be able to aggregate interests from many groups, not just represent one.",
-              "A strong answer links ethnic breadth to winning a national majority and to legitimacy."
+              "Branches can exist in every state while leadership and membership stay tied to one ethnic or regional group.",
+              "A national party must aggregate interests from many groups, not merely represent one.",
+              "Link ethnic breadth to winning a national majority and to legitimacy after victory."
             ]
           }
         }
@@ -2977,6 +3056,358 @@
               "The 1976 reforms tied councils to statutory allocation.",
               "Local rates and levies are hard to collect and politically unpopular.",
               "A strong answer links revenue independence to accountability and better local administration."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "pressure-groups",
+      "title": "Pressure Groups",
+      "objective": "Explain what pressure groups are, how they operate, and how they differ from political parties.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Pressure groups in one sentence",
+            "paragraphs": [
+              "A pressure group is an organised group that seeks to influence policy without contesting elections to govern."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Who pressure groups are",
+            "paragraphs": [
+              "Market traders threaten a strike over a new levy, and the same week the Nigerian Bar Association issues a statement on judicial appointments. Neither group wants to form a government; both want a decision changed.",
+              "Occupational or interest groups defend the interests of their members: the NLC and NUT for workers and teachers, the NBA and NMA for lawyers and doctors, and the MAN for manufacturers. Promotional or cause groups pursue a principle, such as human rights, the environment or gender equality.",
+              "Institutional groups grow inside government, such as a civil service association, while anomic groups form spontaneously and may turn violent. Membership can be open or restricted, and sectional groups defend a slice of society while promotional groups claim a public cause."
+            ],
+            "bullets": [
+              "Occupational: NLC, NUT, NBA, NMA, MAN.",
+              "Promotional: rights, environment, gender.",
+              "Anomic: spontaneous and often violent."
+            ],
+            "takeaway": "A pressure group wants a decision changed, not a government formed.",
+            "check": {
+              "question": "An organised group that seeks to influence government policy without contesting elections is a ______.",
+              "options": [
+                "political party",
+                "pressure group",
+                "electoral commission",
+                "constituency"
+              ],
+              "answer": 1,
+              "why": "Influencing policy without seeking office is the defining mark of a pressure group; a party contests elections in order to govern."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "How they operate",
+            "paragraphs": [
+              "A union writes a petition, meets the minister, holds a press conference, issues a seven-day ultimatum and then strikes. That sequence moves from the least to the most disruptive method.",
+              "The main methods are lobbying, petitions, dialogue, publicity, demonstrations, boycotts, strikes and the ultimatum. Insider groups are consulted regularly; outsider groups rely on public pressure. The ultimatum is the last measure before action, and the strike is the action itself.",
+              "Pressure groups are strongest when they can deliver members' votes or disrupt production. Violence and blackmail weaken their legitimacy, and groups with money or insider access influence policy far more than poor ones."
+            ],
+            "bullets": [
+              "Lobbying → dialogue → publicity → ultimatum → strike.",
+              "Ultimatum: a deadline. Strike: the action.",
+              "Access is unequal; violence destroys legitimacy."
+            ],
+            "takeaway": "The ultimatum is a deadline, not the action; the strike is what happens when it passes.",
+            "check": {
+              "question": "The last measure used by a pressure group when it issues a condition to be met within a fixed time is called ______.",
+              "options": [
+                "lobbying",
+                "an ultimatum",
+                "dialogue",
+                "a strike"
+              ],
+              "answer": 1,
+              "why": "An ultimatum sets a deadline and threatens action; the strike is the action taken if the deadline passes."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Pressure groups and parties compared",
+            "paragraphs": [
+              "The NLC endorses a candidate in an election while still bargaining with whoever wins. That is the overlap: a pressure group can act politically without becoming a party.",
+              "A party seeks to govern and contests elections on a whole programme. A pressure group seeks to influence policy, contests no election and usually concentrates on one interest. Parties are accountable to the electorate; pressure groups answer to their members.",
+              "Pressure groups represent interests, encourage participation, supply information and scrutinise government. Their weakness is that narrow, well-funded interests can drown out diffuse public ones, and a group that turns to violence undermines the system it claims to influence."
+            ],
+            "bullets": [
+              "Aim: govern versus influence.",
+              "Method: contest elections versus pressure.",
+              "Accountability: electorate versus members."
+            ],
+            "takeaway": "Parties contest power; pressure groups bargain with whoever holds it.",
+            "check": {
+              "question": "Which of these is a difference between a political party and a pressure group?",
+              "options": [
+                "A party seeks only to influence policy.",
+                "A pressure group contests elections to form a government.",
+                "A party seeks to govern while a pressure group seeks to influence policy.",
+                "Both nominate candidates for public office."
+              ],
+              "answer": 2,
+              "why": "The decisive difference is the aim: parties contest elections to govern, while pressure groups try to influence whoever governs."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "The aim separates them, even when their methods overlap.",
+              "columns": [
+                "Political party",
+                "Pressure group"
+              ],
+              "rows": [
+                {
+                  "feature": "Aim",
+                  "left": "Win elections and govern",
+                  "right": "Influence policy"
+                },
+                {
+                  "feature": "Method",
+                  "left": "Contest elections, nominate candidates",
+                  "right": "Lobby, petition, strike, demonstrate"
+                },
+                {
+                  "feature": "Membership",
+                  "left": "Broad and open",
+                  "right": "Often occupational or cause-based"
+                },
+                {
+                  "feature": "Accountability",
+                  "left": "To the electorate",
+                  "right": "To members"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Parties nominate candidates and form governments; pressure groups do neither. A group that endorses a candidate is still a pressure group if it does not seek office itself."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Classify each act: (a) the NLC calls a nationwide strike over fuel prices; (b) the NBA petitions the chief judge over delayed cases; (c) the APC holds a rally to launch its manifesto; (d) traders issue a seven-day ultimatum over a levy.",
+            "steps": [
+              {
+                "operation": "Classify (a) and (b)",
+                "reason": "A strike and a petition aim to change a decision without seeking office, so both are pressure-group methods.",
+                "result": "(a) Pressure-group strike; (b) pressure-group petition.",
+                "predictPrompt": "What makes (c) different?"
+              },
+              {
+                "operation": "Classify (c)",
+                "reason": "A rally to launch a manifesto is an election campaign by a party that wants to govern.",
+                "result": "(c) Party activity.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Classify (d)",
+                "reason": "A condition with a deadline is the pressure group's last warning before action.",
+                "result": "(d) Pressure-group ultimatum."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why are pressure groups often strongest where parties are weak, and what does that suggest about representation in a new democracy?",
+            "hints": [
+              "Weak parties fail to aggregate interests, so groups organise around single issues instead.",
+              "Groups with money, members or the ability to disrupt production carry more weight.",
+              "A strong answer links group strength to unequal representation, not just to activism."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "the-electoral-process",
+      "title": "The Electoral Process",
+      "objective": "Explain suffrage and participation, the types of election and the ingredients of a free and fair election, and how electoral systems and the commission shape results.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "The electoral process in one sentence",
+            "paragraphs": [
+              "The electoral process is the set of rules and institutions through which citizens choose their representatives."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Who may vote",
+            "paragraphs": [
+              "A student turns eighteen, registers in her ward and votes for the first time. Her right to do so is suffrage, and the rules that grant it have changed sharply since colonial times.",
+              "Suffrage is the right to vote. Nigeria's 1922 Clifford Constitution allowed a small elective franchise in Lagos and Calabar, and property and literacy limits survived until universal adult suffrage arrived with the 1979 Constitution. The 1999 Constitution gives every citizen who is eighteen and registered the right to vote.",
+              "Franchise can be universal or restricted by property, sex or literacy; plural franchises give some voters more than one vote, and compulsory suffrage requires attendance. Popular political participation is wider than voting: it includes campaigns, rallies, petitions, party membership and standing for office."
+            ],
+            "bullets": [
+              "Suffrage: the right to vote.",
+              "Universal adult suffrage at 18 since 1979.",
+              "Participation is wider than voting."
+            ],
+            "takeaway": "Universal adult suffrage is recent; property and sex limits were removed within living memory.",
+            "check": {
+              "question": "Popular political participation refers to ______.",
+              "options": [
+                "the majority of the people holding public office",
+                "a large number of voters turning out at elections",
+                "the total activities through which citizens actively take part in political life",
+                "the efforts of more than half the citizens to join public debate"
+              ],
+              "answer": 2,
+              "why": "Participation covers all the ways citizens take part, not only voting or holding office; the other options narrow it to one activity or a headcount."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Elections and what makes them free and fair",
+            "paragraphs": [
+              "A result is announced, the loser goes to court, and observers list late materials and ballot snatching. Each complaint points to a different link in the electoral chain.",
+              "A general election fills all seats, a bye-election fills one vacancy, a primary chooses a party's candidate, and a runoff decides a race with no clear winner. A referendum is a direct vote on an issue, while a plebiscite is similar but often advisory.",
+              "Free and fair elections need an independent commission, a credible register, a secret ballot, an impartial judiciary, a free press, security and prompt collation. Pre-election crises arise over registration, primaries and campaign violence; post-election crises arise over rigging, violence, inconclusive results and litigation."
+            ],
+            "bullets": [
+              "General, bye-election, primary, runoff.",
+              "Referendum: a vote on an issue.",
+              "Ingredients: commission, register, ballot, courts, media, security."
+            ],
+            "takeaway": "Free and fair is a chain; one weak link, usually collation or security, breaks the result.",
+            "check": {
+              "question": "A vote taken by the citizenry of a country on an important political issue is a ______.",
+              "options": [
+                "referendum",
+                "general election",
+                "bye-election",
+                "recall"
+              ],
+              "answer": 0,
+              "why": "A referendum asks voters to decide an issue directly; the other terms describe elections of people, not decisions on a question."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Electoral systems and the commission",
+            "paragraphs": [
+              "One party wins sixty per cent of the seats with forty-five per cent of the votes, and a smaller party with ten per cent of the votes gets no seat at all. That gap is produced by the electoral system.",
+              "First past the post elects the highest scorer in each single-member constituency. It is simple and usually produces a stable majority, but it wastes votes and distorts seats. Proportional representation allocates seats by vote share, which is fairer to small parties but can produce coalitions and weaken the constituency link; mixed systems combine both.",
+              "The Independent National Electoral Commission registers voters and parties, conducts elections and announces results. Its problems include dependence on the executive for funding and appointments, poor logistics, failing technology, insecurity and political interference."
+            ],
+            "bullets": [
+              "FPTP: one seat per constituency, highest score wins.",
+              "PR: seats by vote share; mixed: both.",
+              "INEC: register, conduct, announce; problems of independence and logistics."
+            ],
+            "takeaway": "The electoral system decides whether votes or seats are proportional; INEC decides whether either can be trusted.",
+            "check": {
+              "question": "The area from which one or more members are elected to a public office is called an electoral ______.",
+              "options": [
+                "college",
+                "ward",
+                "district",
+                "constituency"
+              ],
+              "answer": 3,
+              "why": "A constituency is the electoral area that returns a representative; an electoral college is a body of electors, not the area itself."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "The same votes produce different parliaments under different electoral systems.",
+              "columns": [
+                "First past the post",
+                "Proportional representation"
+              ],
+              "rows": [
+                {
+                  "feature": "Unit",
+                  "left": "Single-member constituency",
+                  "right": "Party list or multi-member district"
+                },
+                {
+                  "feature": "How seats are won",
+                  "left": "Highest score takes the seat",
+                  "right": "Seats shared by vote share"
+                },
+                {
+                  "feature": "Small parties",
+                  "left": "Usually under-represented",
+                  "right": "Better represented"
+                },
+                {
+                  "feature": "Main weakness",
+                  "left": "Wasted votes and distorted seats",
+                  "right": "Coalitions and a weaker local link"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Suffrage is the right to vote, a constituency is the area that elects a representative, and a referendum is a direct vote on an issue. Do not use the three as synonyms."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Classify each event: (a) voters decide whether to adopt a new constitution; (b) voters fill every seat in the National Assembly; (c) voters in one federal constituency replace a member who died; (d) party members choose their candidate for the general election.",
+            "steps": [
+              {
+                "operation": "Classify (a)",
+                "reason": "A direct vote on a constitutional question is a referendum, not an election of a person.",
+                "result": "(a) Referendum.",
+                "predictPrompt": "What do we call filling every seat at once?"
+              },
+              {
+                "operation": "Classify (b) and (c)",
+                "reason": "A general election fills all seats; a bye-election fills a single vacancy between general elections.",
+                "result": "(b) General election; (c) bye-election.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Classify (d)",
+                "reason": "Choosing a party's candidate before the general election is a primary.",
+                "result": "(d) Primary election."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why does first past the post produce large seat majorities, and what would proportional representation change for small parties and for government formation?",
+            "hints": [
+              "In each constituency the highest scorer takes the seat, so a party with a spread of narrow wins can convert a minority of votes into a majority of seats.",
+              "PR shares seats by vote share, so small parties win seats they would lose under FPTP.",
+              "Link the change to coalition government and to the constituency link."
             ]
           }
         }
