@@ -99,16 +99,24 @@
     },
     {
       "slug": "pre-colonial-colonial-administration",
-      "name": "Pre-colonial and Colonial Administration",
+      "name": "Pre-colonial Nigerian Polities",
       "section": "Nigerian Government",
       "order": 17,
-      "description": "Yoruba, Igbo and Hausa/Fulani systems; colonial rule and the independence constitutions."
+      "description": "The Yoruba monarchy, the Igbo assembly and the Hausa/Fulani emirate."
+    },
+    {
+      "slug": "constitutional-development-in-nigeria",
+      "name": "Colonial Rule and Constitutional Development",
+      "syllabus_ref": "B.4",
+      "section": "Nigerian Government",
+      "order": 18,
+      "description": "Colonial takeover, indirect rule, and the constitutions from Clifford to independence."
     },
     {
       "slug": "nigerian-federalism-military-rule",
       "name": "Nigerian Federalism",
       "section": "Nigerian Government",
-      "order": 18,
+      "order": 19,
       "description": "The federal principle, legislative lists, state creation, revenue and federal character."
     },
     {
@@ -116,7 +124,7 @@
       "name": "The Military in Nigerian Politics",
       "syllabus_ref": "B.12",
       "section": "Nigerian Government",
-      "order": 19,
+      "order": 20,
       "description": "Why soldiers intervened, how military regimes worked, their legacy and the exit to civil rule."
     },
     {
@@ -124,14 +132,14 @@
       "name": "Local Government",
       "syllabus_ref": "B.11",
       "section": "Nigerian Government",
-      "order": 20,
+      "order": 21,
       "description": "The 1976 reforms, council functions and finance, traditional rulers and state control."
     },
     {
       "slug": "foreign-policy-international-organisations",
       "name": "Foreign Policy",
       "section": "Nigerian Government",
-      "order": 21,
+      "order": 22,
       "description": "Goals, principles, instruments and cases in Nigeria's Afrocentric foreign policy."
     },
     {
@@ -139,7 +147,7 @@
       "name": "Nigeria in International Organisations",
       "syllabus_ref": "C.4",
       "section": "Nigerian Government",
-      "order": 22,
+      "order": 23,
       "description": "The UN, African Union, ECOWAS, Commonwealth and OPEC, and the decision rules of each."
     },
     {
@@ -1140,40 +1148,134 @@
         }
       ]
     },
-    {
+        {
       "slug": "pre-colonial-colonial-administration",
-      "title": "Pre-colonial and Colonial Administration",
-      "objective": "Compare the Yoruba, Igbo and Hausa/Fulani systems and trace the colonial constitutions to independence.",
-      "estimatedMinutes": 12,
+      "title": "Pre-colonial Nigerian Polities",
+      "objective": "Compare the Yoruba monarchy, the Igbo assembly system and the Hausa/Fulani emirate, and explain how each organised authority.",
+      "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "heading": "Pre-colonial systems",
+            "heading": "Pre-colonial polities in one sentence",
             "paragraphs": [
-              "The three major pre-colonial systems were organised differently. The Yoruba were monarchical, the Igbo were largely acephalous and consensual, and the Hausa/Fulani were theocratic and centralised."
+              "Before colonial rule, the Yoruba, Igbo and Hausa/Fulani organised government in three different ways."
             ],
-            "bullets": [
-              "Yoruba: the Oba ruled with the Oyomesi (chiefs) and the Ogboni cult; the Alaafin of Oyo was checked by the Oyomesi.",
-              "Igbo: the village assembly (Oha-na-eze), the Okpara (oldest man), age grades and title societies made decisions by consensus.",
-              "Hausa/Fulani: the Emir ruled a theocratic emirate; the Galadima administered the capital, the Madaki commanded the army and the Alkali judged cases."
-            ]
+            "bullets": []
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Colonial rule and the constitutions",
+            "heading": "The Yoruba monarchy",
             "paragraphs": [
-              "Colonial administration moved from company rule to direct Crown control, then through a series of constitutions that widened Nigerian participation."
+              "An Alaafin of Oyo does not rule alone: he governs with a council of chiefs that can check him. That division is the mark of the Yoruba political system.",
+              "The Yoruba were monarchical. The Oba or Alaafin ruled with the Oyomesi, the council of senior chiefs, and the Ogboni cult, which handled religious and judicial matters and could restrain a tyrannical ruler.",
+              "The system combined a central palace with checks: the Oyomesi advised the Oba, and the Ogboni judged serious cases. Power was hierarchical but not absolute. A ruler who ignored both bodies risked deposition."
             ],
             "bullets": [
-              "Lagos was annexed as a Crown Colony in 1861.",
-              "The Royal Niger Company's charter was revoked in 1900, and Britain took direct control.",
-              "The Richards Constitution (1946) created regional councils and is said to have conceived federalism for Nigeria.",
-              "The Macpherson Constitution (1951) introduced ministerial government; the Lyttleton Constitution (1954) confirmed a federal structure with regional premiers.",
-              "Independence came in 1960; Nigeria became a republic in 1963."
-            ]
+              "Head: Oba or Alaafin.",
+              "Council: Oyomesi.",
+              "Ogboni: religious and judicial check."
+            ],
+            "takeaway": "The Yoruba system was monarchical, but the monarchy was checked by council and cult.",
+            "check": {
+              "question": "The traditional political system of the Yoruba kingdom was ______.",
+              "options": [
+                "monarchical",
+                "egalitarian",
+                "republican",
+                "democratic"
+              ],
+              "answer": 0,
+              "why": "A central Oba or Alaafin ruled through the Oyomesi and Ogboni; the other labels describe systems without a hereditary throne."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The Igbo assembly",
+            "paragraphs": [
+              "An Igbo village settles a land dispute in an open assembly, and no single ruler pronounces the verdict. The community decides.",
+              "The Igbo were largely acephalous, meaning they had no single paramount ruler. The village assembly, Oha-na-eze, debated issues; the Okpara, the oldest man, presided; age grades enforced decisions and title societies conferred prestige.",
+              "Authority was diffused and decisions were reached by consensus. That made the system flexible and participatory, but it also meant colonial officers could find no single chief to sign a treaty with. They appointed warrant chiefs instead, and the innovation caused conflict."
+            ],
+            "bullets": [
+              "Acephalous: no paramount ruler.",
+              "Oha-na-eze: village assembly.",
+              "Okpara: oldest man; age grades and title societies."
+            ],
+            "takeaway": "The Igbo system governed through assembly and consensus rather than a throne.",
+            "check": {
+              "question": "The most senior member of the council of elders in the Igbo political system was the ______.",
+              "options": [
+                "Obi",
+                "Eze",
+                "Okpara",
+                "Ofo"
+              ],
+              "answer": 2,
+              "why": "The Okpara was the oldest man who presided over the assembly; Obi and Eze are titles in other systems, and Ofo is a symbol of authority."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "Both systems checked power, but one through a throne and the other through an assembly.",
+              "columns": [
+                "Yoruba",
+                "Igbo"
+              ],
+              "rows": [
+                {
+                  "feature": "Head of system",
+                  "left": "Oba or Alaafin",
+                  "right": "No paramount ruler"
+                },
+                {
+                  "feature": "Main body",
+                  "left": "Oyomesi council",
+                  "right": "Oha-na-eze assembly"
+                },
+                {
+                  "feature": "Decision rule",
+                  "left": "Ruler with council",
+                  "right": "Consensus"
+                },
+                {
+                  "feature": "Check on power",
+                  "left": "Ogboni cult",
+                  "right": "Age grades and title societies"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The Hausa/Fulani emirate",
+            "paragraphs": [
+              "An Emir sits in his palace, appoints district heads and judges cases under Islamic law. The emirate is both a government and a religious order.",
+              "The Hausa/Fulani system was theocratic and centralised. The Emir ruled by Islamic law, the Galadima administered the capital, the Madaki commanded the army and the Alkali judged cases.",
+              "Not every northern group was organised this way. The Tiv, for example, had a non-centralised system and were not influenced by Islamic political culture in the same way as the Kanuri, Fulani and Nupe. The emirates shared a single religious and legal framework, which is why the Tiv stand out."
+            ],
+            "bullets": [
+              "Emir: ruler under Islamic law.",
+              "Galadima: capital. Madaki: army. Alkali: judge.",
+              "Tiv: the non-Islamic exception in the north."
+            ],
+            "takeaway": "The emirate fused political and religious authority in one ruler.",
+            "check": {
+              "question": "The Galadima in the emirate system was ______.",
+              "options": [
+                "a judge",
+                "administrator of the capital",
+                "village head",
+                "officer in charge of the army"
+              ],
+              "answer": 1,
+              "why": "The Galadima administered the capital; the Alkali judged and the Madaki commanded the army."
+            }
           }
         },
         {
@@ -1181,30 +1283,30 @@
           "content": {
             "title": "Exam tip",
             "tone": "tip",
-            "body": "Indirect rule preserved traditional authority but served colonial extraction. That dual effect explains both its administrative convenience and the rise of nationalism."
+            "body": "The three systems are not a ranking. Monarchy, acephalous consensus and theocratic centralisation are different answers to the same problem of order."
           }
         },
         {
           "type": "worked_example",
           "content": {
-            "problem": "Why is the Lyttleton Constitution of 1954 important?",
+            "problem": "Classify each scene: (a) an Alaafin meets the Oyomesi before a decision; (b) a village assembly debates a land case until agreement; (c) an Emir appoints a district head and an Alkali to hear a case.",
             "steps": [
               {
-                "operation": "Place it in the sequence",
-                "reason": "Richards (1946) created regions; Macpherson (1951) added ministers; Lyttleton (1954) settled the federal shape.",
-                "result": "Lyttleton confirmed Nigeria as a federation.",
-                "predictPrompt": "What did it give each region?"
+                "operation": "Classify (a)",
+                "reason": "A hereditary ruler advised by the Oyomesi is the Yoruba monarchy.",
+                "result": "(a) Yoruba system.",
+                "predictPrompt": "Which system decides by consensus?"
               },
               {
-                "operation": "Name the change",
-                "reason": "The regions gained premiers and a larger share of power, while the centre handled federal matters.",
-                "result": "A federal structure with regional autonomy.",
+                "operation": "Classify (b)",
+                "reason": "An open assembly reaching agreement without a paramount ruler is the Igbo system.",
+                "result": "(b) Igbo system.",
                 "predictPrompt": ""
               },
               {
-                "operation": "Match the option",
-                "reason": "The constitution's key legacy is the federal structure.",
-                "result": "Choose the option that says it confirmed Nigeria as a federal structure."
+                "operation": "Classify (c)",
+                "reason": "An Emir appointing officials and a judge under Islamic law is the Hausa/Fulani emirate.",
+                "result": "(c) Hausa/Fulani system."
               }
             ]
           }
@@ -1212,11 +1314,11 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "Give one difference between the Yoruba and Igbo pre-colonial systems, and one reason the difference mattered to colonial administrators.",
+            "question": "Why did indirect rule work more easily in the emirates than in Igboland?",
             "hints": [
-              "The Yoruba had a central Oba; the Igbo governed through village assemblies and consensus.",
-              "Indirect rule needed a single ruler to deal with — that was easier where a monarchy existed.",
-              "A strong answer contrasts centralised monarchy with acephalous consensus and links it to indirect rule."
+              "Indirect rule needed a single authority through whom the district officer could govern.",
+              "The emirate already had a hierarchy of district and village heads.",
+              "Igbo consensus government left no paramount chief, so the British created warrant chiefs."
             ]
           }
         }
@@ -3647,6 +3749,179 @@
               "In ECOWAS and the AU Nigeria is one of the largest economies and contributors.",
               "The Security Council has five permanent veto-holding members, and Nigeria is not one of them.",
               "Link formal voting power to informal influence and regional leadership."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "constitutional-development-in-nigeria",
+      "title": "Colonial Rule and Constitutional Development",
+      "objective": "Trace the colonial takeover, explain indirect rule, and order the constitutions from Clifford to independence.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Colonial rule in one sentence",
+            "paragraphs": [
+              "Colonial rule moved from company charter to Crown control and then through a series of constitutions that widened Nigerian participation."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "How Britain took control",
+            "paragraphs": [
+              "A British consul signs a treaty with a Lagos chief, a chartered company administers the Niger, and by 1914 a single governor rules the amalgamated territory. That is the sequence of colonial takeover.",
+              "Lagos was annexed as a Crown Colony in 1861. The Royal Niger Company governed much of the north and south by charter until Britain revoked the charter in 1900 and took direct control, and the Northern and Southern Protectorates were amalgamated in 1914.",
+              "The Brussels Conference of 1889–90 followed the Berlin Conference and pressed for the suppression of the slave trade, while the Nigerian Council created in 1914 was unrepresentative and was replaced because it could not speak for Nigerians."
+            ],
+            "bullets": [
+              "1861: Lagos Crown Colony.",
+              "1900: Royal Niger Company charter revoked.",
+              "1914: amalgamation; Nigerian Council unrepresentative."
+            ],
+            "takeaway": "Colonial control began as a company charter and ended as a Crown administration.",
+            "check": {
+              "question": "The Crown Colony of Lagos was created in ______.",
+              "options": [
+                "1914",
+                "1861",
+                "1960",
+                "1900"
+              ],
+              "answer": 1,
+              "why": "Lagos was annexed in 1861; 1900 is the year the Royal Niger Company's charter was revoked, and 1914 is the amalgamation."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Indirect rule",
+            "paragraphs": [
+              "A British district officer gives orders to a warrant chief, who collects tax through the native authority. That arrangement is indirect rule.",
+              "Lugard's indirect rule used existing traditional authorities as agents of colonial government. It was cheap, preserved local institutions and worked best in the centralised emirates, but it strained in Igboland, where there was no single ruler to appoint.",
+              "Its defects were exploitation and oppression, the invention of warrant chiefs, and the rise of nationalism among educated Nigerians excluded from power. It preserved tradition and served colonial extraction at the same time."
+            ],
+            "bullets": [
+              "Lugard: rule through native authorities.",
+              "Worked in emirates; strained in Igboland.",
+              "Defects: exploitation, warrant chiefs, nationalism."
+            ],
+            "takeaway": "Indirect rule was cheap administration built on transformed traditional authority.",
+            "check": {
+              "question": "Indirect rule in Nigeria encouraged ______.",
+              "options": [
+                "exploitation and oppression",
+                "inter-communal cooperation",
+                "the rise of nationalism",
+                "communal integration"
+              ],
+              "answer": 2,
+              "why": "Excluding educated Nigerians from power fed nationalist agitation; exploitation was a defect of the system, not what it encouraged politically."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The constitutions to independence",
+            "paragraphs": [
+              "A nationalist motion in 1953 asks for independence in 1956, and the constitutions that follow widen the electorate and shift power to Nigerians.",
+              "The Clifford Constitution of 1922 introduced the elective principle in Lagos and Calabar. The Richards Constitution of 1946 created regional councils and is said to have conceived federalism; Macpherson in 1951 introduced ministerial government; Lyttleton in 1954 confirmed a federal structure with regional premiers.",
+              "Anthony Enahoro moved the independence motion in 1953. Nigeria became independent in 1960 and a republic in 1963, completing the transfer of power the constitutions had staged."
+            ],
+            "bullets": [
+              "1922 Clifford: elective principle.",
+              "1946 Richards: regions and the federal idea.",
+              "1951 Macpherson: ministers. 1954 Lyttleton: federal structure.",
+              "1953 Enahoro motion; 1960 independence; 1963 republic."
+            ],
+            "takeaway": "Each constitution widened participation until independence became the next constitutional step.",
+            "check": {
+              "question": "The Lyttleton Constitution is important because it ______.",
+              "options": [
+                "introduced franchise to Nigerian politics",
+                "abolished the principle of indirect rule",
+                "confirmed Nigeria as a federal structure",
+                "made Nigeria a sovereign nation"
+              ],
+              "answer": 2,
+              "why": "Lyttleton 1954 settled the federal structure with regional premiers; the elective principle came with Clifford in 1922 and sovereignty with independence in 1960."
+            },
+            "visual": {
+              "kind": "flow",
+              "caption": "Each constitution widened participation until independence in 1960.",
+              "steps": [
+                {
+                  "label": "1922: elective principle",
+                  "detail": "Clifford"
+                },
+                {
+                  "label": "1946: regions",
+                  "detail": "Richards"
+                },
+                {
+                  "label": "1951: ministers",
+                  "detail": "Macpherson"
+                },
+                {
+                  "label": "1954: federal structure",
+                  "detail": "Lyttleton"
+                },
+                {
+                  "label": "1960: independence",
+                  "detail": "1963 republic"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Do not confuse the constitutions: Clifford 1922 introduced the elective principle, Richards 1946 created regions and conceived federalism, Macpherson 1951 added ministers, and Lyttleton 1954 confirmed the federation."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Place these in order and match each to its change: Lyttleton 1954, Clifford 1922, Richards 1946, Macpherson 1951.",
+            "steps": [
+              {
+                "operation": "Order the first two",
+                "reason": "Clifford came first and introduced the elective principle; Richards followed and created the regions.",
+                "result": "1922 Clifford, then 1946 Richards.",
+                "predictPrompt": "What did the next constitution add?"
+              },
+              {
+                "operation": "Order the last two",
+                "reason": "Macpherson added ministerial government in 1951, and Lyttleton confirmed the federal structure in 1954.",
+                "result": "1951 Macpherson, then 1954 Lyttleton.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "State the direction",
+                "reason": "Each step widened Nigerian participation and moved power from the governor to elected ministers and regional premiers.",
+                "result": "The sequence runs from a nominated council to a federation ready for independence."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why did the Richards Constitution's regional structure make federalism the likely outcome, rather than a unitary state?",
+            "hints": [
+              "Richards grouped the provinces into three regions with regional councils.",
+              "The regions had different sizes, peoples and administrations.",
+              "Once regional institutions existed, later constitutions built on them rather than abolishing them."
             ]
           }
         }
