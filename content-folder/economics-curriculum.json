@@ -28,11 +28,27 @@
     },
     {
       "slug": "demand-and-supply",
-      "name": "Demand, Supply and Price Determination",
+      "name": "The Theory of Demand",
       "syllabus_ref": "A.4",
       "section": "Foundations of Economics",
       "order": 4,
-      "description": "Types of demand and supply, elasticity, equilibrium price and quantity."
+      "description": "The law of demand, shifts versus movements, types of demand and elasticity."
+    },
+    {
+      "slug": "the-theory-of-supply",
+      "name": "The Theory of Supply",
+      "syllabus_ref": "A.6",
+      "section": "Foundations of Economics",
+      "order": 6,
+      "description": "The law of supply, shifts versus movements, types of supply and elasticity."
+    },
+    {
+      "slug": "the-theory-of-price-determination",
+      "name": "The Theory of Price Determination",
+      "syllabus_ref": "A.7",
+      "section": "Foundations of Economics",
+      "order": 7,
+      "description": "Market and price, equilibrium, price legislation and equilibrium equations."
     },
     {
       "slug": "consumer-behaviour",
@@ -124,7 +140,7 @@
     }
   ],
   "lessons": [
-            {
+    {
       "slug": "basic-concepts",
       "title": "Scarcity, Choice and Opportunity Cost",
       "objective": "Explain scarcity, choice, opportunity cost, the scale of preference and the production possibility frontier.",
@@ -293,7 +309,7 @@
         }
       ]
     },
-        {
+    {
       "slug": "economic-systems",
       "title": "Economic Systems",
       "objective": "Compare free enterprise, centrally planned and mixed economies, and explain how Nigeria's mixed economy answers the basic questions.",
@@ -469,7 +485,7 @@
         }
       ]
     },
-        {
+    {
       "slug": "methods-and-tools-of-economic-analysis",
       "title": "Methods and Tools of Economic Analysis",
       "objective": "Distinguish inductive from deductive reasoning and positive from normative statements, and use tables, charts, averages and dispersion to read economic data.",
@@ -646,18 +662,17 @@
       ]
     },
     {
-      "topic": "demand-and-supply",
       "slug": "demand-and-supply",
-      "title": "Demand, Supply and Equilibrium",
-      "objective": "Apply the laws of demand and supply, distinguish shifts from movements, and solve for equilibrium price and quantity.",
+      "title": "The Theory of Demand",
+      "objective": "Explain the law of demand, distinguish a movement along the curve from a shift, and compare the types and elasticity of demand.",
       "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "heading": "Demand",
+            "heading": "The theory of demand",
             "paragraphs": [
-              "Demand is the quantity buyers are willing and able to buy at each price. The good's own price moves quantity demanded along the curve; every other determinant shifts the whole curve."
+              "Demand is not the same as a wish: it is the quantity buyers are willing and able to buy at each price. The law of demand and its exceptions organise every demand question."
             ],
             "bullets": []
           }
@@ -665,20 +680,64 @@
         {
           "type": "text",
           "content": {
-            "heading": "Demand and its determinants",
+            "heading": "The law of demand",
             "paragraphs": [
-              "The law of demand says that, all else equal, quantity demanded falls as price rises. The demand curve therefore slopes downward."
+              "When tomato prices jump in the market, buyers take fewer tomatoes and some switch to okra. That everyday response is the law of demand at work.",
+              "The law states that, all other things equal, quantity demanded falls as price rises, so the demand curve slopes downward. A demand schedule lists quantity demanded at each price, and plotting it gives the demand curve.",
+              "Three reasons explain the slope: a higher price makes buyers substitute other goods, it reduces their real income, and each extra unit yields less satisfaction. Demand also depends on income, tastes, population, expectations and the prices of related goods."
             ],
             "bullets": [
-              "A change in the good’s own price moves you along the demand curve — a change in quantity demanded.",
-              "A change in income, tastes, population, expectations or the price of a related good shifts the whole curve — a change in demand.",
-              "Normal goods: demand rises with income. Inferior goods: demand falls as income rises.",
-              "Types of demand: complementary (used together), competitive (substitutes), composite (one good, many uses), derived (demand for a factor from demand for its product)."
+              "Demand means willingness and ability to buy, not mere desire.",
+              "Quantity demanded falls as price rises, all else equal.",
+              "Income, tastes, population, expectations and related prices also matter."
             ],
+            "takeaway": "Demand is a schedule of willingness and ability, not a wish.",
+            "check": {
+              "question": "The law of demand states that, all else equal, ______.",
+              "options": [
+                "quantity demanded rises as price rises",
+                "quantity demanded falls as price rises",
+                "demand rises as income falls",
+                "supply falls as price rises"
+              ],
+              "answer": 1,
+              "why": "Price and quantity demanded move in opposite directions along a demand curve, which is why it slopes downward."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Movement along or shift of the curve",
+            "paragraphs": [
+              "A bus fare rises and passengers take fewer trips; separately, a fuel price rise makes the same passengers avoid buses at every fare. The first is a movement along the curve, the second a shift.",
+              "A change in the good's own price moves the buyer along the demand curve, which is a change in quantity demanded. A change in income, tastes, population, expectations or the price of a related good shifts the whole curve, which is a change in demand.",
+              "For a normal good, demand rises with income; for an inferior good, demand falls as income rises. A rise in the price of a substitute shifts demand right, while a rise in the price of a complement shifts it left."
+            ],
+            "bullets": [
+              "Own price: movement along the curve.",
+              "Any other determinant: shift of the curve.",
+              "Normal goods rise with income; inferior goods fall."
+            ],
+            "takeaway": "Own price moves you along; every other determinant shifts the curve.",
+            "check": {
+              "question": "A rise in consumers' income shifts the demand curve for a normal good ______.",
+              "options": [
+                "to the left",
+                "to the right",
+                "along the curve",
+                "downward only"
+              ],
+              "answer": 1,
+              "why": "Income is not the good's own price, so the whole curve shifts; for a normal good, higher income raises demand at every price."
+            },
             "visual": {
               "kind": "compare",
               "caption": "Own price moves you along the curve; every other determinant shifts it.",
-              "columns": ["Movement along the curve", "Shift of the curve"],
+              "columns": [
+                "Movement along the curve",
+                "Shift of the curve"
+              ],
               "rows": [
                 {
                   "feature": "What changed",
@@ -707,16 +766,29 @@
         {
           "type": "text",
           "content": {
-            "heading": "Supply and equilibrium",
+            "heading": "Types of demand and elasticity",
             "paragraphs": [
-              "The law of supply says quantity supplied rises with price, so the supply curve slopes upward. Equilibrium is where quantity demanded equals quantity supplied."
+              "A torch is useless without a battery, palm oil serves both soap making and cooking, and the demand for bricklayers depends on the demand for houses. Those three cases are different types of demand.",
+              "Complementary or joint demand is for goods used together, such as a torch and its battery. Competitive demand is for substitutes, composite demand is one good with several uses, and derived demand is for a factor because of the good it produces.",
+              "Price elasticity of demand measures how strongly quantity responds to price: percentage change in quantity divided by percentage change in price. Demand is elastic when the value exceeds one, inelastic when it is below one, and unitary when it equals one. Necessities with few substitutes, such as salt, are inelastic."
             ],
             "bullets": [
-              "Above equilibrium price there is a surplus, which pushes price down.",
-              "Below equilibrium price there is a shortage, which pushes price up.",
-              "An increase in demand raises both equilibrium price and quantity; an increase in supply lowers price and raises quantity.",
-              "Elasticity measures how strongly quantity responds to price; demand is elastic when the percentage change in quantity exceeds the percentage change in price."
-            ]
+              "Complementary/joint, competitive, composite, derived.",
+              "PED = % change in quantity ÷ % change in price.",
+              "Elastic above one, inelastic below one, unitary at one."
+            ],
+            "takeaway": "Elasticity tells you whether a price change moves quantity a lot or a little.",
+            "check": {
+              "question": "The demand for bricklayers that arises from the demand for houses is ______ demand.",
+              "options": [
+                "composite",
+                "derived",
+                "competitive",
+                "joint"
+              ],
+              "answer": 1,
+              "why": "The factor is not wanted for itself but for the houses it helps to build, so its demand is derived from the product market."
+            }
           }
         },
         {
@@ -724,7 +796,360 @@
           "content": {
             "title": "Exam trap",
             "tone": "tip",
-            "body": "Own price moves you along the curve. Every other determinant shifts the curve. Read the question for which one changed."
+            "body": "A change in demand is not the same as a change in quantity demanded. If the question names the good's own price, stay on the curve; if it names anything else, shift it."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "The price of a good falls from N10 to N8 and quantity demanded rises from 100 to 140 units. Calculate the price elasticity of demand and interpret it.",
+            "steps": [
+              {
+                "operation": "Find the percentage change in quantity",
+                "reason": "Divide the change in quantity by the original quantity.",
+                "result": "(140 − 100) ÷ 100 = 0.40, or 40 per cent.",
+                "predictPrompt": "Now find the percentage change in price."
+              },
+              {
+                "operation": "Find the percentage change in price",
+                "reason": "Divide the change in price by the original price, ignoring the sign.",
+                "result": "(10 − 8) ÷ 10 = 0.20, or 20 per cent.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Divide and interpret",
+                "reason": "Elasticity is the quantity change divided by the price change.",
+                "result": "PED = 40 ÷ 20 = 2. Demand is elastic because the value exceeds one."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A government wants to raise revenue by taxing cigarettes. Explain why the price elasticity of demand matters, and what would change if smokers could easily switch to a cheaper brand.",
+            "hints": [
+              "If demand is inelastic, a tax raises price without cutting quantity much, so revenue rises.",
+              "Easy substitution makes demand more elastic, so buyers cut quantity sharply.",
+              "Link the answer to revenue, not only to health."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "the-theory-of-supply",
+      "title": "The Theory of Supply",
+      "objective": "Explain the law of supply, distinguish a movement along the curve from a shift, and compare the types and elasticity of supply.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "The theory of supply",
+            "paragraphs": [
+              "Supply is the quantity producers are willing and able to offer for sale at each price. The law of supply, its determinants and elasticity explain how sellers respond."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The law of supply",
+            "paragraphs": [
+              "When maize prices rise, farmers plant more maize and traders release more from storage. The higher price draws more supply into the market.",
+              "The law of supply states that, all other things equal, quantity supplied rises as price rises, so the supply curve slopes upward. A supply schedule lists quantity supplied at each price, and plotting it gives the supply curve.",
+              "The slope reflects rising opportunity cost: as producers expand, they use less suitable resources or pay overtime, so they need a higher price. Supply also depends on input costs, technology, taxes and subsidies, the number of sellers, expectations and weather."
+            ],
+            "bullets": [
+              "Supply means willingness and ability to sell, not the stock in a warehouse.",
+              "Quantity supplied rises with price, all else equal.",
+              "Costs, technology, taxes, subsidies, sellers, expectations and weather shift supply."
+            ],
+            "takeaway": "Supply is what sellers will actually offer, not what they happen to hold.",
+            "check": {
+              "question": "The law of supply states that, all else equal, ______.",
+              "options": [
+                "quantity supplied rises as price rises",
+                "quantity supplied falls as price rises",
+                "supply rises as costs rise",
+                "supply is independent of price"
+              ],
+              "answer": 0,
+              "why": "Higher prices make extra production worthwhile, so quantity supplied and price move in the same direction."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Movement along or shift of the curve",
+            "paragraphs": [
+              "The market price of maize rises and farmers bring more to market; separately, a fall in the cost of fertiliser makes them supply more at every price. The first is a movement along the curve, the second a shift.",
+              "A change in the good's own price moves the seller along the supply curve, which is a change in quantity supplied. A change in input costs, technology, taxes, subsidies, the number of sellers, expectations or weather shifts the whole curve, which is a change in supply.",
+              "A fall in costs or a new technology shifts supply right, because more can be supplied at every price. A tax rise or a bad harvest shifts it left."
+            ],
+            "bullets": [
+              "Own price: movement along the curve.",
+              "Any other determinant: shift of the curve.",
+              "Lower costs shift supply right; higher costs shift it left."
+            ],
+            "takeaway": "Own price moves you along; every other determinant shifts the curve.",
+            "check": {
+              "question": "A fall in the cost of raw materials will ______.",
+              "options": [
+                "shift the supply curve to the right",
+                "shift the supply curve to the left",
+                "move the seller along the supply curve",
+                "reduce quantity supplied at every price"
+              ],
+              "answer": 0,
+              "why": "Cheaper inputs raise the profit available at each price, so sellers offer more at every price and the curve shifts right."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "Own price moves you along the curve; every other determinant shifts it.",
+              "columns": [
+                "Movement along the curve",
+                "Shift of the curve"
+              ],
+              "rows": [
+                {
+                  "feature": "What changed",
+                  "left": "The good's own price",
+                  "right": "Costs, technology, taxes or weather"
+                },
+                {
+                  "feature": "What happens",
+                  "left": "Quantity supplied changes",
+                  "right": "Supply changes at every price"
+                },
+                {
+                  "feature": "Example",
+                  "left": "Maize rises from N300 to N400",
+                  "right": "Fertiliser becomes cheaper"
+                },
+                {
+                  "feature": "Exam wording",
+                  "left": "A fall in quantity supplied",
+                  "right": "A fall in supply"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Types of supply and elasticity",
+            "paragraphs": [
+              "A butcher sells beef and hides from the same animal, a farmer chooses between maize and cassava on the same land, and electricity reaches homes from hydro, gas and solar plants. Those cases are different types of supply.",
+              "Joint supply is produced together from one process; competitive supply uses the same resources for alternative products; composite supply comes from several sources for one market.",
+              "Price elasticity of supply measures the response of quantity supplied to price: percentage change in quantity supplied divided by percentage change in price. Supply is elastic when producers can respond quickly, and inelastic when capacity, storage or time is limited. Time is the main determinant, which is why farm supply is inelastic within a season."
+            ],
+            "bullets": [
+              "Joint: one process, several products.",
+              "Competitive: same resources, alternative products.",
+              "Composite: several sources, one market.",
+              "PES = % change in quantity supplied ÷ % change in price."
+            ],
+            "takeaway": "Supply is elastic when producers can respond, and time is the biggest constraint.",
+            "check": {
+              "question": "Beef and hides are produced together from the same animal, so their supply is ______.",
+              "options": [
+                "competitive",
+                "joint",
+                "composite",
+                "inelastic"
+              ],
+              "answer": 1,
+              "why": "One production process yields both goods, so an increase in beef supply also increases the supply of hides."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam trap",
+            "tone": "tip",
+            "body": "Do not confuse a movement along the supply curve with a shift. The good's own price moves you along; costs, technology, taxes and weather shift the curve."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A supply function is P = ¼(Qs + 10). Find the quantity supplied when the price is N10.",
+            "steps": [
+              {
+                "operation": "Rearrange for Qs",
+                "reason": "The function gives price in terms of quantity, so isolate quantity before substituting.",
+                "result": "Multiply by 4: 4P = Qs + 10, so Qs = 4P − 10.",
+                "predictPrompt": "What is 4P when P = 10?"
+              },
+              {
+                "operation": "Substitute the price",
+                "reason": "Put P = 10 into the rearranged supply function.",
+                "result": "Qs = 4(10) − 10 = 40 − 10.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "State the quantity",
+                "reason": "The result is the quantity supplied at that price.",
+                "result": "Qs = 30 units."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Explain why the supply of tomatoes is inelastic within a single season but more elastic over two years.",
+            "hints": [
+              "In one season, land, planting time and storage are fixed.",
+              "Over two years, farmers can plant more land, buy irrigation or build storage.",
+              "Link the time horizon to the elasticity coefficient, not just to output."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "the-theory-of-price-determination",
+      "title": "The Theory of Price Determination",
+      "objective": "Explain how market forces set equilibrium price and quantity, and how price legislation changes the outcome.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "The theory of price determination",
+            "paragraphs": [
+              "Price is set where buyers and sellers agree. Demand and supply, the price system and government legislation explain why the agreed price is what it is."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Market, price and the price system",
+            "paragraphs": [
+              "A tomato glut in one week and a tomato shortage the next show the same market adjusting: the price falls when sellers cannot sell and rises when buyers cannot buy.",
+              "A market is any arrangement in which buyers and sellers exchange a good, not only a physical place. Price is the amount of money for which a good or service exchanges, and the price system is the network of prices across markets.",
+              "The price system performs four jobs: it signals scarcity, rations limited goods among buyers, allocates resources towards profitable uses, and rewards efficient producers. A price is therefore information as well as income."
+            ],
+            "bullets": [
+              "Market: any buyer-seller arrangement, not just a building.",
+              "Price: money value of a good in exchange.",
+              "Price system: signals, rations, allocates, rewards."
+            ],
+            "takeaway": "A price is a signal before it is a payment.",
+            "check": {
+              "question": "The price mechanism determines the prices of commodities through ______.",
+              "options": [
+                "auctioning",
+                "the sale of treasury bills",
+                "market forces",
+                "government legislation"
+              ],
+              "answer": 2,
+              "why": "In a market system, the interaction of demand and supply sets price; legislation is an external intervention."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Equilibrium, surplus and shortage",
+            "paragraphs": [
+              "A trader prices a bag of rice at N60,000 and cannot sell; at N45,000 buyers queue. Between those prices is the level where the market clears.",
+              "Equilibrium is the price at which quantity demanded equals quantity supplied. Above equilibrium, quantity supplied exceeds quantity demanded, so a surplus pushes price down. Below equilibrium, quantity demanded exceeds quantity supplied, so a shortage pushes price up.",
+              "A rise in demand raises both equilibrium price and quantity; a rise in supply lowers equilibrium price and raises quantity. The size of each change depends on the elasticity of the two curves."
+            ],
+            "bullets": [
+              "Equilibrium: quantity demanded equals quantity supplied.",
+              "Surplus pushes price down; shortage pushes it up.",
+              "Demand up: price and quantity up. Supply up: price down, quantity up."
+            ],
+            "takeaway": "The market clears where the two curves cross; surpluses and shortages are temporary pressures.",
+            "check": {
+              "question": "At a price above the equilibrium price, there is ______.",
+              "options": [
+                "a shortage",
+                "a surplus",
+                "equilibrium",
+                "excess demand"
+              ],
+              "answer": 1,
+              "why": "Sellers offer more than buyers will take at that price, so unsold stock accumulates until price falls."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "The two imbalances push the price in opposite directions.",
+              "columns": [
+                "Surplus",
+                "Shortage"
+              ],
+              "rows": [
+                {
+                  "feature": "Price",
+                  "left": "Above equilibrium",
+                  "right": "Below equilibrium"
+                },
+                {
+                  "feature": "Market condition",
+                  "left": "Quantity supplied exceeds demand",
+                  "right": "Quantity demanded exceeds supply"
+                },
+                {
+                  "feature": "Pressure on price",
+                  "left": "Downward",
+                  "right": "Upward"
+                },
+                {
+                  "feature": "Example",
+                  "left": "Unsold rice at N60,000",
+                  "right": "Queues at N45,000"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Price legislation and equilibrium equations",
+            "paragraphs": [
+              "A government caps the price of bread below the market level to protect consumers, and queues appear because demand now exceeds supply. That is the predictable result of a maximum price.",
+              "A maximum price, or price ceiling, is fixed below equilibrium and causes a shortage, rationing and black markets. A minimum price, or price floor, is fixed above equilibrium and causes a surplus, so government may buy the excess; the minimum wage and farm price supports are examples.",
+              "Equilibrium can also be found from simple linear equations. Set quantity demanded equal to quantity supplied, solve for price, then substitute the price back into either equation to get quantity."
+            ],
+            "bullets": [
+              "Maximum price below equilibrium: shortage and black market.",
+              "Minimum price above equilibrium: surplus and government purchase.",
+              "Set Qd = Qs, solve for P, then substitute for Q."
+            ],
+            "takeaway": "A price fixed away from equilibrium creates the imbalance the market would have cleared.",
+            "check": {
+              "question": "A maximum price fixed below the equilibrium price will cause ______.",
+              "options": [
+                "a surplus",
+                "a shortage",
+                "no change in quantity",
+                "an increase in supply"
+              ],
+              "answer": 1,
+              "why": "At the lower price buyers want more than sellers will offer, so quantity demanded exceeds quantity supplied."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam trap",
+            "tone": "tip",
+            "body": "A maximum price protects buyers by keeping prices low; a minimum price protects sellers by keeping prices high. Do not reverse the two."
           }
         },
         {
@@ -755,11 +1180,11 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "The price of petrol rises. Explain why this shifts the demand curve for large cars rather than moving along it.",
+            "question": "A government fixes a maximum price for bread below the equilibrium price. Explain the effects on quantity, queues and the black market, and why the policy may still be popular.",
             "hints": [
-              "Petrol is not the price of the car itself; it is the price of a complementary good used with the car.",
-              "A change in the price of a complement changes demand at every car price, so the whole curve shifts left.",
-              "A strong answer distinguishes the own-price movement from a shift caused by a related good."
+              "At the lower price, quantity demanded rises while quantity supplied falls.",
+              "Queues and a black market appear because some buyers will pay more than the legal price.",
+              "The policy is popular because the buyers who succeed pay less, even though supply shrinks."
             ]
           }
         }
