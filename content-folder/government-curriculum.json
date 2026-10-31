@@ -389,7 +389,7 @@
         }
       ]
     },
-    {
+        {
       "slug": "basic-concepts",
       "title": "Basic Concepts of Government",
       "objective": "Distinguish power, authority, legitimacy and sovereignty, and tell a state from a nation.",
@@ -408,35 +408,36 @@
         {
           "type": "text",
           "content": {
-            "heading": "Power and influence",
+            "heading": "Power, authority and legitimacy",
             "paragraphs": [
-              "Power is the ability to affect others' behaviour, even against their will. It may rest on force, wealth, office, information or persuasion. Influence is the quieter form: shaping what others think or do without commanding them."
+              "A coup leader controls the army and the radio but still needs people to accept his orders. Power is the ability to affect behaviour, even against resistance; influence shapes what others think without commanding them.",
+              "Authority is power accepted as rightful, and legitimacy is the belief that makes it rightful. Authority may be traditional, charismatic or legal-rational; modern states rely on the last, so authority attaches to the office rather than the person.",
+              "Power need not be legitimate. A government can hold office and still lose legitimacy, which is why legitimate governments need less coercion to collect taxes or enforce court orders."
             ],
             "bullets": [
-              "Power is the capacity to compel; influence is the capacity to shape without compulsion.",
-              "Sources of power include force, wealth, office, knowledge, charisma and numbers.",
-              "Power need not be legitimate: a coup leader may hold power while lacking authority."
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "content": {
-            "heading": "Authority and legitimacy",
-            "paragraphs": [
-              "Authority is power accepted as rightful. A teacher may be able to punish, but authority exists when students accept that the punishment is deserved. Authority therefore rests on belief, not simply on force.",
-              "Legitimacy is that belief. A government is legitimate when people accept that it has the right to rule, even when they disagree with it. Legitimacy turns obedience from fear into duty, so legitimate governments need less coercion.",
-              "By source, authority is traditional (custom), charismatic (personal appeal) or legal-rational (law and office); modern states rely mainly on the last, so authority attaches to the office."
+              "Power compels; influence shapes; authority is accepted power.",
+              "Legitimacy is the belief that the right to rule is real.",
+              "Traditional, charismatic, legal-rational: authority's three sources."
             ],
-            "bullets": [
-              "Power is ability; authority is accepted right; legitimacy is the belief that the right is real.",
-              "Traditional, charismatic and legal-rational authority differ by source.",
-              "A government can hold power without legitimacy — the usual position after an unpopular coup."
-            ],
+            "takeaway": "Legitimacy turns obedience from fear into duty.",
+            "check": {
+              "question": "The belief that a government has the right to rule is called ______.",
+              "options": [
+                "authority",
+                "legitimacy",
+                "sovereignty",
+                "power"
+              ],
+              "answer": 1,
+              "why": "Legitimacy is the belief; authority is power accepted as rightful because of that belief. Sovereignty is supreme authority, not the belief itself."
+            },
             "visual": {
               "kind": "compare",
               "caption": "Legitimacy is the belief that turns power into authority.",
-              "columns": ["Power", "Authority"],
+              "columns": [
+                "Power",
+                "Authority"
+              ],
               "rows": [
                 {
                   "feature": "What it is",
@@ -465,31 +466,29 @@
         {
           "type": "text",
           "content": {
-            "heading": "Sovereignty",
+            "heading": "Sovereignty and the state",
             "paragraphs": [
-              "Sovereignty is supreme and final authority within a territory. Internal sovereignty means the state is the highest authority over its people and institutions; external sovereignty means it is independent of other states.",
-              "Legal sovereignty belongs to the body that makes final law — the constitution or parliament. Popular sovereignty belongs to the people, exercised through elections and referendums; the constitution organises how that power is used."
+              "A state signs a treaty, and another state cannot overrule its courts. That independence abroad and supremacy at home is sovereignty.",
+              "Sovereignty is supreme and final authority within a territory. Internal sovereignty means the state is the highest authority over its people; external sovereignty means independence from other states. Legal sovereignty sits with the constitution or parliament, popular sovereignty with the people.",
+              "A state has territory, population, government and sovereignty. A nation is a people sharing an identity, and a nation-state exists when borders roughly match that identity. Nigeria is a state containing many nations; the Kurds are a nation without a state."
             ],
             "bullets": [
-              "Internal sovereignty is supremacy at home; external sovereignty is independence abroad.",
-              "Legal sovereignty sits with the constitution or parliament; popular sovereignty sits with the people.",
-              "Sovereignty is limited in practice by treaties, international law and economic dependence."
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "content": {
-            "heading": "State, nation and nation-state",
-            "paragraphs": [
-              "A state has four elements: territory, population, government and sovereignty. A nation is a group of people sharing an identity — language, history, culture or belonging. A nation-state exists when borders roughly match a nation’s identity.",
-              "The two often diverge. Nigeria is a state containing many nations; the Kurds are a nation without a state. Society is the wider web of relationships; the state is its political organisation."
+              "Internal: supremacy at home. External: independence abroad.",
+              "Legal sovereignty: constitution or parliament. Popular: the people.",
+              "State = territory + population + government + sovereignty."
             ],
-            "bullets": [
-              "State = territory + population + government + sovereignty.",
-              "Nation = shared identity; state = political organisation; nation-state = both coincide.",
-              "A state can contain many nations; a nation can exist without a state."
-            ]
+            "takeaway": "A state is a legal container; a nation is a community of belonging.",
+            "check": {
+              "question": "A state is distinguished from a nation by ______.",
+              "options": [
+                "a shared identity",
+                "territory and sovereignty",
+                "a common language",
+                "a single ethnic group"
+              ],
+              "answer": 1,
+              "why": "A state is defined by territory, population, government and sovereignty; a nation is defined by shared identity, which a state may contain several of."
+            }
           }
         },
         {
@@ -497,13 +496,26 @@
           "content": {
             "heading": "Political processes",
             "paragraphs": [
-              "Political socialisation is how people learn political attitudes and behaviour. Family, school, media, religion, peers and parties are its agents. It is how a child born without political opinions becomes a citizen who holds them.",
-              "Political participation is activity through which people take part: voting, campaigning, protesting, contacting officials and standing for office. Political culture is the pattern of beliefs and values a society holds about politics — for example, whether authority is trusted or suspected."
+              "A child learns to trust or suspect government at home, at school and through the media long before voting. That is political socialisation.",
+              "Political participation is activity through which people take part: voting, campaigning, protesting, contacting officials and standing for office. Political culture is the pattern of beliefs and values a society holds about politics, such as whether authority is trusted or suspected.",
+              "Socialisation forms attitudes, culture is the shared pattern they form, and participation expresses them. Low turnout can reflect apathy, but it can also reflect institutions that do not respond."
             ],
             "bullets": [
-              "Socialisation forms attitudes; participation expresses them; culture is the shared pattern they form.",
-              "Agents of socialisation include family, school, media, religion, peers and parties."
-            ]
+              "Socialisation forms attitudes; culture is the pattern; participation is the action.",
+              "Agents: family, school, media, religion, peers and parties."
+            ],
+            "takeaway": "Socialisation explains how attitudes form; participation shows whether they are acted on.",
+            "check": {
+              "question": "The process by which people learn political attitudes and behaviour is ______.",
+              "options": [
+                "political culture",
+                "political socialisation",
+                "political participation",
+                "public opinion"
+              ],
+              "answer": 1,
+              "why": "Socialisation is the learning process; culture is the resulting pattern of beliefs, and participation is the activity itself."
+            }
           }
         },
         {
