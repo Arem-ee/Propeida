@@ -90,16 +90,32 @@
     },
     {
       "slug": "nigerian-federalism-military-rule",
-      "name": "Nigerian Federalism and Military Rule",
+      "name": "Nigerian Federalism",
       "section": "Nigerian Government",
       "order": 18,
-      "description": "State creation, local government reform, coups and military regimes."
+      "description": "The federal principle, legislative lists, state creation, revenue and federal character."
+    },
+    {
+      "slug": "the-military-in-nigerian-politics",
+      "name": "The Military in Nigerian Politics",
+      "syllabus_ref": "B.12",
+      "section": "Nigerian Government",
+      "order": 19,
+      "description": "Why soldiers intervened, how military regimes worked, their legacy and the exit to civil rule."
+    },
+    {
+      "slug": "local-government",
+      "name": "Local Government",
+      "syllabus_ref": "B.11",
+      "section": "Nigerian Government",
+      "order": 20,
+      "description": "The 1976 reforms, council functions and finance, traditional rulers and state control."
     },
     {
       "slug": "foreign-policy-international-organisations",
       "name": "Foreign Policy and International Organisations",
       "section": "Nigerian Government",
-      "order": 19,
+      "order": 21,
       "description": "Nigeria's foreign policy and the UN, AU/OAU and ECOWAS."
     },
     {
@@ -1979,61 +1995,145 @@
         }
       ]
     },
-    {
-      "topic": "nigerian-federalism-military-rule",
+        {
       "slug": "nigerian-federalism-military-rule",
-      "title": "Nigerian Federalism and Military Rule",
-      "objective": "Apply the federal principle, use the legislative lists, and explain how military rule shaped Nigeria’s federal structure.",
-      "estimatedMinutes": 12,
+      "title": "Nigerian Federalism: Dividing Power",
+      "objective": "Explain the rationale for Nigerian federalism, the tiers and legislative lists, state creation, and the problems and corrective measures.",
+      "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "heading": "The federal principle",
+            "heading": "Federalism in one sentence",
             "paragraphs": [
-              "K. C. Wheare defined the federal principle as a division of powers between a general government and regional governments, each coordinate and independent within its own sphere.",
-              "Nigeria divides power using legislative lists, and the courts police the boundary."
+              "Nigerian federalism divides power between a federal government and state governments, each protected by the constitution within its own sphere."
             ],
-            "bullets": [
-              "Exclusive legislative list: only the federal government may legislate — defence, currency, foreign affairs.",
-              "Concurrent legislative list: both federal and state governments may legislate — education, health.",
-              "Residual list: matters left to the states.",
-              "Where federal and state laws conflict on a concurrent matter, the federal law prevails.",
-              "Other federal features: a written constitution, a bicameral legislature and a supreme court that arbitrates disputes."
-            ]
+            "bullets": []
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "How Nigeria got here, and what military rule did",
+            "heading": "Why Nigeria is a federation",
             "paragraphs": [
-              "Nigerian federalism was built in stages and then reshaped by soldiers. Knowing the sequence answers most history questions."
+              "A state wants to set its own school curriculum while the federal government runs defence and the currency. Both can act, because the constitution gives each level its own powers and neither can abolish the other. That is federalism.",
+              "K. C. Wheare defined the federal principle as a division of powers between a general government and regional governments, each coordinate and independent within its sphere. Nigeria adopted it in 1954 because the country was large and divided into peoples who feared domination by one another.",
+              "The constitution divides power by lists. The exclusive list belongs to the federal government alone: defence, currency and foreign affairs.",
+              "The concurrent list is shared: education and health. The residual list is left to the states. Where federal and state laws conflict on a concurrent matter, the federal law prevails."
             ],
             "bullets": [
-              "1914: amalgamation of the Northern and Southern Protectorates.",
-              "1946 Richards Constitution: conceived a federal structure with three regions.",
-              "1954 Lyttleton Constitution: established federalism with regional autonomy.",
-              "1960 independence, 1963 republic; 1967 twelve states, 1976 nineteen, 1987 twenty-one, 1991 thirty, 1996 thirty-six.",
-              "Military rule ran from 1966 to 1979 and from 1983 to 1999.",
-              "Military governments ruled by decree, suspended the constitution, ousted court jurisdiction and centralised power, which is why Nigeria is often called a federation with strong centralising tendencies.",
-              "The 1976 local government reforms gave councils a guaranteed share of the Federation Account.",
-          "Local government is the third tier, created to bring administration closer to the people."
-            ]
+              "Exclusive: federal only. Concurrent: shared. Residual: states.",
+              "Federal law prevails on a concurrent matter.",
+              "Courts arbitrate disputes between the levels."
+            ],
+            "takeaway": "Federalism was a bargain among Nigeria's regions, not a gift from the centre.",
+            "check": {
+              "question": "Subjects on which both the federal and state governments may legislate are listed in the ______.",
+              "options": [
+                "exclusive legislative list",
+                "residual list",
+                "concurrent legislative list",
+                "federal character list"
+              ],
+              "answer": 2,
+              "why": "The concurrent list is shared; the exclusive list is federal only and the residual list is left to the states."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "From three regions to thirty-six states",
+            "paragraphs": [
+              "At independence Nigeria had three regions; the Mid-West was added in 1963. Soldiers and later civilians kept breaking the regions into smaller states, because groups inside them demanded their own government.",
+              "Gowon created twelve states in 1967, Murtala Mohammed nineteen in 1976, Babangida twenty-one in 1987 and thirty in 1991, and Abacha thirty-six in 1996. The 1996 batch was Bayelsa, Ebonyi, Ekiti, Gombe, Nasarawa and Zamfara.",
+              "Below the states sits local government, the third tier, with 774 councils. The 1976 reforms gave councils a guaranteed share of the Federation Account, which made them depend on the centre rather than on local rates."
+            ],
+            "bullets": [
+              "1967: 12 states. 1976: 19. 1987: 21. 1991: 30. 1996: 36.",
+              "1996: Bayelsa, Ebonyi, Ekiti, Gombe, Nasarawa, Zamfara.",
+              "Local government is the third tier, with 774 councils."
+            ],
+            "takeaway": "State creation has been the main answer to demands for local autonomy.",
+            "check": {
+              "question": "Which of the following states were created in 1996?",
+              "options": [
+                "Gombe and Ekiti",
+                "Ebonyi and Osun",
+                "Adamawa and Kogi",
+                "Akwa Ibom and Zamfara"
+              ],
+              "answer": 0,
+              "why": "Gombe and Ekiti were created in 1996; Osun and Akwa Ibom came in 1991, and Adamawa and Kogi in 1991."
+            },
+            "visual": {
+              "kind": "flow",
+              "caption": "State creation moved from 12 states in 1967 to 36 in 1996, mostly under military governments.",
+              "steps": [
+                {
+                  "label": "1967: 12 states",
+                  "detail": "Gowon"
+                },
+                {
+                  "label": "1976: 19 states",
+                  "detail": "Murtala Mohammed"
+                },
+                {
+                  "label": "1987: 21 states",
+                  "detail": "Babangida"
+                },
+                {
+                  "label": "1991: 30 states",
+                  "detail": "Babangida"
+                },
+                {
+                  "label": "1996: 36 states",
+                  "detail": "Abacha"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The problems federalism creates",
+            "paragraphs": [
+              "A census result is disputed, a state demands more oil revenue, and two states quarrel over a boundary. These are the recurring problems of Nigerian federalism: population counts, revenue allocation, boundaries and ethnic competition for power.",
+              "The constitution answers some of them. The Federal Character Principle requires appointments to reflect Nigeria's diversity; the Revenue Mobilisation Allocation and Fiscal Commission recommends how the Federation Account is shared; and derivation gives oil-producing states a share of the mineral revenue taken from their area.",
+              "The solutions are imperfect. Federal character can reward indigenes over competence, derivation leaves non-oil states poor, and revenue sharing keeps states dependent on the centre. That dependence is why Nigeria is often called a federation with strong centralising tendencies."
+            ],
+            "bullets": [
+              "Problems: census, revenue, boundaries, ethnic competition.",
+              "Federal Character Principle: diversity in appointments.",
+              "RMAFC and derivation: how the Federation Account is shared."
+            ],
+            "takeaway": "Nigeria's federal problem is less the division of power than the division of money.",
+            "check": {
+              "question": "Nigeria's federalism is often measured against the classical federal principle associated with ______.",
+              "options": [
+                "K. C. Wheare",
+                "Abraham Lincoln",
+                "Thomas Hobbes",
+                "Aristotle"
+              ],
+              "answer": 0,
+              "why": "Wheare's definition of coordinate governments, each independent in its sphere, is the standard test used in Nigerian textbooks."
+            }
           }
         },
         {
           "type": "callout",
           "content": {
-            "title": "Exam trap",
+            "title": "Exam tip",
             "tone": "tip",
-            "body": "The 1946 Richards Constitution conceived federalism; the 1954 Lyttleton Constitution established it. Do not swap the two."
+            "body": "Do not confuse the lists: exclusive is federal only, concurrent is shared, residual is states. On a concurrent matter the federal law prevails only to the extent of the inconsistency."
           }
         },
         {
           "type": "worked_example",
           "content": {
-            "problem": "The federal government sets a national minimum standard for secondary schools. A state passes a lower standard. Which law prevails, and on what basis?",
+            "problem": "The federal government sets a national minimum standard for secondary schools and a state passes a lower standard. Which law prevails, and what may the state still do?",
             "steps": [
               {
                 "operation": "Locate the subject",
@@ -2043,13 +2143,13 @@
               },
               {
                 "operation": "Apply the conflict rule",
-                "reason": "On a concurrent matter, the federal law prevails to the extent of the inconsistency.",
+                "reason": "On a concurrent matter the federal law prevails to the extent of the inconsistency.",
                 "result": "The federal minimum standard prevails.",
                 "predictPrompt": ""
               },
               {
                 "operation": "State the limit",
-                "reason": "Federal supremacy is not unlimited: it applies only where the two laws are inconsistent.",
+                "reason": "Federal supremacy applies only where the laws are inconsistent.",
                 "result": "The state may add stricter rules that do not contradict the federal standard."
               }
             ]
@@ -2058,11 +2158,11 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "Why is Nigeria often described as a federation with strong centralising tendencies? Give two reasons and one consequence.",
+            "question": "Nigeria has 36 states and 774 councils, yet it is called a federation with a strong centre. Give two features that make it federal and two that pull power to the centre.",
             "hints": [
-              "Military rule concentrated power and governed by decree.",
-              "Oil revenue and the Federation Account give the centre fiscal leverage over states.",
-              "A consequence is weaker state autonomy or persistent tension over revenue and jurisdiction."
+              "Federal features: a written constitution, coordinate levels, a supreme court, state legislatures.",
+              "Centralising features: oil revenue and the Federation Account, federal roads and police, military-era decrees.",
+              "Pair each feature with its effect on state autonomy."
             ]
           }
         }
@@ -2555,6 +2655,328 @@
               "The veto and override are checks and balances.",
               "Judicial review tests the Act against the constitution.",
               "The answer should show each arm limiting another, not one arm dominating."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "the-military-in-nigerian-politics",
+      "title": "The Military in Nigerian Politics",
+      "objective": "Explain why soldiers intervened, how military regimes were structured, what they changed, and how they withdrew.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Military rule in one sentence",
+            "paragraphs": [
+              "Military rule is government by officers who take power by force, suspend the constitution and make law by decree."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Why soldiers take over",
+            "paragraphs": [
+              "A coup is announced at dawn. The officers say they have come to save the nation from corrupt and incapable politicians, and within hours the constitution is suspended. That is the standard script of military intervention.",
+              "The stated reasons are corruption, electoral fraud, ethnic and regional tension, economic crisis and weak institutions. The deeper causes include personal ambition, factional rivalry inside the army and the example of successful coups elsewhere.",
+              "Nigeria's first coup came in January 1966, followed by a counter-coup in July. Further coups followed in 1975, 1983, 1985 and 1993. Each one repeated the same claim: civilian government had failed."
+            ],
+            "bullets": [
+              "Stated reasons: corruption, fraud, insecurity, economic crisis.",
+              "Deeper causes: ambition, army factionalism, contagion.",
+              "1966, 1975, 1983, 1985 and 1993 coups."
+            ],
+            "takeaway": "The reasons a coup announces are not the same as the causes that produced it.",
+            "check": {
+              "question": "Military intervention in Nigeria was a result of ______.",
+              "options": [
+                "international pressure for change",
+                "perceived incapability of civilians to govern",
+                "civilians' desire to relinquish power",
+                "the desire for a military government"
+              ],
+              "answer": 1,
+              "why": "The officers justified intervention by claiming civilians could not govern; the other options reverse the direction of the claim."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Governing by decree",
+            "paragraphs": [
+              "A military government suspends the constitution, dissolves the legislature and rules through a council of officers. Decrees replace Acts, special tribunals replace ordinary courts, and state governors are serving officers rather than elected civilians.",
+              "The ruling council changed names: the Supreme Military Council, then the Armed Forces Ruling Council under Buhari, then the Provisional Ruling Council under Abacha. Underneath sat the National Council of States and the Federal Executive Council, but final decisions stayed with the officers.",
+              "Military rule reshaped the state. Decree No. 34 of 1966 unified the public service and pushed Nigeria towards a unitary administration, even as soldiers kept creating states. The regimes also left NYSC, the People's Bank, DFRRI, MAMSER and the Structural Adjustment Programme."
+            ],
+            "bullets": [
+              "Constitution suspended; legislature dissolved; rule by decree.",
+              "Councils: Supreme Military Council, Armed Forces Ruling Council, Provisional Ruling Council.",
+              "Legacy: Decree No. 34, NYSC, SAP, DFRRI, People's Bank, MAMSER."
+            ],
+            "takeaway": "Military rule centralised power even while creating more states.",
+            "check": {
+              "question": "The highest decision-making body under the Buhari military regime was the ______.",
+              "options": [
+                "Armed Forces Ruling Council",
+                "National Council of States",
+                "Federal Executive Council",
+                "Supreme Military Council"
+              ],
+              "answer": 0,
+              "why": "Buhari's Supreme Military Council was renamed the Armed Forces Ruling Council; the other bodies were subordinate or earlier."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The exit to civil rule",
+            "paragraphs": [
+              "Soldiers eventually hand over, but usually only after a transition programme they control. Murtala Mohammed and Olusegun Obasanjo set the 1975 to 1979 timetable, which produced the 1979 Constitution and Shehu Shagari as Nigeria's first executive president.",
+              "The second transition was harder. Babangida annulled the 1993 election, Abacha planned to succeed himself, and only Abdulsalami Abubakar's 1998 to 1999 programme returned the country to elected rule under Olusegun Obasanjo.",
+              "Withdrawal is driven by a legitimacy deficit, economic crisis, factional splits in the army, international pressure and an organised civil society. A regime that cannot govern or reproduce itself eventually negotiates its exit."
+            ],
+            "bullets": [
+              "1979: Shagari, the first executive president.",
+              "1993 election annulled; Abacha died in 1998.",
+              "1999: return to civil rule under Obasanjo."
+            ],
+            "takeaway": "Soldiers leave when the cost of ruling exceeds the benefit.",
+            "check": {
+              "question": "Nigeria's first executive president was ______.",
+              "options": [
+                "Alhaji Shehu Shagari",
+                "Dr. Nnamdi Azikiwe",
+                "Alhaji Tafawa Balewa",
+                "Gen. Yakubu Gowon"
+              ],
+              "answer": 0,
+              "why": "Shagari took office in 1979 under the new constitution; Azikiwe was a ceremonial president and Balewa a prime minister."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "A characteristic of military rule is that laws are made by decree, not by an elected legislature. Decrees are usually shielded from judicial review by ouster clauses."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Classify each event: (a) officers suspend the constitution and announce a decree; (b) a military government sets a timetable for elected civilians; (c) a ruling council is renamed after a coup.",
+            "steps": [
+              {
+                "operation": "Classify the suspension",
+                "reason": "Suspending the constitution and ruling by decree is the defining act of military rule.",
+                "result": "(a) Military intervention.",
+                "predictPrompt": "What is the handover called?"
+              },
+              {
+                "operation": "Classify the timetable",
+                "reason": "A programme that ends military rule and restores elections is disengagement.",
+                "result": "(b) Military disengagement.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Classify the renaming",
+                "reason": "A new ruling council signals a change of regime within military rule, not a return to civilian government.",
+                "result": "(c) A new military regime."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why did military governments create more states while also centralising power, and what does that tell you about their claim to be reforming the federation?",
+            "hints": [
+              "State creation answered demands for local autonomy and rewarded loyal groups.",
+              "Decrees, a unified public service and control of revenue pulled power to the centre.",
+              "A strong answer shows the two moves serving the regime's survival, not only reform."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "local-government",
+      "title": "Local Government in Nigeria",
+      "objective": "Trace local government administration, explain the 1976 reforms, its functions, finance and problems, and the role of traditional rulers.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Local government in one sentence",
+            "paragraphs": [
+              "Local government is the third tier of government, created to bring administration closer to the people."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "From native authority to third tier",
+            "paragraphs": [
+              "Before 1976 a district officer worked through a native authority headed by a traditional ruler. The authority collected taxes, ran courts and kept order, but it was appointed rather than elected and differed from region to region.",
+              "The 1976 reforms replaced that patchwork with a uniform single-tier system. Every local government area got an elected council with defined functions, a share of the Federation Account and supervision by a state Ministry of Local Government.",
+              "Later reforms, including those of 1989, adjusted tenure and the balance between elected chairmen and state control. The 1976 framework survived because it gave councils a constitutional place and a predictable income."
+            ],
+            "bullets": [
+              "Before 1976: native authorities, appointed and regionally varied.",
+              "1976: uniform single-tier councils with elected members.",
+              "1976 also gave councils statutory allocation from the Federation Account."
+            ],
+            "takeaway": "1976 turned local administration into a third tier with a guaranteed share of national revenue.",
+            "check": {
+              "question": "The 1976 local government reforms were a benefit to ______.",
+              "options": [
+                "the civil service",
+                "the federal government",
+                "the local government",
+                "the police"
+              ],
+              "answer": 2,
+              "why": "The reforms gave local governments a uniform structure, elected councils and statutory revenue; the other bodies were not their beneficiaries."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "The 1976 reforms changed who ran local affairs and where the money came from.",
+              "columns": [
+                "Before 1976",
+                "After 1976"
+              ],
+              "rows": [
+                {
+                  "feature": "Structure",
+                  "left": "Native authorities, varied by region",
+                  "right": "Uniform single-tier councils"
+                },
+                {
+                  "feature": "Who runs it",
+                  "left": "Appointed chiefs and officials",
+                  "right": "Elected chairman and councillors"
+                },
+                {
+                  "feature": "Finance",
+                  "left": "Local taxes and fees",
+                  "right": "Statutory allocation plus local revenue"
+                },
+                {
+                  "feature": "Supervision",
+                  "left": "Colonial and regional officers",
+                  "right": "State Ministry of Local Government"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "What councils do and how they pay for it",
+            "paragraphs": [
+              "A council keeps the market clean, licenses the motor park, repairs feeder roads and registers births. These are the services people notice daily, which is why local government is called the tier closest to the people.",
+              "Its functions also include primary health centres, agricultural extension, sanitation and, with the state, primary education. It shares these duties with state and federal agencies, so coordination matters as much as money.",
+              "The main income is the statutory allocation from the Federation Account, followed by local rates, licences, fees, fines and grants. The problems are inadequate and delayed allocations, weak internally generated revenue, state interference, corruption and poor staffing."
+            ],
+            "bullets": [
+              "Functions: markets, parks, feeder roads, sanitation, health centres.",
+              "Main finance: statutory allocation from the Federation Account.",
+              "Problems: delayed funds, weak local revenue, state interference, corruption."
+            ],
+            "takeaway": "Councils have the tasks closest to the people and the weakest revenue base.",
+            "check": {
+              "question": "The main source of local government finance since the 1976 reforms has been ______.",
+              "options": [
+                "statutory allocations from the Federation Account",
+                "local rates",
+                "court fines and licences",
+                "market and motor-park levies"
+              ],
+              "answer": 0,
+              "why": "Statutory allocation is the largest and most reliable source; rates and levies are locally generated but much smaller."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Traditional rulers and control",
+            "paragraphs": [
+              "An Oba, Emir or Obi opens a community project and settles a dispute between families, but the council chairman signs the budget. The traditional ruler advises; the elected council decides.",
+              "Traditional rulers are recognised under state chieftaincy laws and serve as custodians of culture and links between the council and the grassroots. They do not hold executive, legislative or judicial power in the modern system, although some states give them advisory councils and salaries.",
+              "Control over councils runs through the state government, the Ministry of Local Government, the auditor-general and the courts. Councillors are elected, but state governments can suspend a council, withhold funds or replace elected officials with caretaker committees, which is a recurring source of conflict."
+            ],
+            "bullets": [
+              "Traditional rulers: advisory and cultural, not executive.",
+              "Control: state government, ministry, auditor-general, courts.",
+              "State suspension of elected councils is a persistent dispute."
+            ],
+            "takeaway": "Traditional rulers advise; elected councils decide.",
+            "check": {
+              "question": "In the modern local government structure in Nigeria, traditional rulers play ______.",
+              "options": [
+                "a judicial role",
+                "a legislative role",
+                "an advisory role",
+                "an executive role"
+              ],
+              "answer": 2,
+              "why": "Traditional rulers advise and represent culture; executive and legislative power sits with the elected council."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Local government is the third tier, not a department of the state. Its main revenue since 1976 is statutory allocation, and traditional rulers have an advisory, not executive, role."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Classify each act: (a) a council chairman presents a budget to councillors; (b) an Emir chairs a meeting on a local dispute; (c) a state governor dissolves a council and appoints a caretaker committee.",
+            "steps": [
+              {
+                "operation": "Classify the budget",
+                "reason": "An elected chairman and council making local decisions is the post-1976 structure.",
+                "result": "(a) Local government decision-making.",
+                "predictPrompt": "Who controls the council's funds?"
+              },
+              {
+                "operation": "Classify the Emir's meeting",
+                "reason": "A traditional ruler mediating a dispute exercises an advisory and cultural role.",
+                "result": "(b) Traditional ruler's advisory role.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Classify the dissolution",
+                "reason": "A state government dissolving an elected council is state supervision, and a common source of conflict.",
+                "result": "(c) State control over local government."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why do Nigerian councils depend so heavily on the Federation Account, and what would they need to do to become more independent?",
+            "hints": [
+              "The 1976 reforms tied councils to statutory allocation.",
+              "Local rates and levies are hard to collect and politically unpopular.",
+              "A strong answer links revenue independence to accountability and better local administration."
             ]
           }
         }
