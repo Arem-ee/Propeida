@@ -54,44 +54,52 @@
     },
     {
       "slug": "constitution-rule-of-law",
-      "name": "Constitution and the Rule of Law",
+      "name": "Constitution",
       "section": "Principles of Government",
       "order": 8,
-      "description": "Sources and types of constitutions; supremacy, rule of law and separation of powers."
+      "description": "Definition, sources and types of constitutions; supremacy and judicial review."
+    },
+    {
+      "slug": "principles-of-democratic-government",
+      "name": "Principles of Democratic Government",
+      "syllabus_ref": "A.9",
+      "section": "Principles of Government",
+      "order": 9,
+      "description": "Rule of law, separation of powers, checks and balances, responsibility and constitutionalism."
     },
     {
       "slug": "political-parties-elections",
       "name": "Political Parties and Elections",
       "section": "Principles of Government",
-      "order": 9,
+      "order": 13,
       "description": "Parties, pressure groups, constituencies, referendums and electoral participation."
     },
     {
       "slug": "citizenship",
       "name": "Citizenship",
       "section": "Principles of Government",
-      "order": 10,
+      "order": 11,
       "description": "Acquisition of citizenship and the duties and obligations of a citizen."
     },
     {
       "slug": "pre-colonial-colonial-administration",
       "name": "Pre-colonial and Colonial Administration",
       "section": "Nigerian Government",
-      "order": 11,
+      "order": 17,
       "description": "Yoruba, Igbo and Hausa/Fulani systems; colonial rule and the independence constitutions."
     },
     {
       "slug": "nigerian-federalism-military-rule",
       "name": "Nigerian Federalism and Military Rule",
       "section": "Nigerian Government",
-      "order": 12,
+      "order": 18,
       "description": "State creation, local government reform, coups and military regimes."
     },
     {
       "slug": "foreign-policy-international-organisations",
       "name": "Foreign Policy and International Organisations",
       "section": "Nigerian Government",
-      "order": 13,
+      "order": 19,
       "description": "Nigeria's foreign policy and the UN, AU/OAU and ECOWAS."
     },
     {
@@ -924,40 +932,126 @@
         }
       ]
     },
-    {
+        {
       "slug": "constitution-rule-of-law",
-      "title": "Constitution and the Rule of Law",
-      "objective": "Explain what a constitution does, compare written and unwritten constitutions, and apply the rule of law.",
+      "title": "Constitution: Sources, Types and Supremacy",
+      "objective": "Explain what a constitution is, identify its sources and types, and show why it is supreme over ordinary law.",
       "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "heading": "What a constitution is",
+            "heading": "Constitution in one sentence",
             "paragraphs": [
-              "A constitution contains the fundamental laws that establish government, distribute power and limit it. It is the supreme law: every other law must conform to it."
+              "A constitution is the fundamental law that creates public offices and limits them; everything else must comply with it."
             ],
-            "bullets": [
-              "Sources: statutes, conventions, judicial decisions, custom and authoritative texts.",
-              "Functions: establish institutions, distribute power, protect rights and provide stability.",
-              "Written constitutions are usually codified in one document; unwritten constitutions rest on statutes, conventions and common law.",
-              "Rigid constitutions are hard to amend; flexible ones can be changed by ordinary law."
-            ]
+            "bullets": []
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "The rule of law",
+            "heading": "The rulebook a government cannot ignore",
             "paragraphs": [
-              "The rule of law means that the law is supreme over every person and institution, including the government. It operates in states where laws, not officials, are supreme."
+              "A new government wants to detain a critic without trial. It cannot simply order the police to act, because the constitution sets the procedure and the courts can strike the order down. That is what makes it fundamental law.",
+              "A constitution creates the main institutions, distributes their powers, limits what they may do, protects rights and gives the regime legitimacy. Its sources include the constitutional text itself, statutes, judicial precedents, conventions, customary law and international treaties.",
+              "It also fixes offices and qualifications. The 1979 Constitution required a presidential candidate to be at least 35, a rule the 1999 Constitution keeps. Under the 1999 Constitution the Attorney-General is the Chief Law Officer, while the Chief Justice heads the Supreme Court."
             ],
             "bullets": [
-              "Supremacy of the law: no punishment without a breach of law.",
-              "Equality before the law: everyone is subject to the same courts.",
-              "Individual rights are protected by ordinary courts.",
-              "Separation of powers and checks and balances help prevent arbitrary rule."
-            ]
+              "Creates institutions, distributes power, limits government.",
+              "Sources: text, statutes, case law, conventions, custom, treaties.",
+              "Fixes qualifications and offices."
+            ],
+            "takeaway": "A constitution is law about government, not a policy manifesto.",
+            "check": {
+              "question": "The fundamental laws of a country are contained in its ______.",
+              "options": [
+                "constitution",
+                "party programmes",
+                "manifestoes",
+                "edicts"
+              ],
+              "answer": 0,
+              "why": "The constitution is the fundamental law; manifestoes and edicts are party or military instruments, not the fundamental law."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Written or unwritten, rigid or flexible",
+            "paragraphs": [
+              "Britain has no single document called a constitution; its rules sit in statutes, court decisions and conventions. The United States has one written document that is hard to amend. Both are constitutional, but they are different types.",
+              "A written constitution is codified in one document; an unwritten one is scattered across statutes, precedents and conventions. A rigid constitution needs a special procedure to amend; a flexible one can be changed by ordinary law. Nigeria's is written and rigid; Britain's is unwritten and flexible.",
+              "Written constitutions give certainty and protect rights, but they can be rigid and litigation-heavy. Unwritten ones adapt easily, but they are uncertain and depend on convention. Federal states usually need a written constitution to protect the units."
+            ],
+            "bullets": [
+              "Written: one document. Unwritten: statutes, cases and conventions.",
+              "Rigid: special amendment. Flexible: ordinary law.",
+              "Nigeria written and rigid; Britain unwritten and flexible."
+            ],
+            "takeaway": "The written/unwritten line is about form; rigid/flexible is about amendment.",
+            "check": {
+              "question": "An example of a country with an unwritten constitution is ______.",
+              "options": [
+                "Nigeria",
+                "United Kingdom",
+                "U.S.A",
+                "Sierra Leone"
+              ],
+              "answer": 1,
+              "why": "The United Kingdom has no single codified constitution; Nigeria, the United States and Sierra Leone have written constitutions."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The constitution is supreme",
+            "paragraphs": [
+              "A state assembly passes a law allowing detention without trial. A court voids it, because the constitution says any law inconsistent with it is void to the extent of the inconsistency. That is supremacy.",
+              "Supremacy means the constitution ranks above ordinary legislation, and courts can review both laws and executive acts for consistency. It limits power, protects rights and gives citizens a fixed standard, but it also makes change slow and can hand large decisions to judges.",
+              "The alternative is legislative supremacy, where parliament is the highest law-maker and courts cannot void its statutes. Britain works this way; Nigeria does not."
+            ],
+            "bullets": [
+              "Inconsistent law is void to that extent.",
+              "Courts review laws and executive acts.",
+              "Nigeria: constitutional supremacy; Britain: legislative supremacy."
+            ],
+            "takeaway": "Supremacy decides who has the last word: the constitution or the legislature.",
+            "check": {
+              "question": "A state law conflicts with the constitution. What happens?",
+              "options": [
+                "It stands because the assembly passed it",
+                "It is void to the extent of the inconsistency",
+                "The president decides whether it stands",
+                "It stands until the assembly amends it"
+              ],
+              "answer": 1,
+              "why": "Constitutional supremacy voids an inconsistent law to that extent; the assembly cannot override the constitution by ordinary legislation."
+            },
+            "visual": {
+              "kind": "flow",
+              "caption": "Supremacy is a test, not a slogan: the court measures each law against the constitution.",
+              "steps": [
+                {
+                  "label": "Constitution sets standard",
+                  "detail": "Rights and powers"
+                },
+                {
+                  "label": "Assembly passes a law",
+                  "detail": "Ordinary legislation"
+                },
+                {
+                  "label": "Court tests consistency",
+                  "detail": "Judicial review"
+                },
+                {
+                  "label": "Inconsistent law is void",
+                  "detail": "To that extent"
+                }
+              ]
+            }
           }
         },
         {
@@ -965,30 +1059,30 @@
           "content": {
             "title": "Exam tip",
             "tone": "tip",
-            "body": "The rule of law is not limited to democracies or developing countries. It applies wherever laws are supreme and officials are answerable to them."
+            "body": "Written is not the same as rigid, and unwritten is not the same as flexible. Britain is unwritten but flexible; Nigeria is written and rigid."
           }
         },
         {
           "type": "worked_example",
           "content": {
-            "problem": "An example of a country with an unwritten constitution is ______.",
+            "problem": "Classify each constitution: (a) one codified document amended only by a special majority; (b) rules spread across statutes, cases and conventions; (c) a codified document that an ordinary Act of Parliament can amend.",
             "steps": [
               {
-                "operation": "Define unwritten",
-                "reason": "An unwritten constitution is not collected in one codified document.",
-                "result": "It is found in statutes, conventions and court decisions.",
-                "predictPrompt": "Which country is famous for this arrangement?"
+                "operation": "Classify the first",
+                "reason": "One codified document with a special amendment procedure is written and rigid.",
+                "result": "(a) Written and rigid.",
+                "predictPrompt": "What type has no single document?"
               },
               {
-                "operation": "Match the example",
-                "reason": "The United Kingdom has no single written constitutional document.",
-                "result": "The United Kingdom is the standard example.",
+                "operation": "Classify the second",
+                "reason": "Rules spread across sources, with no single codified text, make an unwritten constitution.",
+                "result": "(b) Unwritten.",
                 "predictPrompt": ""
               },
               {
-                "operation": "Reject the written examples",
-                "reason": "Nigeria, the USA and Sierra Leone have written constitutions.",
-                "result": "Choose the United Kingdom."
+                "operation": "Classify the third",
+                "reason": "A codified text amendable by ordinary law is written but flexible.",
+                "result": "(c) Written and flexible."
               }
             ]
           }
@@ -996,11 +1090,11 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "A governor ignores a court order because he controls the police. Which rule-of-law principle has he broken, and why?",
+            "question": "Why does a federal state usually need a written and rigid constitution, and what does that rigidity cost?",
             "hints": [
-              "The rule of law requires everyone, including officials, to obey the law.",
-              "Ignoring a court order attacks the supremacy of the law and equality before it.",
-              "A strong answer names supremacy of the law and explains that no official is above it."
+              "A written text protects the units' powers from the centre.",
+              "Rigidity stops a simple majority from rewriting the bargain.",
+              "The cost is slow amendment and heavy reliance on courts."
             ]
           }
         }
@@ -2284,6 +2378,183 @@
               "Governments change, but administration must continue without disruption.",
               "A partisan service rewards loyalty over competence and politicises advice.",
               "A strong answer links neutrality to continuity, impartial advice and public trust."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "principles-of-democratic-government",
+      "title": "Principles of Democratic Government: Limiting Power",
+      "objective": "Explain the rule of law, separation of powers and checks and balances, and the accountability conventions that keep government within limits.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Principles in one sentence",
+            "paragraphs": [
+              "Democratic government rests on principles that stop power from becoming arbitrary: the rule of law, separation of powers and accountability."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "No punishment without a law",
+            "paragraphs": [
+              "A governor orders a critic detained without charge. A court frees the critic and orders the governor to pay costs, because no one may be punished except for a breach of the law proved in court. That is the rule of law.",
+              "A. V. Dicey gave it three limbs: no punishment without a breach of law proved in court; equality before the law, with no exemption for officials; and rights that arise from court decisions, not a document alone. The rule applies wherever law is supreme, not only in Western democracies.",
+              "Its remedies are writs. Habeas corpus orders a jailer to produce a detained person; mandamus compels a public authority to perform its duty; certiorari quashes an unlawful decision; prohibition stops a tribunal exceeding jurisdiction.",
+              "The right to seek redress is the right to approach a court for a remedy."
+            ],
+            "bullets": [
+              "No punishment without a breach of law.",
+              "Officials answer in the same courts as citizens.",
+              "Writs: habeas corpus, mandamus, certiorari, prohibition."
+            ],
+            "takeaway": "The rule of law means the same law binds the governor and the governed.",
+            "check": {
+              "question": "An order compelling a lower court or public authority to perform its public duty is called ______.",
+              "options": [
+                "the great writ",
+                "the writ of ombudsman",
+                "none of the above",
+                "the writ of mandamus"
+              ],
+              "answer": 3,
+              "why": "Mandamus commands performance of a public duty; habeas corpus challenges detention and certiorari quashes a decision."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Three arms, each watching the others",
+            "paragraphs": [
+              "The legislature makes law, the executive implements it and the judiciary interprets it. When one arm also does another's job, liberty is at risk; Montesquieu argued that separating them prevents tyranny.",
+              "Separation of powers is not isolation. Each arm checks the others: the president vetoes a bill and the assembly can override; the Senate confirms ministers and judges; the assembly can impeach the president; the courts can void a law or an executive act as unconstitutional.",
+              "The doctrine is never pure. Delegated legislation lets the executive make rules, and courts make law through precedent. What matters is that no single arm can both make, execute and judge the same decision."
+            ],
+            "bullets": [
+              "Legislature makes, executive implements, judiciary interprets.",
+              "Checks: veto, override, confirmation, impeachment, judicial review.",
+              "No arm should make, execute and judge at once."
+            ],
+            "takeaway": "Separation divides the work; checks and balances stop any arm from dominating.",
+            "check": {
+              "question": "Which power lets a court cancel a law that conflicts with the constitution?",
+              "options": [
+                "veto",
+                "judicial review",
+                "impeachment",
+                "delegated legislation"
+              ],
+              "answer": 1,
+              "why": "Judicial review tests a law against the constitution; the veto belongs to the executive and impeachment to the legislature."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Who answers when policy fails?",
+            "paragraphs": [
+              "A minister approves a contract that wastes public money. Individually, he must explain and may resign; collectively, the cabinet shares responsibility for the government's policy and falls together if it loses the assembly's confidence.",
+              "Individual responsibility makes each minister answerable for his own department. Collective responsibility makes the cabinet present a united front and keep cabinet disputes private. Both depend on a legislature that can question and remove.",
+              "Constitutionalism is the wider principle: government must act within legal limits, not merely win elections. Representative government adds that the people govern through elected agents, while centralisation and decentralisation decide how much power those agents keep at the centre."
+            ],
+            "bullets": [
+              "Individual: a minister answers for his department.",
+              "Collective: the cabinet stands or falls together.",
+              "Constitutionalism: power is exercised within legal limits."
+            ],
+            "takeaway": "Accountability names who must answer, and constitutionalism sets the limit.",
+            "check": {
+              "question": "The convention that ministers must publicly support cabinet decisions is called ______.",
+              "options": [
+                "individual responsibility",
+                "collective responsibility",
+                "judicial review",
+                "devolution"
+              ],
+              "answer": 1,
+              "why": "Collective responsibility requires a united cabinet in public; individual responsibility concerns each minister's own department."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "The two conventions answer different questions: who is personally at fault, and whether the government still stands.",
+              "columns": [
+                "Individual responsibility",
+                "Collective responsibility"
+              ],
+              "rows": [
+                {
+                  "feature": "Who answers",
+                  "left": "The minister alone",
+                  "right": "The whole cabinet"
+                },
+                {
+                  "feature": "For what",
+                  "left": "His department's acts",
+                  "right": "Government policy as a whole"
+                },
+                {
+                  "feature": "Consequence",
+                  "left": "Apology or personal resignation",
+                  "right": "The cabinet resigns together"
+                },
+                {
+                  "feature": "Public face",
+                  "left": "Free to criticise from outside cabinet",
+                  "right": "Must defend the decision publicly"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "The rule of law is not a Western-only idea: it operates wherever law is supreme. Separation of powers is not isolation; the arms share functions and check one another."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Name the principle at work: (a) a court orders a jailer to bring a detained suspect before it; (b) the Senate refuses to confirm a ministerial nominee; (c) a minister resigns after his department misspends funds.",
+            "steps": [
+              {
+                "operation": "Read the court order",
+                "reason": "An order to produce a detained person is habeas corpus, a rule-of-law remedy.",
+                "result": "(a) The rule of law.",
+                "predictPrompt": "Which principle covers the Senate's refusal?"
+              },
+              {
+                "operation": "Read the confirmation vote",
+                "reason": "The Senate checking a presidential appointment is a check and balance.",
+                "result": "(b) Checks and balances.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Read the resignation",
+                "reason": "A minister answering for his own department is individual responsibility.",
+                "result": "(c) Individual responsibility."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Nigeria's president vetoes a bill, the National Assembly overrides the veto, and the Supreme Court later voids part of the Act. Which principles are at work, and why is no arm acting alone?",
+            "hints": [
+              "The veto and override are checks and balances.",
+              "Judicial review tests the Act against the constitution.",
+              "The answer should show each arm limiting another, not one arm dominating."
             ]
           }
         }
