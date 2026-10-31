@@ -4,102 +4,130 @@
   "topics": [
     {
       "slug": "basic-concepts",
-      "name": "Basic Concepts and Economic Systems",
+      "name": "Scarcity, Choice and Opportunity Cost",
+      "syllabus_ref": "A.1",
       "section": "Foundations of Economics",
       "order": 1,
-      "description": "Wants, scarcity, choice, opportunity cost, the scale of preference, and how economic systems answer the basic questions."
+      "description": "Wants, scarcity, choice, opportunity cost, the three basic questions and the production possibility frontier."
+    },
+    {
+      "slug": "economic-systems",
+      "name": "Economic Systems",
+      "syllabus_ref": "A.2",
+      "section": "Foundations of Economics",
+      "order": 2,
+      "description": "Free enterprise, centrally planned and mixed economies, and Nigerian reforms."
+    },
+    {
+      "slug": "methods-and-tools-of-economic-analysis",
+      "name": "Methods and Tools of Economic Analysis",
+      "syllabus_ref": "A.3",
+      "section": "Foundations of Economics",
+      "order": 3,
+      "description": "Induction and deduction, positive and normative statements, tables, charts, averages and dispersion."
     },
     {
       "slug": "demand-and-supply",
       "name": "Demand, Supply and Price Determination",
+      "syllabus_ref": "A.4",
       "section": "Foundations of Economics",
-      "order": 2,
+      "order": 4,
       "description": "Types of demand and supply, elasticity, equilibrium price and quantity."
     },
     {
       "slug": "consumer-behaviour",
       "name": "Theory of Consumer Behaviour",
+      "syllabus_ref": "A.5",
       "section": "Foundations of Economics",
-      "order": 3,
+      "order": 5,
       "description": "Utility, diminishing marginal utility, indifference curves and consumer surplus."
     },
     {
       "slug": "production-and-costs",
       "name": "Production, Costs and Revenue",
+      "syllabus_ref": "A.8",
       "section": "Foundations of Economics",
-      "order": 4,
+      "order": 8,
       "description": "Factors of production, division of labour, the law of diminishing returns, costs and revenue."
     },
     {
       "slug": "market-structures",
       "name": "Market Structures",
+      "syllabus_ref": "A.10",
       "section": "Foundations of Economics",
-      "order": 5,
+      "order": 10,
       "description": "Perfect competition, monopoly, oligopoly and monopolistic competition."
     },
     {
       "slug": "national-income",
       "name": "National Income and Economic Growth",
+      "syllabus_ref": "A.11",
       "section": "Macroeconomics",
-      "order": 6,
+      "order": 11,
       "description": "GDP, real and nominal income, per capita income, growth and development."
     },
     {
       "slug": "money-and-inflation",
       "name": "Money and Inflation",
+      "syllabus_ref": "A.12",
       "section": "Macroeconomics",
-      "order": 7,
+      "order": 12,
       "description": "Functions and qualities of money, inflation, deflation and their causes."
     },
     {
       "slug": "financial-institutions",
       "name": "Financial Institutions",
+      "syllabus_ref": "A.13",
       "section": "Macroeconomics",
-      "order": 8,
+      "order": 13,
       "description": "The Central Bank, deposit money banks, development banks and their roles."
     },
     {
       "slug": "public-finance",
       "name": "Public Finance",
+      "syllabus_ref": "A.14",
       "section": "Macroeconomics",
-      "order": 9,
+      "order": 14,
       "description": "Government revenue, taxation, the budget and fiscal policy."
     },
     {
       "slug": "agriculture-and-industry",
       "name": "Agriculture, Industry and Natural Resources",
+      "syllabus_ref": "A.16",
       "section": "The Nigerian Economy",
-      "order": 10,
+      "order": 16,
       "description": "The role of agriculture, industrialisation and the oil sector in Nigeria."
     },
     {
       "slug": "business-organisations",
       "name": "Business Organisations",
+      "syllabus_ref": "A.19",
       "section": "The Nigerian Economy",
-      "order": 11,
+      "order": 19,
       "description": "Sole proprietorships, partnerships, companies and co-operatives."
     },
     {
       "slug": "population",
       "name": "Population",
+      "syllabus_ref": "A.20",
       "section": "The Nigerian Economy",
-      "order": 12,
+      "order": 20,
       "description": "Population structure, census, labour force and migration."
     },
     {
       "slug": "international-trade",
       "name": "International Trade and Economic Organisations",
+      "syllabus_ref": "A.21",
       "section": "The Nigerian Economy",
-      "order": 13,
+      "order": 21,
       "description": "Comparative advantage, terms of trade, balance of payments, ECOWAS and other organisations."
     }
   ],
   "lessons": [
-    {
-      "topic": "basic-concepts",
+            {
       "slug": "basic-concepts",
       "title": "Scarcity, Choice and Opportunity Cost",
-      "objective": "Explain scarcity, choice and opportunity cost, and rank competing wants with a scale of preference.",
+      "objective": "Explain scarcity, choice, opportunity cost, the scale of preference and the production possibility frontier.",
       "estimatedMinutes": 10,
       "blocks": [
         {
@@ -107,7 +135,7 @@
           "content": {
             "heading": "Scarcity, choice and opportunity cost",
             "paragraphs": [
-              "Scarcity is the gap between unlimited wants and limited resources. It forces a choice, and every choice has an opportunity cost: the next best alternative forgone."
+              "Every economy starts from the same mismatch: wants are unlimited, but the resources used to satisfy them are limited. Economics studies how people and societies choose among competing uses."
             ],
             "bullets": []
           }
@@ -115,24 +143,49 @@
         {
           "type": "text",
           "content": {
-            "heading": "The economic problem",
+            "heading": "Wants, scarcity and choice",
             "paragraphs": [
-              "Economics begins with a mismatch: human wants are unlimited, but the resources used to satisfy them are limited. That gap is scarcity, and it forces everyone — households, firms and governments — to choose."
+              "A student with N5,000 wants a new textbook, a data bundle and a pair of shoes. She can afford only one, so she ranks them and buys the textbook.",
+              "Wants are unlimited while the resources that satisfy them — land, labour, capital and entrepreneurship — are limited. That gap is scarcity. Scarcity is not the same as a shortage: scarcity is the permanent gap between wants and resources, while a shortage is a temporary shortfall in supply.",
+              "Because resources are scarce, every person, firm and government must choose. A scale of preference ranks wants from most to least pressing, and a rational choice compares the benefit of an option with its cost before deciding."
             ],
             "bullets": [
-              "Scarcity means resources are insufficient to satisfy every want at once. It is not the same as shortage, which is temporary.",
-              "Because resources are scarce, choosing one use means giving up another.",
-              "A scale of preference ranks wants in order of importance, so limited income goes to the most pressing wants first.",
-              "Opportunity cost is the next best alternative forgone — not the money paid."
+              "Wants are unlimited; resources are limited.",
+              "Scarcity is permanent and relative; a shortage is temporary.",
+              "A scale of preference ranks wants; rational choice weighs benefit against cost."
             ],
+            "takeaway": "Scarcity forces choice; a shortage only interrupts supply.",
+            "check": {
+              "question": "A fuel queue that disappears once tankers deliver is best described as ______.",
+              "options": [
+                "scarcity",
+                "a shortage",
+                "opportunity cost",
+                "a scale of preference"
+              ],
+              "answer": 1,
+              "why": "The gap was temporary and supply fixed it; scarcity is the permanent gap between wants and resources."
+            },
             "visual": {
               "kind": "flow",
               "caption": "Scarcity forces a choice, and every choice carries an opportunity cost.",
               "steps": [
-                { "label": "Wants exceed resources", "detail": "Unlimited wants, limited means" },
-                { "label": "Scarcity", "detail": "The gap forces a decision" },
-                { "label": "Choice", "detail": "Rank wants; pick one use" },
-                { "label": "Opportunity cost", "detail": "The next best use forgone" }
+                {
+                  "label": "Wants exceed resources",
+                  "detail": "Unlimited wants, limited means"
+                },
+                {
+                  "label": "Scarcity",
+                  "detail": "The gap forces a decision"
+                },
+                {
+                  "label": "Choice",
+                  "detail": "Rank wants; pick one use"
+                },
+                {
+                  "label": "Opportunity cost",
+                  "detail": "The next best use forgone"
+                }
               ]
             }
           }
@@ -140,16 +193,58 @@
         {
           "type": "text",
           "content": {
-            "heading": "How societies answer three questions",
+            "heading": "Opportunity cost and the basic questions",
             "paragraphs": [
-              "Every economy must decide what to produce, how to produce it, and for whom. The way it answers those questions defines its economic system."
+              "A state government has N40 billion and must choose between a new road and a new hospital. If it builds the road, the hospital is the alternative it gives up.",
+              "Opportunity cost is the next best alternative forgone when a choice is made, not the money paid. The N40 billion is the money cost; the hospital is the opportunity cost. Only the highest-ranked alternative forgone counts, not every option that was rejected.",
+              "Production creates goods and services, distribution shares them among people and places, and consumption uses them. Every society answers three questions: what to produce, how to produce it, and for whom. Efficient resource use means producing what people value at the least cost, without waste."
             ],
             "bullets": [
-              "Free enterprise (capitalist): private individuals own the factors of production and prices coordinate most decisions.",
-              "Centrally planned (socialist): the government owns and directs resources through a plan.",
-              "Mixed economy: markets and government both allocate resources. Nigeria is a mixed economy — private firms dominate production while government regulates and provides public goods.",
-              "The production possibility frontier shows the maximum combinations of two goods an economy can produce; a point inside the curve is inefficient."
-            ]
+              "Opportunity cost is the forgone alternative, not the money spent.",
+              "Production creates, distribution shares, consumption uses.",
+              "What, how and for whom are the three basic questions.",
+              "Efficiency means no wasted resources."
+            ],
+            "takeaway": "The real cost of a choice is the best alternative you gave up.",
+            "check": {
+              "question": "A farmer plants maize instead of cassava on his land. His opportunity cost is ______.",
+              "options": [
+                "the cost of the maize seed",
+                "the cassava he did not plant",
+                "the revenue from the maize",
+                "the land itself"
+              ],
+              "answer": 1,
+              "why": "The next best use of the land was cassava; seed and revenue are money flows, not the alternative forgone."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The production possibility frontier",
+            "paragraphs": [
+              "An economy can produce tanks or tractors, and every extra tank costs some tractors. The production possibility frontier draws that trade-off as a curve.",
+              "The PPF shows the maximum combinations of two goods an economy can produce with its current resources and technology. A point on the curve is efficient, a point inside means resources are idle or wasted, and a point outside is unattainable until resources or technology grow.",
+              "The slope of the curve is the opportunity cost of one good in terms of the other. It steepens as more of a good is produced because resources are not equally suited to both uses. Better technology or more resources shifts the whole curve outward."
+            ],
+            "bullets": [
+              "On the curve: efficient. Inside: idle resources. Outside: unattainable.",
+              "The slope measures opportunity cost.",
+              "Growth shifts the curve outward."
+            ],
+            "takeaway": "The PPF is scarcity drawn as a boundary and choice drawn as a move along it.",
+            "check": {
+              "question": "A point inside a country's production possibility curve indicates ______.",
+              "options": [
+                "efficient use of all resources",
+                "output that cannot be reached",
+                "unemployed or wasted resources",
+                "an improvement in technology"
+              ],
+              "answer": 2,
+              "why": "The economy could produce more of at least one good without giving up the other, so some resources are idle."
+            }
           }
         },
         {
@@ -157,30 +252,30 @@
           "content": {
             "title": "Exam trap",
             "tone": "tip",
-            "body": "Opportunity cost is the alternative you gave up, not the naira you spent. If you spend N2,000 on data instead of a textbook, the opportunity cost is the textbook."
+            "body": "Opportunity cost is the alternative forgone, not the naira paid. If N2,000 buys data instead of a textbook, the opportunity cost is the textbook, not the N2,000."
           }
         },
         {
           "type": "worked_example",
           "content": {
-            "problem": "A student has N2,000. She ranks a textbook first, a data bundle second and a cinema ticket third. She buys the textbook. What is her opportunity cost?",
+            "problem": "A student has N2,000 and ranks a textbook first, a data bundle second and a cinema ticket third. She buys the textbook. State her opportunity cost and explain why the N2,000 is not it.",
             "steps": [
               {
                 "operation": "Identify the chosen option",
                 "reason": "Opportunity cost is measured against what was actually chosen.",
                 "result": "She chose the textbook.",
-                "predictPrompt": "Which want came next on her scale of preference?"
+                "predictPrompt": "Which want ranked next?"
               },
               {
                 "operation": "Take the next best alternative",
-                "reason": "Only the highest-ranked forgone option counts, not every option she skipped.",
+                "reason": "Only the highest-ranked forgone option counts, not every option skipped.",
                 "result": "The data bundle is the next best alternative.",
                 "predictPrompt": ""
               },
               {
-                "operation": "Reject the money price",
-                "reason": "The N2,000 is the money cost; it is not the forgone alternative.",
-                "result": "Opportunity cost = the data bundle she did not buy."
+                "operation": "Separate money cost from opportunity cost",
+                "reason": "The N2,000 is what she paid, not what she gave up.",
+                "result": "Opportunity cost = the data bundle."
               }
             ]
           }
@@ -188,11 +283,363 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "Nigeria is usually described as a mixed economy. Name one decision left mainly to markets and one left mainly to government, then explain why scarcity makes the choice necessary.",
+            "question": "A state government with a fixed budget must choose between a new road and a new hospital. Explain its opportunity cost and show how the choice can be illustrated on a production possibility curve.",
             "hints": [
-              "Markets decide most prices and what private firms produce; government provides defence, roads and regulates utilities.",
-              "Scarcity means not every want can be met, so someone must decide which wants come first.",
-              "A strong answer links the two sectors to the three questions — what, how and for whom — and names opportunity cost."
+              "Name the next best alternative, not the money spent.",
+              "On a PPF, the two goods are the axes and a movement along the curve is the trade-off.",
+              "A point inside the curve would mean the budget is not fully used."
+            ]
+          }
+        }
+      ]
+    },
+        {
+      "slug": "economic-systems",
+      "title": "Economic Systems",
+      "objective": "Compare free enterprise, centrally planned and mixed economies, and explain how Nigeria's mixed economy answers the basic questions.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Economic systems",
+            "paragraphs": [
+              "Every economy must decide what to produce, how to produce it and for whom. The institutions that answer those questions define its economic system."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Three systems, three answers",
+            "paragraphs": [
+              "A city allocates land by price, a ministry allocates it by quota, and a mixed system does both. Each is answering the same three questions differently.",
+              "An economic system is the set of institutions and rules a society uses to allocate scarce resources. Free enterprise relies on private ownership and the price mechanism; a centrally planned economy relies on state ownership and a plan; a mixed economy uses both.",
+              "The systems differ in who owns the factors of production, who takes decisions and what motivates producers. Ownership, coordination and incentive are the three tests to apply in an exam."
+            ],
+            "bullets": [
+              "Free enterprise: private owners, prices, profit.",
+              "Centrally planned: state owners, plan, quotas.",
+              "Mixed: markets plus government."
+            ],
+            "takeaway": "An economic system is defined by who owns, who decides and what motivates.",
+            "check": {
+              "question": "In a free enterprise economy, the three basic questions are answered mainly by ______.",
+              "options": [
+                "a central planning committee",
+                "the price mechanism",
+                "traditional rulers",
+                "the legislature"
+              ],
+              "answer": 1,
+              "why": "Private owners respond to prices and profit, so prices coordinate what is produced, how and for whom."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Free enterprise and central planning",
+            "paragraphs": [
+              "A private firm opens a factory because it expects profit, while a ministry opens one because the plan requires it. That difference in motivation shapes how each system performs.",
+              "Free enterprise gives private individuals ownership, lets prices coordinate decisions and rewards efficiency with profit. Its merits are consumer choice, competition and rapid response to demand; its weaknesses are inequality, monopoly and neglect of public goods.",
+              "A centrally planned economy gives the state ownership and directs resources through a plan. It can mobilise resources for national goals and reduce inequality, but it often suffers from poor information, shortages and weak incentives."
+            ],
+            "bullets": [
+              "Free enterprise: choice, competition, profit; inequality and monopoly.",
+              "Planned: national goals and equity; shortages and weak incentives.",
+              "Price signals versus plan targets."
+            ],
+            "takeaway": "Markets coordinate through prices; plans coordinate through targets.",
+            "check": {
+              "question": "Which is a merit of a centrally planned economy?",
+              "options": [
+                "wide consumer choice",
+                "rapid mobilisation of resources for national goals",
+                "profit-driven efficiency",
+                "consumer sovereignty"
+              ],
+              "answer": 1,
+              "why": "A plan can direct resources to a national goal quickly; the other options describe market strengths."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "The systems differ in ownership, coordination, incentive and main weakness.",
+              "columns": [
+                "Free enterprise",
+                "Centrally planned"
+              ],
+              "rows": [
+                {
+                  "feature": "Ownership",
+                  "left": "Private individuals",
+                  "right": "The state"
+                },
+                {
+                  "feature": "Coordination",
+                  "left": "Prices and profit",
+                  "right": "Plan targets and quotas"
+                },
+                {
+                  "feature": "Incentive",
+                  "left": "Profit and competition",
+                  "right": "Directives and national goals"
+                },
+                {
+                  "feature": "Main weakness",
+                  "left": "Inequality and monopoly",
+                  "right": "Shortages and weak incentives"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The mixed economy in Nigeria",
+            "paragraphs": [
+              "A Nigerian household buys petrol from a private station, sends children to a public school and pays a regulated electricity bill. The same economy contains markets and government direction.",
+              "A mixed economy combines private ownership with public provision and regulation. Nigeria is mixed: private firms dominate production and trade, while government provides defence, roads and schools, regulates utilities and manages the oil sector.",
+              "Contemporary reforms show the mix shifting: deregulation of telecoms and the downstream oil sector, the 2005 banking consolidation that raised the minimum capital of banks, and cash policy reforms intended to reduce the cost of handling physical cash."
+            ],
+            "bullets": [
+              "Nigeria: private production, public provision and regulation.",
+              "Reforms: deregulation, banking consolidation, cash policy.",
+              "The mix changes with policy, not with the textbook label."
+            ],
+            "takeaway": "A mixed economy is a balance, and Nigerian reforms keep moving that balance.",
+            "check": {
+              "question": "Nigeria's economy is best described as ______.",
+              "options": [
+                "purely capitalist",
+                "centrally planned",
+                "mixed",
+                "subsistence"
+              ],
+              "answer": 2,
+              "why": "Private firms produce most goods while government provides public goods, regulates and intervenes in key sectors."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Do not call Nigeria capitalist or socialist. It is mixed — private firms produce most goods while government provides public goods, regulates and intervenes in key sectors."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Classify each decision: (a) a ministry sets a production quota for state farms; (b) a private firm raises output because prices rose; (c) the government provides roads while private firms run the buses.",
+            "steps": [
+              {
+                "operation": "Classify (a)",
+                "reason": "State ownership plus a production quota is direction by plan.",
+                "result": "(a) Centrally planned.",
+                "predictPrompt": "What signal drives the private firm in (b)?"
+              },
+              {
+                "operation": "Classify (b)",
+                "reason": "A private firm responding to a price rise is following the market signal.",
+                "result": "(b) Free enterprise.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Classify (c)",
+                "reason": "Public provision of roads alongside private production of bus services combines both sectors.",
+                "result": "(c) Mixed economy."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Nigeria deregulated the downstream oil sector. Explain how that reform changes the balance between market and state, and name one benefit and one risk.",
+            "hints": [
+              "Deregulation removes a controlled price and lets private importers and marketers set prices.",
+              "A benefit is supply that responds to price; a risk is volatility or weak protection for poor consumers.",
+              "Link the answer back to the three questions: what, how and for whom."
+            ]
+          }
+        }
+      ]
+    },
+        {
+      "slug": "methods-and-tools-of-economic-analysis",
+      "title": "Methods and Tools of Economic Analysis",
+      "objective": "Distinguish inductive from deductive reasoning and positive from normative statements, and use tables, charts, averages and dispersion to read economic data.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Methods and tools of economic analysis",
+            "paragraphs": [
+              "Economics uses reasoning to build explanations and statistical tools to describe data. The method and the measure both shape the conclusion."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Induction, deduction and two kinds of claim",
+            "paragraphs": [
+              "An economist notices that fuel prices rose in six states and concludes that they rose nationwide. Another starts from the theory that higher costs raise prices and predicts the same result.",
+              "Inductive reasoning moves from particular observations to a general conclusion. It is useful for spotting patterns but risks a hasty generalisation. Deductive reasoning moves from a general premise to a particular prediction; it is only as good as the premise.",
+              "A positive statement can be tested against evidence, such as 'removing the subsidy raised pump prices'. A normative statement expresses a value judgement, such as 'government should keep the subsidy'. Positive is not the same as true; it means testable."
+            ],
+            "bullets": [
+              "Induction: particular to general. Deduction: general to particular.",
+              "Positive statements are testable; normative statements are value judgements.",
+              "Test the premise before trusting a deduction."
+            ],
+            "takeaway": "Positive claims can be checked; normative claims can only be argued.",
+            "check": {
+              "question": "'The government should spend more on education' is a ______ statement.",
+              "options": [
+                "positive",
+                "normative",
+                "deductive",
+                "inductive"
+              ],
+              "answer": 1,
+              "why": "It recommends what ought to be done, so it is a value judgement rather than a testable claim about what is."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Tables, charts and graphs",
+            "paragraphs": [
+              "A trader records monthly maize prices in a table, then plots them on a line graph to see the trend. The table holds detail; the graph shows shape.",
+              "A table arranges data in rows and columns. A chart presents the same data visually — a bar chart compares categories, a pie chart shows proportions of a whole, and a line graph shows change over time. A graph plots the relationship between two variables, such as price and quantity.",
+              "These tools reveal trends and comparisons quickly, but they can mislead. A truncated axis exaggerates a small change, a poorly chosen chart hides variation, and a graph without units cannot be read."
+            ],
+            "bullets": [
+              "Table: detail. Bar: categories. Pie: proportions. Line: time.",
+              "A graph shows how two variables move together.",
+              "Check the scale, the units and the starting point."
+            ],
+            "takeaway": "A chart is only as honest as its scale and its units.",
+            "check": {
+              "question": "A pie chart is most useful for showing ______.",
+              "options": [
+                "a trend over time",
+                "proportions of a total",
+                "the relationship between price and quantity",
+                "the spread of a distribution"
+              ],
+              "answer": 1,
+              "why": "Each slice is a share of the whole, so a pie chart shows proportions; a line graph is better for time and a scatter or curve for a relationship."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Averages and spread",
+            "paragraphs": [
+              "Two classes both average 60 marks, but one has marks from 58 to 62 and the other from 20 to 100. The average alone hides that difference.",
+              "The mean adds all values and divides by their number; the median is the middle value when the data is ordered; the mode is the most frequent value. The mean uses every value but is pulled by extremes, the median resists outliers, and the mode is best for the most common category.",
+              "Dispersion measures how spread out the data is. The range is the highest value minus the lowest; variance and standard deviation measure how far values sit from the mean, and the standard deviation uses the same units as the data. The range is quick but ignores the middle values, while the standard deviation uses every value."
+            ],
+            "bullets": [
+              "Mean: all values. Median: middle. Mode: most frequent.",
+              "Outliers pull the mean, not the median.",
+              "Range is quick; standard deviation uses every value."
+            ],
+            "takeaway": "An average describes the centre; dispersion describes how much the centre hides.",
+            "check": {
+              "question": "A shoe shop wants the size most customers ask for. The best measure is the ______.",
+              "options": [
+                "mode",
+                "mean",
+                "median",
+                "range"
+              ],
+              "answer": 0,
+              "why": "The mode identifies the most frequent value, which is the size to stock in the largest quantity."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "The mean uses every value; the median resists an extreme one.",
+              "columns": [
+                "Mean",
+                "Median"
+              ],
+              "rows": [
+                {
+                  "feature": "What it is",
+                  "left": "Total divided by the count",
+                  "right": "Middle value when ordered"
+                },
+                {
+                  "feature": "Outliers",
+                  "left": "Pulled towards an extreme",
+                  "right": "Barely moved by an extreme"
+                },
+                {
+                  "feature": "Best use",
+                  "left": "Data without extreme values",
+                  "right": "Income and house prices"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "A positive statement is not automatically correct — it is one that can be tested. 'Fuel prices rose' is positive; 'fuel prices are too high' is normative."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A trader's daily sales are 4, 6, 6, 8 and 11 bags. Find the mean, median, mode and range.",
+            "steps": [
+              {
+                "operation": "Order the data",
+                "reason": "The median needs the values in order before the middle can be located.",
+                "result": "4, 6, 6, 8, 11.",
+                "predictPrompt": "Which value appears most often?"
+              },
+              {
+                "operation": "Compute the mean",
+                "reason": "Add every value and divide by the number of values.",
+                "result": "35 ÷ 5 = 7 bags.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Read the median and mode",
+                "reason": "The median is the third of five ordered values; the mode is the most frequent.",
+                "result": "Median = 6; mode = 6."
+              },
+              {
+                "operation": "Compute the range",
+                "reason": "The range is the highest value minus the lowest.",
+                "result": "11 − 4 = 7 bags."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A report says average income rose by 20 per cent, but most workers say they feel poorer. Explain how the mean and the median can tell different stories, and what measure of spread would help.",
+            "hints": [
+              "A few very high incomes pull the mean above the income of most workers.",
+              "The median is the middle income, so it is not moved by the top earners.",
+              "A measure of spread shows whether incomes are clustered or widely unequal."
             ]
           }
         }
