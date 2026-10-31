@@ -60,11 +60,27 @@
     },
     {
       "slug": "production-and-costs",
-      "name": "Production, Costs and Revenue",
+      "name": "The Theory of Production",
       "syllabus_ref": "A.8",
       "section": "Foundations of Economics",
       "order": 8,
-      "description": "Factors of production, division of labour, the law of diminishing returns, costs and revenue."
+      "description": "The production function, total, average and marginal product, division of labour, economies of scale and productivity."
+    },
+    {
+      "slug": "theory-of-costs-and-revenue",
+      "name": "Theory of Costs and Revenue",
+      "syllabus_ref": "A.9",
+      "section": "Foundations of Economics",
+      "order": 9,
+      "description": "Fixed, variable, average and marginal cost, short-run and long-run costs, revenue and the firm supply curve."
+    },
+    {
+      "slug": "factors-of-production-and-their-theories",
+      "name": "Factors of Production and Their Rewards",
+      "syllabus_ref": "A.23",
+      "section": "Foundations of Economics",
+      "order": 23,
+      "description": "The four factors and their rewards, wages, interest, profit, mobility, efficiency and unemployment."
     },
     {
       "slug": "market-structures",
@@ -1191,41 +1207,129 @@
       ]
     },
     {
-      "topic": "production-and-costs",
       "slug": "production-and-costs",
-      "title": "Production, Factors and Diminishing Returns",
-      "objective": "Match each factor of production to its reward and explain why marginal product eventually falls.",
+      "title": "The Theory of Production",
+      "objective": "Explain the production function, relate total, average and marginal product under the law of variable proportions, and compare economies of scale with returns to scale.",
       "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "heading": "Factors of production and their rewards",
+            "heading": "The theory of production",
             "paragraphs": [
-              "Production combines four factors of production. Each is paid a reward that reflects its contribution."
+              "Production turns inputs into output, and how output responds when a firm adds another worker or another machine is the core of the theory of production."
             ],
-            "bullets": [
-              "Land — all natural resources; reward is rent.",
-              "Labour — human effort, physical and mental; reward is wages or salaries.",
-              "Capital — man-made goods used to produce other goods, such as machines and buildings; reward is interest.",
-              "Entrepreneurship — organises the other factors and bears risk; reward is profit (which can be negative).",
-              "Division of labour splits work into specialised tasks. It raises output per worker but can cause boredom, over-dependence and coordination costs."
-            ]
+            "bullets": []
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Diminishing returns and costs",
+            "heading": "Production and the production function",
             "paragraphs": [
-              "In the short run at least one factor is fixed. Adding more of a variable factor to it eventually yields smaller extra output — the law of diminishing returns."
+              "A baker buys flour, hires a worker and rents an oven; the bread that comes out is production. A firm combines inputs in a deliberate process, and the result can be a good or a service.",
+              "Production is primary when it extracts raw materials, secondary when it manufactures or builds, and tertiary when it provides services such as transport, banking and teaching. A production function shows the maximum output obtainable from given inputs, written Q = f(L, K).",
+              "In the short run at least one input, usually capital, is fixed; in the long run every input can change. Returns to scale compare output with a proportional change in all inputs: increasing returns when output rises faster, constant when it rises at the same rate, and decreasing when it rises more slowly."
             ],
             "bullets": [
-              "Marginal product is the extra output from one more unit of the variable factor.",
-              "Diminishing returns sets in when marginal product starts to fall, even though total output may still be rising.",
-              "Fixed costs do not change with output (rent, machinery). Variable costs do (raw materials, hourly labour).",
-              "Total cost = fixed cost + variable cost. Average fixed cost falls continuously as output rises."
-            ]
+              "Primary extracts, secondary makes, tertiary serves.",
+              "Short run: one input fixed. Long run: all inputs variable.",
+              "Returns to scale use a proportional change in every input."
+            ],
+            "takeaway": "The production function is the recipe that turns inputs into output.",
+            "check": {
+              "question": "When all inputs double and output more than doubles, the firm has ______.",
+              "options": [
+                "increasing returns to scale",
+                "constant returns to scale",
+                "decreasing returns to scale",
+                "diminishing returns"
+              ],
+              "answer": 0,
+              "why": "Output grows faster than the proportional increase in inputs, which is increasing returns to scale."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Total, average and marginal product",
+            "paragraphs": [
+              "A farmer adds workers to a fixed plot of land and records the harvest. The first workers share the land and tools, later ones crowd the same plot, and the extra output from each new worker eventually shrinks.",
+              "Total product is the output from all units of the variable input. Average product is total product divided by the number of units, and marginal product is the extra output from one more unit.",
+              "The law of variable proportions says that as more of a variable input is added to a fixed input, marginal product first rises, then falls, and eventually becomes negative. Diminishing returns begins where marginal product starts to fall, even while total product is still rising. Total product peaks where marginal product is zero."
+            ],
+            "bullets": [
+              "AP = TP ÷ L; MP = change in TP ÷ change in L.",
+              "MP rises, then falls, then turns negative.",
+              "TP peaks where MP = 0."
+            ],
+            "takeaway": "Marginal product turns down before total product does.",
+            "check": {
+              "question": "Diminishing returns set in when ______.",
+              "options": [
+                "total product begins to fall",
+                "marginal product begins to fall",
+                "average product equals zero",
+                "fixed cost begins to rise"
+              ],
+              "answer": 1,
+              "why": "The law starts at the point where each extra unit of the variable factor adds less output than the one before, while total output can still rise."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Division of labour, scale and productivity",
+            "paragraphs": [
+              "A tailor who makes a shirt alone hires specialists for cutting, sewing and finishing, and output per worker rises. Specialisation and larger scale both raise output, but each has a limit.",
+              "Division of labour breaks production into specialised tasks. It raises skill and speed and saves tools and time, but it can bring boredom, over-dependence and coordination costs.",
+              "Internal economies of scale are cost savings from the firm's own growth: technical, managerial, marketing, financial and risk-bearing. External economies come from the industry's growth, such as a skilled labour pool, specialised suppliers and better infrastructure.",
+              "Productivity is output per unit of input, and it rises with training, technology, health, motivation and management. Producer equilibrium is reached where marginal revenue equals marginal cost."
+            ],
+            "bullets": [
+              "Division of labour trades higher output for boredom and dependence.",
+              "Internal economies come from firm size; external from industry size.",
+              "Productivity is output per input; MR = MC at equilibrium."
+            ],
+            "takeaway": "Scale and specialisation raise productivity until coordination costs set in.",
+            "check": {
+              "question": "A firm's own growth lowers its average cost through ______.",
+              "options": [
+                "external economies of scale",
+                "internal economies of scale",
+                "diminishing returns",
+                "fixed costs"
+              ],
+              "answer": 1,
+              "why": "Internal economies arise from the firm's own expansion; external economies come from growth of the whole industry."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "Internal economies come from the firm; external economies come from the industry.",
+              "columns": [
+                "Internal economies",
+                "External economies"
+              ],
+              "rows": [
+                {
+                  "feature": "Source",
+                  "left": "The firm's own growth",
+                  "right": "Growth of the whole industry"
+                },
+                {
+                  "feature": "Examples",
+                  "left": "Technical, managerial, marketing and financial savings",
+                  "right": "Skilled labour pool, specialised suppliers, better infrastructure"
+                },
+                {
+                  "feature": "Limit",
+                  "left": "Management and coordination problems",
+                  "right": "Congestion and rising rents"
+                }
+              ]
+            }
           }
         },
         {
@@ -1233,30 +1337,30 @@
           "content": {
             "title": "Exam trap",
             "tone": "tip",
-            "body": "Marginal product falls before total product does. Total output can keep rising while each extra worker adds less than the one before."
+            "body": "Diminishing returns is a short-run law with at least one fixed factor. Returns to scale is a long-run idea with every factor changing. Do not use the two terms interchangeably."
           }
         },
         {
           "type": "worked_example",
           "content": {
-            "problem": "A farm has fixed land. With 1, 2, 3 and 4 workers, total output is 10, 25, 35 and 40 tonnes. At which worker do diminishing returns set in?",
+            "problem": "A farm has fixed land. With 1, 2, 3 and 4 workers, total output is 10, 25, 35 and 40 tonnes. Find the marginal and average product, and identify where diminishing returns set in.",
             "steps": [
               {
                 "operation": "Compute marginal product",
                 "reason": "Marginal product is the change in total output when one more worker is added.",
-                "result": "MP = 10, 15, 10, 5 tonnes for workers 1–4.",
+                "result": "MP = 10, 15, 10 and 5 tonnes for workers 1 to 4.",
                 "predictPrompt": "Which is the first fall in marginal product?"
               },
               {
-                "operation": "Find the first fall",
-                "reason": "Diminishing returns begin when marginal product turns downward.",
-                "result": "MP rises from 10 to 15, then falls to 10 at the third worker.",
+                "operation": "Compute average product",
+                "reason": "Average product is total output divided by the number of workers.",
+                "result": "AP = 10, 12.5, 11.7 and 10 tonnes.",
                 "predictPrompt": ""
               },
               {
-                "operation": "State the answer",
-                "reason": "The third worker adds less than the second, so the law has set in.",
-                "result": "Diminishing returns set in at the third worker, even though total output rises to 35 tonnes."
+                "operation": "Locate diminishing returns",
+                "reason": "The law begins where marginal product turns downward.",
+                "result": "MP rises from 10 to 15, then falls to 10 at the third worker, so diminishing returns set in there even though total output rises to 35 tonnes."
               }
             ]
           }
@@ -1264,11 +1368,347 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "A bakery pays N200,000 a month in rent and N5,000 per worker per day. Classify each cost and explain what happens to average fixed cost as output rises.",
+            "question": "A firm doubles all its inputs and output rises from 100 to 240 units. Name the returns to scale, and explain why the law of diminishing returns does not apply to this change.",
             "hints": [
-              "Rent is paid whether or not bread is baked, so it is fixed. Daily wages vary with the number of workers, so they are variable.",
-              "Average fixed cost is fixed cost divided by output.",
-              "A strong answer notes that average fixed cost falls as output rises, while average variable cost may fall and then rise."
+              "Compare the percentage rise in output with the 100 per cent rise in inputs.",
+              "Diminishing returns needs at least one fixed factor.",
+              "Doubling every input is a long-run change, so returns to scale is the right tool."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "theory-of-costs-and-revenue",
+      "title": "Theory of Costs and Revenue",
+      "objective": "Distinguish fixed, variable, average and marginal cost, compare accountants' and economists' notions of cost, and relate revenue concepts to the firm's supply decision.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Theory of costs and revenue",
+            "paragraphs": [
+              "A firm's costs and revenue decide whether it stays in business, and each cost measure answers a different question about production."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Fixed, variable and total cost",
+            "paragraphs": [
+              "A bakery pays rent whether it bakes one loaf or a thousand, but flour and casual wages rise with every loaf. The first cost is fixed and the second is variable.",
+              "Fixed costs do not change with output in the short run: rent, insurance, administrative salaries and machinery. Variable costs change with output: flour, fuel, packaging and hourly labour.",
+              "Total cost is fixed cost plus variable cost. Average fixed cost is fixed cost divided by output and falls continuously as output rises; average variable cost is variable cost divided by output; average total cost is total cost divided by output. Marginal cost is the extra cost of one more unit, and it cuts average total cost at the lowest point of the average cost curve."
+            ],
+            "bullets": [
+              "TC = TFC + TVC.",
+              "AFC = TFC ÷ Q; AVC = TVC ÷ Q; ATC = TC ÷ Q.",
+              "MC = change in TC ÷ change in Q."
+            ],
+            "takeaway": "Fixed costs are paid for existing; variable costs are paid for producing.",
+            "check": {
+              "question": "Rent and administrative expenses are examples of ______.",
+              "options": [
+                "average fixed costs",
+                "average variable costs",
+                "variable costs",
+                "fixed costs"
+              ],
+              "answer": 3,
+              "why": "They are paid whether or not output is produced, so they do not vary with the quantity made."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "The two costs respond to output in opposite ways.",
+              "columns": [
+                "Fixed cost",
+                "Variable cost"
+              ],
+              "rows": [
+                {
+                  "feature": "Response to output",
+                  "left": "Unchanged in the short run",
+                  "right": "Rises as output rises"
+                },
+                {
+                  "feature": "Examples",
+                  "left": "Rent, insurance, machinery",
+                  "right": "Flour, fuel, hourly labour"
+                },
+                {
+                  "feature": "Average behaviour",
+                  "left": "Average fixed cost falls continuously",
+                  "right": "Average variable cost falls, then rises"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Short-run and long-run costs",
+            "paragraphs": [
+              "A transport company cannot buy new buses this month, but over five years it can expand its fleet. The short run fixes the fleet; the long run lets the firm choose it.",
+              "In the short run at least one factor is fixed, so the firm has fixed and variable costs. In the long run all factors can change, so every cost is variable and the firm picks the plant size that minimises cost at each output.",
+              "Short-run average cost is U-shaped because average fixed cost falls while diminishing returns eventually raise average variable cost. The long-run average cost curve is the envelope of the short-run curves: it falls with economies of scale and rises with diseconomies of scale. Accountants count only explicit costs, the money paid out; economists add implicit costs, the opportunity cost of the owner's resources."
+            ],
+            "bullets": [
+              "Short run: fixed and variable. Long run: all variable.",
+              "Long-run AC is the envelope of short-run curves.",
+              "Economic cost = explicit + implicit cost."
+            ],
+            "takeaway": "Accountants count money paid; economists also count what was given up.",
+            "check": {
+              "question": "An economist's cost differs from an accountant's cost because it includes ______.",
+              "options": [
+                "only fixed costs",
+                "implicit costs",
+                "only variable costs",
+                "sunk costs"
+              ],
+              "answer": 1,
+              "why": "The economist adds the opportunity cost of resources the owner supplies, which the accountant does not record as a payment."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Revenue and the firm's supply decision",
+            "paragraphs": [
+              "A pure water seller gets N20 a sachet and sells 500 sachets a day, so total revenue is N10,000. Revenue is not the same as profit, because the costs of sachets, water and labour still have to be paid.",
+              "Total revenue is price times quantity. Average revenue is total revenue divided by quantity, which equals price in perfect competition. Marginal revenue is the extra revenue from selling one more unit.",
+              "In perfect competition the firm is a price taker, so average revenue and marginal revenue both equal price. A firm with market power faces a downward-sloping demand curve and must lower price to sell more, so marginal revenue is below price. A firm maximises profit where marginal revenue equals marginal cost, and the marginal cost curve above average variable cost is its short-run supply curve."
+            ],
+            "bullets": [
+              "TR = P × Q; AR = TR ÷ Q = P.",
+              "Perfect competition: AR = MR = P.",
+              "Profit-maximising output: MR = MC."
+            ],
+            "takeaway": "A competitive firm supplies where price equals marginal cost.",
+            "check": {
+              "question": "A perfectly competitive firm's marginal revenue is ______.",
+              "options": [
+                "greater than price",
+                "equal to price",
+                "less than price",
+                "unrelated to price"
+              ],
+              "answer": 1,
+              "why": "The firm can sell any quantity at the market price, so each extra unit adds exactly the price to total revenue."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam trap",
+            "tone": "tip",
+            "body": "Accounting profit ignores implicit costs. A business can report an accounting profit while making an economic loss once the owner's forgone salary and capital are counted."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A firm has fixed cost of N120,000 and variable cost of N2,000 per unit. Find total cost, average total cost and marginal cost at 60 units.",
+            "steps": [
+              {
+                "operation": "Find total variable cost",
+                "reason": "Variable cost per unit times the number of units gives total variable cost.",
+                "result": "TVC = 60 × N2,000 = N120,000.",
+                "predictPrompt": "What is total cost once fixed cost is added?"
+              },
+              {
+                "operation": "Find total cost",
+                "reason": "Total cost is fixed cost plus variable cost.",
+                "result": "TC = N120,000 + N120,000 = N240,000.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Find average and marginal cost",
+                "reason": "Average total cost is total cost divided by output; marginal cost is the extra cost of one more unit.",
+                "result": "ATC = N240,000 ÷ 60 = N4,000. MC = N2,000, because each extra unit adds only its variable cost."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A firm has fixed costs of N100,000 and variable costs of N30 per unit. It sells at N50. Find the break-even quantity and explain why the marginal cost curve above average variable cost is its supply curve.",
+            "hints": [
+              "At break-even, total revenue equals total cost.",
+              "Contribution per unit is price minus variable cost.",
+              "The firm supplies only when price covers average variable cost, and output is set where price equals marginal cost."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "factors-of-production-and-their-theories",
+      "title": "Factors of Production and Their Rewards",
+      "objective": "Identify the four factors of production and their rewards, explain how wages, interest and profit are determined, and relate mobility and efficiency to unemployment.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Factors of production and their rewards",
+            "paragraphs": [
+              "A rice farm uses land, hired workers, a tractor and a manager who takes the risk of the harvest. Those four inputs are the factors of production, and each is paid differently."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The four factors and their features",
+            "paragraphs": [
+              "Land covers all natural resources, including soil, water, minerals and forests. Its supply is fixed, it is geographically immobile and its reward is rent.",
+              "Labour is human effort, physical or mental. It is inseparable from the worker, perishable if unused and varies in skill, and its reward is wages or salaries. Capital is man-made producer goods such as machines, tools and buildings; it is produced, depreciates and earns interest.",
+              "Entrepreneurship organises the other factors, innovates and bears the risk of loss. Its reward is profit, which is a residual: what remains after the other factors are paid, and it can be negative. Factor mobility is the ease of moving a factor to another use or place; land is immobile, while labour and capital are more mobile."
+            ],
+            "bullets": [
+              "Land earns rent, labour earns wages, capital earns interest, entrepreneurship earns profit.",
+              "Land is fixed and immobile; labour is mobile but perishable.",
+              "Profit is residual and can be negative."
+            ],
+            "takeaway": "Each factor is paid for its role, and only the entrepreneur carries the residual risk.",
+            "check": {
+              "question": "The reward for capital as a factor of production is ______.",
+              "options": [
+                "rent",
+                "profit",
+                "wages",
+                "interest"
+              ],
+              "answer": 3,
+              "why": "Capital is man-made producer goods, and the payment for its use is interest; rent is for land and profit is the entrepreneur's residual."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Wages, interest and profit",
+            "paragraphs": [
+              "A hospital pays radiographers more than cleaners because few workers can read scans, and a lender charges interest for giving up cash today. Scarcity of skill and time both shape factor payments.",
+              "The marginal productivity theory of wages says a worker is paid the value of the extra output produced. Demand for labour is derived from demand for the product and slopes downward; supply depends on population, training, alternatives and working conditions.",
+              "Interest is the reward for parting with liquidity, according to the liquidity preference theory. People demand money for transactions, precaution and speculation, and the interest rate adjusts to balance that demand with the money supply. Profit rewards risk-bearing, uncertainty and innovation, and it is the residual left after other costs."
+            ],
+            "bullets": [
+              "Wage = value of marginal product in the theory.",
+              "Interest balances liquidity preference with the money supply.",
+              "Profit is the residual reward for risk and innovation."
+            ],
+            "takeaway": "Wages follow productivity, interest follows liquidity, and profit follows risk.",
+            "check": {
+              "question": "The liquidity preference theory explains the determination of ______.",
+              "options": [
+                "wages",
+                "rent",
+                "interest",
+                "profit"
+              ],
+              "answer": 2,
+              "why": "The theory says the interest rate balances the demand for money to hold as liquidity against the supply of money."
+            },
+            "visual": {
+              "kind": "flow",
+              "caption": "A scarce skill raises the value of the marginal product, and with it the wage.",
+              "steps": [
+                {
+                  "label": "Scarce skill",
+                  "detail": "Few workers can do the task"
+                },
+                {
+                  "label": "Higher marginal product",
+                  "detail": "Each worker adds more output"
+                },
+                {
+                  "label": "Higher wage",
+                  "detail": "Pay follows the added value"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Mobility, efficiency and unemployment",
+            "paragraphs": [
+              "A welder moves from Kano to Lagos for higher pay, while a clerk whose job is automated cannot move into software work. Mobility and skill decide who can reach the jobs that exist.",
+              "Occupational mobility is the ease of moving between jobs; geographical mobility is the ease of moving between places. Housing, family ties, skills and information affect both, and low mobility keeps wage differences alive.",
+              "Labour efficiency is output per worker. It rises with education, training, health, technology, motivation and good management, and it falls with poor working conditions.",
+              "Unemployment has several forms: frictional unemployment is the search between jobs, structural unemployment is a mismatch of skills, seasonal unemployment follows the calendar, and cyclical unemployment follows a downturn. Solutions include skills training, infrastructure, diversification and support for small firms."
+            ],
+            "bullets": [
+              "Occupational mobility: between jobs. Geographical: between places.",
+              "Efficiency rises with training, health, technology and management.",
+              "Match the type: frictional, structural, seasonal, cyclical."
+            ],
+            "takeaway": "Mobility and skills decide whether a worker can reach the job that exists.",
+            "check": {
+              "question": "A farmer who has no work between harvests is ______ unemployed.",
+              "options": [
+                "frictionally",
+                "structurally",
+                "seasonally",
+                "cyclically"
+              ],
+              "answer": 2,
+              "why": "The work disappears on a predictable calendar pattern, which is seasonal unemployment, not a skills mismatch or a downturn."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Profit is a residual, not a cost. Do not list it with rent, wages and interest when asked for the rewards of the factors of production."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A firm employs 10 workers who produce 200 units sold at N50 each. The last worker adds 15 units. Find the value of the marginal product and state the highest wage the firm can pay that worker.",
+            "steps": [
+              {
+                "operation": "Find the marginal product",
+                "reason": "The last worker's extra output is given as 15 units.",
+                "result": "MP = 15 units.",
+                "predictPrompt": "What is each extra unit worth?"
+              },
+              {
+                "operation": "Value the marginal product",
+                "reason": "Multiply the extra output by the price of the product.",
+                "result": "MRP = 15 × N50 = N750.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "State the wage ceiling",
+                "reason": "The firm will not pay more than the value the worker adds.",
+                "result": "The highest wage is N750; at a lower wage the firm can profitably hire more workers."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Explain why a radiographer may earn more than a cleaner using the marginal productivity theory, and name two factors that could weaken the theory.",
+            "hints": [
+              "Compare the value of the extra output each worker produces.",
+              "Training and licensing limit the supply of radiographers.",
+              "Wages can also be set by unions, minimum-wage law or discrimination, not productivity alone."
             ]
           }
         }
