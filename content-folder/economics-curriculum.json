@@ -1715,25 +1715,47 @@
       ]
     },
     {
-      "topic": "market-structures",
       "slug": "market-structures",
       "title": "Market Structures",
-      "objective": "Distinguish perfect competition, monopoly, oligopoly and monopolistic competition by sellers, products and entry.",
+      "objective": "Compare perfect competition with monopoly, monopolistic competition and oligopoly, and apply break-even and shut-down analysis.",
       "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
+            "heading": "Market structures",
+            "paragraphs": [
+              "Markets differ in how much power a seller has, and that power decides price, output and whether a firm survives."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
             "heading": "Perfect competition",
             "paragraphs": [
-              "Perfect competition is a benchmark market with many small firms selling an identical product. No single firm can influence the market price."
+              "A grain market with hundreds of traders selling identical maize is the closest real example of perfect competition. No trader can ask more than the market price without losing every buyer.",
+              "Perfect competition rests on many buyers and sellers, a homogeneous product, free entry and exit, perfect information and perfect factor mobility. Each firm is so small that it cannot influence price, so it is a price taker with a horizontal demand curve.",
+              "The firm's average revenue equals marginal revenue equals price. In the short run it maximises profit where marginal cost equals marginal revenue and can earn supernormal profit or a loss. In the long run, free entry and exit remove both, so firms earn only normal profit and produce at the minimum of long-run average cost."
             ],
             "bullets": [
-              "Many buyers and many sellers, each too small to affect price.",
-              "Homogeneous (identical) products, so buyers have no reason to prefer one seller.",
-              "Free entry and exit, and perfect information about prices.",
-              "The firm is a price taker: its demand curve is horizontal at the market price."
-            ]
+              "Many sellers, identical product, free entry, perfect information.",
+              "Price taker: AR = MR = P, so demand is horizontal.",
+              "Short run: MC = MR. Long run: normal profit at minimum LAC."
+            ],
+            "takeaway": "Perfect competition is a benchmark where no firm can move the market price.",
+            "check": {
+              "question": "A perfectly competitive firm's demand curve is ______.",
+              "options": [
+                "downward sloping",
+                "horizontal at the market price",
+                "vertical",
+                "U-shaped"
+              ],
+              "answer": 1,
+              "why": "The firm can sell any quantity at the market price but nothing above it, so its demand curve is horizontal."
+            }
           }
         },
         {
@@ -1741,45 +1763,118 @@
           "content": {
             "heading": "Imperfect markets",
             "paragraphs": [
-              "When a firm can influence price, the market is imperfect. The three main forms differ by how many firms there are and whether products are differentiated."
+              "A telecoms firm sets its own tariff, a cement oligopoly watches rivals' prices, and a noodle maker differentiates its brand. Each has some power over price.",
+              "An imperfect market has firms that can influence price because products are differentiated or sellers are few. The firm faces a downward-sloping demand curve and is a price maker.",
+              "A pure monopoly has one seller, no close substitute and high barriers to entry; it maximises profit where MR = MC and may practise price discrimination, charging different buyers different prices for the same good. Monopolistic competition has many firms selling differentiated products with easy entry, so short-run supernormal profit attracts entrants and long-run profit falls to normal. An oligopoly has a few large interdependent firms that compete through advertising, branding and service rather than price."
             ],
             "bullets": [
-              "Monopoly: one seller, no close substitute, high barriers to entry; the firm is a price maker.",
-              "Oligopoly: a few large firms whose decisions depend on one another; advertising and non-price competition are common.",
-              "Monopolistic competition: many firms selling differentiated products, with easy entry.",
-              "A monopsony is the mirror image — one buyer facing many sellers."
-            ]
+              "Monopoly: one seller, barriers, price maker, MR = MC.",
+              "Price discrimination needs market power, separated markets and no resale.",
+              "Monopolistic competition: many firms, differentiated products, easy entry.",
+              "Oligopoly: few firms, interdependence, non-price competition."
+            ],
+            "takeaway": "Market power rises as sellers become fewer and products become more distinct.",
+            "check": {
+              "question": "A market with many sellers of differentiated products and easy entry is ______.",
+              "options": [
+                "perfect competition",
+                "monopoly",
+                "monopolistic competition",
+                "oligopoly"
+              ],
+              "answer": 2,
+              "why": "Differentiated products give each seller some price power, while easy entry keeps long-run profit at normal."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "The two ends of the market-power spectrum.",
+              "columns": [
+                "Perfect competition",
+                "Monopoly"
+              ],
+              "rows": [
+                {
+                  "feature": "Sellers",
+                  "left": "Many small firms",
+                  "right": "One firm"
+                },
+                {
+                  "feature": "Product",
+                  "left": "Identical",
+                  "right": "No close substitute"
+                },
+                {
+                  "feature": "Price power",
+                  "left": "Price taker",
+                  "right": "Price maker"
+                },
+                {
+                  "feature": "Long-run profit",
+                  "left": "Normal only",
+                  "right": "Supernormal possible"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Break-even and shut-down",
+            "paragraphs": [
+              "A bus company keeps running during a fuel spike while fares still cover fuel and drivers' daily pay, but stops when fares cannot cover even those variable costs.",
+              "A firm breaks even when total revenue equals total cost, so it earns normal profit. Break-even occurs where average revenue equals average total cost.",
+              "The shut-down point is the minimum of average variable cost. If price falls below it, the firm cannot cover its variable costs and loses less by stopping production in the short run, because fixed costs are paid either way.",
+              "A firm that shuts down still pays fixed costs, so its short-run loss equals fixed cost. It exits only in the long run, when all costs become variable."
+            ],
+            "bullets": [
+              "Break-even: TR = TC, or AR = ATC; normal profit.",
+              "Shut-down: price below minimum AVC.",
+              "At shut-down the short-run loss equals fixed cost; exit is a long-run decision."
+            ],
+            "takeaway": "A firm can survive a loss but not a price below average variable cost.",
+            "check": {
+              "question": "A firm should shut down in the short run when price falls below ______.",
+              "options": [
+                "average total cost",
+                "average fixed cost",
+                "minimum average variable cost",
+                "marginal cost"
+              ],
+              "answer": 2,
+              "why": "Below minimum average variable cost, revenue cannot cover the cost of producing at all, so stopping limits the loss to fixed cost."
+            }
           }
         },
         {
           "type": "callout",
           "content": {
-            "title": "Exam tip",
+            "title": "Exam trap",
             "tone": "tip",
-            "body": "Ask three questions: how many sellers, is the product identical or differentiated, and can new firms enter? Those three answers identify almost every market structure."
+            "body": "Break-even and shut-down are not the same. Breaking even means normal profit; shutting down means production stops because price cannot cover variable cost."
           }
         },
         {
           "type": "worked_example",
           "content": {
-            "problem": "A single firm supplies electricity to a city and no other firm can enter the market. Which market structure is this, and why does government usually regulate its price?",
+            "problem": "A firm sells at N50. At its current output, average total cost is N60 and average variable cost is N45. Should it shut down in the short run, and what is its loss per unit?",
             "steps": [
               {
-                "operation": "Count the sellers",
-                "reason": "One seller is the defining feature of monopoly.",
-                "result": "The market is a monopoly.",
-                "predictPrompt": "Why can no rival enter?"
+                "operation": "Compare price with average variable cost",
+                "reason": "The shut-down test asks whether revenue covers the cost of producing at all.",
+                "result": "N50 is above N45, so the firm should keep producing in the short run.",
+                "predictPrompt": "How much does each unit contribute to fixed cost?"
               },
               {
-                "operation": "Check substitutes and entry",
-                "reason": "Electricity has no close substitute for most users, and the grid is a natural barrier to entry.",
-                "result": "The firm can set price without competitive pressure.",
+                "operation": "Find the contribution",
+                "reason": "Price minus average variable cost is the amount each unit adds towards fixed cost.",
+                "result": "Contribution = N50 − N45 = N5 per unit.",
                 "predictPrompt": ""
               },
               {
-                "operation": "Explain regulation",
-                "reason": "A price-making monopolist may restrict output and charge high prices.",
-                "result": "Government regulates the tariff to protect consumers while allowing the firm to cover costs."
+                "operation": "Find the loss per unit",
+                "reason": "Average total cost exceeds price, so the firm makes a loss on each unit.",
+                "result": "Loss = N60 − N50 = N10 per unit, but shutting down would lose the average fixed cost of N15 per unit."
               }
             ]
           }
@@ -1787,11 +1882,11 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "Why do firms in an oligopoly advertise heavily while perfectly competitive firms do not?",
+            "question": "A monopoly and a perfectly competitive firm both face a fall in demand. Explain how their price and output responses differ, and which is more likely to shut down in the short run.",
             "hints": [
-              "Perfectly competitive firms sell identical products at the market price, so advertising cannot raise their price.",
-              "Oligopolists sell differentiated products and compete for market share; advertising can shift demand toward them.",
-              "A strong answer links advertising to product differentiation and interdependence."
+              "The competitive firm is a price taker and cannot hold price above the market level.",
+              "The monopolist chooses output where MR = MC and may keep price higher by restricting output.",
+              "Compare price with minimum average variable cost in each case."
             ]
           }
         }
