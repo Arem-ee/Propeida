@@ -3724,39 +3724,128 @@
       ]
     },
     {
-      "topic": "population",
       "slug": "population",
       "title": "Population, Census and the Labour Force",
-      "objective": "Interpret population structure, explain the uses of a census, and calculate dependency and participation ratios.",
+      "objective": "Distinguish over-, under- and optimum population, interpret population structure and dependency, and assess the census and population policy in Nigeria.",
       "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "heading": "Population structure",
+            "heading": "Population",
             "paragraphs": [
-              "Population structure describes how a population is distributed by age, sex, occupation and location. It determines how many people work and how many depend on them."
+              "Nigeria's population grows faster than its farms and factories, so each new job must support more people. Whether that is a problem depends on the size of the population relative to resources."
             ],
-            "bullets": [
-              "Working population (labour force): people of working age who are able and willing to work.",
-              "Dependency ratio = dependants ÷ working-age population. Children and the elderly are the main dependants.",
-              "A youthful population needs schools and jobs; an ageing population needs health and pension spending.",
-              "Migration is pushed by low wages, insecurity and unemployment, and pulled by jobs and services."
-            ]
+            "bullets": []
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Census and planning",
+            "heading": "Size, growth and population theory",
             "paragraphs": [
-              "A census is an official count of a country’s population. Accurate figures are a planning tool, not just a statistic."
+              "Malthus argued that population grows geometrically while food grows arithmetically, so checks such as famine and disease keep it in line. His prediction failed because technology raised food output, but his warning still applies where growth outruns resources.",
+              "Over-population means more people than available resources can support at a decent standard; under-population means too few people to use resources fully; optimum population maximises income per head. Population growth comes from births and immigration minus deaths and emigration.",
+              "The size and growth of a population depend on birth rates, death rates and migration, and on income, education, health care and cultural attitudes to family size."
             ],
             "bullets": [
-              "Uses: planning schools, hospitals, housing, roads and jobs; allocating revenue; estimating the labour force; delimiting constituencies.",
-              "Problems: cost, illiteracy, difficult terrain, religious and ethnic sensitivity, poor logistics and political manipulation.",
-              "A census counts people; a survey samples them. Both need clear definitions to be comparable."
-            ]
+              "Malthus: population outruns food.",
+              "Over-, under- and optimum population.",
+              "Growth = births + immigration − deaths − emigration."
+            ],
+            "takeaway": "Population is a problem only in relation to the resources and jobs available.",
+            "check": {
+              "question": "A population is described as optimum when it ______.",
+              "options": [
+                "maximises output per head",
+                "is the largest the country can hold",
+                "has the highest birth rate",
+                "grows faster than output"
+              ],
+              "answer": 0,
+              "why": "Optimum population is the size that gives the highest income per person, not the largest population a country can hold."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "Over-population presses on resources; under-population leaves them idle.",
+              "columns": [
+                "Over-population",
+                "Under-population"
+              ],
+              "rows": [
+                {
+                  "feature": "Meaning",
+                  "left": "People exceed available resources",
+                  "right": "Too few people to use resources"
+                },
+                {
+                  "feature": "Symptom",
+                  "left": "Unemployment and pressure on land",
+                  "right": "Underused land and capital"
+                },
+                {
+                  "feature": "Policy",
+                  "left": "Family planning and job creation",
+                  "right": "Immigration and incentives to raise births"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Structure, distribution and the labour force",
+            "paragraphs": [
+              "A country with many children needs schools now and jobs later, while one with many elderly people needs clinics and pensions. Age structure decides those needs.",
+              "Population structure covers age, sex, occupation, education and location. The working population, or labour force, is the number of people able and willing to work; the dependency ratio divides dependants by the working-age population.",
+              "Distribution is uneven: cities attract migrants with jobs and services, while rural areas lose young people. Occupational distribution is mainly influenced by economic factors such as wages, skills and job availability. A youthful population needs schools and jobs, while an ageing one needs health and pension spending, and migration is pushed by low wages, insecurity and unemployment and pulled by jobs and services."
+            ],
+            "bullets": [
+              "Structure: age, sex, occupation, location.",
+              "Dependency ratio = dependants ÷ working-age population.",
+              "Migration: push and pull factors."
+            ],
+            "takeaway": "Age structure tells a government what to build now and what to fund later.",
+            "check": {
+              "question": "The number of people who are qualified to work and who offer themselves for employment is called the ______.",
+              "options": [
+                "migrant labour",
+                "labour turnover",
+                "mobility of labour",
+                "working population"
+              ],
+              "answer": 3,
+              "why": "The working population or labour force counts those able and willing to work, not everyone of working age."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Census, growth and population policy",
+            "paragraphs": [
+              "A census counts every person, but Nigeria's figures have been disputed because some areas fear undercounting and others inflate their numbers.",
+              "A census is important for economic planning, revenue allocation, constituency delimitation and labour-force estimates. Its problems include cost, illiteracy, difficult terrain, religious and ethnic sensitivity, poor logistics and political manipulation.",
+              "Population policy aims to influence size, growth and distribution through family planning, girls' education, health care, job creation and migration management. In Nigeria, rapid growth with high youth dependency means schools, clinics and jobs must expand faster than the population, or development gains are absorbed by more people."
+            ],
+            "bullets": [
+              "Census: planning, revenue, constituencies.",
+              "Problems: cost, terrain, politics, logistics.",
+              "Policy: family planning, education, health, jobs."
+            ],
+            "takeaway": "A census is only useful when the data are trusted and actually used for planning.",
+            "check": {
+              "question": "A well-conducted census is important for ______.",
+              "options": [
+                "economic planning",
+                "providing economic opportunities in rural areas",
+                "distributing educational materials in cities",
+                "generating revenue"
+              ],
+              "answer": 0,
+              "why": "Census figures tell planners how many schools, clinics, roads and jobs are needed where, which is the core of economic planning."
+            }
           }
         },
         {
@@ -3764,7 +3853,7 @@
           "content": {
             "title": "Exam trap",
             "tone": "tip",
-            "body": "The labour force excludes people of working age who are not able or willing to work — full-time students, retirees and some carers."
+            "body": "Optimum population is not the largest possible population. It is the size that maximises income per head."
           }
         },
         {
@@ -3776,7 +3865,7 @@
                 "operation": "Find the working-age population",
                 "reason": "Subtract the dependent age groups from the total.",
                 "result": "120 − 45 − 5 = 70 million people of working age.",
-                "predictPrompt": "Which group is counted as dependants?"
+                "predictPrompt": "Which groups count as dependants?"
               },
               {
                 "operation": "Compute the dependency ratio",
@@ -3787,7 +3876,7 @@
               {
                 "operation": "Compute participation",
                 "reason": "The labour force is those working or actively seeking work, not everyone of working age.",
-                "result": "50 ÷ 70 ≈ 71.4% participation."
+                "result": "50 ÷ 70 ≈ 71.4 per cent participation."
               }
             ]
           }
@@ -3795,11 +3884,11 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "How can a country’s population grow while its labour force falls? Give two reasons.",
+            "question": "Explain why rapid population growth can help or hurt economic development, and name one policy that would make the difference.",
             "hints": [
-              "Population growth can come from children, who do not join the labour force for years.",
-              "More young people staying in school, more retirements, or emigration can shrink the labour force.",
-              "A strong answer separates total population from the number able and willing to work."
+              "A large young population can be a workforce and a market if jobs and skills exist.",
+              "It becomes a burden when schools, clinics and jobs cannot keep pace.",
+              "Education, health care and job creation turn growth into a dividend."
             ]
           }
         }
