@@ -2847,41 +2847,128 @@
       ]
     },
     {
-      "topic": "public-finance",
       "slug": "public-finance",
-      "title": "Government Revenue, Taxation and the Budget",
-      "objective": "Classify taxes, explain budget outcomes, and distinguish fiscal policy from monetary policy.",
+      "title": "Public Finance, Taxation and the Budget",
+      "objective": "Explain the objectives and revenue sources of public finance, classify taxes and their incidence, and describe fiscal policy, budgets, public debt and revenue allocation in Nigeria.",
       "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "heading": "Government revenue and spending",
+            "heading": "Public finance",
             "paragraphs": [
-              "Public finance studies how government raises and spends money. Revenue comes from oil and non-oil sources; spending is recurrent or capital."
+              "A state government builds a road with money raised from companies and from the oil federation account. Public finance studies how it raises and spends that money."
             ],
-            "bullets": [
-              "Revenue: taxes, fees, licences, fines, dividends from state enterprises, grants, aid and borrowing.",
-              "Recurrent expenditure: salaries, allowances, debt service and day-to-day running costs.",
-              "Capital expenditure: roads, schools, hospitals, power and other long-term assets.",
-              "Borrowing is not revenue in the true sense; it creates a future obligation."
-            ]
+            "bullets": []
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Taxes and the budget",
+            "heading": "Objectives, revenue and expenditure",
             "paragraphs": [
-              "A tax is a compulsory payment to government. Taxes can be classified by how they are collected and by how the burden falls."
+              "Public finance aims at providing public goods, redistributing income, stabilising the economy, protecting infant industries and promoting growth. Public goods such as defence and street lighting are non-excludable and non-rival, so markets underprovide them.",
+              "Revenue comes from taxes, royalties, rents, fees, licences, fines, dividends from state enterprises, grants and aid. Royalties and rents come mainly from oil and mining, while fees, licences and fines come from regulation. Borrowing is not true revenue; it creates a future obligation.",
+              "Public expenditure is recurrent (salaries, allowances, debt service, running costs) or capital (roads, schools, hospitals, power). Capital spending adds to productive capacity, while recurrent spending maintains it. Heavy borrowing for either can crowd out private investment."
             ],
             "bullets": [
-              "Direct tax: levied on income or wealth, e.g. personal income tax and company tax.",
-              "Indirect tax: levied on goods and services, e.g. VAT, import duty and excise duty.",
-              "Progressive tax: the rate rises with income. Proportional: the same rate. Regressive: the rate falls as income rises.",
-              "Budget surplus: revenue exceeds expenditure. Deficit: expenditure exceeds revenue. Balanced: the two are equal.",
-              "Fiscal policy uses taxation and government spending; monetary policy uses interest rates and money supply."
-            ]
+              "Revenue: taxes, royalties, rents, fees, grants, aid.",
+              "Recurrent: salaries and running costs.",
+              "Capital: roads, schools, hospitals."
+            ],
+            "takeaway": "Public finance is about what government takes, what it spends and why.",
+            "check": {
+              "question": "All of the following are sources of government revenue except ______.",
+              "options": [
+                "personal income, disposable income and transfer earnings",
+                "taxes, fees, licences and fines",
+                "interest, dividends, profits and earnings",
+                "grants, aid and borrowing"
+              ],
+              "answer": 0,
+              "why": "Personal income and transfer earnings belong to households; government revenue comes from taxes, fees, dividends, grants, aid and borrowing."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Principles, types and incidence of taxation",
+            "paragraphs": [
+              "A market woman pays VAT on a bag of rice without filling any form, while a salaried worker's income tax is deducted at source. The taxes differ in how they are collected and who bears them.",
+              "Tax principles include equity, certainty, convenience, economy and flexibility. Direct taxes fall on income and wealth, such as personal income tax and company tax; indirect taxes fall on goods and services, such as VAT, import duty and excise duty.",
+              "A progressive tax takes a larger share from higher incomes, a proportional tax takes the same rate, and a regressive tax takes a larger share from lower incomes. Incidence is who finally bears the burden: a tax on sellers can shift forward to consumers through higher prices or backward to suppliers. Taxes can discourage work and investment and encourage evasion."
+            ],
+            "bullets": [
+              "Direct: income and wealth. Indirect: goods and services.",
+              "Progressive, proportional, regressive.",
+              "Incidence: who finally pays."
+            ],
+            "takeaway": "The person who hands over a tax is not always the person who bears it.",
+            "check": {
+              "question": "Value added tax is an example of ______.",
+              "options": [
+                "indirect tax",
+                "direct tax",
+                "capital tax",
+                "progressive tax"
+              ],
+              "answer": 0,
+              "why": "VAT is charged on the sale of goods and services and passed through prices, so it is an indirect tax whatever the seller's income."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "Direct tax is assessed on the person; indirect tax is charged on the transaction.",
+              "columns": [
+                "Direct tax",
+                "Indirect tax"
+              ],
+              "rows": [
+                {
+                  "feature": "Base",
+                  "left": "Income and wealth",
+                  "right": "Goods and services"
+                },
+                {
+                  "feature": "Examples",
+                  "left": "Personal income tax, company tax",
+                  "right": "VAT, import duty, excise duty"
+                },
+                {
+                  "feature": "Who collects",
+                  "left": "Government from the taxpayer",
+                  "right": "Seller on behalf of government"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Fiscal policy, budgets, debt and revenue allocation",
+            "paragraphs": [
+              "When a recession cuts revenue, government can spend more or tax less to revive demand. Fiscal policy is the use of taxation and spending to influence the economy.",
+              "Its instruments are taxation, government expenditure, subsidies, grants and public borrowing. A budget surplus means revenue exceeds expenditure, a deficit means expenditure exceeds revenue, and a balanced budget means they are equal. Deficits are financed by borrowing, which creates public debt; domestic borrowing can crowd out private investment, while external borrowing brings exchange-rate risk.",
+              "Nigeria shares revenue through the federation account using derivation, population, equality and land mass, with shares for states and local governments. Resource control is the claim of producing areas to a larger share of the resources taken from them, and the Niger Delta dispute is the clearest example."
+            ],
+            "bullets": [
+              "Fiscal policy: taxes and spending.",
+              "Surplus, deficit, balanced budget.",
+              "Allocation: derivation, population, equality, land mass."
+            ],
+            "takeaway": "A budget is a plan, and a deficit is a debt postponed, not avoided.",
+            "check": {
+              "question": "A budget deficit occurs when ______.",
+              "options": [
+                "revenue exceeds expenditure",
+                "expenditure exceeds revenue",
+                "taxes exceed subsidies",
+                "exports exceed imports"
+              ],
+              "answer": 1,
+              "why": "A deficit is the gap left when planned spending is greater than expected revenue, and it must be financed by borrowing."
+            }
           }
         },
         {
@@ -2895,24 +2982,24 @@
         {
           "type": "worked_example",
           "content": {
-            "problem": "Classify each tax and say whether it is direct or indirect: personal income tax, VAT, import duty, company tax.",
+            "problem": "A trader buys a good for N4,000 and sells it for N5,000, and VAT is 7.5 per cent. Find the VAT the trader remits and the price the consumer pays.",
             "steps": [
               {
-                "operation": "Ask what is taxed",
-                "reason": "Direct taxes fall on income or wealth; indirect taxes fall on goods and services.",
-                "result": "Personal income tax and company tax are direct; VAT and import duty are indirect.",
-                "predictPrompt": "Who ultimately bears the burden of VAT?"
+                "operation": "Find the taxable value",
+                "reason": "VAT is charged on the selling price, not on the trader's profit.",
+                "result": "Taxable value = N5,000.",
+                "predictPrompt": "What is 7.5 per cent of N5,000?"
               },
               {
-                "operation": "Trace the burden",
-                "reason": "VAT is collected by sellers but added to prices.",
-                "result": "Consumers bear most of the VAT burden, which is why it can be regressive.",
+                "operation": "Compute the VAT",
+                "reason": "Multiply the selling price by the VAT rate.",
+                "result": "VAT = 0.075 × N5,000 = N375.",
                 "predictPrompt": ""
               },
               {
-                "operation": "Check the classification",
-                "reason": "Import duty is charged on imported goods, so it is indirect.",
-                "result": "Direct: personal income tax, company tax. Indirect: VAT, import duty."
+                "operation": "Add it to the price",
+                "reason": "The consumer pays the price plus the tax, and the trader remits the tax.",
+                "result": "Consumer pays N5,375, and the trader remits N375 to government."
               }
             ]
           }
