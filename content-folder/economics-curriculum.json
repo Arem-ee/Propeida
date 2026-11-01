@@ -172,11 +172,19 @@
     },
     {
       "slug": "international-trade",
-      "name": "International Trade and Economic Organisations",
+      "name": "International Trade",
       "syllabus_ref": "A.21",
       "section": "The Nigerian Economy",
       "order": 21,
-      "description": "Comparative advantage, terms of trade, balance of payments, ECOWAS and other organisations."
+      "description": "Comparative advantage, terms of trade, balance of payments, Nigeria's trade and exchange rates."
+    },
+    {
+      "slug": "international-economic-organizations-roles-and-relevance-of-international",
+      "name": "International Economic Organisations",
+      "syllabus_ref": "A.22",
+      "section": "The Nigerian Economy",
+      "order": 22,
+      "description": "ECOWAS, AU, EU, ECA, IMF, World Bank, IBRD, WTO, ADB, UNCTAD, OECD and OPEC, and their relevance to Nigeria."
     }
   ],
   "lessons": [
@@ -2090,41 +2098,129 @@
       ]
     },
     {
-      "topic": "international-trade",
       "slug": "international-trade",
       "title": "International Trade and Comparative Advantage",
-      "objective": "Explain the gains from trade, compute opportunity cost, and distinguish the terms of trade from the balances.",
-      "estimatedMinutes": 12,
+      "objective": "Explain absolute and comparative advantage, interpret the terms of trade and the balances, describe Nigeria's trade and correction measures, and explain exchange-rate types and determination.",
+      "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "heading": "Why countries trade",
+            "heading": "International trade",
             "paragraphs": [
-              "Countries trade because they differ in resources, technology and costs. Specialising where opportunity cost is lowest raises total output, and both sides can gain."
+              "Nigeria sells crude oil and buys refined fuel, machines and wheat. That exchange, and the rate at which it happens, is international trade."
             ],
-            "bullets": [
-              "Absolute advantage: a country can produce more of a good with the same resources.",
-              "Comparative advantage: a country can produce a good at a lower opportunity cost. This, not absolute advantage, is the basis of beneficial trade.",
-              "David Ricardo showed that even a country that is better at everything gains by specialising where its disadvantage is smallest.",
-              "Other gains: economies of scale, wider consumer choice and access to goods a country cannot produce."
-            ]
+            "bullets": []
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Terms of trade and the balances",
+            "heading": "Basis for international trade",
             "paragraphs": [
-              "The terms of trade measure the rate at which exports exchange for imports. The two balances measure different things and are often confused."
+              "A country may be better at making everything, yet still gain from trade. The reason is opportunity cost, not absolute skill. Nigeria has oil but imports refined products, so it trades even with the raw resource.",
+              "Absolute advantage means producing more of a good with the same resources. Comparative advantage means producing it at a lower opportunity cost, and David Ricardo showed that specialising where opportunity cost is lowest raises total output even for a country that is better at everything.",
+              "Other gains are economies of scale, wider consumer choice, access to goods a country cannot produce and the transfer of technology. The terms of trade decide how those gains are shared, and a country whose export prices fall relative to import prices loses even when it trades more."
             ],
             "bullets": [
-              "Terms of trade = (index of export prices ÷ index of import prices) × 100. A rise means exports buy more imports.",
-              "Balance of trade = visible exports − visible imports. It covers goods only.",
-              "Balance of payments = all receipts and payments, including services, income and transfers. It can balance even when trade does not.",
-              "Invisible trade covers services such as banking, shipping, insurance and tourism.",
-              "ECOWAS promotes trade and free movement among West African states; its slow progress is often blamed on weak political will and inadequate resources."
-            ]
+              "Absolute: more output per resource.",
+              "Comparative: lower opportunity cost.",
+              "Gains: scale, choice, technology."
+            ],
+            "takeaway": "Trade pays because opportunity cost differs, not because one country is weaker.",
+            "check": {
+              "question": "The principle of comparative cost advantage was propounded by ______.",
+              "options": [
+                "Alfred Marshall",
+                "J. S. Mill",
+                "Adam Smith",
+                "David Ricardo"
+              ],
+              "answer": 3,
+              "why": "Ricardo showed that specialisation by comparative opportunity cost raises total output even when one country has an absolute advantage in everything."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "Absolute advantage compares output; comparative advantage compares opportunity cost.",
+              "columns": [
+                "Absolute advantage",
+                "Comparative advantage"
+              ],
+              "rows": [
+                {
+                  "feature": "Meaning",
+                  "left": "More output from the same resources",
+                  "right": "Lower opportunity cost of production"
+                },
+                {
+                  "feature": "Basis of trade",
+                  "left": "Not sufficient by itself",
+                  "right": "The real basis of beneficial trade"
+                },
+                {
+                  "feature": "Example",
+                  "left": "One farm yields more cocoa per hectare",
+                  "right": "A country gives up less coffee to grow cocoa"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Terms of trade, balances and Nigeria's trade",
+            "paragraphs": [
+              "Nigeria exports mainly crude oil and imports refined fuel, machinery, food and manufactures. A fall in oil prices therefore worsens its terms of trade.",
+              "The terms of trade are the index of export prices divided by the index of import prices times 100; a rise means exports buy more imports. The balance of trade counts visible goods only, while the balance of payments adds services, income and transfers.",
+              "Invisible trade covers banking, shipping, insurance and tourism, and a goods deficit can be closed by remittances or capital inflows. Payments deficits are corrected by devaluation, tariffs, quotas, import substitution, export promotion and borrowing. A quota limits imports to a fixed quantity and dumping is selling abroad below home cost."
+            ],
+            "bullets": [
+              "Terms of trade = export prices ÷ import prices × 100.",
+              "Trade balance: goods only; payments: everything.",
+              "Correction: devaluation, tariffs, quotas, export promotion.",
+              "The Nigeria Export Promotion Council supports exporters."
+            ],
+            "takeaway": "A trade deficit is not a payments deficit, because services and transfers also move money.",
+            "check": {
+              "question": "The formula (index of export prices ÷ index of import prices) × 100 is used to measure the ______.",
+              "options": [
+                "volume of trade between countries",
+                "commodity terms of trade",
+                "direction of international trade",
+                "volume of imports"
+              ],
+              "answer": 1,
+              "why": "The ratio compares export and import prices, so it measures the commodity terms of trade, or how much imports a unit of exports can buy."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Exchange rates",
+            "paragraphs": [
+              "A traveller changes naira for dollars and finds the rate has moved since last month. The exchange rate is the price of one currency in another. When the naira falls, imported fuel costs more and bus fares rise.",
+              "A fixed rate is pegged by the central bank, a floating rate is set by demand and supply, and a managed float combines both. Multiple rates apply different prices to different transactions.",
+              "The rate is determined by demand for and supply of foreign exchange, which depend on exports, imports, capital flows, inflation, interest rates and speculation. Devaluation makes exports cheaper and imports dearer, which can correct a deficit but also raises domestic prices; revaluation does the opposite."
+            ],
+            "bullets": [
+              "Fixed, floating and managed float.",
+              "Demand and supply set the rate.",
+              "Devaluation: cheaper exports, dearer imports."
+            ],
+            "takeaway": "The exchange rate is a price, and like any price it moves with demand and supply.",
+            "check": {
+              "question": "Devaluation of a currency means ______.",
+              "options": [
+                "a deliberate reduction in its value against other currencies",
+                "an increase in its value against other currencies",
+                "fixing its value permanently to gold",
+                "allowing it to float without any central-bank action"
+              ],
+              "answer": 0,
+              "why": "Devaluation lowers the official value of a currency, which makes exports cheaper abroad and imports dearer at home."
+            }
           }
         },
         {
@@ -2163,11 +2259,182 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "Explain dumping and one reason it harms local producers, then name one trade remedy a government could use.",
+            "question": "Explain how a fall in oil prices affects Nigeria's terms of trade and balance of payments, and name one policy response.",
             "hints": [
-              "Dumping is selling exports below home cost or below the price charged at home.",
-              "Foreign goods priced below local production cost can take market share and force local firms to cut prices or close.",
-              "A government can impose an anti-dumping duty or a tariff to raise the imported price."
+              "Export prices fall while import prices change little, so the terms of trade worsen.",
+              "Export earnings fall, leaving a wider current-account deficit.",
+              "A response could be devaluation, export diversification or expenditure reduction."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "international-economic-organizations-roles-and-relevance-of-international",
+      "title": "International Economic Organisations",
+      "objective": "Identify regional and global economic organisations, explain their functions, and assess their relevance and limits for Nigeria.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "International economic organisations",
+            "paragraphs": [
+              "Nigeria borrows from the IMF, trades under WTO rules and belongs to ECOWAS, so international organisations shape its economy daily."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Regional and continental organisations",
+            "paragraphs": [
+              "A trader moves goods from Lagos to Cotonou without a visa while a Nigerian bank opens in Accra. Regional organisations make that movement easier.",
+              "ECOWAS promotes trade, free movement of persons, a common tariff and monetary cooperation among West African states; Nigeria hosts its headquarters in Abuja. The African Union promotes continental integration and peace, the EU is a customs union and single market, the ECA is the UN's regional economic commission for Africa, and the ADB finances African development projects.",
+              "Their relevance to Nigeria includes wider markets, cheaper imports, labour mobility, infrastructure finance and a stronger voice in world negotiations. Their limits are weak enforcement, overlapping memberships and uneven funding."
+            ],
+            "bullets": [
+              "ECOWAS: West African trade and free movement.",
+              "AU and ECA: continental integration and research.",
+              "ADB: development finance."
+            ],
+            "takeaway": "Regional bodies widen Nigeria's market and voice, but only when members enforce the rules.",
+            "check": {
+              "question": "The headquarters of ECOWAS is in ______.",
+              "options": [
+                "Abuja",
+                "Lagos",
+                "Accra",
+                "Addis Ababa"
+              ],
+              "answer": 0,
+              "why": "The ECOWAS Commission is based in Abuja, Nigeria, which also hosts several of its institutions."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Global financial and trade organisations",
+            "paragraphs": [
+              "When Nigeria faces a balance-of-payments crisis, it may borrow from the IMF with conditions attached. Global institutions set the rules and supply the finance that national policy must work within.",
+              "The IMF lends to countries with balance-of-payments problems and advises on macro policy; the World Bank and its IBRD arm finance development projects; the WTO sets trade rules and settles disputes; UNCTAD studies trade and development; the OECD coordinates rich-country policy; the EEC was the forerunner of the EU.",
+              "Nigeria uses IMF stabilisation loans, World Bank and IBRD project finance, WTO trade rules and UNCTAD research. Loan conditions can require subsidy removal, privatisation and currency reform, which may be unpopular but restore external balance."
+            ],
+            "bullets": [
+              "IMF: balance-of-payments loans.",
+              "World Bank and IBRD: development finance.",
+              "WTO: trade rules and disputes."
+            ],
+            "takeaway": "Global institutions supply finance and rules, and both come with conditions.",
+            "check": {
+              "question": "The institution that lends to countries with balance-of-payments problems is the ______.",
+              "options": [
+                "IMF",
+                "World Bank",
+                "WTO",
+                "ECOWAS"
+              ],
+              "answer": 0,
+              "why": "The IMF provides short- and medium-term balance-of-payments support, while the World Bank funds longer-term development projects."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "The IMF stabilises a balance of payments; the World Bank finances development.",
+              "columns": [
+                "IMF",
+                "World Bank"
+              ],
+              "rows": [
+                {
+                  "feature": "Main role",
+                  "left": "Balance-of-payments support",
+                  "right": "Development project finance"
+                },
+                {
+                  "feature": "Borrower",
+                  "left": "Governments in crisis",
+                  "right": "Governments and projects"
+                },
+                {
+                  "feature": "Conditions",
+                  "left": "Macro stabilisation reforms",
+                  "right": "Project and policy conditions"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "OPEC and the relevance of these bodies to Nigeria",
+            "paragraphs": [
+              "Nigeria's oil revenue rises and falls with OPEC decisions, so a quota meeting in Vienna can change the national budget.",
+              "OPEC coordinates the oil policies of member producers, sets production quotas and tries to stabilise prices; its major contribution to Nigeria is oil-price stabilisation. The relevance of international organisations to Nigeria includes export markets, development finance, technical advice, peacekeeping and a voice in trade negotiations.",
+              "Their limits include conditional loans, unequal bargaining power, quota restrictions on oil output and rules that open Nigerian markets to stronger foreign firms. Nigeria's response is to diversify exports, strengthen regional trade and negotiate rather than withdraw."
+            ],
+            "bullets": [
+              "OPEC: quotas and oil-price stability.",
+              "Relevance: markets, finance, advice, voice.",
+              "Limits: conditions, quotas, unequal power."
+            ],
+            "takeaway": "International organisations give Nigeria finance and markets, but they also constrain its choices.",
+            "check": {
+              "question": "The major contribution of OPEC to the Nigerian economy is the provision of ______.",
+              "options": [
+                "stabilisation of oil prices",
+                "social infrastructure",
+                "subsidies on petroleum products",
+                "refineries"
+              ],
+              "answer": 0,
+              "why": "OPEC coordinates production quotas to steady world oil prices, and stable prices steady Nigeria's oil revenue and budget."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam trap",
+            "tone": "tip",
+            "body": "ECOWAS is regional; the IMF and World Bank are global. Do not mix their functions."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Nigeria's OPEC quota is 1.5 million barrels per day and crude sells for $80 per barrel. Find the daily and annual oil revenue at full quota.",
+            "steps": [
+              {
+                "operation": "Find daily revenue",
+                "reason": "Multiply the quota by the price per barrel.",
+                "result": "Daily revenue = 1.5 million × $80 = $120 million.",
+                "predictPrompt": "Now multiply by the days in a year."
+              },
+              {
+                "operation": "Find annual revenue",
+                "reason": "Multiply daily revenue by 365 days.",
+                "result": "Annual revenue = $120 million × 365 = $43.8 billion.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Interpret",
+                "reason": "The quota caps output, so a lower quota or price cuts revenue even if costs are unchanged.",
+                "result": "At full quota and $80 oil, Nigeria earns about $43.8 billion a year; a quota cut or price fall reduces that directly."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Explain two benefits and one risk of Nigeria's membership of international economic organisations.",
+            "hints": [
+              "Benefits include market access, development finance, technical advice and a stronger negotiating voice.",
+              "A risk is that loan conditions or trade rules limit national policy space.",
+              "A strong answer names a specific body and links it to a specific effect."
             ]
           }
         }
