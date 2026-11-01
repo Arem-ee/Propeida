@@ -92,11 +92,19 @@
     },
     {
       "slug": "national-income",
-      "name": "National Income and Economic Growth",
+      "name": "National Income and Its Measurement",
       "syllabus_ref": "A.11",
       "section": "Macroeconomics",
       "order": 11,
-      "description": "GDP, real and nominal income, per capita income, growth and development."
+      "description": "GDP, GNP, NNP, the three measurement approaches, the circular flow and the multiplier."
+    },
+    {
+      "slug": "economic-growth-and-development",
+      "name": "Economic Growth and Development",
+      "syllabus_ref": "A.15",
+      "section": "Macroeconomics",
+      "order": 15,
+      "description": "Growth versus development, indicators, Nigerian obstacles and development planning."
     },
     {
       "slug": "money-and-inflation",
@@ -2324,72 +2332,161 @@
       ]
     },
     {
-      "topic": "national-income",
       "slug": "national-income",
       "title": "National Income and Its Measurement",
-      "objective": "Define GDP and GNP, convert nominal to real income, compute per capita income, and explain what is excluded.",
+      "objective": "Define GDP, GNP, NNP and national income, compare the output, income and expenditure approaches, and use the multiplier to find equilibrium income.",
       "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "heading": "Measuring output",
+            "heading": "National income and its measurement",
             "paragraphs": [
-              "National income is the total value of goods and services produced in an economy over a year. It can be measured by output, income or expenditure, and the three should agree."
+              "National income measures the output of an economy, and its concepts decide what is counted and what is left out."
             ],
-            "bullets": [
-              "GDP counts output produced within a country’s borders, whoever owns the producer.",
-              "GNP = GDP + net factor income from abroad. It counts income earned by a country’s citizens.",
-              "The expenditure approach adds consumption, investment, government spending and net exports: C + I + G + (X − M).",
-              "Only final goods are counted; intermediate goods would double-count the same output.",
-              "Transfer payments, second-hand sales and purely financial transactions are excluded because they create no new output."
-            ]
+            "bullets": []
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Real income, per capita income and development",
+            "heading": "Concepts and measurement",
             "paragraphs": [
-              "Nominal income is measured at current prices; real income is measured at constant prices, so it shows whether output actually grew."
+              "A country's factories, farms and offices produce goods and services all year; national income adds up their final value. The way that value is defined decides whether foreign-owned production or depreciation is included.",
+              "GDP is the market value of final goods and services produced within a country in a year. GNP adds net factor income from abroad, NNP subtracts depreciation, and national income subtracts indirect taxes and adds subsidies to reach factor cost.",
+              "It can be measured by output (value added), income (rent, wages, interest, profit) or expenditure (C + I + G + X − M), and the three should agree. Only final goods count; intermediate goods, transfer payments and second-hand sales are excluded to avoid double counting. Nominal income uses current prices, real income uses constant prices, and per capita income divides national income by population."
             ],
             "bullets": [
-              "Real GDP = (nominal GDP ÷ price index) × 100.",
-              "Per capita income = national income ÷ population. It is an average, so it hides inequality.",
-              "Economic growth is a sustained rise in real output; economic development also includes health, education and structural change.",
-              "A rise in nominal GDP can be pure inflation, so it is not proof of better living standards."
-            ]
+              "GDP within borders; GNP by citizens; NNP after depreciation.",
+              "Output, income and expenditure should agree.",
+              "Real income uses constant prices; per capita divides by population."
+            ],
+            "takeaway": "National income counts final output, not every payment that changes hands.",
+            "check": {
+              "question": "Gross domestic product measures the total value of goods and services produced ______.",
+              "options": [
+                "by a country's citizens anywhere in the world",
+                "by the government only",
+                "within a country in a year",
+                "and consumed in a year"
+              ],
+              "answer": 2,
+              "why": "GDP is a territorial measure: it counts production inside the country's borders, whoever owns the producer."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Circular flow, consumption and saving",
+            "paragraphs": [
+              "Workers spend part of their pay and save the rest, while firms borrow those savings to buy machines. Income circulates, but some leaks out and some is injected back.",
+              "In the circular flow, households supply land, labour, capital and entrepreneurship to firms, then spend their income on goods and services. The two-sector model has households and firms; the three-sector adds government, which taxes and spends.",
+              "Saving is income not consumed; investment is spending on capital goods. In the two-sector model, saving leaks and investment injects, so equilibrium needs S = I.",
+              "The consumption function is C = a + bY, where b is the marginal propensity to consume. APC and APS divide consumption and saving by income; MPC and MPS divide their changes by the change in income, and MPC + MPS = 1."
+            ],
+            "bullets": [
+              "Households supply factors; firms supply goods.",
+              "Two-sector: S = I. Three-sector adds taxes and government spending.",
+              "APC + APS = 1 and MPC + MPS = 1."
+            ],
+            "takeaway": "Income circulates between households and firms, and saving leaks while investment injects spending back.",
+            "check": {
+              "question": "If the marginal propensity to consume is 0.8, the marginal propensity to save is ______.",
+              "options": [
+                "0.2",
+                "0.8",
+                "1.8",
+                "0"
+              ],
+              "answer": 0,
+              "why": "Every extra naira of income is either consumed or saved, so MPC + MPS = 1 and MPS = 1 − 0.8."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "The three-sector model adds government to the household-firm flow.",
+              "columns": [
+                "Two-sector",
+                "Three-sector"
+              ],
+              "rows": [
+                {
+                  "feature": "Participants",
+                  "left": "Households and firms",
+                  "right": "Households, firms and government"
+                },
+                {
+                  "feature": "Leakages and injections",
+                  "left": "Saving leaks; investment injects",
+                  "right": "Saving and taxes leak; investment and government spending inject"
+                },
+                {
+                  "feature": "Equilibrium",
+                  "left": "S = I",
+                  "right": "S + T = I + G"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Multiplier and equilibrium income",
+            "paragraphs": [
+              "A new factory spends N100 million on machines, and the workers who build them spend part of their pay. One injection can raise income by more than its original size.",
+              "The multiplier is the number of times a change in spending multiplies into a larger change in income. It is k = 1 ÷ (1 − MPC), or 1 ÷ MPS.",
+              "Equilibrium income occurs where total spending equals output, or where injections equal leakages. In the two-sector model Y = C + I; in the three-sector model Y = C + I + G.",
+              "If MPC is 2/3, the multiplier is 3, so a N100 million rise in investment raises equilibrium income by N300 million. It is larger when people spend most of extra income, and smaller when they save or import a lot."
+            ],
+            "bullets": [
+              "k = 1 ÷ (1 − MPC) = 1 ÷ MPS.",
+              "Change in income = k × change in investment.",
+              "Equilibrium: injections = leakages."
+            ],
+            "takeaway": "A naira of new spending can create more than a naira of income when it is respent.",
+            "check": {
+              "question": "If the marginal propensity to consume is 2/3 and investment rises by N100 million, national income rises by ______.",
+              "options": [
+                "N300 million",
+                "N30 million",
+                "N40 million",
+                "N150 million"
+              ],
+              "answer": 0,
+              "why": "The multiplier is 1 ÷ (1 − 2/3) = 3, so N100 million × 3 = N300 million."
+            }
           }
         },
         {
           "type": "callout",
           "content": {
-            "title": "Exam tip",
+            "title": "Exam trap",
             "tone": "tip",
-            "body": "GDP is about where output is produced; GNP is about who earns the income. Read the question for “within the country” versus “by citizens”."
+            "body": "GDP counts output within borders; GNP counts income earned by citizens. A foreign-owned factory in Nigeria counts in Nigeria's GDP, but its profit is not Nigerian GNP."
           }
         },
         {
           "type": "worked_example",
           "content": {
-            "problem": "Nominal GDP is N200 billion, the price index is 125, and the population is 40 million. Find real GDP and per capita real income.",
+            "problem": "An economy has a marginal propensity to consume of 0.75 and investment rises by N80 million. Find the multiplier and the change in equilibrium income.",
             "steps": [
               {
-                "operation": "Deflate nominal GDP",
-                "reason": "Divide by the price index and multiply by 100 to remove price changes.",
-                "result": "Real GDP = (200 ÷ 125) × 100 = N160 billion.",
-                "predictPrompt": "Now divide by population — in what units?"
+                "operation": "Find the multiplier",
+                "reason": "The multiplier is one divided by one minus the marginal propensity to consume.",
+                "result": "k = 1 ÷ (1 − 0.75) = 1 ÷ 0.25 = 4.",
+                "predictPrompt": "What does a multiplier of 4 mean?"
               },
               {
-                "operation": "Compute per capita income",
-                "reason": "Per capita income is national income per person.",
-                "result": "N160 billion ÷ 40 million = N4,000 per person.",
+                "operation": "Apply the multiplier",
+                "reason": "Multiply the initial change in investment by the multiplier.",
+                "result": "Change in income = 4 × N80 million = N320 million.",
                 "predictPrompt": ""
               },
               {
                 "operation": "Interpret",
-                "reason": "The average is not a measure of distribution.",
-                "result": "Average real income is N4,000; many people may still be far below it."
+                "reason": "The extra income is larger than the initial injection because each round of spending becomes someone else's income.",
+                "result": "Income rises by N320 million, four times the N80 million injection."
               }
             ]
           }
@@ -2397,11 +2494,182 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "Why is a rise in nominal GDP not proof that living standards improved? Give two reasons.",
+            "question": "An economy's marginal propensity to consume is 0.75 and investment rises by N80 million. Calculate the multiplier and the change in income, and explain why the actual change may be smaller.",
             "hints": [
-              "Prices may have risen, so the same output is worth more in naira.",
-              "Population may have grown faster, leaving income per head unchanged or lower.",
-              "A strong answer also mentions distribution and unpaid/non-market production."
+              "Use k = 1 ÷ (1 − MPC).",
+              "Multiply the injection by the multiplier.",
+              "Imports, spare capacity and crowding out can reduce the real effect."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "economic-growth-and-development",
+      "title": "Economic Growth and Development",
+      "objective": "Distinguish growth from development, identify development indicators and Nigerian obstacles, and explain the role and limits of development planning.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Economic growth and development",
+            "paragraphs": [
+              "Growth is a bigger economy; development is a better one, and the difference matters when a country's output rises while poverty persists."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Growth versus development",
+            "paragraphs": [
+              "A country's oil output doubles, but schools, hospitals and incomes outside oil barely change. Output grew; development did not.",
+              "Economic growth is a sustained rise in real national output, usually measured by real GDP or GDP per capita. Economic development is broader: it adds health, education, income distribution, infrastructure and structural change.",
+              "Growth can occur without development if the extra output is concentrated in one sector or region, or if population grows as fast as output. Development requires both rising output and better living conditions. Indicators include GDP per capita, life expectancy, literacy, school enrolment, access to clean water, the Human Development Index and the poverty rate; no single indicator captures development, so they are read together."
+            ],
+            "bullets": [
+              "Growth: more output. Development: more output plus better lives.",
+              "Oil output can grow while schools and incomes stagnate.",
+              "HDI combines income, health and education."
+            ],
+            "takeaway": "Growth measures the size of the economy; development measures the quality of life it supports.",
+            "check": {
+              "question": "A major feature of an underdeveloped economy is ______.",
+              "options": [
+                "a low level of standard of living",
+                "excess capacity utilisation",
+                "a low rate of population growth",
+                "a low level of unemployment"
+              ],
+              "answer": 0,
+              "why": "Underdevelopment shows in low incomes, poor health and education and weak infrastructure, not in high capacity use or low unemployment."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Factors and Nigerian problems",
+            "paragraphs": [
+              "A country with fertile land and oil still imports food and refined fuel, because its refineries, roads and skills are weak. Resources alone do not produce development.",
+              "Growth and development depend on natural resources, human capital, capital formation, technology, infrastructure, institutions and political stability. Savings and investment fund capital, while education and health raise productivity.",
+              "Nigeria's problems include over-dependence on oil, weak infrastructure, corruption and poor governance, insecurity, low human-capital development, a narrow export base and dependence on imported manufactures. A large population can be a market and a workforce, but it becomes a burden when jobs and skills do not grow with it."
+            ],
+            "bullets": [
+              "Resources, human capital, capital, technology, infrastructure, institutions.",
+              "Nigeria: oil dependence, weak infrastructure, corruption, insecurity.",
+              "Population is an asset only when skills and jobs grow."
+            ],
+            "takeaway": "Resources do not develop an economy; the institutions and skills that use them do.",
+            "check": {
+              "question": "Which is a problem of development in Nigeria?",
+              "options": [
+                "a diversified export base",
+                "over-dependence on oil",
+                "excess skilled labour",
+                "low population growth"
+              ],
+              "answer": 1,
+              "why": "Oil supplies most export earnings and government revenue, so a fall in oil prices or output destabilises the whole budget and economy."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "Growth is a quantity; development is a set of improvements.",
+              "columns": [
+                "Economic growth",
+                "Economic development"
+              ],
+              "rows": [
+                {
+                  "feature": "Definition",
+                  "left": "Sustained rise in real output",
+                  "right": "Rising output plus better living conditions"
+                },
+                {
+                  "feature": "Measure",
+                  "left": "Real GDP and GDP per capita",
+                  "right": "HDI, literacy, life expectancy, poverty"
+                },
+                {
+                  "feature": "Example",
+                  "left": "Oil output doubles",
+                  "right": "Schools, clinics and incomes improve"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Development planning in Nigeria",
+            "paragraphs": [
+              "Nigeria has launched successive national plans, yet many targets were missed because funding, data and political will fell short.",
+              "Development planning sets targets for output, employment, infrastructure and social services, and allocates resources to meet them. It can coordinate investment and focus government effort.",
+              "Nigeria used fixed national development plans after independence, then rolling plans, the Vision 20:2020 strategy, the Economic Recovery and Growth Plan and the National Development Plan. The plans usually aimed at diversification, infrastructure and human capital. They often failed because of unstable funding, poor data, corruption, policy inconsistency and weak implementation; a plan without a budget, monitoring and accountability remains a document rather than a strategy."
+            ],
+            "bullets": [
+              "Planning sets targets and allocates resources.",
+              "Nigeria: fixed plans, rolling plans, Vision 20:2020, ERGP, NDP.",
+              "Failure: funding, data, corruption, inconsistency, weak implementation."
+            ],
+            "takeaway": "A development plan works only when the budget, data and accountability behind it work.",
+            "check": {
+              "question": "A major reason Nigerian development plans underperform is ______.",
+              "options": [
+                "too much population",
+                "weak implementation and unstable funding",
+                "excessive exports",
+                "low government spending on planning"
+              ],
+              "answer": 1,
+              "why": "Plans are often well written but poorly funded, monitored and implemented, so targets are missed."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam trap",
+            "tone": "tip",
+            "body": "Growth and development are not synonyms. GDP can rise while poverty, literacy and health stay unchanged."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Real GDP grows from N80 trillion to N88 trillion while population grows from 200 million to 220 million. Find the growth in total output and in output per person, and say whether living standards rose.",
+            "steps": [
+              {
+                "operation": "Find total growth",
+                "reason": "Divide the change in real GDP by the original GDP.",
+                "result": "Growth = (88 − 80) ÷ 80 × 100 = 10 per cent.",
+                "predictPrompt": "Now find GDP per person before and after."
+              },
+              {
+                "operation": "Find output per person",
+                "reason": "Divide real GDP by population in each year.",
+                "result": "Before: N80 trillion ÷ 200 million = N400,000. After: N88 trillion ÷ 220 million = N400,000.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Interpret",
+                "reason": "Total output rose, but population rose by the same proportion.",
+                "result": "Output per person is unchanged, so average living standards did not rise."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Nigeria's GDP has grown, but poverty remains widespread. Explain two reasons why growth may not translate into development, and one policy that would connect them.",
+            "hints": [
+              "Growth may be concentrated in oil or in cities, leaving other sectors and regions behind.",
+              "Population growth can absorb the extra output, leaving income per head flat.",
+              "Link the policy to jobs, skills or social spending, not just to more output."
             ]
           }
         }
