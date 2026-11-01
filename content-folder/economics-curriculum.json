@@ -3548,40 +3548,133 @@
       ]
     },
     {
-      "topic": "business-organisations",
       "slug": "business-organisations",
       "title": "Business Organisations",
-      "objective": "Compare sole proprietorships, partnerships, companies and co-operatives on ownership, liability and finance.",
+      "objective": "Compare private business forms on ownership, liability and finance, assess public enterprises and privatisation, and explain business funding, firm size and integration.",
       "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "heading": "Unincorporated businesses",
+            "heading": "Business organisations",
             "paragraphs": [
-              "A sole proprietorship has one owner; a partnership has two to twenty. Neither is a separate legal person from its owners."
+              "A tailor registers his shop as a business name while two friends form a limited liability company. The form they choose decides who is liable and how much capital they can raise."
             ],
-            "bullets": [
-              "Sole proprietorship: easy and cheap to start, owner keeps all profit, but has unlimited liability and limited capital.",
-              "Partnership: pooled capital and skills, shared workload, but unlimited liability and possible disagreement.",
-              "Unlimited liability means business debts can be recovered from the owner’s personal assets.",
-              "Both end when the owner dies or leaves, so they lack perpetual succession."
-            ]
+            "bullets": []
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Companies and co-operatives",
+            "heading": "Private enterprises",
             "paragraphs": [
-              "Incorporation creates a separate legal person. The company owns assets, signs contracts and bears liability in its own name."
+              "A sole proprietorship has one owner and unlimited liability. A partnership has two to twenty persons who share capital and profits, but also bear unlimited liability.",
+              "A private limited company has restricted shares and limited liability; a public limited company can trade its shares publicly and raise far more capital. A co-operative is owned and controlled by its members, who are usually also its customers, on a one-member-one-vote basis.",
+              "Incorporation makes the company a separate legal person, so it owns assets, signs contracts and continues when shareholders change. Unincorporated businesses lack that perpetual succession."
             ],
             "bullets": [
-              "Private limited company: shares restricted, often family-owned, limited liability, separate legal entity.",
-              "Public limited company: shares freely transferable and traded, can raise large capital, subject to stricter disclosure.",
-              "Both companies have perpetual succession: they continue when shareholders change.",
-              "Co-operative: owned and controlled by members, usually one member one vote, surplus shared according to members’ patronage."
-            ]
+              "Sole trader: one owner, unlimited liability.",
+              "Partnership: two to twenty partners, unlimited liability.",
+              "Companies: limited liability, perpetual succession."
+            ],
+            "takeaway": "The business form decides who bears the risk and how much capital can be raised.",
+            "check": {
+              "question": "The maximum number of persons allowed in an ordinary partnership under Nigerian law is ______.",
+              "options": [
+                "20",
+                "2",
+                "10",
+                "50"
+              ],
+              "answer": 0,
+              "why": "An ordinary partnership is capped at twenty persons; anything larger must incorporate as a company."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "Incorporation separates the business from its owners.",
+              "columns": [
+                "Unincorporated",
+                "Incorporated"
+              ],
+              "rows": [
+                {
+                  "feature": "Legal status",
+                  "left": "Not a separate person",
+                  "right": "Separate legal person"
+                },
+                {
+                  "feature": "Liability",
+                  "left": "Owner's personal assets",
+                  "right": "Limited to shares held"
+                },
+                {
+                  "feature": "Succession",
+                  "left": "Ends with the owner",
+                  "right": "Continues beyond owners"
+                },
+                {
+                  "feature": "Capital",
+                  "left": "Savings and loans",
+                  "right": "Shares, bonds, retained profit"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Public enterprises, privatisation and commercialisation",
+            "paragraphs": [
+              "A state water board serves the public but runs at a loss and depends on subsidy. Public enterprises are set up for services markets may not provide, yet they often become a burden.",
+              "Public enterprises are owned by government and include public corporations, parastatals and government companies. They aim to provide essential services, control strategic sectors, create employment and correct market failure. Their problems include political interference, weak accountability, overstaffing, corruption, poor maintenance and losses covered by subsidy.",
+              "Privatisation transfers ownership of a public enterprise to private investors, while commercialisation keeps government ownership but makes the enterprise charge cost-reflective prices and run commercially. Privatisation can raise efficiency and revenue but may cause job losses and higher prices; commercialisation keeps public control but may still lack competition."
+            ],
+            "bullets": [
+              "Public enterprises: government-owned, service motive.",
+              "Problems: politics, overstaffing, losses.",
+              "Privatisation sells; commercialisation makes commercial."
+            ],
+            "takeaway": "Ownership can change faster than the incentives and competition that make an enterprise efficient.",
+            "check": {
+              "question": "Privatisation differs from commercialisation because privatisation ______.",
+              "options": [
+                "transfers ownership to private investors",
+                "keeps ownership with government",
+                "only raises the price of services",
+                "removes all government regulation"
+              ],
+              "answer": 0,
+              "why": "Privatisation changes who owns the enterprise, while commercialisation keeps public ownership and changes how it is run."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Funding, management and the size of firms",
+            "paragraphs": [
+              "A bakery that buys a flour mill is growing backwards, while one that buys a rival bakery is growing sideways. Both change the size and scope of the firm.",
+              "Firms need finance for fixed capital, working capital and expansion. Sources include owners' equity, retained profits, bank loans, trade credit, leasing, bonds and the capital market; small firms rely on savings, family loans and microfinance, while large firms borrow more cheaply.",
+              "The size of a firm depends on market size, capital, technology, management skill, risk and government policy. Growth can be internal, through reinvestment, or external, through merger and takeover. Horizontal integration joins firms at the same stage, vertical integration joins firms at different stages to enjoy economies of large-scale production, and a conglomerate joins unrelated businesses."
+            ],
+            "bullets": [
+              "Finance: equity, retained profit, loans, bonds.",
+              "Size: market, capital, technology, management.",
+              "Integration: horizontal, vertical, conglomerate."
+            ],
+            "takeaway": "A firm grows when its market and management can carry more capital and technology.",
+            "check": {
+              "question": "Firms embark on vertical integration in order to ______.",
+              "options": [
+                "take over markets formerly controlled by other firms",
+                "prevent other firms from entering the market",
+                "enjoy economies of large-scale production",
+                "reduce advertisement and management costs"
+              ],
+              "answer": 2,
+              "why": "Vertical integration joins stages of production or distribution, so one firm internalises the chain and captures its economies."
+            }
           }
         },
         {
@@ -3606,7 +3699,7 @@
               {
                 "operation": "Choose the form",
                 "reason": "A limited liability company is a separate legal person and can issue shares.",
-                "result": "A private limited company fits; it can later become public to raise more capital.",
+                "result": "A private limited company fits, and it can later become public to raise more capital.",
                 "predictPrompt": ""
               },
               {
