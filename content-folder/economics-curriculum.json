@@ -132,11 +132,27 @@
     },
     {
       "slug": "agriculture-and-industry",
-      "name": "Agriculture, Industry and Natural Resources",
+      "name": "Agriculture in Nigeria",
       "syllabus_ref": "A.16",
       "section": "The Nigerian Economy",
       "order": 16,
-      "description": "The role of agriculture, industrialisation and the oil sector in Nigeria."
+      "description": "Types and features of agriculture, its role, problems, policies and income instability."
+    },
+    {
+      "slug": "industry-and-industrialization",
+      "name": "Industry and Industrialization",
+      "syllabus_ref": "A.17",
+      "section": "The Nigerian Economy",
+      "order": 17,
+      "description": "Industrial location and localisation, strategies, problems, firm size and business finance."
+    },
+    {
+      "slug": "natural-resources-and-the-nigerian-economy",
+      "name": "Natural Resources and the Nigerian Economy",
+      "syllabus_ref": "A.18",
+      "section": "The Nigerian Economy",
+      "order": 18,
+      "description": "Oil and non-oil resources, upstream and downstream, linkages, NNPC, OPEC and exploitation challenges."
     },
     {
       "slug": "business-organisations",
@@ -3018,41 +3034,471 @@
       ]
     },
     {
-      "topic": "agriculture-and-industry",
       "slug": "agriculture-and-industry",
-      "title": "Agriculture, Industry and the Oil Sector",
-      "objective": "Explain agriculture’s role, the factors that locate industry, and the difference between upstream and downstream oil.",
-      "estimatedMinutes": 12,
+      "title": "Agriculture in Nigeria",
+      "objective": "Describe the types and features of Nigerian agriculture, explain its role in development, and assess its problems, policies and income instability.",
+      "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "heading": "Agriculture",
+            "heading": "Agriculture in Nigeria",
             "paragraphs": [
-              "Agriculture supplies food, employs labour and provides raw materials for industry. In Nigeria it remains the largest employer even though oil dominates foreign exchange."
+              "A farmer in Benue plants yam on a small plot while a plantation in Cross River employs hundreds. Both show how agriculture is organised in Nigeria."
             ],
-            "bullets": [
-              "Provides food and improves food security.",
-              "Employs a large share of the population.",
-              "Supplies raw materials to agro-processing industries.",
-              "Earns foreign exchange through cash crops and provides a market for industrial goods.",
-              "Problems: low mechanisation, insecure land tenure, weak credit, poor storage and transport, and climate risk."
-            ]
+            "bullets": []
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Industry and the oil sector",
+            "heading": "Types and features of agriculture",
             "paragraphs": [
-              "Industrial location depends on costs. Firms balance proximity to raw materials, markets, power, transport, labour and government incentives."
+              "A family farms a small plot with hoes and sells only the surplus, while a plantation employs wage labour and grows one crop for sale. These are the two ends of Nigerian agriculture.",
+              "Subsistence farming produces mainly for the family, while commercial farming produces for sale. Peasant or smallholder farming dominates, alongside plantation and large-scale mechanised farms. Most farms are rain-fed, labour-intensive and small, with low use of fertiliser and machinery.",
+              "Farming is seasonal, depends on land tenure and weather, and yields are low because inputs, credit and extension services are weak. Large-scale farming can conduct research and employ labour on a large scale, but it needs capital and management that most smallholders lack."
             ],
             "bullets": [
-              "A weight-losing industry locates near its raw material; a weight-gaining or bulky product locates near its market.",
-              "Upstream oil: exploration and extraction of crude oil.",
-              "Downstream oil: refining, distribution and marketing of petroleum products.",
-              "Over-dependence on oil exposes the economy to price shocks, neglects agriculture and manufacturing, and can cause Dutch disease."
+              "Subsistence for the family; commercial for sale.",
+              "Smallholdings dominate; rain-fed and labour-intensive.",
+              "Large scale: research, machinery, wage labour."
+            ],
+            "takeaway": "Nigerian agriculture is mostly small, rain-fed and seasonal, and that shape explains its low yields.",
+            "check": {
+              "question": "An advantage of large-scale farming over peasant farming is ______.",
+              "options": [
+                "redistributing national income across regions",
+                "encouraging the use of traditional implements",
+                "conducting research and employing labour on a large scale",
+                "encouraging urban-rural migration"
+              ],
+              "answer": 2,
+              "why": "Large farms can fund research, machinery and wage labour, while peasant farms rely on family labour and simple tools."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "Subsistence feeds the family; commercial farming sells the output.",
+              "columns": [
+                "Subsistence",
+                "Commercial"
+              ],
+              "rows": [
+                {
+                  "feature": "Purpose",
+                  "left": "Food for the family",
+                  "right": "Output for sale"
+                },
+                {
+                  "feature": "Scale",
+                  "left": "Small plot, family labour",
+                  "right": "Large farm, wage labour"
+                },
+                {
+                  "feature": "Inputs",
+                  "left": "Hoes and few inputs",
+                  "right": "Machinery, fertiliser, research"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The role of agriculture in development",
+            "paragraphs": [
+              "Agriculture feeds the country, employs most of the rural population and supplies factories with cotton, cocoa and groundnuts. Its health decides whether the rest of the economy can grow.",
+              "It provides food and guarantees food security, employs a large share of the population, supplies raw materials to industry, earns foreign exchange through cash crops and provides a market for industrial goods. It also supplies savings and tax revenue for development. Its share of GDP has fallen as oil grew, but its share of employment remains high.",
+              "Agriculture contributes to development by releasing labour to industry, feeding growing towns and raising rural incomes. When it stagnates, food prices rise, imports grow and industry loses its raw materials."
+            ],
+            "bullets": [
+              "Food, jobs, raw materials, exports, markets.",
+              "Releases labour to industry.",
+              "Stagnation raises food prices and imports."
+            ],
+            "takeaway": "Agriculture is the base that feeds and supplies the rest of the economy.",
+            "check": {
+              "question": "The most important function of agriculture to the Nigerian economy is ______.",
+              "options": [
+                "technical skill development",
+                "technological development",
+                "industrial development",
+                "guaranteeing food security"
+              ],
+              "answer": 3,
+              "why": "Food is the first requirement of any economy, so feeding the population is agriculture's most important function."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Problems, policies and income instability",
+            "paragraphs": [
+              "A tomato farmer watches a good harvest rot because the road is bad and no cold store exists. Good weather can lower his income rather than raise it.",
+              "Problems include low mechanisation, insecure land tenure, weak credit, poor storage and transport, pests, climate risk and an ageing workforce. Policies include the Green Revolution, Operation Feed the Nation, the Anchor Borrowers' Programme, fertiliser subsidies, extension services and credit guarantees, though poor funding and implementation have limited their effect.",
+              "Farm incomes are unstable because supply depends on weather, prices swing between harvest and lean seasons, and produce is perishable. Irrigation, storage, commodity boards, price stabilisation, cooperatives, insurance and access to markets reduce the instability."
+            ],
+            "bullets": [
+              "Problems: inputs, land, credit, storage, climate.",
+              "Policies: subsidies, credit, extension, Anchor Borrowers.",
+              "Instability: weather, prices, perishability."
+            ],
+            "takeaway": "Farming fails less from lazy farmers than from weak inputs, storage and markets.",
+            "check": {
+              "question": "An important role of agriculture in an economy is ______.",
+              "options": [
+                "processing of raw materials",
+                "provision of employment",
+                "regulation of the price system",
+                "provision of infrastructure"
+              ],
+              "answer": 1,
+              "why": "Agriculture employs a large share of the population, especially in rural areas, and that employment is a major economic role."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Agriculture includes crop farming, livestock, forestry and fishing, so all four count in agricultural output."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A farmer harvests 2,000 kg of tomatoes. He sells 1,500 kg at N400 per kg and loses 500 kg to spoilage. Find his revenue and the value lost.",
+            "steps": [
+              {
+                "operation": "Find revenue",
+                "reason": "Revenue is the quantity sold multiplied by the price.",
+                "result": "Revenue = 1,500 × N400 = N600,000.",
+                "predictPrompt": "What would the spoiled tomatoes have been worth?"
+              },
+              {
+                "operation": "Value the loss",
+                "reason": "The spoiled quantity is valued at the same market price.",
+                "result": "Loss = 500 × N400 = N200,000.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Interpret",
+                "reason": "Storage or a better road would have turned the loss into sales.",
+                "result": "Better storage would have raised his income by N200,000, a third of his potential revenue."
+              }
             ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A state wants to raise farm incomes and reduce rural poverty. Explain two policies it could use and one risk of each.",
+            "hints": [
+              "Think about inputs, credit, storage, roads, extension or price support.",
+              "A subsidy can raise output but strain the budget and encourage smuggling.",
+              "Storage and roads cut post-harvest losses, but they need maintenance."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "industry-and-industrialization",
+      "title": "Industry and Industrialization",
+      "objective": "Explain industrial location and localisation, compare industrialisation strategies, and describe the role of industry, firm size and business finance.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Industry and industrialisation",
+            "paragraphs": [
+              "A cement plant sits beside a limestone deposit while a bakery sits in the city, because each location follows the cost of moving inputs and products."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Location and localisation of industry",
+            "paragraphs": [
+              "A cement factory near limestone and a bottling plant near its market choose different sites for the same reason: transport cost.",
+              "Location factors include raw materials, market, power, water, transport, labour, capital, government incentives and climate. A weight-losing industry locates near its raw material, while a weight-gaining or bulky product locates near its market. Footloose industries, such as software or tailoring, face no strong pull either way.",
+              "Localisation is the concentration of firms of one industry in a place, such as the textile firms of Kano or the oil services in Port Harcourt. It brings shared labour, suppliers and infrastructure, but also congestion, higher rents and pollution. Establishing industries in rural areas reduces rural-urban migration."
+            ],
+            "bullets": [
+              "Location: raw materials, market, power, transport, labour.",
+              "Weight-losing near inputs; weight-gaining near market.",
+              "Localisation: shared gains, congestion costs."
+            ],
+            "takeaway": "Firms locate where the total cost of moving inputs and output is lowest.",
+            "check": {
+              "question": "The establishment of industries in rural areas will help to reduce ______.",
+              "options": [
+                "urban-rural migration",
+                "rural-rural migration",
+                "rural-urban migration",
+                "urban-urban migration"
+              ],
+              "answer": 2,
+              "why": "Rural industries create local jobs, so fewer young people need to leave the village for the city."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "Weight-losing industries sit near inputs; weight-gaining industries sit near markets.",
+              "columns": [
+                "Weight-losing",
+                "Weight-gaining"
+              ],
+              "rows": [
+                {
+                  "feature": "Example",
+                  "left": "Cement from limestone",
+                  "right": "Bottling soft drinks"
+                },
+                {
+                  "feature": "Site",
+                  "left": "Near the raw material",
+                  "right": "Near the market"
+                },
+                {
+                  "feature": "Reason",
+                  "left": "The input is bulky to move",
+                  "right": "The output is bulky to move"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Industrialisation strategies and problems",
+            "paragraphs": [
+              "Nigeria tried to make what it used to import, but factories still import their machines and spare parts. Industrial strategy decides how far that works.",
+              "Import substitution protects local producers with tariffs and quotas, but it can shelter inefficient firms. Export promotion pushes firms to compete abroad and earn foreign exchange.",
+              "Other choices include small-scale and rural industries, industrial estates and privatisation. Nigeria's early plans favoured import substitution, while later policy added privatisation and support for small firms.",
+              "Industry in Nigeria faces unreliable power, poor roads and ports, scarce and costly credit, imported technology, weak management, counterfeit imports and policy inconsistency. Providing efficient infrastructure is therefore central to industrial development, because no factory can compete while it runs on generators."
+            ],
+            "bullets": [
+              "Import substitution versus export promotion.",
+              "Small-scale and rural industry.",
+              "Problems: power, infrastructure, credit, technology."
+            ],
+            "takeaway": "Protection can start an industry, but infrastructure and competition decide whether it survives.",
+            "check": {
+              "question": "In Nigeria, industrial development can be enhanced by ______.",
+              "options": [
+                "ensuring stable prices for manufactured goods",
+                "reducing government expenditure on imported goods",
+                "increasing the rate of interest",
+                "providing efficient infrastructure"
+              ],
+              "answer": 3,
+              "why": "Reliable power, roads and ports lower production and distribution costs, which is the base every other industrial policy needs."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Industry, firm size and business finance",
+            "paragraphs": [
+              "A mechanic's workshop and a cement plant are both firms, but they differ in size, funding and management.",
+              "Industry contributes to development by creating jobs, diversifying exports, adding value to raw materials, earning foreign exchange and generating tax revenue. It also trains workers and spreads technology to other sectors. Small firms are often sole proprietorships, while large firms take the limited-liability company form.",
+              "The size of a firm depends on market size, capital, technology, management skill, government policy and risk. Firms raise finance from owners' equity, retained profits, bank loans, bonds and the capital market; large firms can borrow more cheaply, while small firms rely on personal savings and microfinance."
+            ],
+            "bullets": [
+              "Industry: jobs, diversification, value added, exports.",
+              "Firm size: market, capital, technology, management.",
+              "Finance: equity, retained profit, loans, bonds."
+            ],
+            "takeaway": "Industry deepens the economy when it adds value rather than only assembling imports.",
+            "check": {
+              "question": "A firm that wants to expand without borrowing can use ______.",
+              "options": [
+                "retained profits",
+                "a bank overdraft",
+                "trade credit",
+                "debentures"
+              ],
+              "answer": 0,
+              "why": "Retained profit is the firm's own past earnings, so using it avoids interest and keeps ownership unchanged."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam trap",
+            "tone": "tip",
+            "body": "Location is where one firm sits; localisation is many firms of one industry clustering in the same place."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A plant can locate near its raw material or near its market. Moving inputs costs N50 per tonne, moving output costs N80 per tonne, and two tonnes of input make one tonne of output. Which site is cheaper?",
+            "steps": [
+              {
+                "operation": "Cost of the raw-material site",
+                "reason": "The firm must move the finished output to the market.",
+                "result": "Output transport = N80 per tonne of product.",
+                "predictPrompt": "Now compare with moving the inputs."
+              },
+              {
+                "operation": "Cost of the market site",
+                "reason": "Two tonnes of input are needed for each tonne of output.",
+                "result": "Input transport = 2 × N50 = N100 per tonne of product.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Compare",
+                "reason": "The cheaper site is the one with the lower total transport cost.",
+                "result": "The raw-material site is cheaper by N20 per tonne, so the firm locates near the deposit."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Explain two reasons Nigerian industry remains weak despite decades of protection, and one policy that would strengthen it.",
+            "hints": [
+              "Protection can shelter inefficient firms from competition.",
+              "Power, transport and credit raise costs and discourage investment.",
+              "A strong answer links the policy to costs or competition, not just to more spending."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "natural-resources-and-the-nigerian-economy",
+      "title": "Natural Resources and the Nigerian Economy",
+      "objective": "Trace Nigeria's major natural resources, distinguish upstream from downstream oil, explain oil and non-oil contributions and linkage effects, and assess the roles of NNPC, OPEC and the environmental challenges of exploitation.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Natural resources in Nigeria",
+            "paragraphs": [
+              "Nigeria earns most of its foreign exchange from crude oil, but gold, tin, limestone and timber also come from its land and forests."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Major resources and the oil sector",
+            "paragraphs": [
+              "A tanker loads crude at Bonny while a quarry in Kogi supplies limestone to a cement plant. Both are natural resources, but they enter the economy differently.",
+              "Nigeria's major resources include petroleum and natural gas, coal, tin and columbite, limestone, gold, iron ore and timber. Petroleum dominates exports and government revenue, while the others support construction, manufacturing and local livelihoods. Their development has depended on foreign capital and technology since colonial times.",
+              "The oil sector divides into upstream and downstream. Upstream covers exploration, drilling and extraction of crude oil and gas; downstream covers refining, distribution, marketing and petrochemicals. Most of Nigeria's crude is exported and its refined products imported because refinery capacity is weak."
+            ],
+            "bullets": [
+              "Resources: oil, gas, coal, tin, limestone, gold, timber.",
+              "Upstream: exploration and extraction.",
+              "Downstream: refining, distribution, marketing."
+            ],
+            "takeaway": "Upstream finds and lifts the oil; downstream turns it into products people buy.",
+            "check": {
+              "question": "The main activity in the upstream oil sector in Nigeria is ______.",
+              "options": [
+                "marketing of petroleum products",
+                "distribution of petroleum products",
+                "refining of crude oil",
+                "extraction of crude oil"
+              ],
+              "answer": 3,
+              "why": "Upstream work happens at the wellhead, where oil and gas are explored, drilled and extracted before refining or sale."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "Upstream lifts crude; downstream refines and sells it.",
+              "columns": [
+                "Upstream",
+                "Downstream"
+              ],
+              "rows": [
+                {
+                  "feature": "Activities",
+                  "left": "Exploration, drilling, extraction",
+                  "right": "Refining, distribution, marketing"
+                },
+                {
+                  "feature": "Output",
+                  "left": "Crude oil and gas",
+                  "right": "Petrol, diesel, petrochemicals"
+                },
+                {
+                  "feature": "Example",
+                  "left": "Oil well in the Niger Delta",
+                  "right": "Refinery or filling station"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Oil, the non-oil sector and linkage effects",
+            "paragraphs": [
+              "Oil pays most of the budget, but it employs few people directly. Agriculture and services employ far more, which is why the non-oil sector still matters.",
+              "Oil contributes foreign exchange, government revenue and energy, while the non-oil sector contributes employment, food, manufactured goods and most GDP. Over-dependence on oil exposes the economy to price shocks and can cause Dutch disease, where oil exports raise the exchange rate and make other exports uncompetitive.",
+              "Linkage effects are the connections through which one sector pulls others along. Backward linkages buy inputs from local suppliers; forward linkages process the output; consumption linkages spend oil wages on local goods; fiscal linkages spend oil revenue on public investment. Weak linkages explain why oil wealth has not transformed Nigerian industry."
+            ],
+            "bullets": [
+              "Oil: foreign exchange, revenue, energy.",
+              "Non-oil: jobs, food, output.",
+              "Linkages: backward, forward, consumption, fiscal."
+            ],
+            "takeaway": "Oil pays the government, but only strong linkages make it develop the rest of the economy.",
+            "check": {
+              "question": "A backward linkage in the oil sector refers to ______.",
+              "options": [
+                "oil firms buying inputs from local suppliers",
+                "refining crude oil into petrol",
+                "exporting crude oil to foreign buyers",
+                "paying taxes to government"
+              ],
+              "answer": 0,
+              "why": "A backward linkage looks upstream to suppliers, so it is the demand oil firms create for local inputs and services."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "NNPC, OPEC and the challenges of exploitation",
+            "paragraphs": [
+              "Niger Delta communities live with spilled oil and flared gas while the revenue leaves by pipeline and tanker. That contrast is the resource curse in everyday form.",
+              "The Nigerian National Petroleum Company manages state interests in exploration, production, refining and marketing, while OPEC coordinates member quotas and prices. Since 2021 the NNPC is a limited-liability company, while the NUPRC and NMDPRA regulate upstream and downstream. OPEC quotas can limit Nigeria's output, and price decisions affect its revenue.",
+              "Challenges include oil spills and gas flaring, pipeline vandalism and theft, pollution of farmland and water, weak enforcement, unstable global prices and the neglect of other sectors. Clean-up, stricter environmental rules, community agreements, diversified exports and saved oil revenue reduce the damage."
+            ],
+            "bullets": [
+              "NNPC: state oil operations. OPEC: quotas and prices.",
+              "Challenges: spills, flaring, theft, pollution.",
+              "Responses: clean-up, regulation, diversification, savings."
+            ],
+            "takeaway": "Natural resources build an economy only when the revenue and the environment are both managed.",
+            "check": {
+              "question": "Gas flaring is best described as ______.",
+              "options": [
+                "burning associated gas during oil production",
+                "refining crude oil into petrol",
+                "storing gas in underground tanks",
+                "exporting gas through pipelines"
+              ],
+              "answer": 0,
+              "why": "Gas flaring burns the gas that comes up with crude oil when it cannot be captured, sold or reinjected."
+            }
           }
         },
         {
@@ -3066,24 +3512,24 @@
         {
           "type": "worked_example",
           "content": {
-            "problem": "A cement factory locates beside a limestone deposit rather than in the city. Which location factor dominates, and what trade-off does the firm accept?",
+            "problem": "A barrel of crude sells for $80. Production costs $20 per barrel and government takes 60 per cent of the profit. Find the profit per barrel and the government's revenue per barrel.",
             "steps": [
               {
-                "operation": "Identify the input",
-                "reason": "Limestone is bulky and expensive to transport, so proximity lowers cost.",
-                "result": "The firm is raw-material oriented.",
-                "predictPrompt": "What does it give up by moving away from customers?"
+                "operation": "Find profit per barrel",
+                "reason": "Profit is the selling price minus the production cost.",
+                "result": "Profit = $80 − $20 = $60 per barrel.",
+                "predictPrompt": "What is 60 per cent of $60?"
               },
               {
-                "operation": "State the trade-off",
-                "reason": "Locating near the deposit raises the distance to the market.",
-                "result": "The firm accepts higher transport costs for finished cement.",
+                "operation": "Find government revenue",
+                "reason": "The government's share is 60 per cent of the profit.",
+                "result": "Government revenue = 0.6 × $60 = $36 per barrel.",
                 "predictPrompt": ""
               },
               {
-                "operation": "Conclude",
-                "reason": "The choice depends on which transport cost is larger.",
-                "result": "When the raw material loses weight in processing, locating near the deposit usually wins."
+                "operation": "Interpret",
+                "reason": "The remaining profit belongs to the oil company, but the state also gains from taxes and royalties.",
+                "result": "Government takes $36 and the company keeps $24 of the profit on each barrel."
               }
             ]
           }
@@ -3091,11 +3537,11 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "Name two ways over-dependence on oil weakens the Nigerian economy.",
+            "question": "Explain how weak linkages reduce the development effect of Nigeria's oil wealth, and name one policy that would strengthen them.",
             "hints": [
-              "Oil prices are volatile, so revenue and the exchange rate swing with them.",
-              "Easy oil revenue can crowd out agriculture and manufacturing, and imported goods can make local production uncompetitive.",
-              "A strong answer mentions price shocks and the neglect of other sectors (or Dutch disease)."
+              "Weak backward linkages mean oil firms import their equipment and services.",
+              "Weak forward linkages mean crude is exported rather than refined or used in local manufacturing.",
+              "A policy could require local content, fund refining or invest oil revenue in infrastructure and skills."
             ]
           }
         }
