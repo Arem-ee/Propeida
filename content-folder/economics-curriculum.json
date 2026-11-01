@@ -2676,42 +2676,128 @@
       ]
     },
     {
-      "topic": "financial-institutions",
       "slug": "financial-institutions",
-      "title": "Financial Institutions and the Central Bank",
-      "objective": "Distinguish the Central Bank, deposit money banks and development banks, and explain the CBN’s main functions.",
+      "title": "Financial Institutions and Markets",
+      "objective": "Identify the types of financial institutions, distinguish the money and capital markets, explain credit creation, and describe monetary policy and financial regulation in Nigeria.",
       "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "heading": "The banking system",
+            "heading": "Financial institutions",
             "paragraphs": [
-              "Financial institutions move funds from savers to borrowers. The Central Bank sits at the top, with commercial and development banks below it."
+              "A trader saves part of her profit while a transport firm needs a loan, and the financial system links the two."
             ],
-            "bullets": [
-              "Deposit money banks (commercial banks) accept deposits, create credit and lend, mainly short term.",
-              "Development banks supply medium- and long-term finance for agriculture, industry and infrastructure.",
-              "Merchant banks handle wholesale banking and corporate finance.",
-              "Microfinance banks serve small borrowers who cannot meet commercial-bank collateral requirements.",
-              "Non-bank institutions include insurance companies and pension funds."
-            ]
+            "bullets": []
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Functions of the Central Bank",
+            "heading": "Types of financial institutions",
             "paragraphs": [
-              "The CBN is the apex financial institution. It does not compete with commercial banks for retail customers; it regulates and supports them."
+              "A trader saves with a commercial bank, which lends part of the money to a transport firm. Several institutions move funds from savers to borrowers.",
+              "Deposit money banks accept deposits and lend, mostly short term. Merchant banks handle wholesale and corporate finance; development banks supply long-term project finance; mortgage banks and building societies finance housing; microfinance banks serve small borrowers; insurance companies and pension funds invest long-term funds. Traditional lenders such as moneylenders and cooperative societies also lend, often outside formal regulation.",
+              "The Central Bank of Nigeria is the apex institution. It issues currency, acts as banker to government and banks, lends as lender of last resort and supervises the system."
             ],
             "bullets": [
-              "Issues currency notes and coins.",
-              "Acts as banker to the federal government and manages its accounts.",
-              "Acts as banker to banks and lender of last resort.",
-              "Formulates and implements monetary policy, including interest rates and reserve requirements.",
-              "Manages external reserves and the exchange rate, and supervises banks."
-            ]
+              "Banks take deposits and create credit.",
+              "Development banks fund long-term projects.",
+              "The CBN regulates; it does not compete for customers."
+            ],
+            "takeaway": "Financial institutions channel savings into investment, and the CBN supervises the channel.",
+            "check": {
+              "question": "Development banks in Nigeria are mainly established to provide ______.",
+              "options": [
+                "short-term consumer loans",
+                "currency notes",
+                "long-term finance for development projects",
+                "insurance cover"
+              ],
+              "answer": 2,
+              "why": "Development banks supply patient finance for agriculture, industry and infrastructure, which commercial banks rarely fund on a long horizon."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Money and capital markets, and money creation",
+            "paragraphs": [
+              "A bank holds only a fraction of deposits as cash, because most depositors do not withdraw at once. It lends the rest, and each loan returns as a new deposit elsewhere.",
+              "That is credit creation: with a cash reserve ratio of 20 per cent, a N1,000 deposit supports N5,000 of deposits, since the multiplier is 1 ÷ 0.2. Leakages into cash, excess reserves and imports shrink the real expansion.",
+              "The money market handles short-term funds: treasury bills, commercial paper and interbank loans. The capital market handles long-term funds: shares and bonds traded on the Nigerian Exchange, with the Securities and Exchange Commission as regulator. Firms use the money market for working capital and the capital market for expansion."
+            ],
+            "bullets": [
+              "Money market: short term, under a year.",
+              "Capital market: shares and bonds, long term.",
+              "Credit multiplier = 1 ÷ reserve ratio."
+            ],
+            "takeaway": "Banks create deposits by lending, but the money and capital markets serve different time horizons.",
+            "check": {
+              "question": "Short-term loans for investment are usually obtained through the ______.",
+              "options": [
+                "stock market",
+                "development banks",
+                "money market",
+                "capital market"
+              ],
+              "answer": 2,
+              "why": "The money market trades instruments that mature within a year, so it suits short-term working capital rather than long-term expansion."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "The money market is short term; the capital market is long term.",
+              "columns": [
+                "Money market",
+                "Capital market"
+              ],
+              "rows": [
+                {
+                  "feature": "Maturity",
+                  "left": "Under one year",
+                  "right": "More than one year"
+                },
+                {
+                  "feature": "Instruments",
+                  "left": "Treasury bills, commercial paper",
+                  "right": "Shares, bonds, debentures"
+                },
+                {
+                  "feature": "Regulator",
+                  "left": "Central Bank of Nigeria",
+                  "right": "Securities and Exchange Commission"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Regulation, monetary policy and Nigerian challenges",
+            "paragraphs": [
+              "When inflation rises, the CBN can make credit dearer or scarcer. Its instruments work through the cost and supply of bank reserves. Open market operations sell bills to mop up reserves, while a higher cash reserve ratio cuts the funds banks can lend.",
+              "Regulators include the CBN for banks, the NDIC for deposit insurance, the SEC for the capital market, NAICOM for insurance and PenCom for pensions. Monetary policy uses open market operations, the cash reserve ratio, the monetary policy rate, special deposits, moral suasion and direct controls.",
+              "Nigeria's financial institutions face high non-performing loans, thin capital, fraud, financial exclusion, exchange-rate pressure and weak consumer protection. Raising capital, enforcing credit rules and expanding mobile and agent banking are the standard responses."
+            ],
+            "bullets": [
+              "Regulators: CBN, NDIC, SEC, NAICOM, PenCom.",
+              "Instruments: OMO, CRR, MPR, special deposits.",
+              "Challenges: bad loans, fraud, exclusion."
+            ],
+            "takeaway": "Regulation and monetary policy decide how safely banks can turn deposits into credit.",
+            "check": {
+              "question": "Foreign exchange control in Nigeria is administered by the ______.",
+              "options": [
+                "money deposit banks",
+                "Central Bank of Nigeria",
+                "discount houses",
+                "Securities and Exchange Commission"
+              ],
+              "answer": 1,
+              "why": "The CBN manages the external reserves and the exchange rate, so it administers foreign exchange control rather than the banks or the SEC."
+            }
           }
         },
         {
@@ -2725,24 +2811,24 @@
         {
           "type": "worked_example",
           "content": {
-            "problem": "A commercial bank faces a sudden wave of withdrawals and cannot borrow from other banks. Who can help it, and under which function?",
+            "problem": "A bank receives a new deposit of N50,000 and the cash reserve ratio is 20 per cent. Find the credit multiplier and the total deposits the banking system can create.",
             "steps": [
               {
-                "operation": "Identify the lender of last resort",
-                "reason": "When no other bank will lend, the apex bank can provide emergency liquidity.",
-                "result": "The Central Bank of Nigeria can lend to it.",
-                "predictPrompt": "Why not let the bank fail?"
+                "operation": "Find the multiplier",
+                "reason": "The credit multiplier is one divided by the cash reserve ratio.",
+                "result": "Multiplier = 1 ÷ 0.2 = 5.",
+                "predictPrompt": "What does a multiplier of 5 mean?"
               },
               {
-                "operation": "Name the function",
-                "reason": "This is the CBN’s lender-of-last-resort role, part of its financial-stability mandate.",
-                "result": "The CBN acts as lender of last resort.",
+                "operation": "Apply the multiplier",
+                "reason": "Multiply the new deposit by the multiplier to get total deposits.",
+                "result": "Total deposits = 5 × N50,000 = N250,000.",
                 "predictPrompt": ""
               },
               {
-                "operation": "Explain the condition",
-                "reason": "Emergency lending is not free money; the bank must be solvent and provide collateral.",
-                "result": "Support is temporary and supervised, to stop panic without rewarding bad management."
+                "operation": "Interpret",
+                "reason": "The bank keeps 20 per cent as reserves and lends the rest, and each loan returns as a deposit.",
+                "result": "The N50,000 deposit supports N250,000 of deposits, with N200,000 created as credit."
               }
             ]
           }
@@ -2750,11 +2836,11 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "A new factory needs finance for ten years. Distinguish what the CBN and a development bank can each do.",
+            "question": "A manufacturing firm needs N200 million for a new plant that will take five years to build. Explain whether it should raise the money in the money market or the capital market, and name one regulator it will deal with.",
             "hints": [
-              "The CBN sets monetary policy and supports the banking system; it does not normally lend to individual firms.",
-              "Development banks provide long-term project finance, often at concessional rates.",
-              "A strong answer says the CBN creates the environment and the development bank supplies the loan."
+              "Match the maturity of the instrument to the life of the project.",
+              "The money market is for short-term funds; the capital market is for long-term funds.",
+              "The SEC regulates the capital market, while the CBN regulates the banks."
             ]
           }
         }
