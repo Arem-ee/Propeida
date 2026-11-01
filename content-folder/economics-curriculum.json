@@ -2150,48 +2150,137 @@
       ]
     },
     {
-      "topic": "consumer-behaviour",
       "slug": "consumer-behaviour",
-      "title": "Utility, Diminishing Marginal Utility and Consumer Choice",
-      "objective": "Distinguish total, average and marginal utility, apply diminishing marginal utility, and compute consumer surplus.",
+      "title": "Utility, Indifference Curves and Consumer Choice",
+      "objective": "Distinguish total, average and marginal utility, use indifference curves and the budget line to find consumer equilibrium, and calculate consumer surplus.",
       "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "heading": "Utility and the margin",
+            "heading": "Consumer behaviour",
             "paragraphs": [
-              "Utility is the satisfaction a consumer derives from a good. It is subjective: the same good can give different satisfaction to different people, or to the same person at different times."
+              "Consumers choose among goods with limited income, and utility, indifference curves and consumer surplus explain those choices."
             ],
-            "bullets": [
-              "Total utility (TU) is the satisfaction from all units consumed.",
-              "Average utility is total utility divided by the number of units.",
-              "Marginal utility (MU) is the extra satisfaction from one more unit.",
-              "The law of diminishing marginal utility says MU falls as consumption of a good increases in a given period.",
-              "Total utility is maximised when MU = 0; a negative MU reduces total utility."
-            ]
+            "bullets": []
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Consumer surplus and indifference curves",
+            "heading": "Total, average and marginal utility",
             "paragraphs": [
-              "Consumers often pay less than the maximum they were willing to pay. That gap is consumer surplus, and it is one reason market exchange creates gains."
+              "A student's first bottle of water after games is deeply satisfying; the fourth adds little.",
+              "Utility is the satisfaction a consumer gets from a good. It is subjective, and can be measured in utils (cardinal) or ranked (ordinal).",
+              "Total utility is the satisfaction from all units; average utility is total utility divided by units; marginal utility is the extra satisfaction from one more unit. The law of diminishing marginal utility says marginal utility falls as consumption rises in a period. Total utility rises while marginal utility is positive, peaks where marginal utility is zero, and falls when marginal utility is negative.",
+              "Because marginal utility falls with quantity, a consumer buys more only at a lower price: the law of demand."
             ],
             "bullets": [
-              "Consumer surplus = willingness to pay − price actually paid.",
-              "An indifference curve shows combinations of two goods that give equal total satisfaction.",
-              "A budget line shows the combinations a consumer can afford at given prices and income.",
-              "Consumer equilibrium occurs where the highest attainable indifference curve is tangent to the budget line.",
-              "The water–diamond paradox: water is vital but cheap because its marginal utility is low; diamonds are frivolous but expensive because their marginal utility is high."
-            ]
+              "TU rises while MU > 0; peaks at MU = 0.",
+              "AU = TU ÷ Q; MU = change in TU ÷ change in Q.",
+              "Diminishing MU explains the downward-sloping demand curve."
+            ],
+            "takeaway": "Each extra unit adds less satisfaction, which is why a lower price is needed to sell more.",
+            "check": {
+              "question": "Total utility is at its maximum when marginal utility is ______.",
+              "options": [
+                "positive",
+                "negative",
+                "rising",
+                "zero"
+              ],
+              "answer": 3,
+              "why": "While marginal utility is positive, total utility is still rising; it stops rising at the point where the next unit adds nothing."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Indifference curves, budget line and equilibrium",
+            "paragraphs": [
+              "A shopper can afford several combinations of rice and beans, and some please her equally. The budget line shows what is affordable; the indifference curve shows equal satisfaction.",
+              "An indifference curve shows combinations of two goods that give equal satisfaction. It slopes downward, is convex because the marginal rate of substitution falls, and never crosses another.",
+              "A budget line shows the combinations a consumer can afford at given prices and income. Its slope is the price ratio; higher income shifts it outward, while a price change rotates it.",
+              "Consumer equilibrium occurs where the highest attainable indifference curve touches the budget line, so the marginal rate of substitution equals the price ratio: MUx ÷ Px = MUy ÷ Py. A price fall raises real income and makes the good relatively cheaper; the income and substitution effects explain the higher quantity."
+            ],
+            "bullets": [
+              "Indifference curve: equal satisfaction, convex.",
+              "Budget line: affordable combinations; slope = price ratio.",
+              "Equilibrium: MRS = price ratio."
+            ],
+            "takeaway": "Equilibrium is where the budget line just touches the highest attainable indifference curve.",
+            "check": {
+              "question": "An indifference curve shows combinations of two goods that give a consumer ______.",
+              "options": [
+                "maximum profit",
+                "equal total satisfaction",
+                "equal cost",
+                "zero satisfaction"
+              ],
+              "answer": 1,
+              "why": "Every point on one indifference curve yields the same total utility, so the consumer is indifferent between them."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "The cardinal approach measures utility; the ordinal approach ranks bundles.",
+              "columns": [
+                "Cardinal utility",
+                "Ordinal utility"
+              ],
+              "rows": [
+                {
+                  "feature": "Measurement",
+                  "left": "Utility measured in utils",
+                  "right": "Satisfaction ranked, not measured"
+                },
+                {
+                  "feature": "Main tool",
+                  "left": "Total, average and marginal utility",
+                  "right": "Indifference curves and the budget line"
+                },
+                {
+                  "feature": "Equilibrium",
+                  "left": "Equal marginal utility per naira",
+                  "right": "MRS equals the price ratio"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Consumer surplus",
+            "paragraphs": [
+              "A traveller would pay N2,000 for a bus fare but pays N1,200, so she gains N800. That gain is consumer surplus.",
+              "Consumer surplus is the difference between willingness to pay and the price actually paid. It measures the benefit of exchange.",
+              "On a demand curve, consumer surplus is the area below the demand curve and above the market price, up to the quantity bought. A fall in price raises consumer surplus, and a rise in price reduces it.",
+              "The surplus explains the water-diamond paradox: water is vital but cheap because its marginal utility is low, while diamonds are frivolous but expensive because their marginal utility is high. Consumer surplus is used to judge the welfare effect of a price change, a tax or a subsidy."
+            ],
+            "bullets": [
+              "Consumer surplus = willingness to pay − price paid.",
+              "Area below demand and above price.",
+              "A price fall raises surplus; a price rise cuts it."
+            ],
+            "takeaway": "Consumer surplus measures the gain a buyer gets when the price is below what she would have paid.",
+            "check": {
+              "question": "Consumer surplus is the difference between the price a consumer is willing to pay and ______.",
+              "options": [
+                "the price actually paid",
+                "the cost of production",
+                "the marginal utility",
+                "the total utility"
+              ],
+              "answer": 0,
+              "why": "The surplus is the gap between willingness to pay and the market price, not a cost or a utility total."
+            }
           }
         },
         {
           "type": "callout",
           "content": {
-            "title": "Exam trap",
+            "title": "Exam tip",
             "tone": "tip",
             "body": "Utility is satisfaction, not usefulness. A useless ornament can give high utility, while a useful tool may give little."
           }
@@ -2199,24 +2288,24 @@
         {
           "type": "worked_example",
           "content": {
-            "problem": "A student’s total utility from 1, 2, 3 and 4 bottles of water is 10, 18, 24 and 28. Find the marginal utility of each bottle, and say where diminishing marginal utility begins.",
+            "problem": "A consumer is willing to pay N500 for the first unit, N400 for the second and N300 for the third. The market price is N300. Find the consumer surplus.",
             "steps": [
               {
-                "operation": "Compute marginal utility",
-                "reason": "MU is the change in total utility from one more unit.",
-                "result": "MU = 10, 8, 6 and 4 for bottles 1–4.",
-                "predictPrompt": "Is marginal utility rising or falling?"
+                "operation": "Find the surplus on each unit",
+                "reason": "Consumer surplus is willingness to pay minus the price actually paid.",
+                "result": "First unit: N500 − N300 = N200. Second: N400 − N300 = N100. Third: N300 − N300 = N0.",
+                "predictPrompt": "What is the total surplus?"
               },
               {
-                "operation": "Locate the fall",
-                "reason": "Diminishing marginal utility means each extra unit adds less than the previous one.",
-                "result": "MU falls from 10 to 8 at the second bottle, so the law applies from there.",
+                "operation": "Add the surpluses",
+                "reason": "Total consumer surplus is the sum of the gains on every unit bought.",
+                "result": "N200 + N100 + N0 = N300.",
                 "predictPrompt": ""
               },
               {
-                "operation": "Check total utility",
-                "reason": "TU is still rising because every MU is positive.",
-                "result": "TU rises to 28; it would stop rising only when MU reaches zero."
+                "operation": "Interpret the result",
+                "reason": "The consumer paid N900 for three units but was willing to pay N1,200.",
+                "result": "She gains N300, which is the area between her demand curve and the price."
               }
             ]
           }
@@ -2224,11 +2313,11 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "A thirsty student drinks three bottles of water. Explain why the third may give less satisfaction than the first, and what happens to total utility if a fourth bottle makes her sick.",
+            "question": "A consumer's income rises while prices stay constant. Explain the effect on the budget line and on the choice between two normal goods, distinguishing the income effect from the substitution effect.",
             "hints": [
-              "The first bottle removes the strongest thirst; later bottles meet weaker wants.",
-              "A bottle that makes her sick has negative marginal utility.",
-              "A strong answer says total utility falls when marginal utility turns negative."
+              "A rise in income shifts the budget line outward without changing its slope.",
+              "The income effect is the change in quantity caused by higher real income.",
+              "The substitution effect is the change caused by a good becoming cheaper relative to the other."
             ]
           }
         }
