@@ -1893,40 +1893,130 @@
       ]
     },
     {
-      "topic": "money-and-inflation",
       "slug": "money-and-inflation",
       "title": "Money and Inflation",
-      "objective": "Name the functions and qualities of money and distinguish demand-pull from cost-push inflation.",
+      "objective": "Explain the functions and qualities of money, apply the quantity theory to the price level, and distinguish the causes, effects and control of inflation and deflation.",
       "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "heading": "Functions and qualities of money",
+            "heading": "Money and inflation",
             "paragraphs": [
-              "Money is anything generally accepted as a means of payment. It removes the double coincidence of wants that makes barter difficult."
+              "Money makes exchange possible without barter, and inflation decides how much that money can actually buy."
             ],
-            "bullets": [
-              "Functions: medium of exchange, unit of account, store of value and standard of deferred payment.",
-              "Qualities: generally acceptable, divisible, portable, durable, homogeneous and limited in supply.",
-              "Homogeneity matters because every unit must be identical, so values can be counted and compared.",
-              "Anything that fails these qualities — cattle, cowries, cocoa — is a poor money even if it is valuable."
-            ]
+            "bullets": []
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Inflation",
+            "heading": "Functions, qualities and supply of money",
             "paragraphs": [
-              "Inflation is a persistent rise in the general price level, which reduces the purchasing power of money. Deflation is the opposite."
+              "A trader who once swapped yams for cloth now accepts naira because every seller will take it. General acceptability, not the paper itself, makes money useful.",
+              "Money is anything generally accepted as a means of payment, and it removes the double coincidence of wants that makes barter difficult. Its functions are medium of exchange, unit of account, store of value and standard of deferred payment.",
+              "Its qualities are general acceptability, divisibility, portability, durability, homogeneity and limited supply. The demand for money comes from transactions, precaution and speculation. The supply of money is currency in circulation plus bank deposits; the central bank controls the monetary base while banks create deposits through lending."
             ],
             "bullets": [
-              "Demand-pull inflation: aggregate demand grows faster than output.",
-              "Cost-push inflation: rising costs of inputs such as fuel, wages or imported raw materials push prices up.",
-              "Imported inflation: higher prices of imported goods enter the domestic price level.",
-              "Fixed-income earners, savers and creditors lose purchasing power; borrowers gain because debts are repaid in cheaper money."
-            ]
+              "Functions: exchange, unit of account, store of value, deferred payment.",
+              "Qualities: acceptable, divisible, portable, durable, homogeneous, scarce.",
+              "Demand motives: transactions, precaution, speculation.",
+              "Money supply: currency plus bank deposits."
+            ],
+            "takeaway": "Money works because everyone accepts it, not because it is valuable in itself.",
+            "check": {
+              "question": "The function of money that allows goods to be valued and compared is ______.",
+              "options": [
+                "medium of exchange",
+                "store of value",
+                "standard of deferred payment",
+                "unit of account"
+              ],
+              "answer": 3,
+              "why": "Prices are quoted in money, so it acts as a common unit for comparing the worth of different goods."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Quantity theory and the value of money",
+            "paragraphs": [
+              "When too much naira chases the same quantity of goods, each naira buys less. That is the quantity theory in everyday form.",
+              "The quantity theory of money states MV = PT: the money supply times its velocity equals the price level times the volume of transactions. If velocity and output are constant, a rise in the money supply raises the price level.",
+              "The value of money is its purchasing power, the quantity of goods one unit can buy. It moves inversely with the price level: when prices double, the value of money halves. Inflation is measured with a consumer price index: a base year is chosen, a basket of goods is priced, and the index is the current basket cost divided by the base-year cost times 100."
+            ],
+            "bullets": [
+              "MV = PT.",
+              "Value of money = 1 ÷ price level.",
+              "CPI = current basket ÷ base basket × 100."
+            ],
+            "takeaway": "More money chasing the same output lowers what each unit of money can buy.",
+            "check": {
+              "question": "If the price level doubles, the value of money ______.",
+              "options": [
+                "doubles",
+                "halves",
+                "stays the same",
+                "falls to zero"
+              ],
+              "answer": 1,
+              "why": "Purchasing power is the inverse of the price level, so doubling prices halves what each unit can buy."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Inflation, deflation and control",
+            "paragraphs": [
+              "A fixed-salary teacher finds her pay buys less each term, while a debtor finds his loan easier to repay. Inflation redistributes income between them.",
+              "Inflation is a persistent rise in the general price level. Demand-pull inflation comes from excess aggregate demand; cost-push inflation comes from rising input costs; imported inflation enters through higher import prices. Stagflation is inflation coexisting with high unemployment.",
+              "Inflation hurts fixed-income earners, savers and creditors, while borrowers gain because they repay in cheaper money. Deflation is a persistent fall in the price level; it helps those on fixed incomes but can delay spending and raise real debt.",
+              "Control uses monetary policy, fiscal policy, income policy such as a wage freeze, and supply-side measures that raise output. Deflation is fought with lower interest rates, public spending and credit expansion."
+            ],
+            "bullets": [
+              "Demand-pull, cost-push, imported, stagflation.",
+              "Inflation hurts savers and creditors; deflation can raise real debt.",
+              "Control: monetary, fiscal, income and supply-side policy."
+            ],
+            "takeaway": "Inflation is controlled by reducing demand or raising supply, not by blaming one price.",
+            "check": {
+              "question": "A wage freeze is a policy measure aimed at ______.",
+              "options": [
+                "encouraging investors",
+                "regulating the standard of living",
+                "curbing deflation",
+                "curbing inflation"
+              ],
+              "answer": 3,
+              "why": "A wage freeze is an income policy that slows cost-push pressure by limiting the growth of wages and prices."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "Demand-pull starts with buyers; cost-push starts with sellers' costs.",
+              "columns": [
+                "Demand-pull",
+                "Cost-push"
+              ],
+              "rows": [
+                {
+                  "feature": "Source",
+                  "left": "Aggregate demand grows faster than output",
+                  "right": "Input costs such as fuel and wages rise"
+                },
+                {
+                  "feature": "Output",
+                  "left": "May rise with prices",
+                  "right": "May fall as costs squeeze firms"
+                },
+                {
+                  "feature": "Policy",
+                  "left": "Reduce demand with higher interest rates",
+                  "right": "Lower costs and raise supply"
+                }
+              ]
+            }
           }
         },
         {
@@ -1934,30 +2024,30 @@
           "content": {
             "title": "Exam trap",
             "tone": "tip",
-            "body": "Demand-pull starts with buyers; cost-push starts with sellers’ costs. Excess demand over supply is always demand-pull."
+            "body": "Inflation is a rise in the general price level, not the price of one item. A single expensive bag of rice is not inflation."
           }
         },
         {
           "type": "worked_example",
           "content": {
-            "problem": "Government pays a large cash transfer, households spend it quickly, but output is unchanged. Which type of inflation follows, and who loses most?",
+            "problem": "A basket of goods cost N20,000 in the base year and N25,000 this year. Calculate the consumer price index and the inflation rate.",
             "steps": [
               {
-                "operation": "Identify the source",
-                "reason": "The extra spending raises aggregate demand, while output has not risen.",
-                "result": "Demand exceeds supply, so prices are pulled up.",
-                "predictPrompt": "Does this originate with buyers or with costs?"
+                "operation": "Compute the index",
+                "reason": "Divide the current basket cost by the base-year cost and multiply by 100.",
+                "result": "CPI = (N25,000 ÷ N20,000) × 100 = 125.",
+                "predictPrompt": "What does an index of 125 mean?"
               },
               {
-                "operation": "Name the type",
-                "reason": "Inflation caused by excess demand is demand-pull.",
-                "result": "The economy experiences demand-pull inflation.",
+                "operation": "Interpret the index",
+                "reason": "The base year has an index of 100, so 125 means prices are 25 per cent higher.",
+                "result": "The basket now costs 125 per cent of its base-year price.",
                 "predictPrompt": ""
               },
               {
-                "operation": "Identify the losers",
-                "reason": "People whose incomes are fixed in naira can buy less as prices rise.",
-                "result": "Fixed-income earners and savers lose the most; borrowers gain."
+                "operation": "Compute the inflation rate",
+                "reason": "Inflation is the percentage change in the index from the base year.",
+                "result": "Inflation = ((125 − 100) ÷ 100) × 100 = 25 per cent."
               }
             ]
           }
@@ -1965,11 +2055,11 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "A farmer’s diesel, fertiliser and transport costs all rise, and food prices follow. Identify the inflation type and one policy response, noting its limitation.",
+            "question": "Government prints money to pay salaries while output is unchanged. Use MV = PT to explain the effect on prices and the value of money, and name one group that gains and one that loses.",
             "hints": [
-              "The increase begins on the cost side, not with excess demand.",
-              "A central bank can raise interest rates to reduce demand, but that does not lower fuel or fertiliser costs directly.",
-              "A strong answer names cost-push inflation and explains the trade-off between fighting inflation and protecting output."
+              "With velocity and output fixed, a rise in M must raise P.",
+              "A higher price level means a lower value of money.",
+              "Borrowers gain and fixed-income earners lose when prices rise."
             ]
           }
         }
