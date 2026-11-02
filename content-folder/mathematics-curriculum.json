@@ -1,0 +1,1110 @@
+{
+  "subject": "mathematics",
+  "source": "JAMB UTME Mathematics syllabus (IBASS 2025)",
+  "topics": [
+    {
+      "slug": "number-bases-modular-arithmetic",
+      "name": "Number bases/Modular Arithmetic",
+      "section": "NUMBER AND NUMERATION",
+      "order": 1,
+      "description": ""
+    },
+    {
+      "slug": "fractions-decimals-approximations",
+      "name": "Fractions, Decimals, Approximations and Percentages",
+      "section": "NUMBER AND NUMERATION",
+      "order": 2,
+      "description": ""
+    },
+    {
+      "slug": "surds",
+      "name": "Surds",
+      "section": "NUMBER AND NUMERATION",
+      "order": 3,
+      "description": "Simplify, rationalise, and compare irrational roots."
+    },
+    {
+      "slug": "indices",
+      "name": "Indices",
+      "section": "NUMBER AND NUMERATION",
+      "order": 4,
+      "description": "Laws of powers for simplification and exponential equations."
+    },
+    {
+      "slug": "sets",
+      "name": "Sets",
+      "section": "NUMBER AND NUMERATION",
+      "order": 5,
+      "description": ""
+    },
+    {
+      "slug": "quadratic-equations",
+      "name": "Quadratic Equations",
+      "section": "ALGEBRA",
+      "order": 6,
+      "description": "Factorize, complete, and formula your way out."
+    },
+    {
+      "slug": "variation",
+      "name": "Variation",
+      "section": "ALGEBRA",
+      "order": 7,
+      "description": ""
+    },
+    {
+      "slug": "inequalities",
+      "name": "Inequalities",
+      "section": "ALGEBRA",
+      "order": 8,
+      "description": ""
+    },
+    {
+      "slug": "progression",
+      "name": "Progression",
+      "section": "ALGEBRA",
+      "order": 9,
+      "description": ""
+    },
+    {
+      "slug": "binary-operations",
+      "name": "Binary Operations",
+      "section": "ALGEBRA",
+      "order": 10,
+      "description": ""
+    },
+    {
+      "slug": "matrices-and-determinants",
+      "name": "Matrices and Determinants",
+      "section": "ALGEBRA",
+      "order": 11,
+      "description": ""
+    },
+    {
+      "slug": "euclidean-geometry",
+      "name": "Euclidean Geometry",
+      "section": "GEOMETRY AND TRIGONOMETRY",
+      "order": 12,
+      "description": ""
+    },
+    {
+      "slug": "mensuration",
+      "name": "Mensuration",
+      "section": "GEOMETRY AND TRIGONOMETRY",
+      "order": 13,
+      "description": ""
+    },
+    {
+      "slug": "loci",
+      "name": "Loci",
+      "section": "GEOMETRY AND TRIGONOMETRY",
+      "order": 14,
+      "description": ""
+    },
+    {
+      "slug": "coordinate-geometry",
+      "name": "Coordinate Geometry",
+      "section": "GEOMETRY AND TRIGONOMETRY",
+      "order": 15,
+      "description": ""
+    },
+    {
+      "slug": "trigonometry",
+      "name": "Trigonometry",
+      "section": "GEOMETRY AND TRIGONOMETRY",
+      "order": 16,
+      "description": "Ratios, triangles, and angles that behave."
+    },
+    {
+      "slug": "differentiation",
+      "name": "Differentiation",
+      "section": "CALCULUS",
+      "order": 17,
+      "description": ""
+    },
+    {
+      "slug": "application-of-differentiation",
+      "name": "Application of differentiation",
+      "section": "CALCULUS",
+      "order": 18,
+      "description": ""
+    },
+    {
+      "slug": "integration",
+      "name": "Integration",
+      "section": "CALCULUS",
+      "order": 19,
+      "description": ""
+    },
+    {
+      "slug": "representation-of-data",
+      "name": "Representation of data",
+      "section": "STATISTICS",
+      "order": 20,
+      "description": ""
+    },
+    {
+      "slug": "measures-of-location",
+      "name": "Measures of Location",
+      "section": "STATISTICS",
+      "order": 21,
+      "description": ""
+    },
+    {
+      "slug": "measures-of-dispersion",
+      "name": "Measures of Dispersion",
+      "section": "STATISTICS",
+      "order": 22,
+      "description": ""
+    },
+    {
+      "slug": "permutation-and-combination",
+      "name": "Permutation and Combination",
+      "section": "STATISTICS",
+      "order": 23,
+      "description": ""
+    },
+    {
+      "slug": "probability",
+      "name": "Probability",
+      "section": "STATISTICS",
+      "order": 24,
+      "description": "Chance, quantified — with and without replacement."
+    }
+  ],
+  "lessons": [
+    {
+      "slug": "surds",
+      "topic": "surds",
+      "title": "Surds",
+      "objective": "Simplify surds, rationalise denominators and compare surd expressions without a calculator.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Surds",
+            "paragraphs": [
+              "A candidate writes √50 − √18 = √32 and loses the mark. Surds only combine after each one is reduced to its simplest form."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "What a surd is and how to simplify",
+            "paragraphs": [
+              "A surd is an irrational root left in root form, such as √2, √3 or √5. √4 is not a surd because it equals 2; the test is whether the root is rational.",
+              "Simplify by splitting the number into a perfect-square factor and a remainder: √12 = √(4 × 3) = 2√3, and √50 = √(25 × 2) = 5√2. Pull out the largest square you can see.",
+              "Only like surds combine. 3√5 + 2√5 = 5√5, but 3√5 + 2√3 stays as it is. Multiplication and division work inside the root: √a × √b = √(ab) and √a ÷ √b = √(a/b)."
+            ],
+            "bullets": [
+              "A surd is an irrational root.",
+              "Extract the largest perfect square.",
+              "Only like surds add or subtract."
+            ],
+            "takeaway": "Reduce every surd before you add, subtract or compare.",
+            "check": {
+              "question": "Simplify √75.",
+              "options": [
+                "3√5",
+                "5√3",
+                "15√5",
+                "25√3"
+              ],
+              "answer": 1,
+              "why": "75 = 25 × 3, so √75 = √25 × √3 = 5√3."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Rationalising the denominator",
+            "paragraphs": [
+              "A fraction is not simplified while a surd sits in the denominator. Rationalising multiplies top and bottom by something that clears the root.",
+              "For a single surd, multiply by that surd: 1/√3 × √3/√3 = √3/3. For a binomial, multiply by the conjugate, which changes the sign between the terms: 1/(√5 + 1) × (√5 − 1)/(√5 − 1) = (√5 − 1)/(5 − 1) = (√5 − 1)/4.",
+              "The conjugate works because (√a + b)(√a − b) = a − b², a difference of squares that removes the root. Write the new denominator as a minus b², then simplify the fraction if a common factor remains."
+            ],
+            "bullets": [
+              "A surd denominator must be cleared.",
+              "Single surd: multiply by itself.",
+              "Binomial: multiply by the conjugate."
+            ],
+            "takeaway": "The conjugate turns a surd denominator into a difference of squares.",
+            "check": {
+              "question": "Rationalise 2/√2.",
+              "options": [
+                "√2",
+                "2",
+                "2√2",
+                "√2/2"
+              ],
+              "answer": 0,
+              "why": "Multiply top and bottom by √2: 2√2/2 = √2."
+            },
+            "visual": {
+              "kind": "flow",
+              "caption": "Choose the multiplier from the shape of the denominator.",
+              "steps": [
+                {
+                  "label": "Spot the surd",
+                  "detail": "in the denominator"
+                },
+                {
+                  "label": "Single or binomial?"
+                },
+                {
+                  "label": "Multiply by surd or conjugate"
+                },
+                {
+                  "label": "Expand and simplify"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Comparing and equating",
+            "paragraphs": [
+              "To compare surds, square both sides and compare the squares. Since the surds here are positive, squaring preserves the order: 3√2 and 2√3 become 18 and 12, so 3√2 is larger.",
+              "To find coefficients in an expression such as (a + b√c)², expand and match the rational part and the surd part separately. The two parts cannot cancel each other.",
+              "Check by squaring back. If a simplification gives 2√2, then (2√2)² = 8, which should match the original quantity. A decimal estimate also catches gross errors: treating √2 as 1.414 is enough to rule out an option that is wildly wrong."
+            ],
+            "bullets": [
+              "Compare surds by squaring.",
+              "Match rational and surd parts separately.",
+              "Square back to check."
+            ],
+            "takeaway": "Squaring removes the root and makes comparison exact.",
+            "check": {
+              "question": "Which is larger, 2√5 or 3√2?",
+              "options": [
+                "2√5",
+                "3√2",
+                "They are equal",
+                "Cannot be determined"
+              ],
+              "answer": 0,
+              "why": "Squaring gives 20 and 18; since 20 is larger, 2√5 is larger."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Reduce every surd to its simplest form before answering. The options are usually written in lowest terms."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Simplify √50 − √18.",
+            "steps": [
+              {
+                "operation": "Split each surd",
+                "reason": "Only lowest-form surds reveal whether the terms can combine.",
+                "result": "√50 = 5√2 and √18 = 3√2.",
+                "predictPrompt": "Both terms now carry √2. What happens next?"
+              },
+              {
+                "operation": "Combine like surds",
+                "reason": "Like surds add and subtract exactly like like terms.",
+                "result": "5√2 − 3√2 = 2√2.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Check by squaring",
+                "reason": "Squaring should return the value of the original expression.",
+                "result": "(2√2)² = 8, which matches 50 − 2√900 + 18 = 8."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Simplify √75 + √27 − √12.",
+            "hints": [
+              "Look for 25, 9 and 4 inside the roots.",
+              "Convert all three to something × √3.",
+              "Combine 5 + 3 − 2 of √3."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "indices",
+      "topic": "indices",
+      "title": "Indices",
+      "objective": "Apply the laws of indices to simplify expressions and solve exponential equations by matching bases.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Indices",
+            "paragraphs": [
+              "A candidate rewrites 4^x = 8 as 2^x = 3 and loses the mark. The bases must match before the indices can be compared."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Laws that come from counting factors",
+            "paragraphs": [
+              "An index counts how many times a base is multiplied by itself. Because a^m means m copies of a, multiplying a^m by a^n gives m+n copies, so a^m × a^n = a^(m+n).",
+              "Division cancels copies: a^m ÷ a^n = a^(m-n). A power of a power repeats the whole block n times, so (a^m)^n = a^(mn). The same counting gives (ab)^m = a^m b^m and (a/b)^m = a^m/b^m.",
+              "Any non-zero base to the power zero is 1, because a^m ÷ a^m = a^0 and also equals 1. Zero itself is excluded, since 0^0 is undefined."
+            ],
+            "bullets": [
+              "Multiply powers of the same base by adding indices.",
+              "Raise a power to a power by multiplying indices.",
+              "Any non-zero base to the power zero equals 1."
+            ],
+            "takeaway": "Every law is a shortcut for counting repeated factors.",
+            "check": {
+              "question": "Simplify 2^3 × 2^4.",
+              "options": [
+                "2^7",
+                "2^12",
+                "4^7",
+                "2^1"
+              ],
+              "answer": 0,
+              "why": "The bases are the same, so add the indices: 3 + 4 = 7."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Negative and fractional powers",
+            "paragraphs": [
+              "A negative power is a reciprocal: a^-m = 1/a^m, so 3^-2 = 1/9. The minus sign does not make the value negative; it moves the power across the fraction line.",
+              "A fractional power is a root: a^(1/n) = the nth root of a, so 8^(1/3) = 2. A general fraction applies the root first and the power second: a^(m/n) = (nth root of a)^m, so 27^(2/3) = 3^2 = 9.",
+              "Take the root before the power when the numbers are large, because the root keeps them small. Convert every root to a fractional power before applying the laws."
+            ],
+            "bullets": [
+              "A negative index means reciprocal.",
+              "A fractional index means root.",
+              "Root first, then raise to the power."
+            ],
+            "takeaway": "A negative index flips the fraction; a fractional index takes a root.",
+            "check": {
+              "question": "Evaluate 16^(3/4).",
+              "options": [
+                "8",
+                "12",
+                "64",
+                "4"
+              ],
+              "answer": 0,
+              "why": "The fourth root of 16 is 2, and 2 cubed is 8."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "The operation on the indices changes with the structure of the expression.",
+              "columns": [
+                "Multiplying powers",
+                "Power of a power"
+              ],
+              "rows": [
+                {
+                  "feature": "Expression",
+                  "left": "a^m × a^n",
+                  "right": "(a^m)^n"
+                },
+                {
+                  "feature": "Law",
+                  "left": "Add the indices",
+                  "right": "Multiply the indices"
+                },
+                {
+                  "feature": "Example",
+                  "left": "2^3 × 2^4 = 2^7",
+                  "right": "(2^3)^4 = 2^12"
+                },
+                {
+                  "feature": "Trap",
+                  "left": "Different bases do not combine",
+                  "right": "Do not add the indices"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Equations and traps",
+            "paragraphs": [
+              "To solve an exponential equation, write both sides with the same base and equate the indices. For 4^x = 8, rewrite as (2^2)^x = 2^3, so 2x = 3 and x = 3/2.",
+              "If the terms are multiplied, add the indices first: 2^x × 2^(x+1) = 32 becomes 2^(2x+1) = 2^5, so x = 2. If the bases cannot be matched directly, factor each term into a common base.",
+              "Watch the traps. (a+b)^2 is not a^2+b^2, and a^m × b^n cannot be combined into one base. Also note that 2x^2 means 2(x^2), while (2x)^2 = 4x^2, and -2^2 = -4 while (-2)^2 = 4."
+            ],
+            "bullets": [
+              "Match the base before equating indices.",
+              "Add indices before solving a product.",
+              "Respect brackets and signs."
+            ],
+            "takeaway": "Most index equations are solved by the single move of matching bases.",
+            "check": {
+              "question": "If 9^x = 27, what is x?",
+              "options": [
+                "3/2",
+                "2/3",
+                "3",
+                "2"
+              ],
+              "answer": 0,
+              "why": "9 = 3^2 and 27 = 3^3, so 2x = 3 and x = 3/2."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Convert every expression to a single base before comparing powers. Most index questions test that one move."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Evaluate 32^(2/5) without a calculator.",
+            "steps": [
+              {
+                "operation": "Split the fractional power",
+                "reason": "The denominator is the root and the numerator is the power.",
+                "result": "32^(2/5) = (fifth root of 32)^2.",
+                "predictPrompt": "What whole number raised to the fifth power gives 32?"
+              },
+              {
+                "operation": "Take the root",
+                "reason": "2^5 = 32, so the fifth root is 2.",
+                "result": "The expression becomes 2^2.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Apply the remaining power",
+                "reason": "The outer square was waiting throughout.",
+                "result": "2^2 = 4."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Evaluate 16^(3/4).",
+            "hints": [
+              "The denominator 4 means the fourth root.",
+              "The fourth root of 16 is 2.",
+              "Now apply the power 3 to that root."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "quadratic-equations",
+      "topic": "quadratic-equations",
+      "title": "Quadratic Equations",
+      "objective": "Solve ax² + bx + c = 0 by factorisation, the formula or completing the square, and use the sum and product of roots.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Quadratic equations",
+            "paragraphs": [
+              "A candidate factorises x² + 3x = 10 without moving the 10 and gets the wrong roots. Standard form comes first."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Standard form and factorisation",
+            "paragraphs": [
+              "A quadratic equation has the form ax² + bx + c = 0 with a not equal to zero. It has two roots, sometimes repeated. Rearrange before doing anything: x² + 3x = 10 becomes x² + 3x − 10 = 0.",
+              "To factorise with a = 1, find two numbers that multiply to c and add to b. For x² + 3x − 10, the pair is 5 and −2, so (x + 5)(x − 2) = 0 and x = −5 or x = 2.",
+              "When a is not 1, split the middle term using a pair that multiplies to ac and adds to b, then group. A product is zero only when one factor is zero, which is why each bracket gives a root."
+            ],
+            "bullets": [
+              "Rearrange to ax² + bx + c = 0 first.",
+              "Find a pair that multiplies to c and adds to b.",
+              "Set each bracket to zero."
+            ],
+            "takeaway": "A quadratic must be in standard form before it can be solved.",
+            "check": {
+              "question": "Solve x² − 7x + 12 = 0.",
+              "options": [
+                "x = 2 or 6",
+                "x = 3 or 4",
+                "x = −3 or −4",
+                "x = 1 or 12"
+              ],
+              "answer": 1,
+              "why": "The pair −3 and −4 multiplies to 12 and adds to −7, so (x − 3)(x − 4) = 0."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Formula and completing the square",
+            "paragraphs": [
+              "When factorisation is not obvious, the quadratic formula always works: x = (−b ± √(b² − 4ac)) / 2a. Substitute carefully, keeping the signs.",
+              "The discriminant b² − 4ac tells the nature of the roots: positive gives two distinct real roots, zero gives one repeated root, and negative gives no real roots.",
+              "Completing the square rewrites x² + bx as (x + b/2)² − (b/2)². It is longer than the formula but gives the vertex of the curve, which matters when a question asks for a maximum or minimum."
+            ],
+            "bullets": [
+              "The formula always works.",
+              "The discriminant predicts the roots.",
+              "Completing the square reveals the vertex."
+            ],
+            "takeaway": "Use the formula for speed and completing the square for the vertex.",
+            "check": {
+              "question": "What is the discriminant of x² + 4x + 4 = 0?",
+              "options": [
+                "0",
+                "8",
+                "16",
+                "−16"
+              ],
+              "answer": 0,
+              "why": "b² − 4ac = 16 − 16 = 0, so the equation has one repeated real root."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "Factorisation is faster when it works; the formula always works.",
+              "columns": [
+                "Factorisation",
+                "Formula"
+              ],
+              "rows": [
+                {
+                  "feature": "Best when",
+                  "left": "The pair is easy to see",
+                  "right": "Factors are not obvious"
+                },
+                {
+                  "feature": "Steps",
+                  "left": "Find the pair, write brackets",
+                  "right": "Substitute a, b and c"
+                },
+                {
+                  "feature": "Gives",
+                  "left": "The roots directly",
+                  "right": "Roots and discriminant"
+                },
+                {
+                  "feature": "Risk",
+                  "left": "Missing the pair",
+                  "right": "Sign and arithmetic errors"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Roots and word problems",
+            "paragraphs": [
+              "For ax² + bx + c = 0, the sum of the roots is −b/a and the product is c/a. Check x² + 3x − 10 = 0: the roots 2 and −5 sum to −3 and multiply to −10.",
+              "To build an equation from its roots, use x² − (sum)x + (product) = 0. If the roots are 3 and 4, the equation is x² − 7x + 12 = 0.",
+              "Word problems are the same process in disguise. Translate the sentence, solve, then reject roots that cannot make sense, such as a negative length or age."
+            ],
+            "bullets": [
+              "Sum of roots = −b/a.",
+              "Product of roots = c/a.",
+              "Reject impossible roots in word problems."
+            ],
+            "takeaway": "The sum and product of roots check the answer and rebuild the equation.",
+            "check": {
+              "question": "For 3x² − 7x + 2 = 0, what are the sum and product of the roots?",
+              "options": [
+                "sum 7/3, product 2/3",
+                "sum −7/3, product 2/3",
+                "sum 7/3, product −2/3",
+                "sum 3/7, product 3/2"
+              ],
+              "answer": 0,
+              "why": "Sum = −b/a = 7/3 and product = c/a = 2/3."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "After finding roots, check their sum and product against −b/a and c/a. It takes seconds and catches most sign errors."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Solve 2x² − 5x − 3 = 0.",
+            "steps": [
+              {
+                "operation": "Find the product ac",
+                "reason": "When a is not 1, the pair multiplies to ac and adds to b.",
+                "result": "ac = 2 × (−3) = −6, and b = −5, so the pair is −6 and 1.",
+                "predictPrompt": "How do you use the pair to split the middle term?"
+              },
+              {
+                "operation": "Split and group",
+                "reason": "Splitting the middle term creates a common bracket.",
+                "result": "2x² − 6x + x − 3 = 2x(x − 3) + 1(x − 3) = (2x + 1)(x − 3).",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Solve each bracket",
+                "reason": "A product is zero when either factor is zero.",
+                "result": "2x + 1 = 0 gives x = −1/2, and x − 3 = 0 gives x = 3."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Solve x² − 7x + 12 = 0 by factorisation.",
+            "hints": [
+              "Which two numbers multiply to 12 and add to −7?",
+              "Both numbers are negative.",
+              "Write the brackets, then solve each one."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "trigonometry",
+      "topic": "trigonometry",
+      "title": "Trigonometry",
+      "objective": "Use the basic ratios, special angles, identities and the sine and cosine rules to solve triangles.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Trigonometry",
+            "paragraphs": [
+              "A candidate uses the sine rule on a triangle with two sides and the included angle and gets stuck. Choosing the right rule starts with naming what is known."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Ratios and special angles",
+            "paragraphs": [
+              "In a right-angled triangle, SOHCAHTOA gives sin θ = opposite/hypotenuse, cos θ = adjacent/hypotenuse, and tan θ = opposite/adjacent. Label the sides against the angle before choosing a ratio.",
+              "The special angles appear in almost every paper. sin 30° = 1/2, sin 45° = √2/2, sin 60° = √3/2; cos runs the same values in reverse; tan 30° = 1/√3, tan 45° = 1 and tan 60° = √3.",
+              "Use exact values rather than decimals when the options are in surd form. The identity tan θ = sin θ/cos θ links the three ratios and explains why tan 45° = 1."
+            ],
+            "bullets": [
+              "SOHCAHTOA names the three ratios.",
+              "Learn the 30°, 45° and 60° values.",
+              "Prefer exact surd values to decimals."
+            ],
+            "takeaway": "Label the sides first, then choose the ratio that connects them.",
+            "check": {
+              "question": "What is sin 60°?",
+              "options": [
+                "1/2",
+                "√2/2",
+                "√3/2",
+                "√3"
+              ],
+              "answer": 2,
+              "why": "The sine of 60° is √3/2; 1/2 is sin 30° and √2/2 is sin 45°."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "Sine and cosine are the same ratios read from opposite sides.",
+              "columns": [
+                "Sine",
+                "Cosine"
+              ],
+              "rows": [
+                {
+                  "feature": "Ratio",
+                  "left": "opposite / hypotenuse",
+                  "right": "adjacent / hypotenuse"
+                },
+                {
+                  "feature": "At 30°",
+                  "left": "1/2",
+                  "right": "√3/2"
+                },
+                {
+                  "feature": "At 60°",
+                  "left": "√3/2",
+                  "right": "1/2"
+                },
+                {
+                  "feature": "Connection",
+                  "left": "sin θ = cos(90° − θ)",
+                  "right": "cos θ = sin(90° − θ)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Identities and quadrants",
+            "paragraphs": [
+              "The identity sin²θ + cos²θ = 1 holds for every angle. It lets you find one ratio from another: if sin θ = 3/5 and θ is acute, cos θ = 4/5.",
+              "Beyond 90°, the sign depends on the quadrant. ASTC — all, sin, tan, cos — records which ratios are positive in the first, second, third and fourth quadrants. A reference angle gives the size, and the quadrant gives the sign.",
+              "Useful reductions follow: sin(180° − θ) = sin θ, cos(180° − θ) = −cos θ, and tan(180° + θ) = tan θ. Sketch the angle to confirm the sign rather than memorising every case."
+            ],
+            "bullets": [
+              "sin²θ + cos²θ = 1 for every angle.",
+              "ASTC gives the sign by quadrant.",
+              "Use a reference angle for the size."
+            ],
+            "takeaway": "The quadrant decides the sign; the reference angle decides the value.",
+            "check": {
+              "question": "What is sin 150°?",
+              "options": [
+                "−1/2",
+                "1/2",
+                "√3/2",
+                "−√3/2"
+              ],
+              "answer": 1,
+              "why": "150° is in the second quadrant, where sine is positive, and its reference angle is 30°, so sin 150° = 1/2."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Non-right triangles",
+            "paragraphs": [
+              "For triangles without a right angle, use the sine rule or the cosine rule. The sine rule is a/sin A = b/sin B = c/sin C; use it when you know a side and its opposite angle.",
+              "The cosine rule is a² = b² + c² − 2bc cos A; use it when you know two sides and the included angle, or all three sides. The area formula is 1/2 ab sin C.",
+              "Bearings are measured clockwise from north as three-figure angles, such as 045° or 315°. Draw the north line at each point before applying either rule."
+            ],
+            "bullets": [
+              "Sine rule: a side and its opposite angle.",
+              "Cosine rule: two sides and the included angle.",
+              "Bearings are clockwise from north."
+            ],
+            "takeaway": "Choose the rule from the information given, not from habit.",
+            "check": {
+              "question": "Which rule should you use when you know two sides and the included angle?",
+              "options": [
+                "Sine rule",
+                "Cosine rule",
+                "Pythagoras' theorem",
+                "SOHCAHTOA"
+              ],
+              "answer": 1,
+              "why": "The cosine rule uses two sides and the angle between them to find the third side."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "The known information decides which rule can be used.",
+              "columns": [
+                "Sine rule",
+                "Cosine rule"
+              ],
+              "rows": [
+                {
+                  "feature": "Use when",
+                  "left": "A side and its opposite angle",
+                  "right": "Two sides and the included angle"
+                },
+                {
+                  "feature": "Formula",
+                  "left": "a/sin A = b/sin B",
+                  "right": "a² = b² + c² − 2bc cos A"
+                },
+                {
+                  "feature": "Finds",
+                  "left": "A missing side or angle",
+                  "right": "The third side or an angle"
+                },
+                {
+                  "feature": "Trap",
+                  "left": "Pair each side with its opposite angle",
+                  "right": "Use the included angle, not any angle"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Check that your calculator is in degree mode, and settle the sign from the quadrant before you compute."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "From 30 m away on level ground, the angle of elevation to the top of a building is 30°. Find the height.",
+            "steps": [
+              {
+                "operation": "Name the sides against the angle",
+                "reason": "The height is opposite the angle and the 30 m distance is adjacent.",
+                "result": "opposite = h and adjacent = 30, so tangent links them.",
+                "predictPrompt": "What is tan 30° exactly?"
+              },
+              {
+                "operation": "Write the tangent equation",
+                "reason": "tan θ = opposite/adjacent.",
+                "result": "tan 30° = h/30.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Solve with the exact value",
+                "reason": "tan 30° = 1/√3, so h = 30/√3 = 10√3.",
+                "result": "The height is 10√3 ≈ 17.3 m."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "If cos θ = 12/13 and θ is acute, find sin θ.",
+            "hints": [
+              "Draw a right triangle with adjacent 12 and hypotenuse 13.",
+              "Pythagoras gives the opposite side: 13² − 12² = 25.",
+              "sin θ = opposite/hypotenuse."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "probability",
+      "topic": "probability",
+      "title": "Probability",
+      "objective": "Use sample spaces, complements and the and/or rules, including draws without replacement.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Probability",
+            "paragraphs": [
+              "A candidate draws two balls without replacement and keeps the original denominator for the second draw. The bag has changed, so the probability must change too."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Sample space and complement",
+            "paragraphs": [
+              "Probability compares favourable outcomes with all equally likely outcomes: P(A) = favourable/total. It always lies between 0 and 1, with 0 impossible and 1 certain.",
+              "The sample space is the set of all outcomes. Two coins give 4 outcomes, two dice give 36, and a coin with a die gives 12. Listing the space prevents double counting.",
+              "The complement rule is P(not A) = 1 − P(A). It is fastest for 'at least one': with three coins, P(no head) = (1/2)³ = 1/8, so P(at least one head) = 7/8. The phrase 'at least one' is the signal to use the complement rather than count every case."
+            ],
+            "bullets": [
+              "P(A) = favourable / total.",
+              "Probability lies between 0 and 1.",
+              "P(not A) = 1 − P(A)."
+            ],
+            "takeaway": "List the sample space before you count anything.",
+            "check": {
+              "question": "If P(A) = 3/8, what is P(not A)?",
+              "options": [
+                "3/8",
+                "5/8",
+                "8/3",
+                "1/8"
+              ],
+              "answer": 1,
+              "why": "The complement is 1 − 3/8 = 5/8."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Union and intersection",
+            "paragraphs": [
+              "'Or' points to the union and 'and' to the intersection. For any two events, P(A or B) = P(A) + P(B) − P(A and B), because adding both counts the overlap twice.",
+              "If the events are mutually exclusive they cannot happen together, so P(A and B) = 0 and the rule becomes P(A or B) = P(A) + P(B).",
+              "If the events are independent, P(A and B) = P(A) × P(B). Dependence changes the second probability, which is why drawing without replacement needs adjustment. Independence is about influence, not about whether the events can happen together."
+            ],
+            "bullets": [
+              "'Or' adds, but subtract the overlap.",
+              "Mutually exclusive events have no overlap.",
+              "Independent events multiply."
+            ],
+            "takeaway": "Decide whether the events can overlap or affect each other before choosing a rule.",
+            "check": {
+              "question": "P(A) = 1/2 and P(B) = 1/3, with A and B independent. What is P(A and B)?",
+              "options": [
+                "5/6",
+                "1/6",
+                "2/3",
+                "1/5"
+              ],
+              "answer": 1,
+              "why": "For independent events, multiply: 1/2 × 1/3 = 1/6."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "Overlap and influence decide which probability rule applies.",
+              "columns": [
+                "Mutually exclusive",
+                "Independent"
+              ],
+              "rows": [
+                {
+                  "feature": "Can both happen?",
+                  "left": "No",
+                  "right": "Yes"
+                },
+                {
+                  "feature": "P(A and B)",
+                  "left": "0",
+                  "right": "P(A) × P(B)"
+                },
+                {
+                  "feature": "P(A or B)",
+                  "left": "P(A) + P(B)",
+                  "right": "P(A) + P(B) − P(A and B)"
+                },
+                {
+                  "feature": "Example",
+                  "left": "A coin shows head or tail",
+                  "right": "Two separate coin tosses"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Without replacement",
+            "paragraphs": [
+              "Without replacement, the first draw changes the second. Both the favourable count and the total fall by one, so the second probability uses the new numbers.",
+              "For a bag with 3 red and 2 blue, P(both red) = (3/5)(2/4) = 6/20 = 3/10. With replacement, the bag resets and the second probability stays 3/5.",
+              "Multiply along a branch for 'and', and add across branches for 'or'. A tree diagram keeps the counts visible and prevents using the original denominator twice. Label each branch with the probability at that moment, not the starting probability."
+            ],
+            "bullets": [
+              "Both counts fall by one without replacement.",
+              "Multiply along branches for 'and'.",
+              "Add across branches for 'or'."
+            ],
+            "takeaway": "After a draw without replacement, redraw the bag before the next probability.",
+            "check": {
+              "question": "A box has 4 green and 6 yellow pens. Two are drawn without replacement. What is P(both green)?",
+              "options": [
+                "2/15",
+                "4/25",
+                "2/5",
+                "8/45"
+              ],
+              "answer": 0,
+              "why": "The first draw is 4/10 and the second is 3/9, so the product is 12/90 = 2/15."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "Replacement resets the bag; no replacement changes every later draw.",
+              "columns": [
+                "With replacement",
+                "Without replacement"
+              ],
+              "rows": [
+                {
+                  "feature": "Total after draw",
+                  "left": "Unchanged",
+                  "right": "One fewer"
+                },
+                {
+                  "feature": "Second draw",
+                  "left": "Same denominator",
+                  "right": "New denominator"
+                },
+                {
+                  "feature": "Events",
+                  "left": "Independent",
+                  "right": "Dependent"
+                },
+                {
+                  "feature": "Example",
+                  "left": "(3/5)(3/5) = 9/25",
+                  "right": "(3/5)(2/4) = 3/10"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Write the sample space and the remaining counts before multiplying. Most probability errors are counting errors, not formula errors."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A bag holds 3 red and 2 blue balls. Two are drawn one after another without replacement. Find P(both red).",
+            "steps": [
+              {
+                "operation": "Write the first draw",
+                "reason": "There are 3 red balls out of 5 in total.",
+                "result": "P(first red) = 3/5.",
+                "predictPrompt": "After one red leaves, what changes?"
+              },
+              {
+                "operation": "Adjust the second draw",
+                "reason": "One red and one ball are gone, leaving 2 red out of 4.",
+                "result": "P(second red) = 2/4 = 1/2.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Multiply for 'and'",
+                "reason": "Both draws must happen in sequence.",
+                "result": "3/5 × 1/2 = 3/10."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A box has 4 green and 6 yellow pens. Two are drawn without replacement. Find P(both green).",
+            "hints": [
+              "The first draw is 4 out of 10.",
+              "After one green leaves, 3 green remain out of 9.",
+              "Multiply the two fractions and simplify."
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
