@@ -162,85 +162,166 @@
       "slug": "comprehension-tips",
       "topic": "comprehension-question-skills",
       "title": "Comprehension Tips",
-      "objective": "A read-and-answer playbook: predict, underline, decide and eliminate to protect marks.",
+      "objective": "Read a passage for the questions that follow, locate textual evidence and eliminate options that the passage does not support.",
       "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "bullets": [],
-            "heading": "Comprehension Tips",
+            "heading": "Comprehension tips",
             "paragraphs": [
-              "A read-and-answer playbook: predict, underline, decide and eliminate to protect marks."
-            ]
+              "A candidate reads a passage twice, then discovers that every question points to a line they did not mark. Reading with the questions already in mind prevents that waste."
+            ],
+            "bullets": []
           }
         },
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "Scan the questions in one sweep — they tell you what to look for.",
-              "Notice the question verbs: what (fact), why (reason), whom (person), how (manner).",
-              "Never guess an answer without checking the passage; every answer must be supported by the text."
-            ],
-            "heading": "Before you read the passage",
+            "heading": "Read the questions first",
             "paragraphs": [
-              "Do not read the passage first. Read the questions first so you know what to look for, then read the passage with those questions already in your mind. Every answer must come from the text, not from real-world knowledge."
-            ]
+              "Do not read the passage first. Read the five questions in one sweep, because they tell you what to look for and which parts of the passage are likely to matter.",
+              "Notice the question verb. 'What' asks for a fact, 'why' for a reason, 'whom' for a person, 'how' for a manner, and 'infer' for a conclusion the text supports without stating. The verb tells you the kind of evidence to hunt.",
+              "Every answer must be supported by the text, not by real-world knowledge. A statement can be true in life and still be a wrong option because the passage never makes it."
+            ],
+            "bullets": [
+              "Read the questions before the passage.",
+              "Let the question verb set your purpose.",
+              "Every answer needs textual support."
+            ],
+            "takeaway": "The questions turn the passage from a text into a search space.",
+            "check": {
+              "question": "A question asks 'Why did the council fail?' What should you look for?",
+              "options": [
+                "a date",
+                "a reason",
+                "a person",
+                "a comparison"
+              ],
+              "answer": 1,
+              "why": "'Why' asks for a cause or reason, so the answer must explain the failure rather than name a time or person."
+            }
           }
         },
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "Note the topic sentence of each paragraph — usually the first sentence.",
-              "Circle proper nouns, dates and figures; questions love to reuse them.",
-              "Slow down at signal words: however, but, therefore, because, in addition, for example.",
-              "If a word is unfamiliar, keep going — the surrounding words usually hint at its meaning."
-            ],
-            "heading": "While you read",
+            "heading": "Read with a map",
             "paragraphs": [
-              "Read actively: underline the main idea of each paragraph and tick anything the questions asked about. Understanding where each idea sits makes finding answers fast."
-            ]
+              "Read each paragraph for its topic sentence, usually the first. Note what the paragraph contributes: a claim, an example, a contrast or a conclusion.",
+              "Circle proper nouns, dates and figures, because questions reuse them. Slow down at signal words: however and but mark a turn, therefore marks a conclusion, because marks a reason, and for example marks support.",
+              "If a word is unfamiliar, keep going. The surrounding sentence usually supplies a definition, an example or a contrast that lets you infer the meaning without a dictionary. The map also tells you where an answer is likely to sit."
+            ],
+            "bullets": [
+              "Find each paragraph's job.",
+              "Mark names, dates, figures and signal words.",
+              "Infer unfamiliar words from their surroundings."
+            ],
+            "takeaway": "A paragraph map turns a second reading into a quick lookup.",
+            "check": {
+              "question": "In 'The scheme was cheap; however, it failed', what does 'however' signal?",
+              "options": [
+                "a cause",
+                "an example",
+                "a contrast",
+                "a definition"
+              ],
+              "answer": 2,
+              "why": "'However' marks a turn against the previous clause, so the second idea contrasts with the first."
+            }
           }
         },
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "Main idea: the option that covers the whole passage, not a single detail.",
-              "Tone/mood: match the emotional language of the passage (happy, critical, sarcastic, persuasive).",
-              "Vocabulary in context: replace the word with each option and see which fits the two lines around it.",
-              "Inference: the correct answer follows logically from the text; distractor options feel plausible but are not implied.",
-              "Reference (\"it\", \"they\"): look at the nearest earlier noun that fits grammatically.",
-              "Budget two minutes per question; leave hard ones and return to them."
-            ],
-            "heading": "Question types and tactics",
+            "heading": "Answer by evidence",
             "paragraphs": [
-              "The most common question types follow the same logic every year. Match each question to its tactic: "
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "content": {
-            "bullets": [
-              "Reject options with extreme words (always, never, everyone) — passages rarely support them.",
-              "Reject options that are true in real life but absent from the passage.",
-              "If two options look alike, re-read the supporting sentence; the correct one is usually the more specific."
+              "Match the question type to its tactic. Main idea wants the option that covers the whole passage, tone wants the writer's attitude rather than the topic, and vocabulary wants the option that fits the surrounding lines. Reference wants the nearest earlier noun that fits grammatically.",
+              "Inference is the hardest: the answer must follow from the text, while a distractor may feel plausible but is not implied. Eliminate options with extreme words such as always, never and everyone, options that are true in life but absent from the passage, and options too vague to be checked.",
+              "Budget about two minutes per question. Leave a hard item, answer the others, then return with a clearer mind."
             ],
-            "heading": "How to eliminate options",
-            "paragraphs": [
-              "When you are stuck, eliminate rather than guess blindly. Wrong comprehension options usually leave a tell: an extreme word, real-world truth not in the passage, or vagueness."
-            ]
+            "bullets": [
+              "Match each question type to its tactic.",
+              "Inference must follow from the text.",
+              "Eliminate extremes, absent truths and vagueness."
+            ],
+            "takeaway": "When two options survive, the one with the stronger textual support wins.",
+            "check": {
+              "question": "Which option should you reject in a comprehension question?",
+              "options": [
+                "an option supported by a quoted sentence",
+                "an option that is true but not stated in the passage",
+                "an option that restates the main idea",
+                "an option that matches the writer's tone"
+              ],
+              "answer": 1,
+              "why": "Comprehension answers must come from the passage; a true statement the passage never makes is still unsupported."
+            },
+            "visual": {
+              "kind": "flow",
+              "caption": "Work from the question to the evidence before you touch the options.",
+              "steps": [
+                {
+                  "label": "Read the questions"
+                },
+                {
+                  "label": "Map the paragraphs"
+                },
+                {
+                  "label": "Locate the evidence"
+                },
+                {
+                  "label": "Match the question type"
+                },
+                {
+                  "label": "Eliminate and choose"
+                }
+              ]
+            }
           }
         },
         {
           "type": "callout",
           "content": {
-            "body": "Never leave a comprehension question blank. If stuck, pick the option with the strongest textual support — examiners reward exactness, not imagination.",
+            "title": "Exam tip",
             "tone": "tip",
-            "title": "Exam tip"
+            "body": "Never leave a comprehension question blank. If stuck, choose the option with the strongest textual support, not the one that sounds most like your own opinion."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "In the Kolo Creek passage, why did the village council fail to solve the water problem?",
+            "steps": [
+              {
+                "operation": "Find the relevant paragraph",
+                "reason": "The question asks about the council, so scan for the sentence that names it.",
+                "result": "Paragraph 1 says the council met several times but had no money for a borehole.",
+                "predictPrompt": "Does that show ignorance, indifference or a lack of resources?"
+              },
+              {
+                "operation": "Separate the cause from the excuse",
+                "reason": "The passage says the council knew about the problem, so awareness was not the failure.",
+                "result": "The failure was money, not knowledge or concern.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Choose the matching option",
+                "reason": "The answer must restate the evidence without adding to it.",
+                "result": "The correct option is 'resources, not awareness'."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A question asks what 'it' refers to in 'The committee rejected the plan because it was too costly.' What do you check first?",
+            "hints": [
+              "Reference questions look backwards for a noun.",
+              "The pronoun must fit grammatically and in meaning.",
+              "'It' cannot refer to the committee here, because the committee was not costly."
+            ]
           }
         },
         {
@@ -611,113 +692,175 @@
       "slug": "summary-writing",
       "topic": "summary-writing",
       "title": "Summary Writing",
-      "objective": "synthesis of ideas from the passages",
-      "estimatedMinutes": 15,
+      "objective": "Compress a passage into the exact number of sentences or words the question demands, keeping the main point of every paragraph.",
+      "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "One of the five questions on the Section A passage asks for a summary.",
-              "A summary restates the main points in your own words, as briefly as the question allows.",
-              "It is neither a detail question nor an opinion question."
-            ],
-            "heading": "What a summary question asks for",
+            "heading": "Summary writing",
             "paragraphs": [
-              "Section A of Use of English gives you a passage of about two hundred words and five questions. One of them asks you to summarise it. The other four are ordinary comprehension questions on the same passage.",
-              "A summary question asks you to restate the passage's main points in your own words, as briefly as the question allows. It is not a question about a detail, and it is not an opinion question. It is a test of whether you can tell which parts of a passage carry the weight."
-            ]
+              "A summary question gives a passage and a hard limit: one sentence, two sentences, or ten words. The limit is part of the task, not a suggestion."
+            ],
+            "bullets": []
           }
         },
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "The instruction gives a number — one sentence, two sentences, ten words. Treat it as a hard limit.",
-              "The marks come from: right number of sentences, right length, main point per paragraph, accurate wording.",
-              "Writing three sentences when one was asked for is a mark lost for free."
-            ],
-            "heading": "What JAMB actually asks you to write",
+            "heading": "The instruction is a hard limit",
             "paragraphs": [
-              "The instruction is usually: 'Summarise the passage in one sentence' or 'in two sentences' or 'in not more than ten words'. The number in the instruction is a hard limit, and JAMB marks against it.",
-              "The four marks for a summary question come from four things, roughly: the right number of sentences, the right length, the main point of each paragraph, and accurate wording. Losing a mark for writing three sentences when one was asked for is common and entirely avoidable."
-            ]
+              "Section A gives a passage of about two hundred words and five questions. One asks for a summary, and its instruction names a number: one sentence, two sentences, or not more than ten words.",
+              "That number is a hard limit, and JAMB marks against it. The marks come from four things: the right number of sentences, the right length, the main point of each paragraph, and accurate wording in your own words.",
+              "Writing three sentences when one was asked for loses a mark for free. So does writing one when two were asked, because a skipped paragraph is a skipped point."
+            ],
+            "bullets": [
+              "The number of sentences is a hard limit.",
+              "Marks reward coverage and accurate wording.",
+              "Too many or too few sentences both cost marks."
+            ],
+            "takeaway": "Treat the sentence or word count as part of the question.",
+            "check": {
+              "question": "The instruction says 'in one sentence' and you write two. What is the result?",
+              "options": [
+                "full marks if both sentences are correct",
+                "a lost mark for breaking the limit",
+                "extra marks for extra detail",
+                "no effect, because length is a guide"
+              ],
+              "answer": 1,
+              "why": "The instruction is a hard limit, so exceeding it loses a mark even when the content is accurate."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "A summary is judged by different rules from an ordinary comprehension answer.",
+              "columns": [
+                "Comprehension question",
+                "Summary question"
+              ],
+              "rows": [
+                {
+                  "feature": "What it asks",
+                  "left": "One fact or inference",
+                  "right": "The main points of the passage"
+                },
+                {
+                  "feature": "Length",
+                  "left": "As long as the option",
+                  "right": "The count in the instruction"
+                },
+                {
+                  "feature": "Wording",
+                  "left": "Evidence from the text",
+                  "right": "Your own words"
+                },
+                {
+                  "feature": "Test",
+                  "left": "Is it supported?",
+                  "right": "Is every paragraph covered?"
+                }
+              ]
+            }
           }
         },
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "Mark one phrase per paragraph in the margin — never a quotation.",
-              "Find the paragraph that carries the passage; usually the last, but not always.",
-              "One sentence per main point, in your own words, in the number you were given."
-            ],
-            "heading": "How to build one",
+            "heading": "Build it in three moves",
             "paragraphs": [
-              "Do it in three moves. First, mark the main point of each paragraph in the margin — a single phrase, not a sentence, and never a quotation. Second, look at which paragraph carries the passage. In most passages it is the last one, because the passage usually ends by saying what it has been arguing towards, but not always, and the ones that do not are exactly the ones that catch people.",
-              "Third, write. One sentence per main point, using your own words, using the count you were given. If you are writing one sentence, you must cover the whole passage in one sentence, which means a subordinate clause is your friend: the passage is about X, but the writer argues Y."
-            ]
+              "First, mark the main point of each paragraph in the margin as a single phrase, never a quotation. Second, decide which paragraph carries the passage; it is often the last, because the passage usually ends by saying what it has argued towards, but not always.",
+              "Third, write one sentence per main point in your own words, using exactly the number you were given. For a one-sentence summary, a subordinate clause carries two points: 'The market grew because it is cheap, but its future is uncertain because the land is needed for a road.'",
+              "Compress by naming the subject once and attaching the cause, the consequence and the qualification to it. Do not list every detail; keep what the passage would lose if it were removed."
+            ],
+            "bullets": [
+              "Mark one phrase per paragraph.",
+              "Find the paragraph that carries the passage.",
+              "Attach causes and qualifications to one subject."
+            ],
+            "takeaway": "A summary keeps the skeleton and drops the decoration.",
+            "check": {
+              "question": "Which detail belongs in a summary of a passage about a market's growth and possible closure?",
+              "options": [
+                "the colour of the traders' stalls",
+                "the reason for the growth and the threat to the land",
+                "the name of one customer",
+                "the price of a single item"
+              ],
+              "answer": 1,
+              "why": "The cause of growth and the threat to the land carry the passage's argument; the other details are decoration."
+            }
           }
         },
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "Quoting instead of summarising — a summary must be your own words.",
-              "Listing every detail instead of dropping what is mentioned in passing.",
-              "Adding opinion or outside information — both are marked the same way.",
-              "Reporting a character's final quote instead of what the passage is about."
-            ],
             "heading": "What loses marks",
             "paragraphs": [
-              "Four things lose marks reliably. Quoting the passage instead of summarising it, because a summary must be in your own words. Listing every detail, because a summary drops what the passage mentions in passing. Adding your own opinion, because the summary question is not an opinion question. And adding information the passage does not contain, which is the same mistake as adding opinion and is marked the same way.",
-              "There is one more trap. If the passage's last paragraph is a quote from a character, a summary that reports the quote rather than what the passage is about will miss the mark that matters most."
-            ]
+              "Four errors lose marks reliably: quoting instead of paraphrasing, listing every detail, adding your own opinion, and adding information the passage does not contain. The last two are marked the same way because both go beyond the text.",
+              "A fifth trap is reporting a character's final quotation instead of what the passage is about. If the last paragraph is a quote, ask what the quote is doing in the passage's argument, then summarise that.",
+              "Check the sentence count before you submit. Most lost summary marks are counting errors, not comprehension errors."
+            ],
+            "bullets": [
+              "Do not quote; paraphrase.",
+              "Do not add opinion or outside facts.",
+              "Summarise the quote's function, not the quote."
+            ],
+            "takeaway": "Every sentence in a summary must earn its place.",
+            "check": {
+              "question": "Which habit most reliably loses summary marks?",
+              "options": [
+                "using your own words",
+                "covering every paragraph",
+                "quoting long phrases from the passage",
+                "counting your sentences"
+              ],
+              "answer": 2,
+              "why": "A summary must be paraphrased; long quotations repeat the passage instead of compressing it."
+            }
           }
         },
         {
           "type": "callout",
           "content": {
-            "body": "Count the sentences in your summary before you submit. If the instruction said one sentence and you have written two, cut the less important one. If it said two and you have one, add the paragraph you skipped. Most lost summary marks are counting errors, not comprehension errors.",
+            "title": "Exam tip",
             "tone": "tip",
-            "title": "Exam tip"
+            "body": "Count the sentences in your summary before you submit. If the instruction said one and you wrote two, cut the weaker one; if it said two and you wrote one, add the paragraph you skipped."
           }
         },
         {
           "type": "worked_example",
           "content": {
+            "problem": "A passage describes a night market: how it grew, why it grew, and its uncertain future because the land is needed for a road. Summarise it in one sentence.",
             "steps": [
               {
+                "operation": "Mark each paragraph's point",
                 "reason": "You cannot choose what to keep until you know what each paragraph contributes.",
-                "result": "P1: the market has grown large. P2: it grew because it is cheap. P3: its future is uncertain — the land is needed for a road.",
-                "operation": "Mark each paragraph's main point",
-                "predictPrompt": "Which of those three is the passage about, rather than merely containing?"
+                "result": "Growth, cause, and threat: three points.",
+                "predictPrompt": "Which point carries the passage's argument?"
               },
               {
-                "reason": "The passage usually ends by telling you what it has been driving at — here, the unresolved problem.",
-                "result": "The third paragraph carries it: the market works but may not survive.",
-                "operation": "Find the paragraph that carries the passage",
-                "predictPrompt": "So the summary must end where the passage ends. What must it say?"
-              },
-              {
-                "reason": "One sentence with two halves lets you carry both the growth and the uncertainty.",
-                "result": "A fast-growing night market has drawn traders because it is cheap, but its future is uncertain because the land is needed for a road.",
-                "operation": "Compress into one sentence",
+                "operation": "Find the carrying paragraph",
+                "reason": "The last paragraph usually states what the passage has been driving at.",
+                "result": "The threat to the land gives the passage its point: the market may not survive.",
                 "predictPrompt": ""
+              },
+              {
+                "operation": "Compress into one sentence",
+                "reason": "One subordinate clause can carry the cause while the main clause carries the threat.",
+                "result": "A fast-growing night market has drawn traders because it is cheap, but its future is uncertain because the land is needed for a road."
               }
-            ],
-            "problem": "A three-paragraph passage about a night market: how it grew, why it grew, and an uncertain future because the land is needed for a road. The instruction says: 'Summarise the passage in one sentence.'"
+            ]
           }
         },
         {
           "type": "guided_question",
           "content": {
+            "question": "Here is a one-sentence summary: 'The passage describes a night market, its traders, its growth and its problems.' Which summary error does it commit, and how would you fix it?",
             "hints": [
-              "Does the sentence say what happened, or does it just say what the passage is about?",
-              "The market's growth and the threat to the land are two different things — is either in your sentence?",
-              "Rewrite it with the market's situation and its uncertainty, in one sentence."
-            ],
-            "question": "Here is a one-sentence summary: 'The passage describes a night market, its traders, its growth and its problems.' Which of the four things that lose marks does this commit, and what would you add to fix it?"
+              "Does the sentence report the passage or summarise its argument?",
+              "It lists topics instead of stating what the passage says about them.",
+              "Rewrite it with the market's situation and its uncertainty."
+            ]
           }
         },
         {
@@ -912,118 +1055,175 @@
       "slug": "passage-description",
       "topic": "passage-description",
       "title": "Description Passages",
-      "objective": "identify main points/topic sentences in passages",
-      "estimatedMinutes": 14,
+      "objective": "Recognise a description passage, find its topic sentence and choose answers that match what the passage shows rather than what it mentions.",
+      "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "A description passage has no story and no argument — it makes you see something accurately.",
-              "Its topic sentence is the one doing the describing; the rest is detail hanging off it.",
-              "Find the topic sentence first and the 'about the whole passage' questions fall before you read the options."
-            ],
-            "heading": "What a description passage does",
+            "heading": "Description passages",
             "paragraphs": [
-              "A description passage paints a picture of a person, a place, a thing or a moment. It is not telling you a story and it is not arguing a case. Its whole job is to make you see and feel something accurately, and everything in it — the order of details, the sensory words, the exact size and shape — is chosen to serve that single purpose.",
-              "Because the passage has no plot and no argument, its centre of gravity is the topic sentence. That is the sentence doing the describing, and everything after it is detail hanging off that sentence. Find the topic sentence and you have already answered most of the questions about the whole passage before you read a single option."
-            ]
+              "A description passage makes you see a person, place or thing. It has no plot and no argument, so its centre is the topic sentence."
+            ],
+            "bullets": []
           }
         },
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "Description opens wide and narrows: the whole subject first, then the parts.",
-              "It leans on sensory and precise language — colour, texture, temperature, sound, number.",
-              "Sequence of events means narration. Signposting words means exposition. Neither means description."
-            ],
-            "heading": "How to recognise one",
+            "heading": "A picture, not a story",
             "paragraphs": [
-              "Description passages almost always open with a wide shot and then narrow: the whole thing first, then the parts. The first sentence gives you the subject and its scale — a mound, a market, a particular street — and each following sentence tightens the focus until you are looking at something small and exact.",
-              "They also lean hard on sensory language. Not decorative language — precise language. A description will tell you the colour, the texture, the temperature, the sound, the number. If a passage gives you measurements, colours, directions and temperatures, it is a description. If it gives you a sequence of events, it is narration. If it gives you signposting words like first, then, finally and as a result, it is exposition."
-            ]
+              "Description paints a person, place, thing or moment. It does not tell a story or argue a case; its job is to make you see and feel something accurately. The order of details, the sensory words and the exact measurements all serve that one purpose.",
+              "Because there is no plot or argument, the centre of gravity is the topic sentence: the sentence doing the describing. Everything after it is detail hanging from that sentence.",
+              "Ask what the passage is showing and which details make the showing precise. That question answers main-idea items before you read the options."
+            ],
+            "bullets": [
+              "Description shows rather than tells.",
+              "The topic sentence carries the main idea.",
+              "Details sharpen the picture."
+            ],
+            "takeaway": "Find what the passage is showing, not what it merely mentions.",
+            "check": {
+              "question": "What is the main job of a description passage?",
+              "options": [
+                "to tell a sequence of events",
+                "to make a subject vivid and precise",
+                "to prove a disputed claim",
+                "to explain a process step by step"
+              ],
+              "answer": 1,
+              "why": "Description aims at vivid, accurate presentation; sequence belongs to narration, proof to argumentation and process to exposition."
+            }
           }
         },
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "About-the-passage questions answer to the topic sentence or the idea it supports.",
-              "Detail questions are stated flatly — scan for the noun in the question.",
-              "Inference answers are the option the passage makes more likely without asserting."
+            "heading": "Recognise it by its movement",
+            "paragraphs": [
+              "Description usually opens wide and narrows: the whole subject first, then its parts. The first sentence gives the subject and scale, and each later sentence tightens the focus.",
+              "It leans on precise sensory language: colour, texture, temperature, sound, size and number. Precise is not the same as decorative; a detail earns its place by making the picture sharper.",
+              "Contrast the signals. A sequence of events means narration, signposting such as first, next and as a result means exposition, and a claim with reasons means argumentation. Description has none of those."
             ],
+            "bullets": [
+              "It moves from the whole to the parts.",
+              "It uses exact sensory detail.",
+              "It lacks a plot and a thesis."
+            ],
+            "takeaway": "Description holds one scene still and makes it exact.",
+            "check": {
+              "question": "Which detail most strongly signals a description passage?",
+              "options": [
+                "the words 'first', 'next' and 'finally'",
+                "a claim followed by three reasons",
+                "the colour, texture and temperature of a place",
+                "a character's decision and its consequence"
+              ],
+              "answer": 2,
+              "why": "Sensory precision is the signature of description; the other options signal exposition, argumentation and narration."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "The movement of the passage tells description and narration apart.",
+              "columns": [
+                "Description",
+                "Narration"
+              ],
+              "rows": [
+                {
+                  "feature": "Movement",
+                  "left": "Wide shot to close detail",
+                  "right": "One event to the next"
+                },
+                {
+                  "feature": "Signal",
+                  "left": "Colour, texture, size, sound",
+                  "right": "Time markers and action verbs"
+                },
+                {
+                  "feature": "Centre",
+                  "left": "One scene or subject",
+                  "right": "A change or complication"
+                },
+                {
+                  "feature": "Question",
+                  "left": "What does it look like?",
+                  "right": "What happened, and why?"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
             "heading": "Where the answers sit",
             "paragraphs": [
-              "Three question types dominate a description passage, and each has a predictable home.",
-              "Questions about the whole passage ask for the main point, and the answer is the topic sentence or the idea it supports. Questions about a part ask for a detail, and the answer is stated flatly somewhere in the paragraph — you find it by scanning for the noun in the question. Inference questions ask for something the passage does not say outright, and the answer is the one option that the passage makes more likely without asserting it."
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "content": {
-            "bullets": [
-              "One ~200-word passage from some discipline, five questions on it.",
-              "The discipline is there to stop you guessing from knowledge instead of reading.",
-              "Read once for the topic sentence, once for the details, then answer."
+              "Whole-passage questions ask for the main point, and the answer is the topic sentence or the idea it supports. Part questions ask for a detail, and the answer is stated flatly; scan for the noun in the question.",
+              "Inference questions ask for something not stated outright. The answer is the option the passage makes more likely, not the option that is merely plausible.",
+              "JAMB sets about two hundred words from some discipline and five questions. The discipline is there to tempt you into answering from prior knowledge, so check the passage even when the subject looks familiar."
             ],
-            "heading": "How JAMB uses it",
-            "paragraphs": [
-              "JAMB sets one passage of about two hundred words that reflects some discipline — science, history, agriculture, economics — and asks five questions on it. The discipline is there to stop you guessing from prior knowledge and to make you read what is in front of you. That is the trap: candidates who recognise the subject think they know the answer, and then miss the detail the passage actually gives.",
-              "Your method should be the same whether or not you know the discipline. Read once for the topic sentence. Read again for the details the questions name. Then answer."
-            ]
+            "bullets": [
+              "Main idea answers to the topic sentence.",
+              "Detail answers are stated outright.",
+              "Inference answers follow from the text."
+            ],
+            "takeaway": "Match each question to the part of the passage that can settle it.",
+            "check": {
+              "question": "A question asks for the passage's main point. Where should you look first?",
+              "options": [
+                "the last option",
+                "the topic sentence",
+                "the longest paragraph",
+                "a date in the passage"
+              ],
+              "answer": 1,
+              "why": "The topic sentence states what the passage is showing, so it is the best guide to a main-idea answer."
+            }
           }
         },
         {
           "type": "callout",
           "content": {
-            "body": "In a description passage, the first sentence is usually the topic sentence and the last sentence usually carries the writer's attitude. Read those two twice, and the middle once. If you can name the subject from the first line, you already know what every question is about.",
+            "title": "Exam tip",
             "tone": "tip",
-            "title": "Exam tip"
+            "body": "In a description, read the first sentence for the subject and the last for the writer's attitude. Those two lines settle most questions."
           }
         },
         {
           "type": "worked_example",
           "content": {
+            "problem": "A passage opens: 'The old market hall is a wide, low building of red brick, its roofline broken by a row of small ventilator turrets.' A question asks what the passage mainly describes.",
             "steps": [
               {
-                "reason": "There is no sequence of events to follow and no case being argued, so it cannot be narration or exposition.",
-                "result": "It is a description: a building, what it looks like, what it is like inside.",
-                "operation": "Decide what kind of passage this is",
-                "predictPrompt": "What does the first sentence actually give you — a picture, an event, or an argument?"
+                "operation": "Classify the passage",
+                "reason": "There is no sequence and no argument, only a building being shown.",
+                "result": "It is description.",
+                "predictPrompt": "Which sentence names the subject?"
               },
               {
-                "reason": "The sentence doing the describing is the one that names the subject and its character.",
-                "result": "'The old market hall is a wide, low building of red brick...' — that is the whole passage in one line.",
                 "operation": "Find the topic sentence",
-                "predictPrompt": "Now which option says the same thing as that line?"
-              },
-              {
-                "reason": "An option can be true of the passage without being what the passage is about. History appears later; supervision appears nowhere.",
-                "result": "A is true of the passage but is not its main purpose. C is not in the passage at all. D is not in the passage at all.",
-                "operation": "Eliminate the options that describe something else",
-                "predictPrompt": "Which surviving option describes the subject rather than one detail of it?"
-              },
-              {
-                "reason": "The main-point option always restates what the topic sentence describes, not what it mentions.",
-                "result": "B — the physical and sensory character of the market hall.",
-                "operation": "Choose the option that matches the topic sentence",
+                "reason": "The sentence that names the subject and its character carries the main idea.",
+                "result": "The first sentence gives the hall's size, material and shape.",
                 "predictPrompt": ""
+              },
+              {
+                "operation": "Match the option to the topic sentence",
+                "reason": "History and supervision are details or absent; the main point is the hall's physical character.",
+                "result": "Choose 'the physical and sensory character of the market hall'."
               }
-            ],
-            "problem": "A description passage opens: 'The old market hall is a wide, low building of red brick, its roofline broken by a row of small ventilator turrets.' Below it: 'Inside, the noise is constant... The traders have occupied the same pitch for three generations.' A question asks: 'The passage mainly describes' — A the history of the market, B the physical and sensory character of the market hall, C how the traders are supervised, D why the market is closing."
+            ]
           }
         },
         {
           "type": "guided_question",
           "content": {
+            "question": "A passage describes a workshop as 'long and narrow, every surface grey with dust'. A question asks about the writer's attitude. What do the details suggest?",
             "hints": [
-              "The details are all about one thing: what it is like to be there.",
-              "Grey, long, narrow, loud — is the writer selling the workshop or describing it honestly?",
-              "The answer is the one option the passage makes more likely without ever saying it outright."
-            ],
-            "question": "Try this one: a passage opens, 'The Weaver's workshop is long and narrow, and every surface in it is grey with dust — the bench, the walls, the open windows.' It continues, 'By nine, the place is loudest...' A question asks which statement about the writer's attitude to the workshop is best supported. What do the details of grey dust and the noise suggest?"
+              "The details are exact but not admiring.",
+              "Grey dust and narrowness create a cramped, worn impression.",
+              "Choose the option supported by those details, not by your own reaction."
+            ]
           }
         },
         {
@@ -1218,118 +1418,175 @@
       "slug": "passage-narration",
       "topic": "passage-narration",
       "title": "Narration Passages",
-      "objective": "identify main points/topic sentences in passages",
-      "estimatedMinutes": 14,
+      "objective": "Follow a narration passage's timeline, narrator and turning point, and answer questions from what the events show.",
+      "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "Narration tells a story: something happens, in an order, to someone.",
-              "Its spine is the turning point — the moment the situation changes.",
-              "Build the chain of events; the questions ask where a link sits."
-            ],
-            "heading": "What a narration passage does",
+            "heading": "Narration passages",
             "paragraphs": [
-              "A narration passage tells a story: something happens, in an order, to someone. Its defining feature is not the events themselves but the order they arrive in. The passage is built around a turning point — the moment the situation changes — and the questions are usually about what caused it and what it led to.",
-              "Because the events are ordered, a narration passage rewards a different reading strategy than a description. You are not looking for one topic sentence that holds the whole thing; you are building a chain, and the questions ask you where a link in the chain sits."
-            ]
+              "A narration passage reports what happened. Its questions usually turn on why a character acted, what a moment reveals, or how the story changes."
+            ],
+            "bullets": []
           }
         },
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "Time words — one day, at six, by nine, at last — mark a passage as narrative.",
-              "Cause and effect words — because, so, until — mark the chain.",
-              "Every narration has a narrator, and the questions about mood are asking about that voice."
-            ],
-            "heading": "How to recognise one",
+            "heading": "A sequence with a turn",
             "paragraphs": [
-              "Look for time moving. Words like one day, at six, by nine, when the, until, after that and at last mark a passage as narrative even when no explicit dates appear. Then look for cause and effect: because, so, until, which is why.",
-              "Narrations also carry a narrator, and the narrator's view is the passage's opinion. Whether that narrator is a character inside the story or a voice outside it, the attitudes in the passage belong to them, and the questions about mood and opinion are asking about that voice."
-            ]
+              "Narration tells what happened in time. It has a sequence, usually a complication and a resolution, and its questions often turn on why a character acted or what a moment reveals.",
+              "Time markers carry the order: at dawn, by the time, later, finally. A flashback deliberately breaks the order, so note when the passage moves backwards before you answer a sequence question.",
+              "The narrator matters. A first-person narrator reports only what they know, so a question about another character's feelings may require inference rather than a direct statement."
+            ],
+            "bullets": [
+              "Events move in time.",
+              "Time markers and flashbacks control the order.",
+              "The narrator limits what can be known."
+            ],
+            "takeaway": "Read narration as a timeline with a turning point.",
+            "check": {
+              "question": "A passage begins 'Years later, he still remembered the morning...' What does this signal?",
+              "options": [
+                "a process",
+                "a flashback",
+                "a definition",
+                "a comparison"
+              ],
+              "answer": 1,
+              "why": "The phrase moves from the present of the telling back to an earlier morning, which is a flashback."
+            }
           }
         },
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "Order questions: read the passage once as a bare list of events and the order is obvious.",
-              "Cause questions: find the sentence whose consequence the next sentence describes.",
-              "Mood questions: the final image is the point of the whole passage, not decoration."
+            "heading": "Recognise it",
+            "paragraphs": [
+              "Narration strings events together. Look for verbs of action, time adverbials and a change between the beginning and the end.",
+              "Dialogue is common but not decisive; a description can contain speech. The test is whether the passage moves from one event to another rather than holding one scene still.",
+              "Distinguish narration from exposition: exposition explains a process or idea, while narration reports what someone did. A passage that says first, next and as a result is explaining, not narrating. A paragraph of pure scene-setting may still belong to a story, but the narrative question will turn on the event that follows."
             ],
+            "bullets": [
+              "Action verbs and time markers signal narration.",
+              "Dialogue alone does not make a story.",
+              "Events change; explanations do not."
+            ],
+            "takeaway": "If the passage moves from event to event, it is narration.",
+            "check": {
+              "question": "Which sentence is most likely from a narration passage?",
+              "options": [
+                "Photosynthesis converts light energy into chemical energy.",
+                "First, heat the water, then add the powder.",
+                "She left at dawn and returned after dark.",
+                "Cities are more efficient than villages."
+              ],
+              "answer": 2,
+              "why": "It reports two events in time; the others explain, instruct or argue."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "Both passages move, but only one moves through time.",
+              "columns": [
+                "Narration",
+                "Exposition"
+              ],
+              "rows": [
+                {
+                  "feature": "Organising idea",
+                  "left": "Time and consequence",
+                  "right": "Logic and explanation"
+                },
+                {
+                  "feature": "Signal words",
+                  "left": "when, later, finally",
+                  "right": "because, therefore, first"
+                },
+                {
+                  "feature": "Unit",
+                  "left": "An event",
+                  "right": "A step or cause"
+                },
+                {
+                  "feature": "Question",
+                  "left": "What happened next?",
+                  "right": "How does it work?"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
             "heading": "Where the answers sit",
             "paragraphs": [
-              "Three questions come up again and again in narrations. Which came first? Which event caused the change? And what does the ending suggest the writer wants you to feel?",
-              "The first two are answered by the order of the sentences. Read the passage once as a list of events with no detail, and the order is usually obvious. The third is answered by the final image, which is nearly always doing the work the whole passage has been setting up. In a narration, the last paragraph is not decoration — it is the point of the passage."
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "content": {
-            "bullets": [
-              "JAMB's narrations are usually ordinary life — a journey, a family, a school.",
-              "A story about a flooded road is narrative; a passage about how floods form is exposition.",
-              "In narration 'why did this happen' is answered by an event, in exposition by a process."
+              "Detail questions ask what happened or who did it, and the answer is stated in the timeline. Sequence questions ask for the order, so track the time markers rather than the paragraph order when a flashback appears.",
+              "Inference questions ask why a character acted or what a remark suggests. The answer must be supported by behaviour, dialogue or consequence, not by your sympathy for the character.",
+              "Main-idea questions ask what the passage shows about a person or situation. The answer usually names a change, a lesson or a tension, not a single event."
             ],
-            "heading": "How JAMB uses it",
-            "paragraphs": [
-              "JAMB's narration is usually a story of ordinary life — a journey, a family, a school, a piece of luck or misfortune — rather than history or politics. Around two hundred words, and again from some discipline: a passage about a flooded road is a narrative; a passage about how a flood forms is exposition, even though both mention water.",
-              "The distinction is worth holding firmly, because the questions in the two are different. In a narration the answer to 'why did this happen' is an event. In an exposition it is a process."
-            ]
+            "bullets": [
+              "Detail questions follow the timeline.",
+              "Inference rests on behaviour and consequence.",
+              "Main idea names the change, not one event."
+            ],
+            "takeaway": "A narration answer must be earned by something a character did or said.",
+            "check": {
+              "question": "A character gives away his last money and then walks home hungry. What does the passage most likely show?",
+              "options": [
+                "his wealth",
+                "his generosity and its cost",
+                "his skill at bargaining",
+                "his fear of travel"
+              ],
+              "answer": 1,
+              "why": "The two events together show a generous act and its consequence, which is the kind of change a main-idea question rewards."
+            }
           }
         },
         {
           "type": "callout",
           "content": {
-            "body": "In a narration, the last paragraph is the answer to the mood question. Read it on its own — as a paragraph about nothing but the ending — and ask what it makes you feel. Then match that feeling to the options.",
+            "title": "Exam tip",
             "tone": "tip",
-            "title": "Exam tip"
+            "body": "When a narration question asks why, find the sentence just before the action. Motive is usually shown by what the character has just seen, lost or remembered."
           }
         },
         {
           "type": "worked_example",
           "content": {
+            "problem": "A passage says the lorry was due at dawn, the driver arrived after the market had started, and he unloaded what he had and went home. A question asks what the ending suggests about his feelings.",
             "steps": [
               {
-                "reason": "The change happens where the lorry's arrival is missed, not where the driver finally comes.",
-                "result": "The market started without him — that is the moment the situation changes.",
-                "operation": "Find the turning point",
-                "predictPrompt": "Which sentence actually changes the situation?"
+                "operation": "Track the timeline",
+                "reason": "The delay is the event that changes the day.",
+                "result": "He was due at dawn but arrived after trading began.",
+                "predictPrompt": "What does he do after arriving late?"
               },
               {
-                "reason": "In a narration the closing paragraph carries the mood, and it is easier to judge in isolation.",
-                "result": "'He unloaded what he had and went home.' Flat, no comment, no complaint.",
-                "operation": "Read the last paragraph alone",
-                "predictPrompt": "Does the writer say how he felt, or does the telling do it?"
-              },
-              {
-                "reason": "Writers of simple narrations rarely announce an emotion; they describe the action and let the absence of comment carry the weight.",
-                "result": "The feeling is resignation — he does the job, says nothing, goes home.",
-                "operation": "Read the flatness as the feeling",
-                "predictPrompt": "Which option says resignation rather than anger, indifference or relief?"
-              },
-              {
-                "reason": "The correct option states the feeling the passage supports, not one it merely permits.",
-                "result": "The option about quiet disappointment or resignation.",
-                "operation": "Match it to the option",
+                "operation": "Read the final action",
+                "reason": "In narration, feelings are shown through what a character does.",
+                "result": "He unloads and leaves instead of staying to sell.",
                 "predictPrompt": ""
+              },
+              {
+                "operation": "Infer the feeling",
+                "reason": "The action must support the inference without contradicting the text.",
+                "result": "He is resigned or defeated, not cheerful about the delay."
               }
-            ],
-            "problem": "A narration passage runs: 'The lorry had been due at dawn... By the time the driver finally turned onto the road, the market had already started without him.' Then: 'He unloaded what he had and went home.' A question asks what the ending suggests about the driver's feelings."
+            ]
           }
         },
         {
           "type": "guided_question",
           "content": {
+            "question": "A story says a boy laughed as his paper boat spun away down the gutter. What does the detail suggest about the mood?",
             "hints": [
-              "Counting twice tells you something about the state of her mind.",
-              "Now ask what the passage never explains — is she saving, paying, stealing, or being careful?",
-              "The right option is the one the ending supports without needing that missing fact."
-            ],
-            "question": "A narration ends like this: 'She counted the money twice, put it in the tin, and turned the key.' The question asks what the ending mainly suggests. What has the writer told you about her that the ending depends on — and what has he not told you that the question is therefore not asking?"
+              "The boy's reaction is playful, not distressed.",
+              "The boat is lost, yet he laughs.",
+              "The mood is light despite the rain."
+            ]
           }
         },
         {
@@ -1539,112 +1796,175 @@
       "slug": "passage-exposition",
       "topic": "passage-exposition",
       "title": "Exposition Passages",
-      "objective": "identify the grammatical functions of words, phrases, clauses and figurative/idiomatic expressions",
-      "estimatedMinutes": 16,
+      "objective": "Map an exposition passage's process, cause or comparison, and answer from the explanation rather than from prior knowledge.",
+      "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "Exposition explains a mechanism — how it works, why it happens, how two things compare.",
-              "Each paragraph does one job, and the order of the paragraphs is the argument.",
-              "The questions ask about order and connection, not just facts."
-            ],
-            "heading": "What an exposition passage does",
+            "heading": "Exposition passages",
             "paragraphs": [
-              "An exposition passage explains how something works, why something happens, or how two things compare. Its purpose is to make a reader understand a mechanism, and it does that by taking the reader through the steps in a deliberate order.",
-              "The passage is organised, not merely arranged. Every paragraph does one job, and the order of the paragraphs is the argument. That is why the questions in an exposition passage so often ask about order and connection rather than about facts."
-            ]
+              "An exposition passage explains how something works, why it happens, or how two things differ. Its questions test whether you followed the explanation."
+            ],
+            "bullets": []
           }
         },
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "Signposting words — first, then, finally, as a result, in contrast — are the giveaway.",
-              "Expositions name a term and then explain it.",
-              "Definitions and cause-and-effect chains mean exposition, not narration."
-            ],
-            "heading": "How to recognise one",
+            "heading": "Explanation, not story",
             "paragraphs": [
-              "Signposting words are the giveaway: first, then, next, finally, as a result, consequently, in contrast, likewise, for example. Expositions use them heavily because the writer knows the reader is following a sequence and needs to be told where they are in it.",
-              "Second giveaway: the passage defines things. An exposition almost always names a term and then explains it — a solar cooker is defined and then explained; a process is named and then traced. If you find yourself reading definitions and cause-and-effect chains, you are in an exposition."
-            ]
+              "Exposition explains how something works, why something happens, or how two things differ. Its purpose is understanding, so it organises information rather than events.",
+              "Common patterns are process (first, next, finally), cause and effect (because, therefore, as a result), comparison (similarly, unlike, whereas) and classification (types, kinds, categories).",
+              "Find the pattern and you have found the passage's skeleton. A question about why a step comes before another is a process question, not a memory test. The pattern also predicts the wrong options: a process question rarely rewards a definition, and a comparison question rarely rewards a cause."
+            ],
+            "bullets": [
+              "Exposition organises information, not events.",
+              "Process, cause, comparison and classification are the main patterns.",
+              "The pattern tells you where an answer sits."
+            ],
+            "takeaway": "Name the pattern before you answer the question.",
+            "check": {
+              "question": "A passage says 'First the water is heated, then the powder is added.' Which pattern is this?",
+              "options": [
+                "comparison",
+                "process",
+                "classification",
+                "argument"
+              ],
+              "answer": 1,
+              "why": "The steps follow one another in time, which is the process pattern."
+            }
           }
         },
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "Detail questions: flatly stated in the relevant paragraph.",
-              "Order questions: where the step sits in the signposted sequence.",
-              "Coherence questions: the option naming a real dependency — cause before effect, both before comparison."
+            "heading": "Recognise it",
+            "paragraphs": [
+              "Exposition signposts its structure. Sequence words mark a process, causal words mark an explanation, and comparison words mark a contrast.",
+              "It often defines its subject before developing it: 'Photosynthesis is the process by which...' The definition is usually the topic sentence and the best answer to a main-idea question. Read the first two sentences together: the definition names the subject, and the next sentence usually begins the explanation.",
+              "Unlike argumentation, exposition does not try to persuade you to agree. It may recommend a step, but its main job is to make the mechanism clear."
             ],
+            "bullets": [
+              "Signpost words reveal the pattern.",
+              "A definition often opens the passage.",
+              "Exposition explains; it does not take sides."
+            ],
+            "takeaway": "Exposition wants you to understand, not to agree.",
+            "check": {
+              "question": "Which word most strongly signals a cause-and-effect explanation?",
+              "options": [
+                "unlike",
+                "therefore",
+                "first",
+                "for example"
+              ],
+              "answer": 1,
+              "why": "'Therefore' marks a result, which is the core of a cause-and-effect explanation."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "Explanation and persuasion can share a topic but not a purpose.",
+              "columns": [
+                "Exposition",
+                "Argumentation"
+              ],
+              "rows": [
+                {
+                  "feature": "Purpose",
+                  "left": "Make a mechanism clear",
+                  "right": "Win agreement"
+                },
+                {
+                  "feature": "Structure",
+                  "left": "Steps, causes or contrasts",
+                  "right": "Claim, reasons, evidence"
+                },
+                {
+                  "feature": "Signal words",
+                  "left": "first, because, whereas",
+                  "right": "therefore, clearly, must"
+                },
+                {
+                  "feature": "Test",
+                  "left": "Can you explain it now?",
+                  "right": "Are you persuaded?"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
             "heading": "Where the answers sit",
             "paragraphs": [
-              "Detail questions in an exposition are answered flatly from the relevant paragraph. Order questions are answered by where a step sits in the signposted sequence. And the hardest type — the coherence question — asks you why one step has to come before another, which means you have to hold two paragraphs in mind at once.",
-              "The coherence questions are where expository passages earn their difficulty. The answer is always the one that names a real dependency: you cannot measure the effect before you have described the cause, you cannot compare two things before you have described either."
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "content": {
-            "bullets": [
-              "JAMB's expositions are usually scientific, technical or economic processes.",
-              "One main-idea question, one or two details, one vocabulary, one on order or connection.",
-              "The signposts are the structure — that is where the order question is answered."
+              "Process questions ask what happens at a stage or why the order matters; the answer is in the sequence, often in one sentence.",
+              "Cause questions ask why something happens; the answer is the stated cause, not the result. Comparison questions ask for a difference; the answer is usually the clause after 'whereas' or 'unlike'.",
+              "Main-idea questions ask what the passage explains. Choose the option that names the whole mechanism, not one stage of it. A detail question may quote a single stage, so check that the option names the stage the question asks about."
             ],
-            "heading": "How JAMB uses it",
-            "paragraphs": [
-              "JAMB's expository passages are usually about a scientific, technical or economic process — how something works or how something is made. Two hundred words, and quite dense, because an exposition cannot waste a word.",
-              "The questions follow the structure: one on the main idea, one or two on detail, one on vocabulary in context, and one on the order or connection between steps. Learn to read the signposts: they are not decoration, they are the structure of the passage and they are where the order question is answered."
-            ]
+            "bullets": [
+              "Process answers sit in the sequence.",
+              "Cause answers name the cause, not the result.",
+              "Main idea names the whole mechanism."
+            ],
+            "takeaway": "Answer from the explanation's own structure, not from the topic's general facts.",
+            "check": {
+              "question": "A question asks why the water rises in the tube. Which answer is correct?",
+              "options": [
+                "the result of the water rising",
+                "the stated cause earlier in the process",
+                "a fact about water in general",
+                "the last stage of the process"
+              ],
+              "answer": 1,
+              "why": "A why-question asks for the cause, which the passage states before or alongside the result."
+            }
           }
         },
         {
           "type": "callout",
           "content": {
-            "body": "Write the signposting words down as you read an exposition — first, then, as a result — and number the steps. When the order question comes, you will have the answer before you read the options, and you can rule out every option that puts a later step before an earlier one.",
+            "title": "Exam tip",
             "tone": "tip",
-            "title": "Exam tip"
+            "body": "Underline the signpost words as you read. They mark the steps, causes and contrasts that the questions will ask about."
           }
         },
         {
           "type": "worked_example",
           "content": {
+            "problem": "A passage explains: 'First, the tube is filled with water. Next, the flame is placed beneath it. As a result, the water rises.' A question asks why the filling step must come before the heating step.",
             "steps": [
               {
-                "reason": "The signposting words mark them: first, next, as a result.",
-                "result": "Three steps — fill, heat, rise.",
-                "operation": "Locate the steps",
-                "predictPrompt": "What does 'as a result' tell you about the relationship between step three and the others?"
+                "operation": "Identify the pattern",
+                "reason": "The words first, next and as a result mark a process with a cause.",
+                "result": "This is a process explanation.",
+                "predictPrompt": "What does the flame do to the water?"
               },
               {
-                "reason": "You cannot heat what is not there, and you cannot see a rise in an empty tube. The cause has to exist before the effect can be observed.",
-                "result": "Filling must precede heating, which must precede the observed rise.",
-                "operation": "Name the dependency",
-                "predictPrompt": "So what is the rule the correct option will state?"
-              },
-              {
-                "reason": "An option that says heating may come first, or that the order does not matter, contradicts the passage's own causal chain.",
-                "result": "Only the option saying the tube must contain water before heating can produce the described result survives.",
-                "operation": "Test the options against the rule",
+                "operation": "Locate the causal link",
+                "reason": "The result clause tells you what the earlier steps produce.",
+                "result": "Heating causes the water to rise, so the water must already be there.",
                 "predictPrompt": ""
+              },
+              {
+                "operation": "Choose the option that states the dependency",
+                "reason": "The answer must explain the order, not merely repeat it.",
+                "result": "The filling must come first because there is nothing to heat otherwise."
               }
-            ],
-            "problem": "An exposition passage runs: 'First, the tube is filled with water... Next, the flame is placed beneath it... As a result, the water rises in the tube.' A question asks: 'Why must the filling step come before the heating step?'"
+            ]
           }
         },
         {
           "type": "guided_question",
           "content": {
+            "question": "A passage says, 'Unlike a mirror, a lens bends light as it passes through.' What is the passage contrasting?",
             "hints": [
-              "What happens if the valves stayed open while the piston rose?",
-              "The piston rising pushes water up the pipe — but what does it push it into if the valve is still open?",
-              "The correct option states the dependency, not just the sequence."
-            ],
-            "question": "An exposition explains how a water pump lifts water from a borehole. It says, 'First, the piston descends, drawing water into the cylinder. Then the valves close and the piston rises, pushing the water up the pipe.' A question asks why the valves must close before the piston rises. Work out the dependency before you look at any option."
+              "'Unlike' marks a contrast.",
+              "One object reflects; the other bends light.",
+              "The answer is the difference between a mirror and a lens."
+            ]
           }
         },
         {
@@ -1834,112 +2154,175 @@
       "slug": "passage-argumentation",
       "topic": "passage-argumentation",
       "title": "Argumentation and Persuasion",
-      "objective": "deduce or infer the writers’ intentions including mood, attitude to the subject matter and opinion",
-      "estimatedMinutes": 16,
+      "objective": "Separate an argument's claim from its reasons and evidence, and infer the writer's purpose and attitude from tone.",
+      "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "Argumentation defends a position — it is not balanced.",
-              "The structure is: take a position, concede the strongest objection, defeat the objection.",
-              "Opening praise does not mean the writer supports the policy; the structure gives the verdict."
-            ],
-            "heading": "What an argumentation passage does",
+            "heading": "Argumentation and persuasion",
             "paragraphs": [
-              "An argumentation passage defends a position. It is not balanced — it is written to move you — and it works by taking a position, conceding the strongest objection, and then defeating that objection.",
-              "This is the structure that catches candidates. A passage that opens by praising a policy can still be arguing against it. And a passage that agrees with an option you like can still be arguing for the opposite. The structure tells you the verdict; the surface tells you the topic."
-            ]
+              "An argument passage wants you to accept a position. Its questions ask what the writer claims, why, and how the writer feels about the issue."
+            ],
+            "bullets": []
           }
         },
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "'However', 'but', 'yet', 'the point is' mark where the argument turns.",
-              "A concession arrives with 'it is true that' and is followed by the killing move.",
-              "The closing sentence is usually the verdict, often phrased as an instruction."
-            ],
-            "heading": "How to recognise one",
+            "heading": "A claim with reasons",
             "paragraphs": [
-              "Look for the argumentative move words. 'However', 'but', 'yet', 'in fact', 'the point is', 'the real question is', 'it is true that' are the writer telling you where the argument turns. A concession usually arrives in its own sentence, introduced by 'it is true that' or 'the difficulty is' — and it is followed by the killing move.",
-              "Then look at the closing. An argumentation passage almost always ends with the writer's recommendation, often as an instruction — 'build this first', 'stop doing that', 'change the rule'. The last sentence is the verdict."
-            ]
+              "Argumentation tries to persuade. It states a claim, supports it with reasons and evidence, and often answers an objection. Your job is to separate the claim from the support.",
+              "The claim is what the writer wants you to accept; the reasons explain why; the evidence makes the reasons credible. A counterargument shows the writer has considered the other side, not that the writer agrees with it.",
+              "Tone is part of the argument. Words such as clearly, surely and no doubt signal confidence, while admittedly and although signal concession. An evaluative adjective such as reckless, sensible or overdue is often the quickest route to the writer's attitude."
+            ],
+            "bullets": [
+              "The claim is the position.",
+              "Reasons and evidence support it.",
+              "Concession is not agreement."
+            ],
+            "takeaway": "Find the conclusion first, then see which reasons serve it.",
+            "check": {
+              "question": "A writer says 'Admittedly, the charge is unpopular, but it is necessary.' What is the writer doing?",
+              "options": [
+                "rejecting the charge",
+                "conceding a point before defending the charge",
+                "describing how the charge works",
+                "reporting someone else's view"
+              ],
+              "answer": 1,
+              "why": "'Admittedly' concedes an unpopular feature, while 'but it is necessary' returns to the writer's position."
+            }
           }
         },
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "The central claim is in the last paragraph, not the first.",
-              "The concession question points to the sentence introducing the objection.",
-              "Read the writer's opinion, not yours: underline their evaluative words."
+            "heading": "Recognise it",
+            "paragraphs": [
+              "Look for evaluative language, a position on a disputed question, and connectives such as therefore, because and however. These mark the move from reason to conclusion. A passage that only reports what people said, without evaluating it, is closer to reportage than argument.",
+              "Distinguish argument from exposition. Exposition explains a mechanism; argumentation takes sides. A passage can explain a policy and still argue for it, so identify the conclusion first.",
+              "Beware of a balanced passage. A writer may present both sides and still commit to one in the last paragraph; the conclusion, not the balance, is the position."
             ],
+            "bullets": [
+              "Evaluative words signal a stance.",
+              "Connectives mark reason and conclusion.",
+              "A balanced passage can still take sides."
+            ],
+            "takeaway": "The last paragraph often reveals which side the writer has chosen.",
+            "check": {
+              "question": "Which sentence is argument rather than exposition?",
+              "options": [
+                "The engine converts heat into motion.",
+                "First, the mixture is compressed.",
+                "This policy is unfair and should be repealed.",
+                "The process has three stages."
+              ],
+              "answer": 2,
+              "why": "It evaluates the policy and recommends an action, which is a claim; the others explain."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "Both can discuss the same policy, but only one asks you to agree.",
+              "columns": [
+                "Argumentation",
+                "Exposition"
+              ],
+              "rows": [
+                {
+                  "feature": "Aim",
+                  "left": "Persuade the reader",
+                  "right": "Explain the subject"
+                },
+                {
+                  "feature": "Backbone",
+                  "left": "Claim, reasons, evidence",
+                  "right": "Steps, causes or contrasts"
+                },
+                {
+                  "feature": "Tone",
+                  "left": "Evaluative and committed",
+                  "right": "Neutral and informative"
+                },
+                {
+                  "feature": "Question",
+                  "left": "What does the writer want?",
+                  "right": "How does it work?"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
             "heading": "Where the answers sit",
             "paragraphs": [
-              "The central claim question is answered by the last paragraph, not the first. The first paragraph sets up the problem; the last one tells you which side the writer is on. The concession question is answered by the sentence that introduces the objection. The mood question is answered by the words the writer uses about the opposing side — contempt, grudging respect, or plain statement.",
-              "The most valuable skill here is reading the writer's opinion rather than your own. If you think congestion charging is unfair, and the passage thinks it is right, you must still answer from the passage. Underline the writer's evaluative words — reasonable, wrong, absurd, cannot — and the position becomes visible."
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "content": {
-            "bullets": [
-              "JAMB's arguments are civic, educational or social questions with defensible answers on both sides.",
-              "Distractors are built from the other side — reasonable-sounding, but not the writer's argument.",
-              "You reject an option because the writer did not argue it, not because it is wrong."
+              "Purpose questions ask what the writer wants to achieve, and the answer is the claim plus the action it recommends. Attitude questions ask how the writer feels, and the answer is carried by evaluative words and tone.",
+              "Inference questions ask what the writer assumes or implies. The answer must be a belief the argument needs, not a fact the passage merely mentions.",
+              "Detail questions ask what support is offered. Match the reason to the claim it supports, because an option can be true and still support a different point."
             ],
-            "heading": "How JAMB uses it",
-            "paragraphs": [
-              "JAMB's argumentative passages take a position on a civic, educational or social question — school uniforms, exam reform, road safety, money in politics. Around two hundred words, from some discipline, and usually on a question with a defensible answer on both sides.",
-              "Because both sides are defensible, the distractors are built from the other side. An option arguing the opposite case will sound perfectly reasonable, and you reject it because the writer did not argue it."
-            ]
+            "bullets": [
+              "Purpose = claim plus recommended action.",
+              "Attitude = evaluative language.",
+              "Support must serve the stated claim."
+            ],
+            "takeaway": "An argument answer must connect a reason to the writer's conclusion.",
+            "check": {
+              "question": "A writer argues for a charge and then says the money will fund buses. Why is the bus detail there?",
+              "options": [
+                "to explain how buses work",
+                "to support the charge by answering a likely objection",
+                "to oppose the charge",
+                "to describe the city"
+              ],
+              "answer": 1,
+              "why": "The detail answers the objection that a charge alone would not help commuters, so it supports the claim."
+            }
           }
         },
         {
           "type": "callout",
           "content": {
-            "body": "Write down the writer's position in your own words before you look at the options. If your sentence says 'the writer wants', you have found the claim. Options that argue the opposite case will then be obvious, even when they are reasonable.",
+            "title": "Exam tip",
             "tone": "tip",
-            "title": "Exam tip"
+            "body": "A concessive sentence is not the writer's conclusion. Read past 'although' and 'admittedly' to the clause after 'but'."
           }
         },
         {
           "type": "worked_example",
           "content": {
+            "problem": "A writer says there is no doubt the roads are overcrowded, that change must be affordable, and ends: 'Improve the alternative first. Then restrict.' A question asks for the writer's purpose.",
             "steps": [
               {
-                "reason": "The sentence beginning 'It is also true' grants something to the other side. That is the concession, not the claim.",
-                "result": "The concession is that the change must be affordable.",
-                "operation": "Mark the concession",
-                "predictPrompt": "Is that sentence granting a point, or making the argument?"
+                "operation": "Separate claim from concession",
+                "reason": "The opening agrees the roads are overcrowded, which is common ground rather than the argument.",
+                "result": "The claim is about how to change, not whether to change.",
+                "predictPrompt": "What action does the writer recommend?"
               },
               {
-                "reason": "An argumentation passage ends with the recommendation.",
-                "result": "'Improve the alternative first. Then restrict.' The priority is the alternative.",
-                "operation": "Read the closing as the verdict",
-                "predictPrompt": "Which option puts the alternative first, as the closing does?"
-              },
-              {
-                "reason": "A contradicts the passage, C is an extreme position the writer never takes, D is a detail the passage does not contain.",
-                "result": "Only B survives: a cheap charge alone cannot fix congestion.",
-                "operation": "Test the remaining options",
+                "operation": "Read the recommendation",
+                "reason": "In persuasion, the purpose is usually the action urged on the reader.",
+                "result": "Improve alternatives before restricting cars.",
                 "predictPrompt": ""
+              },
+              {
+                "operation": "Choose the option that matches",
+                "reason": "The answer must include the recommendation, not just the problem.",
+                "result": "The writer wants affordable alternatives before any restriction."
               }
-            ],
-            "problem": "A passage opens: 'There is no doubt that our roads are overcrowded and that something must change.' It continues: 'It is also true that the change must be affordable...' and ends: 'Improve the alternative first. Then restrict.' A question asks: 'The writer's purpose is to' — A argue that nothing should change, B show that a cheap charge alone cannot fix congestion, C prove that city centres should be closed to traffic, D explain how a particular road project was funded."
+            ]
           }
         },
         {
           "type": "guided_question",
           "content": {
+            "question": "A writer says, 'Some claim the tax will hurt small shops. In fact, small shops will be exempt.' What is the writer doing?",
             "hints": [
-              "'It would be easy to say' is not the writer's own view — whose view is it?",
-              "Then: the writer disagrees, but the disagreement is qualified by 'but they do not tell the whole one'.",
-              "So the writer is not simply refuting — the concession is doing real work. Which option says that?"
-            ],
-            "question": "An argumentative passage says: 'It would be easy to say the scheme has failed. The figures tell a different story, but they do not tell the whole one.' A question asks what the writer is doing at that point. Before you look at the options, decide: is the writer conceding, rebutting, or setting up a qualification?"
+              "The first sentence reports an objection.",
+              "The second answers it with a fact.",
+              "The writer is defending the tax, not opposing it."
+            ]
           }
         },
         {
@@ -2134,113 +2517,166 @@
       "slug": "cloze-test-technique",
       "topic": "cloze-test-technique",
       "title": "The Cloze Test",
-      "objective": "identify the grammatical functions of words, phrases, clauses and figurative/idiomatic expressions",
-      "estimatedMinutes": 15,
+      "objective": "Restore missing words by using the passage's meaning, grammar and collocation rather than guessing from the gap alone.",
+      "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "Ten gaps, ten marks, from one passage of about two hundred words.",
-              "You cannot read a cloze as a comprehension passage — the gaps have to be filled first.",
-              "Understanding the passage only helps once you already know the grammar."
+            "heading": "The cloze test",
+            "paragraphs": [
+              "A cloze passage removes words and asks you to restore them. The missing word must fit both the meaning of the sentence and its grammar."
             ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
             "heading": "What a cloze test is",
             "paragraphs": [
-              "A cloze passage has gaps in it. Each gap is one missing word, and you decide which word belongs there. Ten gaps, ten marks, from a single passage of about two hundred words.",
-              "The trap is that a cloze passage looks like a comprehension passage and invites you to read it as one. You cannot. You do not know what the story is about until you have filled the gaps, and you cannot fill the gaps by understanding the story unless you already know the grammar."
-            ]
+              "A cloze passage removes words at regular intervals and asks you to restore them. The missing word must fit both the meaning of the sentence and its grammar.",
+              "The passage is about two hundred words and usually comes from a science, history or everyday topic. Read the whole passage once before filling any gap, because the topic and tone constrain every choice.",
+              "Do not treat gaps as separate puzzles. A gap may depend on a word two sentences earlier, especially when the missing word is a pronoun, a conjunction or a repeated noun."
+            ],
+            "bullets": [
+              "Meaning and grammar must both fit.",
+              "Read the whole passage first.",
+              "A gap can depend on earlier sentences."
+            ],
+            "takeaway": "A gap is a hole in a passage, not a question on its own.",
+            "check": {
+              "question": "What should you do before filling the first gap?",
+              "options": [
+                "choose the longest option",
+                "read the whole passage once",
+                "count the gaps",
+                "memorise the options"
+              ],
+              "answer": 1,
+              "why": "The passage's topic, tone and grammar constrain every gap, so a first read prevents local guesses."
+            }
           }
         },
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "Go to the gap, not to the passage. Read the one sentence the gap sits in.",
-              "Ask what the sentence needs: a verb, a noun, an article, a preposition, a tense.",
-              "Find the subject to place a verb; find the verb to place a noun."
-            ],
-            "heading": "How to attack each gap",
+            "heading": "Attack each gap",
             "paragraphs": [
-              "Do not read the whole passage for meaning. Go to the gap. Read the sentence it sits in, and only that sentence, and ask what the sentence needs: a subject or a verb, an article or no article, a preposition, a particular tense, a singular or plural noun.",
-              "Then check the whole clause. Look left and right of the gap for the subject and the verb, and decide which of them the missing word must be. A gap that needs a verb is a gap you solve by finding the subject; a gap that needs a noun is a gap you solve by finding the verb. Deciding which one you need is most of the work."
-            ]
+              "Read the sentence before and after the gap. Identify what the missing word must do: name, connect, modify, or carry the verb's tense and agreement. The sentence after the gap often supplies the consequence that confirms your choice.",
+              "Predict a word before you look at the options. Then test each option in the gap and re-read the sentence. The correct option fits the grammar and keeps the meaning.",
+              "If two options fit, check collocation and register. 'Make a decision' beats 'do a decision', and a formal passage rejects slang even when the meaning is close."
+            ],
+            "bullets": [
+              "Read around the gap.",
+              "Predict before you look at the options.",
+              "Test grammar, meaning and collocation."
+            ],
+            "takeaway": "Predict first, then let the options confirm or correct you.",
+            "check": {
+              "question": "Two options fit the meaning of a gap. What should you check next?",
+              "options": [
+                "the option's length",
+                "collocation and register",
+                "the first letter",
+                "the number of syllables"
+              ],
+              "answer": 1,
+              "why": "When meaning ties, fixed word partnerships and the passage's formality decide."
+            },
+            "visual": {
+              "kind": "flow",
+              "caption": "Work from the whole passage down to the single word.",
+              "steps": [
+                {
+                  "label": "Read the passage"
+                },
+                {
+                  "label": "Read around the gap"
+                },
+                {
+                  "label": "Predict a word"
+                },
+                {
+                  "label": "Test each option"
+                },
+                {
+                  "label": "Re-read the sentence"
+                }
+              ]
+            }
           }
         },
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "Verb form and tense, including the passive.",
-              "Subject-verb agreement with a phrase between subject and verb.",
-              "Articles, prepositions, relative pronouns, participles, conjunctions, comparatives.",
-              "If you can name the gap type, you can often solve it without knowing the word."
-            ],
-            "heading": "The seven gap types that cover almost everything",
+            "heading": "Gap types and traps",
             "paragraphs": [
-              "Most JAMB cloze gaps fall into a small number of types, and if you can name the type you can usually solve the gap even when you do not know the word.",
-              "Verb form and tense, including the passive. Subject-verb agreement, especially where a phrase sits between the two. Articles — a, an, the, or none. Prepositions, especially of and for. Relative pronouns, and participles used as adjectives. Conjunctions, where the gap joins two clauses and the meaning of the second depends on the first. And comparatives, where one word in the sentence sets the standard."
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "content": {
-            "bullets": [
-              "'Does not show', 'never showed' and 'hardly showed' make different claims.",
-              "A gap after 'does not' cannot also be 'never' — check the logic, not just the grammar.",
-              "The negative must fit what the sentence can support."
+              "Most gaps test one of a few types: prepositions (depend on), conjunctions (although, because), pronouns (it, they), articles (a, an, the), verb forms (has gone, went), quantifiers (much, many) and vocabulary in context.",
+              "The trap is a word that fits the meaning but not the grammar, or the grammar but not the meaning. A singular subject still needs a singular verb, and a countable noun still needs many or fewer.",
+              "Watch the words around the gap for number, tense and polarity. A negative sentence may need 'anything' rather than 'something', and a past-time marker may rule out the present perfect."
             ],
-            "heading": "The trap in gap 7 and its cousins",
-            "paragraphs": [
-              "One type appears over and over because it is the one candidates cannot do: a negative or limiting word in a sentence that already contains a negative. 'Does not show', 'never showed', 'hardly showed' — these are not interchangeable. 'Does not show' means the passage does not do the thing. 'Never showed' says it never happened at all, which is a stronger and different claim.",
-              "When you see a gap that could be a negative of any strength, decide which one the sentence can support. A gap after 'does not' cannot also be 'never'. Read the whole clause and check that your word fits it logically, not just grammatically."
-            ]
+            "bullets": [
+              "Identify the grammatical job of the gap.",
+              "Meaning without grammar is a trap.",
+              "Check number, tense and polarity."
+            ],
+            "takeaway": "The right option satisfies both the sentence's grammar and its sense.",
+            "check": {
+              "question": "The gap reads 'She ______ to school yesterday.' Which option is correct?",
+              "options": [
+                "has gone",
+                "went",
+                "is going",
+                "goes"
+              ],
+              "answer": 1,
+              "why": "'Yesterday' marks a definite past time, so the simple past 'went' is required."
+            }
           }
         },
         {
           "type": "callout",
           "content": {
-            "body": "Underline the subject and the verb of the sentence around each gap before you choose. The moment you know whether the gap needs a verb or a noun, half the options disappear — and the ones left are usually wrong on tense or agreement, not on meaning.",
+            "title": "Exam tip",
             "tone": "tip",
-            "title": "Exam tip"
+            "body": "Say the sentence aloud with your chosen word. Grammar errors and awkward partnerships are easier to hear than to see."
           }
         },
         {
           "type": "worked_example",
           "content": {
+            "problem": "A gap reads: 'The leaves were (1)____ blue-black when the iodine solution was applied.' Options: turned, grew, dried, fell.",
             "steps": [
               {
-                "reason": "There is no auxiliary like 'were to be' doing the work, so the gap is the main verb of the clause.",
-                "result": "The gap needs a verb, in the past tense, agreeing with 'the leaves'.",
-                "operation": "Name what the gap needs",
-                "predictPrompt": "Which of the four options is a verb that can describe a change of colour?"
+                "operation": "Read around the gap",
+                "reason": "The clause describes a change caused by the iodine.",
+                "result": "The leaves changed colour when the solution was applied.",
+                "predictPrompt": "Which verb describes a colour change?"
               },
               {
-                "reason": "Grammar narrows the field but sense decides among the survivors.",
-                "result": "Grew, dried and fell cannot be followed by 'blue-black' as a description of an iodine test. 'Turned blue-black' can.",
-                "operation": "Test each option for sense",
-                "predictPrompt": "So which one survives both the grammar and the sense?"
-              },
-              {
-                "reason": "One option survives both tests.",
-                "result": "A — turned.",
-                "operation": "Choose",
+                "operation": "Test the options",
+                "reason": "Each option must fit the grammar and the scientific sense.",
+                "result": "'Turned' fits the change; 'grew' and 'dried' do not describe colour, and 'fell' is unrelated.",
                 "predictPrompt": ""
+              },
+              {
+                "operation": "Re-read the sentence",
+                "reason": "The chosen word must sound natural in the whole clause.",
+                "result": "'The leaves turned blue-black when the iodine solution was applied.'"
               }
-            ],
-            "problem": "A gap in a cloze passage: 'The leaves were (1)____ blue-black when the iodine solution was applied.' Options: A turned, B grew, C dried, D fell."
+            ]
           }
         },
         {
           "type": "guided_question",
           "content": {
+            "question": "A gap reads: 'Neither the teacher nor the students ______ present.' Choose was or were, and explain why.",
             "hints": [
-              "The subject is 'the results' — plural. The verb is 'were' — also plural, and past.",
-              "Now: which option agrees with a plural past subject and follows 'were'?",
-              "Check the last one — a participle cannot follow 'were' as a main verb."
-            ],
-            "question": "A cloze sentence: 'The results were (1)____ positive in every case.' Options: A remain, B remained, C remains, D remaining. Before you look for the reasoning, find the subject and the verb already in the sentence."
+              "Find the nearer subject.",
+              "'Students' is plural.",
+              "The verb agrees with the nearer subject after 'neither ... nor'."
+            ]
           }
         },
         {
@@ -2590,114 +3026,167 @@
       "slug": "synonyms",
       "topic": "synonyms",
       "title": "Synonyms",
-      "objective": "determine similar and opposite meanings of words",
-      "estimatedMinutes": 12,
+      "objective": "Choose the option nearest in meaning to a word as it is used in a sentence, allowing for shade, formality and collocation.",
+      "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "A synonym is a word that has the same or nearly the same meaning as another word.",
-              "Synonyms give writers and speakers options.",
-              "No two synonyms are exactly identical in meaning, tone, or formality."
-            ],
-            "heading": "What Are Synonyms?",
+            "heading": "Synonyms",
             "paragraphs": [
-              "A synonym is a word that has the same or nearly the same meaning as another word. For example, big and large mean almost the same thing, so they are synonyms.",
-              "Synonyms give writers and speakers options. Instead of saying happy every time, you can say joyful, delighted, pleased, or cheerful, depending on the exact shade of meaning you want.",
-              "But synonyms are rarely exact duplicates. Each word carries its own shade of meaning, tone, and level of formality. That is why choosing the right synonym matters in exams."
-            ]
+              "A candidate replaces 'pleased' with 'delighted' and the sentence still stands, but replacing it with 'angry' breaks it. Synonym items ask for the nearest meaning, not any word from a thesaurus."
+            ],
+            "bullets": []
           }
         },
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "JAMB tests whether you understand vocabulary in context.",
-              "You must choose the synonym that fits the sentence.",
-              "Context determines which synonym is correct."
-            ],
-            "heading": "Why Synonyms Matter in JAMB English",
+            "heading": "Meaning is a shade, not an identity",
             "paragraphs": [
-              "JAMB setters test synonyms because they want to see whether you understand vocabulary in context, not just whether you can memorise word lists. They will ask you to replace a word in a sentence with another word that keeps the meaning intact.",
-              "To do this well, you must look at the whole sentence, not just the target word. A word that is a synonym in one context may be wrong in another.",
-              "For example, bright can mean clever, cheerful, or luminous depending on context. You must choose the synonym that fits the sentence."
-            ]
+              "A synonym shares a word's core meaning but rarely all of it. Big and large are close, yet 'a big brother' is not 'a large brother', because big also carries importance and age.",
+              "Synonyms differ in intensity, formality and connotation. Angry, furious and livid rise in intensity; begin and commence differ in formality; childlike and childish share a root but one praises and the other criticises.",
+              "JAMB tests this precision. The correct option must keep the sentence's meaning, tone and grammar, so a word that is merely related is a distractor rather than an answer."
+            ],
+            "bullets": [
+              "Synonyms share a core meaning, not every shade.",
+              "Intensity and formality separate close pairs.",
+              "The option must fit the sentence's tone."
+            ],
+            "takeaway": "Pick the word that preserves the sentence, not the word that merely looks related.",
+            "check": {
+              "question": "Which word is nearest in meaning to 'furious'?",
+              "options": [
+                "annoyed",
+                "angry",
+                "enraged",
+                "irritated"
+              ],
+              "answer": 2,
+              "why": "Furious is stronger than annoyed, angry or irritated; enraged matches its intensity."
+            }
           }
         },
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "Read the whole sentence before choosing.",
-              "Identify the word being tested and its meaning in context.",
-              "Try each option in the sentence.",
-              "Eliminate options that change meaning or do not fit grammatically."
-            ],
-            "heading": "How to Choose the Right Synonym",
+            "heading": "Choose by context",
             "paragraphs": [
-              "Follow these steps when answering synonym questions:",
-              "1. Read the whole sentence carefully.",
-              "2. Identify the word or phrase being tested.",
-              "3. Think of what that word means in this exact sentence.",
-              "4. Try each option in the sentence and see which one fits.",
-              "5. Eliminate options that change the meaning or do not fit grammatically."
-            ]
+              "Read the whole sentence before looking at the options. Identify the sense the target word carries there, because a word with several senses may need a different synonym in each.",
+              "'Bright' means clever in 'a bright student', cheerful in 'a bright smile', and luminous in 'a bright lamp'. Only the sentence tells you which sense is live at that point.",
+              "Predict a word of your own, then test the options by inserting each one. The option that fits without changing the meaning, tone or grammar is the answer."
+            ],
+            "bullets": [
+              "Read the sentence before the options.",
+              "Decide which sense the word carries there.",
+              "Insert each option and re-read the whole sentence carefully."
+            ],
+            "takeaway": "Context chooses the sense, and the sense chooses the synonym.",
+            "check": {
+              "question": "In 'She gave a bright smile', which word is nearest in meaning to 'bright'?",
+              "options": [
+                "clever",
+                "cheerful",
+                "shiny",
+                "loud"
+              ],
+              "answer": 1,
+              "why": "A smile is cheerful rather than clever or shiny; 'bright' describes the mood, not intelligence or light."
+            },
+            "visual": {
+              "kind": "flow",
+              "caption": "Work through the sentence before you commit to an option.",
+              "steps": [
+                {
+                  "label": "Read the sentence"
+                },
+                {
+                  "label": "Identify the sense",
+                  "detail": "clever, cheerful, luminous"
+                },
+                {
+                  "label": "Predict a word"
+                },
+                {
+                  "label": "Insert each option"
+                },
+                {
+                  "label": "Check tone and grammar"
+                }
+              ]
+            }
           }
         },
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "Beware of near-synonyms – words that look similar but have different meanings.",
-              "Watch for easily confused words like emigrate vs immigrate.",
-              "Context determines the correct synonym."
-            ],
-            "heading": "Common Synonym Traps to Avoid",
+            "heading": "Traps that cost marks",
             "paragraphs": [
-              "Beware of near-synonyms – words that look similar but have different meanings. For example, emigrate (leave a country) vs immigrate (come into a country).",
-              "Another trap is choosing a word that sounds similar but means something different, like affect (verb: to influence) vs effect (noun: result). These sound similar but have different meanings and functions.",
-              "Always read the full sentence. A word that is a synonym in isolation may not work in context."
-            ]
+              "Near-synonyms are the commonest trap. Emigrate means leave a country and immigrate means enter one; they look alike but point in opposite directions. Affect is a verb and effect is a noun, so they cannot replace each other.",
+              "Watch part of speech. A noun cannot fill a slot that needs a verb, even when the meanings overlap: 'success' and 'succeed' are related, but only one fits 'she will ______'.",
+              "Watch collocation as well. We say 'heavy rain', not 'strong rain', and 'make a decision', not 'do a decision'. An option can be a true synonym and still sound wrong because English pairs words in fixed ways."
+            ],
+            "bullets": [
+              "Near-synonyms may point in opposite directions.",
+              "Match the part of speech.",
+              "Respect fixed word partnerships."
+            ],
+            "takeaway": "A synonym must fit the slot as well as the sense.",
+            "check": {
+              "question": "Choose the word nearest in meaning to 'emigrate'.",
+              "options": [
+                "enter a country",
+                "leave a country",
+                "visit a country",
+                "govern a country"
+              ],
+              "answer": 1,
+              "why": "Emigrate means to leave one's country to settle elsewhere; immigrate is the opposite direction."
+            }
           }
         },
         {
           "type": "callout",
           "content": {
-            "body": "When you see a synonym question, read the sentence with each option inserted. The word that fits naturally without changing the meaning is usually correct. If an option sounds right but changes the meaning even slightly, it is wrong.",
+            "title": "Exam tip",
             "tone": "tip",
-            "title": "Exam Tip"
+            "body": "If two options seem right, compare their intensity and formality with the original. The closer pair usually turns on one of those two features."
           }
         },
         {
           "type": "worked_example",
           "content": {
+            "problem": "Choose the word nearest in meaning to the capitalised word: 'The teacher was PLEASED with the students' performance.'",
             "steps": [
               {
-                "step": "Read the sentence to understand the context",
-                "prediction": "The teacher was proud of the students’ performance = the teacher was happy with how students performed."
+                "operation": "Read the sentence for sense",
+                "reason": "The adjective describes the teacher's reaction to good work.",
+                "result": "Pleased means satisfied or glad.",
+                "predictPrompt": "Which options share that sense?"
               },
               {
-                "step": "Test each option in the sentence",
-                "prediction": "The teacher was delighted with... works. The teacher was angry with... does not."
+                "operation": "Test each option",
+                "reason": "A synonym must fit the same slot without changing the meaning.",
+                "result": "'Delighted' fits; 'angry' and 'disappointed' reverse the meaning.",
+                "predictPrompt": ""
               },
               {
-                "step": "Select the best synonym",
-                "prediction": "The best synonym is the one that fits naturally and keeps the meaning."
+                "operation": "Compare the close options",
+                "reason": "When several options fit, intensity decides.",
+                "result": "'Delighted' is stronger than 'pleased' but keeps the positive sense, so it is the nearest."
               }
-            ],
-            "problem": "Choose the word that is nearest in meaning to the word in capital letters: The teacher was PLEASED with the students’ performance."
+            ]
           }
         },
         {
           "type": "guided_question",
           "content": {
+            "question": "Choose the word nearest in meaning to ENORMOUS: 'The crowd at the market was ENORMOUS.'",
             "hints": [
-              "Enormous describes something very large in size.",
-              "Look for a word that means very big.",
-              "Huge is the closest synonym."
-            ],
-            "question": "Choose the word that is nearest in meaning to the word in capital letters: The crowd at the market was ENORMOUS."
+              "Enormous describes size, not noise or mood.",
+              "Look for a word meaning very large.",
+              "Huge is the closest option."
+            ]
           }
         },
         {
@@ -2785,94 +3274,175 @@
       "slug": "antonyms",
       "topic": "antonyms",
       "title": "Antonyms",
-      "objective": "determine similar and opposite meanings of words",
-      "estimatedMinutes": 12,
+      "objective": "Identify the option opposite in meaning to a word in context, distinguishing gradable, complementary and relational opposites.",
+      "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "An antonym is a word that means the opposite of another word.",
-              "Antonyms help you express yourself precisely.",
-              "Antonyms appear often in JAMB questions."
-            ],
-            "heading": "What Are Antonyms?",
+            "heading": "Antonyms",
             "paragraphs": [
-              "An antonym is a word that means the opposite of another word. For example, hot and cold are antonyms. Happy and sad are antonyms.",
-              "Antonyms are useful because they help you describe things precisely. Instead of saying something is not big, you can say it is small. Instead of saying it is not happy, you can say it is sad or miserable.",
-              "Learning antonyms helps you express yourself precisely and understand passages better."
-            ]
+              "A sentence says the room was 'spacious', and the question asks for the opposite. 'Cramped' works, but 'small' is weaker and 'narrow' may describe only one dimension, so the kind of opposite matters."
+            ],
+            "bullets": []
           }
         },
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "First understand what the word means.",
-              "Then think of a word with the opposite meaning.",
-              "Remember that some words have multiple meanings."
-            ],
-            "heading": "How to Find Antonyms",
+            "heading": "Three kinds of opposite",
             "paragraphs": [
-              "To find an antonym, first understand what the word means. Then think of a word with the opposite meaning.",
-              "For example, if the word is hot, the opposite could be cold. If the word is rich, the opposite could be poor. If the word is honest, the opposite could be dishonest.",
-              "Be careful: some words have multiple meanings. The antonym depends on which meaning is being used. For example, light could mean dark (absence of light) or heavy (lack of weight). Context matters."
-            ]
+              "Gradable opposites sit on a scale with middle ground: hot and cold, rich and poor, tall and short. Something can be warm or neither rich nor poor, so the pair does not exhaust the possibilities.",
+              "Complementary opposites leave no middle: alive and dead, true and false, married and single. Relational opposites name two sides of one relationship: buy and sell, teacher and pupil, parent and child.",
+              "Many antonyms are built with prefixes: un-, in-, im-, il-, ir-, dis- and mis-. Happy becomes unhappy, possible becomes impossible, legal becomes illegal, and approve becomes disapprove. The prefix does not always reverse meaning, as inflammable and flammable both mean combustible."
+            ],
+            "bullets": [
+              "Gradable pairs allow a middle.",
+              "Complementary pairs allow none.",
+              "Relational pairs name two sides."
+            ],
+            "takeaway": "Name the kind of opposite before you choose the word.",
+            "check": {
+              "question": "Which pair is complementary?",
+              "options": [
+                "hot and cold",
+                "alive and dead",
+                "buy and sell",
+                "tall and short"
+              ],
+              "answer": 1,
+              "why": "Alive and dead allow no middle state; the others are gradable or relational pairs."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "The middle ground tells gradable and complementary opposites apart.",
+              "columns": [
+                "Gradable",
+                "Complementary"
+              ],
+              "rows": [
+                {
+                  "feature": "Middle ground",
+                  "left": "Warm, cool, lukewarm",
+                  "right": "None"
+                },
+                {
+                  "feature": "Example",
+                  "left": "hot / cold",
+                  "right": "alive / dead"
+                },
+                {
+                  "feature": "Test",
+                  "left": "Can it be neither?",
+                  "right": "Must it be one or the other?"
+                },
+                {
+                  "feature": "Exam use",
+                  "left": "Choose the closer extreme",
+                  "right": "Choose the true negation"
+                }
+              ]
+            }
           }
         },
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "Beware of near-antonyms - words that look similar but mean different things.",
-              "Some words do not have clear antonyms.",
-              "Context determines which antonym is correct."
-            ],
-            "heading": "Common Antonym Traps",
+            "heading": "Find the opposite in context",
             "paragraphs": [
-              "Beware of near-antonyms - words that look similar but mean different things.",
-              "Also, some words do not have clear opposites. What is the opposite of table or chair? There is no single opposite word for these.",
-              "And remember: context matters. The opposite of light could be dark (absence of light) or heavy (lack of weight). Context determines which antonym is correct."
-            ]
+              "Start with the sense the word carries in the sentence. 'Light' opposes heavy in 'a light bag', dark in 'a light room', and serious in 'a light remark'. The sentence, not the dictionary, decides.",
+              "Decide what kind of opposite the sentence sets up. If it contrasts two extremes on a scale, a gradable antonym fits; if it denies a state completely, a complementary one does.",
+              "Test each option by inserting it. The right antonym keeps the sentence logical and matches the word class. A noun needs a noun, and a verb needs a verb, even when the meanings are opposite."
+            ],
+            "bullets": [
+              "Identify the sense in context.",
+              "Decide which kind of opposite fits.",
+              "Check word class and logic."
+            ],
+            "takeaway": "The sentence fixes the sense, and the sense fixes the opposite.",
+            "check": {
+              "question": "In 'a light remark', which is the best antonym of 'light'?",
+              "options": [
+                "heavy",
+                "dark",
+                "serious",
+                "bright"
+              ],
+              "answer": 2,
+              "why": "A light remark is not serious; heavy and dark belong to the physical senses of the word."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Traps that cost marks",
+            "paragraphs": [
+              "A near-opposite is not an antonym. 'Cool' is not the opposite of 'hot' in a three-way scale if the question wants 'cold', and 'unhappy' is weaker than 'miserable'.",
+              "Beware of words that look like negatives but are not. 'Invaluable' means priceless, not worthless; 'inflammable' means combustible, not fireproof; and 'disinterested' means impartial, not uninterested.",
+              "Do not accept 'not' plus the word as an answer. An antonym is a word in its own right, and exam options rarely include a phrase such as 'not strong' when 'weak' is available."
+            ],
+            "bullets": [
+              "A near-opposite may be too weak.",
+              "Prefixes do not always negate.",
+              "'Not + word' is not an antonym."
+            ],
+            "takeaway": "Check the direction and strength of the opposite, not just its contrast.",
+            "check": {
+              "question": "Which word is the opposite of 'invaluable'?",
+              "options": [
+                "priceless",
+                "worthless",
+                "expensive",
+                "rare"
+              ],
+              "answer": 1,
+              "why": "Invaluable means priceless, so its opposite is worthless; the 'in-' prefix does not make it a negative."
+            }
           }
         },
         {
           "type": "callout",
           "content": {
-            "body": "When you see an antonym question, read the whole sentence first. The context tells you which meaning of the word is being used, and therefore which opposite is correct.",
+            "title": "Exam tip",
             "tone": "tip",
-            "title": "Exam Tip"
+            "body": "Read the sentence with the original word, then with the option. If the two versions say opposite things, you have the antonym."
           }
         },
         {
           "type": "worked_example",
           "content": {
+            "problem": "Choose the word opposite in meaning to SPACIOUS: 'The room was spacious enough for a family of six.'",
             "steps": [
               {
-                "step": "Read the sentence to understand the context",
-                "prediction": "The politician gave an honest account = the politician told the truth."
+                "operation": "Identify the sense",
+                "reason": "Spacious describes a room with plenty of space.",
+                "result": "The word means large and roomy.",
+                "predictPrompt": "Which option describes too little space?"
               },
               {
-                "step": "Test each option in the sentence",
-                "prediction": "The politician gave a dishonest account = the politician lied. This fits."
+                "operation": "Test the options",
+                "reason": "The antonym must reverse the sense, not merely differ from it.",
+                "result": "'Cramped' means too small for comfort; 'narrow' covers only width.",
+                "predictPrompt": ""
               },
               {
-                "step": "Select the best antonym",
-                "prediction": "The best antonym is dishonest."
+                "operation": "Check the sentence",
+                "reason": "The replacement must keep the sentence logical.",
+                "result": "'The room was cramped enough for a family of six' is odd, so the option describes the opposite condition rather than fitting positively."
               }
-            ],
-            "problem": "Choose the word that is nearly opposite in meaning to the word in capital letters: The politician gave an HONEST account of the events."
+            ]
           }
         },
         {
           "type": "guided_question",
           "content": {
+            "question": "Choose the word opposite in meaning to TRANSPARENT: 'The water in the stream was transparent.'",
             "hints": [
-              "Think about what hesitant means: unsure, reluctant, uncertain.",
-              "Look for a word that means unsure or unwilling.",
-              "A confident person is the opposite of hesitant."
-            ],
-            "question": "Choose the word that is nearly opposite in meaning to the word in capital letters: The student was HESITANT to answer the question in front of the class."
+              "Transparent means you can see through it.",
+              "Look for a word meaning you cannot see through it.",
+              "Opaque is the direct opposite."
+            ]
           }
         },
         {
@@ -2960,73 +3530,175 @@
       "slug": "common-grammar-errors",
       "topic": "clause-and-sentence-patterns",
       "title": "Common Grammar Errors",
-      "objective": "Tense, pronoun, and other mistakes that recur in \"choose the correct sentence\" questions.",
+      "objective": "Spot the tense, pronoun, preposition and modifier errors that recur in JAMB 'choose the correct sentence' items.",
       "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "bullets": [],
-            "heading": "Common Grammar Errors",
+            "heading": "Common grammar errors",
             "paragraphs": [
-              "Tense, pronoun, and other mistakes that recur in \"choose the correct sentence\" questions."
-            ]
+              "A candidate writes 'I have gone to school yesterday' and the time marker alone proves it wrong. Most 'choose the correct sentence' items turn on one such rule."
+            ],
+            "bullets": []
           }
         },
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "Use the simple past for a completed action with a specific past time: I went to school yesterday (not \"I have gone to school yesterday\").",
-              "Use the present perfect for a past action with present relevance and no definite time: I have finished my revision.",
-              "Use the past perfect (\"had finished\") for the earlier of two actions: By the time I arrived, the lesson had started.",
-              "Time markers decide the tense: \"two years ago\" goes with the simple past; \"since\" goes with a perfect tense.",
-              "In reported speech, shift the tense back: He said he was tired (not \"he is tired\")."
-            ],
-            "heading": "Tense errors",
+            "heading": "Tense and time markers",
             "paragraphs": [
-              "Tense questions test whether you can match the verb form to the time marker in the sentence. The time marker usually decides which option is correct."
-            ]
+              "Tense must match the time marker. A finished action with a definite past time takes the simple past: 'I went to school yesterday', not 'I have gone to school yesterday'. The present perfect suits a past action with present relevance and no definite time: 'I have finished my revision'.",
+              "'Since' and 'for' with a present result take the perfect: 'I have lived here since 2019'. The past perfect marks the earlier of two past actions: 'By the time I arrived, the lesson had started'.",
+              "Reported speech shifts the tense back when the reporting verb is past: 'He said he was tired', not 'he is tired'. Time words shift too: 'tomorrow' becomes 'the next day'."
+            ],
+            "bullets": [
+              "Definite past time takes the simple past.",
+              "Present relevance takes the present perfect.",
+              "The earlier past action takes the past perfect."
+            ],
+            "takeaway": "The time marker usually chooses the tense for you.",
+            "check": {
+              "question": "Choose the correct sentence.",
+              "options": [
+                "I have gone to school yesterday.",
+                "I went to school yesterday.",
+                "I had gone to school yesterday.",
+                "I go to school yesterday."
+              ],
+              "answer": 1,
+              "why": "'Yesterday' names a definite past time, so the simple past 'went' is required."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "The time marker separates the simple past from the present perfect.",
+              "columns": [
+                "Simple past",
+                "Present perfect"
+              ],
+              "rows": [
+                {
+                  "feature": "Time",
+                  "left": "Definite and finished",
+                  "right": "Past linked to now"
+                },
+                {
+                  "feature": "Marker",
+                  "left": "yesterday, in 2018, ago",
+                  "right": "since, for, already, yet"
+                },
+                {
+                  "feature": "Form",
+                  "left": "went, wrote, saw",
+                  "right": "have gone, have written, have seen"
+                },
+                {
+                  "feature": "Test",
+                  "left": "Can you name the time?",
+                  "right": "Does it still matter now?"
+                }
+              ]
+            }
           }
         },
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "After a preposition, use the object form: between you and me (not \"you and I\").",
-              "After \"than\" and \"as\", complete the clause mentally: She is taller than I (am).",
-              "Use reflexive pronouns only when subject and object are the same person: She dressed herself.",
-              "Every pronoun must agree with its antecedent and stay consistent: Everyone should bring their books (informal but common); avoid mixing singular and plural carelessly."
-            ],
-            "heading": "Pronoun errors",
+            "heading": "Pronouns and agreement",
             "paragraphs": [
-              "The choice between \"I\" and \"me\" depends on whether the word is doing the action (subject) or receiving it (object). Prepositions always take the object form."
-            ]
+              "Pronoun case depends on the job. Use the subject form for the doer and the object form after a preposition or verb: 'between you and me', not 'between you and I'. In formal English, complete the comparison: 'She is taller than I am'.",
+              "Reflexive pronouns need a subject to reflect: 'She dressed herself'. They cannot replace a plain subject, so 'Myself and Bola went' is wrong; say 'Bola and I went'.",
+              "Agreement follows the head noun, not the nearest noun: 'The list of items is on the desk'. With 'neither ... nor', the verb agrees with the nearer subject: 'Neither the teacher nor the students were present'."
+            ],
+            "bullets": [
+              "Subject form for the doer, object form after a preposition.",
+              "A reflexive pronoun needs a subject to reflect.",
+              "Agreement follows the head noun."
+            ],
+            "takeaway": "Find the word's job before you choose its form.",
+            "check": {
+              "question": "Choose the correct sentence.",
+              "options": [
+                "Between you and I, the plan is risky.",
+                "Between you and me, the plan is risky.",
+                "Between yourself and me, the plan is risky.",
+                "Between you and myself, the plan is risky."
+              ],
+              "answer": 1,
+              "why": "A preposition takes the object form, so 'between you and me' is correct; reflexives need a subject doing the action."
+            }
           }
         },
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "Double negatives are ungrammatical: \"I did not see nothing\" → \"I did not see anything\".",
-              "Redundancy: \"return back\", except \"repeat again\", \"advance forward\" — one word carries the idea.",
-              "Prepositions: \"running for the bus\" vs \"running to the bus\" changes meaning; say \"good at\", \"different from\", \"prefer … to …\", \"insist on\", \"arrive at/in\".",
-              "Quantifiers: \"much\" for uncountable (much water), \"many\" for plural countable (many books); \"fewer\" for countable, \"less\" for uncountable.",
-              "Confusables: its/it’s, whose/who’s, there/their/they’re, affect/effect, borrow/lend, advice/advise.",
-              "Dangling modifier: \"Walking to school, the bell rang\" — the person walked, not the bell. Attach the modifier to the right subject."
-            ],
             "heading": "Errors examiners repeat",
             "paragraphs": [
-              "A small set of errors appears again and again in \"choose the correct sentence\" questions. Learn these and you eliminate most wrong options at once."
-            ]
+              "Double negatives cancel in standard English: 'I did not see anything', not 'I did not see nothing'. Redundancy repeats an idea, so 'return back', 'repeat again' and 'advance forward' each need only one word.",
+              "Prepositions are fixed: good at, different from, prefer to, insist on, arrive at or in. Quantifiers split by countability: much water, many books, fewer books, less water.",
+              "Confusables change the sentence: its and it's, whose and who's, there, their and they're, affect and effect, borrow and lend, advice and advise. A dangling modifier must describe the subject that follows: 'Walking home, I was caught by rain', not 'Walking home, the rain started'."
+            ],
+            "bullets": [
+              "No double negatives in standard English.",
+              "Learn each word's fixed preposition.",
+              "A modifier describes the subject that follows it."
+            ],
+            "takeaway": "One wrong word is enough to disqualify an option.",
+            "check": {
+              "question": "Choose the correct sentence.",
+              "options": [
+                "She is good in mathematics.",
+                "She is good at mathematics.",
+                "She is good on mathematics.",
+                "She is good for mathematics."
+              ],
+              "answer": 1,
+              "why": "The fixed collocation is 'good at' a subject or skill."
+            }
           }
         },
         {
           "type": "callout",
           "content": {
-            "body": "Read each option word-for-word. Most \"best sentence\" questions test one rule, so a single wrong word (have/went, their/its, me/I) tells you the answer.",
+            "title": "Exam tip",
             "tone": "tip",
-            "title": "Exam tip"
+            "body": "Read each option word for word. Most 'best sentence' questions test one rule, so a single wrong word tells you the answer."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Choose the correct form: 'By the time we arrived, the film ______ (start).'",
+            "steps": [
+              {
+                "operation": "Identify the two past actions",
+                "reason": "One action happened before the other in the past.",
+                "result": "The film started before we arrived.",
+                "predictPrompt": "Which tense marks the earlier action?"
+              },
+              {
+                "operation": "Choose the earlier tense",
+                "reason": "The past perfect marks the action completed before another past action.",
+                "result": "The earlier action takes 'had started'.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Read the sentence",
+                "reason": "The finished sentence must show the order clearly.",
+                "result": "'By the time we arrived, the film had started.'"
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Report this sentence correctly: 'He said, \"I am tired.\"'",
+            "hints": [
+              "The reporting verb 'said' is past.",
+              "Step the present tense back one stage.",
+              "'Am' becomes 'was'."
+            ]
           }
         },
         {
@@ -3178,73 +3850,175 @@
       "slug": "parts-of-speech",
       "topic": "word-classes-and-functions",
       "title": "Parts of Speech",
-      "objective": "The eight word classes every English question depends on — and how to spot them in a sentence.",
+      "objective": "Classify a word by the job it does in a sentence, and recognise when the same word changes class with position.",
       "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "bullets": [],
-            "heading": "Parts of Speech",
+            "heading": "Parts of speech",
             "paragraphs": [
-              "The eight word classes every English question depends on — and how to spot them in a sentence."
-            ]
+              "The same word can be a noun in one sentence and a verb in the next. Parts of speech are jobs, not permanent labels on words."
+            ],
+            "bullets": []
           }
         },
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "A noun names something: a person (student), a place (library), a thing (calculator), or an idea (freedom). Common nouns are general; proper nouns are specific and capitalised (University of Ilorin).",
-              "A pronoun stands in for a noun: I, you, he, she, it, we, they, who, which. It must agree with the noun it replaces.",
-              "A verb expresses action or a state of being: run, think, is, was, have. Every sentence needs at least one.",
-              "An adjective modifies a noun: a brilliant answer, a quick revision.",
-              "An adverb modifies a verb, adjective, or another adverb: ran quickly, quite good, very quickly.",
-              "A preposition shows position or relationship: in, on, at, under, between, after.",
-              "A conjunction joins words or clauses: and, but, or, because, although.",
-              "An interjection is a short exclamation: Wow! Oh! Ouch!"
-            ],
-            "heading": "The eight parts of speech",
+            "heading": "Eight jobs, not eight lists",
             "paragraphs": [
-              "Every English sentence is built from eight kinds of words, called parts of speech. Each one has a job. If you can name the job a word is doing, you can answer most \"identify the part of speech\" questions quickly."
-            ]
+              "Every word in a sentence does one of eight jobs. A noun names a person, place, thing or idea; a pronoun stands in for a noun; a verb asserts an action or a state; an adjective modifies a noun; an adverb modifies a verb, adjective or another adverb.",
+              "A preposition shows relationship (in, on, under, between); a conjunction joins words or clauses (and, but, because, although); an interjection expresses sudden feeling (wow, ouch, oh).",
+              "Classify by the job, not by the word. 'Brilliant' is an adjective in 'a brilliant answer' and a noun in 'the brilliant' when it means brilliant people. Position tells you which job it is doing."
+            ],
+            "bullets": [
+              "Nouns name, pronouns substitute, verbs assert.",
+              "Adjectives and adverbs modify.",
+              "Prepositions, conjunctions and interjections connect or exclaim."
+            ],
+            "takeaway": "A part of speech is a job a word does in a sentence.",
+            "check": {
+              "question": "In 'She sings beautifully', what part of speech is 'beautifully'?",
+              "options": [
+                "noun",
+                "verb",
+                "adjective",
+                "adverb"
+              ],
+              "answer": 3,
+              "why": "It modifies the verb 'sings', which is the job of an adverb."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "Content words carry the message; function words hold the grammar together.",
+              "columns": [
+                "Content words",
+                "Function words"
+              ],
+              "rows": [
+                {
+                  "feature": "Members",
+                  "left": "Nouns, verbs, adjectives, adverbs",
+                  "right": "Pronouns, prepositions, conjunctions"
+                },
+                {
+                  "feature": "Job",
+                  "left": "Carry meaning",
+                  "right": "Show relationship and structure"
+                },
+                {
+                  "feature": "Example",
+                  "left": "student, write, careful, quickly",
+                  "right": "she, under, because"
+                },
+                {
+                  "feature": "Test",
+                  "left": "Can you define it alone?",
+                  "right": "Does it need another word?"
+                }
+              ]
+            }
           }
         },
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "Decide the class by position and function in the sentence, not by memory.",
-              "\"The\" before a noun is an article; before an adjective it can turn the adjective into a noun — \"the rich\" means rich people."
-            ],
-            "heading": "Words that change class",
+            "heading": "The same word, a different job",
             "paragraphs": [
-              "The same word can belong to more than one class, depending on the job it does in the sentence. Do not memorise a list of words; instead, ask what the word is doing where it sits.",
-              "Example: \"Fast\" is an adjective in \"a fast car\" but an adverb in \"drives fast\". \"Run\" is a verb in \"I run daily\" but a noun in \"a quick run\"."
-            ]
+              "Many words change class with position. 'Fast' is an adjective in 'a fast car' and an adverb in 'he drives fast'. 'Run' is a verb in 'I run daily' and a noun in 'a quick run'.",
+              "Test the job with a frame. A noun fits after 'the' or 'a'; an adjective fits between 'the' and a noun; an adverb answers how, when or where; a verb changes for tense.",
+              "Watch -ly. It usually marks an adverb (quickly, carefully), but friendly, lovely and lonely are adjectives, and 'hardly' means scarcely rather than 'in a hard way'."
+            ],
+            "bullets": [
+              "Position decides the class.",
+              "Apply a frame to test the job.",
+              "-ly is a clue, not proof."
+            ],
+            "takeaway": "Ask what the word is doing, not what it usually is.",
+            "check": {
+              "question": "In 'a quick run', what part of speech is 'run'?",
+              "options": [
+                "verb",
+                "noun",
+                "adjective",
+                "adverb"
+              ],
+              "answer": 1,
+              "why": "It follows the adjective 'quick' and names an activity, so it is a noun here."
+            }
           }
         },
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "Do not call \"the\" an adjective; examiners classify it as an article (or determiner).",
-              "Possessive adjectives (my, your, our) must be followed by a noun: \"my book\", never \"I book\".",
-              "A full sentence needs a finite verb — one marked for tense — not just a participle.",
-              "Adverbs of frequency (always, often, rarely) go before the main verb but after \"am/is/are\": He is always late."
-            ],
             "heading": "Exam traps",
             "paragraphs": [
-              "Examiners set traps with words that look like one class but belong to another. Learn these three common ones and you dodge the worst of them."
-            ]
+              "Do not call 'the' an adjective; it is an article or determiner. Possessive adjectives (my, your, our) must be followed by a noun: 'my book', never 'I book'.",
+              "A full sentence needs a finite verb marked for tense, not just a participle: 'The man running' is a phrase, while 'The man is running' is a sentence.",
+              "'To' before a verb marks the infinitive, not a preposition: 'to swim' is a verb form, while 'to the pool' is a prepositional phrase. 'That' can be a pronoun, a conjunction or a determiner, so read its job."
+            ],
+            "bullets": [
+              "'The' is an article, not an adjective.",
+              "A sentence needs a finite verb.",
+              "'To' can mark an infinitive or a preposition."
+            ],
+            "takeaway": "The commonest trap is a word that looks like one class and works as another.",
+            "check": {
+              "question": "What part of speech is 'to' in 'She went to the market'?",
+              "options": [
+                "infinitive marker",
+                "preposition",
+                "conjunction",
+                "adverb"
+              ],
+              "answer": 1,
+              "why": "It introduces the place phrase 'the market', so it is a preposition; an infinitive marker would be followed by a verb."
+            }
           }
         },
         {
           "type": "callout",
           "content": {
-            "body": "When asked to identify a part of speech, ask one question about the word: does it name (noun), replace a name (pronoun), show action (verb), or modify (adjective/adverb)? That is usually enough.",
+            "title": "Exam tip",
             "tone": "tip",
-            "title": "Exam tip"
+            "body": "Ask one question about the word: does it name, replace, assert, modify, relate, join or exclaim? The answer is the part of speech."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Identify the part of speech of 'light' in: (a) 'The light failed.' (b) 'She carried a light bag.' (c) 'He likes to travel light.'",
+            "steps": [
+              {
+                "operation": "Test the first position",
+                "reason": "A word after 'the' and before a verb is usually the subject.",
+                "result": "'Light' names a thing, so it is a noun in (a).",
+                "predictPrompt": "What does it modify in the second sentence?"
+              },
+              {
+                "operation": "Test the second position",
+                "reason": "A word between a determiner and a noun modifies that noun.",
+                "result": "'Light' describes the bag, so it is an adjective in (b).",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Test the third position",
+                "reason": "A word modifying the verb 'travel' answers how.",
+                "result": "'Light' is an adverb in (c)."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "In 'The rich should help the poor', what part of speech are 'rich' and 'poor'?",
+            "hints": [
+              "The words normally describe nouns.",
+              "Here they follow 'the' and act as the subject and object.",
+              "Adjectives can become nouns in this pattern."
+            ]
           }
         }
       ]
@@ -3425,72 +4199,175 @@
       "slug": "concord-rules",
       "topic": "number-agreement-and-concord",
       "title": "Concord Rules",
-      "objective": "The rules of agreement between subject and verb — a heavily tested area of Nigerian English exams.",
+      "objective": "Match the verb to its true subject across interrupting phrases, paired conjunctions, quantities and fixed plurals.",
       "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "bullets": [],
-            "heading": "Concord Rules",
+            "heading": "Concord rules",
             "paragraphs": [
-              "The rules of agreement between subject and verb — a heavily tested area of Nigerian English exams."
-            ]
+              "A sentence says 'The list of items are on the desk', and the verb has agreed with the wrong noun. Concord questions reward the candidate who finds the real subject."
+            ],
+            "bullets": []
           }
         },
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "A singular subject takes a singular verb: The student studies. (add –s to the verb in the present tense)",
-              "A plural subject takes a plural verb: The students study.",
-              "Words between the subject and verb do not decide the verb: The box of matches is on the shelf. (\"box\" governs the verb, not \"matches\")"
-            ],
-            "heading": "Core subject–verb agreement",
+            "heading": "The head noun rules",
             "paragraphs": [
-              "Concord means agreement: a singular subject takes a singular verb, and a plural subject takes a plural verb. In the present tense this usually just means adding or removing an –s."
-            ]
+              "Concord means the verb agrees with its subject in number and person. A singular subject takes a singular verb and a plural subject a plural verb: 'The student studies', 'The students study'.",
+              "Words between the subject and the verb do not change the verb. In 'The box of matches is on the shelf', the head noun is 'box', so the verb is 'is'. Cross out the phrase 'of matches' before you choose.",
+              "Indefinite pronouns are singular: each, every, everyone, everybody, anybody, nobody and nothing take a singular verb: 'Everybody is here'. 'Neither' and 'either' are also singular when they stand alone: 'Neither of the answers is correct'."
+            ],
+            "bullets": [
+              "The verb agrees with the subject.",
+              "Ignore phrases between subject and verb.",
+              "Indefinite pronouns are singular."
+            ],
+            "takeaway": "Strip the sentence to its head noun before you choose the verb.",
+            "check": {
+              "question": "The list of items ______ on the desk.",
+              "options": [
+                "are",
+                "is",
+                "were",
+                "have been"
+              ],
+              "answer": 1,
+              "why": "The head noun is 'list', which is singular, so the verb is 'is'; 'of items' does not govern it."
+            }
           }
         },
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "Each, every, everyone, everybody, anybody, nobody, nothing take a singular verb: Everybody is here.",
-              "Neither and either are singular: Neither of the answers is correct.",
-              "With \"either … or\" and \"neither … nor\", the verb agrees with the nearer subject: Neither the teacher nor the students were present.",
-              "Both (of them) takes a plural verb: Both of the students were present.",
-              "Collective nouns (committee, team, family) are usually treated as singular: The committee has given its report.",
-              "\"The number of\" takes a singular verb; \"a number of\" takes a plural: The number of students has risen. A number of students are absent."
-            ],
-            "heading": "Subjects that fool candidates",
+            "heading": "Proximity and special subjects",
             "paragraphs": [
-              "Some subjects look plural but behave as singular, and some quantifier phrases switch the verb. These are the most-tested patterns, so learn the list."
-            ]
+              "With 'either ... or', 'neither ... nor' and 'not only ... but also', the verb agrees with the subject nearer to it. 'Neither the teacher nor the students were present' takes 'were' because 'students' is nearer.",
+              "'There is' and 'there are' agree with the noun that follows: 'There are many questions left'. With fractions and percentages, the verb matches the noun after 'of': 'Half of the cake has gone', 'Half of the students have gone'.",
+              "Collective nouns such as committee, team and family are usually singular when they act as one body: 'The committee has given its report'. 'The number of' is singular, while 'a number of' is plural."
+            ],
+            "bullets": [
+              "Paired conjunctions follow the nearer subject.",
+              "'There is/are' follows the noun after it.",
+              "'The number of' is singular; 'a number of' is plural."
+            ],
+            "takeaway": "When two subjects compete, the nearer one wins.",
+            "check": {
+              "question": "Neither the teacher nor the students ______ present.",
+              "options": [
+                "was",
+                "were",
+                "is",
+                "has been"
+              ],
+              "answer": 1,
+              "why": "The verb agrees with the nearer subject 'students', which is plural, so 'were' is correct."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "One small word changes the number of the subject.",
+              "columns": [
+                "The number of",
+                "A number of"
+              ],
+              "rows": [
+                {
+                  "feature": "Meaning",
+                  "left": "The total count",
+                  "right": "Several, some"
+                },
+                {
+                  "feature": "Head noun",
+                  "left": "number (singular)",
+                  "right": "number (plural in sense)"
+                },
+                {
+                  "feature": "Verb",
+                  "left": "Singular: has risen",
+                  "right": "Plural: are absent"
+                },
+                {
+                  "feature": "Example",
+                  "left": "The number of students has risen.",
+                  "right": "A number of students are absent."
+                }
+              ]
+            }
           }
         },
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "Amounts, distances and periods of time are singular: Ten years is a long time.",
-              "With fractions and percentages, the verb matches the noun after \"of\": Half of the cake has gone; half of the students have gone.",
-              "\"News\" looks plural but takes a singular verb: The news is good.",
-              "\"The police\" takes a plural verb: The police are investigating.",
-              "\"There is/are\" decides by the subject that follows: There are many questions left."
-            ],
-            "heading": "Quantities, time and distance",
+            "heading": "Quantities, time and fixed plurals",
             "paragraphs": [
-              "Amounts confuse candidates because they look plural. The rule is simple: a sum, distance or period treated as one unit is singular."
-            ]
+              "An amount, distance or period treated as one unit is singular: 'Ten years is a long time', 'Five thousand naira is enough', 'Ten kilometres is a long walk'.",
+              "Some nouns look plural but take singular verbs: news, mathematics, physics, economics and measles: 'The news is good'. Others are plural despite looking singular: police, cattle and people: 'The police are investigating'.",
+              "Pair nouns such as scissors, trousers and glasses take plural verbs: 'The scissors are sharp'. 'One of the + plural noun' takes a singular verb: 'One of the students is absent'."
+            ],
+            "bullets": [
+              "A unit of amount, time or distance is singular.",
+              "News and mathematics are singular.",
+              "Police, cattle and people are plural."
+            ],
+            "takeaway": "Judge the noun by what it denotes, not by its final letter.",
+            "check": {
+              "question": "The news ______ better today.",
+              "options": [
+                "are",
+                "were",
+                "is",
+                "have been"
+              ],
+              "answer": 2,
+              "why": "'News' ends in -s but is singular, so it takes 'is'."
+            }
           }
         },
         {
           "type": "callout",
           "content": {
-            "body": "To settle a concord question, cross out every clause between the head noun and the verb. Then match the verb to the remaining head word.",
+            "title": "Exam tip",
             "tone": "tip",
-            "title": "Exam tip"
+            "body": "Cross out every phrase between the head noun and the verb, then match the verb to what remains."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Choose the correct verb: 'The quality of the students' projects ______ impressive.'",
+            "steps": [
+              {
+                "operation": "Find the head noun",
+                "reason": "The verb agrees with the subject, not with the nearest noun.",
+                "result": "The subject is 'quality', which is singular.",
+                "predictPrompt": "What phrase sits between the subject and the verb?"
+              },
+              {
+                "operation": "Remove the interrupting phrase",
+                "reason": "Prepositional phrases do not change the number of the subject.",
+                "result": "The sentence reduces to 'The quality ... is impressive'.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Choose the verb",
+                "reason": "A singular subject takes a singular verb.",
+                "result": "'The quality of the students' projects is impressive.'"
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Choose the correct verb: 'One of the boys ______ a bicycle.'",
+            "hints": [
+              "The subject is 'one', not 'boys'.",
+              "'One of the' is followed by a plural noun but takes a singular verb.",
+              "The answer is 'has'."
+            ]
           }
         }
       ]
@@ -4022,72 +4899,176 @@
     {
       "slug": "vocabulary-and-idioms",
       "topic": "ordinary-figurative-idiomatic-usage",
-      "title": "Vocabulary & Idioms",
-      "objective": "Crack synonyms, antonyms, word-in-context and the idioms that recur in Nigerian exams.",
+      "title": "Vocabulary and Idioms",
+      "objective": "Infer word meaning from context and interpret formal Standard British English idioms and phrasal verbs correctly.",
       "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "bullets": [],
-            "heading": "Vocabulary & Idioms",
+            "heading": "Vocabulary and idioms",
             "paragraphs": [
-              "Crack synonyms, antonyms, word-in-context and the idioms that recur in Nigerian exams."
-            ]
+              "A passage says the manager 'let the cat out of the bag', and a candidate looks for a cat. The phrase is an idiom, and its meaning has nothing to do with the animal."
+            ],
+            "bullets": []
           }
         },
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "Read two or three lines around the word before you choose.",
-              "Watch for a definition packed into the same sentence: \"a remedy — a cure\".",
-              "Use restatement and examples: \"facilitate, that is, ease\" or \"for instance, …\".",
-              "Look for contrast words — however, but, although — they signal the opposite meaning."
-            ],
-            "heading": "Finding a word’s meaning from context",
+            "heading": "Context is the dictionary",
             "paragraphs": [
-              "You are rarely expected to know every word. Instead, the passage around the word gives the clues. Read a little wider than the one line before choosing."
-            ]
+              "When a word is unfamiliar, the sentence around it usually supplies the meaning. A definition may follow in apposition, an example may illustrate it, or a contrast may mark its opposite.",
+              "Look for these clues: 'that is', 'in other words' and dashes signal a definition; 'for example' and 'such as' signal an example; 'but', 'unlike' and 'whereas' signal a contrast; and 'because', 'so' and 'therefore' signal a cause or result.",
+              "Predict a meaning from the clues, then replace the word with your prediction and re-read. If the sentence still makes sense, the prediction is close enough to answer the question."
+            ],
+            "bullets": [
+              "Definitions often sit beside the word.",
+              "Contrast and cause clues narrow the meaning.",
+              "Substitute your guess and re-read."
+            ],
+            "takeaway": "The sentence usually defines the word it is testing.",
+            "check": {
+              "question": "In 'The arid land, unlike the fertile valley nearby, could grow nothing', what does 'arid' mean?",
+              "options": [
+                "fertile",
+                "dry",
+                "crowded",
+                "expensive"
+              ],
+              "answer": 1,
+              "why": "The contrast with 'fertile' and the result 'could grow nothing' point to dry land."
+            }
           }
         },
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "Reduce the target word to a simple everyday synonym, then match from the options.",
-              "Ignore similar sounds: synonyms must match in meaning, not in rhythm.",
-              "Use prefixes: un-, in-, im-, dis-, non- mean \"not\" (unclear, impossible); re- means \"again\" (rewrite); pre- means \"before\".",
-              "Suffixes show the word class: –ion, –ment; –y; –able (adjectives) usually form nouns; –ly forms adverbs."
-            ],
-            "heading": "Synonyms and antonyms",
+            "heading": "Idioms are fixed",
             "paragraphs": [
-              "For synonym questions, reduce the target word to a simple everyday equivalent, then match it to the options. For antonyms, think of the everyday opposite first."
-            ]
+              "An idiom is a fixed expression whose meaning cannot be worked out from its separate words. 'Bite the bullet' means endure something painful, 'break the ice' means start a conversation, and 'once in a blue moon' means very rarely.",
+              "Phrasal verbs are idioms built from a verb and a particle: give up, put off, look into, run out of, carry out and bring about. The particle changes the meaning, so 'look after' is not 'look into'.",
+              "JAMB tests formal Standard British English, so learn the whole expression. 'Cost an arm and a leg' means be very expensive, and 'let the cat out of the bag' means reveal a secret, not release an animal."
+            ],
+            "bullets": [
+              "An idiom's meaning is not literal.",
+              "The particle changes a phrasal verb's sense.",
+              "Learn the whole expression, not the parts."
+            ],
+            "takeaway": "Treat an idiom as one word with one fixed meaning.",
+            "check": {
+              "question": "What does 'to break the ice' mean?",
+              "options": [
+                "to damage something frozen",
+                "to start a conversation",
+                "to end a meeting",
+                "to tell a secret"
+              ],
+              "answer": 1,
+              "why": "The idiom means to ease the initial awkwardness and begin talking; it is not literal."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "The same words carry a literal sense and a fixed idiomatic one.",
+              "columns": [
+                "Literal",
+                "Idiomatic"
+              ],
+              "rows": [
+                {
+                  "feature": "break the ice",
+                  "left": "Crack a frozen surface",
+                  "right": "Start a conversation"
+                },
+                {
+                  "feature": "let the cat out",
+                  "left": "Release an animal",
+                  "right": "Reveal a secret"
+                },
+                {
+                  "feature": "cost an arm and a leg",
+                  "left": "Injure a limb",
+                  "right": "Be very expensive"
+                },
+                {
+                  "feature": "once in a blue moon",
+                  "left": "A coloured moon",
+                  "right": "Very rarely"
+                }
+              ]
+            }
           }
         },
         {
           "type": "text",
           "content": {
-            "bullets": [
-              "By and large = on the whole. In the long run = eventually. Take for granted = accept without appreciating. Put up with = tolerate.",
-              "Call off = cancel. Carry out = perform. Look into = investigate. Run into = meet by chance.",
-              "Break the ice = start a conversation. Spill the beans = reveal a secret. Once in a blue moon = very rarely.",
-              "A blessing in disguise = a hidden good from a seemingly bad situation. Out of the blue = unexpectedly. Behind the times = old-fashioned.",
-              "Idioms are fixed: do not rearrange their words; we say \"under no circumstances\", not \"in no circumstances\"."
-            ],
-            "heading": "Idioms and phrasal verbs to know",
+            "heading": "Usage traps",
             "paragraphs": [
-              "Idioms are fixed phrases whose meaning is different from the literal words. Learn them as blocks, not as single words."
-            ]
+              "Watch for idioms that differ by one word. 'Turn a blind eye' means ignore deliberately, while 'turn a deaf ear' means refuse to listen; mixing them changes the sentence.",
+              "Watch for Nigerian English coinages that are not standard. 'I am hearing you' should be 'I can hear you', 'senior brother' should be 'elder brother', and 'off head' should be 'from memory'.",
+              "Check the preposition that belongs to the word. We depend on, consist of, insist on, married to, and prefer something to something else. A correct meaning with the wrong particle is still wrong."
+            ],
+            "bullets": [
+              "One changed word can change the idiom.",
+              "Use Standard British English, not coinages.",
+              "Learn each word's fixed preposition."
+            ],
+            "takeaway": "Meaning alone is not enough; the whole expression must be standard.",
+            "check": {
+              "question": "Choose the standard expression.",
+              "options": [
+                "I am hearing you.",
+                "I can hear you.",
+                "I am hearing your voice.",
+                "I hear you well well."
+              ],
+              "answer": 1,
+              "why": "Stative 'hear' does not normally take the progressive, and 'I am hearing you' is a Nigerian-English coinage."
+            }
           }
         },
         {
           "type": "callout",
           "content": {
-            "body": "When two options seem equally good, choose the more idiomatic or more formal one. The wrong options are usually plausible-sounding but slightly misused.",
+            "title": "Exam tip",
             "tone": "tip",
-            "title": "Exam tip"
+            "body": "If an idiom makes literal sense in the sentence, suspect it. Idioms usually make no literal sense at all."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "What does the idiom in this sentence mean? 'The new tax will cost the company an arm and a leg.'",
+            "steps": [
+              {
+                "operation": "Recognise the fixed expression",
+                "reason": "The words form an idiom, so their literal meanings do not apply.",
+                "result": "'Cost an arm and a leg' is a set phrase.",
+                "predictPrompt": "What does the phrase usually mean?"
+              },
+              {
+                "operation": "Recall the meaning",
+                "reason": "Idioms must be learned as whole units.",
+                "result": "It means to be very expensive.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Check the sentence",
+                "reason": "The meaning must fit the context of a tax.",
+                "result": "A tax that is very expensive for the company fits the meaning."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "What does 'run out of' mean in 'We ran out of fuel on the way'?",
+            "hints": [
+              "The phrase is a phrasal verb, not a literal run.",
+              "Think about fuel and a journey.",
+              "It means to have no more of something."
+            ]
           }
         },
         {
