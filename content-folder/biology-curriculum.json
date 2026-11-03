@@ -956,7 +956,7 @@
           "content": {
             "heading": "What increasing complexity means",
             "paragraphs": [
-              "Complexity is not a single ladder, but the kingdoms do show a trend. A moneran is a prokaryotic cell with no nucleus. Protista is a single cell with a nucleus and organelles. Fungi and plants build bodies from many cells, and plants add tissues and organs. Animals add specialised tissues, organs and organ systems.",
+              "Complexity is not a single ladder, but the kingdoms do show a trend. A moneran is a prokaryotic cell with no nucleus. Protista is a single cell with a nucleus and organelles. Most fungi and plants build bodies from many cells, and plants add tissues and organs. Animals add specialised tissues, organs and organ systems.",
               "The trend is about division of labour. A Paramecium carries out all life processes in one cell. A maize plant has roots for absorption, leaves for photosynthesis and vascular tissue for transport. A mammal adds a heart, lungs, kidneys and a nervous system, each doing one job well."
             ],
             "bullets": [
@@ -1316,7 +1316,7 @@
           "content": {
             "heading": "Reproduction and importance",
             "paragraphs": [
-              "Fungi reproduce by spores. Rhizopus forms sporangia on upright stalks. When they burst, spores scatter and grow into new mycelia. A mushroom produces basidiospores on its gills. Yeast reproduces asexually by budding. Many fungi also have a sexual stage, which introduces variation.",
+              "Fungi reproduce by spores. Rhizopus forms sporangia on upright stalks. When they burst, spores scatter, germinate and grow into new mycelia. A mushroom produces basidiospores on its gills. Yeast reproduces asexually by budding. Many fungi also have a sexual stage, which introduces variation.",
               "Fungi are useful and harmful. Yeast ferments sugar in bread and brewing. Mushrooms are food. Penicillium yields penicillin. Fungi decompose dead matter and recycle nutrients. They also spoil food, cause crop diseases such as rust and smut, and cause human infections. Some mushrooms are poisonous."
             ],
             "bullets": [
@@ -1413,7 +1413,7 @@
             "heading": "Thallophyta and Bryophyta",
             "paragraphs": [
               "Thallophyta have a thallus, a body that is not divided into true roots, stems and leaves. Spirogyra is a filamentous green alga that lives in fresh water. Its cells contain spiral chloroplasts and pyrenoids that store starch. It reproduces by fragmentation and conjugation.",
-              "Bryophyta include mosses and liverworts, such as Marchantia. They have rhizoids instead of true roots, no vascular tissue, and a dominant gametophyte generation. Their sperm must swim through a film of water to reach the egg, so they live in damp, shaded places and stay small."
+              "Bryophyta include mosses and liverworts, such as Marchantia. They have rhizoids instead of true roots, no vascular tissue, and a dominant gametophyte generation. The leafy moss plant is the gametophyte; it produces gametes, and the fertilised egg grows into a stalked sporophyte that releases spores. Their sperm must swim through a film of water to reach the egg, so they live in damp, shaded places and stay small."
             ],
             "bullets": [
               "Thallophyta: a thallus, with no true roots, stems or leaves.",
@@ -1439,15 +1439,15 @@
           "content": {
             "heading": "Pteridophyta and Spermatophyta",
             "paragraphs": [
-              "Pteridophyta are ferns such as Dryopteris. They have true roots, stems and leaves, and vascular tissue of xylem and phloem, so they can grow taller than mosses. They still reproduce by spores and their sperm need water, so ferns are common in damp places.",
-              "Spermatophyta reproduce by seeds. Gymnosperms, such as cycads and conifers, bear naked seeds in cones. Angiosperms bear seeds enclosed in fruits. They flower and are divided into monocots, such as maize, and dicots, such as water leaf. Pollen carries the male gamete, so fertilisation no longer needs water."
+              "Pteridophyta are ferns such as Dryopteris. They have true roots, stems and leaves, and vascular tissue of xylem and phloem, so they can grow taller than mosses. They still reproduce by spores and their sperm need water, so ferns are common in damp places. The fern plant is the sporophyte; its spores grow into a small gametophyte that produces gametes, and the fertilised egg grows into a new fern.",
+              "Spermatophyta reproduce by seeds. Gymnosperms, such as cycads and conifers, bear naked seeds in cones. Angiosperms bear seeds enclosed in fruits. They flower and are divided into monocots, such as maize, and dicots, such as water leaf. Pollen carries the male gamete, so fertilisation no longer needs water. The ovule becomes a seed, and the seed germinates into a new plant."
             ],
             "bullets": [
               "Ferns: vascular tissue, spores, water for fertilisation.",
               "Gymnosperms: naked seeds, usually in cones.",
               "Angiosperms: flowers, fruits, monocots and dicots."
             ],
-            "takeaway": "The seed freed plants from standing water.",
+            "takeaway": "Seeds and pollen freed plants from standing water.",
             "check": {
               "question": "Which group produces seeds enclosed in fruits?",
               "options": [
@@ -1476,15 +1476,15 @@
             ],
             "takeaway": "Each plant division removes one more dependence on water.",
             "check": {
-              "question": "Which innovation first allowed plants to reproduce without water?",
+              "question": "Which innovation removed the need for water for fertilisation?",
               "options": [
                 "Vascular tissue",
-                "Seeds and pollen",
-                "Rhizoids",
-                "Chloroplasts"
+                "Seeds",
+                "Pollen",
+                "Rhizoids"
               ],
-              "answer": 1,
-              "why": "Pollen carries the male gamete, so fertilisation does not need a film of water."
+              "answer": 2,
+              "why": "Pollen carries the male gamete to the ovule, so fertilisation does not need a film of water."
             },
             "visual": {
               "kind": "flow",
@@ -1600,7 +1600,7 @@
           "content": {
             "heading": "Biennials: two years, one seed crop",
             "paragraphs": [
-              "A biennial grows vegetatively in its first year, storing food in roots, stems or leaves. In the second year it uses that store to flower, fruit, set seed and die. Carrot, onion, cabbage, beet and turnip are common biennials. The edible part is usually the first-year storage organ.",
+              "A biennial grows vegetatively in its first year, storing food in roots, stems or leaves. In the second year it uses that store to flower, fruit, set seed and die. Carrot, onion, cabbage, beet and turnip are common biennials. The edible part is usually the first-year vegetative growth.",
               "Cold treatment, or vernalisation, often triggers flowering in the second year. A young plant exposed to cold early may flower in its first year and lose its market value. A gardener who wants seed must leave the plant through the second season."
             ],
             "bullets": [
@@ -1736,7 +1736,7 @@
             "heading": "Coelenterata and Platyhelminthes",
             "paragraphs": [
               "Coelenterata, also called Cnidaria, include Hydra and jellyfish. They have radial symmetry, two cell layers, a single opening to a gastrovascular cavity, and tentacles with stinging cells called nematocysts. Hydra lives in fresh water and can regenerate from a fragment.",
-              "Platyhelminthes are flatworms such as Taenia, the tapeworm. They have bilateral symmetry, a flattened body, no body cavity and no true segments. Taenia lives in the intestine of a vertebrate host, attaches with hooks and suckers, and absorbs digested food through its body surface. Its life cycle needs two hosts."
+              "Platyhelminthes are flatworms such as Taenia, the tapeworm. They have bilateral symmetry, a flattened body, no body cavity and no true segments. Taenia lives in the intestine of a vertebrate host, attaches with hooks and suckers, and absorbs digested food through its body surface. Its life cycle needs two hosts. Eggs pass out in faeces and are eaten by a pig, where they form cysts in the muscle; a human is infected by eating undercooked pork, and the adult attaches to the intestine."
             ],
             "bullets": [
               "Coelenterata: radial symmetry, two layers, one opening.",
@@ -1942,7 +1942,7 @@
           "content": {
             "heading": "Complete and incomplete metamorphosis",
             "paragraphs": [
-              "Metamorphosis is the change in body form between the young and the adult. In complete metamorphosis the insect passes through four stages: egg, larva, pupa and adult. Butterflies, mosquitoes, houseflies, bees and beetles do this. The larva is often a feeding machine, while the adult specialises in reproduction and dispersal.",
+              "Metamorphosis is the change in body form between the young and the adult. In complete metamorphosis the insect passes through four stages: egg, larva, pupa and adult. Butterflies, mosquitoes, houseflies, bees and beetles do this. The larva is often a feeding machine, while the adult specialises in reproduction and dispersal. The larva moults several times before it pupates.",
               "In incomplete metamorphosis there are only three stages: egg, nymph and adult. The nymph resembles the adult but is smaller and has no wings or only wing buds. Cockroaches, grasshoppers, termites and dragonflies do this. There is no pupal stage, and the nymph moults repeatedly."
             ],
             "bullets": [
@@ -2095,8 +2095,8 @@
           "content": {
             "heading": "Pisces and Amphibia",
             "paragraphs": [
-              "Pisces are fish. They have a streamlined body, scales, fins and gills. Cartilaginous fish, such as sharks and rays, have a skeleton of cartilage; bony fish, such as tilapia and catfish, have a bony skeleton. Most fish reproduce by external fertilisation, releasing eggs and sperm into water, and their heart has two chambers.",
-              "Amphibia include frogs and toads. Their moist, scale-less skin allows gas exchange, and they also have lungs. They lay jelly-covered eggs in water, and the young tadpole has gills and a tail. Metamorphosis changes the tadpole into an air-breathing adult. Amphibians have a three-chambered heart and still depend on water for reproduction."
+              "Pisces are fish. They have a streamlined body, scales, fins and gills. Cartilaginous fish, such as sharks and rays, have a skeleton of cartilage; bony fish, such as tilapia and catfish, have a bony skeleton. Most fish reproduce by external fertilisation, releasing eggs and sperm into water, and their heart has two chambers. The eggs hatch into fry.",
+              "Amphibia include frogs and toads. Their moist, scale-less skin allows gas exchange, and they also have lungs. They lay jelly-covered eggs in water, and the young tadpole has gills and a tail. Metamorphosis changes the tadpole into an air-breathing adult. The tadpole grows legs and loses its tail as it becomes a frog. Amphibians have a three-chambered heart and still depend on water for reproduction."
             ],
             "bullets": [
               "Pisces: gills, fins, scales, external fertilisation and a two-chambered heart.",
@@ -2122,8 +2122,8 @@
           "content": {
             "heading": "Reptilia and Aves",
             "paragraphs": [
-              "Reptilia include lizards, snakes, turtles and crocodiles. They have dry skin covered with scales, and they breathe with lungs. Their eggs have leathery or hard shells that resist drying, and fertilisation is internal, so reptiles can breed on land. They are ectothermic, using the environment to regulate body temperature. Most have a three-chambered heart, but crocodiles have four.",
-              "Aves are birds. They have feathers, a beak, wings and hollow bones. Their heart has four chambers, and they are endothermic, generating their own heat. Birds lay hard-shelled eggs and incubate them. Their lungs connect to air sacs, which make gas exchange efficient for flight. Birds have no teeth; the beak is shaped for the diet."
+              "Reptilia include lizards, snakes, turtles and crocodiles. They have dry skin covered with scales, and they breathe with lungs. Their eggs have leathery or hard shells that resist drying, and fertilisation is internal, so reptiles can breed on land. They are ectothermic, using the environment to regulate body temperature. Most have a three-chambered heart, but crocodiles have four. The eggs hatch into juveniles.",
+              "Aves are birds. They have feathers, a beak, wings and hollow bones. Their heart has four chambers, and they are endothermic, generating their own heat. Birds lay hard-shelled eggs and incubate them. Their lungs connect to air sacs, which make gas exchange efficient for flight. Birds have no teeth; the beak is shaped for the diet. The eggs hatch into chicks."
             ],
             "bullets": [
               "Reptilia: dry scales, shelled eggs, internal fertilisation and ectothermy.",
@@ -2179,7 +2179,7 @@
           "content": {
             "heading": "Mammalia and the move to land",
             "paragraphs": [
-              "Mammalia include humans, cows, goats, bats and whales. They have hair or fur, mammary glands that produce milk, a diaphragm and a four-chambered heart. Most give birth to live young and care for them. Mammals are endothermic and have differentiated teeth for different diets.",
+              "Mammalia include humans, cows, goats, bats and whales. They have hair or fur, mammary glands that produce milk, a diaphragm and a four-chambered heart. Most give birth to live young and care for them. Mammals are endothermic and have differentiated teeth for different diets. Economically, fish, poultry and livestock provide food, while cattle, sheep and goats add hides, wool and manure; some vertebrates are pests or disease carriers.",
               "The vertebrate classes show a trend. Gills give way to lungs, external fertilisation to internal fertilisation, jelly eggs to shelled eggs, and cold-bloodedness to warm-bloodedness. Each change reduces dependence on water. The trend is not a straight line, and each class still has adaptations to its own habitat."
             ],
             "bullets": [
@@ -2510,7 +2510,7 @@
             "heading": "Division of labour and communication",
             "paragraphs": [
               "Social life works because workers share genes with the queen's offspring, so helping the colony can pass on those shared genes. Division of labour also raises efficiency: each caste specialises in one job instead of every individual doing everything.",
-              "Pheromones coordinate the colony. The queen pheromone suppresses worker reproduction, alarm pheromones mobilise defenders, and trail pheromones guide termites to food. The bee waggle dance tells other workers the direction and distance of a food source. Termites recycle wood and return nutrients to the soil, but they also damage timber and buildings. Bees pollinate crops and produce honey and wax."
+              "Pheromones coordinate the colony. The queen pheromone suppresses worker reproduction, alarm pheromones mobilise defenders, and trail pheromones guide termites to food. The bee waggle dance tells other workers the direction and distance of a food source. Termites develop gradually through nymphs, while bees pass through egg, larva, pupa and adult. Termites recycle wood and return nutrients to the soil, but they also damage timber and buildings. Bees pollinate crops and produce honey and wax."
             ],
             "bullets": [
               "Division of labour raises colony efficiency.",
@@ -2842,7 +2842,7 @@
           "content": {
             "heading": "Mating: signal, compete, display",
             "paragraphs": [
-              "Sexual dimorphism means males and females differ in size, colour or structure. In Agama lizards, the dominant male has a bright red or orange head and a blue body, while the female is duller. The male displays and defends a territory, and the colour advertises his condition to females and rivals.",
+              "Sexual dimorphism means males and females differ in size, colour or structure. In Agama lizards, the dominant male has a bright red or orange head and a blue body, while the female is duller. The male displays and defends a territory, and the colour advertises his condition to females and rivals. A territory secures food, shelter and mates, and reduces fighting.",
               "Birds use displays: a peacock fans his tail, a male weaver builds and displays a nest, and some males feed their partners during courtship. Males also compete directly. Deer use antlers, goats use horns, and baboons fight for dominance, though most contests are ritualised rather than fatal. Bright colours and large weapons carry costs: they attract predators and use energy."
             ],
             "bullets": [
@@ -2995,7 +2995,7 @@
           "content": {
             "heading": "Temperature regulation",
             "paragraphs": [
-              "Endotherms, such as birds and mammals, generate heat internally and keep a fairly constant body temperature. Fur, feathers and blubber insulate; sweating, panting and vasodilation lose heat; shivering and vasoconstriction conserve it. Ectotherms, such as lizards, amphibians and fish, gain heat from the environment, so their body temperature varies.",
+              "Endotherms, such as birds and mammals, generate heat internally and keep a fairly constant body temperature. Hair, fur, feathers and blubber insulate. Sweating and vasodilation lose heat through the skin, panting loses heat through the mouth and lungs, and shivering and vasoconstriction conserve it. Ectotherms, such as lizards, amphibians and fish, gain heat from the environment, so their body temperature varies.",
               "A lizard basks by flattening its body and turning broadside to the sun, then retreats to shade when it is too hot. Hibernation is winter dormancy, with low metabolism and stored fat. Aestivation is summer drought dormancy, used by lungfish and some snails. The two look similar, but the season and the trigger are different."
             ],
             "bullets": [
@@ -3022,8 +3022,8 @@
           "content": {
             "heading": "Water conservation in animals",
             "paragraphs": [
-              "Desert animals reduce water loss in several ways. Thick fur or scales limit evaporation, the kidneys produce concentrated urine, the faeces are dry, and sweat glands are few. Many are nocturnal or burrow during the day. The camel stores fat in its hump, which releases metabolic water when the fat is broken down.",
-              "Reptile scales are waterproof keratin, and pangolin scales add a physical barrier. Insects have a waxy cuticle, spiracles that can close, and Malpighian tubules that concentrate waste. Freshwater fish excrete dilute urine, while marine fish drink water and excrete excess salts. Each strategy keeps the body's water and salt balance within limits."
+              "Desert animals reduce water loss in several ways. Thick fur or scales limit evaporation, the kidneys produce concentrated urine, the faeces are dry, and sweat glands are few. Many are nocturnal or burrow during the day. The camel stores fat in its hump as an energy reserve, while its kidneys and nose reduce water loss.",
+              "Reptile scales are waterproof keratin, and pangolin scales, the only mammalian scales, are keratin too; both reduce water loss and add protection. Insects have a waxy cuticle, spiracles that can close, and Malpighian tubules that concentrate waste. Freshwater fish excrete dilute urine, while marine fish drink water and excrete excess salts. Each strategy keeps the body's water and salt balance within limits."
             ],
             "bullets": [
               "Waterproof coverings reduce evaporation.",
