@@ -1518,6 +1518,708 @@
           }
         }
       ]
+    },
+    {
+      "slug": "plant-life-spans",
+      "topic": "plant-life-spans",
+      "title": "Plant Life Spans",
+      "objective": "Classify a plant as an annual, biennial or perennial from its life cycle, and give Nigerian examples of each.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Plant life spans",
+            "paragraphs": [
+              "A maize field is harvested and cleared within one season, while a mango tree fruits for decades. Both are flowering plants. Their difference is the span of their life cycle, and that difference decides how a farmer plants, harvests and stores seed."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Annuals: one season, one generation",
+            "paragraphs": [
+              "An annual completes its life cycle within one growing season or year. It germinates, grows, flowers, forms fruit and seed, and then dies. Maize, rice, cowpea and sunflower are annuals; tomato is usually grown as an annual. The whole plant dies after seeds are formed, so the species survives only as seed.",
+              "Farmers like annuals because the cycle is short and predictable. They can plant two or three crops a year where water and soil allow, and they can rotate cereals with legumes. The cost is that the field must be replanted every season, and the soil is bare between crops."
+            ],
+            "bullets": [
+              "An annual completes its life cycle in one season, then dies.",
+              "Nigerian examples include maize, rice, cowpea and tomato.",
+              "Survival depends on seed, so seed storage matters."
+            ],
+            "takeaway": "An annual spends everything on one generation of seed.",
+            "check": {
+              "question": "Which of these is an annual crop?",
+              "options": [
+                "Maize",
+                "Carrot",
+                "Mango",
+                "Orange"
+              ],
+              "answer": 0,
+              "why": "Maize germinates, flowers, sets seed and dies within one season."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Biennials: two years, one seed crop",
+            "paragraphs": [
+              "A biennial grows vegetatively in its first year, storing food in roots, stems or leaves. In the second year it uses that store to flower, fruit, set seed and die. Carrot, onion, cabbage, beet and turnip are common biennials. The edible part is usually the first-year storage organ.",
+              "Cold treatment, or vernalisation, often triggers flowering in the second year. A young plant exposed to cold early may flower in its first year and lose its market value. A gardener who wants seed must leave the plant through the second season."
+            ],
+            "bullets": [
+              "Year one: vegetative growth and food storage.",
+              "Year two: flowering, seed production and death.",
+              "Vernalisation often triggers the second-year flower."
+            ],
+            "takeaway": "A biennial stores food first, then spends it on one seed crop.",
+            "check": {
+              "question": "A carrot plant flowers and sets seed in its second year. It is",
+              "options": [
+                "An annual",
+                "A biennial",
+                "A perennial",
+                "An ephemeral"
+              ],
+              "answer": 1,
+              "why": "It grows vegetatively in year one and reproduces in year two before dying."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Perennials: many years, repeated fruiting",
+            "paragraphs": [
+              "A perennial lives for more than two years and usually flowers and fruits many times. Mango, orange, cashew, oil palm, cocoa and most grasses are perennials. Some lose their leaves in the dry season and regrow; others stay evergreen. A few, such as bamboo, flower once and die after many years, so perennial describes the lifespan, not a guarantee of repeated flowering.",
+              "Perennials invest in permanent structures: woody stems, deep roots and food reserves. They protect the soil, provide shade and give repeated harvests, but they take years to mature and cannot be shuffled with the seasons like annuals."
+            ],
+            "bullets": [
+              "A perennial lives more than two years and usually fruits repeatedly.",
+              "Nigerian examples include mango, cashew, oil palm and cocoa.",
+              "Woody stems and deep roots are long-term investments."
+            ],
+            "takeaway": "A perennial spreads its reproduction over many seasons.",
+            "check": {
+              "question": "Which set contains only perennials?",
+              "options": [
+                "Maize, rice and tomato",
+                "Carrot, cabbage and onion",
+                "Mango, cashew and oil palm",
+                "Cowpea, maize and rice"
+              ],
+              "answer": 2,
+              "why": "Mango, cashew and oil palm live and fruit for many years."
+            },
+            "visual": {
+              "kind": "flow",
+              "caption": "An annual completes this cycle in one season, then dies.",
+              "steps": [
+                "Seed germinates",
+                "Seedling grows",
+                "Vegetative growth",
+                "Flowering",
+                "Fruit and seed",
+                "Plant dies"
+              ]
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "A biennial does not live two years and then fruit for years. It dies after its second-year seed crop. Carrot and onion are biennials; mango and oil palm are perennials."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A farmer plants carrot in year one and sees only leaves. In year two the plant flowers, sets seed and dies. Classify the plant and explain what changed.",
+            "steps": [
+              {
+                "operation": "Count the seasons",
+                "reason": "The plant grows in year one and reproduces in year two.",
+                "result": "It has a two-year life cycle.",
+                "predictPrompt": "Which class completes its cycle in one season?"
+              },
+              {
+                "operation": "Check the first-year product",
+                "reason": "The carrot root is a food store, not a seed crop.",
+                "result": "Year one is vegetative growth.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Explain the trigger",
+                "reason": "Cold treatment, or vernalisation, prepares the plant to flower.",
+                "result": "The stored food supports the second-year flower.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Conclude",
+                "reason": "The plant dies after one seed crop in its second year.",
+                "result": "Carrot is a biennial."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A student calls maize a perennial because it is planted every year. Correct the statement and give two differences between maize and mango.",
+            "hints": [
+              "Being replanted every year is not the same as living for many years.",
+              "Maize completes its life cycle in one season and dies.",
+              "Mango has a woody stem and fruits repeatedly over many years."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "invertebrates",
+      "topic": "invertebrates",
+      "title": "Invertebrate Phyla",
+      "objective": "Order the six named invertebrate phyla by symmetry, body cavity and segmentation, and identify their examples.",
+      "estimatedMinutes": 11,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Invertebrate phyla",
+            "paragraphs": [
+              "More than nine in ten animals have no backbone. The syllabus names six invertebrate phyla, and each adds a body-plan feature that the next group builds on: symmetry, a body cavity, segmentation and jointed limbs."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Coelenterata and Platyhelminthes",
+            "paragraphs": [
+              "Coelenterata, also called Cnidaria, include Hydra and jellyfish. They have radial symmetry, two cell layers, a single opening to a gastrovascular cavity, and tentacles with stinging cells called nematocysts. Hydra lives in fresh water and can regenerate from a fragment.",
+              "Platyhelminthes are flatworms such as Taenia, the tapeworm. They have bilateral symmetry, a flattened body, no body cavity and no true segments. Taenia lives in the intestine of a vertebrate host, attaches with hooks and suckers, and absorbs digested food through its body surface. Its life cycle needs two hosts."
+            ],
+            "bullets": [
+              "Coelenterata: radial symmetry, two layers, one opening.",
+              "Platyhelminthes: bilateral, flattened and with no body cavity.",
+              "Taenia is a parasite with hooks and suckers."
+            ],
+            "takeaway": "The first invertebrate steps are symmetry and a fixed body plan.",
+            "check": {
+              "question": "Which feature is characteristic of Hydra?",
+              "options": [
+                "Bilateral symmetry",
+                "Radial symmetry and tentacles",
+                "Jointed legs",
+                "A closed circulatory system"
+              ],
+              "answer": 1,
+              "why": "Hydra is a coelenterate with radial symmetry and stinging tentacles."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Nematoda and Annelida",
+            "paragraphs": [
+              "Nematoda are roundworms such as Ascaris. They have bilateral symmetry, a cylindrical unsegmented body, a tough cuticle and a pseudocoelom, a body cavity not fully lined by mesoderm. Ascaris lives in the small intestine and produces large numbers of eggs that pass out in faeces.",
+              "Annelida are segmented worms such as the earthworm. They have a true coelom, a closed circulatory system, setae for grip and a body divided into repeating segments. Segmentation allows different regions to specialise. The earthworm burrows through soil, aerating it and mixing organic matter into it."
+            ],
+            "bullets": [
+              "Nematoda: round, unsegmented, cuticle and pseudocoelom.",
+              "Annelida: segmented, true coelom and setae.",
+              "Earthworms improve soil structure and fertility."
+            ],
+            "takeaway": "Segmentation and a true coelom are the annelid advance.",
+            "check": {
+              "question": "Which feature separates Annelida from Nematoda?",
+              "options": [
+                "Bilateral symmetry",
+                "A segmented body with a true coelom",
+                "A cuticle",
+                "A parasitic life"
+              ],
+              "answer": 1,
+              "why": "Annelids are segmented and have a true coelom; nematodes are unsegmented with a pseudocoelom."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Arthropoda and Mollusca",
+            "paragraphs": [
+              "Arthropoda have a hard exoskeleton of chitin, jointed appendages and a segmented body. They include insects, crustaceans, arachnids and millipedes. The exoskeleton protects the body but must be shed by moulting for growth. Arthropoda is the largest phylum. It contains more species than all the other animal phyla combined.",
+              "Mollusca have a soft unsegmented body, a muscular foot, a mantle and usually a shell. Snails, slugs, clams and octopuses are molluscs. The mantle secretes the shell, and the radula is a rasping tongue used for feeding. Snails live in damp places on land and in water."
+            ],
+            "bullets": [
+              "Arthropoda: exoskeleton, jointed legs and moulting.",
+              "Mollusca: soft body, mantle, muscular foot and shell.",
+              "Arthropoda is the largest animal phylum."
+            ],
+            "takeaway": "Jointed limbs and a mantle mark the two largest invertebrate groups.",
+            "check": {
+              "question": "A snail belongs to",
+              "options": [
+                "Annelida",
+                "Mollusca",
+                "Arthropoda",
+                "Nematoda"
+              ],
+              "answer": 1,
+              "why": "Snails have a soft body, a mantle and a shell, which are mollusc features."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "Two successful body plans: jointed outside, soft inside a shell.",
+              "columns": [
+                "Arthropoda",
+                "Mollusca"
+              ],
+              "rows": [
+                {
+                  "feature": "Body",
+                  "left": "Segmented, with jointed appendages",
+                  "right": "Soft and unsegmented"
+                },
+                {
+                  "feature": "Support",
+                  "left": "Chitin exoskeleton",
+                  "right": "Shell secreted by the mantle"
+                },
+                {
+                  "feature": "Movement",
+                  "left": "Jointed legs and wings",
+                  "right": "Muscular foot"
+                },
+                {
+                  "feature": "Examples",
+                  "left": "Insects, crabs and spiders",
+                  "right": "Snails, clams and octopuses"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Do not call every worm an annelid. Taenia is a flatworm, Ascaris is a roundworm, and the earthworm is the segmented annelid."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A specimen has a soft body, a shell and a muscular foot. Another has jointed legs and a chitin exoskeleton. Name the phylum of each.",
+            "steps": [
+              {
+                "operation": "Read the first body plan",
+                "reason": "A soft body with a mantle and shell points to Mollusca.",
+                "result": "The first specimen is a mollusc, such as a snail.",
+                "predictPrompt": "Which phylum has a chitin exoskeleton?"
+              },
+              {
+                "operation": "Read the second body plan",
+                "reason": "Jointed legs and a chitin exoskeleton are arthropod features.",
+                "result": "The second specimen is an arthropod.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Check the support",
+                "reason": "A shell is secreted by the mantle; an exoskeleton is shed by moulting.",
+                "result": "The two phyla solve support differently.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Conclude",
+                "reason": "Body covering and appendages decide the phylum.",
+                "result": "The specimens are Mollusca and Arthropoda."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Explain why segmentation is an advance over a solid, unsegmented body. Use the earthworm and a flatworm in your answer.",
+            "hints": [
+              "Segments can carry different organs and appendages.",
+              "A true coelom gives space for organs and a hydrostatic skeleton.",
+              "A flatworm has a flattened body with no body cavity."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "insects",
+      "topic": "insects",
+      "title": "Insects and Their Importance",
+      "objective": "Describe the insect body plan, distinguish complete from incomplete metamorphosis, and assess insects' economic and environmental importance.",
+      "estimatedMinutes": 11,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Insects and their importance",
+            "paragraphs": [
+              "Insects are arthropods with three body regions, six legs and usually two pairs of wings. They are the most numerous animals on land, and JAMB tests both their body plan and their mixed value to people."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The insect body plan",
+            "paragraphs": [
+              "An insect has three body regions: head, thorax and abdomen. The head carries a pair of antennae, compound eyes and mouthparts. The thorax has three pairs of jointed legs and usually two pairs of wings. The abdomen contains the digestive and reproductive organs. Breathing is through spiracles and tracheae, not lungs.",
+              "The exoskeleton is made of chitin. It protects the insect and reduces water loss, but it cannot stretch, so the insect must moult to grow. Insects have an open circulatory system, with haemolymph pumped by a dorsal heart. Their small size and tracheal system limit them to relatively short diffusion paths."
+            ],
+            "bullets": [
+              "Head, thorax and abdomen; three pairs of legs.",
+              "Spiracles and tracheae carry air directly to the tissues.",
+              "The chitin exoskeleton must be moulted for growth."
+            ],
+            "takeaway": "An insect is a three-part arthropod with six legs and tracheal breathing.",
+            "check": {
+              "question": "Which structure is found on the thorax of an insect?",
+              "options": [
+                "Antennae",
+                "Three pairs of jointed legs",
+                "Spiracles only",
+                "Mouthparts"
+              ],
+              "answer": 1,
+              "why": "The thorax bears the legs and wings; the head bears antennae and mouthparts."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Complete and incomplete metamorphosis",
+            "paragraphs": [
+              "Metamorphosis is the change in body form between the young and the adult. In complete metamorphosis the insect passes through four stages: egg, larva, pupa and adult. Butterflies, mosquitoes, houseflies, bees and beetles do this. The larva is often a feeding machine, while the adult specialises in reproduction and dispersal.",
+              "In incomplete metamorphosis there are only three stages: egg, nymph and adult. The nymph resembles the adult but is smaller and has no wings or only wing buds. Cockroaches, grasshoppers, termites and dragonflies do this. There is no pupal stage, and the nymph moults repeatedly."
+            ],
+            "bullets": [
+              "Complete: egg, larva, pupa and adult.",
+              "Incomplete: egg, nymph and adult.",
+              "The pupa is the stage that separates the two patterns."
+            ],
+            "takeaway": "Count the stages: four means complete, three means incomplete.",
+            "check": {
+              "question": "A cockroach hatches as a small wingless form that resembles its parent. This is",
+              "options": [
+                "Complete metamorphosis",
+                "Incomplete metamorphosis",
+                "Budding",
+                "Binary fission"
+              ],
+              "answer": 1,
+              "why": "Egg, nymph and adult are the three stages of incomplete metamorphosis."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "The pupa is the extra stage in complete metamorphosis.",
+              "columns": [
+                "Complete",
+                "Incomplete"
+              ],
+              "rows": [
+                {
+                  "feature": "Stages",
+                  "left": "Egg, larva, pupa, adult",
+                  "right": "Egg, nymph, adult"
+                },
+                {
+                  "feature": "Pupa",
+                  "left": "Present",
+                  "right": "Absent"
+                },
+                {
+                  "feature": "Young",
+                  "left": "Larva, unlike the adult",
+                  "right": "Nymph, similar to the adult"
+                },
+                {
+                  "feature": "Examples",
+                  "left": "Butterfly and mosquito",
+                  "right": "Cockroach and grasshopper"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Economic and environmental importance",
+            "paragraphs": [
+              "Insects are useful. Bees, wasps and butterflies pollinate crops and wild plants. Bees give honey and wax; silkworms give silk; lac insects give shellac. Insects are food for birds, fish and reptiles, and some feed on pests as biological control agents. They decompose dung and dead matter, recycling nutrients.",
+              "Insects are also harmful. Locusts and armyworms destroy crops; weevils and beetles damage stored grain; aphids suck sap and transmit plant viruses. Mosquitoes transmit malaria, yellow fever and dengue; tsetse flies transmit sleeping sickness; houseflies carry typhoid and cholera organisms. The same insect can be useful at one stage and harmful at another."
+            ],
+            "bullets": [
+              "Pollination, honey, silk, wax and biological control.",
+              "Crop pests and stored-product pests.",
+              "Vectors of malaria, sleeping sickness and typhoid."
+            ],
+            "takeaway": "Judge an insect by its stage, its numbers and its role in the food web.",
+            "check": {
+              "question": "Which insect is a vector of malaria?",
+              "options": [
+                "Housefly",
+                "Female Anopheles mosquito",
+                "Honeybee",
+                "Silkworm"
+              ],
+              "answer": 1,
+              "why": "The female Anopheles mosquito transmits the Plasmodium parasite when it bites."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "A butterfly is harmful as a larva and useful as an adult pollinator. Read the stage named in the question before deciding harmful or useful."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A farmer finds caterpillars stripping leaves and adult butterflies visiting flowers. Are the insects harmful or useful? Explain.",
+            "steps": [
+              {
+                "operation": "Identify the stage",
+                "reason": "The caterpillar is the larval stage; the butterfly is the adult.",
+                "result": "The same species is present at two stages.",
+                "predictPrompt": "Which stage feeds on leaves?"
+              },
+              {
+                "operation": "Judge the larva",
+                "reason": "Caterpillars have chewing mouthparts and eat leaves.",
+                "result": "The larval stage damages the crop.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Judge the adult",
+                "reason": "The adult visits flowers for nectar and transfers pollen.",
+                "result": "The adult stage pollinates crops.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Conclude",
+                "reason": "The answer depends on the stage named in the question.",
+                "result": "The insect is both harmful and useful."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Name one insect that is useful in one stage and harmful in another, and explain the difference.",
+            "hints": [
+              "Think of a butterfly or a moth.",
+              "The larva usually feeds on leaves.",
+              "The adult may pollinate flowers."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "vertebrates",
+      "topic": "vertebrates",
+      "title": "Vertebrate Classes",
+      "objective": "Compare Pisces, Amphibia, Reptilia, Aves and Mammalia by skin, respiration, reproduction and heart, and trace the move from water to land.",
+      "estimatedMinutes": 11,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Vertebrate classes",
+            "paragraphs": [
+              "A fish, a frog, a lizard, a bird and a goat all have a backbone, but each solves the problems of support, breathing and reproduction differently. The five vertebrate classes show a step-by-step move from water to land."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Pisces and Amphibia",
+            "paragraphs": [
+              "Pisces are fish. They have a streamlined body, scales, fins and gills. Cartilaginous fish, such as sharks and rays, have a skeleton of cartilage; bony fish, such as tilapia and catfish, have a bony skeleton. Most fish reproduce by external fertilisation, releasing eggs and sperm into water, and their heart has two chambers.",
+              "Amphibia include frogs and toads. Their moist, scale-less skin allows gas exchange, and they also have lungs. They lay jelly-covered eggs in water, and the young tadpole has gills and a tail. Metamorphosis changes the tadpole into an air-breathing adult. Amphibians have a three-chambered heart and still depend on water for reproduction."
+            ],
+            "bullets": [
+              "Pisces: gills, fins, scales, external fertilisation and a two-chambered heart.",
+              "Amphibia: moist skin, lungs, eggs in water and a three-chambered heart.",
+              "Amphibians are the bridge between water and land."
+            ],
+            "takeaway": "Amphibians breathe air but still return to water to breed.",
+            "check": {
+              "question": "Which feature ties a frog to water for reproduction?",
+              "options": [
+                "Lungs",
+                "Jelly-covered eggs laid in water",
+                "A three-chambered heart",
+                "Moist skin"
+              ],
+              "answer": 1,
+              "why": "Frog eggs dry out on land, and the tadpole stage is aquatic."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Reptilia and Aves",
+            "paragraphs": [
+              "Reptilia include lizards, snakes, turtles and crocodiles. They have dry skin covered with scales, and they breathe with lungs. Their eggs have leathery or hard shells that resist drying, and fertilisation is internal, so reptiles can breed on land. They are ectothermic, using the environment to regulate body temperature. Most have a three-chambered heart, but crocodiles have four.",
+              "Aves are birds. They have feathers, a beak, wings and hollow bones. Their heart has four chambers, and they are endothermic, generating their own heat. Birds lay hard-shelled eggs and incubate them. Their lungs connect to air sacs, which make gas exchange efficient for flight. Birds have no teeth; the beak is shaped for the diet."
+            ],
+            "bullets": [
+              "Reptilia: dry scales, shelled eggs, internal fertilisation and ectothermy.",
+              "Aves: feathers, beak, four-chambered heart and endothermy.",
+              "Shelled eggs freed both groups from breeding in water."
+            ],
+            "takeaway": "The shelled egg is the reptile and bird answer to life on dry land.",
+            "check": {
+              "question": "Which feature is shared by reptiles and birds?",
+              "options": [
+                "Feathers",
+                "Milk",
+                "Internal fertilisation and shelled eggs",
+                "Gills"
+              ],
+              "answer": 2,
+              "why": "Both groups fertilise internally and lay eggs with shells that resist drying."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "The pivotal step: an egg that can survive out of water.",
+              "columns": [
+                "Amphibia",
+                "Reptilia"
+              ],
+              "rows": [
+                {
+                  "feature": "Skin",
+                  "left": "Moist and scale-less",
+                  "right": "Dry and scaly"
+                },
+                {
+                  "feature": "Eggs",
+                  "left": "Jelly-covered, laid in water",
+                  "right": "Shelled, laid on land"
+                },
+                {
+                  "feature": "Respiration",
+                  "left": "Skin and lungs",
+                  "right": "Lungs"
+                },
+                {
+                  "feature": "Heart",
+                  "left": "Three chambers",
+                  "right": "Three, four in crocodiles"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Mammalia and the move to land",
+            "paragraphs": [
+              "Mammalia include humans, cows, goats, bats and whales. They have hair or fur, mammary glands that produce milk, a diaphragm and a four-chambered heart. Most give birth to live young and care for them. Mammals are endothermic and have differentiated teeth for different diets.",
+              "The vertebrate classes show a trend. Gills give way to lungs, external fertilisation to internal fertilisation, jelly eggs to shelled eggs, and cold-bloodedness to warm-bloodedness. Each change reduces dependence on water. The trend is not a straight line, and each class still has adaptations to its own habitat."
+            ],
+            "bullets": [
+              "Mammalia: hair, mammary glands, milk and a four-chambered heart.",
+              "Trend: gills to lungs, external to internal fertilisation, jelly to shelled eggs.",
+              "Each class remains adapted to its own habitat."
+            ],
+            "takeaway": "Vertebrates moved onto land by changing how they breathe, breed and control heat.",
+            "check": {
+              "question": "Which set of features is unique to mammals?",
+              "options": [
+                "Hair, mammary glands and milk",
+                "Feathers and wings",
+                "Scales and gills",
+                "Shelled eggs and lungs"
+              ],
+              "answer": 0,
+              "why": "Hair and mammary glands are defining mammalian features."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Cold-blooded means ectothermic, not always cold. A lizard on a hot rock has a high body temperature; it gains heat from the environment."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A vertebrate has dry scales, lays shelled eggs on land and breathes with lungs. Name its class and one reason it is not an amphibian.",
+            "steps": [
+              {
+                "operation": "Read the skin and eggs",
+                "reason": "Dry scales and shelled eggs are reptile features.",
+                "result": "The animal belongs to Reptilia.",
+                "predictPrompt": "Which class has moist, scale-less skin?"
+              },
+              {
+                "operation": "Check the breeding method",
+                "reason": "Internal fertilisation and a shelled egg allow breeding on land.",
+                "result": "The animal does not need water to reproduce.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Compare with Amphibia",
+                "reason": "Amphibians lay jelly-covered eggs in water and have a larval stage.",
+                "result": "The animal has no aquatic larval stage.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Conclude",
+                "reason": "Skin, egg and life cycle all point one way.",
+                "result": "The vertebrate is a reptile, not an amphibian."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Explain why a frog must return to water to breed while a lizard does not.",
+            "hints": [
+              "Compare the egg coverings.",
+              "Compare where fertilisation happens.",
+              "A frog has an aquatic tadpole; a lizard hatches as a miniature adult."
+            ]
+          }
+        }
+      ]
     }
   ]
 }
