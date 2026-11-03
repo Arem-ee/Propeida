@@ -72,10 +72,16 @@ const { data: existingTopics, error: topicsError } = await db
   .eq('subject_id', subject.id)
 if (topicsError) throw new Error(`load topics: ${topicsError.message}`)
 
+// A syllabus reference can map to several topics after a split, so keep the
+// rows as a list and only use the reference when it is unambiguous.
 const byRef = new Map()
 const bySlug = new Map()
 for (const row of existingTopics ?? []) {
-  if (row.syllabus_ref) byRef.set(row.syllabus_ref, row)
+  if (row.syllabus_ref) {
+    const rows = byRef.get(row.syllabus_ref) ?? []
+    rows.push(row)
+    byRef.set(row.syllabus_ref, rows)
+  }
   bySlug.set(row.slug, row)
 }
 
@@ -84,10 +90,19 @@ const topicRowBySourceSlug = new Map()
 const lessons = source.lessons ?? []
 const lessonSlugs = new Set(lessons.map((l) => l.topic ?? l.slug))
 
+// A row may be claimed by one source topic per run. Without this, every topic
+// sharing a split syllabus reference would update the same row.
+const claimedTopicIds = new Set()
+
 let topicsInserted = 0
 let topicsUpdated = 0
 for (const t of source.topics ?? []) {
-  const existing = (t.syllabus_ref && byRef.get(t.syllabus_ref)) || bySlug.get(t.slug)
+  // Slug first: a rename is expressed by keeping the row's slug stable. Fall
+  // back to a syllabus reference only when exactly one unclaimed row has it.
+  const refRows = (t.syllabus_ref && byRef.get(t.syllabus_ref)) || []
+  const freeRefRows = refRows.filter((row) => !claimedTopicIds.has(row.id))
+  const existing =
+    bySlug.get(t.slug) ?? (freeRefRows.length === 1 ? freeRefRows[0] : undefined)
   const willPublish = Boolean(t.published) || lessonSlugs.has(t.slug) || Boolean(existing?.published)
 
   const row = {
@@ -99,9 +114,11 @@ for (const t of source.topics ?? []) {
     section_title: t.section ?? existing?.section_title ?? null,
     published: willPublish,
   }
+  if (t.syllabus_ref) row.syllabus_ref = t.syllabus_ref
   if (!existing) row.slug = t.slug
 
   if (existing) {
+    claimedTopicIds.add(existing.id)
     topicRowBySourceSlug.set(t.slug, { ...existing, ...row, id: existing.id, slug: existing.slug })
     if (!dryRun) {
       const { error } = await db.from('topics').update(row).eq('id', existing.id)

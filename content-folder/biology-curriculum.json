@@ -13,6 +13,7 @@
     {
       "slug": "cell-structure-and-function",
       "name": "Cell Structure and Function",
+      "syllabus_ref": "A.1",
       "section": "Variety of Organisms",
       "order": 2,
       "description": "Shared cell structures, plant and animal differences, and the functions of the organelles."
@@ -20,24 +21,81 @@
     {
       "slug": "levels-of-organisation",
       "name": "Levels of Organisation",
+      "syllabus_ref": "A.1",
       "section": "Variety of Organisms",
       "order": 3,
       "description": "The sequence from cell to tissue, organ, system and organism, with the syllabus examples."
     },
     {
       "slug": "evolution-among-the-following",
-      "name": "Evolution among the following",
+      "name": "The Five Kingdoms",
       "syllabus_ref": "A.2",
       "section": "Variety of Organisms",
       "order": 4,
-      "description": "Monera, Protista, Fungi, plants and animals, and the trend of increasing structural complexity."
+      "description": "The five kingdoms, the prokaryote-eukaryote divide, and the trend of increasing structural complexity."
+    },
+    {
+      "slug": "monera-and-protista",
+      "name": "Monera and Protista",
+      "syllabus_ref": "A.2",
+      "section": "Variety of Organisms",
+      "order": 5,
+      "description": "Bacteria, blue-green algae, Amoeba, Paramecium and Euglena, and how the two single-celled kingdoms differ."
+    },
+    {
+      "slug": "fungi",
+      "name": "Fungi",
+      "syllabus_ref": "A.2",
+      "section": "Variety of Organisms",
+      "order": 6,
+      "description": "Hyphae, spores, saprophytic feeding, Rhizopus and mushrooms, and the economic importance of fungi."
+    },
+    {
+      "slug": "plant-divisions",
+      "name": "Plant Divisions",
+      "syllabus_ref": "A.2",
+      "section": "Variety of Organisms",
+      "order": 7,
+      "description": "Thallophyta, Bryophyta, Pteridophyta and Spermatophyta, and the move from water to land."
+    },
+    {
+      "slug": "plant-life-spans",
+      "name": "Plant Life Spans",
+      "syllabus_ref": "A.2",
+      "section": "Variety of Organisms",
+      "order": 8,
+      "description": "Annuals, biennials and perennials, their examples, and how each completes its life cycle."
+    },
+    {
+      "slug": "invertebrates",
+      "name": "Invertebrate Phyla",
+      "syllabus_ref": "A.2",
+      "section": "Variety of Organisms",
+      "order": 9,
+      "description": "Coelenterata, Platyhelminthes, Nematoda, Annelida, Arthropoda and Mollusca, and their advancing body plans."
+    },
+    {
+      "slug": "insects",
+      "name": "Insects and Their Importance",
+      "syllabus_ref": "A.2",
+      "section": "Variety of Organisms",
+      "order": 10,
+      "description": "Insect structure, complete and incomplete metamorphosis, and their economic and environmental importance."
+    },
+    {
+      "slug": "vertebrates",
+      "name": "Vertebrate Classes",
+      "syllabus_ref": "A.2",
+      "section": "Variety of Organisms",
+      "order": 11,
+      "description": "Pisces, Amphibia, Reptilia, Aves and Mammalia, and the adaptations that took life from water to land."
     },
     {
       "slug": "structural-functional-and-behavioural",
       "name": "Structural/functional and behavioural",
       "syllabus_ref": "A.3",
       "section": "Variety of Organisms",
-      "order": 5,
+      "order": 12,
       "description": "Adaptive colouration, social behaviour and structural adaptations to environment and way of life."
     },
     {
@@ -45,7 +103,7 @@
       "name": "Internal structure of a flowering plant",
       "syllabus_ref": "B.1",
       "section": "Form and Functions",
-      "order": 6,
+      "order": 13,
       "description": "Root, stem and leaf anatomy, supporting tissues, and the internal organs of a mammal."
     },
     {
@@ -53,7 +111,7 @@
       "name": "Nutrition",
       "syllabus_ref": "B.2",
       "section": "Form and Functions",
-      "order": 7,
+      "order": 14,
       "description": "Autotrophic and heterotrophic nutrition, photosynthesis, food classes, teeth and the alimentary canal."
     },
     {
@@ -61,7 +119,7 @@
       "name": "Transport",
       "syllabus_ref": "B.3",
       "section": "Form and Functions",
-      "order": 8,
+      "order": 15,
       "description": "Why organisms need transport, blood and lymph, the mammalian circulatory system and plant vascular tissue."
     },
     {
@@ -69,7 +127,7 @@
       "name": "Respiration",
       "syllabus_ref": "B.4",
       "section": "Form and Functions",
-      "order": 9,
+      "order": 16,
       "description": "Respiratory surfaces, gaseous exchange, aerobic and anaerobic respiration, and fermentation."
     },
     {
@@ -77,7 +135,7 @@
       "name": "Excretion",
       "syllabus_ref": "B.5",
       "section": "Form and Functions",
-      "order": 10,
+      "order": 17,
       "description": "Excretory structures from contractile vacuoles to kidneys, and the excretory products of plants."
     },
     {
@@ -85,7 +143,7 @@
       "name": "Support and movement",
       "syllabus_ref": "B.6",
       "section": "Form and Functions",
-      "order": 11,
+      "order": 18,
       "description": "Plant movements, supporting tissues, skeletons and joints in animals."
     },
     {
@@ -93,7 +151,7 @@
       "name": "Reproduction",
       "syllabus_ref": "B.7",
       "section": "Form and Functions",
-      "order": 12,
+      "order": 19,
       "description": "Asexual and sexual reproduction, flowering-plant reproduction and mammalian reproduction."
     },
     {
@@ -101,7 +159,7 @@
       "name": "Growth",
       "syllabus_ref": "B.8",
       "section": "Form and Functions",
-      "order": 13,
+      "order": 20,
       "description": "The meaning of growth, seed germination and the difference between epigeal and hypogeal germination."
     },
     {
@@ -109,7 +167,7 @@
       "name": "Co-ordination and control",
       "syllabus_ref": "B.9",
       "section": "Form and Functions",
-      "order": 14,
+      "order": 21,
       "description": "Nervous coordination, sense organs, hormones and homeostasis."
     },
     {
@@ -117,7 +175,7 @@
       "name": "Factors affecting the distribution of Organisms",
       "syllabus_ref": "C.1",
       "section": "Ecology",
-      "order": 15,
+      "order": 22,
       "description": "Abiotic and biotic factors that determine where organisms live."
     },
     {
@@ -125,7 +183,7 @@
       "name": "Symbiotic interactions of plants and animals",
       "syllabus_ref": "C.2",
       "section": "Ecology",
-      "order": 16,
+      "order": 23,
       "description": "Symbiosis, energy flow, food chains and webs, and the carbon, water and nitrogen cycles."
     },
     {
@@ -133,7 +191,7 @@
       "name": "Natural Habitats",
       "syllabus_ref": "C.3",
       "section": "Ecology",
-      "order": 17,
+      "order": 24,
       "description": "Aquatic and terrestrial habitats and the adaptive features of the organisms in them."
     },
     {
@@ -141,7 +199,7 @@
       "name": "Local (Nigerian) Biomes",
       "syllabus_ref": "C.4",
       "section": "Ecology",
-      "order": 18,
+      "order": 25,
       "description": "Tropical rainforest, Guinea and Sudan savanna, desert and the highland plateaus of Nigeria."
     },
     {
@@ -149,7 +207,7 @@
       "name": "The Ecology of Populations",
       "syllabus_ref": "C.5",
       "section": "Ecology",
-      "order": 19,
+      "order": 26,
       "description": "Population density, competition, population size, ecological succession and climax communities."
     },
     {
@@ -157,7 +215,7 @@
       "name": "SOIL",
       "syllabus_ref": "C.6",
       "section": "Ecology",
-      "order": 20,
+      "order": 27,
       "description": "Soil types, components, fertility, erosion and the maintenance of productive soil."
     },
     {
@@ -165,7 +223,7 @@
       "name": "Humans and Environment",
       "syllabus_ref": "C.7",
       "section": "Ecology",
-      "order": 21,
+      "order": 28,
       "description": "Disease, drug abuse, pollution, sanitation, conservation and Nigeria's parks and reserves."
     },
     {
@@ -173,7 +231,7 @@
       "name": "Variation In Population",
       "syllabus_ref": "D.1",
       "section": "Heredity and Variations",
-      "order": 22,
+      "order": 29,
       "description": "Morphological and physiological variation and its use in identity, transfusion and paternity."
     },
     {
@@ -181,7 +239,7 @@
       "name": "Heredity",
       "syllabus_ref": "D.2",
       "section": "Heredity and Variations",
-      "order": 23,
+      "order": 30,
       "description": "Heritable characters, chromosomes, genetic crosses, sex determination and sex-linked traits."
     },
     {
@@ -189,7 +247,7 @@
       "name": "Biotechnology",
       "syllabus_ref": "D.3",
       "section": "Heredity and Variations",
-      "order": 24,
+      "order": 31,
       "description": "Applications of biotechnology in agriculture, medicine, pharmaceuticals and the food industry."
     },
     {
@@ -197,7 +255,7 @@
       "name": "Theories of evolution",
       "syllabus_ref": "E.1",
       "section": "Evolution",
-      "order": 25,
+      "order": 32,
       "description": "Organic evolution, Lamarck's and Darwin's theories, and the evidence that supports them."
     },
     {
@@ -205,7 +263,7 @@
       "name": "Evidence of evolution",
       "syllabus_ref": "E.2",
       "section": "Evolution",
-      "order": 26,
+      "order": 33,
       "description": "Fossils, comparative anatomy, embryology and other evidence for organic evolution."
     }
   ],
@@ -754,6 +812,708 @@
               "The leaf has an epidermis and palisade mesophyll.",
               "It also has xylem and phloem in its veins.",
               "A system is a group of organs, not a group of tissues."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "five-kingdoms",
+      "topic": "evolution-among-the-following",
+      "title": "The Five Kingdoms",
+      "objective": "Place an organism in one of the five kingdoms, and explain the trend from a prokaryotic cell to specialised tissues and organs.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "The five kingdoms",
+            "paragraphs": [
+              "A bacterium, a mushroom and a mango tree are all alive, but they are built on different plans. Biology sorts that variety into five kingdoms, then asks what each kingdom added to the basic unit of life: the cell.",
+              "The kingdoms are Monera, Protista, Fungi, Plantae and Animalia. The order is not a family tree. It is a set of body plans, from cells without a nucleus to organisms with tissues, organs and systems."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The first divide: nucleus or no nucleus",
+            "paragraphs": [
+              "Every organism is made of cells, but not every cell is built the same way. A prokaryotic cell has no true nucleus and no membrane-bound organelles. Its DNA lies free in the cytoplasm, usually as a single circular chromosome. Bacteria and blue-green algae are prokaryotes, and they form the kingdom Monera.",
+              "All the other kingdoms are eukaryotic. Their cells have a true nucleus enclosed by a nuclear membrane, and compartments such as mitochondria, chloroplasts and a Golgi body. The nucleus is the first feature to check because it separates Monera from everything else."
+            ],
+            "bullets": [
+              "Prokaryote: no nucleus and no membrane-bound organelles.",
+              "Eukaryote: a true nucleus and membrane-bound organelles.",
+              "Monera is the only prokaryotic kingdom."
+            ],
+            "takeaway": "The first question in classification is whether the cell has a nucleus.",
+            "check": {
+              "question": "A cell has free circular DNA but no nuclear membrane. Which kingdom does it belong to?",
+              "options": [
+                "Monera",
+                "Protista",
+                "Fungi",
+                "Plantae"
+              ],
+              "answer": 0,
+              "why": "Free circular DNA and no nucleus are prokaryotic features, which define Monera."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "The nucleus is the first feature that separates the kingdoms.",
+              "columns": [
+                "Prokaryotic cell",
+                "Eukaryotic cell"
+              ],
+              "rows": [
+                {
+                  "feature": "Nucleus",
+                  "left": "None; DNA lies free",
+                  "right": "True nucleus with a membrane"
+                },
+                {
+                  "feature": "Organelles",
+                  "left": "No membrane-bound organelles",
+                  "right": "Mitochondria, chloroplasts and others"
+                },
+                {
+                  "feature": "DNA",
+                  "left": "Usually one circular chromosome",
+                  "right": "Chromosomes inside the nucleus"
+                },
+                {
+                  "feature": "Size",
+                  "left": "Usually 1 to 10 micrometres",
+                  "right": "Usually 10 to 100 micrometres"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The five kingdoms at a glance",
+            "paragraphs": [
+              "Monera contains bacteria and blue-green algae. Protista contains mainly single-celled eukaryotes such as Amoeba, Paramecium and Euglena. Fungi contains mushroom, Rhizopus and yeast. Plantae contains Spirogyra, mosses, ferns, cycads, maize and water leaf. Animalia contains Hydra, earthworms, insects, fish, frogs, birds and mammals.",
+              "Two further features separate them. Plants make their own food by photosynthesis and have cellulose cell walls. Fungi absorb ready-made food and have chitin cell walls. Animals ingest food and have no cell wall. Protists may be plant-like or animal-like, but they are not divided into tissues."
+            ],
+            "bullets": [
+              "Monera: prokaryotic and mostly single-celled.",
+              "Protista: eukaryotic and mostly single-celled.",
+              "Fungi, Plantae and Animalia: eukaryotic and mostly multicellular."
+            ],
+            "takeaway": "Name the kingdom from the cell plan and the way it feeds.",
+            "check": {
+              "question": "Which kingdom contains organisms with chitin cell walls and no chlorophyll?",
+              "options": [
+                "Monera",
+                "Fungi",
+                "Plantae",
+                "Animalia"
+              ],
+              "answer": 1,
+              "why": "Chitin walls and absorption of ready-made food are fungal features."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "What increasing complexity means",
+            "paragraphs": [
+              "Complexity is not a single ladder, but the kingdoms do show a trend. A moneran is a prokaryotic cell with no nucleus. Protista is a single cell with a nucleus and organelles. Fungi and plants build bodies from many cells, and plants add tissues and organs. Animals add specialised tissues, organs and organ systems.",
+              "The trend is about division of labour. A Paramecium carries out all life processes in one cell. A maize plant has roots for absorption, leaves for photosynthesis and vascular tissue for transport. A mammal adds a heart, lungs, kidneys and a nervous system, each doing one job well."
+            ],
+            "bullets": [
+              "More complexity means more cell types and more division of labour.",
+              "A single cell must carry out every life process itself.",
+              "Complexity is not the same thing as evolutionary superiority."
+            ],
+            "takeaway": "Complexity is the number of specialised parts working together.",
+            "check": {
+              "question": "Which change most clearly shows increasing structural complexity?",
+              "options": [
+                "A bacterium gains a flagellum",
+                "A Paramecium grows larger",
+                "Cells specialise into tissues and organs",
+                "A fungus produces more spores"
+              ],
+              "answer": 2,
+              "why": "Specialised tissues and organs are the structural step beyond a single cell."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Do not classify by colour or habitat. Euglena is green and swims, but it is a protist. Blue-green algae are photosynthetic, but they are bacteria. A mushroom is neither a plant nor an animal."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A specimen is single-celled, green, has a nucleus and swims with a flagellum. A student calls it a plant. Correct the classification.",
+            "steps": [
+              {
+                "operation": "Check the nucleus",
+                "reason": "A true nucleus rules out Monera, whose cells have free DNA.",
+                "result": "The specimen is eukaryotic.",
+                "predictPrompt": "Which kingdom can you already rule out?"
+              },
+              {
+                "operation": "Check the body plan",
+                "reason": "It is one cell, with no tissues or organs.",
+                "result": "It cannot be Plantae, which is multicellular with tissues.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Check nutrition and movement",
+                "reason": "Chloroplasts allow photosynthesis, but the flagellum and eyespot are protist features.",
+                "result": "It fits Euglena in Protista.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Conclude",
+                "reason": "Kingdom is decided by cell plan and body plan, not colour.",
+                "result": "The specimen is a protist, not a plant."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A unicellular organism has no nucleus, a cell wall and a whip-like flagellum. Name its kingdom and explain why it cannot be a protist.",
+            "hints": [
+              "Look for a nuclear membrane.",
+              "Protista is eukaryotic, so its cells have a true nucleus.",
+              "Monera is prokaryotic: free DNA and no membrane-bound organelles."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "monera-and-protista",
+      "topic": "monera-and-protista",
+      "title": "Monera and Protista",
+      "objective": "Distinguish bacteria and blue-green algae from Amoeba, Paramecium and Euglena using the nucleus, nutrition and movement.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Two kingdoms of small organisms",
+            "paragraphs": [
+              "A drop of pond water can hold bacteria, blue-green algae, Amoeba, Paramecium and Euglena. They are all microscopic, but they belong to two different kingdoms. The difference is the nucleus, and it decides how each cell feeds, moves and reproduces."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Monera: cells without a nucleus",
+            "paragraphs": [
+              "Bacteria are the best-known monerans. Each is a single prokaryotic cell with a cell wall, a cell membrane and free circular DNA. Many have a capsule, and some have flagella for movement. They reproduce by binary fission, so one cell splits into two identical cells. Under harsh conditions, some form resistant endospores.",
+              "Blue-green algae, now called cyanobacteria, are also Monera. They contain chlorophyll and photosynthesise, but the pigment is not enclosed in a chloroplast. Some, such as Nostoc and Anabaena, fix nitrogen in rice fields. Bacteria decompose dead matter, cause disease, ferment food and supply antibiotics; cyanobacteria add nitrogen to the soil."
+            ],
+            "bullets": [
+              "Binary fission, not mitosis, is the usual reproduction.",
+              "Cyanobacteria photosynthesise without chloroplasts.",
+              "Some bacteria fix nitrogen or form endospores."
+            ],
+            "takeaway": "Monera is prokaryotic: no nucleus and no membrane-bound organelles.",
+            "check": {
+              "question": "Why are blue-green algae placed in Monera and not in Plantae?",
+              "options": [
+                "They have no chlorophyll",
+                "They are prokaryotic and have no chloroplasts",
+                "They are always harmful",
+                "They cannot photosynthesise"
+              ],
+              "answer": 1,
+              "why": "They photosynthesise, but their cells lack a nucleus and chloroplasts, so they are prokaryotes."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "Both are microscopic, but only one has a nucleus.",
+              "columns": [
+                "Monera",
+                "Protista"
+              ],
+              "rows": [
+                {
+                  "feature": "Nucleus",
+                  "left": "None; DNA lies free",
+                  "right": "True nucleus"
+                },
+                {
+                  "feature": "Organelles",
+                  "left": "No membrane-bound organelles",
+                  "right": "Membrane-bound organelles present"
+                },
+                {
+                  "feature": "Nutrition",
+                  "left": "Absorb, photosynthesise or parasitise",
+                  "right": "Animal-like or plant-like"
+                },
+                {
+                  "feature": "Examples",
+                  "left": "Bacteria and Nostoc",
+                  "right": "Amoeba, Paramecium and Euglena"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Protista: one cell with a nucleus",
+            "paragraphs": [
+              "Protista are eukaryotes that are mostly single-celled. Amoeba moves and feeds with pseudopodia, flowing around food and engulfing it by phagocytosis. Paramecium is covered with cilia that beat in waves. An oral groove sweeps food into a food vacuole, and contractile vacuoles pump out excess water.",
+              "Euglena has a flagellum, a light-sensitive eyespot and chloroplasts. It photosynthesises in light but can absorb food in the dark, so it is mixotrophic. Protists reproduce mainly by binary fission, and Paramecium can exchange genetic material by conjugation. Contractile vacuoles also keep the cell from bursting in fresh water."
+            ],
+            "bullets": [
+              "Amoeba: pseudopodia and phagocytosis.",
+              "Paramecium: cilia, oral groove and contractile vacuoles.",
+              "Euglena: flagellum, eyespot and chloroplasts."
+            ],
+            "takeaway": "Protists are eukaryotic cells that live as a whole organism.",
+            "check": {
+              "question": "Which structure helps Paramecium move?",
+              "options": [
+                "Pseudopodia",
+                "Cilia",
+                "Flagellum",
+                "Setae"
+              ],
+              "answer": 1,
+              "why": "Paramecium is covered with cilia that beat in coordinated waves."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Telling the two kingdoms apart",
+            "paragraphs": [
+              "Start with the nucleus. If there is no nuclear membrane, the organism is Monera. If there is a true nucleus, it is eukaryotic. Then look at the organelles and the body. A protist has membrane-bound organelles and is usually a single cell.",
+              "Nutrition and movement are secondary clues. Euglena is green, but it is a protist, not a plant, because it is unicellular and has no tissues. Blue-green algae are green and photosynthetic, but they are bacteria because they have no nucleus or chloroplasts. Amoeba has no fixed shape, so a drawing of a round cell is not Amoeba."
+            ],
+            "bullets": [
+              "Nucleus first; colour and habitat second.",
+              "Green does not mean plant.",
+              "A single cell with a nucleus is a protist, not Monera."
+            ],
+            "takeaway": "Classify by the nucleus, then by organelles and body plan.",
+            "check": {
+              "question": "An organism is single-celled, has a nucleus and chloroplasts, and swims with a flagellum. What is it?",
+              "options": [
+                "A bacterium",
+                "A protist",
+                "A fungus",
+                "A plant"
+              ],
+              "answer": 1,
+              "why": "It is eukaryotic and unicellular, so it is a protist; plants are multicellular with tissues."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "A question may describe a green, motile cell and expect Euglena. Check the nucleus before you choose the kingdom, and check the organelles before you call it a plant."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A pond sample contains two organisms. One has no nuclear membrane, a cell wall and a flagellum. The other has a nucleus, cilia and a contractile vacuole. Name the kingdom of each.",
+            "steps": [
+              {
+                "operation": "Test the first for a nucleus",
+                "reason": "No nuclear membrane means the DNA is free in the cytoplasm.",
+                "result": "The first organism is prokaryotic, so it belongs to Monera.",
+                "predictPrompt": "Which feature decides the kingdom before any other?"
+              },
+              {
+                "operation": "Test the second for a nucleus",
+                "reason": "A true nucleus makes it eukaryotic.",
+                "result": "The second organism is not Monera.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Use the body plan",
+                "reason": "It is one cell with cilia and a contractile vacuole, which are protist features.",
+                "result": "The second organism is a protist, likely Paramecium.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Check the trap",
+                "reason": "A flagellum alone does not make an organism a protist; bacteria can have flagella too.",
+                "result": "The nucleus, not movement, separates the kingdoms."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A pond sample contains a green unicellular organism with a nucleus and a red eyespot. Name the organism and its kingdom, and explain why it is not a plant.",
+            "hints": [
+              "The eyespot and flagellum point to a familiar protist.",
+              "A plant is multicellular and has tissues.",
+              "The organism is Euglena, in Protista."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "fungi",
+      "topic": "fungi",
+      "title": "Fungi",
+      "objective": "Explain how fungi are built, how they feed and reproduce, and why they are neither plants nor animals.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Fungi",
+            "paragraphs": [
+              "A mushroom pushes through leaf litter after rain, and bread turns mouldy in a damp cupboard. Both are fungi, a kingdom that feeds by absorbing food rather than making it or swallowing it."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The body of a fungus",
+            "paragraphs": [
+              "A fungus is made of thread-like hyphae. A mass of hyphae is a mycelium, which spreads through soil, bread or dead wood. The cell wall is made of chitin, not cellulose, and the cells store carbohydrate as glycogen, not starch. Fungi have no chlorophyll, so they cannot photosynthesise.",
+              "Some fungi are unicellular, such as yeast. Most are multicellular, such as Rhizopus and mushrooms. The visible mushroom is only the fruiting body. Most of the organism is the mycelium hidden in the substrate. The fruiting body releases spores."
+            ],
+            "bullets": [
+              "Hyphae make up the mycelium.",
+              "The cell wall is chitin and the storage carbohydrate is glycogen.",
+              "No chlorophyll means no photosynthesis."
+            ],
+            "takeaway": "A fungus is a chitin-walled heterotroph built from hyphae.",
+            "check": {
+              "question": "A fungal cell wall is made mainly of",
+              "options": [
+                "Cellulose",
+                "Chitin",
+                "Peptidoglycan",
+                "Lignin"
+              ],
+              "answer": 1,
+              "why": "Fungi have chitin walls; plants have cellulose and bacteria have peptidoglycan."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "A fungus looks plant-like but feeds like an animal.",
+              "columns": [
+                "Fungi",
+                "Plants"
+              ],
+              "rows": [
+                {
+                  "feature": "Cell wall",
+                  "left": "Chitin",
+                  "right": "Cellulose"
+                },
+                {
+                  "feature": "Nutrition",
+                  "left": "Absorb dead or living matter",
+                  "right": "Photosynthesise"
+                },
+                {
+                  "feature": "Chlorophyll",
+                  "left": "Absent",
+                  "right": "Present in green parts"
+                },
+                {
+                  "feature": "Storage",
+                  "left": "Glycogen",
+                  "right": "Starch"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "How fungi feed",
+            "paragraphs": [
+              "Fungi are heterotrophs. Saprophytes, such as Rhizopus on bread and mushrooms on dead leaves, release enzymes onto the food and absorb the digested nutrients. Parasites feed on a living host and cause diseases such as ringworm and athlete's foot. Mutualists live with another organism and both benefit. Lichens are fungi with algae, and mycorrhizae are fungi with plant roots.",
+              "This extracellular digestion is why mould softens bread and why a mushroom appears on rotting wood. The fungus digests the substrate outside its body, then absorbs the soluble products. No food is taken in as solid particles."
+            ],
+            "bullets": [
+              "Saprophyte: dead matter digested outside the body.",
+              "Parasite: feeds on a living host.",
+              "Mutualist: both partners benefit."
+            ],
+            "takeaway": "Fungi digest food outside the body, then absorb it.",
+            "check": {
+              "question": "Rhizopus growing on bread is best described as",
+              "options": [
+                "A parasite",
+                "A saprophyte",
+                "An autotroph",
+                "A mutualist"
+              ],
+              "answer": 1,
+              "why": "It releases enzymes onto dead bread and absorbs the products."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Reproduction and importance",
+            "paragraphs": [
+              "Fungi reproduce by spores. Rhizopus forms sporangia on upright stalks. When they burst, spores scatter and grow into new mycelia. A mushroom produces basidiospores on its gills. Yeast reproduces asexually by budding. Many fungi also have a sexual stage, which introduces variation.",
+              "Fungi are useful and harmful. Yeast ferments sugar in bread and brewing. Mushrooms are food. Penicillium yields penicillin. Fungi decompose dead matter and recycle nutrients. They also spoil food, cause crop diseases such as rust and smut, and cause human infections. Some mushrooms are poisonous."
+            ],
+            "bullets": [
+              "Spores are the main dispersal unit.",
+              "Yeast buds; Rhizopus uses sporangia.",
+              "Fungi decompose, ferment, produce antibiotics and cause disease."
+            ],
+            "takeaway": "Fungi recycle matter, but they also spoil food and cause disease.",
+            "check": {
+              "question": "Which fungus is used to produce an antibiotic?",
+              "options": [
+                "Rhizopus",
+                "Penicillium",
+                "Saccharomyces",
+                "Agaricus"
+              ],
+              "answer": 1,
+              "why": "Penicillium produces penicillin."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Mould on bread is Rhizopus, a saprophyte. Do not call it a plant because it is stationary. Look for chitin, glycogen and the absence of chlorophyll."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A student says a mushroom is a plant because it does not move. Give three features that place it in Fungi.",
+            "steps": [
+              {
+                "operation": "Check the cell wall",
+                "reason": "Plant walls are cellulose; fungal walls are chitin.",
+                "result": "The wall points to Fungi.",
+                "predictPrompt": "Which chemical test would help?"
+              },
+              {
+                "operation": "Check nutrition",
+                "reason": "A mushroom has no chlorophyll and cannot photosynthesise.",
+                "result": "It absorbs ready-made food, like a heterotroph.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Check the body",
+                "reason": "The body is a mycelium of hyphae, not roots, stems and leaves.",
+                "result": "It has no plant organs.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Conclude",
+                "reason": "Stationary does not mean plant.",
+                "result": "The mushroom belongs to Fungi."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Explain why a fungus cannot make its own food even when it grows in bright sunlight.",
+            "hints": [
+              "Photosynthesis needs chlorophyll.",
+              "Fungi digest their food outside the body.",
+              "Saprophytes absorb the soluble products."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "plant-divisions",
+      "topic": "plant-divisions",
+      "title": "Plant Divisions",
+      "objective": "Order Thallophyta, Bryophyta, Pteridophyta and Spermatophyta by vascular tissue, seeds and their dependence on water.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Plant divisions",
+            "paragraphs": [
+              "A moss, a fern and a mango tree all photosynthesise, but they solve the same problems differently. Plant divisions are grouped by how far each has moved from water, from a simple thallus to a seed that can be dispersed on land."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Thallophyta and Bryophyta",
+            "paragraphs": [
+              "Thallophyta have a thallus, a body that is not divided into true roots, stems and leaves. Spirogyra is a filamentous green alga that lives in fresh water. Its cells contain spiral chloroplasts and pyrenoids that store starch. It reproduces by fragmentation and conjugation.",
+              "Bryophyta include mosses and liverworts, such as Marchantia. They have rhizoids instead of true roots, no vascular tissue, and a dominant gametophyte generation. Their sperm must swim through a film of water to reach the egg, so they live in damp, shaded places and stay small."
+            ],
+            "bullets": [
+              "Thallophyta: a thallus, with no true roots, stems or leaves.",
+              "Bryophyta: rhizoids, no vascular tissue, water needed for fertilisation.",
+              "Both are tied to damp habitats."
+            ],
+            "takeaway": "Without vascular tissue, a plant cannot grow tall or far from water.",
+            "check": {
+              "question": "Which feature keeps mosses close to the ground?",
+              "options": [
+                "Seeds",
+                "No vascular tissue",
+                "Flowers",
+                "True roots"
+              ],
+              "answer": 1,
+              "why": "Without xylem and phloem, mosses cannot transport water and food over long distances."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Pteridophyta and Spermatophyta",
+            "paragraphs": [
+              "Pteridophyta are ferns such as Dryopteris. They have true roots, stems and leaves, and vascular tissue of xylem and phloem, so they can grow taller than mosses. They still reproduce by spores and their sperm need water, so ferns are common in damp places.",
+              "Spermatophyta reproduce by seeds. Gymnosperms, such as cycads and conifers, bear naked seeds in cones. Angiosperms bear seeds enclosed in fruits. They flower and are divided into monocots, such as maize, and dicots, such as water leaf. Pollen carries the male gamete, so fertilisation no longer needs water."
+            ],
+            "bullets": [
+              "Ferns: vascular tissue, spores, water for fertilisation.",
+              "Gymnosperms: naked seeds, usually in cones.",
+              "Angiosperms: flowers, fruits, monocots and dicots."
+            ],
+            "takeaway": "The seed freed plants from standing water.",
+            "check": {
+              "question": "Which group produces seeds enclosed in fruits?",
+              "options": [
+                "Bryophyta",
+                "Pteridophyta",
+                "Gymnosperms",
+                "Angiosperms"
+              ],
+              "answer": 3,
+              "why": "Angiosperms are flowering plants; their seeds develop inside fruits."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The trend from water to land",
+            "paragraphs": [
+              "The divisions show a series of innovations. Vascular tissue made tall growth possible. The seed protected the embryo and stored food. Pollen removed the need for swimming sperm. Flowers and fruits improved pollination and seed dispersal. Each step reduced dependence on water.",
+              "The trend is not a straight line from one living plant to another, and lower plants are not failures. Mosses and ferns still thrive in damp habitats. But the sequence explains why a mango tree can grow on dry land while a moss cannot. Each innovation widened the range of habitats a plant could occupy."
+            ],
+            "bullets": [
+              "Vascular tissue solved transport.",
+              "Seeds and pollen solved reproduction on land.",
+              "Flowers and fruits improved dispersal."
+            ],
+            "takeaway": "Each plant division removes one more dependence on water.",
+            "check": {
+              "question": "Which innovation first allowed plants to reproduce without water?",
+              "options": [
+                "Vascular tissue",
+                "Seeds and pollen",
+                "Rhizoids",
+                "Chloroplasts"
+              ],
+              "answer": 1,
+              "why": "Pollen carries the male gamete, so fertilisation does not need a film of water."
+            },
+            "visual": {
+              "kind": "flow",
+              "caption": "One innovation at a time, from water to land.",
+              "steps": [
+                "Thallophyta: no vascular tissue",
+                "Bryophyta: rhizoids, no vascular tissue",
+                "Pteridophyta: vascular tissue, spores",
+                "Gymnosperms: seeds, no fruit",
+                "Angiosperms: flowers and fruit"
+              ]
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Match the example to the division: Spirogyra is Thallophyta, Marchantia is Bryophyta, Dryopteris is Pteridophyta, and maize is an angiosperm."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A plant has vascular tissue, true leaves and spores, but no seeds. It grows in damp shade. Name its division and explain why it still needs water.",
+            "steps": [
+              {
+                "operation": "Check the vascular tissue",
+                "reason": "Xylem and phloem rule out Thallophyta and Bryophyta.",
+                "result": "The plant is either Pteridophyta or Spermatophyta.",
+                "predictPrompt": "Which groups lack vascular tissue?"
+              },
+              {
+                "operation": "Check the reproductive structure",
+                "reason": "Spores instead of seeds point to Pteridophyta.",
+                "result": "The plant is a fern, such as Dryopteris.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Explain the water need",
+                "reason": "Fern sperm must swim through a film of water to reach the egg.",
+                "result": "Fertilisation ties the fern to damp shade.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Conclude",
+                "reason": "Vascular tissue allows height, but reproduction still needs water.",
+                "result": "The plant is a pteridophyte."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A farmer wants a tall crop on dry land. Explain why an angiosperm is better suited than a moss or a fern.",
+            "hints": [
+              "Compare vascular tissue first.",
+              "Then compare how each plant fertilises and disperses its young.",
+              "Seeds and pollen remove the need for a film of water."
             ]
           }
         }
