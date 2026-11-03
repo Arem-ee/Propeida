@@ -1,0 +1,763 @@
+{
+  "subject": "biology",
+  "source": "JAMB/IBASS Biology syllabus (2026); lessons checked against the structured syllabus",
+  "topics": [
+    {
+      "slug": "living-organisms",
+      "name": "Characteristics of Living Things",
+      "syllabus_ref": "A.1",
+      "section": "Variety of Organisms",
+      "order": 1,
+      "description": "The seven life processes that separate living from non-living things, and the traps that decide exam questions."
+    },
+    {
+      "slug": "cell-structure-and-function",
+      "name": "Cell Structure and Function",
+      "section": "Variety of Organisms",
+      "order": 2,
+      "description": "Shared cell structures, plant and animal differences, and the functions of the organelles."
+    },
+    {
+      "slug": "levels-of-organisation",
+      "name": "Levels of Organisation",
+      "section": "Variety of Organisms",
+      "order": 3,
+      "description": "The sequence from cell to tissue, organ, system and organism, with the syllabus examples."
+    },
+    {
+      "slug": "evolution-among-the-following",
+      "name": "Evolution among the following",
+      "syllabus_ref": "A.2",
+      "section": "Variety of Organisms",
+      "order": 4,
+      "description": "Monera, Protista, Fungi, plants and animals, and the trend of increasing structural complexity."
+    },
+    {
+      "slug": "structural-functional-and-behavioural",
+      "name": "Structural/functional and behavioural",
+      "syllabus_ref": "A.3",
+      "section": "Variety of Organisms",
+      "order": 5,
+      "description": "Adaptive colouration, social behaviour and structural adaptations to environment and way of life."
+    },
+    {
+      "slug": "internal-structure-of-a-flowering-plant",
+      "name": "Internal structure of a flowering plant",
+      "syllabus_ref": "B.1",
+      "section": "Form and Functions",
+      "order": 6,
+      "description": "Root, stem and leaf anatomy, supporting tissues, and the internal organs of a mammal."
+    },
+    {
+      "slug": "nutrition",
+      "name": "Nutrition",
+      "syllabus_ref": "B.2",
+      "section": "Form and Functions",
+      "order": 7,
+      "description": "Autotrophic and heterotrophic nutrition, photosynthesis, food classes, teeth and the alimentary canal."
+    },
+    {
+      "slug": "transport",
+      "name": "Transport",
+      "syllabus_ref": "B.3",
+      "section": "Form and Functions",
+      "order": 8,
+      "description": "Why organisms need transport, blood and lymph, the mammalian circulatory system and plant vascular tissue."
+    },
+    {
+      "slug": "respiration",
+      "name": "Respiration",
+      "syllabus_ref": "B.4",
+      "section": "Form and Functions",
+      "order": 9,
+      "description": "Respiratory surfaces, gaseous exchange, aerobic and anaerobic respiration, and fermentation."
+    },
+    {
+      "slug": "excretion",
+      "name": "Excretion",
+      "syllabus_ref": "B.5",
+      "section": "Form and Functions",
+      "order": 10,
+      "description": "Excretory structures from contractile vacuoles to kidneys, and the excretory products of plants."
+    },
+    {
+      "slug": "support-and-movement",
+      "name": "Support and movement",
+      "syllabus_ref": "B.6",
+      "section": "Form and Functions",
+      "order": 11,
+      "description": "Plant movements, supporting tissues, skeletons and joints in animals."
+    },
+    {
+      "slug": "reproduction",
+      "name": "Reproduction",
+      "syllabus_ref": "B.7",
+      "section": "Form and Functions",
+      "order": 12,
+      "description": "Asexual and sexual reproduction, flowering-plant reproduction and mammalian reproduction."
+    },
+    {
+      "slug": "growth",
+      "name": "Growth",
+      "syllabus_ref": "B.8",
+      "section": "Form and Functions",
+      "order": 13,
+      "description": "The meaning of growth, seed germination and the difference between epigeal and hypogeal germination."
+    },
+    {
+      "slug": "co-ordination-and-control",
+      "name": "Co-ordination and control",
+      "syllabus_ref": "B.9",
+      "section": "Form and Functions",
+      "order": 14,
+      "description": "Nervous coordination, sense organs, hormones and homeostasis."
+    },
+    {
+      "slug": "factors-affecting-the-distribution-of-organisms",
+      "name": "Factors affecting the distribution of Organisms",
+      "syllabus_ref": "C.1",
+      "section": "Ecology",
+      "order": 15,
+      "description": "Abiotic and biotic factors that determine where organisms live."
+    },
+    {
+      "slug": "symbiotic-interactions-of-plants-and-animals",
+      "name": "Symbiotic interactions of plants and animals",
+      "syllabus_ref": "C.2",
+      "section": "Ecology",
+      "order": 16,
+      "description": "Symbiosis, energy flow, food chains and webs, and the carbon, water and nitrogen cycles."
+    },
+    {
+      "slug": "natural-habitats",
+      "name": "Natural Habitats",
+      "syllabus_ref": "C.3",
+      "section": "Ecology",
+      "order": 17,
+      "description": "Aquatic and terrestrial habitats and the adaptive features of the organisms in them."
+    },
+    {
+      "slug": "local-nigerian-biomes",
+      "name": "Local (Nigerian) Biomes",
+      "syllabus_ref": "C.4",
+      "section": "Ecology",
+      "order": 18,
+      "description": "Tropical rainforest, Guinea and Sudan savanna, desert and the highland plateaus of Nigeria."
+    },
+    {
+      "slug": "the-ecology-of-populations",
+      "name": "The Ecology of Populations",
+      "syllabus_ref": "C.5",
+      "section": "Ecology",
+      "order": 19,
+      "description": "Population density, competition, population size, ecological succession and climax communities."
+    },
+    {
+      "slug": "soil",
+      "name": "SOIL",
+      "syllabus_ref": "C.6",
+      "section": "Ecology",
+      "order": 20,
+      "description": "Soil types, components, fertility, erosion and the maintenance of productive soil."
+    },
+    {
+      "slug": "humans-and-environment",
+      "name": "Humans and Environment",
+      "syllabus_ref": "C.7",
+      "section": "Ecology",
+      "order": 21,
+      "description": "Disease, drug abuse, pollution, sanitation, conservation and Nigeria's parks and reserves."
+    },
+    {
+      "slug": "variation-in-population",
+      "name": "Variation In Population",
+      "syllabus_ref": "D.1",
+      "section": "Heredity and Variations",
+      "order": 22,
+      "description": "Morphological and physiological variation and its use in identity, transfusion and paternity."
+    },
+    {
+      "slug": "heredity",
+      "name": "Heredity",
+      "syllabus_ref": "D.2",
+      "section": "Heredity and Variations",
+      "order": 23,
+      "description": "Heritable characters, chromosomes, genetic crosses, sex determination and sex-linked traits."
+    },
+    {
+      "slug": "biotechnology",
+      "name": "Biotechnology",
+      "syllabus_ref": "D.3",
+      "section": "Heredity and Variations",
+      "order": 24,
+      "description": "Applications of biotechnology in agriculture, medicine, pharmaceuticals and the food industry."
+    },
+    {
+      "slug": "theories-of-evolution",
+      "name": "Theories of evolution",
+      "syllabus_ref": "E.1",
+      "section": "Evolution",
+      "order": 25,
+      "description": "Organic evolution, Lamarck's and Darwin's theories, and the evidence that supports them."
+    },
+    {
+      "slug": "evidence-of-evolution",
+      "name": "Evidence of evolution",
+      "syllabus_ref": "E.2",
+      "section": "Evolution",
+      "order": 26,
+      "description": "Fossils, comparative anatomy, embryology and other evidence for organic evolution."
+    }
+  ],
+  "lessons": [
+    {
+      "slug": "characteristics-of-living-things",
+      "topic": "living-organisms",
+      "title": "Characteristics of Living Things",
+      "objective": "Separate living from non-living things using the seven life processes, and name the process a question describes.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Characteristics of living things",
+            "paragraphs": [
+              "A car moves, a crystal grows and a flame uses oxygen, yet none of them is alive. Biology separates living from non-living things by a set of processes that must all be present, not by any single sign."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Seven processes that define life",
+            "paragraphs": [
+              "A parked car can move, a crystal can grow and a flame can use up fuel. Each mimics one sign of life, which is why one sign cannot decide the question.",
+              "Living things carry out seven processes. Movement includes the whole body and the movement of substances inside it. Respiration releases energy from food. Nutrition obtains and uses food. Excretion removes metabolic waste. Growth is a permanent increase in size or cell number. Reproduction produces new individuals. Sensitivity, also called irritability, is the response to stimuli such as light, heat or touch.",
+              "Only a living thing performs all seven. A virus is a borderline case: it reproduces only inside a host cell and has no metabolism of its own."
+            ],
+            "bullets": [
+              "All seven processes must be present; one alone proves nothing.",
+              "Movement includes internal transport, not only locomotion.",
+              "Growth in living things comes from cell division, not external addition."
+            ],
+            "takeaway": "Life is the whole set of processes, never a single sign.",
+            "check": {
+              "question": "A crystal increases in size. Which characteristic does it imitate?",
+              "options": [
+                "Growth",
+                "Reproduction",
+                "Excretion",
+                "Respiration"
+              ],
+              "answer": 0,
+              "why": "It looks like growth, but a crystal adds material on its outside; living growth is internal."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "The same outward sign can have a different cause.",
+              "columns": [
+                "Living things",
+                "Non-living things"
+              ],
+              "rows": [
+                {
+                  "feature": "Growth",
+                  "left": "From inside by cell division",
+                  "right": "By adding material outside"
+                },
+                {
+                  "feature": "Movement",
+                  "left": "Whole body or body parts",
+                  "right": "Moved only by an outside force"
+                },
+                {
+                  "feature": "Respiration",
+                  "left": "Releases energy from food",
+                  "right": "No metabolic respiration"
+                },
+                {
+                  "feature": "Response",
+                  "left": "Reacts to stimuli",
+                  "right": "No response of its own"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Nutrition and respiration",
+            "paragraphs": [
+              "A green plant in sunlight and a boy eating rice both need energy, but they obtain it in opposite ways.",
+              "Nutrition is how an organism obtains and uses food. Autotrophs, such as green plants, make their own food by photosynthesis. Heterotrophs, such as humans, fungi and most bacteria, depend on ready-made food. Holozoic feeders ingest solid food, saprophytes absorb dissolved food from dead matter, and parasites feed on a living host.",
+              "Respiration is the breakdown of food to release energy. Aerobic respiration uses oxygen and releases carbon dioxide and water. Anaerobic respiration works without oxygen and releases less energy; in yeast it produces ethanol and carbon dioxide. Breathing is only the exchange of gases, not respiration itself."
+            ],
+            "bullets": [
+              "An autotroph makes food; a heterotroph takes it ready-made.",
+              "Respiration releases energy; breathing only moves gases.",
+              "Anaerobic respiration yields less energy than aerobic respiration."
+            ],
+            "takeaway": "Nutrition supplies the fuel; respiration releases its energy.",
+            "check": {
+              "question": "Which process releases energy from food inside a cell?",
+              "options": [
+                "Breathing",
+                "Respiration",
+                "Photosynthesis",
+                "Egestion"
+              ],
+              "answer": 1,
+              "why": "Respiration is the controlled breakdown of food that releases energy; breathing only exchanges gases."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Excretion, reproduction and response",
+            "paragraphs": [
+              "A student confuses sweating with passing faeces, and movement with responding to light. The exam tests exactly these boundaries.",
+              "Excretion removes waste made by metabolism, such as carbon dioxide, urea and excess salts. Egestion removes undigested food from the gut; it is not excretion because the material never entered the body's cells. Sweating is excretion of water and salts, while defecation is egestion.",
+              "Reproduction is the production of offspring. It is not needed for the survival of the individual, only for the species. Sensitivity, or irritability, is the response to a stimulus: a shoot bends towards light, a cockroach runs from a torch, and the pupil narrows in bright light."
+            ],
+            "bullets": [
+              "Excretion removes metabolic waste; egestion removes undigested food.",
+              "Reproduction ensures the species, not the individual.",
+              "Sensitivity is a response to a stimulus."
+            ],
+            "takeaway": "Name the process by its product, not by the organ that releases it.",
+            "check": {
+              "question": "Removal of undigested food from the alimentary canal is called",
+              "options": [
+                "Excretion",
+                "Egestion",
+                "Secretion",
+                "Respiration"
+              ],
+              "answer": 1,
+              "why": "The food never entered the cells, so its removal is egestion, not excretion."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "When a question names an action, match it to the process that defines it: bending to light is sensitivity, shedding metabolic waste is excretion, and passing undigested food is egestion."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A student argues that a burning candle is alive because it gives out heat and uses oxygen. Test the claim using the characteristics of living things.",
+            "steps": [
+              {
+                "operation": "Separate the apparent signs",
+                "reason": "Heat and oxygen use look like respiration, but respiration must release energy from food inside cells.",
+                "result": "The candle has no nutrition and no cells, so it cannot respire.",
+                "predictPrompt": "Which characteristic should you test first?"
+              },
+              {
+                "operation": "Test growth and excretion",
+                "reason": "A candle does not grow from within and produces no metabolic waste.",
+                "result": "Growth and excretion are absent.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Test reproduction and response",
+                "reason": "It cannot reproduce and does not respond to stimuli.",
+                "result": "Only one apparent sign remains.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Conclude",
+                "reason": "Life requires the full set of processes, not one imitation.",
+                "result": "The candle is non-living."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A potted plant near a window bends its stem towards the light. Name the characteristic shown and explain why this is not locomotion.",
+            "hints": [
+              "The plant is responding to a directional stimulus.",
+              "Locomotion is the movement of the whole organism from place to place.",
+              "The response is sensitivity, shown as positive phototropism."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "cell-structure-and-function",
+      "title": "Cell Structure and Function",
+      "objective": "Identify the shared and distinguishing structures of plant and animal cells, and state the function of each organelle.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Cell structure and function",
+            "paragraphs": [
+              "Every living thing is built from cells, but plant and animal cells are not identical. Recognising the shared structures and the few differences is enough to answer most cell questions."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "What every cell shares",
+            "paragraphs": [
+              "A cheek scraping and an onion epidermis look different under the microscope, yet both show the same basic machinery.",
+              "The cell membrane is a thin, selectively permeable layer that controls what enters and leaves. The cytoplasm is the jelly-like medium where reactions occur and organelles sit. The nucleus contains chromosomes made of DNA and controls the cell's activities. Mitochondria are the sites of aerobic respiration, releasing energy as ATP. Ribosomes build proteins from amino acids.",
+              "These five structures are enough to identify a cell as a cell. The membrane surrounds the cell, while the organelles work inside it."
+            ],
+            "bullets": [
+              "The membrane controls exchange; the cytoplasm hosts reactions.",
+              "The nucleus holds DNA and controls activity.",
+              "Mitochondria release energy; ribosomes make protein."
+            ],
+            "takeaway": "Membrane, cytoplasm, nucleus, mitochondria and ribosomes are the shared kit.",
+            "check": {
+              "question": "Which organelle controls the cell's activities?",
+              "options": [
+                "Nucleus",
+                "Mitochondrion",
+                "Ribosome",
+                "Cell membrane"
+              ],
+              "answer": 0,
+              "why": "The nucleus contains the chromosomes that direct the cell."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Plant and animal differences",
+            "paragraphs": [
+              "A leaf cell and a liver cell both need energy, but only one of them can make its own food.",
+              "Plant cells have a cellulose cell wall outside the membrane, giving shape and support. They also contain chloroplasts with chlorophyll for photosynthesis, and a large permanent sap vacuole that stores water and salts and keeps the cell turgid.",
+              "Animal cells lack a cell wall and chloroplasts. They usually have small, temporary vacuoles, and centrioles that help in cell division. Both cell types have a membrane, cytoplasm, nucleus, mitochondria and ribosomes."
+            ],
+            "bullets": [
+              "Plant-only: cellulose wall, chloroplasts, large sap vacuole.",
+              "Animal-only: centrioles and small temporary vacuoles.",
+              "Both share the membrane, cytoplasm, nucleus, mitochondria and ribosomes."
+            ],
+            "takeaway": "The wall and chloroplasts are the plant give-aways.",
+            "check": {
+              "question": "Which structure is present in a plant cell but absent in an animal cell?",
+              "options": [
+                "Cell membrane",
+                "Cell wall",
+                "Mitochondrion",
+                "Ribosome"
+              ],
+              "answer": 1,
+              "why": "A cellulose cell wall surrounds plant cells; the membrane and organelles are shared."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "Two shared kits, four separating features.",
+              "columns": [
+                "Plant cell",
+                "Animal cell"
+              ],
+              "rows": [
+                {
+                  "feature": "Cell wall",
+                  "left": "Cellulose wall present",
+                  "right": "Absent"
+                },
+                {
+                  "feature": "Chloroplast",
+                  "left": "Present in green parts",
+                  "right": "Absent"
+                },
+                {
+                  "feature": "Vacuole",
+                  "left": "Large and permanent",
+                  "right": "Small and temporary"
+                },
+                {
+                  "feature": "Centrioles",
+                  "left": "Usually absent",
+                  "right": "Present"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Organelles that transport and package",
+            "paragraphs": [
+              "A pancreas cell releases digestive enzymes. The protein must be built, moved, packaged and sent out without leaking into the cytoplasm.",
+              "Ribosomes on the rough endoplasmic reticulum make proteins. The rough ER transports them; the smooth ER makes lipids. The Golgi apparatus modifies, packages and secretes proteins, and lysosomes contain digestive enzymes that break down worn-out organelles and foreign material. Vacuoles store water, salts, pigments and waste.",
+              "The path of a secreted protein is ribosome, rough ER, Golgi, vesicle, membrane. A cell that secretes a lot, such as a pancreas cell, has many ribosomes and a large Golgi."
+            ],
+            "bullets": [
+              "Rough ER makes and moves protein; smooth ER makes lipid.",
+              "The Golgi packages and secretes; lysosomes digest.",
+              "Secretory cells have many ribosomes and a large Golgi."
+            ],
+            "takeaway": "Follow the protein: ribosome, ER, Golgi, vesicle, membrane.",
+            "check": {
+              "question": "Which organelle packages proteins for secretion?",
+              "options": [
+                "Golgi apparatus",
+                "Lysosome",
+                "Nucleus",
+                "Chloroplast"
+              ],
+              "answer": 0,
+              "why": "The Golgi modifies and packages proteins into vesicles for release."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Never say the cell wall controls what enters. The wall is fully permeable and gives support; the membrane is the selectively permeable barrier."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A microscope slide shows a cell with a cellulose wall, chloroplasts and a large vacuole. Name the cell type and state two structures it lacks that a liver cell would have.",
+            "steps": [
+              {
+                "operation": "Read the plant features",
+                "reason": "A cellulose wall, chloroplasts and a large permanent vacuole are plant features.",
+                "result": "The cell is a plant cell.",
+                "predictPrompt": "Which features are shared by both cell types?"
+              },
+              {
+                "operation": "Recall the animal kit",
+                "reason": "Animal cells have centrioles and small temporary vacuoles.",
+                "result": "These are the two structures to name.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Check the shared kit",
+                "reason": "Both cell types still have a membrane, cytoplasm, nucleus, mitochondria and ribosomes.",
+                "result": "Do not list shared structures as differences.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Answer precisely",
+                "reason": "Name only the structures the plant cell lacks.",
+                "result": "Centrioles and small temporary vacuoles."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A cell contains many mitochondria and a large Golgi apparatus. Suggest one job the cell might do and explain why it needs both features.",
+            "hints": [
+              "Many mitochondria mean the cell uses a lot of energy.",
+              "A large Golgi means the cell secretes a lot of protein.",
+              "A muscle cell or a gland cell fits both clues."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "levels-of-organisation",
+      "title": "Levels of Organisation",
+      "objective": "Trace the sequence from cell to tissue, organ, system and organism, and place a named structure at the correct level.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Levels of organisation",
+            "paragraphs": [
+              "Life is built in steps: cells form tissues, tissues form organs, organs form systems, and systems form the organism. Each step adds a new function, not just more cells."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Cell and tissue",
+            "paragraphs": [
+              "A single cell can live alone, but a human body needs groups of cells that do the same job.",
+              "The cell is the basic structural and functional unit. A tissue is a group of similar cells with a common origin, performing the same function. Epithelial tissue covers and protects surfaces; muscle tissue contracts; nervous tissue conducts impulses; connective tissue supports and binds.",
+              "Plants have tissues too: the epidermis covers the leaf, palisade mesophyll carries out photosynthesis, xylem transports water and phloem transports food. Hydra is often used to show the tissue level because its body wall is built mainly from two layers of tissue."
+            ],
+            "bullets": [
+              "Cell: the basic unit of structure and function.",
+              "Tissue: similar cells with a shared job.",
+              "Examples: epithelium, muscle, nerve, xylem and phloem."
+            ],
+            "takeaway": "A tissue is a team of similar cells with one job.",
+            "check": {
+              "question": "A group of similar cells performing the same function is a",
+              "options": [
+                "Organ",
+                "Tissue",
+                "System",
+                "Organelle"
+              ],
+              "answer": 1,
+              "why": "Similar cells with a common function form a tissue."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Organs and systems",
+            "paragraphs": [
+              "A stomach is not just a bag of cells: it has muscle, glands and nerves, and it works with the mouth and intestines.",
+              "An organ is made of two or more tissues working together for a specific function. The leaf, root, heart, stomach, eye and kidney are organs. The onion bulb is a modified shoot and is used as the syllabus example of an organ.",
+              "A system is a group of organs working together on a major life process. The digestive system breaks down and absorbs food; the excretory system removes waste; the reproductive system produces offspring. A mammal also has circulatory, respiratory, nervous and skeletal systems."
+            ],
+            "bullets": [
+              "Organ: two or more tissues with a specific job.",
+              "System: organs cooperating on a major process.",
+              "The leaf and the onion bulb are organs, not tissues."
+            ],
+            "takeaway": "An organ combines tissues; a system combines organs.",
+            "check": {
+              "question": "Which of these is an organ?",
+              "options": [
+                "Xylem",
+                "Epithelial tissue",
+                "Leaf",
+                "Human"
+              ],
+              "answer": 2,
+              "why": "A leaf contains epidermis, mesophyll and vascular tissues, so it is an organ."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The full sequence",
+            "paragraphs": [
+              "A euglena is one cell that swims, feeds and responds; a human is trillions of cells arranged into systems. Both are organisms.",
+              "The sequence is cell, tissue, organ, system, organism. In a unicellular organism such as Euglena, Paramecium or Chlamydomonas, one cell performs all life processes, so the cell and the organism are the same level. In multicellular organisms the levels are distinct.",
+              "Not every organism has every level. A hydra has tissues but no true organs or systems; a flowering plant has organs but no organ systems in the animal sense. The sequence is a ladder of increasing complexity, not a rule that every rung must appear."
+            ],
+            "bullets": [
+              "Cell, tissue, organ, system, organism.",
+              "Unicellular organisms live at the cell level.",
+              "Hydra stops at tissues; plants have organs but no animal-style systems."
+            ],
+            "takeaway": "Each level adds a function the level below cannot perform alone.",
+            "check": {
+              "question": "Which organism is unicellular?",
+              "options": [
+                "Hydra",
+                "Onion",
+                "Chlamydomonas",
+                "Human"
+              ],
+              "answer": 2,
+              "why": "Chlamydomonas is a single-celled green alga; the others are multicellular."
+            },
+            "visual": {
+              "kind": "flow",
+              "caption": "Each level is built from the one before it.",
+              "steps": [
+                {
+                  "label": "Cell",
+                  "detail": "Euglena"
+                },
+                {
+                  "label": "Tissue",
+                  "detail": "epithelium"
+                },
+                {
+                  "label": "Organ",
+                  "detail": "onion bulb"
+                },
+                {
+                  "label": "System",
+                  "detail": "digestive"
+                },
+                {
+                  "label": "Organism",
+                  "detail": "Chlamydomonas"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "To place a named structure, ask what it is made of. A leaf is made of tissues, so it is an organ; a stomach works with other organs, so it belongs to a system."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Arrange these from simplest to most complex: stomach, epithelial cell, digestive system, epithelial tissue, human. Name each level.",
+            "steps": [
+              {
+                "operation": "Find the cell",
+                "reason": "The epithelial cell is the basic unit.",
+                "result": "1. Cell.",
+                "predictPrompt": "Which structure is made of similar cells?"
+              },
+              {
+                "operation": "Group similar cells",
+                "reason": "Epithelial cells form epithelial tissue.",
+                "result": "2. Tissue.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Combine tissues",
+                "reason": "The stomach contains epithelial, muscle and nervous tissue.",
+                "result": "3. Organ.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Combine organs",
+                "reason": "The stomach works with the mouth, liver and intestines.",
+                "result": "4. System.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Name the whole",
+                "reason": "The human is the complete living thing.",
+                "result": "5. Organism."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A leaf is called an organ. Name two tissues it contains and explain why it is not a system.",
+            "hints": [
+              "The leaf has an epidermis and palisade mesophyll.",
+              "It also has xylem and phloem in its veins.",
+              "A system is a group of organs, not a group of tissues."
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
