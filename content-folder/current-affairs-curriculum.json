@@ -1,0 +1,747 @@
+{
+  "subject": "current-affairs",
+  "source": "Current Affairs general knowledge (post-UTME); facts checked 2 November 2026",
+  "topics": [
+    {
+      "slug": "nigerian-government",
+      "name": "Nigerian Government",
+      "section": null,
+      "order": 0,
+      "description": "Arms, tiers, and offices of Nigerian government."
+    },
+    {
+      "slug": "national-institutions",
+      "name": "Major National Institutions",
+      "section": null,
+      "order": 1,
+      "description": "JAMB, INEC, and the bodies that run national life."
+    },
+    {
+      "slug": "international-organizations",
+      "name": "International Organizations",
+      "section": null,
+      "order": 2,
+      "description": "UN, AU, ECOWAS, and what Nigeria does in them."
+    },
+    {
+      "slug": "recent-developments",
+      "name": "Recent National Developments",
+      "section": null,
+      "order": 3,
+      "description": "Current events every candidate should know."
+    }
+  ],
+  "lessons": [
+    {
+      "slug": "nigerian-government",
+      "topic": "nigerian-government",
+      "title": "Nigerian Government",
+      "objective": "Place each Nigerian institution in the right arm and tier, and follow a bill from proposal to presidential assent.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Nigerian Government",
+            "paragraphs": [
+              "A question names an agency and asks which arm of government it belongs to. Two facts decide it: who appoints the officer, and what the body is empowered to do."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Three arms, three jobs",
+            "paragraphs": [
+              "The executive implements. It runs the country day to day: the President and Vice President at federal level, governors and deputies at state level, and ministers, commissioners and the civil service beneath them. It also commands the armed forces and conducts foreign affairs.",
+              "The legislature makes law. The National Assembly has two chambers, the Senate and the House of Representatives, and each state has a house of assembly. Legislators also approve budgets, confirm appointments and can remove an officer through impeachment.",
+              "The judiciary settles disputes and interprets the law. It runs from magistrate and high courts through the Court of Appeal to the Supreme Court, with the Federal High Court and the National Industrial Court handling specialised cases."
+            ],
+            "bullets": [
+              "The executive implements.",
+              "The legislature makes law and controls the purse.",
+              "The judiciary interprets and adjudicates."
+            ],
+            "takeaway": "An institution belongs to the arm that appoints it and whose power it exercises.",
+            "check": {
+              "question": "Which arm confirms a ministerial nominee?",
+              "options": [
+                "Executive",
+                "Legislature",
+                "Judiciary",
+                "Civil service"
+              ],
+              "answer": 1,
+              "why": "Senate confirmation is a legislative check on the President's power to appoint ministers."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The federal structure",
+            "paragraphs": [
+              "Nigeria is a federation. Power is divided between the federal government and the 36 states, with the Federal Capital Territory administered separately and 774 local government areas beneath the states.",
+              "The 1999 Constitution, as amended, is supreme. It divides legislative power into an exclusive list for the federation, a concurrent list shared with the states, and a residual list left to the states. Where federal and state law conflict on a concurrent matter, federal law prevails.",
+              "The constitution also fixes the revenue-sharing formula. The Revenue Mobilisation Allocation and Fiscal Commission advises on it, the Accountant-General keeps the accounts, and the Federation Account Allocation Committee shares the money monthly."
+            ],
+            "bullets": [
+              "36 states, the FCT and 774 local government areas.",
+              "Exclusive, concurrent and residual lists divide power.",
+              "Federal law prevails on concurrent matters."
+            ],
+            "takeaway": "The lists tell you which tier may legislate; the constitution tells you who wins a conflict.",
+            "check": {
+              "question": "A state law conflicts with a federal law on a concurrent-list matter. Which prevails?",
+              "options": [
+                "The state law",
+                "The federal law",
+                "Neither",
+                "The Supreme Court decides each case"
+              ],
+              "answer": 1,
+              "why": "On the concurrent list both may legislate, but the doctrine of covering the field gives federal law supremacy."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "From bill to law",
+            "paragraphs": [
+              "A bill begins as a proposal, drafted by the Attorney-General's office or a member. It passes first reading, is debated at second reading, and goes to a committee for scrutiny and public hearing.",
+              "The committee reports to the chamber, which debates and votes at third reading. The bill then repeats the process in the other chamber, and a conference committee reconciles any difference between the two versions.",
+              "When both chambers agree, the Clerk sends the bill to the President, who signs it or withholds assent. A veto can be overridden by a two-thirds majority of each chamber. The law is then gazetted and takes effect on the date it names or on assent."
+            ],
+            "bullets": [
+              "First and second reading introduce and debate the bill.",
+              "The committee stage scrutinises it.",
+              "Third reading and the other chamber must agree.",
+              "Assent makes it law; a two-thirds majority overrides a veto."
+            ],
+            "takeaway": "A bill must survive both chambers and the President before it becomes law.",
+            "check": {
+              "question": "What can override a presidential veto?",
+              "options": [
+                "A simple majority of the Senate",
+                "A two-thirds majority of each chamber",
+                "The Supreme Court",
+                "A referendum"
+              ],
+              "answer": 1,
+              "why": "The constitution lets the National Assembly override a veto with a two-thirds majority in each chamber."
+            },
+            "visual": {
+              "kind": "flow",
+              "caption": "A bill must clear both chambers before it reaches the President.",
+              "steps": [
+                {
+                  "label": "Bill drafted"
+                },
+                {
+                  "label": "Second reading",
+                  "detail": "debate in principle"
+                },
+                {
+                  "label": "Committee stage",
+                  "detail": "scrutiny and hearing"
+                },
+                {
+                  "label": "Third reading",
+                  "detail": "both chambers"
+                },
+                {
+                  "label": "Presidential assent",
+                  "detail": "or veto override"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For 'which arm does X belong to?' questions, attach every agency to one of the three arms first. The wrong options are usually agencies from another arm."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A question asks which arm of government can remove a president for misconduct.",
+            "steps": [
+              {
+                "operation": "Name the action",
+                "reason": "Removal for misconduct is impeachment, a constitutional process rather than a criminal trial.",
+                "result": "The action is impeachment.",
+                "predictPrompt": "Which arm begins an impeachment?"
+              },
+              {
+                "operation": "Locate the power",
+                "reason": "The constitution gives the National Assembly the power to begin and conduct impeachment.",
+                "result": "The legislature begins it in the House and tries it in the Senate.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Confirm the check",
+                "reason": "The judiciary does not remove a president; it can only adjudicate a challenge to the process.",
+                "result": "The correct arm is the legislature."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "The President refuses to sign a bill. What happens next?",
+            "hints": [
+              "The bill returns to the National Assembly with the President's objections.",
+              "Each chamber can vote again.",
+              "A two-thirds majority in each chamber overrides the veto."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "major-national-institutions",
+      "topic": "national-institutions",
+      "title": "Major National Institutions",
+      "objective": "Match each Nigerian agency to its acronym, its sector and its one-sentence function.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Major National Institutions",
+            "paragraphs": [
+              "The question gives an acronym and four functions. One phrase per institution is enough to answer, provided the phrase is the right one."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The big six",
+            "paragraphs": [
+              "INEC runs federal and state elections, registers voters and parties, and declares results. The CBN issues the naira, sets monetary policy through its committee, and supervises banks.",
+              "The EFCC investigates and prosecutes financial crimes such as fraud, money laundering and cybercrime, while the ICPC covers bribery and abuse of office in the public service. NAFDAC registers and regulates food, drugs, cosmetics and medical devices.",
+              "The NUC accredits university programmes and sets minimum academic standards. JAMB conducts the UTME and runs the central admissions processing system that institutions use to offer places."
+            ],
+            "bullets": [
+              "INEC: elections.",
+              "CBN: the naira and the banks.",
+              "EFCC and ICPC: corruption, financial and public-office.",
+              "NAFDAC: food and drugs.",
+              "NUC and JAMB: universities and admissions."
+            ],
+            "takeaway": "Anchor each acronym to one sector and one action.",
+            "check": {
+              "question": "Which body regulates food, drugs and cosmetics?",
+              "options": [
+                "NAFDAC",
+                "NDLEA",
+                "SON",
+                "NCDC"
+              ],
+              "answer": 0,
+              "why": "NAFDAC registers and controls food, drugs, cosmetics and medical devices; SON sets general product standards."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Regulators, revenue and service",
+            "paragraphs": [
+              "The NCC regulates telecommunications and licenses the networks. NERC regulates the electricity market, while the Transmission Company of Nigeria operates the grid.",
+              "The Nigeria Revenue Service, renamed from FIRS under the 2025 reform, assesses and collects federal taxes. The Nigeria Customs Service collects import and export duties, and the Accountant-General manages federal accounts.",
+              "NYSC runs the one-year national service for graduates. The NDLEA enforces drug laws, the NIA handles foreign intelligence and the DSS handles domestic intelligence. NNPC Limited, commercialised under the 2021 Petroleum Industry Act, manages the federation's oil and gas interests."
+            ],
+            "bullets": [
+              "NCC: telecoms.",
+              "NERC and TCN: electricity.",
+              "NRS and Customs: taxes and duties.",
+              "NYSC, NDLEA, NIA and DSS: service and security."
+            ],
+            "takeaway": "Read the sector first; the acronym usually follows it.",
+            "check": {
+              "question": "Which agency collects customs duties?",
+              "options": [
+                "NRS",
+                "Nigeria Customs Service",
+                "CBN",
+                "NAFDAC"
+              ],
+              "answer": 1,
+              "why": "The Customs Service collects import and export duties; the NRS collects federal taxes such as company income tax and VAT."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "Both fight corruption, but one follows the money and the other follows the office.",
+              "columns": [
+                "EFCC",
+                "ICPC"
+              ],
+              "rows": [
+                {
+                  "feature": "Main target",
+                  "left": "Financial crimes",
+                  "right": "Public-office corruption"
+                },
+                {
+                  "feature": "Typical case",
+                  "left": "Fraud, laundering, cybercrime",
+                  "right": "Bribery, abuse of office"
+                },
+                {
+                  "feature": "Enabling law",
+                  "left": "EFCC Act 2004",
+                  "right": "ICPC Act 2000"
+                },
+                {
+                  "feature": "Reach",
+                  "left": "Private and public money",
+                  "right": "Public servants and officials"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Acronym traps and tactics",
+            "paragraphs": [
+              "Look-alike acronyms cost the most marks: EFCC and ICPC, NAFDAC and SON, NIA and DSS, NERC and NEMSA. Expand the acronym before you choose. SON sets product standards, but NAFDAC approves a drug for sale.",
+              "Match by lead word. A commission usually regulates or coordinates, an agency usually enforces or delivers a service, a board usually conducts an examination or admission, and a service collects revenue or runs a public utility.",
+              "If two options fit the sector, choose the one whose enabling law matches the action in the question. A question about prosecution wants an enforcement body; a question about standards wants a regulator."
+            ],
+            "bullets": [
+              "Expand the acronym first.",
+              "Match the lead word to the job.",
+              "Check the enabling law against the action."
+            ],
+            "takeaway": "Expand the acronym, then match its verb.",
+            "check": {
+              "question": "A question asks which body prosecutes advanced-fee fraud. Which fits best?",
+              "options": [
+                "ICPC",
+                "EFCC",
+                "NAFDAC",
+                "Nigeria Customs Service"
+              ],
+              "answer": 1,
+              "why": "Advanced-fee fraud is a financial crime, the EFCC's mandate; the ICPC handles corruption in public office."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Learn each institution by one unique phrase: INEC means elections, CBN the naira, NAFDAC food and drugs, NUC universities. One phrase per institution is enough to score."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A question asks which agency must approve a new malaria drug before it can be sold. Options: SON, NAFDAC, NDLEA, NCDC.",
+            "steps": [
+              {
+                "operation": "Expand each option",
+                "reason": "The acronyms overlap in the public mind, so the full names matter.",
+                "result": "SON sets standards; NAFDAC regulates food and drugs; NDLEA enforces drug laws; NCDC controls disease.",
+                "predictPrompt": "Which action is the question asking about?"
+              },
+              {
+                "operation": "Identify the action",
+                "reason": "Approval for sale is a product registration decision, not a standards or enforcement one.",
+                "result": "The action is drug registration.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Match action to mandate",
+                "reason": "NAFDAC registers and controls drugs and medical products.",
+                "result": "The answer is NAFDAC."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Which body should a customer approach when a bank deducts an illegal charge?",
+            "hints": [
+              "The CBN supervises banks.",
+              "The complaint is about a bank's conduct, not necessarily a crime.",
+              "The EFCC steps in only where there is fraud."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "international-organizations",
+      "topic": "international-organizations",
+      "title": "International Organizations",
+      "objective": "Place each international body by scope, headquarters and function, and pick the one a question describes.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "International Organizations",
+            "paragraphs": [
+              "A question describes a body's job and asks for its name. Scope and headquarters usually eliminate three options before the function decides."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The UN and its agencies",
+            "paragraphs": [
+              "The United Nations was founded in 1945 and is headquartered in New York. Nigeria joined at independence in 1960. The General Assembly gives each member one vote; the Security Council has five permanent members with veto power and ten elected members.",
+              "Specialised agencies carry the technical work: WHO in Geneva leads health, UNESCO in Paris handles education, science and culture, FAO in Rome works on food and farming, and the ILO in Geneva sets labour standards.",
+              "The IMF and the World Bank are Bretton Woods institutions based in Washington. The IMF lends to countries with balance-of-payments problems, while the World Bank finances development projects. The WTO in Geneva rules on trade, and the ICJ in The Hague settles disputes between states."
+            ],
+            "bullets": [
+              "UN: New York, founded 1945.",
+              "WHO and ILO: Geneva.",
+              "IMF and World Bank: Washington.",
+              "ICJ: The Hague."
+            ],
+            "takeaway": "Headquarters and mandate are the two facts most questions test.",
+            "check": {
+              "question": "Which body settles legal disputes between states?",
+              "options": [
+                "The ICC",
+                "The ICJ",
+                "The WTO",
+                "The Security Council"
+              ],
+              "answer": 1,
+              "why": "The International Court of Justice hears disputes between states; the ICC tries individuals for international crimes."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "African and regional bodies",
+            "paragraphs": [
+              "The African Union replaced the Organisation of African Unity in 2002 and is headquartered in Addis Ababa. It has 55 member states and works through an Assembly, an Executive Council and a Pan-African Parliament.",
+              "ECOWAS was founded in 1975 by the Treaty of Lagos and is headquartered in Abuja. It had 15 members until Mali, Burkina Faso and Niger withdrew in January 2025, leaving 12; Guinea-Bissau was suspended in November 2025.",
+              "The African Development Bank in Abidjan finances development. The African Continental Free Trade Area, whose secretariat sits in Accra, entered into force in 2019 and began trading in 2021. The Commonwealth links 56 mainly former British colonies."
+            ],
+            "bullets": [
+              "AU: Addis Ababa, 55 members.",
+              "ECOWAS: Abuja, 12 members after the 2025 exit.",
+              "AfDB: Abidjan; AfCFTA: Accra.",
+              "Commonwealth: 56 members."
+            ],
+            "takeaway": "Match the body to its continent, then to its headquarters.",
+            "check": {
+              "question": "Which body lost three members in January 2025?",
+              "options": [
+                "The African Union",
+                "ECOWAS",
+                "The African Development Bank",
+                "The Commonwealth"
+              ],
+              "answer": 1,
+              "why": "Mali, Burkina Faso and Niger withdrew from ECOWAS on 29 January 2025, leaving 12 members."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "One body covers the continent; the other covers a region within it.",
+              "columns": [
+                "African Union",
+                "ECOWAS"
+              ],
+              "rows": [
+                {
+                  "feature": "Scope",
+                  "left": "The whole continent",
+                  "right": "West Africa"
+                },
+                {
+                  "feature": "Headquarters",
+                  "left": "Addis Ababa",
+                  "right": "Abuja"
+                },
+                {
+                  "feature": "Members",
+                  "left": "55",
+                  "right": "12"
+                },
+                {
+                  "feature": "Origin",
+                  "left": "OAU 1963, AU 2002",
+                  "right": "Treaty of Lagos 1975"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Oil, trade and Nigeria's role",
+            "paragraphs": [
+              "OPEC coordinates the oil policy of major exporters. Nigeria joined in 1971, and the organisation is headquartered in Vienna. Members agree quotas that limit production to support prices, so the quota shapes Nigeria's oil revenue.",
+              "NNPC Limited represents Nigeria in OPEC and manages joint ventures. Nigeria also belongs to the African Continental Free Trade Area and has chaired ECOWAS, most recently under Bola Tinubu from 2023 to 2025.",
+              "Nigeria has supplied peacekeepers to Liberia, Sierra Leone and The Gambia. It also campaigns for a permanent seat on a reformed UN Security Council, the position set out in the African Union's Ezulwini Consensus."
+            ],
+            "bullets": [
+              "OPEC: Vienna, Nigeria a member since 1971.",
+              "AfCFTA: in force 2019, trading 2021.",
+              "Nigeria chairs, peacekeeps and bids for a UN seat."
+            ],
+            "takeaway": "Nigeria's memberships are exam facts; its roles are the follow-up question.",
+            "check": {
+              "question": "In which city is OPEC headquartered?",
+              "options": [
+                "Vienna",
+                "Geneva",
+                "Abuja",
+                "Riyadh"
+              ],
+              "answer": 0,
+              "why": "OPEC has been based in Vienna since 1965; Geneva is the WTO and WHO, Abuja is ECOWAS."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Pair each acronym with its headquarters: UN New York, WHO Geneva, AU Addis Ababa, ECOWAS Abuja, OPEC Vienna. Headquarters questions are guaranteed marks."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A question asks which institution would lend to Nigeria to cover a shortfall in foreign payments.",
+            "steps": [
+              {
+                "operation": "Separate the two lenders",
+                "reason": "The IMF and the World Bank are often confused, but they lend for different reasons.",
+                "result": "The IMF supports the balance of payments; the World Bank funds development projects.",
+                "predictPrompt": "Which one responds to a payments shortfall?"
+              },
+              {
+                "operation": "Match the problem to the lender",
+                "reason": "A shortfall in foreign payments is a balance-of-payments problem.",
+                "result": "The IMF is the lender.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Confirm the detail",
+                "reason": "Both are in Washington, so the headquarters does not separate them.",
+                "result": "The answer is the IMF, chosen by mandate rather than location."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Which body would a West African trader consult about crossing a border without a visa?",
+            "hints": [
+              "The relevant protocol is regional, not continental.",
+              "ECOWAS guarantees free movement for up to 90 days.",
+              "The body is headquartered in Abuja."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "recent-national-developments",
+      "topic": "recent-developments",
+      "title": "Recent National Developments",
+      "objective": "Anchor the 2023–2026 reforms and political milestones to dates, and answer current-affairs questions from their causes and effects.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Recent National Developments",
+            "paragraphs": [
+              "A current-affairs question names a reform and asks what changed. Dates anchor the answer, but the cause and effect carry the mark."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The economic reforms",
+            "paragraphs": [
+              "Fuel subsidy ended in May 2023, when the new administration announced its removal at inauguration. Petrol prices rose sharply, and the savings were redirected to states and to cash transfers.",
+              "The exchange rate was liberalised in June 2023, letting the naira trade closer to market rates. The currency weakened, import costs rose, and the CBN raised the monetary policy rate repeatedly to fight inflation.",
+              "The minimum wage rose to ₦70,000 in 2024, and a compressed natural gas programme followed to cut transport costs. In 2025 the tax reform Acts simplified tax law, changed VAT sharing, exempted low earners and renamed FIRS the Nigeria Revenue Service."
+            ],
+            "bullets": [
+              "Subsidy removed: May 2023.",
+              "Naira floated: June 2023.",
+              "Minimum wage ₦70,000: 2024.",
+              "Tax reform Acts: 2025."
+            ],
+            "takeaway": "Each reform has one trigger, one mechanism and one visible effect.",
+            "check": {
+              "question": "Which reform removed the payment that kept petrol prices below market cost?",
+              "options": [
+                "Exchange-rate liberalisation",
+                "Fuel subsidy removal",
+                "Tax reform",
+                "The minimum-wage review"
+              ],
+              "answer": 1,
+              "why": "The subsidy bridged the gap between the landing cost and the pump price; removing it let the price rise to market level."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Politics and institutions",
+            "paragraphs": [
+              "The 2023 general election returned Bola Tinubu of the APC as President, sworn in on 29 May 2023 with Kashim Shettima as Vice President. The 10th National Assembly elected Godswill Akpabio Senate President and Tajudeen Abbas Speaker.",
+              "INEC conducted the election under the Electoral Act 2022, which allowed electronic transmission of results and the use of the BVAS for accreditation. The next general election is due in 2027.",
+              "In 2024 the Supreme Court ordered that local government allocations be paid directly to councils, ending state control of the funds. NELFUND began disbursing student loans the same year."
+            ],
+            "bullets": [
+              "Tinubu sworn in 29 May 2023.",
+              "Electoral Act 2022: BVAS and electronic transmission.",
+              "LG autonomy: Supreme Court, 2024.",
+              "NELFUND loans: 2024."
+            ],
+            "takeaway": "Attach each milestone to the institution that produced it.",
+            "check": {
+              "question": "Which 2024 court decision changed how local government funds are paid?",
+              "options": [
+                "Supreme Court",
+                "Court of Appeal",
+                "Federal High Court",
+                "Election tribunal"
+              ],
+              "answer": 0,
+              "why": "The Supreme Court ordered direct payment of allocations to councils, removing state control of the funds."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "Both reforms change prices, but one works through deregulation and the other through tax law.",
+              "columns": [
+                "Subsidy removal",
+                "Tax reform"
+              ],
+              "rows": [
+                {
+                  "feature": "Announced",
+                  "left": "May 2023",
+                  "right": "June 2025"
+                },
+                {
+                  "feature": "Mechanism",
+                  "left": "Prices reflect market cost",
+                  "right": "New tax law and administration"
+                },
+                {
+                  "feature": "Immediate effect",
+                  "left": "Pump and transport costs rise",
+                  "right": "VAT sharing and compliance change"
+                },
+                {
+                  "feature": "Who feels it",
+                  "left": "Transport and food buyers",
+                  "right": "Taxpayers, states and businesses"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Reading a development question",
+            "paragraphs": [
+              "Current-affairs questions rarely ask for a date alone. They ask what caused a change, who was affected, or what came next. Answer with the mechanism first, then support it with the date.",
+              "Watch the tense. 'Has been' and 'as of' point to a state that can change, while 'in 2023' points to a fixed event. Officeholders expire, so prefer the office to the person unless the question names the person.",
+              "Treat any note older than the exam as a draft. Verify officeholders, membership numbers and prices against a current source, because a fact that was true when the note was written may have been superseded."
+            ],
+            "bullets": [
+              "Answer the mechanism before the date.",
+              "The tense tells you whether a fact expires.",
+              "Verify names, numbers and prices before the exam."
+            ],
+            "takeaway": "A current-affairs answer is a dated cause and effect, not a memorised list.",
+            "check": {
+              "question": "A question says 'as of 2026'. What kind of answer does it want?",
+              "options": [
+                "A permanent constitutional rule",
+                "A state that may change",
+                "A fixed past event",
+                "An opinion"
+              ],
+              "answer": 1,
+              "why": "'As of' marks a snapshot, so the answer is the position at that date, which later events can change."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Anchor every answer in the reform timeline: subsidy removal in 2023, the wage rise in 2024, the tax Acts in 2025, and the 2027 election build-up."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A question asks why petrol prices rose sharply after May 2023.",
+            "steps": [
+              {
+                "operation": "Name the policy",
+                "reason": "The price change followed the removal of the fuel subsidy at the start of the administration.",
+                "result": "The trigger was subsidy removal.",
+                "predictPrompt": "What had the subsidy been doing to the price?"
+              },
+              {
+                "operation": "Explain the mechanism",
+                "reason": "A subsidy held the pump price below the cost of importing and distributing fuel.",
+                "result": "Without it, the pump price moved towards the landing cost.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "State the effect",
+                "reason": "Fuel is an input to transport and food, so the change spread through the economy.",
+                "result": "Transport fares and food prices rose, and inflation increased."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Which body collects federal taxes after the 2025 reform?",
+            "hints": [
+              "The old name was the Federal Inland Revenue Service.",
+              "The 2025 Act renamed it.",
+              "The new name is the Nigeria Revenue Service."
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
