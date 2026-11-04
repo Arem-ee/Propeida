@@ -131,19 +131,43 @@
       "description": "Basking, hibernation, aestivation, endothermy, xerophytes and water conservation."
     },
     {
-      "slug": "internal-structure-of-a-flowering-plant",
-      "name": "Internal structure of a flowering plant",
+      "slug": "root-and-stem-anatomy",
+      "name": "Root and Stem Anatomy",
       "syllabus_ref": "B.1",
       "section": "Form and Functions",
       "order": 17,
-      "description": "Root, stem and leaf anatomy, supporting tissues, and the internal organs of a mammal."
+      "description": "Transverse sections of root and stem, and how each structure does its job."
+    },
+    {
+      "slug": "leaf-anatomy",
+      "name": "Leaf Anatomy",
+      "syllabus_ref": "B.1",
+      "section": "Form and Functions",
+      "order": 18,
+      "description": "Leaf anatomy from cuticle to vein, and how structure serves photosynthesis and gas exchange."
+    },
+    {
+      "slug": "plant-supporting-tissues",
+      "name": "Supporting Tissues in Plants",
+      "syllabus_ref": "B.1",
+      "section": "Form and Functions",
+      "order": 19,
+      "description": "Collenchyma, sclerenchyma, xylem and phloem fibres, and their distribution in roots, stems and leaves."
+    },
+    {
+      "slug": "mammalian-internal-organs",
+      "name": "Mammalian Internal Organs",
+      "syllabus_ref": "B.1",
+      "section": "Form and Functions",
+      "order": 20,
+      "description": "The digestive, reproductive and excretory organs and where they sit in the body cavity."
     },
     {
       "slug": "nutrition",
       "name": "Nutrition",
       "syllabus_ref": "B.2",
       "section": "Form and Functions",
-      "order": 18,
+      "order": 21,
       "description": "Autotrophic and heterotrophic nutrition, photosynthesis, food classes, teeth and the alimentary canal."
     },
     {
@@ -151,7 +175,7 @@
       "name": "Transport",
       "syllabus_ref": "B.3",
       "section": "Form and Functions",
-      "order": 19,
+      "order": 22,
       "description": "Why organisms need transport, blood and lymph, the mammalian circulatory system and plant vascular tissue."
     },
     {
@@ -159,7 +183,7 @@
       "name": "Respiration",
       "syllabus_ref": "B.4",
       "section": "Form and Functions",
-      "order": 20,
+      "order": 23,
       "description": "Respiratory surfaces, gaseous exchange, aerobic and anaerobic respiration, and fermentation."
     },
     {
@@ -167,7 +191,7 @@
       "name": "Excretion",
       "syllabus_ref": "B.5",
       "section": "Form and Functions",
-      "order": 21,
+      "order": 24,
       "description": "Excretory structures from contractile vacuoles to kidneys, and the excretory products of plants."
     },
     {
@@ -175,7 +199,7 @@
       "name": "Support and movement",
       "syllabus_ref": "B.6",
       "section": "Form and Functions",
-      "order": 22,
+      "order": 25,
       "description": "Plant movements, supporting tissues, skeletons and joints in animals."
     },
     {
@@ -183,7 +207,7 @@
       "name": "Reproduction",
       "syllabus_ref": "B.7",
       "section": "Form and Functions",
-      "order": 23,
+      "order": 26,
       "description": "Asexual and sexual reproduction, flowering-plant reproduction and mammalian reproduction."
     },
     {
@@ -191,7 +215,7 @@
       "name": "Growth",
       "syllabus_ref": "B.8",
       "section": "Form and Functions",
-      "order": 24,
+      "order": 27,
       "description": "The meaning of growth, seed germination and the difference between epigeal and hypogeal germination."
     },
     {
@@ -199,7 +223,7 @@
       "name": "Co-ordination and control",
       "syllabus_ref": "B.9",
       "section": "Form and Functions",
-      "order": 25,
+      "order": 28,
       "description": "Nervous coordination, sense organs, hormones and homeostasis."
     },
     {
@@ -207,7 +231,7 @@
       "name": "Factors affecting the distribution of Organisms",
       "syllabus_ref": "C.1",
       "section": "Ecology",
-      "order": 26,
+      "order": 29,
       "description": "Abiotic and biotic factors that determine where organisms live."
     },
     {
@@ -215,7 +239,7 @@
       "name": "Symbiotic interactions of plants and animals",
       "syllabus_ref": "C.2",
       "section": "Ecology",
-      "order": 27,
+      "order": 30,
       "description": "Symbiosis, energy flow, food chains and webs, and the carbon, water and nitrogen cycles."
     },
     {
@@ -223,7 +247,7 @@
       "name": "Natural Habitats",
       "syllabus_ref": "C.3",
       "section": "Ecology",
-      "order": 28,
+      "order": 31,
       "description": "Aquatic and terrestrial habitats and the adaptive features of the organisms in them."
     },
     {
@@ -231,7 +255,7 @@
       "name": "Local (Nigerian) Biomes",
       "syllabus_ref": "C.4",
       "section": "Ecology",
-      "order": 29,
+      "order": 32,
       "description": "Tropical rainforest, Guinea and Sudan savanna, desert and the highland plateaus of Nigeria."
     },
     {
@@ -239,7 +263,7 @@
       "name": "The Ecology of Populations",
       "syllabus_ref": "C.5",
       "section": "Ecology",
-      "order": 30,
+      "order": 33,
       "description": "Population density, competition, population size, ecological succession and climax communities."
     },
     {
@@ -247,7 +271,7 @@
       "name": "SOIL",
       "syllabus_ref": "C.6",
       "section": "Ecology",
-      "order": 31,
+      "order": 34,
       "description": "Soil types, components, fertility, erosion and the maintenance of productive soil."
     },
     {
@@ -255,7 +279,7 @@
       "name": "Humans and Environment",
       "syllabus_ref": "C.7",
       "section": "Ecology",
-      "order": 32,
+      "order": 35,
       "description": "Disease, drug abuse, pollution, sanitation, conservation and Nigeria's parks and reserves."
     },
     {
@@ -263,7 +287,7 @@
       "name": "Variation In Population",
       "syllabus_ref": "D.1",
       "section": "Heredity and Variations",
-      "order": 33,
+      "order": 36,
       "description": "Morphological and physiological variation and its use in identity, transfusion and paternity."
     },
     {
@@ -271,7 +295,7 @@
       "name": "Heredity",
       "syllabus_ref": "D.2",
       "section": "Heredity and Variations",
-      "order": 34,
+      "order": 37,
       "description": "Heritable characters, chromosomes, genetic crosses, sex determination and sex-linked traits."
     },
     {
@@ -279,7 +303,7 @@
       "name": "Biotechnology",
       "syllabus_ref": "D.3",
       "section": "Heredity and Variations",
-      "order": 35,
+      "order": 38,
       "description": "Applications of biotechnology in agriculture, medicine, pharmaceuticals and the food industry."
     },
     {
@@ -287,7 +311,7 @@
       "name": "Theories of evolution",
       "syllabus_ref": "E.1",
       "section": "Evolution",
-      "order": 36,
+      "order": 39,
       "description": "Organic evolution, Lamarck's and Darwin's theories, and the evidence that supports them."
     },
     {
@@ -295,7 +319,7 @@
       "name": "Evidence of evolution",
       "syllabus_ref": "E.2",
       "section": "Evolution",
-      "order": 37,
+      "order": 40,
       "description": "Fossils, comparative anatomy, embryology and other evidence for organic evolution."
     }
   ],
@@ -3404,6 +3428,606 @@
               "The hump stores fat, which releases water when broken down.",
               "Camels produce concentrated urine and dry faeces.",
               "They can also tolerate a rise in body temperature and reduce sweating."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "root-and-stem-anatomy",
+      "title": "Root and Stem Anatomy",
+      "objective": "Identify transverse sections of a root and a stem and relate their structure to their functions.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Root and stem",
+            "paragraphs": [
+              "A transverse section through a root or stem is a map you can read. From the outside in, each ring has a job, and the jobs follow the plant's two supply routes."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The root slice",
+            "paragraphs": [
+              "In a transverse section of a dicot root, the layers run outside to inside: epidermis, cortex, endodermis and pericycle, ending at the vascular cylinder.",
+              "The epidermis covers the root and bears root hairs, which take up water and dissolved mineral salts. The cortex stores starch and moves water inwards. The endodermis's Casparian strip is a waxy band that blocks the spaces between cells, so water and salts must cross its cell membranes before reaching the xylem. The pericycle, just inside the endodermis, gives rise to branch roots.",
+              "The vascular cylinder carries the xylem as a solid star in a dicot root, with phloem patches between the arms. In a monocot root, the centre is a large pith instead, and the xylem has many arms."
+            ],
+            "bullets": [
+              "Epidermis with root hairs: absorbs water and salts.",
+              "Endodermis with Casparian strip: the checkpoint into the xylem.",
+              "Xylem star in dicots; pith centre in monocots."
+            ],
+            "takeaway": "The root slice works from outside in: hair, membrane, xylem.",
+            "check": {
+              "question": "The Casparian strip is found in the cells of the",
+              "options": [
+                "Epidermis",
+                "Cortex",
+                "Endodermis",
+                "Pericycle"
+              ],
+              "answer": 2,
+              "why": "The Casparian strip blocks spaces between cells in the endodermis."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The stem slice",
+            "paragraphs": [
+              "In a transverse section of a dicot stem, the layers run outside to inside: cuticle and epidermis, cortex, vascular bundles arranged in a ring and a large pith at the centre.",
+              "Each vascular bundle has xylem on the inside, towards the pith, and phloem on the outside, with cambium between them. The cambium is meristematic and produces the thickening layer of wood in woody plants. In a monocot stem, the bundles are scattered through the ground tissue, there is no cambium, and secondary growth is absent.",
+              "The pith in a dicot stem stores starch and some nutrients; in monocots a distinct pith is usually not obvious because of the scattered bundles."
+            ],
+            "bullets": [
+              "Epidermis and cuticle reduce water loss.",
+              "Xylem inside, phloem outside, cambium between.",
+              "Scattered bundles and no cambium: monocot stem."
+            ],
+            "takeaway": "Ring plus cambium means wood; scattered bundles mean not.",
+            "check": {
+              "question": "In a dicot stem T.S., the xylem of a vascular bundle lies",
+              "options": [
+                "Towards the epidermis",
+                "Towards the pith",
+                "Within the epidermis",
+                "Within the cuticle"
+              ],
+              "answer": 1,
+              "why": "Each dicot vascular bundle points its xylem inwards, towards the pith."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Structure matched to function",
+            "paragraphs": [
+              "Root hairs multiply the absorption surface; the waxy cuticle reduces evaporation; air spaces in the cortex supply the deeper cells. Xylem runs from root to leaf, moving water up; phloem runs from leaf to root, moving food down.",
+              "Lignified xylem and the sclerenchyma fibres supporting the vascular bundles give stems their rigidity. Where a stem is still young and tender, collenchyma under the epidermis bends instead of breaking. Roots anchor the plant, and their branch roots emerge from the pericycle.",
+              "When you see a section, match the arrangement to its organ: star-shaped xylem with no pith is a dicot root; a large pith centre is a monocot root; bundles in a ring with cambium is a dicot stem; scattered bundles is a monocot stem."
+            ],
+            "bullets": [
+              "Root hairs increase the absorbing surface.",
+              "Xylem goes up; phloem goes down.",
+              "Ring plus cambium is dicot; scattered is monocot."
+            ],
+            "takeaway": "A section is a map: read the arrangement and you name the organ.",
+            "check": {
+              "question": "Which pattern describes a monocot stem T.S.?",
+              "options": [
+                "Bundles in a ring with cambium",
+                "Xylem star at the centre",
+                "Scattered vascular bundles",
+                "A xylem centre with no phloem"
+              ],
+              "answer": 2,
+              "why": "Monocot stems carry scattered vascular bundles without cambium."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Xylem star with no pith is a dicot root; a star with a large pith centre is a monocot root; bundles in a ring is dicot stem; scattered bundles is monocot stem."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A transverse section shows vascular bundles scattered through the ground tissue, with xylem on the inside of each bundle and no cambium. Name the organ and explain the xylem position.",
+            "steps": [
+              {
+                "operation": "Read the bundle arrangement",
+                "reason": "Scattered bundles are a monocot stem signature.",
+                "result": "A monocotyledonous stem.",
+                "predictPrompt": "What pattern would a dicot stem show instead?"
+              },
+              {
+                "operation": "Locate the xylem",
+                "reason": "In every vascular bundle the phloem faces outwards and the xylem faces inwards.",
+                "result": "The xylem points toward the centre.",
+                "predictPrompt": "Why is the xylem inwards in a stem?"
+              },
+              {
+                "operation": "Check for cambium",
+                "reason": "No cambium means no secondary growth, consistent with a monocot.",
+                "result": "The plant will not form wood.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Explain why a young maize stem does not get woody.",
+            "hints": [
+              "Maize is a monocotyledon.",
+              "Its vascular bundles are scattered and lack cambium.",
+              "Without cambium there is no secondary thickening."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "leaf-anatomy",
+      "title": "Leaf Anatomy",
+      "objective": "Identify a transverse section of a leaf and relate leaf structure to photosynthesis and gas exchange.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Leaf anatomy",
+            "paragraphs": [
+              "A leaf is a solar panel and a gas-exchange surface in one. Its transverse section shows exactly how light and air reach the chloroplasts."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The upper surface",
+            "paragraphs": [
+              "From outside in, the upper surface is a waxy cuticle, then the upper epidermis. The cuticle is a waterproof layer that limits uncontrolled evaporation, and the upper epidermis is usually transparent and contains no chloroplasts, so it passes light to the cells beneath.",
+              "Below the upper epidermis lie the palisade mesophyll cells, elongated, arranged in one or more rows and filled with chloroplasts. This is where most photosynthesis takes place.",
+              "Many leaves also have few or no stomata on the upper surface, and when they do, it is usually on a leaf that floats and receives light from above."
+            ],
+            "bullets": [
+              "Cuticle: reduces uncontrolled water loss.",
+              "Upper epidermis: transparent, no chloroplasts.",
+              "Palisade mesophyll: chloroplast-packed, main photosynthesis tissue."
+            ],
+            "takeaway": "Light arrives through the top; water is lost through the bottom.",
+            "check": {
+              "question": "Which layer blocks most uncontrolled water loss?",
+              "options": [
+                "Cuticle",
+                "Palisade mesophyll",
+                "Spongy mesophyll",
+                "Lower epidermis"
+              ],
+              "answer": 0,
+              "why": "The cuticle is a waterproof layer over the epidermis."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The middle: light and gas exchange",
+            "paragraphs": [
+              "Between the palisade and the lower epidermis is the spongy mesophyll: loosely arranged parenchyma cells with large intercellular air spaces. Those spaces connect with the stomata below, so carbon dioxide, oxygen and water vapour diffuse quickly to and from the cells.",
+              "Veins run through the mesophyll, packed into vascular bundles. In most dicot leaves, xylem lies towards the upper side of the midrib and phloem towards the lower side. Xylem brings the water that photosynthesis needs; phloem carries the sugars away.",
+              "The veins also serve as the leaf's skeleton. The central midrib branches into smaller veins, giving the leaf its shape and plumbing the mesophyll."
+            ],
+            "bullets": [
+              "Spongy mesophyll: loose with large air spaces.",
+              "Vein bundles: xylem above, phloem below.",
+              "Veins support the leaf and carry water in, food out."
+            ],
+            "takeaway": "The middle of the leaf breathes and ships its cargo.",
+            "check": {
+              "question": "The air spaces in the spongy mesophyll mainly speed up",
+              "options": [
+                "Storage",
+                "Support",
+                "Gas diffusion",
+                "Water storage"
+              ],
+              "answer": 2,
+              "why": "Large air spaces shorten the path for gas diffusion."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The lower surface and veins",
+            "paragraphs": [
+              "The lower epidermis carries the stomata. Each stoma is a pore bordered by two guard cells. When the guard cells take up water they swell and bend outwards, opening the pore; when they lose water they shrink and close it. This controls water loss and gas exchange together.",
+              "Most dicot leaves keep most stomata on the lower surface because the upper surface is exposed to light and heat; placing the stomata there would waste water. Shade leaves and the leaves of floating plants often have stomata on both surfaces.",
+              "In a T.S., stomata and guard cells are the signature of the lower epidermis. The midrib carries the main vein and gives the leaf its central ridge."
+            ],
+            "bullets": [
+              "Most stomata sit on the lower side of the leaf.",
+              "Guard cells open and close the pore by changing turgor.",
+              "Midrib: carries the main vein and supports the leaf."
+            ],
+            "takeaway": "Stomata are the leaf's adjustable windows.",
+            "check": {
+              "question": "Guard cells open a stoma when they",
+              "options": [
+                "Lose water",
+                "Gain water",
+                "Lose chloroplasts",
+                "Split into two"
+              ],
+              "answer": 1,
+              "why": "Guard cells swell as they take up water, bending apart to open the pore."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Read a leaf T.S. from the top: cuticle, upper epidermis, palisade, spongy mesophyll, lower epidermis with stomata. If stomata appear on the upper side, the leaf is usually floating."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Identify the tissues from the top of a T.S. to the bottom and state the job of each.",
+            "steps": [
+              {
+                "operation": "Step 1",
+                "reason": "Start at the upper surface.",
+                "result": "Cuticle, transparent layer that reduces evaporation.",
+                "predictPrompt": "Why does the cuticle sit on top and not the bottom?"
+              },
+              {
+                "operation": "Step 2",
+                "reason": "Identify the next layer.",
+                "result": "Upper epidermis, transparent and chloroplast-free.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Step 3",
+                "reason": "Find the photosynthetic tissue.",
+                "result": "Palisade mesophyll, elongated cells packed with chloroplasts.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Step 4",
+                "reason": "Identify the air space tissue.",
+                "result": "Spongy mesophyll, loose with air spaces for gas exchange.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Step 5",
+                "reason": "Find the pores.",
+                "result": "Lower epidermis with stomata and guard cells.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Explain how the arrangement of palisade and spongy mesophyll suits the functions of the leaf.",
+            "hints": [
+              "Palisade cells are packed with chloroplasts and face the light.",
+              "Spongy air spaces open into the stomatal chambers.",
+              "Xylem feeds water into both layers."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "plant-supporting-tissues",
+      "title": "Supporting Tissues in Plants",
+      "objective": "Identify collenchyma, sclerenchyma, xylem and phloem fibres and describe their distribution in roots, stems and leaves.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Support without bones",
+            "paragraphs": [
+              "A plant holds itself up with living, corner-thickened cells and dead, lignified ones. Where each kind sits tells you what the plant is doing with its support."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The four supporting tissues",
+            "paragraphs": [
+              "Collenchyma is living at maturity. Its cell walls are unevenly thickened, often at the corners, with cellulose and pectin. It hugs young stems, petioles and leaf stalks, giving flexible support that can bend.",
+              "Sclerenchyma is dead at maturity. Its walls are thickened with lignin. Fibres are long and spindle-shaped and give tensile strength to stems and leaves; sclereids are short and brittle and make hard shells, stone fruit and the grit in a pear gritty.",
+              "Xylem vessels and tracheids are dead at maturity and lignified, so they carry water and hold the stem rigid. Phloem fibres, lying within the phloem patches, are also lignified and are used where toughness is needed; they are also called bast fibres."
+            ],
+            "bullets": [
+              "Collenchyma: living, corner-thickened, cellulose and pectin.",
+              "Sclerenchyma: dead, walls thickened with lignin.",
+              "Xylem and phloem fibres: lignified and rigid."
+            ],
+            "takeaway": "Living cells bend; lignified cells hold.",
+            "check": {
+              "question": "Which supporting tissue is living at maturity?",
+              "options": [
+                "Sclerenchyma",
+                "Xylem vessels",
+                "Phloem fibres",
+                "Collenchyma"
+              ],
+              "answer": 3,
+              "why": "Collenchyma is the living supporting tissue with cellulose/pectin corner thickening."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Where the support sits",
+            "paragraphs": [
+              "In a young stem, collenchyma lies directly under the epidermis. Sclerenchyma fibres cap the vascular bundles, especially in flax, jute and similar crop plants, and xylem lies inside. In leaves, the midrib and the main veins carry bundles of both tissues.",
+              "In roots, xylem occupies the centre because a root pushes through soil more than it lifts a canopy. There is usually little sclerenchyma because roots are rarely in tension.",
+              "Examples for exams: fibre caps in the stem are sclerenchyma; collenchyma in celery stalks snaps first when bent; xylem supports the woody stem by way of its vessels and fibres."
+            ],
+            "bullets": [
+              "Stem: collenchyma under epidermis, sclerenchyma caps the bundles.",
+              "Root: xylem at the centre.",
+              "Leaf: support runs in the midrib and main veins."
+            ],
+            "takeaway": "Where the load is, the fibres are.",
+            "check": {
+              "question": "In a young stem, collenchyma is found",
+              "options": [
+                "At the centre",
+                "Under the epidermis",
+                "Within the xylem",
+                "Inside the pith"
+              ],
+              "answer": 1,
+              "why": "Collenchyma hugs the stem directly beneath the epidermis."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "How to read the section",
+            "paragraphs": [
+              "Exam questions turn support into descriptions: uneven thickening and living cells give collenchyma; dead, lignified cells give sclerenchyma or xylem; dead cells in the phloem patches are the phloem fibres.",
+              "Then locate each tissue. Collenchyma beneath the epidermis in young stems is a young-plant clue; sclerenchyma in bast fibres is a flax or jute clue; xylem at the centre is a root clue; xylem inside and phloem outside in scattered patches is a monocot stem.",
+              "So the full answer chains together: the identity of the tissue, its wall chemistry, and its location in the organ."
+            ],
+            "bullets": [
+              "Wall chemistry names the tissue: cellulose vs lignin.",
+              "Location: under epidermis, bundle caps, centre or veins.",
+              "Chain identity plus wall chemistry plus location."
+            ],
+            "takeaway": "Name the tissue, state its wall, then say where it sits.",
+            "check": {
+              "question": "Cells described as dead at maturity with walls thickened by lignin are",
+              "options": [
+                "Collenchyma",
+                "Sclerenchyma or xylem",
+                "Parenchyma",
+                "Phloem parenchyma"
+              ],
+              "answer": 1,
+              "why": "Both sclerenchyma and xylem are lignified and dead at maturity."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "If the cell is living with corner thickening, it is collenchyma; if it is dead and lignified it is sclerenchyma or xylem; if the fibres lie among phloem patches, they are phloem fibres."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Identify the tissue: 'Unevenly thickened at the corners and found under the epidermis of a sunflower stem.'",
+            "steps": [
+              {
+                "operation": "Check the wall chemistry",
+                "reason": "Uneven corner thickening with cellulose points to collenchyma.",
+                "result": "Collenchyma.",
+                "predictPrompt": "What if the same cells were dead and lignified instead?"
+              },
+              {
+                "operation": "Check if it is living",
+                "reason": "Collenchyma is alive at maturity.",
+                "result": "Flexible support under tension.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Locate it",
+                "reason": "It sits directly under the epidermis in a young stem.",
+                "result": "Matches the clue.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Explain why sclerenchyma cells are dead at maturity and why this works well for support.",
+            "hints": [
+              "Their walls are thickened with lignin.",
+              "No living contents are needed once the wall is rigid.",
+              "The empty cells save space and add strength."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "mammalian-internal-organs",
+      "title": "Mammalian Internal Organs",
+      "objective": "Examine the arrangement of the mammalian internal organs and describe the appearance and position of the digestive, reproductive and excretory organs.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Inside the mammal",
+            "paragraphs": [
+              "The diaphragm splits the trunk into thorax above and abdomen below. Once you know which systems live in which cavity, the organ map stops being a guessing game."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The two body cavities",
+            "paragraphs": [
+              "The thoracic cavity holds the lungs on either side, the heart between them, slightly to the left, and the thymus above. They are protected by the ribcage.",
+              "Below the diaphragm, the abdominal cavity holds the stomach high on the left, J-shaped; the liver and its gall bladder under the diaphragm on the right; the spleen behind the stomach; the pancreas behind the stomach; the kidneys on the posterior abdominal wall; and the intestines filling the lower cavity. The oesophagus passes through the diaphragm to reach the stomach.",
+              "The organs themselves are covered by membrane: pleura around the lungs and pericardium around the heart. In the abdomen, the visceral and parietal peritoneum wrap and suspend the gut organs."
+            ],
+            "bullets": [
+              "Thorax: lungs and heart.",
+              "Abdomen: liver, stomach, pancreas, spleen.",
+              "Kidneys: posterior abdominal wall (retroperitoneal)."
+            ],
+            "takeaway": "Thorax is lung and heart territory; abdomen is the workshop.",
+            "check": {
+              "question": "Which organ sits mostly on the right side under the diaphragm?",
+              "options": [
+                "Stomach",
+                "Spleen",
+                "Liver",
+                "Pancreas"
+              ],
+              "answer": 2,
+              "why": "The liver is the largest organ (after skin) and tucks under the diaphragm on the right."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The digestive layout",
+            "paragraphs": [
+              "Follow the food: mouth, pharynx, oesophagus, stomach, duodenum, jejunum, ileum, caecum, ascending, transverse and descending colon, finally the rectum and anus.",
+              "Accessory organs feed the tract. The salivary glands open into the mouth; the liver produces bile which is stored in and released from the gall bladder; the pancreas makes digestive enzymes and insulin. Bile and pancreatic juice enter at the duodenum, the first section of the small intestine.",
+              "The small intestine is long and folded to maximise surface area for digestion and absorption. The large intestine reabsorbs water and houses bacteria; its appendix (vermiform) dangles from the caecum."
+            ],
+            "bullets": [
+              "Mouth → oesophagus → stomach → duodenum → ileum → colon.",
+              "Liver makes bile; gall bladder stores it.",
+              "Pancreas: enzymes and hormones."
+            ],
+            "takeaway": "The duodenum is where liver and pancreas meet the meal.",
+            "check": {
+              "question": "Bile is produced in the liver and stored in the",
+              "options": [
+                "Pancreas",
+                "Gall bladder",
+                "Duodenum",
+                "Spleen"
+              ],
+              "answer": 1,
+              "why": "Bile flows to the gall bladder to be concentrated and stored."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Excretory and reproductive position",
+            "paragraphs": [
+              "The urinary system lives mostly in the abdomen. The kidneys are bean-shaped, about eleven centimetres long, on the posterior abdominal wall; the right kidney sits slightly lower because of the liver. Each kidney sends urine into a ureter that descends to the bladder; the urethra expels urine from the bladder.",
+              "In the male, the testes sit in the scrotum below the abdomen, keeping them a few degrees cooler than the abdominal cavity, which is essential for sperm production. Sperm travels through the epididymis and vas deferens past the prostate gland and out through the penis.",
+              "In the female, the ovaries lie on either side of the uterus in the pelvic cavity. Each ovary releases ova into a Fallopian tube, which carries them to the uterus, pear-shaped and midline, lying between the bladder and the rectum, and opening below into the vagina."
+            ],
+            "bullets": [
+              "Kidneys: posterior wall, right lower than left.",
+              "Male: testes in the scrotum.",
+              "Female: ovaries, Fallopian tubes, uterus, vagina."
+            ],
+            "takeaway": "Where an organ sits is the clue to what it does.",
+            "check": {
+              "question": "The right kidney sits slightly lower than the left because of the position of the",
+              "options": [
+                "Stomach",
+                "Heart",
+                "Liver",
+                "Spleen"
+              ],
+              "answer": 2,
+              "why": "The liver occupies the right upper abdomen and pushes the kidney down."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Halve the trunk at the diaphragm. Lungs and heart are above it; liver right, spleen left, kidneys posterior, uterus midline between bladder and rectum."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Trace bile from production to the small intestine and name the organs it passes.",
+            "steps": [
+              {
+                "operation": "Make it in the liver",
+                "reason": "Hepatocytes make bile continuously.",
+                "result": "Bile drains through hepatic ducts.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Store it in the gall bladder",
+                "reason": "The common hepatic duct empties into the cystic duct to the gall bladder.",
+                "result": "Bile is stored between meals.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Release it into the duodenum",
+                "reason": "Fatty meals trigger cholecystokinin and sphincter relaxation.",
+                "result": "Bile flows via common bile duct to emulsify fats.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Explain why the testes are outside the abdominal cavity.",
+            "hints": [
+              "Spermatogenesis runs best a few degrees below body temperature.",
+              "The scrotum keeps the testes cooler than the core.",
+              "Cooling also protects sperm quality."
             ]
           }
         }
