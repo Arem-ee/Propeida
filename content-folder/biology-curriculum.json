@@ -276,18 +276,50 @@
     },
     {
       "slug": "excretion",
-      "name": "Excretion",
+      "name": "Excretion and Excretory Products",
       "syllabus_ref": "B.5",
       "section": "Form and Functions",
       "order": 35,
-      "description": "Excretory structures from contractile vacuoles to kidneys, and the excretory products of plants."
+      "description": "The meaning and significance of excretion, and the nitrogenous wastes animals produce."
+    },
+    {
+      "slug": "excretory-structures",
+      "name": "Excretory Structures",
+      "syllabus_ref": "B.5",
+      "section": "Form and Functions",
+      "order": 36,
+      "description": "Contractile vacuoles, flame cells, nephridia, Malpighian tubules, kidneys, stomata and lenticels."
+    },
+    {
+      "slug": "mammalian-kidney",
+      "name": "The Mammalian Kidney",
+      "syllabus_ref": "B.5",
+      "section": "Form and Functions",
+      "order": 37,
+      "description": "Kidney structure, the nephron, urine formation and osmoregulation."
+    },
+    {
+      "slug": "lungs-and-skin",
+      "name": "Lungs and Skin as Excretory Organs",
+      "syllabus_ref": "B.5",
+      "section": "Form and Functions",
+      "order": 38,
+      "description": "The excretory products and functions of the lungs and skin, including sweat and temperature control."
+    },
+    {
+      "slug": "plant-excretion-and-products",
+      "name": "Plant Excretion and Its Products",
+      "syllabus_ref": "B.5",
+      "section": "Form and Functions",
+      "order": 39,
+      "description": "Plant excretory products such as tannins, resins, gums, mucilage and alkaloids, and their economic uses."
     },
     {
       "slug": "support-and-movement",
       "name": "Support and movement",
       "syllabus_ref": "B.6",
       "section": "Form and Functions",
-      "order": 36,
+      "order": 40,
       "description": "Plant movements, supporting tissues, skeletons and joints in animals."
     },
     {
@@ -295,7 +327,7 @@
       "name": "Reproduction",
       "syllabus_ref": "B.7",
       "section": "Form and Functions",
-      "order": 37,
+      "order": 41,
       "description": "Asexual and sexual reproduction, flowering-plant reproduction and mammalian reproduction."
     },
     {
@@ -303,7 +335,7 @@
       "name": "Growth",
       "syllabus_ref": "B.8",
       "section": "Form and Functions",
-      "order": 38,
+      "order": 42,
       "description": "The meaning of growth, seed germination and the difference between epigeal and hypogeal germination."
     },
     {
@@ -311,7 +343,7 @@
       "name": "Co-ordination and control",
       "syllabus_ref": "B.9",
       "section": "Form and Functions",
-      "order": 39,
+      "order": 43,
       "description": "Nervous coordination, sense organs, hormones and homeostasis."
     },
     {
@@ -319,7 +351,7 @@
       "name": "Factors affecting the distribution of Organisms",
       "syllabus_ref": "C.1",
       "section": "Ecology",
-      "order": 40,
+      "order": 44,
       "description": "Abiotic and biotic factors that determine where organisms live."
     },
     {
@@ -327,7 +359,7 @@
       "name": "Symbiotic interactions of plants and animals",
       "syllabus_ref": "C.2",
       "section": "Ecology",
-      "order": 41,
+      "order": 45,
       "description": "Symbiosis, energy flow, food chains and webs, and the carbon, water and nitrogen cycles."
     },
     {
@@ -335,7 +367,7 @@
       "name": "Natural Habitats",
       "syllabus_ref": "C.3",
       "section": "Ecology",
-      "order": 42,
+      "order": 46,
       "description": "Aquatic and terrestrial habitats and the adaptive features of the organisms in them."
     },
     {
@@ -343,7 +375,7 @@
       "name": "Local (Nigerian) Biomes",
       "syllabus_ref": "C.4",
       "section": "Ecology",
-      "order": 43,
+      "order": 47,
       "description": "Tropical rainforest, Guinea and Sudan savanna, desert and the highland plateaus of Nigeria."
     },
     {
@@ -351,7 +383,7 @@
       "name": "The Ecology of Populations",
       "syllabus_ref": "C.5",
       "section": "Ecology",
-      "order": 44,
+      "order": 48,
       "description": "Population density, competition, population size, ecological succession and climax communities."
     },
     {
@@ -359,7 +391,7 @@
       "name": "SOIL",
       "syllabus_ref": "C.6",
       "section": "Ecology",
-      "order": 45,
+      "order": 49,
       "description": "Soil types, components, fertility, erosion and the maintenance of productive soil."
     },
     {
@@ -367,7 +399,7 @@
       "name": "Humans and Environment",
       "syllabus_ref": "C.7",
       "section": "Ecology",
-      "order": 46,
+      "order": 50,
       "description": "Disease, drug abuse, pollution, sanitation, conservation and Nigeria's parks and reserves."
     },
     {
@@ -375,7 +407,7 @@
       "name": "Variation In Population",
       "syllabus_ref": "D.1",
       "section": "Heredity and Variations",
-      "order": 47,
+      "order": 51,
       "description": "Morphological and physiological variation and its use in identity, transfusion and paternity."
     },
     {
@@ -383,7 +415,7 @@
       "name": "Heredity",
       "syllabus_ref": "D.2",
       "section": "Heredity and Variations",
-      "order": 48,
+      "order": 52,
       "description": "Heritable characters, chromosomes, genetic crosses, sex determination and sex-linked traits."
     },
     {
@@ -391,7 +423,7 @@
       "name": "Biotechnology",
       "syllabus_ref": "D.3",
       "section": "Heredity and Variations",
-      "order": 49,
+      "order": 53,
       "description": "Applications of biotechnology in agriculture, medicine, pharmaceuticals and the food industry."
     },
     {
@@ -399,7 +431,7 @@
       "name": "Theories of evolution",
       "syllabus_ref": "E.1",
       "section": "Evolution",
-      "order": 50,
+      "order": 54,
       "description": "Organic evolution, Lamarck's and Darwin's theories, and the evidence that supports them."
     },
     {
@@ -407,7 +439,7 @@
       "name": "Evidence of evolution",
       "syllabus_ref": "E.2",
       "section": "Evolution",
-      "order": 51,
+      "order": 55,
       "description": "Fossils, comparative anatomy, embryology and other evidence for organic evolution."
     }
   ],
@@ -6211,6 +6243,747 @@
               "The muscles built up lactic acid while oxygen was short.",
               "Extra oxygen is needed to oxidise the lactic acid.",
               "The fast breathing after exercise is repaying the oxygen debt."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "excretion",
+      "title": "Excretion and Excretory Products",
+      "objective": "Define excretion, distinguish it from egestion and secretion, explain its significance, and compare ammonia, urea and uric acid as nitrogenous wastes.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Excretion and excretory products",
+            "paragraphs": [
+              "A patient with kidney failure becomes drowsy when wastes build up in the blood. The body's cleaning system has stopped working."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Excretion is not egestion",
+            "paragraphs": [
+              "Excretion is the removal of metabolic waste products from the body. These wastes are made inside cells, such as carbon (IV) oxide from respiration and urea from the breakdown of excess amino acids.",
+              "Egestion is different: it is the removal of undigested food from the alimentary canal, and the material was never part of the body's metabolism. Secretion is also different, because it releases useful substances such as enzymes and hormones.",
+              "Excretion therefore includes lungs, kidneys, skin and plant stomata, but not the rectum. A useful substance released by a gland is a secretion, even though it leaves the cell."
+            ],
+            "bullets": [
+              "Excretion: metabolic wastes such as carbon (IV) oxide and urea.",
+              "Egestion: undigested food removed as faeces.",
+              "Secretion: useful substances such as enzymes and hormones."
+            ],
+            "takeaway": "Excretion removes metabolic waste; egestion removes unabsorbed food.",
+            "check": {
+              "question": "Which process removes undigested food from the body?",
+              "options": [
+                "Excretion",
+                "Egestion",
+                "Secretion",
+                "Osmoregulation"
+              ],
+              "answer": 1,
+              "why": "Egestion removes unabsorbed food from the alimentary canal; it was never part of metabolism."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Why excretion matters",
+            "paragraphs": [
+              "Metabolic wastes can be toxic. Carbon (IV) oxide lowers blood pH, urea raises the concentration of nitrogenous waste, and excess salts disturb the balance of water between cells and blood.",
+              "Excretion keeps the internal environment steady: water balance, salt balance, pH and temperature. This steady state is called homeostasis, and the kidneys are its main control organs in mammals.",
+              "If excretion fails, wastes accumulate and cells cannot work properly. Dialysis can temporarily remove urea and excess salts from the blood when the kidneys fail, but it does not replace every kidney function."
+            ],
+            "bullets": [
+              "Wastes can be toxic and disturb pH and water balance.",
+              "Excretion helps maintain homeostasis.",
+              "Dialysis removes some wastes but is not a full substitute for kidneys."
+            ],
+            "takeaway": "Excretion protects cells by keeping the internal environment steady.",
+            "check": {
+              "question": "The main control organs of water and salt balance in mammals are the",
+              "options": [
+                "Lungs",
+                "Kidneys",
+                "Skin",
+                "Liver"
+              ],
+              "answer": 1,
+              "why": "The kidneys filter blood and adjust water and salt reabsorption to control urine concentration."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Nitrogenous wastes: ammonia, urea and uric acid",
+            "paragraphs": [
+              "Ammonia is formed when amino acids are broken down. It is very soluble and highly toxic, so aquatic animals such as fish can release it directly into water, where it is quickly diluted.",
+              "Land animals convert ammonia to urea in the liver. Urea is less toxic and needs less water to excrete, which suits mammals; birds, reptiles and insects convert it to uric acid, a semi-solid paste that conserves even more water.",
+              "The choice reflects habitat: ammonia needs plenty of water, urea needs moderate water, and uric acid needs little. The trade-off is that making urea and uric acid costs energy."
+            ],
+            "bullets": [
+              "Ammonia: very soluble, toxic, released by fish into water.",
+              "Urea: less toxic, made in the liver, excreted by mammals.",
+              "Uric acid: semi-solid, conserves water, used by birds, reptiles and insects."
+            ],
+            "takeaway": "Ammonia is fast and watery; urea is balanced; uric acid saves water.",
+            "check": {
+              "question": "Which nitrogenous waste is least soluble and conserves the most water?",
+              "options": [
+                "Ammonia",
+                "Urea",
+                "Uric acid",
+                "Carbon (IV) oxide"
+              ],
+              "answer": 2,
+              "why": "Uric acid is excreted as a semi-solid paste, which limits water loss."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Excretion is metabolic waste; egestion is undigested food. Ammonia suits fish, urea suits mammals, and uric acid suits birds, reptiles and insects."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A student says faeces are an excretory product. Correct the statement and classify three wastes.",
+            "steps": [
+              {
+                "operation": "Classify faeces",
+                "reason": "Faeces contain unabsorbed food that never entered cell metabolism.",
+                "result": "Faeces are removed by egestion, not excretion.",
+                "predictPrompt": "How should carbon (IV) oxide be classified?"
+              },
+              {
+                "operation": "Classify carbon (IV) oxide",
+                "reason": "It is made during respiration inside cells.",
+                "result": "An excretory product removed by the lungs.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Classify urea",
+                "reason": "It is made in the liver from excess amino acids.",
+                "result": "An excretory product removed by the kidneys.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why do desert reptiles excrete uric acid rather than ammonia?",
+            "hints": [
+              "Ammonia is highly toxic and very soluble.",
+              "Excreting ammonia would require a lot of water.",
+              "Uric acid is semi-solid and conserves water, though making it costs energy."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "excretory-structures",
+      "title": "Excretory Structures",
+      "objective": "Relate the structure of contractile vacuoles, flame cells, nephridia, Malpighian tubules, kidneys, stomata and lenticels to their excretory functions.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Excretory structures",
+            "paragraphs": [
+              "A pond Amoeba, a tapeworm, an earthworm and a grasshopper all get rid of wastes without owning a kidney. Each has a different solution."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Contractile vacuole, flame cell and nephridium",
+            "paragraphs": [
+              "An Amoeba lives in fresh water, where water constantly enters by osmosis. Its contractile vacuole collects the excess water and expels it, preventing the cell from bursting; the same organelle removes some dissolved wastes.",
+              "A flame cell is a hollow cell with a tuft of cilia that beats like a flame. It drives fluid through a network of tubules in flatworms such as Taenia, filtering wastes while useful materials are reabsorbed.",
+              "A nephridium is a coiled tubule in an earthworm. It opens into the body cavity, takes up coelomic fluid, reabsorbs useful salts and water, and releases urine through a pore in the body wall."
+            ],
+            "bullets": [
+              "Contractile vacuole: collects and expels excess water.",
+              "Flame cell: ciliated cell that drives fluid through tubules in flatworms.",
+              "Nephridium: coiled tubule that filters coelomic fluid in earthworms."
+            ],
+            "takeaway": "Contractile vacuole pumps water; flame cells and nephridia filter body fluid.",
+            "check": {
+              "question": "Which structure prevents a freshwater Amoeba from bursting?",
+              "options": [
+                "Flame cell",
+                "Contractile vacuole",
+                "Nephridium",
+                "Malpighian tubule"
+              ],
+              "answer": 1,
+              "why": "The contractile vacuole expels excess water that enters the cell by osmosis."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Malpighian tubules and kidneys",
+            "paragraphs": [
+              "Insects use Malpighian tubules, fine tubes that open into the gut. They take up uric acid and salts from the body fluid and empty them into the hindgut, where water is reabsorbed and the waste leaves with faeces.",
+              "The vertebrate kidney is a compact organ packed with nephrons. Each nephron filters blood under pressure, reabsorbs useful glucose, salts and water, and leaves urea and excess ions in the urine.",
+              "The structures get more complex with body size: a contractile vacuole in a single cell, flame cells and nephridia in worms, Malpighian tubules in insects, and paired kidneys in vertebrates. The principle is the same: remove waste and reclaim what is useful."
+            ],
+            "bullets": [
+              "Malpighian tubules: take up uric acid and empty it into the hindgut.",
+              "Kidney nephrons: filter blood, reabsorb useful materials, leave urine.",
+              "The structures become more complex as body size increases."
+            ],
+            "takeaway": "Filter, reabsorb, then excrete: the same logic at every level.",
+            "check": {
+              "question": "Malpighian tubules empty waste into the",
+              "options": [
+                "Coelom",
+                "Hindgut",
+                "Blood vessel",
+                "Body surface"
+              ],
+              "answer": 1,
+              "why": "Malpighian tubules connect to the hindgut, where water is reabsorbed before waste is passed out."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Stomata and lenticels",
+            "paragraphs": [
+              "Plants do not have kidneys. Their main excretory surfaces are stomata in leaves and lenticels in woody stems, which release carbon (IV) oxide and water vapour and allow oxygen to leave.",
+              "Some plant wastes are stored rather than expelled. Tannins, resins, gums, mucilage and alkaloids are kept in vacuoles, ducts or specialized cells, and may be released when the plant is damaged.",
+              "Storage protects the plant from its own toxic products and can also deter herbivores. The excretory structure therefore matches the organism: a pump in a protist, a tubule in a worm, a kidney in a mammal, and a pore in a leaf."
+            ],
+            "bullets": [
+              "Stomata and lenticels release gases and water vapour.",
+              "Tannins, resins, gums, mucilage and alkaloids may be stored.",
+              "Storage protects the plant and can deter herbivores."
+            ],
+            "takeaway": "Animal excretory organs filter; plant surfaces release or store wastes.",
+            "check": {
+              "question": "Which pair are plant excretory surfaces?",
+              "options": [
+                "Stomata and lenticels",
+                "Flame cells and nephridia",
+                "Malpighian tubules and kidneys",
+                "Contractile vacuoles and stomata"
+              ],
+              "answer": 0,
+              "why": "Leaves use stomata and woody stems use lenticels for gas and water-vapour exchange."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Contractile vacuole = water; flame cell or nephridium = filtered body fluid; Malpighian tubule = uric acid; kidney = urea; stoma or lenticel = gases and water vapour."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Match each organism to its excretory structure: Amoeba, earthworm, grasshopper and mammal.",
+            "steps": [
+              {
+                "operation": "Amoeba",
+                "reason": "A single freshwater cell must expel water that enters by osmosis.",
+                "result": "Contractile vacuole.",
+                "predictPrompt": "Which structure serves the earthworm?"
+              },
+              {
+                "operation": "Earthworm",
+                "reason": "Coelomic fluid is filtered by coiled tubules that open to the outside.",
+                "result": "Nephridia.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Grasshopper",
+                "reason": "Fine tubules take up uric acid and empty it into the hindgut.",
+                "result": "Malpighian tubules.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Mammal",
+                "reason": "Blood is filtered under pressure and useful materials are reabsorbed.",
+                "result": "Kidneys with nephrons.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why are Malpighian tubules well suited to insects living on land?",
+            "hints": [
+              "Insects must conserve water.",
+              "The tubules excrete uric acid rather than ammonia.",
+              "Water is reabsorbed from the hindgut before the waste is passed out."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "mammalian-kidney",
+      "title": "The Mammalian Kidney",
+      "objective": "Relate the structure of the kidney and nephron to ultrafiltration, selective reabsorption and osmoregulation.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "The mammalian kidney",
+            "paragraphs": [
+              "A football match in Kano leaves a player thirsty and passing concentrated urine. The kidneys are adjusting water loss to keep the blood steady."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Kidney structure",
+            "paragraphs": [
+              "The kidneys are a pair of bean-shaped organs behind the abdominal cavity, supplied by the renal artery and drained by the renal vein. Each kidney has an outer cortex, an inner medulla and a central pelvis that leads to the ureter.",
+              "The functional unit is the nephron; a kidney contains about a million of them. The nephron begins with a glomerulus inside a Bowman's capsule and continues through the proximal tubule, loop of Henle, distal tubule and collecting duct.",
+              "Blood enters the glomerulus at high pressure and leaves through the efferent arteriole, while the filtrate passes along the tubule. The arrangement of cortex, medulla and pelvis is what lets the kidney filter, reabsorb and then drain urine."
+            ],
+            "bullets": [
+              "Cortex outside, medulla inside, renal pelvis draining to the ureter.",
+              "The nephron is the functional unit of the kidney.",
+              "Glomerulus, Bowman's capsule, tubules and collecting duct form the nephron."
+            ],
+            "takeaway": "Cortex filters, medulla concentrates, pelvis drains.",
+            "check": {
+              "question": "The functional unit of the kidney is the",
+              "options": [
+                "Nephron",
+                "Neuron",
+                "Alveolus",
+                "Villus"
+              ],
+              "answer": 0,
+              "why": "Each nephron filters blood and modifies the filtrate to form urine."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Ultrafiltration and selective reabsorption",
+            "paragraphs": [
+              "In ultrafiltration, blood pressure in the glomerulus forces water, glucose, amino acids, salts and urea through the capillary wall and capsule into the nephron. Blood cells and large proteins remain in the blood because they are too large.",
+              "Selective reabsorption follows. The proximal tubule uses active transport and osmosis to reclaim glucose, amino acids, most salts and much of the water; its cells have microvilli and many mitochondria for this work.",
+              "The loop of Henle creates a salt gradient in the medulla, and the collecting duct uses that gradient to reabsorb more water. Anything not reabsorbed, mainly urea, excess salts and water, leaves as urine through the ureter, bladder and urethra."
+            ],
+            "bullets": [
+              "Ultrafiltration: pressure forces small molecules into Bowman's capsule.",
+              "Selective reabsorption: glucose, amino acids, salts and water are reclaimed.",
+              "Urine contains urea, excess salts and water, not glucose or protein."
+            ],
+            "takeaway": "Filter under pressure, then take back what the body still needs.",
+            "check": {
+              "question": "Which substance is normally absent from urine?",
+              "options": [
+                "Urea",
+                "Glucose",
+                "Excess salts",
+                "Water"
+              ],
+              "answer": 1,
+              "why": "Glucose is normally reabsorbed completely in the proximal tubule."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Osmoregulation",
+            "paragraphs": [
+              "Osmoregulation is the control of water and salt balance. When a person is dehydrated, the hypothalamus detects rising blood solute concentration and the posterior pituitary releases more ADH.",
+              "ADH makes the collecting ducts more permeable to water, so more water is reabsorbed and a small amount of concentrated urine is produced. When a person drinks plenty of water, ADH falls and dilute urine is produced.",
+              "The kidney therefore controls both excretion and water balance. Alcohol and some drugs increase urine output by reducing ADH, while kidney failure reduces filtration and allows urea to accumulate in blood."
+            ],
+            "bullets": [
+              "Dehydration raises ADH; ADH increases water reabsorption.",
+              "Hydration lowers ADH; more dilute urine is produced.",
+              "Kidney failure reduces filtration and causes waste accumulation."
+            ],
+            "takeaway": "ADH tells the collecting duct to save water.",
+            "check": {
+              "question": "ADH increases water reabsorption by acting on the",
+              "options": [
+                "Glomerulus",
+                "Bowman's capsule",
+                "Collecting duct",
+                "Ureter"
+              ],
+              "answer": 2,
+              "why": "ADH makes the collecting duct more permeable, so more water returns to the blood."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Ultrafiltration keeps cells and proteins; reabsorption keeps glucose and useful salts; ADH keeps water. Urine normally contains urea, salts and water, not glucose."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A patient's urine contains glucose and protein. Explain what each result suggests about the nephron.",
+            "steps": [
+              {
+                "operation": "Explain the glucose",
+                "reason": "Glucose should be reabsorbed in the proximal tubule, or filtered only when blood glucose is very high.",
+                "result": "The tubule may be damaged, or the blood glucose may exceed the reabsorption limit.",
+                "predictPrompt": "Where should protein be stopped?"
+              },
+              {
+                "operation": "Explain the protein",
+                "reason": "Large proteins should not pass through the glomerular filter.",
+                "result": "Protein in urine suggests damage to the filtration barrier.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Interpret together",
+                "reason": "Two abnormal findings point to a kidney problem rather than a normal variation.",
+                "result": "The patient needs medical tests to locate the damage.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why does a dehydrated person produce less urine?",
+            "hints": [
+              "Blood solute concentration rises when water is lost.",
+              "The posterior pituitary releases more ADH.",
+              "The collecting ducts reabsorb more water, leaving concentrated urine."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "lungs-and-skin",
+      "title": "Lungs and Skin as Excretory Organs",
+      "objective": "Identify the excretory products and functions of the lungs and skin, and explain how sweating and skin blood flow control body temperature.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Lungs and skin as excretory organs",
+            "paragraphs": [
+              "After a long run in Lagos, a runner's breath is moist and his shirt is wet with sweat. The lungs and skin are both disposing of waste."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Lungs: carbon (IV) oxide and water vapour",
+            "paragraphs": [
+              "The lungs are the excretory route for carbon (IV) oxide and water vapour. Carbon (IV) oxide is made in every respiring cell, carried in blood to the lungs and diffused into the alveoli to be breathed out.",
+              "Water vapour is lost with every exhale because the alveolar surface is moist. The lungs also lose heat, which is why breathing hard in a cold room produces visible vapour.",
+              "Lungs are not a route for urea. Their excretory role is tied to respiration and the need to keep blood pH stable; too much carbon (IV) oxide lowers pH and triggers faster breathing."
+            ],
+            "bullets": [
+              "Lungs excrete carbon (IV) oxide and water vapour.",
+              "They also lose heat with each breath.",
+              "Lungs do not excrete urea; they help control blood pH."
+            ],
+            "takeaway": "Lungs excrete carbon (IV) oxide, water vapour and heat.",
+            "check": {
+              "question": "The main excretory product removed by the lungs is",
+              "options": [
+                "Urea",
+                "Carbon (IV) oxide",
+                "Excess salts",
+                "Bile pigment"
+              ],
+              "answer": 1,
+              "why": "Carbon (IV) oxide produced by respiration is carried to the lungs and breathed out."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Skin: sweat and temperature control",
+            "paragraphs": [
+              "The skin has sweat glands in the dermis. Each gland coils below the surface and opens at a pore; its secretion, sweat, contains water, salts, urea and lactic acid.",
+              "Sweating removes small amounts of nitrogenous waste, but its main job is cooling. As sweat evaporates it takes latent heat from the skin, helping to keep body temperature near 37°C.",
+              "Blood vessels in the skin widen in heat and narrow in cold. Wider vessels bring more blood to the surface for heat loss, while narrower vessels keep heat in the core; shivering generates extra heat."
+            ],
+            "bullets": [
+              "Sweat contains water, salts, urea and lactic acid.",
+              "Evaporation of sweat removes latent heat and cools the body.",
+              "Vasodilation loses heat; vasoconstriction and shivering conserve or make heat."
+            ],
+            "takeaway": "Sweat cools the body and carries a little urea and salt.",
+            "check": {
+              "question": "The main function of sweating is to",
+              "options": [
+                "Remove all urea from the blood",
+                "Cool the body by evaporation",
+                "Increase blood glucose",
+                "Produce vitamin D"
+              ],
+              "answer": 1,
+              "why": "Evaporating sweat takes latent heat from the skin and lowers body temperature."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Working with the kidneys",
+            "paragraphs": [
+              "The kidneys are the main excretory organs for urea and salts, but the lungs, skin and gut also remove wastes. Lungs remove carbon (IV) oxide, skin removes some urea and salts, and the gut removes bile pigments in faeces.",
+              "When kidneys fail, urea accumulates and the skin may carry more urea in sweat, but sweating cannot replace filtration. Dialysis takes over part of the kidney's work by cleaning blood outside the body.",
+              "Excretion is therefore a team effort: each organ removes the waste it is suited to handle, and together they keep the internal environment stable."
+            ],
+            "bullets": [
+              "Kidneys: main route for urea and excess salts.",
+              "Lungs: carbon (IV) oxide and water vapour.",
+              "Skin and gut: small contributions; dialysis supports failing kidneys."
+            ],
+            "takeaway": "Lungs handle volatile waste, skin handles water and some urea, kidneys do the main filtration.",
+            "check": {
+              "question": "Which organ is the main route for urea excretion?",
+              "options": [
+                "Lungs",
+                "Skin",
+                "Kidneys",
+                "Liver"
+              ],
+              "answer": 2,
+              "why": "The kidneys filter urea from blood and excrete it in urine."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Lungs = carbon (IV) oxide and water vapour; skin = water, salts, urea and heat; kidneys = urea and excess salts. Do not credit the lungs with urea."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A patient with kidney failure sweats heavily and has urea on the skin. Explain why this does not solve the problem.",
+            "steps": [
+              {
+                "operation": "Check what sweat removes",
+                "reason": "Sweat carries water, salts and a small amount of urea.",
+                "result": "Only a tiny fraction of the waste is removed.",
+                "predictPrompt": "Can the skin filter blood?"
+              },
+              {
+                "operation": "Compare with the kidney",
+                "reason": "The kidney filters the whole blood volume and adjusts reabsorption.",
+                "result": "Sweating cannot control urea concentration or water balance.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Identify the treatment",
+                "reason": "The failing kidney needs filtration to be replaced.",
+                "result": "Dialysis or a kidney transplant is required.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why does the skin become red and sweaty during heavy exercise?",
+            "hints": [
+              "Muscles produce extra heat during exercise.",
+              "Vasodilation brings more blood to the skin surface.",
+              "Sweat evaporation removes latent heat and cools the body."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "plant-excretion-and-products",
+      "title": "Plant Excretion and Its Products",
+      "objective": "Identify the excretory products of plants, including gases and stored chemicals, and explain their economic importance.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Plant excretion and its products",
+            "paragraphs": [
+              "A rubber tapper cuts a tree and collects a milky sap; a carpenter smells resin in pine wood. Plants make and store many chemicals that people use."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Gases and water vapour",
+            "paragraphs": [
+              "Plants excrete carbon (IV) oxide, oxygen and water vapour through stomata and lenticels. Carbon (IV) oxide is a product of respiration, while oxygen is a by-product of photosynthesis and leaves during the day.",
+              "These gases are not waste to every organism. Oxygen supports respiration in animals and is used in hospitals, while carbon (IV) oxide is used by plants for photosynthesis and in soft drinks and fire extinguishers.",
+              "Water vapour is also lost through transpiration, though the main stored excretory products discussed here are the organic chemicals. The plant cannot store these gases, so they diffuse out as soon as they are made."
+            ],
+            "bullets": [
+              "Carbon (IV) oxide is released by respiration.",
+              "Oxygen is released by photosynthesis during the day.",
+              "Water vapour leaves through stomata and lenticels."
+            ],
+            "takeaway": "Plants release gases and water vapour through stomata and lenticels.",
+            "check": {
+              "question": "Which gas is released by photosynthesis and excreted through stomata?",
+              "options": [
+                "Carbon (IV) oxide",
+                "Oxygen",
+                "Nitrogen",
+                "Hydrogen"
+              ],
+              "answer": 1,
+              "why": "Oxygen is a by-product of photosynthesis and diffuses out through the stomata."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Tannins, resins, gums and mucilage",
+            "paragraphs": [
+              "Tannins are bitter phenolic compounds stored in vacuoles and bark. They deter herbivores and microbes, and people use them to tan leather, make dyes and produce astringent medicines.",
+              "Resins are sticky mixtures secreted into ducts, especially in conifers. They seal wounds and repel insects, and are used in varnishes, adhesives, incense and some medicines.",
+              "Gums and mucilage are polysaccharides that swell in water. Gums exuded from acacia and other trees are used as adhesives, thickeners and emulsifiers; mucilage from okra and cactus holds water and soothes irritated tissue."
+            ],
+            "bullets": [
+              "Tannins: tan leather, make dyes and astringent medicines.",
+              "Resins: seal wounds; used in varnish, adhesives and incense.",
+              "Gums and mucilage: thicken, emulsify and hold water."
+            ],
+            "takeaway": "Tannins tan, resins seal, gums glue and mucilage thickens.",
+            "check": {
+              "question": "Which plant product is used to tan leather?",
+              "options": [
+                "Tannin",
+                "Resin",
+                "Mucilage",
+                "Quinine"
+              ],
+              "answer": 0,
+              "why": "Tannins bind to proteins in animal hides and preserve them as leather."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Alkaloids and the economic ledger",
+            "paragraphs": [
+              "Alkaloids are nitrogen-containing compounds that taste bitter and often affect the nervous system. Plants store them in leaves, bark, roots or seeds, where they deter herbivores and kill microbes.",
+              "Many alkaloids are medicines in the right dose: quinine from cinchona treats malaria, morphine from opium poppy relieves pain, and caffeine from coffee is a stimulant. Nicotine from tobacco is an insecticide but is harmful to people.",
+              "The economic importance of plant excretions is therefore double-edged. They provide medicines, tannins, resins, gums, dyes and food additives, but some are toxic and must be used carefully."
+            ],
+            "bullets": [
+              "Alkaloids are bitter, nitrogen-containing defensive compounds.",
+              "Quinine, morphine and caffeine are useful alkaloids.",
+              "Some alkaloids are toxic, so dose and preparation matter."
+            ],
+            "takeaway": "Plant wastes become medicines, materials and poisons depending on dose.",
+            "check": {
+              "question": "Quinine, used to treat malaria, is obtained from",
+              "options": [
+                "Acacia gum",
+                "Cinchona bark",
+                "Pine resin",
+                "Okra mucilage"
+              ],
+              "answer": 1,
+              "why": "Quinine is an alkaloid extracted from the bark of the cinchona tree."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Tannins tan leather, resins make varnish and incense, gums and mucilage thicken, and alkaloids include quinine and morphine. Plants also excrete oxygen, carbon (IV) oxide and water vapour."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A factory wants to use local plant waste. Evaluate three options: tannin-rich bark, acacia gum and cinchona bark.",
+            "steps": [
+              {
+                "operation": "Evaluate tannin-rich bark",
+                "reason": "Tannins bind proteins and are astringent.",
+                "result": "Suitable for tanning leather and making dyes.",
+                "predictPrompt": "What can acacia gum be used for?"
+              },
+              {
+                "operation": "Evaluate acacia gum",
+                "reason": "The gum swells in water and forms a sticky gel.",
+                "result": "Suitable as an adhesive, thickener or emulsifier.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Evaluate cinchona bark",
+                "reason": "It contains quinine, an alkaloid used against malaria.",
+                "result": "Valuable for medicine, but extraction and dose control are essential.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why can a plant store toxic alkaloids without poisoning itself?",
+            "hints": [
+              "Alkaloids are kept inside vacuoles or specialized ducts.",
+              "They are separated from the cytoplasm where most metabolism occurs.",
+              "The same compartmentation makes them available for defence when the plant is damaged."
             ]
           }
         }

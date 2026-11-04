@@ -84,7 +84,15 @@ const descriptions = {
   'anaerobic-respiration-and-fermentation':
     'Lactic acid in muscles, ethanol and carbon dioxide in yeast, oxygen debt and economic uses.',
   excretion:
-    'Excretory structures from contractile vacuoles to kidneys, and the excretory products of plants.',
+    'The meaning and significance of excretion, and the nitrogenous wastes animals produce.',
+  'excretory-structures':
+    'Contractile vacuoles, flame cells, nephridia, Malpighian tubules, kidneys, stomata and lenticels.',
+  'mammalian-kidney':
+    'Kidney structure, the nephron, urine formation and osmoregulation.',
+  'lungs-and-skin':
+    'The excretory products and functions of the lungs and skin, including sweat and temperature control.',
+  'plant-excretion-and-products':
+    'Plant excretory products such as tannins, resins, gums, mucilage and alkaloids, and their economic uses.',
   'support-and-movement':
     'Plant movements, supporting tissues, skeletons and joints in animals.',
   reproduction:
@@ -305,6 +313,31 @@ const split = [
     slug: 'anaerobic-respiration-and-fermentation',
     name: 'Anaerobic Respiration and Fermentation',
     syllabus_ref: 'B.4',
+  },
+  {
+    slug: 'excretion',
+    name: 'Excretion and Excretory Products',
+    syllabus_ref: 'B.5',
+  },
+  {
+    slug: 'excretory-structures',
+    name: 'Excretory Structures',
+    syllabus_ref: 'B.5',
+  },
+  {
+    slug: 'mammalian-kidney',
+    name: 'The Mammalian Kidney',
+    syllabus_ref: 'B.5',
+  },
+  {
+    slug: 'lungs-and-skin',
+    name: 'Lungs and Skin as Excretory Organs',
+    syllabus_ref: 'B.5',
+  },
+  {
+    slug: 'plant-excretion-and-products',
+    name: 'Plant Excretion and Its Products',
+    syllabus_ref: 'B.5',
   },
 ].map((topic, index) => ({
   ...topic,
