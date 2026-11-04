@@ -209,12 +209,15 @@ gamete.
   oncosphere or cysticercus by name), add those to the relevant lesson or the
   depth tier.
 - Warning colouration in mushrooms is required by the syllabus and is taught
-  with the fly agaric. The lesson deliberately says a bright cap "can be"
-  warning colouration because the aposematic function is debated; it does not
-  claim that every bright mushroom is poisonous.
+  with the fly agaric. The lesson says the fly agaric's bright cap "can signal
+  danger", names it as the syllabus example, and warns that a bright cap alone
+  does not prove toxicity; it does not claim that every bright mushroom is
+  poisonous.
 - Some examples are global standard examples (poison-dart frog, peacock)
   because they are the clearest illustrations. Nigerian examples are used where
   the syllabus supplies them: maize, water leaf, mango, cashew, oil palm,
   tilapia, catfish and *Agama*.
-- These lessons have no optional depth tier yet. Depth remains quality debt
-  across the library, not a correctness issue.
+- Five A.2 lessons now carry depth: *Fungi*, *Plant Divisions*, *Invertebrate
+  Phyla*, *Insects and Their Importance* and *Vertebrate Classes*. The three
+  A.1 lessons and the other eight A.2/A.3 lessons still have none. See
+  `docs/biology-depth-verification.md`.
