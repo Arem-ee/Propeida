@@ -20,7 +20,7 @@ export default async function LessonPage({
   const lesson = await getLessonByPath(subject, slug)
   if (!lesson) notFound()
 
-  const { note, enhancement, english, subjectId } = lesson
+  const { note, enhancement, english, subjectId, examId } = lesson
   const subjectLabel = SUBJECTS.find((s) => s.slug === note.subject)?.label ?? note.subject
 
   let diagnostic = null
@@ -68,6 +68,7 @@ export default async function LessonPage({
           microCheck={microCheck}
           nextLesson={nextLesson}
           subjectId={subjectId}
+          examId={examId}
         />
       ) : (
         <div className="rounded-3xl border-2 border-dashed border-blue-200 bg-white/70 p-8 text-center">

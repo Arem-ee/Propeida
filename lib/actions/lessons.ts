@@ -7,7 +7,30 @@ import { applySubjectEvidence, getNextReviews } from '@/lib/mastery'
 import { findPrerequisiteRepair } from '@/lib/practice'
 import { getNoteById } from '@/lib/notes'
 import type { RevisionNote } from '@/lib/notes'
+import type { NoteSection } from '@/lib/notes'
+import { toLessonVisual } from '@/lib/notes/visual'
 import type { LessonEnhancement } from '@/lib/lessons'
+
+/** One inline check authored on a text block: question, options, answer index. */
+function toSectionCheck(value: unknown): NoteSection['check'] {
+  if (!value || typeof value !== 'object') return undefined
+  const v = value as Record<string, unknown>
+  const question = typeof v.question === 'string' ? v.question.trim() : ''
+  const options = Array.isArray(v.options) ? v.options.map(String) : []
+  const answer = typeof v.answer === 'number' ? v.answer : -1
+  if (!question || options.length < 2 || answer < 0 || answer >= options.length) return undefined
+  return {
+    question,
+    options,
+    answer,
+    ...(typeof v.why === 'string' && v.why.trim() ? { why: v.why.trim() } : {}),
+  }
+}
+
+/** One figure on a text block; malformed figures are simply dropped. */
+function toSectionVisual(value: unknown): NoteSection['visual'] {
+  return toLessonVisual(value) ?? undefined
+}
 
 export interface LessonQuestion {
   id: string
@@ -122,6 +145,7 @@ export async function getLessonByPath(
   enhancement: LessonEnhancement | null
   english: LessonEnglish
   subjectId: string
+  examId: string | null
 } | null> {
   const supabase = await createClient()
 
@@ -134,7 +158,7 @@ export async function getLessonByPath(
   if (subject) {
     const { data: lesson } = await supabase
       .from('lessons')
-      .select('id, slug, title, objective')
+      .select('id, slug, title, objective, exam_id')
       .eq('subject_id', subject.id)
       .eq('slug', lessonSlug)
       .eq('status', 'published')
@@ -154,17 +178,31 @@ export async function getLessonByPath(
 
       const texts = byType('text')
       const first = texts[0]
-      const sections = texts.slice(1).map((b) => ({
-        heading: String(b.content.heading ?? ''),
-        paragraphs: (b.content.paragraphs ?? []) as string[],
-        bullets: (b.content.bullets ?? []) as string[],
-      }))
+      const firstParagraphs = (first?.content.paragraphs ?? []) as string[]
+      const sections = [
+        ...(firstParagraphs.length > 1
+          ? [{ heading: '', paragraphs: firstParagraphs.slice(1), bullets: [] }]
+          : []),
+        ...texts.slice(1).map((b) => ({
+          heading: String(b.content.heading ?? ''),
+          paragraphs: (b.content.paragraphs ?? []) as string[],
+          bullets: (b.content.bullets ?? []) as string[],
+          ...(typeof b.content.takeaway === 'string' && b.content.takeaway.trim()
+            ? { takeaway: b.content.takeaway.trim() }
+            : {}),
+          ...(toSectionCheck(b.content.check)
+            ? { check: toSectionCheck(b.content.check) }
+            : {}),
+          ...(toSectionVisual(b.content.visual)
+            ? { visual: toSectionVisual(b.content.visual) }
+            : {}),
+        })),
+      ]
       const callout = byType('callout')[0]
       const workedBlocks = byType('worked_example')
       const guided = byType('guided_question')[0]
       const vocabBlocks = byType('vocabulary_card')
 
-      const firstParagraphs = (first?.content.paragraphs ?? []) as string[]
       const note: RevisionNote = {
         id: `${subject.slug}-${lesson.slug}`,
         subject: subject.slug as RevisionNote['subject'],
@@ -228,7 +266,13 @@ export async function getLessonByPath(
             }
           : null
 
-      return { note, enhancement, english: toEnglishBlocks(byType), subjectId: subject.id }
+      return {
+        note,
+        enhancement,
+        english: toEnglishBlocks(byType),
+        subjectId: subject.id,
+        examId: lesson.exam_id ?? null,
+      }
     }
   }
 
@@ -241,6 +285,7 @@ export async function getLessonByPath(
     enhancement: getEnhancement(staticNote.id),
     english: { passages: [], pairs: [], rebuilds: [], reflections: [] },
     subjectId: subject?.id ?? '',
+    examId: null,
   }
 }
 
@@ -256,7 +301,10 @@ interface AttemptInput {
 async function resolveExamForSubject(
   supabase: Awaited<ReturnType<typeof createClient>>,
   subjectId: string,
+  examId?: string | null,
 ): Promise<string | null> {
+  if (examId) return examId
+
   const { data: links } = await supabase
     .from('exam_subjects')
     .select('exam_id')
@@ -343,16 +391,17 @@ export async function getTwinQuestion(
   subjectId: string,
   excludeIds: string[],
   sourceQuestionId?: string,
+  examId?: string | null,
 ): Promise<LessonQuestion | null> {
   const supabase = await createClient()
   const user = await getAuthUser(supabase)
   if (!user) throw new Error('Not authenticated')
 
-  const examId = await resolveExamForSubject(supabase, subjectId)
-  if (!examId) return null
+  const scoped = await resolveExamForSubject(supabase, subjectId, examId)
+  if (!scoped) return null
 
   const { data, error } = await supabase.rpc('get_session_questions', {
-    p_exam_id: examId,
+    p_exam_id: scoped,
     p_subject_ids: [subjectId],
     p_difficulty: null,
     p_limit: 8,
