@@ -64,7 +64,15 @@ const descriptions = {
   'mammalian-teeth-and-alimentary-canal':
     'Tooth structure and types, dental formulae, and the alimentary canal with its accessory organs.',
   transport:
-    'Why organisms need transport, blood and lymph, the mammalian circulatory system and plant vascular tissue.',
+    'Why large organisms need a transport system, the materials moved, and the media that carry them.',
+  'mammalian-circulatory-system':
+    'The heart, arteries, veins, capillaries, the two circuits and the named vessels.',
+  'blood-and-lymph':
+    'Plasma, blood cells, platelets, tissue fluid and lymph, and their functions.',
+  'plant-transport':
+    'Xylem and phloem, transpiration pull, root pressure and active transport.',
+  'diffusion-osmosis-and-water-relations':
+    'Diffusion, osmosis, plasmolysis and turgidity as mechanisms of transport.',
   respiration:
     'Respiratory surfaces, gaseous exchange, aerobic and anaerobic respiration, and fermentation.',
   excretion:
@@ -239,6 +247,31 @@ const split = [
     slug: 'mammalian-teeth-and-alimentary-canal',
     name: 'Mammalian Teeth and Alimentary Canal',
     syllabus_ref: 'B.2',
+  },
+  {
+    slug: 'transport',
+    name: 'Why Transport?',
+    syllabus_ref: 'B.3',
+  },
+  {
+    slug: 'mammalian-circulatory-system',
+    name: 'The Mammalian Circulatory System',
+    syllabus_ref: 'B.3',
+  },
+  {
+    slug: 'blood-and-lymph',
+    name: 'Blood and Lymph',
+    syllabus_ref: 'B.3',
+  },
+  {
+    slug: 'plant-transport',
+    name: 'Plant Transport',
+    syllabus_ref: 'B.3',
+  },
+  {
+    slug: 'diffusion-osmosis-and-water-relations',
+    name: 'Diffusion, Osmosis and Water Relations',
+    syllabus_ref: 'B.3',
   },
 ].map((topic, index) => ({
   ...topic,

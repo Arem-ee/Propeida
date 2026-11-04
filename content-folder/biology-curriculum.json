@@ -196,18 +196,50 @@
     },
     {
       "slug": "transport",
-      "name": "Transport",
+      "name": "Why Transport?",
       "syllabus_ref": "B.3",
       "section": "Form and Functions",
       "order": 25,
-      "description": "Why organisms need transport, blood and lymph, the mammalian circulatory system and plant vascular tissue."
+      "description": "Why large organisms need a transport system, the materials moved, and the media that carry them."
+    },
+    {
+      "slug": "mammalian-circulatory-system",
+      "name": "The Mammalian Circulatory System",
+      "syllabus_ref": "B.3",
+      "section": "Form and Functions",
+      "order": 26,
+      "description": "The heart, arteries, veins, capillaries, the two circuits and the named vessels."
+    },
+    {
+      "slug": "blood-and-lymph",
+      "name": "Blood and Lymph",
+      "syllabus_ref": "B.3",
+      "section": "Form and Functions",
+      "order": 27,
+      "description": "Plasma, blood cells, platelets, tissue fluid and lymph, and their functions."
+    },
+    {
+      "slug": "plant-transport",
+      "name": "Plant Transport",
+      "syllabus_ref": "B.3",
+      "section": "Form and Functions",
+      "order": 28,
+      "description": "Xylem and phloem, transpiration pull, root pressure and active transport."
+    },
+    {
+      "slug": "diffusion-osmosis-and-water-relations",
+      "name": "Diffusion, Osmosis and Water Relations",
+      "syllabus_ref": "B.3",
+      "section": "Form and Functions",
+      "order": 29,
+      "description": "Diffusion, osmosis, plasmolysis and turgidity as mechanisms of transport."
     },
     {
       "slug": "respiration",
       "name": "Respiration",
       "syllabus_ref": "B.4",
       "section": "Form and Functions",
-      "order": 26,
+      "order": 30,
       "description": "Respiratory surfaces, gaseous exchange, aerobic and anaerobic respiration, and fermentation."
     },
     {
@@ -215,7 +247,7 @@
       "name": "Excretion",
       "syllabus_ref": "B.5",
       "section": "Form and Functions",
-      "order": 27,
+      "order": 31,
       "description": "Excretory structures from contractile vacuoles to kidneys, and the excretory products of plants."
     },
     {
@@ -223,7 +255,7 @@
       "name": "Support and movement",
       "syllabus_ref": "B.6",
       "section": "Form and Functions",
-      "order": 28,
+      "order": 32,
       "description": "Plant movements, supporting tissues, skeletons and joints in animals."
     },
     {
@@ -231,7 +263,7 @@
       "name": "Reproduction",
       "syllabus_ref": "B.7",
       "section": "Form and Functions",
-      "order": 29,
+      "order": 33,
       "description": "Asexual and sexual reproduction, flowering-plant reproduction and mammalian reproduction."
     },
     {
@@ -239,7 +271,7 @@
       "name": "Growth",
       "syllabus_ref": "B.8",
       "section": "Form and Functions",
-      "order": 30,
+      "order": 34,
       "description": "The meaning of growth, seed germination and the difference between epigeal and hypogeal germination."
     },
     {
@@ -247,7 +279,7 @@
       "name": "Co-ordination and control",
       "syllabus_ref": "B.9",
       "section": "Form and Functions",
-      "order": 31,
+      "order": 35,
       "description": "Nervous coordination, sense organs, hormones and homeostasis."
     },
     {
@@ -255,7 +287,7 @@
       "name": "Factors affecting the distribution of Organisms",
       "syllabus_ref": "C.1",
       "section": "Ecology",
-      "order": 32,
+      "order": 36,
       "description": "Abiotic and biotic factors that determine where organisms live."
     },
     {
@@ -263,7 +295,7 @@
       "name": "Symbiotic interactions of plants and animals",
       "syllabus_ref": "C.2",
       "section": "Ecology",
-      "order": 33,
+      "order": 37,
       "description": "Symbiosis, energy flow, food chains and webs, and the carbon, water and nitrogen cycles."
     },
     {
@@ -271,7 +303,7 @@
       "name": "Natural Habitats",
       "syllabus_ref": "C.3",
       "section": "Ecology",
-      "order": 34,
+      "order": 38,
       "description": "Aquatic and terrestrial habitats and the adaptive features of the organisms in them."
     },
     {
@@ -279,7 +311,7 @@
       "name": "Local (Nigerian) Biomes",
       "syllabus_ref": "C.4",
       "section": "Ecology",
-      "order": 35,
+      "order": 39,
       "description": "Tropical rainforest, Guinea and Sudan savanna, desert and the highland plateaus of Nigeria."
     },
     {
@@ -287,7 +319,7 @@
       "name": "The Ecology of Populations",
       "syllabus_ref": "C.5",
       "section": "Ecology",
-      "order": 36,
+      "order": 40,
       "description": "Population density, competition, population size, ecological succession and climax communities."
     },
     {
@@ -295,7 +327,7 @@
       "name": "SOIL",
       "syllabus_ref": "C.6",
       "section": "Ecology",
-      "order": 37,
+      "order": 41,
       "description": "Soil types, components, fertility, erosion and the maintenance of productive soil."
     },
     {
@@ -303,7 +335,7 @@
       "name": "Humans and Environment",
       "syllabus_ref": "C.7",
       "section": "Ecology",
-      "order": 38,
+      "order": 42,
       "description": "Disease, drug abuse, pollution, sanitation, conservation and Nigeria's parks and reserves."
     },
     {
@@ -311,7 +343,7 @@
       "name": "Variation In Population",
       "syllabus_ref": "D.1",
       "section": "Heredity and Variations",
-      "order": 39,
+      "order": 43,
       "description": "Morphological and physiological variation and its use in identity, transfusion and paternity."
     },
     {
@@ -319,7 +351,7 @@
       "name": "Heredity",
       "syllabus_ref": "D.2",
       "section": "Heredity and Variations",
-      "order": 40,
+      "order": 44,
       "description": "Heritable characters, chromosomes, genetic crosses, sex determination and sex-linked traits."
     },
     {
@@ -327,7 +359,7 @@
       "name": "Biotechnology",
       "syllabus_ref": "D.3",
       "section": "Heredity and Variations",
-      "order": 41,
+      "order": 45,
       "description": "Applications of biotechnology in agriculture, medicine, pharmaceuticals and the food industry."
     },
     {
@@ -335,7 +367,7 @@
       "name": "Theories of evolution",
       "syllabus_ref": "E.1",
       "section": "Evolution",
-      "order": 42,
+      "order": 46,
       "description": "Organic evolution, Lamarck's and Darwin's theories, and the evidence that supports them."
     },
     {
@@ -343,7 +375,7 @@
       "name": "Evidence of evolution",
       "syllabus_ref": "E.2",
       "section": "Evolution",
-      "order": 43,
+      "order": 47,
       "description": "Fossils, comparative anatomy, embryology and other evidence for organic evolution."
     }
   ],
@@ -4653,6 +4685,759 @@
               "Bile contains no digestive enzymes.",
               "Bile salts emulsify large fat droplets into smaller ones.",
               "Emulsification increases the surface area for pancreatic lipase to act on."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "transport",
+      "title": "Why Transport?",
+      "objective": "Relate increasing size and complexity to the need for transport, identify the materials transported and their sources, and name the media and channels used.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Why transport?",
+            "paragraphs": [
+              "A pond Amoeba and an elephant both need oxygen, but only the Amoeba can rely on diffusion through its surface. Increasing size and complexity create a transport problem."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Why size changes the problem",
+            "paragraphs": [
+              "An Amoeba in pond water is one cell, so oxygen and food reach the cytoplasm by diffusion over a very short distance. Its surface area is large compared with its volume, and no part of the cell is far from the water outside.",
+              "A maize plant or a goat is different. Most cells sit deep inside the body, far from the air and food, so diffusion alone would be too slow to supply them. The distance is too long and the demand too high.",
+              "Larger, more active organisms therefore need a transport system: a set of channels and a moving medium that carries materials quickly between organs. The system links the surfaces where materials enter or leave with the tissues that use or make them."
+            ],
+            "bullets": [
+              "Small organisms: short diffusion distances and a large surface-to-volume ratio.",
+              "Large organisms: long distances and high demand.",
+              "A transport system carries materials between surfaces and tissues."
+            ],
+            "takeaway": "Size creates distance; transport closes it.",
+            "check": {
+              "question": "Why does a large, active animal need a transport system?",
+              "options": [
+                "Its cells are too small to absorb oxygen",
+                "Its surface has no exchange organs",
+                "Diffusion alone is too slow over long distances",
+                "It cannot make its own food"
+              ],
+              "answer": 2,
+              "why": "Large bodies have long diffusion distances and high demand, so bulk transport is needed."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "What the transport system carries",
+            "paragraphs": [
+              "Blood does not carry one substance. It carries gases, digested food, manufactured food, excretory products, mineral salts, water and hormones, and each has a source and a destination.",
+              "Oxygen enters at the lungs and travels to every tissue, while carbon (IV) oxide travels the other way. Glucose and amino acids enter at the small intestine and reach the liver and cells; urea is made in the liver and carried to the kidneys.",
+              "Plants move sucrose and amino acids from leaves to growing parts, and water with dissolved mineral salts from roots to leaves. Hormones such as insulin travel in blood from endocrine glands to target organs, so the system also carries chemical messages."
+            ],
+            "bullets": [
+              "Gases: oxygen to tissues; carbon (IV) oxide to the lungs.",
+              "Food and wastes: glucose and amino acids to cells; urea to the kidneys.",
+              "Water, mineral salts and hormones also travel in the transport medium."
+            ],
+            "takeaway": "Transport carries raw materials, wastes and messages.",
+            "check": {
+              "question": "Urea is transported from the liver to the",
+              "options": [
+                "Lungs",
+                "Small intestine",
+                "Kidneys",
+                "Heart"
+              ],
+              "answer": 2,
+              "why": "Urea is a nitrogenous waste carried in blood to the kidneys for excretion."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Media and channels",
+            "paragraphs": [
+              "The medium is what actually carries the material. In Amoeba it is the cytoplasm; in a plant cell it is the cell sap; in an insect it is the body fluid called haemolymph; in a mammal it is blood and lymph.",
+              "The channel is the route. Mammals have blood vessels, plants have xylem and phloem, and very small organisms may have no special channel at all. A medium without a channel can still move by diffusion, but a large organism needs both.",
+              "Open systems such as those of insects pour haemolymph into body spaces, while closed systems keep blood inside vessels. The next lessons follow the mammalian and plant systems in turn."
+            ],
+            "bullets": [
+              "Media: cytoplasm, cell sap, haemolymph, blood and lymph.",
+              "Channels: blood vessels in mammals; xylem and phloem in plants.",
+              "Large organisms need both a medium and a channel."
+            ],
+            "takeaway": "A medium carries; a channel directs.",
+            "check": {
+              "question": "Which of these is a channel for transport in a flowering plant?",
+              "options": [
+                "Cell sap",
+                "Xylem",
+                "Cytoplasm",
+                "Haemolymph"
+              ],
+              "answer": 1,
+              "why": "Xylem and phloem are the plant's transport channels; the other options are media."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "JAMB often asks for the source and destination of a material. Say where it is made or absorbed, what carries it, and where it is used or removed."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A goat eats grass. Trace four materials from their source to their destination.",
+            "steps": [
+              {
+                "operation": "Trace glucose",
+                "reason": "Starch in grass is digested to glucose in the small intestine.",
+                "result": "Absorbed into blood and carried to the liver and muscles.",
+                "predictPrompt": "Where is urea made?"
+              },
+              {
+                "operation": "Trace urea",
+                "reason": "The liver breaks down excess amino acids and forms urea.",
+                "result": "Carried by blood to the kidneys and excreted in urine.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Trace oxygen",
+                "reason": "Oxygen is absorbed at the lungs and bound by haemoglobin.",
+                "result": "Carried by blood to respiring cells.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Trace insulin",
+                "reason": "The pancreas makes insulin and releases it into blood.",
+                "result": "Carried to the liver and muscles, where it lowers blood glucose.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Explain why an Amoeba does not need a circulatory system but a goat does.",
+            "hints": [
+              "Compare surface area with volume in each organism.",
+              "Diffusion is fast only over very short distances.",
+              "A goat has a high demand for oxygen and food in cells deep inside its body."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "mammalian-circulatory-system",
+      "title": "The Mammalian Circulatory System",
+      "objective": "Describe the mammalian heart and double circulation, compare arteries, veins and capillaries, and relate the named vessels to their functions.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "The mammalian circulatory system",
+            "paragraphs": [
+              "A cyclist climbing a Lagos bridge feels her heart pound. The pump is moving oxygen faster because her muscles now demand more of it. That is the circulatory system at work."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The heart and double circulation",
+            "paragraphs": [
+              "The mammalian heart has four chambers: two thin-walled atria above and two thick-walled ventricles below. The right side receives deoxygenated blood from the body and pumps it to the lungs; the left side receives oxygenated blood from the lungs and pumps it to the body.",
+              "Valves between the chambers and at the exits keep blood moving one way. The left ventricle has the thickest wall because it must push blood around the whole body, while the right ventricle only reaches the lungs.",
+              "This is a double circulation: pulmonary through the lungs and systemic through the body. Insects have an open system instead, with haemolymph bathing the organs, while mammals keep blood in closed vessels."
+            ],
+            "bullets": [
+              "Right side: body to lungs. Left side: lungs to body.",
+              "Valves prevent backflow; the left ventricle has the thickest wall.",
+              "Mammals have closed circulation; insects have an open system."
+            ],
+            "takeaway": "Two circuits, one pump, and valves that keep blood moving forward.",
+            "check": {
+              "question": "Which chamber pumps oxygenated blood to the whole body?",
+              "options": [
+                "Right atrium",
+                "Right ventricle",
+                "Left atrium",
+                "Left ventricle"
+              ],
+              "answer": 3,
+              "why": "The left ventricle sends blood into the aorta and around the systemic circuit."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Arteries, veins and capillaries",
+            "paragraphs": [
+              "Arteries carry blood away from the heart. They have thick, elastic muscular walls and a narrow lumen, which withstand the high pressure produced by each heartbeat. The pulmonary artery is an exception to the oxygen rule: it carries deoxygenated blood to the lungs.",
+              "Veins carry blood back to the heart. Their walls are thinner, their lumen wider, and valves stop backflow in the low-pressure system. Capillaries are one cell thick, so gases, glucose and wastes can pass between blood and tissue fluid.",
+              "Arteries branch into arterioles, then capillaries, then venules and veins. The capillary network is where exchange happens; the great vessels are only the delivery roads."
+            ],
+            "bullets": [
+              "Arteries: thick walls, narrow lumen, blood away from the heart.",
+              "Veins: thin walls, wide lumen, valves, blood back to the heart.",
+              "Capillaries: one-cell walls for exchange with tissue fluid."
+            ],
+            "takeaway": "Arteries deliver, veins return, capillaries exchange.",
+            "check": {
+              "question": "Which blood vessel has valves along its length to prevent backflow?",
+              "options": [
+                "Aorta",
+                "Vein",
+                "Arteriole",
+                "Capillary"
+              ],
+              "answer": 1,
+              "why": "Veins carry blood at low pressure and use valves to keep it moving toward the heart."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Named vessels and what they carry",
+            "paragraphs": [
+              "Some vessels are named for the organ they serve. The aorta leaves the left ventricle and carries oxygenated blood to the body. The pulmonary artery leaves the right ventricle with deoxygenated blood, and the pulmonary vein returns oxygenated blood to the left atrium.",
+              "The hepatic portal vein is unusual. It carries blood from the small intestine and other digestive organs to the liver, so digested food is processed before entering the general circulation. It is not the hepatic vein, which drains the liver into the vena cava.",
+              "The renal artery takes oxygenated blood to the kidney, and the renal vein carries filtered, deoxygenated blood away. The hepatic portal vein therefore has two capillary beds in series, while the renal vessels serve one organ."
+            ],
+            "bullets": [
+              "Aorta: left ventricle to body; pulmonary artery: right ventricle to lungs.",
+              "Pulmonary vein: lungs to left atrium; renal artery and vein: kidney.",
+              "Hepatic portal vein: intestine to liver, carrying digested food."
+            ],
+            "takeaway": "Read the name: pulmonary means lungs, hepatic means liver, renal means kidney.",
+            "check": {
+              "question": "Which vessel carries digested food from the intestine to the liver?",
+              "options": [
+                "Hepatic vein",
+                "Renal vein",
+                "Hepatic portal vein",
+                "Pulmonary vein"
+              ],
+              "answer": 2,
+              "why": "The hepatic portal vein links the intestinal capillaries to the liver capillaries."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Do not judge a vessel by its oxygen content alone. The pulmonary artery is deoxygenated and the pulmonary vein oxygenated; the hepatic portal vein carries food-rich blood."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Trace a red blood cell from the right atrium to the aorta. Name the chambers, valves and vessels in order.",
+            "steps": [
+              {
+                "operation": "Enter the right ventricle",
+                "reason": "Blood flows from the right atrium through the tricuspid valve.",
+                "result": "Right ventricle.",
+                "predictPrompt": "Where does the right ventricle send blood?"
+              },
+              {
+                "operation": "Reach the lungs",
+                "reason": "The right ventricle contracts and pushes blood into the pulmonary artery.",
+                "result": "Lungs, where the blood becomes oxygenated.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Return to the heart",
+                "reason": "Oxygenated blood returns through the pulmonary vein.",
+                "result": "Left atrium.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Leave through the aorta",
+                "reason": "Blood passes through the bicuspid valve into the left ventricle, which pumps it into the aorta.",
+                "result": "Aorta and the systemic circulation.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Explain why the left ventricle has a thicker muscular wall than the right ventricle.",
+            "hints": [
+              "Compare the distance blood travels in the pulmonary and systemic circuits.",
+              "The systemic circuit has greater resistance to flow.",
+              "A thicker wall can produce a higher pressure."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "blood-and-lymph",
+      "title": "Blood and Lymph",
+      "objective": "State the composition and functions of blood and lymph, and explain how tissue fluid, plasma, blood cells and platelets carry out transport and defence.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Blood and lymph",
+            "paragraphs": [
+              "A blood donation session in Abuja separates whole blood into plasma, cells and platelets. Each part has a different job in transport and defence, and lymph is the second fluid."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Plasma: the liquid cargo",
+            "paragraphs": [
+              "Plasma is about 55% of blood volume and is mostly water, with dissolved proteins, mineral salts, glucose, amino acids, hormones, urea and carbon (IV) oxide. It is the medium that carries blood cells and dissolved materials around the body.",
+              "The plasma proteins have separate jobs. Fibrinogen is needed for clotting; albumin helps hold water in the blood and keeps osmotic pressure steady; globulins include antibodies that fight infection.",
+              "Plasma also distributes heat from active organs and buffers small changes in pH. Serum is plasma after clotting proteins have been removed, which is why serum is used in some tests."
+            ],
+            "bullets": [
+              "Plasma is mostly water and carries dissolved food, wastes and hormones.",
+              "Fibrinogen clots, albumin holds water, globulins include antibodies.",
+              "Plasma distributes heat and buffers pH; serum is plasma without clotting proteins."
+            ],
+            "takeaway": "Plasma is the liquid road; its proteins clot, balance water and fight infection.",
+            "check": {
+              "question": "Which plasma protein is needed for blood clotting?",
+              "options": [
+                "Albumin",
+                "Fibrinogen",
+                "Globulin",
+                "Haemoglobin"
+              ],
+              "answer": 1,
+              "why": "Fibrinogen is converted to fibrin threads during clotting."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Red cells, white cells and platelets",
+            "paragraphs": [
+              "Red blood cells are biconcave discs without a nucleus in mammals. They are packed with haemoglobin, which binds oxygen in the lungs and releases it in tissues; their shape gives a large surface area and their flexibility lets them squeeze through capillaries.",
+              "White blood cells defend the body. Phagocytes engulf bacteria and debris, while lymphocytes make antibodies and coordinate immune responses. They are fewer than red cells but can leave the blood to reach an infection.",
+              "Platelets are cell fragments that start clotting when a vessel is damaged. They clump at the break and help convert fibrinogen into fibrin threads, which trap blood cells and form a plug."
+            ],
+            "bullets": [
+              "Red cells: haemoglobin, biconcave shape, about 120 days in circulation.",
+              "White cells: phagocytes engulf pathogens; lymphocytes make antibodies.",
+              "Platelets: cell fragments that start clot formation."
+            ],
+            "takeaway": "Red cells carry oxygen, white cells defend, platelets seal leaks.",
+            "check": {
+              "question": "Which blood component produces antibodies?",
+              "options": [
+                "Red blood cell",
+                "Platelet",
+                "Lymphocyte",
+                "Plasma"
+              ],
+              "answer": 2,
+              "why": "Lymphocytes are white blood cells that produce antibodies against specific antigens."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Lymph and tissue fluid",
+            "paragraphs": [
+              "Blood pressure at the arterial end of a capillary pushes water and small solutes into the spaces between cells. This fluid is tissue fluid; it supplies cells and collects their wastes, but it has no red cells or platelets.",
+              "Most tissue fluid returns to the venous end of the capillary. The rest enters blind-ended lymph capillaries and becomes lymph, which passes through lymph nodes and is returned to the blood through veins near the neck.",
+              "Lymph carries lymphocytes and absorbed fats from the villi, and its valves and body movements keep it moving. If lymph vessels are blocked, tissue fluid accumulates and causes oedema, as in filariasis."
+            ],
+            "bullets": [
+              "Tissue fluid bathes cells and exchanges materials with them.",
+              "Lymph returns excess tissue fluid via lymph nodes and veins.",
+              "Lymph carries lymphocytes and absorbed fats; blockage causes oedema."
+            ],
+            "takeaway": "Tissue fluid bathes cells; lymph returns the excess.",
+            "check": {
+              "question": "Lymph differs from blood because lymph lacks",
+              "options": [
+                "Red blood cells",
+                "White blood cells",
+                "Water",
+                "Dissolved salts"
+              ],
+              "answer": 0,
+              "why": "Red cells and platelets stay in capillaries, so lymph is clear and carries lymphocytes."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Blood has red cells, white cells, platelets and plasma; lymph has lymphocytes but no red cells. Tissue fluid is the fluid between cells."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A patient has swollen legs and a blocked lymph vessel. Explain the swelling and trace the normal return of tissue fluid.",
+            "steps": [
+              {
+                "operation": "Identify the fluid",
+                "reason": "The swelling is tissue fluid that has not returned to the blood.",
+                "result": "Tissue fluid accumulation, called oedema.",
+                "predictPrompt": "What vessel normally drains tissue fluid?"
+              },
+              {
+                "operation": "Explain the blockage",
+                "reason": "A blocked lymph vessel raises the pressure in the lymph capillaries.",
+                "result": "Less tissue fluid can drain away, so it collects in the tissues.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Trace the normal route",
+                "reason": "Lymph capillaries join larger lymph vessels and pass through lymph nodes.",
+                "result": "Lymph returns to the blood through veins near the neck.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Explain why lymph normally contains lymphocytes but no red blood cells.",
+            "hints": [
+              "Lymph begins as tissue fluid forced out of blood capillaries.",
+              "Red cells are too large to pass through the capillary wall.",
+              "Lymphocytes can leave capillaries and enter the lymph."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "plant-transport",
+      "title": "Plant Transport",
+      "objective": "Relate xylem and phloem structure to function, explain translocation, and compare transpiration pull, root pressure and active transport.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Plant transport",
+            "paragraphs": [
+              "A cassava plant wilts at midday and recovers at night. Water is moving through it all the time, even when the leaves look still."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Xylem: water and mineral salts upward",
+            "paragraphs": [
+              "Root hairs increase the surface for absorbing water. Water enters by osmosis, moves across the root and up the xylem, which is made of dead, hollow cells with lignified walls. The walls stop the tubes collapsing under tension, and xylem and phloem run through roots, stems and leaves as vascular bundles.",
+              "Water travels as a continuous column from root to leaf. It is pulled upward mainly by transpiration, the loss of water vapour through stomata, and helped by cohesion between water molecules and adhesion to the xylem walls.",
+              "Mineral salts are not simply dragged along. They are absorbed by active transport and then carried in the xylem stream to the leaves, where they are used to make proteins, chlorophyll and other compounds."
+            ],
+            "bullets": [
+              "Xylem: dead, hollow, lignified cells that carry water upward.",
+              "Root hairs absorb water by osmosis; minerals enter by active transport.",
+              "Cohesion and adhesion keep the water column unbroken."
+            ],
+            "takeaway": "Xylem is a one-way water pipeline from root to leaf.",
+            "check": {
+              "question": "Which tissue carries water and mineral salts from roots to leaves?",
+              "options": [
+                "Phloem",
+                "Xylem",
+                "Cambium",
+                "Cortex"
+              ],
+              "answer": 1,
+              "why": "Xylem vessels and tracheids form the water-conducting pipeline of the plant."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Phloem: food in both directions",
+            "paragraphs": [
+              "Phloem carries the products of photosynthesis. Sieve tubes are living cells with perforated end walls, and each has a companion cell that supplies energy and controls loading.",
+              "Sucrose and amino acids move from a source, such as a mature leaf, to a sink, such as a growing shoot, root, fruit or storage organ. This movement is called translocation, and it can go upward or downward because the source and sink change with the season.",
+              "Loading sucrose into the phloem draws water in by osmosis, raising pressure that pushes sap toward the sink. The process uses energy from respiration, so phloem transport is active, unlike the passive pull in xylem."
+            ],
+            "bullets": [
+              "Phloem: living sieve tubes with companion cells.",
+              "Translocation moves sugars and amino acids from source to sink.",
+              "Loading uses energy and pressure, so phloem transport is active."
+            ],
+            "takeaway": "Phloem moves food from source to sink, in either direction.",
+            "check": {
+              "question": "The movement of sugars through phloem is called",
+              "options": [
+                "Transpiration",
+                "Translocation",
+                "Osmosis",
+                "Guttation"
+              ],
+              "answer": 1,
+              "why": "Translocation is the transport of dissolved food through phloem from source to sink."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Transpiration pull, root pressure and active transport",
+            "paragraphs": [
+              "Transpiration pull is the main upward force in tall plants. Evaporation from the leaf lowers pressure in the xylem, and the continuous water column is pulled upward; cohesion and adhesion keep the column unbroken.",
+              "Root pressure pushes water up from below. It develops when minerals accumulate in the root and water follows by osmosis, and it is strongest at night when transpiration is low; it can cause guttation, droplets at leaf tips.",
+              "Active transport moves mineral ions against their concentration gradient using energy from respiration. Diffusion and osmosis also move materials over short distances, while bulk flow in xylem and phloem moves them over long distances."
+            ],
+            "bullets": [
+              "Transpiration pull: passive upward pull driven by evaporation.",
+              "Root pressure: osmotic push, strongest at night; can cause guttation.",
+              "Active transport: uses energy to move mineral ions against a gradient."
+            ],
+            "takeaway": "Transpiration pulls, root pressure pushes, active transport pumps.",
+            "check": {
+              "question": "Which mechanism mainly explains water rising in a tall tree on a hot day?",
+              "options": [
+                "Root pressure",
+                "Transpiration pull",
+                "Guttation",
+                "Translocation"
+              ],
+              "answer": 1,
+              "why": "Rapid evaporation from the leaves creates the tension that pulls the water column upward."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Xylem is dead and carries water upward; phloem is living and carries food both ways. Transpiration pull is passive; active transport needs energy."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A gardener removes a ring of bark from a young tree. Predict what happens above and below the ring.",
+            "steps": [
+              {
+                "operation": "Identify the tissue removed",
+                "reason": "The bark contains the phloem, which lies outside the xylem.",
+                "result": "Phloem transport is interrupted.",
+                "predictPrompt": "Which tissue remains able to carry water?"
+              },
+              {
+                "operation": "Look above the ring",
+                "reason": "Sugars made in the leaves cannot pass down through the removed phloem.",
+                "result": "Sugars accumulate above the ring and the bark may swell.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Look below the ring",
+                "reason": "The roots receive no sugars from the leaves.",
+                "result": "Root growth and respiration decline.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Predict the long-term result",
+                "reason": "The root system starves while the shoot keeps photosynthesising.",
+                "result": "The tree may eventually die.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why does a plant wilt on a hot, windy afternoon even when the soil is wet?",
+            "hints": [
+              "Transpiration can remove water faster than roots absorb it.",
+              "Water loss lowers the turgor pressure that keeps leaves firm.",
+              "Wilting reduces water loss and can reverse when transpiration slows."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "diffusion-osmosis-and-water-relations",
+      "title": "Diffusion, Osmosis and Water Relations",
+      "objective": "Describe diffusion and osmosis, and explain plasmolysis and turgidity as the responses of plant cells to water movement.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Diffusion, osmosis and water relations",
+            "paragraphs": [
+              "A slice of fresh okra left in salt water goes limp within minutes. Water has crossed a membrane, and the direction of movement is the whole story."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Diffusion: movement down a gradient",
+            "paragraphs": [
+              "Diffusion is the net movement of particles from a region of higher concentration to a region of lower concentration. It is passive, so it uses the random motion of particles rather than energy from respiration.",
+              "Oxygen diffuses from the air in the lungs into blood, and from blood into respiring cells. Carbon (IV) oxide diffuses the other way. In a leaf, carbon (IV) oxide enters through stomata and oxygen leaves.",
+              "The rate depends on the concentration gradient, temperature, surface area and distance. Small, thin surfaces with a steep gradient speed diffusion up; that is why alveoli and root hairs are finely branched and thin."
+            ],
+            "bullets": [
+              "Diffusion: particles move from high to low concentration.",
+              "It is passive and depends on random particle motion.",
+              "Steep gradients, large surfaces and short distances speed it up."
+            ],
+            "takeaway": "Diffusion is passive movement from high to low concentration.",
+            "check": {
+              "question": "Diffusion is described as passive because it",
+              "options": [
+                "Uses ATP from respiration",
+                "Depends on the random movement of particles",
+                "Needs a partially permeable membrane",
+                "Moves water only"
+              ],
+              "answer": 1,
+              "why": "Diffusion needs no metabolic energy; particles spread by their own random motion."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Osmosis: water across a membrane",
+            "paragraphs": [
+              "Osmosis is the movement of water through a partially permeable membrane from a dilute solution to a more concentrated solution. The dilute solution has more water molecules, so water moves toward the side with less water and more solute.",
+              "An animal cell placed in distilled water gains water and may burst; in strong salt solution it loses water and shrinks. A plant cell behaves differently because its cell wall resists expansion.",
+              "Root hairs use osmosis to absorb soil water, and water moves from cell to cell across the root. Osmosis is passive, but it depends on a water potential gradient and a membrane the water can cross."
+            ],
+            "bullets": [
+              "Osmosis: water moves through a partially permeable membrane.",
+              "Water moves from dilute (high water) to concentrated (low water).",
+              "Animal cells may burst or shrink; plant cell walls resist expansion."
+            ],
+            "takeaway": "Osmosis is water movement toward the more concentrated solution.",
+            "check": {
+              "question": "Water moves by osmosis from",
+              "options": [
+                "A concentrated solution to a dilute solution",
+                "A dilute solution to a concentrated solution through a partially permeable membrane",
+                "A region of low water potential to high water potential",
+                "Any cell to any other cell"
+              ],
+              "answer": 1,
+              "why": "Water moves down its own gradient, from the dilute side to the more concentrated side."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Plasmolysis and turgidity",
+            "paragraphs": [
+              "When a plant cell is in pure water, water enters its vacuole by osmosis. The vacuole swells, pushes the cytoplasm against the cell wall and the cell becomes turgid; turgor pressure keeps herbaceous plants upright.",
+              "In a concentrated salt or sugar solution, water leaves the vacuole. The protoplast shrinks away from the cell wall, and the cell is plasmolysed. The plant tissue becomes limp, which is why salted vegetables lose their crispness.",
+              "Plasmolysis is reversible if the cell is returned to water before the protoplast is badly damaged. Turgidity and plasmolysis explain wilting, food preservation with salt or sugar, and why fresh vegetables crisp up in cold water."
+            ],
+            "bullets": [
+              "Turgid: water enters, vacuole swells, cell is firm.",
+              "Plasmolysed: water leaves, protoplast pulls away from the wall.",
+              "Turgidity supports plants; plasmolysis makes tissue limp."
+            ],
+            "takeaway": "Turgid cells are firm; plasmolysed cells are limp.",
+            "check": {
+              "question": "A plant cell placed in concentrated salt solution will",
+              "options": [
+                "Gain water and become turgid",
+                "Lose water and become plasmolysed",
+                "Burst because it has no cell wall",
+                "Take in salt and become flaccid"
+              ],
+              "answer": 1,
+              "why": "The external solution is more concentrated, so water leaves the vacuole and the protoplast shrinks."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Diffusion moves any particles; osmosis moves only water through a membrane. Plasmolysis is the plant-cell result of water loss; turgidity is the result of water gain."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Three potato strips are placed in distilled water, a dilute salt solution and a concentrated salt solution. Predict their firmness.",
+            "steps": [
+              {
+                "operation": "Distilled water",
+                "reason": "The cell sap is more concentrated than the surrounding water.",
+                "result": "Water enters by osmosis; the strip becomes turgid and firm.",
+                "predictPrompt": "What happens in the concentrated salt solution?"
+              },
+              {
+                "operation": "Dilute salt solution",
+                "reason": "The gradient is small, so there is little net water movement.",
+                "result": "The strip stays firm, with little change in mass.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Concentrated salt solution",
+                "reason": "The external solution is more concentrated than the cell sap.",
+                "result": "Water leaves the cells; the strip becomes limp and plasmolysed.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Explain why a wilted lettuce leaf becomes crisp again when placed in cold water.",
+            "hints": [
+              "The leaf cells have lost water and become flaccid.",
+              "The water outside is more dilute than the cell sap.",
+              "Water enters the vacuoles by osmosis and restores turgor pressure."
             ]
           }
         }
