@@ -25,11 +25,11 @@ Re-running `node --env-file=.env scripts/seed-curriculum.mjs biology` after the
 connection settled restored the damaged lessons and completed the B.1 split.
 Both `levels-of-organisation` and `adaptive-colouration` now have 7 blocks, and
 the four B.1 lessons are live. The later B.2 Nutrition seed then inserted its
-four lessons, followed by five B.3 Transport lessons, five B.4 Respiration lessons and five B.5 Excretion lessons.
+four lessons, followed by five B.3 Transport lessons, five B.4 Respiration lessons, five B.5 Excretion lessons and five B.6 Support and Movement lessons.
 
-Current database state: 55 Biology topics, 39 published Biology lessons and 120
-published library lessons. All 39 Biology lessons pass
-`check-lesson-depth.mjs`; the B.1-B.5 pages were verified at 360px and 1280px
+Current database state: 59 Biology topics, 44 published Biology lessons and 125
+published library lessons. All 44 Biology lessons pass
+`check-lesson-depth.mjs`; the B.1-B.6 pages were verified at 360px and 1280px
 with correct checks and no horizontal overflow.
 
 ## Prevention

@@ -316,18 +316,50 @@
     },
     {
       "slug": "support-and-movement",
-      "name": "Support and movement",
+      "name": "Why Support and Movement?",
       "syllabus_ref": "B.6",
       "section": "Form and Functions",
       "order": 40,
-      "description": "Plant movements, supporting tissues, skeletons and joints in animals."
+      "description": "Why organisms need support and movement, and how plants and animals meet both needs."
+    },
+    {
+      "slug": "plant-movements",
+      "name": "Plant Movements and Tropisms",
+      "syllabus_ref": "B.6",
+      "section": "Form and Functions",
+      "order": 41,
+      "description": "Tropisms, tactic and nastic movements, sleep movements, growth regions and the role of auxins."
+    },
+    {
+      "slug": "animal-supporting-tissues",
+      "name": "Supporting Tissues in Animals",
+      "syllabus_ref": "B.6",
+      "section": "Form and Functions",
+      "order": 42,
+      "description": "Chitin, cartilage and bone, where each is found and how its structure supports the body."
+    },
+    {
+      "slug": "skeletons-and-their-functions",
+      "name": "Skeletons and Their Functions",
+      "syllabus_ref": "B.6",
+      "section": "Form and Functions",
+      "order": 43,
+      "description": "Exoskeletons, endoskeletons and the mammalian skeleton's support, protection, movement and breathing roles."
+    },
+    {
+      "slug": "joints-and-movement",
+      "name": "Joints and Movement",
+      "syllabus_ref": "B.6",
+      "section": "Form and Functions",
+      "order": 44,
+      "description": "Fibrous, cartilaginous and synovial joints, joint structure and antagonistic muscles."
     },
     {
       "slug": "reproduction",
       "name": "Reproduction",
       "syllabus_ref": "B.7",
       "section": "Form and Functions",
-      "order": 41,
+      "order": 45,
       "description": "Asexual and sexual reproduction, flowering-plant reproduction and mammalian reproduction."
     },
     {
@@ -335,7 +367,7 @@
       "name": "Growth",
       "syllabus_ref": "B.8",
       "section": "Form and Functions",
-      "order": 42,
+      "order": 46,
       "description": "The meaning of growth, seed germination and the difference between epigeal and hypogeal germination."
     },
     {
@@ -343,7 +375,7 @@
       "name": "Co-ordination and control",
       "syllabus_ref": "B.9",
       "section": "Form and Functions",
-      "order": 43,
+      "order": 47,
       "description": "Nervous coordination, sense organs, hormones and homeostasis."
     },
     {
@@ -351,7 +383,7 @@
       "name": "Factors affecting the distribution of Organisms",
       "syllabus_ref": "C.1",
       "section": "Ecology",
-      "order": 44,
+      "order": 48,
       "description": "Abiotic and biotic factors that determine where organisms live."
     },
     {
@@ -359,7 +391,7 @@
       "name": "Symbiotic interactions of plants and animals",
       "syllabus_ref": "C.2",
       "section": "Ecology",
-      "order": 45,
+      "order": 49,
       "description": "Symbiosis, energy flow, food chains and webs, and the carbon, water and nitrogen cycles."
     },
     {
@@ -367,7 +399,7 @@
       "name": "Natural Habitats",
       "syllabus_ref": "C.3",
       "section": "Ecology",
-      "order": 46,
+      "order": 50,
       "description": "Aquatic and terrestrial habitats and the adaptive features of the organisms in them."
     },
     {
@@ -375,7 +407,7 @@
       "name": "Local (Nigerian) Biomes",
       "syllabus_ref": "C.4",
       "section": "Ecology",
-      "order": 47,
+      "order": 51,
       "description": "Tropical rainforest, Guinea and Sudan savanna, desert and the highland plateaus of Nigeria."
     },
     {
@@ -383,7 +415,7 @@
       "name": "The Ecology of Populations",
       "syllabus_ref": "C.5",
       "section": "Ecology",
-      "order": 48,
+      "order": 52,
       "description": "Population density, competition, population size, ecological succession and climax communities."
     },
     {
@@ -391,7 +423,7 @@
       "name": "SOIL",
       "syllabus_ref": "C.6",
       "section": "Ecology",
-      "order": 49,
+      "order": 53,
       "description": "Soil types, components, fertility, erosion and the maintenance of productive soil."
     },
     {
@@ -399,7 +431,7 @@
       "name": "Humans and Environment",
       "syllabus_ref": "C.7",
       "section": "Ecology",
-      "order": 50,
+      "order": 54,
       "description": "Disease, drug abuse, pollution, sanitation, conservation and Nigeria's parks and reserves."
     },
     {
@@ -407,7 +439,7 @@
       "name": "Variation In Population",
       "syllabus_ref": "D.1",
       "section": "Heredity and Variations",
-      "order": 51,
+      "order": 55,
       "description": "Morphological and physiological variation and its use in identity, transfusion and paternity."
     },
     {
@@ -415,7 +447,7 @@
       "name": "Heredity",
       "syllabus_ref": "D.2",
       "section": "Heredity and Variations",
-      "order": 52,
+      "order": 56,
       "description": "Heritable characters, chromosomes, genetic crosses, sex determination and sex-linked traits."
     },
     {
@@ -423,7 +455,7 @@
       "name": "Biotechnology",
       "syllabus_ref": "D.3",
       "section": "Heredity and Variations",
-      "order": 53,
+      "order": 57,
       "description": "Applications of biotechnology in agriculture, medicine, pharmaceuticals and the food industry."
     },
     {
@@ -431,7 +463,7 @@
       "name": "Theories of evolution",
       "syllabus_ref": "E.1",
       "section": "Evolution",
-      "order": 54,
+      "order": 58,
       "description": "Organic evolution, Lamarck's and Darwin's theories, and the evidence that supports them."
     },
     {
@@ -439,7 +471,7 @@
       "name": "Evidence of evolution",
       "syllabus_ref": "E.2",
       "section": "Evolution",
-      "order": 55,
+      "order": 59,
       "description": "Fossils, comparative anatomy, embryology and other evidence for organic evolution."
     }
   ],
@@ -6984,6 +7016,765 @@
               "Alkaloids are kept inside vacuoles or specialized ducts.",
               "They are separated from the cytoplasm where most metabolism occurs.",
               "The same compartmentation makes them available for defence when the plant is damaged."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "support-and-movement",
+      "title": "Why Support and Movement?",
+      "objective": "Explain why organisms need support and movement, and compare how plants and animals achieve both.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Why support and movement?",
+            "paragraphs": [
+              "A maize plant stands upright in the wind while a grasshopper beside it jumps out of reach. Both need support and movement, but they solve the problem with very different materials."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Why support and movement matter",
+            "paragraphs": [
+              "Support gives an organism shape and posture. It holds organs in place, keeps leaves facing light, anchors roots in soil and lets a body grow tall without collapsing under its own weight.",
+              "Movement lets an organism change position or move part of its body. Animals use it to find food, escape predators, seek mates and build shelters; plants move more slowly, growing towards resources or folding leaves when touched.",
+              "Support and movement are linked. A moving body needs a frame to pull against, and a frame needs muscles or turgor to move it. The two demands compete for materials and energy, so each organism strikes a different balance."
+            ],
+            "bullets": [
+              "Support holds shape, organs and posture.",
+              "Movement finds food, escapes danger and reproduces.",
+              "A moving body needs a frame and a force to act on it."
+            ],
+            "takeaway": "Support resists gravity; movement changes position.",
+            "check": {
+              "question": "Which statement best explains why support and movement are linked?",
+              "options": [
+                "Support alone is enough for movement",
+                "A moving body needs a frame to pull against",
+                "Movement prevents an organism from growing",
+                "Support and movement use no energy"
+              ],
+              "answer": 1,
+              "why": "Muscles or turgor must act on a supporting frame to produce controlled movement."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Plants: turgor and lignified walls",
+            "paragraphs": [
+              "A herbaceous plant such as a young maize shoot is held up mainly by turgor. Water fills the vacuoles of parenchyma and collenchyma cells, pressing the cell walls outwards and keeping the stem firm.",
+              "Woody plants add lignified xylem and sclerenchyma fibres. These dead, rigid cells resist bending and compression, so a tree can carry a heavy canopy; the same tissues run through roots, stems and leaves.",
+              "Plant movement is usually slow growth or a reversible change in turgor. A shoot bends towards light as cells on one side elongate, and a Mimosa leaf folds within seconds when its pulvini lose water."
+            ],
+            "bullets": [
+              "Turgor pressure supports young, soft stems.",
+              "Lignified xylem and sclerenchyma support woody plants.",
+              "Plant movement uses growth or reversible turgor changes."
+            ],
+            "takeaway": "Plants stand on water pressure and lignified walls.",
+            "check": {
+              "question": "Which tissue keeps a young herbaceous stem firm?",
+              "options": [
+                "Lignified xylem",
+                "Turgid parenchyma and collenchyma",
+                "Sclerenchyma fibres",
+                "Phloem fibres"
+              ],
+              "answer": 1,
+              "why": "Turgor pressure in living parenchyma and collenchyma cells keeps soft stems upright."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Animals: skeletons and muscles",
+            "paragraphs": [
+              "Animals use three main support systems. An earthworm has a hydrostatic skeleton, in which fluid under pressure in body segments works against circular and longitudinal muscles; an insect has a hard exoskeleton; a mammal has an internal endoskeleton of bone and cartilage.",
+              "Movement happens when muscles pull on the support. Muscles can contract and shorten but cannot push, so they work in antagonistic pairs across joints: one pulls a limb one way while the other pulls it back.",
+              "The choice of support carries trade-offs. A hydrostatic skeleton suits soft bodies and burrowing, an exoskeleton protects but must be moulted, and an endoskeleton grows with the body and allows large size at the cost of more internal tissue."
+            ],
+            "bullets": [
+              "Hydrostatic skeleton: fluid pressure plus muscles.",
+              "Exoskeleton: external covering, must be moulted.",
+              "Endoskeleton: internal bone and cartilage, grows with the body."
+            ],
+            "takeaway": "Every animal moves by pulling against a support.",
+            "check": {
+              "question": "Which support system must be shed for the animal to grow?",
+              "options": [
+                "Hydrostatic skeleton",
+                "Endoskeleton",
+                "Exoskeleton",
+                "Cartilage skeleton"
+              ],
+              "answer": 2,
+              "why": "A rigid exoskeleton cannot expand, so arthropods moult and grow a new one."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Support holds shape and posture; movement changes position and uses energy. Plants use turgor and lignified walls, while animals use hydrostatic skeletons, exoskeletons or endoskeletons and pull with antagonistic muscles."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "An earthworm has no hard skeleton, yet it burrows; a grasshopper has a hard covering, yet it jumps. Compare how each combines support and movement.",
+            "steps": [
+              {
+                "operation": "Identify the earthworm's support",
+                "reason": "Fluid in the coelom resists compression, and circular and longitudinal muscles change the body shape.",
+                "result": "A hydrostatic skeleton produces burrowing movement.",
+                "predictPrompt": "What supports the grasshopper instead?"
+              },
+              {
+                "operation": "Identify the grasshopper's support",
+                "reason": "Chitin forms a jointed exoskeleton outside the body.",
+                "result": "Muscles inside pull on the exoskeleton to move the legs.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Compare growth",
+                "reason": "The earthworm's soft body grows continuously, but chitin cannot stretch much.",
+                "result": "The grasshopper must moult to grow.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "State the shared principle",
+                "reason": "Both animals use muscles that pull against a support.",
+                "result": "Different materials, same principle of movement.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why can a plant stand upright without a skeleton?",
+            "hints": [
+              "Turgor pressure in living cells pushes the walls outward.",
+              "Lignified xylem and sclerenchyma resist bending in older parts.",
+              "When cells lose water, the plant wilts because that pressure falls."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "plant-movements",
+      "title": "Plant Movements and Tropisms",
+      "objective": "Distinguish tropic, tactic and nastic movements, describe sleep movements, and explain the role of auxin in growth regions.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Plant movements and tropisms",
+            "paragraphs": [
+              "A sunflower turns towards the sun, a pond Euglena swims towards light, and a Mimosa leaf folds when touched. All three are plant-like movements, but they work in different ways."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Tropisms: growth in a direction",
+            "paragraphs": [
+              "A tropism is a growth response whose direction depends on the stimulus. Shoots usually show positive phototropism and negative geotropism, while roots show positive geotropism and negative phototropism; roots also grow towards water (hydrotropism) and tendrils curl around support (thigmotropism).",
+              "The response begins in the growing regions. At the shoot tip, the zone of cell division makes new cells, the zone of elongation lengthens them, and the zone of differentiation matures them; auxin, made at the tip, moves down and controls elongation.",
+              "In phototropism, auxin gathers on the shaded side of a shoot and makes those cells elongate more, so the shoot bends towards light. In a root, auxin gathers on the lower side and inhibits elongation there, so the root bends downwards."
+            ],
+            "bullets": [
+              "Tropism: directional growth towards or away from a stimulus.",
+              "Shoot tip and root tip are the growth regions; auxin controls elongation.",
+              "Auxin promotes shoot elongation but inhibits root elongation at high levels."
+            ],
+            "takeaway": "A tropism is growth bending towards or away from a stimulus.",
+            "check": {
+              "question": "A shoot bends towards light because auxin",
+              "options": [
+                "Collects on the lit side and stops growth",
+                "Collects on the shaded side and increases elongation",
+                "Is destroyed by light on both sides",
+                "Moves into the root tip"
+              ],
+              "answer": 1,
+              "why": "Auxin moves away from light, so shaded cells elongate more and the shoot bends towards the light."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Tactic movements: the whole organism moves",
+            "paragraphs": [
+              "A tactic movement is a movement of the whole organism or cell in response to a stimulus. Phototaxis is movement towards or away from light, chemotaxis is movement along a chemical gradient, and geotaxis is movement in response to gravity.",
+              "Euglena and Chlamydomonas swim towards light using their flagella, so photosynthesis can continue. Sperm cells swim towards chemicals released by the egg, and some bacteria move towards nutrients or away from toxins.",
+              "Tactic movements are usually fast and reversible, and they are common in small aquatic organisms that cannot grow towards a resource. The direction of movement is set by the stimulus, not by the direction of growth."
+            ],
+            "bullets": [
+              "Taxis: whole organism moves towards or away from a stimulus.",
+              "Examples: phototaxis in Euglena, chemotaxis in sperm and bacteria.",
+              "Fast, reversible and common in small aquatic organisms."
+            ],
+            "takeaway": "A taxis moves the whole organism; a tropism bends a growing part.",
+            "check": {
+              "question": "A sperm cell swimming towards the egg is an example of",
+              "options": [
+                "Phototropism",
+                "Chemotaxis",
+                "Geotropism",
+                "Nyctinasty"
+              ],
+              "answer": 1,
+              "why": "The sperm follows a chemical gradient released by the egg, which is chemotaxis."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Nastic movements and sleep",
+            "paragraphs": [
+              "A nastic movement is a response to the intensity of a stimulus rather than its direction. The whole organ may fold, droop or open, and the movement is reversible because it depends on turgor rather than growth.",
+              "Seismonasty is the folding of Mimosa pudica leaves after touch or shaking; the pulvini at the leaf bases lose water and the leaflets collapse. Photonasty and thermonasty open and close petals in response to light and temperature.",
+              "Sleep movements, or nyctinasty, are the nightly folding of leaves in many legumes, such as tamarind and some beans. The leaves return to their daytime position when light returns, so the movement follows a daily rhythm rather than a permanent change in shape."
+            ],
+            "bullets": [
+              "Nastic movement: non-directional, reversible, driven by turgor.",
+              "Seismonasty: Mimosa folds when touched.",
+              "Nyctinasty or sleep movement: leaves fold at night."
+            ],
+            "takeaway": "Nastic movements answer how strong a stimulus is, not where it comes from.",
+            "check": {
+              "question": "The folding of Mimosa leaves after touch is called",
+              "options": [
+                "Phototropism",
+                "Geotropism",
+                "Seismonasty",
+                "Chemotaxis"
+              ],
+              "answer": 2,
+              "why": "Seismonasty is a reversible turgor response to touch or shaking."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Tropism = directional growth; taxis = whole-organism movement; nasty = non-directional turgor movement. Link auxin to shoot and root bending, and remember Mimosa pudica as the standard example of seismonasty."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A bean seedling on a windowsill bends towards the window, while its roots grow downwards. Explain both responses using auxin.",
+            "steps": [
+              {
+                "operation": "Identify the shoot stimulus",
+                "reason": "Light comes mainly from one side.",
+                "result": "The shoot shows positive phototropism.",
+                "predictPrompt": "Where does auxin collect?"
+              },
+              {
+                "operation": "Place the auxin in the shoot",
+                "reason": "Auxin moves away from light to the shaded side.",
+                "result": "Shaded cells elongate more, so the shoot bends towards the window.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Explain the root",
+                "reason": "Gravity pulls auxin to the lower side of the root.",
+                "result": "High auxin inhibits root cell elongation, so the upper side grows faster and the root bends down.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Name both responses",
+                "reason": "The shoot is positively phototropic and negatively geotropic; the root is positively geotropic.",
+                "result": "One hormone, two opposite growth effects depending on the organ.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why does a Mimosa leaf fold quickly when touched, but a sunflower does not?",
+            "hints": [
+              "Mimosa uses turgor changes in pulvini, not growth.",
+              "The response is reversible and can repeat.",
+              "A sunflower's phototropism depends on differential growth, which is slower."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "animal-supporting-tissues",
+      "title": "Supporting Tissues in Animals",
+      "objective": "Relate the location and structure of chitin, cartilage and bone to their supporting functions.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Supporting tissues in animals",
+            "paragraphs": [
+              "A grasshopper's armour, a cow's ear and a goat's thigh bone all support the body, yet one is flexible, one springs back, and one is rigid. Their materials explain the difference."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Chitin: support outside the body",
+            "paragraphs": [
+              "Chitin is a tough, lightweight polysaccharide containing nitrogen. It forms the exoskeleton of insects, crabs, prawns and other arthropods, and is also found in the cell walls of fungi.",
+              "The chitin covering protects the body, resists water loss and gives a surface for muscles to pull against. In insects it is divided into plates and jointed sections, so the animal can move while still being supported.",
+              "Chitin cannot stretch much, so an arthropod must moult to grow. The old exoskeleton splits and is shed, and a new, soft one expands before it hardens; this leaves the animal vulnerable until hardening is complete."
+            ],
+            "bullets": [
+              "Chitin: nitrogen-containing polysaccharide, tough and waterproof.",
+              "Forms the jointed exoskeleton of arthropods.",
+              "Must be moulted for growth; the soft new shell is vulnerable."
+            ],
+            "takeaway": "Chitin supports from outside but must be shed to grow.",
+            "check": {
+              "question": "Arthropods must moult because chitin",
+              "options": [
+                "Is softer than bone",
+                "Cannot stretch enough to allow growth",
+                "Dissolves in water",
+                "Contains no nitrogen"
+              ],
+              "answer": 1,
+              "why": "The rigid exoskeleton cannot expand, so it is shed and replaced as the animal grows."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Cartilage: flexible support",
+            "paragraphs": [
+              "Cartilage is a firm but flexible tissue made of collagen fibres in a gel-like matrix. Its cells, chondrocytes, sit in small spaces called lacunae, and the tissue has no blood vessels, so it heals slowly.",
+              "Cartilage is found in the pinna of the ear, the tip of the nose, the trachea, the intervertebral discs and the ends of long bones. In each place it supports without making the part rigid.",
+              "At joints, articular cartilage covers the bone ends, reduces friction and absorbs shock. In the trachea, C-shaped cartilage rings keep the airway open; in the ear, flexible cartilage bends without breaking."
+            ],
+            "bullets": [
+              "Cartilage: flexible, avascular, chondrocytes in lacunae.",
+              "Locations: ear, nose, trachea, discs and bone ends.",
+              "Functions: support, shock absorption and low-friction surfaces."
+            ],
+            "takeaway": "Cartilage supports where the body must bend or absorb shock.",
+            "check": {
+              "question": "Which property of cartilage makes it suitable for the tip of the nose?",
+              "options": [
+                "It is harder than bone",
+                "It is flexible and springs back",
+                "It has a rich blood supply",
+                "It contains chitin"
+              ],
+              "answer": 1,
+              "why": "Flexible cartilage bends under pressure and returns to shape without breaking."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Bone: rigid living support",
+            "paragraphs": [
+              "Bone is a living tissue with a matrix of collagen fibres and calcium phosphate. Osteocytes lie in lacunae, and blood vessels run through channels, so the tissue can grow and repair.",
+              "Compact bone forms the hard outer layer, while spongy bone inside is lighter and has a network of struts. The periosteum covers the outside, and red marrow in spongy bone makes blood cells.",
+              "Bones form the endoskeleton, protect organs, store calcium and phosphate, and give muscles a place to attach. Their rigidity supports the body, while their joints allow movement; bone is therefore both a frame and a mineral bank."
+            ],
+            "bullets": [
+              "Bone: collagen and calcium phosphate matrix, living cells.",
+              "Compact bone is hard; spongy bone is light and holds marrow.",
+              "Functions: support, protection, attachment, mineral store and blood cell production."
+            ],
+            "takeaway": "Bone is a living frame that also stores minerals.",
+            "check": {
+              "question": "The hardness of bone comes mainly from",
+              "options": [
+                "Collagen fibres alone",
+                "Calcium phosphate in the matrix",
+                "Chondrocytes",
+                "Chitin"
+              ],
+              "answer": 1,
+              "why": "Mineral salts, mainly calcium phosphate, harden the collagen framework of bone."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Chitin is outside and must be moulted; cartilage is flexible and avascular; bone is rigid, vascular and living. Match each material to its location: arthropod covering, ear or joint, and skeleton."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A student compares a crab's shell, a shark's skeleton and a cow's thigh bone. Identify the supporting material in each and one consequence.",
+            "steps": [
+              {
+                "operation": "Identify the crab's shell",
+                "reason": "It is a hard external covering made of chitin.",
+                "result": "An exoskeleton that protects but must be moulted.",
+                "predictPrompt": "What supports the shark?"
+              },
+              {
+                "operation": "Identify the shark's skeleton",
+                "reason": "The skeleton is made of cartilage, not bone.",
+                "result": "A flexible endoskeleton that grows with the body.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Identify the cow's thigh bone",
+                "reason": "Bone contains calcium phosphate and collagen.",
+                "result": "A rigid endoskeleton that supports weight and stores minerals.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Compare the three",
+                "reason": "Each material sits in a different place and does a different job.",
+                "result": "Chitin covers, cartilage flexes, and bone bears load.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why is cartilage better than bone for the ends of long bones?",
+            "hints": [
+              "It is smooth and reduces friction at the joint.",
+              "It absorbs shock during movement.",
+              "It has no blood vessels, so it heals slowly, but it suits a moving surface."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "skeletons-and-their-functions",
+      "title": "Skeletons and Their Functions",
+      "objective": "Distinguish exoskeletons, endoskeletons and hydrostatic skeletons, and relate the mammalian skeleton's layout to support, protection, movement and breathing.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Skeletons and their functions",
+            "paragraphs": [
+              "A beetle's shell, an earthworm's fluid-filled body and a footballer's rib cage all support and protect, but only one is a true skeleton of bone. The differences shape how each animal moves and grows."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Exoskeleton, endoskeleton and hydrostatic skeleton",
+            "paragraphs": [
+              "An exoskeleton lies outside the body. Arthropods use chitin, and some molluscs use calcium carbonate shells; the covering protects the body and gives muscles a surface to pull against, but it must be moulted or added to as the animal grows.",
+              "An endoskeleton lies inside the body. Vertebrates use bone and cartilage, and the skeleton grows with the animal, supports a large body and protects internal organs; muscles attach to the outside of the bones.",
+              "A hydrostatic skeleton uses fluid under pressure, as in earthworms and jellyfish. Muscles change the shape of the fluid-filled body, producing movement without hard parts; this suits soft-bodied animals but cannot support great weight on land."
+            ],
+            "bullets": [
+              "Exoskeleton: outside, protective, must be moulted.",
+              "Endoskeleton: inside, grows with the body, allows large size.",
+              "Hydrostatic skeleton: fluid pressure and muscles, no hard parts."
+            ],
+            "takeaway": "Where the skeleton sits decides how the animal grows and moves.",
+            "check": {
+              "question": "Which skeleton grows with the animal without moulting?",
+              "options": [
+                "Exoskeleton",
+                "Endoskeleton",
+                "Chitin shell",
+                "Calcium carbonate shell"
+              ],
+              "answer": 1,
+              "why": "An internal endoskeleton enlarges as the animal grows and does not need to be shed."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The mammalian skeleton layout",
+            "paragraphs": [
+              "The mammalian skeleton is divided into the axial skeleton and the appendicular skeleton. The axial skeleton includes the skull, vertebral column, ribs and sternum; the appendicular skeleton includes the pectoral girdle, pelvic girdle and limbs.",
+              "An adult human has about 206 bones, joined at joints and held by ligaments. The skull protects the brain, the vertebral column supports the trunk and protects the spinal cord, and the rib cage surrounds the heart and lungs.",
+              "The limbs are built as levers: the humerus, radius and ulna in the arm, and the femur, tibia and fibula in the leg. Girdles attach the limbs to the axial skeleton, so body weight is transferred to the legs during standing and walking."
+            ],
+            "bullets": [
+              "Axial: skull, vertebral column, ribs and sternum.",
+              "Appendicular: girdles and limbs.",
+              "About 206 bones in an adult human, linked by joints and ligaments."
+            ],
+            "takeaway": "Axial protects the core; appendicular moves the body.",
+            "check": {
+              "question": "Which group belongs to the axial skeleton?",
+              "options": [
+                "Femur and pelvis",
+                "Skull, ribs and vertebral column",
+                "Humerus and radius",
+                "Pectoral girdle and arm"
+              ],
+              "answer": 1,
+              "why": "The axial skeleton forms the central axis and includes the skull, vertebral column, ribs and sternum."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Support, protection, movement and breathing",
+            "paragraphs": [
+              "Support: the skeleton holds the body upright, gives it shape and anchors soft organs. Protection: the skull, rib cage and vertebral column shield the brain, heart, lungs and spinal cord.",
+              "Movement: muscles attach to bones by tendons, and bones act as levers at joints, so a small muscle contraction can move a limb. Respiration: the ribs and sternum move with the diaphragm, changing the volume of the thorax and drawing air in or out.",
+              "Bones also store calcium and phosphate and house marrow that makes blood cells. These functions explain why a broken rib can affect breathing and why a broken long bone can disturb the whole body, not just the limb."
+            ],
+            "bullets": [
+              "Support and protection of organs.",
+              "Movement through muscles, tendons and joints.",
+              "Breathing through rib movement; mineral storage and blood cell production."
+            ],
+            "takeaway": "The skeleton is a frame, shield, lever and pump handle.",
+            "check": {
+              "question": "The skeleton helps breathing mainly by",
+              "options": [
+                "Making red blood cells",
+                "Moving the ribs and sternum to change thorax volume",
+                "Storing calcium",
+                "Producing synovial fluid"
+              ],
+              "answer": 1,
+              "why": "Rib and sternum movements, with the diaphragm, change thoracic volume and move air."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Exoskeleton outside, endoskeleton inside, hydrostatic skeleton from fluid pressure. For mammals, link axial bones to protection and the rib cage to breathing, not just movement; the same skeleton also stores minerals."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A footballer breaks a rib and later a leg bone. Explain how each injury affects a different function of the skeleton.",
+            "steps": [
+              {
+                "operation": "Identify the rib's functions",
+                "reason": "Ribs protect the lungs and move during breathing.",
+                "result": "A broken rib can make breathing painful and reduce ventilation.",
+                "predictPrompt": "What does the leg bone do?"
+              },
+              {
+                "operation": "Identify the leg bone's functions",
+                "reason": "The femur supports weight and acts as a lever for walking.",
+                "result": "A broken femur affects support and movement.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Link to the skeleton's roles",
+                "reason": "Protection, support, movement and breathing are separate but connected functions.",
+                "result": "The same skeleton serves all four, so the effect depends on which bone is damaged.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why can an insect not simply grow larger inside its exoskeleton?",
+            "hints": [
+              "Chitin is rigid and cannot stretch much.",
+              "The old shell must be shed and a new one expanded.",
+              "Moulting leaves the insect soft and vulnerable, so it must hide."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "joints-and-movement",
+      "title": "Joints and Movement",
+      "objective": "Differentiate fibrous, cartilaginous and synovial joints, describe synovial joint structure, and explain antagonistic muscle action.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Joints and movement",
+            "paragraphs": [
+              "A goalkeeper's shoulder rotates, a runner's knee bends and the bones of the skull stay locked together. The type of joint decides how much movement is possible."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Three classes of joint",
+            "paragraphs": [
+              "A joint is a place where two or more bones meet. Fibrous joints, such as the sutures of the skull, are held by tough fibres and allow no movement; cartilaginous joints, such as those between vertebrae, allow slight movement.",
+              "Synovial joints are freely movable. They have a cavity between the bone ends, filled with synovial fluid, and are the joints used in walking, throwing and writing.",
+              "The amount of movement depends on the tissue between the bones: dense fibres lock, cartilage allows a little, and a fluid-filled cavity allows a lot. Injury to any of these tissues can limit movement."
+            ],
+            "bullets": [
+              "Fibrous: immovable, e.g. skull sutures.",
+              "Cartilaginous: slightly movable, e.g. between vertebrae.",
+              "Synovial: freely movable, e.g. knee, shoulder and elbow."
+            ],
+            "takeaway": "The joint's tissue sets how far the bones can move.",
+            "check": {
+              "question": "Which joint type allows the greatest movement?",
+              "options": [
+                "Fibrous",
+                "Cartilaginous",
+                "Synovial",
+                "Suture"
+              ],
+              "answer": 2,
+              "why": "A synovial joint has a fluid-filled cavity that allows free movement."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Inside a synovial joint",
+            "paragraphs": [
+              "The ends of the bones are covered by articular cartilage, which reduces friction and absorbs shock. A synovial membrane lines the capsule and secretes synovial fluid, which lubricates the joint and nourishes the cartilage.",
+              "Ligaments hold bone to bone and keep the joint stable, while tendons attach muscle to bone and transmit the pull. A joint capsule encloses the cavity, and bursae are small fluid-filled sacs that reduce friction where tendons rub.",
+              "Synovial joints come in shapes that suit their work: hinge joints at the elbow and knee, ball-and-socket joints at the shoulder and hip, pivot joints between the atlas and axis, and gliding joints between the carpals and tarsals."
+            ],
+            "bullets": [
+              "Cartilage reduces friction; synovial fluid lubricates.",
+              "Ligaments join bone to bone; tendons join muscle to bone.",
+              "Hinge, ball-and-socket, pivot and gliding joints suit different movements."
+            ],
+            "takeaway": "Cartilage, fluid, ligaments and tendons make a joint work.",
+            "check": {
+              "question": "Which structure attaches a muscle to a bone?",
+              "options": [
+                "Ligament",
+                "Tendon",
+                "Cartilage",
+                "Synovial membrane"
+              ],
+              "answer": 1,
+              "why": "A tendon attaches skeletal muscle to bone and transmits the muscle's pull."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Muscles pull in pairs",
+            "paragraphs": [
+              "Skeletal muscles are attached to bones by tendons. When a muscle contracts, it shortens and pulls the bone; it cannot push, so movement in the opposite direction needs another muscle.",
+              "At the elbow, the biceps contracts to flex the joint and the triceps contracts to extend it. These antagonistic muscles work in pairs: while one contracts, the other relaxes, and the joint moves smoothly.",
+              "The bone acts as a lever, the joint as the fulcrum and the muscle as the effort. Nerve impulses trigger contraction, and ATP supplies the energy; without either, the joint may be stable but cannot move."
+            ],
+            "bullets": [
+              "Muscles contract and pull; they never push.",
+              "Antagonistic pairs move a joint in opposite directions.",
+              "Bone = lever, joint = fulcrum, muscle = effort."
+            ],
+            "takeaway": "Joints direct movement; antagonistic muscles provide the pull.",
+            "check": {
+              "question": "The biceps and triceps at the elbow are described as antagonistic because they",
+              "options": [
+                "Both flex the elbow",
+                "Pull the joint in opposite directions",
+                "Are joined by a ligament",
+                "Cannot produce movement"
+              ],
+              "answer": 1,
+              "why": "The biceps flexes and the triceps extends the elbow, so their pulls oppose each other."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Fibrous joints do not move, cartilaginous joints move slightly, and synovial joints move freely. In a synovial joint, cartilage and fluid reduce friction; ligaments hold bones, tendons hold muscles, and bursae reduce rubbing."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A patient cannot straighten the knee after an injury. Identify the joint type, the structures that may be damaged and the muscle that extends the knee.",
+            "steps": [
+              {
+                "operation": "Identify the joint",
+                "reason": "The knee is a hinge synovial joint.",
+                "result": "It allows flexion and extension in one plane.",
+                "predictPrompt": "What structures stabilise it?"
+              },
+              {
+                "operation": "Check the stabilisers",
+                "reason": "Ligaments hold bone to bone, and tendons attach muscles.",
+                "result": "Damage to the quadriceps tendon or patellar ligament can block extension.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Name the extensor",
+                "reason": "The quadriceps on the front of the thigh straightens the knee.",
+                "result": "A weakened quadriceps or damaged tendon prevents extension.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Explain the pair",
+                "reason": "The hamstrings flex the knee and are antagonistic to the quadriceps.",
+                "result": "Balanced pairs are needed for controlled movement.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why does a footballer need both strong ligaments and strong muscles around the knee?",
+            "hints": [
+              "Ligaments hold the bones together and limit unwanted movement.",
+              "Muscles produce the movement and absorb forces.",
+              "Cartilage and synovial fluid reduce friction but do not replace strength."
             ]
           }
         }

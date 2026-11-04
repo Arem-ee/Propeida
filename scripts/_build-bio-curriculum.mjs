@@ -94,7 +94,15 @@ const descriptions = {
   'plant-excretion-and-products':
     'Plant excretory products such as tannins, resins, gums, mucilage and alkaloids, and their economic uses.',
   'support-and-movement':
-    'Plant movements, supporting tissues, skeletons and joints in animals.',
+    'Why organisms need support and movement, and how plants and animals meet both needs.',
+  'plant-movements':
+    'Tropisms, tactic and nastic movements, sleep movements, growth regions and the role of auxins.',
+  'animal-supporting-tissues':
+    'Chitin, cartilage and bone, where each is found and how its structure supports the body.',
+  'skeletons-and-their-functions':
+    "Exoskeletons, endoskeletons and the mammalian skeleton's support, protection, movement and breathing roles.",
+  'joints-and-movement':
+    'Fibrous, cartilaginous and synovial joints, joint structure and antagonistic muscles.',
   reproduction:
     'Asexual and sexual reproduction, flowering-plant reproduction and mammalian reproduction.',
   growth:
@@ -338,6 +346,31 @@ const split = [
     slug: 'plant-excretion-and-products',
     name: 'Plant Excretion and Its Products',
     syllabus_ref: 'B.5',
+  },
+  {
+    slug: 'support-and-movement',
+    name: 'Why Support and Movement?',
+    syllabus_ref: 'B.6',
+  },
+  {
+    slug: 'plant-movements',
+    name: 'Plant Movements and Tropisms',
+    syllabus_ref: 'B.6',
+  },
+  {
+    slug: 'animal-supporting-tissues',
+    name: 'Supporting Tissues in Animals',
+    syllabus_ref: 'B.6',
+  },
+  {
+    slug: 'skeletons-and-their-functions',
+    name: 'Skeletons and Their Functions',
+    syllabus_ref: 'B.6',
+  },
+  {
+    slug: 'joints-and-movement',
+    name: 'Joints and Movement',
+    syllabus_ref: 'B.6',
   },
 ].map((topic, index) => ({
   ...topic,
