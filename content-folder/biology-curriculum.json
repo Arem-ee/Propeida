@@ -164,18 +164,42 @@
     },
     {
       "slug": "nutrition",
-      "name": "Nutrition",
+      "name": "Modes of Nutrition",
       "syllabus_ref": "B.2",
       "section": "Form and Functions",
       "order": 21,
-      "description": "Autotrophic and heterotrophic nutrition, photosynthesis, food classes, teeth and the alimentary canal."
+      "description": "Autotrophic and heterotrophic nutrition, and the four heterotrophic feeding patterns."
+    },
+    {
+      "slug": "photosynthesis-and-mineral-requirements",
+      "name": "Photosynthesis and Mineral Requirements",
+      "syllabus_ref": "B.2",
+      "section": "Form and Functions",
+      "order": 22,
+      "description": "Photosynthesis, chemosynthesis, macro and micronutrients, and deficiency symptoms."
+    },
+    {
+      "slug": "classes-of-food-and-balanced-diet",
+      "name": "Classes of Food and Balanced Diet",
+      "syllabus_ref": "B.2",
+      "section": "Form and Functions",
+      "order": 23,
+      "description": "The six classes of food, food tests, balanced diet, and deficiency diseases."
+    },
+    {
+      "slug": "mammalian-teeth-and-alimentary-canal",
+      "name": "Mammalian Teeth and Alimentary Canal",
+      "syllabus_ref": "B.2",
+      "section": "Form and Functions",
+      "order": 24,
+      "description": "Tooth structure and types, dental formulae, and the alimentary canal with its accessory organs."
     },
     {
       "slug": "transport",
       "name": "Transport",
       "syllabus_ref": "B.3",
       "section": "Form and Functions",
-      "order": 22,
+      "order": 25,
       "description": "Why organisms need transport, blood and lymph, the mammalian circulatory system and plant vascular tissue."
     },
     {
@@ -183,7 +207,7 @@
       "name": "Respiration",
       "syllabus_ref": "B.4",
       "section": "Form and Functions",
-      "order": 23,
+      "order": 26,
       "description": "Respiratory surfaces, gaseous exchange, aerobic and anaerobic respiration, and fermentation."
     },
     {
@@ -191,7 +215,7 @@
       "name": "Excretion",
       "syllabus_ref": "B.5",
       "section": "Form and Functions",
-      "order": 24,
+      "order": 27,
       "description": "Excretory structures from contractile vacuoles to kidneys, and the excretory products of plants."
     },
     {
@@ -199,7 +223,7 @@
       "name": "Support and movement",
       "syllabus_ref": "B.6",
       "section": "Form and Functions",
-      "order": 25,
+      "order": 28,
       "description": "Plant movements, supporting tissues, skeletons and joints in animals."
     },
     {
@@ -207,7 +231,7 @@
       "name": "Reproduction",
       "syllabus_ref": "B.7",
       "section": "Form and Functions",
-      "order": 26,
+      "order": 29,
       "description": "Asexual and sexual reproduction, flowering-plant reproduction and mammalian reproduction."
     },
     {
@@ -215,7 +239,7 @@
       "name": "Growth",
       "syllabus_ref": "B.8",
       "section": "Form and Functions",
-      "order": 27,
+      "order": 30,
       "description": "The meaning of growth, seed germination and the difference between epigeal and hypogeal germination."
     },
     {
@@ -223,7 +247,7 @@
       "name": "Co-ordination and control",
       "syllabus_ref": "B.9",
       "section": "Form and Functions",
-      "order": 28,
+      "order": 31,
       "description": "Nervous coordination, sense organs, hormones and homeostasis."
     },
     {
@@ -231,7 +255,7 @@
       "name": "Factors affecting the distribution of Organisms",
       "syllabus_ref": "C.1",
       "section": "Ecology",
-      "order": 29,
+      "order": 32,
       "description": "Abiotic and biotic factors that determine where organisms live."
     },
     {
@@ -239,7 +263,7 @@
       "name": "Symbiotic interactions of plants and animals",
       "syllabus_ref": "C.2",
       "section": "Ecology",
-      "order": 30,
+      "order": 33,
       "description": "Symbiosis, energy flow, food chains and webs, and the carbon, water and nitrogen cycles."
     },
     {
@@ -247,7 +271,7 @@
       "name": "Natural Habitats",
       "syllabus_ref": "C.3",
       "section": "Ecology",
-      "order": 31,
+      "order": 34,
       "description": "Aquatic and terrestrial habitats and the adaptive features of the organisms in them."
     },
     {
@@ -255,7 +279,7 @@
       "name": "Local (Nigerian) Biomes",
       "syllabus_ref": "C.4",
       "section": "Ecology",
-      "order": 32,
+      "order": 35,
       "description": "Tropical rainforest, Guinea and Sudan savanna, desert and the highland plateaus of Nigeria."
     },
     {
@@ -263,7 +287,7 @@
       "name": "The Ecology of Populations",
       "syllabus_ref": "C.5",
       "section": "Ecology",
-      "order": 33,
+      "order": 36,
       "description": "Population density, competition, population size, ecological succession and climax communities."
     },
     {
@@ -271,7 +295,7 @@
       "name": "SOIL",
       "syllabus_ref": "C.6",
       "section": "Ecology",
-      "order": 34,
+      "order": 37,
       "description": "Soil types, components, fertility, erosion and the maintenance of productive soil."
     },
     {
@@ -279,7 +303,7 @@
       "name": "Humans and Environment",
       "syllabus_ref": "C.7",
       "section": "Ecology",
-      "order": 35,
+      "order": 38,
       "description": "Disease, drug abuse, pollution, sanitation, conservation and Nigeria's parks and reserves."
     },
     {
@@ -287,7 +311,7 @@
       "name": "Variation In Population",
       "syllabus_ref": "D.1",
       "section": "Heredity and Variations",
-      "order": 36,
+      "order": 39,
       "description": "Morphological and physiological variation and its use in identity, transfusion and paternity."
     },
     {
@@ -295,7 +319,7 @@
       "name": "Heredity",
       "syllabus_ref": "D.2",
       "section": "Heredity and Variations",
-      "order": 37,
+      "order": 40,
       "description": "Heritable characters, chromosomes, genetic crosses, sex determination and sex-linked traits."
     },
     {
@@ -303,7 +327,7 @@
       "name": "Biotechnology",
       "syllabus_ref": "D.3",
       "section": "Heredity and Variations",
-      "order": 38,
+      "order": 41,
       "description": "Applications of biotechnology in agriculture, medicine, pharmaceuticals and the food industry."
     },
     {
@@ -311,7 +335,7 @@
       "name": "Theories of evolution",
       "syllabus_ref": "E.1",
       "section": "Evolution",
-      "order": 39,
+      "order": 42,
       "description": "Organic evolution, Lamarck's and Darwin's theories, and the evidence that supports them."
     },
     {
@@ -319,7 +343,7 @@
       "name": "Evidence of evolution",
       "syllabus_ref": "E.2",
       "section": "Evolution",
-      "order": 40,
+      "order": 43,
       "description": "Fossils, comparative anatomy, embryology and other evidence for organic evolution."
     }
   ],
@@ -4028,6 +4052,607 @@
               "Spermatogenesis runs best a few degrees below body temperature.",
               "The scrotum keeps the testes cooler than the core.",
               "Cooling also protects sperm quality."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "nutrition",
+      "title": "Modes of Nutrition",
+      "objective": "Compare autotrophic and heterotrophic nutrition and differentiate the holozoic, parasitic, saprophytic and carnivorous-plant types.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Modes of nutrition",
+            "paragraphs": [
+              "Two green plants can sit in the same soil and get fed very differently. That difference decides what a plant can and cannot survive on."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Autotrophs make their own food; heterotrophs take it",
+            "paragraphs": [
+              "A maize plant growing in a cassava farm in Ogun State feeds without eating anything. The same species planted in the same field, but in a dim, shaded spot, grows slowly and pale. The sunlight is mature feed for the first and missing feed for the second.",
+              "Autotrophs make their own organic food from simple inorganic ingredients, mainly carbon (IV) oxide and water, using energy from sunlight. Plants and algae are the examples JAMB wants, and the food they make is called organic.",
+              "Heterotrophs cannot make their own food and must absorb or ingest ready-made organic food from a living or dead source. Man, sheep, Rhizopus, mushroom and tapeworm are heterotrophs; they need a food source that is already organic."
+            ],
+            "bullets": [
+              "Autotrophs make their own organic food from simple inorganic ingredients.",
+              "Heterotrophs take in ready-made organic food.",
+              "Plants and algae are autotrophs; animals and fungi are heterotrophs."
+            ],
+            "takeaway": "Autotrophs make food; heterotrophs take it.",
+            "check": {
+              "question": "An organism that makes its own food from carbon (IV) oxide and water is",
+              "options": [
+                "Heterotroph",
+                "Saprophyte",
+                "Autotroph",
+                "Parasite"
+              ],
+              "answer": 2,
+              "why": "Making food from simple inorganic ingredients defines an autotroph."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Four heterotrophic patterns",
+            "paragraphs": [
+              "A child eats eba, then the food is taken into the body and digested. A tapeworm inside the same child has no such step. Both feed heterotrophically, but the way each one gets its food is different.",
+              "Holozoic feeders ingest solid food into the body and digest it internally, for example man and sheep. Parasites absorb or ingest food from a living host while harming it, for example tapeworm, roundworm and Loranthus.",
+              "Saprophytes absorb food dissolved from dead matter, for example Rhizopus and mushroom. Carnivorous plants trap and digest insects, for example sundew and bladderwort."
+            ],
+            "bullets": [
+              "Holozoic: ingest solid food and digest it, for example man and sheep.",
+              "Parasitic: feed on a living host without killing it, for example tapeworm, roundworm and Loranthus.",
+              "Saprophytic: absorb food released from dead matter, for example Rhizopus and mushroom.",
+              "Carnivorous plants trap and digest insects, for example sundew and bladderwort."
+            ],
+            "takeaway": "Holozoic ingests, parasitic uses a host, saprophytes use dead matter.",
+            "check": {
+              "question": "Rhizopus that feeds on bread is an example of",
+              "options": [
+                "Holozoic",
+                "Parasitic",
+                "Saprophytic",
+                "Autotrophic"
+              ],
+              "answer": 2,
+              "why": "Rhizopus secretes enzymes outside the body and absorbs food from dead bread."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Nutrition is about sources, not the eater alone",
+            "paragraphs": [
+              "A sundew in a marsh catches a fly and digests it. A tree beside it makes food all day. Both are plants; the diet differs in source, not in organ.",
+              "So judge by where the nutrition comes from: a holozoic eater ingests, a parasite uses a living host, a saprophyte uses dead matter, a carnivorous plant supplements minerals. Plants are usually autotrophs, but they may also be saprophytes or parasites, while no animal is an autotroph.",
+              "Exam hint: if the question asks about a plant that traps insects, it is not a carnivorous plant by anatomy; it is supplementing short minerals from insects while keeping its photosynthesis."
+            ],
+            "bullets": [
+              "Saprophytes are mainly fungi; carnivorous plants are green plants that supplement minerals.",
+              "Parasites derive food from a living host and usually harm it.",
+              "Autotrophs manufacture food; heterotrophs absorb or ingest it."
+            ],
+            "takeaway": "Name where the food comes from, not merely who eats.",
+            "check": {
+              "question": "A plant that makes its own food and also traps insects is both",
+              "options": [
+                "Autotroph and holozoic",
+                "Autotroph and carnivorous",
+                "Heterotroph and parasitic",
+                "Saprophyte and holozoic"
+              ],
+              "answer": 1,
+              "why": "Sundew and bladderwort photosynthesise and supplement minerals from insects."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Look for the source word: ingest means holozoic, host means parasitic, dead means saprophytic, trap means carnivorous."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Classify each feeding pattern: tapeworm in humans, mushroom on decaying wood, sundew leaves, and a yam plant.",
+            "steps": [
+              {
+                "operation": "Check for a living host",
+                "reason": "Tapeworm lives and feeds inside a human intestine.",
+                "result": "Parasitic.",
+                "predictPrompt": "Which pattern is shown by mushroom on decaying wood?"
+              },
+              {
+                "operation": "Check for dead matter",
+                "reason": "Mushroom secretes enzymes onto rotten wood and absorbs the products.",
+                "result": "Saprophytic.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Check for insect trapping",
+                "reason": "Sundew traps insects on sticky leaves.",
+                "result": "Carnivorous plant (also an autotroph).",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Check for self-made food",
+                "reason": "Yam stores starch made in leaves from carbon (IV) oxide and water.",
+                "result": "Autotrophic.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Explain why sundew is both an autotroph and a carnivorous plant.",
+            "hints": [
+              "Its leaves contain chlorophyll and photosynthesise.",
+              "Insects supply the mineral salts the soil lacks.",
+              "Nutrition type describes the source of food, not one label per organism."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "photosynthesis-and-mineral-requirements",
+      "title": "Photosynthesis and Mineral Requirements",
+      "objective": "Differentiate the light and dark reactions of photosynthesis, show the necessity of light, carbon (IV) oxide and chlorophyll, and identify macro- and micronutrients with their deficiency symptoms.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Photosynthesis and mineral requirements",
+            "paragraphs": [
+              "A leaf in a covered jar can still be green but stop making starch. The leaf is alive; the missing ingredient is what the question is really testing."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Light reactions and dark reactions",
+            "paragraphs": [
+              "Place a leaf in light that has been filtered through a screen, and the part that forms starch is the part the light hit. Leaves kept in the dark do not form starch at all.",
+              "In the light reaction, chlorophyll absorbs light energy. The energy splits water (photolysis) into hydrogen and oxygen, and oxygen is released. The energy is trapped in carriers for the dark reactions.",
+              "In the dark reaction, glucose is manufactured from carbon (IV) oxide using the energy supplied by the light reaction. It does not need light, hence the name; the two reactions are linked by the energy carriers made in the light reaction."
+            ],
+            "bullets": [
+              "Light reactions: need light, split water, release oxygen, make energy carriers.",
+              "Dark reactions: no light needed, fix carbon (IV) oxide into glucose.",
+              "Starch in a leaf is evidence that photosynthesis has occurred."
+            ],
+            "takeaway": "Light splits water; the dark reactions fix carbon.",
+            "check": {
+              "question": "Oxygen released in photosynthesis comes from the splitting of",
+              "options": [
+                "Carbon (IV) oxide",
+                "Glucose",
+                "Water",
+                "Chlorophyll"
+              ],
+              "answer": 2,
+              "why": "Photolysis splits water and oxygen is released in the light reaction."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Why no light, no carbon (IV) oxide, no chlorophyll means no starch",
+            "paragraphs": [
+              "A variegated leaf with white patches and a green part produces starch only in the green part. A leaf covered so that light cannot reach it produces no starch at all. A destarched leaf enclosed in carbon (IV) oxide-free air produces no starch either.",
+              "Light delivers the energy, carbon (IV) oxide supplies the carbon skeleton of glucose, and chlorophyll captures the energy. All three are necessary; remove any one and starch formation stops.",
+              "The iodine test confirms starch: the leaf is boiled, treated with alcohol and iodine; a blue-black colour shows starch. A leaf that was kept in the dark next to a leaf in light is the control; the part that stays brown has no starch."
+            ],
+            "bullets": [
+              "Light, carbon (IV) oxide and chlorophyll are all needed for photosynthesis.",
+              "Variegated leaf test: only the green part makes starch.",
+              "Iodine gives a blue-black colour with starch."
+            ],
+            "takeaway": "No light, no carbon (IV) oxide or no chlorophyll means no photosynthesis.",
+            "check": {
+              "question": "In the experiment to show that light is needed for photosynthesis, what is done to the leaf?",
+              "options": [
+                "It is covered with foil",
+                "It is kept in alcohol",
+                "It is boiled",
+                "It is kept in water"
+              ],
+              "answer": 0,
+              "why": "Light must be excluded from one part to test its necessity."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Chemosynthesis and mineral requirements",
+            "paragraphs": [
+              "Some bacteria in the soil do not need sunlight at all. They get their energy from oxidised chemicals, especially sulphur and iron compounds. That is chemosynthesis, distinct from photosynthesis because the energy source is chemical rather than light.",
+              "Plants need mineral salts for growth. The macronutrients required in large quantities are nitrogen, phosphorus and potassium (NPK). Nitrogen is needed for proteins and chlorophyll; deficiency shows yellow older leaves, called chlorosis. Phosphorus is needed for roots and seeds; deficiency gives stunted growth and purplish leaves. Potassium controls stomatal opening and enzyme activation; deficiency causes mottled leaves and weak stems.",
+              "Micronutrients, needed in small amounts, include iron, magnesium, calcium, zinc and boron. Magnesium deficiency causes chlorosis because magnesium is the centre of the chlorophyll molecule. Iron deficiency also causes chlorosis in young leaves."
+            ],
+            "bullets": [
+              "Chemosynthesis: energy from chemical oxidation, used by bacteria.",
+              "Macronutrients: nitrogen, phosphorus, potassium.",
+              "Micronutrients: iron, magnesium, calcium, zinc, boron.",
+              "Nitrogen, iron, magnesium deficiency: chlorosis (yellow leaves)."
+            ],
+            "takeaway": "Photosynthesis uses light; chemosynthesis uses chemicals and NPK feed the plant.",
+            "check": {
+              "question": "Yellowing of older leaves indicates deficiency of",
+              "options": [
+                "Nitrogen",
+                "Calcium",
+                "Boron",
+                "Zinc"
+              ],
+              "answer": 0,
+              "why": "Nitrogen deficiency shows chlorosis in older leaves first."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Photosynthesis needs light; chemosynthesis does not. Macronutrients are NPK; micronutrients are trace. Chlorosis signals nitrogen, iron or magnesium deficiency."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Suggest a remedy: a young orange tree shows pale green veins but dark green between them, and the older leaves are also pale.",
+            "steps": [
+              {
+                "operation": "Identify the symptom",
+                "reason": "Chlorosis shows depletion of a green-making nutrient.",
+                "result": "Chlorosis, characteristic of magnesium deficiency.",
+                "predictPrompt": "What nutrient is needed for chlorophyll?"
+              },
+              {
+                "operation": "Pinpoint magnesium",
+                "reason": "Magnesium is the centre of the chlorophyll molecule.",
+                "result": "Established as magnesium deficiency.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Give the remedy",
+                "reason": "Mineral salts must be replaced in soil fertiliser.",
+                "result": "Apply a magnesium-containing fertiliser (e.g. Epsom salts).",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Explain why a variegated-leaf experiment proves chlorophyll is necessary for photosynthesis.",
+            "hints": [
+              "The white parts lack chlorophyll.",
+              "They receive light and carbon (IV) oxide but cannot trap energy.",
+              "Starch is found only in the green parts after iodine testing."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "classes-of-food-and-balanced-diet",
+      "title": "Classes of Food and Balanced Diet",
+      "objective": "Identify the six classes of food, indicate their sources and importance, perform food tests, and relate each class to its deficiency disease.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Classes of food and balanced diet",
+            "paragraphs": [
+              "Two children eat lunch in the same school in Lagos: one eats rice, beans and fish; the other eats only puff-puff. By the end of term, the second child is often tired and pale. The difference is the mix of food classes."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The six classes and where they come from",
+            "paragraphs": [
+              "Carbohydrates supply energy and are found in yam, rice, eba, maize, bread and plantain. Proteins build and repair tissues; fish, meat, eggs, beans and milk are the main sources. Fats and oils store energy, insulate the body and protect organs; palm oil, groundnut oil, margarine and butter are the sources.",
+              "Mineral salts build bones and teeth, regulate body fluids and help enzymes work; iron comes from leafy vegetables, fish and blood-rich meats, while calcium comes from milk, fish bones and leafy greens. Water regulates body temperature, dissolves wastes and transports nutrients.",
+              "Vitamins regulate body processes; vitamin A prevents night blindness, vitamins B and C prevent beriberi and scurvy, vitamin D prevents rickets."
+            ],
+            "bullets": [
+              "Carbohydrates: energy (yam, rice, maize, bread).",
+              "Proteins: growth and repair (fish, meat, eggs, beans).",
+              "Fats and oils: energy store and insulation (palm oil, groundnut oil).",
+              "Mineral salts and water: structure, transport and regulation.",
+              "Vitamins: regulate body processes (A, B, C, D)."
+            ],
+            "takeaway": "Six classes: energy, building blocks, protection and regulation.",
+            "check": {
+              "question": "Proteins are needed in the body for",
+              "options": [
+                "Energy",
+                "Growth and repair",
+                "Insulation",
+                "Temperature regulation"
+              ],
+              "answer": 1,
+              "why": "Proteins build and repair cells and tissues."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Food tests identify each class",
+            "paragraphs": [
+              "To know what a food sample contains, use chemical tests. Iodine solution gives a blue-black colour with starch. Benedict's solution, when heated with a reducing sugar, changes from blue to green, yellow, orange or brick-red.",
+              "For protein, the biuret test gives a purple colour. For fats, the emulsion test gives a white emulsion when alcohol is mixed with the sample. These tests identify food types from experiment results.",
+              "Use the tests as a checklist: blue-black is starch; a colour change in Benedict's is reducing sugar; purple in biuret is protein; emulsion is fat."
+            ],
+            "bullets": [
+              "Starch: blue-black with iodine.",
+              "Reducing sugar: blue to brick-red with Benedict's solution.",
+              "Protein: purple with biuret solution.",
+              "Fat: white emulsion with alcohol."
+            ],
+            "takeaway": "Iodine for starch, Benedict's for sugar, biuret for protein, emulsion for fat.",
+            "check": {
+              "question": "A food sample that turns iodine solution blue-black contains",
+              "options": [
+                "Protein",
+                "Starch",
+                "Fat",
+                "Reducing sugar"
+              ],
+              "answer": 1,
+              "why": "Iodine gives a blue-black colour in the presence of starch."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Balanced diet and deficiency diseases",
+            "paragraphs": [
+              "A balanced diet supplies the right amount of each class in proportions the body needs. A school lunch of rice (carbohydrates), beans (protein), palm oil (fats), vegetable (vitamins and minerals) and water is balanced; puff-puff and fanta alone is not.",
+              "When one class falls short, a deficiency disease appears. Scurvy is caused by lack of vitamin C and shows bleeding gums and poor wound healing. Rickets is caused by lack of vitamin D and calcium and shows bow legs and soft bones in children. Kwashiorkor is caused by lack of protein and shows a swollen belly, oedema and listlessness.",
+              "Marasmus is a more severe protein-energy malnutrition showing a 'skin and bones' appearance. Night blindness shows lack of vitamin A; beriberi shows lack of vitamin B. Recognising each pattern links the food class to the disease."
+            ],
+            "bullets": [
+              "Balanced diet: all six classes in recommended proportions.",
+              "Scurvy: vitamin C deficiency.",
+              "Rickets: vitamin D and calcium deficiency.",
+              "Kwashiorkor and marasmus: protein deficiency.",
+              "Night blindness: vitamin A deficiency."
+            ],
+            "takeaway": "A balanced diet has all six classes; each deficiency has a name.",
+            "check": {
+              "question": "A child with a swollen belly, oedema and flaky skin is likely suffering from",
+              "options": [
+                "Scurvy",
+                "Rickets",
+                "Kwashiorkor",
+                "Beriberi"
+              ],
+              "answer": 2,
+              "why": "Kwashiorkor is protein-energy malnutrition with oedema."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Match the deficiency to the missing class: vitamin C is scurvy, vitamin D/calcium is rickets, protein is kwashiorkor or marasmus."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "An experiment: a food extract turns iodine blue-black, a second turns Benedict's solution brick-red, and a third gives a purple colour with biuret. Identify each food type.",
+            "steps": [
+              {
+                "operation": "Iodine test",
+                "reason": "Blue-black indicates starch.",
+                "result": "Starch.",
+                "predictPrompt": "What test confirms protein?"
+              },
+              {
+                "operation": "Benedict's test",
+                "reason": "Blue to brick-red indicates a reducing sugar.",
+                "result": "Reducing sugar (glucose, fructose).",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Biuret test",
+                "reason": "Purple indicates protein.",
+                "result": "Protein.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why is a meal of yam, pepper soup and water not balanced? Name what is missing.",
+            "hints": [
+              "Yam supplies carbohydrates only.",
+              "Pepper soup has vitamins but very little protein.",
+              "Protein for growth and repair is missing."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "mammalian-teeth-and-alimentary-canal",
+      "title": "Mammalian Teeth and Alimentary Canal",
+      "objective": "Describe the structure of a typical mammalian tooth, differentiate the types and relate them to their functions, compare dental formulae, and relate the alimentary canal and its accessory organs to their functions.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Mammalian teeth and alimentary canal",
+            "paragraphs": [
+              "A goat grazing tough grass and a dog tearing meat both have molars, but the rest of the mouth differs sharply. The mouth shows what the animal eats."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Structure of a tooth",
+            "paragraphs": [
+              "A tooth has a crown above the gum and a root below. The crown is covered with enamel, the hardest substance in the body, which resists acids and wear. The root is held in a socket by cement and anchored by gum and ligaments.",
+              "Beneath the enamel is dentine, a hard but sensitive layer. The pulp cavity at the centre holds nerves and blood vessels. Mammalian teeth are heterodont, meaning they differ in shape within the same mouth.",
+              "Each tooth is adapted by shape to a job: incisors are chisel-shaped for cutting, canines are pointed for tearing, premolars and molars are flat-topped for grinding."
+            ],
+            "bullets": [
+              "Crown (enamel) resists wear; root anchors the tooth.",
+              "Dentine is sensitive; pulp carries nerves and vessels.",
+              "Heterodont: different shapes, different jobs."
+            ],
+            "takeaway": "Enamel resists, dentine senses, and shape decides the job.",
+            "check": {
+              "question": "The hardest substance in the body, covering the tooth crown, is",
+              "options": [
+                "Dentine",
+                "Cement",
+                "Enamel",
+                "Bone"
+              ],
+              "answer": 2,
+              "why": "Enamel is the hardest tissue and protects the crown."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Tooth types and dental formulae",
+            "paragraphs": [
+              "Man has incisors for biting, canines for tearing, premolars and molars for grinding. Dogs have large canines and shearing carnassial teeth for meat. In herbivores like sheep, the upper incisors are replaced by a horny dental pad, and the cheek teeth are high-crowned for grinding grass.",
+              "A dental formula lists, in order, incisors, canines, premolars and molars in the upper and lower jaw. Man: 2/2, 1/1, 2/2, 3/3 = 32 teeth. Dog: 3/3, 1/1, 4/4, 2/3 = 42 teeth. Sheep: 0/3, 0/1, 3/3, 3/3 = 32 teeth.",
+              "The number and pattern show diet: many grinders mean herbivory, strong canines mean carnivory, and an even mix means omnivory."
+            ],
+            "bullets": [
+              "Incisors bite, canines tear, cheek teeth grind.",
+              "Man has 32 teeth; dog 42; sheep 32 with a dental pad.",
+              "Dental formula: incisors/canines/premolars/molars, upper over lower."
+            ],
+            "takeaway": "Count the teeth and you know the diet.",
+            "check": {
+              "question": "Which dental feature is typical of a grass-eating herbivore?",
+              "options": [
+                "Large canines",
+                "A horny dental pad instead of upper incisors",
+                "Carnassial teeth",
+                "No cheek teeth"
+              ],
+              "answer": 1,
+              "why": "Sheep and goats have a dental pad in place of upper incisors."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The alimentary canal and its accessory organs",
+            "paragraphs": [
+              "Food moves through the canal in steps, each part doing a job. The salivary glands moisten food and contain amylase. The oesophagus pushes food with peristalsis, the rhythmic muscular contraction. The stomach churns the food and secretes hydrochloric acid and protease.",
+              "In the small intestine, the food is completed: bile from the liver emulsifies fats, pancreatic juice from the pancreas supplies amylase, trypsin and lipase, and the succus entericus completes digestion. The duodenum is where bile and pancreatic juice enter.",
+              "Absorption happens mainly in the ileum, whose villi multiply the surface area. The nutrition process runs ingestion, digestion, absorption and assimilation, with assimilation building the absorbed food into the body's tissues. In the large intestine water is reabsorbed, and the rectum stores faeces until egestion."
+            ],
+            "bullets": [
+              "Mouth → oesophagus (peristalsis) → stomach → duodenum → ileum → colon.",
+              "Bile emulsifies fats; pancreatic juice carries amylase, trypsin and lipase.",
+              "Villi increase the surface for absorption; the colon reabsorbs water."
+            ],
+            "takeaway": "The gut moves, churns, digests, absorbs and then expels.",
+            "check": {
+              "question": "Peristalsis is the movement of food through the oesophagus by",
+              "options": [
+                "Chemical action",
+                "Rhythmic muscular contraction",
+                "Cilia",
+                "Diffusion"
+              ],
+              "answer": 1,
+              "why": "Waves of muscular contraction push food along the oesophagus."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Dental formula always lists I/C/P/M. Bile emulsifies but does not digest; pancreatic juice digests all three classes."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "An animal has a dental formula 0/3, 0/1, 3/3, 3/3. What does it eat and why?",
+            "steps": [
+              {
+                "operation": "Read the formula",
+                "reason": "No upper incisors and no upper canines, but many cheek teeth.",
+                "result": "The animal grinds rather than bites or tears.",
+                "predictPrompt": "Which mammal has a dental pad like this?"
+              },
+              {
+                "operation": "Relate to diet",
+                "reason": "Cheek teeth for grinding suit fibrous plant food.",
+                "result": "It is a herbivore, like sheep.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Check the canine counter-test",
+                "reason": "Canines would indicate meat-tearing; their absence excludes a carnivore.",
+                "result": "Concluded as herbivore.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why does bile help digestion without itself digesting?",
+            "hints": [
+              "Bile contains no digestive enzymes.",
+              "Bile salts emulsify large fat droplets into smaller ones.",
+              "Emulsification increases the surface area for pancreatic lipase to act on."
             ]
           }
         }

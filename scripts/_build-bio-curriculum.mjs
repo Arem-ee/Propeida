@@ -56,7 +56,13 @@ const descriptions = {
   'mammalian-internal-organs':
     'The digestive, reproductive and excretory organs and where they sit in the body cavity.',
   nutrition:
-    'Autotrophic and heterotrophic nutrition, photosynthesis, food classes, teeth and the alimentary canal.',
+    'Autotrophic and heterotrophic nutrition, and the four heterotrophic feeding patterns.',
+  'photosynthesis-and-mineral-requirements':
+    'Photosynthesis, chemosynthesis, macro and micronutrients, and deficiency symptoms.',
+  'classes-of-food-and-balanced-diet':
+    'The six classes of food, food tests, balanced diet, and deficiency diseases.',
+  'mammalian-teeth-and-alimentary-canal':
+    'Tooth structure and types, dental formulae, and the alimentary canal with its accessory organs.',
   transport:
     'Why organisms need transport, blood and lymph, the mammalian circulatory system and plant vascular tissue.',
   respiration:
@@ -213,6 +219,26 @@ const split = [
     slug: 'mammalian-internal-organs',
     name: 'Mammalian Internal Organs',
     syllabus_ref: 'B.1',
+  },
+  {
+    slug: 'nutrition',
+    name: 'Modes of Nutrition',
+    syllabus_ref: 'B.2',
+  },
+  {
+    slug: 'photosynthesis-and-mineral-requirements',
+    name: 'Photosynthesis and Mineral Requirements',
+    syllabus_ref: 'B.2',
+  },
+  {
+    slug: 'classes-of-food-and-balanced-diet',
+    name: 'Classes of Food and Balanced Diet',
+    syllabus_ref: 'B.2',
+  },
+  {
+    slug: 'mammalian-teeth-and-alimentary-canal',
+    name: 'Mammalian Teeth and Alimentary Canal',
+    syllabus_ref: 'B.2',
   },
 ].map((topic, index) => ({
   ...topic,

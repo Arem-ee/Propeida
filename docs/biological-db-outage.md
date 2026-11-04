@@ -1,67 +1,44 @@
-# Database outage: Supabase host unresolved (2026-11-04)
+# Database incident: resolved (2026-11-04)
+
+## Status
+
+Resolved. The earlier diagnosis that named
+`ympschsusvzsaellvivg.supabase.co` was wrong: that host is stale and does not
+belong to this project. The configured host,
+`yaglpxybwmmpzbzgixkr.supabase.co`, resolves and its REST endpoint responds with
+401, which means the database is live.
 
 ## What happened
 
-After the Biology depth tier was seeded, seeding run 1 (the B.1 pass) failed
-midway through the lesson loop with
-`insert blocks adaptive-colouration: TypeError: fetch failed`, and run 2
-failed at `levels-of-organisation` with the same error. From then on, the
-configured Supabase host stopped resolving on any public DNS resolver.
+Two B.1 seed runs failed partway through the lesson loop with
+`TypeError: fetch failed`, one at `adaptive-colouration` and one at
+`levels-of-organisation`. The seeder deletes a lesson's blocks before inserting
+replacements, so each failed run left that lesson with zero blocks.
 
-## Evidence
+The failures were transient network errors, not a deleted Supabase project.
+Checking the host that is actually in `.env`, rather than the stale host from
+the earlier note, showed the database was reachable throughout.
 
-- `Resolve-DnsName -Name ympschsusvzsaellvivg.supabase.co -Type A` via the local
-  resolver: fails ("DNS name does not exist").
-- `Resolve-DnsName -Name ympschsusvzsaellvivg.supabase.co -Server 8.8.8.8|1.1.1.1|9.9.9.9`:
-  all fail.
-- Control domains resolve normally (`www.google.com`, `github.com`,
-  `castris.vercel.app`), so this is not a general loss of connectivity; the
-  host is gone from global DNS, which is what happens when the Supabase project
-  is deleted or fully provisioned away.
+## Repair
 
-## Known damage in the database (worst case)
+Re-running `node --env-file=.env scripts/seed-curriculum.mjs biology` after the
+connection settled restored the damaged lessons and completed the B.1 split.
+Both `levels-of-organisation` and `adaptive-colouration` now have 7 blocks, and
+the four B.1 lessons are live. The later B.2 Nutrition seed then inserted its
+four lessons.
 
-The seeder deletes a lesson's blocks before re-inserting them, so a lesson that
-failed at insert time has **no blocks** until the seed is re-run successfully:
+Current database state: 43 Biology topics, 24 published Biology lessons and 105
+published library lessons. All 24 Biology lessons pass
+`check-lesson-depth.mjs`; the B.1 and B.2 pages were verified at 360px and
+1280px with correct checks and no horizontal overflow.
 
-| Lesson | State after the failed runs |
-|---|---|
-| `adaptive-colouration` | delete succeeded, insert failed → 0 blocks |
-| `levels-of-organisation` | delete succeeded, insert failed → 0 blocks |
-| `characteristics-of-living-things` | re-applied successfully in run 2 |
-| `cell-structure-and-function` | re-applied successfully in run 2 |
-| the other 12 published Biology lessons | untouched by run 2 (failed before reaching them); present from run 1 |
+## Prevention
 
-## Other partial changes
-
-- 40 topic rows now exist in the subjects table for biology (37 + 3 new:
-  `leaf-anatomy`, `plant-supporting-tissues`, `mammalian-internal-organs`).
-  The three new topics were inserted with `published = true` even though their
-  lessons were never inserted.
-- The B.1 spine row (`internal-structure-of-a-flowering-plant`) was updated to
-  become the topic row for *Root and Stem Anatomy* (name, section, sort order,
-  published), keeping its old slug, by the normal split rules.
-- The four B.1 lessons are absent from the lessons table.
-- Library totals are therefore inconsistent: lessons whose blocks may be
-  missing still exist as rows and are linked to their topics.
-
-## Recovery procedure
-
-1. Confirm the Supabase project exists and is reachable, or follow its restore
-   path (e.g. unpause or restore a paid backup). Configure the URL in `.env`
-   and verify the host resolves.
-2. Re-run `node --env-file=.env scripts/seed-curriculum.mjs biology`. It is
-   idempotent: it re-uploads the blocks for every lesson in
-   `content-folder/biology-curriculum.json`, re-publishes the topics that have
-   lessons, and inserts the four B.1 lessons. After it completes, verify:
-   - `levels-of-organisation` and `adaptive-colouration` have 7 blocks each;
-   - `node scripts/check-lesson-depth.mjs content-folder/biology-curriculum.json`
-     still passes;
-   - library counts return to 101 lessons (97 + 4 new);
-   - the four B.1 lessons are present at
-     `/learn/biology/{root-and-stem-anatomy,leaf-anatomy,plant-supporting-tissues,mammalian-internal-organs}`.
-
-## What not to do first
-
-Do not run any seeder, migration or SQL edit until the host resolves. Every
-failed partial run makes the damage worse; a successful run heals everything.
+- Run the seeder with `--dry-run` first and confirm the planned inserts and
+  updates.
+- Treat a seed run as destructive per lesson: it clears that lesson's blocks
+  before inserting the replacements. Do not start one on a flaky connection.
+- If a run fails during an insert, re-run once the connection is stable; the
+  seeder is idempotent and heals the lesson's blocks.
+- When diagnosing connectivity, read the host from `.env` and test its REST
+  endpoint. Do not reuse a stale host from an older note.
