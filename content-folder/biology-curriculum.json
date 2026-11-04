@@ -236,18 +236,50 @@
     },
     {
       "slug": "respiration",
-      "name": "Respiration",
+      "name": "Respiration and Energy",
       "syllabus_ref": "B.4",
       "section": "Form and Functions",
       "order": 30,
-      "description": "Respiratory surfaces, gaseous exchange, aerobic and anaerobic respiration, and fermentation."
+      "description": "Why cells respire, how ATP carries energy, and the difference between aerobic and anaerobic pathways."
+    },
+    {
+      "slug": "respiratory-organs-and-surfaces",
+      "name": "Respiratory Organs and Surfaces",
+      "syllabus_ref": "B.4",
+      "section": "Form and Functions",
+      "order": 31,
+      "description": "Body surfaces, gills, tracheae, lungs, stomata and lenticels, and the features of a good exchange surface."
+    },
+    {
+      "slug": "gas-exchange-in-plants",
+      "name": "Gas Exchange in Plants",
+      "syllabus_ref": "B.4",
+      "section": "Form and Functions",
+      "order": 32,
+      "description": "Stomatal opening and closing, lenticels, and how leaf gas exchange changes between day and night."
+    },
+    {
+      "slug": "aerobic-respiration",
+      "name": "Aerobic Respiration",
+      "syllabus_ref": "B.4",
+      "section": "Form and Functions",
+      "order": 33,
+      "description": "Glycolysis, the Krebs cycle and the oxygen-dependent stage that releases most ATP."
+    },
+    {
+      "slug": "anaerobic-respiration-and-fermentation",
+      "name": "Anaerobic Respiration and Fermentation",
+      "syllabus_ref": "B.4",
+      "section": "Form and Functions",
+      "order": 34,
+      "description": "Lactic acid in muscles, ethanol and carbon dioxide in yeast, oxygen debt and economic uses."
     },
     {
       "slug": "excretion",
       "name": "Excretion",
       "syllabus_ref": "B.5",
       "section": "Form and Functions",
-      "order": 31,
+      "order": 35,
       "description": "Excretory structures from contractile vacuoles to kidneys, and the excretory products of plants."
     },
     {
@@ -255,7 +287,7 @@
       "name": "Support and movement",
       "syllabus_ref": "B.6",
       "section": "Form and Functions",
-      "order": 32,
+      "order": 36,
       "description": "Plant movements, supporting tissues, skeletons and joints in animals."
     },
     {
@@ -263,7 +295,7 @@
       "name": "Reproduction",
       "syllabus_ref": "B.7",
       "section": "Form and Functions",
-      "order": 33,
+      "order": 37,
       "description": "Asexual and sexual reproduction, flowering-plant reproduction and mammalian reproduction."
     },
     {
@@ -271,7 +303,7 @@
       "name": "Growth",
       "syllabus_ref": "B.8",
       "section": "Form and Functions",
-      "order": 34,
+      "order": 38,
       "description": "The meaning of growth, seed germination and the difference between epigeal and hypogeal germination."
     },
     {
@@ -279,7 +311,7 @@
       "name": "Co-ordination and control",
       "syllabus_ref": "B.9",
       "section": "Form and Functions",
-      "order": 35,
+      "order": 39,
       "description": "Nervous coordination, sense organs, hormones and homeostasis."
     },
     {
@@ -287,7 +319,7 @@
       "name": "Factors affecting the distribution of Organisms",
       "syllabus_ref": "C.1",
       "section": "Ecology",
-      "order": 36,
+      "order": 40,
       "description": "Abiotic and biotic factors that determine where organisms live."
     },
     {
@@ -295,7 +327,7 @@
       "name": "Symbiotic interactions of plants and animals",
       "syllabus_ref": "C.2",
       "section": "Ecology",
-      "order": 37,
+      "order": 41,
       "description": "Symbiosis, energy flow, food chains and webs, and the carbon, water and nitrogen cycles."
     },
     {
@@ -303,7 +335,7 @@
       "name": "Natural Habitats",
       "syllabus_ref": "C.3",
       "section": "Ecology",
-      "order": 38,
+      "order": 42,
       "description": "Aquatic and terrestrial habitats and the adaptive features of the organisms in them."
     },
     {
@@ -311,7 +343,7 @@
       "name": "Local (Nigerian) Biomes",
       "syllabus_ref": "C.4",
       "section": "Ecology",
-      "order": 39,
+      "order": 43,
       "description": "Tropical rainforest, Guinea and Sudan savanna, desert and the highland plateaus of Nigeria."
     },
     {
@@ -319,7 +351,7 @@
       "name": "The Ecology of Populations",
       "syllabus_ref": "C.5",
       "section": "Ecology",
-      "order": 40,
+      "order": 44,
       "description": "Population density, competition, population size, ecological succession and climax communities."
     },
     {
@@ -327,7 +359,7 @@
       "name": "SOIL",
       "syllabus_ref": "C.6",
       "section": "Ecology",
-      "order": 41,
+      "order": 45,
       "description": "Soil types, components, fertility, erosion and the maintenance of productive soil."
     },
     {
@@ -335,7 +367,7 @@
       "name": "Humans and Environment",
       "syllabus_ref": "C.7",
       "section": "Ecology",
-      "order": 42,
+      "order": 46,
       "description": "Disease, drug abuse, pollution, sanitation, conservation and Nigeria's parks and reserves."
     },
     {
@@ -343,7 +375,7 @@
       "name": "Variation In Population",
       "syllabus_ref": "D.1",
       "section": "Heredity and Variations",
-      "order": 43,
+      "order": 47,
       "description": "Morphological and physiological variation and its use in identity, transfusion and paternity."
     },
     {
@@ -351,7 +383,7 @@
       "name": "Heredity",
       "syllabus_ref": "D.2",
       "section": "Heredity and Variations",
-      "order": 44,
+      "order": 48,
       "description": "Heritable characters, chromosomes, genetic crosses, sex determination and sex-linked traits."
     },
     {
@@ -359,7 +391,7 @@
       "name": "Biotechnology",
       "syllabus_ref": "D.3",
       "section": "Heredity and Variations",
-      "order": 45,
+      "order": 49,
       "description": "Applications of biotechnology in agriculture, medicine, pharmaceuticals and the food industry."
     },
     {
@@ -367,7 +399,7 @@
       "name": "Theories of evolution",
       "syllabus_ref": "E.1",
       "section": "Evolution",
-      "order": 46,
+      "order": 50,
       "description": "Organic evolution, Lamarck's and Darwin's theories, and the evidence that supports them."
     },
     {
@@ -375,7 +407,7 @@
       "name": "Evidence of evolution",
       "syllabus_ref": "E.2",
       "section": "Evolution",
-      "order": 47,
+      "order": 51,
       "description": "Fossils, comparative anatomy, embryology and other evidence for organic evolution."
     }
   ],
@@ -5438,6 +5470,747 @@
               "The leaf cells have lost water and become flaccid.",
               "The water outside is more dilute than the cell sap.",
               "Water enters the vacuoles by osmosis and restores turgor pressure."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "respiration",
+      "title": "Respiration and Energy",
+      "objective": "Explain the significance of respiration, describe ATP as the energy currency, and distinguish aerobic from anaerobic respiration.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Respiration and energy",
+            "paragraphs": [
+              "A sprinter leaves the blocks and is breathing hard ten seconds later. The muscles are spending energy that was stored in food and released inside cells."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Respiration is not breathing",
+            "paragraphs": [
+              "Respiration is the controlled release of energy from organic food inside cells. Breathing is only the movement of air that supplies oxygen and removes carbon (IV) oxide; respiration happens in every living cell, including cells with no lungs.",
+              "Glucose is broken down in a series of enzyme-controlled reactions. The energy released is used to make ATP, run active transport, build large molecules, contract muscles and keep the body warm. Some energy is always lost as heat.",
+              "Respiration is catabolic: it breaks larger molecules into simpler ones. Photosynthesis does the opposite, storing energy in glucose. The two processes are linked in a plant, and both depend on enzymes."
+            ],
+            "bullets": [
+              "Respiration releases energy from food inside cells.",
+              "Breathing supplies oxygen and removes carbon (IV) oxide.",
+              "The released energy powers cell work, and some is lost as heat."
+            ],
+            "takeaway": "Respiration is a chemical process in cells, not breathing.",
+            "check": {
+              "question": "Respiration is best described as the",
+              "options": [
+                "Movement of air into the lungs",
+                "Controlled release of energy from food in cells",
+                "Loss of water vapour from leaves",
+                "Building of glucose from carbon (IV) oxide"
+              ],
+              "answer": 1,
+              "why": "Respiration is enzyme-controlled breakdown of food that releases energy for cell work."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "ATP: the energy currency",
+            "paragraphs": [
+              "ATP (adenosine triphosphate) is a small molecule that carries usable energy from respiration to the reactions that need it. When its terminal phosphate is removed, ATP becomes ADP and energy is released.",
+              "Cells can make ATP when needed and break it down at the same place, so energy is delivered in small packets rather than one large burst. This is why ATP is called the energy currency of the cell.",
+              "ATP powers muscle contraction, active transport, nerve impulses and the synthesis of proteins and other molecules. It is not a long-term store; the energy store is the food molecule, while ATP is the spendable form."
+            ],
+            "bullets": [
+              "ATP carries energy from respiration to cell reactions.",
+              "Removing the terminal phosphate releases energy and leaves ADP.",
+              "ATP is spendable energy; food is the long-term store."
+            ],
+            "takeaway": "Food stores energy; ATP spends it.",
+            "check": {
+              "question": "ATP releases useful energy when it is converted to",
+              "options": [
+                "Glucose and oxygen",
+                "ADP and a phosphate group",
+                "Carbon (IV) oxide and water",
+                "Pyruvate and NADH"
+              ],
+              "answer": 1,
+              "why": "Breaking the terminal phosphate bond of ATP yields ADP, phosphate and usable energy."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Aerobic and anaerobic at a glance",
+            "paragraphs": [
+              "Aerobic respiration uses oxygen and breaks glucose down completely to carbon (IV) oxide and water. It releases a large amount of ATP and happens mainly in the mitochondria.",
+              "Anaerobic respiration happens without oxygen. Glucose is only partly broken down, so less ATP is released; the products are lactic acid in muscles or ethanol and carbon (IV) oxide in yeast.",
+              "Both pathways begin with glycolysis in the cytoplasm. Oxygen decides which route follows, so the same glucose can yield very different amounts of energy depending on whether oxygen is present."
+            ],
+            "bullets": [
+              "Aerobic: oxygen, complete breakdown, large ATP yield.",
+              "Anaerobic: no oxygen, partial breakdown, small ATP yield.",
+              "Products: lactic acid in muscles; ethanol and carbon (IV) oxide in yeast."
+            ],
+            "takeaway": "Oxygen is the switch between high-yield aerobic and low-yield anaerobic respiration.",
+            "check": {
+              "question": "Which product is formed in anaerobic respiration in yeast but not in human muscle?",
+              "options": [
+                "Lactic acid",
+                "Ethanol",
+                "Pyruvate",
+                "ATP"
+              ],
+              "answer": 1,
+              "why": "Yeast converts pyruvate to ethanol and carbon (IV) oxide, while human muscle forms lactic acid."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Respiration is a chemical process in cells, not breathing. Aerobic uses oxygen and makes much more ATP; anaerobic works without oxygen and makes much less."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A student says a resting plant cannot respire because it is not breathing. Correct the statement and trace the energy.",
+            "steps": [
+              {
+                "operation": "Separate the two ideas",
+                "reason": "Breathing is ventilation; respiration is a chemical reaction in cells.",
+                "result": "The plant respires even though it has no lungs.",
+                "predictPrompt": "How does a leaf exchange gases?"
+              },
+              {
+                "operation": "Find the exchange surfaces",
+                "reason": "Leaves use stomata and woody stems use lenticels.",
+                "result": "Oxygen enters and carbon (IV) oxide leaves by diffusion.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Trace the energy",
+                "reason": "Glucose is broken down and the energy is transferred to ATP.",
+                "result": "ATP powers the plant's active transport and growth.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Account for the heat",
+                "reason": "Not all the energy is captured in ATP.",
+                "result": "Some is released as heat, even in a resting plant.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why does a cell use ATP rather than spending glucose directly?",
+            "hints": [
+              "Glucose is a stable storage molecule, not a ready payment.",
+              "ATP releases a small, controlled amount of energy.",
+              "Coupling ATP breakdown to cell reactions avoids a wasteful burst of heat."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "respiratory-organs-and-surfaces",
+      "title": "Respiratory Organs and Surfaces",
+      "objective": "Describe body surfaces, gills, tracheae, lungs, stomata and lenticels, and relate the features of a respiratory surface to efficient gas exchange.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Respiratory organs and surfaces",
+            "paragraphs": [
+              "A fish in a Lagos lagoon and a grasshopper on the bank both need oxygen, but neither has a lung. Their surfaces show how anatomy follows habitat."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "What makes a good respiratory surface",
+            "paragraphs": [
+              "Gas exchange happens by diffusion, so a respiratory surface must be thin, moist and permeable. It also needs a large surface area and a steep concentration gradient, usually maintained by ventilation or blood flow.",
+              "These features are summarized in Fick's law: the rate of diffusion is proportional to surface area and concentration difference, and inversely proportional to thickness. A thick, dry surface slows exchange.",
+              "Terrestrial surfaces lose water easily, so land animals keep their exchange surfaces inside the body. Aquatic animals can use exposed gills because water supports them and prevents drying."
+            ],
+            "bullets": [
+              "Thin, moist and permeable for fast diffusion.",
+              "Large area and a steep concentration gradient for more exchange.",
+              "Ventilation and blood flow maintain the gradient."
+            ],
+            "takeaway": "Thin, moist, large and well supplied: the four tests of a respiratory surface.",
+            "check": {
+              "question": "Which feature would decrease the rate of gas exchange across a surface?",
+              "options": [
+                "A larger surface area",
+                "A thinner surface",
+                "A steeper concentration gradient",
+                "A thick, dry surface"
+              ],
+              "answer": 3,
+              "why": "Thickness and dryness increase diffusion distance and slow gas exchange."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Body surface, gills and tracheae",
+            "paragraphs": [
+              "An Amoeba exchanges gases over its whole body surface. An earthworm uses moist skin, kept thin and vascular by mucus and a good blood supply. These surfaces work only where the distance is short and the body is not too thick.",
+              "Fish use gills with many thin lamellae. Water flows over the gills in the opposite direction to blood, a countercurrent arrangement that keeps a concentration gradient along the whole gill and extracts more oxygen.",
+              "Insects use tracheae: air enters through spiracles, travels along tubes and reaches cells through fine tracheoles. This system delivers oxygen directly, so insect blood does not need haemoglobin for most gas transport."
+            ],
+            "bullets": [
+              "Body surface: Amoeba and earthworm, thin and moist.",
+              "Gills: fish, many lamellae with countercurrent water and blood flow.",
+              "Tracheae: insects, air delivered directly to cells through tracheoles."
+            ],
+            "takeaway": "Body surface suits small animals; gills suit water; tracheae pipe air directly.",
+            "check": {
+              "question": "The countercurrent flow in fish gills",
+              "options": [
+                "Makes water and blood flow in the same direction",
+                "Maintains a concentration gradient along the gill",
+                "Stops oxygen entering the blood",
+                "Cools the fish in warm water"
+              ],
+              "answer": 1,
+              "why": "Opposite flows keep oxygen diffusing into the blood along the whole length of the gill."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Lungs, stomata and lenticels",
+            "paragraphs": [
+              "Mammals use lungs, where millions of alveoli give a huge, thin, moist surface. Each alveolus is surrounded by capillaries, and ventilation plus blood flow keeps oxygen coming in and carbon (IV) oxide leaving.",
+              "Plants have no lungs. Leaves exchange gases through stomata, each guarded by two guard cells; woody stems use lenticels, and roots absorb oxygen through root hairs and air spaces in the soil.",
+              "The exchange surface matches the habitat: moist skin in damp soil, gills in water, tracheae in air, alveoli in a sealed lung. The same diffusion rules apply to all of them."
+            ],
+            "bullets": [
+              "Lungs: alveoli give a large, thin, moist surface with capillaries.",
+              "Leaves use stomata; woody stems use lenticels; roots use air spaces.",
+              "Every surface follows the same diffusion rules."
+            ],
+            "takeaway": "The surface follows the habitat, but diffusion follows the same rules.",
+            "check": {
+              "question": "Which structure is the respiratory surface of a woody stem?",
+              "options": [
+                "Stoma",
+                "Lenticel",
+                "Alveolus",
+                "Gill"
+              ],
+              "answer": 1,
+              "why": "Lenticels are loose patches of cells in the bark that allow gas exchange."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Match the surface to the organism: moist skin for earthworm, gills for fish, tracheae for insects, alveoli for mammals, stomata and lenticels for plants."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "An unknown animal has moist skin, no lungs and lives in damp soil. Identify its respiratory surface and explain why it cannot live in dry sand.",
+            "steps": [
+              {
+                "operation": "Identify the surface",
+                "reason": "The whole body surface is thin, moist and supplied with blood.",
+                "result": "Body surface, as in an earthworm.",
+                "predictPrompt": "What happens to that surface in dry air?"
+              },
+              {
+                "operation": "Check the requirement",
+                "reason": "The surface must stay moist for oxygen to dissolve and diffuse.",
+                "result": "Dry sand would dry the skin and stop gas exchange.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Relate to habitat",
+                "reason": "The animal has no internal lung to protect its surface from drying.",
+                "result": "It is restricted to damp soil or water.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why does a fish die when it is taken out of water, even though air contains more oxygen than water?",
+            "hints": [
+              "Gill lamellae are supported by water and collapse in air.",
+              "Collapsed lamellae greatly reduce the exposed surface area.",
+              "The gill surface also dries, so oxygen cannot dissolve."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "gas-exchange-in-plants",
+      "title": "Gas Exchange in Plants",
+      "objective": "Describe the opening and closing of stomata, identify lenticels and root surfaces as gas-exchange routes, and compare leaf gas exchange in light and darkness.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Gas exchange in plants",
+            "paragraphs": [
+              "A maize leaf at noon is losing water through thousands of tiny pores while it takes in carbon (IV) oxide. The same pores must balance food-making against water loss."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Stomata and the guard cells",
+            "paragraphs": [
+              "Each stoma is a pore between two guard cells. Guard cells are kidney-shaped, have thicker inner walls and contain chloroplasts. When they take up water and become turgid, they bow outward and the pore opens; when they lose water, they become flaccid and the pore closes.",
+              "The movement is driven by osmosis. Potassium ions enter the guard cells, lowering their water potential so water follows; when potassium leaves, water leaves and the pore shuts.",
+              "Stomata usually open in light and close in darkness or drought. This lets carbon (IV) oxide enter for photosynthesis while limiting water loss, but the balance changes with humidity, temperature and wind."
+            ],
+            "bullets": [
+              "Stoma: a pore between two guard cells.",
+              "Turgid guard cells open the pore; flaccid guard cells close it.",
+              "Potassium ions and osmosis drive the opening and closing."
+            ],
+            "takeaway": "Guard cells open the pore when turgid and close it when flaccid.",
+            "check": {
+              "question": "A stoma opens when its guard cells",
+              "options": [
+                "Lose water and become flaccid",
+                "Take in water and become turgid",
+                "Lose potassium ions",
+                "Are covered by a waxy cuticle"
+              ],
+              "answer": 1,
+              "why": "Water uptake makes the guard cells turgid and their curved walls pull the pore open."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Lenticels, roots and other surfaces",
+            "paragraphs": [
+              "Most gas exchange in a leaf happens through stomata, but the leaf surface is covered by a waxy cuticle that limits diffusion. The stomata are therefore the main controllable gates.",
+              "Woody stems have lenticels, loose patches of cells in the bark that let oxygen in and carbon (IV) oxide out. Roots take up oxygen from air spaces in the soil, and root hairs increase the surface for this exchange.",
+              "Submerged plants may have no stomata and exchange gases over thin leaves, while floating leaves keep stomata on the upper surface. The surface is positioned where the gas supply is."
+            ],
+            "bullets": [
+              "Leaves: stomata through the cuticle.",
+              "Woody stems: lenticels in the bark.",
+              "Roots: root hairs and air spaces in the soil."
+            ],
+            "takeaway": "Stomata serve leaves, lenticels serve stems, and root surfaces serve roots.",
+            "check": {
+              "question": "Which surface allows gas exchange in a woody stem?",
+              "options": [
+                "Stoma",
+                "Lenticel",
+                "Root hair",
+                "Cuticle"
+              ],
+              "answer": 1,
+              "why": "Lenticels are loose patches in the bark that connect the stem's air spaces to the atmosphere."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Day and night in the leaf",
+            "paragraphs": [
+              "In daylight, photosynthesis is usually faster than respiration. The leaf takes in carbon (IV) oxide and releases oxygen, so the net exchange hides the respiration that is still going on.",
+              "At night, photosynthesis stops but respiration continues. The leaf takes in oxygen and releases carbon (IV) oxide, which is why a respiring plant can be shown with limewater in the dark.",
+              "Respiration in plants also produces heat and uses stored food. The gas exchange of the whole plant depends on stomata, lenticels and root surfaces working together, not on one organ."
+            ],
+            "bullets": [
+              "Day: photosynthesis dominates; carbon (IV) oxide enters and oxygen leaves.",
+              "Night: respiration dominates; oxygen enters and carbon (IV) oxide leaves.",
+              "Limewater turns milky when carbon (IV) oxide is bubbled through it."
+            ],
+            "takeaway": "In light the leaf gains carbon and loses oxygen; at night the direction reverses.",
+            "check": {
+              "question": "At night, a leaf releases more",
+              "options": [
+                "Oxygen than carbon (IV) oxide",
+                "Carbon (IV) oxide than oxygen",
+                "Water than carbon (IV) oxide",
+                "Glucose than oxygen"
+              ],
+              "answer": 1,
+              "why": "Photosynthesis stops at night, so respiration releases carbon (IV) oxide and uses oxygen."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Stomata open when turgid and close when flaccid. In light, net gas exchange follows photosynthesis; at night, respiration dominates."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A potted plant is sealed in a clear container with limewater and kept in the dark. Predict what happens to the limewater and why.",
+            "steps": [
+              {
+                "operation": "Remove the light",
+                "reason": "Photosynthesis cannot run without light.",
+                "result": "The plant stops taking in carbon (IV) oxide.",
+                "predictPrompt": "Does respiration stop too?"
+              },
+              {
+                "operation": "Keep respiration running",
+                "reason": "Respiration continues day and night in living cells.",
+                "result": "The plant releases carbon (IV) oxide into the container.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Test the gas",
+                "reason": "Carbon (IV) oxide reacts with limewater.",
+                "result": "The limewater turns milky.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why do stomata close on a hot, dry afternoon even though photosynthesis needs carbon (IV) oxide?",
+            "hints": [
+              "Open stomata lose water vapour as well as exchange gases.",
+              "Water loss lowers guard-cell turgor and can wilt the leaf.",
+              "Closing the stomata protects the plant from drying out."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "aerobic-respiration",
+      "title": "Aerobic Respiration",
+      "objective": "Outline glycolysis, the Krebs cycle and the electron transport chain, and explain how oxygen allows a large ATP yield.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Aerobic respiration",
+            "paragraphs": [
+              "A runner's muscles keep working long after the first few seconds because oxygen is available. Aerobic respiration unlocks most of the energy in glucose in three linked stages."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Glycolysis in the cytoplasm",
+            "paragraphs": [
+              "Glycolysis is the first stage of both aerobic and anaerobic respiration. It happens in the cytoplasm and does not need oxygen. One glucose molecule (6 carbons) is split into two pyruvate molecules (3 carbons each).",
+              "The process uses two ATP to start and produces four ATP, so the net gain is two ATP. It also transfers energy to NADH, which will carry electrons to later stages.",
+              "Glycolysis is a chain of enzyme-controlled steps, not a single explosion. Because it can run without oxygen, it gives a cell a quick supply of ATP when oxygen is short."
+            ],
+            "bullets": [
+              "Location: cytoplasm; oxygen not required.",
+              "Glucose (6C) splits into two pyruvate (3C) molecules.",
+              "Net gain: 2 ATP and 2 NADH per glucose."
+            ],
+            "takeaway": "Glycolysis splits glucose into pyruvate and gives a small net ATP gain.",
+            "check": {
+              "question": "The net ATP yield of glycolysis per glucose molecule is",
+              "options": [
+                "1 ATP",
+                "2 ATP",
+                "4 ATP",
+                "38 ATP"
+              ],
+              "answer": 1,
+              "why": "Four ATP are made but two are used to start glycolysis, leaving a net gain of two."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The Krebs cycle in the mitochondrion",
+            "paragraphs": [
+              "Pyruvate enters the mitochondrion and is converted to acetyl CoA, releasing carbon (IV) oxide and forming NADH. Acetyl CoA then enters the Krebs cycle in the matrix.",
+              "In the Krebs cycle, acetyl CoA joins a four-carbon acceptor to make a six-carbon acid. The acid is broken down in steps, releasing carbon (IV) oxide and transferring energy to ATP, NADH and FADH2.",
+              "Each glucose produces two turns of the cycle. The cycle itself makes only a small amount of ATP directly; most of the energy is now carried by NADH and FADH2 to the inner membrane."
+            ],
+            "bullets": [
+              "Pyruvate is converted to acetyl CoA, releasing carbon (IV) oxide.",
+              "The Krebs cycle turns twice per glucose and releases more carbon (IV) oxide.",
+              "It makes a little ATP and loads NADH and FADH2 with energy."
+            ],
+            "takeaway": "Krebs strips carbon and loads electron carriers.",
+            "check": {
+              "question": "Where does the Krebs cycle take place?",
+              "options": [
+                "Cytoplasm",
+                "Mitochondrial matrix",
+                "Inner mitochondrial membrane",
+                "Cell wall"
+              ],
+              "answer": 1,
+              "why": "The enzymes of the Krebs cycle are in the mitochondrial matrix."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Oxygen and the electron transport chain",
+            "paragraphs": [
+              "NADH and FADH2 deliver electrons to the electron transport chain on the inner mitochondrial membrane. As electrons pass along the chain, energy pumps protons and the return flow drives ATP synthesis.",
+              "Oxygen is the final electron acceptor. It combines with electrons and protons to form water, and this step keeps the chain running; without oxygen, the carriers stay reduced and the whole aerobic pathway stalls.",
+              "The complete breakdown of one glucose yields carbon (IV) oxide, water and a large amount of ATP, often quoted as 36-38 ATP in textbooks. Some energy is released as heat, which helps maintain body temperature."
+            ],
+            "bullets": [
+              "Electron transport chain: inner mitochondrial membrane.",
+              "Oxygen accepts the final electrons and forms water.",
+              "Most ATP is made here; some energy is lost as heat."
+            ],
+            "takeaway": "Oxygen accepts the last electrons and lets the ATP pipeline run.",
+            "check": {
+              "question": "The role of oxygen in aerobic respiration is to",
+              "options": [
+                "Split glucose into pyruvate",
+                "Accept the final electrons and form water",
+                "Make carbon (IV) oxide in the Krebs cycle",
+                "Carry electrons to the Krebs cycle"
+              ],
+              "answer": 1,
+              "why": "Oxygen is the final electron acceptor at the end of the electron transport chain."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Glycolysis gives 2 ATP; Krebs gives a little more; the electron transport chain gives most. Oxygen is needed only at the last stage."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "One glucose molecule yields 2 ATP in glycolysis and 2 ATP in the Krebs cycle. The electron transport chain brings the textbook total to 38 ATP. How many ATP come from the chain, and why does oxygen matter?",
+            "steps": [
+              {
+                "operation": "Add the direct yields",
+                "reason": "Glycolysis and Krebs make ATP directly.",
+                "result": "2 + 2 = 4 ATP.",
+                "predictPrompt": "Where is the rest of the energy released?"
+              },
+              {
+                "operation": "Find the chain contribution",
+                "reason": "The total is 38 ATP, so subtract the direct yield.",
+                "result": "38 - 4 = 34 ATP from the electron transport chain.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Explain the oxygen requirement",
+                "reason": "Oxygen accepts the final electrons and keeps the chain running.",
+                "result": "Without oxygen the chain stops and the large ATP yield is lost.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why does a muscle cell switch to anaerobic respiration when oxygen runs out?",
+            "hints": [
+              "The electron transport chain needs oxygen as the final electron acceptor.",
+              "Without oxygen, NADH cannot be reoxidised to NAD+.",
+              "Glycolysis can continue only if NAD+ is regenerated, so pyruvate is converted to lactic acid."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "anaerobic-respiration-and-fermentation",
+      "title": "Anaerobic Respiration and Fermentation",
+      "objective": "Explain lactic acid formation and oxygen debt in muscles, describe fermentation in yeast, and compare aerobic with anaerobic respiration.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Anaerobic respiration and fermentation",
+            "paragraphs": [
+              "A sprinter finishes a race gasping for air, while a bowl of dough rises quietly on a kitchen table. Both are using anaerobic respiration, but their products are different."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Lactic acid in muscles",
+            "paragraphs": [
+              "During hard exercise, muscles may use oxygen faster than blood can deliver it. Glycolysis continues, but pyruvate is converted to lactic acid instead of entering the Krebs cycle, so only two ATP are gained per glucose.",
+              "Lactic acid lowers the pH of muscle tissue and contributes to fatigue and cramp. The muscle is not poisoned permanently; when oxygen returns, some lactic acid is oxidised to carbon (IV) oxide and water, and some is converted back to glucose in the liver.",
+              "The extra oxygen needed after exercise to remove lactic acid is called the oxygen debt. Breathing stays fast because the body is repaying that debt, not because the muscles are still working hard."
+            ],
+            "bullets": [
+              "Muscle anaerobic respiration: glucose to lactic acid, net 2 ATP.",
+              "Lactic acid contributes to fatigue and cramp.",
+              "Oxygen debt is the extra oxygen needed to remove lactic acid."
+            ],
+            "takeaway": "No oxygen means lactate, two ATP and an oxygen debt.",
+            "check": {
+              "question": "The product of anaerobic respiration in human muscle is",
+              "options": [
+                "Ethanol",
+                "Carbon (IV) oxide",
+                "Lactic acid",
+                "Pyruvate"
+              ],
+              "answer": 2,
+              "why": "Human muscle converts pyruvate to lactic acid when oxygen is insufficient."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Ethanol and carbon (IV) oxide in yeast",
+            "paragraphs": [
+              "Yeast is a single-celled fungus that respires aerobically when oxygen is present but ferments sugar when oxygen is low. Glycolysis yields two ATP, and the pyruvate is then converted to ethanol and carbon (IV) oxide.",
+              "Fermentation is anaerobic respiration in yeast and some other microbes. The carbon (IV) oxide makes bread dough rise, while the ethanol evaporates during baking; in palm wine, beer and wine, ethanol is the product people want.",
+              "Yeast is also used to make bioethanol, yeast extract, vitamins and animal feed. Its ability to ferment sugar is therefore economically important in food, drink and fuel production."
+            ],
+            "bullets": [
+              "Yeast fermentation: glucose to ethanol + carbon (IV) oxide, net 2 ATP.",
+              "Carbon (IV) oxide raises bread dough; ethanol is the aim in drinks and fuel.",
+              "Yeast is economically important in food, drink and bioethanol production."
+            ],
+            "takeaway": "Yeast turns sugar into ethanol, carbon (IV) oxide and a little ATP.",
+            "check": {
+              "question": "Which gas makes bread dough rise during yeast fermentation?",
+              "options": [
+                "Oxygen",
+                "Nitrogen",
+                "Carbon (IV) oxide",
+                "Hydrogen"
+              ],
+              "answer": 2,
+              "why": "Carbon (IV) oxide released by yeast forms bubbles that expand the dough."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Aerobic versus anaerobic",
+            "paragraphs": [
+              "Aerobic respiration uses oxygen, breaks glucose completely and yields about 36-38 ATP. Anaerobic respiration needs no oxygen, breaks glucose only partly and yields two ATP, so it is much less efficient per glucose molecule.",
+              "Aerobic respiration happens mainly in mitochondria and releases carbon (IV) oxide and water. Anaerobic respiration happens in the cytoplasm and releases lactic acid in muscle, or ethanol and carbon (IV) oxide in yeast and waterlogged roots.",
+              "Anaerobic respiration is fast and useful in short bursts, but the waste products limit it. Aerobic respiration is slower to start but sustains long activity because it releases far more energy."
+            ],
+            "bullets": [
+              "Aerobic: oxygen, mitochondria, complete breakdown, about 36-38 ATP.",
+              "Anaerobic: no oxygen, cytoplasm, partial breakdown, 2 ATP.",
+              "Anaerobic is fast but wasteful; aerobic sustains long activity."
+            ],
+            "takeaway": "Aerobic is efficient but oxygen-dependent; anaerobic is fast but wasteful.",
+            "check": {
+              "question": "Which statement correctly compares aerobic and anaerobic respiration?",
+              "options": [
+                "Aerobic releases more ATP per glucose than anaerobic",
+                "Anaerobic releases more ATP per glucose than aerobic",
+                "Both release the same amount of ATP per glucose",
+                "Anaerobic requires oxygen but aerobic does not"
+              ],
+              "answer": 0,
+              "why": "Complete aerobic breakdown releases far more ATP than partial anaerobic breakdown."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Muscle anaerobic gives lactic acid with no carbon (IV) oxide. Yeast anaerobic gives ethanol plus carbon (IV) oxide. Both yield 2 ATP per glucose."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A sealed flask of yeast and glucose solution is connected to limewater. Predict two observations and explain them.",
+            "steps": [
+              {
+                "operation": "Look for gas",
+                "reason": "Yeast ferments glucose and releases carbon (IV) oxide.",
+                "result": "Bubbles appear in the flask and gas travels to the limewater.",
+                "predictPrompt": "What will the limewater do?"
+              },
+              {
+                "operation": "Test the gas",
+                "reason": "Carbon (IV) oxide turns limewater milky.",
+                "result": "The limewater becomes milky.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Identify the other product",
+                "reason": "The flask is sealed, so oxygen is soon used up and fermentation takes over.",
+                "result": "Ethanol is formed, giving a characteristic smell.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why does a sprinter breathe heavily after a race rather than only during the first few seconds?",
+            "hints": [
+              "The muscles built up lactic acid while oxygen was short.",
+              "Extra oxygen is needed to oxidise the lactic acid.",
+              "The fast breathing after exercise is repaying the oxygen debt."
             ]
           }
         }

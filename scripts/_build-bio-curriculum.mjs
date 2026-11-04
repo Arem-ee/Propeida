@@ -74,7 +74,15 @@ const descriptions = {
   'diffusion-osmosis-and-water-relations':
     'Diffusion, osmosis, plasmolysis and turgidity as mechanisms of transport.',
   respiration:
-    'Respiratory surfaces, gaseous exchange, aerobic and anaerobic respiration, and fermentation.',
+    'Why cells respire, how ATP carries energy, and the difference between aerobic and anaerobic pathways.',
+  'respiratory-organs-and-surfaces':
+    'Body surfaces, gills, tracheae, lungs, stomata and lenticels, and the features of a good exchange surface.',
+  'gas-exchange-in-plants':
+    'Stomatal opening and closing, lenticels, and how leaf gas exchange changes between day and night.',
+  'aerobic-respiration':
+    'Glycolysis, the Krebs cycle and the oxygen-dependent stage that releases most ATP.',
+  'anaerobic-respiration-and-fermentation':
+    'Lactic acid in muscles, ethanol and carbon dioxide in yeast, oxygen debt and economic uses.',
   excretion:
     'Excretory structures from contractile vacuoles to kidneys, and the excretory products of plants.',
   'support-and-movement':
@@ -272,6 +280,31 @@ const split = [
     slug: 'diffusion-osmosis-and-water-relations',
     name: 'Diffusion, Osmosis and Water Relations',
     syllabus_ref: 'B.3',
+  },
+  {
+    slug: 'respiration',
+    name: 'Respiration and Energy',
+    syllabus_ref: 'B.4',
+  },
+  {
+    slug: 'respiratory-organs-and-surfaces',
+    name: 'Respiratory Organs and Surfaces',
+    syllabus_ref: 'B.4',
+  },
+  {
+    slug: 'gas-exchange-in-plants',
+    name: 'Gas Exchange in Plants',
+    syllabus_ref: 'B.4',
+  },
+  {
+    slug: 'aerobic-respiration',
+    name: 'Aerobic Respiration',
+    syllabus_ref: 'B.4',
+  },
+  {
+    slug: 'anaerobic-respiration-and-fermentation',
+    name: 'Anaerobic Respiration and Fermentation',
+    syllabus_ref: 'B.4',
   },
 ].map((topic, index) => ({
   ...topic,
