@@ -420,18 +420,34 @@
     },
     {
       "slug": "growth",
-      "name": "Growth",
+      "name": "Meaning and Measurement of Growth",
       "syllabus_ref": "B.8",
       "section": "Form and Functions",
       "order": 53,
-      "description": "The meaning of growth, seed germination and the difference between epigeal and hypogeal germination."
+      "description": "The meaning and measurement of growth, growth curves, and where growth occurs in plants and animals."
+    },
+    {
+      "slug": "seed-germination",
+      "name": "Seed Germination",
+      "syllabus_ref": "B.8",
+      "section": "Form and Functions",
+      "order": 54,
+      "description": "Conditions for germination, the sequence from imbibition to seedling establishment, and seed dormancy."
+    },
+    {
+      "slug": "epigeal-and-hypogeal-germination",
+      "name": "Epigeal and Hypogeal Germination",
+      "syllabus_ref": "B.8",
+      "section": "Form and Functions",
+      "order": 55,
+      "description": "The two germination patterns, their examples, and how cotyledon position affects planting depth and survival."
     },
     {
       "slug": "co-ordination-and-control",
       "name": "Co-ordination and control",
       "syllabus_ref": "B.9",
       "section": "Form and Functions",
-      "order": 54,
+      "order": 56,
       "description": "Nervous coordination, sense organs, hormones and homeostasis."
     },
     {
@@ -439,7 +455,7 @@
       "name": "Factors affecting the distribution of Organisms",
       "syllabus_ref": "C.1",
       "section": "Ecology",
-      "order": 55,
+      "order": 57,
       "description": "Abiotic and biotic factors that determine where organisms live."
     },
     {
@@ -447,7 +463,7 @@
       "name": "Symbiotic interactions of plants and animals",
       "syllabus_ref": "C.2",
       "section": "Ecology",
-      "order": 56,
+      "order": 58,
       "description": "Symbiosis, energy flow, food chains and webs, and the carbon, water and nitrogen cycles."
     },
     {
@@ -455,7 +471,7 @@
       "name": "Natural Habitats",
       "syllabus_ref": "C.3",
       "section": "Ecology",
-      "order": 57,
+      "order": 59,
       "description": "Aquatic and terrestrial habitats and the adaptive features of the organisms in them."
     },
     {
@@ -463,7 +479,7 @@
       "name": "Local (Nigerian) Biomes",
       "syllabus_ref": "C.4",
       "section": "Ecology",
-      "order": 58,
+      "order": 60,
       "description": "Tropical rainforest, Guinea and Sudan savanna, desert and the highland plateaus of Nigeria."
     },
     {
@@ -471,7 +487,7 @@
       "name": "The Ecology of Populations",
       "syllabus_ref": "C.5",
       "section": "Ecology",
-      "order": 59,
+      "order": 61,
       "description": "Population density, competition, population size, ecological succession and climax communities."
     },
     {
@@ -479,7 +495,7 @@
       "name": "SOIL",
       "syllabus_ref": "C.6",
       "section": "Ecology",
-      "order": 60,
+      "order": 62,
       "description": "Soil types, components, fertility, erosion and the maintenance of productive soil."
     },
     {
@@ -487,7 +503,7 @@
       "name": "Humans and Environment",
       "syllabus_ref": "C.7",
       "section": "Ecology",
-      "order": 61,
+      "order": 63,
       "description": "Disease, drug abuse, pollution, sanitation, conservation and Nigeria's parks and reserves."
     },
     {
@@ -495,7 +511,7 @@
       "name": "Variation In Population",
       "syllabus_ref": "D.1",
       "section": "Heredity and Variations",
-      "order": 62,
+      "order": 64,
       "description": "Morphological and physiological variation and its use in identity, transfusion and paternity."
     },
     {
@@ -503,7 +519,7 @@
       "name": "Heredity",
       "syllabus_ref": "D.2",
       "section": "Heredity and Variations",
-      "order": 63,
+      "order": 65,
       "description": "Heritable characters, chromosomes, genetic crosses, sex determination and sex-linked traits."
     },
     {
@@ -511,7 +527,7 @@
       "name": "Biotechnology",
       "syllabus_ref": "D.3",
       "section": "Heredity and Variations",
-      "order": 64,
+      "order": 66,
       "description": "Applications of biotechnology in agriculture, medicine, pharmaceuticals and the food industry."
     },
     {
@@ -519,7 +535,7 @@
       "name": "Theories of evolution",
       "syllabus_ref": "E.1",
       "section": "Evolution",
-      "order": 65,
+      "order": 67,
       "description": "Organic evolution, Lamarck's and Darwin's theories, and the evidence that supports them."
     },
     {
@@ -527,7 +543,7 @@
       "name": "Evidence of evolution",
       "syllabus_ref": "E.2",
       "section": "Evolution",
-      "order": 66,
+      "order": 68,
       "description": "Fossils, comparative anatomy, embryology and other evidence for organic evolution."
     }
   ],
@@ -9019,6 +9035,447 @@
               "Method failure and incorrect use can happen.",
               "Condoms can break or be used inconsistently.",
               "Emergency contraception and follow-up care matter when protection fails."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "growth",
+      "title": "Meaning and Measurement of Growth",
+      "objective": "Define growth, distinguish it from development, and describe how growth is measured and where it occurs in plants and animals.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Meaning and measurement of growth",
+            "paragraphs": [
+              "A maize seedling doubles its height in a week, while a lizard hatchling grows slowly to adult size. Both are growing, but the pattern and the measurement differ."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "What growth means",
+            "paragraphs": [
+              "Growth is an irreversible increase in the size, mass or number of cells of an organism. It happens when cells divide, then enlarge and add new material, so the change cannot simply be reversed by losing water.",
+              "Growth is not the same as development. Development is the process by which cells and tissues become specialised and the organism matures, such as a seedling forming flowers or a child reaching puberty; an organism can grow without developing a new organ.",
+              "In practice, growth is shown by height, fresh mass, dry mass or cell number. Dry mass is the most reliable measure because it excludes the water that makes fresh mass fluctuate during the day."
+            ],
+            "bullets": [
+              "Growth: irreversible increase in size, mass or cell number.",
+              "Development: specialisation and maturation of cells and organs.",
+              "Dry mass is the best measure because it ignores water changes."
+            ],
+            "takeaway": "Growth adds matter; development adds function.",
+            "check": {
+              "question": "Which measurement best shows true growth without the effect of water uptake?",
+              "options": [
+                "Fresh mass",
+                "Dry mass",
+                "Leaf colour",
+                "Stem diameter only"
+              ],
+              "answer": 1,
+              "why": "Dry mass measures the actual new material added, while fresh mass changes with water content."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "How growth is measured",
+            "paragraphs": [
+              "A single measurement says little, so growth is followed over time. Height or length is easy to measure in plants and young animals, while mass is measured with a balance and cell number with a microscope.",
+              "When growth is plotted against time, many organisms show a sigmoid or S-shaped curve. A slow lag phase is followed by a rapid exponential phase, then a stationary phase as growth slows and the organism reaches maturity.",
+              "The curve helps compare treatments. A fertiliser that raises the exponential phase produces taller plants, while a disease that lengthens the lag phase delays establishment even if the final height is similar."
+            ],
+            "bullets": [
+              "Take repeated measurements over time, not a single reading.",
+              "A sigmoid curve has lag, exponential and stationary phases.",
+              "Height, mass and cell counts reveal different aspects of growth."
+            ],
+            "takeaway": "Growth is a curve, not a single measurement.",
+            "check": {
+              "question": "The rapid phase of a sigmoid growth curve is called the",
+              "options": [
+                "Lag phase",
+                "Exponential phase",
+                "Stationary phase",
+                "Death phase"
+              ],
+              "answer": 1,
+              "why": "During the exponential phase, cells divide and enlarge rapidly, so size or mass increases quickly."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Where growth happens",
+            "paragraphs": [
+              "Plants grow mainly at meristems. Apical meristems at the tips of roots and shoots add length, while lateral meristems such as the cambium add girth; this is why a plant can keep growing throughout its life.",
+              "Animals usually grow throughout the body and stop at adult size, although some organs and tissues continue to replace cells. Insects grow in bursts, shedding the exoskeleton at each moult, while mammals grow more continuously.",
+              "Growth depends on food, oxygen, water, suitable temperature and hormones. A lack of any one factor slows the curve, which is why nutrition and health during childhood affect final adult size."
+            ],
+            "bullets": [
+              "Plants: apical meristems add length; lateral meristems add girth.",
+              "Animals: growth is more general and usually stops at adult size.",
+              "Food, oxygen, water, temperature and hormones control growth."
+            ],
+            "takeaway": "Plants grow at tips and rings; animals grow all over.",
+            "check": {
+              "question": "Which tissue allows a plant to grow longer at its root and shoot tips?",
+              "options": [
+                "Epidermis",
+                "Apical meristem",
+                "Xylem",
+                "Phloem"
+              ],
+              "answer": 1,
+              "why": "Apical meristems are regions of dividing cells at the tips of roots and shoots."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Growth is an irreversible increase in size or mass; development is specialisation. Use dry mass to avoid water effects, and remember the sigmoid curve's lag, exponential and stationary phases when comparing treatments."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Two bean plants are measured daily. Plant A gains fresh mass quickly but its dry mass hardly changes; plant B gains dry mass steadily. Which is really growing and why?",
+            "steps": [
+              {
+                "operation": "Compare the measures",
+                "reason": "Fresh mass includes water, which can rise without new tissue.",
+                "result": "Plant A may only be taking up water.",
+                "predictPrompt": "What does dry mass show?"
+              },
+              {
+                "operation": "Interpret dry mass",
+                "reason": "Dry mass measures new cell material after water is removed.",
+                "result": "Plant B is adding real tissue.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Check the whole picture",
+                "reason": "Growth also involves cell division and development.",
+                "result": "Plant B is growing; Plant A needs more evidence such as height or cell counts.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why can a plant keep growing taller for many years while a mouse stops growing at adult size?",
+            "hints": [
+              "Plants keep meristems at their tips and in their stems.",
+              "Animals grow throughout the body and reach a fixed adult size.",
+              "Meristems continue to divide throughout the plant's life."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "seed-germination",
+      "title": "Seed Germination",
+      "objective": "Explain the conditions needed for germination and describe the sequence from water uptake to seedling establishment.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Seed germination",
+            "paragraphs": [
+              "A dry maize seed can sit in a jar for months, then sprout within days when it is planted and watered. Something switches the dormant embryo back to life."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Conditions needed for germination",
+            "paragraphs": [
+              "A seed needs a viable embryo, water, oxygen and a suitable temperature. Water is absorbed first, softening the seed coat and activating enzymes; oxygen is needed for aerobic respiration, and warmth speeds up the enzyme-controlled reactions.",
+              "Light is not needed by every seed, but some seeds germinate only in light or only in darkness. The seed also needs enough stored food, and the seedling needs light and minerals once it starts photosynthesising.",
+              "A seed that fails to germinate may be dead, dormant, too dry, waterlogged or attacked by fungi. Testing a sample for viability and using clean, well-drained soil improves establishment."
+            ],
+            "bullets": [
+              "Viable embryo, water, oxygen and suitable temperature.",
+              "Water activates enzymes; oxygen powers respiration.",
+              "Light requirements vary; dead or dormant seeds will not sprout."
+            ],
+            "takeaway": "Water wakes the seed; oxygen and warmth drive the engine.",
+            "check": {
+              "question": "Why does a waterlogged seed often fail to germinate?",
+              "options": [
+                "It has too much light",
+                "It lacks oxygen for respiration",
+                "It is too warm",
+                "It has too many minerals"
+              ],
+              "answer": 1,
+              "why": "Water fills the air spaces in the soil, so the seed cannot obtain enough oxygen for aerobic respiration."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The sequence of germination",
+            "paragraphs": [
+              "Germination begins with imbibition, the uptake of water through the seed coat. The seed swells, enzymes are activated, and stored starch, protein and oil are broken down into soluble substances that can be transported to the embryo.",
+              "The radicle emerges first and grows downwards, anchoring the seedling and absorbing water. The plumule then emerges and grows upwards, and the stem elongates; in many seeds a hook forms to protect the delicate shoot tip as it pushes through the soil.",
+              "The seedling relies on stored food until its first leaves expand and photosynthesis begins. At that point, the food store shrinks, the seedling becomes independent, and growth switches to light-driven sugar production."
+            ],
+            "bullets": [
+              "Imbibition activates enzymes that digest stored food.",
+              "Radicle emerges first; plumule follows.",
+              "Photosynthesis begins when the first leaves expand."
+            ],
+            "takeaway": "The seed digests its store, sends down a root, then sends up a shoot.",
+            "check": {
+              "question": "Which part normally emerges first during germination?",
+              "options": [
+                "Plumule",
+                "Radicle",
+                "Cotyledon",
+                "Flower bud"
+              ],
+              "answer": 1,
+              "why": "The radicle emerges first, anchors the seedling and begins water uptake."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Dormancy and delayed germination",
+            "paragraphs": [
+              "Dormancy is a state in which a viable seed does not germinate even when conditions seem suitable. A hard seed coat, an immature embryo or chemical inhibitors inside the seed can delay germination until the environment improves.",
+              "Farmers and gardeners break dormancy by scarifying the seed coat, soaking or chilling the seed, or removing the fleshy fruit around it. These treatments imitate the natural weathering, fire or passage through an animal's gut that would break the coat.",
+              "Dormancy is useful in the wild because it spreads germination over time and avoids a whole generation sprouting in a short wet spell. In agriculture, uniform germination is preferred, so seed treatments are used to synchronise emergence."
+            ],
+            "bullets": [
+              "Dormancy: a viable seed fails to germinate despite suitable conditions.",
+              "Hard coats, immature embryos and inhibitors cause dormancy.",
+              "Scarification, soaking and chilling break dormancy."
+            ],
+            "takeaway": "Dormancy is a safety switch that waits for the right moment.",
+            "check": {
+              "question": "A hard seed coat delays germination because it",
+              "options": [
+                "Prevents water and oxygen entry",
+                "Makes the seed too warm",
+                "Adds extra food",
+                "Attracts pollinators"
+              ],
+              "answer": 0,
+              "why": "The coat blocks water and oxygen, so imbibition and respiration cannot begin."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Germination needs a viable seed, water, oxygen and a suitable temperature. Imbibition activates enzymes, the radicle emerges first, and the plumule follows. Dormancy delays germination until conditions improve, and the seedling becomes independent when its leaves expand."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A farmer plants maize seeds in cold, waterlogged soil and few seedlings appear. Explain two likely causes and one remedy.",
+            "steps": [
+              {
+                "operation": "Check oxygen",
+                "reason": "Waterlogged soil has little air, so the seed cannot respire aerobically.",
+                "result": "Germination is slow or fails.",
+                "predictPrompt": "What about the temperature?"
+              },
+              {
+                "operation": "Check temperature",
+                "reason": "Cold soil slows enzyme activity and imbibition.",
+                "result": "Seeds remain dormant or germinate unevenly.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Suggest a remedy",
+                "reason": "Plant when the soil is warm and well drained.",
+                "result": "Better aeration and temperature improve germination.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why does a seed need oxygen before its first leaf appears?",
+            "hints": [
+              "The embryo is already respiring.",
+              "Aerobic respiration releases ATP from stored food.",
+              "Without oxygen, germination stalls even if water is present."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "epigeal-and-hypogeal-germination",
+      "title": "Epigeal and Hypogeal Germination",
+      "objective": "Differentiate epigeal from hypogeal germination, give examples of each, and relate the pattern to seedling survival.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Epigeal and hypogeal germination",
+            "paragraphs": [
+              "A bean seedling lifts its two thick seed leaves above the soil, while a maize seedling sends up a rolled shoot and keeps its seed leaves underground. The difference is called epigeal versus hypogeal germination."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Epigeal germination",
+            "paragraphs": [
+              "In epigeal germination, the hypocotyl, the region below the cotyledons, elongates and pushes the cotyledons above the soil. The cotyledons turn green and photosynthesise for a time before they shrivel and drop.",
+              "The hypocotyl often forms a hook as it emerges, protecting the delicate plumule from damage as it pushes through the soil. Bean, castor and sunflower are standard examples.",
+              "Because the cotyledons leave the seed and enter the light, the seedling can start photosynthesis early. The cost is that the exposed cotyledons and shoot are vulnerable to frost, grazing and drying. This early start can give the seedling an advantage in a sunny gap."
+            ],
+            "bullets": [
+              "Hypocotyl elongates and lifts the cotyledons above ground.",
+              "Cotyledons turn green and photosynthesise before shrinking.",
+              "Examples: bean, castor and sunflower."
+            ],
+            "takeaway": "Epigeal germination lifts its seed leaves into the light.",
+            "check": {
+              "question": "In epigeal germination, the cotyledons are carried above the soil by the",
+              "options": [
+                "Epicotyl",
+                "Hypocotyl",
+                "Radicle",
+                "Plumule"
+              ],
+              "answer": 1,
+              "why": "The hypocotyl is the region below the cotyledons, and its elongation lifts them above the soil."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Hypogeal germination",
+            "paragraphs": [
+              "In hypogeal germination, the cotyledons remain below the soil and the epicotyl, the region above the cotyledons, elongates to push up the plumule. The cotyledons stay in the seed and supply food rather than turning green.",
+              "Maize, pea, rice and groundnut are standard examples. The shoot emerges as a tight spike or rolled leaf, which reduces friction and protects the growing tip. The protected shoot can push through a crusted soil surface.",
+              "Keeping the cotyledons underground protects the food store and the shoot base from frost, grazing and drying. The seedling depends on stored food for longer, so it may grow more slowly at first."
+            ],
+            "bullets": [
+              "Epicotyl elongates and pushes the plumule above ground.",
+              "Cotyledons stay below ground and supply food.",
+              "Examples: maize, pea, rice and groundnut."
+            ],
+            "takeaway": "Hypogeal germination keeps its food store underground.",
+            "check": {
+              "question": "Which plant shows hypogeal germination?",
+              "options": [
+                "Bean",
+                "Castor",
+                "Maize",
+                "Sunflower"
+              ],
+              "answer": 2,
+              "why": "Maize cotyledons remain below ground while the epicotyl pushes the plumule upwards."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Comparing the two patterns",
+            "paragraphs": [
+              "The key difference is the position of the cotyledons and the region that elongates. Epigeal seedlings lift their cotyledons with the hypocotyl; hypogeal seedlings keep them below ground while the epicotyl elongates.",
+              "The pattern affects planting depth and early survival. Epigeal seeds should not be buried too deeply, because the hypocotyl must reach the surface; hypogeal seeds can be planted deeper, since the food store stays protected.",
+              "Neither pattern is universally better. Epigeal seedlings gain early photosynthesis but are exposed; hypogeal seedlings are protected but rely on stored food for longer, which matters in poor light or cold soil."
+            ],
+            "bullets": [
+              "Epigeal: cotyledons above ground, hypocotyl elongates.",
+              "Hypogeal: cotyledons below ground, epicotyl elongates.",
+              "Planting depth and exposure differ between the two."
+            ],
+            "takeaway": "Cotyledon position and the elongating region separate the two patterns.",
+            "check": {
+              "question": "The main difference between epigeal and hypogeal germination is the",
+              "options": [
+                "Colour of the flower",
+                "Position of the cotyledons",
+                "Number of seeds in the fruit",
+                "Type of root system"
+              ],
+              "answer": 1,
+              "why": "Epigeal cotyledons rise above the soil, while hypogeal cotyledons remain below it."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Epigeal: hypocotyl lifts cotyledons above ground, as in bean and castor. Hypogeal: epicotyl lifts the plumule while cotyledons stay below ground, as in maize and pea. Plant epigeal seeds shallower than hypogeal seeds."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A gardener plants bean and maize seeds at the same depth. The maize emerges well, but many bean seedlings fail. Explain the difference.",
+            "steps": [
+              {
+                "operation": "Identify each pattern",
+                "reason": "Bean is epigeal and maize is hypogeal.",
+                "result": "Bean lifts its cotyledons; maize keeps them below ground.",
+                "predictPrompt": "Why would depth affect the bean more?"
+              },
+              {
+                "operation": "Relate to depth",
+                "reason": "The bean hypocotyl must push the cotyledons to the surface.",
+                "result": "Deep planting exhausts the seedling before it reaches light.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Explain the maize",
+                "reason": "The maize food store stays underground and the epicotyl is adapted to push through.",
+                "result": "Maize emerges from the same depth more successfully.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why might a farmer plant bean seeds more shallowly than maize seeds?",
+            "hints": [
+              "Bean is epigeal and must lift its cotyledons to the surface.",
+              "Maize is hypogeal and its food store stays underground.",
+              "Deep planting uses up the bean's stored food before the shoot reaches light."
             ]
           }
         }

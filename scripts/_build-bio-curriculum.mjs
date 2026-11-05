@@ -120,7 +120,11 @@ const descriptions = {
   'reproductive-health-and-contraception':
     'Family planning, modern contraceptive methods, STIs and reproductive health.',
   growth:
-    'The meaning of growth, seed germination and the difference between epigeal and hypogeal germination.',
+    'The meaning and measurement of growth, growth curves, and where growth occurs in plants and animals.',
+  'seed-germination':
+    'Conditions for germination, the sequence from imbibition to seedling establishment, and seed dormancy.',
+  'epigeal-and-hypogeal-germination':
+    'The two germination patterns, their examples, and how cotyledon position affects planting depth and survival.',
   'co-ordination-and-control':
     'Nervous coordination, sense organs, hormones and homeostasis.',
   'factors-affecting-the-distribution-of-organisms':
@@ -425,6 +429,21 @@ const split = [
     slug: 'reproductive-health-and-contraception',
     name: 'Reproductive Health and Contraception',
     syllabus_ref: 'B.7',
+  },
+  {
+    slug: 'growth',
+    name: 'Meaning and Measurement of Growth',
+    syllabus_ref: 'B.8',
+  },
+  {
+    slug: 'seed-germination',
+    name: 'Seed Germination',
+    syllabus_ref: 'B.8',
+  },
+  {
+    slug: 'epigeal-and-hypogeal-germination',
+    name: 'Epigeal and Hypogeal Germination',
+    syllabus_ref: 'B.8',
   },
 ].map((topic, index) => ({
   ...topic,
