@@ -104,7 +104,21 @@ const descriptions = {
   'joints-and-movement':
     'Fibrous, cartilaginous and synovial joints, joint structure and antagonistic muscles.',
   reproduction:
-    'Asexual and sexual reproduction, flowering-plant reproduction and mammalian reproduction.',
+    'Asexual and sexual reproduction compared, with binary fission and budding.',
+  'vegetative-propagation':
+    'Natural and artificial vegetative propagation, crop applications and the risks of uniform clones.',
+  'flower-structure-and-pollination':
+    'Floral parts, pollination agents, self- versus cross-pollination and the advantages of cross-pollination.',
+  'fertilization-and-seed-formation':
+    'Pollen-tube growth, double fertilization, and how ovules and ovaries become seeds and fruits.',
+  'fruits-placentation-and-dispersal':
+    'Placentation types, simple, aggregate and multiple fruits, and seed dispersal agents.',
+  'mammalian-reproductive-systems':
+    'Male and female reproductive organs, gametes, hormones and the menstrual cycle.',
+  'pregnancy-and-birth':
+    'Fertilization, implantation, placental exchange, gestation, labour and maternal nutrition.',
+  'reproductive-health-and-contraception':
+    'Family planning, modern contraceptive methods, STIs and reproductive health.',
   growth:
     'The meaning of growth, seed germination and the difference between epigeal and hypogeal germination.',
   'co-ordination-and-control':
@@ -371,6 +385,46 @@ const split = [
     slug: 'joints-and-movement',
     name: 'Joints and Movement',
     syllabus_ref: 'B.6',
+  },
+  {
+    slug: 'reproduction',
+    name: 'Asexual and Sexual Reproduction',
+    syllabus_ref: 'B.7',
+  },
+  {
+    slug: 'vegetative-propagation',
+    name: 'Vegetative Propagation',
+    syllabus_ref: 'B.7',
+  },
+  {
+    slug: 'flower-structure-and-pollination',
+    name: 'Flower Structure and Pollination',
+    syllabus_ref: 'B.7',
+  },
+  {
+    slug: 'fertilization-and-seed-formation',
+    name: 'Fertilization and Seed Formation',
+    syllabus_ref: 'B.7',
+  },
+  {
+    slug: 'fruits-placentation-and-dispersal',
+    name: 'Fruits, Placentation and Dispersal',
+    syllabus_ref: 'B.7',
+  },
+  {
+    slug: 'mammalian-reproductive-systems',
+    name: 'Mammalian Reproductive Systems',
+    syllabus_ref: 'B.7',
+  },
+  {
+    slug: 'pregnancy-and-birth',
+    name: 'Pregnancy and Birth',
+    syllabus_ref: 'B.7',
+  },
+  {
+    slug: 'reproductive-health-and-contraception',
+    name: 'Reproductive Health and Contraception',
+    syllabus_ref: 'B.7',
   },
 ].map((topic, index) => ({
   ...topic,
