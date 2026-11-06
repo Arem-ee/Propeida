@@ -189,9 +189,15 @@ const descriptions = {
   'theories-of-evolution':
     'Lamarck\u2019s use and disuse, inheritance of acquired characters, and criticism.',
   'darwin-and-organic-evolution':
-    'Natural selection, the modern organic theory, and Lamarck versus Darwin.',
+    'Natural selection, finches and moths, and Darwin versus Lamarck.',
+  'the-organic-theory-of-evolution':
+    'Inherited variation, mutation and the origin of new species.',
   'evidence-of-evolution':
-    'Fossils, homologous and analogous structures, embryos, biogeography and DNA.',
+    'Fossils, transitional forms and the horse series.',
+  'comparative-anatomy-and-embryology':
+    'Homologous and analogous structures and embryological similarity.',
+  'biogeography-vestigial-organs-and-dna':
+    'Biogeography, vestigial organs and DNA evidence.',
 }
 
 const sections = {
@@ -649,12 +655,27 @@ const split = [
   },
   {
     slug: 'darwin-and-organic-evolution',
-    name: 'Darwin and the Organic Theory',
+    name: "Darwin's Theory of Natural Selection",
+    syllabus_ref: 'E.1',
+  },
+  {
+    slug: 'the-organic-theory-of-evolution',
+    name: 'The Organic Theory of Evolution',
     syllabus_ref: 'E.1',
   },
   {
     slug: 'evidence-of-evolution',
-    name: 'Evidence for Evolution',
+    name: 'Fossil Evidence for Evolution',
+    syllabus_ref: 'E.2',
+  },
+  {
+    slug: 'comparative-anatomy-and-embryology',
+    name: 'Comparative Anatomy and Embryology',
+    syllabus_ref: 'E.2',
+  },
+  {
+    slug: 'biogeography-vestigial-organs-and-dna',
+    name: 'Biogeography, Vestigial Organs and DNA',
     syllabus_ref: 'E.2',
   },
 ].map((topic, index) => ({

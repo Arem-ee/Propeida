@@ -17,12 +17,29 @@ The findings below are the audit snapshot. All P1 and P2 items have since been f
 **Re-verification (2026-11-06).**
 
 - Strict prose scan: 0 of 89 lessons with issues — intro 25–40 words, 1–3 core sections at 120–180 words, exam tip 30–50 words, every paragraph ≤3 sentences, 2–4 bullets, four-option checks with valid keys, and depth sections at 180–300 words where present.
-- `scripts/check-lesson-depth.mjs content-folder/biology-curriculum.json`: all 89 pass.
+- Depth checker: all 89 pass.
 - Answer-key comparator against `scripts/_check-bio.mjs`: 0 mismatches.
 - Database: 89 Biology topics, 89 published lessons and 638 Biology blocks; library totals are 170 published topics and 170 published lessons. Depth: 5 of 89 Biology lessons.
 - Browser sweep on a clean production build (`npm run build`, `npm run start -- --port 3001`): 89/89 pages returned 200 at 360px and 1280px; all inline checks returned the correct feedback; every recap had three items; no page or figure overflow; 16 lessons carry one figure each.
 
-**Residual risks (not P1/P2).** `evidence-of-evolution` still gathers six evidence families in one lesson, and `darwin-and-organic-evolution` still combines natural selection with the modern synthesis; both remain one-concept split candidates. Some sections use four or five short paragraphs where the standard prefers one to three, though every paragraph is now ≤3 sentences. Depth remains optional and incomplete at 5 of 89. Visual coverage is 16 figures across 89 lessons and follows the "only where prose fails" rule.
+**Re-verification (2026-11-07).**
+
+- Strict prose scan on the rebuilt 92-lesson file: 0 issues; no section now uses more than three paragraphs.
+- Depth checker on the rebuilt file: all 92 pass.
+- Targeted comparator against `scripts/_check-bio.mjs` (extended to 92 rows): 0 mismatches.
+- Database after seeding: 92 Biology topics, 92 published lessons and 659 Biology blocks; library totals are 173 published topics, 173 lessons and 13 depth lessons. Biology depth is 5 of 92.
+- Production-build browser spot checks: the five split E lessons and the merged paragraph lessons (`characteristics-of-living-things`, `fungi`, `insects`, `vertebrates`, `temperature-and-water-regulation`, `classes-of-food-and-balanced-diet`) all returned 200 at 360px and 1280px with correct checks and no overflow.
+
+**Residual risks (not P1/P2).** Depth remains optional and incomplete at 5 of 89. Visual coverage is 16 figures across 89 lessons and follows the "only where prose fails" rule.
+
+## Structural remediation — 2026-11-07
+
+The two one-concept risks and the paragraph residue are closed:
+
+- **Splits.** `darwin-and-organic-evolution` is now Darwin-only natural selection (overproduction, variation, finches/moths, Lamarck-versus-Darwin; 570 core words). The modern synthesis became a separate lesson, `the-organic-theory-of-evolution` (inherited variation, mutation as new alleles, speciation; 578 words).
+- **Evidence split.** `evidence-of-evolution` is now `Fossil Evidence for Evolution` (rock record, transitional fossils, horse series; 559 words). Comparative anatomy/embryology (569 words) and biogeography/vestigial/DNA (537 words) are separate lessons. E-block order is now theories, Darwin, organic theory, fossils, comparative anatomy, biogeography. Slugs retained for the first lesson of each group; three new topics carry syllabus refs E.1/E.2.
+- **Paragraph redistribution.** All 45 sections that used 4–5 short paragraphs now use 2–3 paragraphs, each at most three sentences. Adjacent paragraphs were merged and, where needed, the last two sentences fused with ", and" to respect the sentence cap; facts, word budgets, bullets, takeaways and checks are unchanged.
+- **Totals.** 92 Biology topics, 92 published lessons and 659 Biology blocks; library totals are 173 published topics, 173 lessons and 13 depth lessons. Biology depth is 5 of 92.
 
 ## Coverage verdicts (summary)
 
@@ -78,8 +95,8 @@ The findings below are the audit snapshot. All P1 and P2 items have since been f
 
 - **Depth checker:** 89/89 pass (500–700 core, 1–3 teaching cards, takeaway/check, PR checks). Strict prose scan: 0/89 with issues. Browser (production build): 89/89 pages status 200, 360/1280 no overflow, all checks correct, three-item recaps.
 - **Structure:** four-option checks now cover the previously untested list-type knowledge; the answer-key comparator reports 0 mismatches. Residual one-concept risks: `evidence-of-evolution` packs six evidence families; `darwin-and-organic-evolution` packs selection + modern synthesis.
-- **Depth tier:** 5 of 89 Biology lessons carry Go deeper (library total 13 of 170). Core coverage complete, depth incomplete.
+- **Depth tier:** 5 of 92 Biology lessons carry Go deeper (library total 13 of 173). Core coverage complete, depth incomplete.
 
-## Recommendation (2026-11-06)
+## Recommendation (2026-11-07)
 
-The P1/P2 corrections and coverage checks close the exam-accuracy findings. Remaining work is structural and optional: split `evidence-of-evolution` and `darwin-and-organic-evolution`, redistribute sections that still use 4–5 short paragraphs into 1–3, extend depth beyond 5/89, and add visuals only where prose handles the relationship badly. Keep the provenance register with the authored items.
+The P1/P2 corrections, coverage checks, splits and paragraph redistribution close the audit findings. Remaining work is optional: extend depth beyond 5/92, and add visuals only where prose handles the relationship badly. Keep the provenance register with the authored items.

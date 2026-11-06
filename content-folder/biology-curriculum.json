@@ -700,19 +700,43 @@
     },
     {
       "slug": "darwin-and-organic-evolution",
-      "name": "Darwin and the Organic Theory",
+      "name": "Darwin's Theory of Natural Selection",
       "syllabus_ref": "E.1",
       "section": "Evolution",
       "order": 88,
-      "description": "Natural selection, the modern organic theory, and Lamarck versus Darwin."
+      "description": "Natural selection, finches and moths, and Darwin versus Lamarck."
+    },
+    {
+      "slug": "the-organic-theory-of-evolution",
+      "name": "The Organic Theory of Evolution",
+      "syllabus_ref": "E.1",
+      "section": "Evolution",
+      "order": 89,
+      "description": "Inherited variation, mutation and the origin of new species."
     },
     {
       "slug": "evidence-of-evolution",
-      "name": "Evidence for Evolution",
+      "name": "Fossil Evidence for Evolution",
       "syllabus_ref": "E.2",
       "section": "Evolution",
-      "order": 89,
-      "description": "Fossils, homologous and analogous structures, embryos, biogeography and DNA."
+      "order": 90,
+      "description": "Fossils, transitional forms and the horse series."
+    },
+    {
+      "slug": "comparative-anatomy-and-embryology",
+      "name": "Comparative Anatomy and Embryology",
+      "syllabus_ref": "E.2",
+      "section": "Evolution",
+      "order": 91,
+      "description": "Homologous and analogous structures and embryological similarity."
+    },
+    {
+      "slug": "biogeography-vestigial-organs-and-dna",
+      "name": "Biogeography, Vestigial Organs and DNA",
+      "syllabus_ref": "E.2",
+      "section": "Evolution",
+      "order": 92,
+      "description": "Biogeography, vestigial organs and DNA evidence."
     }
   ],
   "lessons": [
@@ -738,11 +762,9 @@
           "content": {
             "heading": "Seven processes that define life",
             "paragraphs": [
-              "A parked car can move, a crystal can grow and a flame can use up fuel. Each mimics one sign of life, which is why one sign cannot decide the question.",
-              "Living things carry out seven processes. Movement includes the whole body and the movement of substances inside it. Respiration releases energy from food.",
+              "A parked car can move, a crystal can grow and a flame can use up fuel. Each mimics one sign of life, which is why one sign cannot decide the question. Living things carry out seven processes, and movement includes the whole body and the movement of substances inside it, and respiration releases energy from food.",
               "Nutrition obtains and uses food. Excretion removes metabolic waste. Growth is a permanent increase in size or cell number.",
-              "Reproduction produces new individuals. Sensitivity, also called irritability, is the response to stimuli such as light, heat or touch.",
-              "Only a living thing performs all seven. A virus is a borderline case: it reproduces only inside a host cell and has no metabolism of its own."
+              "Reproduction produces new individuals. Sensitivity, also called irritability, is the response to stimuli such as light, heat or touch. Only a living thing performs all seven, and a virus is a borderline case: it reproduces only inside a host cell and has no metabolism of its own."
             ],
             "bullets": [
               "All seven processes must be present; one alone proves nothing.",
@@ -798,9 +820,7 @@
           "content": {
             "heading": "Nutrition and respiration",
             "paragraphs": [
-              "A green plant in sunlight and a boy eating rice both need energy, but they obtain it in opposite ways.",
-              "Nutrition is how an organism obtains and uses food. Autotrophs, such as green plants, make their own food by photosynthesis. Heterotrophs, such as humans, fungi and most bacteria, depend on ready-made food.",
-              "Holozoic feeders ingest solid food, saprophytes absorb dissolved food from dead matter, and parasites feed on a living host.",
+              "A green plant in sunlight and a boy eating rice both need energy, but they obtain it in opposite ways. Nutrition is how an organism obtains and uses food. Autotrophs, such as green plants, make their own food by photosynthesis, and heterotrophs, such as humans, fungi and most bacteria, depend on ready-made food, and holozoic feeders ingest solid food, saprophytes absorb dissolved food from dead matter, and parasites feed on a living host.",
               "Respiration is the breakdown of food to release energy. Aerobic respiration uses oxygen and releases carbon dioxide and water. Anaerobic respiration works without oxygen and releases less energy; in yeast it produces ethanol and carbon dioxide.",
               "Breathing is only the exchange of gases, not respiration itself."
             ],
@@ -924,8 +944,7 @@
           "content": {
             "heading": "What every cell shares",
             "paragraphs": [
-              "A cheek scraping and an onion epidermis look different under the microscope, yet both show the same basic machinery.",
-              "The cell membrane is a thin, selectively permeable layer that controls what enters and leaves. The cytoplasm is the jelly-like medium where reactions occur and organelles sit. The nucleus contains chromosomes made of DNA and controls the cell's activities.",
+              "A cheek scraping and an onion epidermis look different under the microscope, yet both show the same basic machinery. The cell membrane is a thin, selectively permeable layer that controls what enters and leaves. The cytoplasm is the jelly-like medium where reactions occur and organelles sit, and the nucleus contains chromosomes made of DNA and controls the cell's activities.",
               "Mitochondria are the sites of aerobic respiration, releasing energy as ATP. Ribosomes build proteins from amino acids.",
               "These five structures are enough to identify a cell as a cell. The membrane surrounds the cell, while the organelles work inside it."
             ],
@@ -1013,8 +1032,7 @@
             "paragraphs": [
               "A pancreas cell releases digestive enzymes. The protein must be built, moved, packaged and sent out without leaking into the cytoplasm.",
               "Ribosomes on the rough endoplasmic reticulum make proteins. The rough ER transports them; the smooth ER makes lipids. The Golgi apparatus modifies, packages and secretes proteins, and lysosomes contain digestive enzymes that break down worn-out organelles and foreign material.",
-              "Vacuoles store water, salts, pigments and waste.",
-              "The path of a secreted protein is ribosome, rough ER, Golgi, vesicle, membrane. A cell that secretes a lot, such as a pancreas cell, has many ribosomes and a large Golgi."
+              "Vacuoles store water, salts, pigments and waste. The path of a secreted protein is ribosome, rough ER, Golgi, vesicle, membrane. A cell that secretes a lot, such as a pancreas cell, has many ribosomes and a large Golgi."
             ],
             "bullets": [
               "Rough ER makes and moves protein; smooth ER makes lipid.",
@@ -1351,8 +1369,7 @@
           "content": {
             "heading": "The five kingdoms at a glance",
             "paragraphs": [
-              "Monera contains bacteria and blue-green algae. Protista contains mainly single-celled eukaryotes such as Amoeba, Paramecium and Euglena. Fungi contains mushroom, Rhizopus and yeast.",
-              "Plantae contains Spirogyra, mosses, ferns, cycads, maize and water leaf. Animalia contains Hydra, earthworms, insects, fish, frogs, birds and mammals.",
+              "Monera contains bacteria and blue-green algae. Protista contains mainly single-celled eukaryotes such as Amoeba, Paramecium and Euglena. Fungi contains mushroom, Rhizopus and yeast, and Plantae contains Spirogyra, mosses, ferns, cycads, maize and water leaf, and Animalia contains Hydra, earthworms, insects, fish, frogs, birds and mammals.",
               "Two further features separate them. Plants make their own food by photosynthesis and have cellulose cell walls. Fungi absorb ready-made food and have chitin cell walls.",
               "Animals ingest food and have no cell wall. Protists may be plant-like or animal-like, but they are not divided into tissues."
             ],
@@ -1380,8 +1397,7 @@
           "content": {
             "heading": "What increasing complexity means",
             "paragraphs": [
-              "Complexity is not a single ladder, but the kingdoms do show a trend. A moneran is a prokaryotic cell with no nucleus. Protista is a single cell with a nucleus and organelles.",
-              "Most fungi and plants build bodies from many cells, and plants add tissues and organs. Animals add specialised tissues, organs and organ systems.",
+              "Complexity is not a single ladder, but the kingdoms do show a trend. A moneran is a prokaryotic cell with no nucleus. Protista is a single cell with a nucleus and organelles, and most fungi and plants build bodies from many cells, and plants add tissues and organs, and animals add specialised tissues, organs and organ systems.",
               "The trend is about division of labour. A Paramecium carries out all life processes in one cell. A maize plant has roots for absorption, leaves for photosynthesis and vascular tissue for transport.",
               "A mammal adds a heart, lungs, kidneys and a nervous system, each doing one job well. This five-kingdom scheme is the traditional school classification; modern biology often uses six kingdoms or three domains, but JAMB still examines the five-kingdom system."
             ],
@@ -1480,8 +1496,7 @@
             "paragraphs": [
               "Bacteria are the best-known monerans. Each is a single prokaryotic cell with a cell wall, a cell membrane and free circular DNA. Many have a capsule, and some have flagella for movement.",
               "They reproduce by binary fission, so one cell splits into two identical cells. Under harsh conditions, some form resistant endospores.",
-              "Blue-green algae, now called cyanobacteria, are also Monera. They contain chlorophyll and photosynthesise, but the pigment is not enclosed in a chloroplast. Some, such as Nostoc and Anabaena, fix nitrogen in rice fields.",
-              "Bacteria decompose dead matter, cause disease, ferment food and supply antibiotics; cyanobacteria add nitrogen to the soil."
+              "Blue-green algae, now called cyanobacteria, are also Monera. They contain chlorophyll and photosynthesise, but the pigment is not enclosed in a chloroplast. Some, such as Nostoc and Anabaena, fix nitrogen in rice fields, and bacteria decompose dead matter, cause disease, ferment food and supply antibiotics; cyanobacteria add nitrogen to the soil."
             ],
             "bullets": [
               "Binary fission, not mitosis, is the usual reproduction.",
@@ -1537,8 +1552,7 @@
           "content": {
             "heading": "Protista: one cell with a nucleus",
             "paragraphs": [
-              "Protista are eukaryotes that are mostly single-celled. Amoeba moves and feeds with pseudopodia, flowing around food and engulfing it by phagocytosis. Paramecium is covered with cilia that beat in waves.",
-              "An oral groove sweeps food into a food vacuole, and contractile vacuoles pump out excess water.",
+              "Protista are eukaryotes that are mostly single-celled. Amoeba moves and feeds with pseudopodia, flowing around food and engulfing it by phagocytosis. Paramecium is covered with cilia that beat in waves, and an oral groove sweeps food into a food vacuole, and contractile vacuoles pump out excess water.",
               "Euglena has a flagellum, a light-sensitive eyespot and chloroplasts. It photosynthesises in light but can absorb food in the dark, so it is mixotrophic. Protists reproduce mainly by binary fission, and Paramecium can exchange genetic material by conjugation.",
               "Contractile vacuoles also keep the cell from bursting in fresh water."
             ],
@@ -1566,8 +1580,7 @@
           "content": {
             "heading": "Telling the two kingdoms apart",
             "paragraphs": [
-              "Start with the nucleus. If there is no nuclear membrane, the organism is Monera. If there is a true nucleus, it is eukaryotic.",
-              "Then look at the organelles and the body. A protist has membrane-bound organelles and is usually a single cell.",
+              "Start with the nucleus. If there is no nuclear membrane, the organism is Monera. If there is a true nucleus, it is eukaryotic, and then look at the organelles and the body, and a protist has membrane-bound organelles and is usually a single cell.",
               "Nutrition and movement are secondary clues. Euglena is green, but it is a protist, not a plant, because it is unicellular and has no tissues. Blue-green algae are green and photosynthetic, but they are bacteria because they have no nucleus or chloroplasts.",
               "Amoeba has no fixed shape, so a drawing of a round cell is not Amoeba. Monera and Protista are legacy groupings: modern taxonomy splits bacteria into domains and protists into several groups, but exams still use these kingdom names."
             ],
@@ -1664,8 +1677,7 @@
           "content": {
             "heading": "The body of a fungus",
             "paragraphs": [
-              "A fungus is made of thread-like hyphae. A mass of hyphae is a mycelium, which spreads through soil, bread or dead wood. The cell wall is made of chitin, not cellulose, and the cells store carbohydrate as glycogen, not starch.",
-              "Fungi have no chlorophyll, so they cannot photosynthesise.",
+              "A fungus is made of thread-like hyphae. A mass of hyphae is a mycelium, which spreads through soil, bread or dead wood. The cell wall is made of chitin, not cellulose, and the cells store carbohydrate as glycogen, not starch, and Fungi have no chlorophyll, so they cannot photosynthesise.",
               "Some fungi are unicellular, such as yeast. Most are multicellular, such as Rhizopus and mushrooms. The visible mushroom is only the fruiting body.",
               "Most of the organism is the mycelium hidden in the substrate. The fruiting body releases spores."
             ],
@@ -1751,11 +1763,9 @@
           "content": {
             "heading": "Reproduction and importance",
             "paragraphs": [
-              "Fungi reproduce by spores. Rhizopus forms sporangia on upright stalks. When they burst, spores scatter, germinate and grow into new mycelia.",
-              "A mushroom produces basidiospores on its gills. Yeast reproduces asexually by budding. Many fungi also have a sexual stage, which introduces variation.",
+              "Fungi reproduce by spores. Rhizopus forms sporangia on upright stalks. When they burst, spores scatter, germinate and grow into new mycelia, and a mushroom produces basidiospores on its gills, and yeast reproduces asexually by budding, and many fungi also have a sexual stage, which introduces variation.",
               "Fungi are useful and harmful. Yeast ferments sugar in bread and brewing. Mushrooms are food.",
-              "Penicillium yields penicillin. Fungi decompose dead matter and recycle nutrients. They also spoil food, cause crop diseases such as rust and smut, and cause human infections.",
-              "Some mushrooms are poisonous."
+              "Penicillium yields penicillin. Fungi decompose dead matter and recycle nutrients. They also spoil food, cause crop diseases such as rust and smut, and cause human infections, and some mushrooms are poisonous."
             ],
             "bullets": [
               "Spores are the main dispersal unit.",
@@ -1822,9 +1832,7 @@
             "paragraphs": [
               "A Rhizopus spore is a single cell with a thick wall. When it lands on damp bread it absorbs water, germinates and sends out a hypha. The hypha branches into a mycelium, and special hyphae called stolons run across the surface while rhizoids anchor the mould and absorb food.",
               "When food runs short, upright sporangiophores rise from the mycelium. Each swells at the tip into a sporangium, where hundreds of haploid spores form by mitosis. The sporangium dries, splits and releases the spores, which scatter in air and start the cycle again.",
-              "Rhizopus can also reproduce sexually. When two compatible mating types meet, their hyphal tips fuse and form a thick-walled zygospore. The zygospore survives heat and drought, then undergoes meiosis and produces a germ sporangium that releases haploid spores, which is why mould returns after bread is dried or frozen: the spores and zygospores wait.",
-              "The sporangium is the black pinhead on mouldy bread; the pale threads underneath are the mycelium.",
-              "Air currents carry the spores long distances, and one mouldy slice can contaminate a whole kitchen."
+              "Rhizopus can also reproduce sexually. When two compatible mating types meet, their hyphal tips fuse and form a thick-walled zygospore. The zygospore survives heat and drought, then undergoes meiosis and produces a germ sporangium that releases haploid spores, which is why mould returns after bread is dried or frozen: the spores and zygospores wait, and the sporangium is the black pinhead on mouldy bread; the pale threads underneath are the mycelium, and air currents carry the spores long distances, and one mouldy slice can contaminate a whole kitchen."
             ],
             "bullets": [
               "A spore germinates into hyphae, which branch into a mycelium.",
@@ -1838,8 +1846,7 @@
           "content": {
             "heading": "Go deeper: How a fungus digests food outside its body",
             "paragraphs": [
-              "A fungus cannot engulf food the way Amoeba does. It secretes enzymes such as amylase, protease and lipase into the material it grows on, breaking starch, protein and fat into small soluble molecules. The hyphae then absorb those molecules across the cell wall and membrane.",
-              "This absorptive feeding explains where moulds grow: they need a moist surface, a food source and oxygen, and jam, leather, timber and stored grain all support mould if moisture is present. The same process is useful in food production: yeast ferments sugar to ethanol and carbon dioxide, and Penicillium secretes penicillin.",
+              "A fungus cannot engulf food the way Amoeba does. It secretes enzymes such as amylase, protease and lipase into the material it grows on, breaking starch, protein and fat into small soluble molecules. The hyphae then absorb those molecules across the cell wall and membrane, and this absorptive feeding explains where moulds grow: they need a moist surface, a food source and oxygen, and jam, leather, timber and stored grain all support mould if moisture is present, and the same process is useful in food production: yeast ferments sugar to ethanol and carbon dioxide, and Penicillium secretes penicillin.",
               "Not every fungus is a saprophyte. Parasitic fungi feed on living hosts and cause diseases such as ringworm and athlete's foot. Mutualistic fungi live with roots as mycorrhizae, trading water and minerals for sugars, and lichens pair a fungus with an alga or cyanobacterium.",
               "The fungus grows fastest in warm, damp conditions, which is why food spoils quickly in a humid kitchen. In a lichen, the fungus provides shelter while the algal partner photosynthesises."
             ],
@@ -1855,8 +1862,7 @@
           "content": {
             "heading": "Go deeper: Why fungi are not plants",
             "paragraphs": [
-              "A fungus looks plant-like, but its cell wall is made of chitin, not cellulose, and it stores glycogen rather than starch. It has no chlorophyll and cannot photosynthesise, so it must obtain ready-made food.",
-              "Its body is a network of hyphae rather than leaves, stems and roots. A mushroom is only the fruiting body; most of the organism is the mycelium hidden in the substrate. Fungi reproduce mainly by spores, and yeasts are unicellular fungi that reproduce by budding.",
+              "A fungus looks plant-like, but its cell wall is made of chitin, not cellulose, and it stores glycogen rather than starch. It has no chlorophyll and cannot photosynthesise, so it must obtain ready-made food. Its body is a network of hyphae rather than leaves, stems and roots, and a mushroom is only the fruiting body; most of the organism is the mycelium hidden in the substrate, and Fungi reproduce mainly by spores, and yeasts are unicellular fungi that reproduce by budding.",
               "These differences matter in exams: bacteria are prokaryotic, while fungi are eukaryotic with a nucleus. Fungi are not plants, and mould is not a bacterium. The safe discrimination rule is: chitin wall, no chlorophyll, absorptive feeding and spores point to fungi.",
               "The chitin wall is a useful drug target because human cells do not make chitin. Yeasts are used in bread and palm wine, while moulds spoil stored food and damage damp buildings."
             ],
@@ -1902,8 +1908,7 @@
           "content": {
             "heading": "Thallophyta and Bryophyta",
             "paragraphs": [
-              "Thallophyta have a thallus, a body that is not divided into true roots, stems and leaves. Spirogyra is a filamentous green alga that lives in fresh water. Its cells contain spiral chloroplasts and pyrenoids that store starch.",
-              "It reproduces by fragmentation and conjugation.",
+              "Thallophyta have a thallus, a body that is not divided into true roots, stems and leaves. Spirogyra is a filamentous green alga that lives in fresh water. Its cells contain spiral chloroplasts and pyrenoids that store starch, and it reproduces by fragmentation and conjugation.",
               "Bryophyta include mosses and liverworts, such as Marchantia. They have rhizoids instead of true roots, no vascular tissue, and a dominant gametophyte generation. The leafy moss plant is the gametophyte; it produces gametes, and the fertilised egg grows into a stalked sporophyte that releases spores.",
               "Their sperm must swim through a film of water to reach the egg, so they live in damp, shaded places and stay small."
             ],
@@ -1931,8 +1936,7 @@
           "content": {
             "heading": "Pteridophyta and Spermatophyta",
             "paragraphs": [
-              "Pteridophyta are ferns such as Dryopteris. They have true roots, stems and leaves, and vascular tissue of xylem and phloem, so they can grow taller than mosses. They still reproduce by spores and their sperm need water, so ferns are common in damp places.",
-              "The fern plant is the sporophyte; its spores grow into a small gametophyte that produces gametes, and the fertilised egg grows into a new fern.",
+              "Pteridophyta are ferns such as Dryopteris. They have true roots, stems and leaves, and vascular tissue of xylem and phloem, so they can grow taller than mosses. They still reproduce by spores and their sperm need water, so ferns are common in damp places, and the fern plant is the sporophyte; its spores grow into a small gametophyte that produces gametes, and the fertilised egg grows into a new fern.",
               "Spermatophyta reproduce by seeds. Gymnosperms, such as cycads and conifers, bear naked seeds in cones. Angiosperms bear seeds enclosed in fruits.",
               "They flower and are divided into monocots, such as maize, and dicots, such as water leaf. Pollen carries the male gamete, so fertilisation no longer needs water. The ovule becomes a seed, and the seed germinates into a new plant."
             ],
@@ -1962,8 +1966,7 @@
             "paragraphs": [
               "The divisions show a series of innovations. Vascular tissue made tall growth possible. The seed protected the embryo and stored food.",
               "Pollen removed the need for swimming sperm. Flowers and fruits improved pollination and seed dispersal. Each step reduced dependence on water.",
-              "The trend is not a straight line from one living plant to another, and lower plants are not failures. Mosses and ferns still thrive in damp habitats. But the sequence explains why a mango tree can grow on dry land while a moss cannot.",
-              "Each innovation widened the range of habitats a plant could occupy. Thallophyta is a legacy grouping; modern botany places green algae among protists or plants, but the exam uses the traditional division."
+              "The trend is not a straight line from one living plant to another, and lower plants are not failures. Mosses and ferns still thrive in damp habitats. But the sequence explains why a mango tree can grow on dry land while a moss cannot, and each innovation widened the range of habitats a plant could occupy, and thallophyta is a legacy grouping; modern botany places green algae among protists or plants, but the exam uses the traditional division."
             ],
             "bullets": [
               "Vascular tissue solved transport.",
@@ -2041,8 +2044,7 @@
             "paragraphs": [
               "Plants switch between two bodies. The gametophyte is haploid and makes gametes by mitosis. The sporophyte is diploid and makes spores by meiosis, and in mosses the leafy plant is the gametophyte, while the stalked capsule that grows from it is the sporophyte, which depends on the gametophyte for food.",
               "A moss spore germinates into a protonema, a green thread that grows into the leafy gametophyte. Antheridia release sperm that swim through a water film to archegonia. The fertilised egg grows into the sporophyte, and its capsule releases spores.",
-              "In ferns the sporophyte is the large plant with fronds. Sori on the underside of a frond produce spores. A spore grows into a small, heart-shaped prothallus, the gametophyte, which bears antheridia and archegonia, and water is still needed for the sperm to swim, so ferns are tied to damp habitats even though the sporophyte is independent.",
-              "The gametophyte and sporophyte stages look so different that early botanists described them as separate plants. That is why the moss capsule and the leafy moss were once given different names."
+              "In ferns the sporophyte is the large plant with fronds. Sori on the underside of a frond produce spores. A spore grows into a small, heart-shaped prothallus, the gametophyte, which bears antheridia and archegonia, and water is still needed for the sperm to swim, so ferns are tied to damp habitats even though the sporophyte is independent, and the gametophyte and sporophyte stages look so different that early botanists described them as separate plants, and that is why the moss capsule and the leafy moss were once given different names."
             ],
             "bullets": [
               "Gametophyte: haploid, makes gametes; sporophyte: diploid, makes spores.",
@@ -2056,8 +2058,7 @@
           "content": {
             "heading": "Go deeper: From pollen to seed",
             "paragraphs": [
-              "In seed plants the gametophytes are tiny and dependent: a pollen grain is the male gametophyte, and the ovule contains the female gametophyte and an egg. Pollination is the transfer of pollen to the stigma or ovule, while fertilisation is the fusion of gametes and happens later.",
-              "When pollen lands, it grows a pollen tube through the style to the ovule. Two male gametes travel down the tube. In angiosperms one fuses with the egg to form the zygote, and the other fuses with two polar nuclei to form the endosperm, the food store of the seed; this is double fertilisation.",
+              "In seed plants the gametophytes are tiny and dependent: a pollen grain is the male gametophyte, and the ovule contains the female gametophyte and an egg. Pollination is the transfer of pollen to the stigma or ovule, while fertilisation is the fusion of gametes and happens later. When pollen lands, it grows a pollen tube through the style to the ovule, and two male gametes travel down the tube, and in angiosperms one fuses with the egg to form the zygote, and the other fuses with two polar nuclei to form the endosperm, the food store of the seed; this is double fertilisation.",
               "The ovule becomes the seed, with the zygote as embryo and the integuments as the seed coat. The ovary becomes the fruit. Gymnosperms have no ovary, so their seeds sit naked on cone scales, while a monocot seed has one cotyledon, such as maize, and a dicot has two, such as cowpea.",
               "The endosperm is why cereal grains such as maize and rice are starchy foods. The seed coat protects the embryo until conditions are right for germination."
             ],
@@ -2073,8 +2074,7 @@
           "content": {
             "heading": "Go deeper: Reading the plant kingdom for exams",
             "paragraphs": [
-              "The divisions form a discrimination chain: thallophytes such as Spirogyra have no true roots, stems or leaves; bryophytes have rhizoids, no vascular tissue and a dominant gametophyte; pteridophytes have vascular tissue and true roots, stems and leaves but no seeds; spermatophytes have seeds.",
-              "Within Spermatophyta, gymnosperms bear naked seeds, usually in cones, while angiosperms bear seeds enclosed in fruits. Angiosperms split into monocots and dicots. The presence of a seed is the fastest way to separate a fern from a flowering plant; the absence of vascular tissue separates a moss from a fern.",
+              "The divisions form a discrimination chain: thallophytes such as Spirogyra have no true roots, stems or leaves; bryophytes have rhizoids, no vascular tissue and a dominant gametophyte; pteridophytes have vascular tissue and true roots, stems and leaves but no seeds; spermatophytes have seeds. Within Spermatophyta, gymnosperms bear naked seeds, usually in cones, while angiosperms bear seeds enclosed in fruits. Angiosperms split into monocots and dicots, and the presence of a seed is the fastest way to separate a fern from a flowering plant; the absence of vascular tissue separates a moss from a fern.",
               "A common trap is to call Spirogyra a bryophyte because it is green and grows in water. Spirogyra is a thallophyte, a green alga. Another trap is to say mosses have no roots at all: they have rhizoids, which anchor them but do not absorb like true roots.",
               "A fern frond with sori is a sporophyte making spores, not a flower making seeds. Moss capsules also make spores, but the leafy moss plant makes gametes."
             ],
@@ -2341,8 +2341,7 @@
           "content": {
             "heading": "Arthropoda and Mollusca",
             "paragraphs": [
-              "Arthropoda have a hard exoskeleton of chitin, jointed appendages and a segmented body. They include insects, crustaceans, arachnids and millipedes. The exoskeleton protects the body but must be shed by moulting for growth.",
-              "Arthropoda is the largest phylum. It contains more species than all the other animal phyla combined.",
+              "Arthropoda have a hard exoskeleton of chitin, jointed appendages and a segmented body. They include insects, crustaceans, arachnids and millipedes. The exoskeleton protects the body but must be shed by moulting for growth, and arthropoda is the largest phylum, and it contains more species than all the other animal phyla combined.",
               "Mollusca have a soft unsegmented body, a muscular foot, a mantle and usually a shell. Snails, slugs, clams and octopuses are molluscs. The mantle secretes the shell, and the radula is a rasping tongue used for feeding.",
               "Snails live in damp places on land and in water. Coelenterata is now called Cnidaria in modern taxonomy; the body plan is the same, so expect either name in questions."
             ],
@@ -2441,8 +2440,7 @@
             "paragraphs": [
               "An adult Taenia lives in the human small intestine. It attaches by a scolex bearing hooks and suckers, and grows a chain of proglottids. Mature proglottids produce eggs, and gravid proglottids break off and pass out in faeces.",
               "A pig eats contaminated food or water and swallows the eggs. In the pig's intestine an egg hatches into an oncosphere, a six-hooked larva that bores through the gut wall into the blood. It settles in muscle and develops into a cysticercus, a fluid-filled bladder with an invaginated scolex.",
-              "A human is infected by eating undercooked pork containing cysticerci. The scolex turns out and attaches to the intestine, and the worm matures. Taenia solium, the pork tapeworm, can also infect humans who swallow its eggs, causing cysticercosis when larvae encyst in tissues such as the brain, while Taenia saginata, the beef tapeworm, has cattle as its intermediate host.",
-              "The tapeworm has no mouth or gut, so it does not eat the host's food directly; it absorbs already digested nutrients through its skin. Gravid proglottids look like small white grains in the stool."
+              "A human is infected by eating undercooked pork containing cysticerci. The scolex turns out and attaches to the intestine, and the worm matures. Taenia solium, the pork tapeworm, can also infect humans who swallow its eggs, causing cysticercosis when larvae encyst in tissues such as the brain, while Taenia saginata, the beef tapeworm, has cattle as its intermediate host, and the tapeworm has no mouth or gut, so it does not eat the host's food directly; it absorbs already digested nutrients through its skin, and gravid proglottids look like small white grains in the stool."
             ],
             "bullets": [
               "Gravid proglottids release eggs in faeces.",
@@ -2458,8 +2456,7 @@
             "paragraphs": [
               "Body plans are compared on three axes: symmetry, germ layers and body cavity. Hydra is radially symmetrical with two germ layers, while flatworms, roundworms, annelids, arthropods and molluscs are bilaterally symmetrical with three. Flatworms are acoelomate, roundworms are pseudocoelomate, and annelids, arthropods and molluscs are coelomate.",
               "A true coelom is a cavity lined by mesoderm on both sides. A pseudocoelom is not fully lined by mesoderm. The coelom gives space for organs, allows the gut to move independently and can act as a hydrostatic skeleton.",
-              "Segmentation is another advance. Annelids have repeated body segments with a fluid-filled coelom in each, so muscles can squeeze one region while another anchors. Arthropods show fused segments and jointed appendages, and molluscs are unsegmented with a muscular foot and mantle, so these features, not size, are what exams compare.",
-              "Cephalisation is the concentration of sense organs and nerve tissue at the front end, and it is most obvious in active, bilaterally symmetrical animals. Radial animals such as Hydra can meet the environment from any direction, so they have no front end."
+              "Segmentation is another advance. Annelids have repeated body segments with a fluid-filled coelom in each, so muscles can squeeze one region while another anchors. Arthropods show fused segments and jointed appendages, and molluscs are unsegmented with a muscular foot and mantle, so these features, not size, are what exams compare, and cephalisation is the concentration of sense organs and nerve tissue at the front end, and it is most obvious in active, bilaterally symmetrical animals, and radial animals such as Hydra can meet the environment from any direction, so they have no front end."
             ],
             "bullets": [
               "Hydra: radial, two layers, no coelom.",
@@ -2473,8 +2470,7 @@
           "content": {
             "heading": "Go deeper: How each phylum moves and feeds",
             "paragraphs": [
-              "Hydra moves by somersaulting or gliding on its basal disc, and feeds by discharging nematocysts from tentacles to paralyse small prey, then pushing food into the single opening.",
-              "Taenia has no gut, so it absorbs digested food through its body surface and relies on the host's digestion. Ascaris has a complete gut and a tough cuticle; it moves by whipping the body against the pseudocoelomic fluid. The earthworm crawls by alternating circular and longitudinal muscles against the coelom, gripping with setae.",
+              "Hydra moves by somersaulting or gliding on its basal disc, and feeds by discharging nematocysts from tentacles to paralyse small prey, then pushing food into the single opening. Taenia has no gut, so it absorbs digested food through its body surface and relies on the host's digestion. Ascaris has a complete gut and a tough cuticle; it moves by whipping the body against the pseudocoelomic fluid, and the earthworm crawls by alternating circular and longitudinal muscles against the coelom, gripping with setae.",
               "Arthropods move with jointed limbs and moult the exoskeleton to grow. Molluscs glide on a muscular foot, and many scrape food with a radula. Each method fits the body plan: a hydrostatic skeleton, a jointed exoskeleton or a muscular foot.",
               "A hydrostatic skeleton works because fluid cannot be compressed: when circular muscles contract the body lengthens, and when longitudinal muscles contract it shortens. Setae are bristles that grip the soil and stop the worm slipping backwards, and arthropods must moult because the exoskeleton cannot stretch."
             ],
@@ -2522,8 +2518,7 @@
             "paragraphs": [
               "An insect has three body regions: head, thorax and abdomen. The head carries a pair of antennae, compound eyes and mouthparts. The thorax has three pairs of jointed legs and usually two pairs of wings.",
               "The abdomen contains the digestive and reproductive organs. Breathing is through spiracles and tracheae, not lungs.",
-              "The exoskeleton is made of chitin. It protects the insect and reduces water loss, but it cannot stretch, so the insect must moult to grow. Insects have an open circulatory system, with haemolymph pumped by a dorsal heart.",
-              "Their small size and tracheal system limit them to relatively short diffusion paths."
+              "The exoskeleton is made of chitin. It protects the insect and reduces water loss, but it cannot stretch, so the insect must moult to grow. Insects have an open circulatory system, with haemolymph pumped by a dorsal heart, and their small size and tracheal system limit them to relatively short diffusion paths."
             ],
             "bullets": [
               "Head, thorax and abdomen; three pairs of legs.",
@@ -2551,8 +2546,7 @@
             "paragraphs": [
               "Metamorphosis is the change in body form between the young and the adult. In complete metamorphosis the insect passes through four stages: egg, larva, pupa and adult. Butterflies, mosquitoes, houseflies, bees and beetles do this.",
               "The larva is often a feeding machine, while the adult specialises in reproduction and dispersal. The larva moults several times before it pupates.",
-              "In incomplete metamorphosis there are only three stages: egg, nymph and adult. The nymph resembles the adult but is smaller and has no wings or only wing buds. Cockroaches, grasshoppers, termites and dragonflies do this.",
-              "There is no pupal stage, and the nymph moults repeatedly."
+              "In incomplete metamorphosis there are only three stages: egg, nymph and adult. The nymph resembles the adult but is smaller and has no wings or only wing buds. Cockroaches, grasshoppers, termites and dragonflies do this, and there is no pupal stage, and the nymph moults repeatedly."
             ],
             "bullets": [
               "Complete: egg, larva, pupa and adult.",
@@ -2610,8 +2604,7 @@
             "paragraphs": [
               "Insects are useful. Bees, wasps and butterflies pollinate crops and wild plants. Bees give honey and wax; silkworms give silk; lac insects give shellac.",
               "Insects are food for birds, fish and reptiles, and some feed on pests as biological control agents. They decompose dung and dead matter, recycling nutrients.",
-              "Insects are also harmful. Locusts and armyworms destroy crops; weevils and beetles damage stored grain; aphids suck sap and transmit plant viruses. Mosquitoes transmit malaria, yellow fever and dengue; tsetse flies transmit sleeping sickness; houseflies carry typhoid and cholera organisms.",
-              "The same insect can be useful at one stage and harmful at another."
+              "Insects are also harmful. Locusts and armyworms destroy crops; weevils and beetles damage stored grain; aphids suck sap and transmit plant viruses. Mosquitoes transmit malaria, yellow fever and dengue; tsetse flies transmit sleeping sickness; houseflies carry typhoid and cholera organisms, and the same insect can be useful at one stage and harmful at another."
             ],
             "bullets": [
               "Pollination, honey, silk, wax and biological control.",
@@ -2676,8 +2669,7 @@
           "content": {
             "heading": "Go deeper: Metamorphosis, stage by stage",
             "paragraphs": [
-              "Complete metamorphosis has four stages: egg, larva, pupa and adult; the larva feeds and grows, moulting several times, and each stage between moults is an instar. The final larval instar becomes a pupa, inside which larval tissues are broken down and adult structures form.",
-              "Hormones control the change: the brain releases a hormone that stimulates the prothoracic glands to make ecdysone, which triggers moulting. Juvenile hormone keeps the next moult larval. When juvenile hormone falls, the next moult produces a pupa, and its absence produces an adult.",
+              "Complete metamorphosis has four stages: egg, larva, pupa and adult; the larva feeds and grows, moulting several times, and each stage between moults is an instar. The final larval instar becomes a pupa, inside which larval tissues are broken down and adult structures form. Hormones control the change: the brain releases a hormone that stimulates the prothoracic glands to make ecdysone, which triggers moulting, and juvenile hormone keeps the next moult larval, and when juvenile hormone falls, the next moult produces a pupa, and its absence produces an adult.",
               "Incomplete metamorphosis has three stages: egg, nymph and adult. The nymph resembles a small adult, lives in the same habitat and gradually develops wings and reproductive organs. There is no pupa, and grasshoppers, cockroaches and termites develop this way, while butterflies, mosquitoes, houseflies, bees and beetles are complete.",
               "The pupa is not a resting stage: inside it, larval organs are dismantled and adult wings, legs and reproductive organs are built. A butterfly pupa is called a chrysalis, and a fly pupa is enclosed in a hardened case."
             ],
@@ -2693,8 +2685,7 @@
           "content": {
             "heading": "Go deeper: How an insect breathes without lungs",
             "paragraphs": [
-              "Air enters through spiracles, small openings along the sides of the thorax and abdomen. Each spiracle leads into a trachea, and the tracheae branch into fine tracheoles that reach individual cells. Oxygen diffuses directly through the tracheole walls into the tissues, and carbon dioxide diffuses out.",
-              "The system works without blood as an oxygen carrier. In large, active insects, abdominal pumping and wing movements ventilate the tracheae. Spiracles can close to reduce water loss, which is why insects survive in dry places.",
+              "Air enters through spiracles, small openings along the sides of the thorax and abdomen. Each spiracle leads into a trachea, and the tracheae branch into fine tracheoles that reach individual cells. Oxygen diffuses directly through the tracheole walls into the tissues, and carbon dioxide diffuses out, and the system works without blood as an oxygen carrier, and in large, active insects, abdominal pumping and wing movements ventilate the tracheae, and spiracles can close to reduce water loss, which is why insects survive in dry places.",
               "Diffusion is efficient only over short distances. That is one reason insects stay small; a very large insect could not move enough oxygen to its deepest tissues through tracheoles alone. Aquatic insect larvae often use gills or take air at the surface.",
               "Tracheae are reinforced with spiral ridges of chitin, so they stay open even when the body bends. Some aquatic larvae, such as mosquito larvae, hang from the surface and draw air through a siphon, while others have gills that absorb oxygen dissolved in water. The same tracheal system supplies the flight muscles, which need more oxygen than any other tissue."
             ],
@@ -2712,8 +2703,7 @@
             "paragraphs": [
               "Mouthpart type predicts both the food and the damage. Biting-chewing mouthparts, as in grasshoppers and beetles, cut plant tissue and leave ragged edges. Piercing-sucking mouthparts, as in mosquitoes, aphids and tsetse flies, penetrate tissue and suck fluids; they can transmit pathogens.",
               "Siphoning mouthparts, as in butterflies and moths, form a coiled tube for nectar. Sponging mouthparts, as in houseflies, mop up liquids and can pick up microbes from filth. Chewing-lapping mouthparts, as in bees, chew wax and lap nectar.",
-              "Control follows the damage. Chewing pests are attacked with stomach poisons or mechanical barriers; sucking pests need systemic or contact insecticides, and disease vectors need habitat control and personal protection. Mouthparts also explain why a butterfly is a pollinator while its caterpillar is a leaf eater.",
-              "Aphids are piercing-sucking pests that weaken plants and can inject viruses. Locusts are biting-chewing pests that strip leaves and can destroy a whole field, while houseflies do not bite but their sponging mouthparts pick up bacteria from refuse and deposit them on food."
+              "Control follows the damage. Chewing pests are attacked with stomach poisons or mechanical barriers; sucking pests need systemic or contact insecticides, and disease vectors need habitat control and personal protection. Mouthparts also explain why a butterfly is a pollinator while its caterpillar is a leaf eater, and aphids are piercing-sucking pests that weaken plants and can inject viruses, and locusts are biting-chewing pests that strip leaves and can destroy a whole field, while houseflies do not bite but their sponging mouthparts pick up bacteria from refuse and deposit them on food."
             ],
             "bullets": [
               "Biting-chewing: cuts tissue. Piercing-sucking: drains fluid and can carry disease.",
@@ -2757,8 +2747,7 @@
           "content": {
             "heading": "Pisces and Amphibia",
             "paragraphs": [
-              "Pisces are fish. They have a streamlined body, scales, fins and gills. Cartilaginous fish, such as sharks and rays, have a skeleton of cartilage; bony fish, such as tilapia and catfish, have a bony skeleton.",
-              "Most fish reproduce by external fertilisation, releasing eggs and sperm into water, and their heart has two chambers. The eggs hatch into fry.",
+              "Pisces are fish. They have a streamlined body, scales, fins and gills. Cartilaginous fish, such as sharks and rays, have a skeleton of cartilage; bony fish, such as tilapia and catfish, have a bony skeleton, and most fish reproduce by external fertilisation, releasing eggs and sperm into water, and their heart has two chambers, and the eggs hatch into fry.",
               "Amphibia include frogs and toads. Their moist, scale-less skin allows gas exchange, and they also have lungs. They lay jelly-covered eggs in water, and the young tadpole has gills and a tail.",
               "Metamorphosis changes the tadpole into an air-breathing adult. The tadpole grows legs and loses its tail as it becomes a frog. Amphibians have a three-chambered heart and still depend on water for reproduction."
             ],
@@ -2786,11 +2775,9 @@
           "content": {
             "heading": "Reptilia and Aves",
             "paragraphs": [
-              "Reptilia include lizards, snakes, turtles and crocodiles. They have dry skin covered with scales, and they breathe with lungs. Their eggs have leathery or hard shells that resist drying, and fertilisation is internal, so reptiles can breed on land.",
-              "They are ectothermic, using the environment to regulate body temperature. Most have a three-chambered heart, but crocodiles have four. The eggs hatch into juveniles.",
+              "Reptilia include lizards, snakes, turtles and crocodiles. They have dry skin covered with scales, and they breathe with lungs. Their eggs have leathery or hard shells that resist drying, and fertilisation is internal, so reptiles can breed on land, and they are ectothermic, using the environment to regulate body temperature, and most have a three-chambered heart, but crocodiles have four, and the eggs hatch into juveniles.",
               "Aves are birds. They have feathers, a beak, wings and hollow bones. Their heart has four chambers, and they are endothermic, generating their own heat.",
-              "Birds lay hard-shelled eggs and incubate them. Their lungs connect to air sacs, which make gas exchange efficient for flight. Birds have no teeth; the beak is shaped for the diet.",
-              "The eggs hatch into chicks."
+              "Birds lay hard-shelled eggs and incubate them. Their lungs connect to air sacs, which make gas exchange efficient for flight. Birds have no teeth; the beak is shaped for the diet, and the eggs hatch into chicks."
             ],
             "bullets": [
               "Reptilia: dry scales, shelled eggs, internal fertilisation and ectothermy.",
@@ -2848,8 +2835,7 @@
             "paragraphs": [
               "Mammalia include humans, cows, goats, bats and whales. They have hair or fur, mammary glands that produce milk, a diaphragm and a four-chambered heart. Most give birth to live young and care for them.",
               "Mammals are endothermic and have differentiated teeth for different diets. Economically, fish, poultry and livestock provide food, while cattle, sheep and goats add hides, wool and manure; some vertebrates are pests or disease carriers.",
-              "The vertebrate classes show a trend. Gills give way to lungs, external fertilisation to internal fertilisation, jelly eggs to shelled eggs, and cold-bloodedness to warm-bloodedness. Each change reduces dependence on water.",
-              "The trend is not a straight line, and each class still has adaptations to its own habitat."
+              "The vertebrate classes show a trend. Gills give way to lungs, external fertilisation to internal fertilisation, jelly eggs to shelled eggs, and cold-bloodedness to warm-bloodedness. Each change reduces dependence on water, and the trend is not a straight line, and each class still has adaptations to its own habitat."
             ],
             "bullets": [
               "Mammalia: hair, mammary glands, milk and a four-chambered heart.",
@@ -2914,8 +2900,7 @@
           "content": {
             "heading": "Go deeper: Metamorphosis in a frog",
             "paragraphs": [
-              "A frog egg is laid in water and covered by jelly. It hatches into a tadpole with external gills, a long tail and a horny beak. The tadpole feeds on plant material and grows, and its external gills are replaced by internal gills.",
-              "As metamorphosis begins, the hind limbs appear first, then the forelimbs; the tail is resorbed, the mouth widens and the gut shortens as the animal changes from a herbivore to a carnivore. The gills disappear, the lungs expand and the skin becomes thicker.",
+              "A frog egg is laid in water and covered by jelly. It hatches into a tadpole with external gills, a long tail and a horny beak. The tadpole feeds on plant material and grows, and its external gills are replaced by internal gills, and as metamorphosis begins, the hind limbs appear first, then the forelimbs; the tail is resorbed, the mouth widens and the gut shortens as the animal changes from a herbivore to a carnivore, and the gills disappear, the lungs expand and the skin becomes thicker.",
               "Thyroxine from the thyroid gland drives the change. The adult returns to water to breed but breathes air and can live on land. The two lives are not separate animals: the tadpole and the frog are the same individual at different stages.",
               "The tadpole has a two-chambered heart like a fish, and the adult develops a three-chambered heart. The adult also develops eyelids and a nictitating membrane, which protect the eyes out of water. The adult frog has no tail, and its hind legs are long and muscular for jumping."
             ],
@@ -2931,8 +2916,7 @@
           "content": {
             "heading": "Go deeper: How the heart and circulation changed",
             "paragraphs": [
-              "A fish has a two-chambered heart: one atrium receives deoxygenated blood and one ventricle pumps it to the gills. The blood loses oxygen in the gills and then flows to the body, so the circuit is single and the pressure falls before the tissues.",
-              "An amphibian has two atria and one ventricle. Oxygenated blood from the skin and lungs enters the left atrium, deoxygenated blood enters the right, and both mix in the ventricle. A reptile also has three chambers, but a partial septum reduces mixing; crocodilians have four.",
+              "A fish has a two-chambered heart: one atrium receives deoxygenated blood and one ventricle pumps it to the gills. The blood loses oxygen in the gills and then flows to the body, so the circuit is single and the pressure falls before the tissues. An amphibian has two atria and one ventricle, and oxygenated blood from the skin and lungs enters the left atrium, deoxygenated blood enters the right, and both mix in the ventricle, and a reptile also has three chambers, but a partial septum reduces mixing; crocodilians have four.",
               "Birds and mammals have four chambers and double circulation. The right side sends blood to the lungs and the left side sends oxygenated blood to the body at high pressure. Complete separation supports the high oxygen demand of endothermy and flight.",
               "Blood pressure is highest in the aorta of birds and mammals because the left ventricle pumps against the resistance of the whole body. In a fish, the gills receive the full force of the ventricle, but the body receives blood after the pressure has dropped."
             ],
@@ -2948,8 +2932,7 @@
           "content": {
             "heading": "Go deeper: Eggs, fertilisation and the move to land",
             "paragraphs": [
-              "Fish usually release eggs and sperm into water, where fertilisation happens outside the body. A fish may lay thousands of eggs because most are eaten or fail. Amphibians also lay jelly-covered eggs in water, and the larvae remain aquatic.",
-              "Reptiles fertilise internally and lay eggs with a leathery or hard shell. The amniotic egg contains four membranes: the amnion surrounds the embryo in fluid, the yolk sac supplies food, the allantois stores waste and helps gas exchange, and the chorion surrounds the whole embryo. The shell slows water loss, so reptiles can breed away from water.",
+              "Fish usually release eggs and sperm into water, where fertilisation happens outside the body. A fish may lay thousands of eggs because most are eaten or fail. Amphibians also lay jelly-covered eggs in water, and the larvae remain aquatic, and reptiles fertilise internally and lay eggs with a leathery or hard shell, and the amniotic egg contains four membranes: the amnion surrounds the embryo in fluid, the yolk sac supplies food, the allantois stores waste and helps gas exchange, and the chorion surrounds the whole embryo, and the shell slows water loss, so reptiles can breed away from water.",
               "Birds lay hard-shelled eggs and incubate them. Mammals usually retain the embryo inside the uterus, nourish it through a placenta and feed the young with milk. Each step reduces the young's dependence on standing water.",
               "The amniotic egg is often called the key invention that freed reptiles from water. The shell is porous, so oxygen enters and carbon dioxide leaves, but water loss is limited. A mammal embryo is attached to the uterus by the placenta, and the umbilical cord carries nutrients and oxygen."
             ],
@@ -3207,8 +3190,7 @@
             "paragraphs": [
               "A honeybee colony has one queen, thousands of sterile female workers and a few hundred male drones. The queen lays eggs and produces pheromones that suppress worker reproduction and keep the colony together. Workers are female.",
               "Their jobs change with age: cleaning, nursing, comb building, guarding and foraging. They have pollen baskets, wax glands and a sting.",
-              "Drones are male. They fertilise a new queen on a mating flight and die after mating. They have no sting and are expelled before a period of food shortage.",
-              "Only females have stings, because the sting is a modified ovipositor."
+              "Drones are male. They fertilise a new queen on a mating flight and die after mating. They have no sting and are expelled before a period of food shortage, and only females have stings, because the sting is a modified ovipositor."
             ],
             "bullets": [
               "One queen, many sterile female workers and a few male drones.",
@@ -3361,8 +3343,7 @@
           "content": {
             "heading": "Bird beaks",
             "paragraphs": [
-              "A bird's beak is its main feeding tool, and its shape follows the diet. Insectivorous birds have slender, pointed beaks for picking insects; the woodpecker uses a chisel beak and a long tongue to extract grubs. Granivorous birds have short, stout, conical beaks for cracking seeds.",
-              "Nectar-feeding birds have long, slender, curved beaks for probing flowers.",
+              "A bird's beak is its main feeding tool, and its shape follows the diet. Insectivorous birds have slender, pointed beaks for picking insects; the woodpecker uses a chisel beak and a long tongue to extract grubs. Granivorous birds have short, stout, conical beaks for cracking seeds, and nectar-feeding birds have long, slender, curved beaks for probing flowers.",
               "Carnivorous birds have strong, hooked beaks for tearing flesh. Ducks have broad, flat beaks with lamellae for filtering food from water. Vultures have hooked beaks for tearing carrion.",
               "Beaks are also used for preening, nest building and defence, so a single shape can serve more than one job."
             ],
@@ -3573,8 +3554,7 @@
           "content": {
             "heading": "Mating: signal, compete, display",
             "paragraphs": [
-              "Sexual dimorphism means males and females differ in size, colour or structure. In Agama lizards, the dominant male has a bright red or orange head and a blue body, while the female is duller. The male displays and defends a territory, and the colour advertises his condition to females and rivals.",
-              "A territory secures food, shelter and mates, and reduces fighting.",
+              "Sexual dimorphism means males and females differ in size, colour or structure. In Agama lizards, the dominant male has a bright red or orange head and a blue body, while the female is duller. The male displays and defends a territory, and the colour advertises his condition to females and rivals, and a territory secures food, shelter and mates, and reduces fighting.",
               "Birds use displays: a peacock fans his tail, a male weaver builds and displays a nest, and some males feed their partners during courtship. Males also compete directly. Kob antelopes lock horns, goats butt heads, and baboons fight for dominance, though most contests are ritualised rather than fatal.",
               "Bright colours and large weapons carry costs: they attract predators and use energy."
             ],
@@ -3729,8 +3709,7 @@
           "content": {
             "heading": "Temperature regulation",
             "paragraphs": [
-              "Endotherms, such as birds and mammals, generate heat internally and keep a fairly constant body temperature. Hair, fur, feathers and blubber insulate. Sweating and vasodilation lose heat through the skin, panting loses heat through the mouth and lungs, and shivering and vasoconstriction conserve it.",
-              "Ectotherms, such as lizards, amphibians and fish, gain heat from the environment, so their body temperature varies.",
+              "Endotherms, such as birds and mammals, generate heat internally and keep a fairly constant body temperature. Hair, fur, feathers and blubber insulate. Sweating and vasodilation lose heat through the skin, panting loses heat through the mouth and lungs, and shivering and vasoconstriction conserve it, and ectotherms, such as lizards, amphibians and fish, gain heat from the environment, so their body temperature varies.",
               "A lizard basks by flattening its body and turning broadside to the sun, then retreats to shade when it is too hot. Hibernation is winter dormancy, with low metabolism and stored fat. Aestivation is summer drought dormancy, used by lungfish and some snails.",
               "The two look similar, but the season and the trigger are different."
             ],
@@ -3758,8 +3737,7 @@
           "content": {
             "heading": "Water conservation in animals",
             "paragraphs": [
-              "Desert animals reduce water loss in several ways. Thick fur or scales limit evaporation, the kidneys produce concentrated urine, the faeces are dry, and sweat glands are few. Many are nocturnal or burrow during the day.",
-              "The camel stores fat in its hump as an energy reserve, while its kidneys and nose reduce water loss.",
+              "Desert animals reduce water loss in several ways. Thick fur or scales limit evaporation, the kidneys produce concentrated urine, the faeces are dry, and sweat glands are few. Many are nocturnal or burrow during the day, and the camel stores fat in its hump as an energy reserve, while its kidneys and nose reduce water loss.",
               "Reptile scales are waterproof keratin, and pangolin scales, the only mammalian scales, are keratin too; both reduce water loss and add protection. Insects have a waxy cuticle, spiracles that can close, and Malpighian tubules that concentrate waste. Freshwater fish excrete dilute urine, while marine fish drink water and excrete excess salts.",
               "Each strategy keeps the body's water and salt balance within limits."
             ],
@@ -3787,8 +3765,7 @@
           "content": {
             "heading": "Water conservation in plants",
             "paragraphs": [
-              "Xerophytes are plants adapted to dry habitats. They have a thick cuticle, sunken stomata, rolled or hairy leaves, and reduced leaf area. Some have deep roots, others have shallow widespread roots, and succulents store water in thick stems or leaves.",
-              "CAM photosynthesis lets them open stomata at night, when water loss is lower.",
+              "Xerophytes are plants adapted to dry habitats. They have a thick cuticle, sunken stomata, rolled or hairy leaves, and reduced leaf area. Some have deep roots, others have shallow widespread roots, and succulents store water in thick stems or leaves, and CAM photosynthesis lets them open stomata at night, when water loss is lower.",
               "In cactus, a desert plant, spines are modified leaves that reduce surface area and transpiration and deter herbivores. Nigerian xerophytes such as acacia and baobab rely more on deep roots and small leaves. Hydrophytes, such as water lilies, have large air spaces, a thin cuticle, stomata on the upper surface and poorly developed roots.",
               "Mesophytes, including most Nigerian crops, sit between the two extremes."
             ],
@@ -3916,8 +3893,7 @@
             "paragraphs": [
               "In a transverse section of a dicot root, the layers run outside to inside: epidermis, cortex, endodermis and pericycle, ending at the vascular cylinder.",
               "The epidermis covers the root and bears root hairs, which take up water and dissolved mineral salts. The cortex stores starch and moves water inwards. The endodermis's Casparian strip is a waxy band that blocks the spaces between cells, so water and salts must cross its cell membranes before reaching the xylem.",
-              "The pericycle, just inside the endodermis, gives rise to branch roots.",
-              "The vascular cylinder carries the xylem as a solid star in a dicot root, with phloem patches between the arms. In a monocot root, the centre is a large pith instead, and the xylem has many arms."
+              "The pericycle, just inside the endodermis, gives rise to branch roots. The vascular cylinder carries the xylem as a solid star in a dicot root, with phloem patches between the arms. In a monocot root, the centre is a large pith instead, and the xylem has many arms."
             ],
             "bullets": [
               "Epidermis with root hairs: absorbs water and salts.",
@@ -4119,8 +4095,7 @@
             "heading": "The lower surface and veins",
             "paragraphs": [
               "The lower epidermis carries the stomata. Each stoma is a pore bordered by two guard cells. When the guard cells take up water they swell and bend outwards, opening the pore; when they lose water they shrink and close it.",
-              "This controls water loss and gas exchange together.",
-              "Most dicot leaves keep most stomata on the lower surface because the upper surface is exposed to light and heat; placing the stomata there would waste water. Shade leaves and the leaves of floating plants often have stomata on both surfaces.",
+              "This controls water loss and gas exchange together. Most dicot leaves keep most stomata on the lower surface because the upper surface is exposed to light and heat; placing the stomata there would waste water. Shade leaves and the leaves of floating plants often have stomata on both surfaces.",
               "In a T.S., stomata and guard cells are the signature of the lower epidermis. The midrib carries the main vein and gives the leaf its central ridge."
             ],
             "bullets": [
@@ -4874,9 +4849,8 @@
           "content": {
             "heading": "Balanced diet and deficiency diseases",
             "paragraphs": [
-              "A balanced diet supplies the right amount of each class in proportions the body needs. A school lunch of rice (carbohydrates), beans (protein), palm oil (fats), vegetable (vitamins and minerals) and water is balanced; puff-puff and fanta alone is not.",
-              "When one class falls short, a deficiency disease appears. Scurvy is caused by lack of vitamin C and shows bleeding gums and poor wound healing. Rickets is caused by lack of vitamin D and calcium and shows bow legs and soft bones in children.",
-              "Kwashiorkor is caused by lack of protein and shows a swollen belly, oedema and listlessness.",
+              "A balanced diet supplies each class in proportions the body needs. A school lunch of rice (carbohydrates), beans (protein), palm oil (fats), vegetable (vitamins and minerals) and water is balanced; puff-puff and fanta alone is not.",
+              "When one class falls short, a deficiency disease appears. Scurvy is caused by lack of vitamin C and shows bleeding gums and poor wound healing. Rickets is caused by lack of vitamin D and calcium and shows bow legs and soft bones in children, and kwashiorkor is caused by lack of protein and shows a swollen belly, oedema and listlessness.",
               "Marasmus is a more severe protein-energy malnutrition showing a 'skin and bones' appearance. Night blindness shows lack of vitamin A; beriberi shows lack of vitamin B. Recognising each pattern links the food class to the disease."
             ],
             "bullets": [
@@ -14423,16 +14397,16 @@
     },
     {
       "slug": "darwin-and-organic-evolution",
-      "title": "Darwin and the Organic Theory",
-      "objective": "Explain Darwin's natural selection and how the organic modern theory adds genetics and mutation to explain diversity.",
+      "title": "Darwin's Theory of Natural Selection",
+      "objective": "Explain Darwin's theory of natural selection and distinguish it from Lamarck's inheritance of acquired characters.",
       "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "heading": "Darwin and the Organic Theory",
+            "heading": "Darwin's Theory of Natural Selection",
             "paragraphs": [
-              "On a farm near Ibadan, more chicks hatch than can survive to adulthood. Some grow faster and find food better. Darwin asked why only some survive and reproduce in each generation."
+              "On a farm near Ibadan, more chicks hatch than survive to adulthood. Some grow faster and find food better. Darwin asked why only some survive and reproduce in each generation."
             ],
             "bullets": []
           }
@@ -14440,81 +14414,81 @@
         {
           "type": "text",
           "content": {
-            "heading": "Darwin's Theory of Natural Selection",
+            "heading": "Natural selection in a population",
             "paragraphs": [
-              "Darwin argued that organisms produce more offspring than can survive in nature. This is overproduction, and it creates a struggle for existence for limited food, water and space. Only some individuals survive to reproduce in the harsh environment each season.",
-              "Within a population, individuals vary in features such as size, colour and speed from birth. Some variations help an organism feed, hide or escape from predators more effectively in daily life. Those advantageous features increase the chance of survival and reproduction.",
-              "The environment therefore selects individuals best adapted to survive, a process Darwin called natural selection. He observed this in Galápagos finches with different beaks and in moths with dark or light wings. Over generations, useful traits become more common in the population."
+              "Darwin argued that organisms produce more offspring than can survive. This overproduction creates a struggle for existence for limited food, water and space, and not every individual survives to breed.",
+              "Within a population, individuals vary in size, colour and speed from birth. Some variations help an organism find food, hide from predators or resist disease, so those individuals are more likely to reach breeding age.",
+              "The environment therefore selects the individuals best suited to it, a process Darwin called natural selection. He saw this in Galápagos finches whose beaks matched their available food."
             ],
             "bullets": [
-              "Overproduction creates competition for limited resources such as food",
-              "Variation gives some individuals advantages in survival",
-              "Survival of the fittest passes useful traits to offspring"
+              "Overproduction creates competition for limited resources",
+              "Variation gives some individuals a survival advantage",
+              "Inherited traits that aid survival become more common over time"
             ],
-            "takeaway": "Natural selection favours advantageous variation, so useful traits spread over time.",
+            "takeaway": "Natural selection favours advantageous variation over many generations.",
             "check": {
               "question": "Why do finches with different beaks illustrate natural selection?",
               "options": [
                 "Beaks changed through use during life",
                 "Birds inherited beaks acquired by stretching",
-                "Beaks suited to different foods aided survival",
-                "Isolated finches planned new beaks"
+                "Beaks suited to their food aided survival",
+                "Isolated finches planned new beak shapes"
               ],
               "answer": 2,
-              "why": "Finches with beaks suited to their food survived and reproduced better, so advantageous beak types spread."
+              "why": "Finches with beaks suited to their food survived and reproduced better, so those beak shapes spread through the population."
             }
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "The Organic and Modern Theory",
+            "heading": "Selection in action: finches and moths",
             "paragraphs": [
-              "The organic theory, also called the modern synthesis, combines Darwin's natural selection with genetics. Genes carry hereditary information that determines features such as beak shape and wing colour in offspring. Selection acts on differences caused by these genetic factors in the population.",
-              "Mutation provides the raw material for evolution by creating new genetic variation in offspring. Random changes in genes occur in offspring and may produce new characteristics over time. If a mutation improves survival, natural selection preserves it in the population.",
-              "Over long periods, small adaptive changes accumulate and eventually produce diversity among organisms. New species may form when populations can no longer interbreed successfully with each other. This explains the great variety of organisms adapted to different habitats and regions."
+              "Darwin drew his evidence from nature, not only from the laboratory. On the Galápagos Islands, finches on different islands had beaks suited to different food supplies, from crushing large seeds to probing for insects.",
+              "In Britain, soot from factories darkened the trees during the industrial age. Birds easily spotted the light peppered moths, so the dark form survived and became commoner; when the air was cleaned, the light form recovered.",
+              "Both cases show that selection works on variation already present. It does not create the helpful feature from nothing; it preserves the type that happens to survive and breed."
             ],
             "bullets": [
-              "Genetics explains how hereditary traits pass from parents to offspring",
-              "Mutation creates new variation on which selection can act",
-              "Adaptive changes over long time lead to new species"
+              "Galápagos finches: beak shape matches available food",
+              "Industrial moths: camouflage changed with the sooty environment",
+              "Selection preserves useful variants; it does not create them on demand"
             ],
-            "takeaway": "Modern theory joins genes, mutation and selection to explain species diversity.",
+            "takeaway": "Darwin's evidence shows selection acting on existing variation.",
             "check": {
-              "question": "What does the organic theory add to Darwin's ideas?",
+              "question": "Which observation best supports natural selection?",
               "options": [
-                "Inheritance of acquired characters",
-                "Genetics and mutation as raw material",
-                "Use and disuse of organs",
-                "Goal-directed stretching for food"
+                "All finches on every island look identical",
+                "Dark moths survived and bred more on soot-darkened trees",
+                "Moths changed colour because they tried to match the soot",
+                "Every bird disappeared after factories opened"
               ],
               "answer": 1,
-              "why": "The modern synthesis keeps natural selection and adds genes and mutation to explain variation and heredity."
+              "why": "Dark moths were better camouflaged, so they survived and reproduced more, and their numbers rose in that environment."
             }
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Comparing Lamarck and Darwin",
+            "heading": "Darwin versus Lamarck",
             "paragraphs": [
-              "Lamarck claimed that organisms inherit characters acquired through use and disuse during life. Darwin claimed that variation exists first, and the environment selects those best able to survive and reproduce. The two theories therefore differ clearly in the source of variation.",
-              "In Lamarck's view, stretching gives giraffes longer necks that their calves inherit directly. In Darwin's view, giraffes born with slightly longer necks fed better and left more calves. One emphasises effort by the individual, while the other emphasises selection of existing variation.",
-              "Darwin's explanation is supported by genetics and experiment, while Lamarck's is not in examinations. Examiners expect candidates to contrast inheritance of acquired characters with natural selection clearly. Remember that selection preserves useful variation rather than creating it by effort."
+              "Lamarck claimed that organisms inherit characters acquired through use and disuse during life. Darwin claimed that variation exists first, and the environment selects the individuals best able to survive and reproduce.",
+              "In Lamarck's view, stretching gives giraffes longer necks that their calves inherit. In Darwin's view, giraffes born with slightly longer necks fed better and left more calves.",
+              "The key difference is the source of variation: Lamarck favoured effort by the individual, Darwin favoured pre-existing variation selected by the environment. Genetic evidence supports Darwin; acquired characters are not passed to offspring."
             ],
             "bullets": [
-              "Lamarck: acquired characters inherited from parents to calves",
-              "Darwin: existing variation selected during survival and breeding",
-              "Modern theory accepts Darwin with genetic variation and mutation"
+              "Lamarck: acquired characters are inherited",
+              "Darwin: existing variation is selected by the environment",
+              "Genetic evidence supports Darwin's mechanism"
             ],
-            "takeaway": "Darwin relies on selected variation, while Lamarck relies on acquired inheritance.",
+            "takeaway": "Darwin relies on selected variation, not acquired inheritance.",
             "check": {
               "question": "How does Darwin explain long giraffe necks?",
               "options": [
-                "Giraffes stretched until necks grew",
+                "Giraffes stretched until their necks grew",
                 "Longer necks were inherited after stretching",
                 "Long-necked giraffes survived and bred more",
-                "Leaves directed genes to lengthen necks"
+                "Leaves directed genes to lengthen the neck"
               ],
               "answer": 2,
               "why": "Variation in neck length already existed; longer necks gave better access to food and led to more offspring."
@@ -14526,30 +14500,36 @@
           "content": {
             "title": "Exam tip",
             "tone": "tip",
-            "body": "For comparisons, learn one sentence for each theory before examples. State variation first for Darwin, acquired characters for Lamarck, then mention genes and mutation to complete the modern theory answer clearly."
+            "body": "For comparisons, learn one sentence per theory before the examples. State variation first for Darwin and use-and-disuse for Lamarck; add genes and mutation only when the question asks for the modern theory, so the two never blur."
           }
         },
         {
           "type": "worked_example",
           "content": {
-            "problem": "Near a factory in Lagos, light moths rest on pale walls while dark moths rest on soot-darkened walls. During smoky periods, birds eat more light moths. What will happen to the moth population over time, and why?",
+            "problem": "In an acacia grove near Kano, giraffes vary in neck length. During the dry season, leaves are only high in the trees. Explain, in Darwin's terms, how neck length changes in the population over generations.",
             "steps": [
               {
-                "operation": "Identify variation and selection pressure",
-                "reason": "Moths differ in colour and birds prey more on light moths",
-                "result": "Dark moths survive and breed more",
+                "operation": "Identify variation in the population",
+                "reason": "Individuals differ in traits such as neck length",
+                "result": "Some giraffes are longer-necked than others",
                 "predictPrompt": ""
               },
               {
-                "operation": "Apply survival of the fittest",
-                "reason": "Dark colour improves camouflage on soot",
-                "result": "Dark moths pass genes to offspring",
+                "operation": "Identify the selection pressure",
+                "reason": "High leaves are scarce in the dry season",
+                "result": "Long-necked giraffes reach more food and avoid starvation",
                 "predictPrompt": ""
               },
               {
-                "operation": "Predict the long-term result",
-                "reason": "Advantageous variation spreads each generation",
-                "result": "Dark moths become more common",
+                "operation": "Apply survival and reproduction",
+                "reason": "Better-fed individuals are more likely to breed",
+                "result": "Long necks are passed to more offspring",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Predict the population change",
+                "reason": "Advantageous alleles increase each generation",
+                "result": "Longer necks become commoner over many generations",
                 "predictPrompt": ""
               }
             ]
@@ -14569,17 +14549,17 @@
       ]
     },
     {
-      "slug": "evidence-of-evolution",
-      "title": "Evidence for Evolution",
-      "objective": "Describe fossils, comparative anatomy, embryology, biogeography, vestigial organs and DNA as evidence for evolution.",
+      "slug": "the-organic-theory-of-evolution",
+      "title": "The Organic Theory of Evolution",
+      "objective": "Explain how the organic theory combines natural selection with genetics and mutation to explain diversity and the origin of new species.",
       "estimatedMinutes": 10,
       "blocks": [
         {
           "type": "text",
           "content": {
-            "heading": "Evidence for Evolution",
+            "heading": "The Organic Theory of Evolution",
             "paragraphs": [
-              "At the museum in Lagos, a student compares a fish fossil with a modern lizard. Their bones share surprising similarities despite different appearances. Such evidence helps scientists trace how life has changed over time."
+              "In a Lagos hospital, one antibiotic kills most bacteria but not every one. The few survivors multiply, and selection starts from them. The organic theory explains how such small inherited differences spread through a population."
             ],
             "bullets": []
           }
@@ -14587,24 +14567,204 @@
         {
           "type": "text",
           "content": {
-            "heading": "The Fossil Record",
+            "heading": "Selection acts on inherited variation",
             "paragraphs": [
-              "Fossils are remains of organisms preserved in rock over millions of years. The fossil record shows species that lived in the past and how they changed over time. Layers of rock help scientists arrange fossils from older to younger periods accurately.",
-              "Archaeopteryx had feathers and wings but also teeth and claws like reptiles inside its body. It is regarded as a link between dinosaurs and birds in evolutionary history. Tiktaalik had fish fins with limb-like bones that could support its body in shallow water, an early step towards life on land.",
-              "The horse fossil series shows changes in size, teeth and feet over time, though it is a branching tree rather than a single straight line. Fossils from different rocks reveal these changes across many generations. The record therefore supports descent with modification from common ancestors over long periods."
+              "Darwin himself could not fully explain where variation first came from. The organic theory, also called the modern synthesis, fills that gap with genetics. Genes carry the hereditary information that determines traits such as beak shape and wing colour.",
+              "Variation within a population is caused both by genes and by environment. Only inherited variation passes to offspring, so only genetic differences can drive long-term evolution; environmental marks such as scars do not.",
+              "Selection favours alleles that improve survival or breeding success, such as resistance to disease or drought. Over generations, those alleles become more common and the whole population adapts to its environment."
             ],
             "bullets": [
-              "Fossils preserve past organisms in rock layers over time",
-              "Archaeopteryx links reptiles with birds through mixed features",
-              "Tiktaalik links fish with land animals through fins and limbs"
+              "Genes carry the information for inherited traits in every cell",
+              "Only inherited variation can drive long-term change in populations",
+              "Selection spreads favourable alleles through a population over generations"
             ],
-            "takeaway": "Fossils reveal past life and show gradual change between groups.",
+            "takeaway": "Selection operates on inherited genetic variation.",
+            "check": {
+              "question": "Why is inherited variation essential for evolution?",
+              "options": [
+                "It lets every organism survive equally",
+                "Only inherited differences can build up over generations",
+                "It removes all need for selection",
+                "It guarantees every mutation is useful"
+              ],
+              "answer": 1,
+              "why": "Acquired differences disappear with the individual; only genetic differences persist and accumulate across generations."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Mutation supplies the raw material",
+            "paragraphs": [
+              "Mutations are random changes in DNA. Most recognised mutations are neutral or harmful, while only a few improve survival. Mutation is the only source of entirely new alleles and can occur without any warning or cause.",
+              "Crossing over during meiosis and random union of gametes reshuffle existing alleles into new combinations. By themselves they do not create new alleles; they only mix the combinations already available in individuals.",
+              "Selection does not invent useful traits to order. It preserves the rare variants that mutation and reshuffling have already produced in the population."
+            ],
+            "bullets": [
+              "Mutation creates new alleles at random in DNA of individuals",
+              "Crossing over and fertilisation reshuffle existing alleles into new combinations",
+              "Selection preserves useful variants; it does not create them on demand"
+            ],
+            "takeaway": "Mutation, not effort, supplies new genetic material.",
+            "check": {
+              "question": "Which process creates entirely new alleles?",
+              "options": [
+                "Crossing over",
+                "Mutation",
+                "Random union of gametes",
+                "Natural selection"
+              ],
+              "answer": 1,
+              "why": "Crossing over and fertilisation reshuffle existing alleles; only mutation can produce alleles that did not exist before."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "From variation to new species",
+            "paragraphs": [
+              "Over many generations, small adaptive differences accumulate. If populations become geographically isolated by rivers, mountains or islands, they face different selection pressures and accumulate different alleles.",
+              "If the isolated groups remain separated long enough, they will no longer interbreed successfully even when brought together. At that point they are reproductively isolated, and each is a separate species.",
+              "This explains the great variety of organisms adapted to different habitats and regions throughout the world, and it unites Darwin's selection with modern genetics under one theory."
+            ],
+            "bullets": [
+              "Small adaptive differences accumulate steadily over many generations",
+              "Geographic isolation lets separate populations diverge from each other",
+              "Reproductive isolation defines new species as separate reproductive communities"
+            ],
+            "takeaway": "Species form when isolated populations can no longer interbreed.",
+            "check": {
+              "question": "What most directly produces a new species?",
+              "options": [
+                "One episode of strong selection",
+                "Geographic isolation and divergence until reproduction fails",
+                "Every individual breeding equally",
+                "Use and disuse of body parts"
+              ],
+              "answer": 1,
+              "why": "Isolation allows different selection pressures to act, and reproductive isolation is the boundary between species."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "When the question names the organic theory, put genes and mutation at the start of your answer. Say selection acts on inherited variation, mutation supplies new alleles, and accumulated differences can produce new species; this order covers the marking points."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A doctor prescribes the same antibiotic repeatedly in a Kano hospital. Some bacteria carry a resistance gene, while others do not. Explain, step by step, how the resistant strain becomes dominant in the hospital.",
+            "steps": [
+              {
+                "operation": "Identify the variation",
+                "reason": "Some bacteria carry a resistance gene by mutation",
+                "result": "A few resistant individuals are present",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Identify the selection agent",
+                "reason": "The antibiotic kills non-resistant bacteria",
+                "result": "Resistant bacteria survive and reproduce",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Apply selection over generations",
+                "reason": "Survivors pass the resistance allele on",
+                "result": "The resistant allele increases in frequency",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Predict the outcome",
+                "reason": "Repeated exposure amplifies selection",
+                "result": "The resistant strain becomes dominant in the hospital",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Some locusts survive insecticide spraying on a farm in Kebbi. Explain in terms of variation, selection and generations why the insecticide becomes less effective.",
+            "hints": [
+              "Think about variation in resistance first",
+              "Identify what the spray acts on",
+              "Ask who survives and passes on the allele"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "evidence-of-evolution",
+      "title": "Fossil Evidence for Evolution",
+      "objective": "Describe fossils and the rock record as evidence for evolution, and interpret transitional fossils such as Archaeopteryx and Tiktaalik.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Fossil Evidence for Evolution",
+            "paragraphs": [
+              "At the museum in Lagos, a student compares a fish fossil with a modern lizard. Their bones share surprising similarities despite different appearances. The fossil record preserves that chain of change through deep time."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Fossils and the rock record",
+            "paragraphs": [
+              "Fossils are remains of ancient organisms preserved in rock over millions of years. Lower rock layers contain older fossils, while higher layers contain younger ones that lived later. The rock record can therefore be read like pages of a history book by geologists.",
+              "Rock layers allow relative dating: the order of fossils can be read without knowing their exact age in years. This sequence shows that life existed in the past and changed over time."
+            ],
+            "bullets": [
+              "Fossils preserve past life in rock layers over long periods of time",
+              "Lower layers are older; higher layers are younger in the sequence",
+              "Rock layers allow relative dating of fossils without exact years"
+            ],
+            "takeaway": "Fossils show that life changed over time.",
+            "check": {
+              "question": "Which fossil is most likely the oldest?",
+              "options": [
+                "One found in a lower rock layer",
+                "One found in a higher rock layer",
+                "One found in a museum",
+                "One found on an exposed surface"
+              ],
+              "answer": 0,
+              "why": "Lower layers were laid down first, so fossils there are older than those in higher layers."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Transitional fossils",
+            "paragraphs": [
+              "Archaeopteryx had feathers and wings like a bird, but teeth and claws like a reptile. It is regarded as a link between dinosaurs and birds.",
+              "Tiktaalik had fish fins with limb-like bones that could support its body in shallow water. It was an early step towards life on land, showing fins preparing to act as limbs for walking in shallow water.",
+              "Such transitional fossils are rare but powerful. They combine features of groups that descended from one another over long periods and show change as a series of small steps."
+            ],
+            "bullets": [
+              "Archaeopteryx links dinosaurs with birds through mixed features",
+              "Tiktaalik links fins with limb-like bones for support",
+              "Transitional fossils show gradual change between major groups"
+            ],
+            "takeaway": "Transitional fossils link one group to another.",
             "check": {
               "question": "Why is Archaeopteryx important evidence for evolution?",
               "options": [
                 "It had feathers and reptile teeth",
                 "It lived in modern Nigeria",
-                "It shows extinction of birds",
+                "It shows birds never changed",
                 "It evolved in a laboratory"
               ],
               "answer": 0,
@@ -14615,18 +14775,115 @@
         {
           "type": "text",
           "content": {
-            "heading": "Comparative Anatomy and Embryology",
+            "heading": "The horse fossil series",
             "paragraphs": [
-              "Comparative anatomy studies similarities in body structure among different living species today. Homologous structures share the same basic plan but perform different functions in the body. The pentadactyl limb in humans, bats and whales has similar bones despite different uses.",
-              "Analogous structures perform the same function but have different basic plans from each other. Bird wings and insect wings both allow flight but developed differently in different ancestors. Their similarity results from similar needs rather than common ancestry in the past.",
-              "Embryology shows that embryos of different animals look very similar early in development. Human embryos develop pharyngeal arches at an early stage, similar to those of other vertebrates. This similarity reflects shared ancestry and similar developmental stages in evolution."
+              "The horse fossil series shows changes in size, teeth and feet over time. It is a branching tree, not a single straight line from small to large.",
+              "Different rock layers preserve different species along related branches. Later layers contain larger, single-toed horses with high-crowned teeth suited to grazing on grass.",
+              "The pattern supports descent with modification from common ancestors over long periods, with new features accumulating gradually rather than appearing all at once in a single leap."
             ],
             "bullets": [
-              "Homologous pentadactyl limbs share bones but serve different functions",
-              "Analogous wings fly well but evolved from different structures",
-              "Similar embryos with pharyngeal arches suggest common ancestry"
+              "Horse fossils show changes in size, teeth and feet over time",
+              "The record branches widely rather than forming a straight ladder",
+              "Later layers contain more derived species with specialised grazing teeth"
             ],
-            "takeaway": "Homologous structures and similar embryos reveal descent from common ancestors.",
+            "takeaway": "The fossil record shows branching descent over deep time.",
+            "check": {
+              "question": "How should the horse fossil series be interpreted?",
+              "options": [
+                "A single straight line from small to large",
+                "A branching record of related species",
+                "A random set of unrelated fossils",
+                "Proof that modern horses appeared unchanged"
+              ],
+              "answer": 1,
+              "why": "The horse record shows related branches with different adaptations, not one unbranched lineage from small to large."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Learn one example per claim: fossil for the rock record, Archaeopteryx for transitional forms, the horse series for branching descent. When asked to date fossils, name the rock-layer order and avoid drawing evolution as a straight line."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A student in Jos finds three fossil layers: shellfish lowest, reptile-like bones in the middle, and a mammal skull highest. What does the sequence suggest, and which layer is oldest?",
+            "steps": [
+              {
+                "operation": "Arrange the layers from oldest to youngest",
+                "reason": "Lower rock layers were laid down first",
+                "result": "Oldest is the shellfish layer; youngest is the mammal layer",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Identify each fossil group",
+                "reason": "Shellfish, reptile-like bones and mammals are different stages of vertebrate life",
+                "result": "The sequence shows aquatic life, then reptile-like forms, then mammals",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Apply descent with modification",
+                "reason": "Later layers reflect accumulated changes",
+                "result": "The sequence supports gradual change over deep time",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "State the evolutionary interpretation",
+                "reason": "Fossils match related groups appearing in order",
+                "result": "Life became more complex step by step, not in single leaps",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A fossil fish with limb-like fins was found in rock older than the first land animals. What does it suggest about the origin of land vertebrates, and what is it an example of?",
+            "hints": [
+              "Think of Tiktaalik and shallow water",
+              "Name the feature that links fins to limbs",
+              "Describe it as a link between two groups"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "comparative-anatomy-and-embryology",
+      "title": "Comparative Anatomy and Embryology",
+      "objective": "Distinguish homologous from analogous structures and explain how embryological similarity supports common ancestry.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Comparative Anatomy and Embryology",
+            "paragraphs": [
+              "A frog, a lizard and a human all begin as embryos with a tail. At the museum, their adult skeletons look different but share clear patterns. Comparing those patterns reveals their common ancestry."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Homologous structures",
+            "paragraphs": [
+              "Comparative anatomy studies similarities in body structure among different living species. Homologous structures share the same basic plan but serve different functions in daily life.",
+              "The pentadactyl limb in humans, bats and whales has the same bone arrangement despite being used for arms, wings and flippers. The common plan is best explained by descent from a common ancestor that had that plan.",
+              "The more closely related two species are, the more features they usually share now. Homologous organs therefore help scientists build evolutionary trees."
+            ],
+            "bullets": [
+              "Homologous: same basic plan, different functions in organisms",
+              "Pentadactyl limb: arm, wing and flipper share the same bones",
+              "Common plan supports common ancestry in evolutionary history"
+            ],
+            "takeaway": "Homologous organs share a plan from common ancestry.",
             "check": {
               "question": "Human, bat and whale forelimbs are homologous because they",
               "options": [
@@ -14636,35 +14893,63 @@
                 "Look identical in embryos only"
               ],
               "answer": 1,
-              "why": "Homologous structures share the same basic bone pattern from a common ancestor despite different functions."
+              "why": "Homologous structures share the same basic bone pattern from a common ancestor, despite different functions."
             }
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Biogeography, Vestigial Organs and DNA",
+            "heading": "Analogous structures",
             "paragraphs": [
-              "Biogeography studies how species are distributed across regions and continents. Marsupials are diverse in Australia and also occur in South America, but are absent as native animals in most other regions. Australia's long isolation allowed its marsupials to radiate into many forms, although bats and rodents also reached the continent.",
-              "Vestigial organs are reduced structures that have lost most of their ancestral function. The human appendix still contains lymphoid tissue, but it is much reduced compared with the ancestral caecum; the pelvic bones in whales are another example. They suggest that ancestors had larger, functional versions.",
-              "DNA and protein similarities show close relationships between species in evolutionary trees clearly. Humans share more DNA sequences with chimpanzees than with dogs in their genomes. Antibiotic resistance in bacteria also shows rapid evolution through natural selection in hospitals every day."
+              "Analogous structures perform the same function but have entirely different basic plans. Bird wings and insect wings both allow powered flight, but they developed from separate ancestral structures over time.",
+              "Similar needs in similar environments can independently produce similar features, a process called convergent evolution. Analogous similarity therefore points to similar demands, not common ancestry.",
+              "Whales and fish are both streamlined for swimming in water, yet their internal structures are very different. Their resemblance is ecological and convergent, not inherited from a common ancestor."
             ],
             "bullets": [
-              "Marsupials in Australia show evolution after geographic isolation",
-              "Vestigial pelvic bones in whales hint at land ancestors",
-              "DNA similarity and antibiotic resistance support common descent"
+              "Analogous: same function, different basic plans in organisms",
+              "Bird and insect wings complete flight by different routes",
+              "Convergent evolution explains the similarity between unrelated species"
             ],
-            "takeaway": "Distribution, vestigial organs and DNA all support evolution by descent.",
+            "takeaway": "Analogous organs fit the same job, not the same ancestor.",
             "check": {
-              "question": "Which evidence best shows close relationship of humans and chimpanzees?",
+              "question": "Which pair is analogous?",
               "options": [
-                "Similar fossils in rock layers",
-                "Same pentadactyl limb bones",
-                "Greater DNA sequence similarity",
-                "Marsupials in Australia"
+                "Human arm and bat wing",
+                "Bird wing and insect wing",
+                "Human arm and whale flipper",
+                "Bat wing and whale flipper"
               ],
-              "answer": 2,
-              "why": "DNA and protein comparisons show humans share more sequences with chimpanzees than with more distant relatives."
+              "answer": 1,
+              "why": "Bird and insect wings both permit flight but evolved from different structures; they are similar because of function, not ancestry."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Embryology",
+            "paragraphs": [
+              "Embryos of different vertebrate animals look surprisingly alike very early in development. Human embryos briefly form pharyngeal arches, similar to those of other vertebrates, before many of them become different adult structures in later growth.",
+              "All vertebrates pass through a stage with pharyngeal arches, even though they later become different adult structures. This shared stage points to a shared vertebrate ancestor.",
+              "The shared stages reflect a common developmental program inherited from a common ancestor. The earlier the stage examined, the more universal the similarity remains among all vertebrates."
+            ],
+            "bullets": [
+              "Early vertebrate embryos look remarkably alike in early stages",
+              "Pharyngeal arches appear in all vertebrate embryos early in development",
+              "Shared developmental stages suggest shared common ancestry among vertebrates"
+            ],
+            "takeaway": "Similar embryos support common ancestry.",
+            "check": {
+              "question": "Why do fish, frogs, birds and humans all develop pharyngeal arches?",
+              "options": [
+                "They all breathe through gills forever",
+                "They share a vertebrate ancestor",
+                "Embryos try out every body plan",
+                "Pharyngeal arches serve no function in any vertebrate"
+              ],
+              "answer": 1,
+              "why": "The arches reflect a shared developmental program inherited from the common vertebrate ancestor."
             }
           }
         },
@@ -14673,30 +14958,36 @@
           "content": {
             "title": "Exam tip",
             "tone": "tip",
-            "body": "Learn definitions first, then one example for each type of evidence. Link homologous structures to common ancestry and analogous structures to similar function in your exam answers clearly."
+            "body": "Classify first: same plan but different function is homologous; same function but different plan is analogous. Then remember the pharyngeal-arch rule: if embryos share it, the ancestry is shared. Analogous structures point to convergent evolution, not descent."
           }
         },
         {
           "type": "worked_example",
           "content": {
-            "problem": "A student in Enugu compares the forelimb bones of a human, a bat wing and a whale flipper. All have the same bone arrangement but different functions. How does this support evolution, and what is the term for the similarity?",
+            "problem": "A student in Enugu compares the forelimb bones of a human, a bat wing and a whale flipper. All have the same bone arrangement but different functions. Classify the structures and state the evolutionary conclusion.",
             "steps": [
               {
                 "operation": "Identify the shared bone plan",
-                "reason": "Same arrangement suggests common ancestry",
-                "result": "Structures are homologous",
+                "reason": "Same arrangement suggests descent from a common ancestor",
+                "result": "The structures are homologous",
                 "predictPrompt": ""
               },
               {
                 "operation": "Contrast with analogous structures",
                 "reason": "Analogous means same function, different plan",
-                "result": "These limbs differ in function despite shared plan",
+                "result": "These limbs share the plan but differ in function",
                 "predictPrompt": ""
               },
               {
-                "operation": "State the evolutionary conclusion",
-                "reason": "Shared plan is best explained by descent",
-                "result": "Humans, bats and whales share a common ancestor",
+                "operation": "Link to a common ancestor",
+                "reason": "A shared plan is best explained by common descent",
+                "result": "Humans, bats and whales inherited the pentadactyl plan from an ancestor",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Explain the difference in function",
+                "reason": "Different environments favour different uses",
+                "result": "The same ancestral plan was modified for arm, wing and flipper",
                 "predictPrompt": ""
               }
             ]
@@ -14705,11 +14996,164 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "Whales have tiny pelvic bones inside their bodies. What evidence type does this provide, and what does it suggest about whale ancestry?",
+            "question": "A bird wing and an insect wing both permit flight. Explain why they are analogous, while a human arm and a bat wing are homologous.",
             "hints": [
-              "Think of reduced unused organs",
-              "Recall the human appendix example",
-              "Consider where whales once lived"
+              "Compare the basic plan, not the function",
+              "Ask whether the ancestors had the same forelimb",
+              "Think about what convergent evolution means"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "biogeography-vestigial-organs-and-dna",
+      "title": "Biogeography, Vestigial Organs and DNA",
+      "objective": "Explain how species distribution, vestigial organs and DNA similarity provide evidence for evolution.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Biogeography, Vestigial Organs and DNA",
+            "paragraphs": [
+              "A student in Enugu notices that marsupials are found only in Australia and South America. Distribution, leftover organs and genetic fingerprints all tell the same evolutionary story."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Biogeography",
+            "paragraphs": [
+              "Biogeography is the study of where species live and why. Closely related species are usually found in the same or neighbouring regions of continents, reflecting a shared evolutionary history.",
+              "Australia's long isolation allowed marsupials to radiate into many forms from a common ancestor, filling habitats that placental mammals fill elsewhere. Marsupials also occur in South America, showing the same ancient lineage was once widespread.",
+              "When the southern landmasses separated, these populations faced different climates and new enemies. Their modern distribution is therefore a map of ancient geography today."
+            ],
+            "bullets": [
+              "Related species live near each other in neighbouring regions",
+              "Australia's marsupials show adaptive radiation into many habitats",
+              "South America's marsupials show old southern lineages"
+            ],
+            "takeaway": "Distribution records where descent and isolation occurred.",
+            "check": {
+              "question": "Why are marsupials diverse in Australia?",
+              "options": [
+                "They recently crossed the ocean there",
+                "Long isolation allowed them to radiate from common ancestors",
+                "They were placed there by humans",
+                "They have no other place to live"
+              ],
+              "answer": 1,
+              "why": "Australia's isolation let marsupials diversify into many niches from shared ancestors."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Vestigial organs",
+            "paragraphs": [
+              "Vestigial organs are reduced structures that have lost most of their ancestral function. The human appendix still contains lymphoid tissue, so it is much reduced rather than completely useless. Whale pelvic bones are another example.",
+              "Such organs indicate that ancestors had larger, functional versions. Because reduction is simpler than sudden creation, lost and shrunken structures are the usual form of vestigial organs.",
+              "The coccyx, a reduced tailbone, remains in humans long after tails disappeared from our ancestors. Its tiny size shows it is a left-over remnant, not a working organ."
+            ],
+            "bullets": [
+              "Vestigial: reduced, not completely useless in the body",
+              "Human appendix and whale pelvic bones are examples",
+              "They point to larger ancestral versions in history"
+            ],
+            "takeaway": "Vestigial organs are leftovers of former functions.",
+            "check": {
+              "question": "What do the tiny pelvic bones in whales suggest?",
+              "options": [
+                "They help whales swim",
+                "Whales descended from land-dwelling ancestors",
+                "They anchor the whale's flippers",
+                "They are unused cartilage"
+              ],
+              "answer": 1,
+              "why": "Pelvic bones are a vestigial remnant of the hind limbs of whale ancestors that walked on land."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "DNA and proteins",
+            "paragraphs": [
+              "DNA and protein sequences place species on evolutionary trees. Humans share more DNA sequences with chimpanzees than with dogs, and the closest relatives share the most sequence.",
+              "Antibiotic-resistant bacteria also show evolution in action, with selection rapidly favouring resistant strains in hospitals and their numbers rising each generation under selection.",
+              "Protein sequences give the same pattern, because the more similar two proteins are, the more recent their shared ancestry is likely to be. Molecular trees and fossil trees agree on the major relationships."
+            ],
+            "bullets": [
+              "DNA and protein sequence comparisons show relatedness between species",
+              "Humans share more DNA with chimpanzees than with dogs or mice",
+              "Antibiotic resistance shows rapid evolution in hospitals and clinics"
+            ],
+            "takeaway": "Molecular evidence maps evolutionary relationships.",
+            "check": {
+              "question": "Which evidence best shows that humans are closely related to chimpanzees?",
+              "options": [
+                "Similar fossils in rock layers",
+                "The same pentadactyl limb layout",
+                "Greater DNA sequence similarity",
+                "Marsupials in Australia"
+              ],
+              "answer": 2,
+              "why": "DNA sequence comparisons show humans and chimpanzees share more of their genome than either does with more distant relatives."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Learn one example per evidence type: fossils for deep time, homologous structures for common ancestry, marsupials for distribution, pelvic bones for vestigial organs and DNA for relatedness. Never call vestigial organs useless; they are reduced, not nothing."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A student in Enugu compares DNA sequences from human, chimpanzee, dog and mouse. Humans share 98% with chimpanzees, 84% with dogs and 78% with mice. Rank the relatedness and explain what the numbers show.",
+            "steps": [
+              {
+                "operation": "Compare the sequence similarities",
+                "reason": "Higher percentage means closer relationship",
+                "result": "Chimpanzee is closest, dog is next, mouse is furthest",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Explain the similarity",
+                "reason": "Shared DNA was inherited from common ancestors",
+                "result": "A nearer ancestor was shared with the chimpanzee",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Order the ancestors",
+                "reason": "Descent branches at different times",
+                "result": "Humans and chimpanzees diverged most recently; mice diverged earliest",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "State the conclusion",
+                "reason": "Sequence comparison measures descent",
+                "result": "Molecular data supports common ancestry in an evolutionary tree",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Marsupials are diverse in Australia but absent as native animals in most other regions, except South America. Explain this pattern in terms of isolation and common ancestry.",
+            "hints": [
+              "Think about Australia's long-term isolation",
+              "Consider South America's marsupials",
+              "Link the pattern to descendants inheriting from a shared ancestor"
             ]
           }
         }
