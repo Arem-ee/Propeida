@@ -187,9 +187,11 @@ const descriptions = {
   biotechnology:
     'Biotechnology in agriculture, medicine, pharmaceuticals and the food industry.',
   'theories-of-evolution':
-    "Organic evolution, Lamarck's and Darwin's theories, and the evidence that supports them.",
+    'Lamarck\u2019s use and disuse, inheritance of acquired characters, and criticism.',
+  'darwin-and-organic-evolution':
+    'Natural selection, the modern organic theory, and Lamarck versus Darwin.',
   'evidence-of-evolution':
-    'Fossils, comparative anatomy, embryology and other evidence for organic evolution.',
+    'Fossils, homologous and analogous structures, embryos, biogeography and DNA.',
 }
 
 const sections = {
@@ -639,6 +641,21 @@ const split = [
     slug: 'biotechnology',
     name: 'Biotechnology and Its Applications',
     syllabus_ref: 'D.3',
+  },
+  {
+    slug: 'theories-of-evolution',
+    name: "Lamarck's Theory of Evolution",
+    syllabus_ref: 'E.1',
+  },
+  {
+    slug: 'darwin-and-organic-evolution',
+    name: 'Darwin and the Organic Theory',
+    syllabus_ref: 'E.1',
+  },
+  {
+    slug: 'evidence-of-evolution',
+    name: 'Evidence for Evolution',
+    syllabus_ref: 'E.2',
   },
 ].map((topic, index) => ({
   ...topic,

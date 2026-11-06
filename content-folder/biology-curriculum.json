@@ -692,19 +692,27 @@
     },
     {
       "slug": "theories-of-evolution",
-      "name": "Theories of evolution",
+      "name": "Lamarck's Theory of Evolution",
       "syllabus_ref": "E.1",
       "section": "Evolution",
       "order": 87,
-      "description": "Organic evolution, Lamarck's and Darwin's theories, and the evidence that supports them."
+      "description": "Lamarck’s use and disuse, inheritance of acquired characters, and criticism."
+    },
+    {
+      "slug": "darwin-and-organic-evolution",
+      "name": "Darwin and the Organic Theory",
+      "syllabus_ref": "E.1",
+      "section": "Evolution",
+      "order": 88,
+      "description": "Natural selection, the modern organic theory, and Lamarck versus Darwin."
     },
     {
       "slug": "evidence-of-evolution",
-      "name": "Evidence of evolution",
+      "name": "Evidence for Evolution",
       "syllabus_ref": "E.2",
       "section": "Evolution",
-      "order": 88,
-      "description": "Fossils, comparative anatomy, embryology and other evidence for organic evolution."
+      "order": 89,
+      "description": "Fossils, homologous and analogous structures, embryos, biogeography and DNA."
     }
   ],
   "lessons": [
@@ -14193,6 +14201,447 @@
               "Think of Bt crops and insect toxins.",
               "Consider yields, sprays and safety.",
               "Mention disease and nutrition benefits too."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "theories-of-evolution",
+      "title": "Lamarck's Theory of Evolution",
+      "objective": "Explain Lamarck's ideas on use and disuse, inheritance of acquired characters, and the criticisms of his theory.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Lamarck's Theory of Evolution",
+            "paragraphs": [
+              "In Kano, a young giraffe stretches daily to reach high acacia leaves. After many seasons, its neck grows longer. Lamarck asked whether such effort could reshape the species forever."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Lamarck's Core Ideas: Use and Disuse",
+            "paragraphs": [
+              "Jean-Baptiste Lamarck proposed that living organisms change because of use and disuse through regular effort in daily life. He argued that organs used frequently grow stronger, while those not used gradually weaken and shrink over time. This change happens during the lifetime of the individual through effort and habit.",
+              "Lamarck described this process as the inheritance of acquired characters in his writings. Characters gained through use or disuse were believed to pass directly to offspring during reproduction. The giraffe stretching for leaves was his most famous illustration of this idea in everyday nature.",
+              "A blacksmith who strengthens his arms through daily hammering provided a simple human example for students. Lamarck claimed that his sons would inherit stronger arms without any training. The theory therefore linked individual effort directly to evolutionary change in descendants over time."
+            ],
+            "bullets": [
+              "Use strengthens organs and improves their function over time",
+              "Disuse causes organs to shrink and eventually disappear",
+              "Acquired changes pass to offspring through inheritance"
+            ],
+            "takeaway": "Lamarck said use and disuse create acquired characters passed to offspring.",
+            "check": {
+              "question": "According to Lamarck, why would a blacksmith's sons have stronger arms?",
+              "options": [
+                "They trained with hammers from childhood",
+                "Their father inherited stronger arms through use",
+                "Natural selection favoured stronger people",
+                "Mutations changed their arm genes"
+              ],
+              "answer": 1,
+              "why": "Lamarck believed characters acquired through use, such as stronger arms, were inherited directly by offspring."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Criticisms of Lamarck's Theory",
+            "paragraphs": [
+              "Critics argued that acquired characters are not inherited by offspring in repeated laboratory tests. Cutting off the tails of mice for many generations never produced tailless mice in later generations. The acquired change affected the body but did not alter the hereditary material passed on.",
+              "There was also lack of direct evidence supporting the inheritance of acquired traits in nature. Many acquired features such as muscle bulk or scars do not appear in descendants at all. Lamarck could not explain how the environment communicated specific changes to reproductive cells.",
+              "Experiments testing the theory therefore failed to support its central claim in every case. Animals subjected to repeated mutilation still produced normal offspring with complete features and tails. This showed that use, disuse and injury during life do not reshape heredity in the way Lamarck suggested."
+            ],
+            "bullets": [
+              "Acquired characters such as extra muscle are not inherited",
+              "Tail-cutting experiments produced mice with normal tails",
+              "No evidence showed how effort changes reproductive material"
+            ],
+            "takeaway": "Criticisms show acquired changes during life are not inherited by offspring.",
+            "check": {
+              "question": "What did the tail-cutting mouse experiment show?",
+              "options": [
+                "Acquired traits passed to offspring",
+                "Mice evolved shorter tails gradually",
+                "Injury during life is inherited",
+                "Offspring still had normal tails"
+              ],
+              "answer": 3,
+              "why": "Despite many generations of tail cutting, offspring were born with normal tails, proving acquired injury is not inherited."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Contributions, Limits and Neo-Lamarckism",
+            "paragraphs": [
+              "Despite its errors, Lamarck's theory made an important historical contribution in the nineteenth century. He was among the first scientists to argue that species change gradually over time. He also highlighted the influence of the environment on living organisms during their lifetime.",
+              "Lamarck correctly emphasised adaptation through behaviour and organ use in daily life. His work encouraged other naturalists to study how organisms respond to their surroundings. These ideas helped prepare the ground for later theories based on natural selection.",
+              "Neo-Lamarckism is a modern attempt to revive parts of Lamarck's thinking using new genetics. It suggests that some acquired changes might be transmitted through epigenetic effects on gene expression. Most scientists still accept natural selection as the main mechanism, so neo-Lamarckism remains a minority view."
+            ],
+            "bullets": [
+              "First to propose species change gradually over long periods",
+              "Linked adaptation to environment and organism behaviour",
+              "Neo-Lamarckism explores epigenetic transmission of acquired traits"
+            ],
+            "takeaway": "Lamarck inspired evolution studies, but his inheritance mechanism was incorrect.",
+            "check": {
+              "question": "What is Lamarck's lasting contribution to evolution?",
+              "options": [
+                "He proved natural selection with finches",
+                "He proposed inheritance of acquired characters",
+                "He discovered mutation as raw material",
+                "He explained genetic inheritance accurately"
+              ],
+              "answer": 1,
+              "why": "Lamarck first promoted gradual species change and environmental influence, even though his inheritance mechanism was later rejected."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "In examinations, state Lamarck's two ideas separately before giving the giraffe example. Mention that acquired characters are not inherited, and link the tail-cutting experiment to this criticism clearly for full marks."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A farmer in Zaria notices that well-fed goats grow larger than poorly fed goats. A student claims the larger goats will always produce larger offspring. What would Lamarck predict, and what is the correct explanation?",
+            "steps": [
+              {
+                "operation": "Identify the trait in question",
+                "reason": "Larger size results from feeding during life",
+                "result": "Size is an acquired character",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "State Lamarck's prediction",
+                "reason": "Lamarck claimed acquired characters are inherited",
+                "result": "Offspring would be larger without good feeding",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Give the correct explanation",
+                "reason": "Feeding does not alter hereditary material",
+                "result": "Offspring size depends on their own feeding and genes",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A plant kept in darkness grows pale leaves. Will its seeds produce pale plants in sunlight? Explain using Lamarck's theory and the correct view.",
+            "hints": [
+              "Think about acquired characters",
+              "Recall the tail-cutting experiment",
+              "Consider hereditary material in seeds"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "darwin-and-organic-evolution",
+      "title": "Darwin and the Organic Theory",
+      "objective": "Explain Darwin's natural selection and how the organic modern theory adds genetics and mutation to explain diversity.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Darwin and the Organic Theory",
+            "paragraphs": [
+              "On a farm near Ibadan, more chicks hatch than can survive to adulthood. Some grow faster and find food better. Darwin asked why only some survive and reproduce in each generation."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Darwin's Theory of Natural Selection",
+            "paragraphs": [
+              "Darwin argued that organisms produce more offspring than can survive in nature. This is overproduction, and it creates a struggle for existence for limited food, water and space. Only some individuals survive to reproduce in the harsh environment each season.",
+              "Within a population, individuals vary in features such as size, colour and speed from birth. Some variations help an organism feed, hide or escape from predators more effectively in daily life. Those advantageous features increase the chance of survival and reproduction.",
+              "The environment therefore selects individuals best adapted to survive, a process called survival of the fittest in different island habitats. Darwin observed this in finches with different beaks and in moths with dark or light wings. Over generations, useful traits become more common in the population."
+            ],
+            "bullets": [
+              "Overproduction creates competition for limited resources such as food",
+              "Variation gives some individuals advantages in survival",
+              "Survival of the fittest passes useful traits to offspring"
+            ],
+            "takeaway": "Natural selection favours advantageous variation, so useful traits spread over time.",
+            "check": {
+              "question": "Why do finches with different beaks illustrate natural selection?",
+              "options": [
+                "Beaks changed through use during life",
+                "Birds inherited beaks acquired by stretching",
+                "Beaks suited to different foods aided survival",
+                "Isolated finches planned new beaks"
+              ],
+              "answer": 2,
+              "why": "Finches with beaks suited to their food survived and reproduced better, so advantageous beak types spread."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The Organic and Modern Theory",
+            "paragraphs": [
+              "The organic theory, also called the modern synthesis, combines Darwin's natural selection with genetics. Genes carry hereditary information that determines features such as beak shape and wing colour in offspring. Selection acts on differences caused by these genetic factors in the population.",
+              "Mutation provides the raw material for evolution by creating new genetic variation in offspring. Random changes in genes occur in offspring and may produce new characteristics over time. If a mutation improves survival, natural selection preserves it in the population.",
+              "Over long periods, small adaptive changes accumulate and eventually produce diversity across Nigeria. New species may form when populations can no longer interbreed successfully with each other. This explains the great variety of organisms adapted to different Nigerian habitats and regions."
+            ],
+            "bullets": [
+              "Genetics explains how hereditary traits pass from parents to offspring",
+              "Mutation creates new variation on which selection can act",
+              "Adaptive changes over long time lead to new species"
+            ],
+            "takeaway": "Modern theory joins genes, mutation and selection to explain species diversity.",
+            "check": {
+              "question": "What does the organic theory add to Darwin's ideas?",
+              "options": [
+                "Inheritance of acquired characters",
+                "Genetics and mutation as raw material",
+                "Use and disuse of organs",
+                "Goal-directed stretching for food"
+              ],
+              "answer": 1,
+              "why": "The modern synthesis keeps natural selection and adds genes and mutation to explain variation and heredity."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Comparing Lamarck and Darwin",
+            "paragraphs": [
+              "Lamarck claimed that organisms inherit characters acquired through use and disuse during life. Darwin claimed that variation exists first, and the environment selects those best able to survive and reproduce. The two theories therefore differ clearly in the source of variation.",
+              "In Lamarck's view, stretching gives giraffes longer necks that their calves inherit directly. In Darwin's view, giraffes born with slightly longer necks fed better and left more calves. One emphasises effort by the individual, while the other emphasises selection of existing variation.",
+              "Darwin's explanation is supported by genetics and experiment, while Lamarck's is not in examinations. Examiners expect candidates to contrast inheritance of acquired characters with natural selection clearly. Remember that selection preserves useful variation rather than creating it by effort."
+            ],
+            "bullets": [
+              "Lamarck: acquired characters inherited from parents to calves",
+              "Darwin: existing variation selected during survival and breeding",
+              "Modern theory accepts Darwin with genetic variation and mutation"
+            ],
+            "takeaway": "Darwin relies on selected variation, while Lamarck relies on acquired inheritance.",
+            "check": {
+              "question": "How does Darwin explain long giraffe necks?",
+              "options": [
+                "Giraffes stretched until necks grew",
+                "Longer necks were inherited after stretching",
+                "Long-necked giraffes survived and bred more",
+                "Leaves directed genes to lengthen necks"
+              ],
+              "answer": 2,
+              "why": "Variation in neck length already existed; longer necks gave better access to food and led to more offspring."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For comparisons, learn one sentence for each theory before examples. State variation first for Darwin, acquired characters for Lamarck, then mention genes and mutation to complete the modern theory answer clearly."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Near a factory in Lagos, light moths rest on pale walls while dark moths rest on soot-darkened walls. During smoky periods, birds eat more light moths. What will happen to the moth population over time, and why?",
+            "steps": [
+              {
+                "operation": "Identify variation and selection pressure",
+                "reason": "Moths differ in colour and birds prey more on light moths",
+                "result": "Dark moths survive and breed more",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Apply survival of the fittest",
+                "reason": "Dark colour improves camouflage on soot",
+                "result": "Dark moths pass genes to offspring",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Predict the long-term result",
+                "reason": "Advantageous variation spreads each generation",
+                "result": "Dark moths become more common",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Antibiotic-killing drugs are introduced in a hospital. Bacteria vary in resistance. Predict which bacteria survive and explain the process in Darwin's terms.",
+            "hints": [
+              "Think about variation first",
+              "Recall the struggle for existence",
+              "Consider what survivors pass on"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "evidence-of-evolution",
+      "title": "Evidence for Evolution",
+      "objective": "Describe fossils, comparative anatomy, embryology, biogeography, vestigial organs and DNA as evidence for evolution.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Evidence for Evolution",
+            "paragraphs": [
+              "At the museum in Lagos, a student compares a fish fossil with a modern lizard. Their bones share surprising similarities despite different appearances. Such evidence helps scientists trace how life has changed over time."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The Fossil Record",
+            "paragraphs": [
+              "Fossils are remains of organisms preserved in rock over millions of years in ancient deposits. The fossil record shows species that lived in the past and how they changed over time. Layers of rock help scientists arrange fossils from older to younger periods accurately.",
+              "Archaeopteryx had feathers and wings but also teeth and claws like reptiles inside its body. It is regarded as a link between dinosaurs and birds in evolutionary history. Tiktaalik had fish fins but also limb-like bones for moving on land successfully.",
+              "The horse series shows gradual changes in size, teeth and feet over time in fossils. Fossils from different rocks reveal this sequence across many generations in order. The record therefore supports descent with modification from common ancestors over long periods."
+            ],
+            "bullets": [
+              "Fossils preserve past organisms in rock layers over time",
+              "Archaeopteryx links reptiles with birds through mixed features",
+              "Tiktaalik links fish with land animals through fins and limbs"
+            ],
+            "takeaway": "Fossils reveal past life and show gradual change between groups.",
+            "check": {
+              "question": "Why is Archaeopteryx important evidence for evolution?",
+              "options": [
+                "It had feathers and reptile teeth",
+                "It lived in modern Nigeria",
+                "It shows extinction of birds",
+                "It evolved in a laboratory"
+              ],
+              "answer": 0,
+              "why": "Archaeopteryx combines bird feathers and wings with reptile teeth and claws, linking dinosaurs to birds."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Comparative Anatomy and Embryology",
+            "paragraphs": [
+              "Comparative anatomy studies similarities in body structure among different living species today. Homologous structures share the same basic plan but perform different functions in the body. The pentadactyl limb in humans, bats and whales has similar bones despite different uses.",
+              "Analogous structures perform the same function but have different basic plans from each other. Bird wings and insect wings both allow flight but developed differently in different ancestors. Their similarity results from similar needs rather than common ancestry in the past.",
+              "Embryology shows that embryos of different animals look very similar early in development inside the mother. Human embryos even develop pharyngeal arches resembling those of fish at an early stage. This similarity reflects shared ancestry and similar developmental stages in evolution."
+            ],
+            "bullets": [
+              "Homologous pentadactyl limbs share bones but serve different functions",
+              "Analogous wings fly well but evolved from different structures",
+              "Similar embryos with pharyngeal arches suggest common ancestry"
+            ],
+            "takeaway": "Homologous structures and similar embryos reveal descent from common ancestors.",
+            "check": {
+              "question": "Human, bat and whale forelimbs are homologous because they",
+              "options": [
+                "Perform the same function",
+                "Share the same bone plan",
+                "Developed independently for flight",
+                "Look identical in embryos only"
+              ],
+              "answer": 1,
+              "why": "Homologous structures share the same basic bone pattern from a common ancestor despite different functions."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Biogeography, Vestigial Organs and DNA",
+            "paragraphs": [
+              "Biogeography studies the distribution of species across regions and continents around the world. Marsupials are widespread in Australia but rare elsewhere as native animals in nature. Isolation in Australia allowed marsupials to evolve distinct forms without competition from placental mammals.",
+              "Vestigial organs are reduced structures with little or no function in the present body. The human appendix and the pelvic bones in whales are examples of vestigial organs found today. They suggest that ancestors possessed larger, functional versions of these structures before reduction.",
+              "DNA and protein similarities show close relationships between species in evolutionary trees clearly. Humans share more DNA sequences with chimpanzees than with dogs in their genomes. Antibiotic resistance in bacteria also shows rapid evolution through natural selection in hospitals every day."
+            ],
+            "bullets": [
+              "Marsupials in Australia show evolution after geographic isolation",
+              "Vestigial pelvic bones in whales hint at land ancestors",
+              "DNA similarity and antibiotic resistance support common descent"
+            ],
+            "takeaway": "Distribution, vestigial organs and DNA all support evolution by descent.",
+            "check": {
+              "question": "Which evidence best shows close relationship of humans and chimpanzees?",
+              "options": [
+                "Similar fossils in rock layers",
+                "Same pentadactyl limb bones",
+                "Greater DNA sequence similarity",
+                "Marsupials in Australia"
+              ],
+              "answer": 2,
+              "why": "DNA and protein comparisons show humans share more sequences with chimpanzees than with more distant relatives."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Learn definitions first, then one example for each type of evidence. Link homologous structures to common ancestry and analogous structures to similar function in your exam answers clearly."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A student in Enugu compares the forelimb bones of a human, a bat wing and a whale flipper. All have the same bone arrangement but different functions. How does this support evolution, and what is the term for the similarity?",
+            "steps": [
+              {
+                "operation": "Identify the shared bone plan",
+                "reason": "Same arrangement suggests common ancestry",
+                "result": "Structures are homologous",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Contrast with analogous structures",
+                "reason": "Analogous means same function, different plan",
+                "result": "These limbs differ in function despite shared plan",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "State the evolutionary conclusion",
+                "reason": "Shared plan is best explained by descent",
+                "result": "Humans, bats and whales share a common ancestor",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Whales have tiny pelvic bones inside their bodies. What evidence type does this provide, and what does it suggest about whale ancestry?",
+            "hints": [
+              "Think of reduced unused organs",
+              "Recall the human appendix example",
+              "Consider where whales once lived"
             ]
           }
         }
