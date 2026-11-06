@@ -89,6 +89,14 @@ topics / 92 published lessons / 920 Biology blocks / 92 depth lessons; 173
 published library lessons and 100 depth lessons. All 92 lessons pass the
 strict prose scan and `check-lesson-depth.mjs`.
 
+## 2026-11-07 English depth complete
+
+Added 22 depth triples (600–669 words each) to all English lessons. Targeted
+reseed changed 22 lessons/258 blocks; a re-run changed 0. Totals now: 173
+published library lessons and 122 depth lessons (Biology 92, English 22,
+Commerce 3, Government 5). All 22 English lessons and all 92 Biology lessons
+pass `check-lesson-depth.mjs`.
+
 ## Prevention
 
 - Run the seeder with `--dry-run` first and confirm the planned inserts and
