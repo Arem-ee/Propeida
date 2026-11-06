@@ -173,11 +173,19 @@ const descriptions = {
   'pollution-conservation-and-parks':
     'Pollution and its control, conservation and Nigeria\u2019s parks and reserves.',
   'variation-in-population':
-    'Morphological and physiological variation and its use in identity, transfusion and paternity.',
+    'Continuous and discontinuous variation, colour patterns, fingerprints and identity.',
+  'physiological-variation':
+    'Tongue rolling, PTC tasting, blood groups, and uses in transfusion, paternity and crime detection.',
   heredity:
-    'Heritable characters, chromosomes, genetic crosses, sex determination and sex-linked traits.',
+    'Heritable characters, genes, alleles, DNA and chromosome segregation.',
+  'genetic-crosses-and-probability':
+    'Monohybrid and dihybrid crosses, Punnett squares and probability.',
+  'sex-determination-and-sex-linked-traits':
+    'XX/XY determination, X-linked colour blindness and haemophilia, and baldness.',
+  'heredity-applications':
+    'Cross-breeding, marriage counselling, GMO biosafety and recombinant DNA products.',
   biotechnology:
-    'Applications of biotechnology in agriculture, medicine, pharmaceuticals and the food industry.',
+    'Biotechnology in agriculture, medicine, pharmaceuticals and the food industry.',
   'theories-of-evolution':
     "Organic evolution, Lamarck's and Darwin's theories, and the evidence that supports them.",
   'evidence-of-evolution':
@@ -596,6 +604,41 @@ const split = [
     slug: 'pollution-conservation-and-parks',
     name: 'Pollution, Conservation and National Parks',
     syllabus_ref: 'C.7',
+  },
+  {
+    slug: 'variation-in-population',
+    name: 'Morphological Variation',
+    syllabus_ref: 'D.1',
+  },
+  {
+    slug: 'physiological-variation',
+    name: 'Physiological Variation and Applications',
+    syllabus_ref: 'D.1',
+  },
+  {
+    slug: 'heredity',
+    name: 'Genes, Chromosomes and Heritable Characters',
+    syllabus_ref: 'D.2',
+  },
+  {
+    slug: 'genetic-crosses-and-probability',
+    name: 'Genetic Crosses and Probability',
+    syllabus_ref: 'D.2',
+  },
+  {
+    slug: 'sex-determination-and-sex-linked-traits',
+    name: 'Sex Determination and Sex-Linked Traits',
+    syllabus_ref: 'D.2',
+  },
+  {
+    slug: 'heredity-applications',
+    name: 'Heredity in Practice',
+    syllabus_ref: 'D.2',
+  },
+  {
+    slug: 'biotechnology',
+    name: 'Biotechnology and Its Applications',
+    syllabus_ref: 'D.3',
   },
 ].map((topic, index) => ({
   ...topic,

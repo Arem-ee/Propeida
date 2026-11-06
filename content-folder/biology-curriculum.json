@@ -636,34 +636,66 @@
     },
     {
       "slug": "variation-in-population",
-      "name": "Variation In Population",
+      "name": "Morphological Variation",
       "syllabus_ref": "D.1",
       "section": "Heredity and Variations",
       "order": 80,
-      "description": "Morphological and physiological variation and its use in identity, transfusion and paternity."
+      "description": "Continuous and discontinuous variation, colour patterns, fingerprints and identity."
+    },
+    {
+      "slug": "physiological-variation",
+      "name": "Physiological Variation and Applications",
+      "syllabus_ref": "D.1",
+      "section": "Heredity and Variations",
+      "order": 81,
+      "description": "Tongue rolling, PTC tasting, blood groups, and uses in transfusion, paternity and crime detection."
     },
     {
       "slug": "heredity",
-      "name": "Heredity",
+      "name": "Genes, Chromosomes and Heritable Characters",
       "syllabus_ref": "D.2",
       "section": "Heredity and Variations",
-      "order": 81,
-      "description": "Heritable characters, chromosomes, genetic crosses, sex determination and sex-linked traits."
+      "order": 82,
+      "description": "Heritable characters, genes, alleles, DNA and chromosome segregation."
+    },
+    {
+      "slug": "genetic-crosses-and-probability",
+      "name": "Genetic Crosses and Probability",
+      "syllabus_ref": "D.2",
+      "section": "Heredity and Variations",
+      "order": 83,
+      "description": "Monohybrid and dihybrid crosses, Punnett squares and probability."
+    },
+    {
+      "slug": "sex-determination-and-sex-linked-traits",
+      "name": "Sex Determination and Sex-Linked Traits",
+      "syllabus_ref": "D.2",
+      "section": "Heredity and Variations",
+      "order": 84,
+      "description": "XX/XY determination, X-linked colour blindness and haemophilia, and baldness."
+    },
+    {
+      "slug": "heredity-applications",
+      "name": "Heredity in Practice",
+      "syllabus_ref": "D.2",
+      "section": "Heredity and Variations",
+      "order": 85,
+      "description": "Cross-breeding, marriage counselling, GMO biosafety and recombinant DNA products."
     },
     {
       "slug": "biotechnology",
-      "name": "Biotechnology",
+      "name": "Biotechnology and Its Applications",
       "syllabus_ref": "D.3",
       "section": "Heredity and Variations",
-      "order": 82,
-      "description": "Applications of biotechnology in agriculture, medicine, pharmaceuticals and the food industry."
+      "order": 86,
+      "description": "Biotechnology in agriculture, medicine, pharmaceuticals and the food industry."
     },
     {
       "slug": "theories-of-evolution",
       "name": "Theories of evolution",
       "syllabus_ref": "E.1",
       "section": "Evolution",
-      "order": 83,
+      "order": 87,
       "description": "Organic evolution, Lamarck's and Darwin's theories, and the evidence that supports them."
     },
     {
@@ -671,7 +703,7 @@
       "name": "Evidence of evolution",
       "syllabus_ref": "E.2",
       "section": "Evolution",
-      "order": 84,
+      "order": 88,
       "description": "Fossils, comparative anatomy, embryology and other evidence for organic evolution."
     }
   ],
@@ -13132,6 +13164,1035 @@
               "Separate renewables from non-renewables.",
               "Think of forests, soils and fisheries.",
               "Name one Nigerian park or reserve."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "variation-in-population",
+      "title": "Morphological Variation",
+      "objective": "Explain continuous and discontinuous variation, colour variation and fingerprints in populations.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Morphological Variation",
+            "paragraphs": [
+              "During morning assembly in Enugu, Chiamaka notices striking differences in skin shade, eye colour and hair texture among classmates. These visible differences prompt the question of how traits are inherited and distributed in a population."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Variation and its two patterns",
+            "paragraphs": [
+              "Variation is the presence of differences in characters among individuals of the same species. These differences arise from genetic and environmental influences on developing organisms. In a population, no two individuals are exactly alike in all traits.",
+              "Continuous variation shows a smooth range with many intermediates, as seen in human height and weight. When heights are measured and a frequency histogram is plotted, the bars form a bell-shaped curve with most near the average. Very tall and very short pupils occur rarely at the two ends.",
+              "Discontinuous variation separates individuals into distinct groups without intermediates. Human blood groups illustrate this pattern because a person has one clear group. Measuring height and weight gives continuous data, whereas blood grouping gives discontinuous data."
+            ],
+            "bullets": [
+              "Continuous traits: height, weight and skin shade show gradual gradation.",
+              "Discontinuous traits: blood group, tongue rolling and earlobe shape show separate classes.",
+              "Frequency histograms reveal the distribution shape of continuous traits."
+            ],
+            "takeaway": "Continuous variation forms a bell curve; discontinuous variation forms distinct groups.",
+            "check": {
+              "question": "Which trait is an example of discontinuous variation?",
+              "options": [
+                "Human height",
+                "Human weight",
+                "Human blood group",
+                "Human skin shade"
+              ],
+              "answer": 2,
+              "why": "Blood group falls into distinct types with no intermediates, unlike height and weight which vary continuously."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Colour variation and survival",
+            "paragraphs": [
+              "Colour variation means differences in skin, eye and hair colour among humans. Melanin in the skin determines shade, while pigments colour the iris and hair. These differences are inherited and help show that humans of the same species vary visibly.",
+              "Animals show similar differences in coat, scales and feathers. Some grasshoppers are green while others are brown, and butterfly wings display many colour patterns. In plants, flower colour and leaf variegation also differ between individuals of one species.",
+              "Colour differences often have adaptive value for survival and reproduction. Camouflage hides animals from predators, while bright colours attract pollinators to flowers. Variation therefore allows some individuals to survive better and pass their favourable traits to offspring."
+            ],
+            "bullets": [
+              "Human colour traits: skin shade, eye colour and hair texture differ.",
+              "Animal colour traits: coat, scales and feathers aid camouflage and display.",
+              "Plant colour examples: flower colour attracts pollinators; leaf patterns aid survival."
+            ],
+            "takeaway": "Colour variation helps organisms survive through camouflage, attraction and protection.",
+            "check": {
+              "question": "Why is colour variation important for survival in animals?",
+              "options": [
+                "It helps animals camouflage and attract mates",
+                "It makes all members look identical",
+                "It prevents inheritance of genes",
+                "It increases need for food"
+              ],
+              "answer": 0,
+              "why": "Colour differences such as camouflage hide animals from predators and bright colours attract pollinators, giving adaptive advantage."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Fingerprints and individual identity",
+            "paragraphs": [
+              "Fingerprints are the ridged patterns on the fingertips that develop before birth. The main patterns are arches, loops and whorls, each with finer ridge endings and bifurcations. These patterns form during fetal development and remain stable throughout life.",
+              "No two people have identical fingerprints, even though general pattern types are shared. The detailed arrangement of ridges makes every fingerprint unique and permanent. This uniqueness means a print can identify a person reliably after birth.",
+              "Fingerprints are used for identity checks, police records and crime detection. A suspect print from a scene can be matched with recorded prints to confirm presence. Identical twins have different fingerprints because development in the womb and environment shape ridge formation."
+            ],
+            "bullets": [
+              "Pattern types: arches, loops and whorls are the three main types.",
+              "Unique and permanent: each person has a distinct ridge arrangement.",
+              "Uses: identity verification, criminal detection and paternity records."
+            ],
+            "takeaway": "Fingerprints are unique, permanent and useful for identification and crime detection.",
+            "check": {
+              "question": "Why do identical twins have different fingerprints?",
+              "options": [
+                "They inherit different blood groups",
+                "Ridge formation is influenced by fetal development and environment",
+                "They have different numbers of fingers",
+                "Their fingerprints change every year"
+              ],
+              "answer": 1,
+              "why": "Although twins share genes, womb conditions and environment shape ridge development, so fingerprints remain unique."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "In examinations, distinguish continuous traits like height, which form a bell curve, from discontinuous traits like blood group, which form separate classes. State an example, describe the pattern and mention that variation comes from genes and environment."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A teacher in Lagos measures the heights of 30 pupils in centimetres and wants to decide whether height shows continuous or discontinuous variation and describe the pattern.",
+            "steps": [
+              {
+                "operation": "Measure and group heights into 5 cm classes, then count pupils per class.",
+                "reason": "Organising data shows how values are distributed across the population.",
+                "result": "Counts rise toward the middle classes and fall at both ends.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Plot a frequency histogram with height classes on the x-axis and frequency on the y-axis.",
+                "reason": "A histogram displays variation shape clearly for comparison.",
+                "result": "Bars form a bell-shaped curve with a central peak.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Conclude that height is continuous and name the pattern.",
+                "reason": "A smooth bell curve with intermediates indicates continuous variation.",
+                "result": "Most pupils cluster near the average height; extremes are rare.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "How would you test whether skin shade in your class shows continuous or discontinuous variation?",
+            "hints": [
+              "Measure shade using a simple scale",
+              "Plot a frequency histogram",
+              "Look for a bell curve or distinct groups"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "physiological-variation",
+      "title": "Physiological Variation and Applications",
+      "objective": "Explain tongue rolling, PTC tasting, blood groups and their applications in medicine and forensics.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Physiological Variation and Applications",
+            "paragraphs": [
+              "At a science fair in Ibadan, Adaeze demonstrates tongue rolling and PTC tasting and records splits in her class. Some pupils succeed while others fail, raising questions about inherited traits and practical uses."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Tongue rolling and PTC tasting",
+            "paragraphs": [
+              "Tongue rolling is the ability to curl the sides of the tongue upward into a roll. The trait is controlled by genes and shows discontinuous variation because people either can roll or cannot. It cannot be learned through practice or exercise.",
+              "PTC tasting is the ability to detect the bitter chemical phenylthiocarbamide, often supplied as paper. Tasters perceive intense bitterness while non-tasters taste little or nothing. The difference is inherited by a single dominant gene and shows distinct groups.",
+              "A class survey can categorise pupils into tasters and non-tasters. The frequencies are recorded in a table to compare numbers and discuss inheritance patterns. Such practical work reinforces how physiological traits vary clearly within a population in Nigeria today."
+            ],
+            "bullets": [
+              "Tongue rolling: inherited, discontinuous and cannot be learned.",
+              "PTC tasting: phenylthiocarbamide bitterness controlled by dominant gene.",
+              "Class survey: tally tasters and non-tasters for frequency comparison."
+            ],
+            "takeaway": "Tongue rolling and PTC tasting are inherited traits showing distinct groups.",
+            "check": {
+              "question": "What does a PTC tasting survey show?",
+              "options": [
+                "How quickly pupils run",
+                "Distinct groups of tasters and non-tasters",
+                "Average height of the class",
+                "Blood group of pupils"
+              ],
+              "answer": 1,
+              "why": "PTC tasting is inherited and discontinuous, so pupils separate into tasters and non-tasters."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Blood groups and inheritance",
+            "paragraphs": [
+              "Blood groups are determined by antigens on red blood cells and antibodies in plasma. The ABO system has types A, B, AB and O, each defined by antigen combination. The Rhesus system depends on the presence or absence of Rhesus factor.",
+              "Antibodies react against antigens not present in the body, which informs inheritance and compatibility. A person with type A blood has A antigens but anti-B antibodies. This matching of antigens and antibodies explains why groups differ between individuals.",
+              "Blood groups differ because genes control antigen production and antibody formation. Inherited genes from parents determine the group passed to offspring. Understanding these differences helps explain variation that is discontinuous and measurable by simple tests."
+            ],
+            "bullets": [
+              "ABO groups: A, B, AB and O defined by antigens and antibodies.",
+              "Rhesus groups: Rh positive has factor; Rh negative lacks factor.",
+              "Inheritance: parental genes determine offspring blood group."
+            ],
+            "takeaway": "Antigens and antibodies determine blood groups, which are inherited discontinuously.",
+            "check": {
+              "question": "What determines a person's ABO blood group?",
+              "options": [
+                "Diet and exercise",
+                "Antigens on red blood cells",
+                "Hair colour",
+                "Tongue rolling ability"
+              ],
+              "answer": 1,
+              "why": "ABO type depends on antigens present and matching antibodies, controlled by inherited genes."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Applications in medicine and forensics",
+            "paragraphs": [
+              "Blood transfusion requires matching donor and recipient blood groups to avoid harmful reactions. Transfusing incompatible blood can cause antibodies to attack donor cells. Correct matching therefore saves lives and shows practical use of blood group variation.",
+              "Blood groups also assist paternity determination when inheritance rules exclude a proposed father. If a child has a group impossible from the mother and alleged father, that man cannot be the father. DNA profiles now confirm such evidence with higher precision.",
+              "Crime detection uses discontinuous traits such as blood groups, fingerprints and DNA. Bloodstain left at a scene can link a suspect to the location. Fingerprints and DNA provide individual profiles that identify offenders more reliably than general features like height alone."
+            ],
+            "bullets": [
+              "Transfusion: donor and recipient groups must be compatible.",
+              "Paternity: incompatible inheritance excludes proposed father.",
+              "Forensics: blood, fingerprints and DNA identify suspects."
+            ],
+            "takeaway": "Blood groups aid transfusion, paternity testing and crime detection.",
+            "check": {
+              "question": "Why is blood group matching important before transfusion?",
+              "options": [
+                "To increase blood volume",
+                "To avoid antibody attack on donor cells",
+                "To change the recipient blood group",
+                "To test for tongue rolling"
+              ],
+              "answer": 1,
+              "why": "Incompatible antigens and antibodies cause harmful reactions, so donor and recipient must be compatible."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "In examinations, link tongue rolling and PTC tasting to genetic inheritance and blood groups to antigens and antibodies. Mention applications such as transfusion, paternity and crime detection to secure full application marks."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A hospital in Kano receives blood from an alleged father, mother and child and must test whether the alleged father could be the biological father.",
+            "steps": [
+              {
+                "operation": "Determine the blood groups of the mother, alleged father and child.",
+                "reason": "Genes control antigens, so inheritance rules predict possible child groups.",
+                "result": "Groups are recorded and compared with inheritance possibilities.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Check whether the child's group can arise from those parents.",
+                "reason": "Discontinuous blood groups follow clear inheritance patterns.",
+                "result": "The child's group is impossible from that pair of parents.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Conclude that the alleged father is excluded and suggest DNA testing.",
+                "reason": "Exclusion by blood group is evidence; DNA gives stronger confirmation.",
+                "result": "The man cannot be the father; DNA profiling confirms the result.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "How could you use blood groups to investigate a claim of paternity?",
+            "hints": [
+              "Find ABO groups of parents",
+              "Apply inheritance rules",
+              "Check for impossible combinations"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "heredity",
+      "title": "Genes, Chromosomes and Heritable Characters",
+      "objective": "By the end of this lesson, you will explain heritable characters, genes and alleles, and how chromosomes carry genetic information.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Genes, Chromosomes and Heritable Characters",
+            "paragraphs": [
+              "Aminu in Kano discovers he has his mother's tall stature and dark eyes, while his elder brother's deep dimples match their father. At a family gathering, such characteristics spark debate about inherited and acquired traits."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Heritable and Non-Heritable Characters",
+            "paragraphs": [
+              "A heritable character passes from parents to offspring through genes. Examples include eye colour, blood group and albinism. A non-heritable character develops during life, such as a scar or a hairstyle.",
+              "Muscles built by exercise are non-heritable. Even strong training cannot alter the genes inside your gametes. Children of a weightlifter therefore start with ordinary muscles and improve only with their own practice.",
+              "Farmers in Zaria select maize for the same inherited resistance. They keep seeds only from plants that repeatedly resist drought. A tree trained to bear sweet fruit will not produce genetically sweeter seedlings."
+            ],
+            "bullets": [
+              "Heritable: eye colour, blood group, dimples",
+              "Non-heritable: scar, plaited hairstyle, trained muscles",
+              "Test: if children share it across generations, it is likely heritable"
+            ],
+            "takeaway": "Heritable traits follow family patterns; non-heritable traits are acquired during life.",
+            "check": {
+              "question": "Which of these is a non-heritable character?",
+              "options": [
+                "Blood group",
+                "Eye colour",
+                "A scar from an accident",
+                "Presence of dimples"
+              ],
+              "answer": 2,
+              "why": "A scar is acquired during life and cannot be passed through gametes. Blood group, eye colour and dimples are heritable."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Genes, Alleles and DNA",
+            "paragraphs": [
+              "Inside almost every cell, DNA forms a double helix like a twisted ladder. The rails are sugar and phosphate, while paired bases form the rungs. A gene is a section of this DNA that codes for one protein.",
+              "All forms of one gene are called alleles. For height, the allele T may code for tallness and t for shortness. Two identical alleles make an organism homozygous, while two different alleles make it heterozygous.",
+              "A homozygous tall plant can only give T to its children. A heterozygous tall plant gives T or t each time. This simple difference explains why some crosses produce only tall offspring."
+            ],
+            "bullets": [
+              "Gene: DNA section coding for a character",
+              "Alleles: different forms, e.g. T and t",
+              "Homozygous TT; heterozygous Tt"
+            ],
+            "takeaway": "Genes are DNA sections; alleles are their alternative forms in homozygous or heterozygous states.",
+            "check": {
+              "question": "A plant with genotype Tt is described as",
+              "options": [
+                "Homozygous tall",
+                "Heterozygous tall",
+                "Homozygous short",
+                "Homozygous for T"
+              ],
+              "answer": 1,
+              "why": "Tt has two different alleles, so the plant is heterozygous. The tall allele T dominates the short allele t."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Chromosomes, Meiosis and Fertilisation",
+            "paragraphs": [
+              "Human body cells contain 46 chromosomes in their nuclei. Each chromosome has a centromere, a pinching region that pulls the chromatids apart. During cell division, sister chromatids or whole chromosomes move to opposite poles.",
+              "Gametes contain only 23 chromosomes, half the body number. Meiosis produces these gametes and separates homologous chromosomes so that each gamete carries one of each pair. This segregation ensures children receive a mixture of traits.",
+              "At fertilisation, the two sets of 23 chromosomes join again to make 46. Because pairing is random, each gamete carries a new combination of maternal and paternal chromosomes. Offspring are therefore genetically different from one another."
+            ],
+            "bullets": [
+              "46 chromosomes in body cells; 23 in gametes",
+              "Centromere joins chromatids and directs movement",
+              "Meiosis separates homologues; fertilisation restores 46"
+            ],
+            "takeaway": "Meiosis halves chromosome number; fertilisation restores it with a new random mix.",
+            "check": {
+              "question": "How many chromosomes are present in a human gamete?",
+              "options": [
+                "46",
+                "23",
+                "92",
+                "12"
+              ],
+              "answer": 1,
+              "why": "Gametes are haploid with half the diploid number. Body cells have 46, so gametes have 23."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Examiners often ask for the difference between homozygous and heterozygous. Remember: homozygous means two identical alleles like TT; heterozygous means two different alleles like Tt; in both cases the visible character may look alike."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A student in Lagos crosses a homozygous tall pea plant (TT) with a homozygous short plant (tt). What is seen in the first generation?",
+            "steps": [
+              {
+                "operation": "Write the gametes of each parent",
+                "reason": "Each parent gives only one allele to the child",
+                "result": "TT parent gives T; tt parent gives t",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Combine the gametes in all zygotes",
+                "reason": "Fertilisation joins one maternal and one paternal allele",
+                "result": "All children have genotype Tt",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "State the phenotype of the F1 generation",
+                "reason": "T codes for tallness and dominates t",
+                "result": "All F1 plants are tall, heterozygous",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Your friend says the child of a tall heterozygous plant always inherits tallness. What gametes could that plant produce?",
+            "hints": [
+              "Look at its genotype.",
+              "Write its possible gametes.",
+              "Consider if the child is short."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "genetic-crosses-and-probability",
+      "title": "Genetic Crosses and Probability",
+      "objective": "By the end of this lesson, you will interpret monohybrid and dihybrid Punnett squares and use probability to explain observed ratios.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Genetic Crosses and Probability",
+            "paragraphs": [
+              "Adaobi in Apapa starts a science fair project with pea seeds from her market. She remembers her teacher's warning about unexpected results. Her classmates laugh when she predicts tall and short plants from crossed seeds."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Monohybrid Cross and the F2 Ratio",
+            "paragraphs": [
+              "A Punnett square in words lists gametes across the top and down the side. For TT x tt, put T and T across the top and t and t down the side. Each box gives a child genotype.",
+              "All four boxes contain Tt, so every F1 child is heterozygous tall. This uniform first generation shows that the tall allele dominates. Self-fertilise the F1 plants Tt x Tt to produce the F2 generation.",
+              "For Tt x Tt, use T and t across the top and down the side. Boxes are TT, Tt, Tt and tt. Phenotype ratio is three tall to one short."
+            ],
+            "bullets": [
+              "F1: all Tt, tall phenotype",
+              "F2 genotype: 1 TT : 2 Tt : 1 tt",
+              "F2 phenotype: 3 tall : 1 short"
+            ],
+            "takeaway": "A monohybrid cross reveals dominant and recessive phenotypes in the F2 ratio.",
+            "check": {
+              "question": "In a Tt x Tt cross, how many of the four boxes are tt?",
+              "options": [
+                "0",
+                "1",
+                "2",
+                "4"
+              ],
+              "answer": 1,
+              "why": "Only one box contains tt, the recessive homozygote. The others are TT, Tt and Tt, all phenotypically tall."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Dihybrid Cross and the 9:3:3:1 Ratio",
+            "paragraphs": [
+              "A dihybrid cross follows two characters at once. For shape and colour, let R be round and r wrinkled, Y yellow and y green. The parent RrYy makes four gamete types: RY, Ry, rY, ry.",
+              "Draw a 4x4 Punnett square in words with the four gametes across the top and down the side. Sixteen boxes show all possible children. Count the phenotypes: round yellow, round green, wrinkled yellow and wrinkled green.",
+              "The phenotypic ratio is nine to three to three to one. Each character follows the monohybrid ratio independently within the square. This pattern confirms independent assortment of the two gene pairs."
+            ],
+            "bullets": [
+              "16 boxes for a 4x4 dihybrid square",
+              "Phenotypes: 9 round yellow, 3 round green",
+              "3 wrinkled yellow, 1 wrinkled green"
+            ],
+            "takeaway": "Dihybrid crosses combine two monohybrid ratios into the nine-three-three-one pattern.",
+            "check": {
+              "question": "How many boxes are in a dihybrid Punnett square for two heterozygous parents?",
+              "options": [
+                "4",
+                "8",
+                "16",
+                "32"
+              ],
+              "answer": 2,
+              "why": "Each parent makes four gamete types, giving four times four boxes. The phenotypic ratio is nine-three-three-one."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Probability, Chi-Square and Family Size",
+            "paragraphs": [
+              "Probability predicts ratios, but actual results vary with chance. A chi-square test compares observed numbers with expected numbers to judge if the deviation is accidental. A small chi-square value suggests the data fit the expected ratio.",
+              "In a real maize experiment, you might count 760 tall and 240 short plants. Expected 750 and 250 fits well, so the 3 to 1 hypothesis is supported. A large discrepancy would question the hypothesis or suggest counting error.",
+              "Ratios seem weary, or unreliable, in small families because each birth is a separate chance event. Two heterozygous parents can have four tall children without breaking the rule. Only large numbers reveal the real probability."
+            ],
+            "bullets": [
+              "Expected = predicted from ratio for total",
+              "Chi-square: sum (observed-expected)² / expected",
+              "Small families give erratic, misleading ratios"
+            ],
+            "takeaway": "Probability predicts ratios, but chance and small samples distort observed results.",
+            "check": {
+              "question": "Why can a family with four children not prove a 3 to 1 ratio?",
+              "options": [
+                "Too few children",
+                "Wrong genes",
+                "Too many children",
+                "Parents are homozygous"
+              ],
+              "answer": 0,
+              "why": "Small samples allow large chance variations. Probability is reliable only in large numbers of offspring."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Remember to state both genotype and phenotype ratios for crosses. For a monohybrid F2, write one TT to two Tt to one tt for genotype and three tall to one short for phenotype."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A farmer in Ibadan crosses heterozygous watermelons (RrYy x RrYy). What proportion are round and yellow?",
+            "steps": [
+              {
+                "operation": "List the four gametes of each parent",
+                "reason": "Each parent is heterozygous for two characters",
+                "result": "RY, Ry, rY, ry",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Count boxes that are round and yellow",
+                "reason": "Round and yellow require dominant alleles R and Y",
+                "result": "Nine of the sixteen boxes",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "State the probability",
+                "reason": "Probability equals favourable outcomes over total",
+                "result": "9/16 or 56.25 per cent",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A cross gives 140 tall and 40 short plants. Expected for 180 plants is 135 and 45. Does the data fit?",
+            "hints": [
+              "Calculate the expected ratio.",
+              "Compare observed with expected.",
+              "Consider chi-square idea."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "sex-determination-and-sex-linked-traits",
+      "title": "Sex Determination and Sex-Linked Traits",
+      "objective": "By the end of this lesson, you will explain XX and XY sex determination and how X-linked traits pass through families.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Sex Determination and Sex-Linked Traits",
+            "paragraphs": [
+              "Chinedu in Jos met his newborn cousin, a girl born to anxious parents who hoped for a boy. The family grandmother explains why each birth brings surprise. Their questions begin a lesson on sex determination."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "XX and XY Sex Determination",
+            "paragraphs": [
+              "Human females have two X chromosomes, XX. Human males have one X and one Y chromosome, XY. The Y chromosome carries the SRY gene that directs male development.",
+              "A female always gives an X to her children in the egg. A male gives either an X or a Y in the sperm. The sperm therefore determines the child sex.",
+              "Each conception has a 50 per cent chance of XX or XY. This probability is independent of previous children. Families with three sons can still have a daughter next."
+            ],
+            "bullets": [
+              "Female XX: all eggs carry X",
+              "Male XY: sperm carry X or Y",
+              "Result: 50 per cent XX, 50 per cent XY"
+            ],
+            "takeaway": "Sex is decided at fertilisation by whether the sperm carries X or Y.",
+            "check": {
+              "question": "Which parent determines the child sex?",
+              "options": [
+                "Mother, because she carries the baby",
+                "Father, because his sperm carries X or Y",
+                "Neither parent can influence it",
+                "Both equally via the egg"
+              ],
+              "answer": 1,
+              "why": "Mothers always give X, but fathers give X or Y depending on the sperm. The sperm type decides XX or XY."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "X-Linked Traits in Males and Females",
+            "paragraphs": [
+              "Some traits are carried on the X chromosome. Haemophilia, a bleeding disorder, and red-green colour blindness are X-linked and recessive. A woman must carry two faulty copies to show fully.",
+              "Because males have only one X, one faulty copy makes them show the trait. A carrier mother passes the faulty X to half her sons. This explains why more males are colour-blind or haemophilic.",
+              "Baldness is different and is inherited as a dominant gene. It anticipates and appears mainly in men, even when mothers carry it. Women need two baldness genes to bald fully and are rarely bald."
+            ],
+            "bullets": [
+              "Colour blindness: X recessive, commoner in males",
+              "Haemophilia: X recessive, bleeding disorder",
+              "Baldness: dominant, anticipated mainly in men"
+            ],
+            "takeaway": "X-linked recessive traits affect more males; baldness is dominant and mostly male.",
+            "check": {
+              "question": "Why are X-linked recessive disorders commoner in males?",
+              "options": [
+                "Males have two faulty X copies",
+                "Males have only one X chromosome",
+                "Females are unaffected carriers",
+                "Y carries the faulty gene"
+              ],
+              "answer": 1,
+              "why": "A single faulty X in a male shows fully. A female needs two faulty copies, so she is usually only a carrier."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Reading Pedigrees",
+            "paragraphs": [
+              "A pedigree is a family tree drawn in words with symbols. Circles are females, squares are males, and filled symbols show the trait. Draw parents at the top and children beneath them.",
+              "To trace a dominant trait, look for it appearing in every generation. To trace a recessive trait, look for unaffected parents producing an affected child. Horizontal lines join couples, while vertical lines drop to children.",
+              "Skip generations suggest recessive inheritance, as the trait hides in carriers. A filled circle with unfilled brothers supports this pattern. Careful counting of filled and unfilled symbols clarifies the mode of inheritance."
+            ],
+            "bullets": [
+              "Circles female, squares male, filled affected",
+              "Dominant: appears every generation",
+              "Recessive: skips generations, hidden in carriers"
+            ],
+            "takeaway": "Pedigrees use symbols to reveal whether a trait is dominant or recessive.",
+            "check": {
+              "question": "Unaffected parents have an affected child. What does this suggest?",
+              "options": [
+                "Dominant trait",
+                "Recessive trait",
+                "X-linked dominant",
+                "Sex determination"
+              ],
+              "answer": 1,
+              "why": "Both parents hide the recessive allele as carriers. Their child inherits two copies and shows the trait."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Males receive their X only from their mother and Y only from their father. This single fact explains sex determination and why X-linked recessive traits affect mostly sons in pedigrees."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A colour-blind woman (XcXc) marries a normal-sighted man (XCY). What are the risks to their sons and daughters?",
+            "steps": [
+              {
+                "operation": "List the gametes of both parents",
+                "reason": "Mother gives Xc; father gives XC or Y",
+                "result": "Sons get XcY; daughters get XCXc",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "State the phenotype of sons",
+                "reason": "Sons have only one X, which is faulty",
+                "result": "All sons are colour-blind",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "State the phenotype of daughters",
+                "reason": "Daughters have one normal and one faulty X",
+                "result": "All daughters are carriers but sighted",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "In a pedigree, a trait appears only in males and passes from father to son. What inheritance is likely?",
+            "hints": [
+              "Check the father's contribution.",
+              "Is it on the X or Y?",
+              "Does it skip generations?"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "heredity-applications",
+      "title": "Heredity in Practice",
+      "objective": "By the end of this lesson, you will describe how heredity improves crops, livestock, preventive medicine and biotechnology.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Heredity in Practice",
+            "paragraphs": [
+              "Emeka in Zaria visits a cattle market with his father to buy a bull with strong resistance to trypanosomiasis. The seller praises cross-bred animals. Emeka wonders how breeders use heredity for better crops and livestock."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Heredity in Crop and Livestock Breeding",
+            "paragraphs": [
+              "Cross-breeding mates individuals from different varieties to produce new breeds. Crossing two maize varieties in Rigachikun can combine drought resistance and high yield. Offspring may show hybrid vigour in the first generation.",
+              "In-breeding mates close relatives to secure desired characters. It makes the herd more uniform but can expose harmful recessive genes. Out-breeding brings in fresh genes and is often used to refresh tired lines.",
+              "Farmers must balance vigour against uniformity when improving livestock. Cross-bred cattle often resist disease better than pure local breeds. Maintaining true breeds, however, protects genetic diversity for future breeding."
+            ],
+            "bullets": [
+              "Cross-breeding: new varieties, hybrid vigour",
+              "In-breeding: uniformity but exposes defects",
+              "Out-breeding: fresh genes, restores vigour"
+            ],
+            "takeaway": "Cross-breeding refreshes stock; in-breeding fixes type but may reveal weaknesses.",
+            "check": {
+              "question": "Which is a disadvantage of long-term in-breeding?",
+              "options": [
+                "Exposes harmful recessive genes",
+                "Brings in new variety",
+                "Produces hybrid vigour",
+                "Increases disease resistance"
+              ],
+              "answer": 0,
+              "why": "Close mating makes recessive defects homozygous. Cross-breeding with unrelated stock can hide them and restore vigour."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Heredity in Marriage and Pregnancy Care",
+            "paragraphs": [
+              "Pregnancy counselling uses blood grouping and genotype tests before marriage. Knowing both partners’ sickle-cell genotype AS or SS helps predict child risks. AS carriers are healthy, while SS children suffer sickle-cell anaemia.",
+              "If two AS partners marry, each child has one in four risk of SS. Counsellors explain these odds without forcing choices. Early diagnosis now allows better care and reduces deaths from crises.",
+              "Rhesus factor also matters for newborn jaundice. A Rhesus-negative mother carrying a Rhesus-positive baby may form antibodies that attack later pregnancies. Hospitals give anti-D injections to prevent this damage."
+            ],
+            "bullets": [
+              "AS x AS: 25 % SS, 50 % AS",
+              "Rhesus-negative mother needs anti-D injection",
+              "Genotype screening protects child health"
+            ],
+            "takeaway": "Blood, genotype and Rhesus tests guide families to plan healthy pregnancies.",
+            "check": {
+              "question": "A couple are both AS. What is the chance their child is SS?",
+              "options": [
+                "0 per cent",
+                "25 per cent",
+                "50 per cent",
+                "100 per cent"
+              ],
+              "answer": 1,
+              "why": "AS x AS gives 1 in 4 SS. Each conception is independent, so past children do not change the chance."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Genetic Modification and Medical Products",
+            "paragraphs": [
+              "Genetic modification inserts a selected gene into a foreign host. Scientists obtained human insulin by placing the human gene into E coli. Fermenters now produce insulin instead of relying on pigs.",
+              "Recombinant DNA also makes interferon against viruses and enzymes for industry. Gene therapy aims to cure faulty genes by adding correct copies to patient cells. Trials must prove safety before hospitals can use these treatments.",
+              "Biosafety rules stop engineered organisms escaping. Laboratories use sealed fermenters and track every modified sample. Regulation balances medical benefit with protection of health and environment."
+            ],
+            "bullets": [
+              "E. coli produces human insulin widely",
+              "Interferon and enzymes made by recombinant DNA",
+              "Containment and regulation ensure biosafety"
+            ],
+            "takeaway": "Gene technology supplies drugs, but strict safety controls protect the public.",
+            "check": {
+              "question": "How is human insulin obtained for many diabetics?",
+              "options": [
+                "From pig pancreases only",
+                "From engineered E. coli",
+                "From sheep bones",
+                "From human blood donors"
+              ],
+              "answer": 1,
+              "why": "E. coli with the human insulin gene produces the hormone. This is safer and more plentiful than animal sources."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Note AS and SS correctly in counselling questions today. AS carriers look healthy, SS shows sickle-cell anaemia. Also recall that Rhesus-negative mothers receive anti-D to protect newborns well."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Tunde from Kaduna, an AS carrier, marries Adaeze, also AS. What is the risk of an SS child?",
+            "steps": [
+              {
+                "operation": "Draw AS x AS Punnett in words",
+                "reason": "Each gives A or S to children",
+                "result": "Boxes AA, AS, AS, SS",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Count the SS boxes",
+                "reason": "Only the homozygous recessive box is affected",
+                "result": "One of four boxes",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "State the probability",
+                "reason": "One favourable box over four total",
+                "result": "25 per cent SS risk",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A cattle breeder wants disease resistance. Should she cross-breed or in-breed? Explain.",
+            "hints": [
+              "Recall hybrid vigour.",
+              "Consider resistance outcome.",
+              "Check risks of defects."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "biotechnology",
+      "title": "Biotechnology and Its Applications",
+      "objective": "At the end of this lesson, learners can define biotechnology and give examples of its agricultural, medical, pharmaceutical and food-industrial applications.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Biotechnology and Its Applications",
+            "paragraphs": [
+              "In a small farm near Jos, a young farmer watches her maize wither from stem borers. She wonders if there is a safer way to protect her harvest and feed her family."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Biotechnology in Agriculture",
+            "paragraphs": [
+              "Biotechnology is the use of living organisms or their components to create useful products for human needs. It involves manipulating organisms, often at the genetic level, to improve crops, animals and processes. Modern work uses tools such as genetic engineering and tissue culture.",
+              "In agriculture, farmers grow pest-resistant crops that produce their own insecticides. Bt cotton, for example, is engineered to produce a bacterial toxin that kills bollworms. This reduces the need for frequent chemical sprays on large farms and protects yields.",
+              "Other improvements include crops resistant to viral and fungal diseases. Herbicide-tolerant varieties allow weeds to be controlled more efficiently without damaging the crop. Biofortification adds vital nutrients, such as vitamin A or iron, directly into staple foods."
+            ],
+            "bullets": [
+              "Pest-resistant crops kill specific insects precisely with inbuilt Bt toxins.",
+              "Disease-resistant crops reduce losses from viruses and fungi.",
+              "Biofortified crops improve everyday nutrition through added vitamins and minerals."
+            ],
+            "takeaway": "Biotechnology helps Nigerian farmers control pests, diseases and weeds while improving nutrition.",
+            "check": {
+              "question": "Which crop improvement is an example of biotechnology in agriculture?",
+              "options": [
+                "Bt cotton resistant to bollworms",
+                "Maize selected for taller stems",
+                "Cassava stored in dry soil",
+                "Yam grown from stem cuttings"
+              ],
+              "answer": 0,
+              "why": "Bt cotton uses genetic engineering to produce its own insecticide."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Biotechnology in Medicine",
+            "paragraphs": [
+              "Medicine has been transformed by vaccines produced using living cells and genetic techniques. These vaccines train the immune system to recognise dangerous pathogens safely. They protect communities against diseases that cannot be treated easily or swiftly.",
+              "Recombinant insulin is made by inserting the human gene for insulin into bacteria or yeast. The microbes multiply rapidly and produce large quantities of pure hormone for many people with diabetes. This replaced animal insulin and reduced allergic reactions.",
+              "Gene therapy introduces corrected genes into patients to treat inherited disorders. DNA-based diagnostic tests detect infections and genetic conditions quickly and accurately. Together, these advances offer more precise, personalised and affordable treatment for patients."
+            ],
+            "bullets": [
+              "Vaccines can be produced more safely and cheaply using genetically modified organisms.",
+              "Recombinant insulin treats diabetes effectively without using animal sources.",
+              "Gene therapy and DNA tests improve early diagnosis and targeted treatment."
+            ],
+            "takeaway": "Biotechnology in medicine produces safer vaccines, human insulin and targeted genetic treatments.",
+            "check": {
+              "question": "Which medicine is made by recombinant DNA technology?",
+              "options": [
+                "Human insulin from modified yeast",
+                "Antibiotic from soil mould",
+                "Painkiller from plant leaves",
+                "Vitamin tablet from grains"
+              ],
+              "answer": 0,
+              "why": "Recombinant insulin is produced when yeast containing the human insulin gene multiplies."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Pharmaceuticals, Food and Safety",
+            "paragraphs": [
+              "The pharmaceutical industry uses biotechnology to produce antibiotics more reliably and cheaply. Microbes can be engineered to grow faster and yield much higher levels of effective medicine. Engineered enzymes also help manufacture many drugs and process various food ingredients.",
+              "Food production depends on fermentation by yeast and bacteria. These organisms produce beer, bread, yoghurt and cheese through controlled biological processes. Genetically modified foods may carry much improved flavour, nutrition or much longer storage life.",
+              "In Nigeria, biosafety rules aim to protect health and the environment from risks. Scientists must also consider ethical questions about modifying genes in foods and humans. Public awareness and regulation help ensure fully responsible use."
+            ],
+            "bullets": [
+              "Antibiotic and enzyme production uses engineered microbes efficiently.",
+              "Fermentation improves food quality, flavour and shelf life.",
+              "Biosafety checks reduce risks to people and ecosystems."
+            ],
+            "takeaway": "Biotechnology supports drug production and food processing, but safety and ethics must guide it.",
+            "check": {
+              "question": "Which process relies on yeast to produce beer and bread?",
+              "options": [
+                "Fermentation",
+                "Photosynthesis",
+                "Transpiration",
+                "Respiration in soil"
+              ],
+              "answer": 0,
+              "why": "Yeast fermentation converts sugars into alcohol and carbon dioxide for beer and bread."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "In JAMB questions, match each product to its source: Bt cotton means pest resistance, recombinant insulin means medicine, and fermentation means food processing. Always read whether the question asks about benefit, risk, or process."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A man in Ibadan needs daily human insulin, but animal insulin causes allergic reactions. How does biotechnology solve his problem?",
+            "steps": [
+              {
+                "operation": "Select recombinant insulin produced by modified yeast.",
+                "reason": "Yeast contains the human insulin gene and multiplies rapidly.",
+                "result": "Large quantities of human-identical insulin are made safely.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Replace animal insulin with this recombinant product.",
+                "reason": "Human insulin matches the body and reduces allergic reactions.",
+                "result": "The man receives effective, affordable treatment daily.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Control dose and monitor blood sugar regularly.",
+                "reason": "Proper management prevents dangerous highs and lows.",
+                "result": "Stable health and reduced complications are achieved.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A farmer wants maize resistant to stem borers. Which biotechnology approach would you recommend and why?",
+            "hints": [
+              "Think of Bt crops and insect toxins.",
+              "Consider yields, sprays and safety.",
+              "Mention disease and nutrition benefits too."
             ]
           }
         }
