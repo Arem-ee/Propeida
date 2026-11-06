@@ -27,10 +27,21 @@ Both `levels-of-organisation` and `adaptive-colouration` now have 7 blocks, and
 the four B.1 lessons are live. The later B.2 Nutrition seed then inserted its
 four lessons, followed by five B.3 Transport lessons, five B.4 Respiration lessons, five B.5 Excretion lessons, five B.6 Support and Movement lessons, eight B.7 Reproduction lessons, three B.8 Growth lessons, eight B.9 Co-ordination and Control lessons, sixteen C Ecology lessons, seven D Heredity and Variations lessons and three E Evolution lessons.
 
-Current database state: 89 Biology topics, 89 published Biology lessons and 170
-published library lessons. All 89 Biology lessons pass
-`check-lesson-depth.mjs`; the A.1-E pages were verified at 360px and 1280px
-with correct checks and no horizontal overflow.
+Current database state: 89 Biology topics, 89 published Biology lessons, 638
+Biology blocks and 170 published library lessons; 5 Biology lessons carry depth.
+All 89 Biology lessons pass `check-lesson-depth.mjs`; the A.1-E pages were
+verified at 360px and 1280px with correct checks and no horizontal overflow.
+
+## 2026-11-06 audit reseed
+
+The factual and coverage remediation recorded in
+`docs/biology-audit-2026-11-05.md` changed 69 of the 89 lessons. A targeted,
+retry-safe seeder compared every source lesson with its database blocks and
+rewrote only the 69 that differed: 498 blocks. A second run reported 0 changed
+lessons and 0 blocks rewritten, confirming that the database matches the rebuilt
+curriculum. Totals after the reseed: 89 Biology topics / 89 published lessons /
+638 Biology blocks / 5 depth lessons; 170 published library lessons. A clean
+production build and browser sweep then passed all 89 pages at 360px and 1280px.
 
 ## Prevention
 
@@ -42,3 +53,9 @@ with correct checks and no horizontal overflow.
   seeder is idempotent and heals the lesson's blocks.
 - When diagnosing connectivity, read the host from `.env` and test its REST
   endpoint. Do not reuse a stale host from an older note.
+- For edits to existing Biology lessons, prefer a targeted retry-safe seeder
+  that compares source blocks with the database and rewrites only lessons whose
+  blocks differ from the rebuilt curriculum.
+- For a full 89-page browser sweep, use a clean production build
+  (`npm run build`, then `npm run start -- --port 3001`). A long dev-server run
+  eventually corrupted the Next dev overlay manifest and returned spurious 500s.
