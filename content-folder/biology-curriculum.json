@@ -444,18 +444,74 @@
     },
     {
       "slug": "co-ordination-and-control",
-      "name": "Co-ordination and control",
+      "name": "Nervous Coordination and Neurons",
       "syllabus_ref": "B.9",
       "section": "Form and Functions",
       "order": 56,
-      "description": "Nervous coordination, sense organs, hormones and homeostasis."
+      "description": "The need for coordination, nervous versus hormonal control, neuron structure, impulse transmission and synapses."
+    },
+    {
+      "slug": "brain-spinal-cord-and-reflexes",
+      "name": "Brain, Spinal Cord and Reflexes",
+      "syllabus_ref": "B.9",
+      "section": "Form and Functions",
+      "order": 57,
+      "description": "The central nervous system, brain regions, spinal cord and reflex arcs; reflex, voluntary and conditioned actions."
+    },
+    {
+      "slug": "skin-nose-and-tongue",
+      "name": "Skin, Nose and Tongue",
+      "syllabus_ref": "B.9",
+      "section": "Form and Functions",
+      "order": 58,
+      "description": "Touch, pressure, temperature and pain in the skin; smell in the nose; taste in the tongue; and common defects."
+    },
+    {
+      "slug": "the-eye",
+      "name": "The Eye",
+      "syllabus_ref": "B.9",
+      "section": "Form and Functions",
+      "order": 59,
+      "description": "Eye structure, rods and cones, accommodation, the pupil reflex and defects such as myopia and hypermetropia."
+    },
+    {
+      "slug": "the-ear",
+      "name": "The Ear",
+      "syllabus_ref": "B.9",
+      "section": "Form and Functions",
+      "order": 60,
+      "description": "Hearing, the ossicles and cochlea, balance and common ear defects."
+    },
+    {
+      "slug": "animal-hormones",
+      "name": "Animal Hormones",
+      "syllabus_ref": "B.9",
+      "section": "Form and Functions",
+      "order": 61,
+      "description": "Endocrine glands, pituitary, thyroid, parathyroid, adrenal, pancreas and gonads, and hormone disorders."
+    },
+    {
+      "slug": "plant-hormones",
+      "name": "Plant Hormones",
+      "syllabus_ref": "B.9",
+      "section": "Form and Functions",
+      "order": 62,
+      "description": "Auxins and tropisms, gibberellins, cytokinins, abscisic acid, ethylene and their agricultural uses."
+    },
+    {
+      "slug": "homeostasis",
+      "name": "Homeostasis",
+      "syllabus_ref": "B.9",
+      "section": "Form and Functions",
+      "order": 63,
+      "description": "Negative feedback, temperature regulation, and salt and water balance by ADH and aldosterone."
     },
     {
       "slug": "factors-affecting-the-distribution-of-organisms",
       "name": "Factors affecting the distribution of Organisms",
       "syllabus_ref": "C.1",
       "section": "Ecology",
-      "order": 57,
+      "order": 64,
       "description": "Abiotic and biotic factors that determine where organisms live."
     },
     {
@@ -463,7 +519,7 @@
       "name": "Symbiotic interactions of plants and animals",
       "syllabus_ref": "C.2",
       "section": "Ecology",
-      "order": 58,
+      "order": 65,
       "description": "Symbiosis, energy flow, food chains and webs, and the carbon, water and nitrogen cycles."
     },
     {
@@ -471,7 +527,7 @@
       "name": "Natural Habitats",
       "syllabus_ref": "C.3",
       "section": "Ecology",
-      "order": 59,
+      "order": 66,
       "description": "Aquatic and terrestrial habitats and the adaptive features of the organisms in them."
     },
     {
@@ -479,7 +535,7 @@
       "name": "Local (Nigerian) Biomes",
       "syllabus_ref": "C.4",
       "section": "Ecology",
-      "order": 60,
+      "order": 67,
       "description": "Tropical rainforest, Guinea and Sudan savanna, desert and the highland plateaus of Nigeria."
     },
     {
@@ -487,7 +543,7 @@
       "name": "The Ecology of Populations",
       "syllabus_ref": "C.5",
       "section": "Ecology",
-      "order": 61,
+      "order": 68,
       "description": "Population density, competition, population size, ecological succession and climax communities."
     },
     {
@@ -495,7 +551,7 @@
       "name": "SOIL",
       "syllabus_ref": "C.6",
       "section": "Ecology",
-      "order": 62,
+      "order": 69,
       "description": "Soil types, components, fertility, erosion and the maintenance of productive soil."
     },
     {
@@ -503,7 +559,7 @@
       "name": "Humans and Environment",
       "syllabus_ref": "C.7",
       "section": "Ecology",
-      "order": 63,
+      "order": 70,
       "description": "Disease, drug abuse, pollution, sanitation, conservation and Nigeria's parks and reserves."
     },
     {
@@ -511,7 +567,7 @@
       "name": "Variation In Population",
       "syllabus_ref": "D.1",
       "section": "Heredity and Variations",
-      "order": 64,
+      "order": 71,
       "description": "Morphological and physiological variation and its use in identity, transfusion and paternity."
     },
     {
@@ -519,7 +575,7 @@
       "name": "Heredity",
       "syllabus_ref": "D.2",
       "section": "Heredity and Variations",
-      "order": 65,
+      "order": 72,
       "description": "Heritable characters, chromosomes, genetic crosses, sex determination and sex-linked traits."
     },
     {
@@ -527,7 +583,7 @@
       "name": "Biotechnology",
       "syllabus_ref": "D.3",
       "section": "Heredity and Variations",
-      "order": 66,
+      "order": 73,
       "description": "Applications of biotechnology in agriculture, medicine, pharmaceuticals and the food industry."
     },
     {
@@ -535,7 +591,7 @@
       "name": "Theories of evolution",
       "syllabus_ref": "E.1",
       "section": "Evolution",
-      "order": 67,
+      "order": 74,
       "description": "Organic evolution, Lamarck's and Darwin's theories, and the evidence that supports them."
     },
     {
@@ -543,7 +599,7 @@
       "name": "Evidence of evolution",
       "syllabus_ref": "E.2",
       "section": "Evolution",
-      "order": 68,
+      "order": 75,
       "description": "Fossils, comparative anatomy, embryology and other evidence for organic evolution."
     }
   ],
@@ -9476,6 +9532,1182 @@
               "Bean is epigeal and must lift its cotyledons to the surface.",
               "Maize is hypogeal and its food store stays underground.",
               "Deep planting uses up the bean's stored food before the shoot reaches light."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "co-ordination-and-control",
+      "title": "Nervous Coordination and Neurons",
+      "objective": "Explain the need for coordination, compare nervous and hormonal control, and describe neuron structure, impulse transmission and synapses.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Nervous coordination and neurons",
+            "paragraphs": [
+              "A student touches a hot plate and pulls the hand away before thinking about it. Receptors, neurons and muscles have already coordinated the response."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Why coordination matters",
+            "paragraphs": [
+              "Coordination links a stimulus to a response. A receptor detects the stimulus, a coordinator processes the information, and an effector such as a muscle or gland carries out the response; this sequence keeps the body working as a whole.",
+              "The nervous system provides fast, short-lived control through electrical impulses and chemical synapses. The endocrine system provides slower, longer-lasting control through hormones carried in the blood.",
+              "Both systems maintain homeostasis. Nervous control suits rapid actions such as blinking or balancing, while hormonal control suits gradual changes such as growth, puberty and blood glucose regulation."
+            ],
+            "bullets": [
+              "Stimulus → receptor → coordinator → effector → response.",
+              "Nervous control is fast and short-lived; hormonal control is slower and longer-lasting.",
+              "Both systems help maintain a steady internal environment."
+            ],
+            "takeaway": "Nerves switch responses quickly; hormones tune the body slowly.",
+            "check": {
+              "question": "Which sequence correctly describes a coordinated response?",
+              "options": [
+                "Effector → receptor → coordinator → stimulus",
+                "Receptor → stimulus → effector → coordinator",
+                "Stimulus → receptor → coordinator → effector",
+                "Coordinator → stimulus → receptor → effector"
+              ],
+              "answer": 2,
+              "why": "A stimulus is detected by a receptor, processed by a coordinator and answered by an effector."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The neuron",
+            "paragraphs": [
+              "A neuron is a nerve cell specialised for carrying impulses. It has a cell body containing the nucleus, dendrites that receive signals, and a long axon that carries the impulse away towards another cell.",
+              "Many axons are wrapped in a fatty myelin sheath, which insulates the fibre and speeds up transmission. The sheath is interrupted at nodes of Ranvier, where the impulse jumps from node to node in saltatory conduction.",
+              "Sensory neurons carry impulses from receptors to the central nervous system, motor neurons carry impulses from the central nervous system to effectors, and relay neurons connect the two inside the brain or spinal cord."
+            ],
+            "bullets": [
+              "Dendrites receive; the axon transmits; the cell body contains the nucleus.",
+              "Myelin insulates and speeds up the impulse.",
+              "Sensory, motor and relay neurons have different jobs."
+            ],
+            "takeaway": "A neuron is built to receive, carry and pass on an impulse.",
+            "check": {
+              "question": "Which part of a neuron carries impulses away from the cell body?",
+              "options": [
+                "Dendrite",
+                "Axon",
+                "Nucleus",
+                "Synapse"
+              ],
+              "answer": 1,
+              "why": "The axon is the long fibre that conducts the impulse away from the cell body."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Impulse transmission and synapses",
+            "paragraphs": [
+              "At rest, the neuron membrane is polarised, with a negative charge inside and a positive charge outside. A stimulus makes the membrane permeable to sodium ions, which rush in and reverse the charge; this is the action potential.",
+              "The impulse travels along the axon as a wave of depolarisation. Behind it, potassium ions move out and restore the resting charge, so the neuron can carry another impulse after a short recovery period.",
+              "At a synapse, the impulse cannot jump the gap. The presynaptic knob releases a neurotransmitter such as acetylcholine into the synaptic cleft; the chemical binds to receptors on the next neuron and starts a new impulse, so transmission is one-way."
+            ],
+            "bullets": [
+              "Action potential: sodium ions enter and reverse the membrane charge.",
+              "Potassium ions restore the resting potential.",
+              "Neurotransmitters carry the signal across the synaptic cleft in one direction."
+            ],
+            "takeaway": "Electric along the axon, chemical across the synapse.",
+            "check": {
+              "question": "The gap between two neurons is crossed by",
+              "options": [
+                "A continuous axon",
+                "A neurotransmitter",
+                "A myelin sheath",
+                "A dendrite"
+              ],
+              "answer": 1,
+              "why": "Neurotransmitters diffuse across the synaptic cleft and bind to receptors on the next neuron."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Nervous control is fast and short-lived; hormonal control is slower and longer-lasting. Neurons carry impulses, myelin speeds them up, and neurotransmitters cross synapses in one direction, so signals travel one way only."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A toxin blocks acetylcholine receptors at a synapse. Predict the effect on a muscle and explain why.",
+            "steps": [
+              {
+                "operation": "Locate the block",
+                "reason": "Acetylcholine normally binds to receptors on the postsynaptic membrane.",
+                "result": "The signal cannot pass from the motor neuron to the muscle.",
+                "predictPrompt": "What happens to the muscle?"
+              },
+              {
+                "operation": "Predict the muscle response",
+                "reason": "Without a new impulse, the muscle fibre is not stimulated.",
+                "result": "The muscle cannot contract and becomes weak or paralysed.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Explain the direction",
+                "reason": "Synapses transmit in one direction only.",
+                "result": "The block stops communication at that synapse, not along the axon behind it.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why does a reflex withdrawal from a hot object happen before the person feels the pain?",
+            "hints": [
+              "The reflex arc can complete in the spinal cord.",
+              "The brain receives the sensory information at the same time.",
+              "Feeling and conscious interpretation take longer than the spinal response."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "brain-spinal-cord-and-reflexes",
+      "title": "Brain, Spinal Cord and Reflexes",
+      "objective": "Describe the central nervous system, the main regions of the brain, the spinal cord, and how reflex arcs produce fast involuntary responses.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Brain, spinal cord and reflexes",
+            "paragraphs": [
+              "A footballer ducks a flying ball, and a student blinks as dust blows into the eye. Both responses depend on the central nervous system, which sorts the signal and triggers the action."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The central nervous system",
+            "paragraphs": [
+              "A footballer ducks a ball and a student blinks as dust blows into the eye. Both responses run through the central nervous system, which sorts signals and issues commands.",
+              "The central nervous system (CNS) is the brain and spinal cord. The brain sits in the skull, the spinal cord runs inside the vertebral column, and both are wrapped in membranes called meninges and cushioned by cerebrospinal fluid.",
+              "Inside, grey matter holds cell bodies and synapses, while white matter holds myelinated axons. The peripheral nervous system (PNS) is the network of cranial and spinal nerves linking the CNS to receptors and effectors."
+            ],
+            "bullets": [
+              "CNS: brain and spinal cord; PNS: cranial and spinal nerves.",
+              "Meninges and cerebrospinal fluid protect the CNS.",
+              "Grey matter holds cell bodies; white matter is myelinated."
+            ],
+            "takeaway": "The CNS is the control centre; the PNS is the wiring.",
+            "check": {
+              "question": "Which structure cushions the brain and spinal cord in fluid?",
+              "options": [
+                "Meninges",
+                "Cerebrospinal fluid",
+                "Periosteum",
+                "Synovial fluid"
+              ],
+              "answer": 1,
+              "why": "Cerebrospinal fluid surrounds and cushions the CNS, while the meninges are the membranes that enclose it."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The brain and spinal cord",
+            "paragraphs": [
+              "Different regions of the brain do different jobs. The cerebrum, with its folded outer layer, handles conscious thought, memory, language, vision, hearing and voluntary movement. The cerebellum, behind it, coordinates balance, posture and smooth muscle action.",
+              "The medulla oblongata at the base of the brain controls involuntary activities such as breathing, heart rate and blood pressure. The hypothalamus monitors temperature, hunger and thirst, and links the nervous system to the pituitary gland.",
+              "The spinal cord is more than a cable. It carries sensory impulses up and motor impulses down, and it contains reflex centres that produce fast responses without waiting for the brain."
+            ],
+            "bullets": [
+              "Cerebrum: thought, memory, senses and voluntary movement.",
+              "Cerebellum: balance, posture and smooth muscle control.",
+              "Medulla and hypothalamus: involuntary control and internal balance."
+            ],
+            "takeaway": "The brain decides; the spinal cord can also act alone.",
+            "check": {
+              "question": "Which part of the brain controls balance and coordination?",
+              "options": [
+                "Cerebrum",
+                "Cerebellum",
+                "Medulla oblongata",
+                "Hypothalamus"
+              ],
+              "answer": 1,
+              "why": "The cerebellum coordinates balance, posture and smooth muscle action."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Reflex and voluntary actions",
+            "paragraphs": [
+              "A reflex action is a rapid, automatic and involuntary response to a stimulus. It protects the body before the brain has time to think.",
+              "The pathway is called a reflex arc. It runs from receptor to sensory neuron, then to a relay neuron in the spinal cord, then to a motor neuron and an effector such as a muscle. Blinking, the knee jerk and pulling the hand from a hot object are simple reflexes.",
+              "A voluntary action begins in the brain and is under conscious control, so it is slower and can be learned or stopped. A conditioned reflex is a learned link between a stimulus and a response, such as salivating at the smell of food or automatically braking a bicycle."
+            ],
+            "bullets": [
+              "Reflex arc: receptor → sensory neuron → relay → motor neuron → effector.",
+              "Reflexes are rapid, involuntary and protective.",
+              "Voluntary actions are conscious; conditioned reflexes are learned."
+            ],
+            "takeaway": "Reflexes take the short road; voluntary actions take the long one.",
+            "check": {
+              "question": "Which sequence correctly shows a reflex arc?",
+              "options": [
+                "Receptor → motor neuron → relay neuron → sensory neuron → effector",
+                "Receptor → sensory neuron → relay neuron → motor neuron → effector",
+                "Effector → sensory neuron → relay neuron → motor neuron → receptor",
+                "Receptor → relay neuron → sensory neuron → effector → motor neuron"
+              ],
+              "answer": 1,
+              "why": "A reflex arc runs from receptor to sensory neuron, relay neuron, motor neuron and effector."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "The CNS is the brain and spinal cord, protected by meninges and cerebrospinal fluid. The cerebrum handles conscious activity, the cerebellum balance, and the medulla involuntary functions. Reflex arcs pass through the spinal cord for speed."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A doctor taps a patient's knee and the leg kicks out, but the patient feels nothing until afterwards. Explain the pathway and why the response is involuntary.",
+            "steps": [
+              {
+                "operation": "Identify the stimulus and receptor",
+                "reason": "The tap stretches a tendon, and stretch receptors in the thigh muscle detect the change.",
+                "result": "A sensory impulse starts towards the spinal cord.",
+                "predictPrompt": "Where does the impulse go next?"
+              },
+              {
+                "operation": "Trace the reflex arc",
+                "reason": "The sensory neuron synapses with a relay neuron in the spinal cord, which synapses with a motor neuron.",
+                "result": "The motor neuron stimulates the thigh muscle to contract.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Explain why it is involuntary",
+                "reason": "The response leaves the spinal cord before the brain has processed the signal.",
+                "result": "The leg kicks automatically, and the brain is informed afterwards.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why does a person blink when an object comes towards the eye, even when they try to keep the eye open?",
+            "hints": [
+              "Blinking is a protective reflex.",
+              "The reflex arc can be completed quickly through the brain stem.",
+              "Conscious control is slower than the reflex pathway."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "skin-nose-and-tongue",
+      "title": "Skin, Nose and Tongue",
+      "objective": "Relate the structure and function of the skin, nose and tongue to touch, smell and taste, and explain common defects of these sense organs.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Skin, nose and tongue",
+            "paragraphs": [
+              "A hand feels the roughness of bark, the nose catches smoke, and the tongue detects salt in soup. Each sense organ turns a different kind of stimulus into nerve impulses."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The skin as a tactile organ",
+            "paragraphs": [
+              "The skin is the largest sense organ. Its dermis contains several kinds of receptor: touch corpuscles near the surface, deeper pressure corpuscles, separate cold and heat receptors, and free nerve endings for pain.",
+              "The receptors are unevenly distributed. Fingertips, lips and the tongue carry many touch receptors, which is why they detect fine detail, while the back is much less sensitive.",
+              "Receptors also adapt. A ring left on the finger soon feels normal because the touch receptors stop responding to a constant stimulus, yet a new change is detected at once. This is why we notice a fly landing but not the feel of clothing."
+            ],
+            "bullets": [
+              "Skin receptors detect touch, pressure, temperature and pain.",
+              "Fingertips and lips are most sensitive because they have more receptors.",
+              "Receptors adapt to a constant stimulus."
+            ],
+            "takeaway": "Skin reports touch, pressure, temperature and pain.",
+            "check": {
+              "question": "A ring feels tight when first worn but soon becomes unnoticeable. This is due to",
+              "options": [
+                "Receptor adaptation",
+                "Loss of skin receptors",
+                "Reduced blood flow",
+                "Thickening of the epidermis"
+              ],
+              "answer": 0,
+              "why": "Receptors stop responding to an unchanging stimulus, so the ring is no longer noticed."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The nose and smell",
+            "paragraphs": [
+              "The nose detects chemicals in the air. At the roof of the nasal cavity, the olfactory epithelium contains receptor cells with fine cilia, and mucus dissolves arriving molecules so they can bind to the receptors.",
+              "The receptor cells send impulses along the olfactory nerve to the cerebrum, where the smell is identified. A blocked nose, a cold or damaged receptor cells can cause anosmia, the loss of the sense of smell.",
+              "Smell and taste work together. Much of what we call flavour comes from odours rising from the mouth into the nasal cavity, so food tastes bland when the nose is blocked."
+            ],
+            "bullets": [
+              "Olfactory receptor cells sit in the roof of the nasal cavity.",
+              "Mucus dissolves odour molecules so receptors can detect them.",
+              "Blocked noses cause anosmia and dull the taste of food."
+            ],
+            "takeaway": "The nose reads dissolved chemicals and sends smell signals to the brain.",
+            "check": {
+              "question": "Why does food taste bland when you have a cold?",
+              "options": [
+                "Taste buds stop working",
+                "Odour molecules cannot reach the olfactory receptors",
+                "The tongue swells",
+                "Saliva becomes acidic"
+              ],
+              "answer": 1,
+              "why": "A blocked nose prevents odour molecules from reaching the olfactory receptors, so the smell component of flavour is lost."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The tongue and taste",
+            "paragraphs": [
+              "The tongue detects dissolved chemicals through taste buds, which sit in small bumps called papillae. Each bud contains receptor cells that respond to one or more of five basic tastes: sweet, sour, salty, bitter and umami.",
+              "Impulses travel along cranial nerves to the medulla and then to the cerebrum. Taste is not fixed to a single zone: the old tongue map is wrong, because most of the tongue can detect every taste, though sensitivity varies.",
+              "Taste buds are damaged by very hot food, and their sensitivity falls when the mouth is dry because chemicals cannot dissolve. Smoking and some medicines also dull taste, while ageing reduces the number of working buds."
+            ],
+            "bullets": [
+              "Taste buds detect sweet, sour, salty, bitter and umami.",
+              "Taste impulses travel by cranial nerves to the brain.",
+              "Heat, dryness and ageing damage or dull taste buds."
+            ],
+            "takeaway": "The tongue identifies dissolved chemicals as five basic tastes.",
+            "check": {
+              "question": "Which list gives the five basic tastes?",
+              "options": [
+                "Sweet, sour, salty, bitter, umami",
+                "Sweet, sour, spicy, bitter, umami",
+                "Sweet, salty, spicy, sour, creamy",
+                "Sour, bitter, salty, minty, umami"
+              ],
+              "answer": 0,
+              "why": "The five basic tastes are sweet, sour, salty, bitter and umami."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Skin receptors detect touch, pressure, temperature and pain and adapt to constant stimuli. The nose detects dissolved odours, and the tongue detects five basic tastes. Smell and taste combine to produce flavour."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A cook loses the sense of smell after a head injury and complains that food has lost its flavour, although tests show normal taste buds. Explain the observation.",
+            "steps": [
+              {
+                "operation": "Check taste",
+                "reason": "The tongue and taste buds still detect the five basic tastes.",
+                "result": "The cook can still tell sweet from sour or salty.",
+                "predictPrompt": "Why is flavour still missing?"
+              },
+              {
+                "operation": "Check smell",
+                "reason": "The injury has damaged the olfactory pathway, so odours cannot reach the brain.",
+                "result": "The smell component of flavour is lost.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Combine the senses",
+                "reason": "The brain builds flavour from both taste and smell.",
+                "result": "Food tastes bland even though the tongue is working.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why can a person still recognise sweet and salty foods when the nose is blocked, but not the full flavour of a meal?",
+            "hints": [
+              "Taste buds detect basic tastes without help from the nose.",
+              "Most flavour comes from odours reaching the olfactory epithelium.",
+              "The brain combines taste and smell into one experience."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "the-eye",
+      "title": "The Eye",
+      "objective": "Describe the structure of the eye, explain focusing and the pupil reflex, and identify common eye defects and their corrections.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "The eye",
+            "paragraphs": [
+              "The eye turns light into nerve impulses. Its curved surfaces focus light on a light-sensitive retina, and the brain builds the image we see."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Structure of the eye",
+            "paragraphs": [
+              "Light enters the eye through the transparent cornea and passes through the pupil, the hole controlled by the coloured iris. The lens then focuses the light onto the retina at the back of the eye.",
+              "The retina contains rods, which work in dim light but see only black and white, and cones, which detect colour and sharp detail in bright light. The fovea has the highest concentration of cones and gives the clearest vision.",
+              "The optic nerve carries impulses from the retina to the brain. Where it leaves the eye there are no receptor cells, creating a blind spot. The sclera is the tough white outer coat, and the choroid supplies blood."
+            ],
+            "bullets": [
+              "Cornea and lens focus light; iris controls pupil size.",
+              "Rods work in dim light; cones detect colour and detail.",
+              "Optic nerve carries impulses; the blind spot has no receptors."
+            ],
+            "takeaway": "The eye focuses light and the retina converts it to impulses.",
+            "check": {
+              "question": "Which cells in the retina are responsible for colour vision?",
+              "options": [
+                "Rods",
+                "Cones",
+                "Ganglion cells",
+                "Ciliary muscles"
+              ],
+              "answer": 1,
+              "why": "Cones detect colour and sharp detail in bright light."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Focusing and the pupil reflex",
+            "paragraphs": [
+              "The eye focuses by changing the shape of the lens, a process called accommodation. To look at something close, the ciliary muscles contract, the suspensory ligaments slacken, and the lens becomes thicker; to look far away, the muscles relax and the lens becomes thinner.",
+              "The pupil reflex controls how much light enters. In bright light the circular muscles of the iris contract and the radial muscles relax, so the pupil narrows. In dim light the reverse happens and the pupil widens.",
+              "These responses are reflexes, not conscious decisions. The retina detects the light level and the brain stem sends the command, protecting the retina from bright light and letting in more light when it is dark."
+            ],
+            "bullets": [
+              "Accommodation: ciliary muscles change lens thickness.",
+              "Bright light constricts the pupil; dim light dilates it.",
+              "Both are reflexes controlled by the nervous system."
+            ],
+            "takeaway": "Near vision thickens the lens; bright light narrows the pupil.",
+            "check": {
+              "question": "To focus on a nearby object, the ciliary muscles",
+              "options": [
+                "Relax and the lens becomes thinner",
+                "Contract and the lens becomes thicker",
+                "Contract and the pupil widens",
+                "Relax and the pupil narrows"
+              ],
+              "answer": 1,
+              "why": "Near vision requires the ciliary muscles to contract, slackening the suspensory ligaments so the lens becomes thicker."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Defects of the eye",
+            "paragraphs": [
+              "Short sight, or myopia, happens when the eyeball is too long or the lens too strong, so distant images focus in front of the retina. It is corrected with a concave lens that spreads the rays before they enter the eye.",
+              "Long sight, or hypermetropia, happens when the eyeball is too short or the lens too weak, so near images focus behind the retina. A convex lens brings the rays together. Astigmatism is caused by an uneven cornea or lens and is corrected with a cylindrical lens.",
+              "Other defects include presbyopia, the loss of lens elasticity with age; cataract, a clouding of the lens; glaucoma, raised pressure inside the eye; and colour blindness, usually a defect in the red or green cones."
+            ],
+            "bullets": [
+              "Myopia: distant blur, concave lens.",
+              "Hypermetropia: near blur, convex lens.",
+              "Cataract, glaucoma and colour blindness also affect sight."
+            ],
+            "takeaway": "Match the defect to its lens: concave for short sight, convex for long sight.",
+            "check": {
+              "question": "A person cannot see distant objects clearly. Which defect and correction are correct?",
+              "options": [
+                "Myopia, concave lens",
+                "Myopia, convex lens",
+                "Hypermetropia, concave lens",
+                "Hypermetropia, convex lens"
+              ],
+              "answer": 0,
+              "why": "Myopia is short sight, and a concave lens spreads the rays so the image falls on the retina."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "The cornea and lens focus light on the retina, where rods and cones make impulses. Near vision thickens the lens; bright light constricts the pupil. Myopia needs a concave lens and hypermetropia a convex lens."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A student complains that the board is blurry but reading a book is fine. Identify the likely defect, explain where the image falls, and state the correction.",
+            "steps": [
+              {
+                "operation": "Identify the defect",
+                "reason": "Clear near vision with blurred distant vision is short sight.",
+                "result": "The student probably has myopia.",
+                "predictPrompt": "Where does the image form?"
+              },
+              {
+                "operation": "Locate the image",
+                "reason": "In myopia the eyeball is too long or the lens too strong.",
+                "result": "Distant rays focus in front of the retina.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Choose the correction",
+                "reason": "A concave lens spreads the rays before they enter the eye.",
+                "result": "The image moves back onto the retina.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why does the pupil become smaller in bright sunlight even when a person tries to keep it open?",
+            "hints": [
+              "The pupil reflex is involuntary.",
+              "The retina detects the light level.",
+              "Circular muscles of the iris contract in bright light."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "the-ear",
+      "title": "The Ear",
+      "objective": "Describe the structure of the ear, explain how sound is converted into impulses, describe balance, and identify common ear defects.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "The ear",
+            "paragraphs": [
+              "The ear turns sound waves into nerve impulses. It also contains organs of balance, which tell the brain how the head is moving."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Structure and hearing",
+            "paragraphs": [
+              "Sound waves are collected by the pinna and travel down the auditory canal to the tympanum, or eardrum. The eardrum vibrates and passes the vibration through three small bones, the malleus, incus and stapes, to the oval window.",
+              "From the oval window, the vibrations enter the fluid-filled cochlea. Hair cells inside the cochlea convert the vibrations into nerve impulses, which travel along the auditory nerve to the brain.",
+              "The Eustachian tube connects the middle ear to the back of the throat and keeps air pressure equal on both sides of the eardrum. The ossicles also amplify the vibration, because the middle ear must transfer energy from air to fluid."
+            ],
+            "bullets": [
+              "Pinna and canal collect sound; eardrum vibrates.",
+              "Ossicles pass vibrations to the cochlea.",
+              "Hair cells make impulses; the auditory nerve carries them."
+            ],
+            "takeaway": "Sound travels as vibrations until hair cells make impulses.",
+            "check": {
+              "question": "Which structure converts sound vibrations into nerve impulses?",
+              "options": [
+                "Tympanum",
+                "Ossicles",
+                "Cochlea",
+                "Eustachian tube"
+              ],
+              "answer": 2,
+              "why": "Hair cells in the cochlea convert vibrations into impulses carried by the auditory nerve."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Balance and the inner ear",
+            "paragraphs": [
+              "Balance is detected by the vestibular system in the inner ear. Three semicircular canals, set at right angles to each other, contain fluid that moves when the head rotates, bending hair cells and signalling the direction of movement.",
+              "The utricle and saccule detect straight-line acceleration and the pull of gravity. They contain small stones called otoliths that press on hair cells when the head tilts or moves.",
+              "Impulses from these organs travel to the cerebellum and other brain centres, which adjust posture and eye movements. Spinning quickly disturbs the fluid, so the brain still receives movement signals after stopping, which causes dizziness."
+            ],
+            "bullets": [
+              "Semicircular canals detect rotation of the head.",
+              "Utricle and saccule detect gravity and straight-line movement.",
+              "Balance signals go to the cerebellum."
+            ],
+            "takeaway": "Canals sense turning; otolith organs sense gravity and speed.",
+            "check": {
+              "question": "Which part of the ear detects rotational movement of the head?",
+              "options": [
+                "Cochlea",
+                "Semicircular canals",
+                "Tympanum",
+                "Eustachian tube"
+              ],
+              "answer": 1,
+              "why": "Fluid in the semicircular canals moves when the head rotates, bending hair cells."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Defects of the ear",
+            "paragraphs": [
+              "Conductive deafness happens when sound cannot reach the inner ear. Causes include wax blocking the canal, a torn eardrum, fluid from otitis media, or damaged ossicles; hearing aids often help because they make the sound louder.",
+              "Sensorineural deafness happens when hair cells or the auditory nerve are damaged, for example by very loud noise, some medicines, infection or ageing. It is usually permanent, and a cochlear implant may restore some hearing by stimulating the nerve directly.",
+              "Tinnitus is a ringing in the ears without an external sound, while Ménière's disease causes episodes of dizziness, hearing loss and a blocked feeling. Ear infections are common in children because their Eustachian tubes are short and horizontal."
+            ],
+            "bullets": [
+              "Conductive deafness: sound blocked; hearing aids help.",
+              "Sensorineural deafness: hair cells or nerve damaged; often permanent.",
+              "Otitis media and loud noise are common causes."
+            ],
+            "takeaway": "Blocked sound is conductive; damaged nerve is sensorineural.",
+            "check": {
+              "question": "Damage to the hair cells of the cochlea causes which type of deafness?",
+              "options": [
+                "Conductive deafness",
+                "Sensorineural deafness",
+                "Temporary deafness from wax",
+                "Otitis media"
+              ],
+              "answer": 1,
+              "why": "Hair cell damage affects the conversion of vibrations into impulses, which is sensorineural deafness."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Sound passes from pinna to eardrum, ossicles, cochlea and auditory nerve. Semicircular canals detect rotation, while the utricle and saccule detect gravity. Conductive deafness blocks sound; sensorineural deafness damages hair cells or the nerve."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A factory worker develops hearing loss after years of loud noise, while another person loses hearing because wax blocks the ear canal. Distinguish the two types and their likely outcomes.",
+            "steps": [
+              {
+                "operation": "Identify the first cause",
+                "reason": "Loud noise damages hair cells in the cochlea.",
+                "result": "The worker has sensorineural deafness.",
+                "predictPrompt": "Is it likely to recover?"
+              },
+              {
+                "operation": "Identify the second cause",
+                "reason": "Wax prevents sound from reaching the eardrum and inner ear.",
+                "result": "The second person has conductive deafness.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Compare the outcomes",
+                "reason": "Wax can be removed, but damaged hair cells do not usually regenerate.",
+                "result": "Conductive loss is often reversible; sensorineural loss is usually permanent.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why does a cold often cause temporary hearing loss and a blocked feeling in the ear?",
+            "hints": [
+              "The Eustachian tube connects the middle ear to the throat.",
+              "A cold causes swelling and mucus in that tube.",
+              "Unequal pressure on the eardrum reduces its movement."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "animal-hormones",
+      "title": "Animal Hormones",
+      "objective": "State the location of the main endocrine glands, relate each hormone to its function, and explain disorders caused by hormone imbalance.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Animal hormones",
+            "paragraphs": [
+              "Hormones are chemical messengers carried in the blood. They act on target organs more slowly than nerves, but their effects usually last longer."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The endocrine system and the pituitary",
+            "paragraphs": [
+              "An endocrine gland has no duct. It releases hormones straight into the blood, and the hormone acts only on cells that carry the matching receptor, called target cells.",
+              "The pituitary gland sits at the base of the brain, attached to the hypothalamus. It is called the master gland because it controls several other glands. Its anterior lobe releases growth hormone, thyroid-stimulating hormone, adrenocorticotrophic hormone, follicle-stimulating hormone and luteinising hormone; the posterior lobe releases antidiuretic hormone and oxytocin.",
+              "Growth hormone promotes growth of bones and muscles. Too little in childhood causes dwarfism, too much causes gigantism, and excess in adulthood causes acromegaly."
+            ],
+            "bullets": [
+              "Endocrine glands are ductless and release hormones into blood.",
+              "The pituitary is attached to the hypothalamus and controls other glands.",
+              "Growth hormone excess or deficiency changes body growth."
+            ],
+            "takeaway": "The pituitary is the master gland because it commands other glands.",
+            "check": {
+              "question": "Which gland is called the master gland because it controls other endocrine glands?",
+              "options": [
+                "Thyroid",
+                "Pituitary",
+                "Adrenal",
+                "Pancreas"
+              ],
+              "answer": 1,
+              "why": "The pituitary releases hormones that control the thyroid, adrenal cortex and gonads."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Thyroid, parathyroid and adrenal glands",
+            "paragraphs": [
+              "The thyroid gland lies in the neck, just below the larynx. It releases thyroxine, which controls the rate of metabolism and needs iodine to be made. A lack of iodine causes goitre, an enlarged thyroid, while too little thyroxine in a child causes cretinism and in an adult causes myxoedema.",
+              "The parathyroid glands, embedded in the thyroid, release parathormone, which raises blood calcium. The adrenal glands sit on top of the kidneys. The cortex releases cortisol, which helps the body cope with stress, and aldosterone, which controls salt balance.",
+              "The adrenal medulla releases adrenaline and noradrenaline. In danger, adrenaline raises heart rate, widens the airways and releases glucose, preparing the body for fight or flight."
+            ],
+            "bullets": [
+              "Thyroxine controls metabolism and needs iodine.",
+              "Parathormone raises blood calcium.",
+              "Adrenaline prepares the body for fight or flight."
+            ],
+            "takeaway": "Thyroid sets the metabolic rate; adrenaline meets emergencies.",
+            "check": {
+              "question": "Which hormone raises blood calcium?",
+              "options": [
+                "Thyroxine",
+                "Parathormone",
+                "Insulin",
+                "Adrenaline"
+              ],
+              "answer": 1,
+              "why": "Parathormone from the parathyroid glands raises the level of calcium in the blood."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Pancreas and gonads",
+            "paragraphs": [
+              "The pancreas contains small groups of cells called the islets of Langerhans. Beta cells release insulin, which lowers blood glucose by helping cells take up glucose and the liver store it as glycogen; alpha cells release glucagon, which raises blood glucose by converting glycogen back to glucose.",
+              "Too little insulin causes diabetes mellitus, with high blood glucose, thirst, frequent urination and glucose in the urine. The ovaries release oestrogen and progesterone, which control the menstrual cycle, pregnancy and female secondary sexual characteristics.",
+              "The testes release testosterone, which controls sperm production and male secondary sexual characteristics. These hormones are carried in the blood but act only on target organs that have the matching receptors."
+            ],
+            "bullets": [
+              "Insulin lowers blood glucose; glucagon raises it.",
+              "Ovaries release oestrogen and progesterone.",
+              "Testes release testosterone."
+            ],
+            "takeaway": "Insulin and glucagon are opposites; the gonads set sexual development.",
+            "check": {
+              "question": "Which cells release insulin?",
+              "options": [
+                "Alpha cells of the pancreas",
+                "Beta cells of the pancreas",
+                "Cells of the adrenal medulla",
+                "Cells of the thyroid"
+              ],
+              "answer": 1,
+              "why": "Beta cells in the islets of Langerhans release insulin, which lowers blood glucose."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Pituitary: growth and control of other glands. Thyroid: thyroxine and metabolism. Parathyroid: calcium. Adrenal: cortisol, aldosterone and adrenaline. Pancreas: insulin and glucagon. Gonads: sex hormones. Learn each gland with its hormone and one disorder."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A patient is always thirsty, passes urine often and has glucose in the blood. Which gland and hormone are involved, and what is the probable condition?",
+            "steps": [
+              {
+                "operation": "Link the signs to glucose",
+                "reason": "Thirst, frequent urination and glucose in the urine point to high blood glucose.",
+                "result": "The patient may have diabetes mellitus.",
+                "predictPrompt": "Which hormone normally lowers glucose?"
+              },
+              {
+                "operation": "Identify the gland and hormone",
+                "reason": "Insulin from the beta cells of the pancreas lowers blood glucose.",
+                "result": "Too little insulin explains the high glucose.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Explain the urine",
+                "reason": "Glucose in the filtrate draws water into the urine by osmosis.",
+                "result": "The patient passes large volumes of urine and becomes thirsty.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why does adrenaline make the heart beat faster and the breathing rate rise during an emergency?",
+            "hints": [
+              "Adrenaline is released from the adrenal medulla.",
+              "Muscles need more oxygen and glucose for action.",
+              "The response prepares the body for fight or flight."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "plant-hormones",
+      "title": "Plant Hormones",
+      "objective": "Describe the functions of auxins, gibberellins, cytokinins, abscisic acid and ethylene, and relate phytohormones to plant responses and agricultural use.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Plant hormones",
+            "paragraphs": [
+              "Plants have no nerves, yet they still respond to light, gravity and touch. Chemical messengers called phytohormones coordinate their growth and development, and their effects depend on concentration and tissue."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Auxins and tropisms",
+            "paragraphs": [
+              "Auxins are made in the shoot tips, root tips and young leaves. They move from cell to cell and can spread sideways, so the side of a shoot that receives less light collects more auxin.",
+              "In a shoot, high auxin concentration makes cells elongate. The shaded side therefore grows faster than the lit side, and the shoot bends towards the light, which is positive phototropism. In a root, the same high concentration inhibits elongation, so the lower side grows more slowly and the root bends downwards, which is positive geotropism.",
+              "Auxin also causes apical dominance: the growing tip produces auxin that suppresses the growth of side buds. Removing the tip releases those buds and makes the plant bushier."
+            ],
+            "bullets": [
+              "Auxin is made at shoot and root tips.",
+              "Uneven auxin makes shoots bend towards light and roots downwards.",
+              "Apical dominance suppresses side buds."
+            ],
+            "takeaway": "Auxin redistributes growth; the darker side grows more.",
+            "check": {
+              "question": "A shoot bends towards light because auxin",
+              "options": [
+                "Collects on the dark side and makes cells elongate",
+                "Collects on the light side and makes cells elongate",
+                "Is destroyed by light on both sides",
+                "Moves down to the root"
+              ],
+              "answer": 0,
+              "why": "Auxin gathers on the shaded side, where it makes cells elongate so that side grows faster and the shoot bends towards the light."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Gibberellins and cytokinins",
+            "paragraphs": [
+              "Gibberellins are growth promoters that stimulate stem elongation, seed germination and fruit development. During germination, gibberellin moves from the embryo to the aleurone layer of the seed and triggers the production of amylase, which digests stored starch into maltose for the growing seedling.",
+              "Cytokinins stimulate cell division and delay the ageing of leaves. They are produced mainly in root tips and move upwards in the xylem, and they also promote the growth of side shoots and the mobilisation of nutrients towards young tissues.",
+              "Growers use these hormones in agriculture. Gibberellin can make seedless grapes larger and break dormancy in some seeds, while cytokinins are used to keep cut leaves and flowers fresh for longer."
+            ],
+            "bullets": [
+              "Gibberellins promote stem growth, germination and fruit development.",
+              "Cytokinins promote cell division and delay ageing.",
+              "Both are used in agriculture and horticulture."
+            ],
+            "takeaway": "Gibberellins stretch and wake seeds; cytokinins divide and delay decay.",
+            "check": {
+              "question": "Which hormone breaks seed dormancy by triggering amylase production?",
+              "options": [
+                "Auxin",
+                "Gibberellin",
+                "Cytokinin",
+                "Abscisic acid"
+              ],
+              "answer": 1,
+              "why": "Gibberellin stimulates the aleurone layer to produce amylase, which digests stored starch for the embryo."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Abscisic acid and ethylene",
+            "paragraphs": [
+              "Abscisic acid is the main growth inhibitor. It builds up when a plant is short of water, closes the stomata to reduce water loss, and keeps seeds dormant until conditions improve. It also slows growth and helps leaves and fruits fall.",
+              "Ethylene is a gas that acts as a hormone. It speeds up the ripening of fruit, the ageing of flowers and the abscission of leaves and fruits. Because it is a gas, ethylene from one ripening fruit can trigger ripening in its neighbours.",
+              "Farmers and traders use these effects. Ethylene is used to ripen bananas and tomatoes uniformly, while chemicals that block ethylene slow ripening and reduce spoilage during storage and transport."
+            ],
+            "bullets": [
+              "Abscisic acid closes stomata and maintains dormancy.",
+              "Ethylene ripens fruit and promotes abscission.",
+              "Both are used to control ripening and storage."
+            ],
+            "takeaway": "ABA puts the brakes on; ethylene moves ripening along.",
+            "check": {
+              "question": "Which gas promotes the ripening of fruit?",
+              "options": [
+                "Ethylene",
+                "Auxin",
+                "Gibberellin",
+                "Abscisic acid"
+              ],
+              "answer": 0,
+              "why": "Ethylene is a gaseous hormone that speeds up fruit ripening and the ageing of plant parts."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Auxin drives phototropism and apical dominance. Gibberellins promote stem growth and germination. Cytokinins promote cell division. Abscisic acid closes stomata and keeps seeds dormant, while ethylene ripens fruit and causes abscission."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A farmer picks tomatoes while they are still green so they can survive transport. Explain how ethylene can be used, and why the storage room must be ventilated.",
+            "steps": [
+              {
+                "operation": "Use ethylene to ripen",
+                "reason": "Ethylene speeds up the changes that soften and colour fruit.",
+                "result": "The green tomatoes ripen uniformly before sale.",
+                "predictPrompt": "Why ventilate the room?"
+              },
+              {
+                "operation": "Explain the risk",
+                "reason": "Ethylene is a gas, so it spreads from fruit to fruit.",
+                "result": "One ripening fruit can trigger ripening in the whole batch.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Control the atmosphere",
+                "reason": "Ventilation removes excess ethylene and slows over-ripening.",
+                "result": "Spoilage is reduced and the fruit lasts longer.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why does removing the shoot tip of a hedge make it grow bushier?",
+            "hints": [
+              "The shoot tip is the main source of auxin.",
+              "Auxin suppresses the growth of side buds.",
+              "Removing the tip releases the side buds from apical dominance."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "homeostasis",
+      "title": "Homeostasis",
+      "objective": "Explain homeostasis and negative feedback, describe temperature regulation, and explain how the kidneys control salt and water balance.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Homeostasis",
+            "paragraphs": [
+              "Your body keeps its temperature, water and salt within narrow limits even when the weather changes. This steady internal state is called homeostasis, and nerves and hormones do the adjusting."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The principle of homeostasis",
+            "paragraphs": [
+              "Homeostasis is the maintenance of a steady internal environment despite changes outside the body. It keeps temperature, blood glucose, water and salt within narrow limits so that enzymes and cells can work properly.",
+              "Control usually works by negative feedback. A receptor detects a change, a coordinator such as the hypothalamus compares it with the set point, and an effector produces a response that reverses the change. When temperature rises, for example, the body cools itself and the rise is corrected.",
+              "Negative feedback keeps conditions stable rather than perfectly constant. Values drift above and below the set point, and the response always pushes them back towards it. Positive feedback, which amplifies a change, is much rarer and is used in events such as childbirth."
+            ],
+            "bullets": [
+              "Homeostasis keeps the internal environment stable.",
+              "Negative feedback reverses a change.",
+              "Receptor, coordinator and effector form the control loop."
+            ],
+            "takeaway": "Negative feedback pushes conditions back to the set point.",
+            "check": {
+              "question": "Which sequence describes negative feedback?",
+              "options": [
+                "Stimulus → receptor → coordinator → effector → response that reverses the change",
+                "Stimulus → effector → coordinator → receptor → response that increases the change",
+                "Receptor → stimulus → effector → coordinator → no response",
+                "Coordinator → receptor → stimulus → effector → response that increases the change"
+              ],
+              "answer": 0,
+              "why": "A receptor detects the stimulus, a coordinator processes it, and an effector reverses the change."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Temperature regulation",
+            "paragraphs": [
+              "Humans are endotherms, so they generate heat by metabolism and keep a core temperature near 37 °C. The hypothalamus acts as the thermostat, comparing blood temperature with the set point and triggering responses.",
+              "When the body is too hot, blood vessels in the skin widen (vasodilation), so more blood flows near the surface and heat is lost by radiation. Sweat glands release sweat, and evaporation cools the skin. Behaviour also helps: we seek shade and wear lighter clothes.",
+              "When the body is too cold, skin blood vessels narrow (vasoconstriction) to keep heat in, shivering muscles generate heat, and hair erects to trap a layer of air. Thyroxine and adrenaline raise the metabolic rate. Fever, which is a raised set point, helps fight infection."
+            ],
+            "bullets": [
+              "Hypothalamus acts as the body's thermostat.",
+              "Heat loss: vasodilation and sweating.",
+              "Heat gain: vasoconstriction, shivering and hair erection."
+            ],
+            "takeaway": "Too hot: radiate and sweat. Too cold: conserve and shiver.",
+            "check": {
+              "question": "Which response helps cool the body on a hot day?",
+              "options": [
+                "Vasoconstriction and shivering",
+                "Vasodilation and sweating",
+                "Hair erection",
+                "Increased thyroxine release"
+              ],
+              "answer": 1,
+              "why": "Vasodilation brings more blood to the skin surface and sweating adds evaporative cooling."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Salt and water regulation",
+            "paragraphs": [
+              "The kidneys control water and salt balance by filtering the blood and reabsorbing what the body needs. The amount of water reabsorbed depends on antidiuretic hormone (ADH), released from the posterior pituitary.",
+              "When the blood is too concentrated, osmoreceptors in the hypothalamus detect the change and trigger ADH release. ADH makes the collecting ducts of the kidney more permeable to water, so more water returns to the blood and the urine becomes small and concentrated.",
+              "When the blood is too dilute, ADH release falls and the kidneys excrete more dilute urine. Aldosterone from the adrenal cortex helps conserve sodium, and the sensation of thirst also drives water intake. This feedback keeps the tissue fluid at a suitable concentration."
+            ],
+            "bullets": [
+              "Kidneys adjust water and salt reabsorption.",
+              "ADH increases water reabsorption and concentrates urine.",
+              "Aldosterone conserves sodium."
+            ],
+            "takeaway": "ADH holds water back; aldosterone holds salt back.",
+            "check": {
+              "question": "A person sweats heavily and drinks little. What happens to ADH and urine?",
+              "options": [
+                "ADH rises; urine becomes more concentrated",
+                "ADH rises; urine becomes more dilute",
+                "ADH falls; urine becomes more concentrated",
+                "ADH falls; urine becomes more dilute"
+              ],
+              "answer": 0,
+              "why": "Water loss concentrates the blood, so ADH rises and the kidneys reabsorb more water, producing concentrated urine."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Homeostasis uses negative feedback. The hypothalamus controls temperature, and the kidneys control water and salt with ADH and aldosterone. Vasodilation and sweating cool the body; vasoconstriction and shivering warm it."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A worker spends a hot afternoon sweating heavily and drinks very little water. Explain how the body responds to conserve water.",
+            "steps": [
+              {
+                "operation": "Detect the water loss",
+                "reason": "Sweating removes water, so the blood becomes more concentrated.",
+                "result": "Osmoreceptors in the hypothalamus are stimulated.",
+                "predictPrompt": "Which hormone is released?"
+              },
+              {
+                "operation": "Release ADH",
+                "reason": "The posterior pituitary releases more antidiuretic hormone.",
+                "result": "The collecting ducts become more permeable to water.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Conserve water",
+                "reason": "More water is reabsorbed into the blood.",
+                "result": "Urine becomes small and concentrated, and thirst encourages drinking.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why does a person produce more urine after drinking a large volume of water?",
+            "hints": [
+              "Drinking water dilutes the blood.",
+              "Osmoreceptors detect the dilution and reduce ADH release.",
+              "Less ADH makes the collecting ducts less permeable to water."
             ]
           }
         }

@@ -126,7 +126,21 @@ const descriptions = {
   'epigeal-and-hypogeal-germination':
     'The two germination patterns, their examples, and how cotyledon position affects planting depth and survival.',
   'co-ordination-and-control':
-    'Nervous coordination, sense organs, hormones and homeostasis.',
+    'The need for coordination, nervous versus hormonal control, neuron structure, impulse transmission and synapses.',
+  'brain-spinal-cord-and-reflexes':
+    'The central nervous system, brain regions, spinal cord and reflex arcs; reflex, voluntary and conditioned actions.',
+  'skin-nose-and-tongue':
+    'Touch, pressure, temperature and pain in the skin; smell in the nose; taste in the tongue; and common defects.',
+  'the-eye':
+    'Eye structure, rods and cones, accommodation, the pupil reflex and defects such as myopia and hypermetropia.',
+  'the-ear':
+    'Hearing, the ossicles and cochlea, balance and common ear defects.',
+  'animal-hormones':
+    'Endocrine glands, pituitary, thyroid, parathyroid, adrenal, pancreas and gonads, and hormone disorders.',
+  'plant-hormones':
+    'Auxins and tropisms, gibberellins, cytokinins, abscisic acid, ethylene and their agricultural uses.',
+  homeostasis:
+    'Negative feedback, temperature regulation, and salt and water balance by ADH and aldosterone.',
   'factors-affecting-the-distribution-of-organisms':
     'Abiotic and biotic factors that determine where organisms live.',
   'symbiotic-interactions-of-plants-and-animals':
@@ -444,6 +458,46 @@ const split = [
     slug: 'epigeal-and-hypogeal-germination',
     name: 'Epigeal and Hypogeal Germination',
     syllabus_ref: 'B.8',
+  },
+  {
+    slug: 'co-ordination-and-control',
+    name: 'Nervous Coordination and Neurons',
+    syllabus_ref: 'B.9',
+  },
+  {
+    slug: 'brain-spinal-cord-and-reflexes',
+    name: 'Brain, Spinal Cord and Reflexes',
+    syllabus_ref: 'B.9',
+  },
+  {
+    slug: 'skin-nose-and-tongue',
+    name: 'Skin, Nose and Tongue',
+    syllabus_ref: 'B.9',
+  },
+  {
+    slug: 'the-eye',
+    name: 'The Eye',
+    syllabus_ref: 'B.9',
+  },
+  {
+    slug: 'the-ear',
+    name: 'The Ear',
+    syllabus_ref: 'B.9',
+  },
+  {
+    slug: 'animal-hormones',
+    name: 'Animal Hormones',
+    syllabus_ref: 'B.9',
+  },
+  {
+    slug: 'plant-hormones',
+    name: 'Plant Hormones',
+    syllabus_ref: 'B.9',
+  },
+  {
+    slug: 'homeostasis',
+    name: 'Homeostasis',
+    syllabus_ref: 'B.9',
   },
 ].map((topic, index) => ({
   ...topic,
