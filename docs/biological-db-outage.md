@@ -27,9 +27,9 @@ Both `levels-of-organisation` and `adaptive-colouration` now have 7 blocks, and
 the four B.1 lessons are live. The later B.2 Nutrition seed then inserted its
 four lessons, followed by five B.3 Transport lessons, five B.4 Respiration lessons, five B.5 Excretion lessons, five B.6 Support and Movement lessons, eight B.7 Reproduction lessons, three B.8 Growth lessons, eight B.9 Co-ordination and Control lessons, sixteen C Ecology lessons, seven D Heredity and Variations lessons and three E Evolution lessons.
 
-Current database state: 92 Biology topics, 92 published Biology lessons, 776
-Biology blocks and 173 published library lessons; 44 Biology lessons carry depth
-(52 library lessons). All 92 Biology lessons pass `check-lesson-depth.mjs`; the
+Current database state: 92 Biology topics, 92 published Biology lessons, 800
+Biology blocks and 173 published library lessons; 52 Biology lessons carry depth
+(60 library lessons). All 92 Biology lessons pass `check-lesson-depth.mjs`; the
 A.1-E pages were verified at 360px and 1280px with correct checks and no
 horizontal overflow.
 
@@ -74,6 +74,13 @@ Added 10 depth triples across B.5 Excretion and B.6 Support and Movement.
 Totals now: 92 Biology topics / 92 published lessons / 776 Biology blocks /
 44 depth lessons; 173 published library lessons and 52 depth lessons. All 92
 lessons pass the strict prose scan and `check-lesson-depth.mjs`.
+
+## 2026-11-07 depth batches 9–10
+
+Added 8 depth triples across B.7 Reproduction. Totals now: 92 Biology topics /
+92 published lessons / 800 Biology blocks / 52 depth lessons; 173 published
+library lessons and 60 depth lessons. All 92 lessons pass the strict prose
+scan and `check-lesson-depth.mjs`.
 
 ## Prevention
 
