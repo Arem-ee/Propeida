@@ -142,18 +142,36 @@ const descriptions = {
   homeostasis:
     'Negative feedback, temperature regulation, and salt and water balance by ADH and aldosterone.',
   'factors-affecting-the-distribution-of-organisms':
-    'Abiotic and biotic factors that determine where organisms live.',
+    'Abiotic factors such as temperature, rainfall, wind and salinity; biotic factors; and how human activities shift distributions.',
   'symbiotic-interactions-of-plants-and-animals':
-    'Symbiosis, energy flow, food chains and webs, and the carbon, water and nitrogen cycles.',
+    'Mutualism, commensalism, parasitism, saprophytism, competition, predation, amensalism and cooperation.',
+  'food-chains-webs-and-trophic-levels':
+    'Producers, consumers and decomposers, food chains versus webs, and energy loss between trophic levels.',
+  'nutrient-cycles':
+    'The carbon, water and nitrogen cycles and the organisms that drive them.',
   'natural-habitats':
-    'Aquatic and terrestrial habitats and the adaptive features of the organisms in them.',
+    'Aquatic habitats: ponds, streams, lakes, seashores and mangrove swamps, and their adaptations.',
+  'terrestrial-and-arboreal-habitats':
+    'Grassland, tree-top and burrow life, and the adaptations of their inhabitants.',
   'local-nigerian-biomes':
-    'Tropical rainforest, Guinea and Sudan savanna, desert and the highland plateaus of Nigeria.',
+    'The tropical rainforest and Niger Delta swamp of southern Nigeria.',
+  'savanna-desert-and-highland-biomes':
+    'Guinea and Sudan savanna, the northern desert, and the Jos, Obudu and Mambilla highlands.',
   'the-ecology-of-populations':
-    'Population density, competition, population size, ecological succession and climax communities.',
-  soil: 'Soil types, components, fertility, erosion and the maintenance of productive soil.',
+    'Population density, sampling and the biotic and abiotic factors that set population size.',
+  'competition-and-niche':
+    'Intra- and inter-specific competition and niche differentiation.',
+  'ecological-succession':
+    'Primary and secondary succession to the climax community.',
+  soil: 'Sandy, clayey and loamy soils, soil structure, components and soil organisms.',
+  'soil-fertility-and-conservation':
+    'Loss of fertility and ways to renew and conserve soil.',
   'humans-and-environment':
-    "Disease, drug abuse, pollution, sanitation, conservation and Nigeria's parks and reserves.",
+    'Common endemic diseases, their vectors and control.',
+  'drug-abuse':
+    'Drug abuse and addiction, effects on health, and prevention.',
+  'pollution-conservation-and-parks':
+    'Pollution and its control, conservation and Nigeria\u2019s parks and reserves.',
   'variation-in-population':
     'Morphological and physiological variation and its use in identity, transfusion and paternity.',
   heredity:
@@ -498,6 +516,86 @@ const split = [
     slug: 'homeostasis',
     name: 'Homeostasis',
     syllabus_ref: 'B.9',
+  },
+  {
+    slug: 'factors-affecting-the-distribution-of-organisms',
+    name: 'Factors Affecting the Distribution of Organisms',
+    syllabus_ref: 'C.1',
+  },
+  {
+    slug: 'symbiotic-interactions-of-plants-and-animals',
+    name: 'Species Interactions',
+    syllabus_ref: 'C.2',
+  },
+  {
+    slug: 'food-chains-webs-and-trophic-levels',
+    name: 'Food Chains, Webs and Trophic Levels',
+    syllabus_ref: 'C.2',
+  },
+  {
+    slug: 'nutrient-cycles',
+    name: 'Carbon, Water and Nitrogen Cycles',
+    syllabus_ref: 'C.2',
+  },
+  {
+    slug: 'natural-habitats',
+    name: 'Aquatic Habitats',
+    syllabus_ref: 'C.3',
+  },
+  {
+    slug: 'terrestrial-and-arboreal-habitats',
+    name: 'Terrestrial and Arboreal Habitats',
+    syllabus_ref: 'C.3',
+  },
+  {
+    slug: 'local-nigerian-biomes',
+    name: 'Tropical Rainforest of Nigeria',
+    syllabus_ref: 'C.4',
+  },
+  {
+    slug: 'savanna-desert-and-highland-biomes',
+    name: 'Savanna, Desert and Highland Biomes',
+    syllabus_ref: 'C.4',
+  },
+  {
+    slug: 'the-ecology-of-populations',
+    name: 'Population Density and Size',
+    syllabus_ref: 'C.5',
+  },
+  {
+    slug: 'competition-and-niche',
+    name: 'Competition and Niche',
+    syllabus_ref: 'C.5',
+  },
+  {
+    slug: 'ecological-succession',
+    name: 'Ecological Succession',
+    syllabus_ref: 'C.5',
+  },
+  {
+    slug: 'soil',
+    name: 'Soil Types and Components',
+    syllabus_ref: 'C.6',
+  },
+  {
+    slug: 'soil-fertility-and-conservation',
+    name: 'Soil Fertility and Conservation',
+    syllabus_ref: 'C.6',
+  },
+  {
+    slug: 'humans-and-environment',
+    name: 'Diseases, Vectors and Control',
+    syllabus_ref: 'C.7',
+  },
+  {
+    slug: 'drug-abuse',
+    name: 'Drug Abuse',
+    syllabus_ref: 'C.7',
+  },
+  {
+    slug: 'pollution-conservation-and-parks',
+    name: 'Pollution, Conservation and National Parks',
+    syllabus_ref: 'C.7',
   },
 ].map((topic, index) => ({
   ...topic,

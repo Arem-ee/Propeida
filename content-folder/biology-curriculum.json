@@ -508,66 +508,138 @@
     },
     {
       "slug": "factors-affecting-the-distribution-of-organisms",
-      "name": "Factors affecting the distribution of Organisms",
+      "name": "Factors Affecting the Distribution of Organisms",
       "syllabus_ref": "C.1",
       "section": "Ecology",
       "order": 64,
-      "description": "Abiotic and biotic factors that determine where organisms live."
+      "description": "Abiotic factors such as temperature, rainfall, wind and salinity; biotic factors; and how human activities shift distributions."
     },
     {
       "slug": "symbiotic-interactions-of-plants-and-animals",
-      "name": "Symbiotic interactions of plants and animals",
+      "name": "Species Interactions",
       "syllabus_ref": "C.2",
       "section": "Ecology",
       "order": 65,
-      "description": "Symbiosis, energy flow, food chains and webs, and the carbon, water and nitrogen cycles."
+      "description": "Mutualism, commensalism, parasitism, saprophytism, competition, predation, amensalism and cooperation."
+    },
+    {
+      "slug": "food-chains-webs-and-trophic-levels",
+      "name": "Food Chains, Webs and Trophic Levels",
+      "syllabus_ref": "C.2",
+      "section": "Ecology",
+      "order": 66,
+      "description": "Producers, consumers and decomposers, food chains versus webs, and energy loss between trophic levels."
+    },
+    {
+      "slug": "nutrient-cycles",
+      "name": "Carbon, Water and Nitrogen Cycles",
+      "syllabus_ref": "C.2",
+      "section": "Ecology",
+      "order": 67,
+      "description": "The carbon, water and nitrogen cycles and the organisms that drive them."
     },
     {
       "slug": "natural-habitats",
-      "name": "Natural Habitats",
+      "name": "Aquatic Habitats",
       "syllabus_ref": "C.3",
       "section": "Ecology",
-      "order": 66,
-      "description": "Aquatic and terrestrial habitats and the adaptive features of the organisms in them."
+      "order": 68,
+      "description": "Aquatic habitats: ponds, streams, lakes, seashores and mangrove swamps, and their adaptations."
+    },
+    {
+      "slug": "terrestrial-and-arboreal-habitats",
+      "name": "Terrestrial and Arboreal Habitats",
+      "syllabus_ref": "C.3",
+      "section": "Ecology",
+      "order": 69,
+      "description": "Grassland, tree-top and burrow life, and the adaptations of their inhabitants."
     },
     {
       "slug": "local-nigerian-biomes",
-      "name": "Local (Nigerian) Biomes",
+      "name": "Tropical Rainforest of Nigeria",
       "syllabus_ref": "C.4",
       "section": "Ecology",
-      "order": 67,
-      "description": "Tropical rainforest, Guinea and Sudan savanna, desert and the highland plateaus of Nigeria."
+      "order": 70,
+      "description": "The tropical rainforest and Niger Delta swamp of southern Nigeria."
+    },
+    {
+      "slug": "savanna-desert-and-highland-biomes",
+      "name": "Savanna, Desert and Highland Biomes",
+      "syllabus_ref": "C.4",
+      "section": "Ecology",
+      "order": 71,
+      "description": "Guinea and Sudan savanna, the northern desert, and the Jos, Obudu and Mambilla highlands."
     },
     {
       "slug": "the-ecology-of-populations",
-      "name": "The Ecology of Populations",
+      "name": "Population Density and Size",
       "syllabus_ref": "C.5",
       "section": "Ecology",
-      "order": 68,
-      "description": "Population density, competition, population size, ecological succession and climax communities."
+      "order": 72,
+      "description": "Population density, sampling and the biotic and abiotic factors that set population size."
+    },
+    {
+      "slug": "competition-and-niche",
+      "name": "Competition and Niche",
+      "syllabus_ref": "C.5",
+      "section": "Ecology",
+      "order": 73,
+      "description": "Intra- and inter-specific competition and niche differentiation."
+    },
+    {
+      "slug": "ecological-succession",
+      "name": "Ecological Succession",
+      "syllabus_ref": "C.5",
+      "section": "Ecology",
+      "order": 74,
+      "description": "Primary and secondary succession to the climax community."
     },
     {
       "slug": "soil",
-      "name": "SOIL",
+      "name": "Soil Types and Components",
       "syllabus_ref": "C.6",
       "section": "Ecology",
-      "order": 69,
-      "description": "Soil types, components, fertility, erosion and the maintenance of productive soil."
+      "order": 75,
+      "description": "Sandy, clayey and loamy soils, soil structure, components and soil organisms."
+    },
+    {
+      "slug": "soil-fertility-and-conservation",
+      "name": "Soil Fertility and Conservation",
+      "syllabus_ref": "C.6",
+      "section": "Ecology",
+      "order": 76,
+      "description": "Loss of fertility and ways to renew and conserve soil."
     },
     {
       "slug": "humans-and-environment",
-      "name": "Humans and Environment",
+      "name": "Diseases, Vectors and Control",
       "syllabus_ref": "C.7",
       "section": "Ecology",
-      "order": 70,
-      "description": "Disease, drug abuse, pollution, sanitation, conservation and Nigeria's parks and reserves."
+      "order": 77,
+      "description": "Common endemic diseases, their vectors and control."
+    },
+    {
+      "slug": "drug-abuse",
+      "name": "Drug Abuse",
+      "syllabus_ref": "C.7",
+      "section": "Ecology",
+      "order": 78,
+      "description": "Drug abuse and addiction, effects on health, and prevention."
+    },
+    {
+      "slug": "pollution-conservation-and-parks",
+      "name": "Pollution, Conservation and National Parks",
+      "syllabus_ref": "C.7",
+      "section": "Ecology",
+      "order": 79,
+      "description": "Pollution and its control, conservation and Nigeria’s parks and reserves."
     },
     {
       "slug": "variation-in-population",
       "name": "Variation In Population",
       "syllabus_ref": "D.1",
       "section": "Heredity and Variations",
-      "order": 71,
+      "order": 80,
       "description": "Morphological and physiological variation and its use in identity, transfusion and paternity."
     },
     {
@@ -575,7 +647,7 @@
       "name": "Heredity",
       "syllabus_ref": "D.2",
       "section": "Heredity and Variations",
-      "order": 72,
+      "order": 81,
       "description": "Heritable characters, chromosomes, genetic crosses, sex determination and sex-linked traits."
     },
     {
@@ -583,7 +655,7 @@
       "name": "Biotechnology",
       "syllabus_ref": "D.3",
       "section": "Heredity and Variations",
-      "order": 73,
+      "order": 82,
       "description": "Applications of biotechnology in agriculture, medicine, pharmaceuticals and the food industry."
     },
     {
@@ -591,7 +663,7 @@
       "name": "Theories of evolution",
       "syllabus_ref": "E.1",
       "section": "Evolution",
-      "order": 74,
+      "order": 83,
       "description": "Organic evolution, Lamarck's and Darwin's theories, and the evidence that supports them."
     },
     {
@@ -599,7 +671,7 @@
       "name": "Evidence of evolution",
       "syllabus_ref": "E.2",
       "section": "Evolution",
-      "order": 75,
+      "order": 84,
       "description": "Fossils, comparative anatomy, embryology and other evidence for organic evolution."
     }
   ],
@@ -10708,6 +10780,2358 @@
               "Drinking water dilutes the blood.",
               "Osmoreceptors detect the dilution and reduce ADH release.",
               "Less ADH makes the collecting ducts less permeable to water."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "factors-affecting-the-distribution-of-organisms",
+      "title": "Factors Affecting the Distribution of Organisms",
+      "objective": "By the end of this lesson, you will be able to explain how abiotic, edaphic and biotic factors determine where organisms live in Nigeria.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Factors Affecting the Distribution of Organisms",
+            "paragraphs": [
+              "During the harmattan dry season in Kano, farmers notice that pond fish crowd into the deepest part of the dugout as the water shrinks and warms."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Abiotic Factors: Temperature, Rainfall and Altitude",
+            "paragraphs": [
+              "Temperature controls enzyme activity and survival. Organisms with thick fur, fat layers or behavioural changes such as basking favour a warmer microclimate when temperatures fall. In cold highland areas, only species that tolerate low temperatures can survive and reproduce.",
+              "Rainfall, humidity and wind also shape distribution. Plants in wet southern Nigeria differ from those in the dry north, while wind spreads seeds and cools leaves during the dry season. A rain gauge measures rainfall, a thermometer measures temperature, and a hygrometer measures humidity.",
+              "Altitude changes temperature and rainfall together. As height increases, air becomes colder and thinner, so mountain crops and animals differ from lowland species. Organisms adapt through small size, thick coats, or timing of breeding to match the short cool season."
+            ],
+            "bullets": [
+              "Thermometer: measures temperature in degrees Celsius",
+              "Rain gauge: measures amount of rainfall collected",
+              "Hygrometer: measures relative humidity of air"
+            ],
+            "takeaway": "Temperature, rainfall, humidity, wind and altitude limit survival and shape adaptation.",
+            "check": {
+              "question": "Which instrument is used to measure rainfall when studying distribution?",
+              "options": [
+                "Thermometer",
+                "Rain gauge",
+                "Secchi disc",
+                "Hygrometer"
+              ],
+              "answer": 1,
+              "why": "A rain gauge collects and measures rainfall, while a thermometer measures temperature and a hygrometer measures humidity."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Water and Soil Factors: Salinity, Turbidity and pH",
+            "paragraphs": [
+              "Salinity is the amount of dissolved salts in water. Freshwater fish die in salty sea water because osmosis removes water from their bodies. Estuaries where rivers meet the sea have changing salinity, so only tolerant species thrive there.",
+              "Turbidity measures how cloudy water is due to suspended particles. A Secchi disc lowered into water shows how far light penetrates, which affects photosynthesis by algae and eelgrass. Very turbid water in polluted rivers limits fish that need clear water.",
+              "Soil, or edaphic factors, include texture, water retention, air space, humus and pH. Sandy soil drains quickly and suits cassava, while clay soil holds water and suits rice. Soil pH affects nutrient availability, so acidic soil may favour pineapple while alkaline soil suits other crops."
+            ],
+            "bullets": [
+              "Secchi disc: measures turbidity by depth of disappearance",
+              "pH meter: measures acidity or alkalinity of water and soil",
+              "Soil probe: measures moisture, texture and nutrient level"
+            ],
+            "takeaway": "Salinity, turbidity, pH and soil texture control which species survive in water and on land.",
+            "check": {
+              "question": "A Secchi disc is used to measure what?",
+              "options": [
+                "Soil pH",
+                "Water turbidity",
+                "Air humidity",
+                "Water salinity"
+              ],
+              "answer": 1,
+              "why": "A Secchi disc measures turbidity by how deep it remains visible in water."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Biotic Factors and Human Activities",
+            "paragraphs": [
+              "Biotic factors are living influences such as food, predators, disease and competition. A species may be absent from an area if its food is scarce or its predators too many. Competition removes resources, so the weaker species may move away or decline in number.",
+              "Human activities now shift distributions faster than climate alone. Farming, dams, urbanisation, pollution and deforestation destroy habitats and block movement. Zaadi rice farms at dams in northern Nigeria pull fish and water birds toward new wetlands, while Lake Chad shrinking forces species into smaller refuges.",
+              "During harmattan, dry winds and dust reduce water for plants and animals, so habitats contract. Pollution from factories and oil spills poisons water, while new roads and cities fragment forests. Conservation, reforestation and planned dams help species keep suitable habitat."
+            ],
+            "bullets": [
+              "Food and disease: affect population size and spread",
+              "Predation and competition: remove or reduce a species locally",
+              "Dams and farms: create wetlands but flood old habitats"
+            ],
+            "takeaway": "Biotic pressures and human change move species, so conservation must protect food, habitat and movement routes.",
+            "check": {
+              "question": "Zaadi rice farms at dams mainly affect distribution by?",
+              "options": [
+                "Creating new wetlands and food",
+                "Lowering altitude",
+                "Changing soil pH only",
+                "Removing all rainfall"
+              ],
+              "answer": 0,
+              "why": "Zaadi farms at dams create shallow wetlands with food, attracting fish and water birds to a new habitat."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "In JAMB questions, first decide whether the factor is abiotic, edaphic or biotic. Remember: temperature and rainfall are abiotic, soil texture is edaphic, and predation or competition is biotic."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A Kano farmer finds fewer fish near the dam where water is very turbid, though algae feed is plentiful. What is limiting, and what should he test?",
+            "steps": [
+              {
+                "operation": "Identify the limiting factor from the scenario",
+                "reason": "Turbid water reduces light for algae and gills",
+                "result": "Turbidity, not food, is the main limit",
+                "predictPrompt": "What would a Secchi disc show here?"
+              },
+              {
+                "operation": "Choose a suitable measuring instrument",
+                "reason": "Secchi disc measures water clarity directly",
+                "result": "Lower Secchi disc depth means higher turbidity",
+                "predictPrompt": "What would you do if the depth is very shallow?"
+              },
+              {
+                "operation": "Suggest control of the human cause",
+                "reason": "Runoff and erosion raise turbidity in dams",
+                "result": "Plant grass strips and reduce soil erosion",
+                "predictPrompt": "How would clearer water help fish return?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Lake Chad is shrinking. Predict two abiotic and two biotic changes that will affect fish and water birds.",
+            "hints": [
+              "Think rainfall and salinity",
+              "Think food and predation",
+              "Think human fishing and farming"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "symbiotic-interactions-of-plants-and-animals",
+      "title": "Species Interactions",
+      "objective": "By the end of this lesson, you will be able to classify species interactions and predict their effects on populations.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Species Interactions",
+            "paragraphs": [
+              "At a Lagos market, a woman sells mistletoe growing on mango trees while her goat chews Loranthus leaves, and nearby a tapeworm treatment is advertised for livestock."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Symbiosis: Mutualism, Commensalism and Parasitism",
+            "paragraphs": [
+              "Symbiosis is a close living association between two species. In mutualism both partners benefit, as in lichen where fungus and algae live together. In commensalism one benefits and the other is neither helped nor harmed.",
+              "Parasitism is when one organism, the parasite, benefits at the host's expense. A tapeworm inside a human intestine absorbs digested food, while head lice feed on blood and skin. Loranthus growing on a mango is a plant parasite that draws water and food from its host.",
+              "The key test is who gains and who loses. If both gain, it is mutualism; if only one gains and the other is unaffected, it is commensalism. If one gains and the other loses, it is parasitism, often with little or no benefit to the host."
+            ],
+            "bullets": [
+              "Lichen: fungus and algae both gain",
+              "Barnacle on whale: barnacle gains, whale unaffected",
+              "Tapeworm in humans: worm gains, human loses"
+            ],
+            "takeaway": "Mutualism helps both, commensalism helps one only, and parasitism harms the host.",
+            "check": {
+              "question": "A butterfly visits a flower for nectar and pollinates it. The interaction is",
+              "options": [
+                "Mutualism",
+                "Parasitism",
+                "Amensalism",
+                "Saprophytism"
+              ],
+              "answer": 0,
+              "why": "Both gain: the butterfly gets nectar and the flower is pollinated, so it is mutualism."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Predation, Competition, Cooperation and Amensalism",
+            "paragraphs": [
+              "Predation is when one organism, the predator, kills and eats another, the prey. A leopard preying on grasscutters and a hawk catching chicks are examples. Predators check prey numbers and keep habitats in balance.",
+              "Competition is struggle for food, space or mates. Intra-specific competition is between members of the same species, while inter-specific competition is between different species. Both can reduce growth or push the weaker competitor out of the area.",
+              "Saprophytism is feeding on dead and decaying matter, as fungi and bacteria do. Cooperation is working together, as in ants guarding cattle egrets that remove ticks. Amensalism is when one is harmed and the other is unaffected, as Penicillium kills bacteria but gains nothing."
+            ],
+            "bullets": [
+              "Saprophytes: fungi digest dead leaves and wood",
+              "Penicillium and bacteria: bacteria harmed, fungus unaffected",
+              "Hawks and mice: predator gains, prey loses"
+            ],
+            "takeaway": "Predation and competition reduce numbers, saprophytism recycles matter, and amensalism harms one side only.",
+            "check": {
+              "question": "Two goat species struggle for the same grass in one field. This is",
+              "options": [
+                "Intra-specific competition",
+                "Inter-specific competition",
+                "Mutualism",
+                "Commensalism"
+              ],
+              "answer": 1,
+              "why": "Competition between different species is inter-specific competition."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Classifying Unseen Examples in Exams",
+            "paragraphs": [
+              "Read the scenario and ask who benefits and who is harmed. First check for feeding on dead matter, which points to saprophytism. Then check for killing and eating, which is predation, and for two species both losing from shared resources, which is competition.",
+              "Use the same test for symbiotic pairs. Lichen shows both partners gaining, so it is mutualism. A barnacle on a whale gains transport and food while the whale is unaffected, so it is commensalism.",
+              "Watch for amensalism and cooperation, which are often confused with other types. Amensalism harms one species while the other gains nothing, as with Penicillium and bacteria. Cooperation means both work together for a shared benefit, such as ants protecting insects that give sweet sap."
+            ],
+            "bullets": [
+              "Both gain: mutualism",
+              "One gains, other unaffected: commensalism",
+              "One gains, other loses: parasitism or predation"
+            ],
+            "takeaway": "Ask who benefits, who is harmed, and whether feeding is on dead matter to classify correctly.",
+            "check": {
+              "question": "A barnacle on a whale, which gains transport, is",
+              "options": [
+                "Parasitism",
+                "Commensalism",
+                "Amensalism",
+                "Predation"
+              ],
+              "answer": 1,
+              "why": "The barnacle gains while the whale is unaffected, which is commensalism."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "If both organisms gain, choose mutualism; if one gains and the other is unaffected, choose commensalism. Parasitism always harms the host, so look for damage in the scenario carefully."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Near a Lagos lagoon, a student sees lichen on a rock, a barnacle on a whale, and an orchid on a mango tree. Classify each pair.",
+            "steps": [
+              {
+                "operation": "Identify who benefits in each pair",
+                "reason": "Lichen both gain, barnacle gains only, orchid gains only",
+                "result": "Lichen mutualism, others commensalism",
+                "predictPrompt": "What extra clue would show parasitism?"
+              },
+              {
+                "operation": "Check if any organism is harmed",
+                "reason": "No harm to rock, whale or tree",
+                "result": "Commensalism fits both single-benefit pairs",
+                "predictPrompt": "How would you test for harm?"
+              },
+              {
+                "operation": "State the answer with reasons",
+                "reason": "Both partners gain only in lichen",
+                "result": "Lichen mutualism, barnacle and orchid commensalism",
+                "predictPrompt": "Why is orchid not parasitism?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A fungus grows on dead wood and a bird eats ticks from a cattle's back. Name each interaction and give one reason.",
+            "hints": [
+              "Dead wood means saprophytism",
+              "Think who benefits from tick removal",
+              "No harm means commensalism or cooperation"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "food-chains-webs-and-trophic-levels",
+      "title": "Food Chains, Webs and Trophic Levels",
+      "objective": "By the end of this lesson, you will be able to explain energy flow, food chains, food webs and trophic levels in Nigerian ecosystems.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Food Chains, Webs and Trophic Levels",
+            "paragraphs": [
+              "At a fish market in Calabar, smoked tilapia, grasscutter meat and garri are sold together, but in nature each of these foods comes from a different level of a food chain."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Producers, Consumers and Decomposers",
+            "paragraphs": [
+              "Green plants, algae and cyanobacteria are producers because they make food by photosynthesis. They form the first trophic level and support all other life. Herbivores such as grasscutters and tilapia eat producers and form the second trophic level.",
+              "Carnivores eat other animals and occupy higher levels. Primary carnivores eat herbivores, while secondary carnivores eat primary carnivores. Omnivores eat both plants and animals, as humans and crows do, so they can feed at more than one level.",
+              "Decomposers such as fungi and bacteria break down dead organisms and waste. They release nutrients back into soil and water for producers to use. Without decomposers, dead matter would pile up and nutrients would not be recycled for new growth."
+            ],
+            "bullets": [
+              "Trophic level 1: producers make food",
+              "Trophic level 2: herbivores eat producers",
+              "Top carnivores: apex predators have few enemies"
+            ],
+            "takeaway": "Producers feed herbivores, herbivores feed carnivores, and decomposers recycle nutrients to producers.",
+            "check": {
+              "question": "In a food chain, the first trophic level is",
+              "options": [
+                "Herbivores",
+                "Carnivores",
+                "Producers",
+                "Decomposers"
+              ],
+              "answer": 2,
+              "why": "Producers such as green plants make food by photosynthesis and form the first trophic level."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Food Chains in Aquatic and Land Habitats",
+            "paragraphs": [
+              "A food chain shows the flow of energy from one organism to the next. In water, algae are eaten by tilapia, and tilapia are eaten by the heron. Each arrow points from food to consumer, showing the direction of energy flow.",
+              "On land, grass is eaten by the grasscutter, which is eaten by the leopard. A longer chain might start with leaves, go to a caterpillar, then to a small bird, and finally to a hawk. Chains are rarely long because energy is lost at each step.",
+              "Most organisms feed on more than one type of food, so chains link together into food webs. A web shows alternative feeding routes and helps communities survive when one food source fails. Exams often test whether you can draw arrows from food to eater."
+            ],
+            "bullets": [
+              "Algae to tilapia to heron: aquatic chain",
+              "Grass to grasscutter to leopard: land chain",
+              "Arrow direction: from food to consumer"
+            ],
+            "takeaway": "Food chains are straight lines of energy flow, while food webs link many chains together.",
+            "check": {
+              "question": "In a food chain diagram, arrows point",
+              "options": [
+                "From eater to food",
+                "From food to eater",
+                "From predator to prey only",
+                "From decomposer to producer only"
+              ],
+              "answer": 1,
+              "why": "Arrows show energy flow from food to consumer, so they point from food to eater."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Energy Loss, Pyramids and Decomposers",
+            "paragraphs": [
+              "At each trophic level, most energy is lost as heat, movement and waste. Only about ten percent passes to the next level, a pattern called the ten percent law. This is why there are many producers but few top carnivores.",
+              "Pyramids show this balance. A pyramid of numbers has many producers and fewer consumers at each higher level. A pyramid of biomass shows total mass, which is usually large for producers and small for large carnivores, though aquatic pyramids can look different.",
+              "Decomposers close the cycle by breaking down dead producers and consumers. Their enzymes release minerals that roots and algae absorb again. Without decomposers, nutrients stay locked in dead matter and producers would soon run out of food."
+            ],
+            "bullets": [
+              "Ten percent law: little energy reaches top levels",
+              "Pyramid of numbers: many producers, few predators",
+              "Pyramid of biomass: total mass falls with level"
+            ],
+            "takeaway": "Energy falls to about ten percent per level, so pyramids narrow and decomposers recycle nutrients.",
+            "check": {
+              "question": "According to the ten percent law, about how much energy passes to the next level?",
+              "options": [
+                "90 percent",
+                "50 percent",
+                "10 percent",
+                "100 percent"
+              ],
+              "answer": 2,
+              "why": "Only about ten percent of energy passes to the next trophic level, so pyramids narrow quickly."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Draw arrows from food to eater, never the reverse. Remember the ten percent law explains why chains are short and why pyramids of numbers are broad at the base."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A Niger Delta pond has algae, tilapia, and a heron. The pond also has a small snake that eats fish. Build the chain and web.",
+            "steps": [
+              {
+                "operation": "Identify producers and consumers",
+                "reason": "Algae make food, tilapia eat algae, heron eats tilapia",
+                "result": "Chain algae to tilapia to heron",
+                "predictPrompt": "What if snake adds another route?"
+              },
+              {
+                "operation": "Add alternative feeding route",
+                "reason": "Snake also eats fish, so fish have two predators",
+                "result": "Web shows fish eaten by heron and snake",
+                "predictPrompt": "How does web help ecosystem?"
+              },
+              {
+                "operation": "Apply ten percent law",
+                "reason": "Energy drops at each level",
+                "result": "Pyramid narrows toward heron and snake",
+                "predictPrompt": "Why are there fewer herons than tilapia?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Explain why a food web is more stable than a single food chain in a Nigerian forest.",
+            "hints": [
+              "Think alternative food sources",
+              "Think predators and prey",
+              "Think what happens when one species declines"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "nutrient-cycles",
+      "title": "Carbon, Water and Nitrogen Cycles",
+      "objective": "By the end of this lesson, you will be able to describe the carbon, water and nitrogen cycles and explain human effects on them.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Carbon, Water and Nitrogen Cycles",
+            "paragraphs": [
+              "In a rice farm near Kano, children watch rain fill the dam, plants grow green, and cattle return dung to the soil, all showing water, carbon and nitrogen moving in cycles."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The Carbon Cycle and Global Warming",
+            "paragraphs": [
+              "Plants take in carbon dioxide and use it in photosynthesis to make glucose. Animals eat plants and release carbon dioxide during respiration. Respiration and decomposition return carbon dioxide to the air, keeping a balance of carbon and oxygen.",
+              "Burning wood, coal and petrol, called combustion, also releases carbon dioxide. Deforestation and fossil fuel use raise carbon dioxide faster than plants can absorb it. Extra carbon dioxide traps heat in the air, causing global warming and changing rainfall patterns.",
+              "The ocean acts as a large carbon sink when carbonates form in shells and sink. Some carbon is stored in limestone and fossil fuels for millions of years. Protecting forests and reducing burning helps keep the carbon and oxygen balance stable."
+            ],
+            "bullets": [
+              "Photosynthesis: uses carbon dioxide, releases oxygen",
+              "Respiration and combustion: release carbon dioxide",
+              "Ocean sink: stores carbon as carbonate shells"
+            ],
+            "takeaway": "Photosynthesis, respiration, combustion and decomposition cycle carbon, while oceans store some long term.",
+            "check": {
+              "question": "Which processes release carbon dioxide into the air?",
+              "options": [
+                "Photosynthesis only",
+                "Respiration, combustion and decomposition",
+                "Ocean sink only",
+                "Fixation only"
+              ],
+              "answer": 1,
+              "why": "Respiration, combustion and decomposition return carbon dioxide to the air, while photosynthesis uses it."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The Water Cycle and Climate",
+            "paragraphs": [
+              "Water evaporates from oceans, lakes and rivers under the sun. Plants also release water vapour through transpiration from their leaves. Together, evaporation and transpiration lift water into the air as an invisible vapour.",
+              "As warm air rises, vapour cools and condenses into clouds. Water falls as precipitation, such as rain, which is common in southern Nigeria. Some rain soaks into soil as groundwater, while the rest runs off the surface into streams and rivers.",
+              "The cycle moves water continuously, so the amount on Earth stays almost constant. Deforestation reduces transpiration and runoff patterns, which can make rainfall less regular. The water cycle therefore affects climate, farming and the availability of clean water."
+            ],
+            "bullets": [
+              "Evaporation and transpiration: lift water to air",
+              "Condensation and precipitation: form clouds and rain",
+              "Runoff and groundwater: move water to rivers and wells"
+            ],
+            "takeaway": "Evaporation, transpiration, condensation, precipitation, runoff and groundwater move water through the environment.",
+            "check": {
+              "question": "Transpiration is the process by which plants",
+              "options": [
+                "Absorb nitrates",
+                "Release water vapour from leaves",
+                "Release carbon dioxide by burning",
+                "Form carbonates in shells"
+              ],
+              "answer": 1,
+              "why": "Transpiration releases water vapour from leaves into the air, part of the water cycle."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The Nitrogen Cycle and Legume Crops",
+            "paragraphs": [
+              "Plants need nitrogen to make proteins, but most cannot use nitrogen gas from air. Fixation converts nitrogen gas into usable compounds. Rhizobium bacteria in legume roots, free-living Azotobacter, and lightning all fix nitrogen for crops.",
+              "Nitrification turns ammonium into nitrites and then nitrates, which plants absorb easily. Nitrosomonas acts first, then Nitrobacter completes the change. Animal waste and urea break down to ammonium, feeding nitrification and keeping nitrogen available in soil.",
+              "Denitrification returns nitrates to nitrogen gas and completes the cycle. Pseudomonas bacteria carry out denitrification in waterlogged, airless soil. Farmers use leguminous crops such as groundnut and cowpea in rotation to restore nitrogen and reduce fertiliser needs."
+            ],
+            "bullets": [
+              "Fixation: Rhizobium, Azotobacter and lightning fix nitrogen",
+              "Nitrification: Nitrosomonas then Nitrobacter make nitrates",
+              "Denitrification: Pseudomonas returns nitrogen gas to air"
+            ],
+            "takeaway": "Fixation, nitrification and denitrification move nitrogen between air, soil and plants for protein making.",
+            "check": {
+              "question": "In nitrification, Nitrosomonas and Nitrobacter convert ammonium to",
+              "options": [
+                "Nitrogen gas",
+                "Nitrites then nitrates",
+                "Urea then waste",
+                "Carbonates"
+              ],
+              "answer": 1,
+              "why": "Nitrosomonas and then Nitrobacter convert ammonium into nitrites and then nitrates for plant uptake."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For nitrogen questions, remember the order: fixation, then nitrification by Nitrosomonas and Nitrobacter, then plant uptake, and finally denitrification by Pseudomonas back to nitrogen gas in the air for exam."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A Kano farmer grows millet alone every year and yields fall. He adds cowpea in rotation and returns cattle waste. Explain the change using the nitrogen cycle.",
+            "steps": [
+              {
+                "operation": "Identify nitrogen shortage",
+                "reason": "Continuous millet removes nitrates without replacement",
+                "result": "Soil nitrogen falls and yields drop",
+                "predictPrompt": "What would fixation add?"
+              },
+              {
+                "operation": "Add cowpea and Rhizobium fixation",
+                "reason": "Legume roots fix nitrogen gas into soil",
+                "result": "More nitrates form through nitrification",
+                "predictPrompt": "What role do manure bacteria play?"
+              },
+              {
+                "operation": "Add waste and nitrification",
+                "reason": "Waste breaks down to ammonium then nitrates",
+                "result": "Plants absorb nitrates and grow better",
+                "predictPrompt": "How does denitrification complete the cycle?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "How would deforestation and burning in northern Nigeria change the carbon and water cycles together?",
+            "hints": [
+              "Think carbon dioxide release",
+              "Think transpiration and rainfall",
+              "Think soil erosion and runoff"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "natural-habitats",
+      "title": "Aquatic Habitats",
+      "objective": "Learners will describe aquatic adaptations in Nigerian ponds, rivers and mangroves.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Aquatic Habitats",
+            "paragraphs": [
+              "A student in Awka watches tilapia jump near water lilies in a village pond during the rains and wonders where fish and insects hide."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Ponds and Lakes: Still Water Communities",
+            "paragraphs": [
+              "Ponds and lakes hold stagnant water that warms easily under the Nigerian sun. Sunlight penetrates only a few metres, so most life stays near the surface. Stagnant conditions also lower dissolved oxygen, especially in deep or polluted water.",
+              "Tiny phytoplankton drift near the surface and multiply during the rainy season. Water lilies root in muddy beds while their broad leaves shade the water below. Tilapia feed on plankton, plants and small invertebrates in these warm layers.",
+              "Frogs, snails, mosquito larvae and dragonfly nymphs complete the food web in ponds. Farmers often dig ponds near Awka and Onitsha to breed tilapia for food. Seasonal flooding connects small ponds to streams, bringing in nutrients and new colonists."
+            ],
+            "bullets": [
+              "Phytoplankton form the base of the food chain in ponds and lakes.",
+              "Water lilies provide food and shelter but can trap debris in still water.",
+              "Tilapia tolerate warm, low-oxygen water better than many native fish."
+            ],
+            "takeaway": "Still ponds are layered systems where plankton, plants and tilapia depend on light and oxygen.",
+            "check": {
+              "question": "What forms the food base in ponds?",
+              "options": [
+                "Tilapia",
+                "Lilies",
+                "Plankton",
+                "Nymphs"
+              ],
+              "answer": 2,
+              "why": "Plankton photosynthesise food for small animals."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Streams and Rivers: Life in Flowing Water",
+            "paragraphs": [
+              "Streams and rivers carry flowing water that is usually well mixed and rich in dissolved oxygen. Riffles, where water splashes over stones, add oxygen rapidly as currents tumble. Rapid flow also prevents stagnant warming and algal scum common in ponds.",
+              "In shallow riffles, insect larvae cling to smooth stones to avoid being swept downstream. Fish such as catfish and tilapia hunt insects, leaves and fallen fruits carried by the current. Freshwater crabs shelter under rocks and scavenge dead organisms.",
+              "During the rainy season, rivers flood nearby lowlands and deposit fertile mud. Market gardeners in Ibadan use flood plains to grow yams and vegetables. Fishermen cast nets in calm pools where oxygen remains high and food is plentiful."
+            ],
+            "bullets": [
+              "Flowing water supplies a steady supply of dissolved oxygen for animals.",
+              "Riffles aerate water and support oxygen-loving insect larvae and fish.",
+              "Flood plains enrich soil and provide breeding grounds for fish."
+            ],
+            "takeaway": "Flowing rivers stay oxygen rich, so riffles favour insects and fish that need fresh water.",
+            "check": {
+              "question": "Why do larvae live in riffles?",
+              "options": [
+                "Warmth",
+                "Low oxygen",
+                "Riffle oxygen",
+                "Mud"
+              ],
+              "answer": 2,
+              "why": "Riffles add oxygen needed by larvae."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Seashores and Mangrove Swamps",
+            "paragraphs": [
+              "Seashores along the Lagos coast experience daily tides that alternately flood and expose sand and mud. Intertidal zones endure strong waves, changing salinity and drying in the hot sun. Animals here must tolerate salty water and survive without it for hours.",
+              "Mangrove swamps in the Niger Delta grow in soft, oxygen-poor mud under brackish water. Red mangroves send arching prop roots to support trees and trap sediments near the water. Black mangroves push cone-like pneumatophores upward to take in air at low tide.",
+              "Fiddler crabs, snails and juvenile fish use mangrove roots as shelter and feeding grounds. Salt tolerance helps these animals pump out excess salt and retain fresh water. Oyster beds and mudskippers also prosper in the damp, sheltered swamp margins."
+            ],
+            "bullets": [
+              "Tides shape seashore life by sorting animals into wet and dry zones.",
+              "Prop roots support mangroves while pneumatophores allow roots to breathe.",
+              "Crabs and fish survive salinity changes through specialised salt control."
+            ],
+            "takeaway": "Tides and salty mud demand roots that breathe and animals that control salt.",
+            "check": {
+              "question": "What do pneumatophores do?",
+              "options": [
+                "Store water",
+                "Block salt",
+                "Absorb oxygen",
+                "Trap fish"
+              ],
+              "answer": 2,
+              "why": "They rise from mud to absorb air."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "In JAMB questions, link each habitat to its water movement and oxygen level. Remember: still ponds favour plankton, riffles favour insects, and mangroves favour salt control. Highlight these contrasts for quick revision."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A Delta fisherman catches crabs in mangrove roots at low tide. Explain why.",
+            "steps": [
+              {
+                "operation": "Note low tide",
+                "reason": "Mud and roots exposed",
+                "result": "Crabs hide and feed",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Compare high tide",
+                "reason": "Fish enter with seawater",
+                "result": "Fish feed near roots",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Link adaptation",
+                "reason": "Salt and oxygen needs differ",
+                "result": "Fishers follow tide",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Where do Lagos crabs hide at low tide?",
+            "hints": [
+              "Exposed mud",
+              "Mangrove roots",
+              "Salt control"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "terrestrial-and-arboreal-habitats",
+      "title": "Terrestrial and Arboreal Habitats",
+      "objective": "Learners will describe land adaptations in Nigerian savanna, canopy and soil.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Terrestrial and Arboreal Habitats",
+            "paragraphs": [
+              "On a farm outside Jos, a boy watches grasscutters dart into tall grass as a harmattan wind spreads dry leaves changing colour."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Savanna Grassland and Abandoned Farmland",
+            "paragraphs": [
+              "Savanna grasslands around Bida and Ogbomosho receive seasonal rain followed by a long dry season. Deep-rooted grasses, such as elephant grass, survive drought and recover quickly after fire. Farmers often abandon old fields where grasses and shrubs reclaim the soil naturally.",
+              "Fire adaptation is essential because dry-season bush fires sweep the savanna each year. Thick underground stems and waxy leaves protect buds from heat and reduce water loss. After burning, fresh green shoots emerge to feed grazers and attract insects.",
+              "Grasscutters hide in dense tufts and feed on tender shoots during the rainy months. Birds such as francolins hunt seeds while reptiles bask on warm laterite soils. In abandoned farmland, shrubs and small trees trap soil and restore moisture for new crops."
+            ],
+            "bullets": [
+              "Grasses dominate savanna because deep roots store water and resist fire.",
+              "Fire removes dead litter and triggers fresh growth for grazers.",
+              "Grasscutters and birds depend on grass cover for food and shelter."
+            ],
+            "takeaway": "Savanna grasses persist through drought and fire, feeding grasscutters and other animals.",
+            "check": {
+              "question": "What helps grasses survive fire?",
+              "options": [
+                "Tall stems",
+                "Waxy leaves",
+                "Underground stems",
+                "Broad leaves"
+              ],
+              "answer": 2,
+              "why": "Underground buds regrow after fire."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Arboreal Life in the Tree Tops",
+            "paragraphs": [
+              "Arboreal animals live in the canopy of trees in forests and savanna woodlands. Monkeys swing through branches near Zaria, grasping limbs with hands and feet. Their long tails aid balance while they forage on fruits, leaves and insects.",
+              "Birds such as hornbills and weavers nest high in branches where ground predators cannot reach. Weavers build hanging nests that sway safely in the wind. Canopy density provides shade, food and escape routes throughout the year.",
+              "Ants and termites form large colonies in tree forks and under bark. Their activity supports arboreal food webs by recycling dead wood and leaves. Study canopy life to understand food, shelter and safety in the treetops."
+            ],
+            "bullets": [
+              "Monkeys use grasping limbs and tails to move safely among branches.",
+              "Weaver birds build hanging nests high above ground predators.",
+              "Ants and termites recycle organic matter within the canopy."
+            ],
+            "takeaway": "Canopy life offers food and safety, but needs limbs and nests for life aloft.",
+            "check": {
+              "question": "Why build nests high in trees?",
+              "options": [
+                "Find rain",
+                "Escape predators",
+                "Feed ants",
+                "Store seeds"
+              ],
+              "answer": 1,
+              "why": "High nests avoid ground predators."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Burrow Life Beneath the Soil",
+            "paragraphs": [
+              "Burrowing animals live in tunnels dug into soil, where temperature and moisture change slowly. Earthworms eat decaying leaves and loosen the soil for roots. Burrows also protect animals from harmattan heat, wind and heavy rain.",
+              "Termites build mounds with well-planned chambers that trap cool air and store food. Their colonies regulate humidity so fungal gardens can grow inside the nest walls. In Nigeria, termites often fill soil with tunnels from farms to forest edges.",
+              "Other soil animals such as millipedes, beetles and burrowing frogs feed on litter. Their burrows let water soak in and prevent soil flooding during storms. Farmers favour these organisms because they improve soil structure and aeration for crops."
+            ],
+            "bullets": [
+              "Earthworms aerate soil and enrich it with nutrient-rich casts.",
+              "Termite mounds control temperature and humidity for the colony.",
+              "Burrows guard animals from drought, heat and sudden rain."
+            ],
+            "takeaway": "Underground burrows keep soil animals cool, moist and safe from weather.",
+            "check": {
+              "question": "How do burrows help dry-season worms?",
+              "options": [
+                "Find sunlight",
+                "Store seeds",
+                "Reduce water loss",
+                "Attract termites"
+              ],
+              "answer": 2,
+              "why": "Burrows stay cool and damp."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "JAMB often pairs habitat with adaptation. For savanna write fire and drought, for canopy write grip and nests, and for burrows write moisture and temperature shelter during their harsh seasons now."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A Jos farmer finds fewer grasscutters after fire. Explain effects.",
+            "steps": [
+              {
+                "operation": "Link grass loss",
+                "reason": "Food and shelter gone",
+                "result": "Grasscutters decline",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Check burrows",
+                "reason": "Worms hide underground",
+                "result": "Soil animals survive",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Note canopy",
+                "reason": "Fruits remain in trees",
+                "result": "Monkeys suffer less",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Where are Ibadan worms after rain?",
+            "hints": [
+              "Damp soil",
+              "Feeding habits",
+              "Burrow depth"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "local-nigerian-biomes",
+      "title": "Tropical Rainforest of Nigeria",
+      "objective": "Learners will explain rainforest location and layered structure in southern Nigeria.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Tropical Rainforest of Nigeria",
+            "paragraphs": [
+              "In Calabar, heavy rain falls almost every afternoon while tall trees drip and leaves glisten in cool shade under thick clouds."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Location and Rainfall in the South",
+            "paragraphs": [
+              "Nigeria's tropical rainforest grows in the south where annual rainfall exceeds 2000 mm. States such as Cross River, Ondo and Rivers receive the heaviest rain each year. Rain falls in most months across southern Nigeria, leaving only a short dry season.",
+              "The Niger Delta and southern uplands sit under constant moist air from the Atlantic. High humidity favours rapid leaf growth and thick plant cover throughout the year. Frequent rainfall leaches nutrients from surface soils, leaving poor, acidic conditions for crops.",
+              "Laterite soils dominate under rainforest, as iron and aluminium remain after heavy leaching. Farmers terrace steep slopes to protect this fragile soil from erosion. Conservation of laterite areas preserves water quality and wildlife corridors for towns and farms downstream."
+            ],
+            "bullets": [
+              "Rainfall over 2000 mm creates warm, wet conditions for rainforest growth.",
+              "Southern states and the Niger Delta host the main forest belt.",
+              "Laterite soils are acidic and nutrient-poor due to leaching."
+            ],
+            "takeaway": "Heavy southern rainfall and laterite soils shape Nigeria's rainforest climate.",
+            "check": {
+              "question": "What rainfall fits rainforest?",
+              "options": [
+                "Less than 500 mm",
+                "Over 2000 mm",
+                "Dry winds only",
+                "Temperate cold"
+              ],
+              "answer": 1,
+              "why": "Rainforest exceeds 2000 mm yearly."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Forest Layers and Rich Diversity",
+            "paragraphs": [
+              "Emergent trees rise above the canopy, reaching 40 metres in fertile lowland areas across southern Nigeria. Their tough leaves resist strong winds and occasional dry spells during harmattan. Buttress roots spread wide at the base to support these giants safely.",
+              "Below emergents lies the closed canopy of tall trees, where leaves form a green roof. Lianas climb through gaps to reach sunlight and flower at treetops. The canopy layers trap moisture and create cool, still conditions underneath.",
+              "The understorey holds shrubs, saplings and herbs that tolerate deep shade and moisture. Gorillas, seed-eating birds and crickets shelter among dense undergrowth nearby. Nigeria's rainforest holds rich diversity because layered plants supply food and habitat vertically."
+            ],
+            "bullets": [
+              "Emergent trees and buttress roots support the forest ceiling.",
+              "Lianas link canopy to understorey and boost plant diversity.",
+              "Understorey shade shelters many small animals and young plants."
+            ],
+            "takeaway": "Layered rainforest supports diverse life from canopy to forest floor.",
+            "check": {
+              "question": "What do buttress roots do?",
+              "options": [
+                "Store rain",
+                "Support tall trunks",
+                "Make flowers",
+                "Feed lianas"
+              ],
+              "answer": 1,
+              "why": "They anchor tall trees on land."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Swamp Forest, Threats and Conservation",
+            "paragraphs": [
+              "Niger Delta swamp forest grows in waterlogged soils beside creeks and rivers across southern wetlands. Raffia palms and short mangroves dominate where brackish water meets fresh water daily. Crabs, fish and snails thrive in this rich, flooded environment with organised feeding behaviour.",
+              "Deforestation for palm oil plantations, logging and farming now threatens the rainforest. Settlers clear forest rapidly for cocoa and rubber estates near Lagos. Plantation farms often replace diverse forest with single crops that need chemicals.",
+              "Conservation now protects remnants through national parks and organised community reserves. Sustainable farming restores buffers of fast-growing trees around degraded areas for wildlife. JAMB favours questions on swamp adaptation and on why forest loss harms climate."
+            ],
+            "bullets": [
+              "Swamp forest tolerates flooding and brackish water in the Delta.",
+              "Plantations and logging drive rapid rainforest loss in the south.",
+              "Parks and reserves conserve species and moderate local climate."
+            ],
+            "takeaway": "Delta swamp forests need protection from plantations and logging pressure.",
+            "check": {
+              "question": "What most threatens rainforest?",
+              "options": [
+                "Fishing",
+                "Plantation farming",
+                "Bird watching",
+                "Stone tools"
+              ],
+              "answer": 1,
+              "why": "Plantations clear forests for crops."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Remember the north to south rainfall gradient. JAMB links rainforest to over 2000 mm, laterite soils, buttress roots and high diversity in layered trees to answer Nigerian context questions fast."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A Cross River group finds roots and lianas. What to record?",
+            "steps": [
+              {
+                "operation": "Name emergents",
+                "reason": "Tall trees exceed canopy",
+                "result": "Note root support",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Trace lianas",
+                "reason": "Need light to flower",
+                "result": "Link climbing diversity",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Describe shade",
+                "reason": "Shrubs grow below canopy",
+                "result": "Record moisture needs",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why Delta swamp not savanna?",
+            "hints": [
+              "Heavy rainfall",
+              "Waterlogged soils",
+              "Laterite leaching"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "savanna-desert-and-highland-biomes",
+      "title": "Savanna, Desert and Highland Biomes",
+      "objective": "Learners will compare Nigerian savanna, desert oases and highland grasslands.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Savanna, Desert and Highland Biomes",
+            "paragraphs": [
+              "Travelling north from Abuja in harmattan season, grasses shrink, dunes appear, then misty plateaus rise where air feels cool at night."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Guinea Savanna of the Middle Belt",
+            "paragraphs": [
+              "Guinea savanna occupies the middle belt with 1000 to 1500 mm of annual rainfall. Tall grass grows 1 to 3 metres high during the rainy months. Trees such as Isoberlinia and Parkia dot the grassland and drop leaves in the dry season.",
+              "The burn regime helps Guinea savanna maintain open grassland against encroaching forest. Yearly fires clear litter, kill pests and recycle nutrients into soil. Farmers burn before the first rains to encourage fresh shoots for livestock.",
+              "Shea, locust bean and dawadawa trees offer nuts and food for families. Antelopes, guinea fowl and grasscutters shelter in the tall grass during rains. JAMB often asks about burn timing and how fire favours grasses over trees."
+            ],
+            "bullets": [
+              "Guinea savanna receives 1000 to 1500 mm and tall grass 1 to 3 metres.",
+              "Isoberlinia and Parkia trees adapt to seasonal fire and drought.",
+              "Burn regime clears litter and favours grasses over shrubs."
+            ],
+            "takeaway": "Guinea savanna blends tall grass, Isoberlinia parkland and yearly fire.",
+            "check": {
+              "question": "How tall is Guinea grass?",
+              "options": [
+                "10 cm",
+                "30 cm",
+                "1-3 metres",
+                "10 metres"
+              ],
+              "answer": 2,
+              "why": "Grasses reach 1 to 3 metres in rains."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Sudan Savanna and the Sahel Edge",
+            "paragraphs": [
+              "Sudan savanna covers the north with less than 1000 mm of rainfall each year. Short grasses, often under 1 metre, grow in scattered clumps between trees. The dry season lasts six to seven months under hazy harmattan skies.",
+              "Shea and baobab trees survive drought with deep roots and thick trunks that store water. Glaucous leaves reduce water loss while seeds remain dormant through dry spells. This zone is a tsetse-free area because dry air limits the fly.",
+              "Farmers in Kano and Katsina grow millet, sorghum and groundnuts with short seasonal crops. Nomadic herders move south in the dry season seeking fresh pasture. Sudan savanna shows adaptation to fierce sun and low moisture year after year."
+            ],
+            "bullets": [
+              "Sudan savanna has under 1000 mm rain and short, sparse grass.",
+              "Shea and baobab store water to survive long dry seasons.",
+              "Tsetse-free dry air supports cattle rearing in the north."
+            ],
+            "takeaway": "Sudan savanna shows tree adaptations to low rain and intense sun.",
+            "check": {
+              "question": "How do shea trees survive drought?",
+              "options": [
+                "Broad leaves",
+                "Thick trunks",
+                "Shallow roots",
+                "Open flowers"
+              ],
+              "answer": 1,
+              "why": "Trunks store water for drought."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Desert Oases and Highland Grasslands",
+            "paragraphs": [
+              "The extreme north-east holds desert with less than 250 mm of annual rainfall. Active dunes shift with wind near Borno, while xerophytes survive with tiny leaves and succulent stems. Date palms cluster around oases where underground water reaches the surface.",
+              "Highland biomes rise in cool mists on the Jos Plateau and Obudu Plateau Cross River. Mambilla Plateau adds another cool grassland where fog lowers temperature. These oases of temperate climate stand out from hot lowlands.",
+              "Jos Plateau grows potatoes and Irish crops that need cool nights and mist. Highland grasses support cattle and attract tourists to viewpoints and canyons. Highland mist supplies moisture to crops that fail in surrounding savanna heat."
+            ],
+            "bullets": [
+              "Desert xerophytes cut water loss with small leaves and coatings.",
+              "Oases allow desert farming where water reaches the surface.",
+              "Highland grasslands enjoy mist and temperate climate for crops."
+            ],
+            "takeaway": "Desert oases and misty highlands contrast sharply with hot savanna plains.",
+            "check": {
+              "question": "Why suit Irish potatoes on Jos Plateau?",
+              "options": [
+                "Hot desert sun",
+                "Mist and cool nights",
+                "Flooded swamps",
+                "Deep sand dunes"
+              ],
+              "answer": 1,
+              "why": "Mist keeps highland climate temperate."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Learn biomes from south to north. Pair Guinea savanna with 1000 to 1500 mm, Sudan with under 1000 mm, desert under 250 mm and highlands with mist for ridge revision."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A trader moves Kano sorghum to Jos and sees frost. Explain why.",
+            "steps": [
+              {
+                "operation": "Compare zones",
+                "reason": "Kano is hot and dry",
+                "result": "Jos is cool and misty",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Link altitude",
+                "reason": "Highland air cools",
+                "result": "Frost harms sorghum",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Suggest planting",
+                "reason": "Potatoes suit cool soils",
+                "result": "Plant temperate crops",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "How tell Guinea from Sudan savanna?",
+            "hints": [
+              "Rainfall amount",
+              "Grass height",
+              "Tree species"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "the-ecology-of-populations",
+      "title": "Population Density and Size",
+      "objective": "Measure population density and explain factors that determine the size of a population in an ecosystem.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Population Density and Size",
+            "paragraphs": [
+              "At the University of Ibadan botanical garden, Adebayo counts wild yam seedlings along a shady path. He wonders whether they are crowded or sparse, and how ecologists compare such counts fairly across different places."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "What Population Density Means",
+            "paragraphs": [
+              "Population density is the number of individuals of a species within a given unit area or volume. It shows whether a species is crowded or thinly spread in its habitat.",
+              "Counting every individual is often impossible in a large forest or field. Ecologists sample a small representative part with a quadrat, usually a 1 m² frame placed at random points. Where plants are spread widely, they lay a transect line and sample quadrats along it.",
+              "Density is the total count divided by the total sampled area. If 40 yam seedlings are found in four 1 m² quadrats, the density is 40 ÷ 4 = 10 seedlings per m². Sampling must be random and repeated so results represent the whole area."
+            ],
+            "bullets": [
+              "Density = total number counted ÷ total area sampled",
+              "A quadrat is a 1 m² frame; a transect is a line along which quadrats are sampled",
+              "Random placement and repetition improve accuracy and fairness"
+            ],
+            "takeaway": "Density tells how crowded a species is per unit area, estimated by quadrat sampling.",
+            "check": {
+              "question": "A student counts 60 seedlings in six 1 m² quadrats. What is the density?",
+              "options": [
+                "6 per m²",
+                "10 per m²",
+                "60 per m²",
+                "360 per m²"
+              ],
+              "answer": 1,
+              "why": "Density = 60 ÷ 6 = 10 seedlings per square metre."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Factors That Affect Population Size",
+            "paragraphs": [
+              "Biotic factors are living or once-living factors that affect a population. Abundant food, low predation and good reproductive ability allow populations to grow quickly. Pests, disease, competition and predation reduce numbers by lowering survival and reproduction.",
+              "Abiotic factors are non-living conditions such as temperature, light, water, space and pH. Each species has an optimum range, and harsh conditions lower its density in the soil. For example, yam seedlings grow poorly when water is scarce or soil pH is too acidic.",
+              "No factor acts alone, and populations usually settle near the carrying capacity of their habitat. When food or space runs out, competition increases and density falls. Ecologists therefore measure both biotic and abiotic factors when explaining population changes."
+            ],
+            "bullets": [
+              "Biotic factors: food, pests, disease, predation, competition and reproductive ability",
+              "Abiotic factors: temperature, light, water, space and soil pH",
+              "Optimum conditions favour growth; unfavourable conditions reduce density"
+            ],
+            "takeaway": "Population size depends on living and non-living factors that affect survival and reproduction.",
+            "check": {
+              "question": "Which set lists only abiotic factors affecting population size?",
+              "options": [
+                "Food, disease and predation",
+                "Temperature, light and water",
+                "Pests, competition and food",
+                "Disease, mates and space"
+              ],
+              "answer": 1,
+              "why": "Temperature, light and water are non-living conditions, so they are abiotic."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Overcrowding in Human Populations",
+            "paragraphs": [
+              "Overcrowding means too many people living in an area for its resources and services. It is often caused by a high birth rate and a falling death rate. Good healthcare, sanitation and nutrition keep more children alive, so numbers rise.",
+              "Overcrowding puts pressure on food, water, space, housing and jobs. It spreads disease quickly, causes unemployment and creates slums with poor sanitation. Schools, hospitals and roads become congested and fierce competition for resources increases within the community.",
+              "Control measures include family planning education, girls' education and child healthcare programmes. Investment in housing, jobs, clean water and farming improves living standards. Such measures slow growth without coercion and improve quality of life."
+            ],
+            "bullets": [
+              "Causes: high birth rate, falling death rate and better healthcare",
+              "Effects: disease, unemployment, slums and pressure on food and space",
+              "Control: family planning, education and improved housing and services"
+            ],
+            "takeaway": "Overcrowding strains resources and services, so planning and education help control it.",
+            "check": {
+              "question": "Which is a direct consequence of overcrowding in cities?",
+              "options": [
+                "More space and food per person",
+                "Disease, unemployment and slums",
+                "Lower birth rate automatically",
+                "Better housing for all"
+              ],
+              "answer": 1,
+              "why": "Overcrowding spreads disease and pressures jobs, housing, food and space, leading to slums."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "In JAMB questions, density is always number divided by area. Write the unit, such as individuals per square metre, and check whether biotic factors are living while abiotic factors are non-living before choosing an option."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "At a primary school garden in Enugu, Chiamaka places four 1 m² quadrats along a transect and counts 36 pawpaw seedlings. Calculate the density and explain what the result suggests.",
+            "steps": [
+              {
+                "operation": "Add the seedlings in all quadrats: 36",
+                "reason": "Density uses the total count from the sampled area",
+                "result": "Total count = 36 seedlings",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Add the sampled area: 4 × 1 m² = 4 m²",
+                "reason": "Each quadrat covers 1 m², so four quadrats cover 4 m²",
+                "result": "Sampled area = 4 m²",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Divide total count by total area: 36 ÷ 4",
+                "reason": "Density is number per unit area",
+                "result": "Density = 9 seedlings per m²",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A farmer in Kano counts 50 millet plants in five 1 m² quadrats. Is the density high or low, and which factor would you check first to explain it?",
+            "hints": [
+              "Divide 50 by the total area",
+              "Think of food, water and pests",
+              "Consider temperature and rainfall too"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "competition-and-niche",
+      "title": "Competition and Niche",
+      "objective": "Explain intra-specific and inter-specific competition and how niche differentiation reduces competition in an ecosystem.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Competition and Niche",
+            "paragraphs": [
+              "On a farm near Zaria, sorghum grows taller than Striga hiding among its roots. The farmer wonders why the crop is stunted. This lesson explains how competition for resources shapes the growth of plants and animals."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Intra-specific Competition",
+            "paragraphs": [
+              "Intra-specific competition occurs between members of the same species. Their needs are almost identical, so they compete strongly for the same resources. This competition is usually intense because individuals want the same food, mates, space, light and water.",
+              "In plants, seedlings of one species shade one another and compete for light, water and mineral salts. In animals, males compete for mates and territories, while all individuals compete for food and shelter. The strongest individuals survive and reproduce, passing on their genes.",
+              "Intra-specific competition limits population size and density in a habitat. When resources are scarce, growth slows, reproduction falls and some individuals die. It therefore helps to keep a population near what the environment can support in a crowded habitat."
+            ],
+            "bullets": [
+              "Same species, same needs: food, mates, space, light and water",
+              "Plants compete for light, water and mineral salts",
+              "Strongest individuals survive; density is limited"
+            ],
+            "takeaway": "Intra-specific competition is contest within a species for identical resources needed for survival.",
+            "check": {
+              "question": "Two male goats fight for access to females during the mating season. This is an example of",
+              "options": [
+                "Intra-specific competition for mates",
+                "Inter-specific competition for food",
+                "Predation",
+                "Mutualism"
+              ],
+              "answer": 0,
+              "why": "Both are males of the same species competing for mates, so it is intra-specific."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Inter-specific Competition",
+            "paragraphs": [
+              "Inter-specific competition occurs between different species that need the same resource. One species may gain while the other loses, or both may suffer. This competition is less direct than intra-specific competition, but it can still reduce growth and yield.",
+              "Striga is a parasitic weed that grows on sorghum roots and steals water and nutrients. In millet and groundnut mixtures, one crop may shade the other or use water faster. Farmers therefore space crops well and remove weeds early to reduce this loss.",
+              "Where two species compete strongly, the better adapted species often replaces the weaker one. This replacement changes the composition of the community over time. Understanding the contest helps farmers and ecologists predict crop yields in the field."
+            ],
+            "bullets": [
+              "Different species competing for the same food, water or light",
+              "Striga steals water and nutrients from sorghum roots",
+              "Millet and groundnut compete when spaced too closely together"
+            ],
+            "takeaway": "Inter-specific competition is contest between species, and the better adapted may dominate.",
+            "check": {
+              "question": "Striga growing on sorghum roots and reducing its growth is an example of",
+              "options": [
+                "Intra-specific competition",
+                "Inter-specific competition",
+                "Decomposition",
+                "Pollination"
+              ],
+              "answer": 1,
+              "why": "Sorghum and Striga are different species competing for the same water and nutrients."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Niche Differentiation and Succession",
+            "paragraphs": [
+              "A niche is the role and position of a species in its ecosystem, including how it obtains food and space. When species partition resources, they use them differently, so competition falls. For example, birds may feed at different heights on the same tree.",
+              "Partitioning also happens through timing and root depth in plants. One species may grow in the rainy season while another grows later, or roots may occupy shallow and deep soil layers. Each species then obtains enough resources to survive and reproduce.",
+              "Competition drives succession as pioneers are replaced by better competitors. Early species modify the soil and shade, allowing shrubs and later trees to invade. Over time, the community changes from pioneer to climax species in a stable environment."
+            ],
+            "bullets": [
+              "Niche: feeding height, timing of growth and root depth",
+              "Sharing resources differently reduces competition between species",
+              "Competition drives replacement of pioneers by climax species"
+            ],
+            "takeaway": "Niche differentiation reduces competition by partitioning resources among species in a habitat.",
+            "check": {
+              "question": "Two bird species feed at different heights on the same tree. This shows",
+              "options": [
+                "Intra-specific competition",
+                "Niche differentiation reducing competition",
+                "Primary succession",
+                "Predation"
+              ],
+              "answer": 1,
+              "why": "Feeding at different heights partitions food, so each species uses the tree differently."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "JAMB often asks whether competition is within one species or between species. Look for the phrase same species for intra-specific and different species for inter-specific. Remember that niche partitioning reduces competition between species."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "In a school farm at Jos, 20 millet seedlings and 20 groundnut seedlings compete for water in the same bed. After one month, millet is taller and groundnut is stunted. Explain the type of competition and the result.",
+            "steps": [
+              {
+                "operation": "Identify the competing organisms: millet and groundnut",
+                "reason": "They are different species needing the same water and light",
+                "result": "Competition is inter-specific",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Compare growth: millet taller, groundnut stunted",
+                "reason": "Millet obtained more water and light than groundnut",
+                "result": "Millet outcompeted groundnut",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Predict replacement if competition continues",
+                "reason": "The better adapted species will dominate the bed",
+                "result": "Groundnut density and yield will fall",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Two bird species feed on the same tree but at different heights. Is this competition, niche differentiation, or succession, and why?",
+            "hints": [
+              "Think of how they partition food",
+              "Consider feeding height on the tree",
+              "Succession requires change over time"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "ecological-succession",
+      "title": "Ecological Succession",
+      "objective": "Describe the stages of primary and secondary succession and explain the features of a climax community.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Ecological Succession",
+            "paragraphs": [
+              "After a landslide near Idanre exposes bare rock, local farmers watch hardy lichens appear first. Over many years, green plants and trees return. This lesson traces how one community replaces another until it becomes stable and mature."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Primary Succession on Bare Rock",
+            "paragraphs": [
+              "Primary succession begins on a bare area where no soil exists, such as exposed rock or cooled lava. It starts slowly because organisms must create the conditions for others to live. The first organisms are pioneers that can survive harsh, dry surfaces with little water and no nutrients.",
+              "Lichens break down rock and form a thin layer of soil, then mosses grow and add more humus. Herbs and grasses grow thicker, shrubs follow, and finally trees form a forest. Each stage builds soil that improves water holding and nutrient supply.",
+              "The sequence is lichens, then mosses, herbs, shrubs and forest, and it may take many years. Soil becomes deeper, darker and richer as roots and dead organisms accumulate. Small animals and fungi arrive as the habitat becomes sheltered and moist."
+            ],
+            "bullets": [
+              "Bare rock: lichens first, then mosses and herbs",
+              "Shrubs and trees follow as soil builds up",
+              "Each stage improves soil for the next stage"
+            ],
+            "takeaway": "Primary succession moves from bare rock to forest as pioneers build soil gradually.",
+            "check": {
+              "question": "What is the correct order in primary succession on bare rock?",
+              "options": [
+                "Forest, shrubs, herbs, mosses, lichens",
+                "Lichens, mosses, herbs, shrubs, forest",
+                "Herbs, lichens, forest, mosses, shrubs",
+                "Shrubs, herbs, lichens, forest, mosses"
+              ],
+              "answer": 1,
+              "why": "Lichens colonise rock first and build soil, then mosses, herbs, shrubs and forest follow."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Secondary Succession on Cleared Farmland",
+            "paragraphs": [
+              "Secondary succession begins where soil already exists, such as cleared farmland or a harvested forest. Seeds, roots and soil organisms remain, so colonisation is faster. Pioneer grasses and small herbs appear within weeks, not years.",
+              "Grasses build cover and add humus, then shrubs and young trees grow rapidly. Because soil is already present, water and nutrients are available from the start. This gives secondary succession a higher net primary productivity, or NPP, than primary succession.",
+              "Human clearing often resets land to the grass stage, and farming may repeat the cycle. If land is abandoned, succession continues towards shrubs and forest. The speed depends on nearby seed sources, rainfall and soil quality in the area."
+            ],
+            "bullets": [
+              "Cleared farmland retains soil, seeds and roots",
+              "Grasses and herbs appear first and grow fast",
+              "Higher NPP because soil and nutrients remain"
+            ],
+            "takeaway": "Secondary succession is faster than primary because soil and seed sources remain.",
+            "check": {
+              "question": "Why is secondary succession faster than primary succession?",
+              "options": [
+                "Soil, seeds and roots remain after clearing",
+                "Bare rock builds soil very quickly",
+                "Forest grows before grasses",
+                "Lichens are absent in secondary succession"
+              ],
+              "answer": 0,
+              "why": "Cleared farmland still has soil and seed sources, so grasses and shrubs establish quickly."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Climax Community and Resetting Factors",
+            "paragraphs": [
+              "A climax community is the final, stable stage of succession in an area under the local climate. It is diverse, mature and self-perpetuating because its species can regenerate themselves. Large trees, many animals and a deep leaf litter characterise such a community.",
+              "In Nigeria, the Omo Forest in Ogun State and Yankari Game Reserve in Bauchi State show climax-like communities. Omo Forest supports tall trees, primates and diverse plants, while Yankari has stable savanna woodland and many wildlife species. These communities resist small changes.",
+              "Fire, farming and drought can reset succession by removing plants and soil cover. Fire clears shrubs and returns land to grasses, while farming clears trees for crops. After such disturbance, succession begins again from an early stage."
+            ],
+            "bullets": [
+              "Climax: stable, diverse and self-perpetuating community",
+              "Examples: Omo Forest climax and Yankari woodland",
+              "Fire, farming and drought reset succession"
+            ],
+            "takeaway": "A climax community is stable and diverse, but fire, farming or drought can reset it.",
+            "check": {
+              "question": "Which feature best describes a climax community?",
+              "options": [
+                "Bare rock with only lichens",
+                "Stable, diverse and self-perpetuating",
+                "Grasses only after farming",
+                "Poor soil with few species"
+              ],
+              "answer": 1,
+              "why": "A climax community is mature, diverse and able to maintain itself under local conditions."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "In JAMB, primary succession starts on bare rock while secondary starts where soil remains. List the order lichens, mosses, herbs, shrubs then forest, and remember climax communities are stable and diverse until fire, farming or drought resets them."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A landslide near Abeokuta exposes bare rock, while a nearby farm is abandoned after harvest. Which area will become forested faster, and why? Give the pioneer organisms for the faster area.",
+            "steps": [
+              {
+                "operation": "Compare starting conditions: rock has no soil, farm has soil and seeds",
+                "reason": "Soil supplies water, nutrients and a site for roots",
+                "result": "Farm will succeed faster",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "List pioneers for the farm",
+                "reason": "Grasses and small herbs colonise cleared soil quickly",
+                "result": "Pioneers: grasses and herbs",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "List pioneers for bare rock",
+                "reason": "Lichens must build soil before larger plants grow",
+                "result": "Pioneers: lichens, then mosses",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "After a bush fire clears shrubs near Ogbomosho, which stage will appear first, and what will the climax be if left undisturbed?",
+            "hints": [
+              "Fire resets succession to grasses",
+              "Think of stages after grasses",
+              "Climax is stable forest or woodland"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "soil",
+      "title": "Soil Types and Components",
+      "objective": "Compare sandy, clayey and loamy soils and explain their components and properties important for plant growth.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Soil Types and Components",
+            "paragraphs": [
+              "At a farm in Nsukka, Musa finds sand in one pit, sticky clay in another, and loam in the third. He wonders why some hold water better. This lesson compares soil types and explains components."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Sandy, Clayey and Loamy Soils",
+            "paragraphs": [
+              "Soils differ because their particles differ in size. Sandy soil has large particles, big air spaces and high porosity, so water drains quickly. Clayey soil has tiny particles, small pores and low porosity, so it holds water for a long time.",
+              "Sandy soil warms quickly and is easy to work, but it dries fast and holds few nutrients. Clayey soil is heavy, sticky when wet and hard when dry, and it is poorly aerated. Roots struggle to get air in clayey soil after heavy rain.",
+              "Loamy soil has a mixture of sand, silt and clay, so it balances the qualities of both. It has good porosity, holds water well and allows air for roots. For these reasons, loamy soil is the best for most crops in a farm."
+            ],
+            "bullets": [
+              "Sandy: large particles, drains fast, poorly holds water",
+              "Clayey: tiny particles, holds water, poorly aerated",
+              "Loamy: mixed particles, good water and air balance"
+            ],
+            "takeaway": "Particle size controls porosity, water retention and aeration in sandy, clayey and loamy soils.",
+            "check": {
+              "question": "Which soil drains water fastest and is poorest in water retention?",
+              "options": [
+                "Clayey soil",
+                "Loamy soil",
+                "Sandy soil",
+                "Humus-rich soil"
+              ],
+              "answer": 2,
+              "why": "Sandy soil has large particles and big pores, so water drains away quickly."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Soil Structure, Porosity and Capillarity",
+            "paragraphs": [
+              "Soil structure describes how particles are arranged into crumbs or clumps with spaces between them. Good structure creates pores that allow roots, air and water to move freely. Poor structure compacts the soil and reduces pore space in a fertile topsoil.",
+              "Porosity is the amount of pore space in the soil, and it affects drainage and aeration. Capillarity is the rise of water through narrow tubes or pores against gravity. In soil, capillarity draws water upward from moist layers to dry roots.",
+              "Humus improves structure by binding particles into crumbs and holding water and nutrients. Soils rich in humus are darker, more porous and more fertile. Capillarity and humus together help roots obtain steady water even in dry spells."
+            ],
+            "bullets": [
+              "Structure: arrangement of particles into crumbs with pores",
+              "Porosity: pore space for air and water movement",
+              "Capillarity: water rises in narrow pores to roots"
+            ],
+            "takeaway": "Good structure, porosity and capillarity give roots steady water, air and nutrients.",
+            "check": {
+              "question": "Capillarity in soil means",
+              "options": [
+                "Water flows down by gravity only",
+                "Water rises through narrow pores to roots",
+                "Particles stick together when wet",
+                "Air moves out of the soil"
+              ],
+              "answer": 1,
+              "why": "Capillarity is the upward movement of water through narrow tubes or pores, helping roots absorb water."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Components of Soil",
+            "paragraphs": [
+              "Soil has inorganic components and organic components. Inorganic components are mineral particles from weathered rock, plus soil water and soil air in the pores. Mineral particles vary from sand to clay and determine soil type.",
+              "Organic components include humus, living roots and dead remains of plants and animals. Humus comes from decayed organic matter and darkens the soil. Roots add organic matter as they die and provide channels for air and water.",
+              "Soil organisms such as earthworms, bacteria and fungi break down organic matter and release nutrients. Earthworms burrow and aerate the soil, while bacteria and fungi decompose remains. Soil air contains oxygen for roots and organisms, and carbon dioxide from respiration."
+            ],
+            "bullets": [
+              "Inorganic: mineral particles, soil water and soil air",
+              "Organic: humus, roots and dead organic matter",
+              "Organisms: earthworms, bacteria and fungi release nutrients"
+            ],
+            "takeaway": "Soil combines minerals, water, air, humus and organisms that support plant growth.",
+            "check": {
+              "question": "Which group lists only inorganic components of soil?",
+              "options": [
+                "Humus, roots and earthworms",
+                "Mineral particles, soil water and air",
+                "Bacteria, fungi and humus",
+                "Roots, water and bacteria"
+              ],
+              "answer": 1,
+              "why": "Mineral particles, soil water and soil air are inorganic, while the others include organic matter."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For JAMB, link particle size to behaviour: sandy drains fast, clayey holds water, loamy balances both. Recall capillarity draws water upward in narrow pores, and soil air supplies oxygen to roots and soil organisms for respiration."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A farmer in Makurdi has sandy soil that dries quickly. He adds compost and clay in small amounts. Explain why the change improves water retention and aeration for his yams.",
+            "steps": [
+              {
+                "operation": "Identify the problem: sandy soil has large particles and big pores",
+                "reason": "Large pores allow water to drain away quickly",
+                "result": "Soil holds little water",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Add compost: humus binds particles into crumbs",
+                "reason": "Humus improves structure and holds water and nutrients",
+                "result": "Water retention improves",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Add clay: smaller particles fill large pores",
+                "reason": "Smaller pore spaces reduce drainage and hold water",
+                "result": "Soil becomes loamier with better balance",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Which soil would you choose for cassava, and how would capillarity help its roots in a dry week?",
+            "hints": [
+              "Think of loamy soil balance",
+              "Capillarity draws water upward",
+              "Roots need air and water"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "soil-fertility-and-conservation",
+      "title": "Soil Fertility and Conservation",
+      "objective": "Explain soil fertility, how it is lost, and how farmers can renew and conserve it using Nigerian practices.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Soil Fertility and Conservation",
+            "paragraphs": [
+              "Adaeze farms yam near Ibadan, but her tubers have shrunk over seasons. Her father keeps planting the same crop on the same plot without rest. She asks why the once-healthy soil no longer feeds plants well."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "What Soil Fertility Means and How It Is Lost",
+            "paragraphs": [
+              "Soil fertility is the soil's ability to support plant growth by supplying water, air, and nutrients like nitrogen, phosphorus, and potassium. Fertile soil holds moisture, allows root growth, and provides humus for steady crop development.",
+              "Heavy rain leaches nutrients downward beyond roots, while erosion removes fertile top soil from bare farms. Burning, trampling and machinery compact soil, reduce air spaces, and destroy humus that improves structure and moisture.",
+              "Planting the same crop repeatedly removes similar nutrients from the same layer. Cassava and yam deplete potassium quickly, so yields fall without rest, fallow, or added organic matter to replace what harvest removed."
+            ],
+            "bullets": [
+              "Leaching: rain carries dissolved nutrients below the root zone.",
+              "Erosion removes humus-rich top soil on slopes.",
+              "Compaction by feet and tractors blocks water and roots."
+            ],
+            "takeaway": "Fertility means nutrients, humus and structure; leaching, erosion, compaction and repeated cropping destroy it.",
+            "check": {
+              "question": "Which practice most directly depletes the same nutrients from the same soil layer?",
+              "options": [
+                "Planting the same crop repeatedly",
+                "Terracing the slope",
+                "Mulching with grasses",
+                "Intercropping with legumes"
+              ],
+              "answer": 0,
+              "why": "Repeated cropping removes similar nutrients from the same depth without replacement."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Renewing Soil Fertility for Better Harvests",
+            "paragraphs": [
+              "Crop rotation plants different crops in sequence on the same land. Legumes like cowpea and groundnut fix nitrogen through root nodules, while deep-rooted plants bring up nutrients. Rotation breaks pests and balances nutrient use across seasons.",
+              "Manure, compost and green manure add humus, improve structure, and feed soil organisms. Inorganic fertiliser such as NPK supplies nitrogen, phosphorus and potassium quickly when crops need them. Farmers in the North often combine manure with NPK for lasting improvement.",
+              "Where soil is acidic, liming with crushed limestone neutralises acidity and improves nutrient uptake. Balanced liming also benefits legumes and soil microbes, helping rice, maize and vegetable farms produce better harvests."
+            ],
+            "bullets": [
+              "Rotation: alternate yam with cowpea to restore nitrogen.",
+              "Intercrop maize with groundnut between rows.",
+              "Apply compost before planting rainy-season crops."
+            ],
+            "takeaway": "Rotation, legumes, manure, compost, NPK and lime restore nutrients and humus for fertile soil.",
+            "check": {
+              "question": "Which crop helps fix atmospheric nitrogen in rotation?",
+              "options": [
+                "Cowpea",
+                "Cassava",
+                "Yam",
+                "Plantain"
+              ],
+              "answer": 0,
+              "why": "Cowpea is a legume whose root nodules fix nitrogen for soil and next crops."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Conserving Soil to Prevent Further Loss",
+            "paragraphs": [
+              "Mulching covers soil with grasses, crop residues, or leaves to reduce raindrop impact, evaporation, and erosion. Cover crops like melon or Mucuna keep soil protected between planting seasons, bind particles, and add organic matter when they die.",
+              "On slopes in Jos and eastern hills, contour ridging follows the land's level to trap runoff. Terracing builds step-like platforms that slow water, while strip-cropping alternates crop rows with grass strips to hold soil and cut erosion.",
+              "Mixed cropping or poly-cropping grows yam, cassava, plantain and cocoyam together, giving full cover and varied roots. In shifting cultivation, farmers clear, farm briefly, then allow fallow to regrow, restoring fertility before reuse."
+            ],
+            "bullets": [
+              "Mulch with dried grasses around tomato beds.",
+              "Ridge along contours, never up and down slopes.",
+              "Mix cassava, yam and vegetables in one plot."
+            ],
+            "takeaway": "Cover soil, slow runoff, and rest land with fallow to conserve fertility.",
+            "check": {
+              "question": "Which conservation method slows runoff on a hillside farm?",
+              "options": [
+                "Contour ridging",
+                "Burning residues",
+                "Bare clean weeding",
+                "Planting up-down rows"
+              ],
+              "answer": 0,
+              "why": "Contour ridging follows the level of the slope and traps runoff and eroded soil."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Examiners often ask for two causes of soil loss and two renewal methods. List leaching, erosion, compaction plus rotation, legumes, manures and liming, linking each choice to a Nigerian farm example for full marks."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Mrs Bello in Kano plants maize yearly on the same sandy plot, applying little manure. Yields fall and rain washes soil. Propose a restoration plan.",
+            "steps": [
+              {
+                "operation": "Rotate maize with cowpea, then sorghum on different rows",
+                "reason": "Cowpea fixes nitrogen and crops use different nutrients",
+                "result": "Nutrient balance improves and pest cycles break",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Add compost and recommended NPK; lime if test shows acidity",
+                "reason": "Humus restores structure and NPK replaces nutrients",
+                "result": "Soil holds water and feeds roots better",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Mulch residues and ridge along contours",
+                "reason": "Mulch cuts evaporation and ridges slow runoff",
+                "result": "Top soil stays and yields stabilise",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "How would you help a farmer who plants only yam on one plot each year restore the soil?",
+            "hints": [
+              "Think of legumes and rotation.",
+              "Which organic matter adds humus?",
+              "What covers soil to stop erosion?"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "humans-and-environment",
+      "title": "Diseases, Vectors and Control",
+      "objective": "Identify common diseases, their vectors and causes, and how communities control them.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Diseases, Vectors and Control",
+            "paragraphs": [
+              "During the dusty harmattan in Kano, Chidi gets fever and stiff neck, diagnosed as meningitis. His cousin in the Niger Delta suffers repeated malaria. How are these Nigerian diseases spread, and how are they controlled?"
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Common Endemic Diseases and Their Causes",
+            "paragraphs": [
+              "Malaria, Nigeria's commonest disease, is caused by Plasmodium parasites carried by female Anopheles mosquitoes. Bites during the rainy season transmit the parasites, causing fever, chills, and anaemia, especially in children under five.",
+              "Meningitis is caused by Neisseria bacteria in the throat, spreading by coughs and close contact in dry, dusty weather. Tuberculosis, or TB, is airborne: Mycobacterium germs spread through coughs and stay in crowded homes, causing persistent cough and weakness.",
+              "Cholera and typhoid spread through contaminated water and food carrying Vibrio and Salmonella bacteria. Open defecation, poor sewage, and dirty hands in markets or IDP camps allow rapid spread, causing watery diarrhoea, vomiting, and fever."
+            ],
+            "bullets": [
+              "Malaria: Anopheles mosquito carries Plasmodium parasites.",
+              "Meningitis: Neisseria bacteria spread in dry season.",
+              "Cholera: Vibrio spreads via dirty water and food."
+            ],
+            "takeaway": "Malaria, meningitis, cholera, typhoid and TB remain endemic through vectors, dust, water and air.",
+            "check": {
+              "question": "Which mosquito spreads Plasmodium parasites that cause malaria?",
+              "options": [
+                "Female Anopheles mosquito",
+                "Female Aedes mosquito",
+                "Simulium blackfly",
+                "Culex water beetle"
+              ],
+              "answer": 0,
+              "why": "Only female Anopheles mosquitoes carry Plasmodium parasites into human blood by bites."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Water, Insect and Contact-Borne Diseases",
+            "paragraphs": [
+              "Schistosomiasis, or bilharzia, occurs when skin touches freshwater containing cercariae larvae. Freshwater snails release cercariae used for swimming, fishing, and washing in rivers, causing blood in urine and liver damage.",
+              "Onchocerciasis, or river blindness, spreads by Simulium blackflies breeding near fast streams, causing severe itching and blindness. Drancunculiasis is caused by Guinea worms spread when people drink water with copepods, leading to painful skin blisters.",
+              "Polio virus spreads through contaminated water and food, attacking nerves and causing paralysis in children. Sexually transmitted infections, including HIV, spread through unsafe sex and blood; repeated reinfection worsens illness and treatment failure."
+            ],
+            "bullets": [
+              "Bilharzia: freshwater snail releases cercariae into water.",
+              "River blindness: Simulium blackfly bites near rivers.",
+              "Guinea worm: copepod in drinking water spreads disease."
+            ],
+            "takeaway": "Snails, blackflies, copepods, contaminated water and unsafe sex transmit these diseases.",
+            "check": {
+              "question": "Which vector spreads onchocerciasis near fast-flowing rivers?",
+              "options": [
+                "Simulium blackfly",
+                "Anopheles mosquito",
+                "Freshwater snail",
+                "Copepod water flea"
+              ],
+              "answer": 0,
+              "why": "Simulium blackflies breed near fast streams and transmit onchocerciasis when biting."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Controlling Diseases Across Communities",
+            "paragraphs": [
+              "Bed nets, indoor spraying with insecticide, and larviciding that kills mosquito larvae reduce malaria. Clearing stagnant water, covering water jars, and improving drainage around homes also stop mosquitoes and blackflies breeding.",
+              "Boiling, chlorination, and filtering make water safe against cholera, typhoid, and polio. Pit latrines, proper sewage disposal, hand washing, and food hygiene break the faecal-oral chain in villages and camps.",
+              "Vaccination protects: Oral Polio Vaccine (OPV) against polio, BCG against TB, and meningococcal vaccine against meningitis. TB patients complete DOTS therapy. WHO coordinates global policy while UNICEF supplies vaccines and water programmes."
+            ],
+            "bullets": [
+              "Use insecticide-treated nets every night.",
+              "Boil or chlorinate water from wells.",
+              "Vaccinate with OPV and BCG early."
+            ],
+            "takeaway": "Nets, clean water, sanitation, vaccines, DOTS and support agencies prevent spread.",
+            "check": {
+              "question": "Which agency supplies vaccines for polio immunisation in Nigeria?",
+              "options": [
+                "UNICEF",
+                "World Bank",
+                "NDLEA",
+                "Federal Road Safety Corps"
+              ],
+              "answer": 0,
+              "why": "UNICEF supplies vaccines, cold chains and immunisation support, while WHO sets policy."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Remember each disease with its pathogen, vector and control. For malaria, match Anopheles and Plasmodium to nets and spraying; for bilharzia, match snails and cercariae to clean water and avoidance of contact."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "After flooding in Benue, many families drink well water and mosquitoes breed in pools. Diarrhoea and malaria rise. What control actions should health workers take?",
+            "steps": [
+              {
+                "operation": "Chlorinate wells and distribute treated nets and insecticide spray",
+                "reason": "Chlorine kills Vibrio and Salmonella; nets and spray block Anopheles bites",
+                "result": "Waterborne diseases and malaria transmission fall",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Build pit latrines away from wells and clear stagnant water",
+                "reason": "Sanitation stops faecal-oral spread and larviciding removes breeding sites",
+                "result": "Cholera risk drops and mosquito numbers fall",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Vaccinate children with OPV and BCG; support DOTS for TB cases",
+                "reason": "Vaccines prevent polio and severe TB; DOTS ensures TB cure",
+                "result": "Outbreaks prevented and treatment completed",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "If bilharzia is common in a fishing village, what vector and control methods would you suggest?",
+            "hints": [
+              "Think of snail and water contact.",
+              "How should drinking water be made safe?",
+              "Which nets or sprays also help?"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "drug-abuse",
+      "title": "Drug Abuse",
+      "objective": "Define drug abuse and addiction, describe their effects, and explain ways to prevent and treat abuse.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Drug Abuse",
+            "paragraphs": [
+              "Tunde, a market trader's son in Onitsha, steals money to buy codeine syrup. He was once bright in school but now sleeps in class. How can a single habit harm his body, mind, and future?"
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "What Drug Abuse Means and Common Drugs",
+            "paragraphs": [
+              "A drug is any substance that changes body or mind function. Drug misuse is taking it wrongly, while abuse is deliberate heavy use. Addiction means compulsive use despite harm, with tolerance and dependence developing over time.",
+              "Tolerance is needing more of the drug for the same effect, while dependence is the body craving it continuously. Withdrawal signs like shaking, sweating, and anxiety appear when use stops. Without help, users cannot easily quit despite harm.",
+              "Commonly abused in Nigeria are alcohol, cannabis (weed), codeine cough syrup, and tramadol tablets. Shisha, cocaine, and heroin are also abused, especially where peer pressure, stress, and idle youths encourage use for pleasure or escape."
+            ],
+            "bullets": [
+              "Alcohol: cheap local gin harms liver quickly.",
+              "Codeine and tramadol affect brain and control.",
+              "Cannabis and shisha damage lungs and focus."
+            ],
+            "takeaway": "Abuse means heavy, harmful use leading to tolerance, dependence and addiction.",
+            "check": {
+              "question": "Needing more tramadol for the same effect shows what?",
+              "options": [
+                "Tolerance",
+                "Vaccination",
+                "Immunity",
+                "Antibiosis"
+              ],
+              "answer": 0,
+              "why": "Tolerance is the need for a larger dose to achieve the previous effect."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Effects of Drug Abuse on Health and Society",
+            "paragraphs": [
+              "Alcohol damages the liver, causes heart failure, and shrinks the brain. Tramadol and cocaine strain the heart, while smoking shisha and cannabis harms lungs. Overdose can cause seizures, coma, and sudden death.",
+              "Drug abuse leads to mental illness, depression, aggression, and violence at home. Users fail school, lose friends, suffer accidents while driving or operating machines, and spread infections through unsafe injections and risky sex.",
+              "Families waste school fees and trading money on drugs, deepening poverty. Stolen goods, damaged markets, and hospital costs burden communities. Government loses workers through illness, accidents, and early deaths."
+            ],
+            "bullets": [
+              "Physical: liver, brain, heart, lungs weaken.",
+              "Mental: violence, depression and school failure rise.",
+              "Economic: money lost to drugs and treatment."
+            ],
+            "takeaway": "Drugs harm body, mind and society while draining family and national wealth.",
+            "check": {
+              "question": "Which is a mental or social effect of drug abuse?",
+              "options": [
+                "Violence and school failure",
+                "Improved memory",
+                "Stronger liver function",
+                "Better academic grades"
+              ],
+              "answer": 0,
+              "why": "Violence, depression and school failure are common mental and social effects of abuse."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Preventing and Treating Drug Abuse",
+            "paragraphs": [
+              "Parents, schools and communities must teach risks early, set rules, and watch peers and friendships. Sports, music, and clubs give youths positive outlets. Counselling can rethink triggers, stress, and pressure before use becomes addiction.",
+              "Addicts need medical treatment, rehabilitation centres, spiritual support, and family backing to recover. Law enforcement arrests dealers but must not only punish users. Linking offenders to treatment saves lives and reduces crime.",
+              "NAFDAC regulates drugs and checks fake products, while NDLEA fights trafficking and abuse. In Onitsha, Tunde's mother sought counselling and rehabilitation; he supports his family after learning a trade and avoiding old friends."
+            ],
+            "bullets": [
+              "Friends and family: talk early, monitor use.",
+              "Schools: sports, clubs and drug education.",
+              "NDLEA and NAFDAC check supply and sales."
+            ],
+            "takeaway": "Education, sports, counselling, treatment and regulation together prevent and cure abuse.",
+            "check": {
+              "question": "Which agency fights drug trafficking in Nigeria?",
+              "options": [
+                "NDLEA",
+                "NPC",
+                "NIMC",
+                "NITAD"
+              ],
+              "answer": 0,
+              "why": "NDLEA enforces drug laws and fights trafficking, while NAFDAC regulates drug quality."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "In essays, separate definitions, effects and prevention clearly. Explain tolerance before listing alcohol, cannabis, codeine, tramadol, shisha, cocaine and heroin, then name NAFDAC and NDLEA for prevention marks."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "The market trader's son in Onitsha steals to buy codeine and fails school. His mother seeks help. Outline steps to rescue him and protect others.",
+            "steps": [
+              {
+                "operation": "Counselling at school and clinic to map pressure and cravings",
+                "reason": "Identifies triggers and builds coping strategies",
+                "result": "Motivation to stop and relapse plan",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Medical treatment and rehabilitation plus family supervision",
+                "reason": "Treats withdrawal and restores health gradually",
+                "result": "Tunde withdraws safely and rebuilds routine",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Join sports club, learn a trade, avoid drug-using friends",
+                "reason": "Positive outlets replace drug rewards and peer influence",
+                "result": "School and business recovery sustained",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "What steps would you take if a friend begins abusing tramadol?",
+            "hints": [
+              "Tell a trusted adult early.",
+              "Think of counselling and treatment.",
+              "Which agencies fight drug abuse?"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "pollution-conservation-and-parks",
+      "title": "Pollution, Conservation and National Parks",
+      "objective": "Describe pollution types and control, and explain conservation of resources and national parks in Nigeria.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Pollution, Conservation and National Parks",
+            "paragraphs": [
+              "Kola farms near Lagos Lagoon and sees empty nets as oil and plastic clog his water. Smoke darkens the mornings. He asks how pollution harms people and how nature can be protected."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Types of Pollution and Their Effects",
+            "paragraphs": [
+              "Air pollution comes from smoke, carbon monoxide (CO), sulphur dioxide (SO2), vehicle exhaust, and generator fumes common in cities. It causes asthma, coughing, and heart problems, while reducing visibility and acidifying rain.",
+              "Water pollution comes from sewage, industrial effluent, and oil spills in rivers and lagoons. It kills fish, spreads cholera, and makes water unsafe. Oil films also smother birds and damage mangrove roots.",
+              "Land pollution comes from plastics, e-waste, market waste, and dumped chemicals. It blocks drains, breeds mosquitoes, harbours rats, and poisons soils. Children playing near dumps risk infections and heavy-metal exposure."
+            ],
+            "bullets": [
+              "Air: smoke, CO, SO2, exhaust, generators.",
+              "Water: sewage, effluent, oil spills kill fish.",
+              "Land: plastics, e-waste, market waste poison soil."
+            ],
+            "takeaway": "Pollution harms health and ecosystems through air, water and land wastes.",
+            "check": {
+              "question": "Which gases cause air pollution near generators and vehicles?",
+              "options": [
+                "Carbon monoxide and sulphur dioxide",
+                "Oxygen and nitrogen",
+                "Hydrogen and helium",
+                "Argon and methane-free air"
+              ],
+              "answer": 0,
+              "why": "Generators and vehicles release CO and SO2, harming lungs and vegetation."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Controlling Pollution in Towns and Industries",
+            "paragraphs": [
+              "Proper sanitation, pit latrines, and sewage treatment stop water contamination. Regulation forces factories to treat effluent before discharge. Clean markets, drains, and water stores prevent cholera and mosquito breeding.",
+              "Segregating solid waste into plastics, paper, organics, and e-waste aids composting and recycling. Market sweepings can become compost, while collection crews must clear dumps promptly. Personal hygiene, including hand washing, closes disease routes.",
+              "Traps, scrubbers, and filters on chimneys reduce smoke and sulphur gases. Cleaner fuels, vehicle exhaust checks, and tree planting also cut air pollution. Laws and fines, enforced by environmental officers, keep polluters accountable."
+            ],
+            "bullets": [
+              "Treat sewage and factory effluent before release.",
+              "Segregate waste for composting and recycling.",
+              "Use scrubbers, filters and cleaner fuels."
+            ],
+            "takeaway": "Treat wastes, segregate solids, trap emissions and enforce hygiene laws.",
+            "check": {
+              "question": "Which method recycles market organic waste into useful material?",
+              "options": [
+                "Composting",
+                "Dumping into lagoons",
+                "Burning plastics",
+                "Burying e-waste"
+              ],
+              "answer": 0,
+              "why": "Composting turns organic market waste into valuable fertiliser for soils."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Conservation, Parks and Protecting Nature",
+            "paragraphs": [
+              "Renewable resources like forests, fisheries, and soils can regrow if managed well. Non-renewable resources such as minerals and fossil fuels, including coal and oil, have fixed amounts and cannot easily replace once used.",
+              "Conservation protects biodiversity, prevents erosion and desertification, and secures clean water and timber. In the North, shelterbelts, agroforestry, and anti-desertification belts stop wind and shifting sands threatening farms and homes.",
+              "The Nigerian Conservation Foundation (NCF), Federal Ministry of Environment, and National Parks Service manage reserves. Internationally, WWF, IUCN, and UNEP support conservation. Parks include Cross River, Gashaka-Gumti, Yankari, Chad Basin, Kainji Lake, and Old Oyo; Borgu is a game reserve."
+            ],
+            "bullets": [
+              "Renewable: forests, fisheries, soils regrow.",
+              "Non-renewable: minerals, oil, coal exhaust.",
+              "Parks: Yankari, Cross River, Old Oyo, Borgu."
+            ],
+            "takeaway": "Protect renewables, use non-renewables wisely, and guard parks for future generations.",
+            "check": {
+              "question": "Which is a national park in south-eastern Nigeria?",
+              "options": [
+                "Cross River National Park",
+                "Yankari National Park",
+                "Kainji Lake National Park",
+                "Chad Basin National Park"
+              ],
+              "answer": 0,
+              "why": "Cross River National Park is in the south-east, while others are in other zones."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Learn parks with states and products: name Cross River, Gashaka-Gumti, Yankari, Chad Basin, Kainji Lake and Old Oyo. Distinguish renewable forests and fisheries from non-renewable oil and minerals in short definitions."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Dust and smoke from a Lagos market dump and factory effluent pollute air and water. Propose pollution control and conservation actions.",
+            "steps": [
+              {
+                "operation": "Segregate market waste; compost organics and recycle plastics and e-waste",
+                "reason": "Less dumping, less drain blockage and compost enriches soil",
+                "result": "Dumps shrink and water contamination falls",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Treat factory effluent and fit chimneys with scrubbers and filters",
+                "reason": "Traps smoke and sulphur gases before release",
+                "result": "Air and river cleaner",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Plant shelterbelts and protect a nearby forest as a reserve",
+                "reason": "Trees cut wind, bind soil and preserve biodiversity",
+                "result": "Anti-desertification and habitat protected",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Which resources would you conserve first in your town, and where would you learn about protected parks?",
+            "hints": [
+              "Separate renewables from non-renewables.",
+              "Think of forests, soils and fisheries.",
+              "Name one Nigerian park or reserve."
             ]
           }
         }
