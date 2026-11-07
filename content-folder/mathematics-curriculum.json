@@ -24,157 +24,164 @@
       "description": ""
     },
     {
+      "slug": "percentages",
+      "name": "Approximations and Percentages",
+      "section": "NUMBER AND NUMERATION",
+      "order": 4,
+      "description": "Rounding and approximations, percentages, profit and loss and simple interest."
+    },
+    {
       "slug": "surds",
       "name": "Surds",
       "section": "NUMBER AND NUMERATION",
-      "order": 4,
+      "order": 5,
       "description": "Simplify, rationalise, and compare irrational roots."
     },
     {
       "slug": "indices",
       "name": "Indices",
       "section": "NUMBER AND NUMERATION",
-      "order": 5,
+      "order": 6,
       "description": "Laws of powers for simplification and exponential equations."
     },
     {
       "slug": "sets",
       "name": "Sets",
       "section": "NUMBER AND NUMERATION",
-      "order": 6,
+      "order": 7,
       "description": ""
     },
     {
       "slug": "quadratic-equations",
       "name": "Quadratic Equations",
       "section": "ALGEBRA",
-      "order": 7,
+      "order": 8,
       "description": "Factorize, complete, and formula your way out."
     },
     {
       "slug": "variation",
       "name": "Variation",
       "section": "ALGEBRA",
-      "order": 8,
+      "order": 9,
       "description": ""
     },
     {
       "slug": "inequalities",
       "name": "Inequalities",
       "section": "ALGEBRA",
-      "order": 9,
+      "order": 10,
       "description": ""
     },
     {
       "slug": "progression",
       "name": "Progression",
       "section": "ALGEBRA",
-      "order": 10,
+      "order": 11,
       "description": ""
     },
     {
       "slug": "binary-operations",
       "name": "Binary Operations",
       "section": "ALGEBRA",
-      "order": 11,
+      "order": 12,
       "description": ""
     },
     {
       "slug": "matrices-and-determinants",
       "name": "Matrices and Determinants",
       "section": "ALGEBRA",
-      "order": 12,
+      "order": 13,
       "description": ""
     },
     {
       "slug": "euclidean-geometry",
       "name": "Euclidean Geometry",
       "section": "GEOMETRY AND TRIGONOMETRY",
-      "order": 13,
+      "order": 14,
       "description": ""
     },
     {
       "slug": "mensuration",
       "name": "Mensuration",
       "section": "GEOMETRY AND TRIGONOMETRY",
-      "order": 14,
+      "order": 15,
       "description": ""
     },
     {
       "slug": "loci",
       "name": "Loci",
       "section": "GEOMETRY AND TRIGONOMETRY",
-      "order": 15,
+      "order": 16,
       "description": ""
     },
     {
       "slug": "coordinate-geometry",
       "name": "Coordinate Geometry",
       "section": "GEOMETRY AND TRIGONOMETRY",
-      "order": 16,
+      "order": 17,
       "description": ""
     },
     {
       "slug": "trigonometry",
       "name": "Trigonometry",
       "section": "GEOMETRY AND TRIGONOMETRY",
-      "order": 17,
+      "order": 18,
       "description": "Ratios, triangles, and angles that behave."
     },
     {
       "slug": "differentiation",
       "name": "Differentiation",
       "section": "CALCULUS",
-      "order": 18,
+      "order": 19,
       "description": ""
     },
     {
       "slug": "application-of-differentiation",
       "name": "Application of differentiation",
       "section": "CALCULUS",
-      "order": 19,
+      "order": 20,
       "description": ""
     },
     {
       "slug": "integration",
       "name": "Integration",
       "section": "CALCULUS",
-      "order": 20,
+      "order": 21,
       "description": ""
     },
     {
       "slug": "representation-of-data",
       "name": "Representation of data",
       "section": "STATISTICS",
-      "order": 21,
+      "order": 22,
       "description": ""
     },
     {
       "slug": "measures-of-location",
       "name": "Measures of Location",
       "section": "STATISTICS",
-      "order": 22,
+      "order": 23,
       "description": ""
     },
     {
       "slug": "measures-of-dispersion",
       "name": "Measures of Dispersion",
       "section": "STATISTICS",
-      "order": 23,
+      "order": 24,
       "description": ""
     },
     {
       "slug": "permutation-and-combination",
       "name": "Permutation and Combination",
       "section": "STATISTICS",
-      "order": 24,
+      "order": 25,
       "description": ""
     },
     {
       "slug": "probability",
       "name": "Probability",
       "section": "STATISTICS",
-      "order": 25,
+      "order": 26,
       "description": "Chance, quantified — with and without replacement."
     }
   ],
@@ -1518,6 +1525,612 @@
               "Reduce 4 mod 9; it is already less than 9",
               "Compute 4^2, then multiply by 4 again",
               "Reduce the final product mod 9"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "fractions-and-decimals",
+      "topic": "fractions-decimals-approximations",
+      "title": "Fractions and Decimals",
+      "objective": "Add, subtract, multiply and divide fractions and convert between fractions and decimals.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Fractions and Decimals",
+            "paragraphs": [
+              "A trader shares three oranges equally among five customers. Each customer gets three-fifths of an orange. That sharing is a fraction, and its decimal form is 0.6."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "What a fraction means",
+            "paragraphs": [
+              "A fraction a/b means a divided by b. The top is the number of parts taken and the bottom is the number of parts in a whole. A fraction is therefore a division, not only a pair of numbers.",
+              "An improper fraction has a top greater than its bottom, as in 7/4. Its mixed form is 1 and 3/4, because one whole is four quarters. Conversion between the two forms is therefore a division with remainder.",
+              "A fraction can equal one when top and bottom are equal, be less than one when the top is smaller and be greater than one when the top is larger. That comparison decides the size before any calculation."
+            ],
+            "bullets": [
+              "a/b means a divided by b",
+              "Improper fractions convert to mixed fractions by division",
+              "Top smaller than bottom means less than one"
+            ],
+            "takeaway": "A fraction is a division, so its size is read from top against bottom.",
+            "check": {
+              "question": "Which fraction is greater than one?",
+              "options": [
+                "3/5",
+                "4/4",
+                "7/3",
+                "2/9"
+              ],
+              "answer": 2,
+              "why": "The top is greater than the bottom, so the fraction is greater than one."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Adding and subtracting fractions",
+            "paragraphs": [
+              "Fractions add by a common denominator. To add a/b and c/d, write both over bd and add the tops. The denominators therefore become the same before the tops are added.",
+              "The sum must then be reduced. A fraction that shares a common factor can be divided by that factor. Reduction is therefore the final step of every addition.",
+              "Subtraction follows the same rule with a minus in place of a plus. The common denominator is still the first step, and reduction is still the last."
+            ],
+            "bullets": [
+              "Add over a common denominator, then reduce",
+              "Subtract over a common denominator, then reduce",
+              "Reduction follows every addition and subtraction"
+            ],
+            "takeaway": "Find a common denominator first, add or subtract the tops, then reduce.",
+            "check": {
+              "question": "What is 1/3 + 2/3?",
+              "options": [
+                "3/6",
+                "1/2",
+                "1",
+                "3/9"
+              ],
+              "answer": 2,
+              "why": "The denominator is already common, so the tops add to 3 over 3, which is 1."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Decimals and conversion",
+            "paragraphs": [
+              "A decimal is a fraction whose denominator is a power of ten. Tenths are tenths, hundredths are hundredths and thousandths are thousandths. A terminating decimal therefore becomes a fraction over a power of ten.",
+              "A recurring decimal does not terminate. Its repetend is shown by a dot or a line, and it converts to a fraction by a short algebraic step. The repetend is therefore the mark of a recurring decimal.",
+              "Rounding a decimal to a stated place looks at the next digit. If that digit is five or more, the last kept digit rises by one. That rule decides the final digit."
+            ],
+            "bullets": [
+              "Decimals are fractions over powers of ten",
+              "Recurring decimals convert by an algebraic step",
+              "Round by the next digit: five or more rises"
+            ],
+            "takeaway": "Decimals are fractions over powers of ten, and rounding looks at the next digit.",
+            "check": {
+              "question": "What is 0.75 as a fraction?",
+              "options": [
+                "7/5",
+                "3/4",
+                "7/10",
+                "5/7"
+              ],
+              "answer": 1,
+              "why": "0.75 is 75 hundredths, which reduces by 25 to 3/4."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For any fraction operation, name the denominator first. If it is not common, make it common before touching the numerators, and reduce at the end. A fraction that is never reduced is marked as incomplete."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Work out 2/3 + 3/4.",
+            "steps": [
+              {
+                "operation": "Find a common denominator",
+                "reason": "3 and 4 multiply to 12, so 12 is common",
+                "result": "2/3 = 8/12 and 3/4 = 9/12",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Add the numerators",
+                "reason": "The denominators are now equal",
+                "result": "(8 + 9)/12 = 17/12",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Write as a mixed fraction",
+                "reason": "17 exceeds 12 by 5",
+                "result": "1 and 5/12, which is already reduced",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Work out 3/4 − 2/5. Give the common denominator, then reduce.",
+            "hints": [
+              "Multiply the denominators for a common one",
+              "Subtract the new numerators",
+              "Reduce and write as a mixed fraction if needed"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why the common denominator works",
+            "paragraphs": [
+              "A fraction counts parts of a whole. Two fractions can only be added when their parts are the same size, which is what a common denominator provides. That sameness is why the denominators must match.",
+              "Multiplying top and bottom by the same number does not change a fraction. That equivalence is why 2/3 and 8/12 are the same quantity. The common denominator is therefore not a trick, but a change of size.",
+              "Reduction then returns the fraction to its smallest parts. A fraction that is not reduced is not wrong, but it is incomplete. Examiners therefore mark the reduced form.",
+              "That reduction is why cancelling is valid. A common factor in top and bottom counts the same parts twice, so removing it simplifies the count.",
+              "A fraction that is not reduced is not wrong, but it is incomplete. Examiners therefore mark the reduced form.",
+              "A fraction that is not reduced is not wrong, but it is incomplete. Examiners therefore mark the reduced form.",
+              "Multiplying top and bottom by the same number does not change a fraction. That equivalence is why 2/3 and 8/12 are the same quantity."
+            ],
+            "bullets": [
+              "Same-sized parts can be added; unlike parts cannot",
+              "Multiplying top and bottom by the same number keeps the fraction",
+              "Reduction removes a common factor from both"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Multiplying and dividing fractions",
+            "paragraphs": [
+              "Multiplication needs no common denominator. Multiply top by top and bottom by bottom. That direct method is why multiplication is shorter than addition.",
+              "Division by a fraction means multiplying by its reciprocal. To divide by 2/3, multiply by 3/2. That inversion is why a division question becomes a multiplication question.",
+              "Cancelling before multiplying saves work. If a top and a bottom share a factor, divide them first. A candidate who cancels early therefore keeps the numbers small.",
+              "That cancelling is the same reduction as in addition, only earlier. Examiners reward it because it prevents a large fraction that must then be reduced.",
+              "Cancelling before multiplying saves work. If a top and a bottom share a factor, divide them first.",
+              "Cancelling before multiplying saves work. If a top and a bottom share a factor, divide them first.",
+              "Division by a fraction means multiplying by its reciprocal. To divide by 2/3, multiply by 3/2."
+            ],
+            "bullets": [
+              "Multiply top by top and bottom by bottom",
+              "Divide by flipping the divisor and multiplying",
+              "Cancel common factors before multiplying"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Recurring decimals and approximations",
+            "paragraphs": [
+              "A recurring decimal does not terminate because its denominator has a prime factor other than two or five. Its repetend therefore repeats forever. That repetition is why it converts to a fraction.",
+              "The conversion sets x equal to the decimal and uses the repetend to eliminate it. A decimal that starts with a non-repeating part needs a longer step. That step is algebraic, not arithmetic.",
+              "An approximation rounds a decimal to a stated place. That rounding must follow the next digit, not the size of the number. A candidate who rounds by guesswork therefore loses the mark.",
+              "That rule is why 0.75 rounds to 0.8 to one decimal place. The next digit is five, so the kept digit rises.",
+              "Rounding a decimal to a stated place looks at the next digit. If that digit is five or more, the last kept digit rises by one.",
+              "Rounding a decimal to a stated place looks at the next digit. If that digit is five or more, the last kept digit rises by one.",
+              "That rule is why 0.75 rounds to 0.8 to one decimal place."
+            ],
+            "bullets": [
+              "Recurring decimals have a repeating repetend",
+              "Conversion uses an algebraic step to eliminate it",
+              "Round by the next digit, not by guesswork"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "percentages",
+      "topic": "percentages",
+      "title": "Percentages",
+      "objective": "Convert between fractions, decimals and percentages and solve profit, loss and simple interest problems.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Percentages",
+            "paragraphs": [
+              "A trader in Onitsha keeps 15 out of every 100 customers. That share is 15 per cent. The denominator is always one hundred."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "What a percentage means",
+            "paragraphs": [
+              "A percentage is a fraction over one hundred. Fifteen per cent is 15/100, which reduces to 3/20. That reduction is why a percentage can be a fraction without changing its value.",
+              "A decimal converts to a percentage by multiplying by 100. A fraction converts by the same step after it becomes a decimal, or by setting it over 100 directly. The denominator therefore decides the step.",
+              "A percentage greater than 100 means a fraction greater than one. One hundred and fifty per cent is therefore 150/100, which is larger than the whole it started from."
+            ],
+            "bullets": [
+              "Per cent means over one hundred",
+              "Decimal to per cent: multiply by 100",
+              "Over 100 per cent means greater than one"
+            ],
+            "takeaway": "A percentage is a fraction over 100, so multiply by 100 to convert.",
+            "check": {
+              "question": "What is 0.35 as a percentage?",
+              "options": [
+                "3.5%",
+                "35%",
+                "0.35%",
+                "350%"
+              ],
+              "answer": 1,
+              "why": "0.35 × 100 = 35, so 0.35 is 35 per cent."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Finding a percentage of a quantity",
+            "paragraphs": [
+              "To find p per cent of a quantity, multiply the quantity by p and divide by 100. Fifteen per cent of 200 is therefore 15 × 200 ÷ 100 = 30. The division must follow the multiplication.",
+              "That method works for any quantity, whether it is money, mass or number. The quantity only changes the size of the product, not the method.",
+              "A percentage increase adds the percentage to the whole, while a percentage decrease subtracts it. A rise of 20 per cent on 50 is therefore 50 + 10 = 60, and a fall of 20 per cent is 50 − 10 = 40."
+            ],
+            "bullets": [
+              "p per cent of Q is p × Q ÷ 100",
+              "Increase adds the percentage; decrease subtracts it",
+              "Method is the same for money, mass or number"
+            ],
+            "takeaway": "Multiply by p, divide by 100, then add or subtract for a change.",
+            "check": {
+              "question": "What is 20% of 150?",
+              "options": [
+                "20",
+                "30",
+                "35",
+                "75"
+              ],
+              "answer": 1,
+              "why": "20 × 150 ÷ 100 = 30, so 20 per cent of 150 is 30."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Profit, loss and simple interest",
+            "paragraphs": [
+              "Profit is selling price minus cost price, and loss is cost price minus selling price. A percentage profit is that profit over the cost price, multiplied by 100. The cost price is therefore the base.",
+              "Simple interest is I = P × R × T ÷ 100, where P is the principal, R is the rate and T is the time. The amount is then P + I. That formula needs the rate as a percentage, not as a decimal.",
+              "A trader who sells at a loss has a selling price below the cost price. That loss is therefore measured over the cost price as well, which is why profit and loss use the same base."
+            ],
+            "bullets": [
+              "Profit = selling price − cost price, over cost price",
+              "Simple interest I = P × R × T ÷ 100",
+              "Amount = P + I"
+            ],
+            "takeaway": "Profit and interest are percentages over the cost price and the principal.",
+            "check": {
+              "question": "What is the simple interest on 500 at 6% per annum for 3 years?",
+              "options": [
+                "30",
+                "90",
+                "180",
+                "1,800"
+              ],
+              "answer": 1,
+              "why": "500 × 6 × 3 ÷ 100 = 90, so the interest is 90."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For any percentage, name the base before computing. A profit base is the cost price, an interest base is the principal, and a change base is the original quantity. The wrong base gives the wrong answer."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A trader buys a phone for 40,000 and sells it at 15% profit. What is the selling price?",
+            "steps": [
+              {
+                "operation": "Find the profit",
+                "reason": "Profit is 15 per cent of the cost price",
+                "result": "15 × 40,000 ÷ 100 = 6,000",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Add the profit to the cost",
+                "reason": "Selling price is cost plus profit",
+                "result": "40,000 + 6,000 = 46,000",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Find the simple interest on 2,000 at 5% per annum for 4 years, then the amount.",
+            "hints": [
+              "Use I = P × R × T ÷ 100",
+              "Substitute 2,000, 5 and 4",
+              "Add the interest to the principal"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why the base must be named",
+            "paragraphs": [
+              "A percentage has no meaning without its base. Fifteen per cent of the cost price is not fifteen per cent of the selling price. That difference is why the base must be named before any computation.",
+              "Profit and loss therefore use the cost price because that is what the trader invested. A percentage profit that used the selling price would measure a different quantity. The base is therefore part of the definition.",
+              "Interest uses the principal for the same reason. The principal is what was borrowed, so the rate is charged on that amount. A rate on any other base would charge the wrong quantity.",
+              "That naming is the first step of every percentage question. A candidate who names the base cannot choose the wrong one.",
+              "A percentage has no meaning without its base. Fifteen per cent of the cost price is not fifteen per cent of the selling price.",
+              "A percentage has no meaning without its base. Fifteen per cent of the cost price is not fifteen per cent of the selling price."
+            ],
+            "bullets": [
+              "Profit is over the cost price; interest is over the principal",
+              "A percentage without a base has no meaning",
+              "Name the base before computing"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Increases, decreases and compound change",
+            "paragraphs": [
+              "A percentage increase multiplies by one plus the rate, while a decrease multiplies by one minus the rate. A rise of 20 per cent on 50 is therefore 1.2 × 50. That multiplier is shorter than adding.",
+              "Two successive changes multiply. A rise of 10 per cent followed by a fall of 10 per cent is not the original, because 1.1 × 0.9 = 0.99. That loss of one per cent is the product, not the sum.",
+              "A candidate who adds percentage changes therefore loses the mark. The changes must be multiplied as multipliers, which is why order matters.",
+              "That multiplication is why a fall after a rise does not restore the start. The base has changed, so the same percentage acts on a different quantity.",
+              "A rise of 10 per cent followed by a fall of 10 per cent is not the original, because 1.1 × 0.9 = 0.99. That loss of one per cent is the product, not the sum.",
+              "A rise of 10 per cent followed by a fall of 10 per cent is not the original, because 1.1 × 0.9 = 0.99. That loss of one per cent is the product, not the sum."
+            ],
+            "bullets": [
+              "Increase multiplies by one plus the rate",
+              "Successive changes multiply; they do not add",
+              "A fall after a rise does not restore the start"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: The trap in a percentage question",
+            "paragraphs": [
+              "The trap is a percentage that is applied to the new quantity rather than the original. A candidate who computes a profit on the selling price therefore gets a smaller answer. That smaller answer is the trap.",
+              "The antidote is to write the base in the working. If the base is not named, the wrong one will be used. That writing is therefore the first step.",
+              "Time must be budgeted as in comprehension. A percentage that resists can be left and returned to. A test that is finished is worth more than a perfect answer to three items.",
+              "That budget is why a first sweep is useful. The easy percentages can be answered at once, and the hard ones can be left until the base is clear.",
+              "The trap is a percentage that is applied to the new quantity rather than the original. A candidate who computes a profit on the selling price therefore gets a smaller answer.",
+              "The trap is a percentage that is applied to the new quantity rather than the original. A candidate who computes a profit on the selling price therefore gets a smaller answer."
+            ],
+            "bullets": [
+              "The trap applies the percentage to the new quantity",
+              "Write the base in the working",
+              "Do an easy-first sweep and return to hard items"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "sets",
+      "topic": "sets",
+      "title": "Sets",
+      "objective": "Use notation for sets and their operations to count elements in unions and intersections.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Sets",
+            "paragraphs": [
+              "A market in Jos lists yam buyers and rice buyers. A trader who buys both is counted in the overlap. That overlap is an intersection."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "What a set is and how it is written",
+            "paragraphs": [
+              "A set is a well-defined collection of distinct objects. The elements of a set are its members, and a set is named by a capital letter. A set is written by listing its elements in braces.",
+              "An element that belongs to a set is written with the membership sign. If a is an element of A, it is written a ∈ A. If it is not, it is written a ∉ A. That sign is therefore the test of membership.",
+              "The empty set has no elements and is written ∅. A universal set U is the set of all objects under discussion. Every other set is therefore a subset of U."
+            ],
+            "bullets": [
+              "A set is a well-defined collection of distinct objects",
+              "a ∈ A means a belongs to A; ∅ is the empty set",
+              "U is the universal set under discussion"
+            ],
+            "takeaway": "A set is defined by its elements, and membership is the test.",
+            "check": {
+              "question": "Which is the empty set?",
+              "options": [
+                "{0}",
+                "{ }",
+                "{∅}",
+                "{1}"
+              ],
+              "answer": 1,
+              "why": "The empty set has no elements, so it is written { } while {0} contains zero as an element."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Union, intersection and complement",
+            "paragraphs": [
+              "The union A ∪ B contains elements that are in A or in B or in both. It is the combined set without repetition. A yam buyer or a rice buyer therefore belongs to the union.",
+              "The intersection A ∩ B contains elements that are in both A and B. It is the overlap, and it is the smallest of the three operations. A trader who buys both therefore belongs to the intersection.",
+              "The complement A′ contains elements that are in U but not in A. It is therefore the set of non-members. That complement depends on U, which is why U must be named."
+            ],
+            "bullets": [
+              "Union: in A or B; intersection: in both; complement: not in A",
+              "Union is combined without repetition",
+              "Complement depends on the universal set U"
+            ],
+            "takeaway": "Union combines, intersection overlaps and complement excludes.",
+            "check": {
+              "question": "A trader buys both yam and rice. In which set does she belong?",
+              "options": [
+                "A ∪ B only",
+                "A ∩ B",
+                "A′",
+                "U′"
+              ],
+              "answer": 1,
+              "why": "Both means in both sets, which is the intersection A ∩ B."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Counting elements with Venn diagrams",
+            "paragraphs": [
+              "A Venn diagram shows sets as circles inside a rectangle for U. The overlap of the circles is the intersection, and the rest of each circle is the exclusive part. The diagram therefore shows every region at once.",
+              "The number of elements in a union can be counted by addition with a correction. |A ∪ B| = |A| + |B| − |A ∩ B|. The intersection is subtracted because it was counted twice.",
+              "A question that gives two sets and their union therefore needs the intersection, and a question that gives the sets and the intersection therefore needs the union. The formula works in both directions."
+            ],
+            "bullets": [
+              "Venn diagrams show every region at once",
+              "|A ∪ B| = |A| + |B| − |A ∩ B|",
+              "Subtract the intersection because it was counted twice"
+            ],
+            "takeaway": "Add the two sets, then subtract the overlap counted twice.",
+            "check": {
+              "question": "If |A| = 10, |B| = 8 and |A ∪ B| = 15, what is |A ∩ B|?",
+              "options": [
+                "2",
+                "3",
+                "5",
+                "18"
+              ],
+              "answer": 1,
+              "why": "10 + 8 − 15 = 3, so the intersection has 3 elements."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Before any counting, name U and draw the Venn circles. A question that never names U has the whole class as U, and a complement that is counted without it will be wrong."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "In a class of 40, 25 study Biology and 20 study Chemistry. 12 study both. How many study neither?",
+            "steps": [
+              {
+                "operation": "Find the union",
+                "reason": "Add the sets, then subtract the overlap counted twice",
+                "result": "25 + 20 − 12 = 33 study at least one",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Subtract from the class",
+                "reason": "Neither means in U but in neither set",
+                "result": "40 − 33 = 7 study neither",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "In a class of 50, 30 like tea and 28 like coffee. 14 like both. How many like neither?",
+            "hints": [
+              "Find the union with |A| + |B| − |A ∩ B|",
+              "Subtract the union from 50",
+              "Check that the overlap was subtracted once"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Subsets and the empty set",
+            "paragraphs": [
+              "A is a subset of B when every element of A is in B. That relation is written A ⊆ B. The empty set is a subset of every set, because it has no element that could fail the test.",
+              "A set is equal to another when each is a subset of the other. That mutual inclusion is therefore the test of equality, not a comparison of size.",
+              "A proper subset excludes equality. It has fewer elements and every one is in the larger set. That exclusion is why ∅ is a proper subset of every non-empty set.",
+              "That definition is why the empty set is the most tested subset. It belongs everywhere without adding anything.",
+              "A set is equal to another when each is a subset of the other. That mutual inclusion is therefore the test of equality, not a comparison of size.",
+              "A set is equal to another when each is a subset of the other. That mutual inclusion is therefore the test of equality, not a comparison of size."
+            ],
+            "bullets": [
+              "A ⊆ B means every element of A is in B",
+              "∅ is a subset of every set",
+              "Equality needs mutual inclusion"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Venn diagrams with three sets",
+            "paragraphs": [
+              "Three sets need three overlapping circles. Their overlaps create eight regions when the universal set is counted. Each region must be filled in turn, from the centre outward.",
+              "A question about exactly one set therefore names an exclusive region, while a question about at least one set names a union. That naming is the test of the region.",
+              "A question about neither set names the part of U outside all circles. That part is the complement of the union, which is why it is counted last.",
+              "That order is why a three-set question is solved from the centre. The overlaps are known first, and the exclusive regions follow from them.",
+              "A question about exactly one set therefore names an exclusive region, while a question about at least one set names a union. That naming is the test of the region.",
+              "A question about exactly one set therefore names an exclusive region, while a question about at least one set names a union. That naming is the test of the region."
+            ],
+            "bullets": [
+              "Three circles create eight regions including U",
+              "Exclusive regions are filled from the centre outward",
+              "Neither is the complement of the union"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: The trap in a counting question",
+            "paragraphs": [
+              "The trap is a number that is given for the union but is used for a set. A candidate who adds the union to a set therefore counts the overlap again. That repetition is the error.",
+              "The antidote is to draw the Venn circles before any arithmetic. A diagram that shows the overlap will not be counted twice, while a formula that is misread will.",
+              "Time must be budgeted as in comprehension. A counting question that resists can be left and returned to. A test that is finished is worth more than a perfect answer to three items.",
+              "That budget is why a first sweep is useful. The easy counts can be answered at once, and the hard ones can be left until the diagram is clear.",
+              "The trap is a number that is given for the union but is used for a set. A candidate who adds the union to a set therefore counts the overlap again.",
+              "The trap is a number that is given for the union but is used for a set. A candidate who adds the union to a set therefore counts the overlap again."
+            ],
+            "bullets": [
+              "The trap counts the union as a set",
+              "Draw the Venn circles before any arithmetic",
+              "Do an easy-first sweep and return to hard items"
             ]
           }
         }
