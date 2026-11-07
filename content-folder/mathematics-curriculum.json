@@ -2139,6 +2139,1217 @@
           }
         }
       ]
+    },
+    {
+      "slug": "variation",
+      "topic": "variation",
+      "title": "Variation",
+      "objective": "Use direct, inverse and partial variation to describe how one quantity changes with another.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Variation",
+            "paragraphs": [
+              "A trader pays four workers for six days and eight workers for three days. The product is the same. That constant product is inverse variation."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Direct variation",
+            "paragraphs": [
+              "Direct variation means y is proportional to x, written y = kx. The constant k is the ratio y ÷ x, which is the same for every pair. That sameness of the ratio is the test.",
+              "A quantity that varies directly with another therefore doubles when the other doubles. If y = 3x, then x = 2 gives y = 6 and x = 4 gives y = 12. The doubling is the meaning of k.",
+              "The graph of a direct variation is a straight line through the origin. That line is why a direct variation can be read from a single pair. One pair decides k for all."
+            ],
+            "bullets": [
+              "Direct variation: y = kx, ratio y ÷ x constant",
+              "Doubling x doubles y",
+              "Graph is a straight line through the origin"
+            ],
+            "takeaway": "Direct variation keeps the ratio y ÷ x constant.",
+            "check": {
+              "question": "If y varies directly as x and y = 12 when x = 4, what is y when x = 7?",
+              "options": [
+                "9",
+                "15",
+                "21",
+                "28"
+              ],
+              "answer": 2,
+              "why": "k = 12 ÷ 4 = 3, so y = 3 × 7 = 21."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Inverse variation",
+            "paragraphs": [
+              "Inverse variation means y is inversely proportional to x, written y = k ÷ x. The product xy is therefore constant. That constant product is the test.",
+              "If x doubles, y halves. Eight workers for three days and four workers for six days are therefore the same total work. That halving is the meaning of the inverse relation.",
+              "The graph of an inverse variation is a hyperbola, not a line. A candidate who draws a line has therefore chosen the wrong variation.",
+              "That product can therefore be found from any single pair. Once it is known, any other pair can be worked out from it."
+            ],
+            "bullets": [
+              "Inverse variation: y = k ÷ x, product xy constant",
+              "Doubling x halves y",
+              "Graph is a hyperbola, not a line"
+            ],
+            "takeaway": "Inverse variation keeps the product xy constant.",
+            "check": {
+              "question": "If y varies inversely as x and y = 6 when x = 5, what is y when x = 10?",
+              "options": [
+                "3",
+                "12",
+                "15",
+                "30"
+              ],
+              "answer": 0,
+              "why": "xy = 30, so y = 30 ÷ 10 = 3."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Partial variation",
+            "paragraphs": [
+              "Partial variation combines a constant part with a varying part, written y = a + kx. The constant a is the value when x is zero. That intercept is the mark of a partial variation.",
+              "The varying part kx is direct. The whole therefore grows with x but starts from a. A taxi fare that has a flag-fall plus a distance charge is a partial variation.",
+              "The constant can be found from the graph where it crosses the y-axis. That crossing is the value at x = 0, which is why it is read first."
+            ],
+            "bullets": [
+              "Partial variation: y = a + kx",
+              "a is the value when x is zero",
+              "The graph crosses the y-axis at a"
+            ],
+            "takeaway": "Partial variation is a constant plus a direct part.",
+            "check": {
+              "question": "If y = 3 + 2x, what is y when x = 5?",
+              "options": [
+                "10",
+                "11",
+                "13",
+                "15"
+              ],
+              "answer": 2,
+              "why": "3 + 2×5 = 3 + 10 = 13."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Before any computation, name the variation. A constant ratio means direct, a constant product means inverse, and a y-intercept means partial. That naming decides the formula."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "y varies directly as x. If y = 18 when x = 6, find y when x = 10.",
+            "steps": [
+              {
+                "operation": "Find the constant",
+                "reason": "k = y ÷ x for a direct variation",
+                "result": "k = 18 ÷ 6 = 3",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Write the relation",
+                "reason": "Direct variation is y = kx",
+                "result": "y = 3x",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Substitute x = 10",
+                "reason": "The relation holds for every pair",
+                "result": "y = 30",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "y varies inversely as x. If y = 9 when x = 4, find y when x = 12.",
+            "hints": [
+              "Find the constant product xy",
+              "Divide that product by the new x",
+              "That quotient is the new y"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why the ratio and the product are constant",
+            "paragraphs": [
+              "Direct variation means the quantities grow together. The ratio y ÷ x therefore cannot change, because a change in the ratio would break the proportional growth. That sameness is the definition.",
+              "Inverse variation means the quantities trade off. The product xy therefore cannot change, because an increase in one must be matched by a decrease in the other. That sameness is the definition.",
+              "A constant ratio and a constant product are therefore different tests for different variations. A candidate who uses the wrong one will get a wrong answer.",
+              "That distinction is why the variation must be named first. The name decides which quantity is constant.",
+              "Direct variation means the quantities grow together. The ratio y ÷ x therefore cannot change, because a change in the ratio would break the proportional growth.",
+              "In direct variation a change in x produces a proportional change in y, so the ratio between them is fixed. In inverse variation the product is fixed because a rise in one quantity must be exactly cancelled by a fall in the other to keep their product unchanged."
+            ],
+            "bullets": [
+              "Direct: the ratio cannot change",
+              "Inverse: the product cannot change",
+              "Name the variation before computing"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Graphs and what they show",
+            "paragraphs": [
+              "A straight line through the origin is direct variation. Any other straight line is partial variation, because it has an intercept. That intercept is the constant part.",
+              "A hyperbola is inverse variation. Its shape comes from the product being constant, because as x grows large, y approaches zero without reaching it.",
+              "A graph that is neither a line nor a hyperbola is no simple variation. That shape therefore tells the candidate that another relation is at work.",
+              "That reading is why a graph can be questioned without numbers. The shape alone names the variation.",
+              "A hyperbola is inverse variation. Its shape comes from the product being constant, because as x grows large, y approaches zero without reaching it.",
+              "The straight line through the origin is the signature of direct variation. The curve that hugs both axes without ever touching either is the signature of inverse variation, because the product stays constant along every point of it."
+            ],
+            "bullets": [
+              "Line through the origin: direct; line with intercept: partial",
+              "Hyperbola: inverse",
+              "Neither line nor hyperbola is no simple variation"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: The trap in a variation question",
+            "paragraphs": [
+              "The trap is a question that looks direct but is inverse, or the reverse. A candidate who does not name the variation will use the wrong constant. That naming is therefore the antidote.",
+              "The second trap is a partial variation that is read as direct. That error drops the constant part, which is why the intercept must be read first.",
+              "Time must be budgeted as in comprehension. A variation that resists can be left and returned to. A test that is finished is worth more than a perfect answer to three items.",
+              "That budget is why a first sweep is useful. The easy variations can be answered at once, and the hard ones can be left until the constant is clear.",
+              "The trap is a question that looks direct but is inverse, or the reverse. A candidate who does not name the variation will therefore use the wrong constant.",
+              "A candidate who names the variation first will choose the right constant and finish in under a minute. A candidate who starts computing first will often discover halfway that the wrong constant was used, which wastes the time the question was meant to save."
+            ],
+            "bullets": [
+              "Name the variation before computing",
+              "A partial variation that is read as direct drops the constant",
+              "Do an easy-first sweep and return to hard items"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "inequalities",
+      "topic": "inequalities",
+      "title": "Inequalities",
+      "objective": "Use inequality signs to compare numbers, solve linear inequalities and represent solution sets on a number line.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Inequalities",
+            "paragraphs": [
+              "A shop in Lagos sells a bundle for more than 500 naira. The price is not a fixed number. That condition is an inequality."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "What an inequality means",
+            "paragraphs": [
+              "An inequality compares two quantities that need not be equal. The signs <, >, ≤ and ≥ mean less than, greater than, less than or equal to and greater than or equal to. A solution is therefore a range, not a single number.",
+              "Flipping an inequality reverses its sign. If a < b, then −a > −b. That reversal happens whenever both sides are multiplied or divided by a negative number, which is the trap most candidates miss.",
+              "Adding or subtracting the same number preserves the sign. If a < b, then a + c < b + c. Multiplying by a positive number also preserves it, while multiplying by a negative number reverses it."
+            ],
+            "bullets": [
+              "Solutions to inequalities are ranges, not single numbers",
+              "Adding or subtracting preserves the sign",
+              "Multiplying or dividing by a negative reverses the sign"
+            ],
+            "takeaway": "An inequality states a range, and a negative multiplier reverses it.",
+            "check": {
+              "question": "If 3x < 12, which is true?",
+              "options": [
+                "x < 36",
+                "x < 4",
+                "x > 4",
+                "x = 4"
+              ],
+              "answer": 1,
+              "why": "Dividing by the positive number 3 preserves the sign, so x < 4."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Solving a linear inequality",
+            "paragraphs": [
+              "A linear inequality is solved by the same steps as an equation, with one difference. Each step must preserve or correctly reverse the sign. A step that is valid for an equation can therefore be invalid for an inequality.",
+              "After isolating x, the solution must be checked against the original. A value that satisfies the final line but not the first step has been introduced by an illegal move. That check is therefore part of the method.",
+              "The solution is then represented on a number line. An open circle means the endpoint is excluded, while a filled circle means it is included. That distinction decides the sign."
+            ],
+            "bullets": [
+              "Use the same steps as an equation, watching the sign",
+              "Check the solution against the original inequality",
+              "Open circle excludes; filled circle includes"
+            ],
+            "takeaway": "Solve like an equation, but reverse the sign for a negative multiplier.",
+            "check": {
+              "question": "If −2x ≥ 6, which is true?",
+              "options": [
+                "x ≥ 3",
+                "x ≥ −3",
+                "x ≤ 3",
+                "x ≤ −3"
+              ],
+              "answer": 3,
+              "why": "Dividing by −2 reverses the sign, so x ≤ −3."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Compound and fractional inequalities",
+            "paragraphs": [
+              "A compound inequality gives two conditions at once, such as 2 < x ≤ 5. Its solution is the overlap of the two ranges. That overlap is therefore the answer, not either range alone.",
+              "A fractional inequality must have a common denominator before it is solved. The denominator can be negative, so its sign must be known before clearing it. That knowledge decides whether the sign reverses.",
+              "A quadratic inequality is solved by its critical values. The sign between them and outside them must be tested, because the expression changes sign at each critical value."
+            ],
+            "bullets": [
+              "Compound: solution is the overlap",
+              "Fractional: know the sign of the denominator first",
+              "Quadratic: test the sign between and outside critical values"
+            ],
+            "takeaway": "Compound means overlap, fractional needs a known sign, quadratic needs a sign test.",
+            "check": {
+              "question": "What is the solution of 2 < x ≤ 5?",
+              "options": [
+                "x < 2",
+                "2 < x ≤ 5",
+                "x > 5",
+                "x = 2 or x = 5"
+              ],
+              "answer": 1,
+              "why": "Both conditions must hold, so x must be greater than 2 and at most 5."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Before any dividing, ask whether the divisor is negative. If it is, the sign reverses; if it is positive, it does not. That one question decides most inequality traps."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Solve −3x ≥ 9.",
+            "steps": [
+              {
+                "operation": "Divide by −3",
+                "reason": "The divisor is negative, so the sign reverses",
+                "result": "x ≤ −3",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Check in the original",
+                "reason": "−3 × (−4) = 12, which is ≥ 9",
+                "result": "x = −4 satisfies the inequality",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Solve 4x − 5 < 7. Keep the sign when dividing by 4.",
+            "hints": [
+              "Add 5 to both sides first",
+              "Divide by the positive number 4",
+              "Represent the solution on a number line"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why a negative multiplier reverses the sign",
+            "paragraphs": [
+              "Multiplying by a negative reflects the number line. A number that was to the left of another moves to the right, so the order reverses. That reflection is why the sign must reverse.",
+              "Adding a constant shifts the line without reflecting it, so the order is preserved. That shift is why addition never reverses an inequality.",
+              "A candidate who understands the reflection will not need to memorise the rule. The rule is the geometry of the line.",
+              "That geometry is why the check matters. A solution that violates the original inequality has reflected incorrectly.",
+              "Multiplying by a negative reflects the number line. A number that was to the left of another moves to the right, so the order reverses.",
+              "Picture the number line being folded over. Every point that was to the left of the fold goes to the right of it, so a statement that was true before the fold is reversed after it. That folding is the geometry behind every sign reversal."
+            ],
+            "bullets": [
+              "A negative multiplier reflects the line and reverses order",
+              "Addition shifts without reflecting",
+              "The check catches a wrong reflection"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Number lines and endpoint marks",
+            "paragraphs": [
+              "An open circle means the endpoint is excluded. A strict inequality therefore has an open circle at its end. A filled circle means the endpoint is included.",
+              "A compound inequality has two endpoints, so it needs two marks. The overlap between them is shaded, which is why a compound line is a segment and not a ray.",
+              "A candidate who reads the marks has read the sign. The marks and the sign are therefore the same information in two forms.",
+              "That reading is why a number line can be questioned without words. The shaded part is the solution.",
+              "An open circle means the endpoint is excluded. A strict inequality therefore has an open circle at its end.",
+              "When a value is excluded, the boundary is not part of the solution and the circle stays open. When it is included, the boundary is part of the solution and the circle is filled. The mark therefore encodes the exact logical content of the sign."
+            ],
+            "bullets": [
+              "Open circle excludes; filled circle includes",
+              "Compound solutions are segments between two marks",
+              "Marks and signs carry the same information"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: The trap in an inequality question",
+            "paragraphs": [
+              "The trap is a division by a negative that keeps the sign. A candidate who does not check the divisor will therefore write the reverse of the answer. That check is the antidote.",
+              "The second trap is a fractional inequality whose denominator is never signed. A candidate who clears it without knowing its sign will choose the wrong range.",
+              "Time must be budgeted as in comprehension. An inequality that resists can be left and returned to. A test that is finished is worth more than a perfect answer to three items.",
+              "That budget is why a first sweep is useful. The easy inequalities can be answered at once, and the hard ones can be left until the sign is clear.",
+              "The trap is a division by a negative that keeps the sign. A candidate who does not check the divisor will therefore write the reverse of the answer.",
+              "Reading the rule aloud before solving often prevents the error. Saying which sign will be used and why forces the divisor check to happen before any division is written, which is when it is too late to add.",
+              "That discipline is what separates the mark from the miss on the hardest inequality items."
+            ],
+            "bullets": [
+              "Check the divisor sign before dividing",
+              "Know the denominator sign before clearing it",
+              "Do an easy-first sweep and return to hard items"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "progression",
+      "topic": "progression",
+      "title": "Progression",
+      "objective": "Find terms and sums of arithmetic and geometric progressions and solve problems that use progressions.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Progression",
+            "paragraphs": [
+              "A farmer adds the same number of bags to a pile each day. The pile grows by a constant addition each day. That constant addition is an arithmetic progression."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Arithmetic progressions",
+            "paragraphs": [
+              "An arithmetic progression adds the same number each term. That number is the common difference d, and the first term is a. The nth term is therefore a + (n − 1)d.",
+              "The sum of the first n terms is n/2 times twice the first plus (n − 1)d. That formula pairs the first and last terms, which is why it is half the number of terms times their sum.",
+              "A progression is therefore decided by two numbers. Once a and d are known, every term and every sum can be found. A candidate who knows those two knows the progression."
+            ],
+            "bullets": [
+              "AP: constant difference d; nth term a + (n − 1)d",
+              "Sum is n/2 × (first + last)",
+              "Two numbers decide the whole progression"
+            ],
+            "takeaway": "An arithmetic progression is decided by its first term and its difference.",
+            "check": {
+              "question": "The first term of an AP is 3 and the difference is 4. What is the 5th term?",
+              "options": [
+                "12",
+                "15",
+                "19",
+                "23"
+              ],
+              "answer": 2,
+              "why": "3 + (5 − 1) × 4 = 3 + 16 = 19."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Geometric progressions",
+            "paragraphs": [
+              "A geometric progression multiplies by the same number each term. That number is the common ratio r, and the first term is a. The nth term is therefore ar^(n−1).",
+              "The sum of the first n terms is a(r^n − 1) ÷ (r − 1). That formula needs r not equal to one. If r equals one, every term is a and the sum is na.",
+              "A geometric progression grows by multiplication rather than addition. That growth is why a sum to a large n becomes large quickly, which is why the formula must be used."
+            ],
+            "bullets": [
+              "GP: constant ratio r; nth term ar^(n−1)",
+              "Sum is a(r^n − 1) ÷ (r − 1) for r ≠ 1",
+              "r = 1 gives na"
+            ],
+            "takeaway": "A geometric progression is decided by its first term and its ratio.",
+            "check": {
+              "question": "The first term of a GP is 2 and the ratio is 3. What is the 4th term?",
+              "options": [
+                "12",
+                "24",
+                "54",
+                "162"
+              ],
+              "answer": 2,
+              "why": "2 × 3³ = 2 × 27 = 54."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Problems that use progressions",
+            "paragraphs": [
+              "A word problem that gives a total and a number of terms needs the sum formula. A problem that gives two terms needs a and d or a and r. The given numbers therefore decide the formula.",
+              "A problem about a series of payments that grow by a constant amount is arithmetic, while a problem about growth by a constant factor is geometric. The story therefore names the progression.",
+              "A problem that asks for a term far down the list needs the nth term, not the sum. That distance is why the formula must be chosen before any numbers are used."
+            ],
+            "bullets": [
+              "Total and number of terms need the sum formula",
+              "Constant addition is arithmetic; constant factor is geometric",
+              "A far term needs the nth term formula"
+            ],
+            "takeaway": "The story names the progression, and the givens choose the formula.",
+            "check": {
+              "question": "A farmer adds 2 more bags each day. Which progression is it?",
+              "options": [
+                "Arithmetic",
+                "Geometric",
+                "Neither",
+                "Constant"
+              ],
+              "answer": 0,
+              "why": "A constant addition of 2 is an arithmetic difference."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Before computing, name the progression and write its two numbers. For an arithmetic progression write a and d, for a geometric progression write a and r. The formula then follows without guessing."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Find the sum of the first 10 terms of 3, 6, 9, …",
+            "steps": [
+              {
+                "operation": "Name the progression",
+                "reason": "Each term adds 3, so it is arithmetic with a = 3 and d = 3",
+                "result": "Use the sum formula",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Apply the sum formula",
+                "reason": "Sum = n/2 × (2a + (n − 1)d)",
+                "result": "10/2 × (6 + 27) = 5 × 33 = 165",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Find the 6th term of 4, 12, 36, … . Name the progression first.",
+            "hints": [
+              "Each term multiplies by 3, so it is geometric",
+              "Use ar^(n−1) with a = 4 and r = 3",
+              "Compute 3^5, then multiply by 4"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why the formulas have their shapes",
+            "paragraphs": [
+              "The sum of an arithmetic progression pairs the first and last terms. Each pair has the same sum, and there are n/2 pairs. That pairing is why the formula is half the number times their sum.",
+              "The sum of a geometric progression is found by subtracting the series from itself shifted by one term. The middle terms cancel, leaving a formula that depends only on the ends. That cancellation is why the formula is short.",
+              "A candidate who understands the pairing and the cancellation will not need to memorise. The formulas are therefore derivations, not magic.",
+              "That understanding is why a sum to a large n can be trusted. The pairing and the cancellation hold for every n.",
+              "The sum of an arithmetic progression pairs the first and last terms. Each pair has the same sum, and there are n/2 pairs.",
+              "Both derivations use the same idea: rewrite the sum so that most terms cancel. Pairing cancels the middle of an arithmetic sum, while shifting cancels the middle of a geometric sum."
+            ],
+            "bullets": [
+              "AP sum pairs first and last terms",
+              "GP sum cancels middle terms by shifting",
+              "The formulas are derivations, not magic"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Infinite sums and the condition that decides them",
+            "paragraphs": [
+              "An infinite geometric sum exists only when the ratio is between −1 and 1. If r is outside that range, the terms do not shrink and the sum grows without bound. That condition therefore decides whether a sum exists.",
+              "The limit is a/(1 − r) when the condition holds. That limit is the sum to infinity, not a sum to a large n. The two are therefore different quantities.",
+              "A problem that asks for a sum to infinity must first check the condition. A problem that asks for a sum to n needs no check.",
+              "That check is why an infinite sum is a separate topic. A candidate who skips it will write a number for a sum that has none.",
+              "An infinite geometric sum exists only when the ratio is between −1 and 1. If r is outside that range, the terms do not shrink and the sum grows without bound.",
+              "When the terms shrink, a large partial sum gets closer and closer to a single limit. When they do not shrink, each new term pushes the sum further away from any fixed value."
+            ],
+            "bullets": [
+              "Infinite GP sum exists only for |r| < 1",
+              "Limit is a ÷ (1 − r)",
+              "Check the condition before writing the limit"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: The trap in a progression question",
+            "paragraphs": [
+              "The trap is an arithmetic progression that is read as geometric, or the reverse. A candidate who does not name the progression will therefore use the wrong formula. That naming is the antidote.",
+              "The second trap is a sum that is computed without checking whether the terms are those asked for. A sum to n is not a term, and a term is not a sum.",
+              "Time must be budgeted as in comprehension. A progression that resists can be left and returned to. A test that is finished is worth more than a perfect answer to three items.",
+              "That budget is why a first sweep is useful. The easy progressions can be answered at once, and the hard ones can be left until the numbers are clear.",
+              "The trap is an arithmetic progression that is read as geometric, or the reverse. A candidate who does not name the progression will therefore use the wrong formula.",
+              "Writing a and the constant beside the question before using any formula keeps the two numbers visible. Visible numbers are much harder to swap than numbers held in memory."
+            ],
+            "bullets": [
+              "Name the progression before choosing a formula",
+              "A term is not a sum, and a sum is not a term",
+              "Do an easy-first sweep and return to hard items"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "binary-operations",
+      "topic": "binary-operations",
+      "title": "Binary Operations",
+      "objective": "Use the properties of a binary operation and find identity and inverse elements in simple cases.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Binary operations",
+            "paragraphs": [
+              "A trader in Kano tangles two numbers with a new rule, a * b = a + b + 1. Two numbers go in and one comes out, and the properties of that rule decide every mark here."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "What a binary operation is and closure",
+            "paragraphs": [
+              "A customer buys 3 yam tubers at £4 each and 2 more, and the stall boy marks the new total with a star. The two counts combine into one total, and that combining is a binary operation.",
+              "A binary operation takes two elements of a set, in that order, and returns one element. It is called binary because two inputs are used. The operation * is not the multiplication sign here; it is only the name of the rule.",
+              "Closure means the answer never leaves the set. Whole numbers are closed under a * b = a + b + 1 because two whole numbers always give a whole number. Subtraction is not closed on whole numbers because 1 − 3 = −2 falls outside."
+            ],
+            "bullets": [
+              "A binary operation combines two ordered elements into one element",
+              "Closure means the result stays inside the set",
+              "Subtraction fails closure: 1 − 3 = −2 leaves the set"
+            ],
+            "takeaway": "A binary operation needs two inputs and a result that stays in the set.",
+            "check": {
+              "question": "A binary operation * satisfies closure on a set when…",
+              "options": [
+                "a * b is always in the set",
+                "a * b = b * a always",
+                "a * b = a + b always",
+                "a * b is never in the set"
+              ],
+              "answer": 0,
+              "why": "Closure only promises the result stays in the set; order and the addition formula are separate properties."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Commutativity, associativity and distributivity",
+            "paragraphs": [
+              "Two stall boys price two bundles in opposite order and get the same bill, so the customer asks whether order ever matters. Swapping the inputs is commutativity, and regrouping them is associativity, and the two are easy to confuse. Keep the test separate.",
+              "Test a * b = a + b + 1 on each property. Since 2 * 3 = 6 and 3 * 2 = 6, it is commutative, and since (2 * 3) * 4 = 11 and 2 * (3 * 4) = 11, it is associative. But 2 * (3 + 4) = 10 while 2 * 3 + 2 * 4 = 13, so it fails distributivity over addition."
+            ],
+            "bullets": [
+              "Commutative: a * b = b * a for every pair",
+              "Associative: (a * b) * c = a * (b * c) for every triple",
+              "Distributive over +: a * (b + c) = a * b + a * c"
+            ],
+            "takeaway": "Swap tests commutativity, regrouping tests associativity, brackets test distributivity.",
+            "check": {
+              "question": "For a * b = a + b + 1, which property holds?",
+              "options": [
+                "Commutative and associative only",
+                "Distributive over addition only",
+                "Commutative and distributive only",
+                "Neither commutative nor associative"
+              ],
+              "answer": 0,
+              "why": "2 * 3 = 3 * 2 and (2 * 3) * 4 = 2 * (3 * 4), but 2 * (3 + 4) ≠ 2 * 3 + 2 * 4."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Identity and inverse elements",
+            "paragraphs": [
+              "A stall keeper adds nothing to a pile and the pile stays the same, then removes what she added to return to the start. The do-nothing element is the identity, and the undoing element is the inverse.",
+              "An identity element e satisfies a * e = e * a = a. Here a + e + 1 = a gives e = −1. An inverse x satisfies a * x = x * a = e.",
+              "The inverse of 2 solves 2 + x + 1 = −1, so x = −4. Check: 2 * (−4) = 2 − 4 + 1 = −1, the identity. Identity leaves every element unchanged; inverse restores the identity."
+            ],
+            "bullets": [
+              "a * e = e * a = a for every a",
+              "a * b = a + b + 1 has identity −1",
+              "Inverse of 2 is −4 since 2 * (−4) = −1"
+            ],
+            "takeaway": "Identity changes nothing, and an inverse undoes an element back to it.",
+            "check": {
+              "question": "Under a * b = a + b + 1, the identity element is",
+              "options": [
+                "−1",
+                "0",
+                "1",
+                "2"
+              ],
+              "answer": 0,
+              "why": "a * (−1) = a − 1 + 1 = a for every a."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Test closure first, then swapped inputs, then regrouped triples, then brackets expanded. Find the identity from a * e = a, and an inverse from a * x = e."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "For real numbers, a * b = a + b + 1. Find the identity element and the inverse of 3 under *.",
+            "steps": [
+              {
+                "operation": "Write the identity test",
+                "reason": "The identity e must satisfy a * e = a for every a.",
+                "result": "a + e + 1 = a gives e + 1 = 0.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Solve for e",
+                "reason": "The e terms must cancel so the result is exactly a.",
+                "result": "e = −1, checked by a * (−1) = a.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Find the inverse of 3",
+                "reason": "The inverse x must satisfy 3 * x = −1.",
+                "result": "3 + x + 1 = −1 gives x = −5.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Find the inverse of 4 under a * b = a + b + 1.",
+            "hints": [
+              "Write 4 * x = −1 using the identity −1",
+              "Simplify to 5 + x = −1",
+              "Solve for x and check that x * 4 is also −1"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why distributivity matters when simplifying",
+            "paragraphs": [
+              "Distributivity connects the new operation to the ordinary addition you already trust. That connection is what lets you expand a bracket such as a * (b + c) and compare it with a * b + a * c. Without it, the two operations would sit apart and every expression would need a fresh calculation.",
+              "Expansion is the daily use of distributivity. To simplify (a + b) * c you must spread * over the sum, just as multiplication spreads over addition in 3(x + 4) = 3x + 12. The habit of spreading is the same even when the spread of a * b = a + b + 1 shows the spread failing.",
+              "Factoring is distributivity read backwards. Breaking a * b + a * c into a * (b + c) is exactly the step that gathers common terms. JAMB setters love the backwards step because it hides a simple form inside a longer one.",
+              "Conjugation is the same spirit applied to identities. Surrounding an element by an inverse and its undoing, x * a * x⁻¹, preserves the structure of a while moving the operation. You meet this idea when you solve a * x = e by multiplying through with the inverse.",
+              "The exam lesson is simple. Use distributivity when brackets must be opened, use it backwards when common terms must be gathered, and never spread an operation that has failed the test."
+            ],
+            "bullets": [
+              "Distributivity bridges * and +: a * (b + c) = a * b + a * c",
+              "Expansion opens brackets; factoring gathers common terms",
+              "Conjugation x * a * x⁻¹ moves an element while preserving structure"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: A harder case with a one-sided test",
+            "paragraphs": [
+              "Some operations pass part of the test and fail the rest. Take a * b = a + 2b on the real numbers. Swapping gives 2 * 3 = 8 and 3 * 2 = 7, so it is not commutative.",
+              "Regrouping also fails: (2 * 3) * 4 = 8 * 4 = 16 while 2 * (3 * 4) = 2 * 11 = 24. The two groupings disagree, so associativity is out. Do not assume a property exists; test it with numbers first.",
+              "The identity test is subtler: setting a * e = a gives a + 2e = a, so e = 0. But the other side gives e * a = 2a, which is not a in general. A left identity that is not a right identity does not count as the identity.",
+              "Because the two-sided identity fails, no two-sided inverse can exist either. An inverse must tie to the identity, and there is none to tie to. That is why the exam always asks in the form does it exist, rather than expecting one blindly.",
+              "The safe habit is to test both sides of every identity claim. One side is never enough when the operation is not commutative."
+            ],
+            "bullets": [
+              "a * b = a + 2b is neither commutative nor associative",
+              "e = 0 works only on the left, so no two-sided identity exists",
+              "No two-sided identity means no two-sided inverse"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: The trap in a binary operation question",
+            "paragraphs": [
+              "The commonest trap is habit. Candidates see * and assume multiplication, then carry over its commutativity and associativity. A defined operation is a new law, and the old laws must earn their place by testing.",
+              "The second trap is the reflexive identity. Candidates guess 0 or 1 because those are identities for addition and multiplication. Under a * b = a + b + 1 the identity is −1, and under a − b the right identity is 0 while the inverse of a is a itself.",
+              "The third trap is testing one pair and stopping. One matching pair never proves a property; all pairs must match. One failing pair, however, destroys it at once, which is why a single calculation can settle a question.",
+              "Time management beats brute force here. Test closure, then swap two numbers, then regroup three, then open one bracket. Each test takes seconds, and the pattern of passes and failures is usually written in the options.",
+              "Draw the tests in a short column before looking at the options. The column turns a guessing contest into a reading exercise, and reading exercises are won slowly and surely."
+            ],
+            "bullets": [
+              "Never import multiplication habits into a defined operation",
+              "Find the identity by solving a * e = a, never by guessing 0 or 1",
+              "One failing pair destroys a property; one matching pair never proves it"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "matrices-and-determinants",
+      "topic": "matrices-and-determinants",
+      "title": "Matrices and Determinants",
+      "objective": "Perform matrix addition and multiplication, calculate 2x2 and 3x3 determinants, and find inverses of 2x2 matrices.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Matrices and determinants",
+            "paragraphs": [
+              "A shop records prices in columns and students record marks in rows. Matrices let us add, multiply and invert such tables. Determinants test whether a table can be inverted."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "What a matrix is and how to add matrices",
+            "paragraphs": [
+              "A trader in Onitsha records yam sales in the first row and rice sales in the second row. Each row lists Monday, Tuesday and Wednesday amounts. The whole table is a matrix, and each amount is an entry.",
+              "The order of a matrix is rows by columns. A table with two rows and three columns is order 2 by 3. The positions matter because rows and columns name different things.",
+              "To add or subtract two tables, the entries must line up. Corresponding entries are added or subtracted one by one. If the orders differ, the addition is impossible."
+            ],
+            "bullets": [
+              "A matrix of order m by n has m rows and n columns",
+              "A matrix of order 2 by 3 has two rows and three columns",
+              "Matrices can be added only when they have the same order"
+            ],
+            "takeaway": "Same order allows addition entry by entry.",
+            "check": {
+              "question": "Which pair of matrices can be added?",
+              "options": [
+                "A 2 by 3 and a 3 by 2",
+                "A 2 by 3 and a 2 by 3",
+                "A 2 by 2 and a 3 by 3",
+                "A 1 by 3 and a 3 by 1"
+              ],
+              "answer": 1,
+              "why": "Addition needs the same order so every entry has a partner."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Multiplying matrices and why order matters",
+            "paragraphs": [
+              "A caterer in Kano lists ingredient costs in one table and quantities in another. To find total cost she matches each cost with each quantity. That matching rule is matrix multiplication.",
+              "An m by n matrix multiplies an n by p matrix to give an m by p result. Each new entry adds products of a row with a column. If the inner numbers differ, the product cannot be formed.",
+              "Order changes the answer because the tables do different jobs. AB means apply B then A, while BA means apply A then B. These products are usually different and BA may not even exist."
+            ],
+            "bullets": [
+              "An m by n times an n by p gives an m by p matrix",
+              "AB and BA are usually different because order changes the operation",
+              "BA exists only when the inner dimensions also match"
+            ],
+            "takeaway": "Check inner numbers and keep the order AB or BA.",
+            "check": {
+              "question": "Which statement about AB and BA is correct for most matrices?",
+              "options": [
+                "AB always equals BA",
+                "AB and BA are usually different",
+                "AB is zero when BA is zero",
+                "AB is defined only when BA is undefined"
+              ],
+              "answer": 1,
+              "why": "Order matters, so swapping the factors usually changes the result."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Determinants and the inverse of a 2 by 2 matrix",
+            "paragraphs": [
+              "Two traders pool money to buy goods. The owner writes two equations for the two prices. The determinant tells whether those equations give a unique answer.",
+              "For a 2 by 2 matrix with a, b on top and c, d below, the determinant is ad minus bc. For a 3 by 3 matrix, expand along any row and add signed 2 by 2 determinants. If the determinant is zero, the matrix has no inverse.",
+              "To invert a 2 by 2 matrix, swap the diagonal entries. Then negate the two off diagonal entries and divide every entry by the determinant. The result multiplied by the original gives the identity matrix."
+            ],
+            "bullets": [
+              "A 2 by 2 determinant is ad minus bc",
+              "A 3 by 3 determinant expands with signed 2 by 2 determinants",
+              "The inverse swaps diagonal entries, negates off diagonal entries and divides by the determinant"
+            ],
+            "takeaway": "Compute ad minus bc, then swap, negate and divide.",
+            "check": {
+              "question": "What is the determinant of the matrix with rows 3 1 and 1 2?",
+              "options": [
+                "5",
+                "7",
+                "6",
+                "4"
+              ],
+              "answer": 0,
+              "why": "Three times two minus one times one equals five."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Check orders first, then multiply in the order written. For a 2 by 2 inverse, compute ad minus bc before swapping anything. If the determinant is zero, stop because no inverse exists and tick the singular option."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Find the inverse of the matrix with rows 3 1 and 1 2, that is A = [[3,1],[1,2]].",
+            "steps": [
+              {
+                "operation": "Compute the determinant",
+                "reason": "The inverse needs ad minus bc",
+                "result": "3 times 2 minus 1 times 1 equals 5",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Swap and negate",
+                "reason": "Diagonal entries swap and off diagonal entries change sign",
+                "result": "[[2,-1],[-1,3]]",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Divide by the determinant",
+                "reason": "Every entry is divided by 5",
+                "result": "[[2/5,-1/5],[-1/5,3/5]]",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Find the inverse of the matrix with rows 4 2 and 1 1.",
+            "hints": [
+              "Compute the determinant with ad minus bc",
+              "Swap diagonal entries and negate off diagonal entries",
+              "Divide every entry by the determinant"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Identity, order and why AB and BA differ",
+            "paragraphs": [
+              "The identity matrix I has ones on the main diagonal and zeros elsewhere. For any square A, multiplying by I leaves A unchanged on either side. That property makes I behave like the number one for matrices.",
+              "Think of a matrix as a set of instructions that moves points in the plane. A rotation matrix turns every point while a reflection matrix flips them. Doing the turn first and the flip second ends at a different point from the reverse order.",
+              "Geometry shows the gap for a point one space to the right of the origin. A quarter turn sends it up while a flip in the horizontal axis keeps it where it is. The two routes finish apart, so the products cannot be equal.",
+              "The identity also explains what an inverse must undo. A left inverse and a right inverse both return I, which is why the two-sided inverse is unique for square matrices. If no matrix returns I, the original has no inverse at all.",
+              "Zero behaves differently from identity. The zero matrix sends every point to the origin, so it destroys information. Adding the zero matrix changes nothing, while multiplying by it wipes the result out."
+            ],
+            "bullets": [
+              "The identity I satisfies AI equals IA equals A",
+              "AB and BA differ because operations act in sequence",
+              "An inverse is a matrix that returns the identity"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Expanding a 3 by 3 determinant",
+            "paragraphs": [
+              "A 3 by 3 determinant is harder because six products compete with signs. A random order of multiplication will miss terms or duplicate them. A fixed pattern prevents that slip for every matrix.",
+              "The Sarrus pattern repeats the first two columns beside the matrix. Add the three products running from top left to bottom right. Subtract the three products running from bottom left to top right.",
+              "Cofactor expansion works along any row or column. Cover the chosen entry and take the determinant of what remains. Then multiply by a checkerboard sign that is positive at corners and negative on edge centres.",
+              "For example, the matrix with rows 2 0 1, 1 3 0 and 0 1 1 expands along the first row. The value is six plus one, which gives seven. That zero in the first row saved one full term.",
+              "Row swaps change the sign of a 3 by 3 determinant. Two swaps restore the original sign, but one swap flips it. JAMB traps often hide a swap inside an expansion, so track the sign before computing."
+            ],
+            "bullets": [
+              "Sarrus adds down diagonals and subtracts up diagonals",
+              "Cofactor expansion uses signed 2 by 2 minors",
+              "Swapping two rows flips the sign of the determinant"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: A harder determinant and the AB trap",
+            "paragraphs": [
+              "A zero determinant is the edge case that separates a top answer from a pass. It means the rows crowd into a smaller space, so the matrix flattens its input. A flat matrix cannot be undone, which is why no inverse exists.",
+              "Consider the matrix with rows 1 2 3, 2 4 6 and 0 1 1. The second row is double the first, so the determinant must be zero. A candidate who expands blindly will still get zero after heavy work, but spotting the duplicate row wins time.",
+              "The AB trap is the commonest error in multiplication. A candidate who reads left to right may compute BA when the question asks for AB. Write the requested order above the working and multiply only in that order.",
+              "A second trap is forgetting the division by the determinant in an inverse. Swapping and negating without dividing leaves a matrix that looks neat but fails the check. Always multiply the candidate inverse by the original to confirm the identity.",
+              "A final trap is treating determinant like addition. The determinant of a product equals the product of the determinants, not their sum. Test with small numbers first, then apply the rule with confidence in the hall."
+            ],
+            "bullets": [
+              "A zero determinant means no inverse exists",
+              "AB and BA must be multiplied in the written order",
+              "Verify an inverse by multiplying back to the identity"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "differentiation",
+      "topic": "differentiation",
+      "title": "Differentiation",
+      "objective": "Find the limit of a function and differentiate algebraic and simple trigonometric functions using the power and chain rules.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Differentiation",
+            "paragraphs": [
+              "A curve rises as x increases, and its steepness changes from point to point. Differentiation measures that steepness exactly, starting from the idea of a limit as the interval shrinks."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Limits as values approach a point",
+            "paragraphs": [
+              "A delivery van slows near a market gate, and its speedometer settles near 10 km/h before it arrives. That settling value is a limit: what the speed approaches, not what it reads at one instant.",
+              "The limit of f(x) as x approaches a is the value f(x) approaches when x is close to a. When f is defined at a with no break nearby, substitution gives that value at once.",
+              "Left and right approaches must agree for a two-sided limit to exist. If the two sides differ, the limit fails, even when each side alone settles to a number."
+            ],
+            "bullets": [
+              "The limit is the value approached as x closes in on a.",
+              "A function with no break at a has limit found by substitution.",
+              "Differing left and right limits mean no two-sided limit exists."
+            ],
+            "takeaway": "A limit is the value approached every time x closes in.",
+            "check": {
+              "question": "If f(x) = x^2 + 3x, find lim x->2 f(x).",
+              "options": [
+                "10",
+                "8",
+                "12",
+                "4"
+              ],
+              "answer": 0,
+              "why": "Substitution gives 4 + 6 = 10, because f is defined and smooth at 2."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The power rule and rates of change",
+            "paragraphs": [
+              "A water tank in Kaduna gains volume faster as its level rises from 2 to 5 metres. The derivative records how fast the quantity changes at each exact level.",
+              "The derivative dy/dx measures the instantaneous rate of change of y with respect to x. For a power x to the n, the rule brings the exponent down and reduces it by one.",
+              "A constant term differentiates to zero because it does not change. A coefficient stays in place while only the power changes."
+            ],
+            "bullets": [
+              "The derivative of x to the n is n times x to the n minus one.",
+              "The derivative of a constant is zero.",
+              "In a rate problem the derivative is the speed of change at that point."
+            ],
+            "takeaway": "Bring the exponent down, reduce it by one, and keep the coefficient.",
+            "check": {
+              "question": "Differentiate y = 5x^3 - 2x.",
+              "options": [
+                "15x^2 - 2",
+                "5x^2 - 2",
+                "15x^2",
+                "3x^2 - 2"
+              ],
+              "answer": 0,
+              "why": "The power rule gives 3 x 5x^2 = 15x^2, and the derivative of -2x is -2."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Trigonometric derivatives and the chain rule",
+            "paragraphs": [
+              "A tidal gauge at a creek rises and falls like a wave, and its height is modelled by sine. The derivative tells how fast the water is rising at a chosen hour.",
+              "Sine differentiates to cosine, and cosine differentiates to negative sine. Tangent differentiates to secant squared, written as one plus tangent squared.",
+              "The chain rule handles a function inside another function, such as sine of x squared. Differentiate the outer function, then multiply by the derivative of the inner function."
+            ],
+            "bullets": [
+              "Sine differentiates to cosine, cosine to negative sine, and tangent to secant squared.",
+              "For a composite function, the chain rule multiplies the outer derivative by the inner derivative.",
+              "The derivative of sine of x squared is two x times cosine of x squared.",
+              "The same product form applies when cosine or tangent wraps an inner expression."
+            ],
+            "takeaway": "Differentiate the outside first, then multiply by the inside derivative.",
+            "check": {
+              "question": "Differentiate y = sin 3x.",
+              "options": [
+                "3 cos 3x",
+                "cos 3x",
+                "-3 sin 3x",
+                "3 sin 3x"
+              ],
+              "answer": 0,
+              "why": "Sine gives cosine outside, and the chain rule multiplies by the inner derivative 3."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Before differentiating, name the outer function first. If a power of x wraps the whole term, use the power rule. If sine, cosine or tangent wraps an inner expression, differentiate the outer function and multiply by the inner derivative at once."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "If y = 2x^4 - 5x + 3 sin x, find dy/dx.",
+            "steps": [
+              {
+                "operation": "Apply the power rule to 2x^4",
+                "reason": "The exponent 4 comes down and the power falls by one.",
+                "result": "The term becomes 8x^3.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Differentiate the remaining terms",
+                "reason": "The derivative of -5x is -5 and the derivative of 3 sin x is 3 cos x.",
+                "result": "The terms become -5 and 3 cos x.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Combine the parts",
+                "reason": "Add the derivatives of each term to give the full derivative.",
+                "result": "dy/dx = 8x^3 - 5 + 3 cos x.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "If y = 4x^3 + 2x - cos x, find dy/dx.",
+            "hints": [
+              "Bring the exponent down on 4x^3 and keep the coefficient.",
+              "Differentiate 2x by the power rule and keep the coefficient.",
+              "Differentiate -cos x and watch the sign: the derivative is positive sine."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Limits that need algebra before substitution",
+            "paragraphs": [
+              "Direct substitution sometimes gives 0 divided by 0, which means the function is written in a form that hides its behaviour. At that point, no number has been found yet. The limit may still exist and can be uncovered by simplifying the expression.",
+              "Factoring is the usual opening move. For example, (x squared minus 4) divided by (x minus 2) has numerator (x minus 2)(x plus 2). Cancelling the common factor (x minus 2) leaves x plus 2, valid for x not equal to 2.",
+              "Substitution now works. As x approaches 2, x plus 2 approaches 4, so the limit is 4. The original function itself is undefined at 2 because of division by zero, yet the limit value from nearby points is 4.",
+              "The same cancellation handles (x squared minus 1) divided by (x minus 1), which simplifies to x plus 1 with limit 2. Clearing the factor is legal for the limit question because the approaches exclude the point where the factor is zero.",
+              "When factoring fails, rationlising or dividing by the highest power may expose a simpler form. The principle stays the same: simplify first, then approach. A limit question that gives 0 over 0 is almost always asking for that simplification before any substitution."
+            ],
+            "bullets": [
+              "A zero over zero form means simplify before substituting.",
+              "Factor and cancel the common bracket to remove the undefined point.",
+              "Simplify first, then substitute to find the limit value."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: The chain rule worked step by step",
+            "paragraphs": [
+              "A composite function is a function built inside another function, like cosine of (3x minus 2). The outer and inner parts change together, so the rate must combine both changes. The chain rule is exactly that combination.",
+              "Take y equal to cosine of (3x minus 2). The outer derivative of cosine is negative sine. The inner derivative of (3x minus 2) is 3, so the full derivative is negative 3 times sine of (3x minus 2).",
+              "A power example shows the same two steps. For y equal to (2x plus 1) cubed, the outer power rule gives 3 times (2x plus 1) squared. Multiplying by the inner derivative 2 gives 6 times (2x plus 1) squared.",
+              "Skipping the inner derivative is the commonest error. Without the factor 3 in the cosine example, the answer understates the true rate by that factor. The factor is not optional because the inner argument moves faster than x itself.",
+              "When the outer function is tangent, the same structure applies. The derivative is secant squared multiplied by the inner derivative. Naming the outer and inner parts on paper first prevents the factor from being dropped under time pressure."
+            ],
+            "bullets": [
+              "The chain rule multiplies the outer derivative by the inner derivative.",
+              "Name outer then inner before writing any derivative.",
+              "Omitting the inner derivative understates the rate by that factor."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: The exam trap between value and limit",
+            "paragraphs": [
+              "Many candidates lose the mark by giving the function value when the question asks for the limit. Those two numbers agree only when the function is continuous at the point. A break, a hole or a single missing definition separates them.",
+              "A second trap is the sign of the cosine derivative. Differentiating cosine gives negative sine, so omitting the minus flips the answer. In a term like negative cosine, the two negatives cancel and the result is positive sine.",
+              "A third trap is mixing up exponent and coefficient. In 5x cubed, the 5 stays and only the power changes, giving 15x squared. Reversing that order produces a wrong coefficient that looks plausible among the options.",
+              "Tangent traps sit alongside those. Its derivative is secant squared, not sine or cosine alone. An option with sine squared or cosine suggests a confused recall, and secant squared should be chosen at once.",
+              "Before finalising any differentiation answer, check the outer function, the inner factor and the signs. A three-second review for a dropped chain factor or a lost negative saves the whole item. That habit turns differentiation from a memory test into a method."
+            ],
+            "bullets": [
+              "The function value and the limit agree only at a continuous point.",
+              "Dropping the negative in negative sine flips a cosine derivative.",
+              "Check the coefficient, the sign and the inner derivative before answering."
+            ]
+          }
+        }
+      ]
     }
   ]
 }
