@@ -3350,6 +3350,2022 @@
           }
         }
       ]
+    },
+    {
+      "slug": "euclidean-geometry",
+      "topic": "euclidean-geometry",
+      "title": "Euclidean Geometry",
+      "objective": "Identify lines and angles, solve triangle and polygon angle problems, apply circle theorems and construct special angles.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Euclidean Geometry",
+            "paragraphs": [
+              "A surveyor in Enugu marks two parallel roads and a cross street, then must work out every angle at the junction. Euclidean geometry gives the exact rules for lines, polygons and circles that make those calculations certain."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Lines and angles from a single junction",
+            "paragraphs": [
+              "Two streets cross in Kano, and a builder must know the ramp angle with the road. When two lines cross, adjacent angles on a straight line add to 180°. That straight angle fixes the value of its neighbour.",
+              "Complementary angles add to 90°, while supplementary angles add to 180°. Vertically opposite angles are equal when two lines cross. Adjacent angles share a side, so their sum follows the line they form.",
+              "Parallel lines cut by a transversal give equal corresponding and alternate angles. Corresponding angles share the same relative position at each intersection. Co-interior angles lie on the same side and are supplementary."
+            ],
+            "bullets": [
+              "Complementary angles sum to 90° and supplementary angles sum to 180°.",
+              "Vertically opposite angles are equal.",
+              "On parallel lines, corresponding and alternate angles are equal."
+            ],
+            "takeaway": "Angles on a straight line sum to 180°, and parallel lines preserve corresponding and alternate equality.",
+            "check": {
+              "question": "Two parallel lines are cut by a transversal. If a corresponding angle is 65°, what is the alternate angle?",
+              "options": [
+                "65°",
+                "115°",
+                "25°",
+                "90°"
+              ],
+              "answer": 0,
+              "why": "Corresponding and alternate angles on parallel lines are equal, so the alternate angle is also 65°."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Triangles, quadrilaterals and general polygons",
+            "paragraphs": [
+              "A carpenter in Aba frames a triangular roof, then checks that its three corners fit. The interior angles of every triangle add to 180°. If two angles are 50° and 60°, the third must be 70°.",
+              "A quadrilateral has four interior angles totalling 360°, twice the triangle total. Its exterior angles, taken one at each vertex, also total 360° whatever the shape. An exterior angle equals 180° minus its interior angle on the same straight line.",
+              "A polygon with n sides can be split into n − 2 triangles from one vertex. Its interior angles therefore sum to (n − 2) × 180°. A regular hexagon has 720°, so each interior angle is 120°, while each exterior angle is 60°."
+            ],
+            "bullets": [
+              "The interior angles of a triangle sum to 180°.",
+              "The exterior angles of any polygon sum to 360°.",
+              "A regular n-sided polygon has each interior angle equal to (n − 2) × 180° ÷ n."
+            ],
+            "takeaway": "Triangle angles sum to 180° and polygon angles follow (n − 2) × 180°.",
+            "check": {
+              "question": "A regular pentagon has each exterior angle equal to what?",
+              "options": [
+                "72°",
+                "108°",
+                "90°",
+                "60°"
+              ],
+              "answer": 0,
+              "why": "Exterior angles sum to 360°, so each exterior angle of a regular pentagon is 360° ÷ 5 = 72°."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Circles and constructing special angles",
+            "paragraphs": [
+              "An engineer in Port Harcourt sights points on a circular tank from its centre and edge. The centre angle is twice the circumference angle on the same chord. If the circumference angle is 35°, the centre angle is 70°.",
+              "Angles in the same segment stand on the same chord and are equal. A cyclic quadrilateral has all vertices on a circle, so opposite angles are supplementary. If one angle is 110°, the angle opposite it is 70°.",
+              "Chords crossing inside a circle give vertically opposite angles and equal segment products. The products match because same-segment angles link the two triangles. With compass and straightedge, a right angle gives 90° and 45° by bisection, while an equilateral triangle gives 60°, 30° and 75° by sum."
+            ],
+            "bullets": [
+              "Centre angle is twice circumference angle on the same chord.",
+              "Same-segment angles are equal, and cyclic quadrilateral opposite angles sum to 180°.",
+              "Intersecting chords give equal products of their segments."
+            ],
+            "takeaway": "Centre angle doubles circumference angle, and cyclic opposite angles sum to 180°.",
+            "check": {
+              "question": "A cyclic quadrilateral has one angle of 115°. What is the angle opposite it?",
+              "options": [
+                "65°",
+                "115°",
+                "25°",
+                "90°"
+              ],
+              "answer": 0,
+              "why": "Opposite angles of a cyclic quadrilateral sum to 180°, so 180° − 115° = 65°."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Label every angle on the diagram before calculating. Opposite angles in a cyclic quadrilateral sum to 180°, exterior polygon angles sum to 360°, and parallel-line angles follow corresponding, alternate or co-interior rules. Naming the type chooses the rule."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Each interior angle of a regular polygon is 140°. How many sides does it have?",
+            "steps": [
+              {
+                "operation": "Write the interior-angle formula",
+                "reason": "A regular n-sided polygon has each interior angle equal to (n − 2) × 180° ÷ n.",
+                "result": "(n − 2) × 180 ÷ n = 140.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Solve the equation",
+                "reason": "Multiply by n and collect terms to isolate n.",
+                "result": "180n − 360 = 140n, so 40n = 360.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Find the number of sides",
+                "reason": "Divide by the coefficient of n and test the result.",
+                "result": "n = 9 sides, and (9 − 2) × 180 ÷ 9 = 140° checks.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "The angle at the circumference standing on a chord is 42°. Find the angle at the centre on the same chord.",
+            "hints": [
+              "Name the angle type before calculating anything else.",
+              "The centre angle doubles the circumference angle on the same chord.",
+              "Multiply 42 by two and check that the chord is the same."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why polygon angles always follow (n − 2) × 180°",
+            "paragraphs": [
+              "Splitting a polygon from one vertex works because that vertex sees every other vertex along a diagonal. Those diagonals lie inside a convex polygon, so they cut the shape into exactly n − 2 triangles. Each triangle contributes its full 180° to the total.",
+              "A concave polygon breaks the simple picture because one interior angle exceeds 180° and some diagonals fall outside. The formula still holds, but splitting needs a vertex that can see the shape. Recognising a reflex angle prevents the common error of capping every angle at 180°.",
+              "Exterior angles sum to 360° for a different reason: walking once around any closed shape turns you through one full circle. Each exterior angle is the turn at that vertex, so the turns must complete 360°. That explains why the exterior total does not grow with n.",
+              "The confusable pair is interior versus exterior angle at the same vertex. They are supplementary because they form a straight line, so knowing one gives the other by subtraction from 180°. To find n from an interior angle, first convert it to the exterior angle.",
+              "The trap is using n × 180° instead of (n − 2) × 180°. That extra 360° counts two triangles that were never drawn. Another trap is dividing by n before subtracting two triangles, so always subtract two sides first, multiply by 180°, then divide only for a regular polygon."
+            ],
+            "bullets": [
+              "From one vertex, n sides create n − 2 triangles.",
+              "Exterior angles sum to 360° because walking around turns once.",
+              "Interior and exterior angles at a vertex are supplementary."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why the centre angle doubles the circumference angle",
+            "paragraphs": [
+              "Join the centre to the ends of the chord and an isosceles triangle forms, because two radii are equal. The exterior angle at the centre equals the sum of the two equal base angles. That exterior angle is the angle on the same chord at the circumference.",
+              "Same-segment angles use the same idea. Two angles on the same chord look at that chord from the same side of it. Each subtends the same arc, so the arcs force the angles to be equal even when the points sit at different distances.",
+              "A cyclic quadrilateral is supplementary because its opposite angles stand on arcs that together make the whole circle. One subtends one arc and the opposite subtends the remaining arc. The arcs add to 360°, and halving each gives a total of 180°.",
+              "Intersecting chords give equal products through similar triangles. Vertically opposite angles match, and same-segment angles match across the crossing. Two triangles with two equal angles are similar, so matching sides are in proportion, which rearranges to equal segment products.",
+              "The edge case is the major arc: an angle on the major segment subtends the minor arc, so its centre counterpart is the reflex angle. Choosing the wrong arc halves the reflex angle instead. Always check which side of the chord the point lies on before doubling."
+            ],
+            "bullets": [
+              "Two radii make an isosceles triangle at the centre.",
+              "Same arc means same segment angle, whichever point is chosen.",
+              "Cyclic opposite angles subtend arcs totalling the full circle."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: How compass constructions build 30°, 45°, 60°, 75° and 90°",
+            "paragraphs": [
+              "A 90° angle is the starting point because a line perpendicular to another is built by equal compass arcs on both sides. Bisecting that right angle gives exactly 45°, since bisection divides the angle into two equal parts by symmetry. No measurement is needed; the arcs enforce equality.",
+              "An equilateral triangle is built by drawing two circles of the same radius from the ends of a segment. Each new vertex is equidistant from both ends, so all sides match and every angle is 60°. Bisecting one angle gives 30°, and 45° plus 30° gives 75°.",
+              "Constructions fail when the compass slips or arcs are too short to intersect cleanly. Short arcs make bisecting circles miss, while a loose hinge changes the radius between steps. Keep the radius fixed, draw generous arcs, and never measure with a ruler during construction.",
+              "The parallel-line trap is naming the wrong pair. Co-interior angles are supplementary, not equal, because they lie on the same side and form a straight line with a corresponding angle. Corresponding and alternate angles are equal only when the lines are parallel.",
+              "A second trap mixes construction angles with circle angles. A 75° construction is 45° + 30°, not a guess from half of 90°. In a circle question, check whether the angle is at the centre or the circumference before doubling or halving, because naming the type first avoids that reversal."
+            ],
+            "bullets": [
+              "Bisect 90° to obtain 45° with compass arcs alone.",
+              "An equilateral triangle gives 60°, and its bisector gives 30°.",
+              "Only parallel lines guarantee equal corresponding and alternate angles."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "mensuration",
+      "topic": "mensuration",
+      "title": "Mensuration",
+      "objective": "Calculate areas and perimeters of plane figures, arc/chord/sector quantities, surface areas and volumes of solids, and simple Earth distances.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Mensuration",
+            "paragraphs": [
+              "Mensuration turns shapes into numbers for cost, capacity and distance. Every JAMB question names a plane figure, a circle part, a solid or a point on the Earth, and asks for an area, length, surface or volume."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Areas and perimeters of plane figures",
+            "paragraphs": [
+              "A builder in Kano must price tiles for a rectangular floor and land for a triangular plot. Area tells the coverage and perimeter tells the boundary, so both numbers decide the cost.",
+              "A triangle has area ½ × base × vertical height, and Heron's formula √[s(s−a)(s−b)(s−c)] with s the semiperimeter is used when no height is given. A rectangle has area length × breadth and perimeter 2(length + breadth), while a parallelogram uses base × vertical height and a rhombus uses half the product of its diagonals.",
+              "A trapezium has area ½ × (sum of the two parallel sides) × distance between them. A circle has area πr² and circumference 2πr, and a composite shape is solved by splitting into known pieces and adding or subtracting."
+            ],
+            "bullets": [
+              "Triangle area is ½ × base × height; Heron uses the three sides.",
+              "Match the shape to its exact area and perimeter formulas.",
+              "Composite shapes are split into pieces whose areas add or subtract."
+            ],
+            "takeaway": "Name the shape first, then apply its area or perimeter formula.",
+            "check": {
+              "question": "What is the area of a trapezium with parallel sides 6 cm and 10 cm, 4 cm apart?",
+              "options": [
+                "32 cm²",
+                "40 cm²",
+                "24 cm²",
+                "16 cm²"
+              ],
+              "answer": 0,
+              "why": "Area is ½ × (6 + 10) × 4 = 32 cm²."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Arcs, chords, sectors and segments",
+            "paragraphs": [
+              "A school in Jos has a circular track and a pie chart to share. The angle at the centre decides what fraction of the circle each part represents.",
+              "An arc is part of the circumference, so for angle θ degrees it has length (θ/360) × 2πr. A chord joins the arc's ends, and its length is 2r sin(θ/2) when θ is at the centre, with the longest chord being the diameter when θ is 180°.",
+              "A sector is the pie slice bounded by two radii and an arc, and its area is (θ/360) × πr². A segment is the cap cut off by a chord, so its area is the sector area minus the triangular part ½ r² sin θ with the same θ."
+            ],
+            "bullets": [
+              "Arc length equals θ/360 times the circumference.",
+              "Chord length is 2r sin(θ/2) for central angle θ.",
+              "Segment area equals sector area minus triangular area."
+            ],
+            "takeaway": "Every circle part is a fixed fraction of the whole circle.",
+            "check": {
+              "question": "In a circle of radius 7 cm, what is the length of a 90° arc? Use π = 22/7.",
+              "options": [
+                "11 cm",
+                "22 cm",
+                "44 cm",
+                "5.5 cm"
+              ],
+              "answer": 0,
+              "why": "Arc length is (90/360) × 2 × (22/7) × 7 = 11 cm."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Surface areas, volumes and Earth distances",
+            "paragraphs": [
+              "A trader in Onitsha buys a cuboid box, a cylindrical drum and a conical funnel. Volume shows capacity, surface area shows material to cover the outside.",
+              "A cuboid has volume length × breadth × height and surface area 2(lb + lh + bh). A cylinder has volume πr²h and surface area 2πr(r + h), a cone has volume ⅓πr²h with slant height ℓ and surface area πr(r + ℓ), and a sphere has surface area 4πr² and volume (4/3)πr³.",
+              "A pyramid and a prism also use base area × height, with a factor of one third for the pyramid. Composite solids are built by adding or subtracting such pieces. On Earth, a longitude distance is rθ with θ in radians and r the Earth's radius."
+            ],
+            "bullets": [
+              "Volume is base area times height, one third for cones and pyramids.",
+              "Curved solids replace one base edge with circumference in surface area.",
+              "Earth distances use rθ with θ in radians."
+            ],
+            "takeaway": "Identify the solid, then use its volume and surface formulas.",
+            "check": {
+              "question": "What is the volume of a cylinder of radius 7 cm and height 10 cm? Use π = 22/7.",
+              "options": [
+                "440 cm³",
+                "1540 cm³",
+                "770 cm³",
+                "220 cm³"
+              ],
+              "answer": 1,
+              "why": "Volume is (22/7) × 49 × 10 = 1540 cm³."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "In JAMB questions, use π = 22/7 when the radius is a multiple of seven because the fractions cancel. Check whether the object is open or closed, and whether an Earth angle must be changed to radians before using rθ."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Find the area and arc length of a sector with radius 14 cm and angle 90°, using π = 22/7.",
+            "steps": [
+              {
+                "operation": "Find the fraction of the circle",
+                "reason": "A sector is the angle fraction of the whole circle.",
+                "result": "90°/360° = 1/4 of the circle.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Compute the sector area",
+                "reason": "Sector area is the fraction of πr².",
+                "result": "(1/4) × (22/7) × 14² = (1/4) × 22/7 × 196 = 154 cm².",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Compute the arc length",
+                "reason": "Arc length is the same fraction of the circumference.",
+                "result": "(1/4) × 2 × (22/7) × 14 = (1/4) × 88 = 22 cm.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Find the area and arc length of a sector with radius 21 cm and angle 60°, using π = 22/7.",
+            "hints": [
+              "60°/360° = 1/6 of the circle.",
+              "Area is 1/6 × π × 21².",
+              "Arc is 1/6 × 2π × 21."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why Heron's formula works for any triangle",
+            "paragraphs": [
+              "Heron's formula looks like a trick, but it comes from Pythagoras applied twice. Drop the height from one vertex to the opposite side, and the two right triangles share that height. The base is then split into two parts, and Pythagoras in each part links the two sides meeting at the vertex to the split parts.",
+              "Eliminating the split parts between the two Pythagoras equations leaves a relation that involves only the three sides. Collecting it into factors gives (s−a)(s−b)(s−c) under a square root, with s the semiperimeter. That factorisation is why the formula needs no height and no angle.",
+              "The same base-times-height idea hides inside the other plane formulas. A parallelogram is a rectangle cut and moved, so it keeps base times height. A rhombus is two triangles on one diagonal, so its area is half the product of the diagonals, which checks the core formula.",
+              "A trapezium is also two such pieces joined along the distance between the parallel sides. Splitting it by a median gives two trapeziums of equal height, which is why the average of the parallel sides appears. Recognising the split explains the average rather than memorising it.",
+              "Composite shapes use exactly this splitting habit. Add a rectangle and a triangle where they join, or subtract a hole that is not part of the figure. For the triangle with sides 13, 14 and 15, s is 21 and √[21 × 8 × 7 × 6] = √7056 = 84, a clean check that no height was needed."
+            ],
+            "bullets": [
+              "Heron follows from Pythagoras applied twice to one height.",
+              "Parallelogram, rhombus and trapezium hide the same base-times-height split.",
+              "Composite shapes add or subtract known pieces; holes subtract."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Sectors, segments and the radian shortcut",
+            "paragraphs": [
+              "Every circle part is the same fraction θ/360 of the whole. An arc is that fraction of the circumference, a sector is that fraction of the area, and the chord is the straight distance between the arc's ends. Once the fraction is known, all three follow at once.",
+              "The chord needs a different argument because it is not a fraction of a length. Join the centre to the ends and drop a perpendicular to the chord, which bisects both chord and angle. Half the chord is therefore r sin(θ/2), so the whole chord is 2r sin(θ/2), giving the diameter 2r when θ is 180°.",
+              "A segment is the sector with the triangular piece removed. For a minor segment that triangle is ½ r² sin θ, so segment equals sector minus triangle. For a major segment the triangle is added back, and the picture decides which side is wanted.",
+              "Radians shorten the method. One radian has arc equal to the radius, so arc is rθ and sector is ½ r²θ with θ in radians. The Earth distance formula is the arc case with r the Earth's radius.",
+              "In JAMB calculations, π = 22/7 is chosen when the radius has a factor seven. With r = 7 and θ = 90° the fraction is one quarter, giving area 154 cm² and arc 11 cm. A fraction-first approach then avoids decimals throughout."
+            ],
+            "bullets": [
+              "Arc, sector and chord share the same central angle θ.",
+              "Segment is sector minus triangle for the minor part.",
+              "In radians, arc is rθ and sector is ½ r²θ."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: From flat faces to curved solids and the Earth",
+            "paragraphs": [
+              "Solid formulas are plane formulas applied once more. A prism and a cuboid are a base extruded through a height, so volume is base area times height. A pyramid and a cone taper to a point, so their volume is one third of the corresponding extrusion.",
+              "Surface area is found by unwrapping. A cylinder unwraps into a rectangle 2πr by h plus two circles, giving 2πr(r + h) for a closed drum. A cone unwraps into a sector of radius ℓ whose arc is 2πr, giving πrℓ plus the base πr².",
+              "The sphere does not unwrap, and its area 4πr² is four times the great circle. Its volume (4/3)πr³ is twice the cylinder circumscribed about it, as Archimedes proved. In composite solids, add the pieces and subtract any shared face no longer exposed.",
+              "On a sphere the shortest surface distance lies along a great circle, and Earth questions use that arc. Along the equator or a meridian the radius is R, so distance is Rθ with θ in radians. Along a parallel the radius is R cos latitude, so the same longitude difference gives a shorter distance.",
+              "A simple JAMB case uses the equator directly. With R = 6370 km, towns 10° apart have θ = π/18 radians. The distance is 6370 × (22/7) ÷ 18 ≈ 1112 km using π = 22/7, with no correction because the equator is a great circle."
+            ],
+            "bullets": [
+              "Prism and cylinder volumes are base area times height.",
+              "Unwrapping gives curved surface areas; shared faces are removed.",
+              "Earth distance is Rθ along a great circle, in radians."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "loci",
+      "topic": "loci",
+      "title": "Loci",
+      "objective": "Identify and draw the loci of points equidistant from a point or line, on a perpendicular or angle bisector, or at a fixed distance from a point.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Loci",
+            "paragraphs": [
+              "A goat tied to a post can eat grass only within its rope. Every point it can reach obeys the same distance rule, and the edge of the grazing area is a locus."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "From a moving point to its path",
+            "paragraphs": [
+              "A goat is tied by a 10 m rope to a post. As it walks round while pulling the rope tight, every point it reaches stays 10 m from that post.",
+              "Joining all those points gives one path. A locus is the set of all points that obey a given rule, so the goat's path is the locus of points 10 m from the post.",
+              "The rule decides the shape. Points a fixed distance from one fixed point form a circle with that point as centre. Points a fixed distance from one fixed line form two parallel lines, one on each side of it."
+            ],
+            "bullets": [
+              "A locus is every point that obeys a stated distance rule.",
+              "A fixed distance from one point gives a circle with that point as centre.",
+              "A fixed distance from one line gives two lines parallel to it."
+            ],
+            "takeaway": "A circle comes from one point, and parallel lines come from one line.",
+            "check": {
+              "question": "Points 6 cm from a fixed point P lie on which locus?",
+              "options": [
+                "A circle centred at P",
+                "A line through P",
+                "Two parallel lines",
+                "A point at P"
+              ],
+              "answer": 0,
+              "why": "A fixed distance from one point gives a circle with that point as centre, and the radius is 6 cm."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Equidistant from two points or two sides",
+            "paragraphs": [
+              "Two villages want a meeting point that is fair to both. Any site exactly halfway in the sense of equal distance from the two village centres would satisfy them. Such sites form one straight line, not a single marked spot.",
+              "That line is the perpendicular bisector. It cuts the segment joining the centres at its midpoint at right angles. Every point on it is equally distant from both centres, and every point off it is nearer to one.",
+              "The angle bisector follows the same idea for two sides of an angle. Every point on it is equally far from both sides. That equality is why it cuts the angle exactly in half."
+            ],
+            "bullets": [
+              "The perpendicular bisector is the locus of points equidistant from two fixed points.",
+              "The angle bisector is the locus of points equidistant from the two sides of an angle.",
+              "A point off the bisector is nearer to one of the two given features."
+            ],
+            "takeaway": "Bisectors are the loci of points equidistant from two fixed features.",
+            "check": {
+              "question": "The locus of points equidistant from two fixed points A and B is the",
+              "options": [
+                "Perpendicular bisector of AB",
+                "Angle bisector at A",
+                "Circle centred at A",
+                "Parallel line to AB"
+              ],
+              "answer": 0,
+              "why": "Every point on the perpendicular bisector is the same distance from A and B."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "When two conditions meet",
+            "paragraphs": [
+              "Security cameras at a busy junction must watch two straight roads. A guard house that can serve both roads must be equidistant from the two intersecting lines. Its possible positions form the two angle bisectors through the junction.",
+              "A circle is itself a locus, and a bisector can cut it. Intersecting the circle with the fair-meeting line leaves only some points, and intersecting it with one side of that line can leave an arc. Each extra condition removes points, so the finished locus is smaller than either one alone.",
+              "Exam wording usually names the rule directly. The locus of points equidistant from two intersecting lines is the pair of angle bisectors through their point of meeting. Learn that exact phrase, because JAMB often asks it as a straight identification."
+            ],
+            "bullets": [
+              "Each added condition removes some points from the locus.",
+              "Equidistant from two intersecting lines means lying on an angle bisector.",
+              "A locus cut by another locus can leave only an arc."
+            ],
+            "takeaway": "Combine the conditions, then keep only the points that satisfy every one.",
+            "check": {
+              "question": "The locus of points equidistant from two intersecting lines is the",
+              "options": [
+                "Pair of angle bisectors",
+                "Perpendicular bisector",
+                "Circle at the meeting point",
+                "Two parallel lines"
+              ],
+              "answer": 0,
+              "why": "Points on either angle bisector are equally far from both intersecting lines."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "When a question says equidistant, ask equidistant from what: two points give the perpendicular bisector, two sides or lines give an angle bisector, and one fixed point at a fixed distance gives a circle. Naming the features first decides the locus."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Find the locus of points equidistant from A and B and within 5 cm of A.",
+            "steps": [
+              {
+                "operation": "Name the equal-distance rule",
+                "reason": "Equal distance from A and B places P on the perpendicular bisector of AB.",
+                "result": "First locus: a straight line.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Name the distance limit",
+                "reason": "Within 5 cm of A places P inside a circle centred at A, radius 5 cm.",
+                "result": "Second locus: a disc.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Keep the overlap",
+                "reason": "Both rules must hold, so keep only the part of the line inside the disc.",
+                "result": "Segment of the bisector inside the circle.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A point P is equidistant from A and B and exactly 4 cm from A, with AB = 6 cm. Sketch the locus.",
+            "hints": [
+              "The equal-distance rule gives the perpendicular bisector of AB.",
+              "The exact-distance rule gives a circle centred at A with radius 4 cm.",
+              "The locus is where the bisector meets that circle."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why equidistance forces a circle or a straight line",
+            "paragraphs": [
+              "Fix one point O and a length r, then test every point P in the plane. The rule OP = r leaves no freedom in the distance, although the direction of OP can still turn through all angles. Turning that direction fills the whole circle, because each direction gives a different point at the same distance.",
+              "A fixed distance from a line works differently because distance is measured at right angles. From any point P, the shortest route to the line must meet it perpendicularly. Holding that perpendicular distance constant forces P to stay on one of the two lines parallel to the given line.",
+              "The perpendicular bisector is forced by symmetry. A point P on it forms two right triangles with the midpoint as a common side. Those triangles share that side and have equal legs, so they are congruent and PA equals PB.",
+              "The reverse also holds. If PA equals PB, the same right triangles prove that P must lie on the bisector. That two-way proof is why the bisector is exactly the locus, rather than a line that merely contains some correct points.",
+              "Sketching therefore becomes checks. A candidate can test a proposed circle by marking points at the fixed radius in several directions. A candidate can test a proposed bisector by comparing distances to both fixed points at an arbitrary point."
+            ],
+            "bullets": [
+              "OP = r gives a circle because direction is free but distance is fixed.",
+              "A fixed perpendicular distance from a line gives two parallel lines.",
+              "PA = PB must hold on the bisector and forces a point onto it."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Angle bisectors, inside and outside the angle",
+            "paragraphs": [
+              "An angle has two sides meeting at a vertex. A point inside the angle is equidistant from the sides exactly when it lies on the interior bisector. The interior bisector leans toward one side as quickly as the other, so both perpendicular distances match.",
+              "Distance to a side always means the perpendicular distance. A point close to a side but far along it can still have a small distance. That measurement is why the bisector, not a line joining points at equal distances along the sides, is the locus.",
+              "Outside the angle, another bisector takes over. Points outside on one side are equally far from the two lines only on the exterior bisector. The two bisectors cross at right angles, so together they form an X centred at the vertex.",
+              "Two intersecting lines create four angles and therefore two bisectors. The phrase equidistant from the two lines, without saying inside, names both bisectors together. If a question adds inside the angle, only the interior bisector remains.",
+              "That distinction is a frequent trap. A candidate who draws only one bisector for two intersecting lines has answered a narrower question than the one asked. A candidate who draws both has matched the wording exactly."
+            ],
+            "bullets": [
+              "The interior bisector is the locus inside an angle.",
+              "The exterior bisector is the locus outside the angle.",
+              "Interior and exterior bisectors are perpendicular at the vertex."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Reading locus wording in JAMB questions",
+            "paragraphs": [
+              "Most errors in locus questions come from reading, not from drawing. The noun after equidistant tells the candidate which features matter. From two points, from two lines and from a point at a fixed distance are three different rules that can sound similar in a hurry.",
+              "Words such as exactly, at least and at most change the locus from a curve to a region. Exactly a fixed distance gives a circle or a line. At most that distance gives a disc or the strip between two parallel lines.",
+              "Prepositions also matter. Points between two fixed points on a line, points at the same distance from two intersecting lines and points inside an angle are not interchangeable. A sketch that marks distances before drawing will expose the wrong choice early.",
+              "Options in JAMB often swap a single word to create the trap. A perpendicular bisector appears instead of an angle bisector, or a circle appears instead of the two parallel lines. Matching each option to the named features rejects those swaps without a full construction.",
+              "A final check takes seconds. Pick a point on the proposed locus and test the stated distances to the named points or lines. If any test fails, the wrong rule was used and the option cannot be the locus."
+            ],
+            "bullets": [
+              "Exactly gives a curve, while at most gives a region.",
+              "The features named after equidistant decide the rule.",
+              "Test one point on a proposed locus against every condition."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "coordinate-geometry",
+      "topic": "coordinate-geometry",
+      "title": "Coordinate Geometry",
+      "objective": "Find distance and midpoint, compute gradients, test parallelism and perpendicularity, and write the equation of a straight line.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Coordinate geometry",
+            "paragraphs": [
+              "Two posts are fixed on a plan with coordinates. Coordinate geometry turns their positions into distances, steepness and equations that can be tested and used for building."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Distance and midpoint between two points",
+            "paragraphs": [
+              "A surveyor in Jos marks two fence posts at (1, 2) and (4, 6) on a plan. The fence must run straight between them, and a middle post must stand halfway along it.",
+              "The differences Δx = 4 − 1 = 3 and Δy = 6 − 2 = 4 form the legs of a right triangle. The distance is the hypotenuse, so it equals √((Δx)² + (Δy)²) = √(9 + 16) = 5 units.",
+              "The midpoint is the average of the coordinates: ((1 + 4)/2, (2 + 6)/2) = (2.5, 4). It lies halfway along the join, so halving each sum gives equal distance to both ends."
+            ],
+            "bullets": [
+              "Distance: d = √((x₂ − x₁)² + (y₂ − y₁)²).",
+              "Midpoint: ((x₁ + x₂)/2, (y₁ + y₂)/2).",
+              "Swapping the points leaves the distance unchanged, while Δx and Δy reverse sign."
+            ],
+            "takeaway": "Distance uses Pythagoras on the differences; midpoint averages each coordinate.",
+            "check": {
+              "question": "What is the distance between (0, 0) and (3, 4)?",
+              "options": [
+                "5",
+                "7",
+                "25",
+                "12"
+              ],
+              "answer": 0,
+              "why": "√(3² + 4²) = √25 = 5; 25 is the squared distance, not the distance."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Gradient, parallel and perpendicular lines",
+            "paragraphs": [
+              "Two roads in Kano leave a junction in different directions. One rises 2 metres for every metre forward, while the other climbs faster. Their steepness decides if they run together or meet at right angles.",
+              "Gradient m measures steepness: m = (y₂ − y₁)/(x₂ − x₁), rise over run. For (0, 1) and (3, 7), the rise is 6 and the run is 3, so m = 6/3 = 2. A negative m falls as x rises.",
+              "Lines are parallel when they rise at the same rate, so their gradients are equal. A line with m = 2 is parallel to any line with m = 2. Lines are perpendicular when m₁ × m₂ = −1, so m = 2 pairs with −1/2."
+            ],
+            "bullets": [
+              "Gradient m is rise over run; its sign gives the direction.",
+              "Parallel lines have equal gradients.",
+              "Perpendicular lines have m₁ × m₂ = −1."
+            ],
+            "takeaway": "Parallel lines share a gradient; perpendicular gradients multiply to −1.",
+            "check": {
+              "question": "A line has gradient 3. What is the gradient of a line perpendicular to it?",
+              "options": [
+                "3",
+                "1/3",
+                "−1/3",
+                "−3"
+              ],
+              "answer": 2,
+              "why": "Perpendicular gradients multiply to −1, so 3 × (−1/3) = −1."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Four forms for the equation of a line",
+            "paragraphs": [
+              "A carpenter needs the height of a sloping board at any point. An equation in x and y lists every point on the line. Four forms write the same line differently.",
+              "Slope-intercept y = mx + c shows gradient m and y-intercept c. Point-slope y − y₁ = m(x − x₁) uses one known point. Through (2, 3) with m = 2, it gives y − 3 = 2(x − 2), so y = 2x − 1.",
+              "Two-point form y − y₁ = ((y₂ − y₁)/(x₂ − x₁))(x − x₁) finds m from both points. General form ax + by = c collects x and y on one side. For instance, y = 2x − 1 becomes 2x − y = 1."
+            ],
+            "bullets": [
+              "Slope-intercept y = mx + c gives m and c.",
+              "Point-slope uses one known point and the gradient.",
+              "General form ax + by = c collects variables together."
+            ],
+            "takeaway": "Point-slope builds the line; general form collects ax + by = c.",
+            "check": {
+              "question": "What is the equation of a line with gradient 2 passing through (3, 5)?",
+              "options": [
+                "y − 5 = 2(x − 3)",
+                "y = 2x + 5",
+                "y + 5 = 2(x + 3)",
+                "y = 5x + 2"
+              ],
+              "answer": 0,
+              "why": "Point-slope form is y − y₁ = m(x − x₁), so substitute the gradient and the point."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Write Δx and Δy first, then decide: for distance square and add, for gradient divide, for midpoint add and halve. Naming the two differences prevents most sign errors in every coordinate question."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Find the equation of the line through (2, 3) with gradient 2, and write it in general form ax + by = c.",
+            "steps": [
+              {
+                "operation": "Use the point-slope form",
+                "reason": "The gradient and one point are known, so substitute into y − y₁ = m(x − x₁).",
+                "result": "y − 3 = 2(x − 2).",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Expand the brackets",
+                "reason": "Expanding shows the y-value for each x-value on the line.",
+                "result": "y − 3 = 2x − 4, so y = 2x − 1.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Rearrange to general form",
+                "reason": "Moving x and y to one side gives ax + by = c with integers only.",
+                "result": "2x − y = 1.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Find the equation of the line through (1, 5) with gradient 3, and give it as y = mx + c.",
+            "hints": [
+              "Use y − 5 = 3(x − 1).",
+              "Expand to get y = 3x + 2.",
+              "Check by putting x = 1 back in."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why distance is Pythagoras and midpoint is an average",
+            "paragraphs": [
+              "Take any points P(x₁, y₁) and Q(x₂, y₂) and join them. Draw a horizontal from P and a vertical from Q until they meet. Those segments have lengths |x₂ − x₁| and |y₂ − y₁| and meet at right angles.",
+              "The join PQ is the hypotenuse of that right triangle. Pythagoras gives PQ² = (x₂ − x₁)² + (y₂ − y₁)², and the positive root is the distance. Squaring, adding, then rooting is therefore not a trick.",
+              "Midpoint means moving halfway. From P to Q you gain Δx in x and Δy in y, so half the move adds Δx/2 and Δy/2. The halfway point is therefore ((x₁ + x₂)/2, (y₁ + y₂)/2), the coordinate averages.",
+              "Averaging explains the check. From the midpoint to P the differences are (Δx/2, Δy/2), and to Q they are opposite. Squaring removes the signs, so both distances match, while any other point fails that equality.",
+              "Ratio division is different from halfway. A point in the ratio 1 : 2 divides the join into three parts and weights the coordinates. JAMB may offer both a midpoint and a ratio point, so read the words before averaging."
+            ],
+            "bullets": [
+              "Horizontal and vertical segments form a right triangle with hypotenuse PQ.",
+              "Midpoint adds half the total movement in each coordinate.",
+              "Halfway averaging differs from ratio division."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Vertical, horizontal and coincident lines",
+            "paragraphs": [
+              "Horizontal and vertical directions escape the gradient rules. A horizontal line has no rise, so m = 0. A vertical line has no run, so rise over run divides by zero and m is undefined.",
+              "A vertical line x = 3 is perpendicular to every horizontal y = c, yet m₁ × m₂ = −1 cannot be applied. Likewise two vertical lines are parallel though neither has a numeric m. The rules work only for non-vertical lines.",
+              "Equal gradients also hide coincidence. Two lines with m₁ = m₂ either never meet or share every point. They coincide exactly when they share a point as well as a gradient, so they have the same equation.",
+              "A parallel line through a point therefore needs two steps. The gradient must match, and the point fixes the intercept. Through (1, 4) parallel to y = 2x + 1, the form is y = 2x + c, and c = 2.",
+              "Perpendicular lines through a point follow the same pattern. The new gradient is the opposite reciprocal, and the point gives the intercept. Through (0, 0) perpendicular to y = 2x + 1, that gives y = −x/2."
+            ],
+            "bullets": [
+              "Horizontal has gradient 0; vertical has undefined gradient.",
+              "Equal gradients allow coincident as well as distinct parallels.",
+              "Direction fixes m; the given point fixes the intercept."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Reading a line from its general form",
+            "paragraphs": [
+              "The general form ax + by = c hides m and c, but does not remove them. If b is not zero, divide by b and isolate y to get y = (−a/b)x + c/b. Reading that line gives the gradient and intercept at once.",
+              "For 3x + 4y = 12 that rearrangement gives y = −(3/4)x + 3, with gradient −3/4 and y-intercept 3. Setting y = 0 gives x-intercept 4. Each intercept is the same fact read by putting one variable to zero.",
+              "The cases a = 0 and b = 0 are special. If b = 0 the equation is x = c/a, a vertical line with no finite gradient. If a = 0 it is y = c/b, horizontal with gradient 0. The letters, not habit, decide the case.",
+              "Choosing the form is part of the method. Point-slope suits a point and a gradient, two-point suits two points, slope-intercept suits gradient and intercept questions, and general form suits a line already given that way. Each form is one substitution from the others.",
+              "Intersections use the same reading. Two lines meet where both equations hold together, so equate their y-expressions or eliminate y from general forms. Convert once, carefully, then work in the form the next step needs."
+            ],
+            "bullets": [
+              "From ax + by = c, gradient is −a/b and intercept is c/b.",
+              "A vertical line gives b = 0; a horizontal line gives a = 0.",
+              "Convert to the form the question asks for, then solve."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "application-of-differentiation",
+      "topic": "application-of-differentiation",
+      "title": "Application of Differentiation",
+      "objective": "Use differentiation to find rates of change and to locate maximum and minimum values.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Application of Differentiation",
+            "paragraphs": [
+              "A lorry covers a hidden distance and a bucket fills as water pours. Differentiation turns those stories into rates. It also finds where a curve peaks or dips to give exact maxima and minima."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Derivative as rate of change",
+            "paragraphs": [
+              "A lorry leaves Jos with position s metres after t seconds given by s = 3t² + 2t. The speed at any moment is ds/dt, found by differentiating s. At t = 2, ds/dt = 6(2) + 2 = 14 metres per second.",
+              "A cistern in Kaduna fills so volume V litres after t minutes is V = 5t² + 4. The filling rate is dV/dt, the derivative with respect to time. At t = 3, dV/dt = 10(3) = 30 litres per minute.",
+              "In general, dy/dx is the gradient of the curve at a point. It gives the exact rate at that instant, not the average over an interval. A JAMB rate question therefore substitutes the given value into dy/dx."
+            ],
+            "bullets": [
+              "ds/dt is the speed at a given time, and dV/dt gives the filling rate.",
+              "Differentiate first, then substitute the given time or value.",
+              "dy/dx at a point is the rate there, not the average rate."
+            ],
+            "takeaway": "dy/dx at a point gives the instantaneous rate of change there.",
+            "check": {
+              "question": "If s = 3t² + 2t, what is ds/dt when t = 2?",
+              "options": [
+                "14 m/s",
+                "10 m/s",
+                "6 m/s",
+                "8 m/s"
+              ],
+              "answer": 0,
+              "why": "Differentiate to 6t + 2, then substitute t = 2 to get 14 m/s."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Stationary points and the first-derivative sign test",
+            "paragraphs": [
+              "A ball thrown upward has height h = -5t² + 20t + 1 metres after t seconds. At the top of the flight, the height stops rising for an instant. That turning point is a stationary point, where dh/dt = 0.",
+              "Stationary points are found by setting dy/dx = 0 and solving for x. Each solution gives an x where the gradient is zero. The curve is rising, falling, or momentarily flat at that point.",
+              "The first-derivative test decides its type. If dy/dx changes from positive to negative, the point is a maximum, and if it changes from negative to positive, it is a minimum. If it does not change sign, it is neither."
+            ],
+            "bullets": [
+              "Stationary points have dy/dx = 0 and are found by solving that equation.",
+              "Positive to negative means a maximum; negative to positive means a minimum.",
+              "A stationary point with no sign change is a point of inflection."
+            ],
+            "takeaway": "Set dy/dx = 0 for stationary points, then check the sign change.",
+            "check": {
+              "question": "For y = x² - 4x + 1, dy/dx = 2x - 4. What shows a minimum at x = 2?",
+              "options": [
+                "dy/dx changes from negative to positive",
+                "dy/dx changes from positive to negative",
+                "dy/dx stays positive",
+                "dy/dx stays negative"
+              ],
+              "answer": 0,
+              "why": "At x = 2 the derivative is zero, and it changes from negative to positive, so it is a minimum."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Maximum and minimum word problems",
+            "paragraphs": [
+              "A farmer in Jos has 40 metres of fence to build a rectangular pen against a straight wall. Only three sides need fencing, so length plus twice the width equals 40. The area then becomes a function of one variable, which can be maximised.",
+              "Write area in terms of one variable. If width is x, length is 40 - 2x, so A = x(40 - 2x) = 40x - 2x². Differentiate to get dA/dx = 40 - 4x, and set it to zero for the stationary point.",
+              "Decide max or min. The second derivative d²A/dx² = -4 is negative, so the stationary point is a maximum, and dA/dx changes from positive to negative. Width 10 metres and length 20 metres give maximum area 200 square metres."
+            ],
+            "bullets": [
+              "Use the fixed perimeter or surface to write one-variable function first.",
+              "Stationary value comes from setting the first derivative to zero.",
+              "Negative second derivative or plus-to-minus sign change confirms a maximum."
+            ],
+            "takeaway": "Convert the word problem to one variable, then verify max or min.",
+            "check": {
+              "question": "For the 40-metre fence pen, what are the dimensions for maximum area?",
+              "options": [
+                "Width 10 m, length 20 m",
+                "Width 20 m, length 20 m",
+                "Width 5 m, length 30 m",
+                "Width 15 m, length 10 m"
+              ],
+              "answer": 0,
+              "why": "dA/dx = 40 - 4x = 0 gives x = 10, so length is 20 and area is 200 m²."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "In a rate question, differentiate before substituting the given value or you will find an average instead of the instantaneous rate. In a max/min question, always write the function in one variable and check the second derivative before declaring a maximum."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A farmer has 60 metres of fencing to enclose a rectangular field against a straight wall. Find the dimensions for maximum area.",
+            "steps": [
+              {
+                "operation": "Write area in one variable",
+                "reason": "Use the fixed fencing to express length through width",
+                "result": "A = x(60 - 2x) = 60x - 2x²",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Differentiate and set to zero",
+                "reason": "Stationary values satisfy dA/dx = 0",
+                "result": "60 - 4x = 0, so x = 15, length = 30",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Check and find maximum",
+                "reason": "Second derivative -4 < 0 confirms a maximum",
+                "result": "Maximum area = 15 × 30 = 450 m²",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A wire 40 cm long is bent into a rectangle. Let one side be x cm. Write the area in terms of x and find x for the maximum area.",
+            "hints": [
+              "Let the other side be 20 - x and multiply to get area.",
+              "Differentiate the area and set the derivative to zero.",
+              "Check the second derivative or the sign change to confirm a maximum."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why the derivative gives the rate at an instant",
+            "paragraphs": [
+              "Average rate over an interval can hide what happens inside it. A car may average 60 km/h over an hour yet slow to 20 km/h near a market. The driver needs the speed at that slow moment, not the hourly average.",
+              "Instantaneous rate is found by shrinking the interval. The average slope over a shorter interval moves closer to the slope at a single point. In the limit, that slope becomes dy/dx, defined as the limiting value of the average slope.",
+              "Units tell which rate has been found. If s is in metres and t in seconds, ds/dt is in metres per second, and if V is in litres and t in minutes, dV/dt is in litres per minute. The units must be stated because the letter pair alone does not name them.",
+              "A common mistake is to substitute the given time before differentiating. That step finds the value of the quantity, not its rate. The value y at t = 3 is how much there is, while dy/dt at t = 3 is how fast it grows there."
+            ],
+            "bullets": [
+              "Instantaneous rate is the limit of average rates over shrinking intervals.",
+              "dy/dx carries units of y per x, such as metres per second.",
+              "Differentiate first and substitute second in any rate question."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Maximum, minimum and the point that is neither",
+            "paragraphs": [
+              "A stationary point is only a flat moment, and flat does not mean top or bottom. On the cubic y = x³ - 3x, the derivative 3x² - 3 is zero at x = 1 and x = -1. Both points look flat, yet one is a valley and the other is a hill.",
+              "The sign test separates them. Left of x = -1, the derivative is positive, and right of it the derivative is negative, so the curve falls through the flat point. That plus-to-minus change marks the maximum y = 2 at x = -1.",
+              "At x = 1, the derivative changes from negative to positive, so the curve rises through the flat point. That minus-to-plus change marks the minimum y = -2 at x = 1. The two points therefore have the same flat gradient but opposite meanings.",
+              "The graph y = x³ is flat at the origin but is neither maximum nor minimum. Its derivative 3x² is zero at x = 0, yet it stays positive on both sides. The curve passes through the flat point without turning, which is called a point of inflection.",
+              "The second-derivative test gives the same verdict with one calculation. A negative second derivative means the slope is decreasing through zero, so the point is a maximum. A positive second derivative means the slope is increasing through zero, so it is a minimum."
+            ],
+            "bullets": [
+              "Flat at a point does not alone decide max or min.",
+              "Plus-to-minus is maximum and minus-to-plus is minimum.",
+              "No sign change means a point of inflection, not an extremum."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Getting the function when the surface is fixed",
+            "paragraphs": [
+              "Word problems rarely give the function directly. They give a perimeter, a surface area, or a fixed amount of material, and the function must be built from that constraint. The extra variable has to be removed before differentiating.",
+              "Take an open box with a square base of side x and height y with surface area x² + 4xy, and a fixed area of 108 square centimetres is given. Solve the constraint for y to get y = (108 - x²) ÷ (4x). That step uses the fixed surface to remove y.",
+              "Volume V = x²y then becomes a function of x alone. Substituting the expression for y gives V = (108x - x³) ÷ 4, which can then be differentiated to find where volume is largest. A step that skips the substitution leaves two variables and cannot be maximised.",
+              "The domain must be respected. Since 108 - x² must stay positive for a positive height, x cannot exceed the square root of 108. A stationary point outside that range is a formal solution but not a possible box, so JAMB options sometimes include that formal point as a trap.",
+              "Always return to the story at the end. A value of x that maximises volume must also give a positive height and a sensible shape. The final check connects calculus to the original fence, box, or tank and prevents a correct derivative from giving a wrong rectangle."
+            ],
+            "bullets": [
+              "Use the fixed surface or perimeter to remove the extra variable.",
+              "Write volume or area in one variable before differentiating.",
+              "Reject stationary values that give negative lengths or heights."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "integration",
+      "topic": "integration",
+      "title": "Integration",
+      "objective": "Integrate algebraic and simple trigonometric functions and calculate area under a curve in simple cases.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Integration",
+            "paragraphs": [
+              "A van's speed rises and falls along the Lagos–Ibadan road. Its odometer records the total distance, yet the speedometer only shows the rate. Integration turns a rate into a total, and turns a curve into an area."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Integration undoes differentiation",
+            "paragraphs": [
+              "A rider in Lagos notes the van's speed each minute, but the office needs total distance. Adding the speeds directly gives the wrong answer. Integration recovers the distance from the speed, because it reverses differentiation.",
+              "Differentiation sends x^(n+1) to (n+1)x^n. Dividing by (n+1) reverses that step, so ∫x^n dx = x^(n+1)/(n+1) + c. The rule fails for x^(−1), whose integral is ln|x| + c.",
+              "The constant c appears because differentiation removes every constant. The functions x^2 + 1, x^2 + 5 and x^2 share the derivative 2x. An indefinite integral therefore names a whole family differing only by c."
+            ],
+            "bullets": [
+              "Integration reverses differentiation, so the derivative of the answer must return the start.",
+              "For n ≠ −1, ∫x^n dx = x^(n+1)/(n+1) + c.",
+              "The constant c records every constant that differentiation removes.",
+              "Each term is integrated separately, and constants multiply through the integral."
+            ],
+            "takeaway": "To integrate a power, raise the power, divide by it and add c.",
+            "check": {
+              "question": "What is ∫x^3 dx?",
+              "options": [
+                "x^4/4 + c",
+                "x^4 + c",
+                "4x^3 + c",
+                "x^3 + c"
+              ],
+              "answer": 0,
+              "why": "Raise the power by one and divide by the new power 4."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Trigonometric integrals and definite integrals",
+            "paragraphs": [
+              "A swing's height rises through the morning, then falls again. A candidate who treats sine like a power rule misses the sign. The integrals of sine and cosine reverse their derivatives, so each flips the other's sign.",
+              "Differentiation sends cos x to −sin x, so ∫cos x dx = sin x + c and ∫sin x dx = −cos x + c. The simple case is ∫tan x dx = −ln|cos x| + c.",
+              "A definite integral carries limits a to b and stops at a number. The constant c cancels in [F(b)+c] − [F(a)+c]. It is written ∫_a^b f(x) dx = F(b) − F(a)."
+            ],
+            "bullets": [
+              "∫sin x dx = −cos x + c, while ∫cos x dx = sin x + c.",
+              "For the simple case, ∫tan x dx = −ln|cos x| + c.",
+              "A definite integral gives F(b) − F(a), with c cancelling."
+            ],
+            "takeaway": "Integrate sine and cosine with a sign flip, then evaluate as F(b) − F(a).",
+            "check": {
+              "question": "What is ∫_0^π sin x dx?",
+              "options": [
+                "0",
+                "−2",
+                "2",
+                "1"
+              ],
+              "answer": 2,
+              "why": "The antiderivative is −cos x, so −cos π + cos 0 = 1 + 1 = 2."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Area under a curve",
+            "paragraphs": [
+              "A student plots y = x^2 from 0 to 2 and shades the region under it. The shaded pieces are not rectangles, so counting squares is slow. Integration sums those thin strips into the exact area.",
+              "The area between the curve y = f(x), the x-axis, and the vertical lines x = a and x = b is ∫_a^b f(x) dx. Each strip has width dx and height f(x), so its area is f(x) dx. Adding the strips is exactly the definite integral.",
+              "If the curve lies above the axis, f(x) is positive and the integral is positive. If the curve lies below the axis, f(x) is negative and the integral is negative. The geometric area is therefore always |∫_a^b f(x) dx|, with sign ignored."
+            ],
+            "bullets": [
+              "Area against the x-axis is ∫_a^b f(x) dx.",
+              "Above the axis the integral is positive; below it is negative.",
+              "Geometric area uses the absolute value of the integral."
+            ],
+            "takeaway": "A definite integral gives area, but area itself is never negative.",
+            "check": {
+              "question": "What is the area between y = x^2 and the x-axis from 0 to 1?",
+              "options": [
+                "1/3",
+                "1",
+                "1/2",
+                "0"
+              ],
+              "answer": 0,
+              "why": "∫_0^1 x^2 dx = [x^3/3]_0^1 = 1/3, and the curve is above the axis."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Write the antiderivative first, then substitute F(b) − F(a). If the curve dips below the axis, take the absolute value for area. Check signs at the limits before you subtract, because a reversed order changes the sign of the answer."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Evaluate ∫₀² (3x² + 4x) dx.",
+            "steps": [
+              {
+                "operation": "Integrate term by term",
+                "reason": "The power rule reverses differentiation, so 3x^2 becomes x^3 and 4x becomes 2x^2.",
+                "result": "F(x) = x^3 + 2x^2 + c.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Substitute the limits",
+                "reason": "A definite integral needs F(b) − F(a), and c cancels.",
+                "result": "F(2) = 8 + 8 = 16 and F(0) = 0.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Subtract and state the result",
+                "reason": "The value is a number, not a function, so drop c entirely.",
+                "result": "∫₀² (3x² + 4x) dx = 16 − 0 = 16.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Evaluate ∫₁² (4x^3 − 2x) dx.",
+            "hints": [
+              "Integrate term by term to get x^4 − x^2 + c.",
+              "At x = 2, the value is 16 − 4 = 12.",
+              "Subtract the value at x = 1, which is 1 − 1 = 0."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why integration loses the constant",
+            "paragraphs": [
+              "Differentiation answers the question 'how fast is this changing?' A constant such as 7 never changes, so its derivative is always zero. The same holds for any fixed number added to a function, however large or small.",
+              "That loss is why an antiderivative is never unique. The functions x^2, x^2 + 1 and x^2 − 4 all differentiate to 2x, so integration must restore the whole family with + c. Geometrically, the graphs are identical curves shifted above and below each other.",
+              "A single point on the graph fixes c. If y = 3x^2 + c passes through (1, 5), then 5 = 3 + c gives c = 2. Finding c is therefore not a ritual; it is using extra information to choose one curve from the family.",
+              "A definite integral removes c for a structural reason. Both F(b) + c and F(a) + c carry the same shift, so the shift subtracts away. The integral measures the change between the endpoints, not the height of the shift itself.",
+              "Candidates sometimes invent a value for c in a definite integral and carry it through. That value cancels at the end but wastes time and invites slips. Leave c out of definite integrals, and restore it only when the question asks for the general function or gives a point."
+            ],
+            "bullets": [
+              "Any constant differentiates to zero, so integration must add + c.",
+              "One known point determines c and chooses one curve from the family.",
+              "In a definite integral, c cancels in F(b) + c − (F(a) + c)."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: How a definite integral builds a total",
+            "paragraphs": [
+              "Start with a speed that changes every minute. The distance in one minute is about speed × 1 minute, but that is only an estimate. Dividing the time into twelve five-minute strips gives twelve rectangles whose areas can be added.",
+              "With more strips the rectangles hug the curve more closely, so the total of their areas improves. The definite integral is the limit of that process when the strips become as thin as possible. That is why it is called an accumulation: many small amounts become one total.",
+              "The same picture explains ∫_a^b f(x) dx. The width dx gives the thinness of each strip, and f(x) gives its height. Multiplying them gives a small area, and integrating adds all those areas between a and b.",
+              "A speed–time graph makes the idea visible. The area under the speed curve between two times is the distance travelled between them. That area is the definite integral of speed with respect to time.",
+              "The reverse direction matters in exams. If distance is known as a function of time, differentiating gives speed, and integrating speed gives distance. Asking which direction the question wants is therefore the first decision."
+            ],
+            "bullets": [
+              "Each strip contributes height times width, f(x) dx.",
+              "More strips give a better estimate, and the integral is the limit.",
+              "Area under a speed–time graph is distance travelled."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Area when the curve crosses the axis",
+            "paragraphs": [
+              "A curve may sit above the x-axis for part of an interval and below it for the rest. The integral over the whole interval then mixes positive and negative strips. The positive part adds, and the negative part subtracts.",
+              "Geometric area never subtracts. A piece below the axis still occupies space, so its area is positive. That is the discrimination: the integral gives signed area, while the question usually asks for geometric area.",
+              "The method is to split at the roots. Find where f(x) = 0 inside [a, b], integrate separately on either side, and take absolute values before adding. Each piece then contributes a positive area.",
+              "Consider y = x^2 − 1 from 0 to 2. The root at x = 1 divides the interval. The integral from 0 to 1 is negative, so its absolute value is taken, while the integral from 1 to 2 is positive.",
+              "For a simple non-negative curve the split is unnecessary. A question that asks for 'the area' without saying 'signed' expects the absolute total. Check the sketch first: if the axis cuts the region, splitting is not optional."
+            ],
+            "bullets": [
+              "Signed area cancels; geometric area does not.",
+              "Split at every root inside [a, b] and integrate piece by piece.",
+              "Take the absolute value of each piece, then add."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "representation-of-data",
+      "topic": "representation-of-data",
+      "title": "Representation of Data",
+      "objective": "Read frequency distributions and interpret histograms, bar charts and pie charts.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Representation of Data",
+            "paragraphs": [
+              "A principal in Enugu records twenty examination marks in four score groups, then draws three different charts from the same groups. The table and the charts must agree, and reading them is the skill under test."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Frequency distributions and grouped tables",
+            "paragraphs": [
+              "A teacher in Enugu lists twenty Mathematics marks for class 4A. The marks range from 1 to 38, so she groups them as 0–9, 10–19, 20–29 and 30–39.",
+              "The frequencies are 2, 6, 9 and 3, which add to 20. Each interval has class width 10, and its class mark is the midpoint (4.5, 14.5, 24.5, 34.5). The class boundaries sit halfway between classes, so 10–19 runs from 9.5 to 19.5.",
+              "Cumulative frequency is a running total: 2, 8, 17 and 20. The value 8 therefore means eight pupils scored at most 19. That running total answers at most questions without recounting."
+            ],
+            "bullets": [
+              "Class width is the upper boundary minus the lower boundary.",
+              "Class mark is the midpoint (lower plus upper) divided by two.",
+              "Class boundaries sit halfway between inclusive classes.",
+              "Cumulative frequency adds each frequency to the previous total."
+            ],
+            "takeaway": "A grouped table replaces each mark by its class, its width and its running total.",
+            "check": {
+              "question": "For class 10–19, what is the class mark?",
+              "options": [
+                "9.5",
+                "14.5",
+                "19.5",
+                "10"
+              ],
+              "answer": 1,
+              "why": "Class mark is (10 + 19) divided by 2, which gives 14.5."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Bar charts and histograms compared",
+            "paragraphs": [
+              "A market seller in Onitsha records the fruits chosen by twenty customers. One chart shows mango, orange, pineapple and banana as separate labels, while another shows heights in centimetres.",
+              "A bar chart shows labelled categories with gaps between bars, because mango is not numerically between orange and banana. A histogram shows continuous grouped data, so its bars touch, with base equal to the class interval and height equal to frequency.",
+              "The twenty marks 0–9 with frequency 2, 10–19 with frequency 6, 20–29 with frequency 9 and 30–39 with frequency 3 therefore make a histogram with touching bars. Gaps and labels mean bar chart, and touching bars over intervals mean histogram."
+            ],
+            "bullets": [
+              "A bar chart shows categories, so its bars have gaps.",
+              "A histogram shows continuous intervals, so its bars touch.",
+              "In a histogram, base is the class interval and height is frequency.",
+              "The touching test separates histograms from bar charts."
+            ],
+            "takeaway": "Bars with gaps show labels; joined bars show continuous intervals.",
+            "check": {
+              "question": "Which chart has touching bars over class intervals?",
+              "options": [
+                "Bar chart of fruits",
+                "Histogram of scores",
+                "Pie chart of subjects",
+                "Ogive of marks"
+              ],
+              "answer": 1,
+              "why": "A histogram of continuous scores uses touching bars; labelled fruits have gaps."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Pie charts turn frequency into angle",
+            "paragraphs": [
+              "Twenty pupils in a Lagos school choose favourite subjects, and the head counts Biology, Chemistry, Physics and Mathematics. A pie chart must show each group as part of one whole.",
+              "The rule is angle equals frequency divided by total, multiplied by 360 degrees. Biology 8 gives 8 divided by 20 times 360, which is 144 degrees; Chemistry 5 gives 90 degrees, Physics 4 gives 72 degrees and Mathematics 3 gives 54 degrees.",
+              "The same rule reverses to find a frequency from an angle: frequency equals angle divided by 360, multiplied by total. An angle of 72 degrees therefore represents 72 divided by 360 times 20, which is 4 pupils."
+            ],
+            "bullets": [
+              "Pie angle equals frequency divided by total times 360 degrees.",
+              "All pie angles sum to 360 degrees.",
+              "Frequency equals angle divided by 360 times the total."
+            ],
+            "takeaway": "Pie angle is frequency over total times 360 degrees.",
+            "check": {
+              "question": "In a pie chart of 20 pupils, what angle does Chemistry 5 take?",
+              "options": [
+                "54 degrees",
+                "72 degrees",
+                "90 degrees",
+                "144 degrees"
+              ],
+              "answer": 2,
+              "why": "Angle is 5 divided by 20 times 360, which equals 90 degrees."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "In a pie chart, check the total before calculating, then confirm the angles sum to 360°. In a histogram, confirm the bars touch over true boundaries. In a bar chart, read the labelled category, not the width."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Twenty pupils choose favourite subjects: Biology 8, Chemistry 5, Physics 4 and Mathematics 3. Find the pie chart angles.",
+            "steps": [
+              {
+                "operation": "Add the total",
+                "reason": "Angles use the whole class as the denominator",
+                "result": "8 + 5 + 4 + 3 = 20",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Compute each angle",
+                "reason": "Angle equals frequency divided by total times 360 degrees",
+                "result": "Biology 144 degrees, Chemistry 90 degrees, Physics 72 degrees, Mathematics 54 degrees",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Check the sum",
+                "reason": "The whole circle must be 360 degrees",
+                "result": "144 + 90 + 72 + 54 = 360 degrees",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "In a pie chart of 20 pupils, Mathematics occupies 54 degrees. How many pupils chose Mathematics? Show the reversal of the angle rule.",
+            "hints": [
+              "Write the rule as angle equals frequency divided by total times 360.",
+              "Substitute total 20 and angle 54, then rearrange for frequency.",
+              "Frequency equals 54 divided by 360 times 20, which is 3."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why class boundaries sit halfway",
+            "paragraphs": [
+              "The classes 0–9, 10–19, 20–29 and 30–39 leave a gap of one between 9 and 10, between 19 and 20 and between 29 and 30. A histogram cannot draw that gap along a continuous scale. The boundary is therefore placed halfway at 9.5, 19.5 and 29.5.",
+              "Each class then becomes a true interval: 0–9 becomes negative 0.5 to 9.5, 10–19 becomes 9.5 to 19.5, and 30–39 becomes 29.5 to 39.5. Every width is upper boundary minus lower boundary, so 19.5 minus 9.5 equals 10. The class mark remains the midpoint, such as 14.5 for 10–19.",
+              "The halfway rule fails when classes are already exclusive, such as 0–10, 10–20 and 20–30. There the boundaries 10 and 20 are shared and the classes meet exactly. The test is whether consecutive classes leave a gap, in which case 0.5 moves from the upper value to the lower value.",
+              "JAMB traps that adjustment in ogive questions, where cumulative frequency is plotted at the upper boundary, not at the class mark. The totals 2, 8, 17 and 20 belong at 9.5, 19.5, 29.5 and 39.5. Plotting 8 at 14.5 loses the mark.",
+              "Writing the true limits beside the inclusive classes prevents that slip. Write 9.5 to 19.5 above 10–19, and the width, the mark and the ogive point all follow. That one line carries three separate exam topics."
+            ],
+            "bullets": [
+              "Inclusive classes leave a one-unit gap, so boundaries sit at 9.5, 19.5 and 29.5.",
+              "Exclusive classes 0–10, 10–20 meet exactly and need no adjustment.",
+              "Ogive points use upper boundaries, never class marks."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Choosing the right chart and reading it honestly",
+            "paragraphs": [
+              "A bar chart compares separate categories that share no order or scale, such as mango, orange, pineapple and banana. Bar height stands for frequency, and the gaps show that the categories are not continuous. A bar chart can therefore be drawn for any total.",
+              "A histogram shows the shape of a continuous distribution, such as the twenty marks grouped as 0–9, 10–19, 20–29 and 30–39. Its bars touch because the intervals meet at 9.5, 19.5 and 29.5. The tallest bar is 20–29 with frequency 9, so most pupils cluster in the twenties.",
+              "A pie chart shows parts of one whole, so it needs a total and cannot combine unrelated groups. The twenty favourite subjects can be a pie because Biology, Chemistry, Physics and Mathematics make the whole class. Two separate markets of twenty customers each cannot be one pie.",
+              "Scale and labelling can mislead the eye. A shortened vertical axis can double the apparent gap between frequencies 5 and 8. A pie with a missing slice does not sum to 360 degrees, which is the fastest check.",
+              "Unequal class widths add one more trap, because height no longer equals frequency and area must stand for frequency. A question mixing widths of 10 and 20 must be marked by area. Noticing unequal widths is part of reading a histogram."
+            ],
+            "bullets": [
+              "Bar charts compare labelled categories with gaps between bars.",
+              "Histograms show continuous shape with touching bars over intervals.",
+              "Pie charts need one whole whose angles sum to 360 degrees."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: From cumulative frequency to percentiles",
+            "paragraphs": [
+              "Cumulative frequency turns the grouped table into at most counts. For frequencies 2, 6, 9 and 3 the running totals are 2, 8, 17 and 20, so eight pupils scored at most 19. The final total 20 must match the number of pupils.",
+              "A percentile is a cumulative-frequency reading at p times total divided by 100. For twenty pupils the median is read at cumulative frequency 10, in class 20–29 because totals run from 8 to 17. The lower quartile is read at cumulative frequency 5, in class 10–19.",
+              "The ogive draws those readings without a table. Plot 2 at 9.5, 8 at 19.5, 17 at 29.5 and 20 at 39.5, then join them smoothly. Move across from cumulative frequency 10 and down to the marks axis for the median.",
+              "That method also gives a proportion below any mark. Mark 19.5 has cumulative frequency 8, so 40 percent scored at most 19. Mark 29.5 has cumulative frequency 17, so 85 percent scored at most 29.",
+              "The common error is plotting frequencies 2, 6, 9 and 3 instead of totals 2, 8, 17 and 20. The histogram belongs to frequencies and the ogive to cumulative totals. Listing both columns before drawing prevents the swap."
+            ],
+            "bullets": [
+              "Percentile p is read at cumulative frequency p times total divided by 100.",
+              "Median for twenty pupils is at cumulative frequency 10 in class 20–29.",
+              "Frequencies draw the histogram; cumulative totals draw the ogive."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "measures-of-location",
+      "topic": "measures-of-location",
+      "title": "Measures of Location",
+      "objective": "Compute mean, mode and median of ungrouped and simple grouped data and read cumulative frequency from an ogive.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Measures of Location",
+            "paragraphs": [
+              "A teacher in Enugu has twenty Mathematics marks grouped as 0–9, 10–19, 20–29 and 30–39. A single number must describe where the class sits, so location measures summarise the centre."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The mean from ungrouped and grouped data",
+            "paragraphs": [
+              "A teacher in Enugu wants one mark that would be fair if all twenty pupils shared the total mark equally. That fair share is the mean.",
+              "For ungrouped data the mean is Σx ÷ n, where Σx is the sum of all values and n is their count. Marks 4, 6, 8 and 10 give Σx = 28 and n = 4, so the mean is 7.",
+              "Grouped data replaces each class by its class mark, the midpoint of the interval. Class 10–19 has mark (10 + 19) ÷ 2 = 14.5, and for frequencies 3, 7, 6, 4 the products fm 13.5, 101.5, 147, 138 give Σfm = 400 and Σf = 20, so the mean is 20."
+            ],
+            "bullets": [
+              "The ungrouped mean is Σx divided by n.",
+              "The grouped mean is Σfm divided by Σf using class marks.",
+              "A class mark is the midpoint of its class interval."
+            ],
+            "takeaway": "The mean shares the total equally; grouped means use class marks.",
+            "check": {
+              "question": "What is the mean of 4, 6, 8 and 10?",
+              "options": [
+                "6",
+                "7",
+                "8",
+                "9"
+              ],
+              "answer": 1,
+              "why": "Σx = 28 and n = 4, so mean = 28 ÷ 4 = 7."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Mode and median for ungrouped data",
+            "paragraphs": [
+              "Nine pupils in a Lagos class scored 9, 5, 12, 5, 20, 4, 10, 5, 7. The teacher wants the most common score and the score in the middle when ordered.",
+              "The mode is the value that occurs most often. Here 5 occurs three times and every other mark occurs once, so the mode is 5. In grouped data we cannot name an exact mode, only the modal class with the largest frequency, which is 10–19 with frequency 7.",
+              "To find the median, order the values: 4, 5, 5, 5, 7, 9, 10, 12, 20. With n = 9 the median position is (n + 1) ÷ 2 = 5th, and the fifth value is 7."
+            ],
+            "bullets": [
+              "Mode is the most frequent value in the data.",
+              "The modal class has the largest frequency in grouped data.",
+              "The median is at position (n + 1) ÷ 2 after ordering."
+            ],
+            "takeaway": "Mode is most frequent; median is middle after ordering.",
+            "check": {
+              "question": "Nine ordered values have n = 9. Where is the median?",
+              "options": [
+                "4th value",
+                "5th value",
+                "6th value",
+                "9th value"
+              ],
+              "answer": 1,
+              "why": "Median position is (9 + 1) ÷ 2 = 5th, and the fifth ordered value is 7."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Cumulative frequency and the ogive",
+            "paragraphs": [
+              "A principal in Kano asks how many of the twenty pupils scored at most 19 without counting again. The cumulative-frequency table answers in one look.",
+              "Cumulative frequency is a running total. Adding frequencies 3, 7, 6, 4 gives 3, 10, 16, 20 for classes 0–9, 10–19, 20–29, 30–39, so 10 pupils scored at most 19. The ogive plots these totals against the upper boundaries 9.5, 19.5, 29.5, 39.5.",
+              "Percentile p is read at cumulative frequency p × n ÷ 100: go across to the curve, then down to the marks axis. For n = 20 the median at cf 10 reads about 20, the lower quartile at cf 5 reads about 13 and the upper quartile at cf 15 reads about 28."
+            ],
+            "bullets": [
+              "Cumulative frequency shows how many values are at most a bound.",
+              "An ogive plots cumulative frequency against upper class boundaries.",
+              "Percentile p is read at cumulative frequency p × n ÷ 100."
+            ],
+            "takeaway": "Cumulative totals build the ogive; read percentiles by cumulative frequency.",
+            "check": {
+              "question": "For the twenty marks, how many scored at most 19?",
+              "options": [
+                "3",
+                "7",
+                "10",
+                "16"
+              ],
+              "answer": 2,
+              "why": "Cumulative frequency to 19.5 is 3 + 7 = 10."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Before a grouped mean, write the class marks and fm columns first. Before an ogive reading, find the cumulative frequency for the required percentile. Those two totals prevent most JAMB errors."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "For the 20 marks in classes 0–9 (f = 3), 10–19 (f = 7), 20–29 (f = 6), 30–39 (f = 4), estimate the mean.",
+            "steps": [
+              {
+                "operation": "Write class marks",
+                "reason": "Each class needs its midpoint",
+                "result": "4.5, 14.5, 24.5, 34.5",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Multiply f by mark",
+                "reason": "fm totals each class",
+                "result": "13.5, 101.5, 147, 138; Σfm = 400, Σf = 20",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Divide Σfm by Σf",
+                "reason": "Mean shares total equally",
+                "result": "400 ÷ 20 = 20",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Using cumulative frequencies 3, 10, 16, 20 for the 20 marks, estimate the median from the ogive.",
+            "hints": [
+              "Median position is n ÷ 2 on the cumulative axis.",
+              "Move across from that position to the ogive curve.",
+              "Move down to the marks axis and read the value."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why the mean follows the total",
+            "paragraphs": [
+              "The mean uses every value because it is total divided by count. In the nine-mark list 4, 5, 5, 5, 7, 9, 10, 12, 20 the total is 77, so the mean is about 8.6 while the median is 7 and the mode is 5. The single mark 20 lifts the mean without changing the ordered list, and that gap signals a distribution pulled to the right.",
+              "In grouped data the mean is an estimate. A pupil in class 10–19 is treated as scoring exactly 14.5, but the true mark may be 10 or 19. With narrow ten-mark classes the error stays small, while wide classes spread one mark over a larger range, so the estimated mean 20 for the twenty pupils should be close to the true mean.",
+              "Multiplying every mark by two doubles the mean, while adding ten to every mark adds ten to the mean. Total equals mean multiplied by count, so the fastest way to find a missing value is to recover the total first. A question giving mean and count is asking for that total in disguise.",
+              "On a number line the mean is the balance point of the data. Marks below the mean pull left and marks above pull right, and the pulls cancel. A mark far from the centre has a long arm, so it can balance a cluster near the centre."
+            ],
+            "bullets": [
+              "Mean uses every value, so one outlier can pull it from mode and median.",
+              "A grouped mean is an estimate because each class uses its mark.",
+              "Total equals mean times count for finding a missing value."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Quartiles and percentiles from the ogive",
+            "paragraphs": [
+              "A percentile splits ordered data by percentage. The pth percentile has about p percent of values at most it. For twenty marks the 50th percentile is the median at cumulative frequency 10, the 25th is the lower quartile at cf 5 and the 75th is the upper quartile at cf 15, with each position given by p × n ÷ 100 (25 × 20 ÷ 100 = 5).",
+              "The ogive turns that definition into a reading by straight-line interpolation between plotted points. The lower quartile cf 5 lies between cf 3 at 9.5 and cf 10 at 19.5, giving about 13. The upper quartile cf 15 lies between cf 10 and cf 16, giving about 28, and the reading always goes across from the frequency axis, then down to marks.",
+              "The difference between upper and lower quartiles is the interquartile range, about 28 minus 13, which is about 15 marks. That range holds the middle half of the class and ignores both tails. Two classes can share median about 20 yet differ in spread, which is why quartiles add information the median alone cannot give.",
+              "The same reading also gives a proportion below any mark. Mark 19.5 has cumulative frequency 10, so 50 percent scored at most 19. Mark 29.5 has cf 16, so 80 percent scored at most 29, and either direction of the route gives the same answer when the axes are not swapped."
+            ],
+            "bullets": [
+              "Lower quartile is the 25th percentile, median is the 50th, upper is the 75th.",
+              "Positions come from p × n ÷ 100 on the cumulative axis.",
+              "Interquartile range about 15 holds the middle half only."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Drawing and reading a less-than ogive",
+            "paragraphs": [
+              "A less-than ogive plots how many values are at most a boundary. The upper boundaries are 9.5, 19.5, 29.5, 39.5 with cumulative frequencies 3, 10, 16, 20, giving points (9.5, 3), (19.5, 10), (29.5, 16) and (39.5, 20). Join them smoothly from cumulative frequency zero, as plotting class marks on the horizontal axis is the common slip because the ogive answers at most a bound.",
+              "Cumulative frequency must rise and finish at the total 20. A final point other than 20 means a frequency was missed or repeated, while a falling curve means a frequency was subtracted. The curve should also steepen where frequencies are large, as around modal class 10–19 with frequency 7.",
+              "To find a value, move across from the required cumulative frequency to the curve, then down to the marks axis. To find a count below a mark, move up from the mark to the curve, then across to the frequency axis. A more-than ogive instead falls from 20 to zero, so the wording at most or more than decides which route to take.",
+              "Listing 3, 10, 16, 20 beside the upper boundaries before plotting prevents the most damaging error, which is plotting 3, 7, 6, 4. That single cumulative column carries the whole curve, and every percentile reading depends on it."
+            ],
+            "bullets": [
+              "Plot cumulative frequency against upper boundaries, never class marks.",
+              "The curve must end at Σf = 20 and never fall.",
+              "At most uses the less-than route; more than reverses it."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "measures-of-dispersion",
+      "topic": "measures-of-dispersion",
+      "title": "Measures of Dispersion",
+      "objective": "Compute range, mean deviation, variance and standard deviation for ungrouped and simple grouped data.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Measures of Dispersion",
+            "paragraphs": [
+              "Two classes average 10 marks, yet one class is steady and the other swings widely. The mean alone hides that difference, so dispersion measures how far scores spread around the mean."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Range and mean deviation",
+            "paragraphs": [
+              "Ada scores 7, 9, 10, 11, 13; Bello scores 6, 6, 10, 14, 14. Both classes average 10, but Ada clusters near 10 while Bello swings to 6 and 14. Something extra must describe that spread.",
+              "The range is the fastest look: highest minus lowest. For Ada range = 13 − 7 = 6; for Bello range = 14 − 6 = 8. A larger range warns extremes are far apart, though it uses only two scores.",
+              "Mean deviation uses every score. Find each distance from the mean, make it positive, then average: mean deviation = Σ|x − mean| ÷ n. For Ada: (3 + 1 + 0 + 1 + 3) ÷ 5 = 8 ÷ 5 = 1.6."
+            ],
+            "bullets": [
+              "Range = highest − lowest, so Ada's range is 6 and Bello's is 8.",
+              "Mean deviation = Σ|x − mean| ÷ n, so Ada's mean deviation is 1.6.",
+              "A larger range or mean deviation means scores spread farther from the mean."
+            ],
+            "takeaway": "Range uses extremes only; mean deviation averages every distance.",
+            "check": {
+              "question": "For scores 7, 9, 10, 11, 13, what is the mean deviation about the mean?",
+              "options": [
+                "1.0",
+                "1.6",
+                "2.0",
+                "4.0"
+              ],
+              "answer": 1,
+              "why": "Absolute deviations are 3, 1, 0, 1, 3, sum 8, and 8 ÷ 5 = 1.6."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Variance and standard deviation",
+            "paragraphs": [
+              "Ada's five deviations are −3, −1, 0, 1, 3, which add to zero. Averaging signed deviations therefore reports zero even though scores spread widely. Squaring fixes that cancellation.",
+              "Variance squares each deviation, averages the squares, and rewards large misses more. Variance = Σ(x − mean)² ÷ n. For Ada: (9 + 1 + 0 + 1 + 9) ÷ 5 = 20 ÷ 5 = 4.",
+              "Standard deviation is the square root of variance: SD = √variance. It returns to the original units, so Ada's SD = √4 = 2 marks. Bello's variance is 12.8, so Bello's SD is about 3.58, clearly larger."
+            ],
+            "bullets": [
+              "Variance = Σ(x − mean)² ÷ n, so Ada's variance is 4.",
+              "Standard deviation = √variance, so Ada's standard deviation is 2.",
+              "Variance has squared units; standard deviation has the original units."
+            ],
+            "takeaway": "Variance averages squared deviations; standard deviation returns to original units.",
+            "check": {
+              "question": "For scores 7, 9, 10, 11, 13 with mean 10, what is the variance?",
+              "options": [
+                "2",
+                "4",
+                "12.8",
+                "20"
+              ],
+              "answer": 1,
+              "why": "Squared deviations sum to 20, so 20 ÷ 5 = 4."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Grouped data and consistency",
+            "paragraphs": [
+              "Instead of 7, 9, 10, 11, 13, a report groups them into classes 6–8, 9–11, 12–14. The exact scores vanish, so a class mark must stand for the whole class.",
+              "A class mark is the midpoint: (lower + upper) ÷ 2. The marks for 6–8, 9–11, 12–14 are 7, 10, 13, with frequencies 1, 3, 1. The grouped mean is Σfx ÷ Σf = (7 + 30 + 13) ÷ 5 = 10.",
+              "Now weight each squared distance by frequency: variance = Σf(x − mean)² ÷ Σf. Here (1×9 + 3×0 + 1×9) ÷ 5 = 18 ÷ 5 = 3.6, close to the exact 4. The smaller the variance or SD, the more consistent the data."
+            ],
+            "bullets": [
+              "Class mark = (lower + upper) ÷ 2 gives 7, 10, 13.",
+              "Grouped mean = Σfx ÷ Σf; variance = Σf(x − mean)² ÷ Σf.",
+              "The data set with smaller variance or standard deviation is more consistent."
+            ],
+            "takeaway": "Use class marks as x, weight by f, and compare SD for consistency.",
+            "check": {
+              "question": "Classes 6–8, 9–11, 12–14 have marks 7, 10, 13 with frequencies 1, 3, 1. What is the grouped variance?",
+              "options": [
+                "4.0",
+                "3.6",
+                "1.9",
+                "18"
+              ],
+              "answer": 1,
+              "why": "Σf(x − 10)² = 1×9 + 3×0 + 1×9 = 18, and 18 ÷ 5 = 3.6."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Write the mean first, then a deviation column, and divide by Σf for grouped data. Take the square root for SD; signed deviations must sum to zero as a quick check."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Find the range, mean deviation, variance and standard deviation for 7, 9, 10, 11, 13.",
+            "steps": [
+              {
+                "operation": "Find the mean",
+                "reason": "Add all scores and divide by 5, then subtract extremes for range.",
+                "result": "Mean = 50 ÷ 5 = 10; range = 13 − 7 = 6.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Sum the deviations",
+                "reason": "Use |x − 10| for mean deviation and squares for variance.",
+                "result": "|x − 10|: 3, 1, 0, 1, 3 sum 8; squares sum 20.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Divide and root",
+                "reason": "Divide each sum by n = 5; root only for SD.",
+                "result": "MD = 8 ÷ 5 = 1.6; variance = 20 ÷ 5 = 4; SD = √4 = 2.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "For scores 7, 9, 10, 11, 13, find the mean deviation and the standard deviation.",
+            "hints": [
+              "Add the scores to get sum 50, then the mean 10.",
+              "List |x − 10| as 3, 1, 0, 1, 3 and average them for mean deviation.",
+              "Square the same deviations, sum to 20, divide by 5, then root for SD."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why squaring works and what the standard deviation means",
+            "paragraphs": [
+              "Signed deviations always sum to zero, so their average is useless. For Ada: −3 −1 +0 +1 +3 = 0, exactly the same as five identical scores, yet the spread differs. Squaring removes signs without discarding size.",
+              "Squaring also punishes large misses more than small ones. A deviation of 3 contributes 9, while a deviation of 1 contributes only 1, so variance feels extremes strongly. Mean deviation treats them linearly, as 3 versus 1; that difference explains why variance and SD react more to outliers.",
+              "Variance lives in squared units, which cannot be compared with marks. Taking √variance returns the measure to marks, so SD = √4 = 2 marks for Ada. That return is why SD is quoted beside the mean and interpreted as a typical distance.",
+              "For Bello, squared deviations sum to 64, variance is 64 ÷ 5 = 12.8, and SD is about 3.58. The mean is the same 10, but SD 3.58 against Ada's 2 shows Bello's typical distance is larger. A quick check is the sum of deviations: it must be zero before you divide.",
+              "Exam questions often ask for both variance and SD from the same table. Compute Σ(x − mean)² once, divide for variance, then root for SD; never root before dividing. Mean deviation stays unrooted, which is why its 1.6 sits below SD 2 for this data."
+            ],
+            "bullets": [
+              "Signed deviations sum to zero, so squaring is needed before averaging.",
+              "Variance = Σ(x − mean)² ÷ n and SD = √variance keeps original units."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Choosing between range, mean deviation, variance and standard deviation",
+            "paragraphs": [
+              "Range answers the quickest question: how far do extremes stretch? It needs only two scores, so it misleads when one outlier distorts the picture. Ada's range 6 versus Bello's 8 already hints at wider spread, but two scores cannot prove consistency.",
+              "Mean deviation uses every score but counts large and small moves linearly. That makes it calmer than variance when one score is extreme. For Ada the outlier 13 adds only 3 to the sum, so mean deviation stays 1.6 rather than exploding.",
+              "Variance and SD penalise extremes hardest because squaring magnifies them. A single far score can lift variance sharply, which is useful for risk questions but harsh for a single typo. In an exam, match the wording: 'average distance' suggests mean deviation, while 'square root of variance' names SD.",
+              "When the mean is near zero, comparing SDs across different scales misleads. The coefficient of variation, SD divided by the mean, puts spread on a relative scale. For two mark distributions both centred at 10, plain SD comparison is fair, which is why Bello's 3.58 beats Ada's 2.",
+              "JAMB ungrouped and simply grouped items use the mean and divide by n or Σf. That population form matches our totals: 20 ÷ 5 = 4 and 18 ÷ 5 = 3.6 for grouped marks. If a question instead samples a population, it will state a different divisor, so read the stem before dividing."
+            ],
+            "bullets": [
+              "Range uses extremes, mean deviation uses all scores linearly, SD uses squares.",
+              "Smaller SD means more consistent data when means are comparable."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Grouped data, class marks and the shortcut formula",
+            "paragraphs": [
+              "A class like 9–11 hides whether the true scores were 9, 10 or 11. The class mark 10 is therefore a representative, not a true value. Using it pretends every person scored 10, which explains why grouped variance slightly differs from the exact 4.",
+              "First find boundaries only if the question asks about them; JAMB usually asks through marks. Build columns for f, x, fx and f(x − mean)², with Σf = 5 and mean = Σfx ÷ Σf = 10. The f-weighted sum 18 then gives 18 ÷ 5 = 3.6.",
+              "The shortcut avoids subtracting the mean each row. Variance = Σfx² ÷ Σf − mean², because expanding (x − mean)² separates the terms. For our marks: 518 ÷ 5 − 100 = 103.6 − 100 = 3.6, exactly the row-by-row answer.",
+              "Check sizes before trusting the shortcut: Σfx² must exceed mean² × Σf, otherwise a sign error has crept in. Here 518 exceeds 500, leaving a small positive 18 after scaling, which is plausible because marks lie close to 10, while a negative result always signals a slip.",
+              "Interpretation stays the same: smaller grouped variance means the estimated scores cluster tighter. The grouped SD here is √3.6 ≈ 1.90, just below the exact 2, so the class-level story agrees even though the number is an estimate. Quote it as approximate when marks are involved."
+            ],
+            "bullets": [
+              "Class mark = (lower + upper) ÷ 2 represents every value in the class.",
+              "Grouped variance = Σf(x − mean)² ÷ Σf = Σfx² ÷ Σf − mean²."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "permutation-and-combination",
+      "topic": "permutation-and-combination",
+      "title": "Permutation and Combination",
+      "objective": "Solve simple problems involving permutations, combinations, linear and circular arrangements and repeated objects.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Permutation and Combination",
+            "paragraphs": [
+              "Market women in Lagos arrange five fabrics on a stall and choose three from eight for a display. Order matters in one task and not in the other. Permutation and combination count each situation correctly."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Permutations: when order matters",
+            "paragraphs": [
+              "Five books stand on Adebayo's shelf in Zaria. He wants to arrange three of them in a row for a photograph. The order of the three books is the point, so that is a permutation.",
+              "The factorial n! means multiply 1 up to n, so 5! = 5 × 4 × 3 × 2 × 1 = 120. To choose an ordered group of r from n, count n choices for the first place, n − 1 for the next, and so on down to n − r + 1.",
+              "That gives nPr = n!/(n − r)!. For the shelf, 5P3 = 5! / 2! = 120 ÷ 2 = 60 row arrangements. Positions such as first, second and third always signal a permutation."
+            ],
+            "bullets": [
+              "A permutation is an ordered selection from n objects.",
+              "nPr = n!/(n − r)! counts ordered selections of r from n.",
+              "First, second and third positions mean order matters."
+            ],
+            "takeaway": "Use nPr = n!/(n−r)! whenever the positions of the chosen objects matter.",
+            "check": {
+              "question": "Five books are arranged in a row. In how many ways can 3 be chosen and arranged?",
+              "options": [
+                "10",
+                "60",
+                "20",
+                "125"
+              ],
+              "answer": 1,
+              "why": "5P3 = 5 × 4 × 3 = 60 ordered arrangements."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Combinations: when order does not matter",
+            "paragraphs": [
+              "The school in Ibadan needs a class prefect team of three from ten volunteers. A team of Ngozi, Sule and Tobi is the same team as Tobi, Ngozi and Sule. Listing all six orders would count one team six times.",
+              "That situation is an unordered selection, called a combination. Start from the ordered count nPr and divide by the r! orders inside each group. So nCr = nPr ÷ r! = n! / (r!(n − r)!).",
+              "For the prefect team, 10C3 = 10! / (3! × 7!) = 10 × 9 × 8 ÷ 6 = 120. The cancellation leaves 10, 9 and 8, and dividing by 3! = 6 removes the six internal orders. A committee or a team drawn together asks for this count."
+            ],
+            "bullets": [
+              "A combination is an unordered selection from n objects.",
+              "nCr = n!/(r!(n − r)!) counts unordered selections of r from n.",
+              "The discrimination rule is simple: if swapping two members changes nothing, use combinations."
+            ],
+            "takeaway": "Use nCr = n!/(r!(n−r)!) when the order of the chosen objects does not matter.",
+            "check": {
+              "question": "A committee of 3 is chosen from 10 people. How many committees are possible?",
+              "options": [
+                "720",
+                "120",
+                "30",
+                "35"
+              ],
+              "answer": 1,
+              "why": "10C3 = 10 × 9 × 8 ÷ 6 = 120 unordered selections."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Circular seats and repeated objects",
+            "paragraphs": [
+              "Six friends sit round a circular table at a birthday in Enugu. A rotation of the whole table gives the same seating, because no seat is marked start. Fix one person and arrange the other five.",
+              "Fixing one person reduces a circle of n distinct people to (n − 1)! arrangements. For six people, 5! = 120 circular seatings. A straight row would have 6! = 720, which overcounts rotations.",
+              "Letters can repeat, so the plain factorial overcounts. The word MISSISSIPPI has 11 letters with 4 I's, 4 S's and 2 P's. Divide 11! by 4! × 4! × 2! to remove the swaps inside each repeat."
+            ],
+            "bullets": [
+              "Circular arrangements of n distinct people number (n − 1)!.",
+              "With repeats, divide n! by the factorials of each repeat count.",
+              "A stated head of the table or a starting seat restores n! arrangements."
+            ],
+            "takeaway": "Circles use (n − 1)!; repeated objects end with division by repeat factorials.",
+            "check": {
+              "question": "Seven people sit round a table. In how many ways can they be seated?",
+              "options": [
+                "5040",
+                "720",
+                "120",
+                "42"
+              ],
+              "answer": 1,
+              "why": "(7 − 1)! = 6! = 720 circular arrangements."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "In the hall, first ask whether order matters. Positions, ranks and row arrangements are permutations, while committees, teams and choice from a bag are combinations. Round a table, use (n − 1)!; with repeated letters, divide by each repeat factorial."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A code uses 3 letters from the 8 letters A to H, with no letter repeated and order mattering. How many codes are possible?",
+            "steps": [
+              {
+                "operation": "Write the permutation",
+                "reason": "Order matters and no letter repeats, so choose ordered positions.",
+                "result": "8P3 = 8! / 5!.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Multiply the place choices",
+                "reason": "First place 8 choices, then 7, then 6.",
+                "result": "8 × 7 × 6.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Compute the product",
+                "reason": "8 × 7 = 56 and 56 × 6 = 336.",
+                "result": "There are 336 possible codes.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A team of 4 is chosen from 12 players for a relay. How many teams are possible?",
+            "hints": [
+              "Order does not matter, so use nCr.",
+              "Compute 12C4 = 12 × 11 × 10 × 9 ÷ 24.",
+              "The count is 495 teams."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: How factorials build up and cancel",
+            "paragraphs": [
+              "Counting choices place by place explains the factorial. Filling the first of four seats gives four choices, the next three, and so on down to one.",
+              "Multiplying those choices gives 4 × 3 × 2 × 1 = 24 for four distinct seats. Removing one seat leaves 3 × 2 × 1 = 6, which is why each missing place divides the count.",
+              "A permutation stops early when only r of n places are filled. Its product is n × (n − 1) × … × (n − r + 1), with r factors in all. Cancelling the untouched tail is exactly the step n! ÷ (n − r)!.",
+              "That view makes 7P3 = 7 × 6 × 5 = 210 immediate, without writing 7!. It also shows why nPr grows so fast when n and r grow together. One extra place multiplies the count by the number of choices left.",
+              "Exam calculation is therefore a cancellation exercise. Write n! over (n − r)!, cancel the shared tail, then multiply the short remaining product. No large factorial is ever needed."
+            ],
+            "bullets": [
+              "Place-by-place choices multiply into n! and nPr.",
+              "nPr is n! with the untouched tail cancelled.",
+              "Cancel first, then multiply the short product."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Symmetry and Pascal's triangle",
+            "paragraphs": [
+              "Choosing r objects from n is the same as leaving n − r behind. The group chosen and the group left out are counted together, so nCr equals nC(n − r). That symmetry halves the work in an exam.",
+              "For example, 10C3 = 10C7. Computing 10 × 9 × 8 ÷ 6 = 120 is shorter than choosing seven. Always pick the smaller of r and n − r.",
+              "Pascal's triangle builds every combination by adding neighbours. Each entry equals the sum of the two entries above it, as in 10C3 = 9C2 + 9C3 = 36 + 84 = 120. The triangle therefore checks a binomial coefficient without factorials.",
+              "The edge cases are fixed by that construction. Choosing none or all gives one outcome, so nC0 = nCn = 1. Choosing one gives n, because each object forms its own singleton.",
+              "JAMB items often hide the symmetry. A question may ask for the ways to leave two pupils behind, which is the same count as choosing all others. Recognising the smaller group saves the factorial arithmetic."
+            ],
+            "bullets": [
+              "nCr = nC(n − r): choosing and leaving match.",
+              "Each Pascal entry is the sum of its two neighbours.",
+              "nC0 = nCn = 1 and nC1 = n."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Restrictions and repeated letters",
+            "paragraphs": [
+              "A restriction fixes a place before counting the rest. If a particular book stands first on a shelf, arrange the remaining books freely in the other places. The fixed choice multiplies the free count by one.",
+              "Two people sitting together are glued into one block. A block of two plus n − 2 others gives (n − 1) objects, which are arranged in (n − 1)! ways round a line. The pair itself has 2! internal orders, so the total is 2 × (n − 1)!.",
+              "Repeated letters need the same idea: divide by the swaps that change nothing. The word MISSISSIPPI has 11 letters with 4 I's, 4 S's and 2 P's. Its distinct arrangements number 11! / (4! × 4! × 2!) = 34650.",
+              "On a circle, repeats and rotations combine. Fix one distinct landmark, count the circle with (n − 1)!, then divide by the repeat factorials as in a line. Marking a head or a starting seat removes the rotation step.",
+              "The exam signal is the phrase that limits the count. Words such as first, together, identical and round a table each name one of these adjustments. Naming the adjustment before computing prevents the commonest overcount."
+            ],
+            "bullets": [
+              "Fix a required place, then arrange the rest freely.",
+              "Two together: glue the pair, arrange, then order inside.",
+              "Distinct letters: divide by each repeat factorial."
+            ]
+          }
+        }
+      ]
     }
   ]
 }
