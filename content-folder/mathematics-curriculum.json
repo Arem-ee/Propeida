@@ -4,170 +4,177 @@
   "topics": [
     {
       "slug": "number-bases-modular-arithmetic",
-      "name": "Number bases/Modular Arithmetic",
+      "name": "Number Bases",
       "section": "NUMBER AND NUMERATION",
       "order": 1,
-      "description": ""
+      "description": "Place value in bases other than ten, conversion between bases and arithmetic in a different base."
+    },
+    {
+      "slug": "modular-arithmetic",
+      "name": "Modular Arithmetic",
+      "section": "NUMBER AND NUMERATION",
+      "order": 2,
+      "description": "Remainders modulo a number, arithmetic on remainders and linear congruences."
     },
     {
       "slug": "fractions-decimals-approximations",
       "name": "Fractions, Decimals, Approximations and Percentages",
       "section": "NUMBER AND NUMERATION",
-      "order": 2,
+      "order": 3,
       "description": ""
     },
     {
       "slug": "surds",
       "name": "Surds",
       "section": "NUMBER AND NUMERATION",
-      "order": 3,
+      "order": 4,
       "description": "Simplify, rationalise, and compare irrational roots."
     },
     {
       "slug": "indices",
       "name": "Indices",
       "section": "NUMBER AND NUMERATION",
-      "order": 4,
+      "order": 5,
       "description": "Laws of powers for simplification and exponential equations."
     },
     {
       "slug": "sets",
       "name": "Sets",
       "section": "NUMBER AND NUMERATION",
-      "order": 5,
+      "order": 6,
       "description": ""
     },
     {
       "slug": "quadratic-equations",
       "name": "Quadratic Equations",
       "section": "ALGEBRA",
-      "order": 6,
+      "order": 7,
       "description": "Factorize, complete, and formula your way out."
     },
     {
       "slug": "variation",
       "name": "Variation",
       "section": "ALGEBRA",
-      "order": 7,
+      "order": 8,
       "description": ""
     },
     {
       "slug": "inequalities",
       "name": "Inequalities",
       "section": "ALGEBRA",
-      "order": 8,
+      "order": 9,
       "description": ""
     },
     {
       "slug": "progression",
       "name": "Progression",
       "section": "ALGEBRA",
-      "order": 9,
+      "order": 10,
       "description": ""
     },
     {
       "slug": "binary-operations",
       "name": "Binary Operations",
       "section": "ALGEBRA",
-      "order": 10,
+      "order": 11,
       "description": ""
     },
     {
       "slug": "matrices-and-determinants",
       "name": "Matrices and Determinants",
       "section": "ALGEBRA",
-      "order": 11,
+      "order": 12,
       "description": ""
     },
     {
       "slug": "euclidean-geometry",
       "name": "Euclidean Geometry",
       "section": "GEOMETRY AND TRIGONOMETRY",
-      "order": 12,
+      "order": 13,
       "description": ""
     },
     {
       "slug": "mensuration",
       "name": "Mensuration",
       "section": "GEOMETRY AND TRIGONOMETRY",
-      "order": 13,
+      "order": 14,
       "description": ""
     },
     {
       "slug": "loci",
       "name": "Loci",
       "section": "GEOMETRY AND TRIGONOMETRY",
-      "order": 14,
+      "order": 15,
       "description": ""
     },
     {
       "slug": "coordinate-geometry",
       "name": "Coordinate Geometry",
       "section": "GEOMETRY AND TRIGONOMETRY",
-      "order": 15,
+      "order": 16,
       "description": ""
     },
     {
       "slug": "trigonometry",
       "name": "Trigonometry",
       "section": "GEOMETRY AND TRIGONOMETRY",
-      "order": 16,
+      "order": 17,
       "description": "Ratios, triangles, and angles that behave."
     },
     {
       "slug": "differentiation",
       "name": "Differentiation",
       "section": "CALCULUS",
-      "order": 17,
+      "order": 18,
       "description": ""
     },
     {
       "slug": "application-of-differentiation",
       "name": "Application of differentiation",
       "section": "CALCULUS",
-      "order": 18,
+      "order": 19,
       "description": ""
     },
     {
       "slug": "integration",
       "name": "Integration",
       "section": "CALCULUS",
-      "order": 19,
+      "order": 20,
       "description": ""
     },
     {
       "slug": "representation-of-data",
       "name": "Representation of data",
       "section": "STATISTICS",
-      "order": 20,
+      "order": 21,
       "description": ""
     },
     {
       "slug": "measures-of-location",
       "name": "Measures of Location",
       "section": "STATISTICS",
-      "order": 21,
+      "order": 22,
       "description": ""
     },
     {
       "slug": "measures-of-dispersion",
       "name": "Measures of Dispersion",
       "section": "STATISTICS",
-      "order": 22,
+      "order": 23,
       "description": ""
     },
     {
       "slug": "permutation-and-combination",
       "name": "Permutation and Combination",
       "section": "STATISTICS",
-      "order": 23,
+      "order": 24,
       "description": ""
     },
     {
       "slug": "probability",
       "name": "Probability",
       "section": "STATISTICS",
-      "order": 24,
+      "order": 25,
       "description": "Chance, quantified — with and without replacement."
     }
   ],
@@ -1101,6 +1108,416 @@
               "The first draw is 4 out of 10.",
               "After one green leaves, 3 green remain out of 9.",
               "Multiply the two fractions and simplify."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "number-bases",
+      "topic": "number-bases-modular-arithmetic",
+      "title": "Number Bases",
+      "objective": "Convert numbers between decimal and other bases and add numbers written in a different base.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Number Bases",
+            "paragraphs": [
+              "A shop in Jos prices a bag at 34 in base five. A candidate who reads it as thirty-four loses the mark. The base is the place value system, not the number itself."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "What a base is",
+            "paragraphs": [
+              "A base is the number of symbols a system uses. In base ten the symbols are 0 to 9 and each place is ten times the one to its right. In base five the symbols are 0 to 4 and each place is five times the one to its right.",
+              "A digit must therefore be smaller than the base. The digit 5 cannot appear in base five because the system has only 0 to 4. That test alone rejects a distractor without any calculation.",
+              "The rightmost place is ones, the next is base, the next is base squared. A three-digit base-five number 243 is therefore 2×25 + 4×5 + 3 = 73 in decimal. The position, not the shape of the digit, decides the value."
+            ],
+            "bullets": [
+              "In base b, each place is b times the one to its right",
+              "Digits must be smaller than the base",
+              "Place values are 1, b, b² and so on"
+            ],
+            "takeaway": "A digit must be smaller than the base, and place values are powers of it.",
+            "check": {
+              "question": "Which number cannot be written in base five?",
+              "options": [
+                "243",
+                "354",
+                "132",
+                "204"
+              ],
+              "answer": 1,
+              "why": "5 is not a base-five digit, so 354 cannot be a base-five number."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Converting between bases",
+            "paragraphs": [
+              "To convert from base b to decimal, expand by place value. In base three, 210 is 2×9 + 1×3 + 0 = 21. In base two, 1011 is 8 + 0 + 2 + 1 = 11. The expansion is the method.",
+              "To convert from decimal to base b, divide repeatedly by b and read the remainders upward. To write 25 in base five: 25 ÷ 5 = 5 remainder 0, 5 ÷ 5 = 1 remainder 0, 1 ÷ 5 = 0 remainder 1, so 25 is 100 in base five. The remainders, read upward, are the digits.",
+              "To convert directly between two non-decimal bases, pass through decimal. A number in base three is first expanded to decimal and then divided into base five. A direct shortcut does not exist, which is why the pass is the method."
+            ],
+            "bullets": [
+              "Base b to decimal: expand by powers of b",
+              "Decimal to base b: divide by b, read remainders upward",
+              "Between two non-decimal bases: pass through decimal"
+            ],
+            "takeaway": "Expand to decimal from any base, then divide to a new base.",
+            "check": {
+              "question": "What is 210 in base three in decimal?",
+              "options": [
+                "7",
+                "11",
+                "21",
+                "29"
+              ],
+              "answer": 2,
+              "why": "2×9 + 1×3 + 0 = 21, so 210 in base three is 21 in decimal."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Adding and subtracting in another base",
+            "paragraphs": [
+              "Addition in base b works like decimal addition except that the carrying threshold is b. In base five, 3 + 3 = 11 because 6 is one five and one unit. The carry is therefore smaller than in decimal.",
+              "Subtraction needs borrowing in the same way. In base four, 31 − 12 needs one four borrowed as four units. The method is identical to decimal, only the threshold and the borrow amount change.",
+              "Multiplication by a single digit also follows the threshold. In base five, 4 × 4 = 31 because 16 is three fives and one unit. A table of products up to base minus one is therefore enough."
+            ],
+            "bullets": [
+              "Carry at b, not at ten",
+              "Borrow b units, not ten",
+              "Single-digit products use the same threshold"
+            ],
+            "takeaway": "Do the arithmetic in the base, carrying and borrowing at b.",
+            "check": {
+              "question": "What is 33 + 24 in base five?",
+              "options": [
+                "112",
+                "122",
+                "212",
+                "57"
+              ],
+              "answer": 1,
+              "why": "3 + 4 = 12 in base five, so the result is 122; 57 is the decimal sum, not the base-five sum."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Before any conversion, test the digits. A digit equal to or greater than the base cannot occur, so it rejects a distractor at once. Then expand or divide; never convert between two non-decimal bases directly."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Convert 132 in base four to base five.",
+            "steps": [
+              {
+                "operation": "Verify the digits",
+                "reason": "Each digit must be smaller than four",
+                "result": "1, 3 and 2 are valid, so 132 is a base-four number",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Expand to decimal",
+                "reason": "Place values in base four are 16, 4 and 1",
+                "result": "1×16 + 3×4 + 2 = 30 in decimal",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Divide 30 by five",
+                "reason": "Base five needs remainders on division by five",
+                "result": "30 ÷ 5 = 6 r 0; 6 ÷ 5 = 1 r 1; 1 ÷ 5 = 0 r 1",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Read remainders upward",
+                "reason": "The last remainder is the most significant digit",
+                "result": "110 in base five",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why base ten is a habit, not a law",
+            "paragraphs": [
+              "Base ten is used because humans have ten fingers. It is a habit of counting, not a property of numbers. A number written in base five is the same quantity as a number written in decimal, only the place values differ.",
+              "That is why a bag priced at 34 in base five is not thirty-four in the price. The digits are the same, but the place values are 25, 5 and 1 rather than 100, 10 and 1. The base must therefore be read before the number.",
+              "Examiners test that habit directly. A question that asks for a base-five sum in decimal is testing whether the candidate converts, not whether the candidate can add. The conversion is the skill.",
+              "Examiners test that habit directly. A question that asks for a base-five sum in decimal is testing whether the candidate converts, not whether the candidate can add.",
+              "That is why a bag priced at 34 in base five is not thirty-four in the price. The digits are the same, but the place values are 25, 5 and 1 rather than 100, 10 and 1."
+            ],
+            "bullets": [
+              "Base ten is a habit from ten fingers",
+              "The same digits in different bases are different quantities",
+              "The base must be read before the number"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Base two and the computer",
+            "paragraphs": [
+              "Base two uses only 0 and 1 because a circuit can be on or off. Each place is a power of two, so a byte of eight bits can represent 256 values. That economy is why computers count in binary.",
+              "A binary number such as 1011 is therefore 8 + 0 + 2 + 1 = 11. The expansion is the same as in any base, only the place values are powers of two. The method does not change with the base.",
+              "A hexadecimal digit therefore packs four binary digits. That packing is why one hexadecimal digit can stand for a whole byte, which is how addresses are written in fewer symbols.",
+              "A hexadecimal digit therefore packs four binary digits. That packing is why one hexadecimal digit can stand for a whole byte, which is how addresses are written in fewer symbols.",
+              "A binary number such as 1011 is therefore 8 + 0 + 2 + 1 = 11. The expansion is the same as in any base, only the place values are powers of two."
+            ],
+            "bullets": [
+              "Base two uses 0 and 1 for on and off",
+              "Place values are powers of two",
+              "One hexadecimal digit packs four binary digits"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: The trap in a base question",
+            "paragraphs": [
+              "The trap is a digit that is valid in decimal but invalid in the base. A candidate who does not test the digits will add 5 in base five and get a sum that cannot be written. That test is therefore the first step.",
+              "The second trap is a decimal sum that looks like a base sum. In base five, 33 plus 24 is 122, while in decimal it is 57. A candidate who adds in decimal and writes 57 has answered a different question.",
+              "Time must be budgeted as in comprehension. A conversion that resists can be left and returned to. A test that is finished is worth more than a perfect answer to three items.",
+              "That budget is why a first sweep is useful. The easy conversions can be answered at once, and the hard ones can be left until the base is clear.",
+              "That budget is why a first sweep is useful. The easy conversions can be answered at once, and the hard ones can be left until the base is clear."
+            ],
+            "bullets": [
+              "Test the digits before any calculation",
+              "A decimal sum is not a base sum",
+              "Do an easy-first sweep and return to hard items"
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Convert 24 in base six to base four. Show the decimal value first, then the division.",
+            "hints": [
+              "Expand 24 in base six by powers of six",
+              "Divide that decimal value by four repeatedly",
+              "Read the remainders upward"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "modular-arithmetic",
+      "topic": "modular-arithmetic",
+      "title": "Modular Arithmetic",
+      "objective": "Use remainders modulo a number to solve congruences and to test divisibility without long division.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Modular Arithmetic",
+            "paragraphs": [
+              "A trader shares 17 yams equally among 5 customers. One yam is left over. That remainder is a modular statement, not a division."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Remainders and the meaning of modulo",
+            "paragraphs": [
+              "For a positive integer m, the remainder of a on division by m is the number left after subtracting the largest multiple of m that fits. That remainder lies between 0 and m − 1. It is written a mod m.",
+              "Two numbers are congruent modulo m when they leave the same remainder. That is written a ≡ b (mod m) and means m divides a − b. In mod five, 17 ≡ 2 and 12 ≡ 2, so 17 ≡ 12.",
+              "A remainder is therefore a class, not a single number. All numbers congruent to 2 mod five form one class, which contains 2, 7, 12, 17 and so on. The class is the object of study."
+            ],
+            "bullets": [
+              "a mod m is the remainder between 0 and m − 1",
+              "a ≡ b (mod m) means m divides a − b",
+              "A congruence class is all numbers with that remainder"
+            ],
+            "takeaway": "Modulo keeps only the remainder, so numbers with the same remainder are congruent.",
+            "check": {
+              "question": "What is 38 mod 7?",
+              "options": [
+                "3",
+                "4",
+                "5",
+                "10"
+              ],
+              "answer": 1,
+              "why": "35 is the largest multiple of 7 below 38, so the remainder is 3."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Arithmetic on remainders",
+            "paragraphs": [
+              "Remainders add and multiply without leaving the modulus. To find (a + b) mod m, add a mod m and b mod m and reduce again. To find (a × b) mod m, multiply the remainders and reduce again.",
+              "Powers therefore reduce at each step. To find 7^3 mod 5, note 7 ≡ 2, so 7^3 ≡ 2^3 = 8 ≡ 3. Working with remainders instead of the whole numbers is why modular arithmetic is short.",
+              "Negatives reduce by adding the modulus. In mod five, −1 ≡ 4 and −3 ≡ 2. That reduction lets a subtraction be done as an addition, which is often shorter."
+            ],
+            "bullets": [
+              "Add remainders, then reduce; multiply remainders, then reduce",
+              "Reduce powers at each step",
+              "Negatives reduce by adding the modulus"
+            ],
+            "takeaway": "Keep every intermediate as a remainder, not as a whole number.",
+            "check": {
+              "question": "What is 7×8 mod 5?",
+              "options": [
+                "0",
+                "1",
+                "4",
+                "6"
+              ],
+              "answer": 1,
+              "why": "7 ≡ 2 and 8 ≡ 3, so the product is 2×3 = 6 ≡ 1 mod 5."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Solving congruences and divisibility",
+            "paragraphs": [
+              "A linear congruence ax ≡ b (mod m) is solved by undoing the multiplication. If a and m are coprime, a has an inverse modulo m, and x ≡ a⁻¹b (mod m). The inverse is the number that multiplies a to give 1.",
+              "Divisibility is a congruence to zero. A number is divisible by m exactly when it is congruent to 0 mod m. Testing divisibility is therefore testing a remainder, not performing a division.",
+              "A congruence system combines remainders. The Chinese remainder idea is that a number is determined by its remainders modulo pairwise coprime moduli. Those moduli therefore describe the number without naming it."
+            ],
+            "bullets": [
+              "ax ≡ b (mod m) is undone by the inverse of a",
+              "Divisible by m means congruent to 0 mod m",
+              "Remainders modulo coprime moduli determine the number"
+            ],
+            "takeaway": "A congruence is a remainder statement, and an inverse undoes a multiplication.",
+            "check": {
+              "question": "Which number is divisible by 9?",
+              "options": [
+                "1,234",
+                "2,517",
+                "3,681",
+                "4,572"
+              ],
+              "answer": 2,
+              "why": "The digit sum of 3,681 is 18, a multiple of 9, so it is congruent to 0 mod 9."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Reduce every number to its remainder before any operation, and reduce again after it. A product that is never reduced grows too fast to compute, while a product of remainders stays under the modulus throughout."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Find 13^2 mod 7.",
+            "steps": [
+              {
+                "operation": "Reduce the base",
+                "reason": "13 ÷ 7 leaves 6, so 13 ≡ 6 mod 7",
+                "result": "13^2 ≡ 6^2 mod 7",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Square the remainder",
+                "reason": "6^2 = 36 is small enough to reduce directly",
+                "result": "36 mod 7 = 1, because 35 is a multiple of 7",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "State the congruence",
+                "reason": "The square of 13 leaves the same remainder as the square of 6",
+                "result": "13^2 ≡ 1 (mod 7)",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why remainders are enough",
+            "paragraphs": [
+              "A remainder is enough because only the remainder decides divisibility and congruence. Two numbers with the same remainder behave alike in every addition and multiplication, so the whole numbers can be replaced by their remainders.",
+              "That replacement is why a large power can be computed in a few steps. Instead of 13^2, the work is done on 6^2. The answer is the same because the remainders are congruent.",
+              "An examination rewards that shortness. A candidate who reduces early finishes in seconds, while one who multiplies out runs out of time. The remainder is therefore a time skill as well as a concept.",
+              "An examination rewards that shortness. A candidate who reduces early finishes in seconds, while one who multiplies out runs out of time.",
+              "A remainder is enough because only the remainder decides divisibility and congruence. Two numbers with the same remainder behave alike in every addition and multiplication, so the whole numbers can be replaced by their remainders."
+            ],
+            "bullets": [
+              "Only the remainder decides divisibility and congruence",
+              "Remainders replace whole numbers in addition and multiplication",
+              "Reduction saves time in an examination"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Inverses and when they exist",
+            "paragraphs": [
+              "An inverse of a modulo m is a number that multiplies a to give 1. It exists exactly when a and m are coprime, that is, when they share no common factor greater than one. That coprimality is therefore the condition.",
+              "The inverse can be found by trial because m is small in an examination. In mod five, the inverse of two is three because 2×3 = 6 ≡ 1. That trial is a valid method when m is small.",
+              "A linear congruence ax ≡ b (mod m) is then solved by multiplying both sides by that inverse. If a and m are not coprime, there may be no solution or many, which is why the condition matters.",
+              "The inverse can be found by trial because m is small in an examination. In mod five, the inverse of two is three because 2x3 = 6 is congruent to 1.",
+              "A linear congruence ax is congruent to b modulo m is then solved by multiplying both sides by that inverse. If a and m are not coprime, there may be no solution or many, which is why the condition matters."
+            ],
+            "bullets": [
+              "An inverse exists exactly when a and m are coprime",
+              "In mod five, the inverse of two is three",
+              "Non-coprime a may give no solution or many"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Divisibility tests as congruences",
+            "paragraphs": [
+              "A number is divisible by m exactly when it is congruent to 0 mod m. The familiar tests are congruences in disguise. The test for three and nine uses the digit sum because ten is congruent to one modulo three and nine.",
+              "The test for eleven uses alternating digits because ten is congruent to minus one modulo eleven. That alternation is therefore a congruence, not a trick. The test for four uses the last two digits because one hundred is divisible by four.",
+              "A candidate who understands those tests can derive them. A candidate who memorises them can only apply them. The derivation is therefore the deeper skill.",
+              "That derivation is why a new test can be invented in an examination. If a modulus is given, its test can be built from the value of ten modulo that modulus.",
+              "A candidate who understands those tests can derive them. A candidate who memorises them can only apply them. The derivation is therefore the deeper skill."
+            ],
+            "bullets": [
+              "Divisible by m means congruent to 0 mod m",
+              "Tests for 3, 9, 11 and 4 are congruences",
+              "A test can be derived from ten modulo m"
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Find 4^3 mod 9. Reduce the base first, then square or cube the remainder.",
+            "hints": [
+              "Reduce 4 mod 9; it is already less than 9",
+              "Compute 4^2, then multiply by 4 again",
+              "Reduce the final product mod 9"
             ]
           }
         }
