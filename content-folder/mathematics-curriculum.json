@@ -1270,7 +1270,8 @@
               "That is why a bag priced at 34 in base five is not thirty-four in the price. The digits are the same, but the place values are 25, 5 and 1 rather than 100, 10 and 1. The base must therefore be read before the number.",
               "Examiners test that habit directly. A question that asks for a base-five sum in decimal is testing whether the candidate converts, not whether the candidate can add. The conversion is the skill.",
               "Examiners test that habit directly. A question that asks for a base-five sum in decimal is testing whether the candidate converts, not whether the candidate can add.",
-              "That is why a bag priced at 34 in base five is not thirty-four in the price. The digits are the same, but the place values are 25, 5 and 1 rather than 100, 10 and 1."
+              "That is why a bag priced at 34 in base five is not thirty-four in the price. The digits are the same, but the place values are 25, 5 and 1 rather than 100, 10 and 1.",
+              "Base ten is therefore a cultural fact rather than a mathematical law. That distinction is why a number in another base can be mistaken for a decimal one."
             ],
             "bullets": [
               "Base ten is a habit from ten fingers",
@@ -1287,8 +1288,8 @@
               "Base two uses only 0 and 1 because a circuit can be on or off. Each place is a power of two, so a byte of eight bits can represent 256 values. That economy is why computers count in binary.",
               "A binary number such as 1011 is therefore 8 + 0 + 2 + 1 = 11. The expansion is the same as in any base, only the place values are powers of two. The method does not change with the base.",
               "A hexadecimal digit therefore packs four binary digits. That packing is why one hexadecimal digit can stand for a whole byte, which is how addresses are written in fewer symbols.",
-              "A hexadecimal digit therefore packs four binary digits. That packing is why one hexadecimal digit can stand for a whole byte, which is how addresses are written in fewer symbols.",
-              "A binary number such as 1011 is therefore 8 + 0 + 2 + 1 = 11. The expansion is the same as in any base, only the place values are powers of two."
+              "A binary number such as 1011 is therefore 8 + 0 + 2 + 1 = 11. The expansion is the same as in any base, only the place values are powers of two.",
+              "The eight bits of a byte can therefore represent 256 values. That economy is why a byte is the unit of storage."
             ],
             "bullets": [
               "Base two uses 0 and 1 for on and off",
@@ -1306,7 +1307,7 @@
               "The second trap is a decimal sum that looks like a base sum. In base five, 33 plus 24 is 122, while in decimal it is 57. A candidate who adds in decimal and writes 57 has answered a different question.",
               "Time must be budgeted as in comprehension. A conversion that resists can be left and returned to. A test that is finished is worth more than a perfect answer to three items.",
               "That budget is why a first sweep is useful. The easy conversions can be answered at once, and the hard ones can be left until the base is clear.",
-              "That budget is why a first sweep is useful. The easy conversions can be answered at once, and the hard ones can be left until the base is clear."
+              "The trap is therefore the option that is correct in sense but wrong in form. A candidate who reads only for meaning will choose it."
             ],
             "bullets": [
               "Test the digits before any calculation",
@@ -1472,7 +1473,7 @@
               "That replacement is why a large power can be computed in a few steps. Instead of 13^2, the work is done on 6^2. The answer is the same because the remainders are congruent.",
               "An examination rewards that shortness. A candidate who reduces early finishes in seconds, while one who multiplies out runs out of time. The remainder is therefore a time skill as well as a concept.",
               "An examination rewards that shortness. A candidate who reduces early finishes in seconds, while one who multiplies out runs out of time.",
-              "A remainder is enough because only the remainder decides divisibility and congruence. Two numbers with the same remainder behave alike in every addition and multiplication, so the whole numbers can be replaced by their remainders."
+              "That replacement is why a large power can be computed in a few steps. Instead of 13^2, the work is done on 6^2."
             ],
             "bullets": [
               "Only the remainder decides divisibility and congruence",
@@ -1490,7 +1491,8 @@
               "The inverse can be found by trial because m is small in an examination. In mod five, the inverse of two is three because 2×3 = 6 ≡ 1. That trial is a valid method when m is small.",
               "A linear congruence ax ≡ b (mod m) is then solved by multiplying both sides by that inverse. If a and m are not coprime, there may be no solution or many, which is why the condition matters.",
               "The inverse can be found by trial because m is small in an examination. In mod five, the inverse of two is three because 2x3 = 6 is congruent to 1.",
-              "A linear congruence ax is congruent to b modulo m is then solved by multiplying both sides by that inverse. If a and m are not coprime, there may be no solution or many, which is why the condition matters."
+              "A linear congruence ax is congruent to b modulo m is then solved by multiplying both sides by that inverse. If a and m are not coprime, there may be no solution or many, which is why the condition matters.",
+              "The inverse can be found by trial because m is small in an examination. In mod five, the inverse of two is three."
             ],
             "bullets": [
               "An inverse exists exactly when a and m are coprime",
@@ -1508,7 +1510,7 @@
               "The test for eleven uses alternating digits because ten is congruent to minus one modulo eleven. That alternation is therefore a congruence, not a trick. The test for four uses the last two digits because one hundred is divisible by four.",
               "A candidate who understands those tests can derive them. A candidate who memorises them can only apply them. The derivation is therefore the deeper skill.",
               "That derivation is why a new test can be invented in an examination. If a modulus is given, its test can be built from the value of ten modulo that modulus.",
-              "A candidate who understands those tests can derive them. A candidate who memorises them can only apply them. The derivation is therefore the deeper skill."
+              "A candidate who understands those tests can derive them. A candidate who memorises them can only apply them."
             ],
             "bullets": [
               "Divisible by m means congruent to 0 mod m",
@@ -1686,9 +1688,8 @@
               "Reduction then returns the fraction to its smallest parts. A fraction that is not reduced is not wrong, but it is incomplete. Examiners therefore mark the reduced form.",
               "That reduction is why cancelling is valid. A common factor in top and bottom counts the same parts twice, so removing it simplifies the count.",
               "A fraction that is not reduced is not wrong, but it is incomplete. Examiners therefore mark the reduced form.",
-              "A fraction that is not reduced is not wrong, but it is incomplete. Examiners therefore mark the reduced form.",
               "Multiplying top and bottom by the same number does not change a fraction. That equivalence is why 2/3 and 8/12 are the same quantity.",
-              "A fraction that is not reduced is not wrong, but it is incomplete. Examiners therefore mark the reduced form."
+              "A fraction counts parts of a whole. Two fractions can only be added when their parts are the same size, which is what a common denominator provides."
             ],
             "bullets": [
               "Same-sized parts can be added; unlike parts cannot",
@@ -1707,9 +1708,8 @@
               "Cancelling before multiplying saves work. If a top and a bottom share a factor, divide them first. A candidate who cancels early therefore keeps the numbers small.",
               "That cancelling is the same reduction as in addition, only earlier. Examiners reward it because it prevents a large fraction that must then be reduced.",
               "Cancelling before multiplying saves work. If a top and a bottom share a factor, divide them first.",
-              "Cancelling before multiplying saves work. If a top and a bottom share a factor, divide them first.",
               "Division by a fraction means multiplying by its reciprocal. To divide by 2/3, multiply by 3/2.",
-              "Cancelling before multiplying saves work. If a top and a bottom share a factor, divide them first."
+              "Multiplication needs no common denominator. Multiply top by top and bottom by bottom."
             ],
             "bullets": [
               "Multiply top by top and bottom by bottom",
@@ -1728,9 +1728,8 @@
               "An approximation rounds a decimal to a stated place. That rounding must follow the next digit, not the size of the number. A candidate who rounds by guesswork therefore loses the mark.",
               "That rule is why 0.75 rounds to 0.8 to one decimal place. The next digit is five, so the kept digit rises.",
               "Rounding a decimal to a stated place looks at the next digit. If that digit is five or more, the last kept digit rises by one.",
-              "Rounding a decimal to a stated place looks at the next digit. If that digit is five or more, the last kept digit rises by one.",
               "That rule is why 0.75 rounds to 0.8 to one decimal place.",
-              "Rounding a decimal to a stated place looks at the next digit. If that digit is five or more, the last kept digit rises by one."
+              "A recurring decimal does not terminate because its denominator has a prime factor other than two or five. Its repetend therefore repeats forever."
             ],
             "bullets": [
               "Recurring decimals have a repeating repetend",
@@ -1891,8 +1890,7 @@
               "Interest uses the principal for the same reason. The principal is what was borrowed, so the rate is charged on that amount. A rate on any other base would charge the wrong quantity.",
               "That naming is the first step of every percentage question. A candidate who names the base cannot choose the wrong one.",
               "A percentage has no meaning without its base. Fifteen per cent of the cost price is not fifteen per cent of the selling price.",
-              "A percentage has no meaning without its base. Fifteen per cent of the cost price is not fifteen per cent of the selling price.",
-              "A percentage has no meaning without its base. Fifteen per cent of the cost price is not fifteen per cent of the selling price."
+              "Profit and loss therefore use the cost price because that is what the trader invested. A percentage profit that used the selling price would measure a different quantity."
             ],
             "bullets": [
               "Profit is over the cost price; interest is over the principal",
@@ -1911,8 +1909,7 @@
               "A candidate who adds percentage changes therefore loses the mark. The changes must be multiplied as multipliers, which is why order matters.",
               "That multiplication is why a fall after a rise does not restore the start. The base has changed, so the same percentage acts on a different quantity.",
               "A rise of 10 per cent followed by a fall of 10 per cent is not the original, because 1.1 × 0.9 = 0.99. That loss of one per cent is the product, not the sum.",
-              "A rise of 10 per cent followed by a fall of 10 per cent is not the original, because 1.1 × 0.9 = 0.99. That loss of one per cent is the product, not the sum.",
-              "A rise of 10 per cent followed by a fall of 10 per cent is not the original, because 1.1 × 0.9 = 0.99. That loss of one per cent is the product, not the sum."
+              "A percentage increase multiplies by one plus the rate, while a decrease multiplies by one minus the rate. A rise of 20 per cent on 50 is therefore 1.2 × 50."
             ],
             "bullets": [
               "Increase multiplies by one plus the rate",
@@ -1931,8 +1928,7 @@
               "Time must be budgeted as in comprehension. A percentage that resists can be left and returned to. A test that is finished is worth more than a perfect answer to three items.",
               "That budget is why a first sweep is useful. The easy percentages can be answered at once, and the hard ones can be left until the base is clear.",
               "The trap is a percentage that is applied to the new quantity rather than the original. A candidate who computes a profit on the selling price therefore gets a smaller answer.",
-              "The trap is a percentage that is applied to the new quantity rather than the original. A candidate who computes a profit on the selling price therefore gets a smaller answer.",
-              "The trap is a percentage that is applied to the new quantity rather than the original. A candidate who computes a profit on the selling price therefore gets a smaller answer."
+              "The antidote is to write the base in the working. If the base is not named, the wrong one will be used."
             ],
             "bullets": [
               "The trap applies the percentage to the new quantity",
@@ -2092,9 +2088,8 @@
               "A set is equal to another when each is a subset of the other. That mutual inclusion is therefore the test of equality, not a comparison of size.",
               "A proper subset excludes equality. It has fewer elements and every one is in the larger set. That exclusion is why ∅ is a proper subset of every non-empty set.",
               "That definition is why the empty set is the most tested subset. It belongs everywhere without adding anything.",
-              "A set is equal to another when each is a subset of the other. That mutual inclusion is therefore the test of equality, not a comparison of size.",
-              "A set is equal to another when each is a subset of the other. That mutual inclusion is therefore the test of equality, not a comparison of size.",
-              "A set is equal to another when each is a subset of the other. That mutual inclusion is therefore the test of equality, not a comparison of size."
+              "A proper subset excludes equality. It has fewer elements and every one is in the larger set.",
+              "The empty set has no elements and is written as a pair of braces. That emptiness is why it is a subset of every set."
             ],
             "bullets": [
               "A ⊆ B means every element of A is in B",
@@ -2112,9 +2107,8 @@
               "A question about exactly one set therefore names an exclusive region, while a question about at least one set names a union. That naming is the test of the region.",
               "A question about neither set names the part of U outside all circles. That part is the complement of the union, which is why it is counted last.",
               "That order is why a three-set question is solved from the centre. The overlaps are known first, and the exclusive regions follow from them.",
-              "A question about exactly one set therefore names an exclusive region, while a question about at least one set names a union. That naming is the test of the region.",
-              "A question about exactly one set therefore names an exclusive region, while a question about at least one set names a union. That naming is the test of the region.",
-              "A question about exactly one set therefore names an exclusive region, while a question about at least one set names a union. That naming is the test of the region."
+              "Three sets need three overlapping circles. Their overlaps create eight regions when the universal set is counted.",
+              "A question about exactly one set therefore names an exclusive region, while a question about at least one set names a union."
             ],
             "bullets": [
               "Three circles create eight regions including U",
@@ -2133,8 +2127,9 @@
               "Time must be budgeted as in comprehension. A counting question that resists can be left and returned to. A test that is finished is worth more than a perfect answer to three items.",
               "That budget is why a first sweep is useful. The easy counts can be answered at once, and the hard ones can be left until the diagram is clear.",
               "The trap is a number that is given for the union but is used for a set. A candidate who adds the union to a set therefore counts the overlap again.",
-              "The trap is a number that is given for the union but is used for a set. A candidate who adds the union to a set therefore counts the overlap again.",
-              "The trap is a number that is given for the union but is used for a set. A candidate who adds the union to a set therefore counts the overlap again."
+              "The antidote is to draw the Venn circles before any arithmetic. A diagram that shows the overlap will not be counted twice.",
+              "Time must be budgeted as in comprehension and in tests. A counting question that resists can be left and returned to later.",
+              "That budget is why a first sweep is useful."
             ],
             "bullets": [
               "The trap counts the union as a set",
