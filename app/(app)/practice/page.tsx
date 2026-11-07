@@ -1,4 +1,5 @@
 import { createClient } from '@/lib/supabase/server'
+import { getExamScope, filterExamsForScope, examPathLabel, filterSubjectsForScope, filterExamSubjectMapForScope } from '@/lib/exam-scope'
 import Link from 'next/link'
 import PracticeConfig from '@/components/practice/practice-config'
 import { getCampaignStatus } from '@/lib/campaign'
@@ -20,7 +21,7 @@ export default async function PracticePage() {
   ])
 
   const allExams = examsRes.data ?? []
-  const subjects = subjectsRes.data ?? []
+  const rawSubjects = subjectsRes.data ?? []
 
   const examSubjectMap: Record<string, string[]> = {}
   for (const es of examSubjectsRes.data ?? []) {
@@ -30,6 +31,14 @@ export default async function PracticePage() {
   }
 
   const user = userRes.data.user ?? null
+  // Practice defaults to the learner's own path. A Post-UTME learner should
+  // never have to know that JAMB exists before the UI admits it exists.
+  const scope = user ? await getExamScope(supabase, user.id) : null
+  // Standalone verticals (Current Affairs) stay out of JAMB/Post-UTME
+  // pickers in both the visible list and the no-selection default.
+  const subjects = filterSubjectsForScope(rawSubjects, scope)
+  const scopedExamSubjectMap = filterExamSubjectMapForScope(examSubjectMap, rawSubjects, scope)
+
   let activeSession: { id: string; examName: string } | null = null
   let userExamAccessIds: string[] = []
   if (user) {
@@ -46,9 +55,13 @@ export default async function PracticePage() {
   const campaign = user ? await getCampaignStatus() : null
   const campaignAccess = campaign?.hasAccess ?? false
   const examsWithContent = new Set((questionRows.data ?? []).map((q) => q.exam_id))
-  const exams = allExams.filter(
+  const pathExams = scope
+    ? filterExamsForScope(allExams, scope)
+    : allExams
+  const exams = pathExams.filter(
     (e) => examsWithContent.has(e.id) && (campaignAccess || accessSet.has(e.id) || e.school_id === null),
   )
+  const pathLabel = scope ? examPathLabel(scope) : null
 
   return (
     <div className="mx-auto max-w-2xl">
@@ -57,7 +70,7 @@ export default async function PracticePage() {
           Practice
         </h1>
         <p className="mt-1.5 text-[15px] font-semibold text-ink-soft">
-          Targeted questions. Every wrong answer teaches.
+          {pathLabel ? `${pathLabel} · ` : ''}Targeted questions. Every wrong answer teaches.
         </p>
       </div>
 
@@ -65,7 +78,9 @@ export default async function PracticePage() {
         <div className="rounded-3xl border-2 border-dashed border-blue-200 bg-white/70 p-8 text-center">
           <h2 className="font-display text-2xl font-medium text-black">No practice material yet</h2>
           <p className="mx-auto mt-2 max-w-sm text-sm font-semibold text-ink-soft">
-            Question banks are still being checked. Lessons are ready to read meanwhile.
+            {pathLabel
+              ? `Nothing for ${pathLabel} is checked yet. Lessons are ready to read meanwhile.`
+              : 'Question banks are still being checked. Lessons are ready to read meanwhile.'}
           </p>
           <Link
             href="/learn"
@@ -78,7 +93,7 @@ export default async function PracticePage() {
         <PracticeConfig
           exams={exams}
           allSubjects={subjects}
-          examSubjectMap={examSubjectMap}
+          examSubjectMap={scopedExamSubjectMap}
           activeSession={activeSession}
         />
       )}

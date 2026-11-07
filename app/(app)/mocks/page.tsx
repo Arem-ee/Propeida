@@ -1,4 +1,5 @@
 import { createClient } from '@/lib/supabase/server'
+import { getExamScope, filterExamsForScope, examPathLabel, filterSubjectsForScope, filterExamSubjectMapForScope } from '@/lib/exam-scope'
 import MockLauncher from '@/components/mocks/mock-launcher'
 import { getMockDefaults, type MockDefaults } from '@/lib/practice'
 
@@ -14,6 +15,9 @@ export interface MockableExam {
 
 export default async function MocksPage() {
   const supabase = await createClient()
+  const { data: { user } } = await supabase.auth.getUser()
+  const scope = user ? await getExamScope(supabase, user.id) : null
+  const pathLabel = scope ? examPathLabel(scope) : null
 
   const [examsRes, subjectsRes, examSubjectsRes, questionRows] = await Promise.all([
     supabase.from('exams').select('id, name, slug').order('name'),
@@ -23,9 +27,10 @@ export default async function MocksPage() {
   ])
 
   const withContent = new Set((questionRows.data ?? []).map((q) => q.exam_id))
+  const candidateExams = scope ? filterExamsForScope(examsRes.data ?? [], scope) : (examsRes.data ?? [])
 
   const exams: MockableExam[] = []
-  for (const exam of examsRes.data ?? []) {
+  for (const exam of candidateExams) {
     if (!withContent.has(exam.id)) continue
     let defaults: MockDefaults | null = null
     try {
@@ -49,6 +54,12 @@ export default async function MocksPage() {
     examSubjectMap[es.exam_id]!.push(es.subject_id)
   }
 
+  // Standalone verticals (Current Affairs) stay out of JAMB/Post-UTME
+  // pickers in both the visible list and the no-selection default.
+  const rawSubjects = subjectsRes.data ?? []
+  const subjects = filterSubjectsForScope(rawSubjects, scope)
+  const scopedExamSubjectMap = filterExamSubjectMapForScope(examSubjectMap, rawSubjects, scope)
+
   return (
     <div className="mx-auto max-w-2xl">
       <div className="mb-7">
@@ -56,7 +67,7 @@ export default async function MocksPage() {
           Mocks
         </h1>
         <p className="mt-1.5 text-[15px] font-semibold text-ink-soft">
-          The real hall, rehearsed. Timed, no pauses, answers autosave.
+          {pathLabel ? `${pathLabel} · ` : ''}The real hall, rehearsed. Timed, no pauses, answers autosave.
         </p>
       </div>
 
@@ -64,14 +75,16 @@ export default async function MocksPage() {
         <div className="rounded-3xl border-2 border-dashed border-blue-200 bg-white/70 p-8 text-center">
           <h2 className="font-display text-2xl font-medium text-black">No mocks ready yet</h2>
           <p className="mx-auto mt-2 max-w-sm text-sm font-semibold text-ink-soft">
-            Timed mocks open as soon as a full exam bank is checked. Lessons and practice are ready now.
+            {pathLabel
+              ? `Timed mocks for ${pathLabel} open as soon as a full exam bank is checked. Lessons and practice are ready now.`
+              : 'Timed mocks open as soon as a full exam bank is checked. Lessons and practice are ready now.'}
           </p>
         </div>
       ) : (
         <MockLauncher
           exams={exams}
-          allSubjects={subjectsRes.data ?? []}
-          examSubjectMap={examSubjectMap}
+          allSubjects={subjects}
+          examSubjectMap={scopedExamSubjectMap}
         />
       )}
     </div>
