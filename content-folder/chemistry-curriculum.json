@@ -106,6 +106,13 @@
       "section": "ASTRONOMY",
       "order": 15,
       "description": "Solar system, planets, and the composition of the earth."
+    },
+    {
+      "slug": "metals-and-their-compounds",
+      "name": "Metals and Their Compounds",
+      "section": "METALS",
+      "order": 16,
+      "description": "General properties, alkali metals, calcium, aluminium, tin, transition metals, iron, copper and alloys (spine topic split into six lessons)."
     }
   ],
   "lessons": [
@@ -4857,6 +4864,213 @@
               "C in CO₂ is +4; in CO is +2.",
               "Anthracite is dug; coke is manufactured.",
               "Incomplete combustion → CO; complete → CO₂."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "metals-properties-and-extraction",
+      "topic": "metals-and-their-compounds",
+      "title": "Metal Properties and Extraction",
+      "objective": "Specify the general properties of metals, determine the method of extraction suitable for each metal, relate the methods of extraction to the properties of the metals, and compare the chemical reactivities of the metals.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Metal Properties and Extraction",
+            "paragraphs": [
+              "A nail, a wire and a cooking pot are all metal, and all of them conduct, shine and bend. Those shared habits come from one structure — a sea of electrons — and that same structure decides how each metal is dug out of the ground."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The shared habits of metals",
+            "paragraphs": [
+              "Metals share habits because they share a structure: positive metal cores in a sea of free electrons (metallic bonding). The free electrons conduct electricity and heat, reflect light, and let atoms slide past each other, which is why metals are malleable and ductile.",
+              "Most metals are hard, dense and high-melting, but the exceptions are memorable: sodium is soft enough to cut with a knife, mercury is liquid at room temperature, and lead is soft and dense. Properties follow electron looseness: the looser the sea, the softer the metal.",
+              "Chemically, metals lose electrons to form positive ions. Their reactivity follows position: potassium and sodium react fiercely with water, zinc and iron react with acids, and gold and platinum barely react at all."
+            ],
+            "bullets": [
+              "Metallic bonding: free electron sea in a lattice of cations.",
+              "Conductivity, shine, malleability and ductility all come from the sea.",
+              "Reactivity = how readily a metal loses electrons."
+            ],
+            "takeaway": "One electron sea explains the shared habits and the reactivity order.",
+            "check": {
+              "question": "Metals conduct electricity because",
+              "options": [
+                "They contain free electrons moving through the lattice",
+                "Their atoms are packed closely",
+                "They are dense",
+                "They shine"
+              ],
+              "answer": 0,
+              "why": "The free electron sea carries charge through the metal."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The reactivity series and extraction",
+            "paragraphs": [
+              "The reactivity series ranks metals by how eagerly they lose electrons: K, Ca, Na, Mg, Al, Zn, Fe, Sn, Pb, H, Cu, Hg, Ag, Au. Hydrogen sits in the middle as the reference. A metal higher up displaces a lower one from its compounds.",
+              "Extraction follows the series. Reactive metals (K, Na, Al) are won only by electrolysis, because no cheaper reagent can pull their electrons away. Middle metals (Zn, Fe) are won by carbon reduction in a blast furnace. Unreactive metals (Ag, Au) are found free or by simple leaching.",
+              "The rule is economic as much as chemical: the higher the metal, the more expensive its extraction. That is why aluminium was once precious and gold was always found as nuggets."
+            ],
+            "bullets": [
+              "Series: K, Ca, Na, Mg, Al, Zn, Fe, Sn, Pb, H, Cu, Hg, Ag, Au.",
+              "Higher metal displaces a lower one from solution.",
+              "Top metals: electrolysis. Middle: carbon reduction. Bottom: found free."
+            ],
+            "takeaway": "The series predicts both reactivity and the extraction method.",
+            "check": {
+              "question": "Aluminium is extracted by electrolysis because",
+              "options": [
+                "It is cheap to mine",
+                "It is too reactive for carbon reduction",
+                "It melts at a low temperature",
+                "It does not conduct electricity"
+              ],
+              "answer": 1,
+              "why": "Aluminium sits above zinc in the series, so carbon cannot displace it from its oxide."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Displacement and corrosion",
+            "paragraphs": [
+              "Displacement is the series in action: zinc dipped in copper(II) sulfate solution coats itself with copper while zinc ions enter solution. Zn + CuSO₄ → ZnSO₄ + Cu. Iron displaces copper the same way, which is why iron nails can be copper-plated without electricity.",
+              "Corrosion is the reverse journey: iron rusts because it loses electrons to oxygen and water. It is an electrochemical process, and it happens fastest where air and water meet the metal together.",
+              "Protection follows the series: paint and grease block air and water; galvanising coats iron with zinc, which corrodes first sacrificially; tin is only a barrier, and once scratched, iron rusts faster."
+            ],
+            "bullets": [
+              "Zn + CuSO₄ → ZnSO₄ + Cu (displacement).",
+              "Rust is iron losing electrons to oxygen and water.",
+              "Galvanising protects sacrificially; tin only barriers."
+            ],
+            "takeaway": "Higher metals displace lower ones, and corrode before them.",
+            "check": {
+              "question": "An iron nail dipped in copper(II) sulfate solution becomes coated with copper because",
+              "options": [
+                "Copper is more reactive than iron",
+                "Iron is more reactive than copper and displaces it",
+                "The solution is acidic",
+                "The nail is heated"
+              ],
+              "answer": 1,
+              "why": "Iron sits above copper in the series, so it displaces copper ions."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For any displacement or extraction item, first write the metals in series order. The higher one always wins the reaction."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Zinc is dipped in copper(II) sulfate solution. Write the reaction and state whether it is displacement.",
+            "steps": [
+              {
+                "operation": "Place zinc and copper in the series",
+                "reason": "Zinc sits above copper, so zinc is more reactive",
+                "result": "Zn above Cu: displacement will happen",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Write the ionic change",
+                "reason": "Zinc gives electrons, copper ions gain them",
+                "result": "Zn → Zn²⁺ + 2e⁻ and Cu²⁺ + 2e⁻ → Cu",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Write the full equation",
+                "reason": "The ions combine with the sulfate spectator unchanged",
+                "result": "Zn + CuSO₄ → ZnSO₄ + Cu",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Iron is dipped in zinc sulfate solution. Does any reaction happen? Give a reason from the series.",
+            "hints": [
+              "Find iron and zinc positions in the series",
+              "The higher metal displaces the lower — never the reverse",
+              "Iron is below zinc, so nothing happens"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why the electron sea explains everything",
+            "paragraphs": [
+              "The electron sea is the single idea behind metallic properties: conductivity because electrons move, malleability because atoms slide without breaking bonds, shine because the sea reflects light, and thermal conduction because electrons carry heat fast.",
+              "Reactivity is sea looseness measured. Sodium's outer electron is loosely held, so it leaves instantly; gold's electrons are tightly held, so it stays free in nature. The series is a looseness ranking.",
+              "That is why extraction costs track the series: pulling a tight electron away needs electrolysis, pulling a loose one needs only carbon. Economics and chemistry are the same ranking read twice.",
+              "A candidate who holds the sea picture answers property, reactivity and extraction items from one image instead of three lists.",
+              "The same sea explains why alloys are harder than pure metals: foreign atoms break up the sliding planes, so they resist deformation. Steel’s hardness over iron is the sea picture applied.",
+              "A candidate who holds the sea picture answers property, reactivity and extraction items from one image instead of three lists."
+            ],
+            "bullets": [
+              "Conductivity, shine, malleability: one electron sea.",
+              "Reactivity = looseness of the outer electrons.",
+              "Extraction cost tracks the same looseness.",
+              "One picture answers three item families."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Rusting as an electrochemical cell",
+            "paragraphs": [
+              "Rusting needs both oxygen and water: dry iron in oxygen does not rust, and iron in boiled water without air does not rust. The two together make a tiny cell on the iron's surface, with rust forming at the oxygen-rich spots.",
+              "That is why the waterline of a ship rusts fastest — oxygen is plentiful there and the metal is wet. The cell model predicts the pattern exactly.",
+              "Galvanising works because zinc is the better anode: it oxidises instead of iron. Tin on a scratched can does the opposite — tin is less reactive than iron, so once the coating breaks, the iron becomes the anode and rusts faster.",
+              "Painting and greasing are barriers, not sacrifices. They work only while unbroken, which is why scratched paint is worse than no paint at the scratch.",
+              "Stainless steel resists rusting differently: its chromium forms a thin, self-healing chromium oxide film that seals the surface. The protection is a barrier that repairs itself, unlike scratched paint.",
+              "Galvanised roofing therefore outlasts painted iron in the same rain: one barrier heals by sacrifice, the other fails at the first scratch."
+            ],
+            "bullets": [
+              "Rusting needs both oxygen and water.",
+              "The waterline rusts fastest — oxygen-rich and wet.",
+              "Zinc protects sacrificially; tin only barriers.",
+              "Scratched paint is worse than no paint."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in metals",
+            "paragraphs": [
+              "The classic trap is the extraction method. Carbon reduces zinc oxide but not aluminium oxide; any option giving carbon reduction for aluminium or sodium is false. The series decides, not the metal's abundance.",
+              "The second trap is displacement direction. Iron displaces copper; copper never displaces iron. Writing the series from memory before answering prevents reversals.",
+              "The third trap is hydrogen's position. Metals above hydrogen displace it from dilute acids; metals below do not. Copper with dilute HCl gives no reaction, whatever the acid.",
+              "The fourth trap is corrosion protection. Sacrificial protection needs a more reactive metal (zinc); tin on iron only barriers. Once scratched, the tin-coated iron rusts faster than bare iron.",
+              "A final trap is the hydrogen line. Metals above hydrogen react with dilute acids to give hydrogen; metals below — copper, silver, gold — do not react at all. The line is the reference, not the acid strength."
+            ],
+            "bullets": [
+              "Aluminium needs electrolysis; carbon fails above the line.",
+              "Displacement goes one way only: higher displaces lower.",
+              "Metals below hydrogen do not react with dilute acids.",
+              "Zinc protects sacrificially; scratched tin accelerates rust."
             ]
           }
         }
