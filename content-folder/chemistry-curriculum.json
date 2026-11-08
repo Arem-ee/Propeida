@@ -1509,9 +1509,9 @@
         {
           "type": "text",
           "content": {
-            "heading": "Oxidation and redox",
+            "heading": "Oxidation and Reduction (Redox)",
             "paragraphs": [
-              "A piece of hot copper is oxidised by oxygen, then restored by hydrogen. JAMB asks whether such a change is oxidation or reduction. This lesson gives three tests, in oxygen, electrons and oxidation numbers, for deciding correctly."
+              "A cut apple browns in the air, and a rusty nail loses its shine. Both are the same kind of change: gaining oxygen or losing electrons. This lesson gives three ways to spot that change and one number that tracks it."
             ],
             "bullets": []
           }
@@ -1519,19 +1519,21 @@
         {
           "type": "text",
           "content": {
-            "heading": "From oxygen to electrons",
+            "heading": "Three ways to spot the change",
             "paragraphs": [
-              "Hot copper foil turns black in air because 2Cu + O2 → 2CuO forms CuO. Copper has gained oxygen, so it has been oxidised. Hydrogen turns CuO back to copper by removing oxygen as CuO + H2 → Cu + H2O, so reduction removes oxygen with hydrogen.",
-              "Sodium is oxidised as Na → Na⁺ + e⁻ because it loses an electron, while chlorine is reduced as Cl + e⁻ → Cl⁻ because it gains that electron. OIL RIG says oxidation is loss of electrons and reduction is gain of electrons."
+              "In the oxygen sense, oxidation means gaining oxygen: copper heated in air becomes black copper(II) oxide. Reduction is the reverse — removing oxygen, often with hydrogen: hydrogen strips oxygen from copper(II) oxide and leaves copper metal. The brown apple gains oxygen; the nail gains oxygen.",
+              "In the electron sense, oxidation means losing electrons and reduction means gaining them. Sodium becomes Na⁺ by losing one electron, so sodium is oxidised; chlorine becomes Cl⁻ by gaining one, so chlorine is reduced. The memory aid OIL RIG says: oxidation is loss, reduction is gain, of electrons.",
+              "In the oxidation-number sense, oxidation is an increase in oxidation number and reduction is a decrease. All three senses describe the same event; they are three languages for one change."
             ],
             "bullets": [
-              "Oxidation as oxygen gain: 2Cu + O2 → 2CuO, while reduction removes oxygen with H2",
-              "Oxidation as electron loss: Na → Na⁺ + e⁻, while reduction gains electrons: Cl + e⁻ → Cl⁻",
-              "OIL RIG: oxidation is loss of electrons, reduction is gain of electrons"
+              "Oxygen sense: oxidation = gains O; reduction = loses O.",
+              "Electron sense: oxidation = loses e⁻; reduction = gains e⁻.",
+              "OIL RIG: oxidation is loss, reduction is gain.",
+              "Number sense: rise = oxidation, fall = reduction."
             ],
-            "takeaway": "Oxidation gains oxygen or loses electrons; reduction removes oxygen or gains electrons.",
+            "takeaway": "Oxidation and reduction are gain and loss — of oxygen, then of electrons.",
             "check": {
-              "question": "In the reaction 2Cu + O2 → 2CuO, copper is",
+              "question": "In the reaction 2Cu + O₂ → 2CuO, copper is",
               "options": [
                 "reduced because it gains oxygen",
                 "oxidised because it gains oxygen",
@@ -1546,19 +1548,21 @@
         {
           "type": "text",
           "content": {
-            "heading": "Counting oxidation numbers",
+            "heading": "Oxidation numbers as bookkeeping",
             "paragraphs": [
-              "A chemist meets potassium manganate(VII), sulphuric acid and dichromate in the same titration set. Oxidation number is a bookkeeping charge assigned by fixed rules: a free element is 0, a monatomic ion equals its charge, hydrogen is +1 and oxygen is −2, while the sum for a compound is 0. Applying those rules turns each colour change into a charge change that can be compared.",
-              "Manganese in KMnO4 obeys 1 + Mn + 4(−2) = 0, so Mn = +7. Sulphur in H2SO4 obeys 2 + S − 8 = 0, so S = +6. Chromium in Cr2O7²⁻ obeys 2Cr − 14 = −2, so Cr = +6."
+              "An oxidation number is a bookkeeping charge assigned to each atom. Free elements are zero; monatomic ions equal their charge; hydrogen is +1 and oxygen is −2; and the numbers sum to zero in a neutral compound.",
+              "In H₂SO₄: 2(+1) + S + 4(−2) = 0, so S = +6. In KMnO₄: 1 + Mn + 4(−2) = 0, so Mn = +7. In Cr₂O₇²⁻: 2Cr + 7(−2) = −2, so each Cr = +6.",
+              "The change in oxidation number counts electrons moved. Manganese falls from +7 to +2, a fall of 5, so each manganate gains 5 electrons. That count is what balancing uses."
             ],
             "bullets": [
-              "Free element is 0, and a monatomic ion takes its charge",
-              "Hydrogen is +1 and oxygen is −2 in most compounds",
-              "Oxidation numbers sum to 0, or to the ion charge"
+              "Free element = 0; monatomic ion = its charge.",
+              "H is +1; O is −2; sums to zero in compounds.",
+              "Mn in KMnO₄ is +7; S in H₂SO₄ is +6; Cr in Cr₂O₇²⁻ is +6.",
+              "A fall of 5 in oxidation number means 5 electrons gained."
             ],
-            "takeaway": "Oxidation numbers follow fixed rules, so each atom has a charge to track.",
+            "takeaway": "Oxidation numbers are bookkeeping: the change counts the electrons.",
             "check": {
-              "question": "What is the oxidation number of sulphur in H2SO4?",
+              "question": "What is the oxidation number of sulphur in H₂SO₄?",
               "options": [
                 "+2",
                 "+4",
@@ -1573,27 +1577,29 @@
         {
           "type": "text",
           "content": {
-            "heading": "Balancing, naming and agents",
+            "heading": "Balancing, naming and testing",
             "paragraphs": [
-              "Purple potassium manganate(VII) turns pale green with acid and iron(II) salt. Manganese falls from +7 in MnO4⁻ to +2 in Mn²⁺ and gains five electrons, while each iron rises from +2 to +3 and loses one electron. Balanced equation: MnO4⁻ + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H2O, with five electrons transferred.",
-              "Iron at +2 with chloride is iron(II) chloride, while iron at +3 is iron(III) chloride. Potassium manganate(VII) is an oxidising agent: purple MnO4⁻ bleaches to colourless Mn²⁺ when it is reduced. Orange acidified dichromate turns green to Cr³⁺, which also shows an oxidising agent at work."
+              "Half-equations balance atoms and charge together. In MnO₄⁻ + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H₂O, manganese falls 5 (from +7 to +2) and iron rises 1 each, so 5 irons match one manganate. Balancing by oxidation number is counting the fall against the rise.",
+              "Oxidation numbers name compounds: iron(II) chloride has Fe at +2, iron(III) chloride at +3. The Roman numeral is the oxidation number in words, which is why the same metal gives two different names.",
+              "Oxidising agents take electrons: acidified dichromate turns green when reduced. Reducing agents give electrons: hydrogen bleaches hot copper(II) oxide. The agent is named by what it does to the other reactant, not by what happens to itself."
             ],
             "bullets": [
-              "Naming follows the ion charge: FeCl2 is iron(II) chloride and FeCl3 is iron(III) chloride",
-              "Oxidising agent is reduced while it oxidises another species; reducing agent is oxidised",
-              "Tests: purple MnO4⁻ bleaches to colourless Mn²⁺, and orange acidified dichromate turns green to Cr³⁺"
+              "Balance by matching the oxidation-number change.",
+              "Iron(II) = +2; iron(III) = +3 — the numeral names the state.",
+              "Oxidising agent takes electrons; reducing agent gives them.",
+              "Acidified dichromate turns green when reduced."
             ],
-            "takeaway": "Rise in oxidation number is oxidation; a fall is reduction, and agents prove it.",
+            "takeaway": "Count the fall against the rise, and the equation balances itself.",
             "check": {
-              "question": "In MnO4⁻ + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H2O, which species is the oxidising agent?",
+              "question": "In MnO₄⁻ + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H₂O, which species is the oxidising agent?",
               "options": [
-                "MnO4⁻",
+                "MnO₄⁻",
                 "Fe²⁺",
                 "Fe³⁺",
                 "H⁺"
               ],
               "answer": 0,
-              "why": "MnO4⁻ is reduced from +7 to +2, so it oxidises Fe²⁺."
+              "why": "MnO₄⁻ is reduced from +7 to +2, so it oxidises Fe²⁺."
             }
           }
         },
@@ -1602,29 +1608,29 @@
           "content": {
             "title": "Exam tip",
             "tone": "tip",
-            "body": "Look first at oxidation numbers, not at oxygen. If the number rises, call it oxidation even when no oxygen appears; if it falls, call it reduction. Naming iron(II) or iron(III) is then decided by the charge that balances the chloride ions."
+            "body": "When balancing, write the oxidation-number change under each changing atom first. The matching fall and rise tell you the coefficients before you count charge."
           }
         },
         {
           "type": "worked_example",
           "content": {
-            "problem": "What is the oxidation number of sulphur in H2S2O3 (thiosulphuric acid)?",
+            "problem": "What is the oxidation number of sulphur in H₂S₂O₃ (thiosulphuric acid)?",
             "steps": [
               {
                 "operation": "Assign hydrogen and oxygen",
-                "reason": "Hydrogen is +1 and oxygen is −2, so they are known first.",
+                "reason": "Hydrogen is +1 and oxygen is −2 by the rules",
                 "result": "2(+1) + 3(−2) = 2 − 6 = −4 from H and O",
                 "predictPrompt": ""
               },
               {
                 "operation": "Set up the sum",
-                "reason": "Oxidation numbers sum to zero in a neutral acid.",
-                "result": "2 + 2S − 6 = 0 for H2S2O3",
+                "reason": "A neutral compound sums to zero",
+                "result": "2 + 2S − 6 = 0 for H₂S₂O₃",
                 "predictPrompt": ""
               },
               {
                 "operation": "Solve for sulphur",
-                "reason": "Two sulphur atoms share the remaining charge.",
+                "reason": "Two sulphurs share the +4 needed",
                 "result": "2S = +4, so S = +2",
                 "predictPrompt": ""
               }
@@ -1634,27 +1640,31 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "What is the oxidation number of chromium in K2Cr2O7?",
+            "question": "What is the oxidation number of chromium in Cr₂O₇²⁻?",
             "hints": [
-              "Assign potassium +1 and oxygen −2 first",
-              "Set 2(+1) + 2Cr + 7(−2) = 0",
-              "Solve 2Cr = 12 and check the sign"
+              "Oxygen is −2, so 7 oxygens give −14",
+              "The whole ion sums to −2",
+              "Two chromiums share the remainder"
             ]
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Go deeper: Why oxidation number is bookkeeping, not real charge",
+            "heading": "Go deeper: Why oxidation number is bookkeeping",
             "paragraphs": [
-              "Manganese in potassium manganate(VII) carries the formal number +7, but no Mn7+ ion exists in the solution. The +7 is obtained by pretending that every bond is fully ionic and giving both shared electrons to the more electronegative partner. In a real manganese-oxygen bond electrons are shared, so manganese keeps some electron density and its physical charge is far smaller than +7.",
-              "The rule assigns electrons to the atom whose nucleus attracts them more strongly. Oxygen, being more electronegative than carbon, receives all electrons in each carbon-oxygen bond of carbon dioxide. That assignment gives oxygen −2 and carbon +4, even though the molecule is neutral and no C4+ ion is present. The numbers are correct for electron counting, not for describing isolated ions.",
-              "Because the method is a convention, special cases need memorised exceptions. Hydrogen peroxide holds oxygen at −1 rather than −2 because the two oxygen atoms share electrons equally in the oxygen-oxygen bond. Metal hydrides such as sodium hydride place hydrogen at −1 rather than +1 because hydrogen is more electronegative than the metal. Those exceptions do not break the system; they complete it."
+              "Oxidation number is not a real charge on the atom — it is an accounting entry. In NaCl, sodium has truly lost its electron to chlorine, but in CO the numbers +2 and −2 are formal. The bookkeeping still predicts reactions because it tracks electron movement.",
+              "That is why peroxides surprise learners: in H₂O₂ each oxygen is −1, not −2, because they share. The exception only looks like one once the sharing is seen.",
+              "Real charge and formal number agree only for ions. For molecules, the number is a tool for balancing, and the tool works precisely because it is consistent.",
+              "A candidate who treats the number as a real charge will misjudge covalent compounds. A candidate who treats it as bookkeeping will balance anything.",
+              "The bookkeeping is powerful because it is blind to real sharing: it assigns every electron to one atom by fixed rules, so reactions can be balanced without knowing the true electron distribution.",
+              "That blindness is also its limit. Oxidation numbers cannot say where electrons truly sit in a molecule, only how they are counted for equation purposes."
             ],
             "bullets": [
-              "Bookkeeping assigns bonded electrons to the more electronegative atom",
-              "Formal charge in covalent molecules need not equal a real ion charge",
-              "Peroxide oxygen is −1 and hydride hydrogen is −1, not the usual values"
+              "Oxidation number is formal, not a real charge.",
+              "Peroxides: O is −1 because of sharing.",
+              "The number tracks electron movement for balancing.",
+              "Bookkeeping mindset prevents errors in covalent compounds."
             ]
           }
         },
@@ -1663,30 +1673,37 @@
           "content": {
             "heading": "Go deeper: Balancing half-equations step by step",
             "paragraphs": [
-              "Start with the two half-equations written from oxidation numbers. Manganese falls from +7 to +2, so the manganese half-equation must gain electrons: MnO4⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H2O. Iron rises from +2 to +3, so the iron half-equation must lose electrons: Fe²⁺ → Fe³⁺ + e⁻. Both halves already show the correct connectivity.",
-              "Electrons gained must equal electrons lost, so the iron half-equation is multiplied by five. Five iron(II) ions give five iron(III) ions and release five electrons: 5Fe²⁺ → 5Fe³⁺ + 5e⁻. The five electrons on each side now cancel when the halves are added. Adding the halves gives MnO4⁻ + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H2O.",
-              "Check the finished equation for atoms and charge before writing it in an answer. Atoms: one manganese, five iron, eight hydrogen and four oxygen appear on each side. Charge: minus one plus ten plus eight equals plus seventeen on the left, and plus two plus fifteen equals plus seventeen on the right. Any mismatch shows that water, hydrogen ions or electrons have been missed."
+              "The MnO₄⁻ + Fe²⁺ case shows the full method. Manganese falls from +7 to +2, a fall of 5, so each manganate gains 5 electrons. Iron rises from +2 to +3, a rise of 1, so one iron gives 1 electron.",
+              "Balancing the fall against the rise needs 5 irons per manganate — that fixes the 5 coefficient. Oxygen and hydrogen are then balanced with H⁺ and H₂O, and the charge is checked last.",
+              "The charge check is the safety net: left side −1 + 10 + 8 = +17; right side +2 + 15 = +17. Both sides match, so the equation is balanced. A mismatch means an atom count was missed.",
+              "The same ladder works for dichromate reductions and any half-equation the syllabus sets. Fall against rise, then atoms, then charge — in that order, every time.",
+              "In acid solution the needed H⁺ and H₂O are always available; in alkaline solution OH⁻ and H₂O play that role instead. The medium decides which species appears, and the question will name it.",
+              "A candidate who checks charge after every adjustment catches errors at the step where they appear, not at the end of the question."
             ],
             "bullets": [
-              "Gain of electrons is reduction; loss of electrons is oxidation",
-              "Multiply the one-electron iron half-equation by five to match five electrons gained",
-              "Balance oxygen with water, hydrogen with H+, then cancel electrons"
+              "Fall of 5 needs 5 irons rising by 1 each.",
+              "Balance O and H with water and H⁺, check charge last.",
+              "Charge matching is the safety net.",
+              "Order: fall vs rise, atoms, charge."
             ]
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Go deeper: Exam traps in oxidation and agents",
+            "heading": "Go deeper: Exam traps in redox",
             "paragraphs": [
-              "The most common trap confuses oxidation with the oxidising agent. Oxidation is the process in which a species rises in oxidation number, while the oxidising agent is the species that causes that rise and is itself reduced. In the iron reaction, iron(II) is oxidised and manganate(VII) is the oxidising agent because manganese falls from +7 to +2. Naming both at once prevents the reversal.",
-              "A second trap reverses the oxidation number rule. An increase in oxidation number is oxidation, and a decrease is reduction, whether or not oxygen appears. Hydrogen in copper oxide reduction rises from 0 in H2 to +1 in H2O, so hydrogen is oxidised while copper falls from +2 to 0 and is reduced. Checking the direction first settles the label.",
-              "A third trap trusts only the oxygen test and misses electron transfer entirely. Sodium forms sodium chloride with no oxygen present, yet sodium is oxidised as it loses an electron and chlorine is reduced as it gains one. JAMB sets the same pair in different formulae, so the electron and oxidation number tests must be applied beside the oxygen test. That combined habit removes the oxygen-only error."
+              "The classic trap confuses oxidation with the oxidising agent. If copper is oxidised, copper is the reducing agent because it gave the electrons. Naming what a species does to the other reactant is the skill, and the trap reverses it.",
+              "The second trap is the sign of the change. A decrease in oxidation number is reduction, even though the atom 'lost' number; students read the smaller number as oxidation. Fall is reduction, rise is oxidation — the number moves opposite to the name.",
+              "The third trap is the oxygen rule with peroxides. In H₂O₂ the oxygen is −1, and applying −2 gives a wrong sulphur count in thiosulphates. The shared oxygen is the exception that examiners plant.",
+              "The fourth trap is naming. Iron(II) chloride is not iron with two chlorides for fun — the numeral is the oxidation state itself, and swapping II and III swaps the formula.",
+              "A final trap is forgetting that an element in a free state is always zero — even nitrogen in N₂ or oxygen in O₂. Assigning it a charge breaks every balance that follows."
             ],
             "bullets": [
-              "Oxidation is the rise; the oxidising agent is reduced",
-              "Decrease in oxidation number is reduction, even without oxygen",
-              "Reducing agent is oxidised while it reduces another species"
+              "Oxidised species is the reducing agent.",
+              "Fall in number = reduction; rise = oxidation.",
+              "Peroxide oxygen is −1, not −2.",
+              "The Roman numeral is the oxidation state."
             ]
           }
         }
