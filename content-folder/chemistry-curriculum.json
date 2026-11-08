@@ -4238,6 +4238,213 @@
           }
         }
       ]
+    },
+    {
+      "slug": "sulphur-and-sulphur-acids",
+      "topic": "non-metals-and-their-compounds",
+      "title": "Sulphur and Sulphur Acids",
+      "objective": "Identify the allotropes of sulphur and their uses, predict reagents for preparation, properties and uses of SO₂ and H₂S and of H₂SO₄ and H₂SO₃, and determine specific tests for S²⁻, SO₃²⁻, SO₄²⁻ and HS⁻.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Sulphur and Sulphur Acids",
+            "paragraphs": [
+              "The smell of rotten eggs and the yellow crusts around hot springs are both sulphur. This lesson follows sulphur from its allotropes to the acid that built modern industry."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Sulphur and its allotropes",
+            "paragraphs": [
+              "Sulphur occurs as a yellow solid that melts easily and burns with a blue flame to sulfur(IV) oxide. Its allotropes are different arrangements of the same atoms: rhombic sulfur is the common stable form, while plastic sulfur forms when molten sulfur is poured into water and stays soft.",
+              "Sulphur is used in vulcanising rubber (mixing it in to harden and strengthen tyre rubber), in matches, in gunpowder and in fungicides. Allotropy — same element, different arrangements — is why one element has several forms with different properties.",
+              "Sulphur is a non-metal: it does not conduct electricity and forms acidic oxides. Its chemistry centres on two gases and two acids, each with a preparation, properties and test."
+            ],
+            "bullets": [
+              "Sulphur: yellow solid, burns blue; uses in vulcanisation, matches, fungicides.",
+              "Allotropes: rhombic (stable) and plastic (soft) sulfur.",
+              "Sulphur is a non-metal forming acidic oxides."
+            ],
+            "takeaway": "Sulphur's allotropes share the atoms but not the properties.",
+            "check": {
+              "question": "Vulcanising rubber means",
+              "options": [
+                "Heating rubber until it melts",
+                "Mixing sulphur into rubber to harden it",
+                "Dissolving rubber in petrol",
+                "Freezing rubber with a cold pack"
+              ],
+              "answer": 1,
+              "why": "Sulphur cross-links rubber chains, hardening and strengthening them."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Sulfur(IV) oxide and hydrogen sulfide",
+            "paragraphs": [
+              "Sulfur(IV) oxide (SO₂) is made by burning sulphur in air or roasting sulfide ores. It is a colourless acidic gas that dissolves in water to give sulfurous acid, H₂SO₃, and reacts with alkalis to give trioxosulfate(IV) salts.",
+              "Hydrogen sulfide (H₂S) is made from iron(II) sulfide and dilute hydrochloric acid: FeS + 2HCl → FeCl₂ + H₂S. It smells of rotten eggs. As a weak acid it behaves as a reducing agent, and as a precipitating agent it forms insoluble metal sulfides.",
+              "The tests separate them: SO₂ turns acidified dichromate green and bleaches coloured solutions, while H₂S turns lead(II) acetate paper black (PbS). The rotten-egg smell itself is a warning sign, not the test."
+            ],
+            "bullets": [
+              "SO₂: from burning S or roasting ores; acidic oxide; bleaches; dichromate turns green.",
+              "H₂S: FeS + dilute HCl; rotten-egg smell; weak acid and reducer.",
+              "H₂S turns lead acetate paper black (PbS)."
+            ],
+            "takeaway": "SO₂ is the bleaching acid gas; H₂S is the rotten-egg reducer.",
+            "check": {
+              "question": "Hydrogen sulfide turns lead(II) acetate paper",
+              "options": [
+                "White",
+                "Green",
+                "Black",
+                "Yellow"
+              ],
+              "answer": 2,
+              "why": "Lead(II) sulfide (PbS) is black, confirming H₂S."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Trioxosulfate(IV) and tetraoxosulfate(VI) acids",
+            "paragraphs": [
+              "Trioxosulfate(IV) acid (H₂SO₃) is formed when SO₂ dissolves in water, and its salts are the trioxosulfate(IV) salts. Acids turn those salts back into SO₂, which is their distinguishing reaction: effervescence of a choking gas that bleaches.",
+              "Tetraoxosulfate(VI) acid (H₂SO₄) is made industrially by the Contact process: SO₂ is oxidised to SO₃ over V₂O₅, then absorbed to give the acid. It is the king of acids — dilute it behaves as a strong dibasic acid, concentrated it oxidises and dehydrates.",
+              "The tests separate the sulfur anions: SO₃²⁻ gives SO₂ with acids, SO₄²⁻ gives a white precipitate with BaCl₂ (barium sulfate, insoluble in acid), and S²⁻ gives black PbS with lead acetate. Each anion has one reliable witness."
+            ],
+            "bullets": [
+              "H₂SO₃ forms from SO₂ + water; acids liberate SO₂ from its salts.",
+              "H₂SO₄ by Contact process; concentrated = oxidising and dehydrating.",
+              "SO₃²⁻ → SO₂ with acid; SO₄²⁻ → white BaSO₄; S²⁻ → black PbS."
+            ],
+            "takeaway": "Sulphur's acids and salts each carry one unmistakable test.",
+            "check": {
+              "question": "The test for sulfate ions (SO₄²⁻) is",
+              "options": [
+                "Acids give a choking gas that bleaches",
+                "BaCl₂ gives a white precipitate insoluble in dilute acid",
+                "Lead acetate paper turns black",
+                "Limewater turns milky"
+              ],
+              "answer": 1,
+              "why": "Barium sulfate is a white precipitate insoluble in dilute acid — the sulfate test."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For every sulfur anion question, write its witness first — SO₂ gas, white BaSO₄, or black PbS. The witness is the answer, and everything else is decoration."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A solution gives a white precipitate with BaCl₂ that does not dissolve in dilute HCl. Identify the anion.",
+            "steps": [
+              {
+                "operation": "Read the precipitate",
+                "reason": "Barium chloride precipitates sulfate as barium sulfate",
+                "result": "White precipitate = BaSO₄",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Use the acid test",
+                "reason": "BaSO₄ is insoluble in dilute acid, unlike sulfite or carbonate precipitates",
+                "result": "Insoluble in acid confirms sulfate",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Name the anion",
+                "reason": "Only sulfate gives this combination",
+                "result": "The anion is SO₄²⁻",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A salt effervesces with dilute acid giving a gas that bleaches a coloured solution. Name the anion and its parent acid.",
+            "hints": [
+              "The bleaching gas is SO₂",
+              "SO₂ comes from trioxosulfate(IV) salts",
+              "The parent acid is H₂SO₃"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why concentrated sulfuric acid is two reagents",
+            "paragraphs": [
+              "Dilute sulfuric acid is simply a strong dibasic acid: it donates two protons and behaves like any strong acid. Concentrated acid is a different reagent entirely — it oxidises carbon to carbon dioxide and dehydrates sugars to black carbon.",
+              "The oxidising power comes from the sulfate ion itself: hot concentrated acid oxidises copper to copper(II) sulfate while being reduced to SO₂. Dilute acid cannot do this; concentration changes the reagent's nature.",
+              "Dehydration is the removal of water's elements: sugar with concentrated acid chars to carbon, and ethanol dehydrates to ethene. The acid takes H₂O out of the substrate rather than adding to it.",
+              "A candidate who separates the two personalities — dilute acid versus concentrated oxidiser/dehydrator — will never misclassify a reaction of the acid.",
+              "The dehydrating power is why concentrated acid is stored away from organic materials: it will char paper, wood and sugar on contact, extracting water and leaving carbon behind.",
+              "That charring is also a test: concentrated acid blackens sugar instantly, while dilute acid does nothing of the kind. The reagent difference is visible in one drop."
+            ],
+            "bullets": [
+              "Dilute H₂SO₄ = strong dibasic acid only.",
+              "Concentrated = oxidising (Cu → CuSO₄ + SO₂) and dehydrating (sugar → C).",
+              "Concentration changes the reagent's nature.",
+              "Two personalities, two reaction families."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: The Contact process as applied equilibrium",
+            "paragraphs": [
+              "The Contact process oxidises SO₂ to SO₃: 2SO₂ + O₂ ⇌ 2SO₃, exothermic with fewer molecules forward. Moderate temperature, high pressure and a V₂O₅ catalyst maximise the equilibrium yield — the same Le Chatelier logic as the Haber process.",
+              "The SO₃ is then absorbed not directly in water (which would make a mist) but in concentrated sulfuric acid, forming oleum. Diluting oleum gives the acid without the mist problem.",
+              "Sulfuric acid is the largest-volume chemical made anywhere, and its production is a fair measure of a nation's industrial strength. The process is therefore both an equilibrium exercise and an industrial landmark.",
+              "A candidate who connects the Contact process to equilibrium has learned two topics in one: the chemistry of sulfur and the economics of Le Chatelier.",
+              "The catalyst V₂O₅ does not shift the equilibrium; it only reaches it faster. The yield is set by temperature and pressure, exactly as Le Chatelier predicts for an exothermic, molecule-reducing reaction.",
+              "A candidate who reads the Contact process as equilibrium with a catalyst has answered both the sulfur item and the equilibrium item at once."
+            ],
+            "bullets": [
+              "Contact: 2SO₂ + O₂ ⇌ 2SO₃, exothermic, fewer molecules.",
+              "Moderate T, high P, V₂O₅ catalyst.",
+              "Absorbed via oleum to avoid mist.",
+              "Sulfuric acid output measures industrial strength."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in sulfur chemistry",
+            "paragraphs": [
+              "The classic trap is the oxidation states. In SO₂ sulfur is +4, in SO₃ and H₂SO₄ it is +6, and in H₂S it is −2. Writing the state beside every formula removes most sulfur errors.",
+              "The second trap confuses bleaching with the test. SO₂ bleaches as a reducing agent (it removes oxygen); chlorine bleaches as an oxidising agent. The decolourisation looks identical — the mechanism is opposite.",
+              "The third trap is the precipitate's acid solubility. Sulfate's BaSO₄ is insoluble in dilute acid; sulfite's precipitate dissolves with effervescence. Forgetting the acid step collapses the two tests into one.",
+              "The fourth trap is allotrope versus compound. Rhombic and plastic sulfur are elements; SO₂ is a compound. Preparation questions about allotropes are never expected — only their existence and uses.",
+              "A final trap is the sulfur oxidation ceiling. Sulfur(VI) in sulfuric acid is the highest common state; any calculation giving sulfur more than +6 has an arithmetic error, not a new compound."
+            ],
+            "bullets": [
+              "S in SO₂ is +4; in SO₃/H₂SO₄ +6; in H₂S −2.",
+              "SO₂ bleaches by reducing; Cl₂ by oxidising.",
+              "BaSO₄ is acid-insoluble; sulfite precipitate dissolves.",
+              "Allotropes are elements; preparation is not expected."
+            ]
+          }
+        }
+      ]
     }
   ]
 }
