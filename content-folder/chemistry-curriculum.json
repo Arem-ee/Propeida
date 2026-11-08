@@ -887,7 +887,7 @@
           "content": {
             "heading": "Chemical Bonding",
             "paragraphs": [
-              "Chemical bonding explains why atoms join and how the join decides hardness, conductivity and shape. Ionic, covalent, metallic, hydrogen, coordinate and van der Waals interactions each leave a different fingerprint in melting point, conduction and molecular geometry."
+              "A mango seller ties a bunch with a short string: sharing. Another counts out coins and hands them over: giving. Atoms do the same two things with electrons — sharing them or giving them — and everything about compounds comes from choosing between those two acts."
             ],
             "bullets": []
           }
@@ -895,84 +895,87 @@
         {
           "type": "text",
           "content": {
-            "heading": "Electrovalent (ionic) and covalent bonds",
+            "heading": "Giving and sharing electrons",
             "paragraphs": [
-              "A learner melts table salt, and the bulb lights only when the salt is liquid, never as a cold solid. That contrast reveals electrovalent (ionic) bonding, where ions sit in a fixed lattice.",
-              "Electrovalency is electron transfer from metal to non-metal so each atom attains a stable noble-gas octet. Sodium (2,8,1) loses one electron to become Na+ (2,8), and chlorine (2,8,7) gains it to become Cl− (2,8,8). The opposite charges attract strongly, forming NaCl lattice rather than discrete molecules.",
-              "Covalency contrasts with transfer because atoms share electron pairs to complete octets. Oxygen shares two pairs with hydrogen in H2O, and carbon shares four pairs with hydrogen in CH4, giving neutral low-melting molecules."
+              "Electrovalent (ionic) bonding is giving: a metal loses electrons and a non-metal gains them, so both become ions that attract each other. Sodium (2,8,1) gives one electron and chlorine (2,8,7) gains one, forming NaCl. The result is a lattice, like a criss-cross of opposite charges.",
+              "Covalent bonding is sharing: non-metals share electrons so each reaches a full outer shell. Two hydrogen atoms share their electrons to form H₂, and oxygen shares two pairs to form O₂. Water (H₂O) and methane (CH₄) are covalent because all their atoms are non-metals.",
+              "Ionic compounds melt high and conduct when molten or dissolved, because their ions are free to move. Covalent compounds usually melt low and never conduct, because they have no ions to move. Properties therefore announce the bonding."
             ],
             "bullets": [
-              "Ionic bond: transfer of electrons to attain noble-gas octet structure (NaCl)",
-              "Covalent bond: sharing of electron pairs to complete octets (H2O, CH4)",
-              "Ionic compounds have high melting points, dissolve in water and conduct when molten or aqueous"
+              "Ionic = giving electrons (metal + non-metal).",
+              "Covalent = sharing electrons (non-metal + non-metal).",
+              "Ionic: high melting, conducts molten. Covalent: low melting, no conduction.",
+              "Properties announce the bonding."
             ],
-            "takeaway": "Ionic bonds transfer electrons for noble-gas stability; covalent bonds share pairs to complete octets.",
+            "takeaway": "Giving makes ions and crystals; sharing makes molecules; properties tell which.",
             "check": {
-              "question": "Which pair of statements best explains NaCl and CH4?",
+              "question": "Magnesium (2,8,2) and chlorine (2,8,7) react. Which bonding results, and how many of each ion form?",
               "options": [
-                "NaCl is covalent because both atoms share electrons, and CH4 is ionic because carbon transfers electrons",
-                "NaCl is ionic because electrons transfer to complete octets, and CH4 is covalent because electrons are shared",
-                "Both are ionic because both contain polar bonds",
-                "Both are covalent because both contain discrete molecules"
+                "Covalent sharing, MgCl molecules",
+                "Ionic bonding, one Mg²⁺ and two Cl⁻",
+                "Ionic bonding, one Mg⁺ and one Cl⁻",
+                "Covalent sharing, MgCl₂ molecules"
               ],
               "answer": 1,
-              "why": "Transfer gives ionic NaCl and sharing gives covalent CH4, so only the second statement matches."
+              "why": "Magnesium loses two electrons to become Mg²⁺, and two chlorines each gain one to become Cl⁻."
             }
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Metallic, hydrogen, coordinate and van der Waals attractions",
+            "heading": "The special bonds",
             "paragraphs": [
-              "A copper wire bends and carries current, while ice warms and melts beside it. Copper's strength and conductivity come from metallic bonding, not shared pairs. Ice's easy melting comes from weak forces between molecules, not strong O–H covalent bonds.",
-              "Hydrogen bonding attracts H attached to N, O or F in one molecule to N, O or F in another. Water, HF and NH3 therefore boil unusually high. Van der Waals forces are weaker attractions between all molecules, e.g. H2, O2 and Cl2 at low temperature.",
-              "A coordinate (dative) bond shares both electrons from one atom. In [Fe(CN)6]3− and [Fe(CN)6]4−, cyanide donates to iron; in [Cu(NH3)4]2+ and [Ag(NH3)2]+, ammonia donates to copper and silver. The donor is the ligand."
+              "Metallic bonding is giving without keeping: metal atoms drop their outer electrons into a shared sea, and the sea holds the positive cores together. That shared sea is why metals conduct electricity and bend instead of breaking.",
+              "Hydrogen bonding is an extra attraction between molecules, not a bond inside one. Water molecules hydrogen-bond to each other, which is why water boils so high compared with similar small molecules. A coordinate (dative) bond is sharing where both electrons come from one atom, as in [Fe(CN)₆]³⁻ and [Cu(NH₃)₄]²⁺.",
+              "Van der Waals forces are the weakest attractions between molecules, like the faint stickiness of loose pages. They matter only when stronger bonds are absent, which is why they are mentioned as a special weak force."
             ],
             "bullets": [
-              "Metallic bonding: ions in a sea of delocalised electrons, giving conduction",
-              "Hydrogen bonding occurs in water, HF and NH3",
-              "Van der Waals forces are weak, non-directional attractions between neutral molecules"
+              "Metallic = shared electron sea; explains conductivity and malleability.",
+              "Hydrogen bond = extra attraction between molecules (water, HF, NH₃).",
+              "Coordinate bond = sharing where one atom supplies both electrons.",
+              "Van der Waals = weakest force between molecules."
             ],
-            "takeaway": "Metallic, hydrogen, coordinate and van der Waals bonds differ by electron source and strength.",
+            "takeaway": "Metallic seas, hydrogen attractions and dative sharing are the special cases.",
             "check": {
-              "question": "Which set lists complexes containing coordinate bonds?",
+              "question": "In [Cu(NH₃)₄]²⁺, where do the bonding electron pairs come from?",
               "options": [
-                "H2O, HF and NH3 only",
-                "[Fe(CN)6]3−, [Fe(CN)6]4−, [Cu(NH3)4]2+ and [Ag(NH3)2]+",
-                "NaCl, MgCl2 and KBr",
-                "H2, O2 and Cl2"
+                "One comes from Cu and one from NH₃",
+                "Both come from the NH₃ molecules",
+                "Both come from the copper ion",
+                "They are free electrons shared by the sea"
               ],
               "answer": 1,
-              "why": "Cyanide and ammonia donate both electrons to the metal ion, which defines coordinate bonding."
+              "why": "In a coordinate bond one atom supplies both electrons — here NH₃ supplies each pair."
             }
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Shapes of simple molecules and bonding effects",
+            "heading": "Shapes of molecules",
             "paragraphs": [
-              "A learner plots CO2 and water on the same board and finds one straight and one bent. The difference is not the atoms alone but the electron arrangement around the centre. Shape therefore records bonding and repulsion, not just atom count.",
-              "Linear molecules H2, O2, Cl2, HCl and CO2 place atoms at 180°, as in O=C=O. H2O is bent (non-linear) because lone pairs on oxygen repel bonds, closing the angle. CH4 is tetrahedral, while NH3 is trigonal pyramidal due to its lone pair.",
-              "Bonding fixes bulk properties too: in diamond each carbon joins four neighbours in a rigid network. In graphite, strong bonding within layers alternates with weak forces between layers, so layers slide. Hardness and conductivity therefore differ between the two forms."
+              "The shape of a molecule depends on how its atoms arrange around the centre. A linear molecule is a straight line, like CO₂, HCl, H₂, O₂ and Cl₂. A bent (non-linear) molecule folds at the centre, like H₂O, which is why its shape is V-shaped.",
+              "A tetrahedral molecule spreads four atoms to the corners of a pyramid, like CH₄. A trigonal pyramidal molecule spreads three atoms with a lone pair at the apex, like NH₃. The lone pair pushes the three atoms down, giving the pyramid its shape.",
+              "Shape predicts properties: bent water is polar while linear CO₂ is not, and tetrahedral methane is symmetrical and non-polar. A candidate who can picture the shape can predict polarity without memorising it."
             ],
             "bullets": [
-              "Linear: H2, O2, Cl2, HCl, CO2 at 180°",
-              "Bent: H2O non-linear; tetrahedral: CH4; pyramidal: NH3",
-              "Shape follows bonding and lone-pair repulsion around the central atom"
+              "Linear: CO₂, HCl, H₂, O₂, Cl₂ (straight line).",
+              "Bent: H₂O (folds at oxygen).",
+              "Tetrahedral: CH₄ (four corners). Pyramidal: NH₃ (apex up).",
+              "Shape predicts polarity."
             ],
-            "takeaway": "Linear, bent, tetrahedral and pyramidal shapes follow bonding and lone-pair repulsion.",
+            "takeaway": "Counting the arrangement around the centre names the shape.",
             "check": {
-              "question": "Which assignment of shapes is correct?",
+              "question": "Which molecule has a tetrahedral shape?",
               "options": [
-                "CO2 bent, H2O linear, CH4 pyramidal",
-                "CO2 linear, H2O bent, CH4 tetrahedral",
-                "HCl tetrahedral, NH3 linear, O2 bent",
-                "CH4 linear, CO2 tetrahedral, H2O pyramidal"
+                "CO₂",
+                "H₂O",
+                "CH₄",
+                "NH₃"
               ],
-              "answer": 1,
-              "why": "CO2 is linear, H2O is bent, CH4 is tetrahedral and NH3 is trigonal pyramidal."
+              "answer": 2,
+              "why": "Methane spreads its four hydrogen atoms to the corners of a tetrahedron."
             }
           }
         },
@@ -981,30 +984,30 @@
           "content": {
             "title": "Exam tip",
             "tone": "tip",
-            "body": "Count electrons gained and lost before naming the bond: transfer of one or more electrons means ionic, sharing means covalent, and donation of both electrons from one atom means coordinate. That electron count decides the answer faster than memorised compound names."
+            "body": "Decide bonding from the electron counts first: a metal losing electrons means ionic, two non-metals sharing means covalent. The count decides before the name does."
           }
         },
         {
           "type": "worked_example",
           "content": {
-            "problem": "Magnesium is 2,8,2 and chlorine is 2,8,7. Predict the formula and bond type of magnesium chloride.",
+            "problem": "Deduce the bonding in MgCl₂ from the electron counts Mg (2,8,2) and Cl (2,8,7).",
             "steps": [
               {
-                "operation": "Check electron loss and gain",
-                "reason": "Magnesium loses two electrons to reach 2,8; each chlorine gains one to reach 2,8,8",
-                "result": "Mg2+ and 2Cl− are formed",
+                "operation": "Read both configurations",
+                "reason": "Magnesium has 2 outer electrons; chlorine needs 1 to fill its shell",
+                "result": "Mg (2,8,2); Cl (2,8,7)",
                 "predictPrompt": ""
               },
               {
-                "operation": "Balance the charges",
-                "reason": "One Mg2+ charge balances two Cl− charges for neutrality",
-                "result": "Formula is MgCl2",
+                "operation": "Decide giving or sharing",
+                "reason": "A metal always gives; its 2 electrons go to two chlorines",
+                "result": "Ionic: Mg²⁺ and 2 Cl⁻",
                 "predictPrompt": ""
               },
               {
-                "operation": "Name the bond",
-                "reason": "Electrons were transferred from metal to non-metal to attain octet stability",
-                "result": "MgCl2 has ionic (electrovalent) bonding",
+                "operation": "State the formula and property",
+                "reason": "One Mg²⁺ balances two Cl⁻, and ionic solids melt high",
+                "result": "MgCl₂, high melting, conducts molten",
                 "predictPrompt": ""
               }
             ]
@@ -1013,62 +1016,68 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "Calcium (2,8,8,2) reacts with chlorine (2,8,7). Predict the formula and bond type, explaining electrons lost and gained.",
+            "question": "Sodium (2,8,1) reacts with chlorine (2,8,7). Deduce the bonding, the ions formed and the formula.",
             "hints": [
-              "How many electrons must calcium lose to reach 2,8,8?",
-              "How many electrons does each chlorine gain to reach 2,8,8?",
-              "How many chlorine atoms balance calcium's charge?"
+              "Sodium is a metal — what does it do with its one electron?",
+              "Chlorine needs one electron — so one sodium feeds one chlorine",
+              "Write the ions, then drop the charges into the formula"
             ]
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Go deeper: Why ionic solids conduct only when molten or dissolved",
+            "heading": "Go deeper: Why ionic compounds conduct only when molten or dissolved",
             "paragraphs": [
-              "A crystal of sodium chloride contains ions, yet it does not conduct because every ion is locked at a fixed site in the lattice. Current needs moving charge carriers, and a solid lattice offers no free path. The absence of conduction in the solid therefore does not mean the compound lacks ions.",
-              "Melting supplies enough thermal energy to break the lattice order while keeping the ions together as a liquid. Molten sodium chloride then lets Na+ drift to the cathode and Cl− to the anode under voltage. The ions move toward opposite electrodes, complete the circuit and carry charge through the liquid.",
-              "Dissolving in water also separates the lattice because polar water pulls ions apart into mobile hydrated ions. Aqueous sodium chloride conducts for the same reason as the melt, while solid salt still fails. The test in JAMB is therefore about ion mobility, not ion existence: mobility appears only after melting or dissolving."
+              "In solid NaCl, the ions are locked in a rigid lattice and cannot move, so no current flows even though charges are present. Melting or dissolving frees the ions to drift to the electrodes, and conduction begins. Conductivity is therefore about freedom of ions, not the mere presence of charge.",
+              "Covalent compounds never conduct, even molten, because they contain no ions at all — only neutral molecules. Diamond and graphite differ here because graphite has free electrons between its layers, a rare covalent exception.",
+              "A candidate can be tested on the prediction, not the definition: given a new compound's melting point and conductivity, name its bonding. High melting plus conduction when molten means ionic; low melting with no conduction means covalent.",
+              "That prediction skill is exactly what JAMB questions measure. Bonding names, shapes and properties are one chain, and the chain starts at the electron count.",
+              "The same logic runs backwards: when a solution is evaporated, the ions lock back into a lattice and conduction stops. Freedom of ions is switched on and off by state, not by composition.",
+              "JAMB items exploit this directly, asking why solid NaCl fails to conduct while its melt succeeds. The answer is always the locked ions, never the absence of charge."
             ],
             "bullets": [
-              "Solid ionic: ions fixed in lattice, so no conduction",
-              "Molten ionic: lattice breaks, ions move to electrodes, conduction occurs",
-              "Aqueous ionic: water separates ions into mobile hydrated ions",
-              "Melting or dissolving frees ions, so both methods reveal ionic conduction"
+              "Solid ionic: ions locked, no conduction.",
+              "Molten or dissolved: ions free, conduction starts.",
+              "Covalent: no ions at all, so no conduction ever.",
+              "Predict bonding from melting point and conductivity."
             ]
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Go deeper: Hydrogen bonding versus dipole and van der Waals forces",
+            "heading": "Go deeper: Hydrogen bonding versus ordinary dipole forces",
             "paragraphs": [
-              "All three forces are electrostatic attractions, but their sources differ in strength and place. Van der Waals forces come from temporary uneven electron clouds that induce matching poles in neighbours. They act between every molecule, including noble gases and chlorine, because momentary polarisation makes them weak and short range.",
-              "Dipole forces arise when a molecule has a permanent uneven charge distribution, as in hydrogen chloride or water. Opposite ends of neighbouring dipoles attract in fixed orientations, so the attraction is stronger and more directional than van der Waals forces. Yet dipole forces still involve whole molecules rather than a hydrogen attached directly to nitrogen, oxygen or fluorine.",
-              "Hydrogen bonding is the special dipole case where hydrogen is bound to nitrogen, oxygen or fluorine and points toward a lone pair on nitrogen, oxygen or fluorine in another molecule. That geometry makes it much stronger than ordinary dipoles and explains why water, HF and ammonia associate through networks. Breaking that network needs extra heat, so boiling points rise well above expectation from size alone."
+              "Ordinary dipole attraction happens between any polar molecules: the positive end of one is faintly attracted to the negative end of another. Hydrogen bonding is a stronger, special case that needs a hydrogen atom bonded directly to N, O or F.",
+              "That is why water (H₂O) boils at 100 °C while methane (CH₄), of similar size, boils far lower. Each water molecule hydrogen-bonds to its neighbours, and much heat is needed to break those links. HF and NH₃ show the same elevation.",
+              "Van der Waals forces are weaker still and act between all molecules, polar or not. They become noticeable only when hydrogen bonding is absent, which is why small non-polar molecules are gases at room temperature.",
+              "The exam ordering — hydrogen bond strongest, then dipole, then van der Waals weakest — is therefore a ranking of separation distances. Stronger attraction means higher boiling point, and the ranking sorts every comparison question."
             ],
             "bullets": [
-              "Van der Waals: temporary, weak, between all neutral molecules",
-              "Dipole forces: permanent poles attract directionally by alignment",
-              "Hydrogen bonding: strongest, needs H on N, O or F",
-              "Strength order helps prediction: hydrogen bonding exceeds dipole forces, which exceed van der Waals forces"
+              "Hydrogen bonding needs H bonded to N, O or F.",
+              "Water boils high because of hydrogen bonding.",
+              "Dipole forces are weaker; van der Waals weakest.",
+              "Stronger attraction means higher boiling point."
             ]
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Go deeper: Exam traps in deducing bonds from electron counts",
+            "heading": "Go deeper: Exam traps in bonding",
             "paragraphs": [
-              "The common trap is naming a bond from the element names before checking electron numbers. A metal with few outer electrons and a non-metal close to an octet often transfer, as in sodium and chlorine. Two non-metals at a distance from octets usually share instead, as in oxygen and hydrogen, so counting shells first makes the choice mechanical.",
-              "Another trap confuses coordinate bonding with ordinary covalent bonding because both involve sharing. The test is the source of the pair: a coordinate bond gives both electrons from one partner, as in ammonia donating to silver in [Ag(NH3)2]+. If both partners supply one electron each, the bond is ordinary covalent even when the species is a complex.",
-              "A third trap treats every strong attraction as ionic or every weak one as van der Waals. Metallic bonding is strong yet conducts as a solid because its electrons are delocalised. Hydrogen bonding is weak per bond but raises boiling points through many links, so judging by electron behaviour rather than strength alone avoids these errors."
+              "The classic trap swaps giving and sharing: candidates call NaCl covalent because 'atoms are joined'. The test is the participants — a metal plus a non-metal always gives, so the bond is ionic. Name the participants first, then the bond.",
+              "The second trap is calling any attraction a hydrogen bond. Hydrogen bonding needs H attached to N, O or F; the attraction in HCl is a dipole force, not a hydrogen bond. The bonded atom matters, not the presence of hydrogen alone.",
+              "The third trap is the shape swap between NH₃ (pyramidal) and CH₄ (tetrahedral). Counting the atoms is not enough — NH₃ has a lone pair pushing down, which makes it a pyramid with an apex, not a tetrahedron.",
+              "The fourth trap is the coordinate bond. It looks like ordinary sharing, but one atom supplies both electrons. In [Ag(NH₃)₂]⁺ the silver ion accepts pairs from ammonia; the donor is always the ligand, never the metal.",
+              "A final trap is calling metal atoms ‘molecules’. Metals are lattices of atoms, not discrete molecules, which is why metals melt as a whole rather than boiling into single atoms."
             ],
             "bullets": [
-              "Transfer of electrons to octets points to ionic bonding",
-              "Sharing one electron each points to ordinary covalent bonding",
-              "Both electrons from one partner points to coordinate bonding",
-              "Solid ionic conduction fails because ions cannot migrate until melted or dissolved"
+              "Metal + non-metal = ionic, always.",
+              "Hydrogen bond needs H on N, O or F.",
+              "NH₃ is pyramidal (lone pair); CH₄ is tetrahedral.",
+              "In coordinate bonds the ligand donates both electrons."
             ]
           }
         }
