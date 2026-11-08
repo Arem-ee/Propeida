@@ -6956,6 +6956,216 @@
           }
         }
       ]
+    },
+    {
+      "slug": "alkanols",
+      "topic": "organic-compounds",
+      "title": "Alkanols",
+      "objective": "Compare the various classes of alkanols, determine the processes involved in ethanol production, examine the importance of ethanol as an alternative energy provider, distinguish the various classes of alkanols, give local examples of fermentation and distillation (gin from palm wine), explain glycerol as a polyhydric alkanol, and state the oxidation test distinguishing primary, secondary and tertiary alkanols (Lucas test).",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Alkanols",
+            "paragraphs": [
+              "Drinking spirits, hand sanitiser and fuel all share one family: the alkanols, alcohols with an –OH group. This lesson follows ethanol from palm wine to petrol tank, and the test that tells the alcohol classes apart."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Primary, secondary and tertiary",
+            "paragraphs": [
+              "Alkanols carry the hydroxyl group (–OH) on carbon. The class depends on how many other carbons share that carbon: primary (1°) alcohols have the OH on a carbon bonded to one other carbon (ethanol); secondary (2°) on two (propan-2-ol); tertiary (3°) on three (2-methylpropan-2-ol).",
+              "That single difference decides reactivity: primary alkanols oxidise to aldehydes then acids; secondary oxidise to ketones; tertiary resist oxidation altogether. The more carbons around the OH, the less the OH can be attacked.",
+              "The classes also differ in boiling point and solubility, both falling as the chain branches. Structure at the OH carbon is the whole story."
+            ],
+            "bullets": [
+              "OH on 1 carbon = primary; 2 = secondary; 3 = tertiary.",
+              "Primary oxidises to aldehyde then acid; secondary to ketone; tertiary resists.",
+              "Branching lowers boiling point and solubility."
+            ],
+            "takeaway": "Count the carbons on the OH carbon to name the class.",
+            "check": {
+              "question": "Propan-2-ol is a secondary alkanol because its OH carbon is bonded to",
+              "options": [
+                "One other carbon",
+                "Two other carbons",
+                "Three other carbons",
+                "No other carbons"
+              ],
+              "answer": 1,
+              "why": "A secondary alcohol has its OH on a carbon bonded to two other carbons."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Ethanol by fermentation and distillation",
+            "paragraphs": [
+              "Fermentation is yeast converting sugar to ethanol: C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂. Palm wine ferments this way — wild yeast turns the sap sugary to alcoholic within days. The CO₂ bubbles are the fermentation visible.",
+              "Distillation then concentrates the ethanol: palm wine is distilled to gin, raising the alcohol from a few percent to drinking strength. The same fermentation-plus-distillation makes ethanol from cassava, maize and sugar cane worldwide.",
+              "Ethanol from petroleum is made by hydrating ethene. Both routes give the same molecule; the source decides cost, not the product."
+            ],
+            "bullets": [
+              "Fermentation: yeast, sugar → ethanol + CO₂.",
+              "Palm wine → gin by distillation.",
+              "Petroleum route: hydration of ethene."
+            ],
+            "takeaway": "Yeast ferments sugar to ethanol; distillation concentrates it.",
+            "check": {
+              "question": "The fermentation of glucose to ethanol also produces",
+              "options": [
+                "Oxygen",
+                "Carbon(IV) oxide",
+                "Hydrogen",
+                "Methane"
+              ],
+              "answer": 1,
+              "why": "C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂ — carbon(IV) oxide bubbles off."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The Lucas test and glycerol",
+            "paragraphs": [
+              "The Lucas test distinguishes the three classes: concentrated HCl with ZnCl₂ (Lucas reagent) replaces OH with Cl at rates that differ by class. Tertiary alcohols react instantly, secondary within minutes, primary only on heating. The cloudiness appearing is the reaction.",
+              "Oxidation also distinguishes them: primary gives aldehyde then acid, secondary gives ketone, tertiary gives no reaction. Two independent tests agree, which is why both are asked.",
+              "Glycerol is a trihydric alkanol — three OH groups on one molecule. It is syrupy, sweet, and used in soap, lotions and explosives (nitroglycerine). It is the polyhydric example the syllabus asks for."
+            ],
+            "bullets": [
+              "Lucas reagent: tertiary instant, secondary minutes, primary on heating.",
+              "Oxidation: 1° → aldehyde → acid; 2° → ketone; 3° → none.",
+              "Glycerol: three OH groups; soap, lotions, explosives."
+            ],
+            "takeaway": "Lucas cloudiness and oxidation agree: class decides reactivity.",
+            "check": {
+              "question": "In the Lucas test, the fastest cloudiness comes from",
+              "options": [
+                "A primary alkanol",
+                "A secondary alkanol",
+                "A tertiary alkanol",
+                "Glycerol"
+              ],
+              "answer": 2,
+              "why": "Tertiary alcohols react with Lucas reagent almost instantly."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For class questions, count the carbons on the OH carbon first. The count (1, 2 or 3) names the class before any property is considered."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Ethanol burns completely: C₂H₅OH + 3O₂ → 2CO₂ + 3H₂O. Calculate the volume of oxygen at s.t.p. needed to burn 4.6 g of ethanol. (Mr ethanol = 46)",
+            "steps": [
+              {
+                "operation": "Find moles of ethanol",
+                "reason": "Mr = 2×12 + 6×1 + 16 = 46",
+                "result": "4.6 ÷ 46 = 0.10 mol",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Apply the mole ratio",
+                "reason": "One mole of ethanol needs three moles of oxygen",
+                "result": "0.10 × 3 = 0.30 mol O₂",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Convert to gas volume",
+                "reason": "One mole of gas fills 22.4 dm³ at s.t.p.",
+                "result": "0.30 × 22.4 = 6.72 dm³",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "9.2 g of ethanol burns completely. Calculate the oxygen volume at s.t.p. (Mr = 46).",
+            "hints": [
+              "First find moles of ethanol: 9.2 ÷ 46",
+              "Oxygen needed is 3 times the ethanol moles",
+              "Multiply by 22.4 dm³"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why the classes react differently",
+            "paragraphs": [
+              "Oxidation must remove hydrogen from the OH carbon. Primary alcohols have two hydrogens there, so they oxidise twice (aldehyde, then acid). Secondary have one, so they oxidise once to a ketone. Tertiary have none, so oxidation stops — there is no hydrogen to remove.",
+              "The Lucas order follows the same carbocation stability: tertiary carbocations form fastest, so tertiary alcohols react instantly. The substitution rate is the stability of the intermediate, read as a clock.",
+              "Both tests are therefore the same chemistry seen twice: the substitution detail of the OH carbon decides everything. Class is not a label; it is a mechanism count.",
+              "A candidate who counts hydrogens on the OH carbon predicts oxidation and Lucas behaviour without memorising either.",
+              "That is also why tertiary alcohols dehydrate fastest: the same stable carbocation that speeds substitution also speeds elimination. One intermediate explains three behaviours.",
+              "A candidate who names the carbocation has connected substitution, elimination and oxidation in one idea.",
+              "A candidate who counts hydrogens on the OH carbon predicts oxidation and Lucas behaviour without memorising either.",
+              "The same counting habit classifies many later families, so the skill outlives this lesson.",
+              "It also pays off in every later family."
+            ],
+            "bullets": [
+              "Oxidation removes H from the OH carbon: 1° twice, 2° once, 3° never.",
+              "Lucas rate follows carbocation stability: 3° fastest.",
+              "Class is a mechanism count, not a label.",
+              "Count hydrogens on the OH carbon to predict both."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Ethanol as an energy provider",
+            "paragraphs": [
+              "Ethanol burns to CO₂ and water, releasing energy without the sulfur and lead pollutants of petrol. Blending it into petrol (gasohol) raises octane and reduces emissions, which is why many countries mandate blends.",
+              "The catch is the source: fermentation needs farm land and water, and distillation needs energy. Ethanol is renewable but not free — its energy cost must be paid at the distillery.",
+              "That balance explains both the promise and the limit: ethanol works as an alternative energy provider where feedstock is cheap, and struggles where land competes with food.",
+              "The exam link is therefore economic as much as chemical: ethanol's value is its cleanliness, its cost is its farming.",
+              "Second-generation ethanol from waste biomass aims to escape the food-versus-fuel conflict entirely. The chemistry is identical; only the feedstock changes.",
+              "The exam link is therefore direct: ethanol’s value is its cleanliness, and its cost is its farming."
+            ],
+            "bullets": [
+              "Ethanol burns clean (CO₂ + H₂O) and raises octane.",
+              "Renewable but land- and energy-hungry.",
+              "Blend value: octane up, emissions down.",
+              "Cleanliness is the value; farming is the cost."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in alkanols",
+            "paragraphs": [
+              "The classic trap is the class count. The OH carbon's neighbours decide: ethanol is primary (one neighbour), propan-2-ol secondary (two), 2-methylpropan-2-ol tertiary (three). Counting total carbons instead of neighbours misnames every case.",
+              "The second trap is oxidation products. Primary gives aldehyde then acid in two steps; secondary gives ketone and stops. Any option giving a ketone from a primary alcohol reverses the sequence.",
+              "The third trap is the Lucas direction. Tertiary is fastest, primary slowest — the order is the reverse of oxidation ease. Mixing the two orders is the favourite error.",
+              "The fourth trap is glycerol's class. Three OH groups make it trihydric, not tertiary. Hydric counts OH groups; primary/secondary/tertiary counts neighbours. The two words are not interchangeable.",
+              "A final trap is fermentation direction. Yeast converts sugar to ethanol, never the reverse. Any option making ethanol the starting material of fermentation reverses the process."
+            ],
+            "bullets": [
+              "Count neighbours of the OH carbon, not total carbons.",
+              "Primary → aldehyde → acid; secondary → ketone.",
+              "Lucas order is reverse of oxidation ease.",
+              "Trihydric counts OH groups; tertiary counts neighbours."
+            ]
+          }
+        }
+      ]
     }
   ]
 }
