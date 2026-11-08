@@ -6745,6 +6745,209 @@
           }
         }
       ]
+    },
+    {
+      "slug": "benzene",
+      "topic": "organic-compounds",
+      "title": "Benzene",
+      "objective": "Relate the properties of benzene to its structure, distinguish aliphatic from aromatic hydrocarbons, and state the structure, properties and uses of benzene.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Benzene",
+            "paragraphs": [
+              "Some hydrocarbons are rings, not chains — and the most important ring is a sweet-smelling liquid called benzene. This lesson explains its structure and why it behaves so differently from its chain cousins."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "A ring of six carbons",
+            "paragraphs": [
+              "Benzene (C₆H₆) has six carbon atoms arranged in a ring, each carrying one hydrogen. The ring is not three double bonds and three single bonds — the electrons are shared around the whole ring, which is called delocalisation.",
+              "That delocalisation makes benzene more stable than a simple ring with alternating double bonds would be. It needs more energy to break than expected, which is why benzene resists the easy addition reactions of alkenes.",
+              "Because of its structure, benzene is aromatic — a sweet smell and a ring of shared electrons — while alkanes and alkenes are aliphatic. Aromatic means ring-based, not just 'smelling nice'."
+            ],
+            "bullets": [
+              "Benzene: C₆H₆, a six-carbon ring with delocalised electrons.",
+              "Delocalisation makes it more stable than expected.",
+              "Aromatic = ring-based; aliphatic = chain-based."
+            ],
+            "takeaway": "Benzene is a delocalised six-carbon ring — aromatic, not aliphatic.",
+            "check": {
+              "question": "Benzene is classified as aromatic because",
+              "options": [
+                "It has a sweet smell",
+                "It contains a ring of delocalised electrons",
+                "It is a liquid at room temperature",
+                "It burns with a sooty flame"
+              ],
+              "answer": 1,
+              "why": "Aromatic means a ring of shared (delocalised) electrons, not a smell."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "How benzene reacts",
+            "paragraphs": [
+              "Benzene burns like other hydrocarbons: C₆H₆ + 7½O₂ → 6CO₂ + 3H₂O. But it resists addition: bromine water is not decolourised in the dark, unlike alkenes. With iron(III) chloride and bromine, it undergoes substitution instead — a hydrogen is replaced by bromine.",
+              "That resistance to addition is the delocalisation at work. The ring protects its shared electrons, so benzene prefers substitution (swapping H) over addition (breaking the ring's bonds).",
+              "Benzene is prepared industrially from coal tar and by reforming petroleum. Its uses include making plastics, detergents, dyes, pharmaceuticals and solvents — it is a starting material, not just a fuel."
+            ],
+            "bullets": [
+              "Burns completely: C₆H₆ + 7½O₂ → 6CO₂ + 3H₂O.",
+              "Resists addition; undergoes substitution (with FeCl₃/Br₂).",
+              "From coal tar or petroleum reforming.",
+              "Uses: plastics, detergents, dyes, drugs, solvents."
+            ],
+            "takeaway": "Benzene substitutes instead of adding — its ring protects its electrons.",
+            "check": {
+              "question": "Bromine water is not decolourised by benzene in the dark because",
+              "options": [
+                "Benzene has no carbon–carbon bonds",
+                "Its delocalised electrons resist addition",
+                "Benzene is a saturated hydrocarbon",
+                "Bromine does not react with rings"
+              ],
+              "answer": 1,
+              "why": "Delocalisation stabilises the ring, so benzene undergoes substitution, not addition."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Structure explains behaviour",
+            "paragraphs": [
+              "The delocalised ring has equal bond lengths between all carbons — neither single nor double, but in between. That equality is measurable and proves the sharing is real, not a drawing convention.",
+              "Substitution preserves the ring: a hydrogen is swapped out and the delocalised system survives. Addition would break the ring and lose the stability, so it does not happen under normal conditions.",
+              "That is why benzene's properties cannot be predicted from ethene's. The ring is a different kind of unsaturation — shared, not localised — and its chemistry follows the sharing."
+            ],
+            "bullets": [
+              "All C–C bonds in benzene are equal (delocalised).",
+              "Substitution preserves the ring; addition would break it.",
+              "Ring unsaturation ≠ double-bond unsaturation."
+            ],
+            "takeaway": "Delocalisation makes benzene substitute where alkenes add.",
+            "check": {
+              "question": "In benzene, all carbon–carbon bonds are",
+              "options": [
+                "Alternating single and double",
+                "Equal in length — delocalised",
+                "All single bonds",
+                "All triple bonds"
+              ],
+              "answer": 1,
+              "why": "The electrons are shared around the ring, equalising all bond lengths."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For any benzene item, ask first whether the reagent adds or substitutes. Benzene substitutes — the ring survives — and that one word decides the answer."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Benzene burns completely: C₆H₆ + 7½O₂ → 6CO₂ + 3H₂O. Calculate the volume of oxygen at s.t.p. needed to burn 7.8 g of benzene. (Mr benzene = 78)",
+            "steps": [
+              {
+                "operation": "Find moles of benzene",
+                "reason": "Mr(C₆H₆) = 6×12 + 6×1 = 78",
+                "result": "7.8 ÷ 78 = 0.10 mol",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Find moles of oxygen",
+                "reason": "One mole of benzene needs 7.5 moles of oxygen",
+                "result": "0.10 × 7.5 = 0.75 mol O₂",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Convert to gas volume",
+                "reason": "One mole of gas fills 22.4 dm³ at s.t.p.",
+                "result": "0.75 × 22.4 = 16.8 dm³",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "15.6 g of benzene burns completely. Calculate the oxygen volume at s.t.p. (Mr = 78).",
+            "hints": [
+              "First find moles of benzene: 15.6 ÷ 78",
+              "Oxygen needed is 7.5 times the benzene moles",
+              "Multiply by 22.4 dm³"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Delocalisation made visible",
+            "paragraphs": [
+              "X-ray measurements show all six C–C bonds in benzene are equal at 139 pm — between single (154 pm) and double (134 pm) lengths. The structure is a perfect hexagon, not a triangle of alternating bonds.",
+              "That equality is the direct evidence for delocalisation: if three double bonds existed, the molecule would show two bond lengths. It shows one.",
+              "The extra stability from delocalisation is called resonance energy, and it is why benzene needs more energy to hydrogenate than three isolated double bonds would suggest.",
+              "A candidate who links the bond-length evidence to the substitution behaviour has explained benzene completely — structure, proof and chemistry in one chain."
+            ],
+            "bullets": [
+              "All C–C bonds equal at 139 pm — direct evidence.",
+              "Delocalisation gives resonance energy.",
+              "Equal bonds prove sharing; alternating bonds would not.",
+              "One chain: structure → evidence → behaviour."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why substitution preserves the ring",
+            "paragraphs": [
+              "Substitution swaps one hydrogen for a substituent while the delocalised system reforms. The ring's stability is temporarily lost during the attack but restored when the hydrogen leaves — the net result keeps the aromatic sextet intact.",
+              "Addition, by contrast, would saturate two carbons and break the ring's shared system permanently. Benzene 'chooses' substitution because substitution is the only path that keeps the stability.",
+              "That is why bromination needs iron(III) chloride: the catalyst generates the electrophile that attacks the ring, and the ring's response is substitution, not addition.",
+              "The exam logic is therefore thermodynamic: benzene does what keeps it aromatic. Any option breaking the ring contradicts the stability."
+            ],
+            "bullets": [
+              "Substitution keeps the aromatic sextet; addition breaks it.",
+              "FeCl₃ generates the electrophile for bromination.",
+              "The ring chooses the path that preserves stability.",
+              "Breaking the ring is never the favoured route."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in benzene",
+            "paragraphs": [
+              "The classic trap is the formula. Benzene is C₆H₆ — three degrees of unsaturation by ring plus double bonds — and candidates who write C₆H₁₂ name a saturated ring that cannot exist in the syllabus.",
+              "The second trap is addition versus substitution. Bromine water is not decolourised in the dark; bromination needs FeCl₃ and proceeds by substitution. Conflating the two conditions reverses both answers.",
+              "The third trap is 'aromatic' meaning 'smelling nice'. The syllabus meaning is structural: a ring of delocalised electrons. Smell never decides classification.",
+              "The fourth trap is structure drawings. Alternating double bonds are a convention; the true structure has equal bonds. Options describing three separate double bonds misstate the delocalisation."
+            ],
+            "bullets": [
+              "Benzene is C₆H₆ — unsaturation from ring + bonds.",
+              "No decolourisation in the dark; FeCl₃ gives substitution.",
+              "Aromatic is structural, not a smell.",
+              "Equal bonds: delocalisation is real, not a drawing."
+            ]
+          }
+        }
+      ]
     }
   ]
 }
