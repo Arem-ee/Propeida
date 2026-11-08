@@ -7378,6 +7378,217 @@
           }
         }
       ]
+    },
+    {
+      "slug": "alkanoic-acids-and-alkanoates",
+      "topic": "organic-compounds",
+      "title": "Alkanoic Acids and Alkanoates",
+      "objective": "Compare the various types of alkanoic acids, infer the products of alkanoic acids and alkanols, identify natural sources of alkanoates, specify the methods for the production of soap, detergent and margarine, and distinguish between detergent and soap.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Alkanoic Acids and Alkanoates",
+            "paragraphs": [
+              "Vinegar stings, soap cleans, and margarine spreads — three familiar things from one family of compounds. This lesson follows the alkanoic acids from their reactions to the soaps and fats they build."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Alkanoic acids: reactions and types",
+            "paragraphs": [
+              "Alkanoic acids carry the carboxyl group (–COOH): ethanoic acid (CH₃COOH) is vinegar; propanoic acid is its next member. They are weak acids — they ionise partly — but they neutralise bases like any acid, forming alkanoates (salts).",
+              "Esterification is their signature reaction: a carboxylic acid plus an alkanol gives an ester plus water. Ethanoic acid + ethanol ⇌ ethyl ethanoate + water. The product smells fruity — esters are the perfumes of nature.",
+              "Ethanedioic (oxalic) acid is a dicarboxylic acid — two COOH groups on one molecule. Benzoic acid (benzene carboxylic acid) is aromatic, a preservative because it stops microbes growing."
+            ],
+            "bullets": [
+              "Alkanoic acids: –COOH, weak acids, form alkanoate salts.",
+              "Esterification: acid + alkanol ⇌ ester + water (fruity).",
+              "Oxalic acid has two COOH groups; benzoic acid is aromatic."
+            ],
+            "takeaway": "Alkanoic acids are weak acids that esterify with alkanols and salt with bases.",
+            "check": {
+              "question": "Esterification is the reaction between",
+              "options": [
+                "An acid and a base",
+                "An alkanoic acid and an alkanol",
+                "An alkene and hydrogen",
+                "An aldehyde and Tollens' reagent"
+              ],
+              "answer": 1,
+              "why": "Esterification joins an acid and an alkanol, losing water."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Fats, oils and alkanoates",
+            "paragraphs": [
+              "Fats and oils are alkanoates: esters of fatty acids with glycerol, a trihydric alkanol. That is why glycerol is both a fat component and a soap by-product. The fatty acid chains decide the fat's firmness — saturated chains pack tight (butter), unsaturated chains stay soft (oils).",
+              "Saponification is the alkaline hydrolysis of fats: fat + NaOH → soap + glycerol. Sodium stearate is the soap. Margarine is made by hydrogenating vegetable oils — adding hydrogen across their double bonds hardens them.",
+              "Soaps clean by emulsifying grease into micelles that rinse away. Detergents are synthetic sulfonates that clean the same way but do not form scum with hard water. Soap fails in hard water; detergents do not."
+            ],
+            "bullets": [
+              "Fats/oils: glycerol esters of fatty acids (alkanoates).",
+              "Saponification: fat + NaOH → soap + glycerol.",
+              "Margarine: hydrogenated vegetable oil.",
+              "Soap scums with hard water; detergents do not."
+            ],
+            "takeaway": "Fats are glycerol esters; saponification turns them into soap.",
+            "check": {
+              "question": "Saponification of a fat with sodium hydroxide produces",
+              "options": [
+                "An ester and water",
+                "Soap and glycerol",
+                "An acid and an alkanol",
+                "Carbon(IV) oxide and water"
+              ],
+              "answer": 1,
+              "why": "Alkaline hydrolysis of fats gives soap (alkanoate) plus glycerol."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Natural sources and the soap–detergent choice",
+            "paragraphs": [
+              "Alkanoates come from natural fats and oils: palm oil, coconut oil, groundnut oil and animal tallow. The fatty acid composition of each source decides the soap's hardness and lathering.",
+              "Soap cleans by the same emulsifying trick as detergent, but it forms insoluble scum with Ca²⁺ and Mg²⁺ in hard water. Detergents (synthetic sulfonates) form soluble salts and keep working in hard water.",
+              "That difference is the whole commercial choice: soap where water is soft, detergent where water is hard. Chemistry decides the market."
+            ],
+            "bullets": [
+              "Sources: palm, coconut, groundnut oils; tallow.",
+              "Soap scums in hard water; detergents do not.",
+              "Choice follows the water, not the brand."
+            ],
+            "takeaway": "Soap and detergent clean alike, but only detergent survives hard water.",
+            "check": {
+              "question": "Detergents are preferred over soap in hard water because",
+              "options": [
+                "They are cheaper",
+                "Their salts stay soluble with Ca²⁺ and Mg²⁺",
+                "They contain glycerol",
+                "They are natural products"
+              ],
+              "answer": 1,
+              "why": "Detergent salts are soluble in hard water; soap forms scum."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For ester questions, write the acid and the alkanol first. The ester name combines them: ethyl from the alkanol, ethanoate from the acid."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Ethanoic acid reacts with ethanol to form an ester. Write the equation and calculate the mass of ester from 6.0 g of ethanoic acid. (Mr ethanoic acid = 60, Mr ethyl ethanoate = 88)",
+            "steps": [
+              {
+                "operation": "Write the esterification equation",
+                "reason": "Acid plus alkanol gives ester plus water",
+                "result": "CH₃COOH + C₂H₅OH ⇌ CH₃COOC₂H₅ + H₂O",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Find moles of acid",
+                "reason": "Moles = mass ÷ Mr",
+                "result": "6.0 ÷ 60 = 0.10 mol",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Find the ester mass",
+                "reason": "One mole of acid gives one mole of ester",
+                "result": "0.10 × 88 = 8.8 g",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "3.0 g of ethanoic acid is esterified completely with excess ethanol. Calculate the ester mass. (Mr acid = 60, ester = 88)",
+            "hints": [
+              "First find moles of acid: 3.0 ÷ 60",
+              "The ratio acid:ester is 1:1",
+              "Multiply moles by 88"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Esterification as equilibrium",
+            "paragraphs": [
+              "Esterification is reversible: the ester hydrolyses back to acid and alkanol in water. The equilibrium lies near the middle, so the yield is never complete without tricks — excess alkanol, or removal of water.",
+              "Concentrated sulfuric acid catalyses the reaction by protonating the acid, making the carbonyl carbon more attackable. The catalyst speeds both directions equally, as catalysts always do.",
+              "That reversibility is why esters hydrolyse in acidic or alkaline conditions in nature: fats in seeds and fruits are esters that enzymes hydrolyse as food stores.",
+              "A candidate who sees esterification as equilibrium explains both perfume-making and fat digestion with one idea.",
+              "Excess alkanol pushes the equilibrium toward the ester by Le Chatelier: the alkanol is consumed, so more forms. That is why perfume houses use excess alcohol rather than excess acid.",
+              "Removing water works the same way from the other side. Distilling the ester away as it forms drags the equilibrium forward completely.",
+              "A candidate who sees the perfume process as equilibrium management understands both the factory and the exam item from one principle."
+            ],
+            "bullets": [
+              "Esterification is reversible; yield needs excess or water removal.",
+              "Conc. H₂SO₄ catalyses both directions.",
+              "Enzymes hydrolyse fats the same way in the body.",
+              "One equilibrium explains perfumes and digestion."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why soap fails in hard water",
+            "paragraphs": [
+              "Soap anions pair with Ca²⁺ and Mg²⁺ to form insoluble scum instead of micelles. The soap is wasted on the hardness ions before it can clean. That is the whole chemistry of the hard-water problem.",
+              "Detergent sulfonates form soluble calcium salts, so they keep cleaning. The difference is solubility of the salt, nothing more mysterious.",
+              "Saponification's glycerol by-product is itself valuable in soaps. A fat plus alkali gives two products, and both are sold — the process wastes nothing.",
+              "A candidate who links scum to solubility predicts the soap–detergent choice for any water hardness.",
+              "Boiling water soap solution does not remove the scum, because the calcium salts are insoluble at any temperature. Only a chemical exchange — washing soda or resins — removes the hardness ions.",
+              "That is why hard-water areas adopted detergents first: the chemistry of scum made soap uneconomic there long before brands competed.",
+              "That solubility difference, not cleaning power, is the entire basis of the soap–detergent choice in any water.",
+              "It also explains why hard-water areas adopted detergents first of all in history."
+            ],
+            "bullets": [
+              "Soap + Ca²⁺/Mg²⁺ → insoluble scum.",
+              "Detergent salts stay soluble in hard water.",
+              "Saponification sells both soap and glycerol.",
+              "Solubility of the salt decides the choice."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in acids and alkanoates",
+            "paragraphs": [
+              "The classic trap is the ester name. The first part (-yl) comes from the alkanol; the second (-anoate) from the acid. Ethyl ethanoate is ethanol's ethyl plus ethanoic acid's ethanoate — reversing them names the wrong ester.",
+              "The second trap is saponification direction. Alkaline hydrolysis of a fat gives soap plus glycerol; esterification is the reverse. The reagents decide which way the arrow runs.",
+              "The third trap is oxalic acid. It is dicarboxylic (two COOH groups), so it neutralises two moles of base per mole. Counting COOH groups settles every stoichiometry item.",
+              "The fourth trap is margarine manufacture. It is hydrogenation of vegetable oils, not esterification and not saponification. The double bonds tell the process.",
+              "A final trap is the weak-acid label. Alkanoic acids are weak — they ionise partly — but they still neutralise bases fully at the mole ratio. Weak describes ionisation, not neutralisation capacity."
+            ],
+            "bullets": [
+              "Ester name: -yl from alkanol, -anoate from acid.",
+              "Saponification: fat + alkali → soap + glycerol.",
+              "Oxalic acid has two COOH groups.",
+              "Margarine is hydrogenation, not esterification."
+            ]
+          }
+        }
+      ]
     }
   ]
 }
