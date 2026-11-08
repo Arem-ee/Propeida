@@ -4445,6 +4445,210 @@
           }
         }
       ]
+    },
+    {
+      "slug": "ammonia-and-nitrogen-compounds",
+      "topic": "non-metals-and-their-compounds",
+      "title": "Ammonia and Nitrogen Compounds",
+      "objective": "Specify the laboratory and industrial preparation of NH₃, identify its properties and uses, determine specific tests for NH₄⁺ and NH₃, identify reagents for the laboratory preparation of HNO₃ with its properties and uses, and specify the properties of N₂O, NO and NO₂ with their specific tests.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Ammonia and Nitrogen Compounds",
+            "paragraphs": [
+              "The sharp cleaning smell from a bottle of household ammonia is a nitrogen compound — the same gas that feeds the world's farms. This lesson follows ammonia from its making to the acid it becomes."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Making ammonia",
+            "paragraphs": [
+              "The laboratory preparation warms an ammonium salt with a strong base: NH₄Cl + NaOH → NH₃ + NaCl + H₂O. The gas is dried over quicklime (CaO) and collected by downward displacement of air, because it is lighter than air and very soluble in water.",
+              "The industrial preparation is the Haber process: N₂ + 3H₂ ⇌ 2NH₃, at about 450 °C, 200 atm, over an iron catalyst. Nitrogen comes from fractional distillation of liquid air, hydrogen from water gas. High pressure favours the fewer-molecule side.",
+              "Ammonia is collected over concentrated sulfuric acid in the laboratory when dryness is not needed — it forms white fumes of ammonium salts with hydrogen chloride as the classic confirmation."
+            ],
+            "bullets": [
+              "Laboratory: ammonium salt + strong base, warmed.",
+              "Industry: Haber process (450 °C, 200 atm, iron catalyst).",
+              "Collected by downward air displacement; dried over CaO."
+            ],
+            "takeaway": "The laboratory warms an ammonium salt; industry balances nitrogen and hydrogen.",
+            "check": {
+              "question": "The laboratory preparation of ammonia uses",
+              "options": [
+                "NH₄Cl with NaOH, warmed",
+                "N₂ with H₂ over iron",
+                "Steam over red-hot coke",
+                "Fractional distillation of air"
+              ],
+              "answer": 0,
+              "why": "Warming an ammonium salt with a strong base liberates ammonia in the laboratory."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Properties and uses of ammonia",
+            "paragraphs": [
+              "Ammonia is a colourless gas with a sharp smell, very soluble in water to form an alkaline solution (ammonium hydroxide). It is a base: it neutralises acids to form ammonium salts. With hydrogen chloride it gives dense white fumes — the classic test.",
+              "Ammonia is a reducing agent: it reduces hot copper(II) oxide to copper. It also forms complex ions with metal ions, like [Cu(NH₃)₄]²⁺, which is why it appears in qualitative analysis.",
+              "Its uses follow from those properties: ammonium sulfate and urea fertilisers feed crops, refrigeration uses its easy liquefaction, and household cleaners use its alkalinity. The test for ammonia gas is white fumes with hydrogen chloride; the test for NH₄⁺ is warming with a base and the same fumes."
+            ],
+            "bullets": [
+              "Very soluble in water; alkaline solution; forms white fumes with HCl.",
+              "Reducing agent; forms complex ions.",
+              "Uses: fertilisers, refrigeration, cleaners.",
+              "Test: NH₃ + HCl → dense white fumes."
+            ],
+            "takeaway": "Ammonia is a soluble alkaline gas that fumes white with HCl.",
+            "check": {
+              "question": "The specific test for ammonia gas is",
+              "options": [
+                "It turns limewater milky",
+                "It forms dense white fumes with hydrogen chloride",
+                "It rekindles a glowing splint",
+                "It bleaches damp litmus"
+              ],
+              "answer": 1,
+              "why": "Ammonia and hydrogen chloride form white ammonium chloride fumes."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Trioxonitrate(V) acid and its salts",
+            "paragraphs": [
+              "Trioxonitrate(V) acid (HNO₃) is prepared in the laboratory from ammonia: ammonia is oxidised catalytically to nitrogen(IV) oxide, then to nitrogen dioxide, which dissolves in water to give the acid. It is a strong, oxidising acid.",
+              "HNO₃ is used in fertilisers, explosives and the pickling of metals. Its salts are the trioxonitrate(V) salts (nitrates), which decompose on heating to nitrites and oxygen: 2NaNO₃ → 2NaNO₂ + O₂.",
+              "The test for nitrate ions (NO₃⁻) is brown fumes of NO₂ when heated with concentrated sulfuric acid. The oxides of nitrogen — N₂O, NO and NO₂ — complete the family: colourless N₂O (laughing gas), colourless NO, and brown NO₂."
+            ],
+            "bullets": [
+              "HNO₃ from ammonia oxidation; strong oxidising acid.",
+              "Nitrates decompose on heating to nitrites + O₂.",
+              "Nitrate test: brown NO₂ fumes with conc. H₂SO₄.",
+              "Oxides: N₂O colourless, NO colourless, NO₂ brown."
+            ],
+            "takeaway": "Nitric acid is made by oxidising ammonia; nitrates give brown fumes.",
+            "check": {
+              "question": "The test for nitrate ions is",
+              "options": [
+                "White precipitate with silver nitrate",
+                "Brown fumes of NO₂ with concentrated sulfuric acid",
+                "A squeaky pop with a lighted splint",
+                "Bleaching of damp litmus"
+              ],
+              "answer": 1,
+              "why": "Heating nitrates with concentrated sulfuric acid liberates brown nitrogen dioxide."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For nitrogen questions, track the oxidation state: NH₃ is −3, NO is +2, NO₂ is +4, HNO₃ is +5. The state names the compound before its uses do."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Ammonia is made by N₂ + 3H₂ ⇌ 2NH₃. If 28 g of nitrogen is used, calculate the mass of ammonia formed. (N = 14, H = 1)",
+            "steps": [
+              {
+                "operation": "Find moles of nitrogen",
+                "reason": "Mr(N₂) = 28, so grams convert by dividing by 28",
+                "result": "28 ÷ 28 = 1.0 mol N₂",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Apply the mole ratio",
+                "reason": "One mole of N₂ gives two moles of NH₃",
+                "result": "2.0 mol NH₃",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Convert to mass",
+                "reason": "Mr(NH₃) = 17, so mass = moles × Mr",
+                "result": "2.0 × 17 = 34 g",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "If 3.0 g of hydrogen is used in the Haber process, calculate the mass of ammonia formed. (H = 1, N = 14)",
+            "hints": [
+              "First find moles of H₂: 3.0 ÷ 2",
+              "The ratio H₂:NH₃ is 3:2, so moles NH₃ = (2/3) × moles H₂",
+              "Multiply by Mr(NH₃) = 17"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why the Haber process needs a compromise",
+            "paragraphs": [
+              "The Haber reaction is exothermic, so cooling favours ammonia — but at low temperatures the reaction is too slow to matter. The plant runs at about 450 °C because that is where speed and yield compromise. Iron catalyst speeds the approach without shifting the position.",
+              "High pressure favours the fewer-molecule side (4 gas molecules become 2), so 200 atm pushes the yield up. Higher pressure would push further but costs more to build and run. Unreacted gases are recycled, so low per-pass yield is recovered over many passes.",
+              "The same logic runs the Contact process: moderate temperature, high pressure, V₂O₅ catalyst. Two industries, one principle — Le Chatelier managed by engineers.",
+              "A candidate who sees the Haber conditions as a compromise, not a maximum, answers every 'why these conditions' item correctly."
+            ],
+            "bullets": [
+              "450 °C: compromise between yield (cold) and rate (hot).",
+              "200 atm: favours 2 NH₃ over 4 gas molecules.",
+              "Recycling recovers unreacted gases over many passes.",
+              "Same logic as Contact: Le Chatelier plus economics."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Ammonia as a ligand and a test",
+            "paragraphs": [
+              "Ammonia's lone pair makes it a ligand: it donates both electrons of a coordinate bond to metal ions, forming complex ions like [Cu(NH₃)₄]²⁺. That is why excess ammonia dissolves copper(II) hydroxide to a deep blue solution — a qualitative-analysis landmark.",
+              "The same lone pair makes ammonia a base: it accepts a proton to form NH₄⁺. The acid–base and ligand roles are one property — the available electron pair — used in two different reactions.",
+              "The white-fume test exploits both: NH₃ + HCl → NH₄Cl solid fumes. The reaction is instant and unmistakable, which is why it confirms ammonia beyond doubt.",
+              "A candidate who links the lone pair to both behaviours will never memorise them as separate facts."
+            ],
+            "bullets": [
+              "NH₃ lone pair donates into coordinate bonds.",
+              "Excess NH₃ dissolves Cu(OH)₂ to deep blue [Cu(NH₃)₄]²⁺.",
+              "NH₃ + HCl → white fumes: the specific test.",
+              "One lone pair explains base, ligand and test."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in nitrogen chemistry",
+            "paragraphs": [
+              "The classic trap is the preparation. Warming an ammonium salt with a base is the laboratory preparation; the Haber process is the industrial one. Any option naming the other scale loses the mark.",
+              "The second trap is the oxidation state of nitrogen. In NH₃ it is −3, in NO +2, in NO₂ +4, and in HNO₃ +5. Nitric acid is not 'the acid with nitrogen at +5' by memory — the state follows from the sum rule, and candidates should compute it.",
+              "The third trap is the fume test direction. Ammonia fumes with hydrogen chloride (white); chlorine bleaches litmus. Swapping the two tests reverses the identification.",
+              "The fourth trap is nitrates versus nitrites. Heating a nitrate gives a nitrite plus oxygen; the test for nitrate is brown NO₂ fumes with concentrated sulfuric acid. The two reactions are related but not interchangeable."
+            ],
+            "bullets": [
+              "Laboratory = ammonium salt + base; industry = Haber.",
+              "N states: NH₃ −3, NO +2, NO₂ +4, HNO₃ +5.",
+              "White fumes = ammonia test; bleaching = chlorine test.",
+              "Nitrate test gives brown NO₂ fumes."
+            ]
+          }
+        }
+      ]
     }
   ]
 }
