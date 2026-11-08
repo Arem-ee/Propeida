@@ -1928,7 +1928,7 @@
           "content": {
             "heading": "Electrolysis",
             "paragraphs": [
-              "A technician in a Lagos plating workshop dips a dull key into a chromium bath and comes out with a shining one. Electricity has moved metal ions onto the key. That process is electrolysis."
+              "A technician in a Lagos workshop dips a dull key into a shining bath and lifts out a bright key. Electricity moved metal onto it. That process — using electricity to break a substance apart — is electrolysis."
             ],
             "bullets": []
           }
@@ -1938,17 +1938,17 @@
           "content": {
             "heading": "Electrolytes and the cell",
             "paragraphs": [
-              "An electrolyte is a substance that conducts electricity when molten or in aqueous solution and is decomposed in the process. A non-electrolyte, like sugar or ethanol, does not conduct even when dissolved. The anode is the positive electrode and the cathode is the negative electrode.",
-              "Electrolysis is the decomposition of an electrolyte by an electric current. Inert electrodes, such as platinum or carbon, do not react and only pass the current. Reactive electrodes, such as copper, dissolve at the anode instead of discharging an anion.",
-              "Which ion is discharged follows the electrochemical series and concentration. At the cathode, metal ions and hydrogen compete, and the lower one in the series is discharged. At the anode, non-metal anions are discharged, but concentrated solutions favour the anion over water."
+              "An electrolyte is a substance that carries electricity when molten or dissolved, and is broken apart in the process. Sugar water does not conduct, so it is a non-electrolyte. The anode is the positive electrode; the cathode is the negative electrode.",
+              "Electrolysis is the breaking of an electrolyte by an electric current. Inert electrodes like platinum do not react — they only pass the current. Reactive electrodes like copper dissolve at the anode instead of letting an anion discharge.",
+              "Which ion comes off follows the electrochemical series and the concentration. At the cathode, metal ions and hydrogen compete, and the lower one in the series wins. At the anode, non-metal anions discharge, but concentrated solutions favour the anion over water."
             ],
             "bullets": [
-              "An electrolyte conducts only when molten or dissolved",
-              "The anode is positive; the cathode is negative",
-              "Inert electrodes do not react; reactive electrodes do",
-              "Discharge follows the electrochemical series and concentration"
+              "Electrolyte = conducts molten/dissolved; non-electrolyte never does.",
+              "Anode is positive; cathode is negative.",
+              "Inert electrodes pass current; reactive electrodes dissolve.",
+              "Discharge follows the series and the concentration."
             ],
-            "takeaway": "The electrolyte, the electrodes and the voltage decide what comes off at each pole.",
+            "takeaway": "The electrolyte, the electrodes and the voltage decide what comes off each pole.",
             "check": {
               "question": "When copper electrodes are used to electrolyse copper(II) chloride solution, what happens at the anode?",
               "options": [
@@ -1967,15 +1967,15 @@
           "content": {
             "heading": "Products for the standard electrolytes",
             "paragraphs": [
-              "Dilute H₂SO₄ gives hydrogen at the cathode and oxygen at the anode, so water is the electrolyte that reacts. Aqueous CuSO₄ gives copper at the cathode and oxygen at the anode. CuCl₂ solution gives copper and chlorine.",
-              "Dilute NaCl solution gives hydrogen at the cathode and oxygen at the anode, while concentrated brine gives hydrogen and chlorine. Fused NaCl gives sodium at the cathode and chlorine at the anode because there is no water to compete. Electrode statements are written as half-equations.",
-              "Faraday laws link charge to amount: Q = It, where I is in amperes and t in seconds. One Faraday (96500 C) discharges one mole of electrons, so gas volumes follow from the moles formed."
+              "Dilute H₂SO₄ gives hydrogen at the cathode and oxygen at the anode — water is the electrolyte that reacts. Aqueous CuSO₄ gives copper at the cathode and oxygen at the anode. CuCl₂ solution gives copper and chlorine.",
+              "Dilute NaCl solution gives hydrogen and oxygen, while concentrated brine gives hydrogen and chlorine. Fused NaCl gives sodium at the cathode and chlorine at the anode, because there is no water to compete. Electrode statements are written as half-equations, like Cu²⁺ + 2e⁻ → Cu.",
+              "Faraday's laws link charge to amount: Q = It, where I is in amperes and t in seconds. One Faraday (96500 C) discharges one mole of electrons, so gas volumes follow from the moles formed."
             ],
             "bullets": [
-              "Dilute H₂SO₄ gives H₂ at cathode and O₂ at anode",
-              "Conc. brine gives H₂ and Cl₂; fused NaCl gives Na and Cl₂",
-              "Q = It, and 1 F = 96500 C discharges 1 mol of electrons",
-              "Electrode statements are written as half-equations"
+              "Dilute H₂SO₄ gives H₂ at cathode, O₂ at anode.",
+              "Conc. brine gives H₂ and Cl₂; fused NaCl gives Na and Cl₂.",
+              "Q = It; 1 F = 96500 C discharges 1 mol of electrons.",
+              "Electrode statements are half-equations."
             ],
             "takeaway": "Name the electrolyte and the electrode, then read the products off the series.",
             "check": {
@@ -1996,17 +1996,17 @@
           "content": {
             "heading": "Uses, series and protecting iron",
             "paragraphs": [
-              "Electrolysis purifies copper: impure copper dissolves at the anode while pure copper deposits at the cathode. Aluminium is extracted from aluminium oxide dissolved in cryolite, and sodium by the Downs process on fused NaCl. Chlorine and NaOH come from brine.",
-              "The electrochemical series, K, Ca, Na, Mg, Al, Zn, Fe, Sn, Pb, H, Cu, Hg, Ag, Au, predicts reactivity and displacement. A metal higher up displaces a lower one, so zinc displaces iron but not sodium.",
+              "Electrolysis purifies copper: impure copper dissolves at the anode while pure copper deposits at the cathode. Aluminium is extracted from aluminium oxide dissolved in cryolite, and sodium by the Downs process on fused NaCl. Chlorine and NaOH both come from electrolysis of brine.",
+              "The electrochemical series, K, Ca, Na, Mg, Al, Zn, Fe, Sn, Pb, H, Cu, Hg, Ag, Au, predicts reactivity and displacement. A metal higher up displaces a lower one, so zinc displaces iron but not sodium. Electrode potentials rank the same order.",
               "Corrosion is electrochemical: iron rusts where oxygen and water meet the metal. Painting, greasing or oiling blocks air and water, while cathodic protection sacrifices a more reactive metal like zinc. Electroplating coats a base metal with a rust-resistant one."
             ],
             "bullets": [
-              "Purification of copper uses impure anode and pure cathode",
-              "Aluminium comes from oxide in cryolite; sodium from fused NaCl",
-              "A higher metal displaces a lower one from solution",
-              "Iron is protected by paint, grease or a sacrificial metal"
+              "Purification: impure anode, pure cathode.",
+              "Aluminium from oxide in cryolite; Na from fused NaCl.",
+              "A higher metal displaces a lower one.",
+              "Iron is protected by paint, grease or a sacrificial metal."
             ],
-            "takeaway": "Electrolysis purifies, extracts and protects, all by choosing the right metal and electrolyte.",
+            "takeaway": "Electrolysis purifies, extracts and protects, all by choosing the right metal.",
             "check": {
               "question": "Which method protects iron from rusting by being sacrificed in its place?",
               "options": [
@@ -2025,7 +2025,7 @@
           "content": {
             "title": "Exam tip",
             "tone": "tip",
-            "body": "For any Faraday item, convert the time to seconds first. A current for five minutes is 300 seconds, and mixing minutes with seconds is the commonest silent error."
+            "body": "For any Faraday item, convert the time to seconds first. Five minutes is 300 seconds, and mixing minutes with seconds is the commonest silent error."
           }
         },
         {
@@ -2047,7 +2047,7 @@
               },
               {
                 "operation": "Find the hydrogen volume",
-                "reason": "2H⁺ + 2e⁻ → H₂, so 0.020 mol e⁻ gives 0.010 mol H₂, and 1 mol = 22.4 dm³ at s.t.p.",
+                "reason": "2H⁺ + 2e⁻ → H₂, so 0.020 mol e⁻ gives 0.010 mol H₂; 1 mol = 22.4 dm³ at s.t.p.",
                 "result": "0.010 × 22.4 = 0.224 dm³",
                 "predictPrompt": ""
               }
@@ -2076,10 +2076,10 @@
               "The Hofmann voltameter shows the contest plainly: hydrogen and oxygen collect in a 2:1 ratio from water. The ratio is the stoichiometry made visible, and it confirms the half-equations without any memorisation."
             ],
             "bullets": [
-              "Concentrated chloride outcompetes water at the anode",
-              "Fused NaCl leaves sodium no rival at the cathode",
-              "Water oxidation needs extra voltage (overpotential)",
-              "Hofmann voltameter gives H₂:O₂ in a 2:1 ratio"
+              "Concentrated chloride outcompetes water at the anode.",
+              "Fused NaCl leaves sodium no rival at the cathode.",
+              "Water oxidation needs extra voltage (overpotential).",
+              "Hofmann voltameter gives H₂:O₂ in a 2:1 ratio."
             ]
           }
         },
@@ -2094,10 +2094,10 @@
               "The same cell proves the series in action. Only copper among the dissolved metals can discharge at the cathode under these conditions, which is why the deposit is pure. Reactivity, not just voltage, decides the outcome."
             ],
             "bullets": [
-              "Impure copper is the anode; pure copper is the cathode",
-              "Copper dissolves and redeposits, keeping Cu²⁺ constant",
-              "Less reactive impurities fall as sludge; more reactive ones dissolve",
-              "Electrorefining gives 99.99% pure copper"
+              "Impure copper is the anode; pure copper is the cathode.",
+              "Copper dissolves and redeposits, keeping Cu²⁺ constant.",
+              "Less reactive impurities fall as sludge; more reactive ones dissolve.",
+              "Electrorefining gives 99.99% pure copper."
             ]
           }
         },
@@ -2112,10 +2112,10 @@
               "A candidate who repeats oxidation happens at the anode in both cases will answer pole questions without memorising two contradictory lists. One rule covers both devices, and that is why it is worth learning."
             ],
             "bullets": [
-              "The anode is where oxidation happens in any cell",
-              "Signs differ: negative in a cell, positive in electrolysis",
-              "Corrosion makes iron the anode; protection changes the anode",
-              "Oxidation at the anode is the one rule to keep"
+              "The anode is where oxidation happens in any cell.",
+              "Signs differ: negative in a cell, positive in electrolysis.",
+              "Corrosion makes iron the anode; protection changes the anode.",
+              "Oxidation at the anode is the one rule to keep."
             ]
           }
         }
