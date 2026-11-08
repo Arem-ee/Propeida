@@ -113,6 +113,13 @@
       "section": "METALS",
       "order": 16,
       "description": "General properties, alkali metals, calcium, aluminium, tin, transition metals, iron, copper and alloys (spine topic split into six lessons)."
+    },
+    {
+      "slug": "organic-compounds",
+      "name": "Organic Compounds",
+      "section": "ORGANIC CHEMISTRY",
+      "order": 17,
+      "description": "Introduction, alkanes, alkenes, alkynes, benzene, alkanols, alkanals, alkanoic acids, alkanoates, amines, carbohydrates, proteins and polymers (spine topic split into eleven lessons)."
     }
   ],
   "lessons": [
@@ -6112,6 +6119,425 @@
               "Cu²⁺: pale blue first, deep blue in excess NH₃.",
               "Brass = Cu + Zn; bronze = Cu + Sn.",
               "Alloys always beat pure metals at their job."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "introduction-to-organic-chemistry",
+      "topic": "organic-compounds",
+      "title": "Introduction to Organic Chemistry",
+      "objective": "Derive the name of organic compounds from their general formulae, relate the name of a compound to its structure, relate the tetravalency of carbon to its ability to form chains of compound (catenation), classify compounds according to their functional groups, and derive empirical formula and molecular formula from given data.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Introduction to Organic Chemistry",
+            "paragraphs": [
+              "Soap, fuel, plastics and drugs are all built from one element's endless chains. This lesson explains why carbon — and only carbon — can build those chains, and how names are read from them."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Why carbon forms chains",
+            "paragraphs": [
+              "Carbon has four outer electrons, so it forms four bonds: it is tetravalent. Each bond can link to another carbon, so chains, rings and branches grow without limit. That ability to link carbon to carbon is called catenation.",
+              "No other element does this as well: silicon forms chains poorly, while nitrogen and oxygen stop at two or three bonds. Carbon's four bonds plus its strong carbon–carbon links make it the chain-builder of nature.",
+              "Inside every organic molecule the carbon skeleton carries functional groups — OH, COOH, NH₂ — small teams of atoms that decide the compound's behaviour. The skeleton gives the name's length; the group gives its personality."
+            ],
+            "bullets": [
+              "Carbon is tetravalent: four bonds per atom.",
+              "Catenation = carbon linking to carbon in chains and rings.",
+              "Functional groups (OH, COOH, NH₂) decide behaviour."
+            ],
+            "takeaway": "Carbon's four bonds let it chain without limit, and functional groups decide behaviour.",
+            "check": {
+              "question": "Catenation is the ability of carbon to",
+              "options": [
+                "Conduct electricity",
+                "Form chains of carbon atoms",
+                "Dissolve in water",
+                "React with acids"
+              ],
+              "answer": 1,
+              "why": "Catenation is carbon linking to carbon in chains, rings and branches."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "General formulae and naming",
+            "paragraphs": [
+              "Each family of organic compounds has a general formula: alkanes are CₙH₂ₙ₊₂, alkenes CₙH₂ₙ, alkynes CₙH₂ₙ₋₂, alkanols CₙH₂ₙ₊₁OH. The n tells how many carbons; the formula then gives the hydrogens. Methane is C₁H₄, ethane C₂H₆.",
+              "The name reads the chain length and the group: 'eth' means two carbons, 'an' means single bonds, 'ene' means a double bond, 'yne' a triple bond, 'ol' an OH group, 'oic acid' a COOH group. Butane is four carbons, single bonds; ethene is two carbons with a double bond.",
+              "IUPAC names therefore encode structure: given the name, the skeleton can be drawn; given the skeleton, the name can be built. The skill is translation in both directions."
+            ],
+            "bullets": [
+              "Alkanes CₙH₂ₙ₊₂; alkenes CₙH₂ₙ; alkynes CₙH₂ₙ₋₂.",
+              "Name = chain length + bond type + functional group.",
+              "IUPAC names encode the skeleton both ways."
+            ],
+            "takeaway": "General formulae count hydrogens; names encode length, bonds and groups.",
+            "check": {
+              "question": "The general formula of the alkenes is",
+              "options": [
+                "CₙH₂ₙ₊₂",
+                "CₙH₂ₙ",
+                "CₙH₂ₙ₋₂",
+                "CₙHₙ"
+              ],
+              "answer": 1,
+              "why": "Alkenes have one double bond, so they carry two fewer hydrogens than alkanes."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Empirical and molecular formulae",
+            "paragraphs": [
+              "The empirical formula is the simplest whole-number ratio of atoms; the molecular formula is the true count in one molecule. Glucose and fructose share the empirical formula CH₂O, but glucose is truly C₆H₁₂O₆.",
+              "Percentage composition gives the ratio: divide each percentage by its relative atomic mass, then by the smallest value. A compound of 92.3% carbon and 7.7% hydrogen gives 7.69 and 7.7, which reduce to CH — an empirical formula of CH.",
+              "The molecular formula follows from the molar mass: if the compound's Mr is 78 and CH weighs 13, then 78 ÷ 13 = 6, so the true formula is C₆H₆. Percentages alone never give the true formula — the molar mass scales the ratio up."
+            ],
+            "bullets": [
+              "Empirical = simplest ratio; molecular = true count.",
+              "Divide percentages by Ar, then by the smallest.",
+              "Scale the ratio by Mr ÷ empirical Mr."
+            ],
+            "takeaway": "Percentages give the ratio; the molar mass scales it to the true formula.",
+            "check": {
+              "question": "A compound has Mr = 78 and empirical formula CH. Its molecular formula is",
+              "options": [
+                "CH",
+                "C₆H₆",
+                "C₁₂H₁₂",
+                "C₃H₃"
+              ],
+              "answer": 1,
+              "why": "CH weighs 13; 78 ÷ 13 = 6, so the formula is C₆H₆."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For any organic name, split it into length, bonds and group first. The three parts answer most naming questions before any chemistry is needed."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A compound is 92.3% carbon and 7.7% hydrogen, with Mr = 78. Determine its molecular formula.",
+            "steps": [
+              {
+                "operation": "Divide percentages by Ar",
+                "reason": "Carbon 92.3 ÷ 12, hydrogen 7.7 ÷ 1",
+                "result": "7.69 and 7.7",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Divide by the smallest value",
+                "reason": "The ratio must be whole numbers",
+                "result": "7.69 ÷ 7.69 = 1 and 7.7 ÷ 7.69 = 1, so empirical = CH",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Scale by the molar mass",
+                "reason": "CH weighs 13; the true Mr is 78",
+                "result": "78 ÷ 13 = 6, so C₆H₆",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A compound is 40% carbon, 6.7% hydrogen and 53.3% oxygen. Give its empirical formula.",
+            "hints": [
+              "Divide each percentage by its Ar (12, 1, 16)",
+              "You get 3.3, 6.7 and 3.3",
+              "Divide through by the smallest value"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why carbon chains are endless",
+            "paragraphs": [
+              "Carbon's four bonds and its strong carbon–carbon links let it form chains, rings and branches of any length. Silicon, directly below carbon, forms chains poorly because silicon–silicon bonds are weak; nitrogen and oxygen stop at two or three bonds.",
+              "That chain-building is catenation, and it is the reason organic chemistry exists as a subject: millions of compounds from one element's linking habit. Inorganic chemistry, by contrast, counts thousands.",
+              "The skeleton is not the whole story: functional groups hang off it and decide reactivity. The same chain length with an OH is an alkanol; with a COOH it is an acid. Skeleton plus group is the complete description.",
+              "A candidate who separates skeleton from group can classify any organic compound by naming its two parts.",
+              "The chain can also close into a ring, as in benzene, where six carbons form a loop. Rings are catenation too — the same linking habit bent into a circle.",
+              "A candidate who sees chains and rings as one habit will never treat benzene as a different kind of chemistry. It is the same carbon, looped."
+            ],
+            "bullets": [
+              "Carbon chains uniquely well; silicon poorly, others not at all.",
+              "Millions of compounds from one linking habit.",
+              "Skeleton gives length; functional group gives behaviour.",
+              "Classify by skeleton + group, always."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Homologous series and general formulae",
+            "paragraphs": [
+              "A homologous series is a family differing by CH₂ units with the same functional group: methanol, ethanol, propanol. The fixed difference means properties change gradually down the series — boiling points rise, solubility falls — in a regular pattern.",
+              "The general formula CₙH₂ₙ₊₂ for alkanes is that pattern in algebra: each extra carbon adds CH₂. Deriving a formula is therefore counting the difference, not memorising each member.",
+              "Gradual property change within a series is why the series concept matters: it predicts unseen members. A candidate who knows the pattern can state the properties of a compound never taught.",
+              "The exam loves that prediction: given the properties of two members, the third follows the trend. The series is a prophecy machine.",
+              "The regular property change is why the series concept matters beyond naming: it predicts the properties of unseen members, which is exactly what examination items test.",
+              "That prediction skill is also practical: a chemist who knows a series can estimate the boiling point of a compound nobody has measured yet."
+            ],
+            "bullets": [
+              "Homologous series differ by CH₂ with one functional group.",
+              "Properties change gradually down a series.",
+              "General formulae are patterns, not lists.",
+              "Series predict unseen members’ properties."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in organic introduction",
+            "paragraphs": [
+              "The classic trap is the empirical–molecular confusion. Percentages give the ratio only; without a molar mass the true formula cannot be known. Any option scaling the ratio without an Mr is wrong.",
+              "The second trap is the name–structure direction. 'Butene' names a four-carbon chain with a double bond; the double bond's position needs the number. Candidates who draw only the skeleton miss the position.",
+              "The third trap is tetravalency. Carbon forms four bonds always; structures with five bonds or with carbon carrying a charge in simple molecules violate the rule. Counting bonds is the check.",
+              "The fourth trap is treating functional groups as decoration. The -OH of an alkanol and the -OH of an acid behave differently because the group is embedded differently. The group decides, the skeleton merely carries.",
+              "A final trap is the abbreviation habit. Writing CH₃CH₂OH without recognising ethanol wastes the naming skill the question is testing. Expand structures before naming them."
+            ],
+            "bullets": [
+              "Percentages give ratios; Mr gives true formulae.",
+              "Names encode chain, bonds and group together.",
+              "Carbon always forms four bonds.",
+              "Functional groups decide behaviour, not the skeleton."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "alkanes-and-petroleum",
+      "topic": "organic-compounds",
+      "title": "Alkanes and Petroleum",
+      "objective": "Relate the homologous series of alkanes to their physical properties, state the substitution reaction and a few examples and uses of halogenated products, derive structural isomers (not beyond six carbon atoms), identify crude oil as a complex mixture of hydrocarbons, relate the fractions to their properties and uses, relate transformation processes to quality improvement of the fractions, and state the quality of petrol and the meaning of octane number.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Alkanes and Petroleum",
+            "paragraphs": [
+              "From cooking gas to aviation fuel, one family of compounds powers daily life. This lesson follows them from crude oil to the petrol in a tank."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Alkanes: the saturated family",
+            "paragraphs": [
+              "Alkanes are hydrocarbons with only single bonds: general formula CₙH₂ₙ₊₂ (methane, ethane, propane, butane...). They are saturated, meaning every carbon holds the maximum hydrogens, and they are the petroleum family.",
+              "Physical properties change gradually down the series: melting and boiling points rise with chain length, and density increases. Methane is a gas at room temperature; hexane is a liquid; waxes are solids. The pattern is the homologous series at work.",
+              "Alkanes react mainly by substitution: in ultraviolet light a hydrogen is replaced by a halogen. CH₄ + Cl₂ → CH₃Cl + HCl, then CH₃Cl + Cl₂ → CH₂Cl₂ + HCl. The reaction needs light, and products are mixtures."
+            ],
+            "bullets": [
+              "Alkanes: CₙH₂ₙ₊₂, single bonds only, saturated.",
+              "Boiling point rises with chain length.",
+              "Substitution: UV light replaces H with halogen."
+            ],
+            "takeaway": "Alkanes are saturated chains whose properties climb with length.",
+            "check": {
+              "question": "The substitution reaction of alkanes needs",
+              "options": [
+                "An acid catalyst",
+                "Ultraviolet light",
+                "High pressure only",
+                "A metal catalyst"
+              ],
+              "answer": 1,
+              "why": "UV light provides the energy to replace hydrogen with halogen."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Isomerism in plain words",
+            "paragraphs": [
+              "Isomers are compounds with the same molecular formula but different structures — same atoms, different arrangements. Butane has two structures: the straight chain and the branched chain (methylpropane). Both are C₄H₁₀.",
+              "Structural isomerism rearranges the carbon skeleton: n-butane and isobutane. The exam limits examples to six carbon atoms, which is plenty to show the idea.",
+              "Isomers have different properties because arrangement decides shape. The branched isomer boils lower than the straight chain, which is why refining adjusts isomer ratios.",
+              "The branched isomer is more compact, so its molecules attract each other less strongly and it boils lower. Arrangement changes the contact between molecules, and contact decides boiling."
+            ],
+            "bullets": [
+              "Isomers: same formula, different arrangement.",
+              "C₄H₁₀: n-butane and methylpropane.",
+              "Arrangement changes boiling point and properties.",
+              "Compact isomers attract less and boil lower."
+            ],
+            "takeaway": "Same atoms, different skeletons, different properties.",
+            "check": {
+              "question": "n-Butane and methylpropane are",
+              "options": [
+                "The same compound",
+                "Structural isomers with formula C₄H₁₀",
+                "Different elements",
+                "Inorganic compounds"
+              ],
+              "answer": 1,
+              "why": "Both are C₄H₁₀ with different carbon arrangements — structural isomers."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Petroleum: from crude oil to fractions",
+            "paragraphs": [
+              "Crude oil is a complex mixture of hydrocarbons, mostly alkanes, formed from ancient organisms. It is separated by fractional distillation: heated to vapour, then cooled in a tower where fractions condense at their boiling points.",
+              "The tower gives, from bottom to top: bitumen, fuel oil, kerosene, petrol (gasoline), petroleum gas. Each fraction has its own boiling range and its own use — petrol for cars, kerosene for jets, bitumen for roads.",
+              "Cracking and reforming improve the fractions: cracking breaks long chains into shorter, more valuable ones, and reforming reshapes them into better fuels. Petrochemicals are the starting materials of organic syntheses — plastics, drugs and detergents all begin here."
+            ],
+            "bullets": [
+              "Crude oil = complex mixture of hydrocarbons.",
+              "Fractional distillation gives petrol to bitumen.",
+              "Cracking shortens chains; reforming improves quality.",
+              "Petrochemicals feed plastics, drugs and detergents."
+            ],
+            "takeaway": "Fractional distillation sorts crude oil by boiling point into useful fractions.",
+            "check": {
+              "question": "Petroleum is separated into fractions by",
+              "options": [
+                "Filtration",
+                "Fractional distillation",
+                "Chromatography",
+                "Electrolysis"
+              ],
+              "answer": 1,
+              "why": "Fractions condense at different boiling points in the fractionating tower."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Octane number measures petrol quality: higher means less knocking in the engine. The number is a performance rating, not a composition."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Butane (C₄H₁₀) burns completely: 2C₄H₁₀ + 13O₂ → 8CO₂ + 10H₂O. Calculate the volume of oxygen at s.t.p. needed to burn 5.8 g of butane. (Ar C = 12, H = 1)",
+            "steps": [
+              {
+                "operation": "Find Mr of butane",
+                "reason": "Mr = 4×12 + 10×1 = 58",
+                "result": "Mr = 58",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Find moles of butane",
+                "reason": "Moles = mass ÷ Mr",
+                "result": "5.8 ÷ 58 = 0.10 mol",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Apply the equation ratio and gas volume",
+                "reason": "2 mol butane needs 13 mol O₂, so 0.10 mol needs 0.65 mol; 1 mol = 22.4 dm³ at s.t.p.",
+                "result": "0.65 × 22.4 = 14.56 dm³ O₂",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "2.9 g of butane burns completely. Calculate the oxygen volume at s.t.p. (Mr = 58).",
+            "hints": [
+              "First find moles of butane: 2.9 ÷ 58",
+              "Oxygen needed is 13/2 times the butane moles",
+              "Multiply by 22.4 dm³"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Substitution and why products are mixtures",
+            "paragraphs": [
+              "Substitution replaces one hydrogen at a time, so chlorination of methane gives CH₃Cl, CH₂Cl₂, CHCl₃ and CCl₄ together. Separating them is fractional distillation; the product mix is a direct consequence of successive substitution.",
+              "Ultraviolet light starts the process by breaking chlorine molecules into atoms, which then pull hydrogens off the alkane. The light is the initiator, not a reagent.",
+              "Because every hydrogen is replaceable, halogenated alkanes are made as mixtures and separated by boiling point. The chemistry is simple; the engineering is the separation.",
+              "A candidate who writes successive substitution equations will never call a single product 'the' product of chlorination.",
+              "The successive products also differ in reactivity, so controlling the chlorine supply controls the distribution. Less chlorine favours mono-substitution; excess favours the fully substituted carbon tetrachloride.",
+              "That control is an industrial lever: the product mix is chosen by the chlorine dose, not by luck."
+            ],
+            "bullets": [
+              "Substitution gives CH₃Cl, CH₂Cl₂, CHCl₃, CCl₄ together.",
+              "UV light initiates by splitting Cl₂ into atoms.",
+              "Products are separated by fractional distillation.",
+              "No single product — a boiling-point ladder."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Octane number and petrol quality",
+            "paragraphs": [
+              "Octane number rates a petrol's resistance to knocking — the rattling when fuel ignites too early in the cylinder. The scale runs from isooctane (100) to n-heptane (0), and a petrol's number is the isooctane percentage of a reference mixture that knocks the same.",
+              "Higher octane fuel allows higher compression ratios, so engines run more efficiently. That is why premium petrol costs more: the octane number is bought, not given.",
+              "Branched-chain hydrocarbons have higher octane numbers than straight chains, which is why reforming and isomerisation raise petrol quality. Molecular shape, not just length, decides performance.",
+              "The exam trap is to treat octane number as composition. It is a performance rating — two petrols with the same octane number can have different compositions.",
+              "Blending is the third lever: a low-octane fraction blended with a high-octane one reaches a target number. Petrol quality is therefore a mixture calculation as much as a refining one.",
+              "A candidate who sees blending as averaging octane numbers will predict the result of any blend question.",
+              "Lead once raised octane cheaply, but its toxicity ended the practice. Modern high-octane petrol is blended from reformate and oxygenates instead — quality without poison.",
+              "A candidate who links the octane scale to blending and reforming answers quality questions that name no specific additive."
+            ],
+            "bullets": [
+              "Octane number = resistance to knocking (isooctane = 100).",
+              "Higher octane allows higher compression, better efficiency.",
+              "Branched chains knock less than straight chains.",
+              "Octane number is a rating, not a composition."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in alkanes and petroleum",
+            "paragraphs": [
+              "The classic trap is the general formula. Alkanes are CₙH₂ₙ₊₂ — the saturated family. Alkenes (CₙH₂ₙ) and alkynes (CₙH₂ₙ₋₂) differ by two hydrogens per bond. Counting the bonds gives the formula, not the other way round.",
+              "The second trap is isomer counting. Structural isomers rearrange the skeleton; geometric isomers (cis/trans) rearrange around a double bond. The two types belong to different families and are never interchangeable.",
+              "The third trap is the fractionating tower order. Petrol comes off near the top, bitumen at the bottom. Reversing them reverses every fraction's boiling point.",
+              "The fourth trap is cracking's purpose. Cracking shortens chains to meet demand for petrol; it does not purify crude oil. Purification is distillation's job.",
+              "A final trap is the substitution mechanism. It is a free-radical chain, not an ionic one, so polar-solver arguments do not apply. Light initiates; radicals propagate; termination ends the chain."
+            ],
+            "bullets": [
+              "Count the bonds to get the formula.",
+              "Structural rearranges skeletons; geometric around double bonds.",
+              "Petrol top, bitumen bottom in the tower.",
+              "Cracking shortens chains; distillation purifies."
             ]
           }
         }
