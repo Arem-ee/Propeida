@@ -71,6 +71,13 @@
       "section": "ENERGY CHANGES",
       "order": 10,
       "description": "Enthalpy changes, entropy and spontaneity with the Gibbs equation."
+    },
+    {
+      "slug": "rates-of-chemical-reaction",
+      "name": "Rates of Chemical Reaction",
+      "section": "KINETICS",
+      "order": 11,
+      "description": "Factors affecting rate, rate curves, activation energy and collision theory."
     }
   ],
   "lessons": [
@@ -2543,6 +2550,212 @@
               "Convert to kelvin before any ΔG° number.",
               "ΔG°, not ΔH°, decides spontaneity.",
               "Entropy and energy are weighed separately."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "rates-of-chemical-reaction",
+      "topic": "rates-of-chemical-reaction",
+      "title": "Rates of Chemical Reaction",
+      "objective": "Identify the factors that affect the rates of a chemical reaction, determine the effects of temperature, concentration/pressure and surface area, determine the types of catalysts and their effects, interpret reaction rate curves, solve simple rate problems, relate rate to kinetic theory, examine the significance of activation energy, and deduce activation energy from rate curves.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Rates of Chemical Reaction",
+            "paragraphs": [
+              "A piece of magnesium in acid fizzes slowly, but the same magnesium as powder fizzes fast. Nothing about the chemicals changed — only the speed. This lesson explains what controls that speed."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Four things change the speed",
+            "paragraphs": [
+              "Temperature speeds reactions because faster particles collide more often and harder. A 10 °C rise roughly doubles the rate — that is why food spoils faster in heat and why the HCl and Na₂S₂O₃ clock reaction slows in the cold.",
+              "Concentration or pressure speeds reactions because more particles crowd together, so collisions happen more often. Powdered marble reacts faster with HCl than lumps because powder has far more surface area for the acid to attack. For gases, pressure is the concentration term.",
+              "A catalyst is an unchanged helper that lowers the energy hill, so more collisions succeed. Manganese(IV) oxide speeds the decomposition of hydrogen peroxide and potassium chlorate without being used up. Light also speeds certain reactions, like the halogenation of alkanes."
+            ],
+            "bullets": [
+              "Temperature up → more and harder collisions → faster.",
+              "Concentration/pressure up → more collisions → faster.",
+              "More surface area (powder) → more contact → faster.",
+              "A catalyst lowers the energy hill without being used up."
+            ],
+            "takeaway": "Rate is collisions per second; temperature, concentration, area and catalysts change them.",
+            "check": {
+              "question": "Powdered marble reacts faster with HCl than marble lumps because",
+              "options": [
+                "Powder is hotter than lumps",
+                "Powder has more surface area in contact with the acid",
+                "Powder contains more acid",
+                "Lumps block all collisions"
+              ],
+              "answer": 1,
+              "why": "The same mass spread into powder exposes far more surface for attack."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Curves, collisions and activation energy",
+            "paragraphs": [
+              "A rate curve shows concentration falling steeply at first, then flattening. The slope is the rate, and the steepest part comes at the start when reactants crowd together. Interpreting the slope is interpreting the rate — a shallow slope means a slow reaction.",
+              "Collision theory says a reaction happens only when particles collide with enough energy. Activation energy is that minimum energy. Heating raises the fraction of particles above it, which is why a small temperature rise doubles the rate.",
+              "Arrhenius' law links rate to temperature quantitatively: ln(rate) plotted against 1/T is a straight line whose slope gives the activation energy. Light speeds some reactions (halogenation) by supplying energy directly to molecules."
+            ],
+            "bullets": [
+              "The slope of a rate curve is the rate.",
+              "Only collisions above the activation energy succeed.",
+              "Heating raises the successful fraction — roughly doubling per 10 °C.",
+              "Arrhenius: slope of ln(rate) vs 1/T gives Ea."
+            ],
+            "takeaway": "Rate is successful collisions per second; activation energy sets the threshold.",
+            "check": {
+              "question": "A rate curve flattens out near the end because",
+              "options": [
+                "The reaction has finished completely",
+                "The reactants are nearly used up, so collisions fade",
+                "The temperature has fallen",
+                "The catalyst has been used up"
+              ],
+              "answer": 1,
+              "why": "With few reactants left, successful collisions become rare and the rate falls."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Reading rates from data",
+            "paragraphs": [
+              "Rate can be measured as the volume of gas given off per second, the colour change per second, or the concentration change per second. In the iodine clock reaction, the time for the colour to change gives the rate: shorter time means faster rate.",
+              "A simple rate calculation divides the amount changed by the time. If 200 cm³ of hydrogen is collected in 50 s, the average rate is 200 ÷ 50 = 4 cm³/s. Comparing two runs shows the effect of each factor directly.",
+              "Rate curves let the activation energy be estimated: the steeper the initial slope at higher temperature, the larger the successful fraction. The Arrhenius plot converts that comparison into a number."
+            ],
+            "bullets": [
+              "Rate = amount changed ÷ time taken.",
+              "Gas volume/s, colour/s and concentration/s all measure rate.",
+              "The rate-curve slope gives Ea via Arrhenius."
+            ],
+            "takeaway": "Divide the change by the time, and the slope tells the rest.",
+            "check": {
+              "question": "200 cm³ of gas is collected in 50 s. What is the average rate?",
+              "options": [
+                "0.25 cm³/s",
+                "4 cm³/s",
+                "25 cm³/s",
+                "250 cm³/s"
+              ],
+              "answer": 1,
+              "why": "Average rate = 200 ÷ 50 = 4 cm³/s."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "When a rate question gives a time, flip it: rate is change over time. The reciprocal answer is the favourite trap in this topic."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "200 cm³ of hydrogen is collected in 50 s from a magnesium-acid reaction. Calculate the average rate of gas production.",
+            "steps": [
+              {
+                "operation": "Write the rate definition",
+                "reason": "Rate is amount changed divided by time taken",
+                "result": "rate = 200 ÷ 50",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Divide the volume by the seconds",
+                "reason": "Both numbers are given directly, so no conversion is needed",
+                "result": "4 cm³/s",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "State the rate with its unit",
+                "reason": "A rate without units is meaningless",
+                "result": "Average rate = 4 cm³/s",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "The same reaction collects 300 cm³ of hydrogen in 60 s. Calculate the average rate and compare it with the first run.",
+            "hints": [
+              "Divide 300 by 60",
+              "That gives 5 cm³/s",
+              "Compare 5 with the earlier 4 cm³/s"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Kinetic theory behind every factor",
+            "paragraphs": [
+              "Each rate factor changes the same thing: the number of successful collisions per second. Temperature raises particle speed, so more collisions pass the activation energy. Concentration and pressure crowd particles together, so collisions happen more often. Surface area gives the acid more points of attack.",
+              "The catalyst neither adds energy nor changes the collision count — it lowers the hill so a larger fraction of the same collisions succeed. Manganese(IV) oxide in hydrogen peroxide is the classic example: the same peroxide, the same temperature, a faster rate.",
+              "Light acts differently in halogenation: it supplies energy to break molecules directly, creating free radicals that propagate the chain. That is why alkanes chlorinate under ultraviolet light and not in the dark.",
+              "A candidate who reduces every factor to 'more successful collisions' can predict the direction of any rate question without memorising four separate rules."
+            ],
+            "bullets": [
+              "Every factor acts through successful collisions per second.",
+              "Catalysts lower the hill; they add no energy.",
+              "Light creates radicals directly in halogenation.",
+              "One picture — successful collisions — predicts all directions."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Activation energy from rate curves",
+            "paragraphs": [
+              "Arrhenius' law states that ln(rate) against 1/T is a straight line with gradient −Ea/R. Measuring rates at two temperatures and plotting them gives a slope, and the slope gives the activation energy. The derivation needs no memorised formula beyond the plot itself.",
+              "Graphically, a steeper Arrhenius slope means a larger activation energy — a higher hill that temperature must climb. Comparing two reactions on one plot ranks their hills without any calculation.",
+              "The catalysed reaction plots as a shallower line on the same axes: same starting point, smaller slope. That visual difference is the catalyst's whole effect expressed as geometry.",
+              "The exam trap is reading the direct rate curve as the Arrhenius plot. One shows rate over time; the other shows log-rate over reciprocal temperature. Naming the axes prevents the mix-up.",
+              "A two-temperature estimate follows the same logic: the ratio of the two rates, plotted against the difference of reciprocal temperatures, gives the slope and therefore Ea. The full plot is only the careful version of that one ratio."
+            ],
+            "bullets": [
+              "Arrhenius: ln(rate) vs 1/T has gradient −Ea/R.",
+              "Steeper slope = larger activation energy.",
+              "Catalysts plot shallower on the same axes.",
+              "Rate curve ≠ Arrhenius plot — name the axes."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in rates",
+            "paragraphs": [
+              "The classic trap inverts the rate. If a question gives a time for a colour change, the rate is the reciprocal of that time. Shorter time means faster rate, and candidates who report the time as the rate lose the mark.",
+              "The second trap is concentration versus rate. Increasing concentration speeds the reaction but does not change the final amount of product. Yield is decided by stoichiometry; rate is decided by collisions. The two are never interchangeable.",
+              "The third trap is the catalyst myth. A catalyst does not change ΔH, the equilibrium position or the final yield — it only lowers the hill. Any option claiming a catalyst changes the heat or the product amount is false.",
+              "The fourth trap is surface area versus mass. Powder and lumps of equal mass have the same amount of reactant but different exposed area. Rate follows area, not quantity.",
+              "A final trap is ignoring the conditions in the question. A rate measured at one temperature cannot be compared with a rate at another; the comparison is only valid when every factor except the one tested is held constant."
+            ],
+            "bullets": [
+              "Rate is the reciprocal of a measured time.",
+              "Concentration changes rate, never final yield.",
+              "Catalysts change neither ΔH nor yield.",
+              "Rate follows exposed area, not total mass."
             ]
           }
         }
