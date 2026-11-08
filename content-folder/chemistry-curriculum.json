@@ -475,7 +475,7 @@
           "content": {
             "heading": "Kinetic Theory of Matter and Gas",
             "paragraphs": [
-              "Kinetic theory treats matter as particles in constant motion, and the gas laws follow from how that motion changes with pressure, volume and temperature. Heating speeds the particles, squeezing crowds them and cooling slows them."
+              "Steam rises off a pot of hot yam water, and smoke drifts across a food stall. Both are invisible particles in motion. This lesson explains how the movement of tiny particles explains solids, liquids, gases and every gas law."
             ],
             "bullets": []
           }
@@ -485,44 +485,44 @@
           "content": {
             "heading": "Particles in motion make solids, liquids and gases",
             "paragraphs": [
-              "Ice in a warm room melts, then the water dries without boiling. Heating gives particles energy, so they move faster and escape their neighbours.",
-              "Kinetic theory states matter is made of tiny particles in constant random motion, and average speed rises with temperature. Collisions with the container walls produce gas pressure, because faster particles strike more often and harder.",
-              "Solids vibrate in fixed positions, liquids slide past each other, and gases move freely. Melting, vapourization, boiling, freezing and condensation are changes in particle motion, and wandering smoke particles show this as Brownian movement."
+              "Everything is made of particles that are always moving. In a solid they vibrate in fixed positions. In a liquid they slide past one another. In a gas they move freely everywhere, which is why a gas fills a room.",
+              "Melting is particles gaining enough energy to slip past each other. Boiling is energy high enough that particles escape from everywhere at once. Vapourisation, by contrast, escapes only from the surface, at any temperature.",
+              "Freezing locks particles into place, and condensation returns a gas to a liquid as it cools. Brownian movement is the visible proof: tiny smoke particles jiggle because invisible air particles keep bumping them."
             ],
             "bullets": [
-              "Boiling is rapid vapourization throughout the liquid at its boiling point; vapourization is surface escape at any temperature",
-              "Gains of heat drive melting, boiling and vapourization; losses drive freezing and condensation",
-              "Brownian movement proves particles are moving though the sample looks still"
+              "Solids vibrate in place; liquids slide; gases move freely.",
+              "Boiling bubbles throughout; vapourisation escapes only from the surface.",
+              "Brownian movement shows invisible particles bumping visible ones."
             ],
-            "takeaway": "State changes are changes in particle motion, measured by temperature.",
+            "takeaway": "The speed of particles decides whether matter is solid, liquid or gas.",
             "check": {
               "question": "A puddle dries on a cool day without ever bubbling. Which change is this?",
               "options": [
                 "Freezing",
                 "Condensation",
-                "Surface vapourization",
+                "Surface vapourisation",
                 "Melting throughout"
               ],
               "answer": 2,
-              "why": "Vapourization is escape from the surface at any temperature; boiling bubbles throughout the liquid."
+              "why": "Vapourisation is escape from the surface at any temperature; boiling bubbles throughout."
             }
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Six gas laws relate pressure, volume, temperature and amount",
+            "heading": "Six gas laws in daily words",
             "paragraphs": [
-              "A bicycle pump feels hard to squeeze and warms its barrel as air is forced in. Compression raises the pressure because the same particles collide more often with the walls.",
-              "Boyle's law says P ∝ 1/V at constant temperature, and Charles's law says V ∝ T in kelvin at constant pressure. Gay-Lussac's law says P ∝ T in kelvin at constant volume, because faster particles hit the walls harder.",
-              "Avogadro's law says equal volumes at the same conditions hold equal numbers of moles, so amount links directly to volume. Graham's law says the rate of diffusion is proportional to 1/√M."
+              "Boyle’s law says squeezing a gas raises its pressure, like crowding a bus. Charles’s law says a gas grows when heated, because faster particles push harder. Gay-Lussac’s law says pressure rises with temperature in a sealed container.",
+              "Avogadro’s law says equal volumes hold equal particle numbers, so one mole of any gas fills 22.4 dm³ at s.t.p. Graham’s law says light gases diffuse faster, by the square root of the mass ratio. Dalton’s law says a mixture’s total pressure is the sum of each gas’s pressure.",
+              "Each law names which variable is held constant. Reading that condition is the whole skill of applying them."
             ],
             "bullets": [
-              "Dalton's law: total pressure equals the sum of the partial pressures of the gases present",
-              "Atomicity is the number of atoms in one molecule, so H2 and O2 have atomicity 2",
-              "Rates fall as molecules get heavier: rate ∝ 1/√Mr, so lighter gases diffuse faster"
+              "Boyle: squeeze a gas and pressure rises.",
+              "Charles: heat a gas and volume rises (in kelvin).",
+              "Avogadro: equal volumes, equal numbers. Graham: light is faster. Dalton: pressures add."
             ],
-            "takeaway": "Each law holds two variables fixed while the third changes with temperature in kelvin.",
+            "takeaway": "Pressure, volume and temperature trade off in fixed, predictable ways.",
             "check": {
               "question": "A gas is squeezed to half its volume at constant temperature. What happens to its pressure?",
               "options": [
@@ -539,17 +539,18 @@
         {
           "type": "text",
           "content": {
-            "heading": "One equation links pressure, volume, amount and temperature",
+            "heading": "One equation that joins them",
             "paragraphs": [
-              "A syringe of air is warmed and its piston rises. The extra heat raises particle energy and pushes harder on the piston.",
-              "The ideal gas equation is PV = nRT, with P in atmospheres, V in dm³, n in moles, R = 0.082 dm³·atm·K⁻¹·mol⁻¹ and T in kelvin. Give three of the variables and the equation gives the fourth.",
-              "At s.t.p. one mole occupies 22.4 dm³, since 1 × 0.082 × 273 ≈ 22.4. Vapour density is half the relative molecular mass, VD = Mr ÷ 2, because gases are compared with hydrogen."
+              "The ideal gas equation joins all the laws: PV = nRT. P is pressure, V is volume, n is moles, T is temperature in kelvin, and R is a constant. It reads like a recipe: pressure × volume equals amount × temperature (with R).",
+              "One mole of an ideal gas occupies 22.4 dm³ at 273 K and 1 atm, which is the molar volume. The vapour density of a gas is Mr ÷ 2, so a vapour density of 16 means Mr = 32. That link turns a gas measurement into a mass.",
+              "Real gases misbehave at high pressure and low temperature, when particles are squeezed close enough that their size and attractions matter. An ideal gas is the strict rule; a real gas is the rule with exceptions."
             ],
             "bullets": [
-              "Real gases deviate at high pressure and low temperature because particle size and forces matter there",
-              "Ideal gases are assumed to have negligible size and no forces between particles"
+              "PV = nRT joins pressure, volume, amount and temperature.",
+              "One mole fills 22.4 dm³ at s.t.p.; vapour density = Mr ÷ 2.",
+              "Real gases deviate at high P and low T."
             ],
-            "takeaway": "PV = nRT gives the missing variable, with kelvin and the correct units of R.",
+            "takeaway": "PV = nRT turns any two measurements into the rest.",
             "check": {
               "question": "What volume does 1 mol of an ideal gas occupy at 273 K and 1 atm?",
               "options": [
@@ -568,7 +569,7 @@
           "content": {
             "title": "Exam tip",
             "tone": "tip",
-            "body": "Convert every Celsius temperature to kelvin before using Charles's law, Gay-Lussac's law or PV = nRT. The 273 offset decides the answer, and R = 0.082 dm³·atm·K⁻¹·mol⁻¹ must match pressures in atmospheres and volumes in cubic decimetres."
+            "body": "Convert every temperature to kelvin before any gas calculation. Using Celsius instead of kelvin is the single easiest way to fail a gas item."
           }
         },
         {
@@ -578,19 +579,19 @@
             "steps": [
               {
                 "operation": "Write PV = nRT rearranged",
-                "reason": "Volume V is unknown, so rearrange P V = n R T into V = n R T ÷ P",
+                "reason": "Volume is what is asked, so it goes alone",
                 "result": "V = 0.5 × 0.082 × 273 ÷ 1",
                 "predictPrompt": ""
               },
               {
                 "operation": "Multiply the numerator",
-                "reason": "First find n × R, then multiply by T",
+                "reason": "Half a mole at standard temperature holds half the molar volume",
                 "result": "0.5 × 0.082 = 0.041, then 0.041 × 273 = 11.193",
                 "predictPrompt": ""
               },
               {
                 "operation": "Divide by pressure and round",
-                "reason": "Pressure is 1 atm, so division leaves the value unchanged",
+                "reason": "Pressure of 1 atm leaves the volume unchanged",
                 "result": "V ≈ 11.19 dm³",
                 "predictPrompt": ""
               }
@@ -600,11 +601,11 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "Calculate the volume of 1 mol of an ideal gas at 273 K and 1 atm using PV = nRT.",
+            "question": "Calculate the volume of 0.5 mol of an ideal gas at 546 K and 1 atm, using R = 0.082 dm³·atm·K⁻¹·mol⁻¹.",
             "hints": [
-              "Rearrange to V = n × R × T ÷ P",
-              "Substitute n = 1, R = 0.082, T = 273 and P = 1",
-              "Check that the result matches the molar volume at s.t.p."
+              "Use V = nRT ÷ P as before",
+              "Twice the temperature should double the volume from the worked example",
+              "Check: 0.5 × 0.082 × 546 = 22.386"
             ]
           }
         },
@@ -613,15 +614,19 @@
           "content": {
             "heading": "Go deeper: Why heating makes particles move faster",
             "paragraphs": [
-              "Temperature is the average kinetic energy of the particles, not the energy of any single particle. A hot sample has a higher average because the spread of speeds shifts upward when heat is absorbed, so collisions with the walls become both more frequent and more forceful. That is why pressure rises when a sealed gas is warmed at constant volume.",
-              "Heating adds energy to the particles through collisions with the container and among themselves. The particles do not all gain the same amount; some move faster and some slower, but the average rises and the rate of change of state moves with it. Melting, boiling and vapourization therefore become more likely as the average speed grows.",
-              "Cooling does the reverse and reverses every change of state in turn. Freezing and condensation release the energy that melting and vapourization absorbed, and the particles settle into slower, more ordered motion. The same energy account explains both directions without introducing any new kind of particle.",
-              "Absolute zero is the limit where the average kinetic energy reaches its minimum, which is why kelvin starts there. No sample can be cooled below that limit, because the particles retain their motion but approach the lowest possible average energy."
+              "Temperature is the average speed of particles. Heating a gas hands energy to its particles, so the average speed rises. That is why Charles's law works: faster particles collide harder and push out to a larger volume.",
+              "The same idea explains boiling and vapourisation. At the surface, the fastest particles can escape at any temperature, which is vapourisation. Boiling needs the whole liquid to reach the energy where particles escape from everywhere, including bubbles inside.",
+              "It also explains why a gas's pressure climbs in a sealed container: the particles hit the walls harder and more often. Gay-Lussac's law is just Charles's law felt on the container instead of measured as volume.",
+              "A candidate who pictures collisions instead of formulas can reconstruct every gas law from this one image: speed makes pushing power, and pushing power is pressure.",
+              "A candidate who pictures collisions instead of formulas can rebuild every gas law from this one image: speed makes pushing power, and pushing power is pressure.",
+              "The same picture explains why perfume spreads: the fastest molecules escape first and race across the room while slower ones lag behind.",
+              "Cooling runs the film backwards, slowing particles until some can no longer escape and must condense."
             ],
             "bullets": [
-              "Average kinetic energy rises with temperature in kelvin",
-              "Faster particles collide more often and harder, raising pressure",
-              "Freezing and condensation release the heat that melting absorbed"
+              "Temperature measures average particle speed.",
+              "Heating raises speed, so gases expand.",
+              "Pressure is the force of particles hitting walls.",
+              "Pictures of collisions replace memorised laws."
             ]
           }
         },
@@ -630,15 +635,16 @@
           "content": {
             "heading": "Go deeper: Graham's law worked case for hydrogen and oxygen",
             "paragraphs": [
-              "Graham's law predicts the rate of diffusion from relative molecular mass alone. Because rate is proportional to 1/√Mr, heavy molecules are slower at the same temperature. The ratio form removes the constant of proportionality and needs only the two masses.",
-              "Take hydrogen (Mr = 2) and oxygen (Mr = 32) diffusing at the same temperature. The rate ratio is r(H2) ÷ r(O2) = √(32 ÷ 2) = √16 = 4. Hydrogen therefore diffuses four times as fast as oxygen under identical conditions.",
-              "Times run in the opposite direction to rates. If a given volume of hydrogen takes 10 seconds to diffuse a fixed distance, the same volume of oxygen takes 4 × 10 = 40 seconds. A candidate who inverts the ratio and reports oxygen as faster has used Mr directly instead of its square root.",
-              "A gas with twice the Mr diffuses only 1 ÷ √2 ≈ 0.71 times as fast, because √2 ≈ 1.41. The heavier gas in any pair is therefore always the slower one, never the faster one."
+              "Graham's law says the rate of diffusion of a gas follows the inverse square root of its molar mass: rate ∝ 1 ÷ √Mr. Hydrogen (Mr = 2) against oxygen (Mr = 32) gives a rate ratio of √(32 ÷ 2) = √16 = 4, so hydrogen diffuses 4 times faster.",
+              "In time terms, if oxygen takes 40 seconds to diffuse the same distance, hydrogen takes 40 ÷ 4 = 10 seconds. The lighter gas always wins the race, which is why ammonia fumes cross a classroom long before heavier vapours even start.",
+              "The same ratio governs effusion through a tiny hole. A leaking balloon loses hydrogen fastest, not because hydrogen is 'stronger', but because its light particles move quicker between collisions.",
+              "The exam trap is inverting the ratio. To correct it, ask first which gas is lighter; the lighter one must have the faster rate, so its number must come out larger."
             ],
             "bullets": [
-              "Rate ratio = √(heavier Mr ÷ lighter Mr)",
-              "Hydrogen, Mr = 2, is 4 times faster than oxygen, Mr = 32",
-              "Times invert the ratio: 10 seconds becomes 40 seconds"
+              "Rate ratio = √(heavier Mr ÷ lighter Mr).",
+              "H₂ diffuses 4× faster than O₂ (√16 = 4).",
+              "The lighter gas always has the faster rate.",
+              "Effusion follows the same mass rule."
             ]
           }
         },
@@ -647,15 +653,16 @@
           "content": {
             "heading": "Go deeper: Exam traps in gas calculations",
             "paragraphs": [
-              "The most expensive slip is leaving the temperature in Celsius. Gas laws use kelvin, so 0 °C is 273 K and 27 °C is 300 K, and every substitution must add 273 first. A volume proportional to T that uses 27 instead of 300 is wrong by a factor of about 11, because 300 ÷ 27 ≈ 11.1.",
-              "The second slip swaps vapour density for relative molecular mass. Vapour density is VD = Mr ÷ 2, so a gas with VD = 16 has Mr = 32, not 16. Reading the question for which quantity is asked prevents doubling or halving the answer at the final step.",
-              "Units must match R = 0.082 dm³·atm·K⁻¹·mol⁻¹ throughout. Pressure in atmospheres and volume in cubic decimetres go together, while mixed units need conversion first. At high pressure or low temperature the ideal assumption also fails, because molecular size and forces can no longer be ignored.",
-              "Reading the units line first also catches the remaining traps before arithmetic starts. A pressure, a volume and a temperature that match R can be substituted directly without conversion."
+              "The deadliest trap is temperature units. Charles's law and PV = nRT need kelvin; using Celsius compresses or stretches the answer by a huge factor. At 27 °C the correct temperature is 300 K, not 27, and that single slip re-scales every result by about eleven times.",
+              "The second trap is vapour density. Vapour density equals Mr ÷ 2, never Mr itself. A vapour density of 16 means a relative molecular mass of 32, not 16. The factor of two is the examiners' favourite silent divider.",
+              "The third trap forgets Boyle's condition. If pressure changes, Boyle's law cannot be applied until the temperature is confirmed constant. The question will always bury the condition in plain words like 'the mixture is kept cool'.",
+              "The fourth trap is partial pressure addition in the wrong direction: Dalton's law adds pressures of separate gases sharing one container, it does not share one gas's pressure across gases. Reading 'in the same vessel' is the cue to add."
             ],
             "bullets": [
-              "Convert °C to K with +273 before calculating",
-              "VD = Mr ÷ 2, so Mr = 2 × VD",
-              "Match units to R = 0.082 dm³·atm·K⁻¹·mol⁻¹"
+              "Always convert to kelvin (27 °C = 300 K).",
+              "Vapour density = Mr ÷ 2, never Mr.",
+              "Boyle's law needs constant temperature stated or implied.",
+              "Dalton's law adds gases sharing one vessel."
             ]
           }
         }
