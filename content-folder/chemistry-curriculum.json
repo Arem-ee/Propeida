@@ -3615,6 +3615,421 @@
           }
         }
       ]
+    },
+    {
+      "slug": "hydrogen",
+      "topic": "non-metals-and-their-compounds",
+      "title": "Hydrogen",
+      "objective": "Predict reagents for the laboratory and industrial preparation of hydrogen, identify its properties and uses, and determine its specific test.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Hydrogen",
+            "paragraphs": [
+              "A balloon rises because a gas lighter than air fills it. That gas is hydrogen — the lightest element of all, and the one this lesson follows from its making to its uses."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Making hydrogen industrially and in the laboratory",
+            "paragraphs": [
+              "The main industrial source is water gas: steam passed over red-hot coke makes carbon monoxide and hydrogen, the water-gas shift. Cracking of petroleum fractions also yields hydrogen with alkenes. Water gas is therefore the factory feedstock.",
+              "In the laboratory, hydrogen is prepared by reacting zinc or magnesium with dilute hydrochloric or sulfuric acid: Zn + 2HCl → ZnCl₂ + H₂. It is collected by downward displacement of air because it is lighter than air and would escape a trough of water slowly.",
+              "The choice of method depends on scale: industry needs tonnage from cheap feedstocks, so water gas wins; the laboratory needs a clean small supply, so metal plus acid wins."
+            ],
+            "bullets": [
+              "Industry: water gas from steam over coke; also cracking.",
+              "Laboratory: metal (Zn, Mg) + dilute acid.",
+              "Collected by downward air displacement."
+            ],
+            "takeaway": "Industry makes hydrogen from water gas; the laboratory uses metal plus acid.",
+            "check": {
+              "question": "The laboratory preparation of hydrogen uses",
+              "options": [
+                "Zinc with dilute hydrochloric acid",
+                "Steam over red-hot coke",
+                "Cracking of petroleum",
+                "Fractional distillation of liquid air"
+              ],
+              "answer": 0,
+              "why": "Metal + dilute acid is the standard laboratory preparation of hydrogen."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Properties and the pop test",
+            "paragraphs": [
+              "Hydrogen is a colourless, odourless gas, the lightest of all, and it burns in air to form water: 2H₂ + O₂ → 2H₂O. Because it is the smallest molecule, it diffuses faster than any other gas — Graham's law makes it the fastest.",
+              "It is a reducing agent: it removes oxygen from hot metal oxides, turning copper(II) oxide black into copper metal. That reducing power is why hydrogen is used in welding and in the manufacture of ammonia.",
+              "The test is the squeaky pop: a lighted splint held to a test tube of hydrogen makes a squeak. No other common gas gives that sound, so the pop confirms hydrogen."
+            ],
+            "bullets": [
+              "Lightest gas; burns to form water.",
+              "Reducing agent: removes oxygen from hot oxides.",
+              "Test: lighted splint gives a squeaky pop."
+            ],
+            "takeaway": "Hydrogen is the lightest gas, a reducing agent, and pops with a lighted splint.",
+            "check": {
+              "question": "The specific test for hydrogen is",
+              "options": [
+                "It rekindles a glowing splint",
+                "A lighted splint gives a squeaky pop",
+                "It turns limewater milky",
+                "It bleaches damp litmus"
+              ],
+              "answer": 1,
+              "why": "The squeaky pop with a lighted splint is unique to hydrogen."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Uses of hydrogen",
+            "paragraphs": [
+              "Hydrogen hydrogenates oils into margarine and hardens them for soap, using a nickel catalyst. It feeds the Haber process for ammonia, supplies fuel for rockets and oxy-hydrogen welding, and is tried as a clean fuel because it burns to water only.",
+              "Its lightness once lifted airships, but it is dangerously flammable, so helium replaced it in balloons. In the laboratory its reducing power removes oxygen from hot metal oxides to give pure metals.",
+              "Every use follows one of two properties: it is the lightest gas, or it is a strong reducing agent. The use list is short because the property list is short."
+            ],
+            "bullets": [
+              "Hydrogenation of oils (margarine, soap) with nickel.",
+              "Haber process, welding, rocket fuel, clean fuel.",
+              "Uses follow lightness or reducing power."
+            ],
+            "takeaway": "Hydrogen's uses all follow from being lightest or strongest reducer.",
+            "check": {
+              "question": "Hydrogen is used to harden vegetable oils into margarine because it",
+              "options": [
+                "Is the lightest gas",
+                "Adds across double bonds as a reducing agent",
+                "Bleaches the oil white",
+                "Is heavier than the oil"
+              ],
+              "answer": 1,
+              "why": "Hydrogenation adds hydrogen across the double bonds, hardening the oil."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For any gas question, name the test first. Hydrogen pops, oxygen rekindles, carbon(IV) oxide milks limewater — the test is the fastest identifier."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Zinc reacts with dilute hydrochloric acid to give hydrogen. Calculate the volume of hydrogen at s.t.p. from 6.5 g of zinc. (Zn + 2HCl → ZnCl₂ + H₂; Ar Zn = 65)",
+            "steps": [
+              {
+                "operation": "Find moles of zinc",
+                "reason": "Moles count atoms; Mr(Zn) = 65",
+                "result": "6.5 ÷ 65 = 0.10 mol",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Apply the equation ratio",
+                "reason": "One mole of Zn gives one mole of H₂",
+                "result": "0.10 mol H₂",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Convert to gas volume",
+                "reason": "One mole of gas fills 22.4 dm³ at s.t.p.",
+                "result": "0.10 × 22.4 = 2.24 dm³",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "13.0 g of zinc reacts with excess dilute acid. Calculate the volume of hydrogen at s.t.p. (Ar Zn = 65).",
+            "hints": [
+              "First find moles of zinc: 13.0 ÷ 65",
+              "The ratio Zn:H₂ is 1:1",
+              "Multiply moles by 22.4 dm³"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why water gas is the industrial feedstock",
+            "paragraphs": [
+              "Water gas is made by passing steam over red-hot coke: C + H₂O → CO + H₂. The mixture of carbon monoxide and hydrogen is called producer gas or water gas, and it is the cheapest large-scale source of hydrogen because coke and water are cheap.",
+              "The water-gas shift converts the carbon monoxide further: CO + H₂O → CO₂ + H₂. That step doubles the hydrogen yield per coke and gives a cleaner gas for ammonia synthesis. Industry runs both steps in sequence.",
+              "Cracking of petroleum fractions yields hydrogen with alkenes, but the yield per barrel is smaller than the coke route. Scale is why water gas dominates: the feedstock is nearly free.",
+              "The exam link is direct: any question asking the industrial source of hydrogen expects water gas (or steam–coke); any question about cracking expects alkenes as the main product, with hydrogen as a by-product.",
+              "The shift step is also why syngas is called synthesis gas in industry: the same CO + H₂ mixture feeds ammonia, methanol and oxo processes. One feedstock, several industries.",
+              "A candidate who writes both steps — coke to water gas, then shift to hydrogen — shows the full manufacturing chain rather than just the winning name."
+            ],
+            "bullets": [
+              "Water gas: steam over coke gives CO + H₂.",
+              "Shift: CO + H₂O → CO₂ + H₂ doubles hydrogen.",
+              "Cracking yields less hydrogen per barrel.",
+              "Industrial source = water gas; cracking = alkenes first."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Hydrogen as a reducing agent",
+            "paragraphs": [
+              "Hydrogen removes oxygen from hot metal oxides because it forms water, which is very stable. Copper(II) oxide black turns to copper metal in a stream of hydrogen — a classic laboratory demonstration that reduction is removal of oxygen.",
+              "The same power hydrogenates oils in margarine manufacture: nickel catalyses hydrogen adding across double bonds. In ammonia synthesis hydrogen is the reducing partner fed from water gas.",
+              "Because hydrogen is the lightest molecule, it diffuses fastest and escapes through the smallest holes. That lightness is why airships abandoned it for helium — flammability plus escape made it impractical at scale.",
+              "A candidate who links every use to either lightness or reducing power will never misclassify a hydrogen application.",
+              "That same escape tendency is why hydrogen leaks through the smallest joints in stored systems. Engineers must design around the molecule’s size, not ignore it.",
+              "In the laboratory the reducing power has a second use: drying and reducing gases before they are dried and tested, where hydrogen removes the last oxygen traces."
+            ],
+            "bullets": [
+              "H₂ reduces hot copper(II) oxide to copper.",
+              "Hydrogenation and Haber feed on reducing power.",
+              "Lightness made airships unsafe; helium replaced it.",
+              "Classify uses by lightness or reducing power."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in hydrogen",
+            "paragraphs": [
+              "The classic trap is the preparation. Water gas is the industrial source; metal plus acid is the laboratory one. Questions that name 'red-hot coke' expect water gas, and those naming zinc expect the laboratory method.",
+              "The second trap is the pop test. Oxygen rekindles a glowing splint; hydrogen pops with a lighted one. Swapping the two sounds reverses the identification.",
+              "The third trap is collectability. Hydrogen is collected by downward air displacement, not over water, because it would diffuse away. The method follows the lightness.",
+              "The fourth trap is flammability versus instability. Hydrogen is stable but flammable — it burns cleanly to water. Calling it explosive as a stored gas confuses the burn with the storage hazard.",
+              "A final trap is direction: hydrogen reduces copper oxide to copper, but copper never reduces water. The reducer is always the element higher in reactivity, and hydrogen sits mid-series."
+            ],
+            "bullets": [
+              "Industrial = water gas; laboratory = metal + acid.",
+              "Hydrogen pops; oxygen rekindles — never swap them.",
+              "Collected by downward air displacement.",
+              "Flammable, but burns cleanly to water."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "chlorine-and-hydrogen-chloride",
+      "topic": "non-metals-and-their-compounds",
+      "title": "Chlorine and Hydrogen Chloride",
+      "objective": "Predict reagents for the laboratory and industrial preparation of chlorine, identify its properties and uses, determine specific tests for chlorine and chlorides, and predict the reagents for preparation, properties and uses of hydrogen chloride gas and hydrochloric acid.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Chlorine and Hydrogen Chloride",
+            "paragraphs": [
+              "The smell of a swimming pool on a hot day is chlorine — the same gas that sterilises the water and bleaches cloth. This lesson follows chlorine from its making to its most important acid."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Making chlorine in the laboratory and in industry",
+            "paragraphs": [
+              "The laboratory preparation oxidises hydrochloric acid with manganese(IV) oxide: MnO₂ + 4HCl → MnCl₂ + Cl₂ + 2H₂O. The flask is heated gently and the gas is collected by downward displacement of air because chlorine is denser than air.",
+              "The industrial preparation electrolyses concentrated brine (saturated NaCl solution): 2NaCl + 2H₂O → 2NaOH + H₂ + Cl₂. Chlorine comes off at the anode, hydrogen at the cathode, and sodium hydroxide stays in solution. One cell makes three products.",
+              "The choice differs by scale: the laboratory needs a small pure supply, so oxidation wins; industry needs tonnage, so electrolysis of cheap brine wins."
+            ],
+            "bullets": [
+              "Laboratory: MnO₂ + conc. HCl, heated gently.",
+              "Industry: electrolysis of concentrated brine.",
+              "Chlorine is collected by downward air displacement."
+            ],
+            "takeaway": "The laboratory oxidises HCl; industry electrolyses brine.",
+            "check": {
+              "question": "The industrial preparation of chlorine is by",
+              "options": [
+                "Heating MnO₂ with concentrated HCl",
+                "Electrolysis of concentrated brine",
+                "Fractional distillation of liquid air",
+                "Passing steam over red-hot coke"
+              ],
+              "answer": 1,
+              "why": "Electrolysis of brine is the industrial preparation of chlorine."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Properties and uses of chlorine",
+            "paragraphs": [
+              "Chlorine is a greenish-yellow gas with a choking smell, poisonous in quantity. It is a strong oxidising agent: it bleaches damp litmus and removes colour from dyes. That bleaching power is the basis of its uses.",
+              "Chlorine sterilises drinking water and swimming pools by killing germs. It bleaches wood pulp for paper and cotton for cloth. It also manufactures hydrochloric acid, plastics (PVC) and insecticides.",
+              "The test confirms the gas: chlorine bleaches damp blue litmus paper white. No other common gas does that, so the bleaching is the specific test."
+            ],
+            "bullets": [
+              "Greenish-yellow, choking gas; strong oxidising agent.",
+              "Uses: water sterilisation, bleaching, HCl, PVC, insecticides.",
+              "Test: bleaches damp blue litmus white."
+            ],
+            "takeaway": "Chlorine bleaches and kills germs — that is why it is used.",
+            "check": {
+              "question": "The specific test for chlorine is that it",
+              "options": [
+                "Turns limewater milky",
+                "Bleaches damp blue litmus white",
+                "Gives a squeaky pop",
+                "Rekindles a glowing splint"
+              ],
+              "answer": 1,
+              "why": "Chlorine's bleaching of damp litmus is its specific test."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Hydrogen chloride and hydrochloric acid",
+            "paragraphs": [
+              "Hydrogen chloride gas (HCl) is made in the laboratory by warming concentrated sulfuric acid with sodium chloride: NaCl + conc. H₂SO₄ → NaHSO₄ + HCl. It is collected by downward displacement of air because it is denser than air.",
+              "Hydrogen chloride dissolves in water to form hydrochloric acid, a strong acid. The gas and the acid share the name HCl but are different states: the gas is a fuming, pungent compound; the acid is its aqueous solution.",
+              "Chlorides are salts of hydrochloric acid. The test for chloride ions (Cl⁻) is silver nitrate solution, which gives a white precipitate of silver chloride, soluble in dilute ammonia. That precipitate confirms the chloride."
+            ],
+            "bullets": [
+              "Laboratory HCl: NaCl + conc. H₂SO₄, warmed.",
+              "HCl gas dissolves in water to give hydrochloric acid.",
+              "Chloride test: AgNO₃ gives a white precipitate."
+            ],
+            "takeaway": "HCl gas is made from NaCl and acid; chlorides give a white precipitate with AgNO₃.",
+            "check": {
+              "question": "The test for chloride ions is silver nitrate solution, which gives",
+              "options": [
+                "A brown precipitate",
+                "A white precipitate of silver chloride",
+                "A green gas",
+                "No reaction at all"
+              ],
+              "answer": 1,
+              "why": "Silver chloride is a white precipitate, soluble in dilute ammonia."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For gas preparations, always match the reagents to the scale: MnO₂ + HCl is laboratory, electrolysis of brine is industry. The reagents announce the scale."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "An electrolysis cell of brine passes a current that liberates 7.1 g of chlorine at the anode. Using Cl₂ + 2e⁻ ← 2Cl⁻, calculate the quantity of electricity in faradays. (Ar Cl = 35.5)",
+            "steps": [
+              {
+                "operation": "Find moles of chlorine",
+                "reason": "Mr(Cl₂) = 71, so grams convert by dividing by 71",
+                "result": "7.1 ÷ 71 = 0.10 mol Cl₂",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Count the electrons per molecule",
+                "reason": "Forming one Cl₂ from two Cl⁻ releases two electrons",
+                "result": "0.10 × 2 = 0.20 mol e⁻",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Convert moles of electrons to faradays",
+                "reason": "One faraday is one mole of electrons",
+                "result": "0.20 F",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "14.2 g of chlorine is liberated at an anode. Calculate the faradays passed. (Mr Cl₂ = 71)",
+            "hints": [
+              "First find moles of Cl₂: 14.2 ÷ 71",
+              "Each Cl₂ corresponds to 2 electrons",
+              "Moles of electrons = faradays"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why industry electrolyses brine",
+            "paragraphs": [
+              "Brine electrolysis makes three saleable products at once: chlorine at the anode, hydrogen at the cathode, and sodium hydroxide in solution. A plant that buys salt and electricity sells all three, which is why the process dominates chlorine manufacture worldwide.",
+              "The laboratory oxidation makes only chlorine, with manganese waste. Electrolysis wins on scale because salt is cheap and the co-products pay for the electricity.",
+              "The same cell design explains the Downs process for sodium: remove the water, and sodium itself discharges. One principle — remove the competitor — drives both industries.",
+              "A candidate who sees the by-product economics understands why electrolysis, not oxidation, is the industrial answer to any chlorine question.",
+              "The diaphragm and membrane cell variants differ only in how they keep the products apart; the chemistry at the electrodes is identical in all three.",
+              "Sodium hydroxide is recovered from the catholyte, so the cell is effectively three factories in one vessel. No laboratory oxidation can match that combined output."
+            ],
+            "bullets": [
+              "Brine electrolysis sells Cl₂, H₂ and NaOH together.",
+              "Laboratory oxidation makes chlorine only.",
+              "Remove the water and sodium discharges (Downs process).",
+              "By-product economics explains the industrial choice."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Chlorine among the halogens",
+            "paragraphs": [
+              "The halogens — fluorine, chlorine, bromine, iodine — are Group 17 non-metals that gain one electron to form X⁻ ions. Chlorine is the representative because it is the most available and the most studied: greenish-yellow gas, the others being pale yellow, red-brown and purple-black.",
+              "Reactivity falls down the group: fluorine is the strongest oxidising agent, iodine the weakest. Displacement reactions show it plainly — chlorine displaces bromine from its salts, bromine displaces iodine, and the reverse never happens.",
+              "That order is why chlorine sterilises water efficiently while iodine is used more gently as an antiseptic. Group position predicts behaviour, and the trend is the same charge-versus-shielding contest as the periodic table.",
+              "A candidate who recites the displacement order F₂ > Cl₂ > Br₂ > I₂ can answer any halogen comparison item without memorising individual reactions.",
+              "The displacement order also explains why chlorine water turns starch–potassium iodide paper blue-black in halogen tests: chlorine oxidises iodide to iodine, colouring the paper. The reaction is the test.",
+              "A candidate who links displacement to oxidation power answers both the comparison item and the test item from one rule.",
+              "That single order of oxidising power also explains electrode positions: fluorine is the strongest oxidising agent of all elements, which is why it is never found free in nature and must be made from its compounds."
+            ],
+            "bullets": [
+              "Halogens are Group 17; chlorine is the representative.",
+              "Oxidising power falls down the group.",
+              "Displacement: Cl₂ displaces Br₂; Br₂ displaces I₂.",
+              "Group position predicts behaviour."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in chlorine chemistry",
+            "paragraphs": [
+              "The classic trap is the preparation. Manganese(IV) oxide with concentrated HCl is the laboratory preparation; electrolysis of concentrated brine is the industrial one. Any option naming the other scale loses the mark.",
+              "The second trap is the chloride test. Silver nitrate gives a white precipitate with chloride ions; the precipitate is silver chloride, not chlorine gas. The test detects the ion, not the gas.",
+              "The third trap confuses HCl gas with hydrochloric acid. The gas is the compound; the acid is its solution. Properties asked about the gas (fuming, dense) do not transfer to the solution unchanged.",
+              "The fourth trap is the direction of displacement. Chlorine displaces bromine, never the reverse. Candidates who memorise pairs without direction answer backwards.",
+              "A final trap is the state of the chloride test. The white precipitate forms in aqueous solution; dry chlorine gas alone gives no precipitate until it dissolves. Stating the medium prevents the error."
+            ],
+            "bullets": [
+              "Laboratory = MnO₂ + HCl; industry = brine electrolysis.",
+              "AgNO₃ tests the chloride ion, not chlorine gas.",
+              "HCl gas and hydrochloric acid are different states.",
+              "Chlorine displaces bromine — never the reverse."
+            ]
+          }
+        }
+      ]
     }
   ]
 }
