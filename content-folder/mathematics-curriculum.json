@@ -183,6 +183,13 @@
       "section": "STATISTICS",
       "order": 26,
       "description": "Chance, quantified — with and without replacement."
+    },
+    {
+      "slug": "indices-logarithms-and-surds",
+      "name": "Indices, Logarithms and Surds",
+      "section": "NUMBER AND NUMERATION",
+      "order": 27,
+      "description": "Laws of indices, standard form, logarithms and surds (spine topic split into indices, logarithms and surds lessons)."
     }
   ],
   "lessons": [
@@ -726,18 +733,18 @@
         {
           "type": "text",
           "content": {
-            "heading": "Ratios and special angles",
+            "heading": "Ratios, special angles and graphs",
             "paragraphs": [
-              "In a right-angled triangle, SOHCAHTOA gives sin θ = opposite/hypotenuse, cos θ = adjacent/hypotenuse, and tan θ = opposite/adjacent. Label the sides against the angle before choosing a ratio.",
-              "The special angles appear in almost every paper. sin 30° = 1/2, sin 45° = √2/2, sin 60° = √3/2; cos runs the same values in reverse; tan 30° = 1/√3, tan 45° = 1 and tan 60° = √3.",
-              "Use exact values rather than decimals when the options are in surd form. The identity tan θ = sin θ/cos θ links the three ratios and explains why tan 45° = 1."
+              "A candidate adds sin45° and sin30° to get sin75° and loses the mark. In a right-angled triangle, label the sides against the angle and use SOHCAHTOA: sinθ=opposite/hypotenuse, cosθ=adjacent/hypotenuse, tanθ=opposite/adjacent. The identity sin²θ+cos²θ=1 links all three ratios.",
+              "Know sin30°=1/2, sin45°=√2/2 and sin60°=√3/2, with cosines in reverse and tan30°=1/√3, tan45°=1, tan60°=√3. The right angle gives sin90°=1, cos90°=0 and tan90° undefined. Compounds come from parts: 75°=45°+30° gives sin75°=(√6+√2)/4, cos75°=(√6−√2)/4 and tan75°=2+√3; 105°=60°+45° keeps sin105°=(√6+√2)/4 but needs cos105°=(√2−√6)/4 and tan105°=−(2+√3); 135°=180°−45° gives sin135°=√2/2, cos135°=−√2/2 and tan135°=−1.",
+              "The graphs check signs beyond 90°: sine rises 0 to 1 at 90°, falls to 0 at 180°, to −1 at 270° and to 0 at 360°. Cosine falls 1 to 0 at 90°, to −1 at 180°, to 0 at 270° and to 1 at 360°."
             ],
             "bullets": [
-              "SOHCAHTOA names the three ratios.",
-              "Learn the 30°, 45° and 60° values.",
-              "Prefer exact surd values to decimals."
+              "SOHCAHTOA places each side against the chosen angle.",
+              "Specials include 90° and compounds 75°, 105° and 135°.",
+              "Sine and cosine graphs decide the sign in each quadrant."
             ],
-            "takeaway": "Label the sides first, then choose the ratio that connects them.",
+            "takeaway": "Label sides first, recall exact specials and check the sign from the graph.",
             "check": {
               "question": "What is sin 60°?",
               "options": [
@@ -784,46 +791,46 @@
         {
           "type": "text",
           "content": {
-            "heading": "Identities and quadrants",
+            "heading": "Elevation, depression, bearings and the rules",
             "paragraphs": [
-              "The identity sin²θ + cos²θ = 1 holds for every angle. It lets you find one ratio from another: if sin θ = 3/5 and θ is acute, cos θ = 4/5.",
-              "Beyond 90°, the sign depends on the quadrant. ASTC — all, sin, tan, cos — records which ratios are positive in the first, second, third and fourth quadrants. A reference angle gives the size, and the quadrant gives the sign.",
-              "Useful reductions follow: sin(180° − θ) = sin θ, cos(180° − θ) = −cos θ, and tan(180° + θ) = tan θ. Sketch the angle to confirm the sign rather than memorising every case."
+              "A candidate calls looking up depression and swaps up for down. Both angles start from the horizontal through the eye: elevation rises to an object above and depression falls to an object below. Parallel horizontals make the interior angle equal, so tan links height and horizontal distance in either case.",
+              "Bearings are three-figure angles clockwise from north, such as 040° or 315°, with a north line at each point. Bearing 070° means 70° clockwise from north at O. Ships OA=12km on 040° and OB=15km on 130° include 90°, so AB=√(12²+15²−2×12×15×cos90°)=√369≈19.2km.",
+              "The sine rule is a/sinA=b/sinB=c/sinC and the cosine rule is a²=b²+c²−2bc·cosA. Use sine with a side and its opposite angle, and cosine with two sides and the included angle or three sides. Pair each side with its opposite angle in the sine rule."
             ],
             "bullets": [
-              "sin²θ + cos²θ = 1 for every angle.",
-              "ASTC gives the sign by quadrant.",
-              "Use a reference angle for the size."
+              "Elevation up and depression down from the horizontal.",
+              "Bearings are clockwise from north as three figures.",
+              "Sine uses a side with its opposite angle."
             ],
-            "takeaway": "The quadrant decides the sign; the reference angle decides the value.",
+            "takeaway": "Elevation up, depression down, bearings clockwise from north.",
             "check": {
-              "question": "What is sin 150°?",
+              "question": "A ship sights a lighthouse on bearing 070°. What does this mean?",
               "options": [
-                "−1/2",
-                "1/2",
-                "√3/2",
-                "−√3/2"
+                "70° anticlockwise from north",
+                "70° clockwise from north",
+                "70° clockwise from south",
+                "70° from east clockwise"
               ],
               "answer": 1,
-              "why": "150° is in the second quadrant, where sine is positive, and its reference angle is 30°, so sin 150° = 1/2."
+              "why": "Bearings are measured clockwise from north, so 070° is 70° clockwise from north."
             }
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Non-right triangles",
+            "heading": "Areas and choosing the rule",
             "paragraphs": [
-              "For triangles without a right angle, use the sine rule or the cosine rule. The sine rule is a/sin A = b/sin B = c/sin C; use it when you know a side and its opposite angle.",
-              "The cosine rule is a² = b² + c² − 2bc cos A; use it when you know two sides and the included angle, or all three sides. The area formula is 1/2 ab sin C.",
-              "Bearings are measured clockwise from north as three-figure angles, such as 045° or 315°. Draw the north line at each point before applying either rule."
+              "A candidate uses ½ab·sinC with any angle and overcounts the area. Area=½ab·sinC needs the angle between a and b, because the slant shortens the product ab. Sides 5 and 8 with included 60° give ½×5×8×sin60°=20×(√3/2)=10√3≈17.3 square units.",
+              "Name what is known before choosing. Use the sine rule for a side with its opposite angle, the cosine rule for two sides with the included angle or three sides, and area only for the included case. AAA fixes angles only, never size, so a side cannot be found from angles alone.",
+              "Right-angled elevation or depression stay with SOHCAHTOA, while two bearings from one point give an included angle for cosine and area. The data therefore choose the tool, not habit, and the included angle must be the one between the two named sides."
             ],
             "bullets": [
-              "Sine rule: a side and its opposite angle.",
-              "Cosine rule: two sides and the included angle.",
-              "Bearings are clockwise from north."
+              "Area needs two sides with the included angle only.",
+              "Sine pairs a side with its opposite angle.",
+              "Cosine handles SAS or three sides; area handles SAS only."
             ],
-            "takeaway": "Choose the rule from the information given, not from habit.",
+            "takeaway": "Area uses SAS only, sine uses angle-side pairs and cosine uses SAS or SSS.",
             "check": {
               "question": "Which rule should you use when you know two sides and the included angle?",
               "options": [
@@ -937,12 +944,14 @@
             "paragraphs": [
               "Probability compares favourable outcomes with all equally likely outcomes: P(A) = favourable/total. It always lies between 0 and 1, with 0 impossible and 1 certain.",
               "The sample space is the set of all outcomes. Two coins give 4 outcomes, two dice give 36, and a coin with a die gives 12. Listing the space prevents double counting.",
-              "The complement rule is P(not A) = 1 − P(A). It is fastest for 'at least one': with three coins, P(no head) = (1/2)³ = 1/8, so P(at least one head) = 7/8. The phrase 'at least one' is the signal to use the complement rather than count every case."
+              "The complement rule is P(not A) = 1 − P(A). It is fastest for 'at least one': with three coins, P(no head) = (1/2)³ = 1/8, so P(at least one head) = 7/8. The phrase 'at least one' is the signal to use the complement rather than count every case.",
+              "Experimental probability is relative frequency from trials: tosses with heads in 70 of 100 tosses give 70/100. More trials make the result steadier."
             ],
             "bullets": [
               "P(A) = favourable / total.",
               "Probability lies between 0 and 1.",
-              "P(not A) = 1 − P(A)."
+              "P(not A) = 1 − P(A).",
+              "Experimental probability = relative frequency from trials"
             ],
             "takeaway": "List the sample space before you count anything.",
             "check": {
@@ -1170,14 +1179,16 @@
           "content": {
             "heading": "Converting between bases",
             "paragraphs": [
-              "To convert from base b to decimal, expand by place value. In base three, 210 is 2×9 + 1×3 + 0 = 21. In base two, 1011 is 8 + 0 + 2 + 1 = 11. The expansion is the method.",
-              "To convert from decimal to base b, divide repeatedly by b and read the remainders upward. To write 25 in base five: 25 ÷ 5 = 5 remainder 0, 5 ÷ 5 = 1 remainder 0, 1 ÷ 5 = 0 remainder 1, so 25 is 100 in base five. The remainders, read upward, are the digits.",
-              "To convert directly between two non-decimal bases, pass through decimal. A number in base three is first expanded to decimal and then divided into base five. A direct shortcut does not exist, which is why the pass is the method."
+              "To convert from base b to decimal, expand by place value: base-three 210 is 2×9 + 1×3 + 0 = 21, while base-two 1011 is 11.",
+              "Divide by b repeatedly: 25 ÷ 5 = 5 r0, 5 ÷ 5 = 1 r0, 1 ÷ 5 = 0 r1, so 25 is 100 in base five; read remainders upward.",
+              "Between two non-decimal bases, pass through decimal: expand to decimal, then divide to the new base, since no direct shortcut exists.",
+              "For a fractional part, multiply by b repeatedly and take each whole part upward: 0.5 in base ten is 0.1 in base two, since 0.5×2 = 1.0."
             ],
             "bullets": [
               "Base b to decimal: expand by powers of b",
               "Decimal to base b: divide by b, read remainders upward",
-              "Between two non-decimal bases: pass through decimal"
+              "Between two non-decimal bases: pass through decimal",
+              "Fractional parts: multiply by b, carry whole parts upward"
             ],
             "takeaway": "Expand to decimal from any base, then divide to a new base.",
             "check": {
@@ -1610,16 +1621,17 @@
           "content": {
             "heading": "Decimals and conversion",
             "paragraphs": [
-              "A decimal is a fraction whose denominator is a power of ten. Tenths are tenths, hundredths are hundredths and thousandths are thousandths. A terminating decimal therefore becomes a fraction over a power of ten.",
-              "A recurring decimal does not terminate. Its repetend is shown by a dot or a line, and it converts to a fraction by a short algebraic step. The repetend is therefore the mark of a recurring decimal.",
-              "Rounding a decimal to a stated place looks at the next digit. If that digit is five or more, the last kept digit rises by one. That rule decides the final digit."
+              "A decimal is a fraction over a power of ten, so 0.75 is 75 hundredths and reduces to 3/4. A recurring decimal does not terminate, and its repetend converts by a short algebraic step into a fraction.",
+              "Add and subtract decimals by lining up the decimal points first. Multiply by counting decimal places in the answer, so 0.4×0.3=0.12, and divide by scaling both numbers by a power of ten, so 4.8÷0.4=12.",
+              "Significant figures count from the first non-zero digit, and leading zeros do not count. Count 0.00457 as three figures (4, 5 and 7) and 2.345 as four. Round by the next digit, so 0.00457 to two figures becomes 0.0046, while 2.345 to three figures becomes 2.35."
             ],
             "bullets": [
-              "Decimals are fractions over powers of ten",
-              "Recurring decimals convert by an algebraic step",
-              "Round by the next digit: five or more rises"
+              "Decimals are fractions over powers of ten.",
+              "Align points for adding and subtracting; count places for multiplying.",
+              "Scale by powers of ten before dividing.",
+              "Leading zeros do not count as significant figures."
             ],
-            "takeaway": "Decimals are fractions over powers of ten, and rounding looks at the next digit.",
+            "takeaway": "Decimals convert by powers of ten, and rounding counts significant figures.",
             "check": {
               "question": "What is 0.75 as a fraction?",
               "options": [
@@ -1816,18 +1828,19 @@
         {
           "type": "text",
           "content": {
-            "heading": "Profit, loss and simple interest",
+            "heading": "Profit, loss, shares and VAT",
             "paragraphs": [
-              "Profit is selling price minus cost price, and loss is cost price minus selling price. A percentage profit is that profit over the cost price, multiplied by 100. The cost price is therefore the base.",
-              "Simple interest is I = P × R × T ÷ 100, where P is the principal, R is the rate and T is the time. The amount is then P + I. That formula needs the rate as a percentage, not as a decimal.",
-              "A trader who sells at a loss has a selling price below the cost price. That loss is therefore measured over the cost price as well, which is why profit and loss use the same base."
+              "Profit is selling price minus cost price, and loss is cost price minus selling price, both measured over cost price. Simple interest I=P×R×T÷100 uses principal P, rate R and time T, with amount P+I.",
+              "A ratio compares parts, a proportion equates two ratios and a rate links different units. Divide an amount in ratio 2:3 in five parts, so ₦5,000 gives ₦2,000 and ₦3,000, and a share is total × part ÷ sum of parts.",
+              "Percentage error is error divided by the true value times 100, so 0.2cm against 10cm true gives 2%. VAT adds the tax rate to the price, so ₦10,000 at 7.5% VAT becomes ₦10,000×1.075=₦10,750."
             ],
             "bullets": [
-              "Profit = selling price − cost price, over cost price",
-              "Simple interest I = P × R × T ÷ 100",
-              "Amount = P + I"
+              "Profit and loss are measured over cost price.",
+              "Share equals total times part divided by the sum of parts.",
+              "Percentage error uses the true value as its base.",
+              "VAT multiplies the price by one plus the tax rate."
             ],
-            "takeaway": "Profit and interest are percentages over the cost price and the principal.",
+            "takeaway": "Profit, shares, error and VAT all need the correct base first.",
             "check": {
               "question": "What is the simple interest on 500 at 6% per annum for 3 years?",
               "options": [
@@ -1961,14 +1974,16 @@
           "content": {
             "heading": "What a set is and how it is written",
             "paragraphs": [
-              "A set is a well-defined collection of distinct objects. The elements of a set are its members, and a set is named by a capital letter. A set is written by listing its elements in braces.",
-              "An element that belongs to a set is written with the membership sign. If a is an element of A, it is written a ∈ A. If it is not, it is written a ∉ A. That sign is therefore the test of membership.",
-              "The empty set has no elements and is written ∅. A universal set U is the set of all objects under discussion. Every other set is therefore a subset of U."
+              "A set is a well-defined collection of distinct objects, each called an element. It is named by a capital letter and written by listing elements in braces.",
+              "Check membership with ∈: a ∈ A means a belongs to A, while a ∉ A means it does not. That sign is the test of membership.",
+              "The empty set ∅ has no elements. The universal set U contains all objects under discussion, so every set is a subset of U.",
+              "A finite set can be counted, like {1, 2, 3}, while an infinite set like the natural numbers cannot. Two sets with no common element are disjoint, so A ∩ B = ∅."
             ],
             "bullets": [
               "A set is a well-defined collection of distinct objects",
               "a ∈ A means a belongs to A; ∅ is the empty set",
-              "U is the universal set under discussion"
+              "U is the universal set under discussion",
+              "Finite sets are countable; disjoint sets have empty intersection"
             ],
             "takeaway": "A set is defined by its elements, and membership is the test.",
             "check": {
@@ -1980,7 +1995,7 @@
                 "{1}"
               ],
               "answer": 1,
-              "why": "The empty set has no elements, so it is written { } while {0} contains zero as an element."
+              "why": "The empty set has no elements, so it is written { } while {0} contains zero as an element. Disjoint sets also have empty intersection."
             }
           }
         },
@@ -2164,12 +2179,14 @@
             "paragraphs": [
               "Direct variation means y is proportional to x, written y = kx. The constant k is the ratio y ÷ x, which is the same for every pair. That sameness of the ratio is the test.",
               "A quantity that varies directly with another therefore doubles when the other doubles. If y = 3x, then x = 2 gives y = 6 and x = 4 gives y = 12. The doubling is the meaning of k.",
-              "The graph of a direct variation is a straight line through the origin. That line is why a direct variation can be read from a single pair. One pair decides k for all."
+              "The graph of a direct variation is a straight line through the origin. That line is why a direct variation can be read from a single pair. One pair decides k for all.",
+              "Joint variation is y = kxz: y varies jointly as x and z. Find k from one pair, then substitute any other pair."
             ],
             "bullets": [
               "Direct variation: y = kx, ratio y ÷ x constant",
               "Doubling x doubles y",
-              "Graph is a straight line through the origin"
+              "Graph is a straight line through the origin",
+              "Joint variation: y = kxz, proportionality in two variables"
             ],
             "takeaway": "Direct variation keeps the ratio y ÷ x constant.",
             "check": {
@@ -2398,12 +2415,14 @@
             "paragraphs": [
               "A linear inequality is solved by the same steps as an equation, with one difference. Each step must preserve or correctly reverse the sign. A step that is valid for an equation can therefore be invalid for an inequality.",
               "After isolating x, the solution must be checked against the original. A value that satisfies the final line but not the first step has been introduced by an illegal move. That check is therefore part of the method.",
-              "The solution is then represented on a number line. An open circle means the endpoint is excluded, while a filled circle means it is included. That distinction decides the sign."
+              "The solution is then represented on a number line. An open circle means the endpoint is excluded, while a filled circle means it is included. That distinction decides the sign.",
+              "For y ≤ 2x + 3, draw the boundary line, then shade the half-plane that satisfies it, testing (0, 0)."
             ],
             "bullets": [
               "Use the same steps as an equation, watching the sign",
               "Check the solution against the original inequality",
-              "Open circle excludes; filled circle includes"
+              "Open circle excludes; filled circle includes",
+              "Shade the half-plane satisfying the inequality, tested at (0, 0)"
             ],
             "takeaway": "Solve like an equation, but reverse the sign for a negative multiplier.",
             "check": {
@@ -2970,12 +2989,14 @@
             "paragraphs": [
               "A trader in Onitsha records yam sales in the first row and rice sales in the second row. Each row lists Monday, Tuesday and Wednesday amounts. The whole table is a matrix, and each amount is an entry.",
               "The order of a matrix is rows by columns. A table with two rows and three columns is order 2 by 3. The positions matter because rows and columns name different things.",
-              "To add or subtract two tables, the entries must line up. Corresponding entries are added or subtracted one by one. If the orders differ, the addition is impossible."
+              "To add or subtract two tables, the entries must line up. Corresponding entries are added or subtracted one by one. If the orders differ, the addition is impossible.",
+              "Scalar multiplication gives kA by multiplying every entry by k; division is kA with k a fraction."
             ],
             "bullets": [
               "A matrix of order m by n has m rows and n columns",
               "A matrix of order 2 by 3 has two rows and three columns",
-              "Matrices can be added only when they have the same order"
+              "Matrices can be added only when they have the same order",
+              "kA multiplies each entry by k; division uses fractional k"
             ],
             "takeaway": "Same order allows addition entry by entry.",
             "check": {
@@ -2987,7 +3008,7 @@
                 "A 1 by 3 and a 3 by 1"
               ],
               "answer": 1,
-              "why": "Addition needs the same order so every entry has a partner."
+              "why": "Addition needs the same order so every entry has a partner. Scalar multiplication kA needs no matching order."
             }
           }
         },
@@ -3605,12 +3626,14 @@
             "paragraphs": [
               "A school in Jos has a circular track and a pie chart to share. The angle at the centre decides what fraction of the circle each part represents.",
               "An arc is part of the circumference, so for angle θ degrees it has length (θ/360) × 2πr. A chord joins the arc's ends, and its length is 2r sin(θ/2) when θ is at the centre, with the longest chord being the diameter when θ is 180°.",
-              "A sector is the pie slice bounded by two radii and an arc, and its area is (θ/360) × πr². A segment is the cap cut off by a chord, so its area is the sector area minus the triangular part ½ r² sin θ with the same θ."
+              "A sector is bounded by two radii and an arc, with area (θ/360) × πr². A segment's area is the sector area minus the triangle ½ r² sin θ.",
+              "A sector's perimeter is 2r plus its arc; a segment's perimeter is its arc plus its chord."
             ],
             "bullets": [
               "Arc length equals θ/360 times the circumference.",
               "Chord length is 2r sin(θ/2) for central angle θ.",
-              "Segment area equals sector area minus triangular area."
+              "Segment area equals sector area minus triangular area.",
+              "Sector perimeter: 2r + arc; segment perimeter: arc + chord"
             ],
             "takeaway": "Every circle part is a fixed fraction of the whole circle.",
             "check": {
@@ -4818,13 +4841,15 @@
             "heading": "Mode and median for ungrouped data",
             "paragraphs": [
               "Nine pupils in a Lagos class scored 9, 5, 12, 5, 20, 4, 10, 5, 7. The teacher wants the most common score and the score in the middle when ordered.",
-              "The mode is the value that occurs most often. Here 5 occurs three times and every other mark occurs once, so the mode is 5. In grouped data we cannot name an exact mode, only the modal class with the largest frequency, which is 10–19 with frequency 7.",
-              "To find the median, order the values: 4, 5, 5, 5, 7, 9, 10, 12, 20. With n = 9 the median position is (n + 1) ÷ 2 = 5th, and the fifth value is 7."
+              "The mode occurs most often: here 5 occurs three times, others once, so the mode is 5. Grouped data has only the modal class, 10–19 with frequency 7.",
+              "To find the median, order the values: 4, 5, 5, 5, 7, 9, 10, 12, 20. With n = 9 the median position is (n + 1) ÷ 2 = 5th, and the fifth value is 7.",
+              "When n is even, average the two middle values: for 2, 4, 8, 10, the median is (4 + 8) ÷ 2 = 6."
             ],
             "bullets": [
               "Mode is the most frequent value in the data.",
               "The modal class has the largest frequency in grouped data.",
-              "The median is at position (n + 1) ÷ 2 after ordering."
+              "The median is at position (n + 1) ÷ 2 after ordering.",
+              "Even n: median is the average of the two middle values"
             ],
             "takeaway": "Mode is most frequent; median is middle after ordering.",
             "check": {
@@ -5045,13 +5070,15 @@
             "heading": "Grouped data and consistency",
             "paragraphs": [
               "Instead of 7, 9, 10, 11, 13, a report groups them into classes 6–8, 9–11, 12–14. The exact scores vanish, so a class mark must stand for the whole class.",
-              "A class mark is the midpoint: (lower + upper) ÷ 2. The marks for 6–8, 9–11, 12–14 are 7, 10, 13, with frequencies 1, 3, 1. The grouped mean is Σfx ÷ Σf = (7 + 30 + 13) ÷ 5 = 10.",
-              "Now weight each squared distance by frequency: variance = Σf(x − mean)² ÷ Σf. Here (1×9 + 3×0 + 1×9) ÷ 5 = 18 ÷ 5 = 3.6, close to the exact 4. The smaller the variance or SD, the more consistent the data."
+              "Class marks are midpoints (lower + upper) ÷ 2: 7, 10, 13 with frequencies 1, 3, 1. The grouped mean is Σfx ÷ Σf = 50 ÷ 5 = 10.",
+              "Grouped variance weights squared distances by frequency: Σf(x − mean)² ÷ Σf = 18 ÷ 5 = 3.6, near the exact 4. Smaller variance or SD means more consistent data.",
+              "Grouped range is the highest upper boundary minus the lowest lower boundary. Grouped mean deviation is Σf|x−mean| ÷ Σf, using class marks."
             ],
             "bullets": [
               "Class mark = (lower + upper) ÷ 2 gives 7, 10, 13.",
               "Grouped mean = Σfx ÷ Σf; variance = Σf(x − mean)² ÷ Σf.",
-              "The data set with smaller variance or standard deviation is more consistent."
+              "The data set with smaller variance or standard deviation is more consistent.",
+              "Grouped range: top − bottom boundaries; grouped mean deviation: Σf|x−mean| ÷ Σf"
             ],
             "takeaway": "Use class marks as x, weight by f, and compare SD for consistency.",
             "check": {
@@ -5362,6 +5389,208 @@
               "Fix a required place, then arrange the rest freely.",
               "Two together: glue the pair, arrange, then order inside.",
               "Distinct letters: divide by each repeat factorial."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "logarithms",
+      "topic": "indices-logarithms-and-surds",
+      "title": "Logarithms",
+      "objective": "Use the logarithm as the inverse of an index, apply the logarithm laws and change bases.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Logarithms",
+            "paragraphs": [
+              "A trader in Onitsha keeps stock by doubling: 8 sacks, then 16, then 32, then 64. The question 'after how many doublings do I reach 512 sacks?' is a logarithm. That question, not a new operation, is the lesson."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "What power of the base makes this number?",
+            "paragraphs": [
+              "A school in Abeokuta doubles its band each year: 8 members, then 32, then 128. The principal asks after how many doublings it will reach 512 members.",
+              "For a base b above 0 except 1, log_b x is the power y with b^y = x. The logarithm is the inverse of an index: the index builds the number and the log recovers it. It exists for any positive x, because powers cover every positive value.",
+              "Evaluate with small powers: log_2 8 = 3 because 2^3 = 8, log_3 27 = 3 because 3^3 = 27. Swap each log for 'to what power must I raise the base to get this number?'."
+            ],
+            "bullets": [
+              "log_b x = y means b^y = x for positive x.",
+              "The logarithm asks for the missing index, the inverse of a power.",
+              "log_2 8 = 3 and log_3 27 = 3 from small powers."
+            ],
+            "takeaway": "A logarithm is the index the base needs to make the number.",
+            "check": {
+              "question": "Evaluate log_2 8.",
+              "options": [
+                "3",
+                "2",
+                "4",
+                "8"
+              ],
+              "answer": 0,
+              "why": "log_2 8 asks for the power of 2 that gives 8, and 2^3 = 8."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Logarithm laws",
+            "paragraphs": [
+              "log_2 (32 × 8) looks hard until you notice 32 × 8 = 256. The product law splits it into log_2 32 + log_2 8 = 5 + 3 = 8. That split is why the laws exist.",
+              "The product law is log_b (mn) = log_b m + log_b n. The quotient law is log_b (m ÷ n) = log_b m − log_b n, and the power law is log_b (m^n) = n log_b m. Each mirrors an index law.",
+              "Product: log_2 (4 × 8) = log_2 4 + log_2 8 = 2 + 3 = 5. Quotient: log_3 (81 ÷ 9) = log_3 81 − log_3 9 = 4 − 2 = 2. Power: log_2 (32^2) = 2 × 5 = 10."
+            ],
+            "bullets": [
+              "log_b (mn) = log_b m + log_b n makes a product a sum.",
+              "log_b (m ÷ n) = log_b m − log_b n makes a quotient a difference.",
+              "log_b (m^n) = n log_b m brings a power down."
+            ],
+            "takeaway": "Products add, quotients subtract and powers multiply inside the log.",
+            "check": {
+              "question": "Simplify log_5 (125 × 25).",
+              "options": [
+                "5",
+                "6",
+                "3",
+                "10"
+              ],
+              "answer": 0,
+              "why": "The product law gives log_5 125 + log_5 25 = 3 + 2 = 5."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Changing the base to solve for the index",
+            "paragraphs": [
+              "A calculator gives ln and log keys, but no log_5 key. To evaluate log_5 100 you must rewrite it from those logs. That rewriting is the change of base rule.",
+              "The change of base rule is log_b x = ln x ÷ ln b. It works because y = log_b x means b^y = x, so y ln b = ln x. With base 10, log_b x = log x ÷ log b.",
+              "To solve a^x = c when bases do not match, take logs and divide by the log of the base. For 5^x = 100, x = ln 100 ÷ ln 5 ≈ 2.86. For 2^x = 40, x = ln 40 ÷ ln 2 ≈ 5.32."
+            ],
+            "bullets": [
+              "log_b x = ln x ÷ ln b for calculator use.",
+              "log_b x = log x ÷ log b for base-10 use.",
+              "To solve a^x = c, set x = ln c ÷ ln a."
+            ],
+            "takeaway": "Change the base to compute, and take logs to solve for the index.",
+            "check": {
+              "question": "Solve 3^x = 50. Which expression gives x?",
+              "options": [
+                "ln 50 ÷ ln 3",
+                "ln 3 ÷ ln 50",
+                "log 50 × log 3",
+                "50 ÷ 3"
+              ],
+              "answer": 0,
+              "why": "Taking ln gives x ln 3 = ln 50, so x = ln 50 ÷ ln 3."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Swap every log for the question 'what power makes this?' before you reach for a law. If the powers are small, read the answer directly. If bases clash, change base first, then solve."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Evaluate log_3 729 − 2 log_3 9 + log_3 27.",
+            "steps": [
+              {
+                "operation": "Apply the power law",
+                "reason": "The term 2 log_3 9 is a power and becomes log_3 (9^2).",
+                "result": "The expression becomes log_3 729 − log_3 81 + log_3 27.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Evaluate each small log",
+                "reason": "Each log is the power of 3 that makes the number.",
+                "result": "log_3 729 = 6, log_3 81 = 4, log_3 27 = 3.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Combine the values",
+                "reason": "Add and subtract in the order written.",
+                "result": "6 − 4 + 3 = 5.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Evaluate log_2 128 − 3 log_2 2 + log_2 8.",
+            "hints": [
+              "2^7 = 128, so log_2 128 = 7.",
+              "Any log_b b = 1.",
+              "Now combine 7, 3 and 3."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why the laws mirror the index laws",
+            "paragraphs": [
+              "The index laws count repeated factors. Multiplying b^m by b^n joins m copies to n copies, so the indices add, and taking logs reverses that joining: a product becomes a sum. The product law is therefore the index law read backwards.",
+              "Division cancels factors, so the corresponding indices subtract. Writing m ÷ n as m × n^{-1} shows that the subtraction comes directly from the negative index n^{-1}. The quotient law is nothing but that cancellation counted in the log direction.",
+              "A power repeats the same block n times. Raising to the nth power therefore writes n copies of the whole block, and the log brings the multiplier n straight down. That is exactly the log form of (b^y)^n = b^{ny}, with the power law as the reversal.",
+              "The mirroring gives a fast personal check. To verify any log answer, rewrite it back as a power and see whether the power returns the original number. If it does not, the law was applied in the wrong direction, and that check catches most law traps in seconds.",
+              "There is also a historical reason the laws mattered. Before electronic computers, long multiplication was done by turning products into sums. Tables of logarithms made three-digit multiplication a matter of addition, which is why the product law was once the fastest arithmetic tool in science."
+            ],
+            "bullets": [
+              "Products add because index addition counts joined factors.",
+              "Quotients subtract because division cancels factors.",
+              "Powers multiply because a power repeats the whole block."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why base 10 and base e are special",
+            "paragraphs": [
+              "Base 10 dominates measurement because human counting is decimal. The common logarithm log x means log_10 x, so log 1000 = 3 is read off the number of zeros. That reading made log tables practical for engineers long before calculators existed.",
+              "Base e is special for a different reason. The number e ≈ 2.718 is the limit that makes the slope of e^x at zero equal to one. Differentiation of e^x is therefore e^x itself, which no other base gives without a correction factor.",
+              "The natural logarithm ln x means log_e x. It is the inverse of e^x, so equations with e^x are solved most cleanly with ln. That is why calculus and exponential growth naturally produce ln, even though everyday measurement prefers base 10.",
+              "The change of base rule connects them all. Since ln b is just one number, dividing by it rescales every log to base e. The same rescaling with log b rescales to base 10, so any log you know gives every other log.",
+              "A base-10 scale is a good picture for earthquakes: each step multiplies intensity by ten. A base-e scale would be less readable there, which shows that 'special' means convenient for the problem, not mathematically unique. JAMB favours base 10, but the rule works for either."
+            ],
+            "bullets": [
+              "log x means base 10; log 1000 = 3.",
+              "ln x means base e ≈ 2.718 and pairs with e^x in calculus.",
+              "Change of base rescales between them by division."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Traps, rejects and the domain of a log",
+            "paragraphs": [
+              "A real logarithm needs three conditions at once: the base b is above 0 and not equal to 1, and the argument x is positive. With base 1 the powers stay at 1 and can never make other numbers, so log_1 is meaningless. With a zero or negative base the powers do not cover all positives in the usual way.",
+              "The argument cannot be zero or negative in real numbers. No power of 2 makes 0, because powers stay positive, and no power of 2 makes −8. An equation that would need log 0 or log of a negative number therefore has no real solution and must be rejected.",
+              "Two special values are worth memorising precisely. Every log of 1 is 0, because b^0 = 1 for any allowed base. Every log of its own base is 1, because b^1 = b, and those two facts evaluate many JAMB items without any law.",
+              "The classic false laws cause most losses. A logarithm does not split a sum: log(a + b) is not log a + log b, and a logarithm does not split a product's outer form: log(ab) is not (log a)(log b). Only products, quotients and powers split, and only in the ways the three laws state.",
+              "When solving, guard the domain throughout. A step that creates a non-positive argument can add extra roots. Check each candidate and discard any asking for log of zero, a negative, or base 1."
+            ],
+            "bullets": [
+              "Domain: b > 0, b ≠ 1 and x > 0 for real logs.",
+              "log_b 1 = 0 and log_b b = 1 for every allowed base.",
+              "log(a + b) ≠ log a + log b; only products split."
             ]
           }
         }
