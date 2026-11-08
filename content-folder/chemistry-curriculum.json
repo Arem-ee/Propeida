@@ -6542,6 +6542,209 @@
           }
         }
       ]
+    },
+    {
+      "slug": "alkenes-and-alkynes",
+      "topic": "organic-compounds",
+      "title": "Alkenes and Alkynes",
+      "objective": "Distinguish structural and geometric isomerism, state additional and polymerization reactions, give polythene and synthetic rubber as products of polymerization and their use in vulcanization, and state the production of ethyne from calcium carbide with its simple reactions and properties, with chemical tests for alkenes and terminal alkynes.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Alkenes and Alkynes",
+            "paragraphs": [
+              "If alkanes are saturated chains, alkenes and alkynes are the same chains with one or two kinks of unsaturation. Those kinks make them reactive — and that reactivity is the whole lesson."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Alkenes: one double bond",
+            "paragraphs": [
+              "Alkenes have one carbon–carbon double bond: general formula CₙH₂ₙ (ethene C₂H₄, propene C₃H₆). The double bond is reactive: it opens up to add atoms across it. Bromine water is decolourised by alkenes — the orange colour disappears as bromine adds — and that is the alkene test.",
+              "Geometric isomerism (cis/trans) appears around the double bond because it cannot rotate. In cis-but-2-ene the two methyl groups sit on the same side; in trans-but-2-ene they sit opposite. Same formula, different geometry, different boiling points.",
+              "Alkenes polymerise: ethene joins into polythene (polyethylene), the plastic of bags and bottles. The double bond opens to link thousands of molecules into one long chain."
+            ],
+            "bullets": [
+              "Alkenes: CₙH₂ₙ with one C=C double bond.",
+              "Test: bromine water decolourised (addition across the double bond).",
+              "Cis/trans isomerism around the double bond.",
+              "Ethene polymerises to polythene."
+            ],
+            "takeaway": "The double bond adds, isomerises and polymerises — the alkene signature.",
+            "check": {
+              "question": "The test for an alkene is",
+              "options": [
+                "It turns limewater milky",
+                "It decolourises bromine water",
+                "It gives a squeaky pop",
+                "It bleaches damp litmus"
+              ],
+              "answer": 1,
+              "why": "Alkenes add bromine across the double bond, discharging its orange colour."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Addition and polymerisation",
+            "paragraphs": [
+              "Addition opens the double bond to add two atoms, one to each carbon. Ethene + H₂ → ethane (with nickel catalyst); ethene + Br₂ → dibromoethane; ethene + HCl → chloroethane. The double bond becomes a single bond.",
+              "Polymerisation is addition repeated thousands of times: ethene chains link into polythene. Synthetic rubber is made the same way from diene monomers, then vulcanised — heated with sulfur — to cross-link the chains and harden the rubber.",
+              "Addition and polymerisation are the same chemistry at two scales: opening double bonds. The products differ only in how many molecules join."
+            ],
+            "bullets": [
+              "Addition: H₂, Br₂, HCl add across C=C.",
+              "Polymerisation: double bonds link into long chains.",
+              "Vulcanisation cross-links rubber with sulfur."
+            ],
+            "takeaway": "Alkenes add and chain together through their double bond.",
+            "check": {
+              "question": "Polythene is made by the polymerisation of",
+              "options": [
+                "Methane",
+                "Ethene",
+                "Ethane",
+                "Ethyne"
+              ],
+              "answer": 1,
+              "why": "Polythene is the polymer of ethene, linked through its double bond."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Alkynes and ethyne",
+            "paragraphs": [
+              "Alkynes have one carbon–carbon triple bond: general formula CₙH₂ₙ₋₂ (ethyne C₂H₂, propyne C₃H₄). The triple bond adds twice — ethyne adds two molecules of hydrogen, then two of bromine.",
+              "Ethyne is produced from calcium carbide and water: CaC₂ + 2H₂O → C₂H₂ + Ca(OH)₂. It burns with a very hot flame (oxy-ethyne welding) because its combustion releases great energy.",
+              "Terminal alkynes (with H on the triple bond, like ethyne) give a red precipitate with ammoniacal silver nitrate — the specific test. Non-terminal alkynes do not."
+            ],
+            "bullets": [
+              "Alkynes: CₙH₂ₙ₋₂ with one C≡C triple bond.",
+              "Ethyne: CaC₂ + water; welding flame.",
+              "Terminal alkyne test: red precipitate with ammoniacal AgNO₃."
+            ],
+            "takeaway": "Alkynes add twice across the triple bond; ethyne is the carbide product.",
+            "check": {
+              "question": "Ethyne is prepared from calcium carbide by reaction with",
+              "options": [
+                "Dilute HCl",
+                "Water",
+                "Steam over coke",
+                "Concentrated sulfuric acid"
+              ],
+              "answer": 1,
+              "why": "CaC₂ + 2H₂O → C₂H₂ + Ca(OH)₂ gives ethyne."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For unsaturation questions, count the additions: alkene adds once, alkyne adds twice. The count of molecules added names the family."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Ethene reacts with bromine. Write the equation and calculate the mass of dibromoethane formed from 2.8 g of ethene. (Ar C = 12, H = 1, Br = 80)",
+            "steps": [
+              {
+                "operation": "Write the addition equation",
+                "reason": "Bromine adds across the double bond, one molecule per ethene",
+                "result": "C₂H₄ + Br₂ → C₂H₄Br₂",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Find moles of ethene",
+                "reason": "Mr(C₂H₄) = 28, so grams convert by dividing by 28",
+                "result": "2.8 ÷ 28 = 0.10 mol",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Find the product mass",
+                "reason": "One mole of ethene gives one mole of product; Mr(C₂H₄Br₂) = 188",
+                "result": "0.10 × 188 = 18.8 g",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "5.6 g of ethene reacts with excess bromine. Calculate the mass of dibromoethane formed. (Mr ethene = 28, product = 188)",
+            "hints": [
+              "First find moles of ethene: 5.6 ÷ 28",
+              "The ratio ethene:product is 1:1",
+              "Multiply moles by 188"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Cis, trans and why geometry matters",
+            "paragraphs": [
+              "A double bond cannot rotate, so groups fixed on its carbons stay in their positions. In cis-but-2-ene both methyl groups sit on the same side; in trans-but-2-ene they sit opposite. The two isomers have different boiling points and reactivity.",
+              "Geometric isomerism exists only where each double-bond carbon carries two different groups. But-2-ene shows it; ethene and propene cannot, because one carbon lacks two different groups.",
+              "The distinction matters because shape changes contact between molecules: cis isomers attract differently and boil differently. Geometry is a property, not just a drawing.",
+              "A candidate who checks the two groups on each carbon before declaring cis/trans will never invent geometric isomers where none exist."
+            ],
+            "bullets": [
+              "Double bonds cannot rotate — geometry is fixed.",
+              "Cis: same side; trans: opposite side.",
+              "Needs two different groups on each carbon.",
+              "Geometry changes boiling point and reactivity."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Polymers and vulcanisation",
+            "paragraphs": [
+              "Addition polymerisation links monomers through their double bonds into long chains: ethene to polythene, styrene to polystyrene. The polymer's properties come from chain length and cross-linking, not from new chemistry.",
+              "Natural rubber is too soft and sticky for tyres. Vulcanisation heats it with sulfur, which forms cross-links between chains and makes it hard, elastic and durable. Every tyre on the road is vulcanised rubber.",
+              "Condensation polymerisation is the other route: monomers join with small molecules lost, as in nylon and terylene. Addition versus condensation is decided by whether a small molecule appears in the equation.",
+              "The exam chain is therefore: double bond → addition → polymer → cross-linking. Each step explains the next product's properties."
+            ],
+            "bullets": [
+              "Addition polymerisation: monomers link through double bonds.",
+              "Vulcanisation cross-links rubber with sulfur.",
+              "Condensation loses small molecules (nylon, terylene).",
+              "Properties come from chain length and cross-linking."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in unsaturation",
+            "paragraphs": [
+              "The classic trap is the carbonyl test. Bromine water is decolourised by alkenes (addition) but not by alkanes. Any option claiming alkanes decolourise bromine water is false.",
+              "The second trap is the terminal alkyne test. Only alkynes with hydrogen on the triple bond give the red precipitate with ammoniacal silver nitrate. Internal alkynes fail the test — terminal is the condition.",
+              "The third trap is polymerisation versus addition. Both use double bonds; polymerisation repeats the addition thousands of times. Naming the scale decides the answer.",
+              "The fourth trap is geometric isomerism in molecules without two different groups on each carbon. But-2-ene has it; ethene does not. The groups must be checked first."
+            ],
+            "bullets": [
+              "Alkenes decolourise bromine water; alkanes do not.",
+              "Only terminal alkynes give the red AgNO₃ precipitate.",
+              "Polymerisation is addition repeated thousands of times.",
+              "Geometric isomerism needs two different groups per carbon."
+            ]
+          }
+        }
+      ]
     }
   ]
 }
