@@ -680,7 +680,7 @@
           "content": {
             "heading": "Periodic Table",
             "paragraphs": [
-              "Elements arranged by atomic number into periods and groups show repeating patterns. Position predicts properties and explains trends, so one table answers both where an element sits and how it behaves in reactions."
+              "A shopkeeper arranges goods in rows by type: grains together, oils together, soaps together. The periodic table arranges elements the same way — by their electron pattern — so that elements with similar behaviour stand in the same column. This lesson reads that arrangement and the trends it hides."
             ],
             "bullets": []
           }
@@ -688,86 +688,86 @@
         {
           "type": "text",
           "content": {
-            "heading": "From atomic number to families",
+            "heading": "Rows, columns and families",
             "paragraphs": [
-              "A student finds chlorine listed as element 17 and wonders why it stands beside bromine and fluorine. The table is ordered by atomic number, the number of protons, so element 17 follows 16 and precedes 18. Each new row starts when a new electron shell begins to fill.",
-              "Rows are called periods, and columns are called groups. Elements in the same group share the same outer-electron arrangement, so they show similar chemistry. Sodium is in period 3 and group 1, while chlorine is in the same period 3 but group 17.",
-              "Families are groups with common names. Group 1 are the alkali metals, group 2 the alkaline-earth metals, group 17 the halogens and group 18 the noble gases. The d-block in the middle holds the transition metals."
+              "The table is read by atomic number, the proton count. Each row, a period, fills one electron shell, and each column, a group, holds elements sharing the same number of outer electrons. Sodium (Z = 11) sits in period 3 because its electrons fill shells 1 and 2 and start shell 3.",
+              "Columns are families with shared behaviour. Group 1, the alkali metals, lose one electron easily. Group 2, the alkaline-earth metals, lose two. Group 17, the halogens, are non-metals that gain one electron. Group 18, the noble gases, are already full and almost never react.",
+              "Between the main blocks sit the transition metals, which form coloured compounds and work as catalysts. Their outer electrons sit in inner shells, so they can form several positive ions instead of just one or two."
             ],
             "bullets": [
-              "Period = row; group = column.",
-              "Same group means similar outer electrons.",
-              "Families: 1 alkali, 2 alkaline-earth, 17 halogens, 18 noble gases."
+              "Rows (periods) fill one electron shell each.",
+              "Columns (groups) share the number of outer electrons.",
+              "Group 1, 2, 17, 18 are alkali, alkaline-earth, halogens and nobles.",
+              "Transition metals form variable ions and coloured compounds."
             ],
-            "takeaway": "Position follows atomic number, and group predicts chemical family.",
+            "takeaway": "Same column means same outer electrons, and same outer electrons mean similar behaviour.",
             "check": {
-              "question": "Why do sodium and potassium behave similarly?",
+              "question": "Which statement correctly pairs a family with its group?",
               "options": [
-                "They both have one outer electron",
-                "They both have the same atomic number",
-                "They both have the same number of shells",
-                "They both lie in period 3"
-              ],
-              "answer": 0,
-              "why": "Same group means same outer-electron arrangement, so chemical behaviour repeats down the group."
-            }
-          }
-        },
-        {
-          "type": "text",
-          "content": {
-            "heading": "What changes across and down",
-            "paragraphs": [
-              "A candidate is asked to order magnesium, sodium and chlorine by size and by ability to attract electrons. Across a period the atoms gain protons while electrons fill the same shell. Radii shrink, ionisation energy, electronegativity and electron affinity rise, and metallic character falls.",
-              "Down a group, each step adds a whole electron shell while nuclear charge rises more slowly. Atoms and ions get bigger, so ionisation energy and electronegativity fall. Metallic character grows, because larger atoms lose outer electrons more easily.",
-              "Electrical and thermal conductivity follow metallic character: metals are good conductors and non-metals are poor. Across a period, conductivity therefore falls as metallic character falls. Down a group, metallic character rises, but conductivity can dip slightly."
-            ],
-            "bullets": [
-              "Across: radii fall; ionisation energy and electronegativity rise.",
-              "Down: radii rise; ionisation energy and electronegativity fall.",
-              "Metallic character falls across and rises down.",
-              "Conductivity tracks metallic character."
-            ],
-            "takeaway": "Across a period atoms shrink and attract more strongly; down a group they enlarge and attract less.",
-            "check": {
-              "question": "Across period 3, which order is correct for atomic radius?",
-              "options": [
-                "chlorine < magnesium < sodium",
-                "sodium < magnesium < chlorine",
-                "magnesium < sodium < chlorine",
-                "sodium = magnesium = chlorine"
-              ],
-              "answer": 0,
-              "why": "Radius falls across a period, so chlorine is smallest and sodium largest."
-            }
-          }
-        },
-        {
-          "type": "text",
-          "content": {
-            "heading": "Why trends happen and family behaviour",
-            "paragraphs": [
-              "A student expects potassium, with more protons than sodium, to hold its outer electron tighter than sodium does. Yet potassium reacts faster with water. The extra inner shell shields the outer electron in potassium.",
-              "Across a period, nuclear charge increases with almost no extra shielding, so electrons are pulled closer and harder to remove. Down a group, a new shell is added, so shielding rises and the outer electron is farther from the nucleus. That distance and shielding explain larger radii and lower ionisation energy.",
-              "Alkali metals lose one electron easily and are therefore very reactive. Halogens are non-metals that gain one electron to form negative ions. Noble gases have full outer shells and are inert, while transition metals form variable oxidation states and act as catalysts."
-            ],
-            "bullets": [
-              "More shielding weakens the pull.",
-              "Alkali metals: reactive, lose one electron.",
-              "Halogens: non-metals, form negative ions; noble gases inert.",
-              "Transition metals catalyse; oxidation states vary."
-            ],
-            "takeaway": "Shielding and distance weaken the pull down a group; full shells make noble gases inert.",
-            "check": {
-              "question": "Why do atoms get larger down a group despite more protons?",
-              "options": [
-                "Nuclear charge falls",
-                "A new electron shell is added",
-                "Electrons move to the same shell",
-                "Protons repel electrons"
+                "Alkali metals are Group 2",
+                "Halogens are Group 17",
+                "Noble gases are Group 1",
+                "Transition metals are Group 18"
               ],
               "answer": 1,
-              "why": "Each step down adds a shell, so distance and shielding outweigh the extra protons."
+              "why": "Halogens sit in Group 17; the others are placed in different groups."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Which way each property moves",
+            "paragraphs": [
+              "Across a period, protons increase while electrons are added to the same shell, so the pull on each electron grows. Atoms therefore shrink, ionisation energy rises, and electronegativity rises. Sodium is a soft metal and chlorine is a reactive non-metal, and that change runs steadily left to right.",
+              "Down a group, new shells are added outside, so atoms grow and the outer electrons are shielded from the nucleus. Ionisation energy and electronegativity fall, while metallic character grows. Fluorine, at the top of the halogens, is the most electronegative element of all.",
+              "Conductivity follows the same logic: metals conduct because outer electrons are free, and that freedom grows where atoms hold their electrons loosely. Sodium conducts well; chlorine, a non-metal, does not conduct at all."
+            ],
+            "bullets": [
+              "Across a period: radius falls, ionisation energy and electronegativity rise.",
+              "Down a group: radius grows, ionisation energy and electronegativity fall.",
+              "Metallic character fades across and grows down.",
+              "Conductivity follows how loosely electrons are held."
+            ],
+            "takeaway": "Across a period the pull grows; down a group new shells shield it.",
+            "check": {
+              "question": "Which order correctly arranges Na, Mg and Cl by electronegativity?",
+              "options": [
+                "Na < Mg < Cl",
+                "Cl < Mg < Na",
+                "Mg < Na < Cl",
+                "Na < Cl < Mg"
+              ],
+              "answer": 0,
+              "why": "Electronegativity rises across the period, so Na < Mg < Cl."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Why the trends happen",
+            "paragraphs": [
+              "The root cause is a contest between nuclear charge and shielding. More protons pull harder, but more electron shells push the pull apart. Across a period, charge wins; down a group, shielding wins. Every trend on the table is that contest playing out.",
+              "Ionisation energy is the energy needed to pull an electron away. Across a period it rises because the pull grows; down a group it falls because shells shield the outer electron. The noble gases peak only where their full shells resist any change.",
+              "Ionic radius shrinks across a period, because the same electron shell is squeezed tighter. Going down, radius grows because each new shell adds a layer. A candidate who remembers the contest can derive any trend without memorising a table."
+            ],
+            "bullets": [
+              "Trends come from nuclear charge versus shielding.",
+              "Across: charge wins. Down: shielding wins.",
+              "Ionic radius follows the same contest."
+            ],
+            "takeaway": "Charge pulls in, shielding pushes out, and the winner sets the trend.",
+            "check": {
+              "question": "Why does ionisation energy fall down a group?",
+              "options": [
+                "Protons are fewer down the group",
+                "New shells are added, so outer electrons are shielded",
+                "Electrons are more numerous and pull harder",
+                "Atoms lose their neutrons down the group"
+              ],
+              "answer": 1,
+              "why": "Extra shells shield the nucleus, so outer electrons are held less tightly."
             }
           }
         },
@@ -776,30 +776,30 @@
           "content": {
             "title": "Exam tip",
             "tone": "tip",
-            "body": "For trend questions, always state the direction first, then the reason in one line. Say across a period electronegativity increases because nuclear charge rises with little extra shielding. Do not reverse the direction down a group."
+            "body": "When a trend question names two elements, first ask whether moving across or down. The direction decides everything before any values are compared."
           }
         },
         {
           "type": "worked_example",
           "content": {
-            "problem": "Arrange sodium, magnesium and chlorine in order of increasing electronegativity and give the reason.",
+            "problem": "Arrange sodium, magnesium and chlorine in order of increasing electronegativity.",
             "steps": [
               {
-                "operation": "Place them in period 3",
-                "reason": "Electronegativity follows position from left to right across a period.",
-                "result": "Sodium, magnesium, then chlorine.",
+                "operation": "Locate the three elements",
+                "reason": "All sit in period 3, sodium first, magnesium second, chlorine third",
+                "result": "Na, Mg, Cl left to right",
                 "predictPrompt": ""
               },
               {
-                "operation": "Apply the trend",
-                "reason": "Nuclear charge rises while shielding stays nearly constant.",
-                "result": "Electronegativity increases along the period.",
+                "operation": "Apply the across-period rule",
+                "reason": "Electronegativity rises left to right in a period",
+                "result": "Na < Mg < Cl",
                 "predictPrompt": ""
               },
               {
-                "operation": "Write the order",
-                "reason": "The leftmost element attracts least, the rightmost most.",
-                "result": "Sodium < magnesium < chlorine.",
+                "operation": "State the order",
+                "reason": "Sodium is the most metallic, chlorine the most electron-hungry",
+                "result": "Increasing: Na, Mg, Cl",
                 "predictPrompt": ""
               }
             ]
@@ -808,62 +808,68 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "Arrange potassium, sodium and lithium in order of increasing ionisation energy and explain the trend.",
+            "question": "Arrange fluorine, chlorine and bromine in order of increasing atomic radius, and say why.",
             "hints": [
-              "They are in the same group, so compare down the group.",
-              "Each step down adds a whole electron shell.",
-              "More shielding and distance mean weaker pull, so energy falls."
+              "All three are halogens in one group",
+              "Count the electron shells in each atom",
+              "More shells means a larger atom"
             ]
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Go deeper: Why ionisation energy rises across a period but falls down a group",
+            "heading": "Go deeper: Why ionisation energy rises across but falls down",
             "paragraphs": [
-              "Ionisation energy is the energy needed to remove one electron from a gaseous atom, so anything that strengthens the attraction between the nucleus and that electron raises the value. Across a period the outer shell stays the same while protons are added. Each new proton adds positive charge without adding a new inner shell to shield it.",
-              "The effective nuclear charge felt by the outer electron therefore grows steadily from left to right, pulling the electron closer and making it harder to remove. This is why first ionisation energy rises across period 3 from sodium through magnesium, aluminium and the p-block elements. The chemical consequence is that the right-hand elements hold their electrons tightly and tend to gain rather than lose them.",
-              "Down a group the picture reverses because each element adds a complete inner shell of electrons. That extra shell shields the outer electron, so the increased nuclear charge is largely cancelled, and the outer electron sits farther away. A more distant, better shielded electron experiences a weaker attraction and needs less energy to escape.",
-              "This explains the steady fall in first ionisation energy down group 1 from lithium to caesium, despite the larger proton number lower down. Small irregularities appear where electron pairing or a filled subshell creates extra stability, and examiners sometimes test those exceptions. The underlying rule remains that shielding and distance dominate the group trend, while rising nuclear charge dominates the period trend."
+              "Ionisation energy is the toll paid to remove an electron. Across a period, each new proton is added to the same electron shell, so every electron feels a stronger pull. The toll therefore rises steadily from sodium to chlorine.",
+              "Down a group, each new element adds a whole shell outside the previous one. The outer electrons are not only farther away but shielded by inner shells, so the pull weakens and the toll falls. Potassium costs less to ionise than lithium for exactly this reason.",
+              "The trend pauses at the noble gases, whose full shells make a sudden jump in cost. That saw-tooth shape confirms the rule: shell structure, not mass alone, sets the price of removing an electron.",
+              "A candidate who explains the trend with charge-versus-shielding language earns full marks; a candidate who recites 'it increases' without the reason earns only part. The mechanism is the mark.",
+              "A candidate who explains the trend with charge-versus-shielding language earns full marks; a candidate who recites ‘it increases’ without the reason earns only part. The mechanism is the mark.",
+              "The same contest also sets electronegativity, electron affinity and metallic character, so one explanation carries several items."
             ],
             "bullets": [
-              "Across: effective nuclear charge rises, distance stays similar.",
-              "Down: shielding rises, distance grows, pull weakens.",
-              "Pairing and filled subshells cause small exceptions."
+              "Across a period, charge wins and ionisation energy rises.",
+              "Down a group, shielding wins and ionisation energy falls.",
+              "Noble gases mark the peaks of the saw-tooth trend.",
+              "Reasons earn marks; recitation earns part marks."
             ]
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Go deeper: Why atomic radius shrinks across a period but grows down a group",
+            "heading": "Go deeper: Why atomic radius falls across but rises down",
             "paragraphs": [
-              "Atomic radius is the distance from the nucleus to the outer electron cloud, so any force that pulls the cloud inward shrinks it. The two competing forces are the attraction from protons and the shielding effect of inner electrons. Their balance decides whether the atom gets smaller or larger as position changes.",
-              "Across a period electrons enter the same outer shell while the nucleus gains a proton at each step. Shielding barely changes because the new electrons are in the same shell as the one being pulled, so effective nuclear charge rises sharply. The stronger pull outweighs electron-electron repulsion, and the cloud contracts, which is why sodium is larger than magnesium and magnesium larger than chlorine.",
-              "Down a group each successive element adds a complete new shell, so the outer electrons occupy a higher level that is inherently farther from the nucleus. That extra shell also shields the outer electrons, reducing the effective pull even though the proton number is larger. Distance therefore wins, and lithium is smaller than sodium, which is smaller than potassium and rubidium.",
-              "Ionic radii follow the same two rules but start from charged sizes, so they shrink across a period and expand down a group. Anions are larger than their parent atoms because gained electrons repel, while cations are smaller because fewer electrons share the same pull. Remembering the shell count therefore predicts both atomic and ionic size without memorising separate tables."
+              "Atomic radius is the distance from nucleus to outer electron. Across a period, protons increase while the shell stays the same, so the pull per electron grows and the atom shrinks. Sodium is larger than chlorine for this reason alone.",
+              "Down a group, a new shell is added each step, so even though protons increase, the outer electrons sit a whole layer farther out. Fluorine is therefore much smaller than bromine, despite having fewer protons.",
+              "Ionic radius follows the same contest with a twist: Na⁺ is smaller than the Na atom because it lost a shell, while Cl⁻ is larger than Cl because it gained one. Charge changes the shell count itself.",
+              "That twist is why radius questions often ask about ions rather than atoms. A candidate who converts the charge into a shell change before comparing will never be trapped.",
+              "Radius values quoted for ions come from crystal measurements, and they follow the shell logic exactly: fewer shells, smaller ion; more shells, larger ion."
             ],
             "bullets": [
-              "Across: same shell, more protons, stronger pull, smaller atom.",
-              "Down: new shell, more shielding, weaker pull, larger atom.",
-              "Cations shrink, anions swell relative to parent atoms."
+              "Across a period, atoms shrink as protons are added.",
+              "Down a group, atoms grow as shells are added.",
+              "Na⁺ shrank a shell; Cl⁻ gained one.",
+              "Convert the charge to a shell change first."
             ]
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Go deeper: Exam traps in metallic character and electronegativity directions",
+            "heading": "Go deeper: Exam traps in the periodic table",
             "paragraphs": [
-              "Many candidates lose marks by giving right facts with opposite arrows, because two trends move together and two move apart. Metallic character falls across a period while electronegativity rises, so the leaders are opposite edges of the table. Down a group metallic character rises while electronegativity falls, so mixing those directions is the commonest trap.",
-              "Metallic character means tendency to lose electrons and form positive ions, which is strongest at the left where ionisation energy is low. Electronegativity means tendency to attract electrons and form negative ions, which is strongest at the right where effective nuclear charge is high. The two properties therefore point to opposite ends of a period, while conductivity follows metallic character and fades to the right.",
-              "Examiners exploit the confusion by asking for the group with the most metallic element or the element with the lowest electronegativity. The answer is usually the bottom-left group, not the top-right, because size and shielding dominate down a group. A second trap reverses conductivities, claiming non-metals conduct better than metals, which contradicts the delocalised electron sea in metals.",
-              "The safe method is to write both arrows vertically before answering, then match each property to its arrow. State position first, such as down group 17, and then give the value direction in words. If a question mentions electron affinity, add the warning that the trend generally rises across but has genuine exceptions such as chlorine over fluorine."
+              "The classic trap reverses the two directions: candidates recall that electronegativity rises across the period and then apply that rise down the group, where it actually falls. Before answering, the candidate must name the direction — across or down — and only then choose the rising or falling trend.",
+              "The second trap is metallic character. It fades across the period (left is metallic, right is non-metallic) and grows down the group (heavier members are more metallic). Both statements are true; confusing which direction the question asks about is the error.",
+              "The third trap is position versus properties. A candidate may state that Group 1 elements 'are reactive' without explaining that each has one outer electron to lose. The charge-versus-shielding mechanism is what earns the full mark.",
+              "The fourth trap is reading 'increase' as 'decrease' on a downward question. Writing the two arrows — across ↑, down ↓ — beside every trend question removes this error almost entirely."
             ],
             "bullets": [
-              "Metallic character falls across, rises down; electronegativity rises across, falls down.",
-              "Conductivity follows metallic character, not electronegativity.",
-              "Write both arrows before answering any trend question."
+              "Name the direction before choosing the trend.",
+              "Metallic character fades across, grows down.",
+              "Reasons (charge vs shielding) earn the full mark.",
+              "Write the arrows beside every trend item."
             ]
           }
         }
