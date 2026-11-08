@@ -4653,6 +4653,214 @@
           }
         }
       ]
+    },
+    {
+      "slug": "carbon-and-its-oxides",
+      "topic": "non-metals-and-their-compounds",
+      "title": "Carbon and Its Oxides",
+      "objective": "Identify the allotropes of carbon, predict reagents for the laboratory preparation of CO₂, specify its properties and uses, determine reagents for the laboratory preparation of CO, predict the effects of CO on humans, determine specific tests for HCO₃⁻, CO₃²⁻ and CO, identify the different forms of coal, determine their uses, specify products of the destructive distillation of wood and coal, and specify the uses of coke and synthesis gas.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Carbon and Its Oxides",
+            "paragraphs": [
+              "Pencil lead, diamonds and charcoal are all the same element: carbon. This lesson follows carbon through its forms, its two oxides, and the fuels dug from the ground."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Allotropes of carbon",
+            "paragraphs": [
+              "Allotropy means one element, different arrangements. Carbon has three famous forms. Diamond is the hardest natural substance, each atom bonded to four others in a rigid network — that is why it cuts glass and glitters in jewellery.",
+              "Graphite is soft and slippery: its atoms form layers that slide over each other. The layered structure makes it a lubricant and the 'lead' in pencils. Amorphous carbon is the shapeless form found in charcoal and coke, used as an adsorbent.",
+              "Other allotropes include fullerenes (buckminsterfullerene, C₆₀) and nanotubes, used in advanced materials. The properties follow the arrangement: hard diamond, slippery graphite, porous charcoal."
+            ],
+            "bullets": [
+              "Diamond: hardest; rigid network; cuts glass.",
+              "Graphite: layered, soft; lubricant and pencil 'lead'.",
+              "Amorphous carbon: charcoal, coke; adsorbent.",
+              "Fullerenes (C₆₀) and nanotubes are advanced forms."
+            ],
+            "takeaway": "Same atoms, different arrangements: hard diamond, soft graphite, porous charcoal.",
+            "check": {
+              "question": "Graphite is used as a lubricant because",
+              "options": [
+                "It is the hardest natural substance",
+                "Its layers slide over each other",
+                "It is a good electrical non-conductor",
+                "It melts at a low temperature"
+              ],
+              "answer": 1,
+              "why": "Graphite's layered structure lets the layers slide, making it slippery."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Carbon(IV) oxide and carbon(II) oxide",
+            "paragraphs": [
+              "Carbon(IV) oxide (CO₂) is made in the laboratory from calcium carbonate: CaCO₃ + 2HCl → CaCl₂ + CO₂ + H₂O. It is a colourless, dense gas, fire-extinguishing (it smothers flames by blanketing), and slightly soluble in water to form carbonic acid.",
+              "The test for CO₂ is limewater turning milky: CO₂ + Ca(OH)₂ → CaCO₃ + H₂O. Carbonates and hydrogencarbonates also give CO₂ with acids, so the test confirms the gas, not the salt.",
+              "Carbon(II) oxide (CO) is made by passing steam over red-hot coke: C + H₂O → CO + H₂. It is a colourless, odourless, poisonous gas, reducing hot metal oxides. It binds haemoglobin far more strongly than oxygen — that is why charcoal fires kill in closed rooms."
+            ],
+            "bullets": [
+              "CO₂: CaCO₃ + acid; test = limewater milky; extinguishes fire.",
+              "CO: steam over coke; poisonous; binds haemoglobin.",
+              "Sources of CO: charcoal, fires, exhaust fumes."
+            ],
+            "takeaway": "CO₂ milks limewater and smothers fire; CO is odourless poison.",
+            "check": {
+              "question": "The specific test for carbon(IV) oxide is",
+              "options": [
+                "It rekindles a glowing splint",
+                "It turns limewater milky",
+                "It bleaches damp litmus",
+                "It gives a squeaky pop"
+              ],
+              "answer": 1,
+              "why": "CO₂ forms insoluble white CaCO₃ with limewater, making it milky."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Coal, coke and synthesis gas",
+            "paragraphs": [
+              "Coal is graded by carbon content: peat is youngest, then lignite, bituminous coal, and anthracite (hardest, richest in carbon). The older the coal, the more carbon and the more heat it gives.",
+              "Destructive distillation heats coal or wood without air: coal gives coke, coal gas, ammonia liquor and coal tar; wood gives wood gas, acetic acid and methanol. Coke is the solid left behind, used as a fuel and reducing agent in metallurgy.",
+              "Coke gasified with steam and air makes synthesis gas (syngas): a mixture of CO and H₂ used to make methanol, ammonia and synthetic fuels. Producer gas is the leaner version used directly as a fuel."
+            ],
+            "bullets": [
+              "Coal grades: peat < lignite < bituminous < anthracite.",
+              "Destructive distillation: coke + gas + tar + ammonia liquor.",
+              "Coke gasification makes synthesis gas (CO + H₂)."
+            ],
+            "takeaway": "Older coal is richer in carbon; distillation and gasification unlock its products.",
+            "check": {
+              "question": "Coke is obtained by",
+              "options": [
+                "Burning coal in air",
+                "Heating coal without air (destructive distillation)",
+                "Dissolving coal in water",
+                "Freezing coal gas"
+              ],
+              "answer": 1,
+              "why": "Coke is the solid residue left when coal is heated in the absence of air."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For carbon questions, first ask which oxide: CO is poisonous and reducing, CO₂ is acidic and milky-limewater. The oxidation state decides the story."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Calcium carbonate reacts with excess dilute HCl to give CO₂. Calculate the volume of CO₂ at s.t.p. from 10 g of CaCO₃. (CaCO₃ + 2HCl → CaCl₂ + CO₂ + H₂O; Mr CaCO₃ = 100)",
+            "steps": [
+              {
+                "operation": "Find moles of carbonate",
+                "reason": "Mr(CaCO₃) = 100, so grams convert by dividing by 100",
+                "result": "10 ÷ 100 = 0.10 mol CaCO₃",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Apply the mole ratio",
+                "reason": "One mole of carbonate gives one mole of CO₂",
+                "result": "0.10 mol CO₂",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Convert to gas volume",
+                "reason": "One mole of gas fills 22.4 dm³ at s.t.p.",
+                "result": "0.10 × 22.4 = 2.24 dm³",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "20 g of calcium carbonate reacts with excess dilute acid. Calculate the CO₂ volume at s.t.p. (Mr = 100).",
+            "hints": [
+              "First find moles of carbonate: 20 ÷ 100",
+              "The ratio carbonate:CO₂ is 1:1",
+              "Multiply moles by 22.4 dm³"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why diamond is hard and graphite is soft",
+            "paragraphs": [
+              "Diamond's hardness is structural: every carbon is bonded to four others in a three-dimensional network, so there is no direction in which layers can slide. The hardness is the network itself.",
+              "Graphite's softness is the opposite structure: strong sheets with only weak forces between them. The sheets slide, so graphite cleaves into flakes and coats surfaces as a lubricant.",
+              "The same structures explain conductivity: diamond has no free electrons and is an insulator, while graphite's free electrons between layers conduct electricity. Structure decides property, and the exam tests exactly that link.",
+              "A candidate who pictures the network versus the layers can predict hardness and conductivity for any carbon form without memorising either.",
+              "The same layer picture explains why diamond cleaves along planes and why graphite writes: each application exploits the weak inter-layer forces rather than the strong bonds within layers.",
+              "Fullerenes extend the idea into curved sheets: C₆₀ closes graphite-like layers into a ball, which is why it behaves between the two classic forms."
+            ],
+            "bullets": [
+              "Diamond: 3D network — hard, insulating.",
+              "Graphite: sliding sheets — soft, conducting.",
+              "Structure decides property; the exam tests the link.",
+              "Picture network vs layers to predict behaviour."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Carbon monoxide as a poison",
+            "paragraphs": [
+              "Carbon monoxide binds haemoglobin about 200–300 times more strongly than oxygen does. Once bound, the haemoglobin cannot carry oxygen, so the blood's oxygen delivery collapses even though the air contains oxygen.",
+              "That is why charcoal fires and faulty generators kill in closed rooms: the CO is colourless and odourless, the victim notices nothing, and the blood is quietly taken over. The danger is silent because the gas gives no smell and no irritation.",
+              "CO is also a reducing agent: it removes oxygen from hot copper(II) oxide. The same property that makes it a poison makes it a useful reducer in metallurgy.",
+              "The exam trap is to treat CO as merely 'a greenhouse gas'. Its primary danger is haemoglobin binding, not the greenhouse effect.",
+              "Treatment is removal from the source and fresh air, because the binding is reversible only slowly. Prevention — ventilation and complete combustion — is the real control.",
+              "That reversibility is also why CO poisoning is survivable: given oxygen and time, the haemoglobin releases CO and reloads with oxygen."
+            ],
+            "bullets": [
+              "CO binds haemoglobin 200–300× stronger than O₂.",
+              "No smell, no irritation — silent poison.",
+              "CO reduces hot metal oxides (metallurgy).",
+              "Primary danger is blood binding, not greenhouse effect."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in carbon chemistry",
+            "paragraphs": [
+              "The classic trap is the limewater test. Limewater turns milky with CO₂ — but if excess CO₂ is passed, the milkiness disappears as soluble calcium hydrogencarbonate forms. The test must be stopped at the first milkiness.",
+              "The second trap is oxidation state. In CO₂ carbon is +4; in CO it is +2. Writing the state beside every formula prevents calculating the wrong number of electrons.",
+              "The third trap is anthracite versus coke. Anthracite is the richest natural coal; coke is a manufactured residue. One is dug, the other is distilled, and the question will name which.",
+              "The fourth trap is carbon(II) oxide's sources. Charcoal, fires and exhaust fumes all produce CO by incomplete combustion; complete combustion gives CO₂. The oxygen supply decides the oxide.",
+              "A final trap is the water-gas shift. Passing CO with steam gives CO₂ and more hydrogen, which is how industry maximises hydrogen from coke: C + H₂O first, then CO + H₂O. The two steps are one process, not two products."
+            ],
+            "bullets": [
+              "Excess CO₂ clears limewater milkiness — stop at first white.",
+              "C in CO₂ is +4; in CO is +2.",
+              "Anthracite is dug; coke is manufactured.",
+              "Incomplete combustion → CO; complete → CO₂."
+            ]
+          }
+        }
+      ]
     }
   ]
 }
