@@ -7800,6 +7800,217 @@
           }
         }
       ]
+    },
+    {
+      "slug": "carbohydrates",
+      "topic": "organic-compounds",
+      "title": "Carbohydrates",
+      "objective": "Identify natural sources of carbohydrates, compare the various classes of carbohydrates, infer the products of hydrolysis and dehydration of carbohydrates, determine the uses of carbohydrates, and specify the tests for simple sugars.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Carbohydrates",
+            "paragraphs": [
+              "Bread, yam, rice and sugar are all carbohydrates — the foods that feed most of the world. This lesson sorts them by size and follows them through the tests and the reactions that matter."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Mono-, di- and polysaccharides",
+            "paragraphs": [
+              "Carbohydrates are compounds of carbon, hydrogen and oxygen, usually in the ratio CH₂O. They are classified by size: monosaccharides are single units (glucose, fructose), disaccharides are pairs (sucrose, lactose, maltose), and polysaccharides are long chains (starch, cellulose).",
+              "Glucose and fructose are reducing sugars: they reduce Fehling's solution to red copper(I) oxide. Sucrose is non-reducing until it is hydrolysed. The reducing test therefore finds single units but misses paired ones.",
+              "Cellulose from cotton is the most abundant organic polymer on earth; starch from cassava is its food-store relative. Both are polysaccharides, but humans digest starch and not cellulose."
+            ],
+            "bullets": [
+              "Mono-: glucose, fructose. Di-: sucrose, lactose, maltose.",
+              "Poly-: starch, cellulose.",
+              "Reducing sugars (glucose, fructose) reduce Fehling's; sucrose does not."
+            ],
+            "takeaway": "Size classifies carbohydrates: single, pairs, or chains.",
+            "check": {
+              "question": "Which of these is a disaccharide?",
+              "options": [
+                "Glucose",
+                "Fructose",
+                "Sucrose",
+                "Starch"
+              ],
+              "answer": 2,
+              "why": "Sucrose is two sugar units joined; glucose and fructose are single."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Tests for sugars and hydrolysis",
+            "paragraphs": [
+              "The Fehling test finds reducing sugars: a blue solution that turns red with red copper(I) oxide on warming. Benedict's solution works the same way. Sucrose fails the test until it is hydrolysed into glucose and fructose.",
+              "Hydrolysis breaks complex sugars into simple ones: sucrose + water → glucose + fructose (with dilute acid); starch → maltose → glucose. Cellulose resists hydrolysis, which is why humans cannot digest it.",
+              "Concentrated tetraoxosulfate(VI) acid dehydrates sugars: glucose chars to black carbon. That dehydration is the test that distinguishes sugars from non-carbohydrates."
+            ],
+            "bullets": [
+              "Fehling: blue → red Cu₂O with reducing sugars.",
+              "Sucrose hydrolyses to glucose + fructose.",
+              "Conc. H₂SO₄ dehydrates sugars to carbon."
+            ],
+            "takeaway": "Fehling finds reducing sugars; hydrolysis breaks big sugars into small ones.",
+            "check": {
+              "question": "Sucrose fails the Fehling test because",
+              "options": [
+                "It contains no carbon",
+                "It is non-reducing until hydrolysed",
+                "It is a polysaccharide",
+                "It dissolves only in alcohol"
+              ],
+              "answer": 1,
+              "why": "Sucrose has no free aldehyde group; hydrolysis frees glucose and fructose first."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Uses of sugar and starch",
+            "paragraphs": [
+              "Sugar and starch feed fermentation for alcoholic beverages: glucose ferments to ethanol. The same fermentation brews palm wine, and distillation raises it to gin. Carbohydrates thus feed both food and drink industries.",
+              "Starch is used in pharmaceuticals (as a binder and filler), in textiles (sizing), and in paper manufacture. Cellulose from cotton is the textile fibre itself — the largest natural fibre industry.",
+              "The uses follow the structure: energy storage (starch), structure (cellulose), and quick energy (sugars). Each class has its own job.",
+              "Preservation is a third use: sugar binds water so microbes cannot grow, which is why jam and suya keep without refrigeration."
+            ],
+            "bullets": [
+              "Fermentation of glucose → ethanol (drinks, palm wine to gin).",
+              "Starch: pharmaceuticals, textiles, paper.",
+              "Cellulose: the cotton fibre itself."
+            ],
+            "takeaway": "Sugars ferment, starch binds and fills, cellulose clothe us.",
+            "check": {
+              "question": "Palm wine becomes gin by",
+              "options": [
+                "Fermentation alone",
+                "Fermentation followed by distillation",
+                "Hydrolysis with acid",
+                "Heating with alkali"
+              ],
+              "answer": 1,
+              "why": "Yeast ferments the sap to ethanol; distillation concentrates it to gin."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For carbohydrate questions, first ask the size class. Single, pair or chain decides the reaction, the test and the use."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Sucrose is hydrolysed to glucose and fructose. Calculate the mass of glucose from 34.2 g of sucrose. (C₁₂H₂₂O₁₁ + H₂O → C₆H₁₂O₆ + C₆H₁₂O₆; Mr sucrose = 342, glucose = 180)",
+            "steps": [
+              {
+                "operation": "Find moles of sucrose",
+                "reason": "Moles = mass ÷ Mr",
+                "result": "34.2 ÷ 342 = 0.10 mol",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Apply the mole ratio",
+                "reason": "One mole of sucrose gives one mole of glucose",
+                "result": "0.10 mol glucose",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Convert to mass",
+                "reason": "Mass = moles × Mr",
+                "result": "0.10 × 180 = 18.0 g",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "17.1 g of sucrose is hydrolysed completely. Calculate the glucose mass formed. (Mr = 342 and 180)",
+            "hints": [
+              "First find moles of sucrose: 17.1 ÷ 342",
+              "The ratio sucrose:glucose is 1:1",
+              "Multiply moles by 180"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why sucrose is non-reducing",
+            "paragraphs": [
+              "A reducing sugar needs a free aldehyde (or keto) group to reduce Fehling's solution. In glucose that group is free; in sucrose the two units are joined through their reactive groups, so the aldehyde is locked away. Joining hides the reactivity.",
+              "Hydrolysis frees the groups again, which is why hydrolysed sucrose then reduces Fehling's. The test result changes because the structure changed, not because the atoms did.",
+              "That is why the syllabus pairs the test with hydrolysis: the sequence — test, hydrolyse, test again — proves the structure. A candidate who runs the sequence explains sucrose completely.",
+              "Maltose and lactose are reducing because their join leaves one unit's group free. The exception proves the rule: it is the free group, not the size, that decides.",
+              "The same joining logic explains why maltose and lactose stay reducing: their structures link one unit through a different carbon, leaving one reactive group free. It is the position of the join that matters, not the fact of joining.",
+              "A candidate who pictures the join can predict the test result for any disaccharide without memorising it.",
+              "A candidate who pictures the join can predict the test result for any disaccharide without memorising it.",
+              "It also pays off in every later family.",
+              "It also pays off in every later family of reactions."
+            ],
+            "bullets": [
+              "Reducing power needs a free aldehyde/keto group.",
+              "Sucrose locks both groups in the join.",
+              "Hydrolysis frees them — the test then works.",
+              "Maltose/lactose stay reducing (one group free)."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Starch, cellulose and the digestion difference",
+            "paragraphs": [
+              "Starch and cellulose are both glucose polymers, but their links differ: starch is alpha-linked and enzymes cut it easily, while cellulose is beta-linked in straight chains that humans have no enzyme to break. Structure, not composition, decides digestibility.",
+              "That is why grass-fed animals digest cellulose through gut bacteria: the bacteria supply the enzyme humans lack. The polymer is the same; the machinery differs.",
+              "The same link difference drives industry: starch is food and pulp, cellulose is fibre and paper. One polymer feeds, the other clothes.",
+              "A candidate who names the link type (alpha versus beta) has explained digestion, textiles and industry from one idea.",
+              "The link difference also decides industrial treatment: starch gelatinises in hot water and feeds fermentation, while cellulose must be pulped mechanically because no enzyme in the factory breaks it either.",
+              "That is why paper is made from cellulose and bread from starch. One polymer feeds; the other clothes and writes."
+            ],
+            "bullets": [
+              "Starch: alpha-linked, digestible. Cellulose: beta-linked, indigestible.",
+              "Ruminants use bacteria to break cellulose.",
+              "One polymer feeds; the other clothes.",
+              "The link type is the whole explanation."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in carbohydrates",
+            "paragraphs": [
+              "The classic trap is the reducing test. Glucose and fructose reduce Fehling's; sucrose does not until hydrolysed. Any option giving sucrose a positive test without hydrolysis reverses the chemistry.",
+              "The second trap is starch versus cellulose digestibility. Both are glucose polymers, but only starch is digestible. Composition alone never decides — the link type does.",
+              "The third trap is dehydration. Concentrated sulfuric acid chars sugars to carbon; it is a dehydration, not an oxidation. The black residue is carbon, not ash.",
+              "The fourth trap is fermentation direction. Yeast converts sugar to ethanol, never the reverse. Any option making ethanol the fermented product's starting material reverses the process.",
+              "A final trap is the sugar source. Reducing sugars occur in fruits and honey; cassava and yam store starch. The natural source names the class, and the class names the reaction."
+            ],
+            "bullets": [
+              "Sucrose is non-reducing until hydrolysed.",
+              "Alpha links digest; beta links do not.",
+              "Conc. H₂SO₄ dehydrates sugars to carbon.",
+              "Fermentation: sugar → ethanol, never backwards."
+            ]
+          }
+        }
+      ]
     }
   ]
 }
