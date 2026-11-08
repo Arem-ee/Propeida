@@ -1,0 +1,2063 @@
+{
+  "subject": "chemistry",
+  "source": "JAMB/IBASS Chemistry syllabus",
+  "topics": [
+    {
+      "slug": "atomic-structure-and-bonding",
+      "name": "Atomic Structure and Bonding",
+      "section": "ATOMIC STRUCTURE",
+      "order": 1,
+      "description": "Atomic structure, periodic table and chemical bonding (spine topic split into atomic structure, periodic table and chemical bonding lessons)."
+    },
+    {
+      "slug": "chemical-combination",
+      "name": "Chemical Combination",
+      "section": "CHEMICAL COMBINATION",
+      "order": 2,
+      "description": "Laws of proportions, formulae, equations and the mole concept."
+    },
+    {
+      "slug": "kinetic-theory-of-matter-and-gas",
+      "name": "Kinetic Theory of Matter and Gas",
+      "section": "KINETIC THEORY",
+      "order": 3,
+      "description": "Kinetic theory, gas laws, ideal gas equation and vapour density."
+    },
+    {
+      "slug": "separation-of-mixtures-and-purification-of-chemical-substances",
+      "name": "Separation of Mixtures and Purification",
+      "section": "SEPARATION",
+      "order": 4,
+      "description": "Elements, compounds and mixtures; pure and impure substances; separation processes."
+    },
+    {
+      "slug": "solubility",
+      "name": "Solubility",
+      "section": "SOLUBILITY",
+      "order": 5,
+      "description": "Unsaturated, saturated and supersaturated solutions; solubility curves and calculations; true and false solutions."
+    },
+    {
+      "slug": "acids-bases-and-salts",
+      "name": "Acids, Bases and Salts",
+      "section": "ACIDS AND BASES",
+      "order": 6,
+      "description": "Properties of acids, bases and salts; indicators; basicity; pH; titration; hydrolysis."
+    },
+    {
+      "slug": "oxidation-and-reduction-redox",
+      "name": "Oxidation and Reduction (Redox)",
+      "section": "REDOX",
+      "order": 7,
+      "description": "Oxidation and reduction in oxygen, electron and oxidation-number senses; balancing."
+    },
+    {
+      "slug": "electrolysis",
+      "name": "Electrolysis",
+      "section": "ELECTROCHEMISTRY",
+      "order": 8,
+      "description": "Electrolysis terms, electrode products, quantitative relationships and industrial applications."
+    }
+  ],
+  "lessons": [
+    {
+      "slug": "atomic-structure",
+      "topic": "atomic-structure-and-bonding",
+      "title": "Atomic Structure",
+      "objective": "Distinguish atoms, molecules and ions, state the contributions of Dalton, Millikan, Rutherford, Moseley, Thomson and Bohr, count protons/neutrons/electrons from atomic and mass numbers, name the four quantum numbers and the rules for filling orbitals, describe s and p orbital shapes, and calculate relative atomic mass from isotopes.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Atomic Structure",
+            "paragraphs": [
+              "A bottle labelled chlorine may hold atoms, molecules or ions, and only the particle count tells which. This lesson separates the three, traces the atomic model and uses atomic numbers to count particles."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Atoms, molecules, ions and the researchers",
+            "paragraphs": [
+              "A student writes Na, Na+ and NaCl as if all three mean the same particle. The first is a single atom, the second a charged atom and the third a formula unit, so the distinction changes the answer.",
+              "Dalton said elements are made of indivisible atoms combining in simple whole-number ratios. Thomson found the electron in cathode rays and pictured positive pudding studded with negatives. Rutherford scattered alpha particles off gold foil, revealing a tiny nucleus holding most mass.",
+              "Moseley's X-rays showed atomic number fixes an element, while Millikan measured charge e. Bohr placed electrons in fixed shells, explaining definite spectral lines."
+            ],
+            "bullets": [
+              "Atom: smallest unit of an element; molecule: bonded atoms; ion: charged atom or molecule.",
+              "Dalton: indivisible atoms; Thomson: electron; Rutherford: nucleus; Bohr: shells; Moseley: atomic number; Millikan: charge e.",
+              "A charged particle is an ion, not a new element."
+            ],
+            "takeaway": "Atoms are single units, molecules are bonded units and ions carry a net charge.",
+            "check": {
+              "question": "Which statement correctly distinguishes the three particles?",
+              "options": [
+                "Na is a molecule, Na+ is an atom and NaCl is an ion",
+                "Na is an atom, Na+ is an ion and NaCl is a formula unit of a compound",
+                "Na is an ion, Na+ is a molecule and NaCl is an atom",
+                "Na, Na+ and NaCl are all molecules"
+              ],
+              "answer": 1,
+              "why": "Na is a single atom, Na+ is the atom minus one electron and NaCl is a formula unit, not a discrete molecule."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Counting particles and relative atomic mass",
+            "paragraphs": [
+              "A label reads 35Cl but asks also for neutrons. Without using the atomic number the count is impossible, because the top number alone never tells protons.",
+              "Atomic number Z is the proton count and fixes identity. Mass number A is protons plus neutrons, and electrons equal protons in a neutral atom. Therefore neutrons equal A minus Z, and an ion gains or loses electrons without changing Z or A.",
+              "Isotopes are atoms of one element with the same Z but different A, as in 35Cl and 37Cl. Relative atomic mass averages isotopes by abundance: RAM = sum of (abundance x isotope mass) / 100. For chlorine, (75 x 35 + 25 x 37) / 100 = 35.5."
+            ],
+            "bullets": [
+              "Protons = Z; neutrons = A minus Z; electrons = Z unless charged.",
+              "Isotopes share Z but differ in A and neutron count.",
+              "RAM uses 75% Cl-35 and 25% Cl-37 to give 35.5."
+            ],
+            "takeaway": "Z counts protons, A minus Z counts neutrons, and abundance weights isotopes.",
+            "check": {
+              "question": "For 37Cl, how many protons and neutrons does one atom contain?",
+              "options": [
+                "17 protons and 18 neutrons",
+                "17 protons and 20 neutrons",
+                "37 protons and 17 neutrons",
+                "20 protons and 17 neutrons"
+              ],
+              "answer": 1,
+              "why": "Chlorine has Z = 17, so protons = 17 and neutrons = 37 - 17 = 20."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Quantum numbers, filling rules and shapes",
+            "paragraphs": [
+              "Two electrons in carbon try to share the same address. The rules forbid that, because each electron needs a unique set of quantum numbers.",
+              "Principal n gives the shell, angular l gives subshell type, magnetic ml gives orientation and spin ms gives direction. Aufbau fills lowest energy first, Hund spreads electrons singly first with parallel spins, and Pauli allows at most two per orbital with opposite spins.",
+              "Following the order gives hydrogen 1s1 and chlorine (Z = 17) 1s2 2s2 2p6 3s2 3p5. An s orbital is spherical with maximum two electrons, while a p subshell has three dumbbell orbitals holding six. Diagrams for Z up to 20 therefore need only s and p shapes."
+            ],
+            "bullets": [
+              "n = shell; l = subshell; ml = orientation; ms = spin.",
+              "Aufbau: lowest first; Hund: singly first; Pauli: opposite spins share.",
+              "s: sphere, 2 electrons; p: three dumbbells, 6 electrons."
+            ],
+            "takeaway": "Four quantum numbers label each electron and three rules govern filling.",
+            "check": {
+              "question": "Which set obeyed the Pauli principle for two electrons?",
+              "options": [
+                "1s2 with ms = +1/2 and +1/2",
+                "1s2 with ms = +1/2 and -1/2 in the same orbital",
+                "1s3 with three electrons in one orbital",
+                "2p6 with all six electrons paired in one orbital"
+              ],
+              "answer": 1,
+              "why": "Pauli allows at most two electrons per orbital, and they must have opposite spins."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "When a question gives both numbers, write A and Z first, then get neutrons as A minus Z and electrons from Z. For relative atomic mass, multiply each abundance by its mass number before adding."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Chlorine has isotopes Cl-35 (75%) and Cl-37 (25%). Calculate the relative atomic mass of chlorine.",
+            "steps": [
+              {
+                "operation": "Write the abundances",
+                "reason": "RAM is a weighted average, so each isotope must be weighted by its share.",
+                "result": "Cl-35 at 75% and Cl-37 at 25%.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Multiply and add",
+                "reason": "Each product is abundance times mass, and the sum is divided by 100.",
+                "result": "75 x 35 = 2625 and 25 x 37 = 925; sum = 3550.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Divide by 100",
+                "reason": "Abundances sum to 100%, so division gives the mean mass.",
+                "result": "3550 / 100 = 35.5.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Bromine has isotopes Br-79 (50%) and Br-81 (50%). Calculate its relative atomic mass.",
+            "hints": [
+              "Write each abundance times its mass number.",
+              "Add the two products: 50 x 79 + 50 x 81.",
+              "Divide the sum by 100."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why mass number and atomic number differ",
+            "paragraphs": [
+              "Atomic number counts protons, the particles with positive charge that define element identity. Change the proton count and the element changes, which is why sodium with eleven protons can never become magnesium with twelve by a chemical reaction.",
+              "Mass number counts nucleons, protons plus neutrons together, because almost all atomic mass sits in the nucleus. Neutrons carry mass but no charge, so an atom can gain neutrons without changing its chemical identity or its proton number.",
+              "That split explains isotopes directly. Carbon-12 has six protons and six neutrons, while carbon-14 has six protons and eight neutrons, so both are carbon despite different mass numbers. The extra neutrons change mass and nuclear stability, not chemical behaviour in simple reactions.",
+              "The same split also explains a different confusion. Calcium-40 has twenty protons and twenty neutrons, while argon-40 has eighteen protons and twenty-two neutrons, so both share mass number forty but are entirely different elements. Sharing A never means sharing Z.",
+              "Electrons contribute almost nothing to mass because each is about one eighteen-hundredth as heavy as a proton. That tiny mass is why A ignores electrons and why adding or removing one electron to form an ion leaves mass number unchanged."
+            ],
+            "bullets": [
+              "Z = protons and fixes element identity.",
+              "A = protons plus neutrons and fixes nucleus mass.",
+              "Same Z can have different A as isotopes; same A can hide different Z."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why the octet is stable",
+            "paragraphs": [
+              "An outer shell with eight electrons, arranged as two s and six p electrons, is a particularly low-energy arrangement. The next electron would have to enter a higher shell, so atoms with a full outer shell tend to keep it rather than gain or lose electrons easily.",
+              "That full-shell arrangement is the noble gas configuration seen in neon, with one s two plus two s two plus two p six giving eight electrons in the second shell. Helium is the exception that proves the rule, because a filled first shell holds only two electrons and is already stable.",
+              "Stability here is about energy, not about a magic number. Losing an electron from a full shell costs more energy than gaining one costs to place in the next higher level, so simple energy arguments already favour leaving the shell alone.",
+              "Period two shows the idea cleanly. Oxygen with eight electrons fills the first shell completely and holds six in the second, so it sits just two electrons short of the stable eight. Atoms in that position are more reactive than neon, which already holds the full set.",
+              "The octet is therefore a useful stability guide for light elements, not a universal law of chemistry. Larger atoms can hold more than eight in a shell, and any deeper account of how full shells relate to reaction behaviour belongs to bonding, which follows atomic structure in the syllabus."
+            ],
+            "bullets": [
+              "Octet means two s plus six p electrons in the outer shell.",
+              "Noble gas configuration is a full outer shell with low energy.",
+              "Helium duet of two is full for the first shell."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in atomic structure",
+            "paragraphs": [
+              "The commonest trap swaps mass number and atomic number. A candidate who reports thirty-seven protons for 37Cl has used A where Z was needed, while one who reports seventeen neutrons has subtracted wrongly. Writing both A and Z before any subtraction prevents the swap in one move.",
+              "A second trap appears in relative atomic mass. Adding the isotope masses and dividing by the number of isotopes gives thirty-six for chlorine, which ignores abundance entirely. Only the weighted sum with percentages gives thirty-five point five, because the heavier isotope is rarer.",
+              "A third trap violates Pauli in a written configuration. Three electrons in one orbital, or two electrons with identical spin in the same orbital, both break the rule that an orbital holds at most two opposite-spin electrons. Any such option can be crossed out at once.",
+              "A fourth trap misapplies Hund by pairing electrons too early. In a p subshell the three orbitals each take one electron with parallel spin before any pairing begins. A configuration that fills one orbital with two before the other two are occupied therefore breaks Hund even if the total count looks right.",
+              "A fifth trap forgets that ions change electron count only. Sodium atom with eleven electrons becomes Na plus with ten without touching its eleven protons. Answers that change Z or A for an ion have mistaken charge for identity."
+            ],
+            "bullets": [
+              "Write A and Z first; never let one do the other's job.",
+              "RAM needs abundance weights, not a plain average of masses.",
+              "One orbital: at most two electrons, opposite spins, singly before paired."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "chemical-combination",
+      "topic": "chemical-combination",
+      "title": "Chemical Combination",
+      "objective": "State the laws of definite, multiple and reciprocal proportions and conservation of mass, write chemical symbols, formulae and balanced equations, and perform mole-concept calculations (moles from mass, concentration, gas volume) and stoichiometry.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Chemical Combination",
+            "paragraphs": [
+              "Chemical reactions rearrange atoms without creating or destroying them. That single fact controls every formula and every balanced equation. The laws of chemical combination turn this idea into testable ratios, and the mole turns those ratios into calculations."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Laws that govern how elements combine",
+            "paragraphs": [
+              "A student burns 12 g of carbon in oxygen and collects 44 g of gas. The oxygen used was 32 g, so 12 g + 32 g = 44 g. The total mass is unchanged, which is conservation of mass.",
+              "Water from any source contains 1 g of hydrogen per 8 g of oxygen, the law of definite proportions. Carbon forms CO and CO₂: 12 g of carbon uses 16 g of oxygen in CO and 32 g in CO₂. The oxygen masses are in the simple ratio 1:2, the law of multiple proportions.",
+              "Hydrogen and sodium both combine with 35.5 g of chlorine: 1 g and 23 g respectively. Their combining ratio is 1:23. The same ratio holds against oxygen, which is reciprocal proportions."
+            ],
+            "bullets": [
+              "Conservation: reactants mass equals products mass",
+              "Definite: same mass ratio in every sample",
+              "Multiple: simple ratio between different compounds",
+              "Reciprocal: same ratio against a third element"
+            ],
+            "takeaway": "Matter is conserved, and elements combine in fixed and simple mass ratios.",
+            "check": {
+              "question": "12 g of carbon forms CO with 16 g of oxygen and CO₂ with 32 g. Which law do 16 and 32 illustrate?",
+              "options": [
+                "Conservation of mass",
+                "Definite proportions",
+                "Multiple proportions",
+                "Reciprocal proportions"
+              ],
+              "answer": 2,
+              "why": "For fixed carbon, oxygen masses 16 and 32 are in the simple ratio 1:2."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Symbols, formulae and balanced equations",
+            "paragraphs": [
+              "A student writes CO for carbon oxides and cannot tell them apart. Symbols name elements, while a formula counts atoms: CO₂ has one carbon and two oxygens, CO has one of each. Relative atomic mass divides by one twelfth of a ¹²C atom, set to 12.",
+              "A student burns methane and writes CH₄ + O₂ → CO₂ + H₂O, which is unbalanced. Balancing counts atoms and adds coefficients until both sides match. The balanced equation is CH₄ + 2O₂ → CO₂ + 2H₂O.",
+              "The compound is 40% carbon, 6.7% hydrogen and 53.3% oxygen by mass. Divide by Ar (C=12, H=1, O=16) to get 3.3, 6.7 and 3.3 mol. Dividing by the smallest value gives 1:2:1, so the empirical formula is CH₂O."
+            ],
+            "bullets": [
+              "Balanced equation: CH₄ + 2O₂ → CO₂ + 2H₂O",
+              "Ar uses ¹²C = 12 as standard",
+              "Empirical formula is simplest whole-number ratio",
+              "Formulae count atoms; equations balance both sides"
+            ],
+            "takeaway": "Formulae count atoms, equations balance them, and composition gives the empirical ratio.",
+            "check": {
+              "question": "A compound is 40% carbon, 6.7% hydrogen and 53.3% oxygen. What is its empirical formula?",
+              "options": [
+                "CH₂O",
+                "C₂H₄O₂",
+                "CO₂",
+                "CH₄"
+              ],
+              "answer": 0,
+              "why": "Dividing by Ar (12, 1, 16) gives 3.3, 6.7, 3.3, so the ratio is 1:2:1."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The mole: counting atoms by weighing",
+            "paragraphs": [
+              "A student cannot count atoms one by one. One mole is 6.02×10²³ particles, large enough to weigh. The number of moles is mass divided by Mr, so mass can be turned into counts.",
+              "A chemist collects 22.4 dm³ of carbon dioxide at s.t.p. That volume contains one mole, so volume divided by 22.4 also gives moles. Concentration is moles divided by volume in dm³, giving mol/dm³.",
+              "A student adds excess acid to 50 g of calcium carbonate. CaCO₃ + 2HCl → CaCl₂ + CO₂ + H₂O needs one mole of carbonate per mole of CO₂. With Mr=100, 50 g is 0.5 mol, so 0.5 mol of CO₂ occupies 11.2 dm³ at s.t.p."
+            ],
+            "bullets": [
+              "1 mol = 6.02×10²³ particles; moles = mass ÷ Mr",
+              "At s.t.p., 1 mol gas = 22.4 dm³; moles = volume ÷ 22.4",
+              "Concentration = moles ÷ volume (mol/dm³)",
+              "Equation ratio gives moles of product per mole of reactant"
+            ],
+            "takeaway": "Weigh, divide by Mr, then use the equation ratio to find product moles.",
+            "check": {
+              "question": "What is the mass of 0.5 mol of methane, CH₄ (Mr = 16)?",
+              "options": [
+                "4 g",
+                "8 g",
+                "16 g",
+                "32 g"
+              ],
+              "answer": 1,
+              "why": "Mass = moles × Mr = 0.5 × 16 = 8 g."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Write Mr first, then decide what the exam asks: mass, moles, volume or concentration. Convert with moles = mass ÷ Mr, volume ÷ 22.4 at s.t.p., or moles ÷ volume. Using the wrong conversion is the commonest error in mole questions."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Calculate the mass of 0.5 mol of methane, CH₄ (Mr = 16).",
+            "steps": [
+              {
+                "operation": "Write the mass relation",
+                "reason": "Moles, mass and Mr are linked",
+                "result": "mass = moles × Mr",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Substitute the values",
+                "reason": "Use 0.5 mol and Mr = 16",
+                "result": "mass = 0.5 × 16 = 8 g",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "State the answer",
+                "reason": "Mass must carry the gram unit",
+                "result": "0.5 mol of CH₄ weighs 8 g",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Calculate the volume at s.t.p. of 0.25 mol of carbon dioxide.",
+            "hints": [
+              "At s.t.p., one mole of gas occupies 22.4 dm³",
+              "Multiply the moles by 22.4 to get the volume",
+              "Check that the unit is dm³"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why chemical equations must balance",
+            "paragraphs": [
+              "A chemical reaction rearranges bonds but leaves every nucleus untouched. No proton is created or destroyed, so the number of atoms of each element is the same before and after. That conservation of atoms is why an equation can be balanced only one way.",
+              "Coefficients change the number of molecules, while subscripts define the molecule itself. Changing CH₄ to CH₂ would make a different substance, so subscripts are never altered when balancing. Adding a 2 before O₂ in CH₄ + 2O₂ doubles the oxygen molecules without changing oxygen itself.",
+              "In a sealed flask, the mass before mixing equals the mass after reaction. If an equation were unbalanced, the missing mass would have to appear or vanish. That impossibility is why examiners treat an unbalanced equation as unfinished, because the atom count proves the claim.",
+              "The same counting explains predicting products. CH₄ + 2O₂ → CO₂ + 2H₂O shows one carbon, four hydrogens and four oxygens on each side. Any attempt to write one water molecule would leave hydrogen unbalanced, so two waters are required.",
+              "Nuclear changes break this rule because nuclei split or fuse. A chemical equation therefore never balances in a nuclear process, which is a different kind of change. That limit is why conservation of atoms applies only to chemical reactions."
+            ],
+            "bullets": [
+              "Coefficients count molecules; subscripts define molecules",
+              "Unbalanced equation means atoms are missing or extra",
+              "Atoms are conserved in chemical, not nuclear, change"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Empirical and molecular formulae compared",
+            "paragraphs": [
+              "An empirical formula gives the simplest whole-number ratio of atoms in a compound. A molecular formula gives the actual number of atoms in one molecule. Glucose has empirical CH₂O and molecular C₆H₁₂O₆, so the two formulae describe different information.",
+              "Start with percentages as grams in 100 g of compound. Divide each mass by its Ar to obtain the mole ratio. Divide every mole value by the smallest to simplify to whole numbers.",
+              "For 40 g of carbon, 6.7 g of hydrogen and 53.3 g of oxygen, the mole values are 40÷12 = 3.3, 6.7÷1 = 6.7 and 53.3÷16 = 3.3. The smallest value is 3.3, so the ratios are 1:2:1. The empirical formula is therefore CH₂O.",
+              "The empirical Mr of CH₂O is 12 + 2 + 16 = 30. If the measured Mr of the compound is 180, divide 180 by 30 to get 6. Multiply every subscript in CH₂O by 6 to obtain C₆H₁₂O₆. That multiplication gives the molecular formula.",
+              "When the empirical Mr equals the measured Mr, the empirical formula is already the molecular formula. Methane shows this, because its smallest ratio CH₄ has Mr = 16 and no multiple is needed. An exam that gives Mr therefore expects the final multiplication step."
+            ],
+            "bullets": [
+              "Empirical formula: simplest ratio; molecular formula: true molecule",
+              "CH₂O empirical Mr = 30; C₆H₁₂O₆ molecular Mr = 180",
+              "Multiply subscripts by measured Mr ÷ empirical Mr"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in mole calculations",
+            "paragraphs": [
+              "Relative atomic mass, Ar, belongs to one kind of atom and is measured against ¹²C = 12. Relative molecular mass, Mr, belongs to a whole formula and is the sum of its Ar values. Carbon has Ar = 12, while carbon dioxide has Mr = 44, not 12.",
+              "Moles count particles, while mass measures weight in grams. The link is moles = mass ÷ Mr, so a heavier substance has fewer moles per gram. One gram of water is 0.056 mol, while one gram of carbon dioxide is 0.023 mol.",
+              "At s.t.p., one mole of any gas occupies 22.4 dm³, but that rule never applies to liquids or solids. Concentration needs moles divided by volume in dm³, not by mass. A solution with 0.5 mol in 0.25 dm³ is 2 mol/dm³, not 0.5 mol/dm³.",
+              "The balanced equation CaCO₃ + 2HCl → CaCl₂ + CO₂ + H₂O fixes the mole ratio at 1:1 for carbonate to carbon dioxide. Mass in grams cannot be read directly from that ratio until each mass is divided by its Mr. The trap is to multiply grams by the ratio without converting to moles.",
+              "Read the units in the question before choosing the formula. Mass asks for moles = mass ÷ Mr, gas volume asks for moles × 22.4, and concentration asks for moles ÷ volume. Naming the unit first prevents the commonest slip."
+            ],
+            "bullets": [
+              "Ar is per atom; Mr is per formula: sum the Ar values",
+              "Moles count particles; grams measure mass: divide by Mr",
+              "Always convert mass to moles before using equation ratios"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "kinetic-theory-of-matter-and-gas",
+      "topic": "kinetic-theory-of-matter-and-gas",
+      "title": "Kinetic Theory of Matter and Gas",
+      "objective": "Apply kinetic theory to distinguish solids, liquids and gases, explain changes of state and Brownian movement, deduce the gas laws from their statements, use the ideal gas equation PV = nRT and vapour density, and state factors that make real gases deviate from ideal.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Kinetic Theory of Matter and Gas",
+            "paragraphs": [
+              "Kinetic theory treats matter as particles in constant motion, and the gas laws follow from how that motion changes with pressure, volume and temperature. Heating speeds the particles, squeezing crowds them and cooling slows them."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Particles in motion make solids, liquids and gases",
+            "paragraphs": [
+              "Ice in a warm room melts, then the water dries without boiling. Heating gives particles energy, so they move faster and escape their neighbours.",
+              "Kinetic theory states matter is made of tiny particles in constant random motion, and average speed rises with temperature. Collisions with the container walls produce gas pressure, because faster particles strike more often and harder.",
+              "Solids vibrate in fixed positions, liquids slide past each other, and gases move freely. Melting, vapourization, boiling, freezing and condensation are changes in particle motion, and wandering smoke particles show this as Brownian movement."
+            ],
+            "bullets": [
+              "Boiling is rapid vapourization throughout the liquid at its boiling point; vapourization is surface escape at any temperature",
+              "Gains of heat drive melting, boiling and vapourization; losses drive freezing and condensation",
+              "Brownian movement proves particles are moving though the sample looks still"
+            ],
+            "takeaway": "State changes are changes in particle motion, measured by temperature.",
+            "check": {
+              "question": "A puddle dries on a cool day without ever bubbling. Which change is this?",
+              "options": [
+                "Freezing",
+                "Condensation",
+                "Surface vapourization",
+                "Melting throughout"
+              ],
+              "answer": 2,
+              "why": "Vapourization is escape from the surface at any temperature; boiling bubbles throughout the liquid."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Six gas laws relate pressure, volume, temperature and amount",
+            "paragraphs": [
+              "A bicycle pump feels hard to squeeze and warms its barrel as air is forced in. Compression raises the pressure because the same particles collide more often with the walls.",
+              "Boyle's law says P ∝ 1/V at constant temperature, and Charles's law says V ∝ T in kelvin at constant pressure. Gay-Lussac's law says P ∝ T in kelvin at constant volume, because faster particles hit the walls harder.",
+              "Avogadro's law says equal volumes at the same conditions hold equal numbers of moles, so amount links directly to volume. Graham's law says the rate of diffusion is proportional to 1/√M."
+            ],
+            "bullets": [
+              "Dalton's law: total pressure equals the sum of the partial pressures of the gases present",
+              "Atomicity is the number of atoms in one molecule, so H2 and O2 have atomicity 2",
+              "Rates fall as molecules get heavier: rate ∝ 1/√Mr, so lighter gases diffuse faster"
+            ],
+            "takeaway": "Each law holds two variables fixed while the third changes with temperature in kelvin.",
+            "check": {
+              "question": "A gas is squeezed to half its volume at constant temperature. What happens to its pressure?",
+              "options": [
+                "It halves",
+                "It stays the same",
+                "It doubles",
+                "It becomes zero"
+              ],
+              "answer": 2,
+              "why": "Boyle's law says P ∝ 1/V, so halving V doubles P at constant temperature."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "One equation links pressure, volume, amount and temperature",
+            "paragraphs": [
+              "A syringe of air is warmed and its piston rises. The extra heat raises particle energy and pushes harder on the piston.",
+              "The ideal gas equation is PV = nRT, with P in atmospheres, V in dm³, n in moles, R = 0.082 dm³·atm·K⁻¹·mol⁻¹ and T in kelvin. Give three of the variables and the equation gives the fourth.",
+              "At s.t.p. one mole occupies 22.4 dm³, since 1 × 0.082 × 273 ≈ 22.4. Vapour density is half the relative molecular mass, VD = Mr ÷ 2, because gases are compared with hydrogen."
+            ],
+            "bullets": [
+              "Real gases deviate at high pressure and low temperature because particle size and forces matter there",
+              "Ideal gases are assumed to have negligible size and no forces between particles"
+            ],
+            "takeaway": "PV = nRT gives the missing variable, with kelvin and the correct units of R.",
+            "check": {
+              "question": "What volume does 1 mol of an ideal gas occupy at 273 K and 1 atm?",
+              "options": [
+                "11.2 dm³",
+                "22.4 dm³",
+                "44.8 dm³",
+                "5.6 dm³"
+              ],
+              "answer": 1,
+              "why": "V = 1 × 0.082 × 273 ÷ 1 ≈ 22.4 dm³, the molar volume at s.t.p."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Convert every Celsius temperature to kelvin before using Charles's law, Gay-Lussac's law or PV = nRT. The 273 offset decides the answer, and R = 0.082 dm³·atm·K⁻¹·mol⁻¹ must match pressures in atmospheres and volumes in cubic decimetres."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Calculate the volume occupied by 0.5 mol of an ideal gas at 273 K and 1 atm, using R = 0.082 dm³·atm·K⁻¹·mol⁻¹.",
+            "steps": [
+              {
+                "operation": "Write PV = nRT rearranged",
+                "reason": "Volume V is unknown, so rearrange P V = n R T into V = n R T ÷ P",
+                "result": "V = 0.5 × 0.082 × 273 ÷ 1",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Multiply the numerator",
+                "reason": "First find n × R, then multiply by T",
+                "result": "0.5 × 0.082 = 0.041, then 0.041 × 273 = 11.193",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Divide by pressure and round",
+                "reason": "Pressure is 1 atm, so division leaves the value unchanged",
+                "result": "V ≈ 11.19 dm³",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Calculate the volume of 1 mol of an ideal gas at 273 K and 1 atm using PV = nRT.",
+            "hints": [
+              "Rearrange to V = n × R × T ÷ P",
+              "Substitute n = 1, R = 0.082, T = 273 and P = 1",
+              "Check that the result matches the molar volume at s.t.p."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why heating makes particles move faster",
+            "paragraphs": [
+              "Temperature is the average kinetic energy of the particles, not the energy of any single particle. A hot sample has a higher average because the spread of speeds shifts upward when heat is absorbed, so collisions with the walls become both more frequent and more forceful. That is why pressure rises when a sealed gas is warmed at constant volume.",
+              "Heating adds energy to the particles through collisions with the container and among themselves. The particles do not all gain the same amount; some move faster and some slower, but the average rises and the rate of change of state moves with it. Melting, boiling and vapourization therefore become more likely as the average speed grows.",
+              "Cooling does the reverse and reverses every change of state in turn. Freezing and condensation release the energy that melting and vapourization absorbed, and the particles settle into slower, more ordered motion. The same energy account explains both directions without introducing any new kind of particle.",
+              "Absolute zero is the limit where the average kinetic energy reaches its minimum, which is why kelvin starts there. No sample can be cooled below that limit, because the particles retain their motion but approach the lowest possible average energy."
+            ],
+            "bullets": [
+              "Average kinetic energy rises with temperature in kelvin",
+              "Faster particles collide more often and harder, raising pressure",
+              "Freezing and condensation release the heat that melting absorbed"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Graham's law worked case for hydrogen and oxygen",
+            "paragraphs": [
+              "Graham's law predicts the rate of diffusion from relative molecular mass alone. Because rate is proportional to 1/√Mr, heavy molecules are slower at the same temperature. The ratio form removes the constant of proportionality and needs only the two masses.",
+              "Take hydrogen (Mr = 2) and oxygen (Mr = 32) diffusing at the same temperature. The rate ratio is r(H2) ÷ r(O2) = √(32 ÷ 2) = √16 = 4. Hydrogen therefore diffuses four times as fast as oxygen under identical conditions.",
+              "Times run in the opposite direction to rates. If a given volume of hydrogen takes 10 seconds to diffuse a fixed distance, the same volume of oxygen takes 4 × 10 = 40 seconds. A candidate who inverts the ratio and reports oxygen as faster has used Mr directly instead of its square root.",
+              "A gas with twice the Mr diffuses only 1 ÷ √2 ≈ 0.71 times as fast, because √2 ≈ 1.41. The heavier gas in any pair is therefore always the slower one, never the faster one."
+            ],
+            "bullets": [
+              "Rate ratio = √(heavier Mr ÷ lighter Mr)",
+              "Hydrogen, Mr = 2, is 4 times faster than oxygen, Mr = 32",
+              "Times invert the ratio: 10 seconds becomes 40 seconds"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in gas calculations",
+            "paragraphs": [
+              "The most expensive slip is leaving the temperature in Celsius. Gas laws use kelvin, so 0 °C is 273 K and 27 °C is 300 K, and every substitution must add 273 first. A volume proportional to T that uses 27 instead of 300 is wrong by a factor of about 11, because 300 ÷ 27 ≈ 11.1.",
+              "The second slip swaps vapour density for relative molecular mass. Vapour density is VD = Mr ÷ 2, so a gas with VD = 16 has Mr = 32, not 16. Reading the question for which quantity is asked prevents doubling or halving the answer at the final step.",
+              "Units must match R = 0.082 dm³·atm·K⁻¹·mol⁻¹ throughout. Pressure in atmospheres and volume in cubic decimetres go together, while mixed units need conversion first. At high pressure or low temperature the ideal assumption also fails, because molecular size and forces can no longer be ignored.",
+              "Reading the units line first also catches the remaining traps before arithmetic starts. A pressure, a volume and a temperature that match R can be substituted directly without conversion."
+            ],
+            "bullets": [
+              "Convert °C to K with +273 before calculating",
+              "VD = Mr ÷ 2, so Mr = 2 × VD",
+              "Match units to R = 0.082 dm³·atm·K⁻¹·mol⁻¹"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "periodic-table",
+      "topic": "atomic-structure-and-bonding",
+      "title": "Periodic Table",
+      "objective": "Relate atomic number to position on the periodic table, relate properties of groups of elements, explain variation of ionisation energy, ionic radii, electron affinity, electronegativity and conductivities across periods and down groups, and identify the alkali metals, alkaline-earth metals, halogens, noble gases and transition metals.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Periodic Table",
+            "paragraphs": [
+              "Elements arranged by atomic number into periods and groups show repeating patterns. Position predicts properties and explains trends, so one table answers both where an element sits and how it behaves in reactions."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "From atomic number to families",
+            "paragraphs": [
+              "A student finds chlorine listed as element 17 and wonders why it stands beside bromine and fluorine. The table is ordered by atomic number, the number of protons, so element 17 follows 16 and precedes 18. Each new row starts when a new electron shell begins to fill.",
+              "Rows are called periods, and columns are called groups. Elements in the same group share the same outer-electron arrangement, so they show similar chemistry. Sodium is in period 3 and group 1, while chlorine is in the same period 3 but group 17.",
+              "Families are groups with common names. Group 1 are the alkali metals, group 2 the alkaline-earth metals, group 17 the halogens and group 18 the noble gases. The d-block in the middle holds the transition metals."
+            ],
+            "bullets": [
+              "Period = row; group = column.",
+              "Same group means similar outer electrons.",
+              "Families: 1 alkali, 2 alkaline-earth, 17 halogens, 18 noble gases."
+            ],
+            "takeaway": "Position follows atomic number, and group predicts chemical family.",
+            "check": {
+              "question": "Why do sodium and potassium behave similarly?",
+              "options": [
+                "They both have one outer electron",
+                "They both have the same atomic number",
+                "They both have the same number of shells",
+                "They both lie in period 3"
+              ],
+              "answer": 0,
+              "why": "Same group means same outer-electron arrangement, so chemical behaviour repeats down the group."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "What changes across and down",
+            "paragraphs": [
+              "A candidate is asked to order magnesium, sodium and chlorine by size and by ability to attract electrons. Across a period the atoms gain protons while electrons fill the same shell. Radii shrink, ionisation energy, electronegativity and electron affinity rise, and metallic character falls.",
+              "Down a group, each step adds a whole electron shell while nuclear charge rises more slowly. Atoms and ions get bigger, so ionisation energy and electronegativity fall. Metallic character grows, because larger atoms lose outer electrons more easily.",
+              "Electrical and thermal conductivity follow metallic character: metals are good conductors and non-metals are poor. Across a period, conductivity therefore falls as metallic character falls. Down a group, metallic character rises, but conductivity can dip slightly."
+            ],
+            "bullets": [
+              "Across: radii fall; ionisation energy and electronegativity rise.",
+              "Down: radii rise; ionisation energy and electronegativity fall.",
+              "Metallic character falls across and rises down.",
+              "Conductivity tracks metallic character."
+            ],
+            "takeaway": "Across a period atoms shrink and attract more strongly; down a group they enlarge and attract less.",
+            "check": {
+              "question": "Across period 3, which order is correct for atomic radius?",
+              "options": [
+                "chlorine < magnesium < sodium",
+                "sodium < magnesium < chlorine",
+                "magnesium < sodium < chlorine",
+                "sodium = magnesium = chlorine"
+              ],
+              "answer": 0,
+              "why": "Radius falls across a period, so chlorine is smallest and sodium largest."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Why trends happen and family behaviour",
+            "paragraphs": [
+              "A student expects potassium, with more protons than sodium, to hold its outer electron tighter than sodium does. Yet potassium reacts faster with water. The extra inner shell shields the outer electron in potassium.",
+              "Across a period, nuclear charge increases with almost no extra shielding, so electrons are pulled closer and harder to remove. Down a group, a new shell is added, so shielding rises and the outer electron is farther from the nucleus. That distance and shielding explain larger radii and lower ionisation energy.",
+              "Alkali metals lose one electron easily and are therefore very reactive. Halogens are non-metals that gain one electron to form negative ions. Noble gases have full outer shells and are inert, while transition metals form variable oxidation states and act as catalysts."
+            ],
+            "bullets": [
+              "More shielding weakens the pull.",
+              "Alkali metals: reactive, lose one electron.",
+              "Halogens: non-metals, form negative ions; noble gases inert.",
+              "Transition metals catalyse; oxidation states vary."
+            ],
+            "takeaway": "Shielding and distance weaken the pull down a group; full shells make noble gases inert.",
+            "check": {
+              "question": "Why do atoms get larger down a group despite more protons?",
+              "options": [
+                "Nuclear charge falls",
+                "A new electron shell is added",
+                "Electrons move to the same shell",
+                "Protons repel electrons"
+              ],
+              "answer": 1,
+              "why": "Each step down adds a shell, so distance and shielding outweigh the extra protons."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For trend questions, always state the direction first, then the reason in one line. Say across a period electronegativity increases because nuclear charge rises with little extra shielding. Do not reverse the direction down a group."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Arrange sodium, magnesium and chlorine in order of increasing electronegativity and give the reason.",
+            "steps": [
+              {
+                "operation": "Place them in period 3",
+                "reason": "Electronegativity follows position from left to right across a period.",
+                "result": "Sodium, magnesium, then chlorine.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Apply the trend",
+                "reason": "Nuclear charge rises while shielding stays nearly constant.",
+                "result": "Electronegativity increases along the period.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Write the order",
+                "reason": "The leftmost element attracts least, the rightmost most.",
+                "result": "Sodium < magnesium < chlorine.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Arrange potassium, sodium and lithium in order of increasing ionisation energy and explain the trend.",
+            "hints": [
+              "They are in the same group, so compare down the group.",
+              "Each step down adds a whole electron shell.",
+              "More shielding and distance mean weaker pull, so energy falls."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why ionisation energy rises across a period but falls down a group",
+            "paragraphs": [
+              "Ionisation energy is the energy needed to remove one electron from a gaseous atom, so anything that strengthens the attraction between the nucleus and that electron raises the value. Across a period the outer shell stays the same while protons are added. Each new proton adds positive charge without adding a new inner shell to shield it.",
+              "The effective nuclear charge felt by the outer electron therefore grows steadily from left to right, pulling the electron closer and making it harder to remove. This is why first ionisation energy rises across period 3 from sodium through magnesium, aluminium and the p-block elements. The chemical consequence is that the right-hand elements hold their electrons tightly and tend to gain rather than lose them.",
+              "Down a group the picture reverses because each element adds a complete inner shell of electrons. That extra shell shields the outer electron, so the increased nuclear charge is largely cancelled, and the outer electron sits farther away. A more distant, better shielded electron experiences a weaker attraction and needs less energy to escape.",
+              "This explains the steady fall in first ionisation energy down group 1 from lithium to caesium, despite the larger proton number lower down. Small irregularities appear where electron pairing or a filled subshell creates extra stability, and examiners sometimes test those exceptions. The underlying rule remains that shielding and distance dominate the group trend, while rising nuclear charge dominates the period trend."
+            ],
+            "bullets": [
+              "Across: effective nuclear charge rises, distance stays similar.",
+              "Down: shielding rises, distance grows, pull weakens.",
+              "Pairing and filled subshells cause small exceptions."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why atomic radius shrinks across a period but grows down a group",
+            "paragraphs": [
+              "Atomic radius is the distance from the nucleus to the outer electron cloud, so any force that pulls the cloud inward shrinks it. The two competing forces are the attraction from protons and the shielding effect of inner electrons. Their balance decides whether the atom gets smaller or larger as position changes.",
+              "Across a period electrons enter the same outer shell while the nucleus gains a proton at each step. Shielding barely changes because the new electrons are in the same shell as the one being pulled, so effective nuclear charge rises sharply. The stronger pull outweighs electron-electron repulsion, and the cloud contracts, which is why sodium is larger than magnesium and magnesium larger than chlorine.",
+              "Down a group each successive element adds a complete new shell, so the outer electrons occupy a higher level that is inherently farther from the nucleus. That extra shell also shields the outer electrons, reducing the effective pull even though the proton number is larger. Distance therefore wins, and lithium is smaller than sodium, which is smaller than potassium and rubidium.",
+              "Ionic radii follow the same two rules but start from charged sizes, so they shrink across a period and expand down a group. Anions are larger than their parent atoms because gained electrons repel, while cations are smaller because fewer electrons share the same pull. Remembering the shell count therefore predicts both atomic and ionic size without memorising separate tables."
+            ],
+            "bullets": [
+              "Across: same shell, more protons, stronger pull, smaller atom.",
+              "Down: new shell, more shielding, weaker pull, larger atom.",
+              "Cations shrink, anions swell relative to parent atoms."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in metallic character and electronegativity directions",
+            "paragraphs": [
+              "Many candidates lose marks by giving right facts with opposite arrows, because two trends move together and two move apart. Metallic character falls across a period while electronegativity rises, so the leaders are opposite edges of the table. Down a group metallic character rises while electronegativity falls, so mixing those directions is the commonest trap.",
+              "Metallic character means tendency to lose electrons and form positive ions, which is strongest at the left where ionisation energy is low. Electronegativity means tendency to attract electrons and form negative ions, which is strongest at the right where effective nuclear charge is high. The two properties therefore point to opposite ends of a period, while conductivity follows metallic character and fades to the right.",
+              "Examiners exploit the confusion by asking for the group with the most metallic element or the element with the lowest electronegativity. The answer is usually the bottom-left group, not the top-right, because size and shielding dominate down a group. A second trap reverses conductivities, claiming non-metals conduct better than metals, which contradicts the delocalised electron sea in metals.",
+              "The safe method is to write both arrows vertically before answering, then match each property to its arrow. State position first, such as down group 17, and then give the value direction in words. If a question mentions electron affinity, add the warning that the trend generally rises across but has genuine exceptions such as chlorine over fluorine."
+            ],
+            "bullets": [
+              "Metallic character falls across, rises down; electronegativity rises across, falls down.",
+              "Conductivity follows metallic character, not electronegativity.",
+              "Write both arrows before answering any trend question."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "chemical-bonding",
+      "topic": "atomic-structure-and-bonding",
+      "title": "Chemical Bonding",
+      "objective": "Distinguish electrovalent (ionic), covalent, coordinate, hydrogen, metallic bonds and van der Waals forces, deduce bond types from electron configurations, relate bonding to properties of compounds, and differentiate the shapes of simple molecules (linear, non-linear, tetrahedral, pyramidal).",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Chemical Bonding",
+            "paragraphs": [
+              "Chemical bonding explains why atoms join and how the join decides hardness, conductivity and shape. Ionic, covalent, metallic, hydrogen, coordinate and van der Waals interactions each leave a different fingerprint in melting point, conduction and molecular geometry."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Electrovalent (ionic) and covalent bonds",
+            "paragraphs": [
+              "A learner melts table salt, and the bulb lights only when the salt is liquid, never as a cold solid. That contrast reveals electrovalent (ionic) bonding, where ions sit in a fixed lattice.",
+              "Electrovalency is electron transfer from metal to non-metal so each atom attains a stable noble-gas octet. Sodium (2,8,1) loses one electron to become Na+ (2,8), and chlorine (2,8,7) gains it to become Cl− (2,8,8). The opposite charges attract strongly, forming NaCl lattice rather than discrete molecules.",
+              "Covalency contrasts with transfer because atoms share electron pairs to complete octets. Oxygen shares two pairs with hydrogen in H2O, and carbon shares four pairs with hydrogen in CH4, giving neutral low-melting molecules."
+            ],
+            "bullets": [
+              "Ionic bond: transfer of electrons to attain noble-gas octet structure (NaCl)",
+              "Covalent bond: sharing of electron pairs to complete octets (H2O, CH4)",
+              "Ionic compounds have high melting points, dissolve in water and conduct when molten or aqueous"
+            ],
+            "takeaway": "Ionic bonds transfer electrons for noble-gas stability; covalent bonds share pairs to complete octets.",
+            "check": {
+              "question": "Which pair of statements best explains NaCl and CH4?",
+              "options": [
+                "NaCl is covalent because both atoms share electrons, and CH4 is ionic because carbon transfers electrons",
+                "NaCl is ionic because electrons transfer to complete octets, and CH4 is covalent because electrons are shared",
+                "Both are ionic because both contain polar bonds",
+                "Both are covalent because both contain discrete molecules"
+              ],
+              "answer": 1,
+              "why": "Transfer gives ionic NaCl and sharing gives covalent CH4, so only the second statement matches."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Metallic, hydrogen, coordinate and van der Waals attractions",
+            "paragraphs": [
+              "A copper wire bends and carries current, while ice warms and melts beside it. Copper's strength and conductivity come from metallic bonding, not shared pairs. Ice's easy melting comes from weak forces between molecules, not strong O–H covalent bonds.",
+              "Hydrogen bonding attracts H attached to N, O or F in one molecule to N, O or F in another. Water, HF and NH3 therefore boil unusually high. Van der Waals forces are weaker attractions between all molecules, e.g. H2, O2 and Cl2 at low temperature.",
+              "A coordinate (dative) bond shares both electrons from one atom. In [Fe(CN)6]3− and [Fe(CN)6]4−, cyanide donates to iron; in [Cu(NH3)4]2+ and [Ag(NH3)2]+, ammonia donates to copper and silver. The donor is the ligand."
+            ],
+            "bullets": [
+              "Metallic bonding: ions in a sea of delocalised electrons, giving conduction",
+              "Hydrogen bonding occurs in water, HF and NH3",
+              "Van der Waals forces are weak, non-directional attractions between neutral molecules"
+            ],
+            "takeaway": "Metallic, hydrogen, coordinate and van der Waals bonds differ by electron source and strength.",
+            "check": {
+              "question": "Which set lists complexes containing coordinate bonds?",
+              "options": [
+                "H2O, HF and NH3 only",
+                "[Fe(CN)6]3−, [Fe(CN)6]4−, [Cu(NH3)4]2+ and [Ag(NH3)2]+",
+                "NaCl, MgCl2 and KBr",
+                "H2, O2 and Cl2"
+              ],
+              "answer": 1,
+              "why": "Cyanide and ammonia donate both electrons to the metal ion, which defines coordinate bonding."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Shapes of simple molecules and bonding effects",
+            "paragraphs": [
+              "A learner plots CO2 and water on the same board and finds one straight and one bent. The difference is not the atoms alone but the electron arrangement around the centre. Shape therefore records bonding and repulsion, not just atom count.",
+              "Linear molecules H2, O2, Cl2, HCl and CO2 place atoms at 180°, as in O=C=O. H2O is bent (non-linear) because lone pairs on oxygen repel bonds, closing the angle. CH4 is tetrahedral, while NH3 is trigonal pyramidal due to its lone pair.",
+              "Bonding fixes bulk properties too: in diamond each carbon joins four neighbours in a rigid network. In graphite, strong bonding within layers alternates with weak forces between layers, so layers slide. Hardness and conductivity therefore differ between the two forms."
+            ],
+            "bullets": [
+              "Linear: H2, O2, Cl2, HCl, CO2 at 180°",
+              "Bent: H2O non-linear; tetrahedral: CH4; pyramidal: NH3",
+              "Shape follows bonding and lone-pair repulsion around the central atom"
+            ],
+            "takeaway": "Linear, bent, tetrahedral and pyramidal shapes follow bonding and lone-pair repulsion.",
+            "check": {
+              "question": "Which assignment of shapes is correct?",
+              "options": [
+                "CO2 bent, H2O linear, CH4 pyramidal",
+                "CO2 linear, H2O bent, CH4 tetrahedral",
+                "HCl tetrahedral, NH3 linear, O2 bent",
+                "CH4 linear, CO2 tetrahedral, H2O pyramidal"
+              ],
+              "answer": 1,
+              "why": "CO2 is linear, H2O is bent, CH4 is tetrahedral and NH3 is trigonal pyramidal."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Count electrons gained and lost before naming the bond: transfer of one or more electrons means ionic, sharing means covalent, and donation of both electrons from one atom means coordinate. That electron count decides the answer faster than memorised compound names."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Magnesium is 2,8,2 and chlorine is 2,8,7. Predict the formula and bond type of magnesium chloride.",
+            "steps": [
+              {
+                "operation": "Check electron loss and gain",
+                "reason": "Magnesium loses two electrons to reach 2,8; each chlorine gains one to reach 2,8,8",
+                "result": "Mg2+ and 2Cl− are formed",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Balance the charges",
+                "reason": "One Mg2+ charge balances two Cl− charges for neutrality",
+                "result": "Formula is MgCl2",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Name the bond",
+                "reason": "Electrons were transferred from metal to non-metal to attain octet stability",
+                "result": "MgCl2 has ionic (electrovalent) bonding",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Calcium (2,8,8,2) reacts with chlorine (2,8,7). Predict the formula and bond type, explaining electrons lost and gained.",
+            "hints": [
+              "How many electrons must calcium lose to reach 2,8,8?",
+              "How many electrons does each chlorine gain to reach 2,8,8?",
+              "How many chlorine atoms balance calcium's charge?"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why ionic solids conduct only when molten or dissolved",
+            "paragraphs": [
+              "A crystal of sodium chloride contains ions, yet it does not conduct because every ion is locked at a fixed site in the lattice. Current needs moving charge carriers, and a solid lattice offers no free path. The absence of conduction in the solid therefore does not mean the compound lacks ions.",
+              "Melting supplies enough thermal energy to break the lattice order while keeping the ions together as a liquid. Molten sodium chloride then lets Na+ drift to the cathode and Cl− to the anode under voltage. The ions move toward opposite electrodes, complete the circuit and carry charge through the liquid.",
+              "Dissolving in water also separates the lattice because polar water pulls ions apart into mobile hydrated ions. Aqueous sodium chloride conducts for the same reason as the melt, while solid salt still fails. The test in JAMB is therefore about ion mobility, not ion existence: mobility appears only after melting or dissolving."
+            ],
+            "bullets": [
+              "Solid ionic: ions fixed in lattice, so no conduction",
+              "Molten ionic: lattice breaks, ions move to electrodes, conduction occurs",
+              "Aqueous ionic: water separates ions into mobile hydrated ions",
+              "Melting or dissolving frees ions, so both methods reveal ionic conduction"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Hydrogen bonding versus dipole and van der Waals forces",
+            "paragraphs": [
+              "All three forces are electrostatic attractions, but their sources differ in strength and place. Van der Waals forces come from temporary uneven electron clouds that induce matching poles in neighbours. They act between every molecule, including noble gases and chlorine, because momentary polarisation makes them weak and short range.",
+              "Dipole forces arise when a molecule has a permanent uneven charge distribution, as in hydrogen chloride or water. Opposite ends of neighbouring dipoles attract in fixed orientations, so the attraction is stronger and more directional than van der Waals forces. Yet dipole forces still involve whole molecules rather than a hydrogen attached directly to nitrogen, oxygen or fluorine.",
+              "Hydrogen bonding is the special dipole case where hydrogen is bound to nitrogen, oxygen or fluorine and points toward a lone pair on nitrogen, oxygen or fluorine in another molecule. That geometry makes it much stronger than ordinary dipoles and explains why water, HF and ammonia associate through networks. Breaking that network needs extra heat, so boiling points rise well above expectation from size alone."
+            ],
+            "bullets": [
+              "Van der Waals: temporary, weak, between all neutral molecules",
+              "Dipole forces: permanent poles attract directionally by alignment",
+              "Hydrogen bonding: strongest, needs H on N, O or F",
+              "Strength order helps prediction: hydrogen bonding exceeds dipole forces, which exceed van der Waals forces"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in deducing bonds from electron counts",
+            "paragraphs": [
+              "The common trap is naming a bond from the element names before checking electron numbers. A metal with few outer electrons and a non-metal close to an octet often transfer, as in sodium and chlorine. Two non-metals at a distance from octets usually share instead, as in oxygen and hydrogen, so counting shells first makes the choice mechanical.",
+              "Another trap confuses coordinate bonding with ordinary covalent bonding because both involve sharing. The test is the source of the pair: a coordinate bond gives both electrons from one partner, as in ammonia donating to silver in [Ag(NH3)2]+. If both partners supply one electron each, the bond is ordinary covalent even when the species is a complex.",
+              "A third trap treats every strong attraction as ionic or every weak one as van der Waals. Metallic bonding is strong yet conducts as a solid because its electrons are delocalised. Hydrogen bonding is weak per bond but raises boiling points through many links, so judging by electron behaviour rather than strength alone avoids these errors."
+            ],
+            "bullets": [
+              "Transfer of electrons to octets points to ionic bonding",
+              "Sharing one electron each points to ordinary covalent bonding",
+              "Both electrons from one partner points to coordinate bonding",
+              "Solid ionic conduction fails because ions cannot migrate until melted or dissolved"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "separation-of-mixtures",
+      "topic": "separation-of-mixtures-and-purification-of-chemical-substances",
+      "title": "Separation of Mixtures",
+      "objective": "Distinguish elements, compounds and mixtures, differentiate chemical from physical changes, distinguish pure from impure substances, use melting/boiling points as purity criteria, and specify the principle and everyday use of each separation method (evaporation, distillation, sublimation, re-crystallisation, chromatography, crystallisation, magnetisation, decantation, filtration, centrifugation).",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Separation of Mixtures",
+            "paragraphs": [
+              "Farmers in Lagos dry sea-water to recover salt, yet the salt water looks like one liquid. A mixture keeps the properties of its parts, so each part can be pulled out by a physical method."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Elements, compounds and mixtures",
+            "paragraphs": [
+              "A seller scoops salt from dried sea-water and asks whether salt and water were chemically bonded. An element is one kind of atom, such as iron. A compound joins elements in fixed ratio, such as water (H2O), while a mixture joins substances without a chemical bond.",
+              "A chemical change forms new substances hard to reverse, like rusting and burning. A physical change only alters state or form, like melting, dissolving or boiling. Separation uses physical change, so a mixture splits without new compounds.",
+              "A pure substance contains one element or one compound and melts and boils sharply. Dissolved impurities make water impure and broaden melting, freezing and boiling ranges. A sharp melting or boiling point and fixed density therefore test purity."
+            ],
+            "bullets": [
+              "Compounds split into elements; mixtures split into parts",
+              "Mixtures keep the properties of their parts",
+              "Chemical change gives new substances; physical change does not"
+            ],
+            "takeaway": "A sharp melting point marks a pure substance.",
+            "check": {
+              "question": "Which sample is a pure substance?",
+              "options": [
+                "Distilled water",
+                "Air",
+                "Salt solution",
+                "Sand and salt mixture"
+              ],
+              "answer": 0,
+              "why": "Distilled water has one compound and boils sharply, while the others are mixtures."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Separation by heating",
+            "paragraphs": [
+              "A family needs drinking water but the borehole water is salty and cloudy. Evaporation heats the mixture so the liquid becomes vapour and leaves the solid residue, as sea-water dries to salt. Simple distillation boils the mixture then condenses the vapour to pure liquid for one boiling point.",
+              "Fractional distillation suits liquids with different boiling points, such as crude oil. The fractionating column lets the most volatile fraction rise highest, condensing petrol lower down and diesel lower still. Sublimation is solid to vapour without melting, used for camphor and ammonium chloride (NH4Cl), which deposit as solid on cooling.",
+              "Re-crystallisation dissolves the solid in hot solvent then cools it so crystals form. The solid is more soluble when hot and crystallises out first. Sugar refining uses this temperature change in solubility."
+            ],
+            "bullets": [
+              "Evaporation leaves solid; distillation collects vapour",
+              "Fractional distillation needs different boiling points",
+              "Sublimation skips liquid; re-crystallisation uses solubility"
+            ],
+            "takeaway": "Heat methods separate by boiling point or solubility differences.",
+            "check": {
+              "question": "Crude oil contains petrol, kerosene and diesel. Which method separates it in one run?",
+              "options": [
+                "Evaporation only",
+                "Fractional distillation",
+                "Magnetisation",
+                "Decantation"
+              ],
+              "answer": 1,
+              "why": "The fractions differ greatly in boiling point, so fractional distillation separates them level by level."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Separation by magnetism, density and absorption",
+            "paragraphs": [
+              "A student tests mixed ink on paper and sees several spots spread apart. Paper chromatography moves each dye a different distance with the solvent, so the spots identify each part. Column chromatography adsorbs parts differently on a column, as in dye analysis.",
+              "Crystallisation evaporates solvent until crystals of the dissolved solid appear, like salt from brine. Magnetisation pulls magnetic iron from sand with a magnet, as in scrapyards. Decantation gently pours the clear liquid from settled solids, as cloudy water is poured from mud.",
+              "Filtration holds back insoluble solid on filter paper while liquid passes, as sand is filtered from salt solution. Centrifugation spins the mixture so denser parts settle quickly by density, as in blood tests. Choose by property: magnetism for iron, density for settling, insolubility for filtering."
+            ],
+            "bullets": [
+              "Chromatography separates by adsorption and distance",
+              "Magnetisation uses magnetism; centrifugation uses density",
+              "Filtration holds insolubles; crystallisation recovers dissolved solids"
+            ],
+            "takeaway": "Match the method to the differing property of components.",
+            "check": {
+              "question": "Ink contains several dyes that travel different distances on paper. Which method separates them?",
+              "options": [
+                "Filtration",
+                "Paper chromatography",
+                "Magnetisation",
+                "Centrifugation"
+              ],
+              "answer": 1,
+              "why": "Paper chromatography moves each dye a different distance with the solvent, giving identifying spots."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "When JAMB gives a mixture, name the differing property first: boiling point, solubility, density, magnetism or adsorption, then choose the method that uses it. Boiling together means fractional distillation, magnetic means magnetisation, dissolved solid means crystallisation."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A mixture of sand, salt and water is given. Which methods separate all three, and in what order?",
+            "steps": [
+              {
+                "operation": "Filter first",
+                "reason": "Sand is insoluble and stays on the paper while salt solution passes.",
+                "result": "Sand is left on filter paper; salt solution passes through."
+              },
+              {
+                "operation": "Evaporate the solution",
+                "reason": "Salt is dissolved, so heating drives off water and leaves salt behind.",
+                "result": "Water vapour escapes and dry salt remains in the dish."
+              },
+              {
+                "operation": "Distill if pure water is needed",
+                "reason": "For pure water, boil the solution and condense the vapour separately.",
+                "result": "Distilled water is collected and salt stays in the flask."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A mixture of iron filings, sand and salt water is given. Outline methods to recover iron, sand, salt and water.",
+            "hints": [
+              "First pick out the magnetic part with a magnet.",
+              "Then filter the remaining mixture to hold back the insoluble solid.",
+              "Evaporate or distil the solution to leave salt and collect water."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why fractional distillation beats simple distillation",
+            "paragraphs": [
+              "Simple distillation suits one boiling point, such as separating water from an involatile salt, and its vapour condenses straight to pure liquid in one collection. Fractional distillation suits several boiling points because it separates each component at its own temperature level. The fractionating column provides the extra surfaces that make that level-by-level separation possible.",
+              "Each glass bead in the column is a surface where vapour condenses and re-evaporates repeatedly. Higher-boiling vapours condense lower down while lower-boiling vapours stay as vapour and rise higher. The column therefore holds a temperature gradient, hot at the base and cool at the top, and each fraction is drawn off where that temperature matches its boiling point.",
+              "Crude oil is a mixture of hydrocarbons with widely spaced boiling points, so simple distillation yields a mixed distillate that must be repeated. Fractional distillation of crude oil gives gases at the top, petrol in the cooler upper zone, kerosene below it and diesel and lubricating oils lower still. The same column separates liquid air into nitrogen, oxygen and argon."
+            ],
+            "bullets": [
+              "Simple distillation: one boiling point, one product",
+              "Fractional distillation: many boiling points, many products",
+              "Column holds a temperature gradient from hot base to cool top",
+              "Crude oil and liquid air need fractional distillation"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Rf values as identity evidence in chromatography",
+            "paragraphs": [
+              "Paper chromatography is a partition and adsorption balance between the moving solvent and the stationary paper fibres and water. Each dye must repeatedly dissolve in the solvent front and adsorb onto the paper, spending different fractions of time in each phase. A dye that spends more time in the mobile solvent moves further with the front, while a strongly adsorbed dye lags behind.",
+              "The retardation factor, Rf, quantifies that movement as the distance travelled by the spot divided by the distance travelled by the solvent front from the same origin. If a dye spot reaches 3.0 cm when the solvent reaches 10.0 cm, its Rf is 0.30. Rf is a ratio, so it is independent of paper size and strip length, which lets values be compared between different runs.",
+              "Identity is claimed only when an unknown spot has the same Rf as a known standard run on the same paper under the same conditions. Matching Rf plus spot colour and shape is evidence that the unknown contains that dye, as in food-colour and forensic ink tests. A different Rf rules out identity, while an extra spot reveals an additional component that a single colour would hide."
+            ],
+            "bullets": [
+              "Rf = distance of spot ÷ distance of solvent front",
+              "Same Rf as a standard on the same paper suggests identity",
+              "An extra spot means an extra component is present"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in purity and sublimation",
+            "paragraphs": [
+              "A pure solid melts sharply at a fixed temperature because every particle needs the same energy to break its lattice. Dissolved impurities break up the lattice and lower the melting point while widening the melting range. A sample that melts over several degrees and below the reference value is therefore impure, even if it looks like a pure crystal.",
+              "Sublimation is a direct solid-to-vapour change without liquid, shown by camphor, naphthalene and ammonium chloride (NH4Cl) on gentle heating. Evaporation is liquid-to-vapour change at the surface of a liquid, shown by wet clothes drying or sea-water drying to salt. The trap is that both produce vapour, but sublimation starts from a solid and deposits solid on cooling, while evaporation leaves a non-volatile residue.",
+              "Examiners also trap candidates who call a melting mixture pure because it melts, or who claim boiling point is constant for salt solution. Salt solution boils over a range above 100 °C, not sharply at 100 °C, because dissolved salt lowers vapour pressure. Always ask whether the point is sharp and at the reference value before calling a substance pure."
+            ],
+            "bullets": [
+              "Impurities depress the melting point and broaden the range",
+              "Sublimation: solid to vapour; evaporation: liquid to vapour",
+              "Salt solution boils over a range, not sharply at 100 °C"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "solubility",
+      "topic": "solubility",
+      "title": "Solubility",
+      "objective": "Distinguish unsaturated, saturated and supersaturated solutions, interpret solubility curves, calculate the amount of solute that dissolves at a given temperature, relate solvents to their uses, and differentiate true solutions from suspensions and colloids with examples.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Solubility",
+            "paragraphs": [
+              "A trader in Kano asks why sugar vanishes in hot tea but fog still hangs in the air. This lesson separates solutions that can hold more, those that are full, and mixtures that only look dissolved."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Unsaturated, saturated and supersaturated solutions",
+            "paragraphs": [
+              "A student stirs sugar into water and it vanishes at once, then stirs more until grains refuse to dissolve. That refusal marks saturation, while the earlier stage was unsaturated and choosing the right dose matters. Unsaturated solution holds less than the maximum at that temperature, saturated holds the maximum and supersaturated holds more than the maximum.",
+              "Most salts rise with temperature because warming helps the solid break its lattice, so hot water dissolves more. Gases fall with temperature because warm water holds less dissolved gas, which is why fizzy drinks go flat faster on a hot day. A solubility curve plots grams dissolved per 100 cm³ of water against temperature, so a point below the curve is unsaturated, on the curve is saturated and above the curve is supersaturated."
+            ],
+            "bullets": [
+              "Unsaturated holds less than the maximum; saturated holds the maximum; supersaturated holds more.",
+              "Read solubility at a temperature directly from the curve.",
+              "Most salts rise with temperature; gases fall with temperature."
+            ],
+            "takeaway": "Below the curve is unsaturated, on it saturated, above it supersaturated.",
+            "check": {
+              "question": "A solution holds more solute than the maximum at that temperature. What is it?",
+              "options": [
+                "Unsaturated",
+                "Saturated",
+                "Supersaturated",
+                "Dilute"
+              ],
+              "answer": 2,
+              "why": "Holding more than the maximum means the solution is supersaturated."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Solubility in mol/dm³ and solvents for stains",
+            "paragraphs": [
+              "A dyer in Kano finds grease on a sleeve and wonders why water alone will not lift it. She needs two ideas: how much dissolves in a given volume and which liquid dissolves that dirt. Molar solubility is moles of solute dissolved per dm³ of solution at saturation, so c = n ÷ V with n = m ÷ M.",
+              "A solvent dissolves a stain only when like dissolves like: polar water lifts polar sweat and salts. Oils, grease and most paints need organic solvents such as petrol or turpentine because they share non-polar character. That match decides the cleaner, not the strength of the liquid."
+            ],
+            "bullets": [
+              "Find moles first with n = m ÷ M, then divide by volume in dm³.",
+              "Water removes sweat and water-soluble stains; organic solvents remove grease and paint.",
+              "Petrol and turpentine are typical organic solvents for fats and paint."
+            ],
+            "takeaway": "Convert mass to moles, divide by volume, and match solvent to stain.",
+            "check": {
+              "question": "Which solvent best removes engine grease from cloth?",
+              "options": [
+                "Plain water",
+                "Petrol",
+                "Salt solution",
+                "Sweat"
+              ],
+              "answer": 1,
+              "why": "Grease is non-polar like petrol, so petrol dissolves it while water does not."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "True solutions, suspensions and colloids",
+            "paragraphs": [
+              "During Harmattan, dust hangs in the air all day and light looks milky, yet the dust later settles on roofs. A true solution like sugar water shows no such haze and passes filter paper without leaving residue. Suspensions such as Harmattan haze and water paints hold large visible particles that settle, while colloids scatter light but settle slowly.",
+              "Particle size decides the test: true particles are molecular and invisible, colloids are larger and show the Tyndall effect, and suspension particles are largest and visible to the eye. Fog, milk, blood, aerosol spray, emulsion paints and rubber solution all scatter a beam and resist ordinary filtration, unlike true solutions. Suspensions settle on standing and are held by filter paper, while colloids stay dispersed much longer."
+            ],
+            "bullets": [
+              "True solution: invisible particles, no Tyndall, passes filter, never settles.",
+              "Suspension: visible particles, settles on standing, held by filter.",
+              "Colloid: shows Tyndall, scatters light, resists filtration, settles slowly.",
+              "Particle size and settling decide which of the three mixtures you have."
+            ],
+            "takeaway": "True passes and hides, colloid scatters, suspension settles and blocks.",
+            "check": {
+              "question": "Which mixture is a colloid?",
+              "options": [
+                "Harmattan haze",
+                "Water paint",
+                "Fog",
+                "Sugar solution"
+              ],
+              "answer": 2,
+              "why": "Fog scatters light and resists filtration like other colloids, unlike the suspensions and true solution."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "On curves, read the exact temperature first and check whether the curve slopes up or down. For mixtures, ask about particle size and settling before naming it. That pair of checks answers most solubility and colloid items directly."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "11 g of NaCl dissolves in 0.1 dm³ of solution. Calculate its molar solubility.",
+            "steps": [
+              {
+                "operation": "Find moles of NaCl",
+                "reason": "Molar solubility needs moles, so convert mass to moles with M = 58.5 g/mol.",
+                "result": "n = 11 ÷ 58.5 = 0.188 mol."
+              },
+              {
+                "operation": "Divide by volume",
+                "reason": "Molar solubility is moles per dm³ of solution, so divide by 0.1 dm³.",
+                "result": "c = 0.188 ÷ 0.1 = 1.88 mol/dm³."
+              },
+              {
+                "operation": "Check the rounding",
+                "reason": "The value 1.880 mol/dm³ rounds to 1.88 mol/dm³ to two decimal places.",
+                "result": "Molar solubility = 1.88 mol/dm³."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "5.85 g of NaCl dissolves in 0.5 dm³ of solution. Calculate its molar solubility.",
+            "hints": [
+              "Find moles with n = 5.85 ÷ 58.5.",
+              "Divide the result by 0.5 dm³.",
+              "Check the units are mol/dm³."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why gases dissolve less when warm",
+            "paragraphs": [
+              "A gas has no crystal lattice to break apart, so dissolving it is mainly about holding its molecules inside water. Gas molecules are kept in solution only by weak attractions while water molecules move and jiggle around them. Warming gives those gas molecules more kinetic energy to escape the weak holds and return to the air above the liquid.",
+              "The dissolving of a gas releases heat, so the process is exothermic and heat is a product of the reaction. Adding heat therefore drives the balance back toward the undissolved gas instead of the dissolved form. That is why warm fizzy drinks lose their bubbles faster and why fish suffer when hot water cannot hold enough dissolved oxygen.",
+              "Solubility curves show the difference plainly because gases slope downward while most salts slope upward. A salt must pay energy to break its lattice, which warming supplies, so more solid can dissolve. A gas needs no such payment, so warming only helps it escape, which means curves must be read with the nature of the solute in mind.",
+              "Pressure matters for gases in a way it rarely does for salts, because pressing gas above a liquid forces more of it to dissolve. Closing a soft drink under pressure keeps gas inside until the seal is broken, while opening lets it rush out. Cooling together with pressure is therefore the recipe for keeping as much gas as possible in solution."
+            ],
+            "bullets": [
+              "Gas dissolving is exothermic, so warming drives gas out.",
+              "Salts need lattice energy, so warming helps them dissolve.",
+              "Curves slope down for gases and up for most salts.",
+              "Higher gas pressure forces more gas to dissolve."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Making and breaking a supersaturated solution",
+            "paragraphs": [
+              "A supersaturated solution holds more solute than the equilibrium maximum at that temperature, so it is stable only until it is disturbed. The extra solute wants to come out as solid, but no new crystal forms on its own in a clean, still liquid. That delay makes the solution metastable, which means it looks normal yet sits ready to crystallise at the slightest trigger.",
+              "The usual way to make one is to dissolve as much salt as possible in hot water, filter off any excess, and then cool the clear liquid very gently. As the liquid cools, the maximum solubility falls, yet the dissolved amount stays at the hot value. The liquid is now above its new curve, so it holds more than it should at that temperature.",
+              "A single seed crystal, a scratch on the glass, or even a speck of dust gives the extra solute a surface to join. Crystals then grow rapidly and excess solute leaves the liquid until the concentration falls back to the saturated line. That rapid growth is why supersaturated samples sometimes turn cloudy in seconds after looking perfectly clear.",
+              "Careful cooling in clean containers avoids early crystallisation, while rough stirring or shaking invites it almost at once. The same idea explains why a hot saturated solution left to stand may deposit crystals on its own. Any time the dissolved amount sits above the curve, the solution is supersaturated and will soon correct itself unless it is protected."
+            ],
+            "bullets": [
+              "Supersaturation is more dissolved solute than the curve allows.",
+              "Make it from a hot saturated solution cooled gently.",
+              "A seed crystal or scratch triggers rapid crystallisation.",
+              "Crystals grow until the solution falls back to saturation."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in solubility and mixtures",
+            "paragraphs": [
+              "Solubility and concentration sound alike but answer different questions, and mixing them is a favourite trap. Solubility is the maximum that can dissolve at a stated temperature, while concentration is the amount actually present, which may sit below that maximum. An unsaturated solution can be fairly concentrated yet still below its limit, so calling every strong solution saturated loses the mark.",
+              "A second trap is reading the wrong slope on a solubility curve. Most salts rise with temperature, so a falling curve usually signals a gas such as oxygen or carbon dioxide. Candidates who assume every curve rises will predict more gas in warm water and miss the correct fall. Naming the solute first decides which direction to expect.",
+              "Colloids and suspensions are separated by particle size, not by whether they look cloudy. Suspension particles are large, visible to the eye, settle on standing, and are held by ordinary filter paper. Colloid particles are far smaller, invisible to the eye, scatter light in the Tyndall effect, resist filtration, and stay dispersed for much longer.",
+              "Remember the syllabus pairs exactly: Harmattan haze and water paints are suspensions, while fog, milk, blood, aerosol spray, emulsion paints and rubber solution are colloids. True solutions such as sugar water or salt water pass filter paper and show no Tyndall beam. Checking size, settling and filtration together prevents the common swap of colloid for suspension."
+            ],
+            "bullets": [
+              "Solubility is the maximum; concentration is what is present.",
+              "Downward curves mean gases; upward curves mean most salts.",
+              "Suspensions settle and block; colloids scatter and resist filtration.",
+              "Learn the syllabus examples as a fixed list."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "oxidation-and-reduction-redox",
+      "topic": "oxidation-and-reduction-redox",
+      "title": "Oxidation and Reduction (Redox)",
+      "objective": "Classify reactions in terms of oxidation and reduction in their three senses (oxygen, hydrogen/electron transfer, oxidation number), deduce oxidation numbers, balance simple redox equations, compute electrons transferred, name species and agents, and apply oxidation numbers in naming inorganic compounds.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Oxidation and redox",
+            "paragraphs": [
+              "A piece of hot copper is oxidised by oxygen, then restored by hydrogen. JAMB asks whether such a change is oxidation or reduction. This lesson gives three tests, in oxygen, electrons and oxidation numbers, for deciding correctly."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "From oxygen to electrons",
+            "paragraphs": [
+              "Hot copper foil turns black in air because 2Cu + O2 → 2CuO forms CuO. Copper has gained oxygen, so it has been oxidised. Hydrogen turns CuO back to copper by removing oxygen as CuO + H2 → Cu + H2O, so reduction removes oxygen with hydrogen.",
+              "Sodium is oxidised as Na → Na⁺ + e⁻ because it loses an electron, while chlorine is reduced as Cl + e⁻ → Cl⁻ because it gains that electron. OIL RIG says oxidation is loss of electrons and reduction is gain of electrons."
+            ],
+            "bullets": [
+              "Oxidation as oxygen gain: 2Cu + O2 → 2CuO, while reduction removes oxygen with H2",
+              "Oxidation as electron loss: Na → Na⁺ + e⁻, while reduction gains electrons: Cl + e⁻ → Cl⁻",
+              "OIL RIG: oxidation is loss of electrons, reduction is gain of electrons"
+            ],
+            "takeaway": "Oxidation gains oxygen or loses electrons; reduction removes oxygen or gains electrons.",
+            "check": {
+              "question": "In the reaction 2Cu + O2 → 2CuO, copper is",
+              "options": [
+                "reduced because it gains oxygen",
+                "oxidised because it gains oxygen",
+                "reduced because it loses electrons",
+                "unchanged because oxygen is a spectator"
+              ],
+              "answer": 1,
+              "why": "Copper gains oxygen, and also loses electrons, so it is oxidised."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Counting oxidation numbers",
+            "paragraphs": [
+              "A chemist meets potassium manganate(VII), sulphuric acid and dichromate in the same titration set. Oxidation number is a bookkeeping charge assigned by fixed rules: a free element is 0, a monatomic ion equals its charge, hydrogen is +1 and oxygen is −2, while the sum for a compound is 0. Applying those rules turns each colour change into a charge change that can be compared.",
+              "Manganese in KMnO4 obeys 1 + Mn + 4(−2) = 0, so Mn = +7. Sulphur in H2SO4 obeys 2 + S − 8 = 0, so S = +6. Chromium in Cr2O7²⁻ obeys 2Cr − 14 = −2, so Cr = +6."
+            ],
+            "bullets": [
+              "Free element is 0, and a monatomic ion takes its charge",
+              "Hydrogen is +1 and oxygen is −2 in most compounds",
+              "Oxidation numbers sum to 0, or to the ion charge"
+            ],
+            "takeaway": "Oxidation numbers follow fixed rules, so each atom has a charge to track.",
+            "check": {
+              "question": "What is the oxidation number of sulphur in H2SO4?",
+              "options": [
+                "+2",
+                "+4",
+                "+6",
+                "+8"
+              ],
+              "answer": 2,
+              "why": "2 + S − 8 = 0 gives S = +6."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Balancing, naming and agents",
+            "paragraphs": [
+              "Purple potassium manganate(VII) turns pale green with acid and iron(II) salt. Manganese falls from +7 in MnO4⁻ to +2 in Mn²⁺ and gains five electrons, while each iron rises from +2 to +3 and loses one electron. Balanced equation: MnO4⁻ + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H2O, with five electrons transferred.",
+              "Iron at +2 with chloride is iron(II) chloride, while iron at +3 is iron(III) chloride. Potassium manganate(VII) is an oxidising agent: purple MnO4⁻ bleaches to colourless Mn²⁺ when it is reduced. Orange acidified dichromate turns green to Cr³⁺, which also shows an oxidising agent at work."
+            ],
+            "bullets": [
+              "Naming follows the ion charge: FeCl2 is iron(II) chloride and FeCl3 is iron(III) chloride",
+              "Oxidising agent is reduced while it oxidises another species; reducing agent is oxidised",
+              "Tests: purple MnO4⁻ bleaches to colourless Mn²⁺, and orange acidified dichromate turns green to Cr³⁺"
+            ],
+            "takeaway": "Rise in oxidation number is oxidation; a fall is reduction, and agents prove it.",
+            "check": {
+              "question": "In MnO4⁻ + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H2O, which species is the oxidising agent?",
+              "options": [
+                "MnO4⁻",
+                "Fe²⁺",
+                "Fe³⁺",
+                "H⁺"
+              ],
+              "answer": 0,
+              "why": "MnO4⁻ is reduced from +7 to +2, so it oxidises Fe²⁺."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Look first at oxidation numbers, not at oxygen. If the number rises, call it oxidation even when no oxygen appears; if it falls, call it reduction. Naming iron(II) or iron(III) is then decided by the charge that balances the chloride ions."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "What is the oxidation number of sulphur in H2S2O3 (thiosulphuric acid)?",
+            "steps": [
+              {
+                "operation": "Assign hydrogen and oxygen",
+                "reason": "Hydrogen is +1 and oxygen is −2, so they are known first.",
+                "result": "2(+1) + 3(−2) = 2 − 6 = −4 from H and O",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Set up the sum",
+                "reason": "Oxidation numbers sum to zero in a neutral acid.",
+                "result": "2 + 2S − 6 = 0 for H2S2O3",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Solve for sulphur",
+                "reason": "Two sulphur atoms share the remaining charge.",
+                "result": "2S = +4, so S = +2",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "What is the oxidation number of chromium in K2Cr2O7?",
+            "hints": [
+              "Assign potassium +1 and oxygen −2 first",
+              "Set 2(+1) + 2Cr + 7(−2) = 0",
+              "Solve 2Cr = 12 and check the sign"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why oxidation number is bookkeeping, not real charge",
+            "paragraphs": [
+              "Manganese in potassium manganate(VII) carries the formal number +7, but no Mn7+ ion exists in the solution. The +7 is obtained by pretending that every bond is fully ionic and giving both shared electrons to the more electronegative partner. In a real manganese-oxygen bond electrons are shared, so manganese keeps some electron density and its physical charge is far smaller than +7.",
+              "The rule assigns electrons to the atom whose nucleus attracts them more strongly. Oxygen, being more electronegative than carbon, receives all electrons in each carbon-oxygen bond of carbon dioxide. That assignment gives oxygen −2 and carbon +4, even though the molecule is neutral and no C4+ ion is present. The numbers are correct for electron counting, not for describing isolated ions.",
+              "Because the method is a convention, special cases need memorised exceptions. Hydrogen peroxide holds oxygen at −1 rather than −2 because the two oxygen atoms share electrons equally in the oxygen-oxygen bond. Metal hydrides such as sodium hydride place hydrogen at −1 rather than +1 because hydrogen is more electronegative than the metal. Those exceptions do not break the system; they complete it."
+            ],
+            "bullets": [
+              "Bookkeeping assigns bonded electrons to the more electronegative atom",
+              "Formal charge in covalent molecules need not equal a real ion charge",
+              "Peroxide oxygen is −1 and hydride hydrogen is −1, not the usual values"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Balancing half-equations step by step",
+            "paragraphs": [
+              "Start with the two half-equations written from oxidation numbers. Manganese falls from +7 to +2, so the manganese half-equation must gain electrons: MnO4⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H2O. Iron rises from +2 to +3, so the iron half-equation must lose electrons: Fe²⁺ → Fe³⁺ + e⁻. Both halves already show the correct connectivity.",
+              "Electrons gained must equal electrons lost, so the iron half-equation is multiplied by five. Five iron(II) ions give five iron(III) ions and release five electrons: 5Fe²⁺ → 5Fe³⁺ + 5e⁻. The five electrons on each side now cancel when the halves are added. Adding the halves gives MnO4⁻ + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H2O.",
+              "Check the finished equation for atoms and charge before writing it in an answer. Atoms: one manganese, five iron, eight hydrogen and four oxygen appear on each side. Charge: minus one plus ten plus eight equals plus seventeen on the left, and plus two plus fifteen equals plus seventeen on the right. Any mismatch shows that water, hydrogen ions or electrons have been missed."
+            ],
+            "bullets": [
+              "Gain of electrons is reduction; loss of electrons is oxidation",
+              "Multiply the one-electron iron half-equation by five to match five electrons gained",
+              "Balance oxygen with water, hydrogen with H+, then cancel electrons"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in oxidation and agents",
+            "paragraphs": [
+              "The most common trap confuses oxidation with the oxidising agent. Oxidation is the process in which a species rises in oxidation number, while the oxidising agent is the species that causes that rise and is itself reduced. In the iron reaction, iron(II) is oxidised and manganate(VII) is the oxidising agent because manganese falls from +7 to +2. Naming both at once prevents the reversal.",
+              "A second trap reverses the oxidation number rule. An increase in oxidation number is oxidation, and a decrease is reduction, whether or not oxygen appears. Hydrogen in copper oxide reduction rises from 0 in H2 to +1 in H2O, so hydrogen is oxidised while copper falls from +2 to 0 and is reduced. Checking the direction first settles the label.",
+              "A third trap trusts only the oxygen test and misses electron transfer entirely. Sodium forms sodium chloride with no oxygen present, yet sodium is oxidised as it loses an electron and chlorine is reduced as it gains one. JAMB sets the same pair in different formulae, so the electron and oxidation number tests must be applied beside the oxygen test. That combined habit removes the oxygen-only error."
+            ],
+            "bullets": [
+              "Oxidation is the rise; the oxidising agent is reduced",
+              "Decrease in oxidation number is reduction, even without oxygen",
+              "Reducing agent is oxidised while it reduces another species"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "acids-bases-and-salts",
+      "topic": "acids-bases-and-salts",
+      "title": "Acids, Bases and Salts",
+      "objective": "Distinguish the properties of acids and bases, determine basicity, classify normal, acidic, basic and double salts, state methods of preparing salts, relate conductance to degree of dissociation, perform pH and pOH calculations, state the significance of pH, apply buffer solutions, choose indicators, and balance the hydrolysis of salts.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Acids, Bases and Salts",
+            "paragraphs": [
+              "A housewife in Onitsha adds vinegar to remove a stain but avoids touching a caustic soda spill on her hands. One is an acid, the other a base. What separates them is how each behaves in water."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "What acids and bases do",
+            "paragraphs": [
+              "An acid is a substance whose aqueous solution furnishes H₃O⁺ ions, or a proton donor. A base is a substance that neutralises an acid, for example an oxide or a hydroxide. Acids turn blue litmus red and form salts with metals and carbonates.",
+              "Bases feel soapy, turn red litmus blue and form salts with acids. The number of replaceable hydrogen atoms an acid has is its basicity, so HCl is monobasic while H₂SO₄ is dibasic. Acids and bases therefore cancel each other in neutralisation.",
+              "Indicators tell the difference without tasting anything. Litmus, methyl orange and phenolphthalein are the standard trio, and a buffer solution is a mixture that resists pH change when acid or alkali is added. Vinegar contains ethanoic acid, while citrus fruits contain citric acid."
+            ],
+            "bullets": [
+              "An acid furnishes H₃O⁺; a base neutralises an acid",
+              "Basicity counts the replaceable hydrogen atoms per molecule",
+              "Litmus, methyl orange and phenolphthalein are standard indicators",
+              "A buffer solution resists change in pH"
+            ],
+            "takeaway": "Acids donate protons, bases accept them, and indicators show which is which.",
+            "check": {
+              "question": "Which definition of an acid follows the proton-donor idea?",
+              "options": [
+                "A substance whose aqueous solution furnishes H₃O⁺ ions",
+                "A substance that turns red litmus blue",
+                "A substance that neutralises an acid",
+                "A substance that conducts electricity only when molten"
+              ],
+              "answer": 0,
+              "why": "Furnishing H₃O⁺ is exactly donating a proton to water."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Salts and how they are made",
+            "paragraphs": [
+              "A salt is the neutral product of reacting an acid with a base, metal or carbonate. When all replaceable hydrogen is used, the salt is normal, like NaCl. When some remains, it is acidic, like NH₄Cl, while basic salts still carry OH.",
+              "A double salt holds two salts together, and alums are the example. Salts are prepared by neutralisation, by precipitation, or by dissolving a metal or carbonate in an acid. Zn + dilute H₂SO₄ gives ZnSO₄ and hydrogen.",
+              "Whether a solution conducts depends on how far it dissociates. A strong acid like HCl dissociates fully and conducts well, while a weak acid like ethanoic acid dissociates partly and conducts weakly. Concentration is about how much is present, not how strongly it dissociates."
+            ],
+            "bullets": [
+              "Normal salts use all replaceable hydrogen; acidic salts keep some",
+              "Alums are double salts crystallised together",
+              "Salts are prepared by neutralisation, precipitation or acid on metal",
+              "Conductance follows the amount of ions, not just concentration"
+            ],
+            "takeaway": "Salt type names its leftover hydrogen or hydroxide, and strength means dissociation.",
+            "check": {
+              "question": "NH₄Cl is an example of which salt type?",
+              "options": [
+                "Normal",
+                "Acidic",
+                "Basic",
+                "Double"
+              ],
+              "answer": 1,
+              "why": "Ammonium chloride carries replaceable hydrogen, so it is an acidic salt."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "pH, titration and hydrolysis",
+            "paragraphs": [
+              "The pH scale measures hydrogen-ion concentration as pH = −log[H⁺]. A solution with [H⁺] = 1×10⁻³ mol/dm³ has pH 3, and pOH = 14 − pH. Neutral water is 7.",
+              "pH matters daily: the stomach works near pH 1–2, soil suits crops near 6–7, and blood holds 7.4. In titration an indicator marks the end point, so phenolphthalein suits a strong acid with a strong base. The mole ratio at the end point gives the unknown concentration.",
+              "Hydrolysis is the reaction of a salt with water, and it decides the character. NH₄Cl hydrolyses acidic, while Na₂CO₃ hydrolyses basic. Their equations are NH₄⁺ + H₂O ⇌ NH₃ + H₃O⁺ and CO₃²⁻ + H₂O ⇌ HCO₃⁻ + OH⁻."
+            ],
+            "bullets": [
+              "pH = −log[H⁺] and pOH = 14 − pH at 298 K",
+              "Blood holds pH 7.4; the stomach works near pH 1–2",
+              "Titration uses the mole ratio at the indicator end point",
+              "NH₄Cl gives an acidic solution; Na₂CO₃ gives a basic one"
+            ],
+            "takeaway": "pH counts hydrogen ions, titration counts moles, and hydrolysis sets the character.",
+            "check": {
+              "question": "A solution has [H⁺] = 1×10⁻³ mol/dm³. What is its pH?",
+              "options": [
+                "1",
+                "3",
+                "11",
+                "7"
+              ],
+              "answer": 1,
+              "why": "pH = −log(10⁻³) = 3."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "In a titration, write the mole ratio first, then the volumes. The ratio decides everything, so a 1:1 reaction is a straight volume swap while a 2:1 reaction halves one side."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "20.0 cm³ of 0.10 M hydrochloric acid is neutralised by 25.0 cm³ of sodium hydroxide. Find the concentration of the NaOH.",
+            "steps": [
+              {
+                "operation": "Write the mole ratio",
+                "reason": "HCl + NaOH → NaCl + H₂O is a 1:1 ratio",
+                "result": "moles HCl = moles NaOH",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Compute the acid moles",
+                "reason": "moles = concentration × volume in dm³ (20.0 cm³ = 0.020 dm³)",
+                "result": "0.10 × 0.020 = 0.0020 mol",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Find the base concentration",
+                "reason": "0.0020 mol sits in 25.0 cm³ = 0.025 dm³, so C = n/V",
+                "result": "0.0020 ÷ 0.025 = 0.080 M",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "25.0 cm³ of 0.20 M sulphuric acid is neutralised by an unknown base in a 1:2 ratio (H₂SO₄ : base = 1:2). It takes 40.0 cm³ of the base. Find its concentration.",
+            "hints": [
+              "First find the moles of acid: 0.25 × 0.025",
+              "The base has twice as many moles as the acid",
+              "Then divide those moles by 0.040 dm³"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why conductance follows dissociation",
+            "paragraphs": [
+              "Conductance needs ions to carry charge to the electrodes. A strong acid like HCl dissociates almost completely, so many ions move and conductance is high. A weak acid like ethanoic acid dissociates only partly, so few ions move and conductance is low even at the same concentration.",
+              "That is why degree of dissociation and acid strength move together. A measured rise in conductance on dilution is not a rise in strength; it is the same weak acid spreading out, so a larger fraction dissociates. Conductance therefore tracks ions present, not the label strong or weak.",
+              "The dilution effect explains a common curve: molar conductance rises slowly as the solution gets more dilute. A candidate who links the two ideas will not call ethanoic acid strong just because its conductance climbs on dilution.",
+              "Strong and weak bases behave the same way. NH₄OH is weak and conducts poorly although it is a base, while NaOH is strong and conducts well. Strength is about dissociation, and concentration is only about amount."
+            ],
+            "bullets": [
+              "Conductance counts the ions actually present",
+              "Strong acids dissociate fully; weak acids partly",
+              "Dilution raises the dissociated fraction of a weak acid",
+              "Strength and concentration are different ideas"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Choosing the indicator for a titration",
+            "paragraphs": [
+              "An indicator changes colour across a pH range, so it must change close to the end point of the reaction. Methyl orange changes between pH 3.1 and 4.4, phenolphthalein between 8.2 and 10.0, and litmus changes broadly near 7.",
+              "A strong acid with a strong base ends near pH 7, so either indicator works. A weak acid with a strong base ends above pH 7, so phenolphthalein is correct and methyl orange would change too early. A strong acid with a weak base ends below pH 7, so methyl orange is correct.",
+              "The titraton curve makes the choice visible: it jumps through the end-point range sharply for strong–strong pairs and more gently for weak pairs. A candidate who reads the jump sees why the wrong indicator gives a false end point.",
+              "Litmus is a mixture and changes gradually, so it is a poor titration indicator. Methyl orange and phenolphthalein stay the sharp choices in the examination hall, and the curve tells which one to pick."
+            ],
+            "bullets": [
+              "Methyl orange changes near pH 3–4; phenolphthalein near pH 8–10",
+              "Weak acid + strong base needs phenolphthalein",
+              "Strong acid + weak base needs methyl orange",
+              "The titration curve shows where the jump falls"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: The trap between basic salt and base",
+            "paragraphs": [
+              "A basic salt is not a base. Na₂CO₃ is a basic salt because its solution is alkaline after hydrolysis, but it does not contain free OH⁻ ions in the way NaOH does. Calling it a base confuses the name of the salt with the behaviour of its solution.",
+              "The same confusion strikes acidic salts. NH₄Cl is not an acid, even though its solution is acidic. Acidity here comes from the NH₄⁺ ion releasing a proton to water, not from the salt itself being an acid.",
+              "The exam loves that pair: solution character asked, salt type implied. The safe habit is to name the ion that hydrolyses and write its equation before deciding. CO₃²⁻ takes a proton from water and leaves OH⁻, so the solution turns basic.",
+              "That equation is also the answer to the balancing item. Hydrolysis equations balance atoms and charge together, so a candidate who writes the ion first rarely writes an unbalanced equation in the hall."
+            ],
+            "bullets": [
+              "A basic salt is not a base in solution",
+              "An acidic salt is not an acid",
+              "Hydrolysis of the ion decides the solution character",
+              "Write the ion equation before choosing the answer"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "electrolysis",
+      "topic": "electrolysis",
+      "title": "Electrolysis",
+      "objective": "Distinguish electrolytes from non-electrolytes, perform Faraday calculations with Q = It, identify suitable electrodes, predict the products at the electrodes for dilute H₂SO₄, aqueous CuSO₄, CuCl₂, dilute and concentrated NaCl, and fused NaCl, state the factors that affect discharge of ions, describe purification of copper and production of aluminium, sodium, oxygen, chlorine and NaOH, use the electrochemical series and electrode potentials for simple calculations, and identify methods of protecting metals from corrosion.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Electrolysis",
+            "paragraphs": [
+              "A technician in a Lagos plating workshop dips a dull key into a chromium bath and comes out with a shining one. Electricity has moved metal ions onto the key. That process is electrolysis."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Electrolytes and the cell",
+            "paragraphs": [
+              "An electrolyte is a substance that conducts electricity when molten or in aqueous solution and is decomposed in the process. A non-electrolyte, like sugar or ethanol, does not conduct even when dissolved. The anode is the positive electrode and the cathode is the negative electrode.",
+              "Electrolysis is the decomposition of an electrolyte by an electric current. Inert electrodes, such as platinum or carbon, do not react and only pass the current. Reactive electrodes, such as copper, dissolve at the anode instead of discharging an anion.",
+              "Which ion is discharged follows the electrochemical series and concentration. At the cathode, metal ions and hydrogen compete, and the lower one in the series is discharged. At the anode, non-metal anions are discharged, but concentrated solutions favour the anion over water."
+            ],
+            "bullets": [
+              "An electrolyte conducts only when molten or dissolved",
+              "The anode is positive; the cathode is negative",
+              "Inert electrodes do not react; reactive electrodes do",
+              "Discharge follows the electrochemical series and concentration"
+            ],
+            "takeaway": "The electrolyte, the electrodes and the voltage decide what comes off at each pole.",
+            "check": {
+              "question": "When copper electrodes are used to electrolyse copper(II) chloride solution, what happens at the anode?",
+              "options": [
+                "Chlorine gas is discharged",
+                "The copper anode dissolves",
+                "Hydrogen gas is discharged",
+                "Oxygen gas is discharged"
+              ],
+              "answer": 1,
+              "why": "A reactive copper anode dissolves instead of letting chloride ions discharge."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Products for the standard electrolytes",
+            "paragraphs": [
+              "Dilute H₂SO₄ gives hydrogen at the cathode and oxygen at the anode, so water is the electrolyte that reacts. Aqueous CuSO₄ gives copper at the cathode and oxygen at the anode. CuCl₂ solution gives copper and chlorine.",
+              "Dilute NaCl solution gives hydrogen at the cathode and oxygen at the anode, while concentrated brine gives hydrogen and chlorine. Fused NaCl gives sodium at the cathode and chlorine at the anode because there is no water to compete. Electrode statements are written as half-equations.",
+              "Faraday laws link charge to amount: Q = It, where I is in amperes and t in seconds. One Faraday (96500 C) discharges one mole of electrons, so gas volumes follow from the moles formed."
+            ],
+            "bullets": [
+              "Dilute H₂SO₄ gives H₂ at cathode and O₂ at anode",
+              "Conc. brine gives H₂ and Cl₂; fused NaCl gives Na and Cl₂",
+              "Q = It, and 1 F = 96500 C discharges 1 mol of electrons",
+              "Electrode statements are written as half-equations"
+            ],
+            "takeaway": "Name the electrolyte and the electrode, then read the products off the series.",
+            "check": {
+              "question": "Electrolysis of concentrated sodium chloride solution gives which pair of products?",
+              "options": [
+                "Sodium at cathode, chlorine at anode",
+                "Hydrogen at cathode, chlorine at anode",
+                "Hydrogen at cathode, oxygen at anode",
+                "Sodium at cathode, oxygen at anode"
+              ],
+              "answer": 1,
+              "why": "Water is reduced to hydrogen, and concentrated chloride discharges chlorine."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Uses, series and protecting iron",
+            "paragraphs": [
+              "Electrolysis purifies copper: impure copper dissolves at the anode while pure copper deposits at the cathode. Aluminium is extracted from aluminium oxide dissolved in cryolite, and sodium by the Downs process on fused NaCl. Chlorine and NaOH come from brine.",
+              "The electrochemical series, K, Ca, Na, Mg, Al, Zn, Fe, Sn, Pb, H, Cu, Hg, Ag, Au, predicts reactivity and displacement. A metal higher up displaces a lower one, so zinc displaces iron but not sodium.",
+              "Corrosion is electrochemical: iron rusts where oxygen and water meet the metal. Painting, greasing or oiling blocks air and water, while cathodic protection sacrifices a more reactive metal like zinc. Electroplating coats a base metal with a rust-resistant one."
+            ],
+            "bullets": [
+              "Purification of copper uses impure anode and pure cathode",
+              "Aluminium comes from oxide in cryolite; sodium from fused NaCl",
+              "A higher metal displaces a lower one from solution",
+              "Iron is protected by paint, grease or a sacrificial metal"
+            ],
+            "takeaway": "Electrolysis purifies, extracts and protects, all by choosing the right metal and electrolyte.",
+            "check": {
+              "question": "Which method protects iron from rusting by being sacrificed in its place?",
+              "options": [
+                "Cathodic protection with zinc",
+                "Painting with oil paint",
+                "Electroplating with tin",
+                "Coating with a thin grease layer"
+              ],
+              "answer": 0,
+              "why": "Zinc is more reactive than iron, so it corrodes first and spares the iron."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For any Faraday item, convert the time to seconds first. A current for five minutes is 300 seconds, and mixing minutes with seconds is the commonest silent error."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A current of 2.0 A is passed through dilute H₂SO₄ for 965 s. Calculate the volume of hydrogen discharged at the cathode at s.t.p.",
+            "steps": [
+              {
+                "operation": "Find the quantity of electricity",
+                "reason": "Q = It, with the time in seconds",
+                "result": "Q = 2.0 × 965 = 1930 C",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Convert charge to moles of electrons",
+                "reason": "1 F = 96500 C discharges 1 mol of electrons",
+                "result": "1930 ÷ 96500 = 0.020 mol e⁻",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Find the hydrogen volume",
+                "reason": "2H⁺ + 2e⁻ → H₂, so 0.020 mol e⁻ gives 0.010 mol H₂, and 1 mol = 22.4 dm³ at s.t.p.",
+                "result": "0.010 × 22.4 = 0.224 dm³",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A current of 1.5 A flows for 1930 s through aqueous CuSO₄. Calculate the mass of copper deposited at the cathode. (Cu²⁺ + 2e⁻ → Cu; Ar Cu = 63.5)",
+            "hints": [
+              "First find Q = It in coulombs",
+              "Divide by 96500 to get moles of electrons",
+              "Halve it for moles of Cu, then multiply by 63.5"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why concentrated brine gives chlorine",
+            "paragraphs": [
+              "In dilute NaCl solution the anode discharges oxygen from water because water is present in large amount and oxidises more easily. In concentrated brine the chloride ions crowd the anode, and their concentration lets them win. Discharge is therefore a contest between ions, and concentration tips the balance.",
+              "The same contest explains the cathode in fused NaCl. Water is absent, so sodium ions discharge directly. That is the whole logic of the Downs process: melt the salt, remove the water, and the metal itself must discharge.",
+              "Oxygen overpotential also matters. Discharging oxygen from water needs extra voltage, so in concentrated brine the chloride route needs less. A candidate who thinks in terms of contests rather than lists will predict products for unfamiliar electrolytes.",
+              "The Hofmann voltameter shows the contest plainly: hydrogen and oxygen collect in a 2:1 ratio from water. The ratio is the stoichiometry made visible, and it confirms the half-equations without any memorisation."
+            ],
+            "bullets": [
+              "Concentrated chloride outcompetes water at the anode",
+              "Fused NaCl leaves sodium no rival at the cathode",
+              "Water oxidation needs extra voltage (overpotential)",
+              "Hofmann voltameter gives H₂:O₂ in a 2:1 ratio"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Purification of copper step by step",
+            "paragraphs": [
+              "Impure copper is cast into thick slabs and hung as the anode in copper(II) sulfate solution. Pure copper is rolled into thin sheets for the cathode. On passing current, copper atoms dissolve from the anode and an equal mass deposits on the cathode.",
+              "Copper ions move through the solution, so the number of Cu²⁺ ions stays constant. Impurities that are less reactive than copper, like gold and silver, fall off the anode as anode sludge. Impurities more reactive than copper, like zinc, dissolve but do not deposit at the cathode.",
+              "The product is 99.99% pure copper, which is why the process is called electrorefining. Resistivity falls sharply with purity, so the copper is good for wires and electrical work where ordinary copper would waste energy as heat.",
+              "The same cell proves the series in action. Only copper among the dissolved metals can discharge at the cathode under these conditions, which is why the deposit is pure. Reactivity, not just voltage, decides the outcome."
+            ],
+            "bullets": [
+              "Impure copper is the anode; pure copper is the cathode",
+              "Copper dissolves and redeposits, keeping Cu²⁺ constant",
+              "Less reactive impurities fall as sludge; more reactive ones dissolve",
+              "Electrorefining gives 99.99% pure copper"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: The trap between cell and electrolysis poles",
+            "paragraphs": [
+              "In a galvanic cell the anode is negative and oxidation happens there, while in electrolysis the anode is positive and oxidation still happens there. The electrode label follows the reaction, not the sign: the anode is where oxidation occurs in both devices. Mixing the two rules is the commonest pole error.",
+              "The other trap is writing the cell sign on the electrodes of a powered cell. A power supply fixes the cathode as negative and the anode as positive, but the names cathode and anode still mean reduction and oxidation respectively. Signs follow the supply, names follow the reaction.",
+              "Corrosion arguments use the same map. In a rusting nail the iron is the anode because it oxidises. Cathodic protection works by attaching a piece whose anode reaction is preferred, so the protective metal is eaten while the iron is spared.",
+              "A candidate who repeats oxidation happens at the anode in both cases will answer pole questions without memorising two contradictory lists. One rule covers both devices, and that is why it is worth learning."
+            ],
+            "bullets": [
+              "The anode is where oxidation happens in any cell",
+              "Signs differ: negative in a cell, positive in electrolysis",
+              "Corrosion makes iron the anode; protection changes the anode",
+              "Oxidation at the anode is the one rule to keep"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
