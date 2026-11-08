@@ -57,6 +57,20 @@
       "section": "ELECTROCHEMISTRY",
       "order": 8,
       "description": "Electrolysis terms, electrode products, quantitative relationships and industrial applications."
+    },
+    {
+      "slug": "nuclear-chemistry",
+      "name": "Nuclear Chemistry",
+      "section": "NUCLEAR CHEMISTRY",
+      "order": 9,
+      "description": "Radioactivity, nuclear stability and decay, fusion and fission."
+    },
+    {
+      "slug": "energy-changes",
+      "name": "Energy Changes",
+      "section": "ENERGY CHANGES",
+      "order": 10,
+      "description": "Enthalpy changes, entropy and spontaneity with the Gibbs equation."
     }
   ],
   "lessons": [
@@ -2116,6 +2130,419 @@
               "Signs differ: negative in a cell, positive in electrolysis.",
               "Corrosion makes iron the anode; protection changes the anode.",
               "Oxidation at the anode is the one rule to keep."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "nuclear-chemistry",
+      "topic": "nuclear-chemistry",
+      "title": "Nuclear Chemistry",
+      "objective": "Distinguish ordinary chemical reactions from nuclear reactions, differentiate natural from artificial radioactivity, compare the properties of the different types of nuclear radiations, compute half-life, balance simple nuclear equations, and identify the applications of radioactivity.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Nuclear Chemistry",
+            "paragraphs": [
+              "A stone in a fire changes colour but stays stone; a few atoms in a hospital machine change into other elements entirely. The first is a chemical reaction; the second is a nuclear reaction, and this lesson explains the difference."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Chemical change versus nuclear change",
+            "paragraphs": [
+              "An ordinary chemical reaction rearranges electrons and bonds — it never changes one element into another. Burning carbon makes carbon dioxide, but the carbon atoms are still carbon. Chemical reactions happen at the surface of atoms and need relatively little energy.",
+              "A nuclear reaction changes the nucleus itself — the protons and neutrons. Radioactive decay does this: an unstable nucleus breaks down, releasing radiation, and the atom becomes a different element. The energy is a million times larger because the nucleus is involved.",
+              "Some radioactivity is natural: uranium and radium in rocks have always been radioactive. Artificial radioactivity is made by bombarding stable nuclei with neutrons or particles, producing new radioactive elements in laboratories and reactors."
+            ],
+            "bullets": [
+              "Chemical: electrons and bonds move; element stays the same.",
+              "Nuclear: the nucleus changes; element becomes another.",
+              "Natural radioactivity is in rocks; artificial is made by bombardment."
+            ],
+            "takeaway": "Chemical reactions rearrange atoms; nuclear reactions rewrite them.",
+            "check": {
+              "question": "Burning carbon to carbon dioxide is a chemical reaction because",
+              "options": [
+                "It releases a large amount of energy",
+                "The carbon atoms remain carbon atoms",
+                "The carbon changes into oxygen",
+                "It produces radiation"
+              ],
+              "answer": 1,
+              "why": "Only electrons and bonds move; the carbon atoms stay carbon throughout."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The three kinds of radiation",
+            "paragraphs": [
+              "Alpha particles are helium nuclei (2 protons, 2 neutrons) fired out at high speed. They ionise strongly but are stopped by paper, so they are the least penetrating. Beta particles are fast electrons from the nucleus; they pass through paper but are stopped by a metal sheet.",
+              "Gamma rays are electromagnetic waves with no mass and no charge — like very energetic light. They pass through the body and are stopped only by dense lead. Increasing order of penetration is alpha, beta, gamma.",
+              "A Geiger counter detects all three by the ionisation they cause. The type of radiation can be identified by which absorber stops it: paper stops alpha, metal stops beta, lead is needed for gamma."
+            ],
+            "bullets": [
+              "Alpha = helium nuclei; stopped by paper.",
+              "Beta = fast electrons; stopped by metal.",
+              "Gamma = waves; stopped by lead; most penetrating."
+            ],
+            "takeaway": "Alpha is stopped by paper, beta by metal, gamma needs lead.",
+            "check": {
+              "question": "Which radiation passes through paper but is stopped by a metal sheet?",
+              "options": [
+                "Alpha",
+                "Beta",
+                "Gamma",
+                "Neutron"
+              ],
+              "answer": 1,
+              "why": "Beta particles are fast electrons that penetrate paper but not metal."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Half-life and nuclear equations",
+            "paragraphs": [
+              "Half-life is the time for half of a radioactive sample to decay. If 800 g becomes 400 g in one half-life and 200 g in the next, the half-life is simply the time between those steps. Each half-life halves the mass again, whatever the starting amount.",
+              "Nuclear equations balance both mass number and atomic number. In ²³⁸₉₂U → ⁴₂He + ²³⁴₉₀Th the masses 238 = 4 + 234 and the charges 92 = 2 + 90 both balance.",
+              "Fusion joins light nuclei into heavier ones, as in the sun: ²₁H + ³₁H → ⁴₂He + ¹₀n. Fission splits a heavy nucleus, as in ²³⁵₉₂U + ¹₀n → ¹³⁹₅₆Ba + ⁹⁴₃₆Kr + 3¹₀n. Applications include medicine (iodine-131), dating (carbon-14) and power generation."
+            ],
+            "bullets": [
+              "Half-life: time for half the sample to decay.",
+              "Nuclear equations balance mass number and atomic number.",
+              "Fusion joins; fission splits. Applications: medicine, dating, power."
+            ],
+            "takeaway": "Each half-life halves the sample; nuclear equations balance both numbers.",
+            "check": {
+              "question": "A sample of 800 g has a half-life of 5 years. How much remains after 15 years?",
+              "options": [
+                "400 g",
+                "200 g",
+                "100 g",
+                "50 g"
+              ],
+              "answer": 2,
+              "why": "15 years is 3 half-lives: 800 → 400 → 200 → 100 g."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For half-life items, count the halvings first, then halve the mass that many times. Most errors come from halving once and stopping."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "800 g of a radioactive sample has a half-life of 5 years. Calculate the mass remaining after 15 years.",
+            "steps": [
+              {
+                "operation": "Count the half-lives",
+                "reason": "Time divided by half-life gives the number of halvings",
+                "result": "15 ÷ 5 = 3 half-lives",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Halve the mass three times",
+                "reason": "Each half-life halves what remains",
+                "result": "800 → 400 → 200 → 100 g",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "State the answer",
+                "reason": "Three halvings leave one eighth of the starting mass",
+                "result": "100 g remains",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A sample of 1600 g has a half-life of 4 years. How much remains after 12 years?",
+            "hints": [
+              "First count the half-lives: 12 ÷ 4",
+              "Then halve 1600 three times",
+              "Check: 1600 ÷ 8 = 200"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why the nucleus is so much more powerful",
+            "paragraphs": [
+              "Chemical reactions involve electrons, the lightest and outermost parts of atoms. Nuclear reactions involve the nucleus, where protons and neutrons are bound together with enormous energy. That is why chemical energy is measured in kilojoules per mole while nuclear energy reaches millions of times more.",
+              "The nucleus is held together by the strong nuclear force, which is short-ranged but extremely powerful. In heavy nuclei that force must balance the electrical repulsion between protons. In light nuclei fusion wins; in heavy nuclei fission wins; the balance point sits near iron.",
+              "Radioactive decay is the nucleus seeking that balance by shedding protons, neutrons or energy. Stable nuclei have already found it; unstable ones decay until they do.",
+              "A candidate who pictures the contest — strong force holding, charge repelling — can predict fission for heavy nuclei and fusion for light ones without memorising the split.",
+              "That difference in scale is why a gram of uranium stores more energy than tonnes of coal. The nucleus is a tiny fraction of the atom’s size but holds nearly all its mass and almost all its potential energy.",
+              "A candidate who compares the two energies will never confuse a chemical reaction with a nuclear one in the hall: the scale itself tells the story."
+            ],
+            "bullets": [
+              "Chemical energy uses electrons; nuclear uses the nucleus — a million times more.",
+              "Strong force holds; charge repulsion pushes apart.",
+              "Fusion wins for light nuclei; fission for heavy ones.",
+              "The balance point sits near iron."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Balancing nuclear equations step by step",
+            "paragraphs": [
+              "Two numbers must balance: the mass number (top) and the atomic number (bottom). In ²³⁸₉₂U → ⁴₂He + ²³⁴₉₀Th, 238 = 4 + 234 on top and 92 = 2 + 90 below. Both checks pass, so the equation is correct.",
+              "In fusion, ²₁H + ³₁H → ⁴₂He + ¹₀n, the masses are 2 + 3 = 5 on the left and 4 + 1 = 5 on the right, while charges are 1 + 1 = 2 and 2 + 0 = 2. A neutron carries mass but no charge, which is why it appears as ¹₀n.",
+              "In fission, ²³⁵₉₂U + ¹₀n gives ¹³⁹₅₆Ba + ⁹⁴₃₆Kr + 3¹₀n: masses 235 + 1 = 139 + 94 + 3 = 236, charges 92 = 56 + 36. The three released neutrons can continue the chain, which is the principle of a reactor.",
+              "The exam trap is balancing only one number. Checking both the top and bottom rows takes seconds and catches every wrong equation."
+            ],
+            "bullets": [
+              "Balance mass number (top) and atomic number (bottom).",
+              "A neutron carries mass but no charge (¹₀n).",
+              "Fission neutrons can continue the chain reaction.",
+              "Always check both rows."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in nuclear chemistry",
+            "paragraphs": [
+              "The classic trap treats radioactivity as a chemical property. Temperature, pressure and catalysts do not change half-life, because they cannot reach the nucleus. A question offering those options tests exactly that understanding.",
+              "The second trap ranks penetration backwards. Alpha is the least penetrating (stopped by paper) and gamma the most (needs lead). Candidates who rank by energy alone reverse the order.",
+              "The third trap is half-life subtraction. Three half-lives do not remove three halves of the original (that would be 800 − 1200); each halves what remains, so three half-lives leave one eighth.",
+              "The fourth trap is calling fission fusion. Fusion joins light nuclei (the sun); fission splits heavy ones (the reactor). The direction of joining or splitting is the discrimination, not the size of the equation.",
+              "A final trap is assuming decay stops. Radioactive decay never stops on its own; only the rate falls as nuclei are used up. A sample remains radioactive long after most of its mass has decayed."
+            ],
+            "bullets": [
+              "Half-life ignores temperature, pressure and catalysts.",
+              "Penetration order: alpha < beta < gamma.",
+              "Three half-lives leave one eighth, not a subtraction.",
+              "Fusion joins light nuclei; fission splits heavy ones."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "energy-changes",
+      "topic": "energy-changes",
+      "title": "Energy Changes",
+      "objective": "Determine the types of heat changes (ΔH) in physical and chemical processes, interpret graphs of heat changes, relate physical state to degree of orderliness, determine the conditions for spontaneity, relate ΔH°, ΔS° and ΔG° as driving forces, and solve simple problems using ΔG° = ΔH° − TΔS°.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Energy Changes",
+            "paragraphs": [
+              "A hand warmer in a pocket turns warm without fire, and a cold pack chills without a fridge. Both are chemistry giving out or taking in heat. This lesson names the two directions and the numbers that measure them."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Giving out heat and taking in heat",
+            "paragraphs": [
+              "An exothermic reaction gives heat out to the surroundings, like combustion or dissolving NaOH in water. Its enthalpy change ΔH is negative: the system loses energy, conventionally written −ΔH. A hand warmer is exothermic — the warmth you feel is the reaction's lost energy.",
+              "An endothermic reaction takes heat in from the surroundings, like dissolving NH₄Cl in water or melting ice. Its ΔH is positive, and the container feels cold. A cold pack is endothermic: it chills your injury by stealing its heat.",
+              "Dissolving sodium or potassium in water is strongly exothermic and can ignite the hydrogen produced. Dissolving NaOH is warm; dissolving ammonium chloride is cold. The sign of ΔH is read from whether the surroundings gain or lose heat."
+            ],
+            "bullets": [
+              "Exothermic = gives heat out; ΔH negative (NaOH, combustion).",
+              "Endothermic = takes heat in; ΔH positive (NH₄Cl, melting ice).",
+              "The sign of ΔH is read from the surroundings."
+            ],
+            "takeaway": "Exothermic gives heat out (−ΔH); endothermic takes heat in (+ΔH).",
+            "check": {
+              "question": "Dissolving sodium hydroxide in water makes the solution warm. The reaction is",
+              "options": [
+                "Endothermic with positive ΔH",
+                "Exothermic with negative ΔH",
+                "A physical change with no ΔH",
+                "Impossible at room temperature"
+              ],
+              "answer": 1,
+              "why": "Heat leaves the system for the surroundings, so ΔH is negative — exothermic."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Order, disorder and spontaneity",
+            "paragraphs": [
+              "Entropy (S) measures disorder. A solid is orderly, a liquid is freer, and a gas is the most disordered of all — so melting, boiling and dissolving raise entropy. Mixing gases also raises entropy, because particles spread into more arrangements.",
+              "A spontaneous reaction happens on its own, like rusting or a fire burning. Gibbs energy decides: ΔG° = ΔH° − TΔS°. If ΔG° is negative the reaction is spontaneous; if positive it is not; if zero it is at equilibrium.",
+              "That one equation explains the trade-off: a reaction with negative ΔH (exothermic) and positive ΔS (disorder rises) is spontaneous at all temperatures. A reaction with positive ΔH and negative ΔS is spontaneous at no temperature. Mixed cases flip at a temperature T = ΔH° ÷ ΔS°."
+            ],
+            "bullets": [
+              "Entropy counts disorder: solid < liquid < gas.",
+              "ΔG° = ΔH° − TΔS° decides spontaneity.",
+              "ΔG° < 0 spontaneous; > 0 not; = 0 equilibrium.",
+              "ΔH and ΔS pull in opposite directions at a crossover temperature."
+            ],
+            "takeaway": "ΔG° = ΔH° − TΔS°: heat release and disorder both drive spontaneity.",
+            "check": {
+              "question": "A reaction has ΔH° = −80 kJ/mol and ΔS° = +0.20 kJ/mol·K. At 298 K, is it spontaneous?",
+              "options": [
+                "No, ΔG° is positive",
+                "Yes, ΔG° is negative",
+                "Only above 400 K",
+                "It cannot be decided"
+              ],
+              "answer": 1,
+              "why": "ΔG° = −80 − 298 × 0.20 = −139.6 kJ/mol, which is negative."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Reading energy diagrams",
+            "paragraphs": [
+              "An energy diagram plots energy against progress. Reactants sit at their starting height, products at their finishing height, and the difference is ΔH. A product level below the reactants means exothermic; above means endothermic.",
+              "The hill between them is the activation energy — the minimum energy needed to start the reaction. A high hill means a slow reaction even when ΔH is favourable, which is why coal needs a spark despite releasing heat.",
+              "Graphs of temperature against time show the same lesson: exothermic curves climb, endothermic curves fall. Reading the height difference gives ΔH; reading the hill gives activation energy."
+            ],
+            "bullets": [
+              "Products below reactants = exothermic; above = endothermic.",
+              "The hill between is the activation energy.",
+              "ΔH = product level minus reactant level."
+            ],
+            "takeaway": "The diagram's heights give ΔH, and its hill gives activation energy.",
+            "check": {
+              "question": "In an energy diagram, the products sit above the reactants. The reaction is",
+              "options": [
+                "Exothermic with negative ΔH",
+                "Endothermic with positive ΔH",
+                "At equilibrium",
+                "Unable to start"
+              ],
+              "answer": 1,
+              "why": "Products higher than reactants means the system gained energy — endothermic."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Write ΔG° = ΔH° − TΔS° with temperatures in kelvin before any numbers. The kelvin conversion is where most spontaneity marks are lost."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "For a reaction ΔH° = −80 kJ/mol and ΔS° = +0.20 kJ/mol·K. Calculate ΔG° at 298 K and state whether the reaction is spontaneous.",
+            "steps": [
+              {
+                "operation": "Write the Gibbs equation",
+                "reason": "ΔG° = ΔH° − TΔS° is the only formula needed",
+                "result": "ΔG° = −80 − 298 × 0.20",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Compute the entropy term",
+                "reason": "298 × 0.20 = 59.6 kJ/mol",
+                "result": "ΔG° = −80 − 59.6 = −139.6 kJ/mol",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Decide spontaneity",
+                "reason": "A negative ΔG° means the reaction runs on its own",
+                "result": "Spontaneous at 298 K",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "For a reaction ΔH° = +120 kJ/mol and ΔS° = +0.40 kJ/mol·K, calculate ΔG° at 298 K. Is it spontaneous?",
+            "hints": [
+              "Start with ΔG° = ΔH° − TΔS°",
+              "Compute 298 × 0.40 = 119.2",
+              "Then 120 − 119.2 decides the sign"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why exothermic and disorder cooperate",
+            "paragraphs": [
+              "Enthalpy and entropy both favour spontaneity through different routes: releasing energy and spreading out. When both point the same way — exothermic with disorder rising — the reaction is spontaneous at every temperature, because both terms in ΔG° are negative.",
+              "When both point against — endothermic with disorder falling — the reaction is spontaneous at no temperature. Nature needs both a push and a direction; here it has neither.",
+              "The crossover temperature T = ΔH° ÷ ΔS° governs the mixed cases. Below it, enthalpy or entropy dominates; above it, the other does. The equation is a scale that tips at one calculable temperature.",
+              "A candidate who reasons with the two terms can answer spontaneity questions even for unseen numbers. The equation is a balance, and both sides are visible.",
+              "The temperature term is why many reactions that need heating at first become self-sustaining once started: at high temperature the entropy term overwhelms the enthalpy cost.",
+              "A candidate who sees spontaneity as a tug-of-war between energy and disorder can reason through any unseen combination of signs without numbers."
+            ],
+            "bullets": [
+              "Both favourable: spontaneous at all temperatures.",
+              "Both opposed: spontaneous at no temperature.",
+              "Mixed cases flip at T = ΔH° ÷ ΔS°.",
+              "The equation is a balance of two driving forces."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Enthalpy diagrams and activation energy",
+            "paragraphs": [
+              "The energy profile separates two ideas that students merge: ΔH says whether the reaction is energetically favoured, while activation energy says how fast it starts. A reaction can be strongly exothermic yet need a spark, because the hill is high even though the far side is low.",
+              "Catalysts lower the hill without changing the heights. That is why a catalyst speeds a reaction without changing ΔH: it opens a lower path between the same two levels.",
+              "The profile also shows intermediate hills for multi-step reactions. The highest hill decides the rate, which is why one slow step can throttle a whole sequence of fast ones.",
+              "Reading diagrams is therefore two questions, not one: first the levels (ΔH), then the hill (activation energy). The exam tests them separately, and merging them loses both marks.",
+              "The diagram also explains why some exothermic reactions still need initiation. The products sit low, but the hill between is high, so a spark or catalyst is needed to begin the descent."
+            ],
+            "bullets": [
+              "Levels give ΔH; hill gives activation energy.",
+              "Catalysts lower the hill without changing ΔH.",
+              "The highest hill throttles a multi-step reaction.",
+              "Two questions, two answers — never merge them."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in energy changes",
+            "paragraphs": [
+              "The classic trap reads the temperature of the surroundings backwards. If the solution warms, the reaction gave heat out and is exothermic — warming of surroundings never means endothermic. The feeling in the hand, not the formula, gives the sign.",
+              "The second trap is the kelvin conversion in ΔG° items. Using 298 °C instead of 298 K re-scales the entropy term by hundreds of kilojoules. Converting temperature first removes the trap entirely.",
+              "The third trap merges ΔH with spontaneity. An endothermic reaction can be spontaneous if disorder rises enough (like the dissolution of NH₄Cl at higher temperatures), and an exothermic one can fail if disorder falls. ΔG°, not ΔH°, is the judge.",
+              "The fourth trap confuses entropy with energy. A system can lose energy (exothermic) while gaining order, and the two terms must be weighed separately in ΔG° = ΔH° − TΔS°.",
+              "A final trap is ignoring the standard state written on ΔG°. The degree symbol means standard conditions, and mixing values measured at different pressures or temperatures invalidates the sign.",
+              "A candidate who converts to kelvin, checks the signs, and reads the diagram separately will not be caught by any of these."
+            ],
+            "bullets": [
+              "Warm surroundings = exothermic, always.",
+              "Convert to kelvin before any ΔG° number.",
+              "ΔG°, not ΔH°, decides spontaneity.",
+              "Entropy and energy are weighed separately."
             ]
           }
         }
