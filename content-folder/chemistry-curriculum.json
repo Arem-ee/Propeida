@@ -271,7 +271,7 @@
           "content": {
             "heading": "Chemical Combination",
             "paragraphs": [
-              "Chemical reactions rearrange atoms without creating or destroying them. That single fact controls every formula and every balanced equation. The laws of chemical combination turn this idea into testable ratios, and the mole turns those ratios into calculations."
+              "A trader in Onitsha keeps one scale pan for rice and one for beans, and a customer always gets exactly what the scale says. Chemicals combine the same way: in fixed, weighable proportions. This lesson names the three laws behind those proportions and teaches counting by weighing."
             ],
             "bullets": []
           }
@@ -279,19 +279,18 @@
         {
           "type": "text",
           "content": {
-            "heading": "Laws that govern how elements combine",
+            "heading": "Three laws in plain words",
             "paragraphs": [
-              "A student burns 12 g of carbon in oxygen and collects 44 g of gas. The oxygen used was 32 g, so 12 g + 32 g = 44 g. The total mass is unchanged, which is conservation of mass.",
-              "Water from any source contains 1 g of hydrogen per 8 g of oxygen, the law of definite proportions. Carbon forms CO and CO₂: 12 g of carbon uses 16 g of oxygen in CO and 32 g in CO₂. The oxygen masses are in the simple ratio 1:2, the law of multiple proportions.",
-              "Hydrogen and sodium both combine with 35.5 g of chlorine: 1 g and 23 g respectively. Their combining ratio is 1:23. The same ratio holds against oxygen, which is reciprocal proportions."
+              "Conservation of mass says matter is never created or destroyed, only rearranged. Twelve grams of carbon plus 32 grams of oxygen gives 44 grams of carbon dioxide, because 12 + 32 = 44. Nothing is lost.",
+              "The law of definite proportions says a compound always has the same mass ratio of its elements. Water is always 1 g of hydrogen to 8 g of oxygen. If the ratio changed, it would be a different compound.",
+              "The law of multiple proportions says that when two elements form more than one compound, the masses of one combining with a fixed mass of the other are in a simple ratio. Twelve grams of carbon combines with 16 g of oxygen in CO and 32 g in CO₂ — a ratio of 1:2."
             ],
             "bullets": [
-              "Conservation: reactants mass equals products mass",
-              "Definite: same mass ratio in every sample",
-              "Multiple: simple ratio between different compounds",
-              "Reciprocal: same ratio against a third element"
+              "Mass in = mass out; reactions only rearrange matter.",
+              "Every compound has a fixed mass ratio of its elements.",
+              "Paired compounds use simple whole-number mass ratios."
             ],
-            "takeaway": "Matter is conserved, and elements combine in fixed and simple mass ratios.",
+            "takeaway": "Mass is conserved, ratios are fixed, and paired compounds use simple ratios.",
             "check": {
               "question": "12 g of carbon forms CO with 16 g of oxygen and CO₂ with 32 g. Which law do 16 and 32 illustrate?",
               "options": [
@@ -301,26 +300,25 @@
                 "Reciprocal proportions"
               ],
               "answer": 2,
-              "why": "For fixed carbon, oxygen masses 16 and 32 are in the simple ratio 1:2."
+              "why": "For a fixed mass of carbon, the oxygen masses 16 and 32 are in the simple ratio 1:2."
             }
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Symbols, formulae and balanced equations",
+            "heading": "Formulae and balanced equations",
             "paragraphs": [
-              "A student writes CO for carbon oxides and cannot tell them apart. Symbols name elements, while a formula counts atoms: CO₂ has one carbon and two oxygens, CO has one of each. Relative atomic mass divides by one twelfth of a ¹²C atom, set to 12.",
-              "A student burns methane and writes CH₄ + O₂ → CO₂ + H₂O, which is unbalanced. Balancing counts atoms and adds coefficients until both sides match. The balanced equation is CH₄ + 2O₂ → CO₂ + 2H₂O.",
-              "The compound is 40% carbon, 6.7% hydrogen and 53.3% oxygen by mass. Divide by Ar (C=12, H=1, O=16) to get 3.3, 6.7 and 3.3 mol. Dividing by the smallest value gives 1:2:1, so the empirical formula is CH₂O."
+              "A formula counts atoms: H₂O means two hydrogen atoms and one oxygen atom. Symbols are the shorthand — H for hydrogen, O for oxygen — and the subscript is the count. Writing the formula is writing the recipe.",
+              "A balanced equation has equal atoms on both sides, since atoms are only rearranged. CH₄ + 2O₂ → CO₂ + 2H₂O has C1 H4 O4 on both sides. If counts differ, the equation lies about conservation.",
+              "Percentage composition gives the empirical formula: divide each percentage by its Ar, then by the smallest value. A compound of 40% C, 6.7% H and 53.3% O gives 3.3, 6.7, 3.3, which reduces to CH₂O."
             ],
             "bullets": [
-              "Balanced equation: CH₄ + 2O₂ → CO₂ + 2H₂O",
-              "Ar uses ¹²C = 12 as standard",
-              "Empirical formula is simplest whole-number ratio",
-              "Formulae count atoms; equations balance both sides"
+              "A formula counts atoms; subscripts are counts.",
+              "Balancing means equal atom counts on both sides.",
+              "Percentage composition gives the empirical formula."
             ],
-            "takeaway": "Formulae count atoms, equations balance them, and composition gives the empirical ratio.",
+            "takeaway": "Formulae count atoms, equations must balance, and percentages become formulae.",
             "check": {
               "question": "A compound is 40% carbon, 6.7% hydrogen and 53.3% oxygen. What is its empirical formula?",
               "options": [
@@ -337,19 +335,18 @@
         {
           "type": "text",
           "content": {
-            "heading": "The mole: counting atoms by weighing",
+            "heading": "The mole: counting by weighing",
             "paragraphs": [
-              "A student cannot count atoms one by one. One mole is 6.02×10²³ particles, large enough to weigh. The number of moles is mass divided by Mr, so mass can be turned into counts.",
-              "A chemist collects 22.4 dm³ of carbon dioxide at s.t.p. That volume contains one mole, so volume divided by 22.4 also gives moles. Concentration is moles divided by volume in dm³, giving mol/dm³.",
-              "A student adds excess acid to 50 g of calcium carbonate. CaCO₃ + 2HCl → CaCl₂ + CO₂ + H₂O needs one mole of carbonate per mole of CO₂. With Mr=100, 50 g is 0.5 mol, so 0.5 mol of CO₂ occupies 11.2 dm³ at s.t.p."
+              "One mole is a counting unit, like a dozen eggs: 1 mole = 6.02 × 10²³ particles. A mole of any substance has the same particle count, but different particles weigh differently, so a mole of carbon and a mole of water weigh different amounts.",
+              "Moles come from mass using moles = mass ÷ Mr. Methane has Mr = 16, so 0.5 mol weighs 8 g. One mole of any gas fills 22.4 dm³ at s.t.p., and concentration is moles ÷ volume.",
+              "Stoichiometry applies the equation’s mole ratio to real masses. Calcium carbonate (Mr = 100) gives one mole of CO₂ per mole, so 50 g is 0.5 mol and releases 11.2 dm³ of gas at s.t.p."
             ],
             "bullets": [
-              "1 mol = 6.02×10²³ particles; moles = mass ÷ Mr",
-              "At s.t.p., 1 mol gas = 22.4 dm³; moles = volume ÷ 22.4",
-              "Concentration = moles ÷ volume (mol/dm³)",
-              "Equation ratio gives moles of product per mole of reactant"
+              "1 mole = 6.02 × 10²³ particles, like a dozen eggs.",
+              "Moles = mass ÷ Mr; gas at s.t.p. = 22.4 dm³ per mole.",
+              "Stoichiometry applies the equation’s mole ratio."
             ],
-            "takeaway": "Weigh, divide by Mr, then use the equation ratio to find product moles.",
+            "takeaway": "A mole counts particles by weighing, and equations give the ratios.",
             "check": {
               "question": "What is the mass of 0.5 mol of methane, CH₄ (Mr = 16)?",
               "options": [
@@ -368,7 +365,7 @@
           "content": {
             "title": "Exam tip",
             "tone": "tip",
-            "body": "Write Mr first, then decide what the exam asks: mass, moles, volume or concentration. Convert with moles = mass ÷ Mr, volume ÷ 22.4 at s.t.p., or moles ÷ volume. Using the wrong conversion is the commonest error in mole questions."
+            "body": "Changed one unit? Convert cm³ to dm³ first (divide by 1000). Most mole errors in the hall are unit errors, not concept errors."
           }
         },
         {
@@ -378,19 +375,19 @@
             "steps": [
               {
                 "operation": "Write the mass relation",
-                "reason": "Moles, mass and Mr are linked",
+                "reason": "Mass is what weighs, moles is what counts, Mr links them",
                 "result": "mass = moles × Mr",
                 "predictPrompt": ""
               },
               {
                 "operation": "Substitute the values",
-                "reason": "Use 0.5 mol and Mr = 16",
+                "reason": "Half a mole of a Mr of 16 weighs half of 16 grams",
                 "result": "mass = 0.5 × 16 = 8 g",
                 "predictPrompt": ""
               },
               {
                 "operation": "State the answer",
-                "reason": "Mass must carry the gram unit",
+                "reason": "A mole in this service is always 6.02×10²³ particles",
                 "result": "0.5 mol of CH₄ weighs 8 g",
                 "predictPrompt": ""
               }
@@ -400,29 +397,30 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "Calculate the volume at s.t.p. of 0.25 mol of carbon dioxide.",
+            "question": "Calculate the volume of 0.25 mol of a gas at s.t.p.",
             "hints": [
-              "At s.t.p., one mole of gas occupies 22.4 dm³",
-              "Multiply the moles by 22.4 to get the volume",
-              "Check that the unit is dm³"
+              "One mole fills 22.4 dm³",
+              "Multiply 0.25 by 22.4",
+              "Check your units are dm³"
             ]
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Go deeper: Why chemical equations must balance",
+            "heading": "Go deeper: Why equations must balance",
             "paragraphs": [
-              "A chemical reaction rearranges bonds but leaves every nucleus untouched. No proton is created or destroyed, so the number of atoms of each element is the same before and after. That conservation of atoms is why an equation can be balanced only one way.",
-              "Coefficients change the number of molecules, while subscripts define the molecule itself. Changing CH₄ to CH₂ would make a different substance, so subscripts are never altered when balancing. Adding a 2 before O₂ in CH₄ + 2O₂ doubles the oxygen molecules without changing oxygen itself.",
-              "In a sealed flask, the mass before mixing equals the mass after reaction. If an equation were unbalanced, the missing mass would have to appear or vanish. That impossibility is why examiners treat an unbalanced equation as unfinished, because the atom count proves the claim.",
-              "The same counting explains predicting products. CH₄ + 2O₂ → CO₂ + 2H₂O shows one carbon, four hydrogens and four oxygens on each side. Any attempt to write one water molecule would leave hydrogen unbalanced, so two waters are required.",
-              "Nuclear changes break this rule because nuclei split or fuse. A chemical equation therefore never balances in a nuclear process, which is a different kind of change. That limit is why conservation of atoms applies only to chemical reactions."
+              "An equation is a scale pan: atoms on the left must equal atoms on the right, because reactions only rearrange. Unbalanced equations pretend atoms appear or vanish, which breaks conservation of mass. Balancing is therefore counting, not decoration.",
+              "The counting order that never fails: balance metals first, then non-metals, then oxygen and hydrogen last. Metals rarely appear more than once per side, while oxygen and hydrogen hide inside several compounds and need final checking.",
+              "In CH₄ + 2O₂ → CO₂ + 2H₂O the carbon balances at once, hydrogen forces 2H₂O, and oxygen then forces 2O₂. Notice the coefficients: doubling H₂O also doubles its oxygen, which is why oxygen is adjusted last.",
+              "A systematic candidate counts each element across the whole arrow, not per compound. Total counts, not written counts, decide balance — that is the habit that prevents a balanced-looking equation from being wrong.",
+              "A candidate who counts totals before adjusting coefficients balances every equation on the first attempt. The habit costs seconds and saves whole marks.",
+              "The system also explains why fractional coefficients are tidied by multiplying the whole equation through: the atom totals do not change, only the presentation."
             ],
             "bullets": [
-              "Coefficients count molecules; subscripts define molecules",
-              "Unbalanced equation means atoms are missing or extra",
-              "Atoms are conserved in chemical, not nuclear, change"
+              "Balancing is counting: atoms are only rearranged.",
+              "Order: metals, non-metals, then oxygen and hydrogen.",
+              "Count totals across the whole arrow, not inside one compound."
             ]
           }
         },
@@ -431,16 +429,16 @@
           "content": {
             "heading": "Go deeper: Empirical and molecular formulae compared",
             "paragraphs": [
-              "An empirical formula gives the simplest whole-number ratio of atoms in a compound. A molecular formula gives the actual number of atoms in one molecule. Glucose has empirical CH₂O and molecular C₆H₁₂O₆, so the two formulae describe different information.",
-              "Start with percentages as grams in 100 g of compound. Divide each mass by its Ar to obtain the mole ratio. Divide every mole value by the smallest to simplify to whole numbers.",
-              "For 40 g of carbon, 6.7 g of hydrogen and 53.3 g of oxygen, the mole values are 40÷12 = 3.3, 6.7÷1 = 6.7 and 53.3÷16 = 3.3. The smallest value is 3.3, so the ratios are 1:2:1. The empirical formula is therefore CH₂O.",
-              "The empirical Mr of CH₂O is 12 + 2 + 16 = 30. If the measured Mr of the compound is 180, divide 180 by 30 to get 6. Multiply every subscript in CH₂O by 6 to obtain C₆H₁₂O₆. That multiplication gives the molecular formula.",
-              "When the empirical Mr equals the measured Mr, the empirical formula is already the molecular formula. Methane shows this, because its smallest ratio CH₄ has Mr = 16 and no multiple is needed. An exam that gives Mr therefore expects the final multiplication step."
+              "The empirical formula is the simplest whole-number ratio of atoms; the molecular formula is the true count in one molecule. Glucose and fructose share the empirical formula CH₂O, but only glucose is written C₆H₁₂O₆. The ratio is the same; the size is not.",
+              "The link between them is the molar mass. CH₂O has Mr = 30 and glucose has Mr = 180, so 180 ÷ 30 = 6, meaning the true formula is six empirical units. Comparing Mr values converts one formula into the other without any new experiment.",
+              "Finding an empirical formula is the reverse journey: percentage composition gives the atom ratio directly, and a measured Mr then scales the ratio up to the molecular formula. Percentages alone can never give the true formula — they only give the ratio.",
+              "The exam trap is to stop at the ratio when a molar mass was given. If Mr appears anywhere in the question, the answer needs scaling. No Mr, no scaling: that is the whole discrimination.",
+              "Empirical formulae also predict percentage composition, so a candidate can move in either direction between ratio, percentages and true formula in one set of steps."
             ],
             "bullets": [
-              "Empirical formula: simplest ratio; molecular formula: true molecule",
-              "CH₂O empirical Mr = 30; C₆H₁₂O₆ molecular Mr = 180",
-              "Multiply subscripts by measured Mr ÷ empirical Mr"
+              "Empirical = simplest ratio; molecular = true count.",
+              "Scale ratio by Mr ÷ empirical Mr.",
+              "Percentages alone never give the molecular formula."
             ]
           }
         },
@@ -449,16 +447,17 @@
           "content": {
             "heading": "Go deeper: Exam traps in mole calculations",
             "paragraphs": [
-              "Relative atomic mass, Ar, belongs to one kind of atom and is measured against ¹²C = 12. Relative molecular mass, Mr, belongs to a whole formula and is the sum of its Ar values. Carbon has Ar = 12, while carbon dioxide has Mr = 44, not 12.",
-              "Moles count particles, while mass measures weight in grams. The link is moles = mass ÷ Mr, so a heavier substance has fewer moles per gram. One gram of water is 0.056 mol, while one gram of carbon dioxide is 0.023 mol.",
-              "At s.t.p., one mole of any gas occupies 22.4 dm³, but that rule never applies to liquids or solids. Concentration needs moles divided by volume in dm³, not by mass. A solution with 0.5 mol in 0.25 dm³ is 2 mol/dm³, not 0.5 mol/dm³.",
-              "The balanced equation CaCO₃ + 2HCl → CaCl₂ + CO₂ + H₂O fixes the mole ratio at 1:1 for carbonate to carbon dioxide. Mass in grams cannot be read directly from that ratio until each mass is divided by its Mr. The trap is to multiply grams by the ratio without converting to moles.",
-              "Read the units in the question before choosing the formula. Mass asks for moles = mass ÷ Mr, gas volume asks for moles × 22.4, and concentration asks for moles ÷ volume. Naming the unit first prevents the commonest slip."
+              "The first trap is confusing Mr with relative atomic mass: Mr is for a molecule, Ar for an atom. Water's Mr is 18 (2 × 1 + 16), while oxygen's Ar is 16. Using the wrong one changes every mole count after it.",
+              "The second trap is skipping the ratio. Two moles of acid may need only one mole of base; multiplying by the equation's ratio comes before any concentration arithmetic. Which is limiting comes from the smaller mole count after dividing by coefficients.",
+              "The third trap is s.t.p. values quoted at the wrong temperature. The 22.4 dm³ molar volume belongs to 273 K and 1 atm; at any other temperature the gas law, not the memorised volume, must be used.",
+              "The fourth trap is unit mixing: cm³ against dm³, or grams against kilograms. Moles ÷ volume needs dm³, and examiners plant cm³ figures precisely to catch candidates who skip conversion. Convert first, calculate second — always.",
+              "Reading the question twice catches the last trap: state the units beside every number as you write, and the habit will expose mismatches before they mark you down."
             ],
             "bullets": [
-              "Ar is per atom; Mr is per formula: sum the Ar values",
-              "Moles count particles; grams measure mass: divide by Mr",
-              "Always convert mass to moles before using equation ratios"
+              "Mr is per molecule; Ar is per atom.",
+              "Apply the equation ratio before concentrations.",
+              "22.4 dm³ belongs only to 273 K and 1 atm.",
+              "Convert cm³ to dm³ before dividing."
             ]
           }
         }
