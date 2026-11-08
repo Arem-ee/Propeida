@@ -5908,6 +5908,214 @@
           }
         }
       ]
+    },
+    {
+      "slug": "copper-and-alloys",
+      "topic": "metals-and-their-compounds",
+      "title": "Copper and Alloys",
+      "objective": "Identify the appropriate method of extraction of copper from its compounds, relate the properties of copper and its compounds to their uses, specify the method for the preparation of CuSO₄, specify the constituents and uses of alloys, and compare the properties and uses of alloys to pure metals.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Copper and Alloys",
+            "paragraphs": [
+              "The wire in a wall socket carries current because one metal conducts it better than almost any other. This lesson follows that metal from its rock to its alloys."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Extracting copper",
+            "paragraphs": [
+              "Copper is extracted from chalcopyrite (CuFeS₂) and other sulfide ores because it sits low in the reactivity series. The ore is concentrated by froth flotation, then roasted to copper(I) oxide, and reduced with carbon or by self-reduction to blister copper.",
+              "Blister copper is then purified by electrorefining: impure anodes dissolve, pure cathodes collect the metal. The process mirrors copper purification from the electrolysis lesson, with anode sludge recovering gold and silver.",
+              "Oxide ores follow a simpler route: carbon reduction directly, because copper is low enough for carbon to displace it. The series decides, as always."
+            ],
+            "bullets": [
+              "Sulfide ores: concentrate, roast, self-reduce to blister copper.",
+              "Electrorefining purifies blister copper.",
+              "Carbon works because copper sits low in the series."
+            ],
+            "takeaway": "Copper comes from sulfide ores by reduction, then electrorefining.",
+            "check": {
+              "question": "Blister copper is purified by",
+              "options": [
+                "Carbon reduction in a furnace",
+                "Electrorefining with pure copper cathode",
+                "Heating with steam",
+                "Melting with limestone"
+              ],
+              "answer": 1,
+              "why": "Electrorefining dissolves impure anodes and deposits pure copper on the cathode."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Properties, uses and copper(II) sulfate",
+            "paragraphs": [
+              "Copper is reddish-brown, soft, malleable, and the best common conductor of electricity after silver. Those properties explain its uses: electrical wiring, motors, coins and alloys. It does not rust like iron, though it tarnishes green in air.",
+              "Copper(II) tetraoxosulfate(VI) (CuSO₄) is prepared by reacting copper(II) oxide or carbonate with dilute sulfuric acid: CuO + H₂SO₄ → CuSO₄ + H₂O. The blue solution crystallises to blue pentahydrate.",
+              "The test for Cu²⁺ is ammonia solution, which first gives a pale blue precipitate of Cu(OH)₂ that dissolves in excess ammonia to a deep blue complex. That deep blue is specific to copper."
+            ],
+            "bullets": [
+              "Reddish-brown, soft, best common conductor.",
+              "CuSO₄ from CuO + dilute H₂SO₄.",
+              "Cu²⁺ test: pale blue precipitate, deep blue in excess NH₃."
+            ],
+            "takeaway": "Copper conducts best among common metals, and its blue test is unmistakable.",
+            "check": {
+              "question": "The test for Cu²⁺ with excess ammonia solution gives",
+              "options": [
+                "A white precipitate",
+                "A deep blue solution",
+                "A brown precipitate",
+                "No change"
+              ],
+              "answer": 1,
+              "why": "Excess ammonia complexes copper(II) to the deep blue [Cu(NH₃)₄]²⁺."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Alloys: mixtures with a purpose",
+            "paragraphs": [
+              "An alloy is a mixture of metals (sometimes with non-metals) designed to beat the pure metal at some job. Steel is iron with carbon; stainless steel adds chromium and nickel. Brass is copper with zinc; bronze is copper with tin.",
+              "Duralumin is aluminium with copper and magnesium for aircraft. Type-metal is lead with antimony and tin for printing. Soft solder is lead with tin for joining. Permalloy (iron with nickel) and alnico (iron with aluminium, nickel and cobalt) serve in magnets.",
+              "Alloys are harder and stronger than the pure metals because foreign atoms break up the sliding planes of the electron sea. They resist rust better and melt lower. Pure metals are never the best choice when an alloy exists."
+            ],
+            "bullets": [
+              "Steel = iron + C; stainless = + Cr, Ni.",
+              "Brass = Cu + Zn; bronze = Cu + Sn; duralumin = Al + Cu.",
+              "Alloys are harder, stronger and more rust-resistant."
+            ],
+            "takeaway": "Alloys trade purity for hardness, strength and rust resistance.",
+            "check": {
+              "question": "Bronze is an alloy of",
+              "options": [
+                "Copper and zinc",
+                "Copper and tin",
+                "Iron and carbon",
+                "Aluminium and copper"
+              ],
+              "answer": 1,
+              "why": "Bronze is copper alloyed with tin; brass is copper with zinc."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For alloy questions, name the two main metals first. Brass-zinc, bronze-tin, steel-iron: the pair is the answer's skeleton."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Copper(II) sulfate is prepared from copper(II) oxide and dilute sulfuric acid. Write the equation and state the colour change.",
+            "steps": [
+              {
+                "operation": "Identify the reactants",
+                "reason": "A base (oxide) plus an acid gives a salt plus water",
+                "result": "CuO + H₂SO₄ → CuSO₄ + H₂O",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Track the colour",
+                "reason": "Black oxide dissolves to a blue solution",
+                "result": "Black CuO becomes blue CuSO₄ solution",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Name the salt formed",
+                "reason": "The sulfate ion names it tetraoxosulfate(VI)",
+                "result": "Copper(II) tetraoxosulfate(VI)",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why is copper preferred to aluminium for household wiring despite aluminium being lighter?",
+            "hints": [
+              "Compare conductivities first",
+              "Copper conducts better than aluminium",
+              "Safety and losses decide household wiring"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why copper wins wires",
+            "paragraphs": [
+              "Silver conducts best, but price rules it out. Copper is second-best and far cheaper, which is why it owns household wiring. Aluminium conducts well per kilogram and wins overhead transmission lines, where weight matters more than volume.",
+              "The choice is therefore economic physics: conductivity per cost for wires, conductivity per weight for cables. The same metal ranking produces different winners in different jobs.",
+              "Copper's ductility also matters: it draws into thin wire without breaking. A conductor must be both conducting and drawable, and copper is the best compromise of the two.",
+              "A candidate who ranks by job rather than by metal will answer use questions correctly even for unfamiliar alloys.",
+              "Corrosion decides the rest: copper resists rusting far better than iron, which is why it survives in damp walls for decades. Conductivity, ductility and durability together close the case.",
+              "A candidate who needs a wiring answer should rank by the job (household, overhead, marine) before naming the metal. The job is the question; the metal is the conclusion."
+            ],
+            "bullets": [
+              "Silver best but dear; copper second and affordable.",
+              "Aluminium wins overhead lines (per kilogram).",
+              "Ductility plus conductivity decides wiring.",
+              "Rank by job: cost, weight or drawable."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Alloys and the electron sea",
+            "paragraphs": [
+              "Pure metals are soft because their atoms slide past each other in the electron sea. Foreign atoms in an alloy pin those slides: the planes cannot move as freely, so the alloy is harder and stronger than either parent metal.",
+              "That is why steel beats iron, brass beats zinc, and bronze beats copper at their jobs. The alloying atoms are a deliberate obstruction, not an impurity.",
+              "Alloys also resist corrosion better: stainless steel's chromium film, brass's copper-rich surface, and bronze's patina all seal the metal from attack. Hardness and protection arrive together.",
+              "The exam contrast is purity versus purpose: pure metals are never the best choice when an alloy exists for the same job.",
+              "The same pinning explains why pure copper is too soft for coins and why bronze was chosen for bells: hardness is not a virtue in itself, only a fit for the job.",
+              "A candidate who sees every alloy as pinned pure metal will predict relative hardness from composition alone."
+            ],
+            "bullets": [
+              "Foreign atoms pin the sliding planes — alloys are harder.",
+              "Steel, brass, bronze all beat their parents.",
+              "Alloy surfaces resist corrosion better.",
+              "Purpose beats purity in every alloy question."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in copper and alloys",
+            "paragraphs": [
+              "The classic trap is the extraction route. Sulfide ores go through roasting and self-reduction; oxide ores go through carbon reduction. Naming carbon reduction for a sulfide ore reverses the method.",
+              "The second trap is the Cu²⁺ test direction. Pale blue precipitate first, deep blue solution in excess — reversing the order describes the wrong observation.",
+              "The third trap is brass versus bronze. Brass is copper with zinc; bronze is copper with tin. The two names are the most swapped pair in the syllabus.",
+              "The fourth trap is assuming pure metals are best. Every named alloy exists because it beats the pure metal at hardness, rust resistance or melting point — the comparison question always favours the alloy.",
+              "A final trap is the purity of blister copper. Blister copper is crude and electrorefining alone makes it pure; any option claiming the reduction step gives pure copper reverses the factory order.",
+              "A candidate who writes the two alloy pairs before reading the options eliminates half the distractors instantly."
+            ],
+            "bullets": [
+              "Sulfides: roast + self-reduce. Oxides: carbon reduction.",
+              "Cu²⁺: pale blue first, deep blue in excess NH₃.",
+              "Brass = Cu + Zn; bronze = Cu + Sn.",
+              "Alloys always beat pure metals at their job."
+            ]
+          }
+        }
+      ]
     }
   ]
 }
