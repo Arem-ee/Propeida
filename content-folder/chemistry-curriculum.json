@@ -7589,6 +7589,217 @@
           }
         }
       ]
+    },
+    {
+      "slug": "amines",
+      "topic": "organic-compounds",
+      "title": "Amines",
+      "objective": "Compare the various classes of alkanamines and classify primary, secondary and tertiary amines.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Amines",
+            "paragraphs": [
+              "The rotten-fish smell of a fish market is an amine — a family of compounds with nitrogen at the centre. This lesson names their three classes and the reactions that tell them apart."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Primary, secondary and tertiary",
+            "paragraphs": [
+              "Amines carry the amino group (–NH₂) on carbon, like the hydroxyl group of alkanols. The class depends on how many carbons share the nitrogen: primary (1°) amines have one carbon on nitrogen (ethanamine, CH₃CH₂NH₂); secondary (2°) have two (dimethylamine); tertiary (3°) have three (trimethylamine).",
+              "That count decides the reactions. Primary amines react with nitrous acid (HNO₂) to give nitrogen gas, which is their distinguishing test. Secondary amines give a yellow oil with the same reagent, and tertiary amines do not react at all.",
+              "Amines are bases: they accept protons to form ammonium-type ions. That basicity makes them smell fishy and makes their salts soluble in water."
+            ],
+            "bullets": [
+              "1°: one C on N. 2°: two C. 3°: three C.",
+              "Primary + HNO₂ → N₂ gas (distinguishing test).",
+              "Amines are bases; the lone pair accepts protons."
+            ],
+            "takeaway": "Count the carbons on nitrogen to name the class; primary amines fizz with nitrous acid.",
+            "check": {
+              "question": "Ethylamine (CH₃CH₂NH₂) is a primary amine because its nitrogen is bonded to",
+              "options": [
+                "One carbon",
+                "Two carbons",
+                "Three carbons",
+                "No carbons"
+              ],
+              "answer": 0,
+              "why": "One carbon on the nitrogen makes it primary."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Reactions and the nitrous acid test",
+            "paragraphs": [
+              "The distinguishing test uses nitrous acid (HNO₂), made in situ from sodium nitrite and dilute hydrochloric acid. Primary amines react to give nitrogen gas — visible effervescence — plus an alcohol.",
+              "Secondary amines give a yellow oil (an N-nitroso compound) that does not bubble. Tertiary amines give no reaction with cold nitrous acid. The three results are three different answers to the same reagent.",
+              "The nitrogen gas from a primary amine is quantitative: moles of gas equal moles of amine. That makes the reaction both a test and a measurement."
+            ],
+            "bullets": [
+              "Primary: N₂ effervescence with HNO₂.",
+              "Secondary: yellow oil, no gas.",
+              "Tertiary: no reaction in the cold."
+            ],
+            "takeaway": "Nitrous acid separates all three classes: gas, oil, or nothing.",
+            "check": {
+              "question": "A primary amine with cold nitrous acid gives",
+              "options": [
+                "A yellow oil",
+                "Nitrogen gas with effervescence",
+                "No reaction",
+                "A red precipitate"
+              ],
+              "answer": 1,
+              "why": "Primary amines react with HNO₂ to liberate nitrogen gas."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Properties and uses",
+            "paragraphs": [
+              "Amines are polar, hydrogen-bonding compounds, soluble in water when small. Their smell is a warning system: trimethylamine is the rotten-fish smell of decaying fish, because bacteria produce it from choline.",
+              "They undergo salt formation with acids, alkylation with halogenoalkanes, and acylation — the reactions that build dyes, drugs and polyamides (nylon). The lone pair does all of it.",
+              "Aniline, the aromatic amine, is the parent of the dye industry. The whole dye and pharmaceutical world grew from amine chemistry.",
+              "That lone pair also makes amines smell strongly and react with many reagents, so they are stored sealed and handled with care."
+            ],
+            "bullets": [
+              "Polar, water-soluble when small; fishy smell.",
+              "Salt formation, alkylation, acylation reactions.",
+              "Aniline parents the dye industry."
+            ],
+            "takeaway": "Amines are basic, fishy-smelling, and the parents of dyes and drugs.",
+            "check": {
+              "question": "The rotten-fish smell of decaying fish is caused by",
+              "options": [
+                "Ethers",
+                "Amines (trimethylamine)",
+                "Esters",
+                "Alkanals"
+              ],
+              "answer": 1,
+              "why": "Bacteria produce trimethylamine, an amine, as fish decays."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For amine questions, count the carbons on nitrogen first. The count (1, 2 or 3) predicts the nitrous acid result before any reagent is named."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "0.1 mol of a primary amine reacts with excess nitrous acid. Calculate the volume of nitrogen gas at s.t.p. liberated.",
+            "steps": [
+              {
+                "operation": "Write the reaction",
+                "reason": "Primary amine plus nitrous acid gives nitrogen and an alcohol",
+                "result": "RNH₂ + HNO₂ → N₂ + ROH + H₂O",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Apply the mole ratio",
+                "reason": "One mole of amine gives one mole of N₂",
+                "result": "0.1 mol N₂",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Convert to gas volume",
+                "reason": "One mole of gas fills 22.4 dm³ at s.t.p.",
+                "result": "0.1 × 22.4 = 2.24 dm³",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "0.2 mol of a primary amine reacts with excess nitrous acid. Calculate the nitrogen volume at s.t.p.",
+            "hints": [
+              "One mole of amine gives one mole of N₂",
+              "So 0.2 mol gives 0.2 mol N₂",
+              "Multiply by 22.4 dm³"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why the classes differ",
+            "paragraphs": [
+              "The reaction with nitrous acid needs a replaceable hydrogen on nitrogen. Primary amines carry two, so diazotisation proceeds to nitrogen gas. Secondary amines carry one, so they stop at the yellow oil. Tertiary amines carry none, so nothing happens.",
+              "That single count — hydrogens on nitrogen — predicts the test result for every class. It is the amine version of the alkanol reactivity ladder.",
+              "Basicity follows a related but different order, because alkyl groups donate electron density and stabilise the ammonium ion. Basic strength and diazotisation rate are different ladders and must not be merged.",
+              "A candidate who counts hydrogens for the test and electron donation for basicity keeps the two ladders separate.",
+              "Basicity rises with alkyl substitution because the groups donate electron density and stabilise the ammonium ion. Greater donation means a stronger base, which is why trimethylamine is more basic than methylamine.",
+              "That donation order is not the diazotisation order. A candidate who ranks basicity by the test result merges two different ladders and loses both items.",
+              "A candidate who counts hydrogens for the test and electron donation for basicity keeps the two ladders separate.",
+              "It also pays off in every later amine family."
+            ],
+            "bullets": [
+              "Diazotisation needs N–H hydrogen: 1° has two, 2° has one, 3° none.",
+              "Basicity follows electron donation — a different order.",
+              "Two ladders, never merged.",
+              "Count hydrogens for the test."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Diazotisation and dyes",
+            "paragraphs": [
+              "Diazotisation is the conversion of a primary aromatic amine (aniline) with nitrous acid at low temperature into a diazonium salt. That salt couples with other aromatics to form azo dyes — the largest dye family in the world.",
+              "The reaction must stay cold because diazonium salts decompose on warming. Temperature control is part of the chemistry, not a detail.",
+              "Aliphatic diazonium salts are unstable and decompose at once to nitrogen gas — which is why the test works for aliphatic amines. Aromatic ones survive long enough to couple.",
+              "The same reaction thus tests aliphatic amines and manufactures aromatic dyes. Stability of the intermediate decides which use.",
+              "The coupling step is electrophilic substitution on the aromatic ring, so the diazonium ion is the electrophile. Electron-donating groups on the coupling partner speed it up.",
+              "That mechanism links amines to the whole dye industry: diazotisation plus coupling is the manufacturing sequence for azo colours.",
+              "A candidate who knows the diazonium must be kept cold answers both the test item and the dye item from one fact."
+            ],
+            "bullets": [
+              "Aniline + HNO₂ (cold) → diazonium salt → azo dyes.",
+              "Aliphatic diazonium salts decompose instantly (N₂ test).",
+              "Cold temperature is essential for diazotisation.",
+              "One reaction, two industries."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in amines",
+            "paragraphs": [
+              "The classic trap is the class count. The carbons on nitrogen decide: ethanamine is primary, dimethylamine secondary, trimethylamine tertiary. Counting total carbons instead of nitrogen neighbours misnames every case.",
+              "The second trap is the test direction. Nitrogen gas means primary; yellow oil means secondary; nothing means tertiary. Any option assigning nitrogen gas to a secondary amine reverses the test.",
+              "The third trap is the amine versus amide confusion. Amides are carboxamides (CONH₂), amines are alkylamines (RNH₂). The -amide and -amine endings are different families entirely.",
+              "The fourth trap is basicity versus test order. Basic strength does not follow the diazotisation order; merging the two ladders loses both items.",
+              "A final trap is calling ammonia an amine. Ammonia is the parent of the family, not a member — it has no carbon at all."
+            ],
+            "bullets": [
+              "Count carbons on nitrogen, not total carbons.",
+              "N₂ = primary; yellow oil = secondary; nothing = tertiary.",
+              "Amides (CONH₂) ≠ amines (RNH₂).",
+              "Basicity and test orders are different ladders."
+            ]
+          }
+        }
+      ]
     }
   ]
 }
