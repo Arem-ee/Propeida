@@ -1095,7 +1095,7 @@
           "content": {
             "heading": "Separation of Mixtures",
             "paragraphs": [
-              "Farmers in Lagos dry sea-water to recover salt, yet the salt water looks like one liquid. A mixture keeps the properties of its parts, so each part can be pulled out by a physical method."
+              "A market woman sells mixed goods — stones in beans, husks in rice — and picks them apart by hand. Separating a chemical mixture is the same job with better tools: every method picks components apart using one difference between them."
             ],
             "bullets": []
           }
@@ -1105,82 +1105,84 @@
           "content": {
             "heading": "Elements, compounds and mixtures",
             "paragraphs": [
-              "A seller scoops salt from dried sea-water and asks whether salt and water were chemically bonded. An element is one kind of atom, such as iron. A compound joins elements in fixed ratio, such as water (H2O), while a mixture joins substances without a chemical bond.",
-              "A chemical change forms new substances hard to reverse, like rusting and burning. A physical change only alters state or form, like melting, dissolving or boiling. Separation uses physical change, so a mixture splits without new compounds.",
-              "A pure substance contains one element or one compound and melts and boils sharply. Dissolved impurities make water impure and broaden melting, freezing and boiling ranges. A sharp melting or boiling point and fixed density therefore test purity."
+              "An element is a substance made of one kind of atom, like oxygen or iron. A compound is two or more elements joined by chemical bonding, like water or carbon dioxide. A mixture is two or more substances merely mixed, like sand and salt in a bowl.",
+              "A chemical change makes a new substance with new properties — burning wood gives ash and smoke. A physical change changes only appearance, like melting ice. Mixtures change physically, so their parts can be separated again.",
+              "A pure substance melts and boils at exact temperatures; an impure one melts over a range. A sharp melting point therefore proves purity, while a falling melting point reveals impurities. That is why melting and boiling points are purity tests."
             ],
             "bullets": [
-              "Compounds split into elements; mixtures split into parts",
-              "Mixtures keep the properties of their parts",
-              "Chemical change gives new substances; physical change does not"
+              "Element = one kind of atom; compound = bonded elements; mixture = mixed substances.",
+              "Chemical change makes new substances; physical change does not.",
+              "Pure substances melt sharply; impure ones melt over a range."
             ],
-            "takeaway": "A sharp melting point marks a pure substance.",
+            "takeaway": "Mixtures separate physically because their parts were never chemically joined.",
             "check": {
-              "question": "Which sample is a pure substance?",
+              "question": "Which statement correctly pairs a pure substance with its test?",
               "options": [
-                "Distilled water",
-                "Air",
-                "Salt solution",
-                "Sand and salt mixture"
+                "Pure water melts over 0–10 °C",
+                "A pure substance melts at one exact temperature",
+                "Pure substances never crystallise",
+                "Impure substances boil at one exact temperature"
               ],
-              "answer": 0,
-              "why": "Distilled water has one compound and boils sharply, while the others are mixtures."
+              "answer": 1,
+              "why": "Purity shows as a sharp melting point; impurities spread the range."
             }
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Separation by heating",
+            "heading": "Separating by heat and air",
             "paragraphs": [
-              "A family needs drinking water but the borehole water is salty and cloudy. Evaporation heats the mixture so the liquid becomes vapour and leaves the solid residue, as sea-water dries to salt. Simple distillation boils the mixture then condenses the vapour to pure liquid for one boiling point.",
-              "Fractional distillation suits liquids with different boiling points, such as crude oil. The fractionating column lets the most volatile fraction rise highest, condensing petrol lower down and diesel lower still. Sublimation is solid to vapour without melting, used for camphor and ammonium chloride (NH4Cl), which deposit as solid on cooling.",
-              "Re-crystallisation dissolves the solid in hot solvent then cools it so crystals form. The solid is more soluble when hot and crystallises out first. Sugar refining uses this temperature change in solubility."
+              "Evaporation removes a liquid by heating, leaving the dissolved solid: salt from seawater is won this way. Simple distillation separates liquids with different boiling points, like ethanol and water, by boiling and condensing the vapour. Fractional distillation repeats that for many fractions, as in crude oil refining.",
+              "Sublimation turns a solid directly into vapour, as with camphor or ammonium chloride, which then deposits back. Re-crystallisation dissolves the solid hot and cools the solution so pure crystals form. Each method exploits one property: volatility, boiling point or solubility.",
+              "Magnetisation removes iron with a magnet, as in scrapyards. Decantation pours the liquid off a solid, filtration traps the solid, and centrifugation spins a mixture so the denser part settles outward, as in blood tests."
             ],
             "bullets": [
-              "Evaporation leaves solid; distillation collects vapour",
-              "Fractional distillation needs different boiling points",
-              "Sublimation skips liquid; re-crystallisation uses solubility"
+              "Evaporation leaves the salt; distillation separates by boiling point.",
+              "Sublimation: solid → vapour → solid (camphor, NH₄Cl).",
+              "Magnet removes iron; decantation pours; filtration traps; centrifugation spins.",
+              "Every method exploits one property difference."
             ],
-            "takeaway": "Heat methods separate by boiling point or solubility differences.",
+            "takeaway": "Find the property that differs, and that property is the separating tool.",
             "check": {
-              "question": "Crude oil contains petrol, kerosene and diesel. Which method separates it in one run?",
+              "question": "To obtain pure water from seawater that also contains suspended sand, which order of methods works?",
               "options": [
-                "Evaporation only",
-                "Fractional distillation",
-                "Magnetisation",
-                "Decantation"
+                "Distil, then filter",
+                "Filter (sand), then distil (water, salt)",
+                "Magnet, then evaporate",
+                "Centrifuge, then magnet"
               ],
               "answer": 1,
-              "why": "The fractions differ greatly in boiling point, so fractional distillation separates them level by level."
+              "why": "Filtration removes sand first, then distillation separates water from dissolved salt."
             }
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Separation by magnetism, density and absorption",
+            "heading": "Chromatography and crystallisation",
             "paragraphs": [
-              "A student tests mixed ink on paper and sees several spots spread apart. Paper chromatography moves each dye a different distance with the solvent, so the spots identify each part. Column chromatography adsorbs parts differently on a column, as in dye analysis.",
-              "Crystallisation evaporates solvent until crystals of the dissolved solid appear, like salt from brine. Magnetisation pulls magnetic iron from sand with a magnet, as in scrapyards. Decantation gently pours the clear liquid from settled solids, as cloudy water is poured from mud.",
-              "Filtration holds back insoluble solid on filter paper while liquid passes, as sand is filtered from salt solution. Centrifugation spins the mixture so denser parts settle quickly by density, as in blood tests. Choose by property: magnetism for iron, density for settling, insolubility for filtering."
+              "Chromatography separates dyes and inks that travel at different speeds along a strip. Paper chromatography dips ink in water; the colours spread out as bands. Column chromatography does the same through a packed tube that holds back some substances longer.",
+              "Simple crystallisation grows crystals from a saturated solution by cooling or evaporation. Re-crystallisation purifies: dissolve the impure solid hot, filter while hot, then cool so only pure crystals form while impurities stay dissolved.",
+              "In each case the principle is solubility: components dissolve or travel at different rates. A method is chosen by asking which property differs most between the components."
             ],
             "bullets": [
-              "Chromatography separates by adsorption and distance",
-              "Magnetisation uses magnetism; centrifugation uses density",
-              "Filtration holds insolubles; crystallisation recovers dissolved solids"
+              "Paper chromatography separates ink dyes by travel speed.",
+              "Column chromatography holds components back differently.",
+              "Crystallisation uses solubility; re-crystallisation purifies.",
+              "Choose the method whose property differs most."
             ],
-            "takeaway": "Match the method to the differing property of components.",
+            "takeaway": "Chromatography separates by speed; crystallisation separates by solubility.",
             "check": {
-              "question": "Ink contains several dyes that travel different distances on paper. Which method separates them?",
+              "question": "Black ink is mainly one dye that travels as a single band. What does that tell about its composition?",
               "options": [
-                "Filtration",
-                "Paper chromatography",
-                "Magnetisation",
-                "Centrifugation"
+                "It contains one dye only",
+                "It contains several dyes travelling together",
+                "It is a pure substance",
+                "It cannot be separated"
               ],
               "answer": 1,
-              "why": "Paper chromatography moves each dye a different distance with the solvent, giving identifying spots."
+              "why": "An ink of several dyes would spread into several bands; a single band suggests one travel rate."
             }
           }
         },
@@ -1189,28 +1191,31 @@
           "content": {
             "title": "Exam tip",
             "tone": "tip",
-            "body": "When JAMB gives a mixture, name the differing property first: boiling point, solubility, density, magnetism or adsorption, then choose the method that uses it. Boiling together means fractional distillation, magnetic means magnetisation, dissolved solid means crystallisation."
+            "body": "Before naming a method, name the property that differs: boiling point, solubility, density or magnetism. The property chooses the method every time."
           }
         },
         {
           "type": "worked_example",
           "content": {
-            "problem": "A mixture of sand, salt and water is given. Which methods separate all three, and in what order?",
+            "problem": "A mixture holds sand, salt and water. Describe a separation that gives pure water.",
             "steps": [
               {
-                "operation": "Filter first",
-                "reason": "Sand is insoluble and stays on the paper while salt solution passes.",
-                "result": "Sand is left on filter paper; salt solution passes through."
+                "operation": "Filter the mixture",
+                "reason": "Sand is insoluble; filter paper traps it while salt water passes",
+                "result": "Sand is removed as a solid",
+                "predictPrompt": ""
               },
               {
-                "operation": "Evaporate the solution",
-                "reason": "Salt is dissolved, so heating drives off water and leaves salt behind.",
-                "result": "Water vapour escapes and dry salt remains in the dish."
+                "operation": "Distil the filtrate",
+                "reason": "Water boils and condenses; salt does not distil",
+                "result": "Pure water is collected, salt remains in the flask",
+                "predictPrompt": ""
               },
               {
-                "operation": "Distill if pure water is needed",
-                "reason": "For pure water, boil the solution and condense the vapour separately.",
-                "result": "Distilled water is collected and salt stays in the flask."
+                "operation": "Name why evaporation alone fails",
+                "reason": "Evaporating to dryness would leave salt mixed with nothing pure to collect",
+                "result": "Distillation is needed to collect the water itself",
+                "predictPrompt": ""
               }
             ]
           }
@@ -1218,60 +1223,69 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "A mixture of iron filings, sand and salt water is given. Outline methods to recover iron, sand, salt and water.",
+            "question": "A mixture holds iron filings, sand and water. Give a two-step separation that recovers the iron and the water.",
             "hints": [
-              "First pick out the magnetic part with a magnet.",
-              "Then filter the remaining mixture to hold back the insoluble solid.",
-              "Evaporate or distil the solution to leave salt and collect water."
+              "One component answers to a magnet",
+              "After that, separate solid from water by filtering",
+              "Then distil to collect the water pure"
             ]
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Go deeper: Why fractional distillation beats simple distillation",
+            "heading": "Go deeper: Why fractional distillation beats simple",
             "paragraphs": [
-              "Simple distillation suits one boiling point, such as separating water from an involatile salt, and its vapour condenses straight to pure liquid in one collection. Fractional distillation suits several boiling points because it separates each component at its own temperature level. The fractionating column provides the extra surfaces that make that level-by-level separation possible.",
-              "Each glass bead in the column is a surface where vapour condenses and re-evaporates repeatedly. Higher-boiling vapours condense lower down while lower-boiling vapours stay as vapour and rise higher. The column therefore holds a temperature gradient, hot at the base and cool at the top, and each fraction is drawn off where that temperature matches its boiling point.",
-              "Crude oil is a mixture of hydrocarbons with widely spaced boiling points, so simple distillation yields a mixed distillate that must be repeated. Fractional distillation of crude oil gives gases at the top, petrol in the cooler upper zone, kerosene below it and diesel and lubricating oils lower still. The same column separates liquid air into nitrogen, oxygen and argon."
+              "Simple distillation separates two liquids with widely different boiling points. Crude oil holds many fractions with boiling points close together, so one round of boiling cannot divide them. Fractional distillation uses a fractionating column where vapours rise, cool and condense at their own levels.",
+              "Each level of the column is a separate still in miniature: vapour condenses, re-boils and rises again. The lightest fraction escapes at the top, while heavier ones leave lower down. The column therefore multiplies the separation without multiplying the apparatus.",
+              "The same principle refines air into oxygen and nitrogen, and petroleum into petrol, kerosene and diesel. Whenever boiling points crowd together, fractionation is the answer.",
+              "A candidate who links the column to repeated simple distillations will never call a single flask a fractionating column again.",
+              "A simple still can split two liquids when their boiling points differ by a wide margin, because the lower-boiling vapour leaves alone. As the gap narrows, contamination rises, and only the column’s repeated boil–condense cycles keep the fractions apart."
             ],
             "bullets": [
-              "Simple distillation: one boiling point, one product",
-              "Fractional distillation: many boiling points, many products",
-              "Column holds a temperature gradient from hot base to cool top",
-              "Crude oil and liquid air need fractional distillation"
+              "Crude oil fractions boil too close for one still.",
+              "The column repeats boil–condense at each level.",
+              "Light fractions exit top; heavy fractions exit lower.",
+              "Fractionation is repeated simple distillation in one tower."
             ]
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Go deeper: Rf values as identity evidence in chromatography",
+            "heading": "Go deeper: Chromatography as identity evidence",
             "paragraphs": [
-              "Paper chromatography is a partition and adsorption balance between the moving solvent and the stationary paper fibres and water. Each dye must repeatedly dissolve in the solvent front and adsorb onto the paper, spending different fractions of time in each phase. A dye that spends more time in the mobile solvent moves further with the front, while a strongly adsorbed dye lags behind.",
-              "The retardation factor, Rf, quantifies that movement as the distance travelled by the spot divided by the distance travelled by the solvent front from the same origin. If a dye spot reaches 3.0 cm when the solvent reaches 10.0 cm, its Rf is 0.30. Rf is a ratio, so it is independent of paper size and strip length, which lets values be compared between different runs.",
-              "Identity is claimed only when an unknown spot has the same Rf as a known standard run on the same paper under the same conditions. Matching Rf plus spot colour and shape is evidence that the unknown contains that dye, as in food-colour and forensic ink tests. A different Rf rules out identity, while an extra spot reveals an additional component that a single colour would hide."
+              "The retention factor, Rf, measures how far a spot travelled relative to the solvent: Rf = distance of spot ÷ distance of solvent. A spot that always travels to the same Rf is the same substance in different hands, which makes chromatography an identity test, not only a separation tool.",
+              "Two dyes with different Rf values separate into different bands, and the pattern of bands is a fingerprint. Food colours, inks and plant pigments are all identified this way in food and forensic laboratories.",
+              "Paper chromatography depends on solubility and attraction to paper; column chromatography adds adsorption on the packing. Both exploit the same difference: how strongly each component holds on versus travels on.",
+              "The exam trap is to treat Rf as a separation product. Rf identifies; it does not manufacture. Discovery of a new spot means a new dye, not a new element.",
+              "Because each substance has a fixed Rf under given conditions, matching Rf values in two samples is strong evidence they contain the same dye. Courts and food laboratories rely on exactly this reasoning.",
+              "The solvent must be chosen so spots travel a measurable distance without running off the paper. A solvent in which the dye is insoluble gives no evidence at all."
             ],
             "bullets": [
-              "Rf = distance of spot ÷ distance of solvent front",
-              "Same Rf as a standard on the same paper suggests identity",
-              "An extra spot means an extra component is present"
+              "Rf = spot distance ÷ solvent distance.",
+              "Rf patterns identify dyes and pigments.",
+              "Paper uses solubility; column adds adsorption.",
+              "Rf identifies; it does not create new substances."
             ]
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Go deeper: Exam traps in purity and sublimation",
+            "heading": "Go deeper: Exam traps in separation",
             "paragraphs": [
-              "A pure solid melts sharply at a fixed temperature because every particle needs the same energy to break its lattice. Dissolved impurities break up the lattice and lower the melting point while widening the melting range. A sample that melts over several degrees and below the reference value is therefore impure, even if it looks like a pure crystal.",
-              "Sublimation is a direct solid-to-vapour change without liquid, shown by camphor, naphthalene and ammonium chloride (NH4Cl) on gentle heating. Evaporation is liquid-to-vapour change at the surface of a liquid, shown by wet clothes drying or sea-water drying to salt. The trap is that both produce vapour, but sublimation starts from a solid and deposits solid on cooling, while evaporation leaves a non-volatile residue.",
-              "Examiners also trap candidates who call a melting mixture pure because it melts, or who claim boiling point is constant for salt solution. Salt solution boils over a range above 100 °C, not sharply at 100 °C, because dissolved salt lowers vapour pressure. Always ask whether the point is sharp and at the reference value before calling a substance pure."
+              "The first trap is melting-point reading. A substance melting over a range is impure, but a substance melting sharply is not necessarily pure — some mixtures melt sharply by coincidence. Sharpness is evidence, not proof, and candidates should state it that way.",
+              "The second trap confuses sublimation with evaporation. Evaporation turns a liquid into vapour; sublimation turns a solid directly into vapour. Camphor and ammonium chloride sublime; water evaporates. The starting state decides the name.",
+              "The third trap mixes decantation with filtration. Decantation pours the liquid off; filtration passes the mixture through a barrier. If the solid is fine enough to pass the filter, decantation fails and centrifugation is the answer.",
+              "The fourth trap is choosing distillation for immiscible liquids. Oil and water separate by decantation long before boiling is needed; distillation is the tool when boiling points differ, not whenever two liquids mix.",
+              "A final trap is over-heating during evaporation to dryness, which decomposes some salts. Gentle heating and crystallisation on cooling are the safe route, and the question usually hints at it by asking for crystals."
             ],
             "bullets": [
-              "Impurities depress the melting point and broaden the range",
-              "Sublimation: solid to vapour; evaporation: liquid to vapour",
-              "Salt solution boils over a range, not sharply at 100 °C"
+              "Sharp melting is evidence, not proof, of purity.",
+              "Sublimation starts from a solid; evaporation from a liquid.",
+              "Decantation pours; filtration traps; centrifugation spins.",
+              "Immiscible liquids separate without boiling."
             ]
           }
         }
