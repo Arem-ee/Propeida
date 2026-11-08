@@ -8011,6 +8011,217 @@
           }
         }
       ]
+    },
+    {
+      "slug": "proteins-and-enzymes",
+      "topic": "organic-compounds",
+      "title": "Proteins and Enzymes",
+      "objective": "Identify the basic structure of proteins, specify the methods and products of hydrolysis, specify the various tests for proteins, and state the functions of enzymes.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Proteins and Enzymes",
+            "paragraphs": [
+              "Meat, eggs, beans and milk all share one building material: protein. This lesson explains what proteins are, how tests find them, and the tiny workers — enzymes — that build and break them."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The structure of proteins",
+            "paragraphs": [
+              "Proteins are polymers of amino acids joined by peptide bonds. Twenty amino acids make all proteins; their sequence and folding decide the protein's shape and job. Insulin, haemoglobin and keratin are all amino-acid chains folded differently.",
+              "Primary structure is the amino-acid sequence. Secondary structure is the local folding into helices and sheets. Tertiary structure is the whole chain folded into a three-dimensional shape — and the shape is the function.",
+              "Denaturation unfolds the shape: heat or acid destroys it, and the protein loses its job. Boiling an egg white is denaturation made visible."
+            ],
+            "bullets": [
+              "Proteins = amino acids joined by peptide bonds.",
+              "Structure: sequence → helix/sheet → 3D fold → function.",
+              "Denaturation unfolds the shape and kills the function."
+            ],
+            "takeaway": "Sequence folds into shape, and shape is the protein's job.",
+            "check": {
+              "question": "The primary structure of a protein is",
+              "options": [
+                "Its three-dimensional fold",
+                "Its amino-acid sequence",
+                "Its helix pattern",
+                "Its denaturation"
+              ],
+              "answer": 1,
+              "why": "Primary structure is the order of amino acids in the chain."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Hydrolysis and the protein tests",
+            "paragraphs": [
+              "Hydrolysis breaks proteins back into amino acids: acid hydrolysis (hot HCl) or enzyme hydrolysis (digestion). The products are the same amino acids the protein was built from — hydrolysis reverses polymerisation.",
+              "The biuret test finds peptide bonds: copper(II) sulfate in alkali gives a violet colour. The ninhydrin test finds amino groups: ninhydrin gives a blue-purple colour. Millon's test finds tyrosine: a red colour with Millon's reagent.",
+              "The xanthoproteic test finds aromatic rings: concentrated nitric acid gives a yellow colour that turns orange with alkali. Each test targets a different feature — bonds, amino groups, or rings."
+            ],
+            "bullets": [
+              "Hydrolysis: protein → amino acids (acid or enzymes).",
+              "Biuret: violet with CuSO₄/alkali (peptide bonds).",
+              "Ninhydrin: blue-purple (amino groups). Millon: red (tyrosine).",
+              "Xanthoproteic: yellow → orange (aromatic rings)."
+            ],
+            "takeaway": "Hydrolysis reverses building; each test targets a different feature.",
+            "check": {
+              "question": "The biuret test for proteins gives",
+              "options": [
+                "A blue-purple colour",
+                "A violet colour",
+                "A red colour",
+                "A yellow colour"
+              ],
+              "answer": 1,
+              "why": "Biuret reagent (CuSO₄ in alkali) gives a violet colour with peptide bonds."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Enzymes and their functions",
+            "paragraphs": [
+              "Enzymes are biological catalysts — proteins that speed reactions without being used up. Amylase breaks starch in the mouth and gut; pepsin breaks proteins in the stomach; catalase breaks hydrogen peroxide in cells.",
+              "Enzymes work by lowering the activation energy: they provide a surface where reactants meet in the right orientation. They do not change the equilibrium or the final yield — only the speed.",
+              "Enzymes are specific: each fits particular substrates, like a lock and key. Temperature and pH control them — heat denatures them, and extreme pH changes their shape, killing their function."
+            ],
+            "bullets": [
+              "Enzymes are protein catalysts, unchanged by the reaction.",
+              "They lower activation energy; they never change yield.",
+              "Specific (lock and key); destroyed by heat and extreme pH."
+            ],
+            "takeaway": "Enzymes are specific protein catalysts that lower the energy hill.",
+            "check": {
+              "question": "An enzyme speeds a reaction by",
+              "options": [
+                "Increasing the temperature",
+                "Lowering the activation energy",
+                "Changing the equilibrium position",
+                "Adding extra reactants"
+              ],
+              "answer": 1,
+              "why": "Enzymes lower the activation energy, so more collisions succeed."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For protein questions, first ask which feature the test targets: bonds (biuret), amino groups (ninhydrin), or rings (xanthoproteic). The feature names the test."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A peptide bond links two amino acids. Calculate the number of peptide bonds in a protein of 100 amino acids.",
+            "steps": [
+              {
+                "operation": "Picture the chain",
+                "reason": "Amino acids join end to end like beads on a string",
+                "result": "100 beads in one chain",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Count the joins",
+                "reason": "Each new amino acid adds one peptide bond",
+                "result": "99 peptide bonds",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "State the rule",
+                "reason": "A chain of n amino acids has n − 1 peptide bonds",
+                "result": "n − 1 = 99 bonds",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A protein has 50 amino acids in one chain. How many peptide bonds does it contain?",
+            "hints": [
+              "Picture beads on a string",
+              "Each amino acid after the first adds one bond",
+              "50 − 1 = 49 bonds"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why shape is function",
+            "paragraphs": [
+              "A protein's shape decides its job: haemoglobin's pocket cradles oxygen, enzymes' clefts fit their substrates, keratin's helices make hair tough. Denaturation unfolds the shape, and the job stops even though the sequence is unchanged.",
+              "That is why boiling an egg white matters: the protein is still there, but unfolded. Function lives in the fold, not the formula.",
+              "Enzymes exploit the same principle: their active sites are shaped for specific substrates. A wrong shape means no reaction — specificity is geometry.",
+              "A candidate who links sequence → fold → function explains every protein question in the syllabus from one chain.",
+              "The same folding logic explains why some proteins are fibres (keratin in hair and nails) and others are globular (haemoglobin in blood). Fibres need strength; globular proteins need pockets.",
+              "A candidate who pictures the fold can predict the job: long fibres for strength, compact globules for carrying and catalysis.",
+              "A candidate who links sequence to fold to function explains every protein question in the syllabus from one chain of reasoning.",
+              "It also pays off in every later structural question, from enzymes to fibres.",
+              "That chain of reasoning is the whole topic in one line."
+            ],
+            "bullets": [
+              "Shape decides the job: pockets, clefts, fibres.",
+              "Denaturation unfolds without breaking the sequence.",
+              "Enzyme specificity is geometry (lock and key).",
+              "One chain: sequence → fold → function."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: How enzymes lower the hill",
+            "paragraphs": [
+              "An enzyme provides an active site where reactants bind in the right orientation, which lowers the activation energy. The reaction then proceeds at body temperature instead of needing heat.",
+              "Because the enzyme is unchanged, it works again and again: one amylase molecule digests thousands of starch molecules. That turnover is why tiny amounts of enzyme do large jobs.",
+              "The enzyme never changes the equilibrium or the yield. It only changes the speed. Any option giving an enzyme control over the final amount reverses its role.",
+              "Heat and pH kill enzymes by denaturing them — unfolding the active site. That is why fever denatures and why cooking kills bacteria: the workers are unfolded.",
+              "Inhibitors exploit the same site: competitive inhibitors block it, non-competitive ones change its shape. Drugs are designed as enzyme inhibitors for exactly this reason.",
+              "The lock-and-key picture thus covers catalysis, inhibition and denaturation in one image. Few models in the syllabus work this hard."
+            ],
+            "bullets": [
+              "Active site lowers activation energy by orientation.",
+              "One enzyme, thousands of reactions (turnover).",
+              "Enzymes never change yield or equilibrium.",
+              "Heat and pH denature — unfolding kills function."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in proteins",
+            "paragraphs": [
+              "The classic trap is the test–feature match. Biuret targets peptide bonds, ninhydrin targets amino groups, Millon targets tyrosine, xanthoproteic targets aromatic rings. Naming the feature first prevents every mismatch.",
+              "The second trap is denaturation versus hydrolysis. Denaturation unfolds the protein (function lost, sequence kept); hydrolysis breaks the sequence (amino acids freed). The two processes are different depths of destruction.",
+              "The third trap is the enzyme's role. Enzymes speed reactions without changing yield or equilibrium. Any option giving an enzyme control over the final amount reverses its role.",
+              "The fourth trap is the peptide bond count. A chain of n amino acids has n − 1 bonds, not n. The first amino acid adds no bond — it starts the chain.",
+              "A final trap is the hydrolysis product. Acid hydrolysis of a protein gives amino acids, not sugars. Any option releasing glucose from a protein confuses the two polymer families."
+            ],
+            "bullets": [
+              "Match each test to its feature before answering.",
+              "Denaturation unfolds; hydrolysis breaks the chain.",
+              "Enzymes never change yield or equilibrium.",
+              "n amino acids = n − 1 peptide bonds."
+            ]
+          }
+        }
+      ]
     }
   ]
 }
