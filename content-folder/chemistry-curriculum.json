@@ -4030,6 +4030,214 @@
           }
         }
       ]
+    },
+    {
+      "slug": "oxygen-water-and-hardness",
+      "topic": "non-metals-and-their-compounds",
+      "title": "Oxygen, Water and Hardness",
+      "objective": "Identify the allotropes of oxygen, determine the significance of ozone, classify the oxides of oxygen and their properties, identify the uses of water, identify the effects of dissolved atmospheric gases in water, distinguish hard from soft water, determine the causes of hardness, identify methods of removing hardness, and describe the treatment of water for town supply, distinguishing water of crystallisation from efflorescence, deliquescence and hygroscopy.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Oxygen, Water and Hardness",
+            "paragraphs": [
+              "Every fire needs oxygen, every tap needs water, and every kettle fights the crust that water leaves behind. This lesson follows oxygen from its making, water from its composition, and the hardness that plagues both."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Oxygen and its oxides",
+            "paragraphs": [
+              "Oxygen is prepared in the laboratory by heating potassium chlorate with manganese(IV) oxide: 2KClO₃ → 2KCl + 3O₂. Industrially it comes from fractional distillation of liquid air. It rekindles a glowing splint, which is its specific test.",
+              "Oxygen supports combustion and oxidation; almost every metal and fuel reacts with it, forming oxides. Oxides are classified by their behaviour with acids and bases: acidic oxides (CO₂, SO₂) react with bases, basic oxides (Na₂O, CaO) react with acids, and amphoteric ones (Al₂O₃, ZnO) react with both.",
+              "Oxygen has a second allotrope, ozone (O₃), formed when oxygen is exposed to ultraviolet light. Ozone is a pale blue gas with a sharp smell. In the stratosphere it absorbs harmful ultraviolet radiation, shielding life on earth."
+            ],
+            "bullets": [
+              "Laboratory: KClO₃ + MnO₂, heated. Industry: fractionating liquid air.",
+              "Test: rekindles a glowing splint.",
+              "Oxides: acidic (CO₂), basic (Na₂O), amphoteric (ZnO), neutral (CO, N₂O).",
+              "Ozone (O₃) blocks harmful ultraviolet radiation."
+            ],
+            "takeaway": "Oxygen rekindles a splint, and its oxides split into four behaviour families.",
+            "check": {
+              "question": "Zinc oxide reacts with both acids and bases. It is",
+              "options": [
+                "A basic oxide",
+                "An acidic oxide",
+                "An amphoteric oxide",
+                "A neutral oxide"
+              ],
+              "answer": 2,
+              "why": "Amphoteric oxides react with both acids and bases, like ZnO and Al₂O₃."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Water: composition, solvent and dissolved gases",
+            "paragraphs": [
+              "Water is the product of burning hydrogen: 2H₂ + O₂ → 2H₂O. By volume, two volumes of hydrogen combine with one of oxygen. Every water molecule is H₂O, and its hydrogen bonding makes water the universal solvent — more substances dissolve in it than in any other liquid.",
+              "Water dissolves atmospheric gases: oxygen for fish to breathe, carbon(IV) oxide for plants, and nitrogen in small amounts. Those dissolved gases are biologically essential — a pond without dissolved oxygen kills its fish.",
+              "Water also dissolves salts, which is why natural waters are never pure. The dissolved load decides the next topic: hardness."
+            ],
+            "bullets": [
+              "2H₂ + O₂ → 2H₂O; by volume 2:1.",
+              "Water is the universal solvent.",
+              "Dissolved O₂ feeds aquatic life; dissolved CO₂ feeds plants."
+            ],
+            "takeaway": "Water is H₂O, a universal solvent, and a carrier of dissolved gases.",
+            "check": {
+              "question": "Two volumes of hydrogen combine with one volume of oxygen to form water. The volume ratio is",
+              "options": [
+                "1:1",
+                "2:1",
+                "1:2",
+                "3:1"
+              ],
+              "answer": 1,
+              "why": "From 2H₂ + O₂ → 2H₂O, hydrogen combines in twice the volume of oxygen."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Hard and soft water",
+            "paragraphs": [
+              "Soft water lathers easily with soap; hard water does not, because dissolved calcium and magnesium salts stop the lather and leave scum. Temporary hardness is caused by hydrogencarbonates and is removed by boiling. Permanent hardness is caused by sulfates and survives boiling.",
+              "Softening removes the calcium and magnesium: boiling for temporary hardness, adding washing soda for permanent hardness, and ion-exchange resins in modern plants. The salts themselves are not removed from the water's chemistry — they are exchanged or precipitated out.",
+              "Water for town supply is treated in stages: screening, coagulation, sedimentation, filtration, chlorination and storage. Each stage removes a different class of impurity, ending with sterile water safe to drink."
+            ],
+            "bullets": [
+              "Hardness = Ca²⁺ and Mg²⁺ salts stop soap lathering.",
+              "Temporary (hydrogencarbonates) removed by boiling.",
+              "Permanent (sulfates) removed by washing soda or ion exchange.",
+              "Town water: screening → coagulation → filtration → chlorination."
+            ],
+            "takeaway": "Temporary hardness boils away; permanent hardness needs chemicals or resins.",
+            "check": {
+              "question": "Temporary hardness of water is removed by",
+              "options": [
+                "Adding washing soda",
+                "Boiling",
+                "Chlorination",
+                "Filtration"
+              ],
+              "answer": 1,
+              "why": "Boiling decomposes the hydrogencarbonates that cause temporary hardness."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For water questions, name the dissolved salt first. Hydrogencarbonates mean temporary hardness; sulfates mean permanent — the salt decides the method."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Classify water that lathers poorly and whose hardness remains after boiling, and name a softening method.",
+            "steps": [
+              {
+                "operation": "Read the lather test",
+                "reason": "Poor lathering means calcium or magnesium salts are present",
+                "result": "The water is hard",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Use the boiling result",
+                "reason": "Hardness surviving boiling is permanent, so it comes from sulfates",
+                "result": "Permanent hardness",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Choose the method",
+                "reason": "Sulfates need a chemical exchange, not heat",
+                "result": "Add washing soda (or use an ion-exchange resin)",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Water lathers poorly but softens on boiling. Classify the hardness and state the cause.",
+            "hints": [
+              "Boiling removes it, so it is temporary",
+              "Temporary hardness comes from hydrogencarbonates",
+              "Name the ion pair: calcium and magnesium hydrogencarbonates"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Water of crystallisation and its three cousins",
+            "paragraphs": [
+              "Crystals grown from water often trap water molecules inside their lattice — water of crystallisation. Blue copper(II) sulfate pentahydrate, CuSO₄·5H₂O, is the classic example: the blue colour is the water, and heating drives it off to leave white anhydrous salt.",
+              "Efflorescence is the opposite journey: a hydrated crystal loses its water of crystallisation to the air and turns powdery. Sodium sulfate decahydrate does this on standing. Deliquescence is the reverse of efflorescence — a salt absorbs so much water it dissolves in the absorbed water, like calcium chloride.",
+              "Hygroscopy is absorbing moisture without dissolving: silica gel soaks water vapour but stays a solid. Deliquescence dissolves; hygroscopy merely dampens. That boundary is the exam distinction.",
+              "The three phenomena are one scale of water affinity: efflorescence loses water, hygroscopy gains it slowly, deliquescence gains it until dissolved. Naming the direction is naming the phenomenon.",
+              "Heating a hydrated crystal therefore removes water of crystallisation and changes its colour in the classic blue-to-white copper sulfate test. The colour change is the visible proof that water was part of the crystal.",
+              "A candidate who links colour to water content can identify events in a heating curve without any further information."
+            ],
+            "bullets": [
+              "Water of crystallisation is trapped in the crystal (CuSO₄·5H₂O).",
+              "Efflorescence loses water to air; deliquescence dissolves in gained water.",
+              "Hygroscopy absorbs moisture without dissolving (silica gel).",
+              "Direction decides the name."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Softening and town water treatment",
+            "paragraphs": [
+              "Washing soda (Na₂CO₃) softens permanent hardness by precipitating the calcium and magnesium sulfates as insoluble carbonates. The water trades its hardness salts for soluble sodium salts, which do not interfere with soap.",
+              "Ion exchange goes further: resins swap Ca²⁺ and Mg²⁺ for Na⁺ or H⁺ ions, removing the hardness without adding anything else. The resin is regenerated with concentrated brine when exhausted.",
+              "Town supply treatment is a sequence, not a single step: screening removes leaves and debris, coagulation and sedimentation settle fine particles, filtration removes the rest, and chlorination kills germs. Each stage removes a different class of impurity.",
+              "Chlorination is last because chlorine would be consumed by the dirt it would otherwise have to kill. Order in treatment is chemistry: first the bulk, then the germs.",
+              "That order also explains why chlorination comes after filtration: filtered water needs far less chlorine, so the dose stays low and the taste stays acceptable. Treatment order is economics as well as chemistry.",
+              "The same sequence, without the chemical stages, is how rain becomes river water and then groundwater — nature runs the same plants at catchment scale."
+            ],
+            "bullets": [
+              "Washing soda precipitates Ca/Mg sulfates as carbonates.",
+              "Resins exchange hardness ions for sodium.",
+              "Treatment order: screening → settling → filtration → chlorination.",
+              "Chlorine works last because dirt would consume it."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in water chemistry",
+            "paragraphs": [
+              "The classic trap is the hardness label. Temporary hardness comes from hydrogencarbonates and boils away; permanent hardness comes from sulfates and does not. The salt names the method, and any option reversing them is false.",
+              "The second trap confuses efflorescence with deliquescence. Efflorescence loses water and turns powdery; deliquescence gains water until it dissolves. The direction of water movement is the discrimination, and the exam tests exactly that.",
+              "The third trap treats ozone as a pollutant. Stratospheric ozone is protective; ground-level ozone is a pollutant. The layer decides the role, just as with the ozone hole item.",
+              "The fourth trap is the volume ratio of water formation. Two volumes of hydrogen combine with one volume of oxygen — candidates who write 1:1 lose the item. From the equation, 2H₂ + O₂ → 2H₂O, the volumes follow directly."
+            ],
+            "bullets": [
+              "Hydrogencarbonates = temporary; sulfates = permanent.",
+              "Efflorescence loses water; deliquescence dissolves in it.",
+              "Stratospheric ozone protects; ground ozone pollutes.",
+              "H₂:O₂ volume ratio in water is 2:1."
+            ]
+          }
+        }
+      ]
     }
   ]
 }
