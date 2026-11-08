@@ -5701,6 +5701,213 @@
           }
         }
       ]
+    },
+    {
+      "slug": "iron-and-steel",
+      "topic": "metals-and-their-compounds",
+      "title": "Iron and Steel",
+      "objective": "Determine the suitable method of extraction of iron, specify its properties and uses, identify the different forms of iron with their compositions, properties and uses, and determine the specific tests for Fe²⁺ and Fe³⁺.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Iron and Steel",
+            "paragraphs": [
+              "A gate, a bridge and a car body all begin as rusty rock in a furnace. This lesson follows iron from its ore to the steel that shapes the modern world."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Extracting iron in the blast furnace",
+            "paragraphs": [
+              "Iron is extracted from haematite ore (Fe₂O₃) by carbon reduction in a blast furnace. The furnace is charged with ore, limestone and coke, and hot air is blown in from the bottom. The coke burns to carbon monoxide, which reduces the oxide: Fe₂O₃ + 3CO → 2Fe + 3CO₂.",
+              "Limestone is the flux: it combines with the sandy impurities to form slag, which floats on the molten iron and is tapped off separately. That is why slag is a useful by-product, not waste.",
+              "Molten iron collects at the bottom and is tapped into moulds. It is run into ingots or taken straight to the steel converters."
+            ],
+            "bullets": [
+              "Ore: haematite (Fe₂O₃); charge: ore + limestone + coke.",
+              "CO reduces the oxide; limestone forms slag with impurities.",
+              "Molten iron tapped at the bottom."
+            ],
+            "takeaway": "Carbon monoxide reduces the ore; limestone flux carries the impurities away as slag.",
+            "check": {
+              "question": "In the blast furnace, the actual reducing agent is",
+              "options": [
+                "Carbon",
+                "Carbon monoxide",
+                "Limestone",
+                "Hot air"
+              ],
+              "answer": 1,
+              "why": "Coke burns to CO, and CO reduces the iron oxide."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Forms of iron and the making of steel",
+            "paragraphs": [
+              "Pig iron is the crude blast-furnace product, rich in carbon (about 4%) and brittle. Wrought iron is nearly pure iron, soft and tough, made by puddling. Cast iron has less carbon than pig iron and is hard but brittle.",
+              "Steel is iron with a controlled small amount of carbon. Stainless steel adds chromium and nickel for rust resistance. The carbon content decides the type: more carbon means harder, stronger steel.",
+              "Steel is made by blowing oxygen through molten pig iron (basic oxygen furnace), which burns away excess carbon and impurities. The controlled burn is the difference between pig iron and steel."
+            ],
+            "bullets": [
+              "Pig iron: ~4% C, brittle. Wrought iron: nearly pure, tough.",
+              "Cast iron: hard, brittle. Steel: controlled carbon.",
+              "Steel: oxygen burns excess carbon from pig iron."
+            ],
+            "takeaway": "Carbon content separates pig iron, cast iron, wrought iron and steel.",
+            "check": {
+              "question": "Steel differs from pig iron in that",
+              "options": [
+                "It contains more carbon",
+                "Its carbon content is controlled and lower",
+                "It is made from pure iron",
+                "It contains no impurities at all"
+              ],
+              "answer": 1,
+              "why": "Steel is pig iron with its carbon burnt down to a controlled level."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Properties, uses and the tests for Fe²⁺ and Fe³⁺",
+            "paragraphs": [
+              "Iron is a grey, magnetic, conducting metal used for gates, beams, tools, machines and vehicles. Its weakness is rusting, which is why it is painted, galvanised or alloyed into steel.",
+              "The test for Fe²⁺ is potassium hexacyanoferrate(III) solution, which gives a deep blue precipitate (Prussian blue). The test for Fe³⁺ is potassium hexacyanoferrate(II), which also gives a blue precipitate — the reagents are swapped in the two tests.",
+              "With sodium hydroxide, Fe²⁺ gives a dirty green precipitate and Fe³⁺ gives a reddish-brown one. The two ions are therefore separable by their precipitate colours as well as by the blue tests."
+            ],
+            "bullets": [
+              "Uses: construction, tools, machines, vehicles.",
+              "Fe²⁺: Prussian blue with hexacyanoferrate(III); dirty green with NaOH.",
+              "Fe³⁺: Prussian blue with hexacyanoferrate(II); reddish-brown with NaOH."
+            ],
+            "takeaway": "Iron's weakness is rust; its two ions give two blue tests and two precipitate colours.",
+            "check": {
+              "question": "The test for Fe³⁺ uses",
+              "options": [
+                "Potassium hexacyanoferrate(III)",
+                "Potassium hexacyanoferrate(II)",
+                "Sodium hydroxide only",
+                "Limewater"
+              ],
+              "answer": 1,
+              "why": "Fe³⁺ with hexacyanoferrate(II) gives Prussian blue; the reagent is the other iron complex."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For blast furnace items, always separate the three jobs: coke burns, carbon monoxide reduces, limestone fluxes. Mixing them loses the mark."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "In the blast furnace, haematite is reduced by carbon monoxide. Write the equation for Fe₂O₃ + CO → Fe + CO₂.",
+            "steps": [
+              {
+                "operation": "Balance the iron atoms",
+                "reason": "Two irons on the left need two on the right",
+                "result": "Fe₂O₃ + CO → 2Fe + CO₂",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Balance the oxygen atoms",
+                "reason": "Three oxygens on the left must all appear in CO₂",
+                "result": "Fe₂O₃ + 3CO → 2Fe + 3CO₂",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Check carbon and oxygen together",
+                "reason": "Three carbons and three oxygens each side",
+                "result": "Fe₂O₃ + 3CO → 2Fe + 3CO₂ balanced",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Why is limestone added to the blast furnace charge? Give its chemical role.",
+            "hints": [
+              "Impurities in the ore are sandy (silicon dioxide)",
+              "Limestone reacts with the sand to form slag",
+              "Slag floats on the iron and is tapped off"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why the furnace is a blast furnace",
+            "paragraphs": [
+              "The name comes from the blast: hot air is forced in at the bottom, and the rising gases meet the descending charge in counter-current. That arrangement maximises contact between gas and solid, which is why the furnace is tall and narrow.",
+              "The temperature also grades from bottom to top: hottest near the blast, cooler at the mouth. Different furnace zones do different jobs — drying at the top, reduction in the middle, melting at the bottom.",
+              "The slag is molten throughout, floating because it is less dense than iron. Two liquids tapped separately is the whole separation, driven by density alone.",
+              "A candidate who pictures the counter-current flow and the two liquids understands the furnace as a machine, not a list of facts.",
+              "The rising hot gases also preheat and dry the incoming charge, so the furnace recovers its own heat. That counter-current economy is what makes the process continuous rather than batch.",
+              "A candidate who traces the gases upward and the charge downward sees why the furnace can run for years without stopping."
+            ],
+            "bullets": [
+              "Blast = hot air forced in; counter-current maximises contact.",
+              "Temperature grades bottom (hottest) to top (driest).",
+              "Slag floats on iron — two liquids, tapped separately.",
+              "The furnace is a machine, not a list."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Carbon decides the form of iron",
+            "paragraphs": [
+              "Pure iron (wrought iron) is soft and tough because its crystals slide past each other. Adding carbon pins those slides: more carbon means harder and stronger, up to a point, then brittle. Pig iron at 4% carbon is brittle precisely because the pinning is total.",
+              "Steelmakers live on that curve: mild steel (under 0.3% carbon) for beams and bodywork, high-carbon steel for tools and springs. Strength and brittleness are traded along one axis.",
+              "Stainless steel adds chromium, whose oxide film protects like aluminium's. The same film logic that saves aluminium saves stainless steel — different metal, same chemistry.",
+              "The exam chain is therefore: carbon content → properties → use. Naming the carbon percentage is naming the form.",
+              "The same curve explains why pure iron was forged for centuries before steel: without controlled carbon, the smith could only choose between soft wrought iron and brittle cast iron.",
+              "Modern steelmaking is therefore carbon management — burning exactly the right amount down from pig iron. The oxygen lance in a converter is a carbon-removal tool, not a purifier in general."
+            ],
+            "bullets": [
+              "Pure iron is soft; carbon pins crystal slides.",
+              "Mild steel (<0.3% C) for beams; high-carbon for tools.",
+              "Stainless steel's chromium film resists rust like aluminium.",
+              "Carbon percentage names the form."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in iron chemistry",
+            "paragraphs": [
+              "The classic trap is the reducing agent. Coke burns, but carbon monoxide reduces the ore. Any option naming carbon as the reducer reverses the furnace's chemistry.",
+              "The second trap is limestone's role. Limestone is a flux forming slag, not a fuel and not a reducer. Burning is coke's job; fluxing is limestone's.",
+              "The third trap is the iron(II)/iron(III) test swap. Fe²⁺ uses hexacyanoferrate(III); Fe³⁺ uses hexacyanoferrate(II). The reagents cross — answering the same reagent for both fails both items.",
+              "The fourth trap is wrought versus cast iron. Wrought is nearly pure and tough; cast is hard and brittle. Toughness belongs to the purer form, not the harder one.",
+              "A final trap is the direction of steelmaking. Oxygen removes carbon from pig iron to make steel; it never adds carbon. Any option describing carbon addition in a converter reverses the process."
+            ],
+            "bullets": [
+              "CO reduces; coke burns; limestone fluxes.",
+              "Fe²⁺ → hexacyanoferrate(III); Fe³⁺ → hexacyanoferrate(II).",
+              "Wrought iron is tough; cast iron is brittle.",
+              "Crossed reagents, crossed reputations."
+            ]
+          }
+        }
+      ]
     }
   ]
 }
