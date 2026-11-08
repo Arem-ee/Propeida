@@ -72,7 +72,7 @@
           "content": {
             "heading": "Atomic Structure",
             "paragraphs": [
-              "A bottle labelled chlorine may hold atoms, molecules or ions, and only the particle count tells which. This lesson separates the three, traces the atomic model and uses atomic numbers to count particles."
+              "Everything you have ever touched — including you — is built from particles too small to see. Those particles come in shapes you already know from daily life: single beads, beads joined in pairs, and beads that have gained or lost a charge. Chemistry starts by naming those three shapes correctly."
             ],
             "bullets": []
           }
@@ -80,18 +80,16 @@
         {
           "type": "text",
           "content": {
-            "heading": "Atoms, molecules, ions and the researchers",
+            "heading": "Atoms, molecules and ions in daily words",
             "paragraphs": [
-              "A student writes Na, Na+ and NaCl as if all three mean the same particle. The first is a single atom, the second a charged atom and the third a formula unit, so the distinction changes the answer.",
-              "Dalton said elements are made of indivisible atoms combining in simple whole-number ratios. Thomson found the electron in cathode rays and pictured positive pudding studded with negatives. Rutherford scattered alpha particles off gold foil, revealing a tiny nucleus holding most mass.",
-              "Moseley's X-rays showed atomic number fixes an element, while Millikan measured charge e. Bohr placed electrons in fixed shells, explaining definite spectral lines."
+              "An atom is one single bead of an element, like one grain of rice. A molecule is atoms holding hands, like a short string of grains. An ion is an atom that has gained or lost an electron, so it carries a charge.",
+              "Protons are positive, neutrons neutral. H and He are atoms; H₂O is a molecule; Na⁺ is an ion. Dalton: indivisible atoms in whole-number ratios. Thomson: electron. Rutherford: tiny nucleus. Moseley: atomic number fixes identity. Millikan: charge e. Bohr: shells."
             ],
             "bullets": [
-              "Atom: smallest unit of an element; molecule: bonded atoms; ion: charged atom or molecule.",
-              "Dalton: indivisible atoms; Thomson: electron; Rutherford: nucleus; Bohr: shells; Moseley: atomic number; Millikan: charge e.",
-              "A charged particle is an ion, not a new element."
+              "Atom: one single bead. Molecule: beads holding hands. Ion: a charged bead.",
+              "Dalton, Thomson, Rutherford, Moseley, Millikan, Bohr: one idea each."
             ],
-            "takeaway": "Atoms are single units, molecules are bonded units and ions carry a net charge.",
+            "takeaway": "Atoms are single beads, molecules are joined beads, and ions carry a charge.",
             "check": {
               "question": "Which statement correctly distinguishes the three particles?",
               "options": [
@@ -101,25 +99,24 @@
                 "Na, Na+ and NaCl are all molecules"
               ],
               "answer": 1,
-              "why": "Na is a single atom, Na+ is the atom minus one electron and NaCl is a formula unit, not a discrete molecule."
+              "why": "Na is a single atom, Na+ is that atom minus one electron, and NaCl is a formula unit, not a discrete molecule."
             }
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Counting particles and relative atomic mass",
+            "heading": "Counting the three parts of an atom",
             "paragraphs": [
-              "A label reads 35Cl but asks also for neutrons. Without using the atomic number the count is impossible, because the top number alone never tells protons.",
-              "Atomic number Z is the proton count and fixes identity. Mass number A is protons plus neutrons, and electrons equal protons in a neutral atom. Therefore neutrons equal A minus Z, and an ion gains or loses electrons without changing Z or A.",
-              "Isotopes are atoms of one element with the same Z but different A, as in 35Cl and 37Cl. Relative atomic mass averages isotopes by abundance: RAM = sum of (abundance x isotope mass) / 100. For chlorine, (75 x 35 + 25 x 37) / 100 = 35.5."
+              "Think of the atom as a class of people. The proton count names the element, like a school name tag. That count is the atomic number, Z. Protons plus neutrons is the mass number, A. A neutral atom has as many electrons as protons, so electrons = Z.",
+              "Neutrons are simply what is left: neutrons = A − Z. Chlorine has Z = 17, so 17 protons and normally 17 electrons. Isotopes are family members differing only in neutrons, like ³⁵Cl and ³⁷Cl. The relative atomic mass is the weighted average: (75 × 35 + 25 × 37) ÷ 100 = 35.5."
             ],
             "bullets": [
-              "Protons = Z; neutrons = A minus Z; electrons = Z unless charged.",
-              "Isotopes share Z but differ in A and neutron count.",
-              "RAM uses 75% Cl-35 and 25% Cl-37 to give 35.5."
+              "Z = protons = the element’s identity.",
+              "Neutrons = A − Z; electrons = Z when neutral.",
+              "RAM weights isotopes by abundance, not plain average."
             ],
-            "takeaway": "Z counts protons, A minus Z counts neutrons, and abundance weights isotopes.",
+            "takeaway": "Z counts protons, A − Z counts neutrons, and abundance sets the average.",
             "check": {
               "question": "For 37Cl, how many protons and neutrons does one atom contain?",
               "options": [
@@ -129,25 +126,25 @@
                 "20 protons and 17 neutrons"
               ],
               "answer": 1,
-              "why": "Chlorine has Z = 17, so protons = 17 and neutrons = 37 - 17 = 20."
+              "why": "Chlorine has Z = 17, so protons = 17 and neutrons = 37 − 17 = 20."
             }
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Quantum numbers, filling rules and shapes",
+            "heading": "Shells, addresses and shapes",
             "paragraphs": [
-              "Two electrons in carbon try to share the same address. The rules forbid that, because each electron needs a unique set of quantum numbers.",
-              "Principal n gives the shell, angular l gives subshell type, magnetic ml gives orientation and spin ms gives direction. Aufbau fills lowest energy first, Hund spreads electrons singly first with parallel spins, and Pauli allows at most two per orbital with opposite spins.",
-              "Following the order gives hydrogen 1s1 and chlorine (Z = 17) 1s2 2s2 2p6 3s2 3p5. An s orbital is spherical with maximum two electrons, while a p subshell has three dumbbell orbitals holding six. Diagrams for Z up to 20 therefore need only s and p shapes."
+              "Electrons live on floors (shells) around the nucleus, in rooms called orbitals. Each electron has an address of four quantum numbers: n names the floor, l the room type, ml the exact room, and ms the spin direction.",
+              "Three rules govern filling. Aufbau fills the lowest rooms first, like front seats. Hund spreads electrons singly before pairing, like students taking separate seats. Pauli allows at most two electrons per room, spinning opposite ways.",
+              "An s orbital is a round cloud holding 2 electrons; a p subshell has three dumbbells holding 6. Chlorine (Z = 17) arranges as 1s² 2s² 2p⁶ 3s² 3p⁵ — count them: 2 + 2 + 6 + 2 + 5 = 17."
             ],
             "bullets": [
-              "n = shell; l = subshell; ml = orientation; ms = spin.",
-              "Aufbau: lowest first; Hund: singly first; Pauli: opposite spins share.",
-              "s: sphere, 2 electrons; p: three dumbbells, 6 electrons."
+              "Shells are floors; orbitals are rooms; quantum numbers are addresses.",
+              "Aufbau: lowest first. Hund: singly first. Pauli: two at most.",
+              "s = round cloud (2); p = three dumbbells (6)."
             ],
-            "takeaway": "Four quantum numbers label each electron and three rules govern filling.",
+            "takeaway": "Four quantum numbers address each electron, and three rules govern the filling.",
             "check": {
               "question": "Which set obeyed the Pauli principle for two electrons?",
               "options": [
@@ -166,7 +163,7 @@
           "content": {
             "title": "Exam tip",
             "tone": "tip",
-            "body": "When a question gives both numbers, write A and Z first, then get neutrons as A minus Z and electrons from Z. For relative atomic mass, multiply each abundance by its mass number before adding."
+            "body": "Before any electron-configuration answer, write Z first and count your electrons to match it. Most lost marks come from a total that does not equal Z."
           }
         },
         {
@@ -176,20 +173,20 @@
             "steps": [
               {
                 "operation": "Write the abundances",
-                "reason": "RAM is a weighted average, so each isotope must be weighted by its share.",
-                "result": "Cl-35 at 75% and Cl-37 at 25%.",
+                "reason": "Most atoms are Cl-35 and a quarter are Cl-37",
+                "result": "Cl-35 at 75% and Cl-37 at 25%",
                 "predictPrompt": ""
               },
               {
                 "operation": "Multiply and add",
-                "reason": "Each product is abundance times mass, and the sum is divided by 100.",
-                "result": "75 x 35 = 2625 and 25 x 37 = 925; sum = 3550.",
+                "reason": "Each mass is weighted by how common it is",
+                "result": "75 × 35 = 2625 and 25 × 37 = 925; sum = 3550",
                 "predictPrompt": ""
               },
               {
                 "operation": "Divide by 100",
-                "reason": "Abundances sum to 100%, so division gives the mean mass.",
-                "result": "3550 / 100 = 35.5.",
+                "reason": "Percentages must return to a per-atom average",
+                "result": "3550 ÷ 100 = 35.5",
                 "predictPrompt": ""
               }
             ]
@@ -200,9 +197,9 @@
           "content": {
             "question": "Bromine has isotopes Br-79 (50%) and Br-81 (50%). Calculate its relative atomic mass.",
             "hints": [
-              "Write each abundance times its mass number.",
-              "Add the two products: 50 x 79 + 50 x 81.",
-              "Divide the sum by 100."
+              "Multiply each mass by its percentage",
+              "Add the two products",
+              "Divide the sum by 100"
             ]
           }
         },
@@ -211,16 +208,16 @@
           "content": {
             "heading": "Go deeper: Why mass number and atomic number differ",
             "paragraphs": [
-              "Atomic number counts protons, the particles with positive charge that define element identity. Change the proton count and the element changes, which is why sodium with eleven protons can never become magnesium with twelve by a chemical reaction.",
-              "Mass number counts nucleons, protons plus neutrons together, because almost all atomic mass sits in the nucleus. Neutrons carry mass but no charge, so an atom can gain neutrons without changing its chemical identity or its proton number.",
-              "That split explains isotopes directly. Carbon-12 has six protons and six neutrons, while carbon-14 has six protons and eight neutrons, so both are carbon despite different mass numbers. The extra neutrons change mass and nuclear stability, not chemical behaviour in simple reactions.",
-              "The same split also explains a different confusion. Calcium-40 has twenty protons and twenty neutrons, while argon-40 has eighteen protons and twenty-two neutrons, so both share mass number forty but are entirely different elements. Sharing A never means sharing Z.",
-              "Electrons contribute almost nothing to mass because each is about one eighteen-hundredth as heavy as a proton. That tiny mass is why A ignores electrons and why adding or removing one electron to form an ion leaves mass number unchanged."
+              "Atomic number Z and mass number A answer different questions. Z asks what element it is — the proton count decides the family. A asks how heavy the atom is — protons plus neutrons. Two atoms can share the same Z and still have different A, which is exactly what isotopes are.",
+              "Chlorine shows the pair: ³⁵Cl and ³⁷Cl both have Z = 17 but differ in neutrons (18 versus 20). Calcium-40 and argon-40 show the reverse: same A = 40, but different Z (20 versus 18), so they are different elements with the same mass.",
+              "That is why the periodic table is ordered by Z and not by A. Moseley's X-ray work showed Z fixes identity, and the occasional inversion in mass order (argon before potassium) disappears once Z takes over. Mass decides average weight; proton count decides identity.",
+              "A useful habit: read the numbers in order — top number A, bottom number Z in the usual symbol — and ask first what Z says, then what A adds. Most isotope errors come from reading the two numbers as one idea."
             ],
             "bullets": [
-              "Z = protons and fixes element identity.",
-              "A = protons plus neutrons and fixes nucleus mass.",
-              "Same Z can have different A as isotopes; same A can hide different Z."
+              "Z = identity; A = weight; they are not the same idea.",
+              "Same Z, different A = isotopes; same A, different Z = different elements.",
+              "The table is ordered by Z (Moseley), not by mass.",
+              "Read Z first, then ask what A adds."
             ]
           }
         },
@@ -229,16 +226,16 @@
           "content": {
             "heading": "Go deeper: Why the octet is stable",
             "paragraphs": [
-              "An outer shell with eight electrons, arranged as two s and six p electrons, is a particularly low-energy arrangement. The next electron would have to enter a higher shell, so atoms with a full outer shell tend to keep it rather than gain or lose electrons easily.",
-              "That full-shell arrangement is the noble gas configuration seen in neon, with one s two plus two s two plus two p six giving eight electrons in the second shell. Helium is the exception that proves the rule, because a filled first shell holds only two electrons and is already stable.",
-              "Stability here is about energy, not about a magic number. Losing an electron from a full shell costs more energy than gaining one costs to place in the next higher level, so simple energy arguments already favour leaving the shell alone.",
-              "Period two shows the idea cleanly. Oxygen with eight electrons fills the first shell completely and holds six in the second, so it sits just two electrons short of the stable eight. Atoms in that position are more reactive than neon, which already holds the full set.",
-              "The octet is therefore a useful stability guide for light elements, not a universal law of chemistry. Larger atoms can hold more than eight in a shell, and any deeper account of how full shells relate to reaction behaviour belongs to bonding, which follows atomic structure in the syllabus."
+              "Atoms behave like small rooms whose outer shell wants eight electrons — the octet. Sodium (2,8,1) has one electron in its outer shell and loses it to become Na⁺ with a full (2,8) shell, which is why sodium reacts so eagerly. Chlorine (2,8,7) gains one electron to reach Cl⁻ (2,8,8), completing its octet.",
+              "Helium is the exception that proves the rule: its shell holds only two electrons (1s²), the duet, and it is completely inert. Noble gases are inert because their outer shells are already full, and other atoms become stable by matching that arrangement.",
+              "This one idea predicts bonding and ion formation. Elements on the left of the table lose electrons to reach a full shell; elements on the right gain them. Hydrogen and helium are the only elements that stop at two.",
+              "The octet also explains why metals are conductive and why some compounds form lattice structures: ions with full shells pack stably. Every later lesson on bonding leans on this idea, so it is worth understanding before moving on."
             ],
             "bullets": [
-              "Octet means two s plus six p electrons in the outer shell.",
-              "Noble gas configuration is a full outer shell with low energy.",
-              "Helium duet of two is full for the first shell."
+              "Outer shell wants 8 electrons (octet); helium wants 2 (duet).",
+              "Na loses 1 to fill its shell; Cl gains 1 to fill its own.",
+              "Reached-octet atoms are stable and unreactive.",
+              "Bonding predictions start from this rule."
             ]
           }
         },
@@ -247,16 +244,16 @@
           "content": {
             "heading": "Go deeper: Exam traps in atomic structure",
             "paragraphs": [
-              "The commonest trap swaps mass number and atomic number. A candidate who reports thirty-seven protons for 37Cl has used A where Z was needed, while one who reports seventeen neutrons has subtracted wrongly. Writing both A and Z before any subtraction prevents the swap in one move.",
-              "A second trap appears in relative atomic mass. Adding the isotope masses and dividing by the number of isotopes gives thirty-six for chlorine, which ignores abundance entirely. Only the weighted sum with percentages gives thirty-five point five, because the heavier isotope is rarer.",
-              "A third trap violates Pauli in a written configuration. Three electrons in one orbital, or two electrons with identical spin in the same orbital, both break the rule that an orbital holds at most two opposite-spin electrons. Any such option can be crossed out at once.",
-              "A fourth trap misapplies Hund by pairing electrons too early. In a p subshell the three orbitals each take one electron with parallel spin before any pairing begins. A configuration that fills one orbital with two before the other two are occupied therefore breaks Hund even if the total count looks right.",
-              "A fifth trap forgets that ions change electron count only. Sodium atom with eleven electrons becomes Na plus with ten without touching its eleven protons. Answers that change Z or A for an ion have mistaken charge for identity."
+              "The commonest trap is swapping the two numbers: writing A as the proton count or Z as the mass. The question 'how many protons in ⁴⁰₂₀Ca?' tests exactly that: 20, from Z, not 40. Always hunt for Z first.",
+              "The second trap is the plain average of isotope masses. The RAM of chlorine is not (35 + 37) ÷ 2 = 36; it is abundance-weighted and equals 35.5. Averages in chemistry are weighted by how common each part is.",
+              "The third trap is electron-counting for ions. Na⁺ has 10 electrons, not 11, because losing one electron changes only the electron count — Z and A stay put. Cl⁻ has 18 electrons for the same reason in reverse.",
+              "The fourth trap is configuration totals. After writing a configuration, add the superscripts and check the sum against Z. A sum that does not match Z means the arrangement is wrong, no matter how neatly it looks."
             ],
             "bullets": [
-              "Write A and Z first; never let one do the other's job.",
-              "RAM needs abundance weights, not a plain average of masses.",
-              "One orbital: at most two electrons, opposite spins, singly before paired."
+              "Protons come from Z, never from A.",
+              "RAM is abundance-weighted, not a plain average.",
+              "Ions change electron count only; Z and A stay fixed.",
+              "Check configuration totals against Z every time."
             ]
           }
         }
