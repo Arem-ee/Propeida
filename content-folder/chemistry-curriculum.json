@@ -5492,6 +5492,215 @@
           }
         }
       ]
+    },
+    {
+      "slug": "aluminium-and-tin",
+      "topic": "metals-and-their-compounds",
+      "title": "Aluminium and Tin",
+      "objective": "Specify the method of purification of bauxite, the electrolytic extraction of aluminium, the properties and uses of aluminium and its compounds, and determine the test for Al³⁺; specify the ores of tin, relate the method of extraction to its properties, and specify the uses of tin.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Aluminium and Tin",
+            "paragraphs": [
+              "A cooking pot that does not rust and a food tin that seals tight are both made from metals pulled out of rock by electricity and fire. This lesson follows aluminium from its ore to its tests, and tin from its ore to its uses."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Aluminium: purification and extraction",
+            "paragraphs": [
+              "Bauxite is the ore of aluminium, a reddish rock rich in aluminium oxide. It is purified by the Bayer process: the oxide dissolves in hot concentrated NaOH, impurities are filtered off, and pure aluminium oxide precipitates and is calcined. That pure oxide is called alumina.",
+              "Alumina is electrolysed dissolved in cryolite (Na₃AlF₆), which lowers its melting point and saves energy. At the cathode, aluminium ions gain electrons and deposit as metal; at the carbon anode, oxide ions discharge as oxygen, which burns the anode away.",
+              "Aluminium sits high in the reactivity series, so carbon cannot reduce it — only electrolysis wins its electrons. Its extraction is therefore electricity-hungry, which is why aluminium is made near cheap power."
+            ],
+            "bullets": [
+              "Bayer process purifies bauxite to alumina.",
+              "Alumina electrolysed in cryolite; oxygen burns the anode.",
+              "Aluminium needs electrolysis because it sits high in the series."
+            ],
+            "takeaway": "Bauxite is purified to alumina, and alumina is electrolysed in cryolite.",
+            "check": {
+              "question": "Aluminium is extracted by electrolysis rather than carbon reduction because",
+              "options": [
+                "It is too reactive for carbon to displace it",
+                "It melts at too low a temperature",
+                "Carbon is more expensive",
+                "It does not occur in nature"
+              ],
+              "answer": 0,
+              "why": "Aluminium sits high in the series; carbon cannot pull its electrons away."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Properties, uses and the test for Al³⁺",
+            "paragraphs": [
+              "Aluminium is light (density one-third of iron), does not rust because its oxide film seals it, conducts well, and is malleable. Those four properties explain its uses: aircraft bodies, cooking pots, overhead cables and foil.",
+              "Its compounds include aluminium oxide (the abrasive itself), aluminium chloride and aluminium sulfate (used in water treatment). The oxide film is amphoteric: it reacts with both acids and bases, which is why aluminium dissolves in both.",
+              "The test for Al³⁺ is sodium hydroxide solution, which gives a white gelatinous precipitate of Al(OH)₃ that dissolves in excess NaOH. That double behaviour — precipitate, then dissolve — is specific to aluminium."
+            ],
+            "bullets": [
+              "Light, rust-proof (oxide film), conducting, malleable.",
+              "Uses: aircraft, pots, cables, foil.",
+              "Al³⁺ test: white gelatinous precipitate with NaOH, soluble in excess."
+            ],
+            "takeaway": "Aluminium's oxide film makes it light, rust-proof and useful — and Al³⁺ precipitates white with NaOH.",
+            "check": {
+              "question": "The test for Al³⁺ with sodium hydroxide solution gives",
+              "options": [
+                "A brown precipitate",
+                "A white gelatinous precipitate that dissolves in excess NaOH",
+                "A green solution",
+                "No reaction"
+              ],
+              "answer": 1,
+              "why": "Al(OH)₃ is white and gelatinous, and it dissolves in excess alkali."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Tin: ore, extraction and uses",
+            "paragraphs": [
+              "Tin is mined from cassiterite ore (SnO₂). The ore is concentrated by gravity because cassiterite is dense, then reduced with carbon in a furnace: SnO₂ + C → Sn + CO₂. Carbon works because tin sits low in the reactivity series.",
+              "Tin is a soft, silvery metal that resists corrosion and is used to coat iron (tin plate for food cans), in alloys like soft solder and bronze, and in some electrical work. Tin plate protects because tin forms a barrier — but as the earlier lesson showed, a scratched coating lets iron rust faster.",
+              "Tin's uses follow its properties: low melting point for soldering, corrosion resistance for coating, and softness for alloying. Each use is a property read off the metal."
+            ],
+            "bullets": [
+              "Ore: cassiterite (SnO₂); extraction by carbon reduction.",
+              "Uses: tin plate, soft solder, bronze, electrical work.",
+              "Scratched tin plate accelerates rusting of iron."
+            ],
+            "takeaway": "Tin comes from cassiterite by carbon reduction and coats iron against rust.",
+            "check": {
+              "question": "Tin is extracted from cassiterite by",
+              "options": [
+                "Electrolysis",
+                "Carbon reduction",
+                "Heating with steam",
+                "Fractional distillation"
+              ],
+              "answer": 1,
+              "why": "Tin sits low in the series, so carbon displaces it from its oxide."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For extraction questions, locate the metal in the series first. The position names the method — electrolysis, carbon, or found free — every time."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Alumina is electrolysed in cryolite. At which electrode does aluminium form, and why not carbon reduction?",
+            "steps": [
+              {
+                "operation": "Locate aluminium in the series",
+                "reason": "Aluminium sits above zinc and iron",
+                "result": "Al is above Zn and Fe",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Decide carbon reduction",
+                "reason": "Carbon cannot displace a metal above zinc",
+                "result": "Carbon fails; electrolysis is needed",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Name the electrode",
+                "reason": "Metal ions gain electrons at the cathode",
+                "result": "Aluminium deposits at the cathode",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Tin is extracted by carbon reduction. What does that tell you about tin's position in the series?",
+            "hints": [
+              "Carbon displaces only metals below zinc",
+              "Tin is extracted this way, so tin sits below zinc",
+              "The series position is the explanation"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why cryolite is there",
+            "paragraphs": [
+              "Aluminium oxide melts above 2000 °C, far too hot for an economical cell. Cryolite (Na₃AlF₆) dissolves alumina and drops the melting point to about 950 °C. That single addition makes the whole industry affordable.",
+              "Cryolite also conducts, which alumina alone does not. The electrolyte needs the salt for both melting point and conductivity — one mineral doing two jobs.",
+              "The anode is consumed because the oxygen released burns carbon to carbon dioxide. Anodes are therefore replaced regularly, a running cost unique to aluminium smelting.",
+              "A candidate who names cryolite's two jobs — melting point and conductivity — has explained the cell completely.",
+              "The cryolite also protects the cell lining from the corrosive melt, extending the furnace life. One mineral thus serves melting point, conductivity and furnace protection together.",
+              "A candidate who lists all three jobs has shown the complete picture; most answers name only the melting point.",
+              "The cells run day and night because stopping them would freeze the bath. Aluminium smelting is therefore a continuous process anchored to cheap electricity more than to any other input.",
+              "That continuity is also why aluminium recycling needs only a twentieth of the energy: melting scrap avoids the whole extraction chain."
+            ],
+            "bullets": [
+              "Cryolite drops alumina melting point to ~950 °C.",
+              "Cryolite also conducts — two jobs, one mineral.",
+              "Released oxygen burns the carbon anode.",
+              "Anodes are replaced regularly in smelting."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why aluminium does not rust",
+            "paragraphs": [
+              "Aluminium's oxide film is thin, transparent and self-healing: scratch it and the metal underneath oxidises again to seal the scratch. That self-repair is why pots and aircraft skins last for decades in rain.",
+              "The film is amphoteric — it dissolves in both acids and bases — which is why aluminium cookware is attacked by strong alkalis and why aluminium dissolves in both HCl and NaOH.",
+              "Iron's rust, by contrast, is porous and does not seal. Aluminium protects itself; iron does not. That single difference explains the durability of two metals in the same rain.",
+              "The exam contrast is therefore structural: a sealing film versus a non-sealing one. Naming the film is naming the explanation.",
+              "Anodising thickens that film deliberately by electrolysing aluminium in an acid bath, growing a harder, coloured coating used on cooking pots and aircraft parts.",
+              "The film logic also explains aluminium foil: it seals the food inside from air and moisture the same way it seals the metal from rust."
+            ],
+            "bullets": [
+              "Aluminium oxide film seals scratches by re-oxidising.",
+              "The film is amphoteric (reacts with acids and bases).",
+              "Iron rust is porous and never seals.",
+              "Sealing film vs non-sealing rust decides durability."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in aluminium and tin",
+            "paragraphs": [
+              "The classic trap is the bauxite step. The Bayer process purifies bauxite to alumina; electrolysis extracts the metal from alumina. Naming electrolysis as the purification reverses the factory order.",
+              "The second trap is the anode. Released oxygen burns the carbon anode, so the anode shrinks during electrolysis. Any option claiming the anode is inert is false.",
+              "The third trap is tin's protection. Tin plate barriers iron, but scratched tin accelerates rusting because iron becomes the anode. The coating protects only while whole.",
+              "The fourth trap is the Al³⁺ test direction. The precipitate dissolves in excess NaOH — the two-step behaviour separates aluminium from iron(III), whose precipitate does not dissolve.",
+              "A final trap is the extraction of tin. Cassiterite reduction uses carbon because tin sits below zinc in the series; any option giving electrolysis for tin reverses the series logic."
+            ],
+            "bullets": [
+              "Bayer purifies; electrolysis extracts — do not reverse them.",
+              "The carbon anode burns away in the cell.",
+              "Scratched tin accelerates iron rusting.",
+              "Al(OH)₃ dissolves in excess NaOH; Fe(OH)₃ does not."
+            ]
+          }
+        }
+      ]
     }
   ]
 }
