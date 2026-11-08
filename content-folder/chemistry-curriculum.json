@@ -1303,7 +1303,7 @@
           "content": {
             "heading": "Solubility",
             "paragraphs": [
-              "A trader in Kano asks why sugar vanishes in hot tea but fog still hangs in the air. This lesson separates solutions that can hold more, those that are full, and mixtures that only look dissolved."
+              "A spoon of sugar disappears into tea while grits stay at the bottom. The sugar dissolved; the grits did not. Solubility is simply how much of a substance a given amount of liquid can dissolve — and this lesson explains the limits."
             ],
             "bullets": []
           }
@@ -1311,17 +1311,18 @@
         {
           "type": "text",
           "content": {
-            "heading": "Unsaturated, saturated and supersaturated solutions",
+            "heading": "Full, not full, and over-full",
             "paragraphs": [
-              "A student stirs sugar into water and it vanishes at once, then stirs more until grains refuse to dissolve. That refusal marks saturation, while the earlier stage was unsaturated and choosing the right dose matters. Unsaturated solution holds less than the maximum at that temperature, saturated holds the maximum and supersaturated holds more than the maximum.",
-              "Most salts rise with temperature because warming helps the solid break its lattice, so hot water dissolves more. Gases fall with temperature because warm water holds less dissolved gas, which is why fizzy drinks go flat faster on a hot day. A solubility curve plots grams dissolved per 100 cm³ of water against temperature, so a point below the curve is unsaturated, on the curve is saturated and above the curve is supersaturated."
+              "An unsaturated solution can still dissolve more, like a half-filled cup. A saturated solution is full: at that temperature it can dissolve no more, and any extra solid settles. A supersaturated solution is over-full — it holds more than the limit because it was cooled carefully without anything to start crystallisation.",
+              "A solubility curve shows how much dissolves at each temperature. Most salts dissolve more as water warms, so their curve climbs. Gases behave oppositely: oxygen dissolves less in warm water, which is why warm water holds less dissolved air for fish.",
+              "Solubility is written in mol/dm³: moles of solute per cubic decimetre of solution. At saturation, the concentration is fixed by the temperature, not by how much solid you added — extra solid just sits at the bottom."
             ],
             "bullets": [
-              "Unsaturated holds less than the maximum; saturated holds the maximum; supersaturated holds more.",
-              "Read solubility at a temperature directly from the curve.",
-              "Most salts rise with temperature; gases fall with temperature."
+              "Unsaturated: more can dissolve. Saturated: full. Supersaturated: over-full.",
+              "Most salts dissolve more when hot; gases dissolve less when hot.",
+              "Solubility = moles of solute per dm³ of saturated solution."
             ],
-            "takeaway": "Below the curve is unsaturated, on it saturated, above it supersaturated.",
+            "takeaway": "Solubility is a limit set by temperature, and the curve shows how it moves.",
             "check": {
               "question": "A solution holds more solute than the maximum at that temperature. What is it?",
               "options": [
@@ -1338,17 +1339,18 @@
         {
           "type": "text",
           "content": {
-            "heading": "Solubility in mol/dm³ and solvents for stains",
+            "heading": "Calculating solubility and choosing solvents",
             "paragraphs": [
-              "A dyer in Kano finds grease on a sleeve and wonders why water alone will not lift it. She needs two ideas: how much dissolves in a given volume and which liquid dissolves that dirt. Molar solubility is moles of solute dissolved per dm³ of solution at saturation, so c = n ÷ V with n = m ÷ M.",
-              "A solvent dissolves a stain only when like dissolves like: polar water lifts polar sweat and salts. Oils, grease and most paints need organic solvents such as petrol or turpentine because they share non-polar character. That match decides the cleaner, not the strength of the liquid."
+              "A solubility calculation starts from the definition: how many moles sit in one dm³ of saturated solution. Suppose 11 g of NaCl dissolves in 0.1 dm³. Moles = 11 ÷ 58.5 = 0.188 mol, so the solubility is 0.188 ÷ 0.1 = 1.88 mol/dm³.",
+              "Like dissolves like: water, a polar liquid, removes sweat and salt, but not grease. Petrol, an organic solvent, dissolves grease and paint, which is why dry cleaners use it. The solvent is chosen by matching its nature to the stain.",
+              "Temperature enters every calculation. A curve reading gives the solubility at the stated temperature, and a supersaturated solution made at a high temperature may crash out crystals as it cools — the basis of re-crystallisation for purification."
             ],
             "bullets": [
-              "Find moles first with n = m ÷ M, then divide by volume in dm³.",
-              "Water removes sweat and water-soluble stains; organic solvents remove grease and paint.",
-              "Petrol and turpentine are typical organic solvents for fats and paint."
+              "Molar solubility = moles ÷ volume of saturated solution.",
+              "Water removes polar stains; petrol removes grease and paint.",
+              "The solvent is matched to the nature of the stain."
             ],
-            "takeaway": "Convert mass to moles, divide by volume, and match solvent to stain.",
+            "takeaway": "Solubility is moles per dm³ at saturation, and the solvent must match the stain.",
             "check": {
               "question": "Which solvent best removes engine grease from cloth?",
               "options": [
@@ -1367,16 +1369,17 @@
           "content": {
             "heading": "True solutions, suspensions and colloids",
             "paragraphs": [
-              "During Harmattan, dust hangs in the air all day and light looks milky, yet the dust later settles on roofs. A true solution like sugar water shows no such haze and passes filter paper without leaving residue. Suspensions such as Harmattan haze and water paints hold large visible particles that settle, while colloids scatter light but settle slowly.",
-              "Particle size decides the test: true particles are molecular and invisible, colloids are larger and show the Tyndall effect, and suspension particles are largest and visible to the eye. Fog, milk, blood, aerosol spray, emulsion paints and rubber solution all scatter a beam and resist ordinary filtration, unlike true solutions. Suspensions settle on standing and are held by filter paper, while colloids stay dispersed much longer."
+              "A true solution is uniform at the particle level: sugar in water looks clear, passes through filter paper, and never settles. A suspension has particles large enough to see and settle, like muddy water after stirring — Harmattan haze and water paints are suspensions.",
+              "A colloid sits between the two: its particles are too small to see or filter but large enough to scatter light. Fog, milk, blood, aerosol sprays, emulsion paints and rubber solution are colloids. The Tyndall effect — a light beam turning visible — is the giveaway.",
+              "The particle size decides everything: true solutions pass filter paper; colloids scatter light but do not settle; suspensions settle and are filtered. Size, not appearance, is the distinction."
             ],
             "bullets": [
-              "True solution: invisible particles, no Tyndall, passes filter, never settles.",
-              "Suspension: visible particles, settles on standing, held by filter.",
-              "Colloid: shows Tyndall, scatters light, resists filtration, settles slowly.",
-              "Particle size and settling decide which of the three mixtures you have."
+              "True solution: uniform, passes filters, never settles.",
+              "Suspension: visible particles, settles, filtered (haze, water paints).",
+              "Colloid: invisible particles, scatters light (fog, milk, blood).",
+              "Particle size separates the three."
             ],
-            "takeaway": "True passes and hides, colloid scatters, suspension settles and blocks.",
+            "takeaway": "Size decides: solutions pass, colloids scatter, suspensions settle.",
             "check": {
               "question": "Which mixture is a colloid?",
               "options": [
@@ -1395,7 +1398,7 @@
           "content": {
             "title": "Exam tip",
             "tone": "tip",
-            "body": "On curves, read the exact temperature first and check whether the curve slopes up or down. For mixtures, ask about particle size and settling before naming it. That pair of checks answers most solubility and colloid items directly."
+            "body": "Before any solubility number, ask which temperature it belongs to. A solubility quoted without its temperature means nothing, and examiners plant exactly that trap."
           }
         },
         {
@@ -1405,18 +1408,21 @@
             "steps": [
               {
                 "operation": "Find moles of NaCl",
-                "reason": "Molar solubility needs moles, so convert mass to moles with M = 58.5 g/mol.",
-                "result": "n = 11 ÷ 58.5 = 0.188 mol."
+                "reason": "Moles count particles; Mr(NaCl) = 58.5",
+                "result": "n = 11 ÷ 58.5 = 0.188 mol",
+                "predictPrompt": ""
               },
               {
                 "operation": "Divide by volume",
-                "reason": "Molar solubility is moles per dm³ of solution, so divide by 0.1 dm³.",
-                "result": "c = 0.188 ÷ 0.1 = 1.88 mol/dm³."
+                "reason": "Solubility is per cubic decimetre of solution",
+                "result": "c = 0.188 ÷ 0.1 = 1.88 mol/dm³",
+                "predictPrompt": ""
               },
               {
                 "operation": "Check the rounding",
-                "reason": "The value 1.880 mol/dm³ rounds to 1.88 mol/dm³ to two decimal places.",
-                "result": "Molar solubility = 1.88 mol/dm³."
+                "reason": "0.188 × 58.5 = 11.0, so the division is exact",
+                "result": "Molar solubility = 1.88 mol/dm³",
+                "predictPrompt": ""
               }
             ]
           }
@@ -1424,65 +1430,70 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "5.85 g of NaCl dissolves in 0.5 dm³ of solution. Calculate its molar solubility.",
+            "question": "23.4 g of NaCl dissolves in 0.2 dm³ of solution. Calculate its molar solubility.",
             "hints": [
-              "Find moles with n = 5.85 ÷ 58.5.",
-              "Divide the result by 0.5 dm³.",
-              "Check the units are mol/dm³."
+              "First find moles: 23.4 ÷ 58.5",
+              "That is 0.4 mol — check it",
+              "Divide by 0.2 dm³"
             ]
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Go deeper: Why gases dissolve less when warm",
+            "heading": "Go deeper: Why gases dissolve less when hot",
             "paragraphs": [
-              "A gas has no crystal lattice to break apart, so dissolving it is mainly about holding its molecules inside water. Gas molecules are kept in solution only by weak attractions while water molecules move and jiggle around them. Warming gives those gas molecules more kinetic energy to escape the weak holds and return to the air above the liquid.",
-              "The dissolving of a gas releases heat, so the process is exothermic and heat is a product of the reaction. Adding heat therefore drives the balance back toward the undissolved gas instead of the dissolved form. That is why warm fizzy drinks lose their bubbles faster and why fish suffer when hot water cannot hold enough dissolved oxygen.",
-              "Solubility curves show the difference plainly because gases slope downward while most salts slope upward. A salt must pay energy to break its lattice, which warming supplies, so more solid can dissolve. A gas needs no such payment, so warming only helps it escape, which means curves must be read with the nature of the solute in mind.",
-              "Pressure matters for gases in a way it rarely does for salts, because pressing gas above a liquid forces more of it to dissolve. Closing a soft drink under pressure keeps gas inside until the seal is broken, while opening lets it rush out. Cooling together with pressure is therefore the recipe for keeping as much gas as possible in solution."
+              "Dissolving a gas means trapping its particles into the liquid. Warming speeds particles up, so they escape more easily — the same reason a hot drink goes flat. Salts behave oppositely because warming helps break their lattice apart.",
+              "That opposite behaviour is why solubility curves split into two families: climbing curves for salts, falling curves for gases. Sodium sulfate decahydrate is the exception that proves the rule, falling after about 33 °C when it loses its water of crystallisation.",
+              "The practical effect is everywhere: soft drinks are bottled cold to keep gas in, and heating water drives dissolved air out as bubbles. Temperature dependence is not a formula detail; it is visible in every cold drink.",
+              "A candidate who explains the escape idea can predict the direction of any curve without memorising it. Hot liquid cannot hold fast-moving gas particles.",
+              "The same escape logic explains why heating a soft drink releases bubbles immediately. The gas was only ever loosely held, and warming loosens its grip further.",
+              "At the other end, cooling a gas makes it far more soluble, which is why winter lakes hold more dissolved oxygen for fish."
             ],
             "bullets": [
-              "Gas dissolving is exothermic, so warming drives gas out.",
-              "Salts need lattice energy, so warming helps them dissolve.",
-              "Curves slope down for gases and up for most salts.",
-              "Higher gas pressure forces more gas to dissolve."
+              "Gas solubility falls with temperature (particles escape).",
+              "Most salts rise; gases fall — two curve families.",
+              "Cold drinks stay fizzy because cold holds gas.",
+              "One escape picture predicts every direction."
             ]
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Go deeper: Making and breaking a supersaturated solution",
+            "heading": "Go deeper: Supersaturation and how it forms",
             "paragraphs": [
-              "A supersaturated solution holds more solute than the equilibrium maximum at that temperature, so it is stable only until it is disturbed. The extra solute wants to come out as solid, but no new crystal forms on its own in a clean, still liquid. That delay makes the solution metastable, which means it looks normal yet sits ready to crystallise at the slightest trigger.",
-              "The usual way to make one is to dissolve as much salt as possible in hot water, filter off any excess, and then cool the clear liquid very gently. As the liquid cools, the maximum solubility falls, yet the dissolved amount stays at the hot value. The liquid is now above its new curve, so it holds more than it should at that temperature.",
-              "A single seed crystal, a scratch on the glass, or even a speck of dust gives the extra solute a surface to join. Crystals then grow rapidly and excess solute leaves the liquid until the concentration falls back to the saturated line. That rapid growth is why supersaturated samples sometimes turn cloudy in seconds after looking perfectly clear.",
-              "Careful cooling in clean containers avoids early crystallisation, while rough stirring or shaking invites it almost at once. The same idea explains why a hot saturated solution left to stand may deposit crystals on its own. Any time the dissolved amount sits above the curve, the solution is supersaturated and will soon correct itself unless it is protected."
+              "A supersaturated solution holds more solute than its temperature allows, but only because crystallisation has not started. Stirring, scratching or adding a tiny crystal starts the process, and the excess falls out until saturation returns.",
+              "It is made by dissolving at a high temperature, filtering while hot to remove impurities, then cooling slowly without disturbance. Rock candy is grown exactly this way: a supersaturated sugar solution cooling around a string.",
+              "Supersaturation is unstable by definition — the excess wants out. That instability is useful for purification: the excess crashes out as pure crystals while impurities stay dissolved.",
+              "The exam trap is calling a supersaturated solution 'concentrated'. Concentration is a measurement; supersaturation is a state beyond the saturation limit. A solution can be concentrated without being supersaturated.",
+              "A careful chemist can recrystallise a salt that refuses to dissolve cold: dissolve it hot, remove impurities by hot filtration, then seed the cooling solution with a pure crystal.",
+              "Without the seed, a supersaturated solution can sit stable for days — a reminder that stability in chemistry is often only the absence of a beginning."
             ],
             "bullets": [
-              "Supersaturation is more dissolved solute than the curve allows.",
-              "Make it from a hot saturated solution cooled gently.",
-              "A seed crystal or scratch triggers rapid crystallisation.",
-              "Crystals grow until the solution falls back to saturation."
+              "Supersaturated = more than the limit, waiting for a start.",
+              "Made by hot dissolving, hot filtering, slow cooling.",
+              "Used to purify salts by re-crystallisation.",
+              "Concentrated is a measure; supersaturated is a state."
             ]
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Go deeper: Exam traps in solubility and mixtures",
+            "heading": "Go deeper: Exam traps in solubility",
             "paragraphs": [
-              "Solubility and concentration sound alike but answer different questions, and mixing them is a favourite trap. Solubility is the maximum that can dissolve at a stated temperature, while concentration is the amount actually present, which may sit below that maximum. An unsaturated solution can be fairly concentrated yet still below its limit, so calling every strong solution saturated loses the mark.",
-              "A second trap is reading the wrong slope on a solubility curve. Most salts rise with temperature, so a falling curve usually signals a gas such as oxygen or carbon dioxide. Candidates who assume every curve rises will predict more gas in warm water and miss the correct fall. Naming the solute first decides which direction to expect.",
-              "Colloids and suspensions are separated by particle size, not by whether they look cloudy. Suspension particles are large, visible to the eye, settle on standing, and are held by ordinary filter paper. Colloid particles are far smaller, invisible to the eye, scatter light in the Tyndall effect, resist filtration, and stay dispersed for much longer.",
-              "Remember the syllabus pairs exactly: Harmattan haze and water paints are suspensions, while fog, milk, blood, aerosol spray, emulsion paints and rubber solution are colloids. True solutions such as sugar water or salt water pass filter paper and show no Tyndall beam. Checking size, settling and filtration together prevents the common swap of colloid for suspension."
+              "The first trap confuses solubility with concentration. Solubility is the saturation limit at a temperature; concentration is what is actually present. A dilute solution may be far below its solubility, and a supersaturated one far above.",
+              "The second trap mixes gram solubility with molar solubility. Converting between them needs Mr: grams per dm³ divided by Mr gives mol/dm³. Skipping Mr is the commonest calculation error in this topic.",
+              "The third trap ignores the curve's temperature. Reading a value from the wrong temperature point is reading a different solution entirely. Always anchor the reading to the stated temperature.",
+              "The fourth trap treats colloids as suspensions. Both look milky, but colloids do not settle and pass neither filter nor light beam silently. Particle size, not appearance, decides the class.",
+              "A final trap is treating the Tyndall effect as proof of a true solution. Only colloids scatter a beam of light; a clear true solution leaves the beam invisible."
             ],
             "bullets": [
-              "Solubility is the maximum; concentration is what is present.",
-              "Downward curves mean gases; upward curves mean most salts.",
-              "Suspensions settle and block; colloids scatter and resist filtration.",
-              "Learn the syllabus examples as a fixed list."
+              "Solubility is the limit; concentration is the present amount.",
+              "Convert g/dm³ to mol/dm³ by dividing by Mr.",
+              "Anchor every curve reading to its temperature.",
+              "Colloids scatter light; suspensions settle."
             ]
           }
         }
