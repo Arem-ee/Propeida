@@ -7166,6 +7166,216 @@
           }
         }
       ]
+    },
+    {
+      "slug": "alkanals-and-alkanones",
+      "topic": "organic-compounds",
+      "title": "Alkanals and Alkanones",
+      "objective": "Differentiate between alkanals and alkanones, giving the chemical test to distinguish them.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Alkanals and Alkanones",
+            "paragraphs": [
+              "The next family after alcohols carries a double bond to oxygen — a carbonyl group. This lesson follows the two carbonyl families and the test that tells them apart."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Aldehydes and ketones",
+            "paragraphs": [
+              "Alkanals (aldehydes) carry the carbonyl group at the end of the chain: the carbon has a hydrogen attached. Ethanal is CH₃CHO. Ketones (alkanones) carry it in the middle: propanone is CH₃COCH₃. End versus middle is the whole distinction.",
+              "Aldehydes oxidise easily to carboxylic acids, because the aldehyde hydrogen can be removed. Ketones resist further oxidation — there is no hydrogen on the carbonyl carbon to remove. That one hydrogen decides the chemistry.",
+              "Both families are made by oxidising alcohols: primary alkanols give alkanals, secondary give alkanones. The oxidation ladder from the alkanols lesson continues here."
+            ],
+            "bullets": [
+              "Aldehydes: carbonyl at the end, with a hydrogen (ethanal).",
+              "Ketones: carbonyl in the middle, no hydrogen (propanone).",
+              "Aldehydes oxidise to acids; ketones resist.",
+              "Made by oxidising primary and secondary alkanols respectively."
+            ],
+            "takeaway": "Aldehydes end with a hydrogen; ketones bury the carbonyl in the middle.",
+            "check": {
+              "question": "Propanone is a ketone because",
+              "options": [
+                "Its carbonyl carbon has no hydrogen",
+                "It has three carbons",
+                "It dissolves in water",
+                "It burns with a blue flame"
+              ],
+              "answer": 0,
+              "why": "In propanone (CH₃COCH₃) the carbonyl carbon carries two methyl groups and no hydrogen."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Tollens test and the silver mirror",
+            "paragraphs": [
+              "Tollens' reagent is an ammoniacal silver nitrate solution used to warm aldehydes. Aldehydes reduce silver ions to metallic silver, which deposits as a shiny mirror on the tube walls. Ketones do not reduce it — no mirror forms.",
+              "Fehling's and Benedict's solutions give the same distinction: aldehydes reduce blue copper(II) to red copper(I) oxide, while ketones leave the blue unchanged. Two independent reagents agree.",
+              "The silver mirror is the classic laboratory result: a clean tube, warmed with an aldehyde, comes out silvered inside. It is the specific test for the aldehyde group."
+            ],
+            "bullets": [
+              "Tollens: aldehydes give a silver mirror; ketones do not.",
+              "Fehling/Benedict: aldehydes give red Cu₂O; ketones do not.",
+              "The aldehyde hydrogen is the reducing agent."
+            ],
+            "takeaway": "Aldehydes reduce Tollens and Fehling; ketones do neither.",
+            "check": {
+              "question": "A compound gives a silver mirror with Tollens' reagent. It is",
+              "options": [
+                "A ketone",
+                "An aldehyde",
+                "An alkane",
+                "An ester"
+              ],
+              "answer": 1,
+              "why": "Only aldehydes reduce silver ions to metallic silver."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Properties and uses",
+            "paragraphs": [
+              "Aldehydes and ketones are polar, hydrogen-bonding liquids, soluble in water when small. Their boiling points rise with chain length, and both families are used as solvents and intermediates.",
+              "Formaldehyde (methanal) preserves specimens and makes plastics; acetone (propanone) is a nail-polish remover and industrial solvent. Flavouring aldehydes perfume foods and soaps.",
+              "The carbonyl group decides both families' chemistry: it is the site of addition reactions (hydrogen, HCN) and of the oxidation that separates them.",
+              "Their polarity also lets small members dissolve in water, which is why formaldehyde is sold as a solution and acetone mixes with water freely."
+            ],
+            "bullets": [
+              "Polar, hydrogen-bonding, water-soluble when small.",
+              "Formaldehyde: preservative, plastics. Acetone: solvent.",
+              "Carbonyl group is the reactive site."
+            ],
+            "takeaway": "Both families share the carbonyl group; only aldehydes can be oxidised further.",
+            "check": {
+              "question": "Acetone (propanone) is used as",
+              "options": [
+                "A fuel",
+                "A solvent (nail-polish remover)",
+                "A fertiliser",
+                "A detergent"
+              ],
+              "answer": 1,
+              "why": "Propanone is a common solvent, including in nail-polish remover."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For carbonyl questions, first ask whether the carbonyl carbon carries a hydrogen. If yes, aldehyde; if no, ketone — and the tests follow."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Ethanal is oxidised to ethanoic acid. Write the oxidation and state the change in oxidation number of the carbonyl carbon.",
+            "steps": [
+              {
+                "operation": "Write the oxidation equation",
+                "reason": "Aldehydes oxidise to carboxylic acids",
+                "result": "CH₃CHO + [O] → CH₃COOH",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Find the carbonyl carbon's number in ethanal",
+                "reason": "CH₃ is −3 overall; the double bond to O adds +2, the H adds −1",
+                "result": "Carbonyl C = +1 in CH₃CHO",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Find it in the acid",
+                "reason": "COOH carbon loses the H and gains an OH oxygen",
+                "result": "Carbonyl C = +3 in CH₃COOH (rise of 2)",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Propanone is warmed with Tollens' reagent. Predict the result and give the reason.",
+            "hints": [
+              "Propanone is a ketone",
+              "Ketones cannot oxidise further",
+              "No silver mirror forms — the solution stays unchanged"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why aldehydes oxidise and ketones refuse",
+            "paragraphs": [
+              "Oxidation removes the hydrogen from the carbonyl carbon. Aldehydes have one to remove, so they oxidise to acids. Ketones have none — both neighbours are carbons — so oxidation would need to break a carbon–carbon bond, which does not happen under these conditions.",
+              "That is why the oxidation ladder stops at ketones in the alkanol series: primary gives aldehyde then acid, secondary gives ketone and stops, tertiary gives nothing. The carbonyl neighbourhood decides the fate.",
+              "The same neighbourhood explains Tollens' reagent: only the aldehyde hydrogen can reduce silver ions. A ketone offers no hydrogen, so no mirror forms.",
+              "One hydrogen atom thus decides two famous tests — a candidate who counts it predicts both.",
+              "The same count explains the boiling points and reactivity patterns of the two families. Reaction chemistry, in this topic, is hydrogen counting from start to finish.",
+              "A candidate who counts first and names second never confuses the families under time pressure."
+            ],
+            "bullets": [
+              "Oxidation removes the carbonyl hydrogen.",
+              "Aldehydes have one; ketones have none.",
+              "Tollens and Fehling both exploit that hydrogen.",
+              "One atom decides both famous tests."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Silver mirror and Fehling mechanisms",
+            "paragraphs": [
+              "In Tollens' test, silver ions are complexed by ammonia into [Ag(NH₃)₂]⁺. The aldehyde reduces them to metallic silver, which nucleates on the glass as a mirror. The aldehyde itself is oxidised to a carboxylate.",
+              "In Fehling's test, blue copper(II) is reduced by the aldehyde to red copper(I) oxide. The colour change blue → red is the visible oxidation.",
+              "Both reagents are oxidising agents with a colour signal: silver mirror for one, red precipitate for the other. Ketones fail both because they cannot be oxidised under these conditions.",
+              "A candidate who writes the aldehyde as the reductant in both equations connects the two tests mechanistically.",
+              "Ammonia has two roles in Tollens reagent: it complexes silver ions and it keeps the solution alkaline for the reduction. Without ammonia, silver oxide would precipitate instead and no mirror would form.",
+              "The mirror itself is diagnostic because it requires a clean, smooth surface and a reducing agent strong enough to deposit metal slowly. Fast reduction gives a black powder instead.",
+              "A candidate who writes the aldehyde as the reductant in both equations connects the two tests mechanistically."
+            ],
+            "bullets": [
+              "Tollens: [Ag(NH₃)₂]⁺ reduced to a silver mirror.",
+              "Fehling: Cu(II) blue reduced to red Cu₂O.",
+              "The aldehyde is the reductant in both.",
+              "Ketones fail both — no oxidation possible."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in carbonyl chemistry",
+            "paragraphs": [
+              "The classic trap is the family name. Alkanals end in -al, alkanones in -one, and the end/middle position follows the suffix. Any option naming ethanal a ketone misreads the structure.",
+              "The second trap is the test direction. The silver mirror and the red precipitate both confirm aldehydes; their absence confirms ketones. Candidates who assign the mirror to ketones reverse the distinction.",
+              "The third trap is oxidation products. Aldehydes oxidise to carboxylic acids; ketones do not oxidise at all under these conditions. Any option oxidising a ketone to an acid is false.",
+              "The fourth trap is the carbonyl carbon's hydrogen. Counting it settles every question in the topic: present means aldehyde, absent means ketone.",
+              "A final trap is methanal. Formaldehyde has no alkyl group on the carbonyl carbon at all, which makes it the most reactive aldehyde and the one most likely to be asked about by name."
+            ],
+            "bullets": [
+              "-al = aldehyde (end); -one = ketone (middle).",
+              "Mirror and red precipitate mean aldehyde.",
+              "Ketones never oxidise to acids here.",
+              "Count the carbonyl hydrogen first."
+            ]
+          }
+        }
+      ]
     }
   ]
 }
