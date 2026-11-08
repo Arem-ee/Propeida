@@ -5075,6 +5075,214 @@
           }
         }
       ]
+    },
+    {
+      "slug": "sodium-and-its-compounds",
+      "topic": "metals-and-their-compounds",
+      "title": "Sodium and Its Compounds",
+      "objective": "Determine the method of production of sodium hydroxide by electrolysis of brine and its action on aluminium, zinc and lead ions, determine the production of sodium trioxocarbonate(IV) and sodium hydrogen trioxocarbonate(IV) by the Solvay process with their properties and uses, determine the occurrence of sodium chloride in sea water and its uses and economic importance with the test for Na⁺.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Sodium and Its Compounds",
+            "paragraphs": [
+              "Salt from sea water, soda for glass, and caustic soda for soap all reach back to one soft metal that catches fire in water. This lesson follows sodium from the sea to its three great compounds."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Sodium hydroxide from brine",
+            "paragraphs": [
+              "Sodium hydroxide (NaOH, caustic soda) is produced by electrolysing concentrated brine (saturated NaCl solution): 2NaCl + 2H₂O → 2NaOH + H₂ + Cl₂. The three products are hydrogen at the cathode, chlorine at the anode, and NaOH in solution — one cell, three sales.",
+              "NaOH is a strong base that precipitates metallic hydroxides from their salts: 2NaOH + Al³⁺ → 2Na⁺ + Al(OH)₃, and the same with Zn²⁺ and Pb²⁺. Those precipitates are the qualitative-analysis tests for those ions.",
+              "Its uses follow its strength: soap and detergent manufacture, paper pulping, aluminium extraction, and the neutralisation of acidic gases. Caustic soda is the workhorse alkali of industry."
+            ],
+            "bullets": [
+              "Brine electrolysis: H₂ cathode, Cl₂ anode, NaOH solution.",
+              "NaOH precipitates Al³⁺, Zn²⁺, Pb²⁺ as hydroxides.",
+              "Uses: soap, paper, aluminium processing, neutralisation."
+            ],
+            "takeaway": "Brine electrolysis makes caustic soda, and caustic soda precipitates metallic hydroxides.",
+            "check": {
+              "question": "Sodium hydroxide is produced industrially by",
+              "options": [
+                "Heating sodium with water",
+                "Electrolysis of concentrated brine",
+                "The Solvay process",
+                "Fractional distillation of air"
+              ],
+              "answer": 1,
+              "why": "Electrolysis of brine produces NaOH with H₂ and Cl₂ as co-products."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Washing soda and the Solvay process",
+            "paragraphs": [
+              "Sodium trioxocarbonate(IV) (Na₂CO₃, washing soda) is produced by the Solvay process, in which brine is reacted with ammonia and carbon(IV) oxide. The key step forms sodium hydrogen trioxocarbonate(IV) (NaHCO₃), which is heated to give Na₂CO₃.",
+              "Na₂CO₃ is used in glass manufacture (it lowers the melting point of sand), in soap, in water softening and in detergents. Sodium hydrogen trioxocarbonate(IV) (NaHCO₃, baking soda) is used in baking, fire extinguishers and as an antacid.",
+              "Heating sodium hydrogencarbonate gives the carbonate and water: 2NaHCO₃ → Na₂CO₃ + CO₂ + H₂O. The carbonate is therefore the 'baked' form of the hydrogencarbonate."
+            ],
+            "bullets": [
+              "Solvay process: brine + NH₃ + CO₂ → NaHCO₃ → Na₂CO₃.",
+              "Na₂CO₃: glass, soap, water softening, detergents.",
+              "NaHCO₃: baking, extinguishers, antacid."
+            ],
+            "takeaway": "Solvay bakes hydrogencarbonate into washing soda for glass and soap.",
+            "check": {
+              "question": "Sodium trioxocarbonate(IV) (washing soda) is used in",
+              "options": [
+                "Baking",
+                "Glass manufacture",
+                "Fire extinguishers",
+                "Antacids"
+              ],
+              "answer": 1,
+              "why": "Na₂CO₃ lowers the melting point of sand in glass manufacture."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Sodium chloride from the sea",
+            "paragraphs": [
+              "Sodium chloride occurs dissolved in sea water and as rock salt. Its recovery is solar evaporation: sea water is pumped into shallow ponds and the sun evaporates it until salt crystallises. The process is cheap because the fuel is sunlight.",
+              "Salt is the feedstock of the chlor-alkali industry: electrolysis of brine gives chlorine, hydrogen and NaOH, and from those come plastics, acids and soaps. Salt also preserves food, seasons it, and melts ice on roads.",
+              "The test for Na⁺ is the flame colour: sodium gives a persistent golden-yellow flame. That colour is specific enough to confirm the ion in a mixture."
+            ],
+            "bullets": [
+              "NaCl occurs in sea water; recovered by solar evaporation.",
+              "Salt feeds the chlor-alkali industry (Cl₂, H₂, NaOH).",
+              "Na⁺ flame test: persistent golden yellow."
+            ],
+            "takeaway": "Sea salt is solar-won and feeds the whole chlor-alkali industry.",
+            "check": {
+              "question": "The flame colour of sodium is",
+              "options": [
+                "Lilac purple",
+                "Persistent golden yellow",
+                "Brick red",
+                "Apple green"
+              ],
+              "answer": 1,
+              "why": "Sodium gives a persistent golden-yellow flame — its specific test."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For sodium questions, trace the feedstock: salt in, and chlorine, hydrogen and caustic soda out. The products name the process."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Write the ionic equation for the precipitation of aluminium hydroxide by sodium hydroxide.",
+            "steps": [
+              {
+                "operation": "Identify the ions present",
+                "reason": "Aluminium solution has Al³⁺; NaOH supplies OH⁻",
+                "result": "Al³⁺ and OH⁻ meet in solution",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Combine to the neutral solid",
+                "reason": "Three hydroxides balance one aluminium charge",
+                "result": "Al³⁺ + 3OH⁻ → Al(OH)₃",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Name the observation",
+                "reason": "Aluminium hydroxide is a white gelatinous precipitate",
+                "result": "White gelatinous precipitate of Al(OH)₃",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Write the ionic equation for the precipitation of zinc hydroxide by sodium hydroxide.",
+            "hints": [
+              "Zinc is Zn²⁺ in solution",
+              "Two OH⁻ balance one Zn²⁺",
+              "Write Zn²⁺ + 2OH⁻ → Zn(OH)₂"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why the Solvay process is clever",
+            "paragraphs": [
+              "The Solvay process is clever because it wastes nothing: the ammonia used in the first step is recovered from the by-products and fed back. The net inputs are brine, limestone and carbon dioxide; the outputs are washing soda and calcium chloride.",
+              "The insoluble sodium hydrogencarbonate is the key: it precipitates from the reaction mixture, so it can be filtered and heated cleanly to the carbonate. Solubility differences do the separating.",
+              "That is why the process replaced the older Leblanc process, which produced mountains of waste. Process chemistry is often the art of the precipitate: making the product fall out cleanly.",
+              "A candidate who sees the recycling and the precipitate understands why Solvay, not Leblanc, is the answer to any washing-soda question.",
+              "The calcium chloride by-product is not waste in modern plants: it is sold for de-icing roads and dust control. A well-designed process turns even its remainder into a product.",
+              "That completeness is why Solvay remains the world standard a century later. Efficiency, not novelty, keeps it in use."
+            ],
+            "bullets": [
+              "Ammonia is recovered and recycled in Solvay.",
+              "Insoluble NaHCO₃ precipitates for easy separation.",
+              "Solvay replaced Leblanc (waste) with recycling.",
+              "Precipitation is the separating trick."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: The chlor-alkali industry as one cell",
+            "paragraphs": [
+              "Chlor-alkali means chlorine plus alkali from one cell. Electrolysing brine gives chlorine, hydrogen and sodium hydroxide together, and each product feeds a different industry: chlorine to plastics and acids, hydrogen to ammonia, caustic soda to soap and paper.",
+              "The economics explains the geography: chlor-alkali plants sit near salt and cheap electricity, because those are the two inputs that cannot be moved. Chemistry plants follow their feedstocks.",
+              "Sodium metal itself is won from fused NaCl (Downs process), completing the picture: the same salt feeds the metal, the alkali and the gas.",
+              "A candidate who traces salt through all three products has learned sodium chemistry as a system, not as three facts.",
+              "The same economics explains why caustic soda prices move with electricity prices: power is half the cost of the cell. When power is cheap, alkali is cheap; when power rises, soap and paper follow.",
+              "A candidate who links the product prices to the electricity bill understands the industry better than one who memorises the equation."
+            ],
+            "bullets": [
+              "One cell, three products: Cl₂, H₂, NaOH.",
+              "Plants sit near salt and cheap power.",
+              "Salt also feeds sodium metal (Downs process).",
+              "Trace salt through every product."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in sodium chemistry",
+            "paragraphs": [
+              "The classic trap is the Solvay product. The process makes washing soda (Na₂CO₃) via the hydrogencarbonate, not caustic soda. Caustic soda comes from brine electrolysis; washing soda comes from Solvay. The two processes are never interchangeable.",
+              "The second trap is the flame colour. Sodium is golden yellow, potassium is lilac, calcium is brick red. Swapping flame colours reverses the identification.",
+              "The third trap is the precipitate test. Sodium hydroxide precipitates Al³⁺, Zn²⁺ and Pb²⁺ as hydroxides — but the ions are the metals', not sodium's. Na⁺ itself stays in solution and is tested by flame, not by precipitation.",
+              "The fourth trap is the direction of the Solvay bake. Heating hydrogencarbonate gives carbonate, never the reverse. Baking drives off CO₂ and water; no amount of heating in air returns them.",
+              "A final trap is the evaporation step. Salt won by solar evaporation is crude and needs purification before the cell; sea water cannot go straight into an electrolyser without fouling it.",
+              "The ponds are staged by density so that impurities crystallise out before the salt does. Purification is part of the recovery, not an afterthought."
+            ],
+            "bullets": [
+              "Solvay = washing soda; brine electrolysis = caustic soda.",
+              "Na⁺ flame is golden yellow; K⁺ is lilac.",
+              "NaOH precipitates the metal ions, not Na⁺.",
+              "Heating NaHCO₃ gives Na₂CO₃ — never backwards."
+            ]
+          }
+        }
+      ]
     }
   ]
 }
