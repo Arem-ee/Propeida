@@ -356,6 +356,33 @@
               "Combine 5 + 3 − 2 of √3."
             ]
           }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "A harder worked example: rationalising with a conjugate",
+            "problem": "Rationalise the denominator and simplify (2 + √3)/(2 − √3).",
+            "steps": [
+              {
+                "operation": "Multiply by the conjugate",
+                "reason": "The conjugate 2 + √3 turns the denominator into a difference of squares.",
+                "result": "Denominator becomes (2−√3)(2+√3) = 4 − 3 = 1.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Expand the numerator",
+                "reason": "The numerator is a perfect square, so the outer terms double.",
+                "result": "(2 + √3)² = 4 + 4√3 + 3 = 7 + 4√3.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Write the final surd",
+                "reason": "A denominator of 1 leaves the numerator as the whole answer.",
+                "result": "The value is 7 + 4√3.",
+                "predictPrompt": ""
+              }
+            ]
+          }
         }
       ]
     },
@@ -531,6 +558,33 @@
               "The denominator 4 means the fourth root.",
               "The fourth root of 16 is 2.",
               "Now apply the power 3 to that root."
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "A harder worked example: a fraction power with a negative power",
+            "problem": "Evaluate 8^(2/3) − 27^(−1/3) without a calculator.",
+            "steps": [
+              {
+                "operation": "Take the cube root first",
+                "reason": "The denominator 3 means cube root, and small bases keep the numbers manageable.",
+                "result": "8^(2/3) = (cube root of 8)² = 2² and 27^(1/3) = 3.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Apply the powers",
+                "reason": "The fraction 2/3 keeps the square, while the negative sign makes a reciprocal.",
+                "result": "8^(2/3) = 2² = 4 and 27^(−1/3) = 1/3.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Subtract the fractions",
+                "reason": "A fraction minus a fraction needs a common denominator of 3.",
+                "result": "4 − 1/3 = 11/3.",
+                "predictPrompt": ""
+              }
             ]
           }
         }
@@ -710,6 +764,33 @@
               "Write the brackets, then solve each one."
             ]
           }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "A harder worked example: the formula with a negative root",
+            "problem": "Solve 3x² + 2x − 1 = 0 using the formula.",
+            "steps": [
+              {
+                "operation": "Compute the discriminant",
+                "reason": "The discriminant shows the roots are real before the formula is used.",
+                "result": "b² − 4ac = 4 − (−12) = 16, so √16 = 4.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Substitute the values",
+                "reason": "The ± produces both roots from a single line.",
+                "result": "x = (−2 ± 4)/6, so x = 1/3 or x = −1.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Check the product",
+                "reason": "The product of the roots equals c/a, catching sign slips.",
+                "result": "Roots give −1/3 and c/a is −1/3, so both fit.",
+                "predictPrompt": ""
+              }
+            ]
+          }
         }
       ]
     },
@@ -735,9 +816,9 @@
           "content": {
             "heading": "Ratios, special angles and graphs",
             "paragraphs": [
-              "A candidate adds sin45° and sin30° to get sin75° and loses the mark. In a right-angled triangle, label the sides against the angle and use SOHCAHTOA: sinθ=opposite/hypotenuse, cosθ=adjacent/hypotenuse, tanθ=opposite/adjacent. The identity sin²θ+cos²θ=1 links all three ratios.",
+              "A candidate adds sin45° and sin30° to get sin75°. In a right-angled triangle, label the sides against the angle and use SOHCAHTOA: sinθ=opposite/hypotenuse, cosθ=adjacent/hypotenuse, tanθ=opposite/adjacent. The identity sin²θ+cos²θ=1 links all three ratios.",
               "Know sin30°=1/2, sin45°=√2/2 and sin60°=√3/2, with cosines in reverse and tan30°=1/√3, tan45°=1, tan60°=√3. The right angle gives sin90°=1, cos90°=0 and tan90° undefined. Compounds come from parts: 75°=45°+30° gives sin75°=(√6+√2)/4, cos75°=(√6−√2)/4 and tan75°=2+√3; 105°=60°+45° keeps sin105°=(√6+√2)/4 but needs cos105°=(√2−√6)/4 and tan105°=−(2+√3); 135°=180°−45° gives sin135°=√2/2, cos135°=−√2/2 and tan135°=−1.",
-              "The graphs check signs beyond 90°: sine rises 0 to 1 at 90°, falls to 0 at 180°, to −1 at 270° and to 0 at 360°. Cosine falls 1 to 0 at 90°, to −1 at 180°, to 0 at 270° and to 1 at 360°."
+              "The graphs check signs beyond 90°: sine rises 0 to 1 at 90°, falls to 0 at 180° and to −1 at 270°. Cosine falls 1 to 0 at 90°, to −1 at 180° and to 0 at 270°."
             ],
             "bullets": [
               "SOHCAHTOA places each side against the chosen angle.",
@@ -793,9 +874,9 @@
           "content": {
             "heading": "Elevation, depression, bearings and the rules",
             "paragraphs": [
-              "A candidate calls looking up depression and swaps up for down. Both angles start from the horizontal through the eye: elevation rises to an object above and depression falls to an object below. Parallel horizontals make the interior angle equal, so tan links height and horizontal distance in either case.",
+              "A candidate calls looking up depression and swaps up for down. Both angles start from the horizontal: elevation rises to an object above and depression falls to an object below. Parallel horizontals make the interior angle equal, so tan links height and horizontal distance in either case.",
               "Bearings are three-figure angles clockwise from north, such as 040° or 315°, with a north line at each point. Bearing 070° means 70° clockwise from north at O. Ships OA=12km on 040° and OB=15km on 130° include 90°, so AB=√(12²+15²−2×12×15×cos90°)=√369≈19.2km.",
-              "The sine rule is a/sinA=b/sinB=c/sinC and the cosine rule is a²=b²+c²−2bc·cosA. Use sine with a side and its opposite angle, and cosine with two sides and the included angle or three sides. Pair each side with its opposite angle in the sine rule."
+              "The sine rule is a/sinA=b/sinB=c/sinC and the cosine rule is a²=b²+c²−2bc·cosA. Use sine with a side and its opposite angle, and cosine with two sides and the included angle or three sides."
             ],
             "bullets": [
               "Elevation up and depression down from the horizontal.",
@@ -821,9 +902,9 @@
           "content": {
             "heading": "Areas and choosing the rule",
             "paragraphs": [
-              "A candidate uses ½ab·sinC with any angle and overcounts the area. Area=½ab·sinC needs the angle between a and b, because the slant shortens the product ab. Sides 5 and 8 with included 60° give ½×5×8×sin60°=20×(√3/2)=10√3≈17.3 square units.",
-              "Name what is known before choosing. Use the sine rule for a side with its opposite angle, the cosine rule for two sides with the included angle or three sides, and area only for the included case. AAA fixes angles only, never size, so a side cannot be found from angles alone.",
-              "Right-angled elevation or depression stay with SOHCAHTOA, while two bearings from one point give an included angle for cosine and area. The data therefore choose the tool, not habit, and the included angle must be the one between the two named sides."
+              "A candidate uses ½ab·sinC with any angle and overcounts the area. Area=½ab·sinC needs the angle between a and b, because the slant shortens the product ab. Sides 5 and 8 with included 60° give ½×5×8×sin60°=20×(√3/2)=10√3.",
+              "Name what is known before choosing: a side with its opposite angle takes sine, two sides with their included angle or three sides take cosine. AAA fixes angles only, never size, so a side cannot be found from angles alone.",
+              "Right-angled elevation or depression stay with SOHCAHTOA, while two bearings from one point give an included angle for cosine and area. The data therefore choose the tool, not habit."
             ],
             "bullets": [
               "Area needs two sides with the included angle only.",
@@ -915,6 +996,33 @@
               "Draw a right triangle with adjacent 12 and hypotenuse 13.",
               "Pythagoras gives the opposite side: 13² − 12² = 25.",
               "sin θ = opposite/hypotenuse."
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "A harder worked example: a bearing after two legs",
+            "problem": "A boat sails 8 km north then 6 km east. Find its bearing from the start.",
+            "steps": [
+              {
+                "operation": "Draw the triangle",
+                "reason": "The north and east moves are the legs of a right triangle.",
+                "result": "The hypotenuse joins the start to the finish.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Use Pythagoras",
+                "reason": "The finish distance is the hypotenuse of the two moves.",
+                "result": "d = √(8² + 6²) = √100 = 10 km.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Find the bearing",
+                "reason": "Bearings run clockwise from north, with east opposite the angle.",
+                "result": "tan θ = 6/8, so θ ≈ 36.9° and the bearing is 037°.",
+                "predictPrompt": ""
+              }
             ]
           }
         }
@@ -1124,6 +1232,33 @@
               "The first draw is 4 out of 10.",
               "After one green leaves, 3 green remain out of 9.",
               "Multiply the two fractions and simplify."
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "A harder worked example: three draws without replacement",
+            "problem": "A bag holds 4 red and 3 blue balls. Three are drawn one after another without replacement. Find P(all three red).",
+            "steps": [
+              {
+                "operation": "Write the first draw",
+                "reason": "There are 4 red balls out of 7 in total.",
+                "result": "P(first red) = 4/7.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Write the second draw",
+                "reason": "One red ball is gone, leaving 3 red out of 6.",
+                "result": "P(second red) = 3/6 = 1/2.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Do the third draw",
+                "reason": "Only 2 red in 5 remain, and 'and' means multiply.",
+                "result": "P = 4/7 × 3/6 × 2/5 = 4/35.",
+                "predictPrompt": ""
+              }
             ]
           }
         }
@@ -1337,6 +1472,33 @@
               "Read the remainders upward"
             ]
           }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "Go deeper: A harder worked example: multiplying 25 by 4 in base eight",
+            "problem": "Multiply 25 by 4 in base eight.",
+            "steps": [
+              {
+                "operation": "Multiply the units",
+                "reason": "Base-eight carries come in eights, so 20 is 2 eights with 4 left over.",
+                "result": "5 × 4 = 20, so write 4 and carry 2.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Multiply the eights column",
+                "reason": "The eights column adds its own 8 to the 2 carried eights.",
+                "result": "8 + 2 = 10, so write 2 and carry 1.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Write the final carry",
+                "reason": "A final carry becomes the new highest place value.",
+                "result": "Answer: 124_8, and 25_8 × 4 = 21 × 4 = 84 checks it.",
+                "predictPrompt": ""
+              }
+            ]
+          }
         }
       ]
     },
@@ -1538,6 +1700,33 @@
               "Reduce 4 mod 9; it is already less than 9",
               "Compute 4^2, then multiply by 4 again",
               "Reduce the final product mod 9"
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "Go deeper: A harder worked example: reducing 2^7 step by step",
+            "problem": "Find 2^7 mod 9 without a long multiplication.",
+            "steps": [
+              {
+                "operation": "Split the power",
+                "reason": "Powers multiply, so 2^7 is 2, then 2^3, then 2^3.",
+                "result": "2^7 = 2 × 2^3 × 2^3.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Reduce the block 2^3",
+                "reason": "A block equal to 8 can be replaced by −1 when reducing mod 9.",
+                "result": "2^3 = 8 ≡ −1 (mod 9).",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Finish the product",
+                "reason": "The −1 makes the square 1, leaving a single 2.",
+                "result": "2 × (−1)² = 2, so 2^7 ≡ 2 (mod 9).",
+                "predictPrompt": ""
+              }
             ]
           }
         }
@@ -1749,6 +1938,33 @@
               "Round by the next digit, not by guesswork"
             ]
           }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "Go deeper: A harder worked example: Nested division",
+            "problem": "Work out 5/6 ÷ (2/3 − 1/4).",
+            "steps": [
+              {
+                "operation": "Simplify the brackets first",
+                "reason": "The minus sign inside applies before dividing, so the outer fraction waits.",
+                "result": "2/3 − 1/4 = 8/12 − 3/12 = 5/12",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Turn division into multiplication",
+                "reason": "Dividing by a fraction means multiplying by its reciprocal, so invert 5/12.",
+                "result": "5/6 × 12/5 = 60/30",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Reduce the fraction",
+                "reason": "Both 5s and the factors 6 and 12 share a common factor, so cancel them first.",
+                "result": "Answer is 2",
+                "predictPrompt": ""
+              }
+            ]
+          }
         }
       ]
     },
@@ -1947,6 +2163,33 @@
               "The trap applies the percentage to the new quantity",
               "Write the base in the working",
               "Do an easy-first sweep and return to hard items"
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "Go deeper: A harder worked example: Discount then VAT",
+            "problem": "A shirt marked ₦80,000 is sold at 20% discount, and VAT of 7.5% is added. What does the customer pay?",
+            "steps": [
+              {
+                "operation": "Apply the discount first",
+                "reason": "The shop removes its 20% before tax, so reduce the marked price.",
+                "result": "₦80,000 × 80/100 = ₦64,000",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Work out the VAT",
+                "reason": "VAT is charged on the discounted price actually paid, not on the marked price.",
+                "result": "7.5 × 64,000 ÷ 100 = ₦4,800",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Add the VAT",
+                "reason": "The customer pays the shop price plus the government tax.",
+                "result": "₦64,000 + ₦4,800 = ₦68,800",
+                "predictPrompt": ""
+              }
             ]
           }
         }
@@ -2150,6 +2393,33 @@
               "The trap counts the union as a set",
               "Draw the Venn circles before any arithmetic",
               "Do an easy-first sweep and return to hard items"
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "Go deeper: A harder worked example: Two unknowns in a Venn diagram",
+            "problem": "In a class of 60, 35 study Mathematics and 30 study English. 8 study neither. How many study both, and how many study only Mathematics?",
+            "steps": [
+              {
+                "operation": "Find the union",
+                "reason": "Neither is outside the union, so subtract it from 60.",
+                "result": "60 − 8 = 52 study at least one",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Find the overlap",
+                "reason": "Adding both sets double-counts the overlap, so subtract the union.",
+                "result": "35 + 30 − 52 = 13 study both",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Find only Mathematics",
+                "reason": "Only Mathematics excludes the learners also taking English.",
+                "result": "35 − 13 = 22 study only Mathematics",
+                "predictPrompt": ""
+              }
             ]
           }
         }
@@ -2360,6 +2630,33 @@
               "Do an easy-first sweep and return to hard items"
             ]
           }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "Go deeper: A harder worked example: Joint variation",
+            "problem": "y varies jointly as x and z. When x = 3 and z = 4, y = 48. Find y when x = 5 and z = 2.",
+            "steps": [
+              {
+                "operation": "Find the constant",
+                "reason": "Joint variation means y = kxz, so divide y by both variables.",
+                "result": "k = 48 ÷ (3 × 4) = 4",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Write the relation",
+                "reason": "The same k holds for every pair, so substitute both new values.",
+                "result": "y = 4 × 5 × 2",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Multiply out",
+                "reason": "Each variable scales y, so multiply both values by k.",
+                "result": "y = 40",
+                "predictPrompt": ""
+              }
+            ]
+          }
         }
       ]
     },
@@ -2562,6 +2859,33 @@
               "Do an easy-first sweep and return to hard items"
             ]
           }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "Go deeper: A harder worked example: Compound inequality with a negative multiplier",
+            "problem": "Solve the compound inequality −4 < −2x + 2 ≤ 6.",
+            "steps": [
+              {
+                "operation": "Subtract 2 from all three parts",
+                "reason": "Removing +2 from the whole chain keeps the inequality intact on every side.",
+                "result": "−6 < −2x ≤ 4",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Divide each part by −2",
+                "reason": "Dividing by a negative reverses every sign, so each inequality flips direction.",
+                "result": "3 > x ≥ −2",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Rewrite the chain",
+                "reason": "The chain can be read either way, so list the smaller bound first for the answer.",
+                "result": "−2 ≤ x < 3",
+                "predictPrompt": ""
+              }
+            ]
+          }
         }
       ]
     },
@@ -2759,6 +3083,33 @@
               "Name the progression before choosing a formula",
               "A term is not a sum, and a sum is not a term",
               "Do an easy-first sweep and return to hard items"
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "Go deeper: A harder worked example: Infinite geometric sum",
+            "problem": "A geometric progression starts 96, 32, 32/3, … with common ratio r. Work out its sum to infinity.",
+            "steps": [
+              {
+                "operation": "Name the progression",
+                "reason": "Each term is a third of the last, so a = 96, r = 1/3 < 1.",
+                "result": "A convergent geometric series",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Apply the infinite-sum formula",
+                "reason": "The infinite sum is a/(1 − r) because the shrinking terms settle to a fixed total.",
+                "result": "96 ÷ (1 − 1/3) = 96 ÷ (2/3)",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Finish the division",
+                "reason": "Dividing by 2/3 is multiplying by 3/2, because the fraction in the denominator inverts.",
+                "result": "144",
+                "predictPrompt": ""
+              }
             ]
           }
         }
@@ -2960,6 +3311,33 @@
               "Never import multiplication habits into a defined operation",
               "Find the identity by solving a * e = a, never by guessing 0 or 1",
               "One failing pair destroys a property; one matching pair never proves it"
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "Go deeper: A harder worked example: Only a one-sided identity",
+            "problem": "On the reals, a ∘ b = a + 2b. Does it have an identity? Does 3 have an inverse?",
+            "steps": [
+              {
+                "operation": "Try right identity",
+                "reason": "The right identity e must give a ∘ e = a for every a.",
+                "result": "a + 2e = a, so e = 0",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Try it on the left",
+                "reason": "A two-sided identity must also give e ∘ a = a.",
+                "result": "0 + 2a = 2a, not a",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Conclude",
+                "reason": "With a = 3, 2a = 6 fails, so no two-sided identity exists.",
+                "result": "No identity; no inverse for 3",
+                "predictPrompt": ""
+              }
             ]
           }
         }
@@ -3166,6 +3544,33 @@
               "Verify an inverse by multiplying back to the identity"
             ]
           }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "Go deeper: A harder worked example: Multiplying 2×3 by 3×2",
+            "problem": "Find AB where A = [[1,2,3],[0,1,4]] and B = [[2,0],[1,3],[1,1]].",
+            "steps": [
+              {
+                "operation": "Check the inner sizes match",
+                "reason": "Inner sizes must match for multiplication",
+                "result": "AB exists and is a 2 by 2 matrix.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Compute the first row of AB",
+                "reason": "Each entry pairs a row of A with a column of B",
+                "result": "7 from 1×2+2×1+3×1 and 9 from 1×0+2×3+3×1.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Compute the second row of AB",
+                "reason": "Repeat the same row-column pairing for this row",
+                "result": "5 from 0×2+1×1+4×1 and 7 from 0×0+1×3+4×1.",
+                "predictPrompt": ""
+              }
+            ]
+          }
         }
       ]
     },
@@ -3367,6 +3772,33 @@
               "The function value and the limit agree only at a continuous point.",
               "Dropping the negative in negative sine flips a cosine derivative.",
               "Check the coefficient, the sign and the inner derivative before answering."
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "Go deeper: A harder worked example: Chain rule with (2x+1)³",
+            "problem": "If y = (2x + 1)³, find dy/dx.",
+            "steps": [
+              {
+                "operation": "Name the outer and inner parts",
+                "reason": "The cube is outside and 2x+1 is inside",
+                "result": "Outer: u³; inner: 2x+1.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Differentiate the outer part",
+                "reason": "The power rule applies before the inner change is counted",
+                "result": "3u² = 3(2x+1)².",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Multiply by the inner derivative",
+                "reason": "The inner part moves twice as fast as x",
+                "result": "dy/dx = 6(2x+1)².",
+                "predictPrompt": ""
+              }
             ]
           }
         }
@@ -3571,6 +4003,33 @@
               "Only parallel lines guarantee equal corresponding and alternate angles."
             ]
           }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "Go deeper: A harder worked example: Two unknowns in a cyclic quadrilateral",
+            "problem": "Quadrilateral ABCD is cyclic with A=2x°, B=(3y+20)°, C=(3x+10)° and D=(y+20)°. Find all four interior angles.",
+            "steps": [
+              {
+                "operation": "Use opposite angles A and C",
+                "reason": "Cyclic opposites sum to 180°",
+                "result": "5x+10=180, so x=34, A=68°, C=112°.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Use opposite angles B and D",
+                "reason": "The second opposite pair also sums to 180°",
+                "result": "4y+40=180, so y=35, B=125°, D=55°.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Check the four angles",
+                "reason": "Interior angles of a quadrilateral sum to 360°",
+                "result": "68+125+112+55=360°, so all angles fit.",
+                "predictPrompt": ""
+              }
+            ]
+          }
         }
       ]
     },
@@ -3731,7 +4190,7 @@
               "Eliminating the split parts between the two Pythagoras equations leaves a relation that involves only the three sides. Collecting it into factors gives (s−a)(s−b)(s−c) under a square root, with s the semiperimeter. That factorisation is why the formula needs no height and no angle.",
               "The same base-times-height idea hides inside the other plane formulas. A parallelogram is a rectangle cut and moved, so it keeps base times height. A rhombus is two triangles on one diagonal, so its area is half the product of the diagonals, which checks the core formula.",
               "A trapezium is also two such pieces joined along the distance between the parallel sides. Splitting it by a median gives two trapeziums of equal height, which is why the average of the parallel sides appears. Recognising the split explains the average rather than memorising it.",
-              "Composite shapes use exactly this splitting habit. Add a rectangle and a triangle where they join, or subtract a hole that is not part of the figure. For the triangle with sides 13, 14 and 15, s is 21 and √[21 × 8 × 7 × 6] = √7056 = 84, a clean check that no height was needed."
+              "Composite shapes use the same split: add joined pieces or subtract a hole. For sides 13, 14 and 15, s is 21 and √[21×8×7×6] = √7056 = 84, with no height needed."
             ],
             "bullets": [
               "Heron follows from Pythagoras applied twice to one height.",
@@ -3773,6 +4232,33 @@
               "Prism and cylinder volumes are base area times height.",
               "Unwrapping gives curved surface areas; shared faces are removed.",
               "Earth distance is Rθ along a great circle, in radians."
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "Go deeper: A harder worked example: Segment area as sector minus triangle",
+            "problem": "Find the minor segment area for radius 14 cm and angle 90°, using π = 22/7.",
+            "steps": [
+              {
+                "operation": "Find the sector area",
+                "reason": "The sector is a quarter of the circle",
+                "result": "(1/4) × (22/7) × 14² = 154 cm².",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Find the triangle area",
+                "reason": "The two radii at right angles form a right triangle",
+                "result": "(1/2) × 14 × 14 = 98 cm².",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Subtract the triangle from the sector",
+                "reason": "The segment is what remains after removing the triangle",
+                "result": "154 − 98 = 56 cm².",
+                "predictPrompt": ""
+              }
             ]
           }
         }
@@ -3977,6 +4463,33 @@
               "Test one point on a proposed locus against every condition."
             ]
           }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "Go deeper: A harder worked example: Bisector meeting a fixed circle",
+            "problem": "Find points equidistant from A and B, and exactly 5 cm from the midpoint M of AB.",
+            "steps": [
+              {
+                "operation": "Name the equal-distance rule",
+                "reason": "Equal distance from A and B places P on the perpendicular bisector",
+                "result": "First locus: the perpendicular bisector of AB.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Name the fixed-distance rule",
+                "reason": "Exactly 5 cm from M places P on a circle centred at M",
+                "result": "Second locus: a circle of radius 5 cm about M.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Keep the overlap",
+                "reason": "Both rules must hold, so only common points remain",
+                "result": "The bisector meets the circle at two symmetric points.",
+                "predictPrompt": ""
+              }
+            ]
+          }
         }
       ]
     },
@@ -4177,6 +4690,33 @@
               "From ax + by = c, gradient is −a/b and intercept is c/b.",
               "A vertical line gives b = 0; a horizontal line gives a = 0.",
               "Convert to the form the question asks for, then solve."
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "Go deeper: A harder worked example: Perpendicular bisector of a join",
+            "problem": "Find the perpendicular bisector of the join between (2, 3) and (6, 7).",
+            "steps": [
+              {
+                "operation": "Find the midpoint of the join",
+                "reason": "The bisector must pass halfway along the join",
+                "result": "M = ((2+6)/2, (3+7)/2) = (4, 5).",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Find the perpendicular gradient",
+                "reason": "The join gradient is 1, so the bisector is −1",
+                "result": "m1 × m2 = −1, hence m2 = −1.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Write the equation through M",
+                "reason": "A line is fixed by one point and one gradient",
+                "result": "y − 5 = −(x − 4), so x + y = 9.",
+                "predictPrompt": ""
+              }
             ]
           }
         }
@@ -4380,6 +4920,33 @@
               "Reject stationary values that give negative lengths or heights."
             ]
           }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "Go deeper: A harder worked example: Rate of change of a sphere",
+            "problem": "A balloon has radius 7 cm increasing at 1 cm/s. Find dV/dt.",
+            "steps": [
+              {
+                "operation": "Write volume as a function of radius",
+                "reason": "The sphere volume formula links V to r alone",
+                "result": "V = (4/3)πr³.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Differentiate with respect to time",
+                "reason": "The chain rule carries dr/dt through the cube",
+                "result": "dV/dt = 4πr² dr/dt.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Substitute the given values",
+                "reason": "The rate at that instant needs r = 7 and dr/dt = 1",
+                "result": "dV/dt = 4π×49×1 = 616 cm³/s using π = 22/7.",
+                "predictPrompt": ""
+              }
+            ]
+          }
         }
       ]
     },
@@ -4581,6 +5148,33 @@
               "Signed area cancels; geometric area does not.",
               "Split at every root inside [a, b] and integrate piece by piece.",
               "Take the absolute value of each piece, then add."
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "Go deeper: A harder worked example: Substitution inside a square",
+            "problem": "Evaluate ∫₀² (3x+1)² dx using the substitution u=3x+1.",
+            "steps": [
+              {
+                "operation": "Substitute u=3x+1",
+                "reason": "Inside is linear, so substitution avoids expansion because dx=du/3.",
+                "result": "x=0 gives u=1; x=2 gives u=7, so integral is (1/3)∫₁⁷u²du.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Integrate u²",
+                "reason": "Power rule reverses differentiation, and factor 1/3 remains from dx=du/3.",
+                "result": "(1/3)(u³/3)=u³/9.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Evaluate limits 1 to 7",
+                "reason": "Subtract F(1) from F(7) because definite integral is total change.",
+                "result": "343/9−1/9=342/9=38.",
+                "predictPrompt": ""
+              }
             ]
           }
         }
@@ -4787,6 +5381,33 @@
               "Frequencies draw the histogram; cumulative totals draw the ogive."
             ]
           }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "Go deeper: A harder worked example: Frequency hidden in an angle",
+            "problem": "A pie chart of 60 farmers shows cassava at an angle of 126°. How many farmers chose cassava?",
+            "steps": [
+              {
+                "operation": "Write the fraction",
+                "reason": "Angle is the share of the circle, so share is angle ÷ 360°.",
+                "result": "Share = 126°/360° = 0.35.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Convert to share",
+                "reason": "A share between 0 and 1 scales the total, so division must come first.",
+                "result": "126 ÷ 360 = 0.35.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Scale to 60 farmers",
+                "reason": "Frequency is share times total because each farmer sits in one slice.",
+                "result": "0.35 × 60 = 21 farmers.",
+                "predictPrompt": ""
+              }
+            ]
+          }
         }
       ]
     },
@@ -4988,6 +5609,33 @@
               "At most uses the less-than route; more than reverses it."
             ]
           }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "Go deeper: A harder worked example: Percentile from cumulative frequencies",
+            "problem": "Ogive: <10 cf=5, <20 cf=12, <30 cf=32, <40 cf=40 (N=40). Estimate the 75th percentile.",
+            "steps": [
+              {
+                "operation": "Find the position",
+                "reason": "75% lie below the 75th percentile, so use 0.75×N.",
+                "result": "0.75×40=30, so 30th lowest score.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Locate the class",
+                "reason": "30 passes cf=12 but is below cf=32, so it lies in 20–30.",
+                "result": "Class 20–30 contains it.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Interpolate within class",
+                "reason": "Assume even spread inside the class, so split width by needed share.",
+                "result": "20+(30−12)/20×10=29.",
+                "predictPrompt": ""
+              }
+            ]
+          }
         }
       ]
     },
@@ -5187,6 +5835,33 @@
             "bullets": [
               "Class mark = (lower + upper) ÷ 2 represents every value in the class.",
               "Grouped variance = Σf(x − mean)² ÷ Σf = Σfx² ÷ Σf − mean²."
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "Go deeper: A harder worked example: Grouped variance using class marks",
+            "problem": "Classes 5–15 (f=1), 15–25 (f=6), 25–35 (f=1) with class marks 10, 20, 30. Find variance and standard deviation.",
+            "steps": [
+              {
+                "operation": "Find the mean",
+                "reason": "Mean is total score shared equally, so weight each mark by frequency.",
+                "result": "Σfx=10+120+30=160; mean=160÷8=20.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Find Σfx²",
+                "reason": "Variance needs squared deviations, which Σfx²/Σf captures compactly.",
+                "result": "Σfx²=100+2400+900=3400; 3400÷8=425.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Subtract mean squared",
+                "reason": "Variance is average squared distance from mean, so remove mean effect.",
+                "result": "Var=425−400=25; SD=√25=5.",
+                "predictPrompt": ""
+              }
             ]
           }
         }
@@ -5391,6 +6066,33 @@
               "Distinct letters: divide by each repeat factorial."
             ]
           }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "Go deeper: A harder worked example: Round table with a pair together",
+            "problem": "In how many ways can 6 people sit round a table if two particular people must sit together?",
+            "steps": [
+              {
+                "operation": "Bind the pair",
+                "reason": "Together is a restriction, so glue the pair into one block first.",
+                "result": "Block + 4 others = 5 units.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Arrange the units",
+                "reason": "Round tables fix rotation, so n units give (n−1)! not n!.",
+                "result": "(5−1)! = 4! = 24.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Order inside block",
+                "reason": "The pair can swap, so order inside matters and doubles ways.",
+                "result": "24 × 2 = 48 ways.",
+                "predictPrompt": ""
+              }
+            ]
+          }
         }
       ]
     },
@@ -5591,6 +6293,33 @@
               "Domain: b > 0, b ≠ 1 and x > 0 for real logs.",
               "log_b 1 = 0 and log_b b = 1 for every allowed base.",
               "log(a + b) ≠ log a + log b; only products split."
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "Go deeper: A harder worked example: Change of base with log10 2 given",
+            "problem": "Given log₁₀2=0.3010, evaluate log₈32 in its simplest exact form.",
+            "steps": [
+              {
+                "operation": "Change the base",
+                "reason": "Use base 10 because only log₁₀2 is known, via the change-of-base formula.",
+                "result": "log₈32 = log₁₀32 ÷ log₁₀8.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Expand both logs",
+                "reason": "Powers become multiples by the power law, so log₁₀(2^k) equals k times log₁₀2.",
+                "result": "log₁₀32=5×0.3010=1.5050; log₁₀8=3×0.3010=0.9030.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Cancel and divide",
+                "reason": "Both terms share log₁₀2, so that factor cancels, leaving only the powers.",
+                "result": "1.5050 ÷ 0.9030 = 5/3 ≈ 1.667.",
+                "predictPrompt": ""
+              }
             ]
           }
         }
