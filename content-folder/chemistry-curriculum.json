@@ -78,6 +78,34 @@
       "section": "KINETICS",
       "order": 11,
       "description": "Factors affecting rate, rate curves, activation energy and collision theory."
+    },
+    {
+      "slug": "chemical-equilibra-reversible-reactions-and-factors",
+      "name": "Chemical Equilibrium",
+      "section": "EQUILIBRIUM",
+      "order": 12,
+      "description": "Dynamic equilibrium, Le Chatelier principle and industrial applications."
+    },
+    {
+      "slug": "environmental-pollution",
+      "name": "Environmental Pollution",
+      "section": "ENVIRONMENT",
+      "order": 13,
+      "description": "Air composition and separation, air, water and soil pollution, controls."
+    },
+    {
+      "slug": "chemistry-and-industry",
+      "name": "Chemistry and Industry",
+      "section": "INDUSTRY",
+      "order": 14,
+      "description": "Heavy and fine chemical industries, raw materials and biotechnology."
+    },
+    {
+      "slug": "astronomical-chemistry",
+      "name": "Astronomical Chemistry",
+      "section": "ASTRONOMY",
+      "order": 15,
+      "description": "Solar system, planets, and the composition of the earth."
     }
   ],
   "lessons": [
@@ -2756,6 +2784,833 @@
               "Concentration changes rate, never final yield.",
               "Catalysts change neither ΔH nor yield.",
               "Rate follows exposed area, not total mass."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "chemical-equilibra-reversible-reactions-and-factors",
+      "topic": "chemical-equilibra-reversible-reactions-and-factors",
+      "title": "Chemical Equilibrium",
+      "objective": "Identify the factors that affect the position of equilibrium of a chemical reaction, predict the effects of each factor on the position of equilibrium, specify the industrial processes where Le Chatelier's principle is required, and determine the effects of these factors on the equilibrium constant.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Chemical Equilibrium",
+            "paragraphs": [
+              "A tug-of-war between two teams can end in a stand-off: both teams pull, nobody moves, and the rope only trembles. A reversible reaction does exactly that — both directions run, and the concentrations settle into a stand-off called dynamic equilibrium."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Reversible reactions and the stand-off",
+            "paragraphs": [
+              "A reversible reaction can run forwards and backwards: N₂O₄ ⇌ 2NO₂, where brown nitrogen(IV) oxide splits into two colourless nitrogen(II) oxide molecules, and the reverse rejoins them. The double arrow ⇌ is the sign of reversibility.",
+              "In dynamic equilibrium both reactions continue at equal rates, so concentrations stop changing even though molecules keep moving — like a crowded market where people enter and leave at the same rate. The mixture looks still but is not still.",
+              "Steam passed over hot iron forms iron oxides and hydrogen reversibly: Fe₃O₄ + H₂ ⇌ 3FeO + H₂O. Live steam and equilibrium behave the same way — the reaction runs until the stand-off is reached."
+            ],
+            "bullets": [
+              "⇌ marks a reversible reaction running both ways.",
+              "Dynamic equilibrium: equal rates, constant concentrations.",
+              "The mixture looks still but is not still."
+            ],
+            "takeaway": "Dynamic equilibrium is equal rates both ways, with constant concentrations.",
+            "check": {
+              "question": "In N₂O₄ ⇌ 2NO₂ at equilibrium, what is true?",
+              "options": [
+                "Both reactions have stopped",
+                "The forward and reverse rates are equal",
+                "Only the forward reaction continues",
+                "The concentrations keep changing"
+              ],
+              "answer": 1,
+              "why": "Dynamic equilibrium means both reactions continue at equal rates."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Le Chatelier's principle",
+            "paragraphs": [
+              "Le Chatelier's principle says a system at equilibrium resists change: if you disturb it, the reaction moves to cancel the disturbance. Add a reactant and the reaction moves forward to consume it; remove a product and it moves forward to replace it.",
+              "Temperature works the same way. Heating favours the endothermic direction; cooling favours the exothermic one. In N₂O₄ ⇌ 2NO₂ the forward reaction is endothermic, so heating deepens the brown colour — more NO₂ forms.",
+              "Pressure matters only for gases with different molecule counts. Increasing pressure favours the side with fewer gas molecules. A catalyst speeds both directions equally, so it never shifts the equilibrium position — it only reaches it faster."
+            ],
+            "bullets": [
+              "Add a reactant → reaction moves forward to consume it.",
+              "Heat favours the endothermic direction; cold the exothermic.",
+              "Pressure favours fewer gas molecules; catalysts never shift position."
+            ],
+            "takeaway": "The system resists disturbance by moving in the cancelling direction.",
+            "check": {
+              "question": "In N₂O₄ ⇌ 2NO₂ (forward endothermic), heating the mixture makes the colour",
+              "options": [
+                "Fade — N₂O₄ forms",
+                "Deepen — more NO₂ forms",
+                "Stay the same",
+                "Turn colourless instantly"
+              ],
+              "answer": 1,
+              "why": "Heating favours the endothermic forward direction, producing more brown NO₂."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Industries that use the principle",
+            "paragraphs": [
+              "The Haber process fixes nitrogen as N₂ + 3H₂ ⇌ 2NH₃. The forward reaction is exothermic, so cooling favours ammonia but slows the rate; industry compromises at about 450 °C with an iron catalyst and high pressure of 200 atm. High pressure favours the fewer-molecule side (4 → 2).",
+              "The Contact process oxidises sulfur dioxide: 2SO₂ + O₂ ⇌ 2SO₃, again exothermic with fewer molecules forward. Moderate temperature, high pressure and V₂O₅ catalyst maximise sulphur trioxide for sulphuric acid manufacture.",
+              "The equilibrium constant K measures how far the reaction lies to one side. Temperature is the only factor that changes K — pressure, concentration and catalysts change the position but not the constant. No calculation is required; the effects and their uses are."
+            ],
+            "bullets": [
+              "Haber: 450 °C, 200 atm, iron catalyst — compromise conditions.",
+              "Contact: moderate temperature, high pressure, V₂O₅ catalyst.",
+              "Only temperature changes the equilibrium constant K."
+            ],
+            "takeaway": "Industry trades the perfect position for a reachable one.",
+            "check": {
+              "question": "In the Haber process, why is high pressure used?",
+              "options": [
+                "It increases the equilibrium constant",
+                "It favours the side with fewer gas molecules (2 NH₃)",
+                "It speeds the reaction without shifting equilibrium",
+                "It cools the mixture"
+              ],
+              "answer": 1,
+              "why": "N₂ + 3H₂ → 2NH₃ reduces 4 gas molecules to 2, so pressure pushes it forward."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For any equilibrium item, first write the disturbance, then move the reaction to cancel it. The cancelling direction is always the answer."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "In N₂O₄ ⇌ 2NO₂, the forward reaction is endothermic. Predict the effect of raising the temperature, and naming the colour change.",
+            "steps": [
+              {
+                "operation": "Identify the disturbance",
+                "reason": "Raising temperature adds heat, which the endothermic direction absorbs",
+                "result": "The reaction favours the forward direction",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Apply Le Chatelier",
+                "reason": "The system resists the heating by consuming heat",
+                "result": "More NO₂ forms",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Name the observation",
+                "reason": "NO₂ is brown and N₂O₄ is colourless",
+                "result": "The colour deepens to a darker brown",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "In N₂O₄ ⇌ 2NO₂, what happens if the pressure on the container is increased? State the colour change.",
+            "hints": [
+              "Count gas molecules on each side: 1 → 2",
+              "Pressure favours the side with fewer molecules",
+              "Fewer molecules means the colourless N₂O₄"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Dynamic does not mean frozen",
+            "paragraphs": [
+              "The commonest misconception is that equilibrium means a frozen system. In dynamic equilibrium the forward and reverse reactions continue at equal speed, and molecules keep crossing in both directions. The concentrations are constant because the two rates cancel, not because nothing happens.",
+              "Isotopic labelling proves it: if a label appears on one side and then spreads to the other, traffic continues. The stand-off is a balance of movement, not an absence of it.",
+              "That is why a catalyst matters: it speeds both directions equally, so equilibrium is reached faster but at the same position. Speed is not position — the two knobs turn different things.",
+              "A candidate who holds the market picture (equal entry and exit rates) will never call an equilibrium mixture 'stopped' again.",
+              "The equal rates also explain why an equilibrium mixture responds instantly to disturbance: the machinery is already running, so a shift in either direction is felt at once. A frozen system would need to start from nothing.",
+              "That readiness is why small additions of a reactant show a large immediate response in colour or pressure. The system is listening, not sleeping."
+            ],
+            "bullets": [
+              "Equilibrium is balanced traffic, not frozen stillness.",
+              "Isotopic labels prove molecules keep crossing.",
+              "Catalysts speed arrival, never the position.",
+              "Rate and position are different knobs."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why industry never uses the perfect conditions",
+            "paragraphs": [
+              "For an exothermic reaction, the perfect yield would be at the lowest temperature — but at low temperatures the reaction is too slow to matter. The Haber process runs at 450 °C because that is where speed and yield compromise. V₂O₅ in the Contact process does the same work for SO₃.",
+              "Pressure is the other compromise: higher pressure favours the fewer-molecule side but costs more to build and run. 200 atm for Haber and moderate pressure for Contact are economic choices, not chemical limits.",
+              "Recycling unreacted gases completes the strategy: unreacted N₂ and H₂ return to the reactor, so low per-pass yield is recovered over many passes. The plant converts what equilibrium leaves behind.",
+              "Le Chatelier's principle therefore explains plant design, not just exam items: conditions are chosen on a curve between position, rate and cost.",
+              "The recycle loop is itself an application of Le Chatelier: unreacted gases are returned so the forward reaction consumes them again, recovering over many passes what a single pass leaves behind.",
+              "A candidate who sees the loop will recognise recycling as equilibrium management, not waste handling."
+            ],
+            "bullets": [
+              "Cold favours yield; heat favours speed — compromise temperature.",
+              "Pressure favours numbers; cost limits how far it goes.",
+              "Recycling recovers unreacted gases over many passes.",
+              "Plant design is Le Chatelier plus economics."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in equilibrium",
+            "paragraphs": [
+              "The classic trap is the catalyst. Catalysts speed both directions equally, so they never shift the equilibrium position or change K. Any option claiming a catalyst changes the yield or the constant is false.",
+              "The second trap is the constant K. Concentration, pressure and catalysts move the position but leave K unchanged; only temperature changes K. Forgetting that distinction mixes up position with constant.",
+              "The third trap is counting molecules wrongly. Pressure favours fewer gas molecules, not fewer total moles of any kind. N₂ + 3H₂ → 2NH₃ moves from 4 to 2; the side with 2 wins under pressure.",
+              "The fourth trap is concentration versus position. Adding a reactant disturbs the equilibrium and the reaction moves forward — but a catalyst added at the same time does not. The two effects must be separated before answering."
+            ],
+            "bullets": [
+              "Catalysts never shift position or change K.",
+              "Only temperature changes the equilibrium constant.",
+              "Pressure favours fewer gas molecules specifically.",
+              "Separate concentration effects from catalyst effects."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "environmental-pollution",
+      "topic": "environmental-pollution",
+      "title": "Environmental Pollution",
+      "objective": "Give reasons for air as a mixture, identify the principle in separating air components, state reasons for variation in air composition, specify the uses of some air constituents, identify types of pollution and pollutants, specify sources of pollutants, classify pollutants as biodegradable or non-biodegradable, specify effects of pollution, and identify measures for controlling pollution.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Environmental Pollution",
+            "paragraphs": [
+              "Every breath contains mostly nitrogen, some oxygen, and traces of other gases — a natural mixture, not a single substance. That mixture can be polluted, and this lesson explains what is in clean air, what pollutes it, and what can be done."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "What is in the air",
+            "paragraphs": [
+              "Air is a mixture because its gases keep their own properties and separate by physical methods. Its main parts are nitrogen (about 78%), oxygen (about 21%), argon (about 0.9%), carbon(IV) oxide (about 0.04%) and water vapour. Noble gases like argon and neon sit in the mixture without reacting.",
+              "Components vary with place and time: near forests there is more oxygen and less carbon(IV) oxide; near cities and factories the reverse. Humidity changes the water vapour share. Variation is normal because air is a mixture, not a compound with a fixed formula.",
+              "Air is separated by fractional distillation: air is cooled until it liquefies, then warmed gradually so each gas boils off at its own temperature. Nitrogen and oxygen are separated this way industrially, and argon is drawn off between them."
+            ],
+            "bullets": [
+              "Air = about 78% N₂, 21% O₂, 0.9% Ar, 0.04% CO₂, water vapour.",
+              "Air is a mixture: components keep their properties.",
+              "Fractional distillation separates air by boiling points.",
+              "Composition varies with place, humidity and activity."
+            ],
+            "takeaway": "Air is a mixture of gases separated by their boiling points.",
+            "check": {
+              "question": "Which principle is used in the fractional distillation of liquid air?",
+              "options": [
+                "Different boiling points of the gases",
+                "Different chemical reactions with oxygen",
+                "Different densities of the solids",
+                "Different colours of the gases"
+              ],
+              "answer": 0,
+              "why": "Each gas boils at its own temperature, so they leave one after another."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Air pollution",
+            "paragraphs": [
+              "Air pollutants include hydrogen sulfide (H₂S), carbon monoxide (CO), sulfur dioxide (SO₂), oxides of nitrogen, chlorofluorocarbons (CFCs) and dust. Sources are vehicle exhaust, factory chimneys, domestic burning, and farms using fertilisers and pesticides.",
+              "Their effects are direct: CO blocks oxygen uptake in the blood, SO₂ and nitrogen oxides form acid rain that damages crops and buildings, and CFCs attack the ozone layer. Dust and smoke harm lungs directly, causing asthma and bronchitis in crowded cities.",
+              "Control measures match each source: scrubbers and filters on chimneys, catalytic converters on vehicles, banning CFCs, and planting trees. Prevention beats cleaning, because once gases mix into air they cannot be unmixed."
+            ],
+            "bullets": [
+              "Pollutants: H₂S, CO, SO₂, NOₓ, CFCs, dust.",
+              "Sources: vehicles, factories, domestic burning, farms.",
+              "Effects: CO blocks blood oxygen; acid rain; ozone damage.",
+              "Controls: scrubbers, converters, CFC bans, trees."
+            ],
+            "takeaway": "Pollutants come from burning and industry; control beats cleaning.",
+            "check": {
+              "question": "Which pollutant attacks the ozone layer?",
+              "options": [
+                "Carbon monoxide",
+                "Chlorofluorocarbons",
+                "Sulfur dioxide",
+                "Dust"
+              ],
+              "answer": 1,
+              "why": "CFCs release chlorine that destroys ozone molecules."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Water and soil pollution",
+            "paragraphs": [
+              "Water is polluted by sewage, oil spills, industrial effluent and farm runoff. Sewage breeds disease-causing organisms; oil spreads over water and suffocates aquatic life. Both lower the oxygen in water that fish need to breathe.",
+              "Soil is polluted by oil spillage, industrial waste and excess fertilisers. Pollutants are classed as biodegradable (they rot away, like sewage and food waste) or non-biodegradable (they persist, like plastics, DDT and heavy metals).",
+              "Control of water pollution includes treating sewage before discharge, stopping oil spills at source, and regulating effluent. Soil control uses cleanup, safe disposal, and reducing plastic and pesticide use."
+            ],
+            "bullets": [
+              "Water pollutants: sewage, oil, effluent, runoff.",
+              "Biodegradable rot away; non-biodegradable persist.",
+              "Oil suffocates aquatic life; sewage spreads disease.",
+              "Treat sewage; stop spills; regulate effluent."
+            ],
+            "takeaway": "Biodegradable pollutants rot away; persistent ones stay and spread.",
+            "check": {
+              "question": "Which of these is non-biodegradable?",
+              "options": [
+                "Sewage",
+                "Food waste",
+                "Plastics",
+                "Paper"
+              ],
+              "answer": 2,
+              "why": "Plastics do not rot away, unlike sewage, food waste and paper."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For any pollutant question, separate source from effect. The mark goes to naming which is which, not to listing both in one breath."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Name one pollutant, its source, its effect, and one control measure for air pollution.",
+            "steps": [
+              {
+                "operation": "Choose a pollutant",
+                "reason": "Carbon monoxide is a colourless, poisonous gas",
+                "result": "Pollutant: carbon monoxide (CO)",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Give its source",
+                "reason": "Incomplete combustion in vehicle engines produces CO",
+                "result": "Source: vehicle exhaust",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Give effect and control",
+                "reason": "CO blocks oxygen uptake in blood; catalytic converters reduce it",
+                "result": "Effect: blocks blood oxygen; control: catalytic converters",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Name one pollutant in soil, its class (biodegradable or not), and one control measure.",
+            "hints": [
+              "Think of oil spillage from pipelines",
+              "Oil does not rot away easily",
+              "Control means stopping spills or cleaning up"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why air is a mixture and why it matters",
+            "paragraphs": [
+              "Air is a mixture because its gases were never chemically combined: each keeps its own boiling point, density and reactions. That is why fractional distillation can separate them — a compound could not be divided by boiling alone. The mixture nature of air is the reason the whole separation industry exists.",
+              "The proportions are stable at large scale (78% nitrogen, 21% oxygen) because the atmosphere mixes continuously. Local variation — a city centre, a forest, a factory gate — sits on top of that stable base.",
+              "Those variations are measurable and meaningful: a rise in carbon(IV) oxide near a city signals combustion load, and a fall in oxygen signals the same. Monitoring stations read the mixture the way a doctor reads a pulse.",
+              "A candidate who understands mixture versus compound will never claim air has a formula. It has a recipe range, not a formula, and that difference is the whole point of the item.",
+              "Because air is a mixture, its composition can drift without any chemical change occurring: a forest breathes out oxygen by day, a city breathes out carbon(IV) oxide by night. The mixture absorbs those swings silently until they accumulate.",
+              "That silent absorption is also why pollution is slow to notice and slower to reverse. The mixture must be actively cleaned or left to wash out, and both take time."
+            ],
+            "bullets": [
+              "Air's gases were never bonded, so they separate physically.",
+              "Stable base proportions with local variation on top.",
+              "Monitoring reads variation as pollution signals.",
+              "A mixture has a range, not a formula."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Acid rain and the ozone layer",
+            "paragraphs": [
+              "Sulfur dioxide and nitrogen oxides dissolve in rainwater to form sulfuric and nitric acids. Acid rain falls on crops, forests, buildings and lakes, dissolving limestone and corroding metals. Its pH can fall below 5, far from the neutral 5.6 of clean rain.",
+              "CFCs rise into the stratosphere and release chlorine under ultraviolet light, each chlorine atom destroying many ozone molecules. Ozone is the shield that blocks harmful ultraviolet radiation; thinning it lets more reach the surface.",
+              "The Montreal Protocol control story is the exam favourite: the world agreed to phase out CFCs, and the ozone hole is recovering. Control works when the source is a single chemical family.",
+              "Acid rain and ozone loss are different problems with different controls — scrubbers for the first, chemical bans for the second. Merging them is the commonest error in this topic.",
+              "Ground-level ozone is a pollutant that damages lungs, while stratospheric ozone is a shield that protects them. The same molecule is poison below and protection above — location decides the role, which is why the two problems need opposite thinking.",
+              "That reversal confuses candidates under time pressure. Naming the layer first removes the confusion every time."
+            ],
+            "bullets": [
+              "SO₂ and NOₓ form acid rain (pH below 5).",
+              "CFC chlorine destroys ozone molecules.",
+              "Acid rain needs scrubbers; ozone loss needed CFC bans.",
+              "Different problems, different controls."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in pollution",
+            "paragraphs": [
+              "The classic trap is classifying smoke. Smoke is a mixture of solid particles and gases; it is not a true solution and not a pure substance. Naming it precisely is the mark, and 'pollution' alone earns nothing.",
+              "The second trap mixes biodegradable with non-biodegradable. Sewage and food waste rot; plastics, DDT and heavy metals persist. The test is whether nature can break it down in reasonable time.",
+              "The third trap is source versus effect. Factories are sources; acid rain is an effect. Listing a source when the question asks an effect (or the reverse) loses the mark even when both facts are correct.",
+              "The fourth trap is the noble gases. Argon and neon are naturally present in air and are not pollutants; listing them as pollutants reverses the syllabus item."
+            ],
+            "bullets": [
+              "Smoke = solid particles + gases, a mixture.",
+              "Biodegradable rots; non-biodegradable persists.",
+              "Source ≠ effect — name which is asked.",
+              "Noble gases in air are natural, not pollutants."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "chemistry-and-industry",
+      "topic": "chemistry-and-industry",
+      "title": "Chemistry and Industry",
+      "objective": "Classify chemical industries in terms of products, identify raw materials for each industry, distinguish between fine and heavy chemicals, enumerate the relevance of each of these industries, and relate industrial processes to biotechnology.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Chemistry and Industry",
+            "paragraphs": [
+              "Every hospital drug, plastic bucket, soap bar and farm fertiliser began in a chemical plant. This lesson sorts those industries by what they make, what they feed on, and why they matter."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Sorting the industries",
+            "paragraphs": [
+              "Heavy chemical industries make bulk products in large tonnage: cement, fertilisers, soaps, plastics and petroleum refining. They feed on cheap raw materials like limestone, crude oil and natural gas, and they employ many people in production.",
+              "Fine chemical industries make small quantities of pure, high-value products: pharmaceuticals, dyes, reagents and laboratory chemicals. They feed on refined intermediates, not raw materials, and their value lies in purity, not tonnage.",
+              "The drug, dye and reagent shelves of a hospital or laboratory are fine chemicals; the cement plant and the refinery are heavy chemicals. Quantity versus value is the sorting rule."
+            ],
+            "bullets": [
+              "Heavy chemicals: bulk, tonnage, cheap raw materials.",
+              "Fine chemicals: small quantity, high purity, high value.",
+              "Cement, fertiliser, refining = heavy; drugs, dyes, reagents = fine."
+            ],
+            "takeaway": "Heavy chemicals are made in bulk; fine chemicals in purity.",
+            "check": {
+              "question": "Which set belongs to fine chemicals?",
+              "options": [
+                "Cement, fertiliser, soap",
+                "Pharmaceuticals, dyes, laboratory reagents",
+                "Cement, steel, roofing sheets",
+                "Petrol, diesel, kerosene"
+              ],
+              "answer": 1,
+              "why": "Fine chemicals are small quantities of pure, high-value products."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Raw materials and why they matter",
+            "paragraphs": [
+              "Each industry is fed by particular raw materials. Cement eats limestone and clay. Fertiliser plants eat natural gas and air nitrogen. Soap and detergent plants eat oils and fats. Plastics and fuels feed on crude oil fractions.",
+              "The relevance of each industry follows from what it makes possible. Cement builds houses and roads; fertilisers raise farm yields; drugs treat disease; plastics and fuels power transport and daily life. Losing an industry starves everything downstream of it.",
+              "Nigeria's petrochemical and fertiliser plants show the chain clearly: gas in, urea and methanol out, farms and industries fed. Raw material, process and product are one straight line in every chemical industry."
+            ],
+            "bullets": [
+              "Cement: limestone + clay. Fertiliser: natural gas + nitrogen.",
+              "Soap: oils and fats. Plastics/fuels: crude oil fractions.",
+              "Each industry feeds everything downstream of it."
+            ],
+            "takeaway": "Raw material in, product out, and everything downstream depends on it.",
+            "check": {
+              "question": "The main raw material for cement manufacture is",
+              "options": [
+                "Crude oil",
+                "Limestone and clay",
+                "Natural gas",
+                "Sea salt"
+              ],
+              "answer": 1,
+              "why": "Cement is made by heating limestone (calcium carbonate) with clay."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Biotechnology in industry",
+            "paragraphs": [
+              "Biotechnology uses living systems — bacteria, yeast and enzymes — as chemical workers. Fermentation brews ethanol and antibiotics; enzymes replace harsh chemicals in detergents and food processing. The workers are alive, not machines.",
+              "Industrial processes relate to biotechnology wherever a biological step replaces a chemical one: insulin production, vaccine manufacture, and brewing all depend on it. The link is that biology does the chemistry at low temperature and low energy cost.",
+              "The industry relevance is therefore twofold: biotechnology makes products that plain chemistry cannot (insulin, vaccines), and it makes familiar products more cheaply. Rejecting it as 'alternative' misses that it is now a production route."
+            ],
+            "bullets": [
+              "Biotechnology uses living cells and enzymes as workers.",
+              "Fermentation: ethanol, antibiotics. Enzymes: detergents, food.",
+              "Biology does chemistry at low temperature and energy cost."
+            ],
+            "takeaway": "Biotechnology runs chemical processes with living workers.",
+            "check": {
+              "question": "Which product is made by biotechnology?",
+              "options": [
+                "Cement",
+                "Insulin",
+                "Steel",
+                "Fertiliser"
+              ],
+              "answer": 1,
+              "why": "Insulin is produced by engineered bacteria in fermentation."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For any industry item, name the raw material first. The product and the relevance usually follow from what the plant eats."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Classify a pharmaceutical plant and a cement plant, giving the raw material of each.",
+            "steps": [
+              {
+                "operation": "Classify the drug plant",
+                "reason": "It makes small quantities of pure, high-value products",
+                "result": "Fine chemicals; raw materials are refined intermediates",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Classify the cement plant",
+                "reason": "It makes bulk construction material in tonnage",
+                "result": "Heavy chemicals; raw materials are limestone and clay",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Compare the two",
+                "reason": "Value lies in purity for drugs and in tonnage for cement",
+                "result": "Size of output alone does not classify an industry",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A fertiliser plant uses natural gas and air nitrogen. Is it a heavy or fine chemical industry, and why?",
+            "hints": [
+              "Think about the tonnage it must produce",
+              "Fertiliser is spread on whole farms, not milligrams",
+              "Bulk tonnage from cheap raw materials is heavy"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why heavy and fine chemicals need different plants",
+            "paragraphs": [
+              "Heavy chemical plants are built for throughput: continuous processes, large reactors and cheap raw materials. A cement kiln runs day and night because stopping it costs more than running it. The economics is volume economics.",
+              "Fine chemical plants are built for purity: batch processes, clean rooms and analytical control. A drug plant may produce kilograms where a cement plant produces tonnes, and the bottles are worth more than the cement by weight.",
+              "The two therefore sit at opposite ends of the value chain. Heavy industries feed fine ones with intermediates, and fine industries feed hospitals and laboratories with pure products.",
+              "A candidate who sorts by value-per-kg rather than by factory size will classify any industry correctly, including ones not named in the syllabus.",
+              "The feedstock difference drives everything else: heavy plants are sited near their raw materials (limestone near the kiln, gas near the field), while fine plants are sited near skills and clean utilities. Geography follows chemistry.",
+              "That is also why a heavy plant is capital-heavy and a fine plant is knowledge-heavy. The cost structure differs because the value structure differs."
+            ],
+            "bullets": [
+              "Heavy: continuous, volume economics, cheap feedstocks.",
+              "Fine: batch, purity economics, clean control.",
+              "Heavy feeds fine; fine serves hospitals and labs.",
+              "Sort by value per kilogram, not factory size."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Biotechnology as a production route",
+            "paragraphs": [
+              "Fermentation is the oldest biotechnology: yeast converts sugar to ethanol, and bacteria convert sugars to antibiotics. Modern plants run the same chemistry in steel vessels, with temperature and pH controlled instead of left to chance.",
+              "Enzyme biotechnology replaces chemical steps inside other industries. Laundry detergents carry enzymes that remove stains at low temperature; food processors use them to clarify juices and tenderise meat. The chemistry is the same, the energy bill is lower.",
+              "Genetic engineering extends the route: bacteria engineered to produce human insulin remove the need for animal sources. The product is identical, the supply is steadier, and the process is scalable.",
+              "The exam link is therefore direct: wherever a question asks how a biological product is made industrially, the answer is fermentation, enzymes or engineered cells — never a high-temperature chemical synthesis.",
+              "That low-energy advantage is why fermentation survives in an age of cheap chemicals: biology does at room temperature what furnaces do at high temperature, and the energy saving decides the economics."
+            ],
+            "bullets": [
+              "Fermentation: ethanol, antibiotics — old biotechnology in steel vessels.",
+              "Enzymes replace chemical steps in detergents and food.",
+              "Engineered bacteria produce insulin at scale.",
+              "Biological routes mean low temperature, low cost."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in industry",
+            "paragraphs": [
+              "The classic trap is classifying by importance. A drug plant is vital but fine; a cement plant is bulk but heavy. Importance never decides the class — output size and purity do.",
+              "The second trap is raw material versus product. Limestone is the raw material of cement, not its product. Reading the plant's direction — materials in, products out — prevents the reversal.",
+              "The third trap is calling fermentation a chemical process only. It is a biological process run inside the chemical industry, and questions about its workers expect 'yeast' or 'enzymes', not reagents.",
+              "The fourth trap is assuming biotechnology replaces chemistry. It complements it: heavy chemicals still feed the fine ones, and both feed biotechnology with substrates. The industries form a chain, not a contest.",
+              "A final trap is treating biotechnology as a separate industry beside chemistry. It is a production route inside the industry, so questions about it expect biological workers within chemical plants, not a new sector."
+            ],
+            "bullets": [
+              "Importance never decides heavy versus fine.",
+              "Raw materials go in; products come out — do not reverse them.",
+              "Fermentation workers are yeast and enzymes.",
+              "Biotechnology complements chemistry; it does not replace it."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "astronomical-chemistry",
+      "topic": "astronomical-chemistry",
+      "title": "Astronomical Chemistry",
+      "objective": "State the composition of the solar system, list the planets, and describe the composition of the earth — atmosphere, lithosphere and hydrosphere.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Astronomical Chemistry",
+            "paragraphs": [
+              "The air you breathe, the rock you stand on and the water you drink are three layers of one planet, all made of the same elements the periodic table lists. This lesson names the solar system and the three layers of the earth."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The solar system and the planets",
+            "paragraphs": [
+              "The solar system is the sun and everything held in orbit by its gravity: eight planets, their moons, asteroids, comets and dust. The sun itself is mostly hydrogen and helium, fusing as it shines.",
+              "The eight planets in order from the sun are Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune. The first four are rocky; the last four are giants of gas and ice. Earth sits third, the only planet known to carry life.",
+              "Moons orbit the planets; asteroids are rocky leftovers between Mars and Jupiter; comets are icy bodies with glowing tails. All of them share the same elements as the earth, which is why the periodic table applies everywhere."
+            ],
+            "bullets": [
+              "Solar system = sun + 8 planets + moons, asteroids, comets.",
+              "Planets in order: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune.",
+              "Inner four rocky; outer four giants."
+            ],
+            "takeaway": "Eight planets circle the sun, and all share the same elements as earth.",
+            "check": {
+              "question": "Which list gives the planets in order from the sun?",
+              "options": [
+                "Earth, Mars, Venus, Mercury, Jupiter, Saturn, Uranus, Neptune",
+                "Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune",
+                "Mercury, Earth, Venus, Mars, Jupiter, Uranus, Saturn, Neptune",
+                "Venus, Mercury, Earth, Mars, Saturn, Jupiter, Neptune, Uranus"
+              ],
+              "answer": 1,
+              "why": "The order is Mercury, Venus, Earth, Mars, then the giants Jupiter, Saturn, Uranus, Neptune."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The atmosphere",
+            "paragraphs": [
+              "The atmosphere is the blanket of gases around the earth: mostly nitrogen (78%) and oxygen (21%), with argon, carbon(IV) oxide and water vapour making up the rest. It protects life by holding oxygen, reflecting radiation and keeping heat in.",
+              "The atmosphere is layered by temperature: the troposphere where weather happens, the stratosphere with ozone, and the upper layers thinning into space. Each layer's chemistry differs, but mixture chemistry governs them all.",
+              "The atmosphere is the part of the earth most changed by human activity — pollution, deforestation and burning all read directly in its composition, which is why monitoring it matters."
+            ],
+            "bullets": [
+              "Atmosphere = N₂ 78%, O₂ 21%, Ar 0.9%, CO₂ 0.04%, water vapour.",
+              "Troposphere holds the weather; stratosphere holds ozone.",
+              "Human activity reads directly in its composition."
+            ],
+            "takeaway": "The atmosphere is a layered gas blanket of nitrogen and oxygen.",
+            "check": {
+              "question": "The gas that makes up about 78% of the atmosphere is",
+              "options": [
+                "Oxygen",
+                "Carbon(IV) oxide",
+                "Nitrogen",
+                "Argon"
+              ],
+              "answer": 2,
+              "why": "Nitrogen is about 78% of air; oxygen is about 21%."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The lithosphere and hydrosphere",
+            "paragraphs": [
+              "The lithosphere is the solid outer layer of the earth: crust, mantle and core, rich in silicates, oxides and metals. Its soil and rocks supply minerals, and its erosion feeds rivers with dissolved salts.",
+              "The hydrosphere is all of the earth's water — oceans, seas, lakes, rivers, groundwater and ice. About 97% of it is salt water in the oceans; the fresh water humans drink is a tiny fraction of the whole.",
+              "The two layers exchange matter: rivers carry rock down to the sea, and evaporation returns water to the air. The water cycle is the hydrosphere and atmosphere trading the same water forever."
+            ],
+            "bullets": [
+              "Lithosphere = solid layers: crust, mantle, core.",
+              "Hydrosphere = all water; 97% is ocean salt water.",
+              "Rivers, evaporation and rain link the layers."
+            ],
+            "takeaway": "Rock, water and air trade matter in one continuous cycle.",
+            "check": {
+              "question": "About what fraction of the hydrosphere is ocean salt water?",
+              "options": [
+                "About half",
+                "About 97%",
+                "About 10%",
+                "About 25%"
+              ],
+              "answer": 1,
+              "why": "Roughly 97% of Earth's water is in the oceans."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Learn the planets as one sentence — Mercury Venus Earth Mars Jupiter Saturn Uranus Neptune. Reciting it beats any diagram in the hall."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Name the three layers of the earth and the main component of each.",
+            "steps": [
+              {
+                "operation": "Name the gas layer",
+                "reason": "Air surrounds the planet and is mostly nitrogen",
+                "result": "Atmosphere: nitrogen (78%) and oxygen (21%)",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Name the rock layer",
+                "reason": "The solid part is crust, mantle and core of silicates and metals",
+                "result": "Lithosphere: silicate rocks and metal core",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Name the water layer",
+                "reason": "Most of Earth's water sits in the oceans",
+                "result": "Hydrosphere: water, 97% ocean",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Which layer of the atmosphere holds the ozone layer, and what does ozone block?",
+            "hints": [
+              "Ozone sits above the weather layer",
+              "That layer is the stratosphere",
+              "Ozone blocks harmful ultraviolet radiation"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why the same elements appear everywhere",
+            "paragraphs": [
+              "The sun and the planets condensed from one cloud of gas and dust, so the same elements occur in the earth's crust, the moon's rocks and meteorites. Connecting a meteorite's chemistry to a earth's rock is exact science, not speculation.",
+              "Hydrogen and helium dominate the sun and the giant planets because the cloud was mostly those two. The rocky planets formed later from dust where only heavier elements could condense.",
+              "That history explains the earth's layers: heavy metals sank to the core, silicates formed the mantle and crust, and light gases escaped to form the atmosphere later. Chemistry sorted the planet by density.",
+              "A candidate who sees the earth as sorted cloud material will never be surprised by element distribution anywhere in the solar system.",
+              "Spectroscopy proves it directly: the absorption lines in starlight match the elements of the periodic table, so the sun composition was read from its light long before any sample could be collected.",
+              "The earth itself is the sample: its crust, atmosphere and hydrosphere all show the same sorted chemistry, which is why one periodic table covers all of them."
+            ],
+            "bullets": [
+              "One cloud made everything — same elements everywhere.",
+              "H and He dominate sun and giants; dust made rocky planets.",
+              "Density sorted the earth: core, mantle, crust, air.",
+              "Meteorites are samples of the original cloud."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: The water cycle as chemistry in motion",
+            "paragraphs": [
+              "Evaporation lifts ocean water into the air; condensation clouds it; rain returns it to land and rivers; rivers carry it back to the sea. The same water molecule may make the trip hundreds of times, unchanged as H₂O throughout.",
+              "The cycle is also a purification: evaporated water leaves its salts behind, so rain is fresh water distilled by the sun. The hydrosphere's salt and the atmosphere's freshness are two ends of one process.",
+              "Human activity interrupts the cycle at every step: pollution enters the rain, dams slow the rivers, and deforestation reduces evaporation. The chemistry is simple; the management is not.",
+              "That is why the water cycle is the bridge between this topic and pollution: the same trading of water carries both purity and pollutants.",
+              "The cycle also moves pollutants: acid rain falls through the same evaporation–condensation loop that purifies water. Pollution is water chemistry out of place, carried by the same machinery that delivers clean rain.",
+              "Understanding the loop therefore explains both the syllabus fact and the environmental consequence in one picture."
+            ],
+            "bullets": [
+              "Evaporation, condensation, rain, rivers — one loop.",
+              "Evaporation leaves salts; rain is distilled fresh water.",
+              "Pollution rides the same cycle as purity.",
+              "The cycle links astronomy to environmental chemistry."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in astronomical chemistry",
+            "paragraphs": [
+              "The classic trap swaps the layers: atmosphere is gas, lithosphere is rock, hydrosphere is water. Any option pairing gas with lithosphere or rock with atmosphere is wrong by definition, and the syllabus lists them in that order on purpose.",
+              "The second trap is planetary order. Jupiter is the fifth planet, not the sixth, and Saturn precedes Uranus. The sentence 'My Very Energetic Mother Just Served Us Nachos' fixes Mercury through Neptune; reciting it beats counting.",
+              "The third trap is the dominant gas. Nitrogen (78%) beats oxygen (21%) — candidates who memorise 'oxygen is the main gas' lose the item. Air is mostly nitrogen; that is the single easiest mark in the topic.",
+              "The fourth trap is the fresh-water fraction. Most of the hydrosphere is salt water; drinking water is a tiny share. Options calling the hydrosphere mostly fresh are reversed."
+            ],
+            "bullets": [
+              "Atmosphere = gas; lithosphere = rock; hydrosphere = water.",
+              "Recite the planets in order; Jupiter is fifth.",
+              "Nitrogen (78%) dominates air, not oxygen.",
+              "Hydrosphere is mostly salt water."
             ]
           }
         }
