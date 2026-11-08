@@ -1721,7 +1721,7 @@
           "content": {
             "heading": "Acids, Bases and Salts",
             "paragraphs": [
-              "A housewife in Onitsha adds vinegar to remove a stain but avoids touching a caustic soda spill on her hands. One is an acid, the other a base. What separates them is how each behaves in water."
+              "A housewife in Onitsha keeps vinegar for stains and caustic soda for blocked drains, and she knows never to mix them. One is an acid; the other is a base. This lesson explains how to tell them apart, what salts are, and how to measure strength."
             ],
             "bullets": []
           }
@@ -1731,15 +1731,15 @@
           "content": {
             "heading": "What acids and bases do",
             "paragraphs": [
-              "An acid is a substance whose aqueous solution furnishes H₃O⁺ ions, or a proton donor. A base is a substance that neutralises an acid, for example an oxide or a hydroxide. Acids turn blue litmus red and form salts with metals and carbonates.",
-              "Bases feel soapy, turn red litmus blue and form salts with acids. The number of replaceable hydrogen atoms an acid has is its basicity, so HCl is monobasic while H₂SO₄ is dibasic. Acids and bases therefore cancel each other in neutralisation.",
-              "Indicators tell the difference without tasting anything. Litmus, methyl orange and phenolphthalein are the standard trio, and a buffer solution is a mixture that resists pH change when acid or alkali is added. Vinegar contains ethanoic acid, while citrus fruits contain citric acid."
+              "An acid is a substance whose water solution gives H₃O⁺ ions — it donates a proton. Acids turn blue litmus red, react with metals and carbonates, and form salts. A base is the opposite: it neutralises an acid, turning red litmus blue and forming a salt.",
+              "Basicity counts the hydrogen atoms an acid can donate: HCl is monobasic (one H), H₂SO₄ is dibasic (two H). Strong acids like HCl dissolve fully in water; weak acids like ethanoic acid (vinegar) dissolve only partly. Citric acid in oranges and tartaric acid in tamarind are natural weak acids.",
+              "Indicators show the difference without tasting: litmus, methyl orange and phenolphthalein change colour across the pH range. A buffer solution is a mixture that resists pH change, like the bicarbonate system that holds blood at pH 7.4."
             ],
             "bullets": [
-              "An acid furnishes H₃O⁺; a base neutralises an acid",
-              "Basicity counts the replaceable hydrogen atoms per molecule",
-              "Litmus, methyl orange and phenolphthalein are standard indicators",
-              "A buffer solution resists change in pH"
+              "Acids donate protons; bases accept them.",
+              "Strong acids dissociate fully; weak acids partly.",
+              "Indicators change colour across the pH range.",
+              "Buffers resist pH change."
             ],
             "takeaway": "Acids donate protons, bases accept them, and indicators show which is which.",
             "check": {
@@ -1760,17 +1760,17 @@
           "content": {
             "heading": "Salts and how they are made",
             "paragraphs": [
-              "A salt is the neutral product of reacting an acid with a base, metal or carbonate. When all replaceable hydrogen is used, the salt is normal, like NaCl. When some remains, it is acidic, like NH₄Cl, while basic salts still carry OH.",
-              "A double salt holds two salts together, and alums are the example. Salts are prepared by neutralisation, by precipitation, or by dissolving a metal or carbonate in an acid. Zn + dilute H₂SO₄ gives ZnSO₄ and hydrogen.",
-              "Whether a solution conducts depends on how far it dissociates. A strong acid like HCl dissociates fully and conducts well, while a weak acid like ethanoic acid dissociates partly and conducts weakly. Concentration is about how much is present, not how strongly it dissociates."
+              "A salt is the neutral product of reacting an acid with a base, metal or carbonate. When all replaceable hydrogen is used, the salt is normal, like NaCl. When some remains it is acidic, like NH₄Cl. When it still carries OH groups it is basic.",
+              "A double salt holds two salts crystallised together; alums are the famous example. Salts are prepared by neutralisation (acid + base), by precipitation (two solutions forming an insoluble salt), or by dissolving a metal or carbonate in an acid: Zn + dilute H₂SO₄ gives ZnSO₄ and hydrogen.",
+              "How well a solution conducts depends on how far it dissociates. A strong acid dissociates fully and conducts well; a weak acid dissociates partly and conducts weakly. Conductance follows the amount of ions present, not merely the concentration."
             ],
             "bullets": [
-              "Normal salts use all replaceable hydrogen; acidic salts keep some",
-              "Alums are double salts crystallised together",
-              "Salts are prepared by neutralisation, precipitation or acid on metal",
-              "Conductance follows the amount of ions, not just concentration"
+              "Normal salts use all replaceable H; acidic salts keep some.",
+              "Alums are double salts.",
+              "Salts: neutralisation, precipitation, or acid on metal.",
+              "Conductance follows the ions present."
             ],
-            "takeaway": "Salt type names its leftover hydrogen or hydroxide, and strength means dissociation.",
+            "takeaway": "Salt type names its leftover hydrogen or hydroxide; strength means dissociation.",
             "check": {
               "question": "NH₄Cl is an example of which salt type?",
               "options": [
@@ -1789,15 +1789,15 @@
           "content": {
             "heading": "pH, titration and hydrolysis",
             "paragraphs": [
-              "The pH scale measures hydrogen-ion concentration as pH = −log[H⁺]. A solution with [H⁺] = 1×10⁻³ mol/dm³ has pH 3, and pOH = 14 − pH. Neutral water is 7.",
-              "pH matters daily: the stomach works near pH 1–2, soil suits crops near 6–7, and blood holds 7.4. In titration an indicator marks the end point, so phenolphthalein suits a strong acid with a strong base. The mole ratio at the end point gives the unknown concentration.",
-              "Hydrolysis is the reaction of a salt with water, and it decides the character. NH₄Cl hydrolyses acidic, while Na₂CO₃ hydrolyses basic. Their equations are NH₄⁺ + H₂O ⇌ NH₃ + H₃O⁺ and CO₃²⁻ + H₂O ⇌ HCO₃⁻ + OH⁻."
+              "The pH scale counts hydrogen ions: pH = −log[H⁺]. A solution with [H⁺] = 1×10⁻³ mol/dm³ has pH 3, and pOH = 14 − pH. Pure water sits at 7.",
+              "pH matters daily: the stomach works near pH 1–2, soil suits crops near 6–7, and blood holds 7.4. In titration an indicator marks the end point of neutralisation — phenolphthalein for a strong acid with a strong base, methyl orange for a strong acid with a weak base.",
+              "Hydrolysis is a salt reacting with water, and it sets the solution’s character. NH₄Cl hydrolyses acidic; Na₂CO₃ hydrolyses basic. Their equations: NH₄⁺ + H₂O ⇌ NH₃ + H₃O⁺ and CO₃²⁻ + H₂O ⇌ HCO₃⁻ + OH⁻. The ion that hydrolyses decides the result."
             ],
             "bullets": [
-              "pH = −log[H⁺] and pOH = 14 − pH at 298 K",
-              "Blood holds pH 7.4; the stomach works near pH 1–2",
-              "Titration uses the mole ratio at the indicator end point",
-              "NH₄Cl gives an acidic solution; Na₂CO₃ gives a basic one"
+              "pH = −log[H⁺]; pOH = 14 − pH.",
+              "Blood 7.4; stomach 1–2; soil 6–7.",
+              "Indicator must change near the end point.",
+              "NH₄Cl gives acidic; Na₂CO₃ gives basic solutions."
             ],
             "takeaway": "pH counts hydrogen ions, titration counts moles, and hydrolysis sets the character.",
             "check": {
@@ -1818,7 +1818,7 @@
           "content": {
             "title": "Exam tip",
             "tone": "tip",
-            "body": "In a titration, write the mole ratio first, then the volumes. The ratio decides everything, so a 1:1 reaction is a straight volume swap while a 2:1 reaction halves one side."
+            "body": "In a titration, find the mole ratio first, then the volumes. The ratio decides everything, so a 1:1 reaction is a straight swap and a 2:1 reaction halves one side."
           }
         },
         {
@@ -1863,16 +1863,18 @@
           "content": {
             "heading": "Go deeper: Why conductance follows dissociation",
             "paragraphs": [
-              "Conductance needs ions to carry charge to the electrodes. A strong acid like HCl dissociates almost completely, so many ions move and conductance is high. A weak acid like ethanoic acid dissociates only partly, so few ions move and conductance is low even at the same concentration.",
-              "That is why degree of dissociation and acid strength move together. A measured rise in conductance on dilution is not a rise in strength; it is the same weak acid spreading out, so a larger fraction dissociates. Conductance therefore tracks ions present, not the label strong or weak.",
-              "The dilution effect explains a common curve: molar conductance rises slowly as the solution gets more dilute. A candidate who links the two ideas will not call ethanoic acid strong just because its conductance climbs on dilution.",
-              "Strong and weak bases behave the same way. NH₄OH is weak and conducts poorly although it is a base, while NaOH is strong and conducts well. Strength is about dissociation, and concentration is only about amount."
+              "Conductance needs ions to carry charge to the electrodes. A strong acid like HCl dissociates almost completely, so many ions move and conductance is high. A weak acid like ethanoic acid dissociates only partly, so few ions move and conductance stays low at the same concentration.",
+              "Dilution makes the contrast sharper: a weak acid dissociates more as it spreads out, so its molar conductance rises on dilution. Strength is about dissociation; concentration is only about amount. A concentrated weak acid can still conduct less than a dilute strong one.",
+              "That is the exam link tested: compare two molar solutions, and the stronger acid shows the higher conductance. The degree of dissociation can be read off the conductance ratio directly.",
+              "Bases mirror acids: NaOH is strong and conducts well, NH₄OH is weak and conducts poorly although both are bases. Strength, not the acid–base label, sets the ion count.",
+              "Comparing a strong and weak acid at the same molar concentration therefore shows a wide conductance gap, and that gap is the practical proof of their different dissociation.",
+              "The same measurement ranks bases. The ion count, not the label, always decides."
             ],
             "bullets": [
-              "Conductance counts the ions actually present",
-              "Strong acids dissociate fully; weak acids partly",
-              "Dilution raises the dissociated fraction of a weak acid",
-              "Strength and concentration are different ideas"
+              "Conductance counts the ions actually present.",
+              "Strong acids dissociate fully; weak acids partly.",
+              "Dilution raises the dissociated fraction of a weak acid.",
+              "Strength and concentration are different ideas."
             ]
           }
         },
@@ -1883,14 +1885,14 @@
             "paragraphs": [
               "An indicator changes colour across a pH range, so it must change close to the end point of the reaction. Methyl orange changes between pH 3.1 and 4.4, phenolphthalein between 8.2 and 10.0, and litmus changes broadly near 7.",
               "A strong acid with a strong base ends near pH 7, so either indicator works. A weak acid with a strong base ends above pH 7, so phenolphthalein is correct and methyl orange would change too early. A strong acid with a weak base ends below pH 7, so methyl orange is correct.",
-              "The titraton curve makes the choice visible: it jumps through the end-point range sharply for strong–strong pairs and more gently for weak pairs. A candidate who reads the jump sees why the wrong indicator gives a false end point.",
-              "Litmus is a mixture and changes gradually, so it is a poor titration indicator. Methyl orange and phenolphthalein stay the sharp choices in the examination hall, and the curve tells which one to pick."
+              "The titration curve shows why: it jumps through the end-point range sharply for strong–strong pairs and more gently for weak pairs. A candidate who reads the jump sees why the wrong indicator gives a false end point.",
+              "Litmus is a mixture and changes gradually, so it is a poor titration indicator. Methyl orange and phenolphthalein stay the sharp choices, and the curve tells which one to pick."
             ],
             "bullets": [
-              "Methyl orange changes near pH 3–4; phenolphthalein near pH 8–10",
-              "Weak acid + strong base needs phenolphthalein",
-              "Strong acid + weak base needs methyl orange",
-              "The titration curve shows where the jump falls"
+              "Methyl orange changes near pH 3–4; phenolphthalein near pH 8–10.",
+              "Weak acid + strong base needs phenolphthalein.",
+              "Strong acid + weak base needs methyl orange.",
+              "The titration curve shows where the jump falls."
             ]
           }
         },
@@ -1899,16 +1901,16 @@
           "content": {
             "heading": "Go deeper: The trap between basic salt and base",
             "paragraphs": [
-              "A basic salt is not a base. Na₂CO₃ is a basic salt because its solution is alkaline after hydrolysis, but it does not contain free OH⁻ ions in the way NaOH does. Calling it a base confuses the name of the salt with the behaviour of its solution.",
-              "The same confusion strikes acidic salts. NH₄Cl is not an acid, even though its solution is acidic. Acidity here comes from the NH₄⁺ ion releasing a proton to water, not from the salt itself being an acid.",
+              "A basic salt is not a base. Na₂CO₃ is a basic salt because its solution is alkaline after hydrolysis, but it does not contain free OH⁻ ions the way NaOH does. Calling it a base confuses the salt's name with the behaviour of its solution.",
+              "The same confusion strikes acidic salts. NH₄Cl is not an acid, even though its solution is acidic. Its acidity comes from the NH₄⁺ ion releasing a proton to water, not from the salt itself being an acid.",
               "The exam loves that pair: solution character asked, salt type implied. The safe habit is to name the ion that hydrolyses and write its equation before deciding. CO₃²⁻ takes a proton from water and leaves OH⁻, so the solution turns basic.",
               "That equation is also the answer to the balancing item. Hydrolysis equations balance atoms and charge together, so a candidate who writes the ion first rarely writes an unbalanced equation in the hall."
             ],
             "bullets": [
-              "A basic salt is not a base in solution",
-              "An acidic salt is not an acid",
-              "Hydrolysis of the ion decides the solution character",
-              "Write the ion equation before choosing the answer"
+              "A basic salt is not a base in solution.",
+              "An acidic salt is not an acid.",
+              "Hydrolysis of the ion decides the solution character.",
+              "Write the ion equation before choosing the answer."
             ]
           }
         }
