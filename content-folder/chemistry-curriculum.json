@@ -146,11 +146,11 @@
             "heading": "Atoms, molecules and ions in daily words",
             "paragraphs": [
               "An atom is one single bead of an element, like one grain of rice. A molecule is atoms holding hands, like a short string of grains. An ion is an atom that has gained or lost an electron, so it carries a charge.",
-              "Protons are positive, neutrons neutral. H and He are atoms; H₂O is a molecule; Na⁺ is an ion. Dalton: indivisible atoms in whole-number ratios. Thomson: electron. Rutherford: tiny nucleus. Moseley: atomic number fixes identity. Millikan: charge e. Bohr: shells."
+              "Protons are positive, neutrons neutral. H and He are atoms; H₂O is a molecule; Na⁺ is an ion. Dalton proposed indivisible atoms combining in whole-number ratios, Thomson found the electron in cathode rays for the plum-pudding model, Rutherford’s gold foil showed the tiny nucleus, Moseley’s X-rays proved atomic number fixes identity, Millikan’s oil drop measured charge e, and Bohr placed electrons in shells explaining spectral lines."
             ],
             "bullets": [
               "Atom: one single bead. Molecule: beads holding hands. Ion: a charged bead.",
-              "Dalton, Thomson, Rutherford, Moseley, Millikan, Bohr: one idea each."
+              "Dalton atoms; Thomson electron from cathode rays; Rutherford nucleus from gold foil; Moseley Z from X-rays; Millikan charge e; Bohr shells for spectral lines."
             ],
             "takeaway": "Atoms are single beads, molecules are joined beads, and ions carry a charge.",
             "check": {
@@ -198,16 +198,17 @@
           "content": {
             "heading": "Shells, addresses and shapes",
             "paragraphs": [
-              "Electrons live on floors (shells) around the nucleus, in rooms called orbitals. Each electron has an address of four quantum numbers: n names the floor, l the room type, ml the exact room, and ms the spin direction.",
-              "Three rules govern filling. Aufbau fills the lowest rooms first, like front seats. Hund spreads electrons singly before pairing, like students taking separate seats. Pauli allows at most two electrons per room, spinning opposite ways.",
-              "An s orbital is a round cloud holding 2 electrons; a p subshell has three dumbbells holding 6. Chlorine (Z = 17) arranges as 1s² 2s² 2p⁶ 3s² 3p⁵ — count them: 2 + 2 + 6 + 2 + 5 = 17."
+              "Electrons live on floors (shells) around the nucleus, in rooms called orbitals. Each electron has four quantum numbers as its address: n the floor, l the room type, ml the exact room, ms the spin.",
+              "Three rules govern filling: Aufbau fills lowest rooms first, like front seats. Hund spreads electrons singly before pairing. Pauli allows two per room, spinning opposite ways.",
+              "An s orbital is a round cloud (2 electrons); a p subshell has three dumbbells (6). Chlorine (Z = 17) arranges as 1s² 2s² 2p⁶ 3s² 3p⁵ — count them: 2 + 2 + 6 + 2 + 5 = 17. Z 1–20 runs H (1s¹) to Ca (1s² 2s² 2p⁶ 3s² 3p⁶ 4s²), filling shells 1–3 before 4s."
             ],
             "bullets": [
               "Shells are floors; orbitals are rooms; quantum numbers are addresses.",
               "Aufbau: lowest first. Hund: singly first. Pauli: two at most.",
-              "s = round cloud (2); p = three dumbbells (6)."
+              "s = round cloud (2); p = three dumbbells (6).",
+              "Z 1–20: H 1s¹ to Ca 2,8,8,2 — add superscripts and check Z."
             ],
-            "takeaway": "Four quantum numbers address each electron, and three rules govern the filling.",
+            "takeaway": "Four quantum numbers address each electron; three rules govern filling.",
             "check": {
               "question": "Which set obeyed the Pauli principle for two electrons?",
               "options": [
@@ -344,16 +345,18 @@
           "content": {
             "heading": "Three laws in plain words",
             "paragraphs": [
-              "Conservation of mass says matter is never created or destroyed, only rearranged. Twelve grams of carbon plus 32 grams of oxygen gives 44 grams of carbon dioxide, because 12 + 32 = 44. Nothing is lost.",
-              "The law of definite proportions says a compound always has the same mass ratio of its elements. Water is always 1 g of hydrogen to 8 g of oxygen. If the ratio changed, it would be a different compound.",
-              "The law of multiple proportions says that when two elements form more than one compound, the masses of one combining with a fixed mass of the other are in a simple ratio. Twelve grams of carbon combines with 16 g of oxygen in CO and 32 g in CO₂ — a ratio of 1:2."
+              "Conservation of mass says matter is rearranged, never created or destroyed. Twelve grams carbon plus 32 g oxygen gives 44 g carbon dioxide because 12 + 32 = 44.",
+              "Definite proportions says a compound always keeps the same mass ratio. Water is always 1 g hydrogen to 8 g oxygen. A changed ratio means a different compound.",
+              "Multiple proportions says that when two elements form more than one compound, masses of one with a fixed mass of the other are in a simple ratio. Twelve grams carbon uses 16 g oxygen in CO and 32 g in CO₂ — 1:2.",
+              "Reciprocal proportions say that masses of two elements combining with a fixed mass of a third are in a simple ratio. With 8 g oxygen combining with 1 g hydrogen and 3 g carbon, hydrogen and carbon combine as 1:3."
             ],
             "bullets": [
-              "Mass in = mass out; reactions only rearrange matter.",
-              "Every compound has a fixed mass ratio of its elements.",
-              "Paired compounds use simple whole-number mass ratios."
+              "Mass in equals mass out.",
+              "Compounds have fixed mass ratios.",
+              "Paired compounds use simple ratios.",
+              "Reciprocal links ratios via a fixed third element."
             ],
-            "takeaway": "Mass is conserved, ratios are fixed, and paired compounds use simple ratios.",
+            "takeaway": "Mass is conserved; ratios are fixed and simple.",
             "check": {
               "question": "12 g of carbon forms CO with 16 g of oxygen and CO₂ with 32 g. Which law do 16 and 32 illustrate?",
               "options": [
@@ -372,12 +375,14 @@
           "content": {
             "heading": "Formulae and balanced equations",
             "paragraphs": [
-              "A formula counts atoms: H₂O means two hydrogen atoms and one oxygen atom. Symbols are the shorthand — H for hydrogen, O for oxygen — and the subscript is the count. Writing the formula is writing the recipe.",
+              "A formula counts atoms: H₂O means two hydrogen atoms and one oxygen atom. Writing the formula is writing the recipe.",
+              "Symbols form a system: one letter for H, O and C, two for Na and Cl. The first letter is capital, the second small, so Co is cobalt but CO is carbon plus oxygen.",
               "A balanced equation has equal atoms on both sides, since atoms are only rearranged. CH₄ + 2O₂ → CO₂ + 2H₂O has C1 H4 O4 on both sides. If counts differ, the equation lies about conservation.",
               "Percentage composition gives the empirical formula: divide each percentage by its Ar, then by the smallest value. A compound of 40% C, 6.7% H and 53.3% O gives 3.3, 6.7, 3.3, which reduces to CH₂O."
             ],
             "bullets": [
               "A formula counts atoms; subscripts are counts.",
+              "Symbols: H, O are one letter; Na, Cl two; Co ≠ CO.",
               "Balancing means equal atom counts on both sides.",
               "Percentage composition gives the empirical formula."
             ],
@@ -400,16 +405,18 @@
           "content": {
             "heading": "The mole: counting by weighing",
             "paragraphs": [
-              "One mole is a counting unit, like a dozen eggs: 1 mole = 6.02 × 10²³ particles. A mole of any substance has the same particle count, but different particles weigh differently, so a mole of carbon and a mole of water weigh different amounts.",
-              "Moles come from mass using moles = mass ÷ Mr. Methane has Mr = 16, so 0.5 mol weighs 8 g. One mole of any gas fills 22.4 dm³ at s.t.p., and concentration is moles ÷ volume.",
-              "Stoichiometry applies the equation’s mole ratio to real masses. Calcium carbonate (Mr = 100) gives one mole of CO₂ per mole, so 50 g is 0.5 mol and releases 11.2 dm³ of gas at s.t.p."
+              "One mole is a counting unit, like a dozen eggs: 1 mole = 6.02 × 10²³ particles. A mole of any substance has the same count, but different masses.",
+              "Moles come from mass using moles = mass ÷ Mr. Methane (Mr = 16) gives 0.5 mol = 8 g. One mole of gas fills 22.4 dm³ at s.t.p.; concentration is moles ÷ volume.",
+              "Stoichiometry applies the equation’s mole ratio. Calcium carbonate (Mr = 100) gives one mole CO₂ per mole, so 50 g is 0.5 mol releasing 11.2 dm³ at s.t.p.",
+              "Relative atomic mass is measured against carbon-12: ¹²C is assigned exactly 12. The relative mass of any atom is the average mass of its isotopes compared with one twelfth of a ¹²C atom. That standard lets Ar and Mr be linked by weighing."
             ],
             "bullets": [
-              "1 mole = 6.02 × 10²³ particles, like a dozen eggs.",
-              "Moles = mass ÷ Mr; gas at s.t.p. = 22.4 dm³ per mole.",
-              "Stoichiometry applies the equation’s mole ratio."
+              "1 mole = 6.02 × 10²³ particles.",
+              "Moles = mass ÷ Mr; gas = 22.4 dm³ per mole.",
+              "Stoichiometry applies the equation’s mole ratio.",
+              "¹²C = 12 exactly is the scale for Ar and Mr."
             ],
-            "takeaway": "A mole counts particles by weighing, and equations give the ratios.",
+            "takeaway": "A mole counts particles by weighing.",
             "check": {
               "question": "What is the mass of 0.5 mol of methane, CH₄ (Mr = 16)?",
               "options": [
@@ -548,14 +555,16 @@
           "content": {
             "heading": "Particles in motion make solids, liquids and gases",
             "paragraphs": [
-              "Everything is made of particles that are always moving. In a solid they vibrate in fixed positions. In a liquid they slide past one another. In a gas they move freely everywhere, which is why a gas fills a room.",
-              "Melting is particles gaining enough energy to slip past each other. Boiling is energy high enough that particles escape from everywhere at once. Vapourisation, by contrast, escapes only from the surface, at any temperature.",
-              "Freezing locks particles into place, and condensation returns a gas to a liquid as it cools. Brownian movement is the visible proof: tiny smoke particles jiggle because invisible air particles keep bumping them."
+              "Everything is made of particles that are always moving. Solids vibrate in fixed positions, liquids slide past each other, and gases move freely to fill a room. Particle speed and freedom set the state.",
+              "Melting lets particles slip past each other. Boiling lets them escape from everywhere at once. Vapourisation escapes only from the surface, at any temperature.",
+              "Freezing locks particles in place; condensation returns a gas to a liquid. Brownian movement proves it: smoke jiggles as invisible air particles bump it.",
+              "Gases differ in atomicity: the atoms per molecule in one formula unit. Helium is monatomic (He), hydrogen and oxygen diatomic (H₂, O₂), and carbon dioxide polyatomic (CO₂). Atomicity changes molar mass and diffusion, so H₂ diffuses faster than O₂."
             ],
             "bullets": [
               "Solids vibrate in place; liquids slide; gases move freely.",
               "Boiling bubbles throughout; vapourisation escapes only from the surface.",
-              "Brownian movement shows invisible particles bumping visible ones."
+              "Brownian movement shows invisible particles bumping visible ones.",
+              "Monatomic He; diatomic H₂, O₂; polyatomic CO₂."
             ],
             "takeaway": "The speed of particles decides whether matter is solid, liquid or gas.",
             "check": {
@@ -568,6 +577,24 @@
               ],
               "answer": 2,
               "why": "Vapourisation is escape from the surface at any temperature; boiling bubbles throughout."
+            },
+            "visual": {
+              "kind": "flow",
+              "caption": "Heating speeds particles, so they escape fixed places, slide past each other, then fly freely.",
+              "steps": [
+                {
+                  "label": "Solid vibrates in place",
+                  "detail": "Particles fixed, slow movement"
+                },
+                {
+                  "label": "Liquid slides past neighbours",
+                  "detail": "Particles slip past each other"
+                },
+                {
+                  "label": "Gas fills the container",
+                  "detail": "Particles move freely and fast"
+                }
+              ]
             }
           }
         },
@@ -577,8 +604,9 @@
             "heading": "Six gas laws in daily words",
             "paragraphs": [
               "Boyle’s law says squeezing a gas raises its pressure, like crowding a bus. Charles’s law says a gas grows when heated, because faster particles push harder. Gay-Lussac’s law says pressure rises with temperature in a sealed container.",
-              "Avogadro’s law says equal volumes hold equal particle numbers, so one mole of any gas fills 22.4 dm³ at s.t.p. Graham’s law says light gases diffuse faster, by the square root of the mass ratio. Dalton’s law says a mixture’s total pressure is the sum of each gas’s pressure.",
-              "Each law names which variable is held constant. Reading that condition is the whole skill of applying them."
+              "Avogadro’s law says equal volumes hold equal numbers: one mole fills 22.4 dm³ at s.t.p. Graham’s law says light gases diffuse faster by √Mr ratio. Dalton’s law adds each gas’s pressure in a mixture.",
+              "Each law holds one variable constant; read it first.",
+              "On graphs, Boyle’s law is a P–V hyperbola falling as V rises. Charles’s law is a V–T straight line through 0 K, and Gay-Lussac’s is a P–T line through the same point. Always read the constant variable first, then the shape tells the law."
             ],
             "bullets": [
               "Boyle: squeeze a gas and pressure rises.",
@@ -604,14 +632,14 @@
           "content": {
             "heading": "One equation that joins them",
             "paragraphs": [
-              "The ideal gas equation joins all the laws: PV = nRT. P is pressure, V is volume, n is moles, T is temperature in kelvin, and R is a constant. It reads like a recipe: pressure × volume equals amount × temperature (with R).",
-              "One mole of an ideal gas occupies 22.4 dm³ at 273 K and 1 atm, which is the molar volume. The vapour density of a gas is Mr ÷ 2, so a vapour density of 16 means Mr = 32. That link turns a gas measurement into a mass.",
-              "Real gases misbehave at high pressure and low temperature, when particles are squeezed close enough that their size and attractions matter. An ideal gas is the strict rule; a real gas is the rule with exceptions."
+              "The ideal gas equation joins all the laws: PV = nRT. P is pressure, V volume, n moles, T temperature in kelvin, and R a constant. Pressure × volume equals amount × temperature.",
+              "One mole occupies 22.4 dm³ at 273 K and 1 atm (molar volume). Vapour density is Mr ÷ 2, so vapour density 16 means Mr = 32. That converts a gas measurement into a mass.",
+              "Real gases deviate because particles have finite volume and attract each other, so PV = nRT fails when crowding matters. At high pressure particles are forced close, and at low temperature attractions pull them together. Both effects shrink measured volume below ideal, strongest for easily liquefied gases."
             ],
             "bullets": [
               "PV = nRT joins pressure, volume, amount and temperature.",
               "One mole fills 22.4 dm³ at s.t.p.; vapour density = Mr ÷ 2.",
-              "Real gases deviate at high P and low T."
+              "Deviation from finite volume, attractions, high P, low T."
             ],
             "takeaway": "PV = nRT turns any two measurements into the rest.",
             "check": {
@@ -793,6 +821,31 @@
               "Conductivity follows how loosely electrons are held."
             ],
             "takeaway": "Across a period the pull grows; down a group new shells shield it.",
+            "visual": {
+              "kind": "compare",
+              "caption": "More protons pull harder across; more shells shield better down.",
+              "columns": [
+                "Across a period",
+                "Down a group"
+              ],
+              "rows": [
+                {
+                  "feature": "Atomic radius",
+                  "left": "falls as pull grows",
+                  "right": "grows as new shells add"
+                },
+                {
+                  "feature": "Ionisation energy",
+                  "left": "rises as pull grows",
+                  "right": "falls as new shells shield"
+                },
+                {
+                  "feature": "Electronegativity",
+                  "left": "rises toward chlorine",
+                  "right": "falls toward heavier halogens"
+                }
+              ]
+            },
             "check": {
               "question": "Which order correctly arranges Na, Mg and Cl by electronegativity?",
               "options": [
@@ -818,7 +871,8 @@
             "bullets": [
               "Trends come from nuclear charge versus shielding.",
               "Across: charge wins. Down: shielding wins.",
-              "Ionic radius follows the same contest."
+              "Ionic radius follows the same contest.",
+              "Electron affinity rises across a period and falls down a group."
             ],
             "takeaway": "Charge pulls in, shielding pushes out, and the winner sets the trend.",
             "check": {
@@ -889,7 +943,8 @@
               "The trend pauses at the noble gases, whose full shells make a sudden jump in cost. That saw-tooth shape confirms the rule: shell structure, not mass alone, sets the price of removing an electron.",
               "A candidate who explains the trend with charge-versus-shielding language earns full marks; a candidate who recites 'it increases' without the reason earns only part. The mechanism is the mark.",
               "A candidate who explains the trend with charge-versus-shielding language earns full marks; a candidate who recites ‘it increases’ without the reason earns only part. The mechanism is the mark.",
-              "The same contest also sets electronegativity, electron affinity and metallic character, so one explanation carries several items."
+              "The same contest also sets electronegativity, electron affinity and metallic character, so one explanation carries several items.",
+              "Electron affinity is the energy released when an atom gains an electron, so a stronger pull releases more energy. Across a period the atom shrinks and the pull grows, so electron affinity rises; down a group new shells shield the nucleus, so it falls. This is the same charge-versus-shielding contest, not a separate memorised list."
             ],
             "bullets": [
               "Across a period, charge wins and ionisation energy rises.",
@@ -990,13 +1045,13 @@
             "heading": "The special bonds",
             "paragraphs": [
               "Metallic bonding is giving without keeping: metal atoms drop their outer electrons into a shared sea, and the sea holds the positive cores together. That shared sea is why metals conduct electricity and bend instead of breaking.",
-              "Hydrogen bonding is an extra attraction between molecules, not a bond inside one. Water molecules hydrogen-bond to each other, which is why water boils so high compared with similar small molecules. A coordinate (dative) bond is sharing where both electrons come from one atom, as in [Fe(CN)₆]³⁻ and [Cu(NH₃)₄]²⁺.",
+              "Hydrogen bonding is an extra attraction between molecules, not a bond inside one. Water molecules hydrogen-bond to each other, which is why water boils so high compared with similar small molecules. A coordinate (dative) bond is sharing where both electrons come from one atom, as in [Fe(CN)₆]⁴⁻ (ferrocyanide), [Fe(CN)₆]³⁻ and [Cu(NH₃)₄]²⁺.",
               "Van der Waals forces are the weakest attractions between molecules, like the faint stickiness of loose pages. They matter only when stronger bonds are absent, which is why they are mentioned as a special weak force."
             ],
             "bullets": [
               "Metallic = shared electron sea; explains conductivity and malleability.",
               "Hydrogen bond = extra attraction between molecules (water, HF, NH₃).",
-              "Coordinate bond = sharing where one atom supplies both electrons.",
+              "Coordinate bond = sharing where one atom supplies both electrons: [Fe(CN)₆]⁴⁻.",
               "Van der Waals = weakest force between molecules."
             ],
             "takeaway": "Metallic seas, hydrogen attractions and dative sharing are the special cases.",
@@ -1168,16 +1223,18 @@
           "content": {
             "heading": "Elements, compounds and mixtures",
             "paragraphs": [
-              "An element is a substance made of one kind of atom, like oxygen or iron. A compound is two or more elements joined by chemical bonding, like water or carbon dioxide. A mixture is two or more substances merely mixed, like sand and salt in a bowl.",
-              "A chemical change makes a new substance with new properties — burning wood gives ash and smoke. A physical change changes only appearance, like melting ice. Mixtures change physically, so their parts can be separated again.",
-              "A pure substance melts and boils at exact temperatures; an impure one melts over a range. A sharp melting point therefore proves purity, while a falling melting point reveals impurities. That is why melting and boiling points are purity tests."
+              "An element is one kind of atom, like oxygen. A compound is elements joined by chemical bonding, like water. A mixture is substances merely mixed, like sand and salt.",
+              "A chemical change makes a new substance with new properties, like burning wood. A physical change changes only appearance, like melting ice. Mixtures change physically, so parts separate again.",
+              "A pure substance melts and boils sharply at one temperature; an impure one melts over a range. A falling melting point therefore reveals impurities. Melting and boiling points are thus purity tests.",
+              "Density and freezing point also test purity: a pure substance has a fixed density and a sharp freezing point. Impurities shift density and depress or spread the freezing point. An off-value therefore proves impurity."
             ],
             "bullets": [
-              "Element = one kind of atom; compound = bonded elements; mixture = mixed substances.",
+              "Element = one atom kind; compound = bonded; mixture = mixed.",
               "Chemical change makes new substances; physical change does not.",
-              "Pure substances melt sharply; impure ones melt over a range."
+              "Pure melts sharply; impure melts over a range.",
+              "Pure: fixed density and sharp freezing point; impure: shifted, spread values."
             ],
-            "takeaway": "Mixtures separate physically because their parts were never chemically joined.",
+            "takeaway": "Mixtures separate physically because their parts were never bonded.",
             "check": {
               "question": "Which statement correctly pairs a pure substance with its test?",
               "options": [
@@ -1207,6 +1264,24 @@
               "Every method exploits one property difference."
             ],
             "takeaway": "Find the property that differs, and that property is the separating tool.",
+            "visual": {
+              "kind": "flow",
+              "caption": "Each method works because one property differs, and that difference is the separating tool.",
+              "steps": [
+                {
+                  "label": "Identify difference",
+                  "detail": "Boiling point or solubility"
+                },
+                {
+                  "label": "Choose method",
+                  "detail": "Distil, filter or crystallise"
+                },
+                {
+                  "label": "Separate",
+                  "detail": "Collect pure parts"
+                }
+              ]
+            },
             "check": {
               "question": "To obtain pure water from seawater that also contains suspended sand, which order of methods works?",
               "options": [
@@ -1225,15 +1300,16 @@
           "content": {
             "heading": "Chromatography and crystallisation",
             "paragraphs": [
-              "Chromatography separates dyes and inks that travel at different speeds along a strip. Paper chromatography dips ink in water; the colours spread out as bands. Column chromatography does the same through a packed tube that holds back some substances longer.",
+              "Chromatography separates dyes travelling at different speeds along a strip. Paper chromatography dips ink in water; colours spread as bands. Column chromatography holds back some parts longer in a packed tube.",
               "Simple crystallisation grows crystals from a saturated solution by cooling or evaporation. Re-crystallisation purifies: dissolve the impure solid hot, filter while hot, then cool so only pure crystals form while impurities stay dissolved.",
-              "In each case the principle is solubility: components dissolve or travel at different rates. A method is chosen by asking which property differs most between the components."
+              "The principle is solubility: parts dissolve or travel at different rates. The differing property chooses the method.",
+              "Fractional crystallisation separates two soluble salts with close solubilities, like saltpetre and common salt, crystallising one then the other as the solution cools. Simple crystallisation grows one salt at a time; fractional separates a pair by staged cooling."
             ],
             "bullets": [
               "Paper chromatography separates ink dyes by travel speed.",
               "Column chromatography holds components back differently.",
               "Crystallisation uses solubility; re-crystallisation purifies.",
-              "Choose the method whose property differs most."
+              "Fractional separates close pairs in stages; simple grows one salt."
             ],
             "takeaway": "Chromatography separates by speed; crystallisation separates by solubility.",
             "check": {
@@ -1396,6 +1472,24 @@
               ],
               "answer": 2,
               "why": "Holding more than the maximum means the solution is supersaturated."
+            },
+            "visual": {
+              "kind": "flow",
+              "caption": "Heating dissolves more until full, and careful cooling can push past full into over-full.",
+              "steps": [
+                {
+                  "label": "Unsaturated",
+                  "detail": "Heat dissolves more salt"
+                },
+                {
+                  "label": "Saturated",
+                  "detail": "Cooling reaches the limit"
+                },
+                {
+                  "label": "Supersaturated",
+                  "detail": "Careful cooling holds excess"
+                }
+              ]
             }
           }
         },
@@ -1405,13 +1499,14 @@
             "heading": "Calculating solubility and choosing solvents",
             "paragraphs": [
               "A solubility calculation starts from the definition: how many moles sit in one dm³ of saturated solution. Suppose 11 g of NaCl dissolves in 0.1 dm³. Moles = 11 ÷ 58.5 = 0.188 mol, so the solubility is 0.188 ÷ 0.1 = 1.88 mol/dm³.",
-              "Like dissolves like: water, a polar liquid, removes sweat and salt, but not grease. Petrol, an organic solvent, dissolves grease and paint, which is why dry cleaners use it. The solvent is chosen by matching its nature to the stain.",
-              "Temperature enters every calculation. A curve reading gives the solubility at the stated temperature, and a supersaturated solution made at a high temperature may crash out crystals as it cools — the basis of re-crystallisation for purification."
+              "Like dissolves like: water, a polar liquid, removes sweat and salt, but not grease. Petrol, an organic solvent, dissolves grease and paint, which is why dry cleaners use it. Fats need detergents and oil needs turpentine or another organic solvent, so the solvent must match the stain.",
+              "Temperature enters every calculation. A curve reading gives solubility at that temperature, and a supersaturated solution made hot may crash out crystals on cooling — the basis of re-crystallisation."
             ],
             "bullets": [
               "Molar solubility = moles ÷ volume of saturated solution.",
               "Water removes polar stains; petrol removes grease and paint.",
-              "The solvent is matched to the nature of the stain."
+              "The solvent is matched to the nature of the stain.",
+              "Oil needs turpentine/organic solvents; fats need detergents."
             ],
             "takeaway": "Solubility is moles per dm³ at saturation, and the solvent must match the stain.",
             "check": {
@@ -1741,7 +1836,8 @@
               "The charge check is the safety net: left side −1 + 10 + 8 = +17; right side +2 + 15 = +17. Both sides match, so the equation is balanced. A mismatch means an atom count was missed.",
               "The same ladder works for dichromate reductions and any half-equation the syllabus sets. Fall against rise, then atoms, then charge — in that order, every time.",
               "In acid solution the needed H⁺ and H₂O are always available; in alkaline solution OH⁻ and H₂O play that role instead. The medium decides which species appears, and the question will name it.",
-              "A candidate who checks charge after every adjustment catches errors at the step where they appear, not at the end of the question."
+              "A candidate who checks charge after every adjustment catches errors at the step where they appear, not at the end of the question.",
+              "Agent tests always name the colour that betrays the transfer. Acidified dichromate (orange) turns green as Cr₂O₇²⁻ is reduced to Cr³⁺, while purple KMnO₄ is bleached to colourless Mn²⁺ when it oxidises a reductant. Fe²⁺ (pale green) reduces dichromate and manganate, whereas Fe³⁺ (brown) oxidises iodide to brown iodine."
             ],
             "bullets": [
               "Fall of 5 needs 5 irons rising by 1 each.",
@@ -1760,13 +1856,15 @@
               "The second trap is the sign of the change. A decrease in oxidation number is reduction, even though the atom 'lost' number; students read the smaller number as oxidation. Fall is reduction, rise is oxidation — the number moves opposite to the name.",
               "The third trap is the oxygen rule with peroxides. In H₂O₂ the oxygen is −1, and applying −2 gives a wrong sulphur count in thiosulphates. The shared oxygen is the exception that examiners plant.",
               "The fourth trap is naming. Iron(II) chloride is not iron with two chlorides for fun — the numeral is the oxidation state itself, and swapping II and III swaps the formula.",
-              "A final trap is forgetting that an element in a free state is always zero — even nitrogen in N₂ or oxygen in O₂. Assigning it a charge breaks every balance that follows."
+              "A final trap is forgetting that an element in a free state is always zero — even nitrogen in N₂ or oxygen in O₂. Assigning it a charge breaks every balance that follows.",
+              "The central atom oxidation state sets the suffix: the higher state takes -ate and the lower takes -ite, as in sulphate and sulphite. A variable metal takes a Roman numeral for its state, as in iron(II) and iron(III). The suffix and numeral therefore both read the oxidation number directly."
             ],
             "bullets": [
               "Oxidised species is the reducing agent.",
               "Fall in number = reduction; rise = oxidation.",
               "Peroxide oxygen is −1, not −2.",
-              "The Roman numeral is the oxidation state."
+              "The Roman numeral is the oxidation state.",
+              "Higher state takes -ate (sulphate); lower takes -ite (sulphite); metals take Roman numerals."
             ]
           }
         }
@@ -1873,6 +1971,28 @@
               ],
               "answer": 1,
               "why": "pH = −log(10⁻³) = 3."
+            },
+            "visual": {
+              "kind": "flow",
+              "caption": "Base is added until the indicator changes, so the colour change marks exact neutralisation.",
+              "steps": [
+                {
+                  "label": "Acid in flask",
+                  "detail": "Fixed volume of acid"
+                },
+                {
+                  "label": "Base in burette",
+                  "detail": "Added drop by drop"
+                },
+                {
+                  "label": "Add indicator",
+                  "detail": "Colour signals pH change"
+                },
+                {
+                  "label": "End point reached",
+                  "detail": "Colour change shows neutralisation"
+                }
+              ]
             }
           }
         },
@@ -1931,13 +2051,15 @@
               "That is the exam link tested: compare two molar solutions, and the stronger acid shows the higher conductance. The degree of dissociation can be read off the conductance ratio directly.",
               "Bases mirror acids: NaOH is strong and conducts well, NH₄OH is weak and conducts poorly although both are bases. Strength, not the acid–base label, sets the ion count.",
               "Comparing a strong and weak acid at the same molar concentration therefore shows a wide conductance gap, and that gap is the practical proof of their different dissociation.",
-              "The same measurement ranks bases. The ion count, not the label, always decides."
+              "The same measurement ranks bases. The ion count, not the label, always decides.",
+              "Common bases feel soapy, turn red litmus blue and neutralise acids to salts, with NaOH in soap and limewater Ca(OH)₂ in mortar. Ammonia solution serves as a laboratory base and a fertiliser feedstock. Useful salts include ammonium sulphate fertiliser, sodium chloride for food preservation and calcium hydroxide for soil treatment."
             ],
             "bullets": [
               "Conductance counts the ions actually present.",
               "Strong acids dissociate fully; weak acids partly.",
               "Dilution raises the dissociated fraction of a weak acid.",
-              "Strength and concentration are different ideas."
+              "Strength and concentration are different ideas.",
+              "Salt uses: ammonium sulphate fertiliser, sodium chloride food preservation and calcium hydroxide soil treatment."
             ]
           }
         },
@@ -1949,13 +2071,16 @@
               "An indicator changes colour across a pH range, so it must change close to the end point of the reaction. Methyl orange changes between pH 3.1 and 4.4, phenolphthalein between 8.2 and 10.0, and litmus changes broadly near 7.",
               "A strong acid with a strong base ends near pH 7, so either indicator works. A weak acid with a strong base ends above pH 7, so phenolphthalein is correct and methyl orange would change too early. A strong acid with a weak base ends below pH 7, so methyl orange is correct.",
               "The titration curve shows why: it jumps through the end-point range sharply for strong–strong pairs and more gently for weak pairs. A candidate who reads the jump sees why the wrong indicator gives a false end point.",
-              "Litmus is a mixture and changes gradually, so it is a poor titration indicator. Methyl orange and phenolphthalein stay the sharp choices, and the curve tells which one to pick."
+              "Litmus is a mixture and changes gradually, so it is a poor titration indicator. Methyl orange and phenolphthalein stay the sharp choices, and the curve tells which one to pick.",
+              "AlCl₃ (aluminium chloride) hydrolyses acidic because Al³⁺ pulls hydroxide from water and leaves hydrogen ions: Al³⁺ + 3H₂O ⇌ Al(OH)₃ + 3H⁺. CH₃COONa (sodium ethanoate) hydrolyses basic because CH₃COO⁻ takes a proton from water: CH₃COO⁻ + H₂O ⇌ CH₃COOH + OH⁻. The ion from the weak parent therefore decides the pH the indicator must match."
             ],
             "bullets": [
               "Methyl orange changes near pH 3–4; phenolphthalein near pH 8–10.",
               "Weak acid + strong base needs phenolphthalein.",
               "Strong acid + weak base needs methyl orange.",
-              "The titration curve shows where the jump falls."
+              "The titration curve shows where the jump falls.",
+              "AlCl₃: Al³⁺ + 3H₂O ⇌ Al(OH)₃ + 3H⁺ (acidic); CH₃COONa: CH₃COO⁻ + H₂O ⇌ CH₃COOH + OH⁻ (basic).",
+              "Buffers beyond blood: limed soil, antacid tablets, anti-dandruff shampoos and detergent builders."
             ]
           }
         },
@@ -1967,13 +2092,15 @@
               "A basic salt is not a base. Na₂CO₃ is a basic salt because its solution is alkaline after hydrolysis, but it does not contain free OH⁻ ions the way NaOH does. Calling it a base confuses the salt's name with the behaviour of its solution.",
               "The same confusion strikes acidic salts. NH₄Cl is not an acid, even though its solution is acidic. Its acidity comes from the NH₄⁺ ion releasing a proton to water, not from the salt itself being an acid.",
               "The exam loves that pair: solution character asked, salt type implied. The safe habit is to name the ion that hydrolyses and write its equation before deciding. CO₃²⁻ takes a proton from water and leaves OH⁻, so the solution turns basic.",
-              "That equation is also the answer to the balancing item. Hydrolysis equations balance atoms and charge together, so a candidate who writes the ion first rarely writes an unbalanced equation in the hall."
+              "That equation is also the answer to the balancing item. Hydrolysis equations balance atoms and charge together, so a candidate who writes the ion first rarely writes an unbalanced equation in the hall.",
+              "Oxides follow their parents: acidic oxides such as CO₂ and SO₂ react with bases to make salts, basic oxides such as MgO react with acids, and amphoteric oxides such as ZnO and Al₂O₃ react with both. Trioxocarbonate(IV) salts such as Na₂CO₃ and CaCO₃ fizz with dilute acid to release carbon dioxide: CaCO₃ + 2HCl → CaCl₂ + H₂O + CO₂. The steady bubbles therefore identify a trioxocarbonate(IV) salt."
             ],
             "bullets": [
               "A basic salt is not a base in solution.",
               "An acidic salt is not an acid.",
               "Hydrolysis of the ion decides the solution character.",
-              "Write the ion equation before choosing the answer."
+              "Write the ion equation before choosing the answer.",
+              "Acidic oxide + base → salt; basic oxide + acid → salt; trioxocarbonate(IV) salt + acid → CO₂ effervescence."
             ]
           }
         }
@@ -2002,7 +2129,7 @@
             "heading": "Electrolytes and the cell",
             "paragraphs": [
               "An electrolyte is a substance that carries electricity when molten or dissolved, and is broken apart in the process. Sugar water does not conduct, so it is a non-electrolyte. The anode is the positive electrode; the cathode is the negative electrode.",
-              "Electrolysis is the breaking of an electrolyte by an electric current. Inert electrodes like platinum do not react — they only pass the current. Reactive electrodes like copper dissolve at the anode instead of letting an anion discharge.",
+              "Electrolysis breaks an electrolyte with a current. Use inert graphite or platinum for CuSO₄, dilute H₂SO₄ and fused NaCl, and graphite for brine. Reactive copper dissolves at the anode, so it is used only when copper must deposit.",
               "Which ion comes off follows the electrochemical series and the concentration. At the cathode, metal ions and hydrogen compete, and the lower one in the series wins. At the anode, non-metal anions discharge, but concentrated solutions favour the anion over water."
             ],
             "bullets": [
@@ -2031,8 +2158,8 @@
             "heading": "Products for the standard electrolytes",
             "paragraphs": [
               "Dilute H₂SO₄ gives hydrogen at the cathode and oxygen at the anode — water is the electrolyte that reacts. Aqueous CuSO₄ gives copper at the cathode and oxygen at the anode. CuCl₂ solution gives copper and chlorine.",
-              "Dilute NaCl solution gives hydrogen and oxygen, while concentrated brine gives hydrogen and chlorine. Fused NaCl gives sodium at the cathode and chlorine at the anode, because there is no water to compete. Electrode statements are written as half-equations, like Cu²⁺ + 2e⁻ → Cu.",
-              "Faraday's laws link charge to amount: Q = It, where I is in amperes and t in seconds. One Faraday (96500 C) discharges one mole of electrons, so gas volumes follow from the moles formed."
+              "Dilute NaCl gives hydrogen at the cathode and oxygen at the anode, while concentrated brine gives hydrogen and chlorine. Fused NaCl gives sodium at the cathode and chlorine at the anode, because no water competes.",
+              "First law: mass liberated is proportional to charge, Q = It, where I is in amperes and t in seconds. Second law: for the same Q, masses liberated are proportional to equivalent masses (molar mass ÷ electrons gained). One Faraday (96500 C) discharges one mole of electrons."
             ],
             "bullets": [
               "Dilute H₂SO₄ gives H₂ at cathode, O₂ at anode.",
@@ -2041,6 +2168,24 @@
               "Electrode statements are half-equations."
             ],
             "takeaway": "Name the electrolyte and the electrode, then read the products off the series.",
+            "visual": {
+              "kind": "flow",
+              "caption": "Read the electrolyte and the electrode, then the series gives both products.",
+              "steps": [
+                {
+                  "label": "Electrolyte",
+                  "detail": "Molten or dissolved"
+                },
+                {
+                  "label": "Pass current",
+                  "detail": "Charge moves the ions"
+                },
+                {
+                  "label": "Products at both electrodes",
+                  "detail": "Cathode and anode products"
+                }
+              ]
+            },
             "check": {
               "question": "Electrolysis of concentrated sodium chloride solution gives which pair of products?",
               "options": [
@@ -2059,8 +2204,8 @@
           "content": {
             "heading": "Uses, series and protecting iron",
             "paragraphs": [
-              "Electrolysis purifies copper: impure copper dissolves at the anode while pure copper deposits at the cathode. Aluminium is extracted from aluminium oxide dissolved in cryolite, and sodium by the Downs process on fused NaCl. Chlorine and NaOH both come from electrolysis of brine.",
-              "The electrochemical series, K, Ca, Na, Mg, Al, Zn, Fe, Sn, Pb, H, Cu, Hg, Ag, Au, predicts reactivity and displacement. A metal higher up displaces a lower one, so zinc displaces iron but not sodium. Electrode potentials rank the same order.",
+              "Electrolysis purifies copper: impure copper dissolves at the anode while pure copper deposits at the cathode. Aluminium oxide in cryolite gives aluminium, and the Downs process gives sodium from fused NaCl. Chlorine and NaOH come from brine, and oxygen comes from water electrolysis and liquid air.",
+              "The electrochemical series, K, Ca, Na, Mg, Al, Zn, Fe, Sn, Pb, H, Cu, Hg, Ag, Au, predicts reactivity and displacement. A metal higher up displaces a lower one, so zinc displaces iron but not sodium. Standard potentials (E°) rank the same order; E°cell = E°cathode − E°anode.",
               "Corrosion is electrochemical: iron rusts where oxygen and water meet the metal. Painting, greasing or oiling blocks air and water, while cathodic protection sacrifices a more reactive metal like zinc. Electroplating coats a base metal with a rust-resistant one."
             ],
             "bullets": [
@@ -2136,7 +2281,8 @@
               "In dilute NaCl solution the anode discharges oxygen from water because water is present in large amount and oxidises more easily. In concentrated brine the chloride ions crowd the anode, and their concentration lets them win. Discharge is therefore a contest between ions, and concentration tips the balance.",
               "The same contest explains the cathode in fused NaCl. Water is absent, so sodium ions discharge directly. That is the whole logic of the Downs process: melt the salt, remove the water, and the metal itself must discharge.",
               "Oxygen overpotential also matters. Discharging oxygen from water needs extra voltage, so in concentrated brine the chloride route needs less. A candidate who thinks in terms of contests rather than lists will predict products for unfamiliar electrolytes.",
-              "The Hofmann voltameter shows the contest plainly: hydrogen and oxygen collect in a 2:1 ratio from water. The ratio is the stoichiometry made visible, and it confirms the half-equations without any memorisation."
+              "The Hofmann voltameter shows the contest plainly: hydrogen and oxygen collect in a 2:1 ratio from water. The ratio is the stoichiometry made visible, and it confirms the half-equations without any memorisation.",
+              "Graphite and platinum are chosen because they conduct yet do not react, so they survive chlorine and oxygen. Copper or other reactive metals would dissolve and contaminate the products. That is why brine and fused-salt cells use graphite, and CuSO₄ cells use graphite or platinum."
             ],
             "bullets": [
               "Concentrated chloride outcompetes water at the anode.",
@@ -2172,7 +2318,8 @@
               "In a galvanic cell the anode is negative and oxidation happens there, while in electrolysis the anode is positive and oxidation still happens there. The electrode label follows the reaction, not the sign: the anode is where oxidation occurs in both devices. Mixing the two rules is the commonest pole error.",
               "The other trap is writing the cell sign on the electrodes of a powered cell. A power supply fixes the cathode as negative and the anode as positive, but the names cathode and anode still mean reduction and oxidation respectively. Signs follow the supply, names follow the reaction.",
               "Corrosion arguments use the same map. In a rusting nail the iron is the anode because it oxidises. Cathodic protection works by attaching a piece whose anode reaction is preferred, so the protective metal is eaten while the iron is spared.",
-              "A candidate who repeats oxidation happens at the anode in both cases will answer pole questions without memorising two contradictory lists. One rule covers both devices, and that is why it is worth learning."
+              "A candidate who repeats oxidation happens at the anode in both cases will answer pole questions without memorising two contradictory lists. One rule covers both devices, and that is why it is worth learning.",
+              "A standard electrode potential (E°) is a half-cell value measured against the standard hydrogen electrode. For a cell, E°cell = E°cathode − E°anode, where each half-reaction is written as a reduction. Example: E°(Cu²⁺/Cu) = +0.34 V and E°(Zn²⁺/Zn) = −0.76 V, so E°cell = 0.34 − (−0.76) = +1.10 V."
             ],
             "bullets": [
               "The anode is where oxidation happens in any cell.",
@@ -2338,9 +2485,10 @@
               "Chemical reactions involve electrons, the lightest and outermost parts of atoms. Nuclear reactions involve the nucleus, where protons and neutrons are bound together with enormous energy. That is why chemical energy is measured in kilojoules per mole while nuclear energy reaches millions of times more.",
               "The nucleus is held together by the strong nuclear force, which is short-ranged but extremely powerful. In heavy nuclei that force must balance the electrical repulsion between protons. In light nuclei fusion wins; in heavy nuclei fission wins; the balance point sits near iron.",
               "Radioactive decay is the nucleus seeking that balance by shedding protons, neutrons or energy. Stable nuclei have already found it; unstable ones decay until they do.",
-              "A candidate who pictures the contest — strong force holding, charge repelling — can predict fission for heavy nuclei and fusion for light ones without memorising the split.",
+              "Picturing strong force holding against charge repelling predicts fission for heavy and fusion for light nuclei.",
               "That difference in scale is why a gram of uranium stores more energy than tonnes of coal. The nucleus is a tiny fraction of the atom’s size but holds nearly all its mass and almost all its potential energy.",
-              "A candidate who compares the two energies will never confuse a chemical reaction with a nuclear one in the hall: the scale itself tells the story."
+              "A candidate who compares the two energies will never confuse a chemical reaction with a nuclear one in the hall: the scale itself tells the story.",
+              "Stability turns on n/p ratio, binding energy per nucleon and magic numbers. Light nuclei need n/p near 1; heavy nuclei need more neutrons to dilute repulsion, so n/p rises. Binding energy per nucleon peaks near iron, and magic numbers (2, 8, 20, 28, 50, 82, 126) add stability."
             ],
             "bullets": [
               "Chemical energy uses electrons; nuclear uses the nucleus — a million times more.",
@@ -2431,6 +2579,31 @@
               ],
               "answer": 1,
               "why": "Heat leaves the system for the surroundings, so ΔH is negative — exothermic."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "The sign flips with the surroundings: giving heat out feels warm, taking heat in feels cold.",
+              "columns": [
+                "Exothermic",
+                "Endothermic"
+              ],
+              "rows": [
+                {
+                  "feature": "ΔH sign",
+                  "left": "Negative, system loses energy",
+                  "right": "Positive, system gains energy"
+                },
+                {
+                  "feature": "Example",
+                  "left": "NaOH dissolving, combustion",
+                  "right": "NH4Cl dissolving, melting ice"
+                },
+                {
+                  "feature": "Feeling",
+                  "left": "Surroundings feel warm",
+                  "right": "Surroundings feel cold"
+                }
+              ]
             }
           }
         },
@@ -2565,7 +2738,8 @@
               "Catalysts lower the hill without changing the heights. That is why a catalyst speeds a reaction without changing ΔH: it opens a lower path between the same two levels.",
               "The profile also shows intermediate hills for multi-step reactions. The highest hill decides the rate, which is why one slow step can throttle a whole sequence of fast ones.",
               "Reading diagrams is therefore two questions, not one: first the levels (ΔH), then the hill (activation energy). The exam tests them separately, and merging them loses both marks.",
-              "The diagram also explains why some exothermic reactions still need initiation. The products sit low, but the hill between is high, so a spark or catalyst is needed to begin the descent."
+              "The diagram also explains why some exothermic reactions still need initiation. The products sit low, but the hill between is high, so a spark or catalyst is needed to begin the descent.",
+              "Physical changes carry enthalpy signs too. Melting, vaporisation and sublimation absorb heat and are endothermic with positive ΔH, while condensation, freezing and deposition release heat and are exothermic with negative ΔH. The sign rule is the same as for reactions: energy taken in is positive, energy given out is negative."
             ],
             "bullets": [
               "Levels give ΔH; hill gives activation energy.",
@@ -2619,7 +2793,7 @@
           "content": {
             "heading": "Four things change the speed",
             "paragraphs": [
-              "Temperature speeds reactions because faster particles collide more often and harder. A 10 °C rise roughly doubles the rate — that is why food spoils faster in heat and why the HCl and Na₂S₂O₃ clock reaction slows in the cold.",
+              "Temperature speeds reactions because faster particles collide more often and harder. A 10 °C rise roughly doubles the rate — that is why food spoils faster in heat. Warm Mg + HCl fizzes faster, while the HCl and Na₂S₂O₃ clock slows in the cold.",
               "Concentration or pressure speeds reactions because more particles crowd together, so collisions happen more often. Powdered marble reacts faster with HCl than lumps because powder has far more surface area for the acid to attack. For gases, pressure is the concentration term.",
               "A catalyst is an unchanged helper that lowers the energy hill, so more collisions succeed. Manganese(IV) oxide speeds the decomposition of hydrogen peroxide and potassium chlorate without being used up. Light also speeds certain reactions, like the halogenation of alkanes."
             ],
@@ -2669,6 +2843,28 @@
               ],
               "answer": 1,
               "why": "With few reactants left, successful collisions become rare and the rate falls."
+            },
+            "visual": {
+              "kind": "flow",
+              "caption": "Only collisions with energy above the threshold succeed, so heating makes more reactions succeed.",
+              "steps": [
+                {
+                  "label": "Reactants meet",
+                  "detail": "Particles crowd together"
+                },
+                {
+                  "label": "Particles collide",
+                  "detail": "Bumps happen often"
+                },
+                {
+                  "label": "Overcome activation energy",
+                  "detail": "Collision energy is enough"
+                },
+                {
+                  "label": "Products form",
+                  "detail": "New bonds are made"
+                }
+              ]
             }
           }
         },
@@ -2684,7 +2880,8 @@
             "bullets": [
               "Rate = amount changed ÷ time taken.",
               "Gas volume/s, colour/s and concentration/s all measure rate.",
-              "The rate-curve slope gives Ea via Arrhenius."
+              "The rate-curve slope gives Ea via Arrhenius.",
+              "Concentration: more concentrated HCl/marble, HCl/Na₂S₂O₃ and iodine-clock mixtures react faster."
             ],
             "takeaway": "Divide the change by the time, and the slope tells the rest.",
             "check": {
@@ -2753,7 +2950,9 @@
               "Each rate factor changes the same thing: the number of successful collisions per second. Temperature raises particle speed, so more collisions pass the activation energy. Concentration and pressure crowd particles together, so collisions happen more often. Surface area gives the acid more points of attack.",
               "The catalyst neither adds energy nor changes the collision count — it lowers the hill so a larger fraction of the same collisions succeed. Manganese(IV) oxide in hydrogen peroxide is the classic example: the same peroxide, the same temperature, a faster rate.",
               "Light acts differently in halogenation: it supplies energy to break molecules directly, creating free radicals that propagate the chain. That is why alkanes chlorinate under ultraviolet light and not in the dark.",
-              "A candidate who reduces every factor to 'more successful collisions' can predict the direction of any rate question without memorising four separate rules."
+              "A candidate who reduces every factor to 'more successful collisions' can predict the direction of any rate question without memorising four separate rules.",
+              "Concentration and pressure are tested with HCl and marble chips, HCl and Na₂S₂O₃, and the iodine clock: raising the concentration of any reactant shortens the measured time and raises the rate. In each case more particles per unit volume means more collisions per second. The final amount of product is unchanged; only the speed changes.",
+              "Heterogeneous catalysts are in a different phase from the reactants, like solid MnO₂ acting on liquid H₂O₂ or solid platinum acting on gases. Homogeneous catalysts share the same phase as the reactants, like enzymes dissolved with their substrates in solution. The phase test — same phase or different phase — classifies every catalyst."
             ],
             "bullets": [
               "Every factor acts through successful collisions per second.",
@@ -2791,7 +2990,8 @@
               "The second trap is concentration versus rate. Increasing concentration speeds the reaction but does not change the final amount of product. Yield is decided by stoichiometry; rate is decided by collisions. The two are never interchangeable.",
               "The third trap is the catalyst myth. A catalyst does not change ΔH, the equilibrium position or the final yield — it only lowers the hill. Any option claiming a catalyst changes the heat or the product amount is false.",
               "The fourth trap is surface area versus mass. Powder and lumps of equal mass have the same amount of reactant but different exposed area. Rate follows area, not quantity.",
-              "A final trap is ignoring the conditions in the question. A rate measured at one temperature cannot be compared with a rate at another; the comparison is only valid when every factor except the one tested is held constant."
+              "A final trap is ignoring the conditions in the question. A rate measured at one temperature cannot be compared with a rate at another; the comparison is only valid when every factor except the one tested is held constant.",
+              "Rates can also be moderated by reversing each factor: cooling slows a reaction, diluting it (lowering concentration) slows it, and reducing surface area by using lumps instead of powder slows attack. Removing the catalyst returns the reaction to its slower uncatalysed rate. Each reversal lowers successful collisions per second, which is the same kinetic logic in reverse."
             ],
             "bullets": [
               "Rate is the reciprocal of a measured time.",
@@ -2873,6 +3073,33 @@
               ],
               "answer": 1,
               "why": "Heating favours the endothermic forward direction, producing more brown NO₂."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "Each disturbance is cancelled because the reaction consumes what is added and remakes what is removed.",
+              "columns": ["Disturbance", "System response"],
+              "rows": [
+                {
+                  "feature": "Add reactant",
+                  "left": "More reactant present",
+                  "right": "Reaction moves forward to consume it"
+                },
+                {
+                  "feature": "Remove product",
+                  "left": "Less product present",
+                  "right": "Reaction moves forward to replace it"
+                },
+                {
+                  "feature": "Apply heat",
+                  "left": "More heat present",
+                  "right": "Endothermic direction absorbs the heat"
+                },
+                {
+                  "feature": "Increase pressure",
+                  "left": "Pressure increased on gases",
+                  "right": "Side with fewer gas molecules favoured"
+                }
+              ]
             }
           }
         },
@@ -2959,13 +3186,15 @@
               "That is why a catalyst matters: it speeds both directions equally, so equilibrium is reached faster but at the same position. Speed is not position — the two knobs turn different things.",
               "A candidate who holds the market picture (equal entry and exit rates) will never call an equilibrium mixture 'stopped' again.",
               "The equal rates also explain why an equilibrium mixture responds instantly to disturbance: the machinery is already running, so a shift in either direction is felt at once. A frozen system would need to start from nothing.",
-              "That readiness is why small additions of a reactant show a large immediate response in colour or pressure. The system is listening, not sleeping."
+              "That readiness is why small additions of a reactant show a large immediate response in colour or pressure. The system is listening, not sleeping.",
+              "Steam over hot iron shows the same stand-off in the Fe plus steam direction. Iron is oxidised by steam while hydrogen forms: 3Fe + 4H₂O(steam) ⇌ Fe₃O₄ + 4H₂. At equilibrium the reducing hydrogen and oxidising steam hold each other, so iron and magnetite coexist with neither side exhausted."
             ],
             "bullets": [
               "Equilibrium is balanced traffic, not frozen stillness.",
               "Isotopic labels prove molecules keep crossing.",
               "Catalysts speed arrival, never the position.",
-              "Rate and position are different knobs."
+              "Rate and position are different knobs.",
+              "Steam on iron: 3Fe + 4H₂O(steam) ⇌ Fe₃O₄ + 4H₂."
             ]
           }
         },
@@ -3031,9 +3260,10 @@
           "content": {
             "heading": "What is in the air",
             "paragraphs": [
-              "Air is a mixture because its gases keep their own properties and separate by physical methods. Its main parts are nitrogen (about 78%), oxygen (about 21%), argon (about 0.9%), carbon(IV) oxide (about 0.04%) and water vapour. Noble gases like argon and neon sit in the mixture without reacting.",
-              "Components vary with place and time: near forests there is more oxygen and less carbon(IV) oxide; near cities and factories the reverse. Humidity changes the water vapour share. Variation is normal because air is a mixture, not a compound with a fixed formula.",
-              "Air is separated by fractional distillation: air is cooled until it liquefies, then warmed gradually so each gas boils off at its own temperature. Nitrogen and oxygen are separated this way industrially, and argon is drawn off between them."
+              "Air is a mixture because its gases keep their own properties. Its main parts are nitrogen (about 78%), oxygen (about 21%), argon (about 0.9%), carbon(IV) oxide (about 0.04%) and water vapour.",
+              "Components vary with place and time: forests raise oxygen and lower carbon(IV) oxide, while cities and factories show the reverse. Humidity changes the water vapour share. Variation is normal for a mixture.",
+              "Air is separated by fractional distillation: air is cooled until it liquefies, then warmed gradually so each gas boils off at its own temperature. Nitrogen and oxygen are separated this way industrially.",
+              "Argon fills welding torches and provides inert atmospheres for metals; neon fills discharge tubes and signs. Water vapour is about 1% but varies with humidity, and neon is 18 parts per million."
             ],
             "bullets": [
               "Air = about 78% N₂, 21% O₂, 0.9% Ar, 0.04% CO₂, water vapour.",
@@ -3168,7 +3398,8 @@
               "Those variations are measurable and meaningful: a rise in carbon(IV) oxide near a city signals combustion load, and a fall in oxygen signals the same. Monitoring stations read the mixture the way a doctor reads a pulse.",
               "A candidate who understands mixture versus compound will never claim air has a formula. It has a recipe range, not a formula, and that difference is the whole point of the item.",
               "Because air is a mixture, its composition can drift without any chemical change occurring: a forest breathes out oxygen by day, a city breathes out carbon(IV) oxide by night. The mixture absorbs those swings silently until they accumulate.",
-              "That silent absorption is also why pollution is slow to notice and slower to reverse. The mixture must be actively cleaned or left to wash out, and both take time."
+              "That silent absorption is also why pollution is slow to notice and slower to reverse. The mixture must be actively cleaned or left to wash out, and both take time.",
+              "Uses follow composition: oxygen supports respiration and combustion, carbon(IV) oxide feeds photosynthesis, and nitrogen is fixed into fertilisers for crops. Air is therefore both a life-support mixture and an industrial raw material."
             ],
             "bullets": [
               "Air's gases were never bonded, so they separate physically.",
@@ -3242,7 +3473,8 @@
             "paragraphs": [
               "Heavy chemical industries make bulk products in large tonnage: cement, fertilisers, soaps, plastics and petroleum refining. They feed on cheap raw materials like limestone, crude oil and natural gas, and they employ many people in production.",
               "Fine chemical industries make small quantities of pure, high-value products: pharmaceuticals, dyes, reagents and laboratory chemicals. They feed on refined intermediates, not raw materials, and their value lies in purity, not tonnage.",
-              "The drug, dye and reagent shelves of a hospital or laboratory are fine chemicals; the cement plant and the refinery are heavy chemicals. Quantity versus value is the sorting rule."
+              "The drug, dye and reagent shelves of a hospital or laboratory are fine chemicals; the cement plant and the refinery are heavy chemicals. Quantity versus value is the sorting rule.",
+              "By product type, industries divide into inorganic (cement, fertilisers), organic (plastics, soaps) and fine (drugs, dyes) products. All three create jobs, earn foreign exchange from exports, and feed downstream industries in farming, building and health care."
             ],
             "bullets": [
               "Heavy chemicals: bulk, tonnage, cheap raw materials.",
@@ -3446,14 +3678,15 @@
           "content": {
             "heading": "The solar system and the planets",
             "paragraphs": [
-              "The solar system is the sun and everything held in orbit by its gravity: eight planets, their moons, asteroids, comets and dust. The sun itself is mostly hydrogen and helium, fusing as it shines.",
+              "The solar system is the sun and everything held in orbit by its gravity: eight planets, moons, asteroids, comets and dust. The sun is mostly hydrogen and helium, fusing as it shines.",
               "The eight planets in order from the sun are Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune. The first four are rocky; the last four are giants of gas and ice. Earth sits third, the only planet known to carry life.",
-              "Moons orbit the planets; asteroids are rocky leftovers between Mars and Jupiter; comets are icy bodies with glowing tails. All of them share the same elements as the earth, which is why the periodic table applies everywhere."
+              "Moons orbit the planets; asteroids are rocky leftovers between Mars and Jupiter; comets are icy bodies with glowing tails. All share the same elements as earth, which is why the periodic table applies everywhere. Natural moons orbit planets, while artificial satellites orbit Earth for communication, weather and navigation."
             ],
             "bullets": [
               "Solar system = sun + 8 planets + moons, asteroids, comets.",
               "Planets in order: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune.",
-              "Inner four rocky; outer four giants."
+              "Inner four rocky; outer four giants.",
+              "Natural moons orbit planets; artificial satellites serve communication, weather, navigation."
             ],
             "takeaway": "Eight planets circle the sun, and all share the same elements as earth.",
             "check": {
@@ -4067,13 +4300,13 @@
           "content": {
             "heading": "Oxygen and its oxides",
             "paragraphs": [
-              "Oxygen is prepared in the laboratory by heating potassium chlorate with manganese(IV) oxide: 2KClO₃ → 2KCl + 3O₂. Industrially it comes from fractional distillation of liquid air. It rekindles a glowing splint, which is its specific test.",
-              "Oxygen supports combustion and oxidation; almost every metal and fuel reacts with it, forming oxides. Oxides are classified by their behaviour with acids and bases: acidic oxides (CO₂, SO₂) react with bases, basic oxides (Na₂O, CaO) react with acids, and amphoteric ones (Al₂O₃, ZnO) react with both.",
-              "Oxygen has a second allotrope, ozone (O₃), formed when oxygen is exposed to ultraviolet light. Ozone is a pale blue gas with a sharp smell. In the stratosphere it absorbs harmful ultraviolet radiation, shielding life on earth."
+              "Oxygen is prepared in the laboratory by heating potassium chlorate with manganese(IV) oxide: 2KClO₃ → 2KCl + 3O₂. Industrially it comes from fractional distillation of liquid air. It rekindles a glowing splint, its specific test.",
+              "Oxygen supports combustion, respiration and oxidation: almost every fuel, metal and living cell reacts with it. It serves oxy-acetylene welding, hospitals and spacecraft life support. Oxides are classified by their behaviour with acids and bases: acidic oxides (CO₂, SO₂) react with bases, basic oxides (Na₂O, CaO) react with acids, and amphoteric ones (Al₂O₃, ZnO) react with both.",
+              "Oxygen has a second allotrope, ozone (O₃), formed when oxygen is exposed to ultraviolet light. Ozone is pale blue with a sharp smell. In the stratosphere it absorbs harmful ultraviolet radiation, shielding life on earth."
             ],
             "bullets": [
               "Laboratory: KClO₃ + MnO₂, heated. Industry: fractionating liquid air.",
-              "Test: rekindles a glowing splint.",
+              "Uses: respiration, combustion, welding, life support; test: rekindles splint.",
               "Oxides: acidic (CO₂), basic (Na₂O), amphoteric (ZnO), neutral (CO, N₂O).",
               "Ozone (O₃) blocks harmful ultraviolet radiation."
             ],
@@ -4310,7 +4543,8 @@
             "bullets": [
               "SO₂: from burning S or roasting ores; acidic oxide; bleaches; dichromate turns green.",
               "H₂S: FeS + dilute HCl; rotten-egg smell; weak acid and reducer.",
-              "H₂S turns lead acetate paper black (PbS)."
+              "H₂S turns lead acetate paper black (PbS).",
+              "SO₂ uses: bleaching, fumigation, wine-making, sulfuric acid manufacture; SO₂ + 2NaOH → Na₂SO₃ + H₂O."
             ],
             "takeaway": "SO₂ is the bleaching acid gas; H₂S is the rotten-egg reducer.",
             "check": {
@@ -4338,7 +4572,8 @@
             "bullets": [
               "H₂SO₃ forms from SO₂ + water; acids liberate SO₂ from its salts.",
               "H₂SO₄ by Contact process; concentrated = oxidising and dehydrating.",
-              "SO₃²⁻ → SO₂ with acid; SO₄²⁻ → white BaSO₄; S²⁻ → black PbS."
+              "SO₃²⁻ → SO₂ with acid; SO₄²⁻ → white BaSO₄; S²⁻ → black PbS.",
+              "H₂SO₄ uses: fertilisers, detergents, batteries, dehydrating agent."
             ],
             "takeaway": "Sulphur's acids and salts each carry one unmistakable test.",
             "check": {
@@ -4489,7 +4724,8 @@
             "bullets": [
               "Laboratory: ammonium salt + strong base, warmed.",
               "Industry: Haber process (450 °C, 200 atm, iron catalyst).",
-              "Collected by downward air displacement; dried over CaO."
+              "Collected by downward air displacement; dried over CaO.",
+              "N₂ (lab): heating NH₄NO₂ solution → N₂ + 2H₂O."
             ],
             "takeaway": "The laboratory warms an ammonium salt; industry balances nitrogen and hydrogen.",
             "check": {
@@ -4517,7 +4753,7 @@
             "bullets": [
               "Very soluble in water; alkaline solution; forms white fumes with HCl.",
               "Reducing agent; forms complex ions.",
-              "Uses: fertilisers, refrigeration, cleaners.",
+              "Uses: fertilisers, refrigeration, cleaners, NH₄Cl soldering flux, explosives.",
               "Test: NH₃ + HCl → dense white fumes."
             ],
             "takeaway": "Ammonia is a soluble alkaline gas that fumes white with HCl.",
@@ -4541,13 +4777,13 @@
             "paragraphs": [
               "Trioxonitrate(V) acid (HNO₃) is prepared in the laboratory from ammonia: ammonia is oxidised catalytically to nitrogen(IV) oxide, then to nitrogen dioxide, which dissolves in water to give the acid. It is a strong, oxidising acid.",
               "HNO₃ is used in fertilisers, explosives and the pickling of metals. Its salts are the trioxonitrate(V) salts (nitrates), which decompose on heating to nitrites and oxygen: 2NaNO₃ → 2NaNO₂ + O₂.",
-              "The test for nitrate ions (NO₃⁻) is brown fumes of NO₂ when heated with concentrated sulfuric acid. The oxides of nitrogen — N₂O, NO and NO₂ — complete the family: colourless N₂O (laughing gas), colourless NO, and brown NO₂."
+              "The test for nitrate ions (NO₃⁻) is brown fumes of NO₂ when heated with concentrated sulfuric acid. The oxides of nitrogen — N₂O, NO and NO₂ — complete the family: colourless N₂O (laughing gas) and colourless NO are neutral; brown NO₂ is acidic and oxidising. NO in air forms brown NO₂ and gives a brown ring with FeSO₄."
             ],
             "bullets": [
               "HNO₃ from ammonia oxidation; strong oxidising acid.",
               "Nitrates decompose on heating to nitrites + O₂.",
               "Nitrate test: brown NO₂ fumes with conc. H₂SO₄.",
-              "Oxides: N₂O colourless, NO colourless, NO₂ brown."
+              "Oxides: N₂O/NO neutral; NO₂ brown, acidic and oxidising."
             ],
             "takeaway": "Nitric acid is made by oxidising ammonia; nitrates give brown fumes.",
             "check": {
@@ -4719,12 +4955,12 @@
           "content": {
             "heading": "Carbon(IV) oxide and carbon(II) oxide",
             "paragraphs": [
-              "Carbon(IV) oxide (CO₂) is made in the laboratory from calcium carbonate: CaCO₃ + 2HCl → CaCl₂ + CO₂ + H₂O. It is a colourless, dense gas, fire-extinguishing (it smothers flames by blanketing), and slightly soluble in water to form carbonic acid.",
-              "The test for CO₂ is limewater turning milky: CO₂ + Ca(OH)₂ → CaCO₃ + H₂O. Carbonates and hydrogencarbonates also give CO₂ with acids, so the test confirms the gas, not the salt.",
+              "Carbon(IV) oxide (CO₂) is made in the laboratory from calcium carbonate: CaCO₃ + 2HCl → CaCl₂ + CO₂ + H₂O. It is colourless, dense, fire-extinguishing (it smothers flames), slightly soluble to carbonic acid.",
+              "The test for CO₂ is limewater turning milky: CO₂ + Ca(OH)₂ → CaCO₃ + H₂O. Both carbonates (CO₃²⁻) and hydrogencarbonates (HCO₃⁻) give CO₂ with dilute acid, but hydrogencarbonates decompose on heating to carbonates while carbonates are heat-stable. HCO₃⁻ with dilute acid gives CO₂; with NaOH it discharges phenolphthalein pink, confirming hydrogencarbonate.",
               "Carbon(II) oxide (CO) is made by passing steam over red-hot coke: C + H₂O → CO + H₂. It is a colourless, odourless, poisonous gas, reducing hot metal oxides. It binds haemoglobin far more strongly than oxygen — that is why charcoal fires kill in closed rooms."
             ],
             "bullets": [
-              "CO₂: CaCO₃ + acid; test = limewater milky; extinguishes fire.",
+              "CO₂: CaCO₃ + acid, limewater milky; CO₃²⁻/HCO₃⁻ + acid → CO₂; HCO₃⁻ decomposes on heating, CO₃²⁻ stable.",
               "CO: steam over coke; poisonous; binds haemoglobin.",
               "Sources of CO: charcoal, fires, exhaust fumes."
             ],
@@ -4936,6 +5172,28 @@
               "Top metals: electrolysis. Middle: carbon reduction. Bottom: found free."
             ],
             "takeaway": "The series predicts both reactivity and the extraction method.",
+            "visual": {
+              "kind": "flow",
+              "caption": "Higher metals need electrolysis, middle metals carbon; the higher the metal, the more it costs to win.",
+              "steps": [
+                {
+                  "label": "Ore",
+                  "detail": "Metal held in rock"
+                },
+                {
+                  "label": "Concentrate",
+                  "detail": "Waste rock removed"
+                },
+                {
+                  "label": "Reduce",
+                  "detail": "Electrolysis or carbon"
+                },
+                {
+                  "label": "Metal",
+                  "detail": "Element won from ore"
+                }
+              ]
+            },
             "check": {
               "question": "Aluminium is extracted by electrolysis because",
               "options": [
@@ -6176,12 +6434,14 @@
             "paragraphs": [
               "Each family of organic compounds has a general formula: alkanes are CₙH₂ₙ₊₂, alkenes CₙH₂ₙ, alkynes CₙH₂ₙ₋₂, alkanols CₙH₂ₙ₊₁OH. The n tells how many carbons; the formula then gives the hydrogens. Methane is C₁H₄, ethane C₂H₆.",
               "The name reads the chain length and the group: 'eth' means two carbons, 'an' means single bonds, 'ene' means a double bond, 'yne' a triple bond, 'ol' an OH group, 'oic acid' a COOH group. Butane is four carbons, single bonds; ethene is two carbons with a double bond.",
-              "IUPAC names therefore encode structure: given the name, the skeleton can be drawn; given the skeleton, the name can be built. The skill is translation in both directions."
+              "IUPAC names therefore encode structure: given the name, the skeleton can be drawn; given the skeleton, the name can be built. The skill is translation in both directions.",
+              "Isomer counting follows chain length: pentane (C5H12) has 3 structural isomers and hexane (C6H14) has 5, each drawn by rearranging the skeleton."
             ],
             "bullets": [
               "Alkanes CₙH₂ₙ₊₂; alkenes CₙH₂ₙ; alkynes CₙH₂ₙ₋₂.",
               "Name = chain length + bond type + functional group.",
-              "IUPAC names encode the skeleton both ways."
+              "IUPAC names encode the skeleton both ways.",
+              "Isomers: C5H12 3 (n, iso, neo), C6H14 5."
             ],
             "takeaway": "General formulae count hydrogens; names encode length, bonds and groups.",
             "check": {
@@ -6355,12 +6615,14 @@
             "paragraphs": [
               "Alkanes are hydrocarbons with only single bonds: general formula CₙH₂ₙ₊₂ (methane, ethane, propane, butane...). They are saturated, meaning every carbon holds the maximum hydrogens, and they are the petroleum family.",
               "Physical properties change gradually down the series: melting and boiling points rise with chain length, and density increases. Methane is a gas at room temperature; hexane is a liquid; waxes are solids. The pattern is the homologous series at work.",
-              "Alkanes react mainly by substitution: in ultraviolet light a hydrogen is replaced by a halogen. CH₄ + Cl₂ → CH₃Cl + HCl, then CH₃Cl + Cl₂ → CH₂Cl₂ + HCl. The reaction needs light, and products are mixtures."
+              "Alkanes react mainly by substitution: in ultraviolet light a hydrogen is replaced by a halogen. CH₄ + Cl₂ → CH₃Cl + HCl, then CH₃Cl + Cl₂ → CH₂Cl₂ + HCl. The reaction needs light, and products are mixtures.",
+              "Halogenated products were widely used: chloroform served as an anaesthetic, carbon tetrachloride as a solvent and in fire extinguishers, and DDT as an insecticide. DDT's persistence later led to its restriction."
             ],
             "bullets": [
               "Alkanes: CₙH₂ₙ₊₂, single bonds only, saturated.",
               "Boiling point rises with chain length.",
-              "Substitution: UV light replaces H with halogen."
+              "Substitution: UV light replaces H with halogen.",
+              "Uses: chloroform anaesthetic, CCl4 solvent/fire extinguishing, DDT insecticide."
             ],
             "takeaway": "Alkanes are saturated chains whose properties climb with length.",
             "check": {
@@ -6413,13 +6675,15 @@
             "paragraphs": [
               "Crude oil is a complex mixture of hydrocarbons, mostly alkanes, formed from ancient organisms. It is separated by fractional distillation: heated to vapour, then cooled in a tower where fractions condense at their boiling points.",
               "The tower gives, from bottom to top: bitumen, fuel oil, kerosene, petrol (gasoline), petroleum gas. Each fraction has its own boiling range and its own use — petrol for cars, kerosene for jets, bitumen for roads.",
-              "Cracking and reforming improve the fractions: cracking breaks long chains into shorter, more valuable ones, and reforming reshapes them into better fuels. Petrochemicals are the starting materials of organic syntheses — plastics, drugs and detergents all begin here."
+              "Cracking and reforming improve the fractions: cracking breaks long chains into shorter, more valuable ones, and reforming reshapes them into better fuels. Petrochemicals are the starting materials of organic syntheses — plastics, drugs and detergents all begin here.",
+              "Feedstocks from refining and cracking are ethene, propene, benzene, toluene and xylene, ready for polymer and solvent manufacture."
             ],
             "bullets": [
               "Crude oil = complex mixture of hydrocarbons.",
               "Fractional distillation gives petrol to bitumen.",
               "Cracking shortens chains; reforming improves quality.",
-              "Petrochemicals feed plastics, drugs and detergents."
+              "Petrochemicals feed plastics, drugs and detergents.",
+              "Feedstocks: ethene, propene, benzene, toluene, xylene."
             ],
             "takeaway": "Fractional distillation sorts crude oil by boiling point into useful fractions.",
             "check": {
@@ -6432,6 +6696,24 @@
               ],
               "answer": 1,
               "why": "Fractions condense at different boiling points in the fractionating tower."
+            },
+            "visual": {
+              "kind": "flow",
+              "caption": "Heating turns crude oil to vapour, then cooling in the tower separates fractions by boiling point.",
+              "steps": [
+                {
+                  "label": "Crude oil",
+                  "detail": "Heated to vapour"
+                },
+                {
+                  "label": "Fractionating tower",
+                  "detail": "Vapour cools as it rises"
+                },
+                {
+                  "label": "Fractions collected",
+                  "detail": "Petrol top, bitumen bottom"
+                }
+              ]
             }
           }
         },
@@ -6586,6 +6868,28 @@
               ],
               "answer": 1,
               "why": "Alkenes add bromine across the double bond, discharging its orange colour."
+            },
+            "visual": {
+              "kind": "compare",
+              "caption": "Alkenes add across the double bond, so bromine water is discharged, while saturated alkanes do not.",
+              "columns": ["Alkene", "Alkane"],
+              "rows": [
+                {
+                  "feature": "General formula",
+                  "left": "CₙH₂ₙ, one double bond",
+                  "right": "CₙH₂ₙ₊₂, single bonds only"
+                },
+                {
+                  "feature": "Bromine water test",
+                  "left": "Orange colour discharged",
+                  "right": "Orange colour remains"
+                },
+                {
+                  "feature": "Addition reaction",
+                  "left": "Adds H2, Br2, HCl",
+                  "right": "Substitution only, needs UV"
+                }
+              ]
             }
           }
         },
@@ -8069,13 +8373,13 @@
             "heading": "Hydrolysis and the protein tests",
             "paragraphs": [
               "Hydrolysis breaks proteins back into amino acids: acid hydrolysis (hot HCl) or enzyme hydrolysis (digestion). The products are the same amino acids the protein was built from — hydrolysis reverses polymerisation.",
-              "The biuret test finds peptide bonds: copper(II) sulfate in alkali gives a violet colour. The ninhydrin test finds amino groups: ninhydrin gives a blue-purple colour. Millon's test finds tyrosine: a red colour with Millon's reagent.",
-              "The xanthoproteic test finds aromatic rings: concentrated nitric acid gives a yellow colour that turns orange with alkali. Each test targets a different feature — bonds, amino groups, or rings."
+              "The biuret test finds peptide bonds: copper(II) sulfate in alkali gives a violet colour. The ninhydrin test finds amino groups: ninhydrin gives a blue-purple colour. Millon's test finds tyrosine through its phenolic OH group: Millon's reagent (Fe(NO3)3 in HNO3) gives a red colour.",
+              "The xanthoproteic test finds aromatic rings: concentrated nitric acid nitrates the rings to give a yellow colour that turns orange with alkali. Each test targets a different feature — bonds, amino groups, or rings."
             ],
             "bullets": [
               "Hydrolysis: protein → amino acids (acid or enzymes).",
               "Biuret: violet with CuSO₄/alkali (peptide bonds).",
-              "Ninhydrin: blue-purple (amino groups). Millon: red (tyrosine).",
+              "Ninhydrin: blue-purple (amino groups). Millon: red (phenolic OH of tyrosine).",
               "Xanthoproteic: yellow → orange (aromatic rings)."
             ],
             "takeaway": "Hydrolysis reverses building; each test targets a different feature.",
@@ -8649,6 +8953,672 @@
               "Zinc (3d¹⁰) is not a typical transition metal.",
               "Colour belongs to the complex, not the metal.",
               "Catalysts never change yield or equilibrium."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "nitrogen-cycle",
+      "topic": "non-metals-and-their-compounds",
+      "title": "Nitrogen Cycle",
+      "objective": "Explain the nitrogen cycle — nitrogen fixation, nitrification, assimilation, denitrification — and examine its relevance to the environment.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Nitrogen cycle",
+            "paragraphs": [
+              "Most of the air around us is nitrogen gas, but plants cannot use it directly. The nitrogen cycle is the journey that turns air nitrogen into food for plants and then returns it to the air again."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Fixation: locking air nitrogen into the soil",
+            "paragraphs": [
+              "A farmer's beans grow slowly in poor soil because the roots cannot use air nitrogen. Fixation is like charging a battery; hard energy pushes stable nitrogen gas into a form plants can use. Without that charge, the battery stays empty.",
+              "Lightning does one kind of fixation high in the sky. Its great heat joins nitrogen and oxygen in air to make nitrogen oxides, and rain carries them down to the soil. The Haber process does fixation in factories, joining nitrogen with hydrogen to make ammonia for fertilisers.",
+              "Legume bacteria do fixation inside the soil help. Rhizobium bacteria live in root nodules on beans and peas, so the plant feeds them. In return they turn air nitrogen into ammonia the plant can use."
+            ],
+            "bullets": [
+              "Lightning fixation: heat joins nitrogen and oxygen; rain carries oxides down.",
+              "Haber fixation: nitrogen plus hydrogen gives ammonia in factories.",
+              "Biological fixation: Rhizobium in legume nodules makes ammonia in soil."
+            ],
+            "takeaway": "Fixation uses great energy to lock air nitrogen into usable ammonia.",
+            "check": {
+              "question": "Which process is fixation?",
+              "options": [
+                "Turning air nitrogen into ammonia",
+                "Changing ammonium into nitrite",
+                "Taking up nitrate into proteins",
+                "Returning nitrogen gas to the air"
+              ],
+              "answer": 0,
+              "why": "Fixation makes usable ammonia from air nitrogen; the others move nitrogen later."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Nitrification and assimilation: feeding the plant",
+            "paragraphs": [
+              "Dead leaves and animal waste rot and release ammonium ions into the soil water. Plants cannot build proteins from ammonium alone, so soil bacteria must pass the nitrogen on. That passing-on work is called nitrification.",
+              "Nitrosomonas bacteria change ammonium, NH4+, into nitrite, NO2-. Nitrobacter bacteria then change nitrite into nitrate, NO3-. Nitrate is the main food plants absorb from soil water.",
+              "Plants take up nitrate through their roots. Inside the plant, nitrate is changed into amino acids and then into proteins for new leaves and seeds. This uptake and building work is called assimilation."
+            ],
+            "bullets": [
+              "Nitrosomonas: NH4+ to NO2- (ammonium to nitrite).",
+              "Nitrobacter: NO2- to NO3- (nitrite to nitrate).",
+              "Assimilation: plant roots absorb nitrate and build proteins.",
+              "Soil nitrate feeds crops but can easily wash away in heavy rain."
+            ],
+            "takeaway": "Nitrifying bacteria make nitrate, and plants assimilate nitrate into proteins.",
+            "check": {
+              "question": "Which bacteria turn ammonium into nitrite, then nitrite into nitrate?",
+              "options": [
+                "Nitrosomonas then Nitrobacter",
+                "Rhizobium then denitrifying bacteria",
+                "Denitrifying bacteria then Rhizobium",
+                "Nitrobacter then Nitrosomonas"
+              ],
+              "answer": 0,
+              "why": "Nitrosomonas makes nitrite from ammonium; Nitrobacter then makes nitrate from nitrite."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Denitrification and the cycle's use",
+            "paragraphs": [
+              "After heavy rain, a waterlogged field loses nitrate even though fertiliser was added. Denitrifying bacteria in airless soil convert that nitrate back into nitrogen gas for the air. This return work is called denitrification, the opposite of nitrification.",
+              "Nitrification adds oxygen to nitrogen to build nitrate up in soil. Denitrification does the reverse by stripping oxygen away again. So nitrification feeds plants, while denitrification sends nitrogen back to the air.",
+              "Farmers add fertiliser to replace nitrate that crops remove and that rain washes away. Too much nitrate in water, called eutrophication, makes algae bloom and starves fish of oxygen. The cycle shows why fertiliser must be used with care."
+            ],
+            "bullets": [
+              "Denitrifying bacteria release nitrogen gas, N2, from nitrate in airless soil.",
+              "Nitrification builds nitrate; denitrification destroys nitrate.",
+              "Fertiliser restores soil fertility but excess nitrate pollutes ponds and wells."
+            ],
+            "takeaway": "Denitrification returns nitrogen to the air; careless fertiliser pollutes water.",
+            "check": {
+              "question": "Waterlogged soil loses nitrate as gas because",
+              "options": [
+                "Denitrifying bacteria make nitrogen gas from nitrate",
+                "Nitrobacter makes nitrate from nitrite",
+                "Plants absorb nitrate to make proteins",
+                "Lightning joins nitrogen and oxygen in air"
+              ],
+              "answer": 0,
+              "why": "In airless soil, denitrifying bacteria convert nitrate back into nitrogen gas."
+            },
+            "visual": {
+              "kind": "flow",
+              "caption": "Each step passes nitrogen on until denitrification returns it to the air.",
+              "steps": [
+                {
+                  "label": "Fixation",
+                  "detail": "N2 becomes ammonia"
+                },
+                {
+                  "label": "Nitrification",
+                  "detail": "NH4+ becomes NO3-"
+                },
+                {
+                  "label": "Assimilation",
+                  "detail": "Plants build proteins"
+                },
+                {
+                  "label": "Denitrification",
+                  "detail": "NO3- becomes N2"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "When a question names a step, ask where nitrogen moves from and to. Fixation locks air nitrogen in, nitrification builds nitrate, assimilation builds protein, denitrification releases nitrogen gas again and again."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A farm cycle is described: leaves rot to ammonium; Nitrosomonas and Nitrobacter act; a plant builds protein; airless soil releases gas. Name the process at each stage.",
+            "steps": [
+              {
+                "operation": "Name the rotting step",
+                "reason": "Dead matter releases ammonium, but named cycle steps start after that",
+                "result": "Nitrification begins the named cycle",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Name the bacterial change",
+                "reason": "Nitrosomonas then Nitrobacter convert ammonium through nitrite to nitrate",
+                "result": "Nitrate is ready in soil water",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Name plant and soil steps",
+                "reason": "Roots assimilate nitrate into protein; denitrators then release nitrogen gas",
+                "result": "Assimilation then denitrification complete the cycle",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A soil sample has plenty of nitrogen gas but crops still grow poorly. Which cycle step is failing, and what would you check?",
+            "hints": [
+              "Think about which step plants cannot start from nitrogen gas",
+              "Ask whether nitrifying bacteria have oxygen in the soil",
+              "Check if nitrate is being formed from ammonium"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why fixation needs so much energy",
+            "paragraphs": [
+              "Nitrogen gas looks harmless because two atoms share a triple bond. That bond holds the two atoms very tightly together. Breaking it takes a great deal of energy before anything useful can be made.",
+              "Lightning supplies that energy in one fierce flash. The heat splits nitrogen and oxygen molecules apart so they can join again as oxides. The new bonds need far less energy than the lost triple bond alone.",
+              "The Haber process feeds energy slowly with heat and pressure. At about 450 degrees, the iron catalyst opens the triple bond at a steady rate. Engineers accept lower yield so the reaction can run all day without huge cost.",
+              "Legume bacteria pay the energy bill with a different coin. The plant feeds them sugars that break down to release energy. Enzymes then use that trickle of energy to pry the triple bond open in cool soil.",
+              "That is why fixation is never free in the field. A power station burns fuel, a storm spends heat, and a bean spends leaf sugar. Each route pays the same bond-breaking price by a different method."
+            ],
+            "bullets": [
+              "N≡N triple bond energy is about 941 kilojoules per mole.",
+              "Lightning works by sudden heat, not by steady pressure.",
+              "Haber uses heat, pressure and iron to balance speed and yield.",
+              "Rhizobium uses plant sugars and enzymes to work in cool soil."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: The two nitrification bacteria at work",
+            "paragraphs": [
+              "Nitrification is not one step but two bacterial hands passing nitrogen on. The first hand belongs to Nitrosomonas. It feeds on ammonium and exhales nitrite into the soil water.",
+              "Nitrosomonas needs oxygen to do this work well. In loose, airy soil it grows fast and turns ammonium quickly. In waterlogged soil it slows down because oxygen is scarce, so ammonium may build up.",
+              "The second hand belongs to Nitrobacter. It catches the nitrite left by Nitrosomonas and adds oxygen again. The product is nitrate, which stays dissolved and travels to plant roots.",
+              "Nitrite rarely piles up because the two bacteria live side by side. Where one releases nitrite, the other soon consumes it. Accumulation marks broken cooperation, such as sudden fertiliser, cold soil or blocked air.",
+              "Farmers help these bacteria by tilling and draining the field. Loose soil lets oxygen reach their roots. Balanced fertiliser feeds them without flooding the soil with ammonium.",
+              "Exam questions name the pair in order because the order excuses the reason. NH4+ to NO2- is first, NO2- to NO3- is second. Reversing them suggests denitrification, which releases nitrogen gas instead."
+            ],
+            "bullets": [
+              "Nitrosomonas: ammonium to nitrite; needs oxygen and moisture.",
+              "Nitrobacter: nitrite to nitrate; prefers airy soil.",
+              "Nitrite is toxic to seedlings when it piles up.",
+              "Both bacteria slow in waterlogged or very acid soil."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps that confuse the cycle",
+            "paragraphs": [
+              "The commonest trap swaps fixation with nitrification. Fixation starts from nitrogen gas in air or soil air. Nitrification starts later, from ammonium already in the soil.",
+              "The next trap swaps nitrification with denitrification. Nitrification builds nitrate, so it feeds crops. Denitrification destroys nitrate and releases nitrogen gas, so it starves crops if it runs wild.",
+              "The third trap mixes nitrite and nitrate as if they were the same. Nitrite, NO2-, is the middle stage and is toxic when it builds up. Nitrate, NO3-, is the plant food form and the main pollutant when it leaches.",
+              "The fourth trap forgets that Haber and lightning are both fixation. An option that calls Haber nitrification fails, even if ammonia is named. Ask what the starting material is: nitrogen gas means fixation.",
+              "A safe solving habit is to trace one nitrogen atom through the question. Follow it from air to ammonia to nitrate to protein and back to air. If the atom cannot move as described, the answer is wrong.",
+              "Practice by sorting each new fact into its stage before you memorise its name. Stage decides the bacteria, the input and the output every time."
+            ],
+            "bullets": [
+              "Fixation starts from N2 gas; nitrification starts from NH4+.",
+              "Nitrification builds nitrate; denitrification releases N2.",
+              "Nitrite is middle and toxic; nitrate is plant food.",
+              "Relevance: fertiliser restores fertility, excess nitrate pollutes water."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "iron-from-sulfide-ores",
+      "topic": "metals-and-their-compounds",
+      "title": "Iron from Sulphide Ores",
+      "objective": "Determine the method of extraction of iron from sulphide ores, specify the properties and uses of the different forms of iron, and compare the advantages of steel over iron.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Iron from sulphide ores",
+            "paragraphs": [
+              "Iron can be won from two kinds of rock. Oxide ores go straight to the blast furnace. Sulphide ores must first be roasted, which burns off the sulphur and leaves an oxide the furnace can reduce."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Roasting sulphide ores to oxides",
+            "paragraphs": [
+              "A builder finds iron locked in yellow pyrite, FeS2, and in copper-iron chalcopyrite. These sulphide ores cannot go straight into the blast furnace because carbon reduces oxides, not sulphides. The ore must first change its chemistry.",
+              "Roasting means heating the crushed sulphide strongly in air. The sulphur burns away as sulphur dioxide and the iron becomes iron(III) oxide: 2FeS2 + 11O2 → Fe2O3 + 4SO2. Roasting is therefore oxidation, which gives the oxide the furnace needs.",
+              "The roasted oxide is now charged with limestone and coke. Hot air at the bottom burns coke to carbon monoxide, which reduces the oxide to molten iron. Limestone fluxes the impurities into slag, so each stage has its own job."
+            ],
+            "bullets": [
+              "Sulphide ore: pyrite (FeS2) or chalcopyrite; roast it first.",
+              "Roasting: 2FeS2 + 11O2 → Fe2O3 + 4SO2; sulphide to oxide.",
+              "Blast furnace: carbon monoxide reduces oxide; limestone makes slag."
+            ],
+            "takeaway": "Roasting converts sulphide to oxide; the furnace then reduces that oxide.",
+            "check": {
+              "question": "Why must pyrite be roasted before the blast furnace?",
+              "options": [
+                "Iron is present as an oxide",
+                "Sulphide must become oxide for reduction",
+                "Roasting melts the iron",
+                "Roasting adds carbon"
+              ],
+              "answer": 1,
+              "why": "Carbon monoxide reduces oxides, so sulphide must first become oxide."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Forms of iron and what each form is for",
+            "paragraphs": [
+              "The furnace taps pig iron, the crude metal rich in carbon at about four percent. Pig iron is hard but so brittle that it shatters under a blow. It is rarely used directly because it feeds cast iron and steel.",
+              "Cast iron, made with less carbon, is hard and brittle for pipes, covers and cookware. Wrought iron is nearly pure, soft and tough for gates and chains that must bend without breaking. Tough resists breaking; brittle cracks.",
+              "Mild steel has little carbon, so it stays tough and weldable for beams, rails and car bodies. Stainless steel adds chromium and nickel for a rust-proof film on cutlery, sinks and medical tools. Carbon and alloying decide the form and its use."
+            ],
+            "bullets": [
+              "Pig iron: about 4% carbon, brittle; feeds cast iron and steel.",
+              "Cast iron: hard, brittle; pipes, covers, cookware.",
+              "Wrought iron: nearly pure, tough; gates, chains. Mild steel: weldable; beams, rails.",
+              "Stainless steel: chromium and nickel; rust-proof; cutlery, sinks."
+            ],
+            "takeaway": "Carbon content and alloying separate every form of iron.",
+            "check": {
+              "question": "A gate and a chain need a form of iron that is nearly pure, soft and tough. Which form fits?",
+              "options": [
+                "Pig iron",
+                "Cast iron",
+                "Wrought iron",
+                "Cast steel"
+              ],
+              "answer": 2,
+              "why": "Wrought iron is nearly pure iron, so it is soft and tough for bending."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Why steel beats plain iron",
+            "paragraphs": [
+              "Plain iron is soft and rusts quickly, so gates and beams soon fail. Steel keeps iron's low cost but gains strength and hardness from a small amount of carbon. That one change gives it far greater load-bearing power.",
+              "More carbon gives harder, stronger steel for tools, springs and rails that must keep an edge. Less carbon keeps mild steel tough and weldable for construction. Picking the carbon level is therefore picking the job.",
+              "Stainless steel adds chromium and nickel, so a thin film stops rust where plain iron fails. Steel therefore beats plain iron in strength, hardness, rust resistance and range of uses, from construction to surgery."
+            ],
+            "bullets": [
+              "Strength and hardness: more carbon, higher strength; heat-treated for edges.",
+              "Rust resistance: stainless chromium film; plain iron rusts fast.",
+              "Range of uses: bridges, machines, vehicles, tools; wider than wrought or cast iron."
+            ],
+            "takeaway": "Steel beats plain iron in strength, hardness, rust resistance and uses.",
+            "check": {
+              "question": "Which advantage lets steel hold a cutting edge that plain iron cannot?",
+              "options": [
+                "More carbon with heat treatment for hardness",
+                "A chromium rust-proof film",
+                "Being nearly pure iron",
+                "Roasting in air"
+              ],
+              "answer": 0,
+              "why": "Steel's controlled carbon and heat treatment give hardness; pure iron is soft."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Roasting turns sulphide into oxide, carbon monoxide reduces that oxide, and limestone fluxes the impurities into slag. Do not swap roasting with reduction: roasting oxidises, reduction removes oxygen."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Pyrite ore is roasted in air. Write the roasting equation for FeS2 + O2 → Fe2O3 + SO2.",
+            "steps": [
+              {
+                "operation": "Write the skeleton",
+                "reason": "Sulphide in air gives oxide plus sulphur dioxide",
+                "result": "FeS2 + O2 → Fe2O3 + SO2 (unbalanced)",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Balance iron atoms",
+                "reason": "Two irons on the left need two on the right",
+                "result": "2FeS2 + O2 → Fe2O3 + SO2",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Balance sulphur and oxygen",
+                "reason": "Four sulphurs give four sulphur dioxides needing eleven oxygens",
+                "result": "2FeS2 + 11O2 → Fe2O3 + 4SO2",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Chalcopyrite must be turned into iron in the blast furnace. List the two chemical stages in order.",
+            "hints": [
+              "Chalcopyrite is a sulphide, like pyrite",
+              "First roast in air to make the oxide",
+              "Then reduce the oxide with carbon monoxide in the furnace"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: What roasting does to sulphur and iron",
+            "paragraphs": [
+              "Roasting is burning, and it gives out heat. That heat helps the furnace, but the sulphur dioxide gas must be captured. In many plants the gas is cleaned and then used to make sulphuric acid, so a waste gas becomes a useful chemical.",
+              "The sulphur in pyrite is pushed to a higher oxidation state, while iron is also oxidised. Oxygen from the air is the oxidising agent, and the solid shrinks as sulphur leaves as gas. The remaining porous oxide is easy for carbon monoxide to attack.",
+              "Chalcopyrite raises a second problem because it holds copper as well as iron. Roasting alone does not separate those metals, so copper works must handle the roasted ore differently from a pyrite-only plant. JAMB asks about pyrite in plain terms, but the mixed ore is why chalcopyrite is named.",
+              "If roasting is skipped, sulphur stays in the iron and spoils it. Sulphur makes steel brittle and hard to weld, which is why the gas must leave before reduction begins. Roasting is therefore purification by oxidation, not merely heating.",
+              "The same logic explains why oxide ores need no roasting. Haematite already holds iron joined to oxygen, so it can go directly to reduction. Sulphide ore has the wrong partner atom, and roasting swaps sulphur for oxygen before reduction can start."
+            ],
+            "bullets": [
+              "Roasting releases heat; sulphur dioxide may be captured for acid.",
+              "Iron and sulphur are oxidised; porous oxide reduces easily.",
+              "Chalcopyrite adds copper, so roasting alone does not win iron."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: How carbon turns one metal into many forms",
+            "paragraphs": [
+              "Pure iron is soft because its crystal layers slide past each other. Carbon atoms jam those slides, so more carbon means harder and stronger metal. Past a point the jamming is so complete that the metal snaps instead of bending.",
+              "Pig iron at about four percent carbon is jammed almost completely, hence its brittleness. Cast iron keeps more carbon than steel but less than pig iron, so it casts well yet breaks under shock. Wrought iron has almost no carbon left, so it bends and welds.",
+              "Mild steel with less than about 0.3 percent carbon is the workhorse for construction because it is tough, cheap and weldable. Raising the carbon gives tool steel that holds an edge but is harder to weld. Each grade is a trade between toughness and hardness.",
+              "Stainless steel changes the surface, not just the bulk. Chromium forms a thin oxide film that re-forms after a scratch, which is why cutlery stays bright. Aluminium and zinc protect themselves the same way, so film protection is a general pattern, not an iron trick.",
+              "Heat treatment adds a final control. Quenching steel in water or oil locks in hardness, while tempering warms it to restore toughness. That is why two steels with the same carbon can still behave very differently after different cooling."
+            ],
+            "bullets": [
+              "Carbon pins crystal slides: more carbon, harder, then brittle.",
+              "Mild steel under 0.3 percent carbon welds; tool steel holds edges.",
+              "Chromium film on stainless steel re-forms after a scratch."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Traps that cost marks in iron questions",
+            "paragraphs": [
+              "The first trap swaps roasting with reduction. Roasting adds oxygen to the ore, while reduction removes oxygen from the oxide. Any option that calls roasting a reduction reverses the chemistry and must be rejected at once.",
+              "The second trap names carbon as the reducer. Coke is fuel, but carbon monoxide does the reducing in the furnace. Limestone is neither fuel nor reducer; it is the flux that carries impurities into slag.",
+              "The third trap mixes wrought iron with cast iron. Wrought iron is nearly pure and tough, fit for gates and chains. Cast iron is hard and brittle, fit for pipes and covers. Toughness belongs to the purer metal, not the harder one.",
+              "The fourth trap reverses steelmaking. Oxygen in the converter burns carbon out of pig iron; it never adds carbon. Mild steel, high-carbon steel and stainless steel differ mainly in carbon level and alloy additions.",
+              "The last trap treats stainless steel as just harder mild steel. Its name points to rust resistance from chromium, not hardness alone. A question about sinks or cutlery that lists mild steel as the answer ignores that film."
+            ],
+            "bullets": [
+              "Roasting is oxidation; reduction removes oxygen later.",
+              "Carbon monoxide reduces; carbon burns; limestone fluxes.",
+              "Wrought iron is tough; cast iron is brittle."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "alloys-constituents-and-uses",
+      "topic": "metals-and-their-compounds",
+      "title": "Alloys: Constituents and Uses",
+      "objective": "Specify the constituents and uses of steel, stainless steel, brass, bronze, type-metal, duralumin, soft solder, permalloy and alnico, and compare alloys to pure metals.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Alloys: constituents and uses",
+            "paragraphs": [
+              "Pure metals are too soft or too weak for the job. An alloy mixes a metal with others so the blend is harder, stronger or safer. This lesson names the mixtures behind steel, brass, bronze, solder, magnets and aircraft parts."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Iron alloys: steel, stainless steel and magnet alloys",
+            "paragraphs": [
+              "Pure iron is too soft for beams and knives. Steel mixes iron with a little carbon, and the carbon pins the crystals. The blend is harder and stronger than pure iron, so it carries loads and holds edges.",
+              "Stainless steel adds chromium and nickel to iron. Its surface film blocks rust, so it suits cutlery, sinks and medical tools where strength alone would not suffice. Permalloy, iron with nickel, concentrates magnetism for relay and transformer cores, beating plain iron as a magnetic path.",
+              "Alnico mixes iron with aluminium, nickel, cobalt and copper. It keeps its magnetism without an outside supply, so it makes permanent magnets for motors and pickup cartridges. Each added element is the clue to the special job."
+            ],
+            "bullets": [
+              "Steel: iron plus carbon; construction and tools; harder, stronger.",
+              "Stainless steel: iron, chromium, nickel; cutlery, sinks; rust-proof.",
+              "Permalloy: iron plus nickel; magnet cores; better magnetic path.",
+              "Alnico: iron, aluminium, nickel, cobalt, copper; permanent magnets."
+            ],
+            "takeaway": "Carbon gives strength, chromium gives rust resistance, nickel and cobalt give magnetism.",
+            "check": {
+              "question": "A transformer core needs an iron alloy that concentrates magnetism. Which alloy fits?",
+              "options": [
+                "Alnico",
+                "Stainless steel",
+                "Permalloy",
+                "Mild steel"
+              ],
+              "answer": 2,
+              "why": "Permalloy (iron plus nickel) is chosen for its magnetic properties."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Copper and aluminium alloys for shape and lightness",
+            "paragraphs": [
+              "Pure copper is soft, so it dents and wears too quickly for keys and bells. Brass mixes copper with zinc, and zinc hardens the blend while keeping its golden colour. That hardness and colour suit instruments, keys and decorative fittings.",
+              "Bronze mixes copper with tin, making hard, ringing metal that takes fine detail. Bells use its tone, medals and statues its hardness and patina. Tin turns soft copper into bell metal.",
+              "Duralumin mixes aluminium with copper, magnesium and manganese. It is far stronger than pure aluminium yet stays light, so it builds aircraft frames. The added metals supply strength while lightness is kept."
+            ],
+            "bullets": [
+              "Brass: copper plus zinc; instruments, keys; harder, golden.",
+              "Bronze: copper plus tin; bells, medals; hard, ringing, detailed.",
+              "Duralumin: aluminium, copper, magnesium, manganese; aircraft; light, strong."
+            ],
+            "takeaway": "Zinc hardens brass, tin rings bronze, and duralumin trades weight for strength.",
+            "check": {
+              "question": "A bell needs a copper alloy that rings well and takes fine detail. Which alloy is used?",
+              "options": [
+                "Brass",
+                "Bronze",
+                "Duralumin",
+                "Stainless steel"
+              ],
+              "answer": 1,
+              "why": "Bronze is copper plus tin, chosen for its ringing tone and hardness."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Soft alloys and the rule for alloys",
+            "paragraphs": [
+              "Some alloys are wanted soft and low-melting, not strong. Type-metal mixes lead with antimony and tin, so it melts sharply and holds its shape for printing blocks. Pure lead is too soft and weak to hold type.",
+              "Soft solder mixes lead with tin, so it melts low and wets joints cleanly. A plumber can join pipes without melting them, which pure lead or tin alone cannot do well. Its low melting point is the advantage.",
+              "The rule is this: an alloy beats the pure metal for one job. It is usually harder, may resist rust or hold magnetism, and often melts over a range, not at one sharp point."
+            ],
+            "bullets": [
+              "Type-metal: lead, antimony, tin; printing blocks; sharp melt, wear-proof.",
+              "Soft solder: lead plus tin; joining pipes; low melting, wetting joints.",
+              "Alloy rule: harder, stronger, or more resistant than the pure metal."
+            ],
+            "takeaway": "Alloys gain one winning property over the pure metal for a chosen job.",
+            "visual": {
+              "kind": "compare",
+              "caption": "Alloys are judged by the one property they improve over the pure metal.",
+              "columns": [
+                "Pure metal",
+                "Alloy"
+              ],
+              "rows": [
+                {
+                  "feature": "Composition",
+                  "left": "one element only",
+                  "right": "two or more metals mixed"
+                },
+                {
+                  "feature": "Hardness",
+                  "left": "softer and easier to cut",
+                  "right": "harder and stronger usually"
+                },
+                {
+                  "feature": "Melting",
+                  "left": "sharp single melting point",
+                  "right": "melts over a range"
+                },
+                {
+                  "feature": "Examples",
+                  "left": "pure copper or lead",
+                  "right": "brass, bronze, solder, steel"
+                }
+              ]
+            },
+            "check": {
+              "question": "Which statement correctly compares an alloy with its pure metal?",
+              "options": [
+                "An alloy is a single element",
+                "An alloy melts at one sharp point always",
+                "An alloy is usually harder and stronger than the pure metal",
+                "An alloy is always softer than the pure metal"
+              ],
+              "answer": 2,
+              "why": "Alloys are mixtures that are usually harder, stronger, or more resistant than the pure metal."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Name the added metal first, then the job. Zinc in brass, tin in bronze and solder, chromium in stainless steel: the added element points to the property the alloy was made to gain."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A bell metal is a copper alloy with tin that rings well. Name the alloy and state its advantage over pure copper.",
+            "steps": [
+              {
+                "operation": "Spot the added metal",
+                "reason": "Tin mixed with copper points to bronze, not brass",
+                "result": "Alloy is bronze (Cu plus Sn)",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Recall the pure metal",
+                "reason": "Pure copper is soft and dull, so bells and detail fail",
+                "result": "Pure copper too soft for bells",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "State the gained property",
+                "reason": "Tin hardens the blend and gives a ringing tone",
+                "result": "Bronze harder, ringing, takes detail",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A sink must stay rust-free and a transformer core must guide magnetism. Name the iron alloy for each job.",
+            "hints": [
+              "Rust-free needs a chromium film on iron",
+              "Guiding magnetism needs iron with nickel for cores",
+              "Contrast stainless steel with permalloy for the two jobs"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why mixing metals changes their hardness",
+            "paragraphs": [
+              "In a pure metal the atoms sit in neat rows and the rows can slide. An added atom of a different size jams the slide, so the rows must push past a barrier to move. That jamming is felt outside the crystal as hardness.",
+              "Carbon in steel is the classic jam, but zinc in brass and tin in bronze jam copper in the same way. The smaller the added atoms relative to the host, the stronger the pinning tends to be. Too much of the added metal, though, makes the blend brittle.",
+              "Hardness is not the only gain. Chromium in stainless steel does not mainly jam crystals; it skins the surface with an oxide film. Nickel in permalloy changes how magnetic domains move, not how crystals slide. Each additive writes a different property.",
+              "Melting also changes because the mixture has no single neat lattice. Pure lead melts sharply, while lead-tin solder softens gradually over a range. Type-metal, by contrast, is chosen to melt sharply so type fills moulds cleanly. The use decides whether a range or a point is wanted.",
+              "The exam rule follows: say the added metal, then the property it buys, then the use. A bare list of symbols without the property explains nothing. Properties are the bridge between constituents and uses."
+            ],
+            "bullets": [
+              "Added atoms jam crystal slides, so alloys are harder to deform.",
+              "Film formers and magnetic additives work differently from hardeners.",
+              "Melting may sharpen or spread, depending on the mix and its use."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Choosing the right alloy for the job",
+            "paragraphs": [
+              "Brass and bronze are the pair candidates confuse because both are copper alloys with a golden colour. Zinc is the brass marker and tin is the bronze marker. Keys, instruments and door fittings point to brass, while bells, medals and statues point to bronze.",
+              "Steel and stainless steel share iron but diverge on rust. Mild steel wins on cost and weldability for beams and bodies, while stainless wins where water and air would ruin mild steel. A sink or cutlery made from mild steel would rust, so the film matters more than strength there.",
+              "Permalloy and alnico both contain iron and nickel, so they are confused on paper. Permalloy is soft magnetically and guides fields in cores, while alnico is a hard magnet that keeps its own field. Guide or keep is the discrimination question.",
+              "Soft solder and type-metal both rely on lead, but solder must melt low to join, while type-metal must melt sharply to cast. Tin in solder lowers the melting point for joining, while antimony in type-metal hardens lead for printing. Joining versus casting separates them.",
+              "Duralumin is the lightness answer because aluminium is about a third the weight of steel for the same volume. Its copper, magnesium and manganese additions restore strength that pure aluminium lacks. Where weight is penalised, duralumin wins over steel."
+            ],
+            "bullets": [
+              "Brass has zinc; bronze has tin; keys versus bells.",
+              "Permalloy guides fields; alnico keeps its own magnetism.",
+              "Solder joins at low melt; type-metal casts type sharply."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Traps that cost marks in alloy questions",
+            "paragraphs": [
+              "The first trap swaps zinc and tin. Brass is copper plus zinc for instruments and keys, while bronze is copper plus tin for bells and medals. Any option pairing zinc with bells or tin with keys has crossed the markers.",
+              "The second trap forgets nickel in stainless steel or adds it to the wrong alloy. Stainless steel is iron with chromium and nickel, where chromium supplies the rust film. Duralumin is aluminium based and never contains iron as its main metal.",
+              "The third trap treats alnico and permalloy as the same magnet. Alnico makes permanent magnets because it holds magnetism alone, while permalloy is a core material that concentrates fields. One keeps a field, the other guides a field.",
+              "The fourth trap ignores melting behaviour. Soft solder is chosen for melting low, type-metal for melting sharply, and duralumin for lightness. A joint that needs low melting must not be answered with a high-carbon steel.",
+              "The final trap lists constituents without the gain. Every alloy item in JAMB expects the added metal, the property it buys and the use. Writing iron plus copper alone for duralumin, without magnesium and manganese, misses the alloy."
+            ],
+            "bullets": [
+              "Zinc means brass; tin means bronze, solder and bells.",
+              "Chromium means rust-proof stainless steel; light means duralumin.",
+              "Guide a field: permalloy; keep a field: alnico."
             ]
           }
         }
