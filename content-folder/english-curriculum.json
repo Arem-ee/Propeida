@@ -155,6 +155,20 @@
       "section": "Oral Forms",
       "order": 22,
       "description": "Emphasis places stress on a word in an utterance for the purpose of emphasis. Learn to hear where the stress lands and what it signals."
+    },
+    {
+      "slug": "comprehension-and-summary",
+      "name": "Comprehension and Summary",
+      "section": "COMPREHENSION AND SUMMARY",
+      "order": 26,
+      "description": "Three-passage set structure, coherence and multi-passage synthesis."
+    },
+    {
+      "slug": "lexis-and-structure",
+      "name": "Lexis and Structure",
+      "section": "LEXIS AND STRUCTURE",
+      "order": 27,
+      "description": "Clause and sentence patterns."
     }
   ],
   "lessons": [
@@ -6931,13 +6945,14 @@
             "heading": "Stress belongs to the word",
             "paragraphs": [
               "Stress is the syllable a speaker makes louder, longer and higher. English does not mark it in spelling, so the same letters can carry different stress: a REcord is a file, but to reCORD is to store sound.",
-              "Monosyllables carry stress by default, so exam items use polysyllables. Two-syllable nouns and adjectives usually stress the first syllable (TAble, HAPpy, DOCtor), while two-syllable verbs usually stress the second (beGIN, reLAX, deCIDE).",
+              "Monosyllabic words carry one stress by default, so the exam tests polysyllables most — but know the monosyllabic rules: monosyllables with long vowels or diphthongs (SHEEP, SHOUT) stress the vowel itself, while monosyllables with unstressed function use (TO, AND, IT) weaken in sentences. Recognising a weak-form monosyllable is a connected-speech skill tested alongside word stress.",
               "Nigerian English sometimes places stress differently, as in 'MAintain' for mainTAIN. The exam follows standard British pronunciation, so learn the pattern rather than your own habit."
             ],
             "bullets": [
               "Stress means louder, longer and higher.",
               "Nouns often front-stress; verbs often end-stress.",
-              "Spelling does not show stress."
+              "Spelling does not show stress.",
+              "Monosyllables with long vowels stress the vowel itself (SHEEP, SHOUT)."
             ],
             "takeaway": "Stress is a property of the spoken word, not of its spelling.",
             "check": {
@@ -7195,12 +7210,15 @@
             "paragraphs": [
               "JAMB usually gives a sentence with one word capitalised and asks which question it answers, or gives a question and asks where the stress falls. Work from the contrast, not from loudness alone.",
               "'Bola cooked RICE' answers 'What did Bola cook?', because rice is contrasted with other foods. 'BOLA cooked rice' answers 'Who cooked the rice?'.",
-              "A negative correction works the same way. 'He did not go to LAGOS' contradicts 'He went to Lagos', not 'He went to Abuja'; the stressed place is the one being denied."
+              "A negative correction works the same way. 'He did not go to LAGOS' contradicts 'He went to Lagos', not 'He went to Abuja'; the stressed place is the one being denied.",
+              "Connected speech also links and reduces words: a final consonant joins a following vowel (AN apple, NOT it), and function words weaken into schwa (to /tə/, and /ənd/, for /fə/). Those weak forms are articulation, not spelling — they are how the words are actually said in a sentence."
             ],
             "bullets": [
               "Identify the word in contrast.",
               "Match it to the question it answers.",
-              "A stressed negative denies that same item."
+              "A stressed negative denies that same item.",
+              "Linking joins a final consonant to a following vowel (AN apple).",
+              "Function words weaken to schwa: to /tə/, and /ənd/, for /fə/."
             ],
             "takeaway": "Find the word in contrast, then read the question it answers.",
             "check": {
@@ -7372,6 +7390,599 @@
               "The stressed word answers the question directly.",
               "LATE tells you when, not who or where.",
               "Look for a question about time."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "section-a-set-and-synthesis",
+      "topic": "comprehension-and-summary",
+      "title": "Section A Set and Synthesis",
+      "objective": "Describe the three-passage Section A set (two passages + one cloze, about 200 words, various disciplines), explain passage coherence, and synthesise ideas from multiple passages into one summary.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Section A set and synthesis",
+            "paragraphs": [
+              "Section A gives three texts of about 200 words each — two reading passages and one cloze — drawn from different subjects. Good candidates read each text for its shape, then combine its central ideas into one faithful summary."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "What the three-passage set looks like",
+            "paragraphs": [
+              "A candidate who has prepared for one long comprehension passage meets Section A and is startled by its shape. Instead of one text, she finds two passages and a cloze, each near 200 words, and must work across all three under time pressure.",
+              "The set is deliberately mixed. One passage may treat biology, another economics, history or health, and the cloze usually tests vocabulary and grammatical fit. The disciplines differ because the examination wants reading skill, not specialist knowledge.",
+              "Because each text is short, the skill lies in management rather than stamina. Candidates should move deliberately between texts, noting the main claim of each, since the final summary draws on more than one source."
+            ],
+            "bullets": [
+              "Section A has two passages and one cloze, each about 200 words.",
+              "Passages span varied disciplines such as science, history, economics and health.",
+              "Roughly 200 words per text keeps the focus on quick, purposeful reading."
+            ],
+            "takeaway": "Two passages plus one cloze, each about 200 words, form one mixed set.",
+            "check": {
+              "question": "Which description matches the Section A set?",
+              "options": [
+                "one long passage only",
+                "two passages and one cloze, each about 200 words",
+                "four short poems on one topic",
+                "a single legal document with questions"
+              ],
+              "answer": 1,
+              "why": "Section A presents two reading passages and one cloze, each near 200 words, from varied disciplines."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Coherence is how paragraphs link",
+            "paragraphs": [
+              "A reader finishes a passage without ever being lost, even though she never looked up a hard word. She followed the argument because each paragraph announced its purpose and handed the reader to the next.",
+              "That linking is coherence: ideas are arranged so each paragraph earns its place. A topic sentence names the paragraph's claim, and later sentences develop only that claim. Unity therefore comes from one idea per paragraph, varied in wording but not in direction.",
+              "Signal words carry the reader between steps. However and but flag a turn, for example gives support, and therefore or consequently draws the conclusion. Reasoning follows when conclusions grow from those links, not outside knowledge."
+            ],
+            "bullets": [
+              "Coherence means paragraphs link so the argument moves in one direction.",
+              "A topic sentence states what that paragraph alone must prove.",
+              "Signal words such as however, for example and therefore mark turns and conclusions."
+            ],
+            "takeaway": "One claim per paragraph, linked by signal words, makes reasoning easy to follow.",
+            "check": {
+              "question": "A paragraph begins 'The diet improved; therefore...' What does 'therefore' signal?",
+              "options": [
+                "an example",
+                "a new topic",
+                "a conclusion or result",
+                "a counterexample"
+              ],
+              "answer": 2,
+              "why": "'Therefore' marks a conclusion that follows from the claims before it."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Synthesis combines passages into one summary",
+            "paragraphs": [
+              "Two passages describe a school garden project from opposite sides: one praises its harvest, the other warns about its cost. Asked for one summary, the candidate must hold both claims together instead of copying either passage alone.",
+              "Synthesis means combining distinct pieces into a complete whole. A Section A summary therefore merges main claims, reasons and conclusions from several texts, in fresh wording. It does not add opinions, and it leaves out minor detail.",
+              "The Approved Reading Text is the set of passages itself: candidates read those texts to link their summary to the ideas given. Synthesis differs from a single-passage summary because it must balance at least two voices and show how they agree or differ."
+            ],
+            "bullets": [
+              "Synthesis merges main claims from several passages into one coherent whole.",
+              "Keep the summary in your own words and drop examples and minor detail.",
+              "A single-passage summary uses one voice; synthesis must balance at least two."
+            ],
+            "takeaway": "One summary, in fresh words, marries the main ideas of several passages.",
+            "check": {
+              "question": "Which summary shows synthesis of two passages?",
+              "options": [
+                "quotes a long line from one passage",
+                "merges the main ideas of both passages in fresh words",
+                "adds an opinion absent from both passages",
+                "retells only the first passage in new words"
+              ],
+              "answer": 1,
+              "why": "Synthesis combines distinct pieces from several texts into one whole, in original wording."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Plan Section A as one set. Read each passage for its main claim and note it down before moving on, because examiners reward the summary that can name the shared idea across texts, not the longest quotation from one."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Passage A says a school garden boosts nutrition; Passage B says it strains budgets. Synthesise a one-sentence summary.",
+            "steps": [
+              {
+                "operation": "Extract the main claim of each passage",
+                "reason": "Synthesis starts from each text's actual claims, not its examples",
+                "result": "A claims nutrition gains; B claims rising costs for schools",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Compare the claims for agreement and tension",
+                "reason": "The summary must hold both voices and show their relationship clearly",
+                "result": "Gains and costs are two sides of the same project",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Merge both claims into one sentence in fresh words",
+                "reason": "One sentence must cover both claims in new wording",
+                "result": "The garden improves diets but demands careful budgeting from schools",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Passage A praises free school meals; Passage B worries about their cost. What should your one-sentence summary do?",
+            "hints": [
+              "Name the main claim of each passage first.",
+              "Keep both voices in the sentence, joined by a contrast link.",
+              "Use fresh wording and leave out figures and examples."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: The Approved Reading Text",
+            "paragraphs": [
+              "Candidates sometimes meet the phrase Approved Reading Text and wonder whether it names a hidden book or an extra list to memorise. In the Section A context, it simply means the approved set of passages printed for the examination itself. Those passages are the authorised reading, not a separate textbook chapter.",
+              "That honesty matters because examiners may connect the summary or essay task directly to the set texts. A candidate who has read them only for multiple-choice answers will struggle to discuss them at length. The link is not mysterious: the examination expects learners to think with the passages, not merely about them.",
+              "Approval does not mean the texts are easy, complete or beyond criticism. It means they have been selected as fair, readable material for all candidates. Ideas may still be challenged in an essay, provided the challenge engages the wording of the set passages and stays faithful to their claims.",
+              "Preparation therefore has two parts. First, read the set passages for meaning, following topic sentences and signal words so each text can be stated in one line. Second, read them for connections, noting where a second passage repeats, qualifies or contradicts the first. Summary and essay practice then becomes synthesis rather than recall."
+            ],
+            "bullets": [
+              "The Approved Reading Text is the examination's own passage set, not a hidden textbook.",
+              "Candidates must read the set with the summary or essay link in mind.",
+              "Preparation covers meaning first, then connections between passages."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: A harder synthesis, fully worked",
+            "paragraphs": [
+              "Consider two short texts about a mobile clinic for riverine villages. Passage A reports that the clinic visits twelve villages each month and gives vaccines without charge. Passage B argues that fuel costs, poor roads and broken equipment force the clinic to miss one scheduled visit in every four.",
+              "A weak summary copies Passage A alone and praises free vaccines, or copies Passage B alone and complains about costs. Both responses fail the synthesis task because the examination set that duty precisely to test the ability to balance two distinct claims. The stronger summary names the benefit and the limit in one relationship.",
+              "The synthesis that follows keeps one idea from each text and joins them with a contrast link. It reads: the mobile clinic brings free vaccines to twelve riverine villages monthly, yet fuel, roads and breakdowns regularly cancel planned visits. Every fact there can be traced to a set passage, and no new opinion has been added.",
+              "Notice how the method protects time. A candidate who notes one line per passage — reach and regularity — can construct that sentence in under a minute. Without such notes, the reader returns to both texts, hunting for figures that the summary does not need."
+            ],
+            "bullets": [
+              "One line per passage before synthesis prevents copying a single voice.",
+              "Every fact in the merged sentence must be traceable to a set text.",
+              "Contrast words such as yet and however join opposed claims honestly."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in the Section A set",
+            "paragraphs": [
+              "The first trap is treating Section A as three separate duties instead of one set. Candidates answer the cloze carefully, summarise one passage, and then discover that the summary task expected ideas from across the set. Reading each text on its own therefore produces a complete cloze score and a half-complete summary.",
+              "The second trap is confusing coherence with copying links. A paragraph can repeat therefore and however yet still drift, because the topic sentence never states a claim. Examiners reward logical reasoning, which means each paragraph must develop the stated claim and each signal word must reflect a real turn or conclusion.",
+              "The third trap is stuffing the summary with examples, quotations and fine detail from the most vivid passage. Range across sources is not richness; it is disorder. Synthesis succeeds when minor instances disappear and the governing ideas remain, phrased independently so the candidate's own judgement can be seen.",
+              "A final trap is importing outside knowledge to fill gaps. A candidate who knows the real history behind a passage may add causes the text never mentions. In Section A the passages remain the authority, and a conclusion is sound only when the set texts support it."
+            ],
+            "bullets": [
+              "Treat the three texts as one set with one shared summary duty.",
+              "Signal words cannot save a paragraph that lacks a topic claim.",
+              "Keep examples and outside knowledge out of the merged summary."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "figures-of-speech-in-context",
+      "topic": "comprehension-and-summary",
+      "title": "Figures of Speech in Context",
+      "objective": "Identify figurative and idiomatic expressions in passages and explain their functions — metaphor, simile, personification, hyperbole, irony and understatement — as comprehension items.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Figures of speech in context",
+            "paragraphs": [
+              "A reader in Surulere meets the line ‘His anger was a harmattan wind’ and may misread it literally. JAMB asks what it suggests, so figurative language must be read for meaning, not for form alone."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Metaphor and simile",
+            "paragraphs": [
+              "At a bus park, a reporter writes, ‘The queue moved like ants.’ A reader who pictures insects misses the point, which is steady, slow movement. The line is a simile because it compares the queue with ants using like.",
+              "The same reporter later calls the driver ‘a lion of the road.’ He is not an animal; he is brave, fierce and ready to fight through every jam. That is a metaphor because it declares that the man is a lion without like or as."
+            ],
+            "bullets": [
+              "A simile uses like or as to compare two different things.",
+              "A metaphor says one thing is another without that signal.",
+              "JAMB asks what the comparison suggests, not which label fits."
+            ],
+            "takeaway": "A simile compares with like or as; a metaphor declares that one thing is another.",
+            "check": {
+              "question": "In ‘The danfo driver is a lion of the road’, what is suggested about the driver?",
+              "options": [
+                "He is brave and ready to confront any obstacle on the road.",
+                "He once transported a lion in his vehicle.",
+                "He resembles a lion in shape and size.",
+                "He drives only at night to avoid lions."
+              ],
+              "answer": 0,
+              "why": "The metaphor transfers courage and ferocity, while the literal animal readings are absurd in context."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Personification and hyperbole",
+            "paragraphs": [
+              "During a heavy downpour at Oshodi Market, the rain ‘hammered angrily on the zinc roof’ and the chief’s generator ‘coughed and died’. The rain did not feel anger and the machine did not cough. Both lines give human life or action to non-human things, which is personification.",
+              "A trader who sold fifty orange crates in one morning told friends, ‘I have waited a thousand years for this rain.’ She had not lived that long. That is hyperbole, deliberate exaggeration for effect, and it suggests impatience so intense that waiting felt endless."
+            ],
+            "bullets": [
+              "Personification gives human action or feeling to things that cannot act.",
+              "Hyperbole exaggerates beyond literal truth to stress a feeling.",
+              "JAMB asks what the figure suggests, not which term the examiner prefers."
+            ],
+            "takeaway": "Personification acts human; hyperbole exaggerates to stress a feeling.",
+            "check": {
+              "question": "The line ‘The harmattan wind howled through the town’ suggests that the wind was",
+              "options": [
+                "loud, wild and feeling alive with force",
+                "a person who shouted in the town",
+                "a sound record played through the town",
+                "a spirit that entered every house"
+              ],
+              "answer": 0,
+              "why": "The wind is given a human voice and movement, but the meaning is violent loudness, not a literal person."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Irony and understatement",
+            "paragraphs": [
+              "After six hours without light, a tenant told the landlord, ‘Beautiful planning,’ while staring at uncooked food. The praise was not sincere because the surrounding lines show familiar failure. That is irony: saying the opposite of what is meant, usually to expose folly with quiet humour.",
+              "A committee that calls a six-hour blackout ‘a little delay’ uses understatement, which makes a fact sound smaller than it is. Idioms work the same way in context, as in ‘He keeps an eye on the money,’ which means he watches it carefully. JAMB tests these items by asking for the meaning in the passage, so reject the literal opposite or the too-small reading."
+            ],
+            "bullets": [
+              "Irony means the opposite of the literal words; the context proves it.",
+              "Understatement shrinks a fact; the correct meaning is larger than stated.",
+              "Always test an option against the surrounding lines before choosing."
+            ],
+            "takeaway": "Read the lines around the figure; the context, not the literal words, decides.",
+            "check": {
+              "question": "A trader says ‘A small delay’ after a six-hour blackout. The phrase suggests that the delay was",
+              "options": [
+                "serious, though the words dress it as small",
+                "truly small and easily forgotten",
+                "pleasant because the stall stayed cool",
+                "caused by the trader herself"
+              ],
+              "answer": 0,
+              "why": "Understatement calls a large fact small, so the passage means a major disruption despite the mild wording."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "In meaning-in-context items, first ask what the words say literally, then ask what the surrounding lines show the writer means, and choose the option that matches the lines, not the dictionary or the label."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Passage: ‘When the council opened the new library, the chairman called it a light in the dark room of illiteracy.’ What does the chairman most nearly mean?",
+            "steps": [
+              {
+                "operation": "Identify the figure and its source",
+                "reason": "The library is called light, which is a metaphor because it declares identity without like or as.",
+                "result": "Source is light; target is the library.",
+                "predictPrompt": "What plain meaning can replace the image?"
+              },
+              {
+                "operation": "Contrast literal and figurative readings",
+                "reason": "A library cannot shine as a lamp does, so the literal reading fails in context.",
+                "result": "Figuratively, light means knowledge and hope that remove ignorance.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Choose the meaning the passage supports",
+                "reason": "The surrounding idea is that the library ends illiteracy, not that it replaces electricity.",
+                "result": "The answer is that the library brings knowledge and hope."
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A passage says, ‘The crowd after the match was a river flowing towards the gates.’ What does the image suggest about the crowd?",
+            "hints": [
+              "A river flows steadily, in one direction and without pause.",
+              "The gates tell you where the movement is heading.",
+              "Choose steady, directed movement, not water or boats."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: How context fixes the meaning of a figure",
+            "paragraphs": [
+              "The figure does not carry its meaning alone. Words before and after it narrow the choice, because a writer cannot leave a key image unexplained in an examination passage. Signal words such as but, however and yet often mark the turn that tells the reader how to take it.",
+              "Consider ‘The committee worked like a beehive during the flood relief.’ The flood and relief already tell the reader that busy, organised cooperation is meant. If the same image appeared after praise for a failed plan, the meaning would shift; the figure stays, but the context organises its sense.",
+              "A useful test is substitution: replace the figure with a plain sentence and see whether the passage still reads coherently. If ‘The library brings knowledge’ fits where the light image stood, the figurative reading survives. The literal reading, that the building glows, breaks the next sentence, so it must be rejected.",
+              "The last figure in a paragraph often carries the main idea, because writers place their judgement where the reader pauses. A candidate should therefore read the whole paragraph before deciding, then return to the figure with that judgement in mind. That order recognises the writer’s craft and prevents a local phrase from winning over the passage."
+            ],
+            "bullets": [
+              "Surrounding lines narrow the range of plausible meanings.",
+              "Substitution with a plain sentence tests the figurative reading.",
+              "The final figure often states the writer’s judgement."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Where metaphor, simile and personification meet",
+            "paragraphs": [
+              "Metaphor and simile share the same work: they let one idea borrow the force of another. The simile announces the borrowing with like or as, while the metaphor performs it silently. Personification is the special case where the borrowed force is human: wind howls, roads invite, markets smile.",
+              "The test is not the word alone, because ‘like’ can join equals, as in ‘men like the chairman’, without comparing to a different thing. A simile must compare two unlike domains: a queue with ants, a voice with harmattan wind. The candidate should therefore ask what two things are being set side by side.",
+              "In Nigerian narrative writing, these figures give landscape a voice. A harmattan wind that ‘scours the streets’ feels more honest than a weather report, because the verb carries judgement with the fact. The gain is economy: one borrowed image does the work of a plain clause, and the reader feels the scene rather than merely listing it.",
+              "Examiners rarely reward naming, because an option that says ‘This is a simile’ is useless if it then explains the comparison wrongly. The safe habit is to ignore the label in the first reading, state the meaning in plain words, and only then check which option carries that meaning. The label follows the meaning, never the reverse."
+            ],
+            "bullets": [
+              "Like or as signals comparison only when two unlike things meet.",
+              "Personification borrows human force for non-human things.",
+              "Plain meaning first, label afterwards, prevents naming traps."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exaggeration, irony and restraint in argument",
+            "paragraphs": [
+              "Hyperbole in argumentative writing is a signal, not a statistic. When a writer says the price ‘jumped to the moon’ or that ‘every trader has fled’, the numbers are not to be trusted as facts. They tell the reader that the writer feels the change is sudden, cruel or universal, and that feeling is itself evidence of tone.",
+              "Irony and understatement both create a gap between words and truth, but they face opposite ways. Irony says more than is meant in the direction of praise, so ‘beautiful planning’ attacks poor planning, while understatement says less, so ‘a little delay’ confesses a large problem. Recognising the direction of the gap recognises the figure.",
+              "Options for these items are built from the gap: one repeats the literal words, one gives the opposite too strongly, and one names the feeling without the fact. The correct option holds both: it admits the fact is large or opposite, and it keeps the writer’s restrained tone. A tone that stays cool, for example, rarely admits open anger.",
+              "Idioms are figures that have hardened into fixed phrases, so ‘to keep an eye on’ means watch carefully because custom has settled it. The same substitution test works: replace the idiom with its plain meaning and the passage should still hold. If it does not hold, the idiom has been read too literally."
+            ],
+            "bullets": [
+              "Hyperbole signals feeling; treat its numbers as tone, not fact.",
+              "Irony overpraises; understatement understates; the gap gives the direction.",
+              "The correct option keeps both the fact and the restrained tone."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "clause-and-sentence-patterns",
+      "topic": "lexis-and-structure",
+      "title": "Clause and Sentence Patterns",
+      "objective": "Identify simple, compound and complex sentence patterns, identify noun, adjective and adverbial clauses and their functions, identify various grammatical patterns in use, and interpret information conveyed in sentences.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Clause and sentence patterns",
+            "paragraphs": [
+              "Sentences classify by clause number and clause function, and JAMB asks you to label patterns and interpret what each clause contributes to meaning in examination questions."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Simple, compound or complex",
+            "paragraphs": [
+              "A candidate faces three sentences and must label one simple, one compound and one complex. Count clauses rather than length, because longer does not always mean more complex.",
+              "A simple sentence has one independent clause with one subject and one finite verb, as in 'The traders closed early'. A compound sentence joins two independent clauses with and, but or so, as in 'The traders closed early, but the driver waited'.",
+              "A complex sentence keeps one main clause and adds a dependent clause with because, when, although or if. 'The traders closed early although the market was busy' is complex because the although part cannot stand alone."
+            ],
+            "bullets": [
+              "Simple: one independent clause, for example Ada sold pepper.",
+              "Compound: two independent clauses joined by and, but, or, so.",
+              "Complex: one main clause plus a dependent clause with because, when, although, if."
+            ],
+            "takeaway": "Count clauses: one is simple, two equal is compound, unequal is complex.",
+            "check": {
+              "question": "Which sentence is complex?",
+              "options": [
+                "The traders closed early.",
+                "The traders closed early, but the driver waited.",
+                "The traders closed early although the market was busy.",
+                "The traders closed early and the driver waited."
+              ],
+              "answer": 2,
+              "why": "It has one main clause plus a dependent although clause; the others are simple or compound."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Three kinds of dependent clause",
+            "paragraphs": [
+              "A student writes 'I know that he passed' and cannot label 'that he passed'. It is the object of 'know', so it is a noun clause, which does the job of a noun.",
+              "A noun clause can be subject or object and often begins with that, what, whether or who. What he said was true shows a noun clause as subject, while She asked what happened shows one as object. It answers what.",
+              "An adjective clause describes a noun through who, which or that, as in 'The school that stands near the market is old'. An adverbial clause tells time, cause or purpose through when, because or so that, as in 'Students left when the bell rang'."
+            ],
+            "bullets": [
+              "Noun clause: subject or object, introduced by that, what, whether, who.",
+              "Adjective clause: describes a noun with who, which, that, where.",
+              "Adverbial clause: tells when, why or for what purpose with when, because, so that."
+            ],
+            "takeaway": "Ask what the clause does: noun, adjective or adverbial decides its name.",
+            "check": {
+              "question": "In 'The boy who sang won the prize', what is 'who sang'?",
+              "options": [
+                "a noun clause",
+                "an adjective clause",
+                "an adverbial clause",
+                "an independent clause"
+              ],
+              "answer": 1,
+              "why": "Who sang describes the noun boy, so it is an adjective clause."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Patterns, meaning and number",
+            "paragraphs": [
+              "A candidate reads 'The boy who passed received a book' and must tell what the sentence means. The who clause limits which boy, and the singular noun book tells that one book was given.",
+              "Use patterns to rebuild broken sentences. A correct pattern keeps main and dependent clauses in order, joins equal ideas with and, but or so, and places adverbial clauses where they explain time, cause or purpose without breaking the main idea.",
+              "Form plurals with regular endings. Add s to book, books, es after s, sh, ch or x, as in boxes, and ies for consonant plus y, as in stories. Uncountables such as information and furniture take no plural s."
+            ],
+            "bullets": [
+              "Pattern in use: main clause plus dependent clause in logical order.",
+              "Meaning: ask who, what, when, why or for what purpose the clause answers.",
+              "Number: countable nouns take s and es, uncountables take no s."
+            ],
+            "takeaway": "Read the pattern for structure and the number for meaning and agreement.",
+            "check": {
+              "question": "Which noun is uncountable and takes no plural s?",
+              "options": [
+                "books",
+                "boxes",
+                "information",
+                "stories"
+              ],
+              "answer": 2,
+              "why": "Information is uncountable, so it takes no plural s and a singular verb."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "In an item that asks for the pattern, count clauses first, then ask what each clause does. Two equal ideas joined by and, but or so is compound; a clause that describes a noun is adjective; one that cannot stand alone is dependent."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Classify this sentence and state its clause pattern: Students who worked hard succeeded because they prepared early.",
+            "steps": [
+              {
+                "operation": "Count finite verbs",
+                "reason": "Each finite verb marks one clause in the sentence.",
+                "result": "Three verbs show three clauses: worked, succeeded, prepared.",
+                "predictPrompt": "What does the who part do if it is not the main clause?"
+              },
+              {
+                "operation": "Split the clauses",
+                "reason": "Students who worked hard succeeded is main; who and because parts are dependent.",
+                "result": "Who part describes students; because part gives the cause.",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Name the pattern",
+                "reason": "A main clause with dependent clauses is complex.",
+                "result": "Complex sentence with adjective and adverbial clauses.",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: When coordination looks like subordination",
+            "paragraphs": [
+              "A linker alone does not fix the pattern. And, but and so can join phrases inside one clause, while because and when can open the whole sentence. That is why candidates should count finite verbs rather than hunt for a favourite linker.",
+              "In 'The cat and the dog slept', and joins two nouns, not two clauses, so the sentence is simple despite containing and. In 'The cat slept and the dog barked', and joins two independent clauses, so the sentence is compound. The shape changes because the number of subjects and verbs changes.",
+              "Subordinators surprise when they appear inside noun phrases. In 'a book that I bought', that introduces an adjective clause, not a separate sentence. JAMB favours that contrast because a candidate who treats every subordinate word as a complex sentence will miscount. The test remains standing alone: a dependent part cannot stand alone.",
+              "Coordination can also be incomplete. 'The team worked hard and well' has and joining two adverbs in a simple sentence, while 'The team worked hard, and they rested' has two clauses. Look for the second subject and verb before you call a sentence compound, because the second verb is the proof."
+            ],
+            "bullets": [
+              "And inside a phrase is simple; and between two clauses is compound.",
+              "Count finite verbs, not favourite linkers, before you label the pattern.",
+              "Dependent parts fail the stand-alone test; main clauses pass it."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Noun clauses and the missing linker",
+            "paragraphs": [
+              "English often drops the linker at the start of a noun clause. 'I know he passed' means 'I know that he passed', but he passed is still the object of know. The missing that tempts candidates to call he passed a separate sentence, which the word order forbids.",
+              "The same drop happens with adjective clauses. 'The book I bought' is not a sentence fragment; it is a noun plus an adjective clause with the relative pronoun omitted. The noun book remains the head, and the clause describes it. Spotting the head noun first prevents both errors at once.",
+              "Whose and where sharpen the test. Whose introduces an adjective clause that shows possession, as in 'The student whose bag was stolen reported it'. Where introduces an adjective clause that shows place, as in 'The hall where we met is small'. Neither shows ownership of the clause itself, so neither is nominal.",
+              "Subject noun clauses favour what and whether in formal English. 'What he said surprised us' has what he said as subject, while 'Whether he passed is uncertain' uses whether. The verb after the clause agrees with the clause as a whole, so what he said is normally treated as singular in subject agreement."
+            ],
+            "bullets": [
+              "Omitted that still leaves the clause as object or description.",
+              "Whose shows possession and where shows place in adjective clauses.",
+              "Subject clauses with what and whether take a singular verb."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Irregular plurals and uncountables in use",
+            "paragraphs": [
+              "Regular spelling rules cover most plurals, but a small set breaks them. Child becomes children, person becomes people in general use, and analysis becomes analyses through a change of ending. JAMB tests these because a candidate who adds a regular s to children or analysis loses the mark at once.",
+              "Countability decides much versus many and the verb that follows. Much goes with uncountables such as information, advice and research, while many goes with countables such as facts, ideas and reports. A sentence with much information takes a singular verb, and a sentence with many reports takes a plural verb.",
+              "Some nouns keep a plural form for a singular meaning, and some keep a singular form for a plural meaning. News, mathematics and measles take singular verbs, while police, cattle and people take plural ones. The meaning, not the final letter, decides the verb, which is why this set is examined closely.",
+              "Collectives and quantities carry the pattern into examination use. 'The committee has reported' shows the body acting as one, while 'The committee have disagreed' shows members acting separately. 'A number of students are absent' is plural in sense, while 'The number of students has risen' is singular because number is the head noun."
+            ],
+            "bullets": [
+              "Irregulars such as children and analyses must be learnt whole.",
+              "Much with uncountables is singular; many with countables is plural.",
+              "Do not judge number by the final letter; judge by meaning."
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Classify this sentence and state its pattern: The students who arrived late left when the hall was full.",
+            "hints": [
+              "Count the finite verbs to find how many clauses are present.",
+              "Ask what each dependent part does: one describes students, the other tells time.",
+              "A main clause with dependent clauses gives the complex pattern."
             ]
           }
         }
