@@ -8222,6 +8222,221 @@
           }
         }
       ]
+    },
+    {
+      "slug": "polymers",
+      "topic": "organic-compounds",
+      "title": "Polymers",
+      "objective": "Distinguish between natural and synthetic polymers, differentiate between addition and condensation polymerization processes, classify natural and commercial polymers and their uses, and distinguish between thermoplastics and thermosetting plastics.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Polymers",
+            "paragraphs": [
+              "A plastic bucket, a nylon shirt and a rubber tyre share one trick: thousands of small molecules joined into one giant chain. This lesson explains how the chains form and why some melt while others never do."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Addition versus condensation",
+            "paragraphs": [
+              "Addition polymerisation links monomers through their double bonds, with no by-product: ethene chains link into polythene, styrene into polystyrene. The reaction is addition repeated thousands of times.",
+              "Condensation polymerisation joins monomers with small molecules lost: amino acids lose water to form proteins, and dicarboxylic acids with diols lose water to form polyesters like terylene. Nylon is a condensation polymer too.",
+              "The distinction is the by-product: addition loses nothing; condensation loses water (or alcohol). The equation shows it at a glance.",
+              "The by-product is the quickest check of all: look at the equation, and if water appears, the polymerisation was condensation.",
+              "Polymer length matters too: longer chains mean stronger, tougher plastics because more entanglement holds them together. That is why molecular weight is controlled so carefully in manufacture."
+            ],
+            "bullets": [
+              "Addition: monomers link through double bonds; nothing lost.",
+              "Condensation: monomers join with water or alcohol lost.",
+              "Add: polythene, polystyrene. Condense: nylon, terylene, proteins."
+            ],
+            "takeaway": "Addition loses nothing; condensation loses water.",
+            "check": {
+              "question": "Nylon is a condensation polymer because its formation",
+              "options": [
+                "Opens double bonds",
+                "Loses small molecules (water)",
+                "Needs ultraviolet light",
+                "Uses a metal catalyst"
+              ],
+              "answer": 1,
+              "why": "Condensation polymers form with small molecules lost, like water."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Natural and synthetic polymers",
+            "paragraphs": [
+              "Natural polymers come from living things: cellulose (cotton, wood), proteins (wool, silk), starch and natural rubber. They are made by biology, not factories, though humans process them.",
+              "Synthetic polymers are made by chemical plants: polythene, PVC, polystyrene, nylon, terylene and synthetic rubber. They are designed for specific properties — strength, insulation, flexibility.",
+              "The class decides the fate: natural polymers are biodegradable and renewable; synthetic ones persist and accumulate. That environmental difference is now part of every use decision.",
+              "Synthetic rubber, for example, copies the properties of natural rubber from petroleum feedstock. The category is about origin, not about performance."
+            ],
+            "bullets": [
+              "Natural: cellulose, proteins, starch, natural rubber.",
+              "Synthetic: polythene, PVC, nylon, terylene, synthetic rubber.",
+              "Natural biodegrades; synthetic persists."
+            ],
+            "takeaway": "Natural polymers come from living things; synthetic ones from reactors.",
+            "check": {
+              "question": "Which of these is a natural polymer?",
+              "options": [
+                "Polythene",
+                "Nylon",
+                "Cellulose",
+                "PVC"
+              ],
+              "answer": 2,
+              "why": "Cellulose is the plant polymer found in cotton and wood."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Thermoplastics and thermosetting plastics",
+            "paragraphs": [
+              "Thermoplastics soften on heating and harden on cooling, again and again: polythene, polystyrene, PVC. They can be remelted and remoulded, which makes them recyclable — and disposable.",
+              "Thermosetting plastics harden once and never soften again: Bakelite and melamine set by cross-linking into a rigid network. Heating them further chars them instead of melting them.",
+              "The difference is cross-linking: thermoplastics are individual chains that slide; thermosets are one interlocked network. Structure decides whether remelting is possible.",
+              "That is why a broken thermoplastic bucket can be remelted into a new bucket, while a broken thermoset switch cannot be recovered at all."
+            ],
+            "bullets": [
+              "Thermoplastics: remelt and remould (polythene, PVC).",
+              "Thermosets: harden once, never remelt (Bakelite).",
+              "Cross-linking decides the difference."
+            ],
+            "takeaway": "Thermoplastics remelt; thermosets set once and char.",
+            "check": {
+              "question": "Bakelite is a thermosetting plastic because",
+              "options": [
+                "It softens on reheating",
+                "It hardens once and cannot be remelted",
+                "It is made from cellulose",
+                "It dissolves in water"
+              ],
+              "answer": 1,
+              "why": "Thermosets cross-link permanently; reheating chars them instead of softening."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For polymer questions, first check for a by-product: water lost means condensation, nothing lost means addition. The equation tells the class."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Ethene polymerises to polythene. Write the polymerisation equation and state whether it is addition or condensation.",
+            "steps": [
+              {
+                "operation": "Write the monomer",
+                "reason": "Polythene is made from ethene monomers",
+                "result": "n CH₂=CH₂",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Link the chains",
+                "reason": "Double bonds open and join thousands of units",
+                "result": "–[CH₂–CH₂]ₙ–",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Classify the process",
+                "reason": "No small molecule is lost",
+                "result": "Addition polymerisation",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Amino acids join to form proteins with water lost at each join. Classify the polymerisation.",
+            "hints": [
+              "Small molecules are lost at each join",
+              "Loss of water means condensation",
+              "Proteins are condensation polymers"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why thermoplastics remelt and thermosets do not",
+            "paragraphs": [
+              "A thermoplastic is a pile of individual chains held together only by weak forces. Heating weakens those forces, so the chains slide and the plastic flows; cooling restores them. The chains themselves never change.",
+              "A thermoset is one giant network: cross-links join the chains into a single molecule. Heating cannot slide what is interlocked, so the material chars instead of melting. The network is the molecule.",
+              "That structural difference is why thermoplastics can be recycled and thermosets cannot. Remelting is always a chain-separation question.",
+              "A candidate who pictures piles versus networks predicts remelting, hardness and recyclability for any polymer.",
+              "The same picture explains recycled plastics: thermoplastics are ground and remelted because their chains survive the process, while thermosets must be ground into filler because their networks cannot flow.",
+              "Even the filler market follows the picture: ground thermoset powder is used as a cheap filler precisely because it cannot flow back into shape.",
+              "Cross-link density controls hardness directly: more links mean a harder, more brittle network. That is why Bakelite is rigid while lightly cross-linked rubber stays flexible.",
+              "The same density also governs heat resistance: heavily cross-linked networks keep their shape where thermoplastics would soften. Structure, again, is destiny."
+            ],
+            "bullets": [
+              "Thermoplastics: separate chains, weak forces, remelt.",
+              "Thermosets: one interlocked network, chars.",
+              "Structure decides remelting and recycling.",
+              "Piles versus networks is the whole distinction."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Vulcanised rubber and cross-linking",
+            "paragraphs": [
+              "Natural rubber is polyisoprene chains, too soft and sticky for tyres. Vulcanisation heats it with sulfur, which forms cross-links between chains. The network makes it hard, elastic and durable.",
+              "Synthetic rubber is made the same way from synthetic monomers: the cross-linking step is identical, only the starting chains differ. Vulcanisation is a treatment, not a polymerisation.",
+              "The cross-links also explain why vulcanised rubber cannot be remelted: heating breaks the network, it does not slide it. Rubber is a thermoset once vulcanised.",
+              "A candidate who separates polymerisation (making chains) from vulcanisation (linking them) keeps two processes distinct.",
+              "The sulfur bridges also explain the smell of hot rubber and the ageing of tyres: heat breaks some bridges over time, and the network weakens.",
+              "Synthetic rubber follows the same treatment: Buna-S and neoprene are vulcanised exactly like natural rubber, proving that cross-linking is independent of the chain source."
+            ],
+            "bullets": [
+              "Vulcanisation cross-links rubber chains with sulfur.",
+              "Same treatment for natural and synthetic rubber.",
+              "Vulcanised rubber is thermoset — it chars, not melts.",
+              "Polymerisation makes chains; vulcanisation links them."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in polymers",
+            "paragraphs": [
+              "The classic trap is the by-product. Addition loses nothing; condensation loses water or alcohol. Any option describing amino acids joining without water lost is addition, not condensation.",
+              "The second trap is natural versus synthetic. Cellulose is natural; nylon is synthetic. Both are polymers, but only one comes from living things.",
+              "The third trap is thermoplastic versus thermosetting. Remelting means thermoplastic; charring means thermosetting. The heating test decides, not the softness.",
+              "The fourth trap is vulcanisation as polymerisation. Sulfur cross-links existing chains; it does not make them. The two processes are sequential, not the same.",
+              "A final trap is calling natural rubber synthetic because tyres are manufactured. Origin decides the category: natural rubber comes from latex, however it is processed afterwards.",
+              "A candidate who checks the by-product, the heating test, and the origin in that order answers every polymer item without memorising examples.",
+              "That order — by-product, heating, origin — is the whole polymer method in one line."
+            ],
+            "bullets": [
+              "By-product decides: water = condensation; nothing = addition.",
+              "Natural = living; synthetic = reactor-made.",
+              "Remelts = thermoplastic; chars = thermosetting.",
+              "Vulcanisation links chains; it does not make them."
+            ]
+          }
+        }
+      ]
     }
   ]
 }
