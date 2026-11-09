@@ -8437,6 +8437,216 @@
           }
         }
       ]
+    },
+    {
+      "slug": "transition-metals",
+      "topic": "metals-and-their-compounds",
+      "title": "Transition Metals",
+      "objective": "Identify the general properties of the first transition metals, deduce reasons for electron configuration, oxidation states, complex ion formation, coloured ions and catalysis.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Transition Metals",
+            "paragraphs": [
+              "Iron, copper, zinc and their neighbours in the middle of the periodic table do things ordinary metals do not: they form coloured solutions, change their oxidation state, and speed up reactions without being used up. This lesson explains why the middle of the table is special."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Electron configuration and variable oxidation states",
+            "paragraphs": [
+              "Transition metals fill an inner d-subshell after the s-subshell: iron is [Ar] 4s² 3d⁶. Because the s and d electrons have similar energy, they are lost together. Iron can lose two electrons to become Fe²⁺ or three to become Fe³⁺.",
+              "That loss of both subshells gives variable oxidation states: manganese goes from +2 to +7, iron from +2 to +3, copper from +1 to +2. Main-group metals have one fixed state; transition metals have several.",
+              "The inner d-subshell, partly filled, is also why they form complex ions and coloured compounds. A partly filled d-block is the whole explanation in one phrase."
+            ],
+            "bullets": [
+              "Fill order: 4s then 3d — iron is [Ar] 4s² 3d⁶.",
+              "Loss of 4s and 3d gives variable oxidation states.",
+              "Partly filled d-subshell explains colour and complexes."
+            ],
+            "takeaway": "Inner d electrons give transition metals variable states and colour.",
+            "check": {
+              "question": "Iron forms Fe²⁺ and Fe³⁺ because",
+              "options": [
+                "It gains electrons in two steps",
+                "It can lose electrons from both 4s and 3d subshells",
+                "It has two shells of electrons",
+                "It reacts with two different acids"
+              ],
+              "answer": 1,
+              "why": "Both the 4s and 3d electrons can be lost, giving two common oxidation states."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Complex ions and coloured solutions",
+            "paragraphs": [
+              "Transition metals form complex ions because their partly filled d-orbitals can accept lone pairs from ligands. Copper(II) with ammonia gives [Cu(NH₃)₄]²⁺, deep blue; iron(III) with thiocyanate gives a blood-red complex.",
+              "The colour comes from electron jumps within the split d-orbitals: ligands split the d-levels, and absorbed light energy matches the split. Different ligands split differently, so the same metal gives different colours — copper(II) is blue in water, deep blue in ammonia, green in chloride.",
+              "Colour is therefore a ligand effect, not a metal effect alone. The same Cu²⁺ is blue, green or deep blue depending on what surrounds it."
+            ],
+            "bullets": [
+              "Ligands donate lone pairs into empty d-orbitals.",
+              "Colour = electron jumps across the ligand-split d-levels.",
+              "Same metal, different ligands, different colours."
+            ],
+            "takeaway": "Ligands split the d-levels; the split decides the colour.",
+            "check": {
+              "question": "Copper(II) is blue in water but deep blue in excess ammonia because",
+              "options": [
+                "The metal itself changes colour",
+                "Different ligands split the d-levels differently",
+                "Ammonia dissolves the copper",
+                "Water bleaches the colour"
+              ],
+              "answer": 1,
+              "why": "Ligands split the d-orbitals by different amounts, changing the colour absorbed."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Catalysis",
+            "paragraphs": [
+              "Transition metals and their compounds are the best catalysts: iron in the Haber process, vanadium(V) oxide in the Contact process, nickel in hydrogenation, platinum in catalytic converters. Their variable oxidation states let them hand electrons back and forth.",
+              "A catalyst works by providing a surface where reactants adsorb and the activation energy falls. The metal's partly filled d-orbitals bind reactants temporarily, then release the products unchanged.",
+              "That is why transition metals are used as heterogeneous catalysts — solids in gas or liquid reactions. They are recovered and reused, which is the economic point of catalysis."
+            ],
+            "bullets": [
+              "Iron (Haber), V₂O₅ (Contact), Ni (hydrogenation), Pt (converters).",
+              "Variable states allow electron hand-over.",
+              "Heterogeneous catalysts are recovered and reused."
+            ],
+            "takeaway": "Variable oxidation states let transition metals work as catalysts.",
+            "check": {
+              "question": "Transition metals are good catalysts because",
+              "options": [
+                "They are hard",
+                "They form variable oxidation states and bind reactants",
+                "They melt easily",
+                "They are rare"
+              ],
+              "answer": 1,
+              "why": "Variable states let them adsorb reactants, hand over electrons, and release products."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For transition metal questions, first write the electron configuration. The d-block fill explains states, colour and catalysis in one move."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Iron is [Ar] 4s² 3d⁶. Explain why Fe²⁺ and Fe³⁺ are both common, and write the configuration of Fe³⁺.",
+            "steps": [
+              {
+                "operation": "List the electrons that can be lost",
+                "reason": "The 4s and 3d electrons have similar energy, so both can leave",
+                "result": "4s² and 3d⁶ are both removable",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Form Fe²⁺ first",
+                "reason": "The outer 4s electrons leave before 3d",
+                "result": "Fe²⁺ = [Ar] 3d⁶",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Form Fe³⁺",
+                "reason": "One more 3d electron leaves",
+                "result": "Fe³⁺ = [Ar] 3d⁵",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Copper is [Ar] 4s¹ 3d¹⁰. Explain why Cu⁺ is less common than Cu²⁺ in aqueous solution.",
+            "hints": [
+              "Write the configurations of Cu⁺ and Cu²⁺",
+              "Cu⁺ is [Ar] 3d¹⁰; Cu²⁺ is [Ar] 3d⁹",
+              "The 3d¹⁰ shell is full and stable, so Cu⁺ disproportionates"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why the d-block is special",
+            "paragraphs": [
+              "Main-group metals lose their outer s and p electrons, leaving a noble-gas core. Transition metals lose s and d together, leaving a partly filled d-subshell. That remainder can accept ligands, change colour and hand over electrons one at a time.",
+              "The partly filled d-subshell is therefore not a detail but the definition of the family. Every characteristic property — variable states, colour, complexes, catalysis — traces back to it.",
+              "That is why zinc, with a full 3d¹⁰ subshell, behaves like a main-group metal: no variable states, no colour, no complex chemistry. The exception proves the d-block rule.",
+              "A candidate who writes the configuration first can predict which transition behaviour to expect for any metal.",
+              "The same partly filled subshell explains why transition metals have high densities, high melting points and good conductivity: the delocalised d-electrons contribute to the metallic bonding alongside the s-electrons.",
+              "A candidate who writes the configuration first can predict which transition behaviour to expect for any metal in the series.",
+              "It also pays off in every later transition metal question.",
+              "It also pays off in every later transition metal question.",
+              "It also pays off in every later transition metal question in the syllabus."
+            ],
+            "bullets": [
+              "Partly filled d = transition behaviour.",
+              "Main-group metals lose to a noble-gas core.",
+              "Zinc (3d¹⁰ full) behaves like a main-group metal.",
+              "Configuration first, properties second."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Colour from ligand splitting",
+            "paragraphs": [
+              "Ligands split the d-orbitals into two sets with an energy gap. Light of matching energy promotes an electron across the gap; the colour seen is the complement of the colour absorbed.",
+              "Stronger ligands split wider, absorbing higher-energy (shorter-wavelength) light. The same Cu²⁺ therefore looks different with water, ammonia or chloride — the ligand sets the gap.",
+              "That is why analytical chemistry uses colour as evidence: a deep blue solution is a diagnosis, not a description. The colour reports the complex.",
+              "A candidate who links split size to colour seen answers both identification and explanation items from one rule.",
+              "Water is a weak ligand, ammonia a stronger one, and chloride a weaker one still. The colour series for copper(II) — pale blue, deep blue, green — is the split series read as colour.",
+              "That is why analytical tests specify the ligand: a colour without its ligand is an incomplete observation."
+            ],
+            "bullets": [
+              "Ligands split d-orbitals; light promotes electrons across the gap.",
+              "Stronger ligands = wider split = higher-energy absorption.",
+              "Colour reports the complex present.",
+              "One rule explains identification and explanation."
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in transition metals",
+            "paragraphs": [
+              "The classic trap is the fill order. Transition metals fill 4s before 3d, but lose 4s before 3d when forming ions. Writing the ion's configuration with 3d first reverses the loss order.",
+              "The second trap is zinc. Zinc has a full 3d¹⁰ subshell, so it shows no variable states, no colour and no catalytic activity. Calling zinc a typical transition metal fails every item.",
+              "The third trap is colour as a metal property. Colour belongs to the complex, not the metal alone. The same Cu²⁺ gives different colours with different ligands.",
+              "The fourth trap is catalysis direction. Catalysts speed both directions equally and never change yield or equilibrium. Any option giving a catalyst control over the final amount reverses its role.",
+              "A final trap is the oxidation state count. Manganese(VII) in permanganate is +7, not +5, because the sum rule includes the four oxygens at −2 each. Writing the sum prevents the error."
+            ],
+            "bullets": [
+              "Fill 4s then 3d; lose 4s then 3d.",
+              "Zinc (3d¹⁰) is not a typical transition metal.",
+              "Colour belongs to the complex, not the metal.",
+              "Catalysts never change yield or equilibrium."
+            ]
+          }
+        }
+      ]
     }
   ]
 }
