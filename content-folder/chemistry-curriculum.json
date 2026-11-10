@@ -812,13 +812,14 @@
             "paragraphs": [
               "Across a period, protons increase while electrons are added to the same shell, so the pull on each electron grows. Atoms therefore shrink, ionisation energy rises, and electronegativity rises. Sodium is a soft metal and chlorine is a reactive non-metal, and that change runs steadily left to right.",
               "Down a group, new shells are added outside, so atoms grow and the outer electrons are shielded from the nucleus. Ionisation energy and electronegativity fall, while metallic character grows. Fluorine, at the top of the halogens, is the most electronegative element of all.",
-              "Conductivity follows the same logic: metals conduct because outer electrons are free, and that freedom grows where atoms hold their electrons loosely. Sodium conducts well; chlorine, a non-metal, does not conduct at all."
+              "Conductivity follows the same logic: metals conduct because outer electrons are free, and that freedom grows where atoms hold their electrons loosely. Thermal conductivity moves with electrical conductivity, because the same free electrons carry both heat and charge. Sodium conducts well; chlorine, a non-metal, does not conduct at all."
             ],
             "bullets": [
               "Across a period: radius falls, ionisation energy and electronegativity rise.",
               "Down a group: radius grows, ionisation energy and electronegativity fall.",
               "Metallic character fades across and grows down.",
-              "Conductivity follows how loosely electrons are held."
+              "Conductivity follows how loosely electrons are held.",
+              "Thermal conductivity moves with electrical conductivity."
             ],
             "takeaway": "Across a period the pull grows; down a group new shells shield it.",
             "visual": {
@@ -1320,7 +1321,7 @@
                 "It is a pure substance",
                 "It cannot be separated"
               ],
-              "answer": 1,
+              "answer": 0,
               "why": "An ink of several dyes would spread into several bands; a single band suggests one travel rate."
             }
           }
@@ -1645,7 +1646,8 @@
               "The second trap mixes gram solubility with molar solubility. Converting between them needs Mr: grams per dm³ divided by Mr gives mol/dm³. Skipping Mr is the commonest calculation error in this topic.",
               "The third trap ignores the curve's temperature. Reading a value from the wrong temperature point is reading a different solution entirely. Always anchor the reading to the stated temperature.",
               "The fourth trap treats colloids as suspensions. Both look milky, but colloids do not settle and pass neither filter nor light beam silently. Particle size, not appearance, decides the class.",
-              "A final trap is treating the Tyndall effect as proof of a true solution. Only colloids scatter a beam of light; a clear true solution leaves the beam invisible."
+              "A final trap is treating the Tyndall effect as proof of a true solution. Only colloids scatter a beam of light; a clear true solution leaves the beam invisible.",
+              "Curve-based mass questions follow the same anchor rule: read the solubility value at the stated temperature, then scale it to the given solvent mass. If a curve gives 40 g per 100 g water at 30 °C, then 200 g water dissolves 80 g at that temperature. The reading decides everything; the arithmetic is just a ratio."
             ],
             "bullets": [
               "Solubility is the limit; concentration is the present amount.",
@@ -2035,7 +2037,7 @@
           "content": {
             "question": "25.0 cm³ of 0.20 M sulphuric acid is neutralised by an unknown base in a 1:2 ratio (H₂SO₄ : base = 1:2). It takes 40.0 cm³ of the base. Find its concentration.",
             "hints": [
-              "First find the moles of acid: 0.25 × 0.025",
+              "First find the moles of acid: 0.20 × 0.025",
               "The base has twice as many moles as the acid",
               "Then divide those moles by 0.040 dm³"
             ]
@@ -2300,13 +2302,15 @@
               "Impure copper is cast into thick slabs and hung as the anode in copper(II) sulfate solution. Pure copper is rolled into thin sheets for the cathode. On passing current, copper atoms dissolve from the anode and an equal mass deposits on the cathode.",
               "Copper ions move through the solution, so the number of Cu²⁺ ions stays constant. Impurities that are less reactive than copper, like gold and silver, fall off the anode as anode sludge. Impurities more reactive than copper, like zinc, dissolve but do not deposit at the cathode.",
               "The product is 99.99% pure copper, which is why the process is called electrorefining. Resistivity falls sharply with purity, so the copper is good for wires and electrical work where ordinary copper would waste energy as heat.",
-              "The same cell proves the series in action. Only copper among the dissolved metals can discharge at the cathode under these conditions, which is why the deposit is pure. Reactivity, not just voltage, decides the outcome."
+              "The same cell proves the series in action. Only copper among the dissolved metals can discharge at the cathode under these conditions, which is why the deposit is pure. Reactivity, not just voltage, decides the outcome.",
+              "Half-cell equations write each electrode separately: at the cathode, Cu²⁺ + 2e⁻ → Cu; at the anode, 2Cl⁻ → Cl₂ + 2e⁻ (or 4OH⁻ → O₂ + 2H₂O + 4e⁻ in dilute solution). Each is a reduction or an oxidation half-reaction; adding the two, with the electrons equal, gives the full ionic equation."
             ],
             "bullets": [
               "Impure copper is the anode; pure copper is the cathode.",
               "Copper dissolves and redeposits, keeping Cu²⁺ constant.",
               "Less reactive impurities fall as sludge; more reactive ones dissolve.",
-              "Electrorefining gives 99.99% pure copper."
+              "Electrorefining gives 99.99% pure copper.",
+              "Cathode: Cu²⁺ + 2e⁻ → Cu; anode: 2Cl⁻ → Cl₂ + 2e⁻."
             ]
           }
         },
@@ -3077,7 +3081,10 @@
             "visual": {
               "kind": "compare",
               "caption": "Each disturbance is cancelled because the reaction consumes what is added and remakes what is removed.",
-              "columns": ["Disturbance", "System response"],
+              "columns": [
+                "Disturbance",
+                "System response"
+              ],
               "rows": [
                 {
                   "feature": "Add reactant",
@@ -4436,13 +4443,15 @@
               "Hygroscopy is absorbing moisture without dissolving: silica gel soaks water vapour but stays a solid. Deliquescence dissolves; hygroscopy merely dampens. That boundary is the exam distinction.",
               "The three phenomena are one scale of water affinity: efflorescence loses water, hygroscopy gains it slowly, deliquescence gains it until dissolved. Naming the direction is naming the phenomenon.",
               "Heating a hydrated crystal therefore removes water of crystallisation and changes its colour in the classic blue-to-white copper sulfate test. The colour change is the visible proof that water was part of the crystal.",
-              "A candidate who links colour to water content can identify events in a heating curve without any further information."
+              "A candidate who links colour to water content can identify events in a heating curve without any further information.",
+              "Their uses follow from the property: CuSO4·5H2O is the blue reagent itself, Na2SO4·10H2O (Glauber salt) is the classic efflorescent crystal, CaCl2 is the drying agent in desiccators, and silica gel packs are the hygroscopic moisture traps in packaged goods. Each substance is chosen for how it behaves with water."
             ],
             "bullets": [
               "Water of crystallisation is trapped in the crystal (CuSO₄·5H₂O).",
               "Efflorescence loses water to air; deliquescence dissolves in gained water.",
               "Hygroscopy absorbs moisture without dissolving (silica gel).",
-              "Direction decides the name."
+              "Direction decides the name.",
+              "Uses: CuSO4·5H2O reagent; Na2SO4·10H2O classic crystal; CaCl2 desiccant; silica gel moisture trap."
             ]
           }
         },
@@ -4717,15 +4726,15 @@
           "content": {
             "heading": "Making ammonia",
             "paragraphs": [
-              "The laboratory preparation warms an ammonium salt with a strong base: NH₄Cl + NaOH → NH₃ + NaCl + H₂O. The gas is dried over quicklime (CaO) and collected by downward displacement of air, because it is lighter than air and very soluble in water.",
-              "The industrial preparation is the Haber process: N₂ + 3H₂ ⇌ 2NH₃, at about 450 °C, 200 atm, over an iron catalyst. Nitrogen comes from fractional distillation of liquid air, hydrogen from water gas. High pressure favours the fewer-molecule side.",
-              "Ammonia is collected over concentrated sulfuric acid in the laboratory when dryness is not needed — it forms white fumes of ammonium salts with hydrogen chloride as the classic confirmation."
+              "The laboratory preparation warms an ammonium salt with a strong base: NH4Cl + NaOH → NH3 + NaCl + H2O. The gas is dried over quicklime and collected by downward displacement of air, because it is lighter than air and very soluble in water.",
+              "The industrial preparation is the Haber process: N2 + 3H2 ⇌ 2NH3, at about 450 °C, 200 atm, over an iron catalyst. Nitrogen comes from fractional distillation of liquid air; hydrogen from water gas.",
+              "Ammonia forms white fumes with hydrogen chloride — the classic confirmation in the laboratory.",
+              "Nitrogen itself is prepared in the laboratory by heating ammonium nitrite solution: NH4NO2 → N2 + 2H2O, and collected by downward displacement of air. Industrially it comes from fractional distillation of liquid air, which is why the Haber plant sits near an air-separation unit."
             ],
             "bullets": [
               "Laboratory: ammonium salt + strong base, warmed.",
               "Industry: Haber process (450 °C, 200 atm, iron catalyst).",
-              "Collected by downward air displacement; dried over CaO.",
-              "N₂ (lab): heating NH₄NO₂ solution → N₂ + 2H₂O."
+              "Collected by downward air displacement."
             ],
             "takeaway": "The laboratory warms an ammonium salt; industry balances nitrogen and hydrogen.",
             "check": {
@@ -4775,15 +4784,16 @@
           "content": {
             "heading": "Trioxonitrate(V) acid and its salts",
             "paragraphs": [
-              "Trioxonitrate(V) acid (HNO₃) is prepared in the laboratory from ammonia: ammonia is oxidised catalytically to nitrogen(IV) oxide, then to nitrogen dioxide, which dissolves in water to give the acid. It is a strong, oxidising acid.",
-              "HNO₃ is used in fertilisers, explosives and the pickling of metals. Its salts are the trioxonitrate(V) salts (nitrates), which decompose on heating to nitrites and oxygen: 2NaNO₃ → 2NaNO₂ + O₂.",
-              "The test for nitrate ions (NO₃⁻) is brown fumes of NO₂ when heated with concentrated sulfuric acid. The oxides of nitrogen — N₂O, NO and NO₂ — complete the family: colourless N₂O (laughing gas) and colourless NO are neutral; brown NO₂ is acidic and oxidising. NO in air forms brown NO₂ and gives a brown ring with FeSO₄."
+              "Trioxonitrate(V) acid (HNO3) is prepared in the laboratory from ammonia: ammonia is oxidised catalytically to nitrogen(II) oxide, then to nitrogen(IV) oxide, which dissolves in water to give the acid. It is a strong, oxidising acid.",
+              "HNO3 is used in fertilisers, explosives and pickling metals. Its salts are the nitrates, which decompose on heating: 2NaNO3 → 2NaNO2 + O2.",
+              "The test for nitrate ions (NO3-) is brown fumes of NO2 when heated with concentrated sulfuric acid. Nitrogen oxides have distinct tests: N2O is colourless and supports combustion; NO2 is brown and turns starch-iodide paper blue-black.",
+              "Nitrogen oxides have distinct tests: N2O is colourless and supports combustion like oxygen; NO2 is brown and turns starch-iodide paper blue-black. Nitrates are used in fertilisers, gunpowder and matches, and the nitrate ion is the starting point of the whole nitric-acid chain."
             ],
             "bullets": [
-              "HNO₃ from ammonia oxidation; strong oxidising acid.",
-              "Nitrates decompose on heating to nitrites + O₂.",
-              "Nitrate test: brown NO₂ fumes with conc. H₂SO₄.",
-              "Oxides: N₂O/NO neutral; NO₂ brown, acidic and oxidising."
+              "HNO3 from ammonia oxidation; strong oxidising acid.",
+              "Nitrates decompose on heating to nitrites + O2.",
+              "Nitrate test: brown NO2 fumes with conc. H2SO4.",
+              "N2O: colourless, supports combustion; NO2: brown, starch-iodide test."
             ],
             "takeaway": "Nitric acid is made by oxidising ammonia; nitrates give brown fumes.",
             "check": {
@@ -4854,7 +4864,8 @@
               "The same logic runs the Contact process: moderate temperature, high pressure, V₂O₅ catalyst. Two industries, one principle — Le Chatelier managed by engineers.",
               "A candidate who sees the Haber conditions as a compromise, not a maximum, answers every 'why these conditions' item correctly.",
               "The recycle loop is itself an application of Le Chatelier: unreacted gases are returned so the forward reaction consumes them again, recovering over many passes what a single pass leaves behind.",
-              "A candidate who sees the loop will recognise recycling as equilibrium management, not waste handling."
+              "A candidate who sees the loop will recognise recycling as equilibrium management, not waste handling.",
+              "Nitrogen itself is prepared in the laboratory by heating ammonium nitrite solution: NH4NO2 → N2 + 2H2O, collected by downward displacement of air. Industrially it comes from fractional distillation of liquid air, which is why the Haber plant sits near an air-separation unit."
             ],
             "bullets": [
               "450 °C: compromise between yield (cold) and rate (hot).",
@@ -4872,13 +4883,15 @@
               "Ammonia's lone pair makes it a ligand: it donates both electrons of a coordinate bond to metal ions, forming complex ions like [Cu(NH₃)₄]²⁺. That is why excess ammonia dissolves copper(II) hydroxide to a deep blue solution — a qualitative-analysis landmark.",
               "The same lone pair makes ammonia a base: it accepts a proton to form NH₄⁺. The acid–base and ligand roles are one property — the available electron pair — used in two different reactions.",
               "The white-fume test exploits both: NH₃ + HCl → NH₄Cl solid fumes. The reaction is instant and unmistakable, which is why it confirms ammonia beyond doubt.",
-              "A candidate who links the lone pair to both behaviours will never memorise them as separate facts."
+              "A candidate who links the lone pair to both behaviours will never memorise them as separate facts.",
+              "Nitrates are used in fertilisers, gunpowder and matches, and the nitrate ion is the starting point of the whole nitric-acid chain. Their heat decomposition supplies the oxygen that makes gunpowder and matches work."
             ],
             "bullets": [
               "NH₃ lone pair donates into coordinate bonds.",
               "Excess NH₃ dissolves Cu(OH)₂ to deep blue [Cu(NH₃)₄]²⁺.",
               "NH₃ + HCl → white fumes: the specific test.",
-              "One lone pair explains base, ligand and test."
+              "One lone pair explains base, ligand and test.",
+              "Nitrate uses: fertilisers, gunpowder, matches."
             ]
           }
         },
@@ -5364,7 +5377,7 @@
             "heading": "Sodium hydroxide from brine",
             "paragraphs": [
               "Sodium hydroxide (NaOH, caustic soda) is produced by electrolysing concentrated brine (saturated NaCl solution): 2NaCl + 2H₂O → 2NaOH + H₂ + Cl₂. The three products are hydrogen at the cathode, chlorine at the anode, and NaOH in solution — one cell, three sales.",
-              "NaOH is a strong base that precipitates metallic hydroxides from their salts: 2NaOH + Al³⁺ → 2Na⁺ + Al(OH)₃, and the same with Zn²⁺ and Pb²⁺. Those precipitates are the qualitative-analysis tests for those ions.",
+              "NaOH is a strong base that precipitates metallic hydroxides from their salts: 3NaOH + Al³⁺ → 3Na⁺ + Al(OH)₃, and the same with Zn²⁺ and Pb²⁺. Those precipitates are the qualitative-analysis tests for those ions.",
               "Its uses follow its strength: soap and detergent manufacture, paper pulping, aluminium extraction, and the neutralisation of acidic gases. Caustic soda is the workhorse alkali of industry."
             ],
             "bullets": [
@@ -6872,7 +6885,10 @@
             "visual": {
               "kind": "compare",
               "caption": "Alkenes add across the double bond, so bromine water is discharged, while saturated alkanes do not.",
-              "columns": ["Alkene", "Alkane"],
+              "columns": [
+                "Alkene",
+                "Alkane"
+              ],
               "rows": [
                 {
                   "feature": "General formula",
@@ -8373,7 +8389,7 @@
             "heading": "Hydrolysis and the protein tests",
             "paragraphs": [
               "Hydrolysis breaks proteins back into amino acids: acid hydrolysis (hot HCl) or enzyme hydrolysis (digestion). The products are the same amino acids the protein was built from — hydrolysis reverses polymerisation.",
-              "The biuret test finds peptide bonds: copper(II) sulfate in alkali gives a violet colour. The ninhydrin test finds amino groups: ninhydrin gives a blue-purple colour. Millon's test finds tyrosine through its phenolic OH group: Millon's reagent (Fe(NO3)3 in HNO3) gives a red colour.",
+              "The biuret test finds peptide bonds: copper(II) sulfate in alkali gives a violet colour. The ninhydrin test finds amino groups: ninhydrin gives a blue-purple colour. Millon's test finds tyrosine through its phenolic OH group: Millon's reagent (mercury(II) nitrate in nitric acid) gives a red colour.",
               "The xanthoproteic test finds aromatic rings: concentrated nitric acid nitrates the rings to give a yellow colour that turns orange with alkali. Each test targets a different feature — bonds, amino groups, or rings."
             ],
             "bullets": [
@@ -8927,13 +8943,15 @@
               "That is why analytical chemistry uses colour as evidence: a deep blue solution is a diagnosis, not a description. The colour reports the complex.",
               "A candidate who links split size to colour seen answers both identification and explanation items from one rule.",
               "Water is a weak ligand, ammonia a stronger one, and chloride a weaker one still. The colour series for copper(II) — pale blue, deep blue, green — is the split series read as colour.",
-              "That is why analytical tests specify the ligand: a colour without its ligand is an incomplete observation."
+              "That is why analytical tests specify the ligand: a colour without its ligand is an incomplete observation.",
+              "IUPAC names the complex by ligand first, then metal: [Cu(NH3)4]2+ is tetraamminecopper(II), [Fe(CN)6]3- is hexacyanoferrate(III), and [Fe(CN)6]4- is hexacyanoferrate(II). The Roman numeral is the oxidation state; the prefix counts the ligands. Naming the complex is naming the ligand count plus the metal state."
             ],
             "bullets": [
               "Ligands split d-orbitals; light promotes electrons across the gap.",
               "Stronger ligands = wider split = higher-energy absorption.",
               "Colour reports the complex present.",
-              "One rule explains identification and explanation."
+              "One rule explains identification and explanation.",
+              "[Cu(NH3)4]2+ = tetraamminecopper(II); [Fe(CN)6]3- = hexacyanoferrate(III)."
             ]
           }
         },
@@ -9211,12 +9229,12 @@
             "heading": "Roasting sulphide ores to oxides",
             "paragraphs": [
               "A builder finds iron locked in yellow pyrite, FeS2, and in copper-iron chalcopyrite. These sulphide ores cannot go straight into the blast furnace because carbon reduces oxides, not sulphides. The ore must first change its chemistry.",
-              "Roasting means heating the crushed sulphide strongly in air. The sulphur burns away as sulphur dioxide and the iron becomes iron(III) oxide: 2FeS2 + 11O2 → Fe2O3 + 4SO2. Roasting is therefore oxidation, which gives the oxide the furnace needs.",
+              "Roasting means heating the crushed sulphide strongly in air. The sulphur burns away as sulphur dioxide and the iron becomes iron(III) oxide: 4FeS2 + 11O2 → 2Fe2O3 + 8SO2. Roasting is therefore oxidation, which gives the oxide the furnace needs.",
               "The roasted oxide is now charged with limestone and coke. Hot air at the bottom burns coke to carbon monoxide, which reduces the oxide to molten iron. Limestone fluxes the impurities into slag, so each stage has its own job."
             ],
             "bullets": [
               "Sulphide ore: pyrite (FeS2) or chalcopyrite; roast it first.",
-              "Roasting: 2FeS2 + 11O2 → Fe2O3 + 4SO2; sulphide to oxide.",
+              "Roasting: 4FeS2 + 11O2 → 2Fe2O3 + 8SO2; sulphide to oxide.",
               "Blast furnace: carbon monoxide reduces oxide; limestone makes slag."
             ],
             "takeaway": "Roasting converts sulphide to oxide; the furnace then reduces that oxide.",
@@ -9301,24 +9319,24 @@
         {
           "type": "worked_example",
           "content": {
-            "problem": "Pyrite ore is roasted in air. Write the roasting equation for FeS2 + O2 → Fe2O3 + SO2.",
+            "problem": "Balance the roasting of pyrite: FeS2 + O2 → Fe2O3 + SO2.",
             "steps": [
               {
-                "operation": "Write the skeleton",
-                "reason": "Sulphide in air gives oxide plus sulphur dioxide",
-                "result": "FeS2 + O2 → Fe2O3 + SO2 (unbalanced)",
-                "predictPrompt": ""
-              },
-              {
-                "operation": "Balance iron atoms",
-                "reason": "Two irons on the left need two on the right",
+                "operation": "Balance the iron atoms",
+                "reason": "Two irons on the right need two on the left",
                 "result": "2FeS2 + O2 → Fe2O3 + SO2",
                 "predictPrompt": ""
               },
               {
-                "operation": "Balance sulphur and oxygen",
-                "reason": "Four sulphurs give four sulphur dioxides needing eleven oxygens",
-                "result": "2FeS2 + 11O2 → Fe2O3 + 4SO2",
+                "operation": "Balance the sulphur atoms",
+                "reason": "Four sulphurs on the left need four on the right",
+                "result": "2FeS2 + O2 → Fe2O3 + 4SO2",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Balance the oxygen atoms",
+                "reason": "Right side has 3 + 8 = 11 oxygens, so O2 needs 5.5; multiply all by 2",
+                "result": "4FeS2 + 11O2 → 2Fe2O3 + 8SO2",
                 "predictPrompt": ""
               }
             ]
