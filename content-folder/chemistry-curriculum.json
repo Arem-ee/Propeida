@@ -634,12 +634,12 @@
             "paragraphs": [
               "The ideal gas equation joins all the laws: PV = nRT. P is pressure, V volume, n moles, T temperature in kelvin, and R a constant. Pressure × volume equals amount × temperature.",
               "One mole occupies 22.4 dm³ at 273 K and 1 atm (molar volume). Vapour density is Mr ÷ 2, so vapour density 16 means Mr = 32. That converts a gas measurement into a mass.",
-              "Real gases deviate because particles have finite volume and attract each other, so PV = nRT fails when crowding matters. At high pressure particles are forced close, and at low temperature attractions pull them together. Both effects shrink measured volume below ideal, strongest for easily liquefied gases."
+              "Real gases misbehave at high pressure and low temperature, when particles are squeezed close enough that their own volume and their mutual attractions matter. An ideal gas is the strict rule; a real gas is the rule with exceptions. The two factors that cause the deviation are the finite size of the molecules and the forces between them."
             ],
             "bullets": [
               "PV = nRT joins pressure, volume, amount and temperature.",
               "One mole fills 22.4 dm³ at s.t.p.; vapour density = Mr ÷ 2.",
-              "Deviation from finite volume, attractions, high P, low T."
+              "Deviation factors: finite molecular volume and intermolecular attractions, strongest at high P and low T."
             ],
             "takeaway": "PV = nRT turns any two measurements into the rest.",
             "check": {
@@ -812,14 +812,13 @@
             "paragraphs": [
               "Across a period, protons increase while electrons are added to the same shell, so the pull on each electron grows. Atoms therefore shrink, ionisation energy rises, and electronegativity rises. Sodium is a soft metal and chlorine is a reactive non-metal, and that change runs steadily left to right.",
               "Down a group, new shells are added outside, so atoms grow and the outer electrons are shielded from the nucleus. Ionisation energy and electronegativity fall, while metallic character grows. Fluorine, at the top of the halogens, is the most electronegative element of all.",
-              "Conductivity follows the same logic: metals conduct because outer electrons are free, and that freedom grows where atoms hold their electrons loosely. Thermal conductivity moves with electrical conductivity, because the same free electrons carry both heat and charge. Sodium conducts well; chlorine, a non-metal, does not conduct at all."
+              "Conductivity follows the same logic: metals conduct because outer electrons are free, and that freedom grows where atoms hold their electrons loosely. Thermal conductivity moves with electrical conductivity, since the same free electrons carry both heat and charge. Sodium conducts well; chlorine, a non-metal, does not conduct at all."
             ],
             "bullets": [
               "Across a period: radius falls, ionisation energy and electronegativity rise.",
               "Down a group: radius grows, ionisation energy and electronegativity fall.",
               "Metallic character fades across and grows down.",
-              "Conductivity follows how loosely electrons are held.",
-              "Thermal conductivity moves with electrical conductivity."
+              "Conductivity: electrical and thermal fall across the period, rise down the group."
             ],
             "takeaway": "Across a period the pull grows; down a group new shells shield it.",
             "visual": {
@@ -1322,7 +1321,7 @@
                 "It cannot be separated"
               ],
               "answer": 0,
-              "why": "An ink of several dyes would spread into several bands; a single band suggests one travel rate."
+              "why": "A single band means the ink is essentially one dye; several dyes would spread into several bands."
             }
           }
         },
@@ -4444,14 +4443,14 @@
               "The three phenomena are one scale of water affinity: efflorescence loses water, hygroscopy gains it slowly, deliquescence gains it until dissolved. Naming the direction is naming the phenomenon.",
               "Heating a hydrated crystal therefore removes water of crystallisation and changes its colour in the classic blue-to-white copper sulfate test. The colour change is the visible proof that water was part of the crystal.",
               "A candidate who links colour to water content can identify events in a heating curve without any further information.",
-              "Their uses follow from the property: CuSO4·5H2O is the blue reagent itself, Na2SO4·10H2O (Glauber salt) is the classic efflorescent crystal, CaCl2 is the drying agent in desiccators, and silica gel packs are the hygroscopic moisture traps in packaged goods. Each substance is chosen for how it behaves with water."
+              "Their uses follow from the property: CuSO₄·5H₂O is the blue reagent itself, Na₂SO₄·10H₂O (Glauber salt) is the classic efflorescent crystal, CaCl₂ is the drying agent in desiccators, and silica gel packs are the hygroscopic moisture traps in packaged goods. Each substance is chosen for how it behaves with water."
             ],
             "bullets": [
               "Water of crystallisation is trapped in the crystal (CuSO₄·5H₂O).",
               "Efflorescence loses water to air; deliquescence dissolves in gained water.",
               "Hygroscopy absorbs moisture without dissolving (silica gel).",
               "Direction decides the name.",
-              "Uses: CuSO4·5H2O reagent; Na2SO4·10H2O classic crystal; CaCl2 desiccant; silica gel moisture trap."
+              "Uses: CuSO₄·5H₂O reagent; Na₂SO₄·10H₂O classic crystal; CaCl₂ desiccant; silica gel moisture trap."
             ]
           }
         },
@@ -4726,15 +4725,15 @@
           "content": {
             "heading": "Making ammonia",
             "paragraphs": [
-              "The laboratory preparation warms an ammonium salt with a strong base: NH4Cl + NaOH → NH3 + NaCl + H2O. The gas is dried over quicklime and collected by downward displacement of air, because it is lighter than air and very soluble in water.",
-              "The industrial preparation is the Haber process: N2 + 3H2 ⇌ 2NH3, at about 450 °C, 200 atm, over an iron catalyst. Nitrogen comes from fractional distillation of liquid air; hydrogen from water gas.",
-              "Ammonia forms white fumes with hydrogen chloride — the classic confirmation in the laboratory.",
-              "Nitrogen itself is prepared in the laboratory by heating ammonium nitrite solution: NH4NO2 → N2 + 2H2O, and collected by downward displacement of air. Industrially it comes from fractional distillation of liquid air, which is why the Haber plant sits near an air-separation unit."
+              "The laboratory preparation warms an ammonium salt with a strong base: NH₄Cl + NaOH → NH₃ + NaCl + H₂O. The gas is dried over quicklime (CaO) and collected by downward displacement of air, because it is lighter than air and very soluble in water.",
+              "The industrial preparation is the Haber process: N₂ + 3H₂ ⇌ 2NH₃, at about 450 °C, 200 atm, over an iron catalyst. Nitrogen comes from fractional distillation of liquid air, hydrogen from water gas. High pressure favours the fewer-molecule side.",
+              "Ammonia forms dense white fumes with hydrogen chloride — the classic confirmation. Nitrogen itself is prepared in the laboratory by heating ammonium nitrite solution: NH₄NO₂ → N₂ + 2H₂O, collected by downward displacement of air. Industrially it comes from fractional distillation of liquid air."
             ],
             "bullets": [
               "Laboratory: ammonium salt + strong base, warmed.",
               "Industry: Haber process (450 °C, 200 atm, iron catalyst).",
-              "Collected by downward air displacement."
+              "Collected by downward air displacement; dried over CaO.",
+              "N₂ (lab): heating NH₄NO₂ solution → N₂ + 2H₂O."
             ],
             "takeaway": "The laboratory warms an ammonium salt; industry balances nitrogen and hydrogen.",
             "check": {
@@ -4784,16 +4783,15 @@
           "content": {
             "heading": "Trioxonitrate(V) acid and its salts",
             "paragraphs": [
-              "Trioxonitrate(V) acid (HNO3) is prepared in the laboratory from ammonia: ammonia is oxidised catalytically to nitrogen(II) oxide, then to nitrogen(IV) oxide, which dissolves in water to give the acid. It is a strong, oxidising acid.",
-              "HNO3 is used in fertilisers, explosives and pickling metals. Its salts are the nitrates, which decompose on heating: 2NaNO3 → 2NaNO2 + O2.",
-              "The test for nitrate ions (NO3-) is brown fumes of NO2 when heated with concentrated sulfuric acid. Nitrogen oxides have distinct tests: N2O is colourless and supports combustion; NO2 is brown and turns starch-iodide paper blue-black.",
-              "Nitrogen oxides have distinct tests: N2O is colourless and supports combustion like oxygen; NO2 is brown and turns starch-iodide paper blue-black. Nitrates are used in fertilisers, gunpowder and matches, and the nitrate ion is the starting point of the whole nitric-acid chain."
+              "Trioxonitrate(V) acid (HNO₃) is prepared in the laboratory from ammonia: ammonia is oxidised catalytically to nitrogen(IV) oxide, then to nitrogen dioxide, which dissolves in water to give the acid. It is a strong, oxidising acid.",
+              "HNO₃ is used in fertilisers, explosives and the pickling of metals. Its salts are the trioxonitrate(V) salts (nitrates), which decompose on heating to nitrites and oxygen: 2NaNO₃ → 2NaNO₂ + O₂.",
+              "The test for nitrate ions (NO₃⁻) is brown fumes of NO₂ when heated with concentrated sulfuric acid. The oxides of nitrogen complete the family: N₂O is colourless and supports combustion, NO is colourless and turns brown in air, and NO₂ is brown, acidic and oxidising. NO also gives a brown ring with iron(II) sulfate."
             ],
             "bullets": [
-              "HNO3 from ammonia oxidation; strong oxidising acid.",
-              "Nitrates decompose on heating to nitrites + O2.",
-              "Nitrate test: brown NO2 fumes with conc. H2SO4.",
-              "N2O: colourless, supports combustion; NO2: brown, starch-iodide test."
+              "HNO₃ from ammonia oxidation; strong oxidising acid.",
+              "Nitrates decompose on heating to nitrites + O₂.",
+              "Nitrate test: brown NO₂ fumes with conc. H₂SO₄.",
+              "Oxides: N₂O/NO neutral; NO₂ brown, acidic and oxidising."
             ],
             "takeaway": "Nitric acid is made by oxidising ammonia; nitrates give brown fumes.",
             "check": {
@@ -4864,8 +4862,7 @@
               "The same logic runs the Contact process: moderate temperature, high pressure, V₂O₅ catalyst. Two industries, one principle — Le Chatelier managed by engineers.",
               "A candidate who sees the Haber conditions as a compromise, not a maximum, answers every 'why these conditions' item correctly.",
               "The recycle loop is itself an application of Le Chatelier: unreacted gases are returned so the forward reaction consumes them again, recovering over many passes what a single pass leaves behind.",
-              "A candidate who sees the loop will recognise recycling as equilibrium management, not waste handling.",
-              "Nitrogen itself is prepared in the laboratory by heating ammonium nitrite solution: NH4NO2 → N2 + 2H2O, collected by downward displacement of air. Industrially it comes from fractional distillation of liquid air, which is why the Haber plant sits near an air-separation unit."
+              "A candidate who sees the loop will recognise recycling as equilibrium management, not waste handling."
             ],
             "bullets": [
               "450 °C: compromise between yield (cold) and rate (hot).",
@@ -8944,14 +8941,14 @@
               "A candidate who links split size to colour seen answers both identification and explanation items from one rule.",
               "Water is a weak ligand, ammonia a stronger one, and chloride a weaker one still. The colour series for copper(II) — pale blue, deep blue, green — is the split series read as colour.",
               "That is why analytical tests specify the ligand: a colour without its ligand is an incomplete observation.",
-              "IUPAC names the complex by ligand first, then metal: [Cu(NH3)4]2+ is tetraamminecopper(II), [Fe(CN)6]3- is hexacyanoferrate(III), and [Fe(CN)6]4- is hexacyanoferrate(II). The Roman numeral is the oxidation state; the prefix counts the ligands. Naming the complex is naming the ligand count plus the metal state."
+              "IUPAC names the complex by ligand first, then metal: [Cu(NH₃)₄]²⁺ is tetraamminecopper(II), [Fe(CN)₆]³⁻ is hexacyanoferrate(III), and [Fe(CN)₆]⁴⁻ is hexacyanoferrate(II). The Roman numeral is the oxidation state; the prefix counts the ligands. Naming the complex is naming the ligand count plus the metal state."
             ],
             "bullets": [
               "Ligands split d-orbitals; light promotes electrons across the gap.",
               "Stronger ligands = wider split = higher-energy absorption.",
               "Colour reports the complex present.",
               "One rule explains identification and explanation.",
-              "[Cu(NH3)4]2+ = tetraamminecopper(II); [Fe(CN)6]3- = hexacyanoferrate(III)."
+              "[Cu(NH₃)₄]²⁺ = tetraamminecopper(II); [Fe(CN)₆]³⁻ = hexacyanoferrate(III)."
             ]
           }
         },
@@ -9000,7 +8997,7 @@
             "paragraphs": [
               "A farmer's beans grow slowly in poor soil because the roots cannot use air nitrogen. Fixation is like charging a battery; hard energy pushes stable nitrogen gas into a form plants can use. Without that charge, the battery stays empty.",
               "Lightning does one kind of fixation high in the sky. Its great heat joins nitrogen and oxygen in air to make nitrogen oxides, and rain carries them down to the soil. The Haber process does fixation in factories, joining nitrogen with hydrogen to make ammonia for fertilisers.",
-              "Legume bacteria do fixation inside the soil help. Rhizobium bacteria live in root nodules on beans and peas, so the plant feeds them. In return they turn air nitrogen into ammonia the plant can use."
+              "Legume bacteria do a third kind of fixation, inside the soil itself. Rhizobium bacteria live in root nodules on beans and peas, so the plant feeds them sugar. In return they turn air nitrogen into ammonia the plant can use."
             ],
             "bullets": [
               "Lightning fixation: heat joins nitrogen and oxygen; rain carries oxides down.",
@@ -9152,7 +9149,7 @@
             "paragraphs": [
               "Nitrogen gas looks harmless because two atoms share a triple bond. That bond holds the two atoms very tightly together. Breaking it takes a great deal of energy before anything useful can be made.",
               "Lightning supplies that energy in one fierce flash. The heat splits nitrogen and oxygen molecules apart so they can join again as oxides. The new bonds need far less energy than the lost triple bond alone.",
-              "The Haber process feeds energy slowly with heat and pressure. At about 450 degrees, the iron catalyst opens the triple bond at a steady rate. Engineers accept lower yield so the reaction can run all day without huge cost.",
+              "The Haber process feeds energy slowly with heat and pressure. At about 450 °C, the iron catalyst opens the triple bond at a steady rate. Engineers accept lower yield so the reaction can run all day without huge cost.",
               "Legume bacteria pay the energy bill with a different coin. The plant feeds them sugars that break down to release energy. Enzymes then use that trickle of energy to pry the triple bond open in cool soil.",
               "That is why fixation is never free in the field. A power station burns fuel, a storm spends heat, and a bean spends leaf sugar. Each route pays the same bond-breaking price by a different method."
             ],
@@ -9229,12 +9226,12 @@
             "heading": "Roasting sulphide ores to oxides",
             "paragraphs": [
               "A builder finds iron locked in yellow pyrite, FeS2, and in copper-iron chalcopyrite. These sulphide ores cannot go straight into the blast furnace because carbon reduces oxides, not sulphides. The ore must first change its chemistry.",
-              "Roasting means heating the crushed sulphide strongly in air. The sulphur burns away as sulphur dioxide and the iron becomes iron(III) oxide: 4FeS2 + 11O2 → 2Fe2O3 + 8SO2. Roasting is therefore oxidation, which gives the oxide the furnace needs.",
+              "Roasting means heating the crushed sulphide strongly in air. The sulphur burns away as sulphur dioxide and the iron becomes iron(III) oxide: 4FeS₂ + 11O₂ → 2Fe₂O₃ + 8SO₂. Roasting is therefore oxidation, which gives the oxide the furnace needs.",
               "The roasted oxide is now charged with limestone and coke. Hot air at the bottom burns coke to carbon monoxide, which reduces the oxide to molten iron. Limestone fluxes the impurities into slag, so each stage has its own job."
             ],
             "bullets": [
               "Sulphide ore: pyrite (FeS2) or chalcopyrite; roast it first.",
-              "Roasting: 4FeS2 + 11O2 → 2Fe2O3 + 8SO2; sulphide to oxide.",
+              "Roasting: 4FeS₂ + 11O₂ → 2Fe₂O₃ + 8SO₂; sulphide to oxide.",
               "Blast furnace: carbon monoxide reduces oxide; limestone makes slag."
             ],
             "takeaway": "Roasting converts sulphide to oxide; the furnace then reduces that oxide.",
