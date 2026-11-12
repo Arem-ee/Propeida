@@ -624,6 +624,50 @@
               ],
               "answer": 2,
               "why": "Boyle's law says P ∝ 1/V, so halving V doubles P at constant temperature."
+            },
+            "visual": {
+              "kind": "chart",
+              "caption": "Boyle's law is a hyperbola: half the volume doubles the pressure.",
+              "xLabel": "Volume (dm³)",
+              "yLabel": "Pressure (kPa)",
+              "series": [
+                {
+                  "points": [
+                    [
+                      1,
+                      48.7
+                    ],
+                    [
+                      2,
+                      24.35
+                    ],
+                    [
+                      3,
+                      16.2
+                    ],
+                    [
+                      4,
+                      12.2
+                    ],
+                    [
+                      5,
+                      9.74
+                    ],
+                    [
+                      6,
+                      8.1
+                    ],
+                    [
+                      8,
+                      6.1
+                    ],
+                    [
+                      10,
+                      4.87
+                    ]
+                  ]
+                }
+              ]
             }
           }
         },
@@ -652,6 +696,42 @@
               ],
               "answer": 1,
               "why": "V = 1 × 0.082 × 273 ÷ 1 ≈ 22.4 dm³, the molar volume at s.t.p."
+            },
+            "visual": {
+              "kind": "chart",
+              "caption": "Charles's law is a straight line through 0 K — 22.4 dm³ at 273 K for one mole.",
+              "xLabel": "Temperature (K)",
+              "yLabel": "Volume (dm³)",
+              "series": [
+                {
+                  "points": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      100,
+                      8.2
+                    ],
+                    [
+                      200,
+                      16.4
+                    ],
+                    [
+                      273,
+                      22.4
+                    ],
+                    [
+                      373,
+                      30.6
+                    ],
+                    [
+                      473,
+                      38.8
+                    ]
+                  ]
+                }
+              ]
             }
           }
         },
@@ -2079,7 +2159,64 @@
               "The titration curve shows where the jump falls.",
               "AlCl₃: Al³⁺ + 3H₂O ⇌ Al(OH)₃ + 3H⁺ (acidic); CH₃COONa: CH₃COO⁻ + H₂O ⇌ CH₃COOH + OH⁻ (basic).",
               "Buffers beyond blood: limed soil, antacid tablets, anti-dandruff shampoos and detergent builders."
-            ]
+            ],
+            "visual": {
+              "kind": "chart",
+              "caption": "The strong–strong curve jumps sharply through pH 7 — the indicator must change inside the jump.",
+              "xLabel": "Base added (cm³)",
+              "yLabel": "pH",
+              "series": [
+                {
+                  "label": "Strong acid vs strong base",
+                  "points": [
+                    [
+                      0,
+                      2.4
+                    ],
+                    [
+                      8,
+                      3.2
+                    ],
+                    [
+                      14,
+                      3.9
+                    ],
+                    [
+                      18,
+                      4.6
+                    ],
+                    [
+                      21,
+                      5.7
+                    ],
+                    [
+                      24,
+                      7.2
+                    ],
+                    [
+                      27,
+                      8.7
+                    ],
+                    [
+                      30,
+                      9.3
+                    ],
+                    [
+                      34,
+                      9.7
+                    ],
+                    [
+                      42,
+                      10
+                    ],
+                    [
+                      50,
+                      10.2
+                    ]
+                  ]
+                }
+              ]
+            }
           }
         },
         {
@@ -2661,6 +2798,64 @@
               ],
               "answer": 1,
               "why": "Products higher than reactants means the system gained energy — endothermic."
+            },
+            "visual": {
+              "kind": "chart",
+              "caption": "Products below reactants mean exothermic; products above mean endothermic.",
+              "xLabel": "Reaction progress",
+              "yLabel": "Relative energy",
+              "series": [
+                {
+                  "label": "Exothermic",
+                  "points": [
+                    [
+                      10,
+                      62
+                    ],
+                    [
+                      30,
+                      62
+                    ],
+                    [
+                      40,
+                      88
+                    ],
+                    [
+                      55,
+                      88
+                    ],
+                    [
+                      78,
+                      36
+                    ]
+                  ]
+                },
+                {
+                  "label": "Endothermic",
+                  "points": [
+                    [
+                      10,
+                      62
+                    ],
+                    [
+                      30,
+                      62
+                    ],
+                    [
+                      40,
+                      88
+                    ],
+                    [
+                      55,
+                      88
+                    ],
+                    [
+                      78,
+                      88
+                    ]
+                  ]
+                }
+              ]
             }
           }
         },
@@ -2894,6 +3089,56 @@
               ],
               "answer": 1,
               "why": "Average rate = 200 ÷ 50 = 4 cm³/s."
+            },
+            "visual": {
+              "kind": "chart",
+              "caption": "The Arrhenius plot is straight, and a catalyst draws the shallower line.",
+              "xLabel": "1/T (×10⁻³ K⁻¹)",
+              "yLabel": "ln(rate)",
+              "series": [
+                {
+                  "label": "Uncatalysed",
+                  "points": [
+                    [
+                      2.2,
+                      2.1
+                    ],
+                    [
+                      2.7,
+                      1
+                    ],
+                    [
+                      3.2,
+                      -0.1
+                    ],
+                    [
+                      3.7,
+                      -1.2
+                    ]
+                  ]
+                },
+                {
+                  "label": "Catalysed",
+                  "points": [
+                    [
+                      2.2,
+                      1
+                    ],
+                    [
+                      2.7,
+                      0.6
+                    ],
+                    [
+                      3.2,
+                      0.2
+                    ],
+                    [
+                      3.7,
+                      -0.2
+                    ]
+                  ]
+                }
+              ]
             }
           }
         },

@@ -6,6 +6,11 @@ const MAX_COMPARE_ROWS = 4
 const text = (value: unknown): string =>
   typeof value === 'string' ? value.trim() : ''
 
+const num = (value: unknown): number | null => {
+  const n = Number(value)
+  return Number.isFinite(n) ? n : null
+}
+
 /**
  * Validates a visual that came from a JSON block. Content is authored, not
  * trusted: a malformed figure degrades to nothing rather than breaking a
@@ -63,6 +68,36 @@ export function toLessonVisual(value: unknown): LessonVisual | null {
       columns: [first, second],
       rows,
     }
+  }
+
+  if (v.kind === 'chart') {
+    const xLabel = text(v.xLabel)
+    const yLabel = text(v.yLabel)
+    if (!xLabel || !yLabel) return null
+    const raw = Array.isArray(v.series) ? v.series : []
+    const MAX_POINTS = 64
+    const series = raw
+      .map((item) => {
+        if (!item || typeof item !== 'object') return null
+        const s = item as Record<string, unknown>
+        const pts = Array.isArray(s.points) ? s.points : []
+        const points = pts
+          .map((p) => {
+            if (!Array.isArray(p) || p.length < 2) return null
+            const x = num(p[0])
+            const y = num(p[1])
+            return x === null || y === null ? null : ([x, y] as [number, number])
+          })
+          .filter((p): p is [number, number] => p !== null)
+          .slice(0, MAX_POINTS)
+        if (points.length < 2) return null
+        const label = text(s.label)
+        return label ? { points, label } : { points }
+      })
+      .filter((s): s is { points: [number, number][]; label?: string } => s !== null)
+      .slice(0, 3)
+    if (series.length < 1) return null
+    return { kind: 'chart', caption, xLabel, yLabel, series }
   }
 
   return null

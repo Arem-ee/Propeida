@@ -1,5 +1,6 @@
 import FlowVisual from './flow'
 import CompareVisual from './compare'
+import ChartVisual from './chart'
 
 /**
  * Renders the visual attached to one section. Unknown or malformed figures
@@ -10,5 +11,6 @@ export default function LessonVisualBlock({ visual }: { visual: unknown }) {
   const kind = (visual as { kind?: unknown }).kind
   if (kind === 'flow') return <FlowVisual visual={visual} />
   if (kind === 'compare') return <CompareVisual visual={visual} />
+  if (kind === 'chart') return <ChartVisual visual={visual} />
   return null
 }

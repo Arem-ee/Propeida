@@ -35,6 +35,13 @@ export interface FlowStep {
   detail?: string
 }
 
+export interface ChartSeries {
+  /** [[x, y], ...] points in data units; the renderer scales them into viewBox units. */
+  points: [number, number][]
+  /** Short legend label, e.g. "Exothermic". */
+  label?: string
+}
+
 /**
  * A relationship that prose handles badly. Two primitives only: a chain
  * (`flow`) and a two-way contrast (`compare`). Every label is real text, so
@@ -53,6 +60,16 @@ export type LessonVisual =
       /** The two alternatives being contrasted, in reading order. */
       columns: [string, string]
       rows: { feature: string; left: string; right: string }[]
+    }
+  | {
+      kind: 'chart'
+      /** States the relationship the curve makes legible, in one line. */
+      caption: string
+      /** Axis labels; keep them under five words each. */
+      xLabel: string
+      yLabel: string
+      /** Up to three series, in reading order. */
+      series: ChartSeries[]
     }
 
 export interface NoteSection {
@@ -156,7 +173,7 @@ export function getReadingMinutes(note: RevisionNote): number {
 export function getPracticeUrl(note: RevisionNote): string {
   const subject = encodeURIComponent(note.subject)
   const topic = encodeURIComponent(note.practiceTopic)
-  return `/practice?hub=universities&subject=${subject}&topic=${topic}`
+  return `/practice?hub=post-utme&subject=${subject}&topic=${topic}`
 }
 
 export function getSubjectLabel(slug: SubjectSlug): string {

@@ -85,6 +85,38 @@ function visualIssues(visual, label) {
     return issues
   }
 
+  if (visual.kind === 'chart') {
+    const xLabel = String(visual.xLabel ?? '').trim()
+    const yLabel = String(visual.yLabel ?? '').trim()
+    if (!xLabel) issues.push(`"${label}" chart has no x label`)
+    if (!yLabel) issues.push(`"${label}" chart has no y label`)
+    if (words(xLabel) > 6) issues.push(`"${label}" chart x label is ${words(xLabel)} words (keep it under 6)`)
+    if (words(yLabel) > 6) issues.push(`"${label}" chart y label is ${words(yLabel)} words (keep it under 6)`)
+    const series = Array.isArray(visual.series) ? visual.series : []
+    if (series.length < 1) {
+      issues.push(`"${label}" chart has no series`)
+      return issues
+    }
+    if (series.length > 3) {
+      issues.push(`"${label}" chart has ${series.length} series (max 3)`)
+    }
+    series.forEach((s, i) => {
+      const pts = Array.isArray(s?.points) ? s.points : []
+      if (pts.length < 2) {
+        issues.push(`"${label}" chart series ${i + 1} has ${pts.length} points (need at least 2)`)
+      } else if (pts.length > 64) {
+        issues.push(`"${label}" chart series ${i + 1} has ${pts.length} points (max 64)`)
+      }
+      for (const p of pts) {
+        if (!Array.isArray(p) || p.length < 2 || !Number.isFinite(Number(p[0])) || !Number.isFinite(Number(p[1]))) {
+          issues.push(`"${label}" chart series ${i + 1} has a non-numeric point`)
+          break
+        }
+      }
+    })
+    return issues
+  }
+
   issues.push(`"${label}" visual kind "${visual.kind}" is not supported`)
   return issues
 }
