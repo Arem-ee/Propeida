@@ -146,7 +146,7 @@
             "heading": "Atoms, molecules and ions in daily words",
             "paragraphs": [
               "An atom is one single bead of an element, like one grain of rice. A molecule is atoms holding hands, like a short string of grains. An ion is an atom that has gained or lost an electron, so it carries a charge.",
-              "Protons are positive, neutrons neutral. H and He are atoms; H₂O is a molecule; Na⁺ is an ion. Dalton proposed indivisible atoms combining in whole-number ratios, Thomson found the electron in cathode rays for the plum-pudding model, Rutherford’s gold foil showed the tiny nucleus, Moseley’s X-rays proved atomic number fixes identity, Millikan’s oil drop measured charge e, and Bohr placed electrons in shells explaining spectral lines."
+              "Protons are positive, neutrons neutral. H and He are atoms; H₂O is a molecule; Na⁺ is an ion. Dalton proposed indivisible atoms combining in whole-number ratios, Thomson found the electron in cathode rays, Rutherford’s gold foil showed the tiny nucleus, Moseley’s X-rays proved atomic number fixes identity, Millikan’s oil drop measured charge e, and Bohr placed electrons in shells explaining spectral lines."
             ],
             "bullets": [
               "Atom: one single bead. Molecule: beads holding hands. Ion: a charged bead.",
@@ -171,7 +171,7 @@
           "content": {
             "heading": "Counting the three parts of an atom",
             "paragraphs": [
-              "Think of the atom as a class of people. The proton count names the element, like a school name tag. That count is the atomic number, Z. Protons plus neutrons is the mass number, A. A neutral atom has as many electrons as protons, so electrons = Z.",
+              "Think of the atom as a class of people. The proton count names the element, like a school name tag. That count is the atomic number, Z. Protons plus neutrons is the mass number, A. A neutral atom: electrons = Z.",
               "Neutrons are simply what is left: neutrons = A − Z. Chlorine has Z = 17, so 17 protons and normally 17 electrons. Isotopes are family members differing only in neutrons, like ³⁵Cl and ³⁷Cl. The relative atomic mass is the weighted average: (75 × 35 + 25 × 37) ÷ 100 = 35.5."
             ],
             "bullets": [
@@ -198,7 +198,7 @@
           "content": {
             "heading": "Shells, addresses and shapes",
             "paragraphs": [
-              "Electrons live on floors (shells) around the nucleus, in rooms called orbitals. Each electron has four quantum numbers as its address: n the floor, l the room type, ml the exact room, ms the spin.",
+              "Electrons live on floors (shells) around the nucleus, in orbitals. Four quantum numbers address each electron: n the floor, l the room type, ml the exact room, ms the spin.",
               "Three rules govern filling: Aufbau fills lowest rooms first, like front seats. Hund spreads electrons singly before pairing. Pauli allows two per room, spinning opposite ways.",
               "An s orbital is a round cloud (2 electrons); a p subshell has three dumbbells (6). Chlorine (Z = 17) arranges as 1s² 2s² 2p⁶ 3s² 3p⁵ — count them: 2 + 2 + 6 + 2 + 5 = 17. Z 1–20 runs H (1s¹) to Ca (1s² 2s² 2p⁶ 3s² 3p⁶ 4s²), filling shells 1–3 before 4s."
             ],
@@ -252,6 +252,12 @@
                 "reason": "Percentages must return to a per-atom average",
                 "result": "3550 ÷ 100 = 35.5",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Equal case",
+                "reason": "When abundances are equal (Br, 50:50), the mean is the simple average",
+                "result": "Isotope maths folds to the plain average at 50:50",
+                "predictPrompt": "What if the two abundances were equal?"
               }
             ]
           }
@@ -335,7 +341,7 @@
           "content": {
             "heading": "Chemical Combination",
             "paragraphs": [
-              "A trader in Onitsha keeps one scale pan for rice and one for beans, and a customer always gets exactly what the scale says. Chemicals combine the same way: in fixed, weighable proportions. This lesson names the three laws behind those proportions and teaches counting by weighing."
+              "Chemicals combine in fixed, weighable proportions, like rice weighed on a trader's scale. This lesson names the three laws behind those proportions and teaches counting by weighing."
             ],
             "bullets": []
           }
@@ -406,7 +412,7 @@
             "heading": "The mole: counting by weighing",
             "paragraphs": [
               "One mole is a counting unit, like a dozen eggs: 1 mole = 6.02 × 10²³ particles. A mole of any substance has the same count, but different masses.",
-              "Moles come from mass using moles = mass ÷ Mr (relative molecular mass). Methane (Mr = 16) gives 0.5 mol = 8 g. One mole of gas fills 22.4 dm³ at s.t.p. (standard temperature and pressure, 0 °C and 1 atm); concentration is moles ÷ volume.",
+              "Moles = mass ÷ Mr (relative molecular mass). Methane (Mr = 16): 0.5 mol = 8 g; one mole fills 22.4 dm³ at s.t.p.; concentration = moles ÷ volume.",
               "Stoichiometry applies the equation’s mole ratio. Calcium carbonate (Mr = 100) gives one mole CO₂ per mole, so 50 g is 0.5 mol releasing 11.2 dm³ at s.t.p.",
               "Relative atomic mass is measured against carbon-12: ¹²C is assigned exactly 12. The relative mass of any atom is the average mass of its isotopes compared with one twelfth of a ¹²C atom. That standard lets Ar and Mr be linked by weighing."
             ],
@@ -460,6 +466,12 @@
                 "reason": "A mole in this service is always 6.02×10²³ particles",
                 "result": "0.5 mol of CH₄ weighs 8 g",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Scaling case",
+                "reason": "Mass doubles with the moles: 1 mol of CH₄ weighs 16 g",
+                "result": "Mass scales with amount: double the moles, double the mass",
+                "predictPrompt": "What would 1 mol weigh?"
               }
             ]
           }
@@ -606,7 +618,7 @@
               "Boyle’s law says squeezing a gas raises its pressure, like crowding a bus. Charles’s law says a gas grows when heated, because faster particles push harder. Gay-Lussac’s law says pressure rises with temperature in a sealed container.",
               "Avogadro’s law says equal volumes hold equal numbers: one mole fills 22.4 dm³ at s.t.p. Graham’s law says light gases diffuse faster by √Mr ratio. Dalton’s law adds each gas’s pressure in a mixture.",
               "Each law holds one variable constant; read it first.",
-              "On graphs, Boyle’s law is a P–V hyperbola falling as V rises. Charles’s law is a V–T straight line through 0 K, and Gay-Lussac’s is a P–T line through the same point. Always read the constant variable first, then the shape tells the law."
+              "Boyle is a P–V hyperbola; Charles is a V–T straight line through 0 K; Gay-Lussac is P–T through the same point. Read the constant first; the shape tells the law."
             ],
             "bullets": [
               "Boyle: squeeze a gas and pressure rises.",
@@ -678,7 +690,7 @@
             "paragraphs": [
               "The ideal gas equation joins all the laws: PV = nRT. P is pressure, V volume, n moles, T temperature in kelvin, and R a constant. Pressure × volume equals amount × temperature.",
               "One mole occupies 22.4 dm³ at 273 K and 1 atm (molar volume). Vapour density is Mr ÷ 2, so vapour density 16 means Mr = 32. That converts a gas measurement into a mass.",
-              "Real gases misbehave at high pressure and low temperature, when particles are squeezed close enough that their own volume and their mutual attractions matter. An ideal gas is the strict rule; a real gas is the rule with exceptions. The two factors that cause the deviation are the finite size of the molecules and the forces between them."
+              "Real gases misbehave at high pressure and low temperature. An ideal gas is the strict rule; a real gas is the rule with exceptions. The two factors that cause the deviation are the finite size of the molecules and the forces between them."
             ],
             "bullets": [
               "PV = nRT joins pressure, volume, amount and temperature.",
@@ -765,6 +777,12 @@
                 "reason": "Pressure of 1 atm leaves the volume unchanged",
                 "result": "V ≈ 11.19 dm³",
                 "predictPrompt": "How would you prove this claim to a sceptic?"
+              },
+              {
+                "operation": "Molar check",
+                "reason": "1 mol at s.t.p. fills 22.4 dm³, so 0.5 mol fills 11.2 dm³",
+                "result": "The PV=nRT answer agrees with the molar-volume rule at s.t.p.",
+                "predictPrompt": "How does the 22.4 dm³ rule cross-check the division?"
               }
             ]
           }
@@ -850,7 +868,7 @@
           "content": {
             "heading": "Periodic Table",
             "paragraphs": [
-              "A shopkeeper arranges goods in rows by type: grains together, oils together, soaps together. The periodic table arranges elements the same way — by their electron pattern — so that elements with similar behaviour stand in the same column. This lesson reads that arrangement and the trends it hides."
+              "The table ranks elements by electron pattern, so family members stand in the same column. This lesson reads that arrangement and the trends it hides."
             ],
             "bullets": []
           }
@@ -997,6 +1015,12 @@
                 "reason": "Sodium is the most metallic, chlorine the most electron-hungry",
                 "result": "Increasing: Na, Mg, Cl",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Direction check",
+                "reason": "Electronegativity falls down a group: K < Na < Li",
+                "result": "Trends run in both directions: up within a group, in across",
+                "predictPrompt": "Which way goes down the table?"
               }
             ]
           }
@@ -1083,7 +1107,7 @@
           "content": {
             "heading": "Chemical Bonding",
             "paragraphs": [
-              "A mango seller ties a bunch with a short string: sharing. Another counts out coins and hands them over: giving. Atoms do the same two things with electrons — sharing them or giving them — and everything about compounds comes from choosing between those two acts."
+              "Atoms do the same two things with electrons — sharing or giving — and everything about compounds follows from that choice."
             ],
             "bullets": []
           }
@@ -1123,7 +1147,7 @@
             "heading": "The special bonds",
             "paragraphs": [
               "Metallic bonding is giving without keeping: metal atoms drop their outer electrons into a shared sea, and the sea holds the positive cores together. That shared sea is why metals conduct electricity and bend instead of breaking.",
-              "Hydrogen bonding is an extra attraction between molecules, not a bond inside one. Water molecules hydrogen-bond to each other, which is why water boils so high compared with similar small molecules. A coordinate (dative) bond is sharing where both electrons come from one atom, as in [Fe(CN)₆]⁴⁻ (ferrocyanide), [Fe(CN)₆]³⁻ and [Cu(NH₃)₄]²⁺.",
+              "Hydrogen bonding is an attraction between molecules, which is why water boils so high. A coordinate (dative) bond is sharing where both electrons come from one atom, as in [Fe(CN)₆]⁴⁻ (ferrocyanide), [Fe(CN)₆]³⁻ and [Cu(NH₃)₄]²⁺.",
               "Van der Waals forces are the weakest attractions between molecules, like the faint stickiness of loose pages. They matter only when stronger bonds are absent, which is why they are mentioned as a special weak force."
             ],
             "bullets": [
@@ -1205,6 +1229,12 @@
                 "reason": "One Mg²⁺ balances two Cl⁻, and ionic solids melt high",
                 "result": "MgCl₂, high melting, conducts molten",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
+              },
+              {
+                "operation": "Non-metal rule",
+                "reason": "Cl₂ bonds covalently — two chlorines share rather than give",
+                "result": "Metal + non-metal = ionic; non-metal + non-metal = covalent",
+                "predictPrompt": "What happens when both atoms refuse to give?"
               }
             ]
           }
@@ -1291,7 +1321,7 @@
           "content": {
             "heading": "Separation of Mixtures",
             "paragraphs": [
-              "A market woman sells mixed goods — stones in beans, husks in rice — and picks them apart by hand. Separating a chemical mixture is the same job with better tools: every method picks components apart using one difference between them."
+              "Every separation method picks parts apart by one difference between them."
             ],
             "bullets": []
           }
@@ -1433,6 +1463,12 @@
                 "reason": "Evaporating to dryness would leave salt mixed with nothing pure to collect",
                 "result": "Distillation is needed to collect the water itself",
                 "predictPrompt": "How would you prove this claim to a sceptic?"
+              },
+              {
+                "operation": "Immiscible case",
+                "reason": "Oil floats on water instead of dissolving",
+                "result": "A separating funnel taps the denser liquid off first",
+                "predictPrompt": "Which tool is needed when liquids refuse to mix?"
               }
             ]
           }
@@ -1520,7 +1556,7 @@
           "content": {
             "heading": "Solubility",
             "paragraphs": [
-              "A spoon of sugar disappears into tea while grits stay at the bottom. The sugar dissolved; the grits did not. Solubility is simply how much of a substance a given amount of liquid can dissolve — and this lesson explains the limits."
+              "Solubility is how much a given amount of liquid can dissolve — this lesson explains the limits."
             ],
             "bullets": []
           }
@@ -1577,7 +1613,7 @@
             "heading": "Calculating solubility and choosing solvents",
             "paragraphs": [
               "A solubility calculation starts from the definition: how many moles sit in one dm³ of saturated solution. Suppose 11 g of NaCl dissolves in 0.1 dm³. Moles = 11 ÷ 58.5 = 0.188 mol, so the solubility is 0.188 ÷ 0.1 = 1.88 mol/dm³.",
-              "Like dissolves like: water, a polar liquid, removes sweat and salt, but not grease. Petrol, an organic solvent, dissolves grease and paint, which is why dry cleaners use it. Fats need detergents and oil needs turpentine or another organic solvent, so the solvent must match the stain.",
+              "Like dissolves like: water, a polar liquid, removes sweat and salt, but not grease. Petrol, an organic solvent, dissolves grease and paint, which is why dry cleaners use it. Fats need detergent; oil needs turpentine; the solvent must match the stain.",
               "Temperature enters every calculation. A curve reading gives solubility at that temperature, and a supersaturated solution made hot may crash out crystals on cooling — the basis of re-crystallisation."
             ],
             "bullets": [
@@ -1659,6 +1695,12 @@
                 "reason": "0.188 × 58.5 = 11.0, so the division is exact",
                 "result": "Molar solubility = 1.88 mol/dm³",
                 "predictPrompt": "How would you explain why this beats the other options?"
+              },
+              {
+                "operation": "Volume check",
+                "reason": "Double the water (0.2 dm³) halves c to 0.94 mol/dm³",
+                "result": "c halves when the same solute gets double the solvent",
+                "predictPrompt": "What happens if the volume were doubled?"
               }
             ]
           }
@@ -1787,7 +1829,7 @@
           "content": {
             "heading": "Oxidation numbers as bookkeeping",
             "paragraphs": [
-              "An oxidation number is a bookkeeping charge assigned to each atom. Free elements are zero; monatomic ions equal their charge; hydrogen is +1 and oxygen is −2; and the numbers sum to zero in a neutral compound.",
+              "An oxidation number is bookkeeping: free elements zero; monatomic ions equal charges; H is +1, O is −2; sums to zero in a neutral compound.",
               "In H₂SO₄: 2(+1) + S + 4(−2) = 0, so S = +6. In KMnO₄: 1 + Mn + 4(−2) = 0, so Mn = +7. In Cr₂O₇²⁻: 2Cr + 7(−2) = −2, so each Cr = +6.",
               "The change in oxidation number counts electrons moved. Manganese falls from +7 to +2, a fall of 5, so each permanganate gains 5 electrons. That count is what balancing uses."
             ],
@@ -1870,6 +1912,12 @@
                 "reason": "Two sulphurs share the +4 needed",
                 "result": "2S = +4, so S = +2",
                 "predictPrompt": "How would you explain why this beats the other options?"
+              },
+              {
+                "operation": "Ceiling case",
+                "reason": "Sulphur's highest common state is +6 (as in SO₄²⁻)",
+                "result": "Any state above +6 means the sum rule was misapplied",
+                "predictPrompt": "What is sulphur's highest common oxidation state?"
               }
             ]
           }
@@ -1961,7 +2009,7 @@
           "content": {
             "heading": "Acids, Bases and Salts",
             "paragraphs": [
-              "A housewife in Onitsha keeps vinegar for stains and caustic soda for blocked drains, and she knows never to mix them. One is an acid; the other is a base. This lesson explains how to tell them apart, what salts are, and how to measure strength."
+              "A housewife in Onitsha knows vinegar stains cloth and caustic soda dissolves drain blockages — this lesson teaches how to tell the two apart."
             ],
             "bullets": []
           }
@@ -1972,7 +2020,7 @@
             "heading": "What acids and bases do",
             "paragraphs": [
               "An acid is a substance whose water solution gives H₃O⁺ ions — it donates a proton. Acids turn blue litmus red, react with metals and carbonates, and form salts. A base is the opposite: it neutralises an acid, turning red litmus blue and forming a salt.",
-              "Basicity counts the hydrogen atoms an acid can donate: HCl is monobasic (one H), H₂SO₄ is dibasic (two H). Strong acids like HCl dissolve fully in water; weak acids like ethanoic acid (vinegar) dissolve only partly. Citric acid in oranges and tartaric acid in tamarind are natural weak acids.",
+              "Basicity counts the hydrogen atoms an acid can donate: HCl is monobasic (one H), H₂SO₄ is dibasic (two H). Strong acids like HCl dissolve fully in water; weak acids like ethanoic acid (vinegar) dissolve only partly. Citric and tartaric acids are natural weak acids (oranges, tamarind).",
               "Indicators show the difference without tasting: litmus, methyl orange and phenolphthalein change colour across the pH range. A buffer solution is a mixture that resists pH change, like the bicarbonate system that holds blood at pH 7.4."
             ],
             "bullets": [
@@ -2001,7 +2049,7 @@
             "heading": "Salts and how they are made",
             "paragraphs": [
               "A salt is the neutral product of acid with a base, metal or carbonate. If all the acid's replaceable hydrogen is replaced, the salt is normal — NaCl, NH₄Cl, Na₂CO₃. If some hydrogen remains replaceable, the salt is acidic — NaHSO₄ is the classic example. If some hydroxide remains, the salt is basic — Mg(OH)Cl.",
-              "Double salts hold two salts crystallised together; alums are the classic case. Salts are prepared by neutralisation (acid + base), by precipitation (two solutions forming an insoluble salt), or by dissolving a metal or carbonate in an acid: Zn + dilute H₂SO₄ gives ZnSO₄ and hydrogen.",
+              "Double salts hold two salts together; alums are the classic case. Salts come from neutralisation, precipitation (two solutions forming an insoluble salt) or Zn + dilute H₂SO₄ → ZnSO₄ + H₂.",
               "How well a solution conducts depends on how far it dissociates. A strong acid dissociates fully and conducts well; a weak acid dissociates partly and conducts weakly. Conductance follows the ion count, not concentration."
             ],
             "bullets": [
@@ -2105,6 +2153,12 @@
                 "reason": "0.0020 mol sits in 25.0 cm³ = 0.025 dm³, so C = n/V",
                 "result": "0.0020 ÷ 0.025 = 0.080 M",
                 "predictPrompt": "How would you explain why this beats the other options?"
+              },
+              {
+                "operation": "Excess case",
+                "reason": "Equal moles neutralise; one mole left over flips the pH",
+                "result": "Excess acid leaves the solution acidic; excess base leaves it basic",
+                "predictPrompt": "What happens to pH if the acid added exceeds the base?"
               }
             ]
           }
@@ -2253,7 +2307,7 @@
           "content": {
             "heading": "Electrolysis",
             "paragraphs": [
-              "A technician in a Lagos workshop dips a dull key into a shining bath and lifts out a bright key. Electricity moved metal onto it. That process — using electricity to break a substance apart — is electrolysis."
+              "A dull key dipped in an electroplating bath comes out bright — electricity moves metal onto it. That process is electrolysis."
             ],
             "bullets": []
           }
@@ -2264,7 +2318,7 @@
             "heading": "Electrolytes and the cell",
             "paragraphs": [
               "An electrolyte is a substance that carries electricity when molten or dissolved, and is broken apart in the process. Sugar water does not conduct, so it is a non-electrolyte. In electrolysis the anode is the positive electrode and the cathode is the negative electrode (in a galvanic cell the labels swap — the depth section covers that case).",
-              "Electrolysis breaks an electrolyte with a current. Use inert graphite or platinum for CuSO₄, dilute H₂SO₄ and fused NaCl, and graphite for brine. Reactive copper dissolves at the anode, so it is used only when copper must deposit.",
+              "Electrolysis breaks an electrolyte with a current. Use inert graphite for CuSO₄, dilute H₂SO₄ and fused NaCl; graphite for brine. Reactive copper dissolves at the anode, so it is used only when copper must deposit.",
               "Which ion comes off follows the electrochemical series and the concentration. At the cathode, metal ions and hydrogen compete, and the lower one in the series wins. At the anode, non-metal anions discharge, but concentrated solutions favour the anion over water."
             ],
             "bullets": [
@@ -2339,7 +2393,7 @@
           "content": {
             "heading": "Uses, series and protecting iron",
             "paragraphs": [
-              "Electrolysis purifies copper: impure copper dissolves at the anode while pure copper deposits at the cathode. Aluminium oxide in cryolite gives aluminium, and the Downs process gives sodium from fused NaCl. Chlorine and NaOH come from brine, and oxygen comes from water electrolysis and liquid air.",
+              "Electrolysis purifies copper: impure copper dissolves at the anode while pure copper deposits at the cathode. Cryolite holds alumina for aluminium; the Downs cell yields sodium from fused NaCl; brine gives Cl₂ and NaOH; oxygen comes from water and air.",
               "The electrochemical series, K, Ca, Na, Mg, Al, Zn, Fe, Sn, Pb, H, Cu, Hg, Ag, Au, predicts reactivity and displacement. A metal higher up displaces a lower one, so zinc displaces iron but not sodium. Standard potentials (E°) rank the same order; E°cell = E°cathode − E°anode.",
               "Corrosion is electrochemical: iron rusts where oxygen and water meet the metal. Painting, greasing or oiling blocks air and water, while cathodic protection sacrifices a more reactive metal like zinc. Electroplating coats a base metal with a rust-resistant one."
             ],
@@ -2393,6 +2447,12 @@
                 "reason": "2H⁺ + 2e⁻ → H₂, so 0.020 mol e⁻ gives 0.010 mol H₂; 1 mol = 22.4 dm³ at s.t.p.",
                 "result": "0.010 × 22.4 = 0.224 dm³",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Faraday math",
+                "reason": "0.20 F equals 0.20 × 96500 = 19,300 coulombs",
+                "result": "Faraday converts to coulombs by × 96,500",
+                "predictPrompt": "How is a faraday expressed in coulombs?"
               }
             ]
           }
@@ -2520,7 +2580,7 @@
             "paragraphs": [
               "Alpha particles are helium nuclei (2 protons, 2 neutrons) fired out at high speed. They ionise strongly but are stopped by paper, so they are the least penetrating. Beta particles are fast electrons from the nucleus; they pass through paper but are stopped by a metal sheet.",
               "Gamma rays are electromagnetic waves with no mass and no charge — like very energetic light. They pass through the body and are stopped only by dense lead. Increasing order of penetration is alpha, beta, gamma.",
-              "A Geiger counter detects all three by the ionisation they cause. The type of radiation can be identified by which absorber stops it: paper stops alpha, metal stops beta, lead is needed for gamma."
+              "A Geiger counter detects all three by the ionisation they cause. Which absorber stops the ray names the radiation: paper alpha, metal beta, lead gamma."
             ],
             "bullets": [
               "Alpha = helium nuclei; stopped by paper.",
@@ -2599,6 +2659,12 @@
                 "reason": "Three halvings leave one eighth of the starting mass",
                 "result": "100 g remains",
                 "predictPrompt": "How would you prove this claim to a sceptic?"
+              },
+              {
+                "operation": "Half-life picture",
+                "reason": "15 years is 3 half-lives: 800 → 400 → 200 → 100",
+                "result": "100 g remains whatever the starting amount after 3 half-lives",
+                "predictPrompt": "How many half-lives passed?"
               }
             ]
           }
@@ -2780,7 +2846,7 @@
             "paragraphs": [
               "An energy diagram plots energy against progress. Reactants sit at their starting height, products at their finishing height, and the difference is ΔH. A product level below the reactants means exothermic; above means endothermic.",
               "The hill between them is the activation energy — the minimum energy needed to start the reaction. A high hill means a slow reaction even when ΔH is favourable, which is why coal needs a spark despite releasing heat.",
-              "Graphs of temperature against time show the same lesson: exothermic curves climb, endothermic curves fall. Reading the height difference gives ΔH; reading the hill gives activation energy."
+              "Temperature vs time: exothermic curves climb; endothermic fall. Height difference gives ΔH; hill gives Ea."
             ],
             "bullets": [
               "Products below reactants = exothermic; above = endothermic.",
@@ -2889,6 +2955,12 @@
                 "reason": "A negative ΔG° means the reaction runs on its own",
                 "result": "Spontaneous at 298 K",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Threshold case",
+                "reason": "ΔG = 0 at the flip temperature: ΔH ÷ |ΔS| = 400 K for a ΔS-losing case",
+                "result": "ΔH positive with ΔS negative flips spontaneous at one temperature",
+                "predictPrompt": "At what temperature does a ΔS-losing reaction flip?"
               }
             ]
           }
@@ -2978,7 +3050,7 @@
           "content": {
             "heading": "Rates of Chemical Reaction",
             "paragraphs": [
-              "A piece of magnesium in acid fizzes slowly, but the same magnesium as powder fizzes fast. Nothing about the chemicals changed — only the speed. This lesson explains what controls that speed."
+              "A piece of magnesium in acid fizzes slowly, but the same magnesium as powder fizzes fast. Only the speed changed. This lesson explains what controls it."
             ],
             "bullets": []
           }
@@ -2989,7 +3061,7 @@
             "heading": "Four things change the speed",
             "paragraphs": [
               "Temperature speeds reactions because faster particles collide more often and harder. A 10 °C rise roughly doubles the rate — that is why food spoils faster in heat. Warm Mg + HCl fizzes faster, while the HCl and Na₂S₂O₃ clock slows in the cold.",
-              "Concentration or pressure speeds reactions because more particles crowd together, so collisions happen more often. Powdered marble reacts faster with HCl than lumps because powder has far more surface area for the acid to attack. For gases, pressure is the concentration term.",
+              "Concentration or pressure speeds reactions because more particles crowd together, so collisions happen more often. Powdered marble reacts faster than lumps — powder gives more surface for the acid. For gases, pressure is the concentration term.",
               "A catalyst is an unchanged helper that lowers the energy hill, so more collisions succeed. Manganese(IV) oxide speeds the decomposition of hydrogen peroxide and potassium chlorate without being used up. Light also speeds certain reactions, like the halogenation of alkanes."
             ],
             "bullets": [
@@ -3172,6 +3244,12 @@
                 "reason": "A rate without units is meaningless",
                 "result": "Average rate = 4 cm³/s",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Initial slope",
+                "reason": "The slope at t = 0 is the initial rate, larger than the average",
+                "result": "Initial rate exceeds the average (4 cm³/s); the curve steepens early",
+                "predictPrompt": "Which slope is steepest on a rate curve?"
               }
             ]
           }
@@ -3409,6 +3487,12 @@
                 "reason": "NO₂ is brown and N₂O₄ is colourless",
                 "result": "The colour deepens to a darker brown",
                 "predictPrompt": "How would you explain why this beats the other options?"
+              },
+              {
+                "operation": "Inert gas",
+                "reason": "Inert gas at constant volume changes no partial pressures",
+                "result": "Equilibrium stays put — only total pressure rises",
+                "predictPrompt": "Does adding an inert gas move the equilibrium?"
               }
             ]
           }
@@ -3498,7 +3582,7 @@
           "content": {
             "heading": "Environmental Pollution",
             "paragraphs": [
-              "Every breath contains mostly nitrogen, some oxygen, and traces of other gases — a natural mixture, not a single substance. That mixture can be polluted, and this lesson explains what is in clean air, what pollutes it, and what can be done."
+              "Every breath is a natural mixture — mostly nitrogen, some oxygen, traces of others. This lesson explains what pollutes it and what can be done."
             ],
             "bullets": []
           }
@@ -3621,6 +3705,12 @@
                 "reason": "CO blocks oxygen uptake in blood; catalytic converters reduce it",
                 "result": "Effect: blocks blood oxygen; control: catalytic converters",
                 "predictPrompt": "How would you prove this claim to a sceptic?"
+              },
+              {
+                "operation": "Silent killer",
+                "reason": "Carbon monoxide is colourless and odourless",
+                "result": "Victims do not smell it — deaths in closed rooms often involve charcoal",
+                "predictPrompt": "Why is CO more dangerous than smoke?"
               }
             ]
           }
@@ -3829,6 +3919,12 @@
                 "reason": "Value lies in purity for drugs and in tonnage for cement",
                 "result": "Size of output alone does not classify an industry",
                 "predictPrompt": "How would you prove this claim to a sceptic?"
+              },
+              {
+                "operation": "Counting rule",
+                "reason": "Cement uses limestone and clay as raw materials, not intermediates",
+                "result": "Cement is heavy chemicals by feedstock, not by output size",
+                "predictPrompt": "What decides heavy vs fine chemistry?"
               }
             ]
           }
@@ -3928,7 +4024,7 @@
             "paragraphs": [
               "The solar system is the sun and everything held in orbit by its gravity: eight planets, moons, asteroids, comets and dust. The sun is mostly hydrogen and helium, fusing as it shines.",
               "The eight planets in order from the sun are Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune. The first four are rocky; the last four are giants of gas and ice. Earth sits third, the only planet known to carry life.",
-              "Moons orbit the planets; asteroids are rocky leftovers between Mars and Jupiter; comets are icy bodies with glowing tails. All share the same elements as earth, which is why the periodic table applies everywhere. Natural moons orbit planets, while artificial satellites orbit Earth for communication, weather and navigation."
+              "Moons orbit planets; asteroids are rocky leftovers between Mars and Jupiter; comets are icy bodies with tails; satellites orbit Earth for communication, weather and navigation."
             ],
             "bullets": [
               "Solar system = sun + 8 planets + moons, asteroids, comets.",
@@ -4036,6 +4132,12 @@
                 "reason": "Most of Earth's water sits in the oceans",
                 "result": "Hydrosphere: water, 97% ocean",
                 "predictPrompt": "How would you prove this claim to a sceptic?"
+              },
+              {
+                "operation": "Layer keys",
+                "reason": "The mantle is solid rock, not molten magma",
+                "result": "Lithosphere = solid silicate rock, not lava",
+                "predictPrompt": "Is the mantle molten or solid?"
               }
             ]
           }
@@ -4242,6 +4344,12 @@
                 "reason": "One mole of gas fills 22.4 dm³ at s.t.p.",
                 "result": "0.10 × 22.4 = 2.24 dm³",
                 "predictPrompt": "How would you explain why this beats the other options?"
+              },
+              {
+                "operation": "Rate kit",
+                "reason": "Magnesium reacts faster than zinc; same volume of hydrogen",
+                "result": "The ratio holds for any reactive metal — rate only changes the wait",
+                "predictPrompt": "Which metal finishes first?"
               }
             ]
           }
@@ -4448,6 +4556,12 @@
                 "reason": "One faraday is one mole of electrons",
                 "result": "0.20 F",
                 "predictPrompt": "How would you prove this claim to a sceptic?"
+              },
+              {
+                "operation": "Faraday math",
+                "reason": "0.10 mol of Cl₂ liberates 0.20 mol of electrons: 0.20 F",
+                "result": "Faraday conversion: 0.20 × 96,500 = 19,300 C",
+                "predictPrompt": "How many coulombs were passed?"
               }
             ]
           }
@@ -4658,6 +4772,12 @@
                 "reason": "Sulphates need a chemical exchange, not heat",
                 "result": "Add washing soda (or use an ion-exchange resin)",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Boiling consequence",
+                "reason": "Permanent hardness stays after boiling",
+                "result": "Both ions mean washing soda or ion exchange, not a kettle",
+                "predictPrompt": "Does boiling remove permanent hardness?"
               }
             ]
           }
@@ -4868,6 +4988,12 @@
                 "reason": "Only sulphate gives this combination",
                 "result": "The anion is SO₄²⁻",
                 "predictPrompt": "How would you prove this claim to a sceptic?"
+              },
+              {
+                "operation": "Wrong precipitate",
+                "reason": "A white precipitate that dissolves with effervescence is BaCO₃",
+                "result": "Effervescence means carbonate — not the test for SO₄²⁻",
+                "predictPrompt": "Which precipitate dissolves in acid?"
               }
             ]
           }
@@ -4956,7 +5082,7 @@
           "content": {
             "heading": "Ammonia and Nitrogen Compounds",
             "paragraphs": [
-              "The sharp cleaning smell from a bottle of household ammonia is a nitrogen compound — the same gas that feeds the world's farms. This lesson follows ammonia from its making to the acid it becomes."
+              "Ammonia is a nitrogen compound — the same gas that feeds the world's farms. This lesson follows it from its making and use to the acid it becomes."
             ],
             "bullets": []
           }
@@ -4968,7 +5094,7 @@
             "paragraphs": [
               "The laboratory preparation warms an ammonium salt with a strong base: NH₄Cl + NaOH → NH₃ + NaCl + H₂O. The gas is dried over quicklime (CaO) and collected by downward displacement of air, because it is lighter than air and very soluble in water.",
               "The industrial preparation is the Haber process: N₂ + 3H₂ ⇌ 2NH₃, at about 450 °C, 200 atm, over an iron catalyst. Nitrogen comes from fractional distillation of liquid air, hydrogen from water gas. High pressure favours the fewer-molecule side.",
-              "Ammonia forms dense white fumes with hydrogen chloride — the classic confirmation. Nitrogen itself is prepared in the laboratory by heating ammonium nitrite solution: NH₄NO₂ → N₂ + 2H₂O, collected by downward displacement of air. Industrially it comes from fractional distillation of liquid air."
+              "Ammonia forms dense white fumes with hydrogen chloride — the classic confirmation. Nitrogen itself is prepared in the laboratory by heating ammonium nitrite solution: NH₄NO₂ → N₂ + 2H₂O, collected by downward displacement of air."
             ],
             "bullets": [
               "Laboratory: ammonium salt + strong base, warmed.",
@@ -5025,8 +5151,8 @@
             "heading": "Trioxonitrate(V) acid and its salts",
             "paragraphs": [
               "Trioxonitrate(V) acid (HNO₃) is made industrially by the Ostwald process: ammonia is oxidised over platinum catalyst to nitrogen(II) oxide, then to nitrogen dioxide, which dissolves in water to give the acid. The laboratory route heats a trioxonitrate(V) salt with concentrated sulphuric acid — KNO₃ + H₂SO₄ → KHSO₄ + HNO₃. It is a strong, oxidising acid.",
-              "HNO₃ is used in fertilisers, explosives and the pickling of metals. Its salts are the trioxonitrate(V) salts (nitrates). Alkali-metal nitrates decompose to nitrites and oxygen (2NaNO₃ → 2NaNO₂ + O₂); heavy-metal nitrates give metal oxide, NO₂ and O₂ (2Pb(NO₃)₂ → 2PbO + 4NO₂ + O₂).",
-              "The brown ring test confirms nitrate — FeSO₄ and concentrated H₂SO₄ give a brown ring between the layers. The oxides of nitrogen complete the family: N₂O is colourless and supports combustion, NO is colourless and turns brown in air, and NO₂ is brown, acidic and oxidising. NO also gives a brown ring with iron(II) sulphate."
+              "Its uses are fertilisers, explosives and pickling of metals. Its salts are the trioxonitrate(V) salts (nitrates). Alkali-metal nitrates decompose to nitrites and oxygen (2NaNO₃ → 2NaNO₂ + O₂); heavy-metal nitrates give metal oxide, NO₂ and O₂ (2Pb(NO₃)₂ → 2PbO + 4NO₂ + O₂).",
+              "The brown ring test confirms nitrate — FeSO₄ and concentrated H₂SO₄ give a brown ring between the layers. The oxides of nitrogen complete the family: N₂O is colourless and supports combustion, NO is colourless and turns brown in air, and NO₂ is brown, acidic and oxidising."
             ],
             "bullets": [
               "HNO₃ from ammonia oxidation; strong oxidising acid.",
@@ -5078,6 +5204,12 @@
                 "reason": "Mr(NH₃) = 17, so mass = moles × Mr",
                 "result": "2.0 × 17 = 34 g",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Limiting reagent",
+                "reason": "28 g N₂ = 1 mol; 3H₂ excess gives 2 mol NH₃",
+                "result": "34 g assumes hydrogen is in excess; otherwise nitrogen caps the yield",
+                "predictPrompt": "What if nitrogen runs out first?"
               }
             ]
           }
@@ -5287,6 +5419,12 @@
                 "reason": "One mole of gas fills 22.4 dm³ at s.t.p.",
                 "result": "0.10 × 22.4 = 2.24 dm³",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
+              },
+              {
+                "operation": "Excess acid",
+                "reason": "Excess HCl means the carbonate fully reacts",
+                "result": "2.24 dm³ assumes acid excess — the carbonate decides the CO₂",
+                "predictPrompt": "What would change if acid ran out first?"
               }
             ]
           }
@@ -5516,6 +5654,12 @@
                 "reason": "The ions combine with the sulphate spectator unchanged",
                 "result": "Zn + CuSO₄ → ZnSO₄ + Cu",
                 "predictPrompt": "How would you prove this claim to a sceptic?"
+              },
+              {
+                "operation": "One-way series",
+                "reason": "Copper cannot displace zinc above it in the series",
+                "result": "The series is one-way: only the higher metal gives up electrons",
+                "predictPrompt": "Which direction do displacements run?"
               }
             ]
           }
@@ -5724,6 +5868,12 @@
                 "reason": "Aluminium hydroxide is a white gelatinous precipitate",
                 "result": "White gelatinous precipitate of Al(OH)₃",
                 "predictPrompt": "How would you prove this claim to a sceptic?"
+              },
+              {
+                "operation": "Excess alkali",
+                "reason": "Al(OH)₃ redissolves in excess NaOH (amphoteric)",
+                "result": "White precipitate dissolves in more alkali — the amphoteric clue",
+                "predictPrompt": "What happens to the precipitate in excess?"
               }
             ]
           }
@@ -5933,6 +6083,12 @@
                 "reason": "The carbon leaves as its oxide",
                 "result": "Carbon(IV) oxide, CO₂",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
+              },
+              {
+                "operation": "Cooling trap",
+                "reason": "CaO left open absorbs CO₂ and becomes CaCO₃ again",
+                "result": "Quicklime needs sealed storage or it cakes over",
+                "predictPrompt": "What happens if CaO sits in air?"
               }
             ]
           }
@@ -6141,6 +6297,12 @@
                 "reason": "Metal ions gain electrons at the cathode",
                 "result": "Aluminium deposits at the cathode",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
+              },
+              {
+                "operation": "Series cut-off",
+                "reason": "Al sits above carbon in the reactivity series",
+                "result": "No carbon temperature works — electrolysis is the only route",
+                "predictPrompt": "Why can carbon not melt aluminium?"
               }
             ]
           }
@@ -6350,6 +6512,12 @@
                 "reason": "Three carbons and three oxygens each side",
                 "result": "Fe₂O₃ + 3CO → 2Fe + 3CO₂ balanced",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
+              },
+              {
+                "operation": "Partial step",
+                "reason": "Partially reduced ore passes through FeO and Fe₃O₄",
+                "result": "Real furnaces run through FeO/Fe₃O₄ stages — not directly to Fe",
+                "predictPrompt": "What forms between Fe₂O₃ and Fe?"
               }
             ]
           }
@@ -6557,6 +6725,12 @@
                 "reason": "The sulphate ion names it tetraoxosulfate(VI)",
                 "result": "Copper(II) tetraoxosulfate(VI)",
                 "predictPrompt": "How would you prove this claim to a sceptic?"
+              },
+              {
+                "operation": "Heating case",
+                "reason": "Hot concentrated acid speeds the dissolve — same equation",
+                "result": "Heat changes the rate, not the chemistry",
+                "predictPrompt": "What changes if the acid is hot?"
               }
             ]
           }
@@ -6767,6 +6941,12 @@
                 "reason": "CH weighs 13; the true Mr is 78",
                 "result": "78 ÷ 13 = 6, so C₆H₆",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
+              },
+              {
+                "operation": "Mr pick",
+                "reason": "Mr of 78 ÷ Mr(CH) of 13 = 6",
+                "result": "Mr picks the empirical multiple: C₆H₆, not CH",
+                "predictPrompt": "How does Mr decide between CH and C₆H₆?"
               }
             ]
           }
@@ -6999,6 +7179,12 @@
                 "reason": "2 mol butane needs 13 mol O₂, so 0.10 mol needs 0.65 mol; 1 mol = 22.4 dm³ at s.t.p.",
                 "result": "0.65 × 22.4 = 14.56 dm³ O₂",
                 "predictPrompt": "How would you prove this claim to a sceptic?"
+              },
+              {
+                "operation": "Air case",
+                "reason": "Only about 21% of air is oxygen; 14.56 dm³ O₂ needs ≈ 69 dm³ of air",
+                "result": "Air ≈ 4.8 × the O₂ volume",
+                "predictPrompt": "How much air would make that possible?"
               }
             ]
           }
@@ -7234,6 +7420,12 @@
                 "reason": "One mole of ethene gives one mole of product; Mr(C₂H₄Br₂) = 188",
                 "result": "0.10 × 188 = 18.8 g",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
+              },
+              {
+                "operation": "Test case",
+                "reason": "Ethene decolourises bromine water; ethene-looking colour rules out alkane",
+                "result": "Addition to the double bond turns orange to colourless",
+                "predictPrompt": "What happens to bromine water with an alkene?"
               }
             ]
           }
@@ -7445,6 +7637,12 @@
                 "reason": "One mole of gas fills 22.4 dm³ at s.t.p.",
                 "result": "0.75 × 22.4 = 16.8 dm³",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
+              },
+              {
+                "operation": "Air case",
+                "reason": "21% of air is oxygen; 16.8 dm³ O₂ needs ≈ 80 dm³ of air",
+                "result": "Air ≈ 4.8 × the O₂ volume",
+                "predictPrompt": "How much air supplies that oxygen?"
               }
             ]
           }
@@ -7655,6 +7853,12 @@
                 "reason": "One mole of gas fills 22.4 dm³ at s.t.p.",
                 "result": "0.30 × 22.4 = 6.72 dm³",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
+              },
+              {
+                "operation": "General rule",
+                "reason": "All alcohols fit CₙH₂ₙ₊₂O + 3n/2 O₂ → nCO₂ + (n+1)H₂O",
+                "result": "3 O₂ per ethanol is the C₂ member of that pattern",
+                "predictPrompt": "How many O₂ per mole for other alcohols?"
               }
             ]
           }
@@ -7867,6 +8071,12 @@
                 "reason": "COOH carbon loses the H and gains an OH oxygen",
                 "result": "Carbonyl C = +3 in CH₃COOH (rise of 2)",
                 "predictPrompt": "How would you prove this claim to a sceptic?"
+              },
+              {
+                "operation": "Limit case",
+                "reason": "Ketones resist oxidation; aldehydes oxidise easily",
+                "result": "Aldehydes oxidise to acids; ketones survive most reagents",
+                "predictPrompt": "Would a ketone give the same result?"
               }
             ]
           }
@@ -8078,6 +8288,12 @@
                 "reason": "One mole of acid gives one mole of ester",
                 "result": "0.10 × 88 = 8.8 g",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Yield limit",
+                "reason": "Ester forms 1:1:1 with the limiting reagent",
+                "result": "One reagent missing caps the ester at whatever it allows",
+                "predictPrompt": "What caps the ester if ethanol is deficient?"
               }
             ]
           }
@@ -8289,6 +8505,12 @@
                 "reason": "One mole of gas fills 22.4 dm³ at s.t.p.",
                 "result": "0.1 × 22.4 = 2.24 dm³",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Van Slyke test",
+                "reason": "Tertiary amines have no N–H to react",
+                "result": "Primary and secondary amines pass; tertiary fails",
+                "predictPrompt": "Which amine would not react?"
               }
             ]
           }
@@ -8500,6 +8722,12 @@
                 "reason": "Mass = moles × Mr",
                 "result": "0.10 × 180 = 18.0 g",
                 "predictPrompt": "How would you explain why this beats the other options?"
+              },
+              {
+                "operation": "Partial hydrolysis",
+                "reason": "Half the sucrose means half the glucose",
+                "result": "Hydrolysis is 1:1:1 — partial means partial everywhere",
+                "predictPrompt": "What if only half the sucrose hydrolysed?"
               }
             ]
           }
@@ -8713,6 +8941,12 @@
                 "reason": "A chain of n amino acids has n − 1 peptide bonds",
                 "result": "n − 1 = 99 bonds",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
+              },
+              {
+                "operation": "Loop case",
+                "reason": "A cyclic peptide: n residues, n bonds",
+                "result": "Ring peptide: 100 amino acids → 100 peptide bonds",
+                "predictPrompt": "What changes if the chain closes into a ring?"
               }
             ]
           }
@@ -8927,6 +9161,12 @@
                 "reason": "No small molecule is lost",
                 "result": "Addition polymerisation",
                 "predictPrompt": "How would you prove this claim to a sceptic?"
+              },
+              {
+                "operation": "Loss check",
+                "reason": "Addition keeps all atoms; condensation ejects water",
+                "result": "Addition: no by-product; condensation: water out",
+                "predictPrompt": "Where does the water go in condensation?"
               }
             ]
           }
@@ -9138,6 +9378,12 @@
                 "reason": "One more 3d electron leaves",
                 "result": "Fe³⁺ = [Ar] 3d⁵",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
+              },
+              {
+                "operation": "Stability case",
+                "reason": "Fe³⁺ has half-filled 3d⁵ — extra stability",
+                "result": "Half-filled subshells resist change; that is why Fe³⁺ lasts",
+                "predictPrompt": "Why is Fe³⁺ so stable?"
               }
             ]
           }
@@ -9371,6 +9617,12 @@
                 "reason": "Roots assimilate nitrate into protein; denitrifiers then release nitrogen gas",
                 "result": "Assimilation then denitrification complete the cycle",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Excess case",
+                "reason": "Excess nitrate leaches into rivers",
+                "result": "Excess nitrate → algal bloom → fish kills",
+                "predictPrompt": "What does excess fertiliser do to a river?"
               }
             ]
           }
@@ -9579,6 +9831,12 @@
                 "reason": "Right side has 3 + 8 = 11 oxygens, so O2 needs 5.5; multiply all by 2",
                 "result": "4FeS2 + 11O2 → 2Fe2O3 + 8SO2",
                 "predictPrompt": "How would you prove this claim to a sceptic?"
+              },
+              {
+                "operation": "Partial burns",
+                "reason": "Partial roasting passes through FeO and Fe₃O₄",
+                "result": "Step-wise roasting is chemistry in stages, not one equation",
+                "predictPrompt": "What forms between partial and full burning?"
               }
             ]
           }
@@ -9812,6 +10070,12 @@
                 "reason": "Tin hardens the blend and gives a ringing tone",
                 "result": "Bronze harder, ringing, takes detail",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Bell contrast",
+                "reason": "Pure copper is too soft to ring for long",
+                "result": "Tin adds hardness and ring — bronze outlasts copper",
+                "predictPrompt": "Why does bronze beat copper for bells?"
               }
             ]
           }

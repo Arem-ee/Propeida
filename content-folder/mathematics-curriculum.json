@@ -364,6 +364,12 @@
                 "reason": "Squaring should return the value of the original expression.",
                 "result": "(2√2)² = 8, which matches 50 − 2√900 + 18 = 8.",
                 "predictPrompt": "How would you sanity-check the size and sign of this answer?"
+              },
+              {
+                "operation": "Like-terms case",
+                "reason": "Only like surds combine; unlike surds stay split",
+                "result": "√8 − √2 = 2√2 − √2 = √2",
+                "predictPrompt": "What if the surds did not match?"
               }
             ]
           }
@@ -402,6 +408,12 @@
                 "reason": "A denominator of 1 leaves the numerator as the whole answer.",
                 "result": "The value is 7 + 4√3.",
                 "predictPrompt": "How would you verify this answer satisfies the question?"
+              },
+              {
+                "operation": "Numeric check",
+                "reason": "Compute (2 + √3)/(2 − √3) ≈ 3.732/0.268 ≈ 13.93",
+                "result": "7 + 4√3 ≈ 13.93 — the algebra matches",
+                "predictPrompt": "How would you verify this answer?"
               }
             ]
           }
@@ -569,6 +581,12 @@
                 "reason": "The outer square was waiting throughout.",
                 "result": "2^2 = 4.",
                 "predictPrompt": "How would you explain why this beats the other options?"
+              },
+              {
+                "operation": "Prime-factor case",
+                "reason": "32 = 2^5, so (2^5)^(2/5) = 2^2",
+                "result": "The prime-factor route reaches the same 4 without roots",
+                "predictPrompt": "How does the prime-factor method reach the same answer?"
               }
             ]
           }
@@ -607,6 +625,12 @@
                 "reason": "A fraction minus a fraction needs a common denominator of 3.",
                 "result": "4 − 1/3 = 11/3.",
                 "predictPrompt": "How would you verify this answer satisfies the question?"
+              },
+              {
+                "operation": "Sign case",
+                "reason": "Negative exponent: reciprocal, not negation",
+                "result": "27^(−1/3) = 1/3, not −3",
+                "predictPrompt": "What does a negative exponent mean here?"
               }
             ]
           }
@@ -664,8 +688,8 @@
             "heading": "Formula and completing the square",
             "paragraphs": [
               "When factorisation is not obvious, the quadratic formula always works: x = (−b ± √(b² − 4ac)) / 2a. Substitute carefully, keeping the signs.",
-              "The discriminant b² − 4ac tells the nature of the roots: positive gives two distinct real roots, zero gives one repeated root, and negative gives no real roots.",
-              "Completing the square rewrites x² + bx as (x + b/2)² − (b/2)². It is longer than the formula but gives the vertex of the curve, which matters when a question asks for a maximum or minimum."
+              "The discriminant b² − 4ac tells the nature of the roots: positive two distinct, zero one repeated, negative none.",
+              "Completing the square rewrites x² + bx as (x + b/2)² − (b/2)². Longer than the formula, but it gives the vertex."
             ],
             "bullets": [
               "The formula always works.",
@@ -722,8 +746,8 @@
             "heading": "Roots and word problems",
             "paragraphs": [
               "For ax² + bx + c = 0, the sum of the roots is −b/a and the product is c/a. Check x² + 3x − 10 = 0: the roots 2 and −5 sum to −3 and multiply to −10.",
-              "To build an equation from its roots, use x² − (sum)x + (product) = 0. If the roots are 3 and 4, the equation is x² − 7x + 12 = 0.",
-              "Word problems are the same process in disguise. Translate the sentence, solve, then reject roots that cannot make sense, such as a negative length or age."
+              "From the roots, x² − (sum)x + (product) = 0: roots 3 and 4 give x² − 7x + 12 = 0.",
+              "Word problems are the same process in disguise — translate, solve, then reject impossible roots, such as negative lengths."
             ],
             "bullets": [
               "Sum of roots = −b/a.",
@@ -774,6 +798,12 @@
                 "reason": "A product is zero when either factor is zero.",
                 "result": "2x + 1 = 0 gives x = −1/2, and x − 3 = 0 gives x = 3.",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Discriminant case",
+                "reason": "Δ = 0 gives a repeated root; Δ < 0 gives none",
+                "result": "Δ = 25 + 24 = 49 > 0; two distinct roots here",
+                "predictPrompt": "What if the factor pair never lands?"
               }
             ]
           }
@@ -812,6 +842,12 @@
                 "reason": "The product of the roots equals c/a, catching sign slips.",
                 "result": "Roots give −1/3 and c/a is −1/3, so both fit.",
                 "predictPrompt": "How would you sanity-check the size and sign of this answer?"
+              },
+              {
+                "operation": "Substitute check",
+                "reason": "Check x = 1/3: 3(1/9) + 2/3 − 1 = 0",
+                "result": "The formula roots each satisfy the original",
+                "predictPrompt": "Does x = 1/3 satisfy the original equation?"
               }
             ]
           }
@@ -898,8 +934,8 @@
           "content": {
             "heading": "Elevation, depression, bearings and the rules",
             "paragraphs": [
-              "A candidate calls looking up depression and swaps up for down. Both angles start from the horizontal: elevation rises to an object above and depression falls to an object below. Parallel horizontals make the interior angle equal, so tan links height and horizontal distance in either case.",
-              "Bearings are three-figure angles clockwise from north, such as 040° or 315°, with a north line at each point. Bearing 070° means 70° clockwise from north at O. Ships OA=12km on 040° and OB=15km on 130° include 90°, so AB=√(12²+15²−2×12×15×cos90°)=√369≈19.2km.",
+              "Elevation rises from the horizontal; depression falls from it. Both start from the horizontal, so tan links height and horizontal distance.",
+              "Bearings are three-figure angles clockwise from north, such as 040° or 315°. Bearing 070° means 70° clockwise from north at O. Ships OA=12km on 040° and OB=15km on 130° include 90°, so AB=√(12²+15²−2×12×15×cos90°)=√369≈19.2km.",
               "The sine rule is a/sinA=b/sinB=c/sinC and the cosine rule is a²=b²+c²−2bc·cosA. Use sine with a side and its opposite angle, and cosine with two sides and the included angle or three sides."
             ],
             "bullets": [
@@ -926,7 +962,7 @@
           "content": {
             "heading": "Areas and choosing the rule",
             "paragraphs": [
-              "A candidate uses ½ab·sinC with any angle and overcounts the area. Area=½ab·sinC needs the angle between a and b, because the slant shortens the product ab. Sides 5 and 8 with included 60° give ½×5×8×sin60°=20×(√3/2)=10√3.",
+              "Area=½ab·sinC needs the angle between a and b. Sides 5 and 8 with included 60° give ½×5×8×sin60° = 10√3.",
               "Name what is known before choosing: a side with its opposite angle takes sine, two sides with their included angle or three sides take cosine. AAA (three angles equal) fixes angles only, never size, so a side cannot be found from angles alone.",
               "Right-angled elevation or depression stay with SOHCAHTOA, while two bearings from one point give an included angle for cosine and area. The data therefore choose the tool, not habit."
             ],
@@ -1009,6 +1045,12 @@
                 "reason": "tan 30° = 1/√3, so h = 30/√3 = 10√3.",
                 "result": "The height is 10√3 ≈ 17.3 m.",
                 "predictPrompt": "How would you explain why this beats the other options?"
+              },
+              {
+                "operation": "Complement case",
+                "reason": "Complementary angles swap sine and cosine; 30° and 60° are mirrors",
+                "result": "h = x·tanθ handles any right triangle",
+                "predictPrompt": "What swaps if the angle were 60°?"
               }
             ]
           }
@@ -1047,6 +1089,12 @@
                 "reason": "Bearings run clockwise from north, with east opposite the angle.",
                 "result": "tan θ = 6/8, so θ ≈ 36.9° and the bearing is 037°.",
                 "predictPrompt": "How would you explain why this beats the other options?"
+              },
+              {
+                "operation": "Sense check",
+                "reason": "Return journey needs the reversed bearing: 180° away from the outbound one",
+                "result": "Distance 10 km; bearing reverse of the outbound route",
+                "predictPrompt": "What is the return bearing after the north-then-east legs?"
               }
             ]
           }
@@ -1399,6 +1447,12 @@
                 "reason": "Both draws must happen in sequence.",
                 "result": "3/5 × 1/2 = 3/10.",
                 "predictPrompt": "How would you verify this answer satisfies the question?"
+              },
+              {
+                "operation": "Replacement case",
+                "reason": "With replacement: 3/5 × 3/5 = 9/25",
+                "result": "Without: 3/10; with: 9/25 — the adverb decides",
+                "predictPrompt": "What changes if the balls are put back each time?"
               }
             ]
           }
@@ -1437,6 +1491,12 @@
                 "reason": "Only 2 red in 5 remain, and 'and' means multiply.",
                 "result": "P = 4/7 × 3/6 × 2/5 = 4/35.",
                 "predictPrompt": "How would you sanity-check the size and sign of this answer?"
+              },
+              {
+                "operation": "Combination case",
+                "reason": "C(4,3)/C(7,3) = 4/35 — same answer by counting",
+                "result": "Two methods agree on 4/35",
+                "predictPrompt": "How would you count all outcomes directly?"
               }
             ]
           }
@@ -1455,7 +1515,7 @@
           "content": {
             "heading": "Number Bases",
             "paragraphs": [
-              "A shop in Jos prices a bag at 34 in base five. A candidate who reads it as thirty-four loses the mark. The base is the place value system, not the number itself."
+              "Reading 34₅ as thirty-four loses the mark. The base is the system, not the number itself."
             ],
             "bullets": []
           }
@@ -1496,7 +1556,7 @@
               "To convert from base b to decimal, expand by place value: base-three 210 is 2×9 + 1×3 + 0 = 21, while base-two 1011 is 11.",
               "Divide by b repeatedly: 25 ÷ 5 = 5 r0, 5 ÷ 5 = 1 r0, 1 ÷ 5 = 0 r1, so 25 is 100 in base five; read remainders upward.",
               "Between two non-decimal bases, pass through decimal: expand to decimal, then divide to the new base, since no direct shortcut exists.",
-              "For a fractional part, multiply by b repeatedly and take each whole part upward: 0.5 in base ten is 0.1 in base two, since 0.5×2 = 1.0."
+              "Fractional parts multiply out: 0.5₁₀ = 0.1₂ since 0.5×2 = 1.0."
             ],
             "bullets": [
               "Base b to decimal: expand by powers of b",
@@ -1524,7 +1584,7 @@
             "heading": "Adding and subtracting in another base",
             "paragraphs": [
               "Addition in base b works like decimal addition except that the carrying threshold is b. In base five, 3 + 3 = 11 because 6 is one five and one unit. The carry is therefore smaller than in decimal.",
-              "Subtraction needs borrowing in the same way. In base four, 31 − 12 needs one four borrowed as four units. The method is identical to decimal, only the threshold and the borrow amount change.",
+              "Subtraction borrows the same way: 31₄ − 12₄ borrows one four as four units. Only the threshold and the borrow differ.",
               "Multiplication by a single digit also follows the threshold. In base five, 4 × 4 = 31 because 16 is three fives and one unit. A table of products up to base minus one is therefore enough.",
               "Multiplication and division are done column-wise with the same threshold. In base five, 23 × 14 = 432: work in columns as in decimal, carrying at five — 4 × 23 = 202, then 1 × 23 shifted one place = 230, and 202 + 230 = 432."
             ],
@@ -1583,6 +1643,12 @@
                 "reason": "The last remainder is the most significant digit",
                 "result": "110 in base five",
                 "predictPrompt": "How would you explain why this beats the other options?"
+              },
+              {
+                "operation": "Bad digit case",
+                "reason": "Base 5 numbers never contain the digit 5",
+                "result": "55 is not a base-5 numeral; 110₅ equals 30 and 132₄ does too",
+                "predictPrompt": "Which digits can appear in base 5?"
               }
             ]
           }
@@ -1673,6 +1739,12 @@
                 "reason": "A final carry becomes the new highest place value.",
                 "result": "Answer: 124_8, and 25_8 × 4 = 21 × 4 = 84 checks it.",
                 "predictPrompt": "How would you verify this answer satisfies the question?"
+              },
+              {
+                "operation": "Column case",
+                "reason": "4 × 25₈ = 124₈: carry 2 from 4 × 5 = 24₈; 2 × 4 + 2 = 12₈",
+                "result": "124₈ either way — two methods, one answer",
+                "predictPrompt": "How would you multiply directly in base eight?"
               }
             ]
           }
@@ -1828,6 +1900,12 @@
                 "reason": "The square of 13 leaves the same remainder as the square of 6",
                 "result": "13^2 ≡ 1 (mod 7)",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Cycle case",
+                "reason": "Powers of 13 mod 7 cycle: 6, 1, 6, 1...",
+                "result": "The cycle length is 2 here",
+                "predictPrompt": "What is the cycle length of 13 mod 7?"
               }
             ]
           }
@@ -1919,6 +1997,12 @@
                 "reason": "The −1 makes the square 1, leaving a single 2.",
                 "result": "2 × (−1)² = 2, so 2^7 ≡ 2 (mod 9).",
                 "predictPrompt": "How would you sanity-check the size and sign of this answer?"
+              },
+              {
+                "operation": "Cycle case",
+                "reason": "2^6 ≡ 1 (mod 9), so 2^7 = 2^6 × 2 ≡ 2",
+                "result": "Cycle of length 6 knocks the big power down",
+                "predictPrompt": "What is the cycle length of 2 mod 9?"
               }
             ]
           }
@@ -2057,6 +2141,12 @@
                 "reason": "17 exceeds 12 by 5",
                 "result": "1 and 5/12, which is already reduced",
                 "predictPrompt": "How would you verify this answer satisfies the question?"
+              },
+              {
+                "operation": "Magnitude case",
+                "reason": "2/3 + 3/4 = 17/12 exceeds 1 — write a mixed number",
+                "result": "1 5/12 sits between 1 and 2",
+                "predictPrompt": "How do you know the sum exceeds 1?"
               }
             ]
           }
@@ -2152,6 +2242,12 @@
                 "reason": "Both 5s and the factors 6 and 12 share a common factor, so cancel them first.",
                 "result": "Answer is 2",
                 "predictPrompt": "How would you verify this answer satisfies the question?"
+              },
+              {
+                "operation": "Flip check",
+                "reason": "Division is multiplication by the reciprocal: 5/6 × 12/5",
+                "result": "Every division is a flipped multiply",
+                "predictPrompt": "Why does division flip into multiplication?"
               }
             ]
           }
@@ -2284,6 +2380,18 @@
                 "reason": "Selling price is cost plus profit",
                 "result": "40,000 + 6,000 = 46,000",
                 "predictPrompt": "How would you sanity-check the size and sign of this answer?"
+              },
+              {
+                "operation": "Compounding case",
+                "reason": "Successive percentages multiply: 10% then 10% gives 1.21",
+                "result": "Compounding beats adding: 1.21, not 1.20",
+                "predictPrompt": "What happens to two successive 10% rises?"
+              },
+              {
+                "operation": "Reverse case",
+                "reason": "Original = 64,000 ÷ 0.8 = 80,000 — the inverse recovers the start",
+                "result": "Reverse multiplication recovers the original price",
+                "predictPrompt": "How do you recover the marked price from the sale price?"
               }
             ]
           }
@@ -2376,6 +2484,12 @@
                 "reason": "The customer pays the shop price plus the government tax.",
                 "result": "₦64,000 + ₦4,800 = ₦68,800",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Reverse case",
+                "reason": "Original = 64,000 ÷ 0.8 = 80,000 — the inverse recovers the start",
+                "result": "Reverse multiplication recovers the original price",
+                "predictPrompt": "How do you recover the marked price from the sale price?"
               }
             ]
           }
@@ -2509,6 +2623,18 @@
                 "reason": "Neither means in U but in neither set",
                 "result": "40 − 33 = 7 study neither",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Overlap case",
+                "reason": "Both = 25 + 20 − 33 = 12 — the overlap verifies neither",
+                "result": "n(A∩B) = 12 feeds back into n(A∪B) = 33",
+                "predictPrompt": "How would you verify the overlap count?"
+              },
+              {
+                "operation": "Verify check",
+                "reason": "|M ∪ F| = 55; both = 35 + 30 − 55 = 10 ✓",
+                "result": "Neither = 5 verifies cleanly",
+                "predictPrompt": "How does the union cross-check your neither answer?"
               }
             ]
           }
@@ -2605,6 +2731,12 @@
                 "reason": "Only Mathematics excludes the learners also taking English.",
                 "result": "35 − 13 = 22 study only Mathematics",
                 "predictPrompt": "How would you sanity-check the size and sign of this answer?"
+              },
+              {
+                "operation": "Verify check",
+                "reason": "|M ∪ F| = 55; both = 35 + 30 − 55 = 10 ✓",
+                "result": "Neither = 5 verifies cleanly",
+                "predictPrompt": "How does the union cross-check your neither answer?"
               }
             ]
           }
@@ -2745,6 +2877,12 @@
                 "reason": "The relation holds for every pair",
                 "result": "y = 30",
                 "predictPrompt": "How would you verify this answer satisfies the question?"
+              },
+              {
+                "operation": "Inverse case",
+                "reason": "Inverse variation: the product x·y is constant",
+                "result": "Inverse form: y = 108/x; direct form: y = 3x",
+                "predictPrompt": "What stays constant in inverse variation?"
               }
             ]
           }
@@ -2839,6 +2977,12 @@
                 "reason": "Each variable scales y, so multiply both values by k.",
                 "result": "y = 40",
                 "predictPrompt": "How would you verify this answer satisfies the question?"
+              },
+              {
+                "operation": "Substitute back",
+                "reason": "k = 6: 6 × 3 × 2 = 36 — recovers the given value",
+                "result": "k recovers the data exactly",
+                "predictPrompt": "How would you verify your k value?"
               }
             ]
           }
@@ -2972,6 +3116,18 @@
                 "reason": "−3 × (−4) = 12, which is ≥ 9",
                 "result": "x = −4 satisfies the inequality",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Flip case",
+                "reason": "Dividing by a negative flips the sign",
+                "result": "x ≤ −3 — the flip is the whole rule",
+                "predictPrompt": "When exactly does the inequality flip?"
+              },
+              {
+                "operation": "Flip trap",
+                "reason": "Dividing by −2 flips both signs: −6 < −2x ≤ 4 → 2 > x ≥ −2",
+                "result": "Forgetting the flip turns the answer inside out",
+                "predictPrompt": "What happens to the signs when you divide by −2?"
               }
             ]
           }
@@ -3065,6 +3221,12 @@
                 "reason": "The chain can be read either way, so list the smaller bound first for the answer.",
                 "result": "−2 ≤ x < 3",
                 "predictPrompt": "How would you verify this answer satisfies the question?"
+              },
+              {
+                "operation": "Flip trap",
+                "reason": "Dividing by −2 flips both signs: −6 < −2x ≤ 4 → 2 > x ≥ −2",
+                "result": "Forgetting the flip turns the answer inside out",
+                "predictPrompt": "What happens to the signs when you divide by −2?"
               }
             ]
           }
@@ -3196,6 +3358,18 @@
                 "reason": "Sum = n/2 × (2a + (n − 1)d)",
                 "result": "10/2 × (6 + 27) = 5 × 33 = 165",
                 "predictPrompt": "How would you verify this answer satisfies the question?"
+              },
+              {
+                "operation": "List check",
+                "reason": "a₁ = 3, d = 3, a₁₀ = 30; sum = 5(3 + 30) = 165",
+                "result": "Listing terms matches the formula",
+                "predictPrompt": "How would you check by listing terms?"
+              },
+              {
+                "operation": "Convergence case",
+                "reason": "r < 1, so S∞ = a/(1 − r) = 96/(2/3) = 144 holds",
+                "result": "Tail shrinks to zero; the infinite sum converges",
+                "predictPrompt": "Does this infinite series converge?"
               }
             ]
           }
@@ -3289,6 +3463,12 @@
                 "reason": "Dividing by 2/3 is multiplying by 3/2, because the fraction in the denominator inverts.",
                 "result": "144",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Convergence case",
+                "reason": "r < 1, so S∞ = a/(1 − r) = 96/(2/3) = 144 holds",
+                "result": "Tail shrinks to zero; the infinite sum converges",
+                "predictPrompt": "Does this infinite series converge?"
               }
             ]
           }
@@ -3317,7 +3497,7 @@
           "content": {
             "heading": "What a binary operation is and closure",
             "paragraphs": [
-              "A customer buys 3 yam tubers at ₦4 each and 2 more, and the stall boy marks the new total with a star. The two counts combine into one total, and that combining is a binary operation.",
+              "The two yam counts combine into one total — that combining is a binary operation.",
               "A binary operation takes two elements of a set, in that order, and returns one element. It is called binary because two inputs are used. The operation * is not the multiplication sign here; it is only the name of the rule.",
               "Closure means the answer never leaves the set. Whole numbers are closed under a * b = a + b + 1 because two whole numbers always give a whole number. Subtraction is not closed on whole numbers because 1 − 3 = −2 falls outside."
             ],
@@ -3345,7 +3525,7 @@
           "content": {
             "heading": "Commutativity, associativity and distributivity",
             "paragraphs": [
-              "Two stall boys price two bundles in opposite order and get the same bill, so the customer asks whether order ever matters. Swapping the inputs is commutativity, and regrouping them is associativity, and the two are easy to confuse. Keep the test separate.",
+              "Two bundles priced in opposite order give the same bill — swapping is commutativity; regrouping is associativity. Keep the tests separate.",
               "Test a * b = a + b + 1 on each property. Since 2 * 3 = 6 and 3 * 2 = 6, it is commutative, and since (2 * 3) * 4 = 11 and 2 * (3 * 4) = 11, it is associative. But 2 * (3 + 4) = 10 while 2 * 3 + 2 * 4 = 13, so it fails distributivity over addition."
             ],
             "bullets": [
@@ -3372,7 +3552,7 @@
           "content": {
             "heading": "Identity and inverse elements",
             "paragraphs": [
-              "A stall keeper adds nothing to a pile and the pile stays the same, then removes what she added to return to the start. The do-nothing element is the identity, and the undoing element is the inverse.",
+              "The do-nothing element is the identity; the undoing element is the inverse.",
               "An identity element e satisfies a * e = e * a = a. Here a + e + 1 = a gives e = −1. An inverse x satisfies a * x = x * a = e.",
               "The inverse of 2 solves 2 + x + 1 = −1, so x = −4. Check: 2 * (−4) = 2 − 4 + 1 = −1, the identity. Identity leaves every element unchanged; inverse restores the identity."
             ],
@@ -3425,6 +3605,12 @@
                 "reason": "The inverse x must satisfy 3 * x = −1.",
                 "result": "3 + x + 1 = −1 gives x = −5.",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Two-sided case",
+                "reason": "e = −1 works from both sides here",
+                "result": "An identity must be two-sided — that is the trap",
+                "predictPrompt": "What if e worked from only one side?"
               }
             ]
           }
@@ -3517,6 +3703,12 @@
                 "reason": "With a = 3, 2a = 6 fails, so no two-sided identity exists.",
                 "result": "No identity; no inverse for 3",
                 "predictPrompt": "How would you verify this answer satisfies the question?"
+              },
+              {
+                "operation": "One-sided case",
+                "reason": "Right test gives e = 0; left test e ∘ a = 2a ≠ a — no identity",
+                "result": "No identity means no inverse for 3",
+                "predictPrompt": "Why does a one-sided identity not count?"
               }
             ]
           }
@@ -3656,6 +3848,12 @@
                 "reason": "Every entry is divided by 5",
                 "result": "[[2/5,-1/5],[-1/5,3/5]]",
                 "predictPrompt": "How would you verify this answer satisfies the question?"
+              },
+              {
+                "operation": "Singular case",
+                "reason": "det = 0 means no inverse (parallel rows)",
+                "result": "Singular matrices are not invertible",
+                "predictPrompt": "What if the determinant were 0?"
               }
             ]
           }
@@ -3748,6 +3946,12 @@
                 "reason": "Repeat the same row-column pairing for this row",
                 "result": "5 from 0×2+1×1+4×1 and 7 from 0×0+1×3+4×1.",
                 "predictPrompt": "How would you explain why this beats the other options?"
+              },
+              {
+                "operation": "Dimension case",
+                "reason": "2×3 · 3×2 → 2×2; row by row against column by column",
+                "result": "Shapes must match — everything else is arithmetic",
+                "predictPrompt": "What must be true of the row and column counts to multiply?"
               }
             ]
           }
@@ -3887,6 +4091,12 @@
                 "reason": "Add the derivatives of each term to give the full derivative.",
                 "result": "dy/dx = 8x^3 - 5 + 3 cos x.",
                 "predictPrompt": "How would you explain why this beats the other options?"
+              },
+              {
+                "operation": "Constant case",
+                "reason": "Constant terms vanish; 3 differentiates to 0",
+                "result": "The -5 drops out — it is a constant",
+                "predictPrompt": "What happens to a constant's derivative?"
               }
             ]
           }
@@ -3978,6 +4188,12 @@
                 "reason": "The inner part moves twice as fast as x",
                 "result": "dy/dx = 6(2x+1)².",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Forgot case",
+                "reason": "The inner 2 is the whole chain rule",
+                "result": "6(2x+1)² — never skip the inner factor",
+                "predictPrompt": "What is the derivative of the bracket?"
               }
             ]
           }
@@ -4131,6 +4347,12 @@
                 "reason": "Divide by the coefficient of n and test the result.",
                 "result": "n = 9 sides, and (9 − 2) × 180 ÷ 9 = 140° checks.",
                 "predictPrompt": "How would you verify this answer satisfies the question?"
+              },
+              {
+                "operation": "Exterior case",
+                "reason": "Exterior angle = 180° − 140° = 40°; n = 360/40 = 9",
+                "result": "360° around the outside decides the side count",
+                "predictPrompt": "How many 180°-exterior angles give a regular polygon?"
               }
             ]
           }
@@ -4223,6 +4445,12 @@
                 "reason": "Interior angles of a quadrilateral sum to 360°",
                 "result": "68+125+112+55=360°, so all angles fit.",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Opposite case",
+                "reason": "Opposite angles in a cyclic quadrilateral sum to 180°",
+                "result": "Opposite angles that fail the 180° test mean not cyclic",
+                "predictPrompt": "What is the rule for opposite angles in a cyclic quadrilateral?"
               }
             ]
           }
@@ -4281,7 +4509,7 @@
             "paragraphs": [
               "A school in Jos has a circular track and a pie chart to share. The angle at the centre decides what fraction of the circle each part represents.",
               "An arc is part of the circumference, so for angle θ degrees it has length (θ/360) × 2πr. A chord joins the arc's ends, and its length is 2r sin(θ/2) when θ is at the centre, with the longest chord being the diameter when θ is 180°.",
-              "A sector is bounded by two radii and an arc, with area (θ/360) × πr². A segment's area is the sector area minus the triangle ½ r² sin θ.",
+              "Sector area = (θ/360) × πr²; segment area = sector minus triangle ½ r² sin θ.",
               "A sector's perimeter is 2r plus its arc; a segment's perimeter is its arc plus its chord."
             ],
             "bullets": [
@@ -4311,7 +4539,7 @@
             "paragraphs": [
               "A trader in Onitsha buys a cuboid box, a cylindrical drum and a conical funnel. Volume shows capacity, surface area shows material to cover the outside.",
               "A cuboid has volume length × breadth × height and surface area 2(lb + lh + bh). A cylinder has volume πr²h and surface area 2πr(r + h), a cone has volume ⅓πr²h with slant height ℓ and surface area πr(r + ℓ), and a sphere has surface area 4πr² and volume (4/3)πr³.",
-              "A pyramid and a prism also use base area × height, with a factor of one third for the pyramid. Composite solids are built by adding or subtracting such pieces. On Earth, a longitude distance is rθ with θ in radians and r the Earth's radius."
+              "A pyramid and a prism also use base area × height, with a factor of one third for the pyramid. Composite solids add or subtract such pieces; a longitude distance is rθ with θ in radians."
             ],
             "bullets": [
               "Volume is base area times height, one third for cones and pyramids.",
@@ -4362,6 +4590,12 @@
                 "reason": "Arc length is the same fraction of the circumference.",
                 "result": "(1/4) × 2 × (22/7) × 14 = (1/4) × 88 = 22 cm.",
                 "predictPrompt": "How would you explain why this beats the other options?"
+              },
+              {
+                "operation": "Quarter case",
+                "reason": "90° is a quarter turn; the sector is a quarter of a circle",
+                "result": "Arc and area each scale with the angle fraction",
+                "predictPrompt": "What happens if the sector angle were 45°?"
               }
             ]
           }
@@ -4454,6 +4688,12 @@
                 "reason": "The segment is what remains after removing the triangle",
                 "result": "154 − 98 = 56 cm².",
                 "predictPrompt": "How would you explain why this beats the other options?"
+              },
+              {
+                "operation": "Size check",
+                "reason": "Minor segment = sector minus triangle; 60° < 180°, so less than half the circle",
+                "result": "Segment ≈ 17.7 cm² — positive and smaller than the sector",
+                "predictPrompt": "How small is the segment compared with the sector?"
               }
             ]
           }
@@ -4512,7 +4752,7 @@
             "paragraphs": [
               "Two villages want a meeting point that is fair to both. Any site exactly halfway in the sense of equal distance from the two village centres would satisfy them. Such sites form one straight line, not a single marked spot.",
               "That line is the perpendicular bisector. It cuts the segment joining the centres at its midpoint at right angles. Every point on it is equally distant from both centres, and every point off it is nearer to one.",
-              "The angle bisector follows the same idea for two sides of an angle. Every point on it is equally far from both sides. That equality is why it cuts the angle exactly in half."
+              "The angle bisector follows the same idea: every point on it is equally far from both sides — that is why it cuts the angle exactly in half."
             ],
             "bullets": [
               "The perpendicular bisector is the locus of points equidistant from two fixed points.",
@@ -4539,7 +4779,7 @@
             "heading": "When two conditions meet",
             "paragraphs": [
               "Security cameras at a busy junction must watch two straight roads. A guard house that can serve both roads must be equidistant from the two intersecting lines. Its possible positions form the two angle bisectors through the junction.",
-              "A circle is itself a locus, and a bisector can cut it. Intersecting the circle with the fair-meeting line leaves only some points, and intersecting it with one side of that line can leave an arc. Each extra condition removes points, so the finished locus is smaller than either one alone.",
+              "A circle is a locus too; intersecting it with a bisector trims points. Each extra condition removes points, so the final locus is smaller than either alone.",
               "Exam wording usually names the rule directly. The locus of points equidistant from two intersecting lines is the pair of angle bisectors through their point of meeting. Learn that exact phrase, because JAMB often asks it as a straight identification."
             ],
             "bullets": [
@@ -4591,6 +4831,12 @@
                 "reason": "Both rules must hold, so keep only the part of the line inside the disc.",
                 "result": "Segment of the bisector inside the circle.",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Empty case",
+                "reason": "If AB > 10 cm, the bisector never dips within 5 cm of A",
+                "result": "The locus is empty when the distance exceeds twice the radius",
+                "predictPrompt": "When does the locus become empty?"
               }
             ]
           }
@@ -4683,6 +4929,12 @@
                 "reason": "Both rules must hold, so only common points remain",
                 "result": "The bisector meets the circle at two symmetric points.",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Two solutions",
+                "reason": "Radius 6 circle meets the bisector twice when AB < 12; one when AB = 12; none otherwise",
+                "result": "The AB vs radius comparison decides everything",
+                "predictPrompt": "How many points satisfy both conditions when AB = 8?"
               }
             ]
           }
@@ -4820,6 +5072,12 @@
                 "reason": "Moving x and y to one side gives ax + by = c with integers only.",
                 "result": "2x − y = 1.",
                 "predictPrompt": "How would you explain why this beats the other options?"
+              },
+              {
+                "operation": "Check case",
+                "reason": "(2,3) fits y = 2x − 1: 3 = 4 − 1 ✓",
+                "result": "The point substitutes cleanly — the rearrangement is right",
+                "predictPrompt": "Does (2,3) satisfy y = 2x − 1?"
               }
             ]
           }
@@ -4912,6 +5170,12 @@
                 "reason": "A line is fixed by one point and one gradient",
                 "result": "y − 5 = −(x − 4), so x + y = 9.",
                 "predictPrompt": "How would you verify this answer satisfies the question?"
+              },
+              {
+                "operation": "Midpoint check",
+                "reason": "The bisector passes through the midpoint (3,5) and is perpendicular",
+                "result": "Equidistant from both ends — symmetric by construction",
+                "predictPrompt": "Which line satisfies the two-end distance test?"
               }
             ]
           }
@@ -4997,8 +5261,8 @@
             "heading": "Maximum and minimum word problems",
             "paragraphs": [
               "A farmer in Jos has 40 metres of fence to build a rectangular pen against a straight wall. Only three sides need fencing, so length plus twice the width equals 40. The area then becomes a function of one variable, which can be maximised.",
-              "Write area in terms of one variable. If width is x, length is 40 - 2x, so A = x(40 - 2x) = 40x - 2x². Differentiate to get dA/dx = 40 - 4x, and set it to zero for the stationary point.",
-              "Decide max or min. The second derivative d²A/dx² = -4 is negative, so the stationary point is a maximum, and dA/dx changes from positive to negative. Width 10 metres and length 20 metres give maximum area 200 square metres."
+              "A farmer has a fence against a straight wall: length plus twice the width equals the fence total. Area in terms of width x, then differentiate and set to zero gives the optimum.",
+              "Negative second derivative means a maximum — width 10 and length 20 give the peak area."
             ],
             "bullets": [
               "Use the fixed perimeter or surface to write one-variable function first.",
@@ -5049,6 +5313,12 @@
                 "reason": "Second derivative -4 < 0 confirms a maximum",
                 "result": "Maximum area = 15 × 30 = 450 m²",
                 "predictPrompt": "How would you sanity-check the size and sign of this answer?"
+              },
+              {
+                "operation": "Wall case",
+                "reason": "Against the wall, only 3 sides are fenced: 30 × 15 = 450",
+                "result": "One wall doubles the maximum area",
+                "predictPrompt": "What if the wall were gone?"
               }
             ]
           }
@@ -5140,6 +5410,12 @@
                 "reason": "The rate at that instant needs r = 7 and dr/dt = 1",
                 "result": "dV/dt = 4π×49×1 = 616 cm³/s using π = 22/7.",
                 "predictPrompt": "How would you sanity-check the size and sign of this answer?"
+              },
+              {
+                "operation": "Rate case",
+                "reason": "dV/dt = 4πr²·dr/dt = 4π × 49 × 1 = 196π ≈ 616 cm³/s",
+                "result": "Surface area times the radial speed gives the volume rate",
+                "predictPrompt": "What does dV/dt equal in terms of r and dr/dt?"
               }
             ]
           }
@@ -5278,6 +5554,12 @@
                 "reason": "The value is a number, not a function, so drop c entirely.",
                 "result": "∫₀² (3x² + 4x) dx = 16 − 0 = 16.",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Loop case",
+                "reason": "sin x from 0 to π integrates to 2; from 0 to 2π to 0",
+                "result": "Symmetric limits cancel in periodic functions",
+                "predictPrompt": "What does ∫₀^2π sin x dx equal?"
               }
             ]
           }
@@ -5370,6 +5652,12 @@
                 "reason": "Subtract F(1) from F(7) because definite integral is total change.",
                 "result": "343/9−1/9=342/9=38.",
                 "predictPrompt": "How would you sanity-check the size and sign of this answer?"
+              },
+              {
+                "operation": "Expansion check",
+                "reason": "(3x+1)² = 9x² + 6x + 1 — integrate directly to 38",
+                "result": "Two methods, one answer: 38",
+                "predictPrompt": "How would you verify this by expanding first?"
               }
             ]
           }
@@ -5509,6 +5797,12 @@
                 "reason": "The whole circle must be 360 degrees",
                 "result": "144 + 90 + 72 + 54 = 360 degrees",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Scale case",
+                "reason": "angle = fraction × 360: 8/20 × 360 = 144°",
+                "result": "The fraction and the angle scale together",
+                "predictPrompt": "How would you check the Biology angle?"
               }
             ]
           }
@@ -5601,6 +5895,12 @@
                 "reason": "Frequency is share times total because each farmer sits in one slice.",
                 "result": "0.35 × 60 = 21 farmers.",
                 "predictPrompt": "How would you explain why this beats the other options?"
+              },
+              {
+                "operation": "Angle check",
+                "reason": "Cassava = 210/360 × 60 = 35 farmers; rest = 25; 35 + 25 = 60",
+                "result": "Angles sum to 360°; farmers sum to the total",
+                "predictPrompt": "How many farmers grow other crops?"
               }
             ]
           }
@@ -5740,6 +6040,12 @@
                 "reason": "Mean shares total equally",
                 "result": "400 ÷ 20 = 20",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Spread case",
+                "reason": "Group mean assumes even spread inside each class",
+                "result": "Answer is an estimate, not the exact value",
+                "predictPrompt": "How exact is the group mean?"
               }
             ]
           }
@@ -5829,6 +6135,12 @@
                 "reason": "Assume even spread inside the class, so split width by needed share.",
                 "result": "20+(30−12)/20×10=29.",
                 "predictPrompt": "How would you verify this answer satisfies the question?"
+              },
+              {
+                "operation": "CDF check",
+                "reason": "n/2 = 25 sits between cf 12 and cf 32 — median class 20–30",
+                "result": "Median ≈ 26 on the ogive",
+                "predictPrompt": "Which class contains the median?"
               }
             ]
           }
@@ -5968,6 +6280,12 @@
                 "reason": "Divide each sum by n = 5; root only for SD.",
                 "result": "MD = 8 ÷ 5 = 1.6; variance = 20 ÷ 5 = 4; SD = √4 = 2.",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Outlier case",
+                "reason": "One giant outlier (130) swings the mean to 33.4; the median holds",
+                "result": "Median resists outliers; mean does not",
+                "predictPrompt": "What if the last value were 130 instead of 13?"
               }
             ]
           }
@@ -6057,6 +6375,12 @@
                 "reason": "Variance is average squared distance from mean, so remove mean effect.",
                 "result": "Var=425−400=25; SD=√25=5.",
                 "predictPrompt": "How would you sanity-check the size and sign of this answer?"
+              },
+              {
+                "operation": "Balance case",
+                "reason": "Centre class dominates; extremes cancel for the mean",
+                "result": "Mean = 20 exactly; MD = 2.5",
+                "predictPrompt": "How do the extremes balance around the centre?"
               }
             ]
           }
@@ -6194,6 +6518,12 @@
                 "reason": "8 × 7 = 56 and 56 × 6 = 336.",
                 "result": "There are 336 possible codes.",
                 "predictPrompt": "How would you explain why this beats the other options?"
+              },
+              {
+                "operation": "Repetition case",
+                "reason": "With repetition: 8³ = 512; without: 8 × 7 × 6 = 336",
+                "result": "8P3 = 336 without; 8³ = 512 with",
+                "predictPrompt": "What if letters could repeat?"
               }
             ]
           }
@@ -6286,6 +6616,12 @@
                 "reason": "The pair can swap, so order inside matters and doubles ways.",
                 "result": "24 × 2 = 48 ways.",
                 "predictPrompt": "How would you explain why this beats the other options?"
+              },
+              {
+                "operation": "Small case",
+                "reason": "n = 3 round table: (3 − 1)! = 2 ways ✓",
+                "result": "(n − 1)! generalises from the n = 3 check",
+                "predictPrompt": "How many ways round a 3-person table?"
               }
             ]
           }
@@ -6423,6 +6759,12 @@
                 "reason": "Add and subtract in the order written.",
                 "result": "6 − 4 + 3 = 5.",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Domain case",
+                "reason": "log to base 1 is impossible (1^x = 1 always)",
+                "result": "Log needs base > 0 and ≠ 1; log 0 is undefined",
+                "predictPrompt": "What is log to base 1?"
               }
             ]
           }
@@ -6515,6 +6857,12 @@
                 "reason": "Both terms share log₁₀2, so that factor cancels, leaving only the powers.",
                 "result": "1.5050 ÷ 0.9030 = 5/3 ≈ 1.667.",
                 "predictPrompt": "How would you sanity-check the size and sign of this answer?"
+              },
+              {
+                "operation": "Numeric check",
+                "reason": "8^(5/3) = 2^5 = 32 — exact in both forms",
+                "result": "5/3 is both the surds answer and the decimal one",
+                "predictPrompt": "What is 8^(5/3) directly?"
               }
             ]
           }
@@ -6652,6 +7000,12 @@
                 "reason": "Factorise x² − 6x + 8",
                 "result": "(x − 2)(x − 4) = 0, so x = 2, 3, 4",
                 "predictPrompt": "How would you verify this answer satisfies the question?"
+              },
+              {
+                "operation": "Zero case",
+                "reason": "P(0) = constant = 0 means x is a root by the factor theorem",
+                "result": "A zero constant always gives x as a factor",
+                "predictPrompt": "When is 0 always a root?"
               }
             ]
           }
@@ -6857,6 +7211,12 @@
                 "reason": "Use the formula",
                 "result": "x = (1 ± √(1 + 16))/2 = (1 ± √17)/2",
                 "predictPrompt": "How would you explain why this beats the other options?"
+              },
+              {
+                "operation": "Discriminant case",
+                "reason": "1 − 4(1)(−4) = 17 > 0 — roots are real here",
+                "result": "Discriminant decides whether there are solutions at all",
+                "predictPrompt": "What happens if the discriminant were negative?"
               }
             ]
           }
@@ -7077,6 +7437,12 @@
                 "reason": "Axis of symmetry: x = -b/(2a)",
                 "result": "x = -2/(2×(−1)) = 1, y = −1 + 2 + 3 = 4",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Tangent case",
+                "reason": "Δ = 0 means a double root that touches, never crosses",
+                "result": "x² − 4x + 4: touches at 2, never crosses",
+                "predictPrompt": "What does a discriminant of zero look like at the root?"
               }
             ]
           }
