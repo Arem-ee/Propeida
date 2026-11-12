@@ -182,12 +182,13 @@
                 "operation": "Locate the power",
                 "reason": "The constitution gives the National Assembly the power to begin and conduct impeachment.",
                 "result": "The legislature begins it in the House and tries it in the Senate.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer?"
               },
               {
                 "operation": "Confirm the check",
                 "reason": "The judiciary does not remove a president; it can only adjudicate a challenge to the process.",
-                "result": "The correct arm is the legislature."
+                "result": "The correct arm is the legislature.",
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -362,12 +363,13 @@
                 "operation": "Identify the action",
                 "reason": "Approval for sale is a product registration decision, not a standards or enforcement one.",
                 "result": "The action is drug registration.",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Match action to mandate",
                 "reason": "NAFDAC registers and controls drugs and medical products.",
-                "result": "The answer is NAFDAC."
+                "result": "The answer is NAFDAC.",
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -541,12 +543,13 @@
                 "operation": "Match the problem to the lender",
                 "reason": "A shortfall in foreign payments is a balance-of-payments problem.",
                 "result": "The IMF is the lender.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer?"
               },
               {
                 "operation": "Confirm the detail",
                 "reason": "Both are in Washington, so the headquarters does not separate them.",
-                "result": "The answer is the IMF, chosen by mandate rather than location."
+                "result": "The answer is the IMF, chosen by mandate rather than location.",
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }
@@ -720,12 +723,13 @@
                 "operation": "Explain the mechanism",
                 "reason": "A subsidy held the pump price below the cost of importing and distributing fuel.",
                 "result": "Without it, the pump price moved towards the landing cost.",
-                "predictPrompt": ""
+                "predictPrompt": "What exactly does the question want you to write down first?"
               },
               {
                 "operation": "State the effect",
                 "reason": "Fuel is an input to transport and food, so the change spread through the economy.",
-                "result": "Transport fares and food prices rose, and inflation increased."
+                "result": "Transport fares and food prices rose, and inflation increased.",
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }

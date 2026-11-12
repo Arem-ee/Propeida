@@ -334,12 +334,13 @@
                 "operation": "Take the next best alternative",
                 "reason": "Only the highest-ranked forgone option counts, not every option skipped.",
                 "result": "The data bundle is the next best alternative.",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Separate money cost from opportunity cost",
                 "reason": "The N2,000 is what she paid, not what she gave up.",
-                "result": "Opportunity cost = the data bundle."
+                "result": "Opportunity cost = the data bundle.",
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -561,12 +562,13 @@
                 "operation": "Classify (b)",
                 "reason": "A private firm responding to a price rise is following the market signal.",
                 "result": "(b) Free enterprise.",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Classify (c)",
                 "reason": "Public provision of roads alongside private production of bus services combines both sectors.",
-                "result": "(c) Mixed economy."
+                "result": "(c) Mixed economy.",
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -783,17 +785,19 @@
                 "operation": "Compute the mean",
                 "reason": "Add every value and divide by the number of values.",
                 "result": "35 ÷ 5 = 7 bags.",
-                "predictPrompt": ""
+                "predictPrompt": "What does the question tell you to find first?"
               },
               {
                 "operation": "Read the median and mode",
                 "reason": "The median is the third of five ordered values; the mode is the most frequent.",
-                "result": "Median = 6; mode = 6."
+                "result": "Median = 6; mode = 6.",
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Compute the range",
                 "reason": "The range is the highest value minus the lowest.",
-                "result": "11 − 4 = 7 bags."
+                "result": "11 − 4 = 7 bags.",
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -1015,12 +1019,13 @@
                 "operation": "Find the percentage change in price",
                 "reason": "Divide the change in price by the original price, ignoring the sign.",
                 "result": "(10 − 8) ÷ 10 = 0.20, or 20 per cent.",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Divide and interpret",
                 "reason": "Elasticity is the quantity change divided by the price change.",
-                "result": "PED = 40 ÷ 20 = 2. Demand is elastic because the value exceeds one."
+                "result": "PED = 40 ÷ 20 = 2. Demand is elastic because the value exceeds one.",
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -1243,12 +1248,13 @@
                 "operation": "Substitute the price",
                 "reason": "Put P = 10 into the rearranged supply function.",
                 "result": "Qs = 4(10) − 10 = 40 − 10.",
-                "predictPrompt": ""
+                "predictPrompt": "What exactly does the question want you to write down first?"
               },
               {
                 "operation": "State the quantity",
                 "reason": "The result is the quantity supplied at that price.",
-                "result": "Qs = 30 units."
+                "result": "Qs = 30 units.",
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -1470,12 +1476,13 @@
                 "operation": "Solve for price",
                 "reason": "Subtract 5 from both sides and add 2P to both sides.",
                 "result": "10 = 5P, so P = 2.",
-                "predictPrompt": ""
+                "predictPrompt": "What do you substitute, into which formula?"
               },
               {
                 "operation": "Substitute back for quantity",
                 "reason": "Either equation gives the equilibrium quantity at P = 2.",
-                "result": "Qd = 15 − 2(2) = 11, and Qs = 5 + 3(2) = 11. Equilibrium is P = 2, Q = 11."
+                "result": "Qd = 15 − 2(2) = 11, and Qs = 5 + 3(2) = 11. Equilibrium is P = 2, Q = 11.",
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -1693,12 +1700,13 @@
                 "operation": "Compute average product",
                 "reason": "Average product is total output divided by the number of workers.",
                 "result": "AP = 10, 12.5, 11.7 and 10 tonnes.",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Locate diminishing returns",
                 "reason": "The law begins where marginal product turns downward.",
-                "result": "MP rises from 10 to 15, then falls to 10 at the third worker, so diminishing returns set in there even though total output rises to 35 tonnes."
+                "result": "MP rises from 10 to 15, then falls to 10 at the third worker, so diminishing returns set in there even though total output rises to 35 tonnes.",
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -1916,12 +1924,13 @@
                 "operation": "Find total cost",
                 "reason": "Total cost is fixed cost plus variable cost.",
                 "result": "TC = N120,000 + N120,000 = N240,000.",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Find average and marginal cost",
                 "reason": "Average total cost is total cost divided by output; marginal cost is the extra cost of one more unit.",
-                "result": "ATC = N240,000 ÷ 60 = N4,000. MC = N2,000, because each extra unit adds only its variable cost."
+                "result": "ATC = N240,000 ÷ 60 = N4,000. MC = N2,000, because each extra unit adds only its variable cost.",
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -2132,12 +2141,13 @@
                 "operation": "Value the marginal product",
                 "reason": "Multiply the extra output by the price of the product.",
                 "result": "MRP = 15 × N50 = N750.",
-                "predictPrompt": ""
+                "predictPrompt": "What exactly does the question want you to write down first?"
               },
               {
                 "operation": "State the wage ceiling",
                 "reason": "The firm will not pay more than the value the worker adds.",
-                "result": "The highest wage is N750; at a lower wage the firm can profitably hire more workers."
+                "result": "The highest wage is N750; at a lower wage the firm can profitably hire more workers.",
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -2361,12 +2371,13 @@
                 "operation": "Find the contribution",
                 "reason": "Price minus average variable cost is the amount each unit adds towards fixed cost.",
                 "result": "Contribution = N50 − N45 = N5 per unit.",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Find the loss per unit",
                 "reason": "Average total cost exceeds price, so the firm makes a loss on each unit.",
-                "result": "Loss = N60 − N50 = N10 per unit, but shutting down would lose the average fixed cost of N15 per unit."
+                "result": "Loss = N60 − N50 = N10 per unit, but shutting down would lose the average fixed cost of N15 per unit.",
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -2585,12 +2596,13 @@
                 "operation": "Interpret the index",
                 "reason": "The base year has an index of 100, so 125 means prices are 25 per cent higher.",
                 "result": "The basket now costs 125 per cent of its base-year price.",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Compute the inflation rate",
                 "reason": "Inflation is the percentage change in the index from the base year.",
-                "result": "Inflation = ((125 − 100) ÷ 100) × 100 = 25 per cent."
+                "result": "Inflation = ((125 − 100) ÷ 100) × 100 = 25 per cent.",
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }
@@ -2808,12 +2820,13 @@
                 "operation": "Compute opportunity costs for B",
                 "reason": "Giving up 4 cocoa frees resources for 8 coffee, so 1 coffee costs 0.5 cocoa.",
                 "result": "B: 1 coffee = 0.5 cocoa, or 1 cocoa = 2 coffee.",
-                "predictPrompt": ""
+                "predictPrompt": "What information do you compare before deciding?"
               },
               {
                 "operation": "Compare and specialise",
                 "reason": "Each country should produce the good for which it gives up less.",
-                "result": "A has the lower cocoa cost (0.5 coffee vs 2), so A produces cocoa; B has the lower coffee cost (0.5 cocoa vs 2), so B produces coffee."
+                "result": "A has the lower cocoa cost (0.5 coffee vs 2), so A produces cocoa; B has the lower coffee cost (0.5 cocoa vs 2), so B produces coffee.",
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -3030,12 +3043,13 @@
                 "operation": "Find annual revenue",
                 "reason": "Multiply daily revenue by 365 days.",
                 "result": "Annual revenue = $120 million × 365 = $43.8 billion.",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Interpret",
                 "reason": "The quota caps output, so a lower quota or price cuts revenue even if costs are unchanged.",
-                "result": "At full quota and $80 oil, Nigeria earns about $43.8 billion a year; a quota cut or price fall reduces that directly."
+                "result": "At full quota and $80 oil, Nigeria earns about $43.8 billion a year; a quota cut or price fall reduces that directly.",
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -3255,12 +3269,13 @@
                 "operation": "Add the surpluses",
                 "reason": "Total consumer surplus is the sum of the gains on every unit bought.",
                 "result": "N200 + N100 + N0 = N300.",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Interpret the result",
                 "reason": "The consumer paid N900 for three units but was willing to pay N1,200.",
-                "result": "She gains N300, which is the area between her demand curve and the price."
+                "result": "She gains N300, which is the area between her demand curve and the price.",
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -3479,12 +3494,13 @@
                 "operation": "Apply the multiplier",
                 "reason": "Multiply the initial change in investment by the multiplier.",
                 "result": "Change in income = 4 × N80 million = N320 million.",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Interpret",
                 "reason": "The extra income is larger than the initial injection because each round of spending becomes someone else's income.",
-                "result": "Income rises by N320 million, four times the N80 million injection."
+                "result": "Income rises by N320 million, four times the N80 million injection.",
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -3701,12 +3717,13 @@
                 "operation": "Find output per person",
                 "reason": "Divide real GDP by population in each year.",
                 "result": "Before: N80 trillion ÷ 200 million = N400,000. After: N88 trillion ÷ 220 million = N400,000.",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Interpret",
                 "reason": "Total output rose, but population rose by the same proportion.",
-                "result": "Output per person is unchanged, so average living standards did not rise."
+                "result": "Output per person is unchanged, so average living standards did not rise.",
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -3923,12 +3940,13 @@
                 "operation": "Apply the multiplier",
                 "reason": "Multiply the new deposit by the multiplier to get total deposits.",
                 "result": "Total deposits = 5 × N50,000 = N250,000.",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Interpret",
                 "reason": "The bank keeps 20 per cent as reserves and lends the rest, and each loan returns as a deposit.",
-                "result": "The N50,000 deposit supports N250,000 of deposits, with N200,000 created as credit."
+                "result": "The N50,000 deposit supports N250,000 of deposits, with N200,000 created as credit.",
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -4145,12 +4163,13 @@
                 "operation": "Compute the VAT",
                 "reason": "Multiply the selling price by the VAT rate.",
                 "result": "VAT = 0.075 × N5,000 = N375.",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Add it to the price",
                 "reason": "The consumer pays the price plus the tax, and the trader remits the tax.",
-                "result": "Consumer pays N5,375, and the trader remits N375 to government."
+                "result": "Consumer pays N5,375, and the trader remits N375 to government.",
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -4367,12 +4386,13 @@
                 "operation": "Value the loss",
                 "reason": "The spoiled quantity is valued at the same market price.",
                 "result": "Loss = 500 × N400 = N200,000.",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Interpret",
                 "reason": "Storage or a better road would have turned the loss into sales.",
-                "result": "Better storage would have raised his income by N200,000, a third of his potential revenue."
+                "result": "Better storage would have raised his income by N200,000, a third of his potential revenue.",
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -4546,7 +4566,7 @@
             "paragraphs": [
               "A mechanic's workshop and a cement plant are both firms, but they differ in size, funding and management.",
               "Industry contributes to development by creating jobs, diversifying exports, adding value to raw materials, earning foreign exchange and generating tax revenue. It also trains workers and spreads technology to other sectors. Small firms are often sole proprietorships, while large firms take the limited-liability company form.",
-              "The size of a firm depends on market size, capital, technology, management skill, government policy and risk. Firms raise finance from owners' equity, retained profits, bank loans, bonds and the capital market; large firms can borrow more cheaply, while small firms rely on personal savings and microfinance."
+              "What sizes a firm? Market width, cash, tech, management, policy and risk. Finance runs from owners' pockets to bonds and capital markets; big names borrow cheaply, small ones scrape by on savings and microfinance."
             ],
             "bullets": [
               "Industry: jobs, diversification, value added, exports.",
@@ -4590,12 +4610,13 @@
                 "operation": "Cost of the market site",
                 "reason": "Two tonnes of input are needed for each tonne of output.",
                 "result": "Input transport = 2 × N50 = N100 per tonne of product.",
-                "predictPrompt": ""
+                "predictPrompt": "What information do you compare before deciding?"
               },
               {
                 "operation": "Compare",
                 "reason": "The cheaper site is the one with the lower total transport cost.",
-                "result": "The raw-material site is cheaper by N20 per tonne, so the firm locates near the deposit."
+                "result": "The raw-material site is cheaper by N20 per tonne, so the firm locates near the deposit.",
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }
@@ -4812,12 +4833,13 @@
                 "operation": "Find government revenue",
                 "reason": "The government's share is 60 per cent of the profit.",
                 "result": "Government revenue = 0.6 × $60 = $36 per barrel.",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Interpret",
                 "reason": "The remaining profit belongs to the oil company, but the state also gains from taxes and royalties.",
-                "result": "Government takes $36 and the company keeps $24 of the profit on each barrel."
+                "result": "Government takes $36 and the company keeps $24 of the profit on each barrel.",
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -5039,12 +5061,13 @@
                 "operation": "Choose the form",
                 "reason": "A limited liability company is a separate legal person and can issue shares.",
                 "result": "A private limited company fits, and it can later become public to raise more capital.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer?"
               },
               {
                 "operation": "Check the trade-off",
                 "reason": "Incorporation brings registration, disclosure and compliance costs.",
-                "result": "They accept formalities in exchange for limited liability and easier capital raising."
+                "result": "They accept formalities in exchange for limited liability and easier capital raising.",
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }
@@ -5261,12 +5284,13 @@
                 "operation": "Compute the dependency ratio",
                 "reason": "Dependants are the under-15 and over-64 groups: 45 + 5 = 50 million.",
                 "result": "50 ÷ 70 ≈ 0.71 dependants per working-age person.",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Compute participation",
                 "reason": "The labour force is those working or actively seeking work, not everyone of working age.",
-                "result": "50 ÷ 70 ≈ 71.4 per cent participation."
+                "result": "50 ÷ 70 ≈ 71.4 per cent participation.",
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }

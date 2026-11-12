@@ -317,12 +317,13 @@
                 "operation": "Separate the cause from the excuse",
                 "reason": "The passage says the council knew about the problem, so awareness was not the failure.",
                 "result": "The failure was money, not knowledge or concern.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you choose between the possible routes?"
               },
               {
                 "operation": "Choose the matching option",
                 "reason": "The answer must restate the evidence without adding to it.",
-                "result": "The correct option is 'resources, not awareness'."
+                "result": "The correct option is 'resources, not awareness'.",
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }
@@ -910,12 +911,13 @@
                 "operation": "Find the carrying paragraph",
                 "reason": "The last paragraph usually states what the passage has been driving at.",
                 "result": "The threat to the land gives the passage its point: the market may not survive.",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Compress into one sentence",
                 "reason": "One subordinate clause can carry the cause while the main clause carries the threat.",
-                "result": "A fast-growing night market has drawn traders because it is cheap, but its future is uncertain because the land is needed for a road."
+                "result": "A fast-growing night market has drawn traders because it is cheap, but its future is uncertain because the land is needed for a road.",
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -1327,12 +1329,13 @@
                 "operation": "Find the topic sentence",
                 "reason": "The sentence that names the subject and its character carries the main idea.",
                 "result": "The first sentence gives the hall's size, material and shape.",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Match the option to the topic sentence",
                 "reason": "History and supervision are details or absent; the main point is the hall's physical character.",
-                "result": "Choose 'the physical and sensory character of the market hall'."
+                "result": "Choose 'the physical and sensory character of the market hall'.",
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -1744,12 +1747,13 @@
                 "operation": "Read the final action",
                 "reason": "In narration, feelings are shown through what a character does.",
                 "result": "He unloads and leaves instead of staying to sell.",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Infer the feeling",
                 "reason": "The action must support the inference without contradicting the text.",
-                "result": "He is resigned or defeated, not cheerful about the delay."
+                "result": "He is resigned or defeated, not cheerful about the delay.",
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -2176,12 +2180,13 @@
                 "operation": "Locate the causal link",
                 "reason": "The result clause tells you what the earlier steps produce.",
                 "result": "Heating causes the water to rise, so the water must already be there.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you choose between the possible routes?"
               },
               {
                 "operation": "Choose the option that states the dependency",
                 "reason": "The answer must explain the order, not merely repeat it.",
-                "result": "The filling must come first because there is nothing to heat otherwise."
+                "result": "The filling must come first because there is nothing to heat otherwise.",
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }
@@ -2588,12 +2593,13 @@
                 "operation": "Read the recommendation",
                 "reason": "In persuasion, the purpose is usually the action urged on the reader.",
                 "result": "Improve alternatives before restricting cars.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you choose between the possible routes?"
               },
               {
                 "operation": "Choose the option that matches",
                 "reason": "The answer must include the recommendation, not just the problem.",
-                "result": "The writer wants affordable alternatives before any restriction."
+                "result": "The writer wants affordable alternatives before any restriction.",
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -2996,12 +3002,13 @@
                 "operation": "Test the options",
                 "reason": "Each option must fit the grammar and the scientific sense.",
                 "result": "'Turned' fits the change; 'grew' and 'dried' do not describe colour, and 'fell' is unrelated.",
-                "predictPrompt": ""
+                "predictPrompt": "What does the question tell you to find first?"
               },
               {
                 "operation": "Re-read the sentence",
                 "reason": "The chosen word must sound natural in the whole clause.",
-                "result": "'The leaves turned blue-black when the iodine solution was applied.'"
+                "result": "'The leaves turned blue-black when the iodine solution was applied.'",
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -3560,12 +3567,13 @@
                 "operation": "Test each option",
                 "reason": "A synonym must fit the same slot without changing the meaning.",
                 "result": "'Delighted' fits; 'angry' and 'disappointed' reverse the meaning.",
-                "predictPrompt": ""
+                "predictPrompt": "What information do you compare before deciding?"
               },
               {
                 "operation": "Compare the close options",
                 "reason": "When several options fit, intensity decides.",
-                "result": "'Delighted' is stronger than 'pleased' but keeps the positive sense, so it is the nearest."
+                "result": "'Delighted' is stronger than 'pleased' but keeps the positive sense, so it is the nearest.",
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -3869,12 +3877,13 @@
                 "operation": "Test the options",
                 "reason": "The antonym must reverse the sense, not merely differ from it.",
                 "result": "'Cramped' means too small for comfort; 'narrow' covers only width.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer?"
               },
               {
                 "operation": "Check the sentence",
                 "reason": "The replacement must keep the sentence logical.",
-                "result": "'The room was cramped enough for a family of six' is odd, so the option describes the opposite condition rather than fitting positively."
+                "result": "'The room was cramped enough for a family of six' is odd, so the option describes the opposite condition rather than fitting positively.",
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -4179,12 +4188,13 @@
                 "operation": "Choose the earlier tense",
                 "reason": "The past perfect marks the action completed before another past action.",
                 "result": "The earlier action takes 'had started'.",
-                "predictPrompt": ""
+                "predictPrompt": "What does the question tell you to find first?"
               },
               {
                 "operation": "Read the sentence",
                 "reason": "The finished sentence must show the order clearly.",
-                "result": "'By the time we arrived, the film had started.'"
+                "result": "'By the time we arrived, the film had started.'",
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }
@@ -4553,12 +4563,13 @@
                 "operation": "Test the second position",
                 "reason": "A word between a determiner and a noun modifies that noun.",
                 "result": "'Light' describes the bag, so it is an adjective in (b).",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Test the third position",
                 "reason": "A word modifying the verb 'travel' answers how.",
-                "result": "'Light' is an adverb in (c)."
+                "result": "'Light' is an adverb in (c).",
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -4779,12 +4790,13 @@
                 "operation": "Identify the aspect",
                 "reason": "'For five years' measures a period completed by the reference point.",
                 "result": "The action will be complete by next June, so the future perfect fits.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you choose between the possible routes?"
               },
               {
                 "operation": "Select and check",
                 "reason": "The future perfect is will + have + past participle.",
-                "result": "Ada will have lived here for five years."
+                "result": "Ada will have lived here for five years.",
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -5010,12 +5022,13 @@
                 "operation": "Remove the interrupting phrase",
                 "reason": "Prepositional phrases do not change the number of the subject.",
                 "result": "The sentence reduces to 'The quality ... is impressive'.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you choose between the possible routes?"
               },
               {
                 "operation": "Choose the verb",
                 "reason": "A singular subject takes a singular verb.",
-                "result": "'The quality of the students' projects is impressive.'"
+                "result": "'The quality of the students' projects is impressive.'",
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -5241,12 +5254,13 @@
                 "operation": "Check whether the adjective is regular",
                 "reason": "Irregular adjectives do not take -er or -est.",
                 "result": "'Good' is irregular: good, better, best.",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Apply the superlative",
                 "reason": "A superlative normally takes 'the'.",
-                "result": "This is the best result of the three tests."
+                "result": "This is the best result of the three tests.",
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -5467,12 +5481,13 @@
                 "operation": "Reverse the polarity",
                 "reason": "A positive statement takes a negative tag.",
                 "result": "The tag begins 'hadn't'.",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Add the pronoun",
                 "reason": "The subject must become a pronoun that matches in person and number.",
-                "result": "'The students' becomes 'they', so the tag is 'hadn't they?'."
+                "result": "'The students' becomes 'they', so the tag is 'hadn't they?'.",
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -5698,12 +5713,13 @@
                 "operation": "Form the plural possessive",
                 "reason": "'Children' is an irregular plural that does not end in s.",
                 "result": "The possessive is 'children's'.",
-                "predictPrompt": ""
+                "predictPrompt": "What does the question tell you to find first?"
               },
               {
                 "operation": "Read the corrected sentence",
                 "reason": "Both marks must now carry the right meaning.",
-                "result": "'It's raining, so the children's books are wet.'"
+                "result": "'It's raining, so the children's books are wet.'",
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -5929,12 +5945,13 @@
                 "operation": "Recall the meaning",
                 "reason": "Idioms must be learned as whole units.",
                 "result": "It means to be very expensive.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer?"
               },
               {
                 "operation": "Check the sentence",
                 "reason": "The meaning must fit the context of a tax.",
-                "result": "A tax that is very expensive for the company fits the meaning."
+                "result": "A tax that is very expensive for the company fits the meaning.",
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -6301,12 +6318,13 @@
                 "operation": "Listen for a glide",
                 "reason": "A diphthong changes quality within the same syllable.",
                 "result": "Sight moves from /a/ towards /ɪ/; the other three stay steady.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you choose between the possible routes?"
               },
               {
                 "operation": "Select the answer",
                 "reason": "The question asks for a diphthong, not merely a long vowel.",
-                "result": "Sight /saɪt/ is the answer."
+                "result": "Sight /saɪt/ is the answer.",
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -6532,12 +6550,13 @@
                 "operation": "List the sounds",
                 "reason": "Each distinct sound counts once, even when several letters spell it.",
                 "result": "The sounds are /s/, /t/, /r/, /e/, /ŋ/, /θ/ and /s/.",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Count the consonants",
                 "reason": "Remove the vowel /e/ and count what remains.",
-                "result": "Six consonants: s, t, r, ŋ, θ, s."
+                "result": "Six consonants: s, t, r, ŋ, θ, s.",
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -6763,12 +6782,13 @@
                 "operation": "Test the near misses",
                 "reason": "One changed consonant can separate two similar words.",
                 "result": "Loose /luːs/ and lose /luːz/ differ in voicing; food /uː/ and foot /ʊ/ differ in length; advice /s/ and advise /z/ differ in voicing.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer?"
               },
               {
                 "operation": "Confirm meaning and spelling",
                 "reason": "A homophone pair must also differ in spelling and sense.",
-                "result": "Write and right are spelled differently and mean different things."
+                "result": "Write and right are spelled differently and mean different things.",
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -6995,12 +7015,13 @@
                 "operation": "Apply the -ical rule",
                 "reason": "Words ending in -ical stress the syllable before the suffix.",
                 "result": "Political becomes po-LIT-i-cal.",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Apply the -ian rule",
                 "reason": "Words ending in -ian also stress the syllable before it.",
-                "result": "Politician becomes pol-i-TI-cian."
+                "result": "Politician becomes pol-i-TI-cian.",
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -7229,12 +7250,13 @@
                 "operation": "Match the item to a question",
                 "reason": "The stressed word must be the answer to the question.",
                 "result": "The question asks where Mary sang.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer?"
               },
               {
                 "operation": "Check the alternatives",
                 "reason": "A question about who or what would stress a different word.",
-                "result": "'Who sang at the party?' would stress MARY, and 'What did Mary do?' would stress SANG."
+                "result": "'Who sang at the party?' would stress MARY, and 'What did Mary do?' would stress SANG.",
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -7424,19 +7446,19 @@
                 "operation": "Extract the main claim of each passage",
                 "reason": "Synthesis starts from each text's actual claims, not its examples",
                 "result": "A claims nutrition gains; B claims rising costs for schools",
-                "predictPrompt": ""
+                "predictPrompt": "What information do you compare before deciding?"
               },
               {
                 "operation": "Compare the claims for agreement and tension",
                 "reason": "The summary must hold both voices and show their relationship clearly",
                 "result": "Gains and costs are two sides of the same project",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Merge both claims into one sentence in fresh words",
                 "reason": "One sentence must cover both claims in new wording",
                 "result": "The garden improves diets but demands careful budgeting from schools",
-                "predictPrompt": ""
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -7627,12 +7649,13 @@
                 "operation": "Contrast literal and figurative readings",
                 "reason": "A library cannot shine as a lamp does, so the literal reading fails in context.",
                 "result": "Figuratively, light means knowledge and hope that remove ignorance.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you choose between the possible routes?"
               },
               {
                 "operation": "Choose the meaning the passage supports",
                 "reason": "The surrounding idea is that the library ends illiteracy, not that it replaces electricity.",
-                "result": "The answer is that the library brings knowledge and hope."
+                "result": "The answer is that the library brings knowledge and hope.",
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -7826,13 +7849,13 @@
                 "operation": "Split the clauses",
                 "reason": "Students who worked hard succeeded is main; who and because parts are dependent.",
                 "result": "Who part describes students; because part gives the cause.",
-                "predictPrompt": ""
+                "predictPrompt": "What exactly does the question want you to write down first?"
               },
               {
                 "operation": "Name the pattern",
                 "reason": "A main clause with dependent clauses is complex.",
                 "result": "Complex sentence with adjective and adverbial clauses.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }

@@ -289,12 +289,13 @@
                 "operation": "Classify each option",
                 "reason": "Mining, farming and manufacturing produce goods; insurance covers risk in transit and storage.",
                 "result": "Insurance is the service.",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Reject production",
                 "reason": "Production creates goods; commerce moves and supports them.",
-                "result": "The answer is B, insurance."
+                "result": "The answer is B, insurance.",
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -509,12 +510,13 @@
                 "operation": "Check the sale",
                 "reason": "Orders are placed by phone and paid in cash.",
                 "result": "The transaction is not online.",
-                "predictPrompt": ""
+                "predictPrompt": "What information do you compare before deciding?"
               },
               {
                 "operation": "Decide",
                 "reason": "Electronic advertising is e-business, not e-commerce.",
-                "result": "The answer is C."
+                "result": "The answer is C.",
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -593,7 +595,7 @@
           "content": {
             "heading": "Occupation",
             "paragraphs": [
-              "An occupation is the regular work a person does for a living. It is wider than a job: a teacher who changes schools still has the same occupation."
+              "An occupation is the regular work a person does for a living. It is wider than a job: a teacher who changes schools still has the same occupation. Occupations rise with civilisation — the more advanced an economy, the longer its menu of trades."
             ],
             "bullets": []
           }
@@ -731,12 +733,13 @@
                 "operation": "Reject the producers",
                 "reason": "Extractive and manufacturing occupations create or process goods; she does neither.",
                 "result": "A and B are wrong.",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Reject service",
                 "reason": "A service is rendered directly to a client; she sells goods to buyers.",
-                "result": "The answer is C, commercial."
+                "result": "The answer is C, commercial.",
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -764,8 +767,8 @@
             "heading": "Go deeper: Specialisation and the labour market",
             "paragraphs": [
               "Occupations multiply because of division of labour. When work is split into tasks, each task can be done by someone who does it often and well. Specialisation raises output, but it also makes workers dependent on exchange: the tailor needs the farmer, and the farmer needs the tailor.",
-              "The labour market matches people to work. Employers hire by skill and experience; workers invest in training to raise their value; wages move with demand and supply. A shortage of engineers raises their pay, while a surplus of a narrow skill lowers it.",
-              "Two kinds of skill matter differently. Specific skills are useful in one firm or industry; transferable skills move across employers. Automation and new technology shift demand toward transferable and technical skills, which is why training policy focuses on adaptability rather than a single job.",
+              "Engineers short? Their wage rises. Narrow skill in surplus? Theirs falls. That matching — employers hiring what works, workers training up — is the labour market at work. A skill shortage is a wage signal the whole economy pays attention to.",
+              "Two skill classes: specific, married to one firm, and transferable, married to none. Automation fattens demand for the latter — so train for adaptability, never for a single job.",
               "In Nigeria, apprenticeships and informal training carry much of the skill formation that formal institutions do not reach. That makes the quality of training uneven, but it also keeps practical trades alive."
             ],
             "bullets": [
@@ -780,7 +783,7 @@
           "content": {
             "heading": "Go deeper: The informal sector in Nigeria",
             "paragraphs": [
-              "A large share of Nigerian work is informal: street trading, repairs, transport, artisanal production and personal services. Informal work is not the same as illegal work. It is work that is not registered, regulated or recorded in the same way as formal employment.",
+              "A large share of Nigerian work is informal: street trading, repairs, transport, artisanal production and personal services. A workshop that teaches apprenticeships is a school without a signboard, and the city runs on their labour morning and night. Informal work is not the same as illegal work. It is work that is not registered, regulated or recorded in the same way as formal employment.",
               "Its advantages are easy entry, low starting capital and flexibility. A trader can start with small capital, set her own hours and keep the income close to the household. It absorbs workers when formal jobs are scarce.",
               "Its disadvantages are protection and finance. Informal workers usually lack pensions, health insurance and written contracts, and lenders cannot easily assess their income. Because records are thin, the tax base is narrow too.",
               "Policy therefore faces a trade-off. Registering and taxing the informal sector can widen revenue, but heavy-handed collection can push fragile businesses out of operation. The usual prescription is to lower the cost of formalising and to pair registration with access to credit and social protection."
@@ -943,12 +946,13 @@
                 "operation": "Reject extraction",
                 "reason": "The farmers extract the cassava; the firm buys it.",
                 "result": "A is wrong.",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Reject building and trade",
                 "reason": "The firm neither builds a fixed asset nor merely resells the cassava.",
-                "result": "The answer is B, manufacturing."
+                "result": "The answer is B, manufacturing.",
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -1113,12 +1117,13 @@
                 "operation": "Reject the producers",
                 "reason": "Extractive and manufacturing occupations create or process goods; she does neither.",
                 "result": "A and B are wrong.",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Reject service",
                 "reason": "A service is rendered directly to a client; she sells goods to buyers.",
-                "result": "The answer is C, commercial."
+                "result": "The answer is C, commercial.",
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }
@@ -1209,7 +1214,7 @@
           "content": {
             "heading": "Skills that travel",
             "paragraphs": [
-              "The labour market matches people to work. Employers hire by skill and experience; workers invest in training to raise their value; wages move with demand and supply. A shortage of engineers raises their pay, while a surplus of a narrow skill lowers it.",
+              "Pay and skill move together on two hills. Fewer engineers, higher stakes on each; a surplus of any narrow skill, vanishing shine on it all. A shortage is a wage sign, and a surplus is a wage warning.",
               "Two kinds of skill matter differently. Specific skills are useful in one firm or industry; transferable skills move across employers. Automation and new technology shift demand toward transferable and technical skills, so training that teaches adaptability protects a worker better than training for one job. A worker who can learn new tools is less exposed to automation."
             ],
             "bullets": [
@@ -1253,12 +1258,13 @@
                 "operation": "Identify the hiring",
                 "reason": "Schools are hiring, so there is demand for teachers.",
                 "result": "Demand is the second factor.",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Match the pair",
                 "reason": "Only option B names government policy and demand.",
-                "result": "The answer is B."
+                "result": "The answer is B.",
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -1390,19 +1396,19 @@
                 "operation": "Name the factor",
                 "reason": "A tractor is capital, meaning equipment provided for production.",
                 "result": "Capital earns interest for its use.",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Reject rent and wages",
                 "reason": "Rent pays for land, while wages pay for labour.",
                 "result": "Neither reward fits a tractor.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you choose between the possible routes?"
               },
               {
                 "operation": "Choose interest",
                 "reason": "Capital supplied for a payment receives interest as its return.",
                 "result": "The answer is C, interest.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -1583,19 +1589,19 @@
                 "operation": "Recall the qualities",
                 "reason": "Good money must be acceptable, durable, portable and divisible.",
                 "result": "Divisibility fits the list.",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Reject the opposites",
                 "reason": "Perishability, limited acceptance and instability weaken circulation.",
                 "result": "A, C and D are defects, not qualities.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you choose between the possible routes?"
               },
               {
                 "operation": "Choose divisibility",
                 "reason": "Divisibility allows small change from one unit of money.",
                 "result": "The answer is B, divisibility.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -1777,19 +1783,19 @@
                 "operation": "Name the test",
                 "reason": "Limited liability and separate legal status point to a company.",
                 "result": "Sole and partnership forms lack that shield.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer?"
               },
               {
                 "operation": "Confirm registration",
                 "reason": "A company gains legal personality through Corporate Affairs Commission registration.",
                 "result": "It can own property and be sued separately.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you choose between the possible routes?"
               },
               {
                 "operation": "Choose the company",
                 "reason": "Only the limited company combines limited liability with separate identity.",
                 "result": "The answer is C, limited liability company.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }
@@ -1971,19 +1977,19 @@
                 "operation": "Define chain retail",
                 "reason": "Chain stores repeat the same shop under one organisation",
                 "result": "Look for many towns with the same standard.",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Reject single shops",
                 "reason": "Itinerant moves and fixed stays in one place",
                 "result": "Only the repeated towns fit the definition.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you choose between the possible routes?"
               },
               {
                 "operation": "Choose the answer",
                 "reason": "Ten towns under one control match chain retail",
                 "result": "The answer is C, chain store.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -2164,19 +2170,19 @@
                 "operation": "Name the account",
                 "reason": "Balance of trade counts goods only",
                 "result": "Use exports minus imports of goods.",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Work the numbers",
                 "reason": "Exports exceed imports, so the result is positive",
                 "result": "9 minus 7 gives 2.",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Judge favourability",
                 "reason": "A positive goods surplus is favourable",
                 "result": "The answer is B, surplus 2.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }
@@ -2360,19 +2366,19 @@
                 "operation": "Apply trade discount",
                 "reason": "Trade discount comes off list price first to get net trade price",
                 "result": "₦200,000 − ₦20,000 = ₦180,000",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Apply cash discount",
                 "reason": "Cash discount is calculated on the reduced balance after trade discount",
                 "result": "5% of ₦180,000 = ₦9,000",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Find amount payable",
                 "reason": "Subtract cash discount to get final amount owed",
                 "result": "₦180,000 − ₦9,000 = ₦171,000 payable",
-                "predictPrompt": ""
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -2559,19 +2565,19 @@
                 "operation": "Find gross profit",
                 "reason": "Gross profit is turnover minus cost of sales",
                 "result": "₦3,500,000 − ₦2,200,000 = ₦1,300,000",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Find net profit",
                 "reason": "Net profit is gross profit minus all expenses",
                 "result": "₦1,300,000 − ₦800,000 = ₦500,000",
-                "predictPrompt": ""
+                "predictPrompt": "What exactly does the question want you to write down first?"
               },
               {
                 "operation": "State the answer",
                 "reason": "Net profit is the final earning after all deductions",
                 "result": "Gross ₦1,300,000; net ₦500,000",
-                "predictPrompt": ""
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -2758,19 +2764,19 @@
                 "operation": "Identify the need",
                 "reason": "The need is wide awareness at low cost, so choose one method",
                 "result": "Advertising through radio",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer?"
               },
               {
                 "operation": "Check the medium",
                 "reason": "Radio reaches many buyers, including rural listeners, at moderate cost",
                 "result": "Radio advertising selected",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer?"
               },
               {
                 "operation": "Confirm the role",
                 "reason": "It creates awareness and induces demand for the soap",
                 "result": "Advertising meets the need",
-                "predictPrompt": ""
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -2967,19 +2973,19 @@
                 "operation": "Check the policy",
                 "reason": "The policy states the covered risk and the claim procedure",
                 "result": "Fire is a covered risk",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "File the claim",
                 "reason": "The trader notifies the insurer with evidence of loss",
                 "result": "Claim submitted promptly",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Receive indemnity",
                 "reason": "Indemnity restores the trader to the former position",
                 "result": "Payment covers actual loss",
-                "predictPrompt": ""
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }
@@ -3174,19 +3180,19 @@
                 "operation": "Identify the stage",
                 "reason": "Both firms make feed at the same stage of the chain.",
                 "result": "They are direct rivals, so the link is horizontal.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer?"
               },
               {
                 "operation": "Check for a merger",
                 "reason": "The firms join as one company, so ownership is shared.",
                 "result": "It is a true business combination, not a cartel agreement.",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Rule out the alternatives",
                 "reason": "No different-stage supply link and no unrelated trade is involved.",
                 "result": "The answer is a horizontal merger, not vertical, conglomerate or cartel.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -3369,19 +3375,19 @@
                 "operation": "Identify the action",
                 "reason": "The investor buys and later sells through a licensed stockbroker.",
                 "result": "The deal passes through the NGX platform to settlement.",
-                "predictPrompt": ""
+                "predictPrompt": "What exactly does the question want you to write down first?"
               },
               {
                 "operation": "Identify the motive",
                 "reason": "The gain comes from a higher resale price, not from dividends.",
                 "result": "The motive is speculation for a capital gain.",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Contrast with investing",
                 "reason": "Investing seeks steady income and long term growth of the firm.",
                 "result": "Selling quickly for a price rise shows speculation, not investing.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }
@@ -3565,19 +3571,19 @@
                 "operation": "Count the bosses",
                 "reason": "Two bosses create conflicting orders, the symptom unity of command forbids.",
                 "result": "Unity of command is broken; option A names it.",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Count the subordinates",
                 "reason": "Fifteen direct reports exceed a workable span of control for one manager.",
                 "result": "Repair means organising a narrower structure, confirming A.",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Reject the other options",
                 "reason": "Staffing would concern recruitment; controlling compares results, and planning sets goals.",
                 "result": "The answer is A: unity of command, organising.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -3763,19 +3769,19 @@
                 "operation": "Name the channel difference",
                 "reason": "Place is where buyers buy; one shop versus shops plus online is a place gap.",
                 "result": "Place differs most sharply.",
-                "predictPrompt": ""
+                "predictPrompt": "What exactly does the question want you to write down first?"
               },
               {
                 "operation": "Name the informing difference",
                 "reason": "Promotion is how buyers are told; Instagram and Jumia listings have no mall-shop equivalent.",
                 "result": "Promotion differs next.",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Segment the response",
                 "reason": "Premium buyers accept a single location, while deal-seekers need online discounts and delivery.",
                 "result": "Serve the mall segment for experience and the Jumia segment for price and speed.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }
@@ -3965,19 +3971,19 @@
                 "operation": "Find the offer",
                 "reason": "A definite promise meant for acceptance is the first element.",
                 "result": "Offer exists at ₦30,000.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer?"
               },
               {
                 "operation": "Check acceptance and consideration",
                 "reason": "Bala accepted exactly, and ₦30,000 is something of value in return.",
                 "result": "Acceptance and consideration are both present.",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Test capacity and legality",
                 "reason": "Both adults can contract and the purpose is lawful trading.",
                 "result": "Answer is A: a valid contract exists.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -4167,19 +4173,19 @@
                 "operation": "Identify the risk",
                 "reason": "The miller fears non-delivery, not price debate on a floor.",
                 "result": "The risk is empty promises without goods.",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Recall the institutions",
                 "reason": "Warehousing assures goods exist; clearing settles payment.",
                 "result": "Only warehousing covers the delivery fear.",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Reject the methods",
                 "reason": "Outcry and electronic matching set price but do not store goods.",
                 "result": "Answer is B: warehousing protects the miller.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }
@@ -4372,19 +4378,19 @@
                 "operation": "Name the source",
                 "reason": "Duties follow a government decision, not buyer habits.",
                 "result": "The source is public policy.",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Recall the scope",
                 "reason": "Political environment covers stability and policy.",
                 "result": "Duties sit under politics.",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Reject the others",
                 "reason": "Legal is rules to obey, but the change came from policy.",
                 "result": "Answer is B: political.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }

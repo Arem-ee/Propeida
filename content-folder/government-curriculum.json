@@ -315,12 +315,13 @@
                 "operation": "Test permanence",
                 "reason": "The state survives changes of rulers, so any option calling government permanent is wrong.",
                 "result": "Options A and D fail.",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Test the direction",
                 "reason": "Government acts for the state; the state is not the machinery of government.",
-                "result": "Option C is correct."
+                "result": "Option C is correct.",
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -541,12 +542,13 @@
                 "operation": "Identify the owner",
                 "reason": "The state holds sovereign authority over the political community.",
                 "result": "Authority is vested in the state.",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Reject the agents",
                 "reason": "The judiciary, executive and armed forces exercise authority but do not own it.",
-                "result": "The state is the answer."
+                "result": "The state is the answer.",
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -740,12 +742,13 @@
                 "operation": "Classify the elders",
                 "reason": "Power reserved for the oldest is gerontocracy.",
                 "result": "(b) Gerontocracy.",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Classify the general",
                 "reason": "A council of officers ruling without the constitution is a military junta.",
-                "result": "(c) Military junta."
+                "result": "(c) Military junta.",
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -970,12 +973,13 @@
                 "operation": "Apply the veto rule",
                 "reason": "A two-thirds majority of each chamber can override a presidential veto.",
                 "result": "The bill can still become law.",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Reject the alternatives",
                 "reason": "Courts do not sign bills and governors do not assent to federal bills.",
-                "result": "Option B is correct."
+                "result": "Option B is correct.",
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }
@@ -1191,12 +1195,13 @@
                 "operation": "Classify the second",
                 "reason": "Rules spread across sources, with no single codified text, make an unwritten constitution.",
                 "result": "(b) Unwritten.",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Classify the third",
                 "reason": "A codified text amendable by ordinary law is written but flexible.",
-                "result": "(c) Written and flexible."
+                "result": "(c) Written and flexible.",
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -1421,12 +1426,13 @@
                 "operation": "Classify (b)",
                 "reason": "An open assembly reaching agreement without a paramount ruler is the Igbo system.",
                 "result": "(b) Igbo system.",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Classify (c)",
                 "reason": "An Emir appointing officials and a judge under Islamic law is the Hausa/Fulani emirate.",
-                "result": "(c) Hausa/Fulani system."
+                "result": "(c) Hausa/Fulani system.",
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -1621,12 +1627,13 @@
                 "operation": "Classify (b)",
                 "reason": "Two parties taking turns in government is the defining feature of a two-party system.",
                 "result": "(b) Two-party system.",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Classify (c) and (d)",
                 "reason": "Several parties winning seats and forming coalitions is multi-party; repeated victory by one competitor is dominant-party.",
-                "result": "(c) Multi-party system; (d) dominant-party system."
+                "result": "(c) Multi-party system; (d) dominant-party system.",
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -1843,12 +1850,13 @@
                 "operation": "Classify (c)",
                 "reason": "Sending troops under a regional mandate is a military and peacekeeping instrument.",
                 "result": "(c) Military/peacekeeping instrument.",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Classify (d)",
                 "reason": "Aid is an economic instrument intended to build influence and goodwill.",
-                "result": "(d) Economic instrument."
+                "result": "(d) Economic instrument.",
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -2073,12 +2081,13 @@
                 "operation": "Classify the trader",
                 "reason": "Sixteen years' residence, good character and the oath meet the naturalisation conditions.",
                 "result": "(b) Citizen by naturalisation.",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Classify the engineer",
                 "reason": "A citizen by birth may hold another citizenship without losing Nigerian citizenship.",
-                "result": "(c) Still a Nigerian citizen."
+                "result": "(c) Still a Nigerian citizen.",
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -2300,12 +2309,13 @@
                 "operation": "Read the ownership claim",
                 "reason": "State ownership plus planning is the socialist position.",
                 "result": "(b) Socialism.",
-                "predictPrompt": ""
+                "predictPrompt": "What does the question tell you to find first?"
               },
               {
                 "operation": "Read the power claim",
                 "reason": "Ultranationalism, a single leader and rule by force are fascist.",
-                "result": "(c) Fascism."
+                "result": "(c) Fascism.",
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -2528,12 +2538,13 @@
                 "operation": "Classify Nigeria",
                 "reason": "Two levels are coordinate and the constitution divides power between them.",
                 "result": "(b) Federal.",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Classify the American league",
                 "reason": "Sovereign states delegating a few powers to a weak centre form a confederation.",
-                "result": "(c) Confederal."
+                "result": "(c) Confederal.",
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -2755,12 +2766,13 @@
                 "operation": "Apply the conflict rule",
                 "reason": "On a concurrent matter the federal law prevails to the extent of the inconsistency.",
                 "result": "The federal minimum standard prevails.",
-                "predictPrompt": ""
+                "predictPrompt": "What exactly does the question want you to write down first?"
               },
               {
                 "operation": "State the limit",
                 "reason": "Federal supremacy applies only where the laws are inconsistent.",
-                "result": "The state may add stricter rules that do not contradict the federal standard."
+                "result": "The state may add stricter rules that do not contradict the federal standard.",
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -2952,12 +2964,13 @@
                 "operation": "Classify the United Kingdom",
                 "reason": "A prime minister drawn from Parliament, under a ceremonial monarch, is a parliamentary system and a constitutional monarchy.",
                 "result": "(b) Parliamentary system.",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Classify the league",
                 "reason": "A centre that cannot tax or command its units is confederal, a structure rather than a system.",
-                "result": "(c) Confederal structure."
+                "result": "(c) Confederal structure.",
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -3172,12 +3185,13 @@
                 "operation": "Classify the corporation accountant",
                 "reason": "A public corporation is a separate legal person, so its staff are public servants but not civil servants.",
                 "result": "(b) Public servant, not a civil servant.",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Classify the council officer",
                 "reason": "Local government staff belong to the public service, not the civil service.",
-                "result": "(c) Public servant, not a civil servant."
+                "result": "(c) Public servant, not a civil servant.",
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -3400,12 +3414,13 @@
                 "operation": "Read the confirmation vote",
                 "reason": "The Senate checking a presidential appointment is a check and balance.",
                 "result": "(b) Checks and balances.",
-                "predictPrompt": ""
+                "predictPrompt": "What does the question tell you to find first?"
               },
               {
                 "operation": "Read the resignation",
                 "reason": "A minister answering for his own department is individual responsibility.",
-                "result": "(c) Individual responsibility."
+                "result": "(c) Individual responsibility.",
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -3597,12 +3612,13 @@
                 "operation": "Classify the timetable",
                 "reason": "A programme that ends military rule and restores elections is disengagement.",
                 "result": "(b) Military disengagement.",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Classify the renaming",
                 "reason": "A new ruling council signals a change of regime within military rule, not a return to civilian government.",
-                "result": "(c) A new military regime."
+                "result": "(c) A new military regime.",
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }
@@ -3824,12 +3840,13 @@
                 "operation": "Classify the Emir's meeting",
                 "reason": "A traditional ruler mediating a dispute exercises an advisory and cultural role.",
                 "result": "(b) Traditional ruler's advisory role.",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Classify the dissolution",
                 "reason": "A state government dissolving an elected council is state supervision, and a common source of conflict.",
-                "result": "(c) State control over local government."
+                "result": "(c) State control over local government.",
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -4051,12 +4068,13 @@
                 "operation": "Classify (c)",
                 "reason": "A rally to launch a manifesto is an election campaign by a party that wants to govern.",
                 "result": "(c) Party activity.",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Classify (d)",
                 "reason": "A condition with a deadline is the pressure group's last warning before action.",
-                "result": "(d) Pressure-group ultimatum."
+                "result": "(d) Pressure-group ultimatum.",
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -4278,12 +4296,13 @@
                 "operation": "Classify (b) and (c)",
                 "reason": "A general election fills all seats; a bye-election fills a single vacancy between general elections.",
                 "result": "(b) General election; (c) bye-election.",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Classify (d)",
                 "reason": "Choosing a party's candidate before the general election is a primary.",
-                "result": "(d) Primary election."
+                "result": "(d) Primary election.",
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -4475,12 +4494,13 @@
                 "operation": "Match (c)",
                 "reason": "OPEC coordinates oil-exporting states on production and prices.",
                 "result": "(c) OPEC.",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Match (d)",
                 "reason": "The Commonwealth can suspend a member over human-rights abuses, as it did to Nigeria in 1995.",
-                "result": "(d) The Commonwealth."
+                "result": "(d) The Commonwealth.",
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }
@@ -4699,12 +4719,13 @@
                 "operation": "Order the last two",
                 "reason": "Macpherson added ministerial government in 1951, and Lyttleton confirmed the federal structure in 1954.",
                 "result": "1951 Macpherson, then 1954 Lyttleton.",
-                "predictPrompt": ""
+                "predictPrompt": "What exactly does the question want you to write down first?"
               },
               {
                 "operation": "State the direction",
                 "reason": "Each step widened Nigerian participation and moved power from the governor to elected ministers and regional premiers.",
-                "result": "The sequence runs from a nominated council to a federation ready for independence."
+                "result": "The sequence runs from a nominated council to a federation ready for independence.",
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }

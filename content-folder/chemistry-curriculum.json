@@ -239,19 +239,19 @@
                 "operation": "Write the abundances",
                 "reason": "Most atoms are Cl-35 and a quarter are Cl-37",
                 "result": "Cl-35 at 75% and Cl-37 at 25%",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Multiply and add",
                 "reason": "Each mass is weighted by how common it is",
                 "result": "75 × 35 = 2625 and 25 × 37 = 925; sum = 3550",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Divide by 100",
                 "reason": "Percentages must return to a per-atom average",
                 "result": "3550 ÷ 100 = 35.5",
-                "predictPrompt": ""
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -447,19 +447,19 @@
                 "operation": "Write the mass relation",
                 "reason": "Mass is what weighs, moles is what counts, Mr links them",
                 "result": "mass = moles × Mr",
-                "predictPrompt": ""
+                "predictPrompt": "What do you substitute, into which formula?"
               },
               {
                 "operation": "Substitute the values",
                 "reason": "Half a mole of a Mr of 16 weighs half of 16 grams",
                 "result": "mass = 0.5 × 16 = 8 g",
-                "predictPrompt": ""
+                "predictPrompt": "What exactly does the question want you to write down first?"
               },
               {
                 "operation": "State the answer",
                 "reason": "A mole in this service is always 6.02×10²³ particles",
                 "result": "0.5 mol of CH₄ weighs 8 g",
-                "predictPrompt": ""
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -672,19 +672,19 @@
                 "operation": "Write PV = nRT rearranged",
                 "reason": "Volume is what is asked, so it goes alone",
                 "result": "V = 0.5 × 0.082 × 273 ÷ 1",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Multiply the numerator",
                 "reason": "Half a mole at standard temperature holds half the molar volume",
                 "result": "0.5 × 0.082 = 0.041, then 0.041 × 273 = 11.193",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Divide by pressure and round",
                 "reason": "Pressure of 1 atm leaves the volume unchanged",
                 "result": "V ≈ 11.19 dm³",
-                "predictPrompt": ""
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }
@@ -904,19 +904,19 @@
                 "operation": "Locate the three elements",
                 "reason": "All sit in period 3, sodium first, magnesium second, chlorine third",
                 "result": "Na, Mg, Cl left to right",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Apply the across-period rule",
                 "reason": "Electronegativity rises left to right in a period",
                 "result": "Na < Mg < Cl",
-                "predictPrompt": ""
+                "predictPrompt": "What exactly does the question want you to write down first?"
               },
               {
                 "operation": "State the order",
                 "reason": "Sodium is the most metallic, chlorine the most electron-hungry",
                 "result": "Increasing: Na, Mg, Cl",
-                "predictPrompt": ""
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -1112,19 +1112,19 @@
                 "operation": "Read both configurations",
                 "reason": "Magnesium has 2 outer electrons; chlorine needs 1 to fill its shell",
                 "result": "Mg (2,8,2); Cl (2,8,7)",
-                "predictPrompt": ""
+                "predictPrompt": "What information do you compare before deciding?"
               },
               {
                 "operation": "Decide giving or sharing",
                 "reason": "A metal always gives; its 2 electrons go to two chlorines",
                 "result": "Ionic: Mg²⁺ and 2 Cl⁻",
-                "predictPrompt": ""
+                "predictPrompt": "What exactly does the question want you to write down first?"
               },
               {
                 "operation": "State the formula and property",
                 "reason": "One Mg²⁺ balances two Cl⁻, and ionic solids melt high",
                 "result": "MgCl₂, high melting, conducts molten",
-                "predictPrompt": ""
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -1340,19 +1340,19 @@
                 "operation": "Filter the mixture",
                 "reason": "Sand is insoluble; filter paper traps it while salt water passes",
                 "result": "Sand is removed as a solid",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Distil the filtrate",
                 "reason": "Water boils and condenses; salt does not distil",
                 "result": "Pure water is collected, salt remains in the flask",
-                "predictPrompt": ""
+                "predictPrompt": "What exactly does the question want you to write down first?"
               },
               {
                 "operation": "Name why evaporation alone fails",
                 "reason": "Evaporating to dryness would leave salt mixed with nothing pure to collect",
                 "result": "Distillation is needed to collect the water itself",
-                "predictPrompt": ""
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }
@@ -1566,19 +1566,19 @@
                 "operation": "Find moles of NaCl",
                 "reason": "Moles count particles; Mr(NaCl) = 58.5",
                 "result": "n = 11 ÷ 58.5 = 0.188 mol",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Divide by volume",
                 "reason": "Solubility is per cubic decimetre of solution",
                 "result": "c = 0.188 ÷ 0.1 = 1.88 mol/dm³",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer?"
               },
               {
                 "operation": "Check the rounding",
                 "reason": "0.188 × 58.5 = 11.0, so the division is exact",
                 "result": "Molar solubility = 1.88 mol/dm³",
-                "predictPrompt": ""
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -1777,19 +1777,19 @@
                 "operation": "Assign hydrogen and oxygen",
                 "reason": "Hydrogen is +1 and oxygen is −2 by the rules",
                 "result": "2(+1) + 3(−2) = 2 − 6 = −4 from H and O",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Set up the sum",
                 "reason": "A neutral compound sums to zero",
                 "result": "2 + 2S − 6 = 0 for H₂S₂O₃",
-                "predictPrompt": ""
+                "predictPrompt": "What do you need to find before you can solve this?"
               },
               {
                 "operation": "Solve for sulphur",
                 "reason": "Two sulphurs share the +4 needed",
                 "result": "2S = +4, so S = +2",
-                "predictPrompt": ""
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -2012,19 +2012,19 @@
                 "operation": "Write the mole ratio",
                 "reason": "HCl + NaOH → NaCl + H₂O is a 1:1 ratio",
                 "result": "moles HCl = moles NaOH",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Compute the acid moles",
                 "reason": "moles = concentration × volume in dm³ (20.0 cm³ = 0.020 dm³)",
                 "result": "0.10 × 0.020 = 0.0020 mol",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Find the base concentration",
                 "reason": "0.0020 mol sits in 25.0 cm³ = 0.025 dm³, so C = n/V",
                 "result": "0.0020 ÷ 0.025 = 0.080 M",
-                "predictPrompt": ""
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -2243,19 +2243,19 @@
                 "operation": "Find the quantity of electricity",
                 "reason": "Q = It, with the time in seconds",
                 "result": "Q = 2.0 × 965 = 1930 C",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Convert charge to moles of electrons",
                 "reason": "1 F = 96500 C discharges 1 mol of electrons",
                 "result": "1930 ÷ 96500 = 0.020 mol e⁻",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Find the hydrogen volume",
                 "reason": "2H⁺ + 2e⁻ → H₂, so 0.020 mol e⁻ gives 0.010 mol H₂; 1 mol = 22.4 dm³ at s.t.p.",
                 "result": "0.010 × 22.4 = 0.224 dm³",
-                "predictPrompt": ""
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -2449,19 +2449,19 @@
                 "operation": "Count the half-lives",
                 "reason": "Time divided by half-life gives the number of halvings",
                 "result": "15 ÷ 5 = 3 half-lives",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Halve the mass three times",
                 "reason": "Each half-life halves what remains",
                 "result": "800 → 400 → 200 → 100 g",
-                "predictPrompt": ""
+                "predictPrompt": "What exactly does the question want you to write down first?"
               },
               {
                 "operation": "State the answer",
                 "reason": "Three halvings leave one eighth of the starting mass",
                 "result": "100 g remains",
-                "predictPrompt": ""
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }
@@ -2681,19 +2681,19 @@
                 "operation": "Write the Gibbs equation",
                 "reason": "ΔG° = ΔH° − TΔS° is the only formula needed",
                 "result": "ΔG° = −80 − 298 × 0.20",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Compute the entropy term",
                 "reason": "298 × 0.20 = 59.6 kJ/mol",
                 "result": "ΔG° = −80 − 59.6 = −139.6 kJ/mol",
-                "predictPrompt": ""
+                "predictPrompt": "What information do you compare before deciding?"
               },
               {
                 "operation": "Decide spontaneity",
                 "reason": "A negative ΔG° means the reaction runs on its own",
                 "result": "Spontaneous at 298 K",
-                "predictPrompt": ""
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -2914,19 +2914,19 @@
                 "operation": "Write the rate definition",
                 "reason": "Rate is amount changed divided by time taken",
                 "result": "rate = 200 ÷ 50",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Divide the volume by the seconds",
                 "reason": "Both numbers are given directly, so no conversion is needed",
                 "result": "4 cm³/s",
-                "predictPrompt": ""
+                "predictPrompt": "What exactly does the question want you to write down first?"
               },
               {
                 "operation": "State the rate with its unit",
                 "reason": "A rate without units is meaningless",
                 "result": "Average rate = 4 cm³/s",
-                "predictPrompt": ""
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -3151,19 +3151,19 @@
                 "operation": "Identify the disturbance",
                 "reason": "Raising temperature adds heat, which the endothermic direction absorbs",
                 "result": "The reaction favours the forward direction",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Apply Le Chatelier",
                 "reason": "The system resists the heating by consuming heat",
                 "result": "More NO₂ forms",
-                "predictPrompt": ""
+                "predictPrompt": "What exactly does the question want you to write down first?"
               },
               {
                 "operation": "Name the observation",
                 "reason": "NO₂ is brown and N₂O₄ is colourless",
                 "result": "The colour deepens to a darker brown",
-                "predictPrompt": ""
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -3363,19 +3363,19 @@
                 "operation": "Choose a pollutant",
                 "reason": "Carbon monoxide is a colourless, poisonous gas",
                 "result": "Pollutant: carbon monoxide (CO)",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Give its source",
                 "reason": "Incomplete combustion in vehicle engines produces CO",
                 "result": "Source: vehicle exhaust",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Give effect and control",
                 "reason": "CO blocks oxygen uptake in blood; catalytic converters reduce it",
                 "result": "Effect: blocks blood oxygen; control: catalytic converters",
-                "predictPrompt": ""
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }
@@ -3571,19 +3571,19 @@
                 "operation": "Classify the drug plant",
                 "reason": "It makes small quantities of pure, high-value products",
                 "result": "Fine chemicals; raw materials are refined intermediates",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Classify the cement plant",
                 "reason": "It makes bulk construction material in tonnage",
                 "result": "Heavy chemicals; raw materials are limestone and clay",
-                "predictPrompt": ""
+                "predictPrompt": "What information do you compare before deciding?"
               },
               {
                 "operation": "Compare the two",
                 "reason": "Value lies in purity for drugs and in tonnage for cement",
                 "result": "Size of output alone does not classify an industry",
-                "predictPrompt": ""
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }
@@ -3778,19 +3778,19 @@
                 "operation": "Name the gas layer",
                 "reason": "Air surrounds the planet and is mostly nitrogen",
                 "result": "Atmosphere: nitrogen (78%) and oxygen (21%)",
-                "predictPrompt": ""
+                "predictPrompt": "What exactly does the question want you to write down first?"
               },
               {
                 "operation": "Name the rock layer",
                 "reason": "The solid part is crust, mantle and core of silicates and metals",
                 "result": "Lithosphere: silicate rocks and metal core",
-                "predictPrompt": ""
+                "predictPrompt": "What exactly does the question want you to write down first?"
               },
               {
                 "operation": "Name the water layer",
                 "reason": "Most of Earth's water sits in the oceans",
                 "result": "Hydrosphere: water, 97% ocean",
-                "predictPrompt": ""
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }
@@ -3984,19 +3984,19 @@
                 "operation": "Find moles of zinc",
                 "reason": "Moles count atoms; Mr(Zn) = 65",
                 "result": "6.5 ÷ 65 = 0.10 mol",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Apply the equation ratio",
                 "reason": "One mole of Zn gives one mole of H₂",
                 "result": "0.10 mol H₂",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Convert to gas volume",
                 "reason": "One mole of gas fills 22.4 dm³ at s.t.p.",
                 "result": "0.10 × 22.4 = 2.24 dm³",
-                "predictPrompt": ""
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -4190,19 +4190,19 @@
                 "operation": "Find moles of chlorine",
                 "reason": "Mr(Cl₂) = 71, so grams convert by dividing by 71",
                 "result": "7.1 ÷ 71 = 0.10 mol Cl₂",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Count the electrons per molecule",
                 "reason": "Forming one Cl₂ from two Cl⁻ releases two electrons",
                 "result": "0.10 × 2 = 0.20 mol e⁻",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Convert moles of electrons to faradays",
                 "reason": "One faraday is one mole of electrons",
                 "result": "0.20 F",
-                "predictPrompt": ""
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }
@@ -4400,19 +4400,19 @@
                 "operation": "Read the lather test",
                 "reason": "Poor lathering means calcium or magnesium salts are present",
                 "result": "The water is hard",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Use the boiling result",
                 "reason": "Hardness surviving boiling is permanent, so it comes from sulphates",
                 "result": "Permanent hardness",
-                "predictPrompt": ""
+                "predictPrompt": "How would you choose between the possible routes?"
               },
               {
                 "operation": "Choose the method",
                 "reason": "Sulphates need a chemical exchange, not heat",
                 "result": "Add washing soda (or use an ion-exchange resin)",
-                "predictPrompt": ""
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -4610,19 +4610,19 @@
                 "operation": "Read the precipitate",
                 "reason": "Barium chloride precipitates sulphate as barium sulphate",
                 "result": "White precipitate = BaSO₄",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Use the acid test",
                 "reason": "BaSO₄ is insoluble in dilute acid, unlike sulphite or carbonate precipitates",
                 "result": "Insoluble in acid confirms sulphate",
-                "predictPrompt": ""
+                "predictPrompt": "What exactly does the question want you to write down first?"
               },
               {
                 "operation": "Name the anion",
                 "reason": "Only sulphate gives this combination",
                 "result": "The anion is SO₄²⁻",
-                "predictPrompt": ""
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }
@@ -4820,19 +4820,19 @@
                 "operation": "Find moles of nitrogen",
                 "reason": "Mr(N₂) = 28, so grams convert by dividing by 28",
                 "result": "28 ÷ 28 = 1.0 mol N₂",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Apply the mole ratio",
                 "reason": "One mole of N₂ gives two moles of NH₃",
                 "result": "2.0 mol NH₃",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Convert to mass",
                 "reason": "Mr(NH₃) = 17, so mass = moles × Mr",
                 "result": "2.0 × 17 = 34 g",
-                "predictPrompt": ""
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -5029,19 +5029,19 @@
                 "operation": "Find moles of carbonate",
                 "reason": "Mr(CaCO₃) = 100, so grams convert by dividing by 100",
                 "result": "10 ÷ 100 = 0.10 mol CaCO₃",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Apply the mole ratio",
                 "reason": "One mole of carbonate gives one mole of CO₂",
                 "result": "0.10 mol CO₂",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Convert to gas volume",
                 "reason": "One mole of gas fills 22.4 dm³ at s.t.p.",
                 "result": "0.10 × 22.4 = 2.24 dm³",
-                "predictPrompt": ""
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -5258,19 +5258,19 @@
                 "operation": "Place zinc and copper in the series",
                 "reason": "Zinc sits above copper, so zinc is more reactive",
                 "result": "Zn above Cu: displacement will happen",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Write the ionic change",
                 "reason": "Zinc gives electrons, copper ions gain them",
                 "result": "Zn → Zn²⁺ + 2e⁻ and Cu²⁺ + 2e⁻ → Cu",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Write the full equation",
                 "reason": "The ions combine with the sulphate spectator unchanged",
                 "result": "Zn + CuSO₄ → ZnSO₄ + Cu",
-                "predictPrompt": ""
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }
@@ -5466,19 +5466,19 @@
                 "operation": "Identify the ions present",
                 "reason": "Aluminium solution has Al³⁺; NaOH supplies OH⁻",
                 "result": "Al³⁺ and OH⁻ meet in solution",
-                "predictPrompt": ""
+                "predictPrompt": "Which terms can be combined next?"
               },
               {
                 "operation": "Combine to the neutral solid",
                 "reason": "Three hydroxides balance one aluminium charge",
                 "result": "Al³⁺ + 3OH⁻ → Al(OH)₃",
-                "predictPrompt": ""
+                "predictPrompt": "What exactly does the question want you to write down first?"
               },
               {
                 "operation": "Name the observation",
                 "reason": "Aluminium hydroxide is a white gelatinous precipitate",
                 "result": "White gelatinous precipitate of Al(OH)₃",
-                "predictPrompt": ""
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }
@@ -5675,19 +5675,19 @@
                 "operation": "Identify the shells",
                 "reason": "Sea shells are calcium carbonate (CaCO₃)",
                 "result": "Starting material: CaCO₃",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Write the decomposition",
                 "reason": "Heating decomposes the carbonate to the oxide and carbon dioxide",
                 "result": "CaCO₃ → CaO + CO₂",
-                "predictPrompt": ""
+                "predictPrompt": "What exactly does the question want you to write down first?"
               },
               {
                 "operation": "Name the gas",
                 "reason": "The carbon leaves as its oxide",
                 "result": "Carbon(IV) oxide, CO₂",
-                "predictPrompt": ""
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -5883,19 +5883,19 @@
                 "operation": "Locate aluminium in the series",
                 "reason": "Aluminium sits above zinc and iron",
                 "result": "Al is above Zn and Fe",
-                "predictPrompt": ""
+                "predictPrompt": "What information do you compare before deciding?"
               },
               {
                 "operation": "Decide carbon reduction",
                 "reason": "Carbon cannot displace a metal above zinc",
                 "result": "Carbon fails; electrolysis is needed",
-                "predictPrompt": ""
+                "predictPrompt": "What exactly does the question want you to write down first?"
               },
               {
                 "operation": "Name the electrode",
                 "reason": "Metal ions gain electrons at the cathode",
                 "result": "Aluminium deposits at the cathode",
-                "predictPrompt": ""
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -6092,19 +6092,19 @@
                 "operation": "Balance the iron atoms",
                 "reason": "Two irons on the left need two on the right",
                 "result": "Fe₂O₃ + CO → 2Fe + CO₂",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Balance the oxygen atoms",
                 "reason": "Three oxygens on the left must all appear in CO₂",
                 "result": "Fe₂O₃ + 3CO → 2Fe + 3CO₂",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer?"
               },
               {
                 "operation": "Check carbon and oxygen together",
                 "reason": "Three carbons and three oxygens each side",
                 "result": "Fe₂O₃ + 3CO → 2Fe + 3CO₂ balanced",
-                "predictPrompt": ""
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -6299,19 +6299,19 @@
                 "operation": "Identify the reactants",
                 "reason": "A base (oxide) plus an acid gives a salt plus water",
                 "result": "CuO + H₂SO₄ → CuSO₄ + H₂O",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Track the colour",
                 "reason": "Black oxide dissolves to a blue solution",
                 "result": "Black CuO becomes blue CuSO₄ solution",
-                "predictPrompt": ""
+                "predictPrompt": "What exactly does the question want you to write down first?"
               },
               {
                 "operation": "Name the salt formed",
                 "reason": "The sulphate ion names it tetraoxosulfate(VI)",
                 "result": "Copper(II) tetraoxosulfate(VI)",
-                "predictPrompt": ""
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }
@@ -6509,19 +6509,19 @@
                 "operation": "Divide percentages by Ar",
                 "reason": "Carbon 92.3 ÷ 12, hydrogen 7.7 ÷ 1",
                 "result": "7.69 and 7.7",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Divide by the smallest value",
                 "reason": "The ratio must be whole numbers",
                 "result": "7.69 ÷ 7.69 = 1 and 7.7 ÷ 7.69 = 1, so empirical = CH",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Scale by the molar mass",
                 "reason": "CH weighs 13; the true Mr is 78",
                 "result": "78 ÷ 13 = 6, so C₆H₆",
-                "predictPrompt": ""
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -6741,19 +6741,19 @@
                 "operation": "Find Mr of butane",
                 "reason": "Mr = 4×12 + 10×1 = 58",
                 "result": "Mr = 58",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Find moles of butane",
                 "reason": "Moles = mass ÷ Mr",
                 "result": "5.8 ÷ 58 = 0.10 mol",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Apply the equation ratio and gas volume",
                 "reason": "2 mol butane needs 13 mol O₂, so 0.10 mol needs 0.65 mol; 1 mol = 22.4 dm³ at s.t.p.",
                 "result": "0.65 × 22.4 = 14.56 dm³ O₂",
-                "predictPrompt": ""
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }
@@ -6976,19 +6976,19 @@
                 "operation": "Write the addition equation",
                 "reason": "Bromine adds across the double bond, one molecule per ethene",
                 "result": "C₂H₄ + Br₂ → C₂H₄Br₂",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Find moles of ethene",
                 "reason": "Mr(C₂H₄) = 28, so grams convert by dividing by 28",
                 "result": "2.8 ÷ 28 = 0.10 mol",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Find the product mass",
                 "reason": "One mole of ethene gives one mole of product; Mr(C₂H₄Br₂) = 188",
                 "result": "0.10 × 188 = 18.8 g",
-                "predictPrompt": ""
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -7187,19 +7187,19 @@
                 "operation": "Find moles of benzene",
                 "reason": "Mr(C₆H₆) = 6×12 + 6×1 = 78",
                 "result": "7.8 ÷ 78 = 0.10 mol",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Find moles of oxygen",
                 "reason": "One mole of benzene needs 7.5 moles of oxygen",
                 "result": "0.10 × 7.5 = 0.75 mol O₂",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Convert to gas volume",
                 "reason": "One mole of gas fills 22.4 dm³ at s.t.p.",
                 "result": "0.75 × 22.4 = 16.8 dm³",
-                "predictPrompt": ""
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -7397,19 +7397,19 @@
                 "operation": "Find moles of ethanol",
                 "reason": "Mr = 2×12 + 6×1 + 16 = 46",
                 "result": "4.6 ÷ 46 = 0.10 mol",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Apply the mole ratio",
                 "reason": "One mole of ethanol needs three moles of oxygen",
                 "result": "0.10 × 3 = 0.30 mol O₂",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Convert to gas volume",
                 "reason": "One mole of gas fills 22.4 dm³ at s.t.p.",
                 "result": "0.30 × 22.4 = 6.72 dm³",
-                "predictPrompt": ""
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -7609,19 +7609,19 @@
                 "operation": "Write the oxidation equation",
                 "reason": "Aldehydes oxidise to carboxylic acids",
                 "result": "CH₃CHO + [O] → CH₃COOH",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Find the carbonyl carbon's number in ethanal",
                 "reason": "CH₃ is −3 overall; the double bond to O adds +2, the H adds −1",
                 "result": "Carbonyl C = +1 in CH₃CHO",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Find it in the acid",
                 "reason": "COOH carbon loses the H and gains an OH oxygen",
                 "result": "Carbonyl C = +3 in CH₃COOH (rise of 2)",
-                "predictPrompt": ""
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }
@@ -7820,19 +7820,19 @@
                 "operation": "Write the esterification equation",
                 "reason": "Acid plus alkanol gives ester plus water",
                 "result": "CH₃COOH + C₂H₅OH ⇌ CH₃COOC₂H₅ + H₂O",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Find moles of acid",
                 "reason": "Moles = mass ÷ Mr",
                 "result": "6.0 ÷ 60 = 0.10 mol",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Find the ester mass",
                 "reason": "One mole of acid gives one mole of ester",
                 "result": "0.10 × 88 = 8.8 g",
-                "predictPrompt": ""
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -8031,19 +8031,19 @@
                 "operation": "Write the reaction",
                 "reason": "Primary amine plus nitrous acid gives nitrogen and an alcohol",
                 "result": "RNH₂ + HNO₂ → N₂ + ROH + H₂O",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Apply the mole ratio",
                 "reason": "One mole of amine gives one mole of N₂",
                 "result": "0.1 mol N₂",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Convert to gas volume",
                 "reason": "One mole of gas fills 22.4 dm³ at s.t.p.",
                 "result": "0.1 × 22.4 = 2.24 dm³",
-                "predictPrompt": ""
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -8242,19 +8242,19 @@
                 "operation": "Find moles of sucrose",
                 "reason": "Moles = mass ÷ Mr",
                 "result": "34.2 ÷ 342 = 0.10 mol",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Apply the mole ratio",
                 "reason": "One mole of sucrose gives one mole of glucose",
                 "result": "0.10 mol glucose",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Convert to mass",
                 "reason": "Mass = moles × Mr",
                 "result": "0.10 × 180 = 18.0 g",
-                "predictPrompt": ""
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -8455,19 +8455,19 @@
                 "operation": "Picture the chain",
                 "reason": "Amino acids join end to end like beads on a string",
                 "result": "100 beads in one chain",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Count the joins",
                 "reason": "Each new amino acid adds one peptide bond",
                 "result": "99 peptide bonds",
-                "predictPrompt": ""
+                "predictPrompt": "What exactly does the question want you to write down first?"
               },
               {
                 "operation": "State the rule",
                 "reason": "A chain of n amino acids has n − 1 peptide bonds",
                 "result": "n − 1 = 99 bonds",
-                "predictPrompt": ""
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -8669,19 +8669,19 @@
                 "operation": "Write the monomer",
                 "reason": "Polythene is made from ethene monomers",
                 "result": "n CH₂=CH₂",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Link the chains",
                 "reason": "Double bonds open and join thousands of units",
                 "result": "–[CH₂–CH₂]ₙ–",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Classify the process",
                 "reason": "No small molecule is lost",
                 "result": "Addition polymerisation",
-                "predictPrompt": ""
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }
@@ -8880,19 +8880,19 @@
                 "operation": "List the electrons that can be lost",
                 "reason": "The 4s and 3d electrons have similar energy, so both can leave",
                 "result": "4s² and 3d⁶ are both removable",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Form Fe²⁺ first",
                 "reason": "The outer 4s electrons leave before 3d",
                 "result": "Fe²⁺ = [Ar] 3d⁶",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Form Fe³⁺",
                 "reason": "One more 3d electron leaves",
                 "result": "Fe³⁺ = [Ar] 3d⁵",
-                "predictPrompt": ""
+                "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
             ]
           }
@@ -9113,19 +9113,19 @@
                 "operation": "Name the rotting step",
                 "reason": "Dead matter releases ammonium, but named cycle steps start after that",
                 "result": "Nitrification begins the named cycle",
-                "predictPrompt": ""
+                "predictPrompt": "What exactly does the question want you to write down first?"
               },
               {
                 "operation": "Name the bacterial change",
                 "reason": "Nitrosomonas then Nitrobacter convert ammonium through nitrite to nitrate",
                 "result": "Nitrate is ready in soil water",
-                "predictPrompt": ""
+                "predictPrompt": "What exactly does the question want you to write down first?"
               },
               {
                 "operation": "Name plant and soil steps",
                 "reason": "Roots assimilate nitrate into protein; denitrifiers then release nitrogen gas",
                 "result": "Assimilation then denitrification complete the cycle",
-                "predictPrompt": ""
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -9321,19 +9321,19 @@
                 "operation": "Balance the iron atoms",
                 "reason": "Two irons on the right need two on the left",
                 "result": "2FeS2 + O2 → Fe2O3 + SO2",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Balance the sulphur atoms",
                 "reason": "Four sulphurs on the left need four on the right",
                 "result": "2FeS2 + O2 → Fe2O3 + 4SO2",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Balance the oxygen atoms",
                 "reason": "Right side has 3 + 8 = 11 oxygens, so O2 needs 5.5; multiply all by 2",
                 "result": "4FeS2 + 11O2 → 2Fe2O3 + 8SO2",
-                "predictPrompt": ""
+                "predictPrompt": "How would you prove this claim to a sceptic?"
               }
             ]
           }
@@ -9554,19 +9554,19 @@
                 "operation": "Spot the added metal",
                 "reason": "Tin mixed with copper points to bronze, not brass",
                 "result": "Alloy is bronze (Cu plus Sn)",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Recall the pure metal",
                 "reason": "Pure copper is soft and dull, so bells and detail fail",
                 "result": "Pure copper too soft for bells",
-                "predictPrompt": ""
+                "predictPrompt": "What exactly does the question want you to write down first?"
               },
               {
                 "operation": "State the gained property",
                 "reason": "Tin hardens the blend and gives a ringing tone",
                 "result": "Bronze harder, ringing, takes detail",
-                "predictPrompt": ""
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }

@@ -357,12 +357,13 @@
                 "operation": "Combine like surds",
                 "reason": "Like surds add and subtract exactly like like terms.",
                 "result": "5√2 − 3√2 = 2√2.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer?"
               },
               {
                 "operation": "Check by squaring",
                 "reason": "Squaring should return the value of the original expression.",
-                "result": "(2√2)² = 8, which matches 50 − 2√900 + 18 = 8."
+                "result": "(2√2)² = 8, which matches 50 − 2√900 + 18 = 8.",
+                "predictPrompt": "How would you sanity-check the size and sign of this answer?"
               }
             ]
           }
@@ -388,19 +389,19 @@
                 "operation": "Multiply by the conjugate",
                 "reason": "The conjugate 2 + √3 turns the denominator into a difference of squares.",
                 "result": "Denominator becomes (2−√3)(2+√3) = 4 − 3 = 1.",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Expand the numerator",
                 "reason": "The numerator is a perfect square, so the outer terms double.",
                 "result": "(2 + √3)² = 4 + 4√3 + 3 = 7 + 4√3.",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Write the final surd",
                 "reason": "A denominator of 1 leaves the numerator as the whole answer.",
                 "result": "The value is 7 + 4√3.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer satisfies the question?"
               }
             ]
           }
@@ -561,12 +562,13 @@
                 "operation": "Take the root",
                 "reason": "2^5 = 32, so the fifth root is 2.",
                 "result": "The expression becomes 2^2.",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Apply the remaining power",
                 "reason": "The outer square was waiting throughout.",
-                "result": "2^2 = 4."
+                "result": "2^2 = 4.",
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -592,19 +594,19 @@
                 "operation": "Take the cube root first",
                 "reason": "The denominator 3 means cube root, and small bases keep the numbers manageable.",
                 "result": "8^(2/3) = (cube root of 8)² = 2² and 27^(1/3) = 3.",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Apply the powers",
                 "reason": "The fraction 2/3 keeps the square, while the negative sign makes a reciprocal.",
                 "result": "8^(2/3) = 2² = 4 and 27^(−1/3) = 1/3.",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Subtract the fractions",
                 "reason": "A fraction minus a fraction needs a common denominator of 3.",
                 "result": "4 − 1/3 = 11/3.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer satisfies the question?"
               }
             ]
           }
@@ -765,12 +767,13 @@
                 "operation": "Split and group",
                 "reason": "Splitting the middle term creates a common bracket.",
                 "result": "2x² − 6x + x − 3 = 2x(x − 3) + 1(x − 3) = (2x + 1)(x − 3).",
-                "predictPrompt": ""
+                "predictPrompt": "What do you need to find before you can solve this?"
               },
               {
                 "operation": "Solve each bracket",
                 "reason": "A product is zero when either factor is zero.",
-                "result": "2x + 1 = 0 gives x = −1/2, and x − 3 = 0 gives x = 3."
+                "result": "2x + 1 = 0 gives x = −1/2, and x − 3 = 0 gives x = 3.",
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -796,19 +799,19 @@
                 "operation": "Compute the discriminant",
                 "reason": "The discriminant shows the roots are real before the formula is used.",
                 "result": "b² − 4ac = 4 − (−12) = 16, so √16 = 4.",
-                "predictPrompt": ""
+                "predictPrompt": "What do you substitute, into which formula?"
               },
               {
                 "operation": "Substitute the values",
                 "reason": "The ± produces both roots from a single line.",
                 "result": "x = (−2 ± 4)/6, so x = 1/3 or x = −1.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer?"
               },
               {
                 "operation": "Check the product",
                 "reason": "The product of the roots equals c/a, catching sign slips.",
                 "result": "Roots give −1/3 and c/a is −1/3, so both fit.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you sanity-check the size and sign of this answer?"
               }
             ]
           }
@@ -999,12 +1002,13 @@
                 "operation": "Write the tangent equation",
                 "reason": "tan θ = opposite/adjacent.",
                 "result": "tan 30° = h/30.",
-                "predictPrompt": ""
+                "predictPrompt": "What do you need to find before you can solve this?"
               },
               {
                 "operation": "Solve with the exact value",
                 "reason": "tan 30° = 1/√3, so h = 30/√3 = 10√3.",
-                "result": "The height is 10√3 ≈ 17.3 m."
+                "result": "The height is 10√3 ≈ 17.3 m.",
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -1030,19 +1034,19 @@
                 "operation": "Draw the triangle",
                 "reason": "The north and east moves are the legs of a right triangle.",
                 "result": "The hypotenuse joins the start to the finish.",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Use Pythagoras",
                 "reason": "The finish distance is the hypotenuse of the two moves.",
                 "result": "d = √(8² + 6²) = √100 = 10 km.",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Find the bearing",
                 "reason": "Bearings run clockwise from north, with east opposite the angle.",
                 "result": "tan θ = 6/8, so θ ≈ 36.9° and the bearing is 037°.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -1276,12 +1280,13 @@
                 "operation": "Adjust the second draw",
                 "reason": "One red and one ball are gone, leaving 2 red out of 4.",
                 "result": "P(second red) = 2/4 = 1/2.",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Multiply for 'and'",
                 "reason": "Both draws must happen in sequence.",
-                "result": "3/5 × 1/2 = 3/10."
+                "result": "3/5 × 1/2 = 3/10.",
+                "predictPrompt": "How would you verify this answer satisfies the question?"
               }
             ]
           }
@@ -1307,19 +1312,19 @@
                 "operation": "Write the first draw",
                 "reason": "There are 4 red balls out of 7 in total.",
                 "result": "P(first red) = 4/7.",
-                "predictPrompt": ""
+                "predictPrompt": "What do you draw first, and what does it show?"
               },
               {
                 "operation": "Write the second draw",
                 "reason": "One red ball is gone, leaving 3 red out of 6.",
                 "result": "P(second red) = 3/6 = 1/2.",
-                "predictPrompt": ""
+                "predictPrompt": "What do you draw first, and what does it show?"
               },
               {
                 "operation": "Do the third draw",
                 "reason": "Only 2 red in 5 remain, and 'and' means multiply.",
                 "result": "P = 4/7 × 3/6 × 2/5 = 4/35.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you sanity-check the size and sign of this answer?"
               }
             ]
           }
@@ -1447,25 +1452,25 @@
                 "operation": "Verify the digits",
                 "reason": "Each digit must be smaller than four",
                 "result": "1, 3 and 2 are valid, so 132 is a base-four number",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Expand to decimal",
                 "reason": "Place values in base four are 16, 4 and 1",
                 "result": "1×16 + 3×4 + 2 = 30 in decimal",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Divide 30 by five",
                 "reason": "Base five needs remainders on division by five",
                 "result": "30 ÷ 5 = 6 r 0; 6 ÷ 5 = 1 r 1; 1 ÷ 5 = 0 r 1",
-                "predictPrompt": ""
+                "predictPrompt": "What does the question tell you to find first?"
               },
               {
                 "operation": "Read remainders upward",
                 "reason": "The last remainder is the most significant digit",
                 "result": "110 in base five",
-                "predictPrompt": ""
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -1543,19 +1548,19 @@
                 "operation": "Multiply the units",
                 "reason": "Base-eight carries come in eights, so 20 is 2 eights with 4 left over.",
                 "result": "5 × 4 = 20, so write 4 and carry 2.",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Multiply the eights column",
                 "reason": "The eights column adds its own 8 to the 2 carried eights.",
                 "result": "8 + 2 = 10, so write 2 and carry 1.",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Write the final carry",
                 "reason": "A final carry becomes the new highest place value.",
                 "result": "Answer: 124_8, and 25_8 × 4 = 21 × 4 = 84 checks it.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer satisfies the question?"
               }
             ]
           }
@@ -1698,19 +1703,19 @@
                 "operation": "Reduce the base",
                 "reason": "13 ÷ 7 leaves 6, so 13 ≡ 6 mod 7",
                 "result": "13^2 ≡ 6^2 mod 7",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Square the remainder",
                 "reason": "6^2 = 36 is small enough to reduce directly",
                 "result": "36 mod 7 = 1, because 35 is a multiple of 7",
-                "predictPrompt": ""
+                "predictPrompt": "What exactly does the question want you to write down first?"
               },
               {
                 "operation": "State the congruence",
                 "reason": "The square of 13 leaves the same remainder as the square of 6",
                 "result": "13^2 ≡ 1 (mod 7)",
-                "predictPrompt": ""
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -1789,19 +1794,19 @@
                 "operation": "Split the power",
                 "reason": "Powers multiply, so 2^7 is 2, then 2^3, then 2^3.",
                 "result": "2^7 = 2 × 2^3 × 2^3.",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Reduce the block 2^3",
                 "reason": "A block equal to 8 can be replaced by −1 when reducing mod 9.",
                 "result": "2^3 = 8 ≡ −1 (mod 9).",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Finish the product",
                 "reason": "The −1 makes the square 1, leaving a single 2.",
                 "result": "2 × (−1)² = 2, so 2^7 ≡ 2 (mod 9).",
-                "predictPrompt": ""
+                "predictPrompt": "How would you sanity-check the size and sign of this answer?"
               }
             ]
           }
@@ -1927,19 +1932,19 @@
                 "operation": "Find a common denominator",
                 "reason": "3 and 4 multiply to 12, so 12 is common",
                 "result": "2/3 = 8/12 and 3/4 = 9/12",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Add the numerators",
                 "reason": "The denominators are now equal",
                 "result": "(8 + 9)/12 = 17/12",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Write as a mixed fraction",
                 "reason": "17 exceeds 12 by 5",
                 "result": "1 and 5/12, which is already reduced",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer satisfies the question?"
               }
             ]
           }
@@ -2022,19 +2027,19 @@
                 "operation": "Simplify the brackets first",
                 "reason": "The minus sign inside applies before dividing, so the outer fraction waits.",
                 "result": "2/3 − 1/4 = 8/12 − 3/12 = 5/12",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Turn division into multiplication",
                 "reason": "Dividing by a fraction means multiplying by its reciprocal, so invert 5/12.",
                 "result": "5/6 × 12/5 = 60/30",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Reduce the fraction",
                 "reason": "Both 5s and the factors 6 and 12 share a common factor, so cancel them first.",
                 "result": "Answer is 2",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer satisfies the question?"
               }
             ]
           }
@@ -2160,13 +2165,13 @@
                 "operation": "Find the profit",
                 "reason": "Profit is 15 per cent of the cost price",
                 "result": "15 × 40,000 ÷ 100 = 6,000",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Add the profit to the cost",
                 "reason": "Selling price is cost plus profit",
                 "result": "40,000 + 6,000 = 46,000",
-                "predictPrompt": ""
+                "predictPrompt": "How would you sanity-check the size and sign of this answer?"
               }
             ]
           }
@@ -2246,19 +2251,19 @@
                 "operation": "Apply the discount first",
                 "reason": "The shop removes its 20% before tax, so reduce the marked price.",
                 "result": "₦80,000 × 80/100 = ₦64,000",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Work out the VAT",
                 "reason": "VAT is charged on the discounted price actually paid, not on the marked price.",
                 "result": "7.5 × 64,000 ÷ 100 = ₦4,800",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Add the VAT",
                 "reason": "The customer pays the shop price plus the government tax.",
                 "result": "₦64,000 + ₦4,800 = ₦68,800",
-                "predictPrompt": ""
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -2385,13 +2390,13 @@
                 "operation": "Find the union",
                 "reason": "Add the sets, then subtract the overlap counted twice",
                 "result": "25 + 20 − 12 = 33 study at least one",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Subtract from the class",
                 "reason": "Neither means in U but in neither set",
                 "result": "40 − 33 = 7 study neither",
-                "predictPrompt": ""
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -2475,19 +2480,19 @@
                 "operation": "Find the union",
                 "reason": "Neither is outside the union, so subtract it from 60.",
                 "result": "60 − 8 = 52 study at least one",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Find the overlap",
                 "reason": "Adding both sets double-counts the overlap, so subtract the union.",
                 "result": "35 + 30 − 52 = 13 study both",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Find only Mathematics",
                 "reason": "Only Mathematics excludes the learners also taking English.",
                 "result": "35 − 13 = 22 study only Mathematics",
-                "predictPrompt": ""
+                "predictPrompt": "How would you sanity-check the size and sign of this answer?"
               }
             ]
           }
@@ -2615,19 +2620,19 @@
                 "operation": "Find the constant",
                 "reason": "k = y ÷ x for a direct variation",
                 "result": "k = 18 ÷ 6 = 3",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Write the relation",
                 "reason": "Direct variation is y = kx",
                 "result": "y = 3x",
-                "predictPrompt": ""
+                "predictPrompt": "What do you substitute, into which formula?"
               },
               {
                 "operation": "Substitute x = 10",
                 "reason": "The relation holds for every pair",
                 "result": "y = 30",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer satisfies the question?"
               }
             ]
           }
@@ -2709,19 +2714,19 @@
                 "operation": "Find the constant",
                 "reason": "Joint variation means y = kxz, so divide y by both variables.",
                 "result": "k = 48 ÷ (3 × 4) = 4",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Write the relation",
                 "reason": "The same k holds for every pair, so substitute both new values.",
                 "result": "y = 4 × 5 × 2",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Multiply out",
                 "reason": "Each variable scales y, so multiply both values by k.",
                 "result": "y = 40",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer satisfies the question?"
               }
             ]
           }
@@ -2848,13 +2853,13 @@
                 "operation": "Divide by −3",
                 "reason": "The divisor is negative, so the sign reverses",
                 "result": "x ≤ −3",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer?"
               },
               {
                 "operation": "Check in the original",
                 "reason": "−3 × (−4) = 12, which is ≥ 9",
                 "result": "x = −4 satisfies the inequality",
-                "predictPrompt": ""
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -2935,19 +2940,19 @@
                 "operation": "Subtract 2 from all three parts",
                 "reason": "Removing +2 from the whole chain keeps the inequality intact on every side.",
                 "result": "−6 < −2x ≤ 4",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Divide each part by −2",
                 "reason": "Dividing by a negative reverses every sign, so each inequality flips direction.",
                 "result": "3 > x ≥ −2",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Rewrite the chain",
                 "reason": "The chain can be read either way, so list the smaller bound first for the answer.",
                 "result": "−2 ≤ x < 3",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer satisfies the question?"
               }
             ]
           }
@@ -3072,13 +3077,13 @@
                 "operation": "Name the progression",
                 "reason": "Each term adds 3, so it is arithmetic with a = 3 and d = 3",
                 "result": "Use the sum formula",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Apply the sum formula",
                 "reason": "Sum = n/2 × (2a + (n − 1)d)",
                 "result": "10/2 × (6 + 27) = 5 × 33 = 165",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer satisfies the question?"
               }
             ]
           }
@@ -3159,19 +3164,19 @@
                 "operation": "Name the progression",
                 "reason": "Each term is a third of the last, so a = 96, r = 1/3 < 1.",
                 "result": "A convergent geometric series",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Apply the infinite-sum formula",
                 "reason": "The infinite sum is a/(1 − r) because the shrinking terms settle to a fixed total.",
                 "result": "96 ÷ (1 − 1/3) = 96 ÷ (2/3)",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Finish the division",
                 "reason": "Dividing by 2/3 is multiplying by 3/2, because the fraction in the denominator inverts.",
                 "result": "144",
-                "predictPrompt": ""
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -3295,19 +3300,19 @@
                 "operation": "Write the identity test",
                 "reason": "The identity e must satisfy a * e = a for every a.",
                 "result": "a + e + 1 = a gives e + 1 = 0.",
-                "predictPrompt": ""
+                "predictPrompt": "What do you need to find before you can solve this?"
               },
               {
                 "operation": "Solve for e",
                 "reason": "The e terms must cancel so the result is exactly a.",
                 "result": "e = −1, checked by a * (−1) = a.",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Find the inverse of 3",
                 "reason": "The inverse x must satisfy 3 * x = −1.",
                 "result": "3 + x + 1 = −1 gives x = −5.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -3387,19 +3392,19 @@
                 "operation": "Try right identity",
                 "reason": "The right identity e must give a ∘ e = a for every a.",
                 "result": "a + 2e = a, so e = 0",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Try it on the left",
                 "reason": "A two-sided identity must also give e ∘ a = a.",
                 "result": "0 + 2a = 2a, not a",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Conclude",
                 "reason": "With a = 3, 2a = 6 fails, so no two-sided identity exists.",
                 "result": "No identity; no inverse for 3",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer satisfies the question?"
               }
             ]
           }
@@ -3526,19 +3531,19 @@
                 "operation": "Compute the determinant",
                 "reason": "The inverse needs ad minus bc",
                 "result": "3 times 2 minus 1 times 1 equals 5",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Swap and negate",
                 "reason": "Diagonal entries swap and off diagonal entries change sign",
                 "result": "[[2,-1],[-1,3]]",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Divide by the determinant",
                 "reason": "Every entry is divided by 5",
                 "result": "[[2/5,-1/5],[-1/5,3/5]]",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer satisfies the question?"
               }
             ]
           }
@@ -3618,19 +3623,19 @@
                 "operation": "Check the inner sizes match",
                 "reason": "Inner sizes must match for multiplication",
                 "result": "AB exists and is a 2 by 2 matrix.",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Compute the first row of AB",
                 "reason": "Each entry pairs a row of A with a column of B",
                 "result": "7 from 1×2+2×1+3×1 and 9 from 1×0+2×3+3×1.",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Compute the second row of AB",
                 "reason": "Repeat the same row-column pairing for this row",
                 "result": "5 from 0×2+1×1+4×1 and 7 from 0×0+1×3+4×1.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -3757,19 +3762,19 @@
                 "operation": "Apply the power rule to 2x^4",
                 "reason": "The exponent 4 comes down and the power falls by one.",
                 "result": "The term becomes 8x^3.",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Differentiate the remaining terms",
                 "reason": "The derivative of -5x is -5 and the derivative of 3 sin x is 3 cos x.",
                 "result": "The terms become -5 and 3 cos x.",
-                "predictPrompt": ""
+                "predictPrompt": "Which terms can be combined next?"
               },
               {
                 "operation": "Combine the parts",
                 "reason": "Add the derivatives of each term to give the full derivative.",
                 "result": "dy/dx = 8x^3 - 5 + 3 cos x.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -3848,19 +3853,19 @@
                 "operation": "Name the outer and inner parts",
                 "reason": "The cube is outside and 2x+1 is inside",
                 "result": "Outer: u³; inner: 2x+1.",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Differentiate the outer part",
                 "reason": "The power rule applies before the inner change is counted",
                 "result": "3u² = 3(2x+1)².",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Multiply by the inner derivative",
                 "reason": "The inner part moves twice as fast as x",
                 "result": "dy/dx = 6(2x+1)².",
-                "predictPrompt": ""
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -4001,19 +4006,19 @@
                 "operation": "Write the interior-angle formula",
                 "reason": "A regular n-sided polygon has each interior angle equal to (n − 2) × 180° ÷ n.",
                 "result": "(n − 2) × 180 ÷ n = 140.",
-                "predictPrompt": ""
+                "predictPrompt": "What do you need to find before you can solve this?"
               },
               {
                 "operation": "Solve the equation",
                 "reason": "Multiply by n and collect terms to isolate n.",
                 "result": "180n − 360 = 140n, so 40n = 360.",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Find the number of sides",
                 "reason": "Divide by the coefficient of n and test the result.",
                 "result": "n = 9 sides, and (9 − 2) × 180 ÷ 9 = 140° checks.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer satisfies the question?"
               }
             ]
           }
@@ -4093,19 +4098,19 @@
                 "operation": "Use opposite angles A and C",
                 "reason": "Cyclic opposites sum to 180°",
                 "result": "5x+10=180, so x=34, A=68°, C=112°.",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Use opposite angles B and D",
                 "reason": "The second opposite pair also sums to 180°",
                 "result": "4y+40=180, so y=35, B=125°, D=55°.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer?"
               },
               {
                 "operation": "Check the four angles",
                 "reason": "Interior angles of a quadrilateral sum to 360°",
                 "result": "68+125+112+55=360°, so all angles fit.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -4232,19 +4237,19 @@
                 "operation": "Find the fraction of the circle",
                 "reason": "A sector is the angle fraction of the whole circle.",
                 "result": "90°/360° = 1/4 of the circle.",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Compute the sector area",
                 "reason": "Sector area is the fraction of πr².",
                 "result": "(1/4) × (22/7) × 14² = (1/4) × 22/7 × 196 = 154 cm².",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Compute the arc length",
                 "reason": "Arc length is the same fraction of the circumference.",
                 "result": "(1/4) × 2 × (22/7) × 14 = (1/4) × 88 = 22 cm.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -4324,19 +4329,19 @@
                 "operation": "Find the sector area",
                 "reason": "The sector is a quarter of the circle",
                 "result": "(1/4) × (22/7) × 14² = 154 cm².",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Find the triangle area",
                 "reason": "The two radii at right angles form a right triangle",
                 "result": "(1/2) × 14 × 14 = 98 cm².",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Subtract the triangle from the sector",
                 "reason": "The segment is what remains after removing the triangle",
                 "result": "154 − 98 = 56 cm².",
-                "predictPrompt": ""
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -4461,19 +4466,19 @@
                 "operation": "Name the equal-distance rule",
                 "reason": "Equal distance from A and B places P on the perpendicular bisector of AB.",
                 "result": "First locus: a straight line.",
-                "predictPrompt": ""
+                "predictPrompt": "What exactly does the question want you to write down first?"
               },
               {
                 "operation": "Name the distance limit",
                 "reason": "Within 5 cm of A places P inside a circle centred at A, radius 5 cm.",
                 "result": "Second locus: a disc.",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Keep the overlap",
                 "reason": "Both rules must hold, so keep only the part of the line inside the disc.",
                 "result": "Segment of the bisector inside the circle.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -4553,19 +4558,19 @@
                 "operation": "Name the equal-distance rule",
                 "reason": "Equal distance from A and B places P on the perpendicular bisector",
                 "result": "First locus: the perpendicular bisector of AB.",
-                "predictPrompt": ""
+                "predictPrompt": "What exactly does the question want you to write down first?"
               },
               {
                 "operation": "Name the fixed-distance rule",
                 "reason": "Exactly 5 cm from M places P on a circle centred at M",
                 "result": "Second locus: a circle of radius 5 cm about M.",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Keep the overlap",
                 "reason": "Both rules must hold, so only common points remain",
                 "result": "The bisector meets the circle at two symmetric points.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -4690,19 +4695,19 @@
                 "operation": "Use the point-slope form",
                 "reason": "The gradient and one point are known, so substitute into y − y₁ = m(x − x₁).",
                 "result": "y − 3 = 2(x − 2).",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Expand the brackets",
                 "reason": "Expanding shows the y-value for each x-value on the line.",
                 "result": "y − 3 = 2x − 4, so y = 2x − 1.",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Rearrange to general form",
                 "reason": "Moving x and y to one side gives ax + by = c with integers only.",
                 "result": "2x − y = 1.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -4782,19 +4787,19 @@
                 "operation": "Find the midpoint of the join",
                 "reason": "The bisector must pass halfway along the join",
                 "result": "M = ((2+6)/2, (3+7)/2) = (4, 5).",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Find the perpendicular gradient",
                 "reason": "The join gradient is 1, so the bisector is −1",
                 "result": "m1 × m2 = −1, hence m2 = −1.",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Write the equation through M",
                 "reason": "A line is fixed by one point and one gradient",
                 "result": "y − 5 = −(x − 4), so x + y = 9.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer satisfies the question?"
               }
             ]
           }
@@ -4919,19 +4924,19 @@
                 "operation": "Write area in one variable",
                 "reason": "Use the fixed fencing to express length through width",
                 "result": "A = x(60 - 2x) = 60x - 2x²",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Differentiate and set to zero",
                 "reason": "Stationary values satisfy dA/dx = 0",
                 "result": "60 - 4x = 0, so x = 15, length = 30",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer?"
               },
               {
                 "operation": "Check and find maximum",
                 "reason": "Second derivative -4 < 0 confirms a maximum",
                 "result": "Maximum area = 15 × 30 = 450 m²",
-                "predictPrompt": ""
+                "predictPrompt": "How would you sanity-check the size and sign of this answer?"
               }
             ]
           }
@@ -5010,19 +5015,19 @@
                 "operation": "Write volume as a function of radius",
                 "reason": "The sphere volume formula links V to r alone",
                 "result": "V = (4/3)πr³.",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Differentiate with respect to time",
                 "reason": "The chain rule carries dr/dt through the cube",
                 "result": "dV/dt = 4πr² dr/dt.",
-                "predictPrompt": ""
+                "predictPrompt": "What do you substitute, into which formula?"
               },
               {
                 "operation": "Substitute the given values",
                 "reason": "The rate at that instant needs r = 7 and dr/dt = 1",
                 "result": "dV/dt = 4π×49×1 = 616 cm³/s using π = 22/7.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you sanity-check the size and sign of this answer?"
               }
             ]
           }
@@ -5148,19 +5153,19 @@
                 "operation": "Integrate term by term",
                 "reason": "The power rule reverses differentiation, so 3x^2 becomes x^3 and 4x becomes 2x^2.",
                 "result": "F(x) = x^3 + 2x^2 + c.",
-                "predictPrompt": ""
+                "predictPrompt": "What do you substitute, into which formula?"
               },
               {
                 "operation": "Substitute the limits",
                 "reason": "A definite integral needs F(b) − F(a), and c cancels.",
                 "result": "F(2) = 8 + 8 = 16 and F(0) = 0.",
-                "predictPrompt": ""
+                "predictPrompt": "What exactly does the question want you to write down first?"
               },
               {
                 "operation": "Subtract and state the result",
                 "reason": "The value is a number, not a function, so drop c entirely.",
                 "result": "∫₀² (3x² + 4x) dx = 16 − 0 = 16.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -5240,19 +5245,19 @@
                 "operation": "Substitute u=3x+1",
                 "reason": "Inside is linear, so substitution avoids expansion because dx=du/3.",
                 "result": "x=0 gives u=1; x=2 gives u=7, so integral is (1/3)∫₁⁷u²du.",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Integrate u²",
                 "reason": "Power rule reverses differentiation, and factor 1/3 remains from dx=du/3.",
                 "result": "(1/3)(u³/3)=u³/9.",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Evaluate limits 1 to 7",
                 "reason": "Subtract F(1) from F(7) because definite integral is total change.",
                 "result": "343/9−1/9=342/9=38.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you sanity-check the size and sign of this answer?"
               }
             ]
           }
@@ -5379,19 +5384,19 @@
                 "operation": "Add the total",
                 "reason": "Angles use the whole class as the denominator",
                 "result": "8 + 5 + 4 + 3 = 20",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Compute each angle",
                 "reason": "Angle equals frequency divided by total times 360 degrees",
                 "result": "Biology 144 degrees, Chemistry 90 degrees, Physics 72 degrees, Mathematics 54 degrees",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer?"
               },
               {
                 "operation": "Check the sum",
                 "reason": "The whole circle must be 360 degrees",
                 "result": "144 + 90 + 72 + 54 = 360 degrees",
-                "predictPrompt": ""
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -5471,19 +5476,19 @@
                 "operation": "Write the fraction",
                 "reason": "Angle is the share of the circle, so share is angle ÷ 360°.",
                 "result": "Share = 126°/360° = 0.35.",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Convert to share",
                 "reason": "A share between 0 and 1 scales the total, so division must come first.",
                 "result": "126 ÷ 360 = 0.35.",
-                "predictPrompt": ""
+                "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Scale to 60 farmers",
                 "reason": "Frequency is share times total because each farmer sits in one slice.",
                 "result": "0.35 × 60 = 21 farmers.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -5610,19 +5615,19 @@
                 "operation": "Write class marks",
                 "reason": "Each class needs its midpoint",
                 "result": "4.5, 14.5, 24.5, 34.5",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Multiply f by mark",
                 "reason": "fm totals each class",
                 "result": "13.5, 101.5, 147, 138; Σfm = 400, Σf = 20",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Divide Σfm by Σf",
                 "reason": "Mean shares total equally",
                 "result": "400 ÷ 20 = 20",
-                "predictPrompt": ""
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -5699,19 +5704,19 @@
                 "operation": "Find the position",
                 "reason": "75% lie below the 75th percentile, so use 0.75×N.",
                 "result": "0.75×40=30, so 30th lowest score.",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Locate the class",
                 "reason": "30 passes cf=12 but is below cf=32, so it lies in 20–30.",
                 "result": "Class 20–30 contains it.",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Interpolate within class",
                 "reason": "Assume even spread inside the class, so split width by needed share.",
                 "result": "20+(30−12)/20×10=29.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer satisfies the question?"
               }
             ]
           }
@@ -5838,19 +5843,19 @@
                 "operation": "Find the mean",
                 "reason": "Add all scores and divide by 5, then subtract extremes for range.",
                 "result": "Mean = 50 ÷ 5 = 10; range = 13 − 7 = 6.",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Sum the deviations",
                 "reason": "Use |x − 10| for mean deviation and squares for variance.",
                 "result": "|x − 10|: 3, 1, 0, 1, 3 sum 8; squares sum 20.",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Divide and root",
                 "reason": "Divide each sum by n = 5; root only for SD.",
                 "result": "MD = 8 ÷ 5 = 1.6; variance = 20 ÷ 5 = 4; SD = √4 = 2.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -5927,19 +5932,19 @@
                 "operation": "Find the mean",
                 "reason": "Mean is total score shared equally, so weight each mark by frequency.",
                 "result": "Σfx=10+120+30=160; mean=160÷8=20.",
-                "predictPrompt": ""
+                "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Find Σfx²",
                 "reason": "Variance needs squared deviations, which Σfx²/Σf captures compactly.",
                 "result": "Σfx²=100+2400+900=3400; 3400÷8=425.",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Subtract mean squared",
                 "reason": "Variance is average squared distance from mean, so remove mean effect.",
                 "result": "Var=425−400=25; SD=√25=5.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you sanity-check the size and sign of this answer?"
               }
             ]
           }
@@ -6064,19 +6069,19 @@
                 "operation": "Write the permutation",
                 "reason": "Order matters and no letter repeats, so choose ordered positions.",
                 "result": "8P3 = 8! / 5!.",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Multiply the place choices",
                 "reason": "First place 8 choices, then 7, then 6.",
                 "result": "8 × 7 × 6.",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Compute the product",
                 "reason": "8 × 7 = 56 and 56 × 6 = 336.",
                 "result": "There are 336 possible codes.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -6156,19 +6161,19 @@
                 "operation": "Bind the pair",
                 "reason": "Together is a restriction, so glue the pair into one block first.",
                 "result": "Block + 4 others = 5 units.",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Arrange the units",
                 "reason": "Round tables fix rotation, so n units give (n−1)! not n!.",
                 "result": "(5−1)! = 4! = 24.",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Order inside block",
                 "reason": "The pair can swap, so order inside matters and doubles ways.",
                 "result": "24 × 2 = 48 ways.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -6293,19 +6298,19 @@
                 "operation": "Apply the power law",
                 "reason": "The term 2 log_3 9 is a power and becomes log_3 (9^2).",
                 "result": "The expression becomes log_3 729 − log_3 81 + log_3 27.",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Evaluate each small log",
                 "reason": "Each log is the power of 3 that makes the number.",
                 "result": "log_3 729 = 6, log_3 81 = 4, log_3 27 = 3.",
-                "predictPrompt": ""
+                "predictPrompt": "Which terms can be combined next?"
               },
               {
                 "operation": "Combine the values",
                 "reason": "Add and subtract in the order written.",
                 "result": "6 − 4 + 3 = 5.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
@@ -6385,19 +6390,19 @@
                 "operation": "Change the base",
                 "reason": "Use base 10 because only log₁₀2 is known, via the change-of-base formula.",
                 "result": "log₈32 = log₁₀32 ÷ log₁₀8.",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Expand both logs",
                 "reason": "Powers become multiples by the power law, so log₁₀(2^k) equals k times log₁₀2.",
                 "result": "log₁₀32=5×0.3010=1.5050; log₁₀8=3×0.3010=0.9030.",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Cancel and divide",
                 "reason": "Both terms share log₁₀2, so that factor cancels, leaving only the powers.",
                 "result": "1.5050 ÷ 0.9030 = 5/3 ≈ 1.667.",
-                "predictPrompt": ""
+                "predictPrompt": "How would you sanity-check the size and sign of this answer?"
               }
             ]
           }
@@ -6522,19 +6527,19 @@
                 "operation": "Try P(3)",
                 "reason": "An easy small integer that makes the arithmetic simple",
                 "result": "P(3) = 27 − 81 + 78 − 24 = 0",
-                "predictPrompt": ""
+                "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Factor out (x − 3)",
                 "reason": "Divide the cubic by (x − 3)",
                 "result": "x² − 6x + 8",
-                "predictPrompt": ""
+                "predictPrompt": "What do you need to find before you can solve this?"
               },
               {
                 "operation": "Solve the quadratic",
                 "reason": "Factorise x² − 6x + 8",
                 "result": "(x − 2)(x − 4) = 0, so x = 2, 3, 4",
-                "predictPrompt": ""
+                "predictPrompt": "How would you verify this answer satisfies the question?"
               }
             ]
           }
@@ -6727,19 +6732,19 @@
                 "operation": "Express y from the linear",
                 "reason": "Linear is easier to manipulate",
                 "result": "y = 3x − 1",
-                "predictPrompt": ""
+                "predictPrompt": "What do you substitute, into which formula?"
               },
               {
                 "operation": "Substitute into the quadratic",
                 "reason": "One unknown eliminated",
                 "result": "3x − 1 = x² + 2x − 5, so x² − x − 4 = 0",
-                "predictPrompt": ""
+                "predictPrompt": "What do you need to find before you can solve this?"
               },
               {
                 "operation": "Solve the quadratic",
                 "reason": "Use the formula",
                 "result": "x = (1 ± √(1 + 16))/2 = (1 ± √17)/2",
-                "predictPrompt": ""
+                "predictPrompt": "How would you explain why this beats the other options?"
               }
             ]
           }
@@ -6947,19 +6952,19 @@
                 "operation": "Read the leading coefficient",
                 "reason": "Negative coefficient means the parabola opens downward",
                 "result": "Opens downward; a = −1",
-                "predictPrompt": ""
+                "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Find discriminant",
                 "reason": "b² − 4ac determines the crossings",
                 "result": "4 − 4(−1)(3) = 4 + 12 = 16 > 0; two crossings",
-                "predictPrompt": ""
+                "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Find the vertex",
                 "reason": "Axis of symmetry: x = -b/(2a)",
                 "result": "x = -2/(2×(−1)) = 1, y = −1 + 2 + 3 = 4",
-                "predictPrompt": ""
+                "predictPrompt": "How would you test this answer before writing it down?"
               }
             ]
           }
