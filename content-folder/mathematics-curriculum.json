@@ -190,6 +190,27 @@
       "section": "NUMBER AND NUMERATION",
       "order": 27,
       "description": "Laws of indices, standard form, logarithms and surds (spine topic split into indices, logarithms and surds lessons)."
+    },
+    {
+      "slug": "polynomials",
+      "name": "Polynomials",
+      "section": "ALGEBRA",
+      "order": 27,
+      "description": "Change of subject, polynomial arithmetic, factor and remainder theorems, and roots of degree three."
+    },
+    {
+      "slug": "simultaneous-equations",
+      "name": "Simultaneous Equations",
+      "section": "ALGEBRA",
+      "order": 28,
+      "description": "Simultaneous equations, one linear and one quadratic, solved by substitution."
+    },
+    {
+      "slug": "polynomial-graphs",
+      "name": "Graphs of Polynomials",
+      "section": "ALGEBRA",
+      "order": 29,
+      "description": "Graphs of polynomials of degree not greater than three."
     }
   ],
   "lessons": [
@@ -816,16 +837,16 @@
           "content": {
             "heading": "Ratios, special angles and graphs",
             "paragraphs": [
-              "A candidate adds sin45° and sin30° to get sin75°. In a right-angled triangle, label the sides against the angle and use SOHCAHTOA: sinθ=opposite/hypotenuse, cosθ=adjacent/hypotenuse, tanθ=opposite/adjacent. The identity sin²θ+cos²θ=1 links all three ratios.",
-              "Know sin30°=1/2, sin45°=√2/2 and sin60°=√3/2, with cosines in reverse and tan30°=1/√3, tan45°=1, tan60°=√3. The right angle gives sin90°=1, cos90°=0 and tan90° undefined. Compounds come from parts: 75°=45°+30° gives sin75°=(√6+√2)/4, cos75°=(√6−√2)/4 and tan75°=2+√3; 105°=60°+45° keeps sin105°=(√6+√2)/4 but needs cos105°=(√2−√6)/4 and tan105°=−(2+√3); 135°=180°−45° gives sin135°=√2/2, cos135°=−√2/2 and tan135°=−1.",
-              "The graphs check signs beyond 90°: sine rises 0 to 1 at 90°, falls to 0 at 180° and to −1 at 270°. Cosine falls 1 to 0 at 90°, to −1 at 180° and to 0 at 270°."
+              "Label sides against the chosen angle and use SOHCAHTOA: sinθ = opposite/hypotenuse, cosθ = adjacent/hypotenuse, tanθ = opposite/adjacent. The identity sin²θ + cos²θ = 1 links all three.",
+              "Know sin30°=½, sin45°=√2/2, sin60°=√3/2, cosines in reverse, tan30°=1/√3, tan45°=1, tan60°=√3. At 90°, sin=1, cos=0, tan undefined. Compounds use the parts: 75°=45°+30°, sin75°=(√6+√2)/4, cos75°=(√6−√2)/4, tan75°=2+√3. Similarly 105°=60°+45° and 135°=180°−45°.",
+              "A sine graph is read by amplitude, period and shift. For y = a sin bx + c the wave climbs to c + a, falls to c − a, and one wave takes 360°/b. y = 3 sin 2x + 1 has amplitude 3, period 180°, peak 4 and trough −2. Cosine is the same wave shifted 90° right."
             ],
             "bullets": [
               "SOHCAHTOA places each side against the chosen angle.",
               "Specials include 90° and compounds 75°, 105° and 135°.",
-              "Sine and cosine graphs decide the sign in each quadrant."
+              "Amplitude, period and shift describe any sine or cosine wave."
             ],
-            "takeaway": "Label sides first, recall exact specials and check the sign from the graph.",
+            "takeaway": "Label sides first, recall exact specials, read graphs by amplitude and period.",
             "check": {
               "question": "What is sin 60°?",
               "options": [
@@ -1023,6 +1044,47 @@
                 "result": "tan θ = 6/8, so θ ≈ 36.9° and the bearing is 037°.",
                 "predictPrompt": ""
               }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Reading a sine or cosine graph",
+            "paragraphs": [
+              "The equation of a wave is read off the graph by the same three numbers. The height from the midline to a peak is the amplitude a; the distance from one peak to the next is the period; the level the graph sits on when x = 0 is the shift c.",
+              "For y = 4 cos 180°x + 1, each step of 180 degrees in x finishes one complete wave, the amplitude is 4, and the midline sits at 1. The graph therefore runs from −3 to 5 with a period of 180°.",
+              "The cosine graph leads the sine graph by 90°. If sine starts at 0 rising, cosine starts at its peak and falls, and both repeat every 360° divided by the coefficient of x. The two graphs are identical in shape shifted by a quarter period.",
+              "A candidate who writes amplitude, period and shift before trying a sketch will draw the wave correctly on the first attempt. The equation and the graph are the same three numbers in two forms.",
+              "Recognising which graph is which is the other half of the task. A question that asks for the maximum value of y = 2 sin 3x + 5 requires knowing the peak is 7, reached wherever 3x is an odd multiple of 90°.",
+              "A wave question will give the amplitude and ask for the maximum height. If y = 2 sin 3x + 5, the maximum is 2 + 5 = 7 and occurs whenever 3x is an odd multiple of 90°, so x is an odd multiple of 30°.",
+              "When a question asks for the period, draw one full wave on the axis and measure it in degrees. For y = cos 4x − 1, the graph completes one wave in 90°, at height from −2 to 0, starting at x = 0 with y = 0."
+            ],
+            "bullets": [
+              "Amplitude = peak above the midline; period = degrees per wave",
+              "Midline = the level around which the wave oscillates",
+              "Cosine is sine shifted 90° right",
+              "Maximum of a sin bx + c is a + c"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: The second quadrant and the reference angle",
+            "paragraphs": [
+              "Beyond 90°, the ratios change sign by quadrant. Sine is positive in the second quadrant, negative in the third and fourth, while cosine is negative in the second and third but positive in the fourth. Tangent is positive in the first and third and negative in the second and fourth.",
+              "The reference angle is the acute angle between the terminal arm and the x-axis. For 135°, the reference angle is 45°, and every ratio of 135° equals the ratio of 45° with the correct sign chosen from the quadrant.",
+              "A candidate who computes the reference angle first and then picks the sign from the quadrant will write the correct ratio for any angle between 0° and 360°. Memorising isolated values for 135°, 150° and 225° collapses once the rule is understood.",
+              "The same reference-angle rule works for negative angles: −45° has the ratio of 45° with sine negative, because it sits in the fourth quadrant where sine is negative.",
+              "An examiner who asks for cos 150° wants the candidate to find the reference angle first: 150° = 180° − 30°, so cos 150° = −cos30° = −√3/2. Skipping the reference-angle step and computing blindly is the commonest error.",
+              "Tangent has its own quadrant rule: positive in the first and third, negative in the second and fourth. cos −60° equals cos 60° = 0.5, and sin −60° equals −sin 60° = −√3/2, so the reference-angle rule handles signs symmetrically."
+            ],
+            "bullets": [
+              "Reference angle = acute angle to the x-axis",
+              "Choose the sign from the quadrant, not from memory",
+              "Sine positive in quadrants 1 and 2, cosine in 1 and 4, tangent in 1 and 3",
+              "Works for angles beyond 360° and for negative angles"
             ]
           }
         }
@@ -1346,7 +1408,8 @@
             "paragraphs": [
               "Addition in base b works like decimal addition except that the carrying threshold is b. In base five, 3 + 3 = 11 because 6 is one five and one unit. The carry is therefore smaller than in decimal.",
               "Subtraction needs borrowing in the same way. In base four, 31 − 12 needs one four borrowed as four units. The method is identical to decimal, only the threshold and the borrow amount change.",
-              "Multiplication by a single digit also follows the threshold. In base five, 4 × 4 = 31 because 16 is three fives and one unit. A table of products up to base minus one is therefore enough."
+              "Multiplication by a single digit also follows the threshold. In base five, 4 × 4 = 31 because 16 is three fives and one unit. A table of products up to base minus one is therefore enough.",
+              "Multiplication and division are done column-wise with the same threshold. In base five, 23 × 14 = 234 (do 3 × 4, then 3 × 1, then 2 × 4 shifted, then 2 × 1). Reading the product upward gives the answer."
             ],
             "bullets": [
               "Carry at b, not at ten",
@@ -1415,8 +1478,6 @@
               "Base ten is used because humans have ten fingers. It is a habit of counting, not a property of numbers. A number written in base five is the same quantity as a number written in decimal, only the place values differ.",
               "That is why a bag priced at 34 in base five is not thirty-four in the price. The digits are the same, but the place values are 25, 5 and 1 rather than 100, 10 and 1. The base must therefore be read before the number.",
               "Examiners test that habit directly. A question that asks for a base-five sum in decimal is testing whether the candidate converts, not whether the candidate can add. The conversion is the skill.",
-              "Examiners test that habit directly. A question that asks for a base-five sum in decimal is testing whether the candidate converts, not whether the candidate can add.",
-              "That is why a bag priced at 34 in base five is not thirty-four in the price. The digits are the same, but the place values are 25, 5 and 1 rather than 100, 10 and 1.",
               "Base ten is therefore a cultural fact rather than a mathematical law. That distinction is why a number in another base can be mistaken for a decimal one."
             ],
             "bullets": [
@@ -1434,7 +1495,6 @@
               "Base two uses only 0 and 1 because a circuit can be on or off. Each place is a power of two, so a byte of eight bits can represent 256 values. That economy is why computers count in binary.",
               "A binary number such as 1011 is therefore 8 + 0 + 2 + 1 = 11. The expansion is the same as in any base, only the place values are powers of two. The method does not change with the base.",
               "A hexadecimal digit therefore packs four binary digits. That packing is why one hexadecimal digit can stand for a whole byte, which is how addresses are written in fewer symbols.",
-              "A binary number such as 1011 is therefore 8 + 0 + 2 + 1 = 11. The expansion is the same as in any base, only the place values are powers of two.",
               "The eight bits of a byte can therefore represent 256 values. That economy is why a byte is the unit of storage."
             ],
             "bullets": [
@@ -1497,6 +1557,24 @@
                 "result": "Answer: 124_8, and 25_8 × 4 = 21 × 4 = 84 checks it.",
                 "predictPrompt": ""
               }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Multiplication and division in base two and beyond",
+            "paragraphs": [
+              "Two-digit multiplication in base b is carried out one digit at a time exactly as in decimal, and the carry threshold is always b. In base eight, 12 × 6 means (2×6 = 14₈, write 4 and carry 1; 1×6 + 1 = 7₈), so the answer is 74₈.",
+              "Division in another base is the same repeated subtraction with remainders read in that base. In base two, 1101 ÷ 11 = 100 r 1, because 11 goes into 11 exactly once and into 01 is zero times, remainder 1.",
+              "A shortcut when the question is in base ten asks: convert the numbers to decimal, do the division there, then convert back. That route is reliable, but reading the question carefully prevents the commonest error of writing a decimal answer labelled as a base answer.",
+              "Binary multiplication is the engine of every computer, and each bit shift doubles or halves the number. Multiplying by 1000₀ in base two is shifting three places left, the same as multiplying by eight.",
+              "Fractional conversion also tests understanding rather than memory. To check 0.1₂, multiply 0.1 × 2 = 0.2, take the whole part, multiply the remainder by 2 again, and continue; the pattern either repeats or terminates."
+            ],
+            "bullets": [
+              "Multiply digit-wise; carry at b, read upward",
+              "Divide by repeated subtraction; remainders stay in base",
+              "Backward route: multiply back to verify in the original base"
             ]
           }
         }
@@ -1645,8 +1723,9 @@
               "A remainder is enough because only the remainder decides divisibility and congruence. Two numbers with the same remainder behave alike in every addition and multiplication, so the whole numbers can be replaced by their remainders.",
               "That replacement is why a large power can be computed in a few steps. Instead of 13^2, the work is done on 6^2. The answer is the same because the remainders are congruent.",
               "An examination rewards that shortness. A candidate who reduces early finishes in seconds, while one who multiplies out runs out of time. The remainder is therefore a time skill as well as a concept.",
-              "An examination rewards that shortness. A candidate who reduces early finishes in seconds, while one who multiplies out runs out of time.",
-              "That replacement is why a large power can be computed in a few steps. Instead of 13^2, the work is done on 6^2."
+              "A candidate who writes remainders everywhere finishes faster than one who divides fully every time. Modular shortcuts exist precisely so the arithmetic stays small in the exam hall.",
+              "Divisibility tests are modular arguments in disguise: a number is divisible by 9 exactly when its digit sum is, which is why the two facts keep appearing together in past questions.",
+              "Inverses exist modulo a prime for every non-zero residue, so every division by a prime can be replaced by multiplication by the inverse. That trick appears in cryptography and in every fast multiple-choice trick row."
             ],
             "bullets": [
               "Only the remainder decides divisibility and congruence",
@@ -1663,9 +1742,7 @@
               "An inverse of a modulo m is a number that multiplies a to give 1. It exists exactly when a and m are coprime, that is, when they share no common factor greater than one. That coprimality is therefore the condition.",
               "The inverse can be found by trial because m is small in an examination. In mod five, the inverse of two is three because 2×3 = 6 ≡ 1. That trial is a valid method when m is small.",
               "A linear congruence ax ≡ b (mod m) is then solved by multiplying both sides by that inverse. If a and m are not coprime, there may be no solution or many, which is why the condition matters.",
-              "The inverse can be found by trial because m is small in an examination. In mod five, the inverse of two is three because 2x3 = 6 is congruent to 1.",
-              "A linear congruence ax is congruent to b modulo m is then solved by multiplying both sides by that inverse. If a and m are not coprime, there may be no solution or many, which is why the condition matters.",
-              "The inverse can be found by trial because m is small in an examination. In mod five, the inverse of two is three."
+              "A linear congruence ax is congruent to b modulo m is then solved by multiplying both sides by that inverse. If a and m are not coprime, there may be no solution or many, which is why the condition matters."
             ],
             "bullets": [
               "An inverse exists exactly when a and m are coprime",
@@ -1683,10 +1760,9 @@
               "The test for eleven uses alternating digits because ten is congruent to minus one modulo eleven. That alternation is therefore a congruence, not a trick. The test for four uses the last two digits because one hundred is divisible by four.",
               "A candidate who understands those tests can derive them. A candidate who memorises them can only apply them. The derivation is therefore the deeper skill.",
               "That derivation is why a new test can be invented in an examination. If a modulus is given, its test can be built from the value of ten modulo that modulus.",
-              "A candidate who understands those tests can derive them. A candidate who memorises them can only apply them."
+              "A number is divisible by 3 exactly when its digit sum is divisible by 3. That is a modular result in disguise: 10 ≡ 1 (mod 3), so the sum of the digits carries the same residue as the number itself. The same trick gives the tests for 9 and 11."
             ],
             "bullets": [
-              "Divisible by m means congruent to 0 mod m",
               "Tests for 3, 9, 11 and 4 are congruences",
               "A test can be derived from ten modulo m"
             ]
@@ -1889,8 +1965,7 @@
               "Reduction then returns the fraction to its smallest parts. A fraction that is not reduced is not wrong, but it is incomplete. Examiners therefore mark the reduced form.",
               "That reduction is why cancelling is valid. A common factor in top and bottom counts the same parts twice, so removing it simplifies the count.",
               "A fraction that is not reduced is not wrong, but it is incomplete. Examiners therefore mark the reduced form.",
-              "Multiplying top and bottom by the same number does not change a fraction. That equivalence is why 2/3 and 8/12 are the same quantity.",
-              "A fraction counts parts of a whole. Two fractions can only be added when their parts are the same size, which is what a common denominator provides."
+              "A common denominator works because multiplying top and bottom by the same number preserves the value of the fraction. Every addition and subtraction of fractions reduces to it; multiplication does not need it at all, which is why it reverses so easily."
             ],
             "bullets": [
               "Same-sized parts can be added; unlike parts cannot",
@@ -1907,10 +1982,7 @@
               "Multiplication needs no common denominator. Multiply top by top and bottom by bottom. That direct method is why multiplication is shorter than addition.",
               "Division by a fraction means multiplying by its reciprocal. To divide by 2/3, multiply by 3/2. That inversion is why a division question becomes a multiplication question.",
               "Cancelling before multiplying saves work. If a top and a bottom share a factor, divide them first. A candidate who cancels early therefore keeps the numbers small.",
-              "That cancelling is the same reduction as in addition, only earlier. Examiners reward it because it prevents a large fraction that must then be reduced.",
-              "Cancelling before multiplying saves work. If a top and a bottom share a factor, divide them first.",
-              "Division by a fraction means multiplying by its reciprocal. To divide by 2/3, multiply by 3/2.",
-              "Multiplication needs no common denominator. Multiply top by top and bottom by bottom."
+              "That cancelling is the same reduction as in addition, only earlier. Examiners reward it because it prevents a large fraction that must then be reduced."
             ],
             "bullets": [
               "Multiply top by top and bottom by bottom",
@@ -1930,7 +2002,8 @@
               "That rule is why 0.75 rounds to 0.8 to one decimal place. The next digit is five, so the kept digit rises.",
               "Rounding a decimal to a stated place looks at the next digit. If that digit is five or more, the last kept digit rises by one.",
               "That rule is why 0.75 rounds to 0.8 to one decimal place.",
-              "A recurring decimal does not terminate because its denominator has a prime factor other than two or five. Its repetend therefore repeats forever."
+              "A recurring decimal does not terminate because its denominator has a prime factor other than 2 or 5. For example, 1/3 and 7/6 repeat; 1/8 and 5/16 terminate.",
+              "A recurring decimal such as 0.333… is written 0.3̄, and the bar marks where the repeat begins. Every recurring decimal is a fraction whose denominator has a prime factor other than 2 or 5, so recognizing the factor is a fast way to predict whether the decimal repeats."
             ],
             "bullets": [
               "Recurring decimals have a repeating repetend",
@@ -2118,8 +2191,8 @@
               "Profit and loss therefore use the cost price because that is what the trader invested. A percentage profit that used the selling price would measure a different quantity. The base is therefore part of the definition.",
               "Interest uses the principal for the same reason. The principal is what was borrowed, so the rate is charged on that amount. A rate on any other base would charge the wrong quantity.",
               "That naming is the first step of every percentage question. A candidate who names the base cannot choose the wrong one.",
-              "A percentage has no meaning without its base. Fifteen per cent of the cost price is not fifteen per cent of the selling price.",
-              "Profit and loss therefore use the cost price because that is what the trader invested. A percentage profit that used the selling price would measure a different quantity."
+              "A percentage question always hides a base, and the base is named by the phrase “of”. “25% of the price” uses the price as the base; “25% more” uses the original quantity instead.",
+              "A percentage question always hides a base, and the base is named by the phrase of. 25% of the price uses the price as the base; 25% more uses the original quantity instead. Naming the base before computing is the single most reliable step."
             ],
             "bullets": [
               "Profit is over the cost price; interest is over the principal",
@@ -2138,7 +2211,7 @@
               "A candidate who adds percentage changes therefore loses the mark. The changes must be multiplied as multipliers, which is why order matters.",
               "That multiplication is why a fall after a rise does not restore the start. The base has changed, so the same percentage acts on a different quantity.",
               "A rise of 10 per cent followed by a fall of 10 per cent is not the original, because 1.1 × 0.9 = 0.99. That loss of one per cent is the product, not the sum.",
-              "A percentage increase multiplies by one plus the rate, while a decrease multiplies by one minus the rate. A rise of 20 per cent on 50 is therefore 1.2 × 50."
+              "Successive increases are multiplied, not added. A 10% increase followed by a 10% decrease leaves the original quantity at 99% of its start, because the second change is measured against the new base, not the old."
             ],
             "bullets": [
               "Increase multiplies by one plus the rate",
@@ -2155,9 +2228,7 @@
               "The trap is a percentage that is applied to the new quantity rather than the original. A candidate who computes a profit on the selling price therefore gets a smaller answer. That smaller answer is the trap.",
               "The antidote is to write the base in the working. If the base is not named, the wrong one will be used. That writing is therefore the first step.",
               "Time must be budgeted as in comprehension. A percentage that resists can be left and returned to. A test that is finished is worth more than a perfect answer to three items.",
-              "That budget is why a first sweep is useful. The easy percentages can be answered at once, and the hard ones can be left until the base is clear.",
-              "The trap is a percentage that is applied to the new quantity rather than the original. A candidate who computes a profit on the selling price therefore gets a smaller answer.",
-              "The antidote is to write the base in the working. If the base is not named, the wrong one will be used."
+              "That budget is why a first sweep is useful. The easy percentages can be answered at once, and the hard ones can be left until the base is clear."
             ],
             "bullets": [
               "The trap applies the percentage to the new quantity",
@@ -2346,8 +2417,9 @@
               "A set is equal to another when each is a subset of the other. That mutual inclusion is therefore the test of equality, not a comparison of size.",
               "A proper subset excludes equality. It has fewer elements and every one is in the larger set. That exclusion is why ∅ is a proper subset of every non-empty set.",
               "That definition is why the empty set is the most tested subset. It belongs everywhere without adding anything.",
-              "A proper subset excludes equality. It has fewer elements and every one is in the larger set.",
-              "The empty set has no elements and is written as a pair of braces. That emptiness is why it is a subset of every set."
+              "The empty set has no elements and is written as a pair of braces. That emptiness is why it is a subset of every set.",
+              "Every set has two improper subsets: the empty set and itself. Every nonempty proper subset excludes both, which is why counting the proper subsets is always one short of counting all subsets.",
+              "A complement is the set of everything not in the subset, measured against the universal set. Choosing the right universal set is the examiner’s favourite way to make a simple question look hard."
             ],
             "bullets": [
               "A ⊆ B means every element of A is in B",
@@ -2364,9 +2436,7 @@
               "Three sets need three overlapping circles. Their overlaps create eight regions when the universal set is counted. Each region must be filled in turn, from the centre outward.",
               "A question about exactly one set therefore names an exclusive region, while a question about at least one set names a union. That naming is the test of the region.",
               "A question about neither set names the part of U outside all circles. That part is the complement of the union, which is why it is counted last.",
-              "That order is why a three-set question is solved from the centre. The overlaps are known first, and the exclusive regions follow from them.",
-              "Three sets need three overlapping circles. Their overlaps create eight regions when the universal set is counted.",
-              "A question about exactly one set therefore names an exclusive region, while a question about at least one set names a union."
+              "That order is why a three-set question is solved from the centre. The overlaps are known first, and the exclusive regions follow from them."
             ],
             "bullets": [
               "Three circles create eight regions including U",
@@ -2384,10 +2454,10 @@
               "The antidote is to draw the Venn circles before any arithmetic. A diagram that shows the overlap will not be counted twice, while a formula that is misread will.",
               "Time must be budgeted as in comprehension. A counting question that resists can be left and returned to. A test that is finished is worth more than a perfect answer to three items.",
               "That budget is why a first sweep is useful. The easy counts can be answered at once, and the hard ones can be left until the diagram is clear.",
-              "The trap is a number that is given for the union but is used for a set. A candidate who adds the union to a set therefore counts the overlap again.",
-              "The antidote is to draw the Venn circles before any arithmetic. A diagram that shows the overlap will not be counted twice.",
               "Time must be budgeted as in comprehension and in tests. A counting question that resists can be left and returned to later.",
-              "That budget is why a first sweep is useful."
+              "That budget is why a first sweep is useful.",
+              "A union question asks for the total at least one set; an intersection asks for the total in both. Mixing the two is the most common error in a Venn problem.",
+              "A union question asks for everything in at least one set; an intersection asks for everything in both. Mixing the two is the most common error in a Venn problem, and the exam rewards drawing the circles before any arithmetic."
             ],
             "bullets": [
               "The trap counts the union as a set",
@@ -2583,8 +2653,10 @@
               "Inverse variation means the quantities trade off. The product xy therefore cannot change, because an increase in one must be matched by a decrease in the other. That sameness is the definition.",
               "A constant ratio and a constant product are therefore different tests for different variations. A candidate who uses the wrong one will get a wrong answer.",
               "That distinction is why the variation must be named first. The name decides which quantity is constant.",
-              "Direct variation means the quantities grow together. The ratio y ÷ x therefore cannot change, because a change in the ratio would break the proportional growth.",
-              "In direct variation a change in x produces a proportional change in y, so the ratio between them is fixed. In inverse variation the product is fixed because a rise in one quantity must be exactly cancelled by a fall in the other to keep their product unchanged."
+              "In direct variation a change in x produces a proportional change in y, so the ratio between them is fixed. In inverse variation the product is fixed because a rise in one quantity must be exactly cancelled by a fall in the other to keep their product unchanged.",
+              "Off the exam, direct variation explains scaling recipes and inverse variation explains effort-per-hour trade-offs. The same constant still runs both cases.",
+              "Direct variation is a straight line through the origin. Once one pair is known, every other pair is fixed by the ratio, so a single example is enough to write the general rule.",
+              "Joint variation combines three quantities: y = kxz. Doubling x or z doubles y, but doubling both doubles y twice, so the relationship is multiplicative."
             ],
             "bullets": [
               "Direct: the ratio cannot change",
@@ -2602,7 +2674,6 @@
               "A hyperbola is inverse variation. Its shape comes from the product being constant, because as x grows large, y approaches zero without reaching it.",
               "A graph that is neither a line nor a hyperbola is no simple variation. That shape therefore tells the candidate that another relation is at work.",
               "That reading is why a graph can be questioned without numbers. The shape alone names the variation.",
-              "A hyperbola is inverse variation. Its shape comes from the product being constant, because as x grows large, y approaches zero without reaching it.",
               "The straight line through the origin is the signature of direct variation. The curve that hugs both axes without ever touching either is the signature of inverse variation, because the product stays constant along every point of it."
             ],
             "bullets": [
@@ -2621,11 +2692,9 @@
               "The second trap is a partial variation that is read as direct. That error drops the constant part, which is why the intercept must be read first.",
               "Time must be budgeted as in comprehension. A variation that resists can be left and returned to. A test that is finished is worth more than a perfect answer to three items.",
               "That budget is why a first sweep is useful. The easy variations can be answered at once, and the hard ones can be left until the constant is clear.",
-              "The trap is a question that looks direct but is inverse, or the reverse. A candidate who does not name the variation will therefore use the wrong constant.",
               "A candidate who names the variation first will choose the right constant and finish in under a minute. A candidate who starts computing first will often discover halfway that the wrong constant was used, which wastes the time the question was meant to save."
             ],
             "bullets": [
-              "Name the variation before computing",
               "A partial variation that is read as direct drops the constant",
               "Do an easy-first sweep and return to hard items"
             ]
@@ -2811,8 +2880,8 @@
               "Adding a constant shifts the line without reflecting it, so the order is preserved. That shift is why addition never reverses an inequality.",
               "A candidate who understands the reflection will not need to memorise the rule. The rule is the geometry of the line.",
               "That geometry is why the check matters. A solution that violates the original inequality has reflected incorrectly.",
-              "Multiplying by a negative reflects the number line. A number that was to the left of another moves to the right, so the order reverses.",
-              "Picture the number line being folded over. Every point that was to the left of the fold goes to the right of it, so a statement that was true before the fold is reversed after it. That folding is the geometry behind every sign reversal."
+              "Picture the number line being folded over. Every point that was to the left of the fold goes to the right of it, so a statement that was true before the fold is reversed after it. That folding is the geometry behind every sign reversal.",
+              "Multiplying by a negative reflects the number line. A number that sat to the left of zero is now to the right of it, and the order of the two sides flips with it. Textbook rule and geometric rule are one and the same."
             ],
             "bullets": [
               "A negative multiplier reflects the line and reverses order",
@@ -2830,11 +2899,9 @@
               "A compound inequality has two endpoints, so it needs two marks. The overlap between them is shaded, which is why a compound line is a segment and not a ray.",
               "A candidate who reads the marks has read the sign. The marks and the sign are therefore the same information in two forms.",
               "That reading is why a number line can be questioned without words. The shaded part is the solution.",
-              "An open circle means the endpoint is excluded. A strict inequality therefore has an open circle at its end.",
               "When a value is excluded, the boundary is not part of the solution and the circle stays open. When it is included, the boundary is part of the solution and the circle is filled. The mark therefore encodes the exact logical content of the sign."
             ],
             "bullets": [
-              "Open circle excludes; filled circle includes",
               "Compound solutions are segments between two marks",
               "Marks and signs carry the same information"
             ]
@@ -2849,9 +2916,9 @@
               "The second trap is a fractional inequality whose denominator is never signed. A candidate who clears it without knowing its sign will choose the wrong range.",
               "Time must be budgeted as in comprehension. An inequality that resists can be left and returned to. A test that is finished is worth more than a perfect answer to three items.",
               "That budget is why a first sweep is useful. The easy inequalities can be answered at once, and the hard ones can be left until the sign is clear.",
-              "The trap is a division by a negative that keeps the sign. A candidate who does not check the divisor will therefore write the reverse of the answer.",
               "Reading the rule aloud before solving often prevents the error. Saying which sign will be used and why forces the divisor check to happen before any division is written, which is when it is too late to add.",
-              "That discipline is what separates the mark from the miss on the hardest inequality items."
+              "That discipline is what separates the mark from the miss on the hardest inequality items.",
+              "A sign reversal happens only when the divisor or multiplier is negative. Before dividing, ask one question: is this negative? If yes, flip it; if no, leave it alone. That single habit removes most inequality errors in the hall."
             ],
             "bullets": [
               "Check the divisor sign before dividing",
@@ -3038,8 +3105,8 @@
               "The sum of a geometric progression is found by subtracting the series from itself shifted by one term. The middle terms cancel, leaving a formula that depends only on the ends. That cancellation is why the formula is short.",
               "A candidate who understands the pairing and the cancellation will not need to memorise. The formulas are therefore derivations, not magic.",
               "That understanding is why a sum to a large n can be trusted. The pairing and the cancellation hold for every n.",
-              "The sum of an arithmetic progression pairs the first and last terms. Each pair has the same sum, and there are n/2 pairs.",
-              "Both derivations use the same idea: rewrite the sum so that most terms cancel. Pairing cancels the middle of an arithmetic sum, while shifting cancels the middle of a geometric sum."
+              "Both derivations use the same idea: rewrite the sum so that most terms cancel. Pairing cancels the middle of an arithmetic sum, while shifting cancels the middle of a geometric sum.",
+              "The arithmetic sum pairs first and last term; that pairing is why half the number of terms multiplies the sum of the two ends. The geometric sum cancels the middle terms by subtraction of the shifted series. Understanding the cancellation makes the formula much harder to forget."
             ],
             "bullets": [
               "AP sum pairs first and last terms",
@@ -3057,7 +3124,6 @@
               "The limit is a/(1 − r) when the condition holds. That limit is the sum to infinity, not a sum to a large n. The two are therefore different quantities.",
               "A problem that asks for a sum to infinity must first check the condition. A problem that asks for a sum to n needs no check.",
               "That check is why an infinite sum is a separate topic. A candidate who skips it will write a number for a sum that has none.",
-              "An infinite geometric sum exists only when the ratio is between −1 and 1. If r is outside that range, the terms do not shrink and the sum grows without bound.",
               "When the terms shrink, a large partial sum gets closer and closer to a single limit. When they do not shrink, each new term pushes the sum further away from any fixed value."
             ],
             "bullets": [
@@ -3076,7 +3142,6 @@
               "The second trap is a sum that is computed without checking whether the terms are those asked for. A sum to n is not a term, and a term is not a sum.",
               "Time must be budgeted as in comprehension. A progression that resists can be left and returned to. A test that is finished is worth more than a perfect answer to three items.",
               "That budget is why a first sweep is useful. The easy progressions can be answered at once, and the hard ones can be left until the numbers are clear.",
-              "The trap is an arithmetic progression that is read as geometric, or the reverse. A candidate who does not name the progression will therefore use the wrong formula.",
               "Writing a and the constant beside the question before using any formula keeps the two numbers visible. Visible numbers are much harder to swap than numbers held in memory."
             ],
             "bullets": [
@@ -3654,7 +3719,8 @@
             "paragraphs": [
               "A tidal gauge at a creek rises and falls like a wave, and its height is modelled by sine. The derivative tells how fast the water is rising at a chosen hour.",
               "Sine differentiates to cosine, and cosine differentiates to negative sine. Tangent differentiates to secant squared, written as one plus tangent squared.",
-              "The chain rule handles a function inside another function, such as sine of x squared. Differentiate the outer function, then multiply by the derivative of the inner function."
+              "The chain rule handles a function inside another function, such as sine of x squared. Differentiate the outer function, then multiply by the derivative of the inner function.",
+              "Some functions are products or quotients, not a single chain. For a product uv the derivative is u·d(v)/dx + v·d(u)/dx, and for a quotient u/v it is (v·du/dx − u·dv/dx)/v²."
             ],
             "bullets": [
               "Sine differentiates to cosine, cosine to negative sine, and tangent to secant squared.",
@@ -3747,7 +3813,6 @@
               "A composite function is a function built inside another function, like cosine of (3x minus 2). The outer and inner parts change together, so the rate must combine both changes. The chain rule is exactly that combination.",
               "Take y equal to cosine of (3x minus 2). The outer derivative of cosine is negative sine. The inner derivative of (3x minus 2) is 3, so the full derivative is negative 3 times sine of (3x minus 2).",
               "A power example shows the same two steps. For y equal to (2x plus 1) cubed, the outer power rule gives 3 times (2x plus 1) squared. Multiplying by the inner derivative 2 gives 6 times (2x plus 1) squared.",
-              "Skipping the inner derivative is the commonest error. Without the factor 3 in the cosine example, the answer understates the true rate by that factor. The factor is not optional because the inner argument moves faster than x itself.",
               "When the outer function is tangent, the same structure applies. The derivative is secant squared multiplied by the inner derivative. Naming the outer and inner parts on paper first prevents the factor from being dropped under time pressure."
             ],
             "bullets": [
@@ -3799,6 +3864,22 @@
                 "result": "dy/dx = 6(2x+1)².",
                 "predictPrompt": ""
               }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: When a function is a product or a quotient",
+            "paragraphs": [
+              "The derivative of x²·sin x is x²·cos x + 2x·sin x. The first term comes from differentiating sin x while x² is fixed; the second comes from differentiating x² while sin x is fixed.",
+              "The quotient rule is the same split with a division sign. For sin x over x, the derivative is (x·cos x − sin x)/x². Writing the top and bottom first prevents sign errors.",
+              "A common exam item asks for the derivative of a fraction such as (1 + x)/cos x. Applying the quotient rule directly gives ((cos x) − (1 + x)(−sin x))/cos²x, which simplifies to (cos x + (1 + x)sin x)/cos²x."
+            ],
+            "bullets": [
+              "Product uv: u·dv/dx + v·du/dx",
+              "Quotient u/v: (v·du/dx − u·dv/dx)/v²",
+              "Name the pattern before differentiating."
             ]
           }
         }
@@ -6320,6 +6401,636 @@
                 "result": "1.5050 ÷ 0.9030 = 5/3 ≈ 1.667.",
                 "predictPrompt": ""
               }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "polynomials",
+      "topic": "polynomials",
+      "title": "Polynomials",
+      "objective": "Find the subject of a formula, add, subtract, multiply and divide polynomials, factorise polynomials of degree 3 or less, use the factor and remainder theorems, and find roots of polynomials.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Polynomials",
+            "paragraphs": [
+              "A factory manager has a cost formula S = 3h² + 2h + c and wants it in terms of h. That is changing the subject of a formula. A polynomial question asks what the expression itself is doing."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Making a variable the subject",
+            "paragraphs": [
+              "Changing the subject is the mirror of solving an equation: every term is isolated on one side. Whatever is done to both sides of S = 3h² + 2hc gives a formula for h.",
+              "Subtract c, divide by 3h, and h is left with 2/3 added to both: h = (S − c − 2hc)/3h₂. The algebraic rule is the same for letters as for numbers.",
+              "A formula such as P = 2(a + b) becomes 0.5P = a + b, and then b = P/2 − a. Letters are not different arithmetic, just arithmetic with symbols."
+            ],
+            "bullets": [
+              "Do exactly the same to both sides",
+              "Letters follow the same rules as numbers",
+              "The aim is one letter alone on one side"
+            ],
+            "takeaway": "Changing the subject means isolating the letter asked for.",
+            "check": {
+              "question": "S = 3h² + 2hc. What is h in terms of S, c?",
+              "options": [
+                "h = (S − 2hc)/3h",
+                "h = (S − 2hc)/3",
+                "h = (S − 2h)/3c",
+                "h = (S − 2h)/3"
+              ],
+              "answer": 1,
+              "why": "Subtract 2hc from both sides: S − 2hc = 3h², then h² = (S − 2hc)/3."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Polynomial arithmetic and polynomial division",
+            "paragraphs": [
+              "A polynomial is an expression in powers: 3x² − 2x + 5. Addition and subtraction combine like powers only; multiplication treats each term of one as a term of the other. The result keeps the same order in decreasing powers.",
+              "Polynomial division comes before solving: divide the highest power of the dividend by the highest power of the divisor, multiply back, subtract, and bring down. For (x³ + 7x − 6) ÷ (x² + x − 2), the quotient is x − 1 and the remainder is 9x − 4.",
+              "The remainder theorem states that when a polynomial P(x) is divided by (x − a), the remainder is P(a). That turns division into evaluation: P(2) for the above gives 8 − 2 + 12 − 6 = 12, and the remainder is 12."
+            ],
+            "bullets": [
+              "Addition combines like powers",
+              "Division gives quotient and remainder",
+              "Remainder theorem: remainder after dividing by (x − a) is P(a)"
+            ],
+            "takeaway": "Remainder theorem: P(a) is the remainder when P(x) is divided by (x − a).",
+            "check": {
+              "question": "P(x) = x³ + 3x² − x − 3. What is the remainder when P(x) is divided by (x − 1)?",
+              "options": [
+                "−2",
+                "0",
+                "6",
+                "−6"
+              ],
+              "answer": 1,
+              "why": "P(1) = 1 + 3 − 1 − 3 = 0."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Factor theorem and roots",
+            "paragraphs": [
+              "The factor theorem is the remainder theorem with zero remainder. If P(a) = 0 then (x − a) is a factor. P(x) = x³ − 6x² + 11x − 6 has P(1) = 1 − 6 + 11 − 6 = 0, so (x − 1) is a factor.",
+              "Once one factor is known, divide to reduce the degree by one. For the same cubic, dividing by (x − 1) gives x² − 5x + 6 = (x − 2)(x − 3), so the roots are 1, 2 and 3.",
+              "Rational roots are p/q of constant over leading coefficient. For 2x³ − 3x² − 8x + 12, candidates are ±1, ±2, ±3, ±4, ±6 and fractions with denominators 2. The signs tell how many roots are possible."
+            ],
+            "bullets": [
+              "P(a) = 0 means (x − a) is a factor",
+              "One factor found means divide to lower the degree",
+              "Rational roots: p/q of constant over leading"
+            ],
+            "takeaway": "P(a) = 0 means (x − a) is a factor; one factor splits the cubic.",
+            "check": {
+              "question": "Which value of a makes x − 2 a factor of x³ − 2x² − x + 2?",
+              "options": [
+                "x = 1",
+                "x = 2",
+                "x = 3",
+                "x = 0"
+              ],
+              "answer": 1,
+              "why": "P(2) = 8 − 8 − 2 + 2 = 0, so x − 2 is a factor."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "For a factor theorem item write P(a) and set it to zero before any division. Most JAMB items ask only for the factor, not the other two roots, so finding one value is enough."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "P(x) = x³ − 9x² + 26x − 24. Solve P(x) = 0.",
+            "steps": [
+              {
+                "operation": "Try P(3)",
+                "reason": "An easy small integer that makes the arithmetic simple",
+                "result": "P(3) = 27 − 81 + 78 − 24 = 0",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Factor out (x − 3)",
+                "reason": "Divide the cubic by (x − 3)",
+                "result": "x² − 6x + 8",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Solve the quadratic",
+                "reason": "Factorise x² − 6x + 8",
+                "result": "(x − 2)(x − 4) = 0, so x = 2, 3, 4",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "P(x) = x³ + 3x² − 4x − 12. Find one factor by trying small integers, then solve P(x) = 0.",
+            "hints": [
+              "Try P(1) and P(−2)",
+              "Once one factor is found, divide to reduce the degree",
+              "Solve the remaining quadratic by factorization"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Using the remainder theorem on the exam",
+            "paragraphs": [
+              "The remainder theorem is tested directly by giving the divisor and asking for the remainder. For f(x) divided by (2x + 1), the remainder is f(−1/2), since a divisor of the form (ax − r) gives a remainder of f(r/a).",
+              "A common type asks: if the remainder when 4x³ − 2x² + Ax − 6 is divided by x + 3 is 4, find A. Setting up the equation f(−3) = 4 gives −108 − 18 − 3A − 6 = 4, so A = −46. Division is never done; evaluation is all that is needed.",
+              "The remainder theorem also links to the roots question. A polynomial with a factor (x − a) means that dividing reduces the degree by one. A cubic with three factors is then solved completely by factoring successively.",
+              "The factor theorem gives the same trial as the rational root test. Any integer root of a polynomial divides the constant term exactly. For 3x³ + 2x² − 8x + 4, the integer candidates are ±1, ±2, ±4, and the leading coefficient allows fractions too.",
+              "Finally, the number of sign changes in the coefficients tells how many positive roots are possible, and the same count in P(−x) tells the negative roots. A cubic with two sign changes has either two positive roots or none, so the candidate knows what to look for.",
+              "That is why the factor theorem is the gateway. Once one root is found, the rest reduce to a quadratic that can be solved by formula or factorization."
+            ],
+            "bullets": [
+              "Remainder when dividing by (ax − r) is f(r/a)",
+              "Integer roots divide the constant term",
+              "Count sign changes for the number of positive roots"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Graphs of polynomials of degree 3",
+            "paragraphs": [
+              "A cubic polynomial x³ + bx² + cx + d has at most two turning points and at most three real roots. The leading term dominates as x grows large: positive cubics rise on the left and rise on the right, negative ones fall at both extremes.",
+              "The y-intercept is the constant term d. The x-intercepts are the roots. If (x − a)(x − b)(x − c) are the factors, the graph crosses the axis at a, b and c, provided those are real numbers.",
+              "A repeated root touches the axis instead of crossing it. x³ − 3x + 2 = (x − 1)²(x + 2) touches at x = 1 and crosses at x = −2. The discriminant distinguishes three distinct real roots from one repeated and one real.",
+              "Maximum and minimum points are found by setting the derivative to zero, but they can also be estimated by the change of sign of the derivative. The cubic inflects where the second derivative vanishes.",
+              "A polynomial with complex roots does not cross the axis there. Its graph stays above or below, and only real roots give intercepts.",
+              "Identifying the shape from the coefficients is a JAMB skill: a positive leading coefficient means a rising graph on both ends; a negative leading coefficient means a falling graph on both ends; the rest determine the bumps."
+            ],
+            "bullets": [
+              "Cubic has at most two turning points and three roots",
+              "Y-intercept is the constant term; x-intercepts are the real roots",
+              "Complex roots never cross the axis"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: The exam trap in a polynomial question",
+            "paragraphs": [
+              "The commonest trap is applying the remainder theorem with the wrong sign. Dividing by (x + 2) means evaluating at x = −2, not at x = 2. A candidate who evaluates at x = 2 will write the wrong remainder and then defend it because the arithmetic looked clean.",
+              "The second trap is forgetting that a remainder question asks for the remainder only, not the quotient. Doing the full division and then choosing the remainder is legal but slow; evaluating is faster and less error-prone.",
+              "The third trap is assuming the cubic has three real roots because two are visible. A cubic always has at least one real root, but the other two may be complex, and only the real ones appear on the graph and in the factorization.",
+              "The fourth trap is about the sign of the leading coefficient. A positive cubic rises on both ends, so both extremes are large and positive; a negative cubic falls on both ends, so they are both large in magnitude and negative.",
+              "Finally, remembering the sum and product of roots saves full factorization in many items. For (x − a)(x − b)(x − c), the sum of the roots is −b and the product is −d in the standard form x³ + bx² + cx + d.",
+              "A candidate who sees the whole pattern — evaluate, factor, divide, read off — will finish a polynomial question in under two minutes, which is the time budget for a JAMB arithmetic item."
+            ],
+            "bullets": [
+              "Evaluate at the negative of the divisor's constant",
+              "Remainder = f value; do not divide fully unless needed",
+              "Use sum and product of roots as a shortcut"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "simultaneous-equations",
+      "topic": "simultaneous-equations",
+      "title": "Simultaneous Equations",
+      "objective": "Solve simultaneous equations in which one equation is linear and the other is quadratic, by substitution, and interpret the solution graphically.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Simultaneous Equations",
+            "paragraphs": [
+              "A trader sells yams and potatoes. Yams cost ₦a per tuber and potatoes ₦b per tuber, and together the profits and weights are tied. The two unknown prices can be found by using both pieces of information at once."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The substitution method",
+            "paragraphs": [
+              "Simultaneous equations are solved by substitution. Take the linear equation and express one unknown in terms of the other, then substitute into the quadratic equation to get one quadratic in one variable.",
+              "For y = x + 2 and y = x², expressing y from the linear gives y = x + 2, and substituting gives x + 2 = x², so x² − x − 2 = 0, factorising into (x − 2)(x + 1) = 0. The solutions x = 2 and x = −1 follow immediately.",
+              "Each solution x gives the corresponding y from the linear equation. The ordered pairs are (2, 4) and (−1, 1). The equations represent a parabola and a straight line, and they meet at these two points."
+            ],
+            "bullets": [
+              "Express y from the linear equation and substitute into the quadratic",
+              "Solve the resulting single quadratic by factoring or formula",
+              "Each x gives a y; the answer is the pair"
+            ],
+            "takeaway": "Substitution turns two equations into one quadratic.",
+            "check": {
+              "question": "y = x + 1 and y = x² − 2. How many solutions does the pair have?",
+              "options": [
+                "One",
+                "Two",
+                "Three",
+                "None"
+              ],
+              "answer": 1,
+              "why": "Substituting gives x² − x − 3 = 0, with discriminant 13 > 0, so two real roots."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Graphically: parabola meets straight line",
+            "paragraphs": [
+              "A quadratic graph is a parabola. A line crosses it in zero, one or two points, so simultaneous linear and quadratic equations have up to two real solutions.",
+              "Plotting the two equations on the same axes shows the intersection points. Each point is a solution of both equations, which is what simultaneous means.",
+              "The number of solutions depends on the discriminant. If b² − 4ac < 0, the line misses the parabola; if it is zero, the line touches; if it is positive, it cuts twice."
+            ],
+            "bullets": [
+              "A line can cut a parabola twice, once or not at all",
+              "Discriminant positive means two solutions, zero means one, negative means none",
+              "Graphical intersection = simultaneous solution"
+            ],
+            "takeaway": "Each point where the line meets the parabola is a simultaneous solution.",
+            "check": {
+              "question": "For y = 2x + 1 and y = x², how many solutions exist?",
+              "options": [
+                "One",
+                "Two",
+                "None",
+                "Three"
+              ],
+              "answer": 1,
+              "why": "Substituting gives x² − 2x − 1 = 0 with discriminant 8 > 0, so two real roots."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Where the line fails to meet",
+            "paragraphs": [
+              "A line can miss a parabola entirely if its slope is too gentle or the parabola is too high. The algebra gives the same answer: two complex roots whose coordinates are not on any real plane.",
+              "For a tangent case, the discriminant is zero. The line kisses the parabola at exactly one point, which means one solution with multiplicity two.",
+              "The direction of opening matters: an upward parabola and a line can meet in 0, 1 or 2 points, and a downward one can meet in 0, 1 or 2 as well, never more than two."
+            ],
+            "bullets": [
+              "Negative discriminant means no real solutions",
+              "Zero discriminant means exactly one solution (tangency)",
+              "More than two real solutions are impossible"
+            ],
+            "takeaway": "The discriminant counts the intersections between line and parabola.",
+            "check": {
+              "question": "For y = x + 3 and y = x², how many real solutions exist?",
+              "options": [
+                "One",
+                "None",
+                "Two",
+                "Three"
+              ],
+              "answer": 2,
+              "why": "x² − x − 3 = 0 has discriminant 13 > 0, so two real solutions."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "When one equation is linear and the other quadratic, never rotate or subtract them; substitute. Most JAMB items reward the substitution path because the arithmetic stays small."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Solve y = 3x − 1 and y = x² + 2x − 5 simultaneously.",
+            "steps": [
+              {
+                "operation": "Express y from the linear",
+                "reason": "Linear is easier to manipulate",
+                "result": "y = 3x − 1",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Substitute into the quadratic",
+                "reason": "One unknown eliminated",
+                "result": "3x − 1 = x² + 2x − 5, so x² − x − 4 = 0",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Solve the quadratic",
+                "reason": "Use the formula",
+                "result": "x = (1 ± √(1 + 16))/2 = (1 ± √17)/2",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Solve y = 2x + 3 and y = x² simultaneously.",
+            "hints": [
+              "Express y from the linear equation",
+              "Substitute into the quadratic",
+              "Solve the resulting quadratic by formula"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why substitution is the standard method",
+            "paragraphs": [
+              "Substitution bypasses the simultaneous requirement because the linear equation hands you a direct expression for one variable. The quadratic left after substitution then contains only one variable.",
+              "Elimination is rarely used for a linear–quadratic pair because subtracting a quadratic from a linear leaves a quadratic anyway. The substitution reduces the degree consistently by one.",
+              "After substitution, the quadratic can be solved by factorisation or by the formula. If the discriminant is positive, two values of x appear, and each gives a y from the linear equation.",
+              "Negative values in x are allowed, so a solution can include negative coordinates. A negative discriminant means no real pair and the parabola and line do not meet anywhere on the plane.",
+              "That is why a candidate who substitutes early rarely gets stuck. The algebra is short and the steps follow a stable pattern regardless of signs.",
+              "A candidate who substitutes early rarely gets stuck; the algebra is short and the steps follow a stable pattern regardless of signs."
+            ],
+            "bullets": [
+              "Substitution reduces the degree by one",
+              "Negative discriminant means no real solution",
+              "Each x solution gives one y from the linear equation"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: The geometric reading",
+            "paragraphs": [
+              "The graph of y = ax² + bx + c is a parabola that opens upward if a > 0 and downward if a < 0. The vertex is the turning point, the axis of symmetry passes through it, and the two x-values where y = 0 are the roots.",
+              "Adding y = mx + k draws a straight line through the parabola. Where they cross, both y values agree, which is exactly what a simultaneous solution means.",
+              "If the quadratic is y = x² and the line is y = 2x + 3, the two meet at x² − 2x − 3 = 0, so (x − 3)(x + 1) = 0. The intersections are (3, 9) and (−1, 1).",
+              "If the line misses the parabola, the quadratic has no real roots. The graph demonstrates the algebraic fact visually, which is why plotting helps in a timed exam."
+            ],
+            "bullets": [
+              "a > 0 opens upward; a < 0 opens downward",
+              "Vertex is the axis of symmetry point",
+              "Each intersection point is a simultaneous solution"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Exam traps in simultaneous equations",
+            "paragraphs": [
+              "The commonest trap is treating the pair as two independents and solving them separately. They share the variables, so half the information vanishes unless both equations are used together.",
+              "The second trap is confusing the line slope with the parabola coefficient. y = 2x and y = 2x² are different curves with different intersection behaviour.",
+              "The third trap is ignoring the multiplicity. A tangent case gives exactly one intersection but the discriminant is zero. The double root means the parabola kisses the line rather than crossing it.",
+              "The fourth trap is assuming the order of solution pairs. Each x must pair with its corresponding y, not with another x’s y. Getting the pair order wrong is marked wrong even if the numbers are right.",
+              "Finally, negative y values are perfectly valid simultaneous solutions, and JAMB questions sometimes land in negative coordinates. Keep the signs."
+            ],
+            "bullets": [
+              "Use both equations together, never one alone",
+              "Tangency gives exactly one intersection",
+              "Check the y-value for each x with the linear equation"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Substitution versus elimination",
+            "paragraphs": [
+              "Elimination works best when both equations are linear, because matching the coefficients and subtracting is the shortest route. For one linear and one quadratic equation, substitution is always simpler.",
+              "Substitution extracts one variable directly from the linear equation and embeds it into the quadratic in one step. The quadratic is then solved by factoring or the formula.",
+              "The result is up to two ordered pairs, one for each real root. Those are the intersection points of the parabola and the line in the coordinate plane.",
+              "If the quadratic has no real roots, the system has no real solutions. Complex roots still appear mathematically but are not considered in the syllabus.",
+              "The thirty-second test: substitute, simplify, solve the single quadratic, then read the y from the linear equation. Everything else is detail."
+            ],
+            "bullets": [
+              "One linear + one quadratic: substitution always works",
+              "No real roots means no real simultaneous solution",
+              "Steps: substitute, simplify, solve, read y"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "polynomial-graphs",
+      "topic": "polynomial-graphs",
+      "title": "Graphs of Polynomials",
+      "objective": "Interpret graphs of polynomials of degree not greater than 3, recognising the shape, the intercepts and the turning points, and identify the degree from the graph.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Graphs of Polynomials",
+            "paragraphs": [
+              "A quadratic graph is always a parabola, pointed like a U. A cubic graph has at most two turning points and decides its ends by the leading sign. The shape belongs to the degree, not to any coefficient."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Reading a quadratic graph",
+            "paragraphs": [
+              "The coefficient of x² decides the direction of opening. Positive means the parabola opens upward like a bowl; negative means it opens downward like a hill. The smaller |a| is, the wider the bowl.",
+              "The axis of symmetry passes through the vertex, and the y-coordinate there is the maximum or minimum. The roots are the points where the curve crosses the x-axis, from the factorised or unfactored form.",
+              "The discriminant tells how many crossings there are. Greater than zero: two real crossings; equal to zero: one crossing at the vertex; less than zero: no crossing and the curve stays above or below the axis."
+            ],
+            "bullets": [
+              "a > 0 opens upward; a < 0 opens downward",
+              "The vertex lies on the axis of symmetry and gives the extreme value",
+              "Discriminant positive: two crossings; zero: one; negative: none"
+            ],
+            "takeaway": "The sign of x² coefficient and the discriminant decide the shape.",
+            "check": {
+              "question": "y = x² − 4x + 3. What is the position of its vertex?",
+              "options": [
+                "x = 2, y = −1",
+                "x = 3, y = 0",
+                "x = 1, y = 0",
+                "x = 4, y = 3"
+              ],
+              "answer": 0,
+              "why": "Comparing x² − 4x + 3 with y = x² + bx + c, the vertex x = −b/(2a) = 4/(2) = 2. Then y = 4 − 8 + 3 = −1."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Reading a cubic graph",
+            "paragraphs": [
+              "A cubic graph has at most three x-axis crossings. The sign of the leading coefficient decides whether the graph rises from −∞ or from +∞. That end-behaviour is unchanged by any other coefficient.",
+              "At the y-axis, the constant term shows the y-intercept. If the cubic is factorised, the roots appear where the graph touches (repeated root) or crosses the axis. If a factor is squared, the graph bounces; otherwise it crosses.",
+              "Turning points are read from the derivative. Set the derivative equal to zero, find the x-values, and evaluate to know whether each is a maximum or a minimum. The number of turning points is at most two for degree three."
+            ],
+            "bullets": [
+              "Sign of leading coefficient decides the outer ends of the graph",
+              "Constant term decides the y-intercept",
+              "Turning points found from the derivative; at most two"
+            ],
+            "takeaway": "At most two turning points; ends follow the leading sign.",
+            "check": {
+              "question": "P(x) = x³ − 6x² + 11x − 6. How many real roots does the polynomial have?",
+              "options": [
+                "None",
+                "One",
+                "Two",
+                "Three"
+              ],
+              "answer": 3,
+              "why": "P(x) = (x − 1)(x − 2)(x − 3), so there are three distinct real roots."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Using factors and the symmetry",
+            "paragraphs": [
+              "When a cubic is factorised, the roots are where the graph crosses the x-axis. If one factor has a squared base, the graph touches rather than crosses at that point. A repeated root therefore sends the factor to a double factor.",
+              "A quadratic is symmetric about its vertex. The midpoint between the two roots is the x-coordinate of the vertex. That midpoint is the average of the two x-intercepts.",
+              "Evaluating at a test point such as x = 0, x = 1 or x = −1 tells whether to open upward or downward, and where the roots can sit. The test is a single substitution and reveals more than a sketch."
+            ],
+            "bullets": [
+              "Middle of the roots = x-coordinate of the vertex",
+              "Squared factor touches rather than crosses",
+              "A test substitution reveals direction and root positions"
+            ],
+            "takeaway": "Middle of the two roots is the vertex; a squared factor means a touch.",
+            "check": {
+              "question": "A quadratic has roots x = 2 and x = 6. What is its axis of symmetry?",
+              "options": [
+                "x = 4",
+                "x = 2",
+                "x = 8",
+                "x = 6"
+              ],
+              "answer": 0,
+              "why": "The axis of symmetry passes through the midpoint of the roots: (2 + 6)/2 = 4."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Before sketching, check three things: the leading sign, the constant term, and whether the discriminant is positive, zero or negative. That three-second check is enough to draw the shape without an actual axis."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Identify whether y = −x² + 2x + 3 crosses, touches or stays above the x-axis. State the vertex.",
+            "steps": [
+              {
+                "operation": "Read the leading coefficient",
+                "reason": "Negative coefficient means the parabola opens downward",
+                "result": "Opens downward; a = −1",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Find discriminant",
+                "reason": "b² − 4ac determines the crossings",
+                "result": "4 − 4(−1)(3) = 4 + 12 = 16 > 0; two crossings",
+                "predictPrompt": ""
+              },
+              {
+                "operation": "Find the vertex",
+                "reason": "Apex of the downward parabola",
+                "result": "x = 2/(2×1) = 1, y = −1 + 2 + 3 = 4",
+                "predictPrompt": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "For y = x² + 4x, find the vertex and state whether it opens upward or downward.",
+            "hints": [
+              "Compare with y = ax² + bx + c; a = 1",
+              "Axis of symmetry x = −b/(2a)",
+              "Substitute to find the minimum y"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Why the sign of the leading coefficient matters",
+            "paragraphs": [
+              "The leading coefficient is multiplied by the highest power, so it dominates large and small values alike. That is why no other coefficient can rescue a cubic with the wrong overall shape.",
+              "A positive leading coefficient means that as x grows large in either direction, y grows large with it. A negative one means y falls. Only degree three+ applies, because even-degree leading signs are predictably two-ended.",
+              "The next-highest coefficient determines the symmetry in quadratics and the relative steepness in cubics. It does not decide the direction of the opening, but it dictates the y-coordinate at the axis of symmetry or the first turning point.",
+              "The constant term is always the y-intercept, because at x = 0 every term except the constant vanishes. That alone tells the candidate where the graph pierces the vertical axis.",
+              "Putting the three together gives a complete shape profile: where the graph sits, whether it rises or falls at the ends, and how it pierces or touches the x-axis.",
+              "That is why a candidate who names the three pieces can draw a rough curve in under ten seconds without a single calculation."
+            ],
+            "bullets": [
+              "Leading coefficient decides outer ends",
+              "Next coefficient sets symmetry or first turning point",
+              "Constant term is the y-intercept"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Discriminant and the roots",
+            "paragraphs": [
+              "The discriminant tells the story: b² − 4ac > 0 for two real roots; = 0 for one; < 0 for none. No calculator required. A reader can classify the roots from the sign alone.",
+              "For a cubic, the discriminant uses a different formula but the same principle. In a cubic, it tells whether the equation has three real roots, one real and two complex, or a repeated root.",
+              "When the discriminant is positive, the roots can be found by factoring, by the quadratic formula, or by sketching. Any of those three paths will reveal them.",
+              "If the discriminant is negative, the x-axis is never crossed or touched, so the factorised form has complex roots. The graph stays above or below the x-axis.",
+              "That classification is a JAMB typical item: given the coefficients, ask whether the graph crosses the x-axis. The answer is one sign calculation.",
+              "A candidate who has memorised the three signs will solve at least one exam item without writing the quadratic formula at all."
+            ],
+            "bullets": [
+              "b² − 4ac > 0: two real roots",
+              "b² − 4ac = 0: one repeated root",
+              "b² − 4ac < 0: no real roots"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: What the exam trap looks like",
+            "paragraphs": [
+              "Most JAMB items ask for the sign of the coefficient, not the values. A positive leading coefficient with a negative constant means the graph pierces the y-axis below, rises on the left, rises on the right, and may cross the x-axis twice.",
+              "The second trap is confusing the graph orientation of quartic polynomials, which always rise on both ends. Knowing that the shape belongs to the degree prevents that confusion.",
+              "The third trap is missing the correct x-intercept. The graph may cross in three places while also touching once. The candidate must count multiplicity as well as number.",
+              "The fourth trap is applying the discriminant to the wrong equation. y = x² − 5x + 6 has discriminant 25 − 24 = 1 > 0, two crossings; y = x² − 5x + 7 has discriminant 25 − 28 = −3 < 0, no crossings.",
+              "The fifth trap is forgetting that the y-intercept and the x-intercepts almost always agree on the axis. A graph that starts at y = 6 on the left will still pass through y = 0 at two points and return to 6 on the right.",
+              "A candidate who checks the signs at both ends and the y-intercept will never draw an impossible shape in a JAMB item."
+            ],
+            "bullets": [
+              "Positive leading + negative constant: two crossings possible",
+              "Quartic shapes are steeper and always rise on both ends",
+              "Repeated root means a touch, not a cross"
             ]
           }
         }
