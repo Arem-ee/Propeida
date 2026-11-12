@@ -378,7 +378,7 @@
               "A formula counts atoms: H₂O means two hydrogen atoms and one oxygen atom. Writing the formula is writing the recipe.",
               "Symbols form a system: one letter for H, O and C, two for Na and Cl. The first letter is capital, the second small, so Co is cobalt but CO is carbon plus oxygen.",
               "A balanced equation has equal atoms on both sides, since atoms are only rearranged. CH₄ + 2O₂ → CO₂ + 2H₂O has C1 H4 O4 on both sides. If counts differ, the equation lies about conservation.",
-              "Percentage composition gives the empirical formula: divide each percentage by its Ar, then by the smallest value. A compound of 40% C, 6.7% H and 53.3% O gives 3.3, 6.7, 3.3, which reduces to CH₂O."
+              "Percentage composition gives the empirical formula — the simplest whole-number ratio of atoms — divide each percentage by its Ar (relative atomic mass), then by the smallest value. A compound of 40% C, 6.7% H and 53.3% O gives 3.3, 6.7, 3.3, which reduces to CH₂O."
             ],
             "bullets": [
               "A formula counts atoms; subscripts are counts.",
@@ -406,7 +406,7 @@
             "heading": "The mole: counting by weighing",
             "paragraphs": [
               "One mole is a counting unit, like a dozen eggs: 1 mole = 6.02 × 10²³ particles. A mole of any substance has the same count, but different masses.",
-              "Moles come from mass using moles = mass ÷ Mr. Methane (Mr = 16) gives 0.5 mol = 8 g. One mole of gas fills 22.4 dm³ at s.t.p.; concentration is moles ÷ volume.",
+              "Moles come from mass using moles = mass ÷ Mr (relative molecular mass). Methane (Mr = 16) gives 0.5 mol = 8 g. One mole of gas fills 22.4 dm³ at s.t.p. (standard temperature and pressure, 0 °C and 1 atm); concentration is moles ÷ volume.",
               "Stoichiometry applies the equation’s mole ratio. Calcium carbonate (Mr = 100) gives one mole CO₂ per mole, so 50 g is 0.5 mol releasing 11.2 dm³ at s.t.p.",
               "Relative atomic mass is measured against carbon-12: ¹²C is assigned exactly 12. The relative mass of any atom is the average mass of its isotopes compared with one twelfth of a ¹²C atom. That standard lets Ar and Mr be linked by weighing."
             ],
@@ -709,7 +709,6 @@
               "The same idea explains boiling and vapourisation. At the surface, the fastest particles can escape at any temperature, which is vapourisation. Boiling needs the whole liquid to reach the energy where particles escape from everywhere, including bubbles inside.",
               "It also explains why a gas's pressure climbs in a sealed container: the particles hit the walls harder and more often. Gay-Lussac's law is just Charles's law felt on the container instead of measured as volume.",
               "A candidate who pictures collisions instead of formulas can reconstruct every gas law from this one image: speed makes pushing power, and pushing power is pressure.",
-              "A candidate who pictures collisions instead of formulas can rebuild every gas law from this one image: speed makes pushing power, and pushing power is pressure.",
               "The same picture explains why perfume spreads: the fastest molecules escape first and race across the room while slower ones lag behind.",
               "Cooling runs the film backwards, slowing particles until some can no longer escape and must condense."
             ],
@@ -943,7 +942,7 @@
               "The trend pauses at the noble gases, whose full shells make a sudden jump in cost. That saw-tooth shape confirms the rule: shell structure, not mass alone, sets the price of removing an electron.",
               "A candidate who explains the trend with charge-versus-shielding language earns full marks; a candidate who recites 'it increases' without the reason earns only part. The mechanism is the mark.",
               "The same contest also sets electronegativity, electron affinity and metallic character, so one explanation carries several items.",
-              "Electron affinity is the energy released when an atom gains an electron, so a stronger pull releases more energy. Across a period the atom shrinks and the pull grows, so electron affinity rises; down a group new shells shield the nucleus, so it falls. This is the same charge-versus-shielding contest, not a separate memorised list."
+              "Electron affinity is the energy released when an atom gains an electron, so a stronger pull releases more energy. Across a period the atom shrinks and the pull grows, so electron affinity rises; down a group new shells shield the nucleus, so it falls — chlorine is the classic exception, with the most exothermic electron affinity of any element. This is the same charge-versus-shielding contest, not a separate memorised list."
             ],
             "bullets": [
               "Across a period, charge wins and ionisation energy rises.",
@@ -1526,8 +1525,8 @@
           "content": {
             "heading": "True solutions, suspensions and colloids",
             "paragraphs": [
-              "A true solution is uniform at the particle level: sugar in water looks clear, passes through filter paper, and never settles. A suspension has particles large enough to see and settle, like muddy water after stirring — Harmattan haze and water paints are suspensions.",
-              "A colloid sits between the two: its particles are too small to see or filter but large enough to scatter light. Fog, milk, blood, aerosol sprays, emulsion paints and rubber solution are colloids. The Tyndall effect — a light beam turning visible — is the giveaway.",
+              "A true solution is uniform at the particle level: sugar in water looks clear, passes through filter paper, and never settles. A suspension has particles large enough to see and settle, like muddy water after stirring.",
+              "A colloid sits between the two: its particles are too small to see or filter but large enough to scatter light. Fog, milk, blood, aerosol sprays, emulsion paints, Harmattan haze (dust in air) and rubber solution are colloids. The Tyndall effect — a light beam turning visible — is the giveaway.",
               "The particle size decides everything: true solutions pass filter paper; colloids scatter light but do not settle; suspensions settle and are filtered. Size, not appearance, is the distinction."
             ],
             "bullets": [
@@ -1601,7 +1600,7 @@
             "heading": "Go deeper: Why gases dissolve less when hot",
             "paragraphs": [
               "Dissolving a gas means trapping its particles into the liquid. Warming speeds particles up, so they escape more easily — the same reason a hot drink goes flat. Salts behave oppositely because warming helps break their lattice apart.",
-              "That opposite behaviour is why solubility curves split into two families: climbing curves for salts, falling curves for gases. Sodium sulfate decahydrate is the exception that proves the rule, falling after about 33 °C when it loses its water of crystallisation.",
+              "That opposite behaviour is why solubility curves split into two families: climbing curves for salts, falling curves for gases. Sodium sulphate decahydrate is the exception that proves the rule, falling after about 33 °C when it loses its water of crystallisation.",
               "The practical effect is everywhere: soft drinks are bottled cold to keep gas in, and heating water drives dissolved air out as bubbles. Temperature dependence is not a formula detail; it is visible in every cold drink.",
               "A candidate who explains the escape idea can predict the direction of any curve without memorising it. Hot liquid cannot hold fast-moving gas particles.",
               "The same escape logic explains why heating a soft drink releases bubbles immediately. The gas was only ever loosely held, and warming loosens its grip further.",
@@ -1710,7 +1709,7 @@
             "paragraphs": [
               "An oxidation number is a bookkeeping charge assigned to each atom. Free elements are zero; monatomic ions equal their charge; hydrogen is +1 and oxygen is −2; and the numbers sum to zero in a neutral compound.",
               "In H₂SO₄: 2(+1) + S + 4(−2) = 0, so S = +6. In KMnO₄: 1 + Mn + 4(−2) = 0, so Mn = +7. In Cr₂O₇²⁻: 2Cr + 7(−2) = −2, so each Cr = +6.",
-              "The change in oxidation number counts electrons moved. Manganese falls from +7 to +2, a fall of 5, so each manganate gains 5 electrons. That count is what balancing uses."
+              "The change in oxidation number counts electrons moved. Manganese falls from +7 to +2, a fall of 5, so each permanganate gains 5 electrons. That count is what balancing uses."
             ],
             "bullets": [
               "Free element = 0; monatomic ion = its charge.",
@@ -1737,7 +1736,7 @@
           "content": {
             "heading": "Balancing, naming and testing",
             "paragraphs": [
-              "Half-equations balance atoms and charge together. In MnO₄⁻ + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H₂O, manganese falls 5 (from +7 to +2) and iron rises 1 each, so 5 irons match one manganate. Balancing by oxidation number is counting the fall against the rise.",
+              "Half-equations balance atoms and charge together. In MnO₄⁻ + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H₂O, manganese falls 5 (from +7 to +2) and iron rises 1 each, so 5 irons match one permanganate. Balancing by oxidation number is counting the fall against the rise.",
               "Oxidation numbers name compounds: iron(II) chloride has Fe at +2, iron(III) chloride at +3. The Roman numeral is the oxidation number in words, which is why the same metal gives two different names.",
               "Oxidising agents take electrons: acidified dichromate turns green when reduced. Reducing agents give electrons: hydrogen bleaches hot copper(II) oxide. The agent is named by what it does to the other reactant, not by what happens to itself."
             ],
@@ -1831,13 +1830,13 @@
           "content": {
             "heading": "Go deeper: Balancing half-equations step by step",
             "paragraphs": [
-              "The MnO₄⁻ + Fe²⁺ case shows the full method. Manganese falls from +7 to +2, a fall of 5, so each manganate gains 5 electrons. Iron rises from +2 to +3, a rise of 1, so one iron gives 1 electron.",
-              "Balancing the fall against the rise needs 5 irons per manganate — that fixes the 5 coefficient. Oxygen and hydrogen are then balanced with H⁺ and H₂O, and the charge is checked last.",
+              "The MnO₄⁻ + Fe²⁺ case shows the full method. Manganese falls from +7 to +2, a fall of 5, so each permanganate gains 5 electrons. Iron rises from +2 to +3, a rise of 1, so one iron gives 1 electron.",
+              "Balancing the fall against the rise needs 5 irons per permanganate — that fixes the 5 coefficient. Oxygen and hydrogen are then balanced with H⁺ and H₂O, and the charge is checked last.",
               "The charge check is the safety net: left side −1 + 10 + 8 = +17; right side +2 + 15 = +17. Both sides match, so the equation is balanced. A mismatch means an atom count was missed.",
               "The same ladder works for dichromate reductions and any half-equation the syllabus sets. Fall against rise, then atoms, then charge — in that order, every time.",
               "In acid solution the needed H⁺ and H₂O are always available; in alkaline solution OH⁻ and H₂O play that role instead. The medium decides which species appears, and the question will name it.",
               "A candidate who checks charge after every adjustment catches errors at the step where they appear, not at the end of the question.",
-              "Agent tests always name the colour that betrays the transfer. Acidified dichromate (orange) turns green as Cr₂O₇²⁻ is reduced to Cr³⁺, while purple KMnO₄ is bleached to colourless Mn²⁺ when it oxidises a reductant. Fe²⁺ (pale green) reduces dichromate and manganate, whereas Fe³⁺ (brown) oxidises iodide to brown iodine."
+              "Agent tests always name the colour that betrays the transfer. Acidified dichromate (orange) turns green as Cr₂O₇²⁻ is reduced to Cr³⁺, while purple KMnO₄ is bleached to colourless Mn²⁺ when it oxidises a reductant. Fe²⁺ (pale green) reduces dichromate and permanganate, whereas Fe³⁺ (brown) oxidises iodide to brown iodine."
             ],
             "bullets": [
               "Fall of 5 needs 5 irons rising by 1 each.",
@@ -1921,12 +1920,12 @@
           "content": {
             "heading": "Salts and how they are made",
             "paragraphs": [
-              "A salt is the neutral product of reacting an acid with a base, metal or carbonate. When all replaceable hydrogen is used, the salt is normal, like NaCl. When some remains it is acidic, like NH₄Cl. When it still carries OH groups it is basic.",
-              "A double salt holds two salts crystallised together; alums are the famous example. Salts are prepared by neutralisation (acid + base), by precipitation (two solutions forming an insoluble salt), or by dissolving a metal or carbonate in an acid: Zn + dilute H₂SO₄ gives ZnSO₄ and hydrogen.",
-              "How well a solution conducts depends on how far it dissociates. A strong acid dissociates fully and conducts well; a weak acid dissociates partly and conducts weakly. Conductance follows the amount of ions present, not merely the concentration."
+              "A salt is the neutral product of acid with a base, metal or carbonate. If all the acid's replaceable hydrogen is replaced, the salt is normal — NaCl, NH₄Cl, Na₂CO₃. If some hydrogen remains replaceable, the salt is acidic — NaHSO₄ is the classic example. If some hydroxide remains, the salt is basic — Mg(OH)Cl.",
+              "Double salts hold two salts crystallised together; alums are the classic case. Salts are prepared by neutralisation (acid + base), by precipitation (two solutions forming an insoluble salt), or by dissolving a metal or carbonate in an acid: Zn + dilute H₂SO₄ gives ZnSO₄ and hydrogen.",
+              "How well a solution conducts depends on how far it dissociates. A strong acid dissociates fully and conducts well; a weak acid dissociates partly and conducts weakly. Conductance follows the ion count, not concentration."
             ],
             "bullets": [
-              "Normal salts use all replaceable H; acidic salts keep some.",
+              "Normal salts use all replaceable H (NaCl, NH₄Cl); acidic salts keep some (NaHSO₄); basic salts keep OH (Mg(OH)Cl).",
               "Alums are double salts.",
               "Salts: neutralisation, precipitation, or acid on metal.",
               "Conductance follows the ions present."
@@ -1940,8 +1939,8 @@
                 "Basic",
                 "Double"
               ],
-              "answer": 1,
-              "why": "Ammonium chloride carries replaceable hydrogen, so it is an acidic salt."
+              "answer": 0,
+              "why": "HCl is monobasic — every replaceable hydrogen is replaced in NH₄Cl — so NH₄Cl is a normal salt. Its solution is acidic because NH₄⁺ hydrolyses, not because of the salt type."
             }
           }
         },
@@ -1950,8 +1949,8 @@
           "content": {
             "heading": "pH, titration and hydrolysis",
             "paragraphs": [
-              "The pH scale counts hydrogen ions: pH = −log[H⁺]. A solution with [H⁺] = 1×10⁻³ mol/dm³ has pH 3, and pOH = 14 − pH. Pure water sits at 7.",
-              "pH matters daily: the stomach works near pH 1–2, soil suits crops near 6–7, and blood holds 7.4. In titration an indicator marks the end point of neutralisation — phenolphthalein for a strong acid with a strong base, methyl orange for a strong acid with a weak base.",
+              "The pH scale counts hydrogen ions by their power of ten: pH = −log[H⁺], so [H⁺] = 1×10⁻³ mol/dm³ means pH 3. At 25 °C, pH + pOH = 14, so pOH = 14 − pH. Pure water sits at 7.",
+              "pH matters daily: the stomach works near pH 1–2, soil suits crops near 6–7, and blood holds 7.4. An indicator marks the titration end point — phenolphthalein for a strong acid with a strong base, methyl orange for a strong acid with a weak base.",
               "Hydrolysis is a salt reacting with water, and it sets the solution’s character. NH₄Cl hydrolyses acidic; Na₂CO₃ hydrolyses basic. Their equations: NH₄⁺ + H₂O ⇌ NH₃ + H₃O⁺ and CO₃²⁻ + H₂O ⇌ HCO₃⁻ + OH⁻. The ion that hydrolyses decides the result."
             ],
             "bullets": [
@@ -1981,7 +1980,7 @@
                   "detail": "Fixed volume of acid"
                 },
                 {
-                  "label": "Base in burette",
+                  "label": "Base in burette (a marked tube delivering measured volume, drop by drop)",
                   "detail": "Added drop by drop"
                 },
                 {
@@ -2049,7 +2048,7 @@
               "Conductance needs ions to carry charge to the electrodes. A strong acid like HCl dissociates almost completely, so many ions move and conductance is high. A weak acid like ethanoic acid dissociates only partly, so few ions move and conductance stays low at the same concentration.",
               "Dilution makes the contrast sharper: a weak acid dissociates more as it spreads out, so its molar conductance rises on dilution. Strength is about dissociation; concentration is only about amount. A concentrated weak acid can still conduct less than a dilute strong one.",
               "That is the exam link tested: compare two molar solutions, and the stronger acid shows the higher conductance. The degree of dissociation can be read off the conductance ratio directly.",
-              "Bases mirror acids: NaOH is strong and conducts well, NH₄OH is weak and conducts poorly although both are bases. Strength, not the acid–base label, sets the ion count.",
+              "Bases mirror acids: NaOH is strong and conducts well, ammonia solution is weak and conducts poorly although both are bases. Strength, not the acid–base label, sets the ion count.",
               "Comparing a strong and weak acid at the same molar concentration therefore shows a wide conductance gap, and that gap is the practical proof of their different dissociation.",
               "The same measurement ranks bases. The ion count, not the label, always decides.",
               "Common bases feel soapy, turn red litmus blue and neutralise acids to salts, with NaOH in soap and limewater Ca(OH)₂ in mortar. Ammonia solution serves as a laboratory base and a fertiliser feedstock. Useful salts include ammonium sulphate fertiliser, sodium chloride for food preservation and calcium hydroxide for soil treatment."
@@ -2088,8 +2087,8 @@
           "content": {
             "heading": "Go deeper: The trap between basic salt and base",
             "paragraphs": [
-              "A basic salt is not a base. Na₂CO₃ is a basic salt because its solution is alkaline after hydrolysis, but it does not contain free OH⁻ ions the way NaOH does. Calling it a base confuses the salt's name with the behaviour of its solution.",
-              "The same confusion strikes acidic salts. NH₄Cl is not an acid, even though its solution is acidic. Its acidity comes from the NH₄⁺ ion releasing a proton to water, not from the salt itself being an acid.",
+              "A basic salt is not a base. The label belongs to salts that keep hydroxide inside the crystal — Mg(OH)Cl is the classic case. And a normal salt can give an alkaline solution: Na₂CO₃ does, because CO₃²⁻ pulls a proton from water and leaves OH⁻ behind. Solution character is decided by the ion that hydrolyses, never by the salt's name.",
+              "The same confusion strikes acidic salts. NH₄Cl is not an acid and not an acidic salt — its solution is acidic because the NH₄⁺ ion releases a proton to water. NaHSO₄ is the genuine acidic salt: the sulphate ion itself still holds a replaceable hydrogen.",
               "The exam loves that pair: solution character asked, salt type implied. The safe habit is to name the ion that hydrolyses and write its equation before deciding. CO₃²⁻ takes a proton from water and leaves OH⁻, so the solution turns basic.",
               "That equation is also the answer to the balancing item. Hydrolysis equations balance atoms and charge together, so a candidate who writes the ion first rarely writes an unbalanced equation in the hall.",
               "Oxides follow their parents: acidic oxides such as CO₂ and SO₂ react with bases to make salts, basic oxides such as MgO react with acids, and amphoteric oxides such as ZnO and Al₂O₃ react with both. Trioxocarbonate(IV) salts such as Na₂CO₃ and CaCO₃ fizz with dilute acid to release carbon dioxide: CaCO₃ + 2HCl → CaCl₂ + H₂O + CO₂. The steady bubbles therefore identify a trioxocarbonate(IV) salt."
@@ -2127,7 +2126,7 @@
           "content": {
             "heading": "Electrolytes and the cell",
             "paragraphs": [
-              "An electrolyte is a substance that carries electricity when molten or dissolved, and is broken apart in the process. Sugar water does not conduct, so it is a non-electrolyte. The anode is the positive electrode; the cathode is the negative electrode.",
+              "An electrolyte is a substance that carries electricity when molten or dissolved, and is broken apart in the process. Sugar water does not conduct, so it is a non-electrolyte. In electrolysis the anode is the positive electrode and the cathode is the negative electrode (in a galvanic cell the labels swap — the depth section covers that case).",
               "Electrolysis breaks an electrolyte with a current. Use inert graphite or platinum for CuSO₄, dilute H₂SO₄ and fused NaCl, and graphite for brine. Reactive copper dissolves at the anode, so it is used only when copper must deposit.",
               "Which ion comes off follows the electrochemical series and the concentration. At the cathode, metal ions and hydrogen compete, and the lower one in the series wins. At the anode, non-metal anions discharge, but concentrated solutions favour the anion over water."
             ],
@@ -2279,7 +2278,7 @@
             "paragraphs": [
               "In dilute NaCl solution the anode discharges oxygen from water because water is present in large amount and oxidises more easily. In concentrated brine the chloride ions crowd the anode, and their concentration lets them win. Discharge is therefore a contest between ions, and concentration tips the balance.",
               "The same contest explains the cathode in fused NaCl. Water is absent, so sodium ions discharge directly. That is the whole logic of the Downs process: melt the salt, remove the water, and the metal itself must discharge.",
-              "Oxygen overpotential also matters. Discharging oxygen from water needs extra voltage, so in concentrated brine the chloride route needs less. A candidate who thinks in terms of contests rather than lists will predict products for unfamiliar electrolytes.",
+              "Oxygen overpotential — the extra voltage beyond the theoretical value — also matters. Discharging oxygen from water needs extra voltage, so in concentrated brine the chloride route needs less. A candidate who thinks in terms of contests rather than lists will predict products for unfamiliar electrolytes.",
               "The Hofmann voltameter shows the contest plainly: hydrogen and oxygen collect in a 2:1 ratio from water. The ratio is the stoichiometry made visible, and it confirms the half-equations without any memorisation.",
               "Graphite and platinum are chosen because they conduct yet do not react, so they survive chlorine and oxygen. Copper or other reactive metals would dissolve and contaminate the products. That is why brine and fused-salt cells use graphite, and CuSO₄ cells use graphite or platinum."
             ],
@@ -2296,7 +2295,7 @@
           "content": {
             "heading": "Go deeper: Purification of copper step by step",
             "paragraphs": [
-              "Impure copper is cast into thick slabs and hung as the anode in copper(II) sulfate solution. Pure copper is rolled into thin sheets for the cathode. On passing current, copper atoms dissolve from the anode and an equal mass deposits on the cathode.",
+              "Impure copper is cast into thick slabs and hung as the anode in copper(II) sulphate solution. Pure copper is rolled into thin sheets for the cathode. On passing current, copper atoms dissolve from the anode and an equal mass deposits on the cathode.",
               "Copper ions move through the solution, so the number of Cu²⁺ ions stays constant. Impurities that are less reactive than copper, like gold and silver, fall off the anode as anode sludge. Impurities more reactive than copper, like zinc, dissolve but do not deposit at the cathode.",
               "The product is 99.99% pure copper, which is why the process is called electrorefining. Resistivity falls sharply with purity, so the copper is good for wires and electrical work where ordinary copper would waste energy as heat.",
               "The same cell proves the series in action. Only copper among the dissolved metals can discharge at the cathode under these conditions, which is why the deposit is pure. Reactivity, not just voltage, decides the outcome.",
@@ -2757,7 +2756,7 @@
             "paragraphs": [
               "The classic trap reads the temperature of the surroundings backwards. If the solution warms, the reaction gave heat out and is exothermic — warming of surroundings never means endothermic. The feeling in the hand, not the formula, gives the sign.",
               "The second trap is the kelvin conversion in ΔG° items. Using 298 °C instead of 298 K re-scales the entropy term by hundreds of kilojoules. Converting temperature first removes the trap entirely.",
-              "The third trap merges ΔH with spontaneity. An endothermic reaction can be spontaneous if disorder rises enough (like the dissolution of NH₄Cl at higher temperatures), and an exothermic one can fail if disorder falls. ΔG°, not ΔH°, is the judge.",
+              "The third trap merges ΔH with spontaneity. An endothermic reaction can be spontaneous if disorder rises enough (like the dissolution of NH₄Cl at room temperature), and an exothermic one can fail if disorder falls. ΔG°, not ΔH°, is the judge.",
               "The fourth trap confuses entropy with energy. A system can lose energy (exothermic) while gaining order, and the two terms must be weighed separately in ΔG° = ΔH° − TΔS°.",
               "A final trap is ignoring the standard state written on ΔG°. The degree symbol means standard conditions, and mixing values measured at different pressures or temperatures invalidates the sign.",
               "A candidate who converts to kelvin, checks the signs, and reads the diagram separately will not be caught by any of these."
@@ -3026,7 +3025,7 @@
           "content": {
             "heading": "Reversible reactions and the stand-off",
             "paragraphs": [
-              "A reversible reaction can run forwards and backwards: N₂O₄ ⇌ 2NO₂, where brown nitrogen(IV) oxide splits into two colourless nitrogen(II) oxide molecules, and the reverse rejoins them. The double arrow ⇌ is the sign of reversibility.",
+              "A reversible reaction can run forwards and backwards: N₂O₄ ⇌ 2NO₂, where colourless dinitrogen tetroxide (N₂O₄) splits into two brown nitrogen(IV) oxide (NO₂) molecules, and the reverse rejoins them. The double arrow ⇌ is the sign of reversibility.",
               "In dynamic equilibrium both reactions continue at equal rates, so concentrations stop changing even though molecules keep moving — like a crowded market where people enter and leave at the same rate. The mixture looks still but is not still.",
               "Steam passed over hot iron forms iron oxides and hydrogen reversibly: Fe₃O₄ + H₂ ⇌ 3FeO + H₂O. Live steam and equilibrium behave the same way — the reaction runs until the stand-off is reached."
             ],
@@ -3113,7 +3112,7 @@
             "heading": "Industries that use the principle",
             "paragraphs": [
               "The Haber process fixes nitrogen as N₂ + 3H₂ ⇌ 2NH₃. The forward reaction is exothermic, so cooling favours ammonia but slows the rate; industry compromises at about 450 °C with an iron catalyst and high pressure of 200 atm. High pressure favours the fewer-molecule side (4 → 2).",
-              "The Contact process oxidises sulfur dioxide: 2SO₂ + O₂ ⇌ 2SO₃, again exothermic with fewer molecules forward. Moderate temperature, high pressure and V₂O₅ catalyst maximise sulphur trioxide for sulphuric acid manufacture.",
+              "The Contact process oxidises sulphur dioxide: 2SO₂ + O₂ ⇌ 2SO₃, again exothermic with fewer molecules forward. Moderate temperature, high pressure and V₂O₅ catalyst maximise sulphur trioxide for sulphuric acid manufacture.",
               "The equilibrium constant K measures how far the reaction lies to one side. Temperature is the only factor that changes K — pressure, concentration and catalysts change the position but not the constant. No calculation is required; the effects and their uses are."
             ],
             "bullets": [
@@ -3294,7 +3293,7 @@
           "content": {
             "heading": "Air pollution",
             "paragraphs": [
-              "Air pollutants include hydrogen sulfide (H₂S), carbon monoxide (CO), sulfur dioxide (SO₂), oxides of nitrogen, chlorofluorocarbons (CFCs) and dust. Sources are vehicle exhaust, factory chimneys, domestic burning, and farms using fertilisers and pesticides.",
+              "Air pollutants include hydrogen sulphide (H₂S), carbon monoxide (CO), sulphur dioxide (SO₂), oxides of nitrogen, chlorofluorocarbons (CFCs) and dust. Sources are vehicle exhaust, factory chimneys, domestic burning, and farms using fertilisers and pesticides.",
               "Their effects are direct: CO blocks oxygen uptake in the blood, SO₂ and nitrogen oxides form acid rain that damages crops and buildings, and CFCs attack the ozone layer. Dust and smoke harm lungs directly, causing asthma and bronchitis in crowded cities.",
               "Control measures match each source: scrubbers and filters on chimneys, catalytic converters on vehicles, banning CFCs, and planting trees. Prevention beats cleaning, because once gases mix into air they cannot be unmixed."
             ],
@@ -3310,7 +3309,7 @@
               "options": [
                 "Carbon monoxide",
                 "Chlorofluorocarbons",
-                "Sulfur dioxide",
+                "Sulphur dioxide",
                 "Dust"
               ],
               "answer": 1,
@@ -3418,7 +3417,7 @@
           "content": {
             "heading": "Go deeper: Acid rain and the ozone layer",
             "paragraphs": [
-              "Sulfur dioxide and nitrogen oxides dissolve in rainwater to form sulfuric and nitric acids. Acid rain falls on crops, forests, buildings and lakes, dissolving limestone and corroding metals. Its pH can fall below 5, far from the neutral 5.6 of clean rain.",
+              "Sulphur dioxide and nitrogen oxides dissolve in rainwater to form sulphuric and nitric acids. Acid rain falls on crops, forests, buildings and lakes, dissolving limestone and corroding metals. Its pH can fall below 5, far from the neutral 5.6 of clean rain.",
               "CFCs rise into the stratosphere and release chlorine under ultraviolet light, each chlorine atom destroying many ozone molecules. Ozone is the shield that blocks harmful ultraviolet radiation; thinning it lets more reach the surface.",
               "The Montreal Protocol control story is the exam favourite: the world agreed to phase out CFCs, and the ozone hole is recovering. Control works when the source is a single chemical family.",
               "Acid rain and ozone loss are different problems with different controls — scrubbers for the first, chemical bans for the second. Merging them is the commonest error in this topic.",
@@ -3739,7 +3738,7 @@
           "content": {
             "heading": "The lithosphere and hydrosphere",
             "paragraphs": [
-              "The lithosphere is the solid outer layer of the earth: crust, mantle and core, rich in silicates, oxides and metals. Its soil and rocks supply minerals, and its erosion feeds rivers with dissolved salts.",
+              "The lithosphere is the rigid outer layer of the earth — the crust and uppermost mantle, rich in silicates, oxides and metals. Its soil and rocks supply minerals, and its erosion feeds rivers with dissolved salts.",
               "The hydrosphere is all of the earth's water — oceans, seas, lakes, rivers, groundwater and ice. About 97% of it is salt water in the oceans; the fresh water humans drink is a tiny fraction of the whole.",
               "The two layers exchange matter: rivers carry rock down to the sea, and evaporation returns water to the air. The water cycle is the hydrosphere and atmosphere trading the same water forever."
             ],
@@ -3890,7 +3889,7 @@
             "heading": "Making hydrogen industrially and in the laboratory",
             "paragraphs": [
               "The main industrial source is water gas: steam passed over red-hot coke makes carbon monoxide and hydrogen, the water-gas shift. Cracking of petroleum fractions also yields hydrogen with alkenes. Water gas is therefore the factory feedstock.",
-              "In the laboratory, hydrogen is prepared by reacting zinc or magnesium with dilute hydrochloric or sulfuric acid: Zn + 2HCl → ZnCl₂ + H₂. It is collected by downward displacement of air because it is lighter than air and would escape a trough of water slowly.",
+              "In the laboratory, hydrogen is prepared by reacting zinc or magnesium with dilute hydrochloric or sulphuric acid: Zn + 2HCl → ZnCl₂ + H₂. It is collected by downward displacement of air because it is lighter than air and would escape a trough of water slowly.",
               "The choice of method depends on scale: industry needs tonnage from cheap feedstocks, so water gas wins; the laboratory needs a clean small supply, so metal plus acid wins."
             ],
             "bullets": [
@@ -4151,7 +4150,7 @@
           "content": {
             "heading": "Hydrogen chloride and hydrochloric acid",
             "paragraphs": [
-              "Hydrogen chloride gas (HCl) is made in the laboratory by warming concentrated sulfuric acid with sodium chloride: NaCl + conc. H₂SO₄ → NaHSO₄ + HCl. It is collected by downward displacement of air because it is denser than air.",
+              "Hydrogen chloride gas (HCl) is made in the laboratory by warming concentrated sulphuric acid with sodium chloride: NaCl + conc. H₂SO₄ → NaHSO₄ + HCl. It is collected by downward displacement of air because it is denser than air.",
               "Hydrogen chloride dissolves in water to form hydrochloric acid, a strong acid. The gas and the acid share the name HCl but are different states: the gas is a fuming, pungent compound; the acid is its aqueous solution.",
               "Chlorides are salts of hydrochloric acid. The test for chloride ions (Cl⁻) is silver nitrate solution, which gives a white precipitate of silver chloride, soluble in dilute ammonia. That precipitate confirms the chloride."
             ],
@@ -4305,7 +4304,7 @@
             "paragraphs": [
               "Oxygen is prepared in the laboratory by heating potassium chlorate with manganese(IV) oxide: 2KClO₃ → 2KCl + 3O₂. Industrially it comes from fractional distillation of liquid air. It rekindles a glowing splint, its specific test.",
               "Oxygen supports combustion, respiration and oxidation: almost every fuel, metal and living cell reacts with it. It serves oxy-acetylene welding, hospitals and spacecraft life support. Oxides are classified by their behaviour with acids and bases: acidic oxides (CO₂, SO₂) react with bases, basic oxides (Na₂O, CaO) react with acids, and amphoteric ones (Al₂O₃, ZnO) react with both.",
-              "Oxygen has a second allotrope, ozone (O₃), formed when oxygen is exposed to ultraviolet light. Ozone is pale blue with a sharp smell. In the stratosphere it absorbs harmful ultraviolet radiation, shielding life on earth."
+              "Oxygen has a second allotrope — a different arrangement of the same element — ozone (O₃), formed by ultraviolet light on oxygen. Ozone is pale blue with a sharp smell. In the stratosphere it absorbs harmful ultraviolet radiation, shielding life on earth."
             ],
             "bullets": [
               "Laboratory: KClO₃ + MnO₂, heated. Industry: fractionating liquid air.",
@@ -4360,14 +4359,14 @@
           "content": {
             "heading": "Hard and soft water",
             "paragraphs": [
-              "Soft water lathers easily with soap; hard water does not, because dissolved calcium and magnesium salts stop the lather and leave scum. Temporary hardness is caused by hydrogencarbonates and is removed by boiling. Permanent hardness is caused by sulfates and survives boiling.",
+              "Soft water lathers easily with soap; hard water does not, because dissolved calcium and magnesium salts stop the lather and leave scum. Temporary hardness is caused by hydrogencarbonates and is removed by boiling. Permanent hardness is caused by sulphates and survives boiling.",
               "Softening removes the calcium and magnesium: boiling for temporary hardness, adding washing soda for permanent hardness, and ion-exchange resins in modern plants. The salts themselves are not removed from the water's chemistry — they are exchanged or precipitated out.",
               "Water for town supply is treated in stages: screening, coagulation, sedimentation, filtration, chlorination and storage. Each stage removes a different class of impurity, ending with sterile water safe to drink."
             ],
             "bullets": [
               "Hardness = Ca²⁺ and Mg²⁺ salts stop soap lathering.",
               "Temporary (hydrogencarbonates) removed by boiling.",
-              "Permanent (sulfates) removed by washing soda or ion exchange.",
+              "Permanent (sulphates) removed by washing soda or ion exchange.",
               "Town water: screening → coagulation → filtration → chlorination."
             ],
             "takeaway": "Temporary hardness boils away; permanent hardness needs chemicals or resins.",
@@ -4389,7 +4388,7 @@
           "content": {
             "title": "Exam tip",
             "tone": "tip",
-            "body": "For water questions, name the dissolved salt first. Hydrogencarbonates mean temporary hardness; sulfates mean permanent — the salt decides the method."
+            "body": "For water questions, name the dissolved salt first. Hydrogencarbonates mean temporary hardness; sulphates mean permanent — the salt decides the method."
           }
         },
         {
@@ -4405,13 +4404,13 @@
               },
               {
                 "operation": "Use the boiling result",
-                "reason": "Hardness surviving boiling is permanent, so it comes from sulfates",
+                "reason": "Hardness surviving boiling is permanent, so it comes from sulphates",
                 "result": "Permanent hardness",
                 "predictPrompt": ""
               },
               {
                 "operation": "Choose the method",
-                "reason": "Sulfates need a chemical exchange, not heat",
+                "reason": "Sulphates need a chemical exchange, not heat",
                 "result": "Add washing soda (or use an ion-exchange resin)",
                 "predictPrompt": ""
               }
@@ -4434,11 +4433,11 @@
           "content": {
             "heading": "Go deeper: Water of crystallisation and its three cousins",
             "paragraphs": [
-              "Crystals grown from water often trap water molecules inside their lattice — water of crystallisation. Blue copper(II) sulfate pentahydrate, CuSO₄·5H₂O, is the classic example: the blue colour is the water, and heating drives it off to leave white anhydrous salt.",
-              "Efflorescence is the opposite journey: a hydrated crystal loses its water of crystallisation to the air and turns powdery. Sodium sulfate decahydrate does this on standing. Deliquescence is the reverse of efflorescence — a salt absorbs so much water it dissolves in the absorbed water, like calcium chloride.",
+              "Crystals grown from water often trap water molecules inside their lattice — water of crystallisation. Blue copper(II) sulphate pentahydrate, CuSO₄·5H₂O, is the classic example: the blue colour is the water, and heating drives it off to leave white anhydrous salt.",
+              "Efflorescence is the opposite journey: a hydrated crystal loses its water of crystallisation to the air and turns powdery. Sodium sulphate decahydrate does this on standing. Deliquescence is the reverse of efflorescence — a salt absorbs so much water it dissolves in the absorbed water, like calcium chloride.",
               "Hygroscopy is absorbing moisture without dissolving: silica gel soaks water vapour but stays a solid. Deliquescence dissolves; hygroscopy merely dampens. That boundary is the exam distinction.",
               "The three phenomena are one scale of water affinity: efflorescence loses water, hygroscopy gains it slowly, deliquescence gains it until dissolved. Naming the direction is naming the phenomenon.",
-              "Heating a hydrated crystal therefore removes water of crystallisation and changes its colour in the classic blue-to-white copper sulfate test. The colour change is the visible proof that water was part of the crystal.",
+              "Heating a hydrated crystal therefore removes water of crystallisation and changes its colour in the classic blue-to-white copper sulphate test. The colour change is the visible proof that water was part of the crystal.",
               "A candidate who links colour to water content can identify events in a heating curve without any further information.",
               "Their uses follow from the property: CuSO₄·5H₂O is the blue reagent itself, Na₂SO₄·10H₂O (Glauber salt) is the classic efflorescent crystal, CaCl₂ is the drying agent in desiccators, and silica gel packs are the hygroscopic moisture traps in packaged goods. Each substance is chosen for how it behaves with water."
             ],
@@ -4456,7 +4455,7 @@
           "content": {
             "heading": "Go deeper: Softening and town water treatment",
             "paragraphs": [
-              "Washing soda (Na₂CO₃) softens permanent hardness by precipitating the calcium and magnesium sulfates as insoluble carbonates. The water trades its hardness salts for soluble sodium salts, which do not interfere with soap.",
+              "Washing soda (Na₂CO₃) softens permanent hardness by precipitating the calcium and magnesium sulphates as insoluble carbonates. The water trades its hardness salts for soluble sodium salts, which do not interfere with soap.",
               "Ion exchange goes further: resins swap Ca²⁺ and Mg²⁺ for Na⁺ or H⁺ ions, removing the hardness without adding anything else. The resin is regenerated with concentrated brine when exhausted.",
               "Town supply treatment is a sequence, not a single step: screening removes leaves and debris, coagulation and sedimentation settle fine particles, filtration removes the rest, and chlorination kills germs. Each stage removes a different class of impurity.",
               "Chlorination is last because chlorine would be consumed by the dirt it would otherwise have to kill. Order in treatment is chemistry: first the bulk, then the germs.",
@@ -4464,7 +4463,7 @@
               "The same sequence, without the chemical stages, is how rain becomes river water and then groundwater — nature runs the same plants at catchment scale."
             ],
             "bullets": [
-              "Washing soda precipitates Ca/Mg sulfates as carbonates.",
+              "Washing soda precipitates Ca/Mg sulphates as carbonates.",
               "Resins exchange hardness ions for sodium.",
               "Treatment order: screening → settling → filtration → chlorination.",
               "Chlorine works last because dirt would consume it."
@@ -4476,13 +4475,13 @@
           "content": {
             "heading": "Go deeper: Exam traps in water chemistry",
             "paragraphs": [
-              "The classic trap is the hardness label. Temporary hardness comes from hydrogencarbonates and boils away; permanent hardness comes from sulfates and does not. The salt names the method, and any option reversing them is false.",
+              "The classic trap is the hardness label. Temporary hardness comes from hydrogencarbonates and boils away; permanent hardness comes from sulphates and does not. The salt names the method, and any option reversing them is false.",
               "The second trap confuses efflorescence with deliquescence. Efflorescence loses water and turns powdery; deliquescence gains water until it dissolves. The direction of water movement is the discrimination, and the exam tests exactly that.",
               "The third trap treats ozone as a pollutant. Stratospheric ozone is protective; ground-level ozone is a pollutant. The layer decides the role, just as with the ozone hole item.",
               "The fourth trap is the volume ratio of water formation. Two volumes of hydrogen combine with one volume of oxygen — candidates who write 1:1 lose the item. From the equation, 2H₂ + O₂ → 2H₂O, the volumes follow directly."
             ],
             "bullets": [
-              "Hydrogencarbonates = temporary; sulfates = permanent.",
+              "Hydrogencarbonates = temporary; sulphates = permanent.",
               "Efflorescence loses water; deliquescence dissolves in it.",
               "Stratospheric ozone protects; ground ozone pollutes.",
               "H₂:O₂ volume ratio in water is 2:1."
@@ -4513,13 +4512,13 @@
           "content": {
             "heading": "Sulphur and its allotropes",
             "paragraphs": [
-              "Sulphur occurs as a yellow solid that melts easily and burns with a blue flame to sulfur(IV) oxide. Its allotropes are different arrangements of the same atoms: rhombic sulfur is the common stable form, while plastic sulfur forms when molten sulfur is poured into water and stays soft.",
+              "Sulphur occurs as a yellow solid that melts easily and burns with a blue flame to sulphur(IV) oxide. Its allotropes are different arrangements of the same atoms: rhombic sulphur is the common stable form, while plastic sulphur forms when molten sulphur is poured into water and stays soft.",
               "Sulphur is used in vulcanising rubber (mixing it in to harden and strengthen tyre rubber), in matches, in gunpowder and in fungicides. Allotropy — same element, different arrangements — is why one element has several forms with different properties.",
               "Sulphur is a non-metal: it does not conduct electricity and forms acidic oxides. Its chemistry centres on two gases and two acids, each with a preparation, properties and test."
             ],
             "bullets": [
               "Sulphur: yellow solid, burns blue; uses in vulcanisation, matches, fungicides.",
-              "Allotropes: rhombic (stable) and plastic (soft) sulfur.",
+              "Allotropes: rhombic (stable) and plastic (soft) sulphur.",
               "Sulphur is a non-metal forming acidic oxides."
             ],
             "takeaway": "Sulphur's allotropes share the atoms but not the properties.",
@@ -4539,21 +4538,21 @@
         {
           "type": "text",
           "content": {
-            "heading": "Sulfur(IV) oxide and hydrogen sulfide",
+            "heading": "Sulphur(IV) oxide and hydrogen sulphide",
             "paragraphs": [
-              "Sulfur(IV) oxide (SO₂) is made by burning sulphur in air or roasting sulfide ores. It is a colourless acidic gas that dissolves in water to give sulfurous acid, H₂SO₃, and reacts with alkalis to give trioxosulfate(IV) salts.",
-              "Hydrogen sulfide (H₂S) is made from iron(II) sulfide and dilute hydrochloric acid: FeS + 2HCl → FeCl₂ + H₂S. It smells of rotten eggs. As a weak acid it behaves as a reducing agent, and as a precipitating agent it forms insoluble metal sulfides.",
+              "Sulphur(IV) oxide (SO₂) is made by burning sulphur in air or roasting sulphide ores. It is a colourless acidic gas that dissolves in water to give sulphurous acid, H₂SO₃, and reacts with alkalis to give trioxosulfate(IV) salts.",
+              "Hydrogen sulphide (H₂S) is made from iron(II) sulphide and dilute hydrochloric acid: FeS + 2HCl → FeCl₂ + H₂S. It smells of rotten eggs. As a weak acid it behaves as a reducing agent, and as a precipitating agent it forms insoluble metal sulphides.",
               "The tests separate them: SO₂ turns acidified dichromate green and bleaches coloured solutions, while H₂S turns lead(II) acetate paper black (PbS). The rotten-egg smell itself is a warning sign, not the test."
             ],
             "bullets": [
               "SO₂: from burning S or roasting ores; acidic oxide; bleaches; dichromate turns green.",
               "H₂S: FeS + dilute HCl; rotten-egg smell; weak acid and reducer.",
               "H₂S turns lead acetate paper black (PbS).",
-              "SO₂ uses: bleaching, fumigation, wine-making, sulfuric acid manufacture; SO₂ + 2NaOH → Na₂SO₃ + H₂O."
+              "SO₂ uses: bleaching, fumigation, wine-making, sulphuric acid manufacture; SO₂ + 2NaOH → Na₂SO₃ + H₂O."
             ],
             "takeaway": "SO₂ is the bleaching acid gas; H₂S is the rotten-egg reducer.",
             "check": {
-              "question": "Hydrogen sulfide turns lead(II) acetate paper",
+              "question": "Hydrogen sulphide turns lead(II) acetate paper",
               "options": [
                 "White",
                 "Green",
@@ -4561,7 +4560,7 @@
                 "Yellow"
               ],
               "answer": 2,
-              "why": "Lead(II) sulfide (PbS) is black, confirming H₂S."
+              "why": "Lead(II) sulphide (PbS) is black, confirming H₂S."
             }
           }
         },
@@ -4572,7 +4571,7 @@
             "paragraphs": [
               "Trioxosulfate(IV) acid (H₂SO₃) is formed when SO₂ dissolves in water, and its salts are the trioxosulfate(IV) salts. Acids turn those salts back into SO₂, which is their distinguishing reaction: effervescence of a choking gas that bleaches.",
               "Tetraoxosulfate(VI) acid (H₂SO₄) is made industrially by the Contact process: SO₂ is oxidised to SO₃ over V₂O₅, then absorbed to give the acid. It is the king of acids — dilute it behaves as a strong dibasic acid, concentrated it oxidises and dehydrates.",
-              "The tests separate the sulfur anions: SO₃²⁻ gives SO₂ with acids, SO₄²⁻ gives a white precipitate with BaCl₂ (barium sulfate, insoluble in acid), and S²⁻ gives black PbS with lead acetate. Each anion has one reliable witness."
+              "The tests separate the sulphur anions: SO₃²⁻ gives SO₂ with acids, SO₄²⁻ gives a white precipitate with BaCl₂ (barium sulphate, insoluble in acid), and S²⁻ gives black PbS with lead acetate. Each anion has one reliable witness."
             ],
             "bullets": [
               "H₂SO₃ forms from SO₂ + water; acids liberate SO₂ from its salts.",
@@ -4582,7 +4581,7 @@
             ],
             "takeaway": "Sulphur's acids and salts each carry one unmistakable test.",
             "check": {
-              "question": "The test for sulfate ions (SO₄²⁻) is",
+              "question": "The test for sulphate ions (SO₄²⁻) is",
               "options": [
                 "Acids give a choking gas that bleaches",
                 "BaCl₂ gives a white precipitate insoluble in dilute acid",
@@ -4590,7 +4589,7 @@
                 "Limewater turns milky"
               ],
               "answer": 1,
-              "why": "Barium sulfate is a white precipitate insoluble in dilute acid — the sulfate test."
+              "why": "Barium sulphate is a white precipitate insoluble in dilute acid — the sulphate test."
             }
           }
         },
@@ -4599,7 +4598,7 @@
           "content": {
             "title": "Exam tip",
             "tone": "tip",
-            "body": "For every sulfur anion question, write its witness first — SO₂ gas, white BaSO₄, or black PbS. The witness is the answer, and everything else is decoration."
+            "body": "For every sulphur anion question, write its witness first — SO₂ gas, white BaSO₄, or black PbS. The witness is the answer, and everything else is decoration."
           }
         },
         {
@@ -4609,19 +4608,19 @@
             "steps": [
               {
                 "operation": "Read the precipitate",
-                "reason": "Barium chloride precipitates sulfate as barium sulfate",
+                "reason": "Barium chloride precipitates sulphate as barium sulphate",
                 "result": "White precipitate = BaSO₄",
                 "predictPrompt": ""
               },
               {
                 "operation": "Use the acid test",
-                "reason": "BaSO₄ is insoluble in dilute acid, unlike sulfite or carbonate precipitates",
-                "result": "Insoluble in acid confirms sulfate",
+                "reason": "BaSO₄ is insoluble in dilute acid, unlike sulphite or carbonate precipitates",
+                "result": "Insoluble in acid confirms sulphate",
                 "predictPrompt": ""
               },
               {
                 "operation": "Name the anion",
-                "reason": "Only sulfate gives this combination",
+                "reason": "Only sulphate gives this combination",
                 "result": "The anion is SO₄²⁻",
                 "predictPrompt": ""
               }
@@ -4642,10 +4641,10 @@
         {
           "type": "text",
           "content": {
-            "heading": "Go deeper: Why concentrated sulfuric acid is two reagents",
+            "heading": "Go deeper: Why concentrated sulphuric acid is two reagents",
             "paragraphs": [
-              "Dilute sulfuric acid is simply a strong dibasic acid: it donates two protons and behaves like any strong acid. Concentrated acid is a different reagent entirely — it oxidises carbon to carbon dioxide and dehydrates sugars to black carbon.",
-              "The oxidising power comes from the sulfate ion itself: hot concentrated acid oxidises copper to copper(II) sulfate while being reduced to SO₂. Dilute acid cannot do this; concentration changes the reagent's nature.",
+              "Dilute sulphuric acid is simply a strong dibasic acid: it donates two protons and behaves like any strong acid. Concentrated acid is a different reagent entirely — it oxidises carbon to carbon dioxide and dehydrates sugars to black carbon.",
+              "The oxidising power comes from the sulphate ion itself: hot concentrated acid oxidises copper to copper(II) sulphate while being reduced to SO₂. Dilute acid cannot do this; concentration changes the reagent's nature.",
               "Dehydration is the removal of water's elements: sugar with concentrated acid chars to carbon, and ethanol dehydrates to ethene. The acid takes H₂O out of the substrate rather than adding to it.",
               "A candidate who separates the two personalities — dilute acid versus concentrated oxidiser/dehydrator — will never misclassify a reaction of the acid.",
               "The dehydrating power is why concentrated acid is stored away from organic materials: it will char paper, wood and sugar on contact, extracting water and leaving carbon behind.",
@@ -4665,35 +4664,35 @@
             "heading": "Go deeper: The Contact process as applied equilibrium",
             "paragraphs": [
               "The Contact process oxidises SO₂ to SO₃: 2SO₂ + O₂ ⇌ 2SO₃, exothermic with fewer molecules forward. Moderate temperature, high pressure and a V₂O₅ catalyst maximise the equilibrium yield — the same Le Chatelier logic as the Haber process.",
-              "The SO₃ is then absorbed not directly in water (which would make a mist) but in concentrated sulfuric acid, forming oleum. Diluting oleum gives the acid without the mist problem.",
-              "Sulfuric acid is the largest-volume chemical made anywhere, and its production is a fair measure of a nation's industrial strength. The process is therefore both an equilibrium exercise and an industrial landmark.",
-              "A candidate who connects the Contact process to equilibrium has learned two topics in one: the chemistry of sulfur and the economics of Le Chatelier.",
+              "The SO₃ is then absorbed not directly in water (which would make a mist) but in concentrated sulphuric acid, forming oleum. Diluting oleum gives the acid without the mist problem.",
+              "Sulphuric acid is the largest-volume chemical made anywhere, and its production is a fair measure of a nation's industrial strength. The process is therefore both an equilibrium exercise and an industrial landmark.",
+              "A candidate who connects the Contact process to equilibrium has learned two topics in one: the chemistry of sulphur and the economics of Le Chatelier.",
               "The catalyst V₂O₅ does not shift the equilibrium; it only reaches it faster. The yield is set by temperature and pressure, exactly as Le Chatelier predicts for an exothermic, molecule-reducing reaction.",
-              "A candidate who reads the Contact process as equilibrium with a catalyst has answered both the sulfur item and the equilibrium item at once."
+              "A candidate who reads the Contact process as equilibrium with a catalyst has answered both the sulphur item and the equilibrium item at once."
             ],
             "bullets": [
               "Contact: 2SO₂ + O₂ ⇌ 2SO₃, exothermic, fewer molecules.",
               "Moderate T, high P, V₂O₅ catalyst.",
               "Absorbed via oleum to avoid mist.",
-              "Sulfuric acid output measures industrial strength."
+              "Sulphuric acid output measures industrial strength."
             ]
           }
         },
         {
           "type": "text",
           "content": {
-            "heading": "Go deeper: Exam traps in sulfur chemistry",
+            "heading": "Go deeper: Exam traps in sulphur chemistry",
             "paragraphs": [
-              "The classic trap is the oxidation states. In SO₂ sulfur is +4, in SO₃ and H₂SO₄ it is +6, and in H₂S it is −2. Writing the state beside every formula removes most sulfur errors.",
+              "The classic trap is the oxidation states. In SO₂ sulphur is +4, in SO₃ and H₂SO₄ it is +6, and in H₂S it is −2. Writing the state beside every formula removes most sulphur errors.",
               "The second trap confuses bleaching with the test. SO₂ bleaches as a reducing agent (it removes oxygen); chlorine bleaches as an oxidising agent. The decolourisation looks identical — the mechanism is opposite.",
-              "The third trap is the precipitate's acid solubility. Sulfate's BaSO₄ is insoluble in dilute acid; sulfite's precipitate dissolves with effervescence. Forgetting the acid step collapses the two tests into one.",
-              "The fourth trap is allotrope versus compound. Rhombic and plastic sulfur are elements; SO₂ is a compound. Preparation questions about allotropes are never expected — only their existence and uses.",
-              "A final trap is the sulfur oxidation ceiling. Sulfur(VI) in sulfuric acid is the highest common state; any calculation giving sulfur more than +6 has an arithmetic error, not a new compound."
+              "The third trap is the precipitate's acid solubility. Sulphate's BaSO₄ is insoluble in dilute acid; sulphite's precipitate dissolves with effervescence. Forgetting the acid step collapses the two tests into one.",
+              "The fourth trap is allotrope versus compound. Rhombic and plastic sulphur are elements; SO₂ is a compound. Preparation questions about allotropes are never expected — only their existence and uses.",
+              "A final trap is the sulphur oxidation ceiling. Sulphur(VI) in sulphuric acid is the highest common state; any calculation giving sulphur more than +6 has an arithmetic error, not a new compound."
             ],
             "bullets": [
               "S in SO₂ is +4; in SO₃/H₂SO₄ +6; in H₂S −2.",
               "SO₂ bleaches by reducing; Cl₂ by oxidising.",
-              "BaSO₄ is acid-insoluble; sulfite precipitate dissolves.",
+              "BaSO₄ is acid-insoluble; sulphite precipitate dissolves.",
               "Allotropes are elements; preparation is not expected."
             ]
           }
@@ -4751,9 +4750,9 @@
           "content": {
             "heading": "Properties and uses of ammonia",
             "paragraphs": [
-              "Ammonia is a colourless gas with a sharp smell, very soluble in water to form an alkaline solution (ammonium hydroxide). It is a base: it neutralises acids to form ammonium salts. With hydrogen chloride it gives dense white fumes — the classic test.",
+              "Ammonia is a colourless gas with a sharp smell, very soluble in water to form an alkaline solution (ammonia solution, NH₃(aq)). It is a base: it neutralises acids to form ammonium salts. With hydrogen chloride it gives dense white fumes — the classic test.",
               "Ammonia is a reducing agent: it reduces hot copper(II) oxide to copper. It also forms complex ions with metal ions, like [Cu(NH₃)₄]²⁺, which is why it appears in qualitative analysis.",
-              "Its uses follow from those properties: ammonium sulfate and urea fertilisers feed crops, refrigeration uses its easy liquefaction, and household cleaners use its alkalinity. The test for ammonia gas is white fumes with hydrogen chloride; the test for NH₄⁺ is warming with a base and the same fumes."
+              "Its uses follow from those properties: ammonium sulphate and urea fertilisers feed crops, refrigeration uses its easy liquefaction, and household cleaners use its alkalinity. The test for ammonia gas is white fumes with hydrogen chloride; the test for NH₄⁺ is warming with a base and the same fumes."
             ],
             "bullets": [
               "Very soluble in water; alkaline solution; forms white fumes with HCl.",
@@ -4780,9 +4779,9 @@
           "content": {
             "heading": "Trioxonitrate(V) acid and its salts",
             "paragraphs": [
-              "Trioxonitrate(V) acid (HNO₃) is prepared in the laboratory from ammonia: ammonia is oxidised catalytically to nitrogen(IV) oxide, then to nitrogen dioxide, which dissolves in water to give the acid. It is a strong, oxidising acid.",
-              "HNO₃ is used in fertilisers, explosives and the pickling of metals. Its salts are the trioxonitrate(V) salts (nitrates), which decompose on heating to nitrites and oxygen: 2NaNO₃ → 2NaNO₂ + O₂.",
-              "The test for nitrate ions (NO₃⁻) is brown fumes of NO₂ when heated with concentrated sulfuric acid. The oxides of nitrogen complete the family: N₂O is colourless and supports combustion, NO is colourless and turns brown in air, and NO₂ is brown, acidic and oxidising. NO also gives a brown ring with iron(II) sulfate."
+              "Trioxonitrate(V) acid (HNO₃) is made industrially by the Ostwald process: ammonia is oxidised over platinum catalyst to nitrogen(II) oxide, then to nitrogen dioxide, which dissolves in water to give the acid. The laboratory route heats a trioxonitrate(V) salt with concentrated sulphuric acid — KNO₃ + H₂SO₄ → KHSO₄ + HNO₃. It is a strong, oxidising acid.",
+              "HNO₃ is used in fertilisers, explosives and the pickling of metals. Its salts are the trioxonitrate(V) salts (nitrates). Alkali-metal nitrates decompose to nitrites and oxygen (2NaNO₃ → 2NaNO₂ + O₂); heavy-metal nitrates give metal oxide, NO₂ and O₂ (2Pb(NO₃)₂ → 2PbO + 4NO₂ + O₂).",
+              "The brown ring test confirms nitrate — FeSO₄ and concentrated H₂SO₄ give a brown ring between the layers. The oxides of nitrogen complete the family: N₂O is colourless and supports combustion, NO is colourless and turns brown in air, and NO₂ is brown, acidic and oxidising. NO also gives a brown ring with iron(II) sulphate."
             ],
             "bullets": [
               "HNO₃ from ammonia oxidation; strong oxidising acid.",
@@ -4795,12 +4794,12 @@
               "question": "The test for nitrate ions is",
               "options": [
                 "White precipitate with silver nitrate",
-                "Brown fumes of NO₂ with concentrated sulfuric acid",
+                "Brown fumes of NO₂ with concentrated sulphuric acid",
                 "A squeaky pop with a lighted splint",
                 "Bleaching of damp litmus"
               ],
               "answer": 1,
-              "why": "Heating nitrates with concentrated sulfuric acid liberates brown nitrogen dioxide."
+              "why": "Heating nitrates with concentrated sulphuric acid liberates brown nitrogen dioxide."
             }
           }
         },
@@ -4858,8 +4857,8 @@
               "High pressure favours the fewer-molecule side (4 gas molecules become 2), so 200 atm pushes the yield up. Higher pressure would push further but costs more to build and run. Unreacted gases are recycled, so low per-pass yield is recovered over many passes.",
               "The same logic runs the Contact process: moderate temperature, high pressure, V₂O₅ catalyst. Two industries, one principle — Le Chatelier managed by engineers.",
               "A candidate who sees the Haber conditions as a compromise, not a maximum, answers every 'why these conditions' item correctly.",
-              "The recycle loop is itself an application of Le Chatelier: unreacted gases are returned so the forward reaction consumes them again, recovering over many passes what a single pass leaves behind.",
-              "A candidate who sees the loop will recognise recycling as equilibrium management, not waste handling."
+              "Recycling is Le Chatelier in action: unreacted nitrogen and hydrogen are sent back through the converter, so each pass pushes the reaction a little further towards ammonia.",
+              "Candidates should see the loop as equilibrium management, not waste disposal — the same forward reaction is made to run several times over."
             ],
             "bullets": [
               "450 °C: compromise between yield (cold) and rate (hot).",
@@ -4897,8 +4896,8 @@
               "The classic trap is the preparation. Warming an ammonium salt with a base is the laboratory preparation; the Haber process is the industrial one. Any option naming the other scale loses the mark.",
               "The second trap is the oxidation state of nitrogen. In NH₃ it is −3, in NO +2, in NO₂ +4, and in HNO₃ +5. Nitric acid is not 'the acid with nitrogen at +5' by memory — the state follows from the sum rule, and candidates should compute it.",
               "The third trap is the fume test direction. Ammonia fumes with hydrogen chloride (white); chlorine bleaches litmus. Swapping the two tests reverses the identification.",
-              "The fourth trap is nitrates versus nitrites. Heating a nitrate gives a nitrite plus oxygen; the test for nitrate is brown NO₂ fumes with concentrated sulfuric acid. The two reactions are related but not interchangeable.",
-              "A final trap is the state of the ammonia solution. Ammonium hydroxide is a weak base in equilibrium with NH₃ gas; warming it drives off ammonia, which is why the laboratory preparation works at all.",
+              "The fourth trap is nitrates versus nitrites. Heating a nitrate gives a nitrite plus oxygen; the test for nitrate is brown NO₂ fumes with concentrated sulphuric acid. The two reactions are related but not interchangeable.",
+              "A final trap is the state of the ammonia solution. Ammonia solution is a weak base in equilibrium with NH₃ gas; warming it drives off ammonia, which is why the laboratory preparation works at all.",
               "The same equilibrium explains why ammonia bottles are labelled with the pressure of the gas: the solution is a stored gas waiting to escape."
             ],
             "bullets": [
@@ -4963,8 +4962,8 @@
             "heading": "Carbon(IV) oxide and carbon(II) oxide",
             "paragraphs": [
               "Carbon(IV) oxide (CO₂) is made in the laboratory from calcium carbonate: CaCO₃ + 2HCl → CaCl₂ + CO₂ + H₂O. It is colourless, dense, fire-extinguishing (it smothers flames), slightly soluble to carbonic acid.",
-              "The test for CO₂ is limewater turning milky: CO₂ + Ca(OH)₂ → CaCO₃ + H₂O. Both carbonates (CO₃²⁻) and hydrogencarbonates (HCO₃⁻) give CO₂ with dilute acid, but hydrogencarbonates decompose on heating to carbonates while carbonates are heat-stable. HCO₃⁻ with dilute acid gives CO₂; with NaOH it discharges phenolphthalein pink, confirming hydrogencarbonate.",
-              "Carbon(II) oxide (CO) is made by passing steam over red-hot coke: C + H₂O → CO + H₂. It is a colourless, odourless, poisonous gas, reducing hot metal oxides. It binds haemoglobin far more strongly than oxygen — that is why charcoal fires kill in closed rooms."
+              "The test for CO₂ is limewater turning milky: CO₂ + Ca(OH)₂ → CaCO₃ + H₂O. Both carbonates (CO₃²⁻) and hydrogencarbonates (HCO₃⁻) give CO₂ with dilute acid, but hydrogencarbonates decompose on heating to carbonates while carbonates are heat-stable. HCO₃⁻ with dilute acid gives CO₂; to tell hydrogencarbonate from carbonate, add magnesium sulphate — carbonate solutions give a white precipitate of MgCO₃, while hydrogencarbonate solutions stay clear until boiled.",
+              "Carbon(II) oxide (CO) is prepared in the laboratory by dehydrating methanoic acid with concentrated H₂SO₄ — or by passing carbon dioxide over red-hot coke: CO₂ + C → 2CO. It is a colourless, odourless, poisonous gas, reducing hot metal oxides. It binds haemoglobin far more strongly than oxygen — that is why charcoal fires kill in closed rooms."
             ],
             "bullets": [
               "CO₂: CaCO₃ + acid, limewater milky; CO₃²⁻/HCO₃⁻ + acid → CO₂; HCO₃⁻ decomposes on heating, CO₃²⁻ stable.",
@@ -5219,7 +5218,7 @@
           "content": {
             "heading": "Displacement and corrosion",
             "paragraphs": [
-              "Displacement is the series in action: zinc dipped in copper(II) sulfate solution coats itself with copper while zinc ions enter solution. Zn + CuSO₄ → ZnSO₄ + Cu. Iron displaces copper the same way, which is why iron nails can be copper-plated without electricity.",
+              "Displacement is the series in action: zinc dipped in copper(II) sulphate solution coats itself with copper while zinc ions enter solution. Zn + CuSO₄ → ZnSO₄ + Cu. Iron displaces copper the same way, which is why iron nails can be copper-plated without electricity.",
               "Corrosion is the reverse journey: iron rusts because it loses electrons to oxygen and water. It is an electrochemical process, and it happens fastest where air and water meet the metal together.",
               "Protection follows the series: paint and grease block air and water; galvanising coats iron with zinc, which corrodes first sacrificially; tin is only a barrier, and once scratched, iron rusts faster."
             ],
@@ -5230,7 +5229,7 @@
             ],
             "takeaway": "Higher metals displace lower ones, and corrode before them.",
             "check": {
-              "question": "An iron nail dipped in copper(II) sulfate solution becomes coated with copper because",
+              "question": "An iron nail dipped in copper(II) sulphate solution becomes coated with copper because",
               "options": [
                 "Copper is more reactive than iron",
                 "Iron is more reactive than copper and displaces it",
@@ -5253,7 +5252,7 @@
         {
           "type": "worked_example",
           "content": {
-            "problem": "Zinc is dipped in copper(II) sulfate solution. Write the reaction and state whether it is displacement.",
+            "problem": "Zinc is dipped in copper(II) sulphate solution. Write the reaction and state whether it is displacement.",
             "steps": [
               {
                 "operation": "Place zinc and copper in the series",
@@ -5269,7 +5268,7 @@
               },
               {
                 "operation": "Write the full equation",
-                "reason": "The ions combine with the sulfate spectator unchanged",
+                "reason": "The ions combine with the sulphate spectator unchanged",
                 "result": "Zn + CuSO₄ → ZnSO₄ + Cu",
                 "predictPrompt": ""
               }
@@ -5279,7 +5278,7 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "Iron is dipped in zinc sulfate solution. Does any reaction happen? Give a reason from the series.",
+            "question": "Iron is dipped in zinc sulphate solution. Does any reaction happen? Give a reason from the series.",
             "hints": [
               "Find iron and zinc positions in the series",
               "The higher metal displaces the lower — never the reverse",
@@ -5817,7 +5816,7 @@
             "heading": "Properties, uses and the test for Al³⁺",
             "paragraphs": [
               "Aluminium is light (density one-third of iron), does not rust because its oxide film seals it, conducts well, and is malleable. Those four properties explain its uses: aircraft bodies, cooking pots, overhead cables and foil.",
-              "Its compounds include aluminium oxide (the abrasive itself), aluminium chloride and aluminium sulfate (used in water treatment). The oxide film is amphoteric: it reacts with both acids and bases, which is why aluminium dissolves in both.",
+              "Its compounds include aluminium oxide (the abrasive itself), aluminium chloride and aluminium sulphate (used in water treatment). The oxide film is amphoteric: it reacts with both acids and bases, which is why aluminium dissolves in both.",
               "The test for Al³⁺ is sodium hydroxide solution, which gives a white gelatinous precipitate of Al(OH)₃ that dissolves in excess NaOH. That double behaviour — precipitate, then dissolve — is specific to aluminium."
             ],
             "bullets": [
@@ -6025,7 +6024,7 @@
           "content": {
             "heading": "Forms of iron and the making of steel",
             "paragraphs": [
-              "Pig iron is the crude blast-furnace product, rich in carbon (about 4%) and brittle. Wrought iron is nearly pure iron, soft and tough, made by puddling. Cast iron has less carbon than pig iron and is hard but brittle.",
+              "Pig iron is the crude blast-furnace product, rich in carbon (about 4%) and brittle. Wrought iron is nearly pure iron, soft and tough, made by puddling. Cast iron is re-melted pig iron, so it too is carbon-rich and brittle.",
               "Steel is iron with a controlled small amount of carbon. Stainless steel adds chromium and nickel for rust resistance. The carbon content decides the type: more carbon means harder, stronger steel.",
               "Steel is made by blowing oxygen through molten pig iron (basic oxygen furnace), which burns away excess carbon and impurities. The controlled burn is the difference between pig iron and steel."
             ],
@@ -6054,7 +6053,7 @@
             "heading": "Properties, uses and the tests for Fe²⁺ and Fe³⁺",
             "paragraphs": [
               "Iron is a grey, magnetic, conducting metal used for gates, beams, tools, machines and vehicles. Its weakness is rusting, which is why it is painted, galvanised or alloyed into steel.",
-              "The test for Fe²⁺ is potassium hexacyanoferrate(III) solution, which gives a deep blue precipitate (Prussian blue). The test for Fe³⁺ is potassium hexacyanoferrate(II), which also gives a blue precipitate — the reagents are swapped in the two tests.",
+              "The test for Fe²⁺ is potassium hexacyanoferrate(III) solution, which gives a deep blue precipitate (Turnbull's blue). The test for Fe³⁺ is potassium hexacyanoferrate(II), which also gives a blue precipitate — the reagents are swapped in the two tests.",
               "With sodium hydroxide, Fe²⁺ gives a dirty green precipitate and Fe³⁺ gives a reddish-brown one. The two ions are therefore separable by their precipitate colours as well as by the blue tests."
             ],
             "bullets": [
@@ -6204,16 +6203,16 @@
           "content": {
             "heading": "Extracting copper",
             "paragraphs": [
-              "Copper is extracted from chalcopyrite (CuFeS₂) and other sulfide ores because it sits low in the reactivity series. The ore is concentrated by froth flotation, then roasted to copper(I) oxide, and reduced with carbon or by self-reduction to blister copper.",
+              "Copper is extracted from chalcopyrite (CuFeS₂) and other sulphide ores because it sits low in the reactivity series. The ore is concentrated by froth flotation, then roasted to copper(I) oxide, and reduced with carbon or by self-reduction to blister copper.",
               "Blister copper is then purified by electrorefining: impure anodes dissolve, pure cathodes collect the metal. The process mirrors copper purification from the electrolysis lesson, with anode sludge recovering gold and silver.",
               "Oxide ores follow a simpler route: carbon reduction directly, because copper is low enough for carbon to displace it. The series decides, as always."
             ],
             "bullets": [
-              "Sulfide ores: concentrate, roast, self-reduce to blister copper.",
+              "Sulphide ores: concentrate, roast, self-reduce to blister copper.",
               "Electrorefining purifies blister copper.",
               "Carbon works because copper sits low in the series."
             ],
-            "takeaway": "Copper comes from sulfide ores by reduction, then electrorefining.",
+            "takeaway": "Copper comes from sulphide ores by reduction, then electrorefining.",
             "check": {
               "question": "Blister copper is purified by",
               "options": [
@@ -6230,10 +6229,10 @@
         {
           "type": "text",
           "content": {
-            "heading": "Properties, uses and copper(II) sulfate",
+            "heading": "Properties, uses and copper(II) sulphate",
             "paragraphs": [
               "Copper is reddish-brown, soft, malleable, and the best common conductor of electricity after silver. Those properties explain its uses: electrical wiring, motors, coins and alloys. It does not rust like iron, though it tarnishes green in air.",
-              "Copper(II) tetraoxosulfate(VI) (CuSO₄) is prepared by reacting copper(II) oxide or carbonate with dilute sulfuric acid: CuO + H₂SO₄ → CuSO₄ + H₂O. The blue solution crystallises to blue pentahydrate.",
+              "Copper(II) tetraoxosulfate(VI) (CuSO₄) is prepared by reacting copper(II) oxide or carbonate with dilute sulphuric acid: CuO + H₂SO₄ → CuSO₄ + H₂O. The blue solution crystallises to blue pentahydrate.",
               "The test for Cu²⁺ is ammonia solution, which first gives a pale blue precipitate of Cu(OH)₂ that dissolves in excess ammonia to a deep blue complex. That deep blue is specific to copper."
             ],
             "bullets": [
@@ -6294,7 +6293,7 @@
         {
           "type": "worked_example",
           "content": {
-            "problem": "Copper(II) sulfate is prepared from copper(II) oxide and dilute sulfuric acid. Write the equation and state the colour change.",
+            "problem": "Copper(II) sulphate is prepared from copper(II) oxide and dilute sulphuric acid. Write the equation and state the colour change.",
             "steps": [
               {
                 "operation": "Identify the reactants",
@@ -6310,7 +6309,7 @@
               },
               {
                 "operation": "Name the salt formed",
-                "reason": "The sulfate ion names it tetraoxosulfate(VI)",
+                "reason": "The sulphate ion names it tetraoxosulfate(VI)",
                 "result": "Copper(II) tetraoxosulfate(VI)",
                 "predictPrompt": ""
               }
@@ -6373,7 +6372,7 @@
           "content": {
             "heading": "Go deeper: Exam traps in copper and alloys",
             "paragraphs": [
-              "The classic trap is the extraction route. Sulfide ores go through roasting and self-reduction; oxide ores go through carbon reduction. Naming carbon reduction for a sulfide ore reverses the method.",
+              "The classic trap is the extraction route. Sulphide ores go through roasting and self-reduction; oxide ores go through carbon reduction. Naming carbon reduction for a sulphide ore reverses the method.",
               "The second trap is the Cu²⁺ test direction. Pale blue precipitate first, deep blue solution in excess — reversing the order describes the wrong observation.",
               "The third trap is brass versus bronze. Brass is copper with zinc; bronze is copper with tin. The two names are the most swapped pair in the syllabus.",
               "The fourth trap is assuming pure metals are best. Every named alloy exists because it beats the pure metal at hardness, rust resistance or melting point — the comparison question always favours the alloy.",
@@ -6381,7 +6380,7 @@
               "A candidate who writes the two alloy pairs before reading the options eliminates half the distractors instantly."
             ],
             "bullets": [
-              "Sulfides: roast + self-reduce. Oxides: carbon reduction.",
+              "Sulphides: roast + self-reduce. Oxides: carbon reduction.",
               "Cu²⁺: pale blue first, deep blue in excess NH₃.",
               "Brass = Cu + Zn; bronze = Cu + Sn.",
               "Alloys always beat pure metals at their job."
@@ -6440,9 +6439,9 @@
           "content": {
             "heading": "General formulae and naming",
             "paragraphs": [
-              "Each family of organic compounds has a general formula: alkanes are CₙH₂ₙ₊₂, alkenes CₙH₂ₙ, alkynes CₙH₂ₙ₋₂, alkanols CₙH₂ₙ₊₁OH. The n tells how many carbons; the formula then gives the hydrogens. Methane is C₁H₄, ethane C₂H₆.",
+              "Each family of organic compounds has a general formula: alkanes are CₙH₂ₙ₊₂, alkenes CₙH₂ₙ, alkynes CₙH₂ₙ₋₂, alkanols CₙH₂ₙ₊₁OH. The n tells how many carbons; the formula then gives the hydrogens. Methane is CH₄, ethane C₂H₆.",
               "The name reads the chain length and the group: 'eth' means two carbons, 'an' means single bonds, 'ene' means a double bond, 'yne' a triple bond, 'ol' an OH group, 'oic acid' a COOH group. Butane is four carbons, single bonds; ethene is two carbons with a double bond.",
-              "IUPAC names therefore encode structure: given the name, the skeleton can be drawn; given the skeleton, the name can be built. The skill is translation in both directions.",
+              "IUPAC (the international naming rules for chemistry) therefore encodes structure: given the name, the skeleton can be drawn; given the skeleton, the name can be built. The skill is translation in both directions.",
               "Isomer counting follows chain length: pentane (C5H12) has 3 structural isomers and hexane (C6H14) has 5, each drawn by rearranging the skeleton."
             ],
             "bullets": [
@@ -6470,7 +6469,7 @@
           "content": {
             "heading": "Empirical and molecular formulae",
             "paragraphs": [
-              "The empirical formula is the simplest whole-number ratio of atoms; the molecular formula is the true count in one molecule. Glucose and fructose share the empirical formula CH₂O, but glucose is truly C₆H₁₂O₆.",
+              "Glucose and fructose share CH₂O — the empirical formula, the simplest whole-number count of atoms — while their molecular formula is C₆H₁₂O₆, the true count in one molecule.",
               "Percentage composition gives the ratio: divide each percentage by its relative atomic mass, then by the smallest value. A compound of 92.3% carbon and 7.7% hydrogen gives 7.69 and 7.7, which reduce to CH — an empirical formula of CH.",
               "The molecular formula follows from the molar mass: if the compound's Mr is 78 and CH weighs 13, then 78 ÷ 13 = 6, so the true formula is C₆H₆. Percentages alone never give the true formula — the molar mass scales the ratio up."
             ],
@@ -6910,13 +6909,13 @@
             "heading": "Addition and polymerisation",
             "paragraphs": [
               "Addition opens the double bond to add two atoms, one to each carbon. Ethene + H₂ → ethane (with nickel catalyst); ethene + Br₂ → dibromoethane; ethene + HCl → chloroethane. The double bond becomes a single bond.",
-              "Polymerisation is addition repeated thousands of times: ethene chains link into polythene. Synthetic rubber is made the same way from diene monomers, then vulcanised — heated with sulfur — to cross-link the chains and harden the rubber.",
+              "Polymerisation is addition repeated thousands of times: ethene chains link into polythene. Synthetic rubber is made the same way from diene monomers, then vulcanised — heated with sulphur — to cross-link the chains and harden the rubber.",
               "Addition and polymerisation are the same chemistry at two scales: opening double bonds. The products differ only in how many molecules join."
             ],
             "bullets": [
               "Addition: H₂, Br₂, HCl add across C=C.",
               "Polymerisation: double bonds link into long chains.",
-              "Vulcanisation cross-links rubber with sulfur."
+              "Vulcanisation cross-links rubber with sulphur."
             ],
             "takeaway": "Alkenes add and chain together through their double bond.",
             "check": {
@@ -6953,7 +6952,7 @@
                 "Dilute HCl",
                 "Water",
                 "Steam over coke",
-                "Concentrated sulfuric acid"
+                "Concentrated sulphuric acid"
               ],
               "answer": 1,
               "why": "CaC₂ + 2H₂O → C₂H₂ + Ca(OH)₂ gives ethyne."
@@ -7013,7 +7012,7 @@
               "A double bond cannot rotate, so groups fixed on its carbons stay in their positions. In cis-but-2-ene both methyl groups sit on the same side; in trans-but-2-ene they sit opposite. The two isomers have different boiling points and reactivity.",
               "Geometric isomerism exists only where each double-bond carbon carries two different groups. But-2-ene shows it; ethene and propene cannot, because one carbon lacks two different groups.",
               "The distinction matters because shape changes contact between molecules: cis isomers attract differently and boil differently. Geometry is a property, not just a drawing.",
-              "A candidate who checks the two groups on each carbon before declaring cis/trans will never invent geometric isomers where none exist.",
+              "Check the two groups on each carbon before declaring geometry — that one habit kills every invented isomer.",
               "That fixed geometry is also why cis and trans isomers can be separated by boiling point: the same-side arrangement packs differently and attracts differently. Geometry is a physical property, not just a drawing convention.",
               "A candidate who checks the two groups on each carbon before declaring cis or trans will never invent geometric isomers where none can exist."
             ],
@@ -7031,12 +7030,12 @@
             "heading": "Go deeper: Polymers and vulcanisation",
             "paragraphs": [
               "Addition polymerisation links monomers through their double bonds into long chains: ethene to polythene, styrene to polystyrene. The polymer's properties come from chain length and cross-linking, not from new chemistry.",
-              "Natural rubber is too soft and sticky for tyres. Vulcanisation heats it with sulfur, which forms cross-links between chains and makes it hard, elastic and durable. Every tyre on the road is vulcanised rubber.",
+              "Natural rubber is too soft and sticky for tyres. Vulcanisation heats it with sulphur, which forms cross-links between chains and makes it hard, elastic and durable. Every tyre on the road is vulcanised rubber.",
               "Condensation polymerisation is the other route: monomers join with small molecules lost, as in nylon and terylene. Addition versus condensation is decided by whether a small molecule appears in the equation.",
               "The exam chain is therefore: double bond → addition → polymer → cross-linking. Each step explains the next product's properties.",
               "The same addition chemistry also explains why polythene is thermoplastic: its chains are separate and slide on heating. Vulcanised rubber, by contrast, is cross-linked and cannot flow.",
               "A candidate who separates chain-making from cross-linking keeps two processes distinct in every polymer answer.",
-              "Synthetic rubber follows the same route from a different starting point. Butadiene or isoprene is polymerised into long chains, and the chains are then cross-linked with sulfur exactly as natural rubber is. Two industries, one treatment.",
+              "Synthetic rubber follows the same route from a different starting point. Butadiene or isoprene is polymerised into long chains, and the chains are then cross-linked with sulphur exactly as natural rubber is. Two industries, one treatment.",
               "The reason vulcanisation is needed for both is mechanical, not chemical. Uncross-linked rubber flows at body temperature, so a tyre would not hold its shape; the cross-links turn a sticky polymer into a springy solid."
             ],
             "bullets": [
@@ -7244,7 +7243,7 @@
             "paragraphs": [
               "Substitution swaps one hydrogen for a substituent while the delocalised system reforms. The ring's stability is temporarily lost during the attack but restored when the hydrogen leaves — the net result keeps the aromatic sextet intact.",
               "Addition, by contrast, would saturate two carbons and break the ring's shared system permanently. Benzene 'chooses' substitution because substitution is the only path that keeps the stability.",
-              "That is why bromination needs iron(III) chloride: the catalyst generates the electrophile that attacks the ring, and the ring's response is substitution, not addition.",
+              "That is why bromination needs iron(III) chloride: the catalyst generates the electrophile (the electron-accepting species) that attacks the ring, and the ring's response is substitution, not addition.",
               "The exam logic is therefore thermodynamic: benzene does what keeps it aromatic. Any option breaking the ring contradicts the stability.",
               "The intermediate in substitution is temporarily non-aromatic, which is why the reaction needs a catalyst and still proceeds: the stability of the ring is recovered in the final step.",
               "That temporary loss also explains why benzene substitutes more slowly than alkenes react. Stability slows everything it touches."
@@ -7432,13 +7431,13 @@
             "heading": "Go deeper: Why the classes react differently",
             "paragraphs": [
               "Oxidation must remove hydrogen from the OH carbon. Primary alcohols have two hydrogens there, so they oxidise twice (aldehyde, then acid). Secondary have one, so they oxidise once to a ketone. Tertiary have none, so oxidation stops — there is no hydrogen to remove.",
-              "The Lucas order follows the same carbocation stability: tertiary carbocations form fastest, so tertiary alcohols react instantly. The substitution rate is the stability of the intermediate, read as a clock.",
+              "The Lucas order follows the same carbocation (a carbon with only six outer electrons — a reactive intermediate) stability: tertiary carbocations form fastest, so tertiary alcohols react instantly. The substitution rate is the stability of the intermediate, read as a clock.",
               "Both tests are therefore the same chemistry seen twice: the substitution detail of the OH carbon decides everything. Class is not a label; it is a mechanism count.",
               "A candidate who counts hydrogens on the OH carbon predicts oxidation and Lucas behaviour without memorising either.",
               "That is also why tertiary alcohols dehydrate fastest: the same stable carbocation that speeds substitution also speeds elimination. One intermediate explains three behaviours.",
               "A candidate who names the carbocation has connected substitution, elimination and oxidation in one idea.",
               "The same counting habit classifies many later families, so the skill outlives this lesson.",
-              "It also pays off in every later family."
+              "Lucas's test, dehydration and substitution rate are all the same carbocation story."
             ],
             "bullets": [
               "Oxidation removes H from the OH carbon: 1° twice, 2° once, 3° never.",
@@ -7453,7 +7452,7 @@
           "content": {
             "heading": "Go deeper: Ethanol as an energy provider",
             "paragraphs": [
-              "Ethanol burns to CO₂ and water, releasing energy without the sulfur and lead pollutants of petrol. Blending it into petrol (gasohol) raises octane and reduces emissions, which is why many countries mandate blends.",
+              "Ethanol burns to CO₂ and water, releasing energy without the sulphur and lead pollutants of petrol. Blending it into petrol (gasohol) raises octane and reduces emissions, which is why many countries mandate blends.",
               "The catch is the source: fermentation needs farm land and water, and distillation needs energy. Ethanol is renewable but not free — its energy cost must be paid at the distillery.",
               "That balance explains both the promise and the limit: ethanol works as an alternative energy provider where feedstock is cheap, and struggles where land competes with food.",
               "The exam link is therefore economic as much as chemical: ethanol's value is its cleanliness, its cost is its farming.",
@@ -7569,7 +7568,7 @@
           "content": {
             "heading": "Properties and uses",
             "paragraphs": [
-              "Aldehydes and ketones are polar, hydrogen-bonding liquids, soluble in water when small. Their boiling points rise with chain length, and both families are used as solvents and intermediates.",
+              "Aldehydes and ketones are polar liquids held by dipole–dipole forces — they cannot hydrogen-bond with each other, though they accept hydrogen bonds from water — and are soluble when small. Their boiling points rise with chain length, and both families are used as solvents and intermediates.",
               "Formaldehyde (methanal) preserves specimens and makes plastics; acetone (propanone) is a nail-polish remover and industrial solvent. Flavouring aldehydes perfume foods and soaps.",
               "The carbonyl group decides both families' chemistry: it is the site of addition reactions (hydrogen, HCN) and of the oxidation that separates them.",
               "Their polarity also lets small members dissolve in water, which is why formaldehyde is sold as a solution and acetone mixes with water freely."
@@ -7754,7 +7753,7 @@
             "paragraphs": [
               "Fats and oils are alkanoates: esters of fatty acids with glycerol, a trihydric alkanol. That is why glycerol is both a fat component and a soap by-product. The fatty acid chains decide the fat's firmness — saturated chains pack tight (butter), unsaturated chains stay soft (oils).",
               "Saponification is the alkaline hydrolysis of fats: fat + NaOH → soap + glycerol. Sodium stearate is the soap. Margarine is made by hydrogenating vegetable oils — adding hydrogen across their double bonds hardens them.",
-              "Soaps clean by emulsifying grease into micelles that rinse away. Detergents are synthetic sulfonates that clean the same way but do not form scum with hard water. Soap fails in hard water; detergents do not."
+              "Soaps clean by emulsifying grease into micelles that rinse away. Detergents are synthetic sulphonates that clean the same way but do not form scum with hard water. Soap fails in hard water; detergents do not."
             ],
             "bullets": [
               "Fats/oils: glycerol esters of fatty acids (alkanoates).",
@@ -7782,7 +7781,7 @@
             "heading": "Natural sources and the soap–detergent choice",
             "paragraphs": [
               "Alkanoates come from natural fats and oils: palm oil, coconut oil, groundnut oil and animal tallow. The fatty acid composition of each source decides the soap's hardness and lathering.",
-              "Soap cleans by the same emulsifying trick as detergent, but it forms insoluble scum with Ca²⁺ and Mg²⁺ in hard water. Detergents (synthetic sulfonates) form soluble salts and keep working in hard water.",
+              "Soap cleans by the same emulsifying trick as detergent, but it forms insoluble scum with Ca²⁺ and Mg²⁺ in hard water. Detergents (synthetic sulphonates) form soluble salts and keep working in hard water.",
               "That difference is the whole commercial choice: soap where water is soft, detergent where water is hard. Chemistry decides the market."
             ],
             "bullets": [
@@ -7855,7 +7854,7 @@
             "heading": "Go deeper: Esterification as equilibrium",
             "paragraphs": [
               "Esterification is reversible: the ester hydrolyses back to acid and alkanol in water. The equilibrium lies near the middle, so the yield is never complete without tricks — excess alkanol, or removal of water.",
-              "Concentrated sulfuric acid catalyses the reaction by protonating the acid, making the carbonyl carbon more attackable. The catalyst speeds both directions equally, as catalysts always do.",
+              "Concentrated sulphuric acid catalyses the reaction by protonating the acid, making the carbonyl carbon more attackable. The catalyst speeds both directions equally, as catalysts always do.",
               "That reversibility is why esters hydrolyse in acidic or alkaline conditions in nature: fats in seeds and fruits are esters that enzymes hydrolyse as food stores.",
               "A candidate who sees esterification as equilibrium explains both perfume-making and fat digestion with one idea.",
               "Excess alkanol pushes the equilibrium toward the ester by Le Chatelier: the alkanol is consumed, so more forms. That is why perfume houses use excess alcohol rather than excess acid.",
@@ -7876,7 +7875,7 @@
             "heading": "Go deeper: Why soap fails in hard water",
             "paragraphs": [
               "Soap anions pair with Ca²⁺ and Mg²⁺ to form insoluble scum instead of micelles. The soap is wasted on the hardness ions before it can clean. That is the whole chemistry of the hard-water problem.",
-              "Detergent sulfonates form soluble calcium salts, so they keep cleaning. The difference is solubility of the salt, nothing more mysterious.",
+              "Detergent sulphonates form soluble calcium salts, so they keep cleaning. The difference is solubility of the salt, nothing more mysterious.",
               "Saponification's glycerol by-product is itself valuable in soaps. A fat plus alkali gives two products, and both are sold — the process wastes nothing.",
               "A candidate who links scum to solubility predicts the soap–detergent choice for any water hardness.",
               "Boiling water soap solution does not remove the scum, because the calcium salts are insoluble at any temperature. Only a chemical exchange — washing soda or resins — removes the hardness ions.",
@@ -8069,9 +8068,9 @@
               "That single count — hydrogens on nitrogen — predicts the test result for every class. It is the amine version of the alkanol reactivity ladder.",
               "Basicity follows a related but different order, because alkyl groups donate electron density and stabilise the ammonium ion. Basic strength and diazotisation rate are different ladders and must not be merged.",
               "A candidate who counts hydrogens for the test and electron donation for basicity keeps the two ladders separate.",
-              "Basicity rises with alkyl substitution because the groups donate electron density and stabilise the ammonium ion. Greater donation means a stronger base, which is why trimethylamine is more basic than methylamine.",
+              "In water the order is messier: methylamine is weaker than dimethylamine, and trimethylamine is weaker than both. Alkyl groups donate electron density, but in water the ion is also stabilised by solvation, so do not assume more alkyl always means a stronger base.",
               "That donation order is not the diazotisation order. A candidate who ranks basicity by the test result merges two different ladders and loses both items.",
-              "It also pays off in every later amine family."
+              "Basicity learned here decides how amine salts split and recombine in reactions."
             ],
             "bullets": [
               "Diazotisation needs N–H hydrogen: 1° has two, 2° has one, 3° none.",
@@ -8176,7 +8175,7 @@
             "paragraphs": [
               "The Fehling test finds reducing sugars: a blue solution that turns red with red copper(I) oxide on warming. Benedict's solution works the same way. Sucrose fails the test until it is hydrolysed into glucose and fructose.",
               "Hydrolysis breaks complex sugars into simple ones: sucrose + water → glucose + fructose (with dilute acid); starch → maltose → glucose. Cellulose resists hydrolysis, which is why humans cannot digest it.",
-              "Concentrated tetraoxosulfate(VI) acid dehydrates sugars: glucose chars to black carbon. That dehydration is the test that distinguishes sugars from non-carbohydrates."
+              "Concentrated tetraoxosulfate(VI) acid chars any organic matter, sugars included: glucose chars to black carbon. That proves carbon is present, not that the substance is a sugar. The working tests for sugars are Fehling's or Benedict's solution (reducing sugars) and iodine solution (starch)."
             ],
             "bullets": [
               "Fehling: blue → red Cu₂O with reducing sugars.",
@@ -8282,8 +8281,8 @@
               "Maltose and lactose are reducing because their join leaves one unit's group free. The exception proves the rule: it is the free group, not the size, that decides.",
               "The same joining logic explains why maltose and lactose stay reducing: their structures link one unit through a different carbon, leaving one reactive group free. It is the position of the join that matters, not the fact of joining.",
               "A candidate who pictures the join can predict the test result for any disaccharide without memorising it.",
-              "It also pays off in every later family.",
-              "It also pays off in every later family of reactions."
+              "The same carbonyl pattern carries into fats, proteins and flavour molecules you meet later.",
+              "Dehydration also explains the Fehling's and Benedict's tests you meet later in this lesson."
             ],
             "bullets": [
               "Reducing power needs a free aldehyde/keto group.",
@@ -8324,7 +8323,7 @@
             "paragraphs": [
               "The classic trap is the reducing test. Glucose and fructose reduce Fehling's; sucrose does not until hydrolysed. Any option giving sucrose a positive test without hydrolysis reverses the chemistry.",
               "The second trap is starch versus cellulose digestibility. Both are glucose polymers, but only starch is digestible. Composition alone never decides — the link type does.",
-              "The third trap is dehydration. Concentrated sulfuric acid chars sugars to carbon; it is a dehydration, not an oxidation. The black residue is carbon, not ash.",
+              "The third trap is dehydration. Concentrated sulphuric acid chars sugars to carbon; it is a dehydration, not an oxidation. The black residue is carbon, not ash.",
               "The fourth trap is fermentation direction. Yeast converts sugar to ethanol, never the reverse. Any option making ethanol the fermented product's starting material reverses the process.",
               "A final trap is the sugar source. Reducing sugars occur in fruits and honey; cassava and yam store starch. The natural source names the class, and the class names the reaction."
             ],
@@ -8388,7 +8387,7 @@
             "heading": "Hydrolysis and the protein tests",
             "paragraphs": [
               "Hydrolysis breaks proteins back into amino acids: acid hydrolysis (hot HCl) or enzyme hydrolysis (digestion). The products are the same amino acids the protein was built from — hydrolysis reverses polymerisation.",
-              "The biuret test finds peptide bonds: copper(II) sulfate in alkali gives a violet colour. The ninhydrin test finds amino groups: ninhydrin gives a blue-purple colour. Millon's test finds tyrosine through its phenolic OH group: Millon's reagent (mercury(II) nitrate in nitric acid) gives a red colour.",
+              "The biuret test finds peptide bonds: copper(II) sulphate in alkali gives a violet colour. The ninhydrin test finds amino groups: ninhydrin gives a blue-purple colour. Millon's test finds tyrosine through its phenolic OH group: Millon's reagent (mercury(II) nitrate in nitric acid) gives a red colour.",
               "The xanthoproteic test finds aromatic rings: concentrated nitric acid nitrates the rings to give a yellow colour that turns orange with alkali. Each test targets a different feature — bonds, amino groups, or rings."
             ],
             "bullets": [
@@ -8496,7 +8495,7 @@
               "The same folding logic explains why some proteins are fibres (keratin in hair and nails) and others are globular (haemoglobin in blood). Fibres need strength; globular proteins need pockets.",
               "A candidate who pictures the fold can predict the job: long fibres for strength, compact globules for carrying and catalysis.",
               "A candidate who links sequence to fold to function explains every protein question in the syllabus from one chain of reasoning.",
-              "It also pays off in every later structural question, from enzymes to fibres.",
+              "The peptide bond is the same backbone that folds into fibres, muscles and enzymes.",
               "That chain of reasoning is the whole topic in one line."
             ],
             "bullets": [
@@ -8570,7 +8569,7 @@
           "content": {
             "heading": "Addition versus condensation",
             "paragraphs": [
-              "Addition polymerisation links monomers through their double bonds, with no by-product: ethene chains link into polythene, styrene into polystyrene. The reaction is addition repeated thousands of times.",
+              "Chain forms as double bonds open, with no by-product at all — ethene becomes polythene, styrene becomes polystyrene, every link a single addition.",
               "Condensation polymerisation joins monomers with small molecules lost: amino acids lose water to form proteins, and dicarboxylic acids with diols lose water to form polyesters like terylene. Nylon is a condensation polymer too.",
               "The distinction is the by-product: addition loses nothing; condensation loses water (or alcohol). The equation shows it at a glance.",
               "The by-product is the quickest check of all: look at the equation, and if water appears, the polymerisation was condensation.",
@@ -8725,15 +8724,15 @@
           "content": {
             "heading": "Go deeper: Vulcanised rubber and cross-linking",
             "paragraphs": [
-              "Natural rubber is polyisoprene chains, too soft and sticky for tyres. Vulcanisation heats it with sulfur, which forms cross-links between chains. The network makes it hard, elastic and durable.",
+              "Natural rubber is polyisoprene chains, too soft and sticky for tyres. Vulcanisation heats it with sulphur, which forms cross-links between chains. The network makes it hard, elastic and durable.",
               "Synthetic rubber is made the same way from synthetic monomers: the cross-linking step is identical, only the starting chains differ. Vulcanisation is a treatment, not a polymerisation.",
               "The cross-links also explain why vulcanised rubber cannot be remelted: heating breaks the network, it does not slide it. Rubber is a thermoset once vulcanised.",
               "A candidate who separates polymerisation (making chains) from vulcanisation (linking them) keeps two processes distinct.",
-              "The sulfur bridges also explain the smell of hot rubber and the ageing of tyres: heat breaks some bridges over time, and the network weakens.",
+              "The sulphur bridges also explain the smell of hot rubber and the ageing of tyres: heat breaks some bridges over time, and the network weakens.",
               "Synthetic rubber follows the same treatment: Buna-S and neoprene are vulcanised exactly like natural rubber, proving that cross-linking is independent of the chain source."
             ],
             "bullets": [
-              "Vulcanisation cross-links rubber chains with sulfur.",
+              "Vulcanisation cross-links rubber chains with sulphur.",
               "Same treatment for natural and synthetic rubber.",
               "Vulcanised rubber is thermoset — it chars, not melts.",
               "Polymerisation makes chains; vulcanisation links them."
@@ -8748,7 +8747,7 @@
               "The classic trap is the by-product. Addition loses nothing; condensation loses water or alcohol. Any option describing amino acids joining without water lost is addition, not condensation.",
               "The second trap is natural versus synthetic. Cellulose is natural; nylon is synthetic. Both are polymers, but only one comes from living things.",
               "The third trap is thermoplastic versus thermosetting. Remelting means thermoplastic; charring means thermosetting. The heating test decides, not the softness.",
-              "The fourth trap is vulcanisation as polymerisation. Sulfur cross-links existing chains; it does not make them. The two processes are sequential, not the same.",
+              "The fourth trap is vulcanisation as polymerisation. Sulphur cross-links existing chains; it does not make them. The two processes are sequential, not the same.",
               "A final trap is calling natural rubber synthetic because tyres are manufactured. Origin decides the category: natural rubber comes from latex, however it is processed afterwards.",
               "A candidate who checks the by-product, the heating test, and the origin in that order answers every polymer item without memorising examples.",
               "That order — by-product, heating, origin — is the whole polymer method in one line."
@@ -8919,8 +8918,8 @@
               "That is why zinc, with a full 3d¹⁰ subshell, behaves like a main-group metal: no variable states, no colour, no complex chemistry. The exception proves the d-block rule.",
               "A candidate who writes the configuration first can predict which transition behaviour to expect for any metal in the series.",
               "The same partly filled subshell explains why transition metals have high densities, high melting points and good conductivity: the delocalised d-electrons contribute to the metallic bonding alongside the s-electrons.",
-              "It also pays off in every later transition metal question.",
-              "It also pays off in every later transition metal question in the syllabus."
+              "The same ligand logic names haemoglobin’s haem group.",
+              "Stability comparisons also predict why iron rusts and silver does not."
             ],
             "bullets": [
               "Partly filled d = transition behaviour.",
@@ -9024,7 +9023,7 @@
             "heading": "Nitrification and assimilation: feeding the plant",
             "paragraphs": [
               "Dead leaves and animal waste rot and release ammonium ions into the soil water. Plants cannot build proteins from ammonium alone, so soil bacteria must pass the nitrogen on. That passing-on work is called nitrification.",
-              "Nitrosomonas bacteria change ammonium, NH4+, into nitrite, NO2-. Nitrobacter bacteria then change nitrite into nitrate, NO3-. Nitrate is the main food plants absorb from soil water.",
+              "Nitrosomonas bacteria change ammonium, NH₄⁺, into nitrite, NO₂⁻. Nitrobacter bacteria then change nitrite into nitrate, NO₃⁻. Nitrate is the main food plants absorb from soil water.",
               "Plants take up nitrate through their roots. Inside the plant, nitrate is changed into amino acids and then into proteins for new leaves and seeds. This uptake and building work is called assimilation."
             ],
             "bullets": [
@@ -9124,7 +9123,7 @@
               },
               {
                 "operation": "Name plant and soil steps",
-                "reason": "Roots assimilate nitrate into protein; denitrators then release nitrogen gas",
+                "reason": "Roots assimilate nitrate into protein; denitrifiers then release nitrogen gas",
                 "result": "Assimilation then denitrification complete the cycle",
                 "predictPrompt": ""
               }
@@ -9171,7 +9170,7 @@
               "The second hand belongs to Nitrobacter. It catches the nitrite left by Nitrosomonas and adds oxygen again. The product is nitrate, which stays dissolved and travels to plant roots.",
               "Nitrite rarely piles up because the two bacteria live side by side. Where one releases nitrite, the other soon consumes it. Accumulation marks broken cooperation, such as sudden fertiliser, cold soil or blocked air.",
               "Farmers help these bacteria by tilling and draining the field. Loose soil lets oxygen reach their roots. Balanced fertiliser feeds them without flooding the soil with ammonium.",
-              "Exam questions name the pair in order because the order excuses the reason. NH4+ to NO2- is first, NO2- to NO3- is second. Reversing them suggests denitrification, which releases nitrogen gas instead."
+              "Exam questions name the pair in order because the order excuses the reason. NH₄⁺ to NO₂⁻ is first, NO₂⁻ to NO₃⁻ is second. Reversing them suggests denitrification, which releases nitrogen gas instead."
             ],
             "bullets": [
               "Nitrosomonas: ammonium to nitrite; needs oxygen and moisture.",
@@ -9374,7 +9373,7 @@
             "heading": "Go deeper: How carbon turns one metal into many forms",
             "paragraphs": [
               "Pure iron is soft because its crystal layers slide past each other. Carbon atoms jam those slides, so more carbon means harder and stronger metal. Past a point the jamming is so complete that the metal snaps instead of bending.",
-              "Pig iron at about four percent carbon is jammed almost completely, hence its brittleness. Cast iron keeps more carbon than steel but less than pig iron, so it casts well yet breaks under shock. Wrought iron has almost no carbon left, so it bends and welds.",
+              "Pig iron at about four percent carbon is jammed almost completely, hence its brittleness. Cast iron is re-melted pig iron — it keeps most of that carbon, so it casts well but breaks under shock. Wrought iron has almost no carbon left, so it bends and welds.",
               "Mild steel with less than about 0.3 percent carbon is the workhorse for construction because it is tough, cheap and weldable. Raising the carbon gives tool steel that holds an edge but is harder to weld. Each grade is a trade between toughness and hardness.",
               "Stainless steel changes the surface, not just the bulk. Chromium forms a thin oxide film that re-forms after a scratch, which is why cutlery stays bright. Aluminium and zinc protect themselves the same way, so film protection is a general pattern, not an iron trick.",
               "Heat treatment adds a final control. Quenching steel in water or oil locks in hardness, while tempering warms it to restore toughness. That is why two steels with the same carbon can still behave very differently after different cooling."
@@ -9430,7 +9429,7 @@
             "paragraphs": [
               "Pure iron is too soft for beams and knives. Steel mixes iron with a little carbon, and the carbon pins the crystals. The blend is harder and stronger than pure iron, so it carries loads and holds edges.",
               "Stainless steel adds chromium and nickel to iron. Its surface film blocks rust, so it suits cutlery, sinks and medical tools where strength alone would not suffice. Permalloy, iron with nickel, concentrates magnetism for relay and transformer cores, beating plain iron as a magnetic path.",
-              "Alnico mixes iron with aluminium, nickel, cobalt and copper. It keeps its magnetism without an outside supply, so it makes permanent magnets for motors and pickup cartridges. Each added element is the clue to the special job."
+              "Alnico mixes iron with aluminium, nickel and cobalt. It keeps its magnetism without an outside supply, so it makes permanent magnets for motors and pickup cartridges. Each added element is the clue to the special job."
             ],
             "bullets": [
               "Steel: iron plus carbon; construction and tools; harder, stronger.",
