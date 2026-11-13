@@ -7202,13 +7202,13 @@
               },
               {
                 "operation": "Substitute into the quadratic",
-                "reason": "One unknown eliminated",
+                "reason": "Substituting one equation into the other eliminates one of the two variables. Use substitution because the linear equation already hands you y directly; if substitution stalls, use the matching-coefficients method instead.",
                 "result": "3x − 1 = x² + 2x − 5, so x² − x − 4 = 0",
                 "predictPrompt": "What do you need to find before you can solve this?"
               },
               {
                 "operation": "Solve the quadratic",
-                "reason": "Use the formula",
+                "reason": "Use the quadratic formula because substitution broke the problem to a standard form. If you are confident with completing the square, that works too.",
                 "result": "x = (1 ± √(1 + 16))/2 = (1 ± √17)/2",
                 "predictPrompt": "How would you explain why this beats the other options?"
               },
