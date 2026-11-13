@@ -41,6 +41,25 @@ export async function POST(request: Request) {
       )
     }
 
+    const { data: answers, error: answerError } = await supabase
+      .from('question_answers')
+      .select('question_id, explanation')
+      .in('question_id', ids)
+    if (answerError) return NextResponse.json({ error: 'Could not check explanations' }, { status: 500 })
+    const explained = new Set((answers ?? []).filter((a) => String(a.explanation ?? '').trim().length > 0).map((a) => a.question_id))
+    const missingExplanation = (rows as { id: string; question_text: string }[])
+      .filter((r) => !explained.has(r.id))
+      .map((r) => ({ id: r.id, text: r.question_text.slice(0, 80) }))
+    if (missingExplanation.length > 0) {
+      return NextResponse.json(
+        {
+          error: `Every MCQ needs a reviewed explanation — ${missingExplanation.length} missing`,
+          missingExplanation,
+        },
+        { status: 400 },
+      )
+    }
+
     const { error } = await supabase
       .from('questions')
       .update({ status: 'published' })

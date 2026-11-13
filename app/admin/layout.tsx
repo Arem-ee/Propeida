@@ -27,55 +27,55 @@ export default async function AdminLayout({ children }: { children: React.ReactN
             <nav className="flex flex-wrap items-center gap-1">
               <Link
                 href="/admin/questions"
-                className="rounded-xl px-3 py-2 text-xs font-bold text-gray-500 hover:text-gray-700 hover:bg-gray-50 min-h-[44px] flex items-center"
+                className="rounded-xl px-3 py-2 text-xs font-bold text-gray-500 hover:text-gray-700 hover:bg-gray-50 min-h-[44px] flex items-center pressable"
               >
                 Questions
               </Link>
               <Link
                 href="/admin/exams"
-                className="rounded-xl px-3 py-2 text-xs font-bold text-gray-500 hover:text-gray-700 hover:bg-gray-50 min-h-[44px] flex items-center"
+                className="rounded-xl px-3 py-2 text-xs font-bold text-gray-500 hover:text-gray-700 hover:bg-gray-50 min-h-[44px] flex items-center pressable"
               >
                 Exams
               </Link>
               <Link
                 href="/admin/codes"
-                className="rounded-xl px-3 py-2 text-xs font-bold text-gray-500 hover:text-gray-700 hover:bg-gray-50 min-h-[44px] flex items-center"
+                className="rounded-xl px-3 py-2 text-xs font-bold text-gray-500 hover:text-gray-700 hover:bg-gray-50 min-h-[44px] flex items-center pressable"
               >
                 Codes
               </Link>
               <Link
                 href="/admin/lessons"
-                className="rounded-xl px-3 py-2 text-xs font-bold text-gray-500 hover:text-gray-700 hover:bg-gray-50 min-h-[44px] flex items-center"
+                className="rounded-xl px-3 py-2 text-xs font-bold text-gray-500 hover:text-gray-700 hover:bg-gray-50 min-h-[44px] flex items-center pressable"
               >
                 Lessons
               </Link>
               <Link
                 href="/admin/schools"
-                className="rounded-xl px-3 py-2 text-xs font-bold text-gray-500 hover:text-gray-700 hover:bg-gray-50 min-h-[44px] flex items-center"
+                className="rounded-xl px-3 py-2 text-xs font-bold text-gray-500 hover:text-gray-700 hover:bg-gray-50 min-h-[44px] flex items-center pressable"
               >
                 Schools
               </Link>
               <Link
                 href="/admin/cycles"
-                className="rounded-xl px-3 py-2 text-xs font-bold text-gray-500 hover:text-gray-700 hover:bg-gray-50 min-h-[44px] flex items-center"
+                className="rounded-xl px-3 py-2 text-xs font-bold text-gray-500 hover:text-gray-700 hover:bg-gray-50 min-h-[44px] flex items-center pressable"
               >
                 Cycles
               </Link>
               <Link
                 href="/admin/contact-submissions"
-                className="rounded-xl px-3 py-2 text-xs font-bold text-gray-500 hover:text-gray-700 hover:bg-gray-50 min-h-[44px] flex items-center"
+                className="rounded-xl px-3 py-2 text-xs font-bold text-gray-500 hover:text-gray-700 hover:bg-gray-50 min-h-[44px] flex items-center pressable"
               >
                 Contact
               </Link>
               <Link
                 href="/admin/analytics"
-                className="rounded-xl px-3 py-2 text-xs font-bold text-gray-500 hover:text-gray-700 hover:bg-gray-50 min-h-[44px] flex items-center"
+                className="rounded-xl px-3 py-2 text-xs font-bold text-gray-500 hover:text-gray-700 hover:bg-gray-50 min-h-[44px] flex items-center pressable"
               >
                 Analytics
               </Link>
               <Link
                 href="/home"
-                className="rounded-xl px-3 py-2 text-xs font-bold text-blue-600 hover:bg-blue-50 min-h-[44px] flex items-center"
+                className="rounded-xl px-3 py-2 text-xs font-bold text-blue-600 hover:bg-blue-50 min-h-[44px] flex items-center pressable"
               >
                 Back to Dashboard
               </Link>

@@ -1,9 +1,14 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { ArrowLeft } from 'lucide-react'
-import { SUBJECTS, getNotesBySubject } from '@/lib/notes'
-import { getLessonByPath, getLessonQuestions } from '@/lib/actions/lessons'
+import { SUBJECTS } from '@/lib/notes'
+import {
+  getLessonByPath,
+  getLessonQuestions,
+  getNextLessonInCurriculum,
+} from '@/lib/actions/lessons'
 import LessonPlayer from '@/components/lessons/lesson-player'
+import UpgradeCard, { PRO_BULLETS } from '@/components/paywall/upgrade-card'
 
 export async function generateMetadata({ params }: { params: Promise<{ subject: string; slug: string }> }) {
   const { subject, slug } = await params
@@ -20,15 +25,36 @@ export default async function LessonPage({
   const lesson = await getLessonByPath(subject, slug)
   if (!lesson) notFound()
 
-  const { note, enhancement, english, subjectId, examId } = lesson
+  const { note, enhancement, english, subjectId, examId, topicId, gated } = lesson
   const subjectLabel = SUBJECTS.find((s) => s.slug === note.subject)?.label ?? note.subject
+
+  if (gated) {
+    return (
+      <div className="mx-auto max-w-2xl">
+        <Link
+          href={`/learn/${note.subject}`}
+          className="mb-4 inline-flex items-center gap-1 text-sm font-bold text-ink-soft hover:text-blue-700 min-h-[36px]"
+        >
+          <ArrowLeft className="h-4 w-4" /> {subjectLabel} lessons
+        </Link>
+        <UpgradeCard
+          title={note.topic}
+          body={lesson.teaserTakeaway ?? 'This lesson is part of Pro.'}
+          bullets={PRO_BULLETS}
+        />
+      </div>
+    )
+  }
 
   let diagnostic = null
   let independent: Awaited<ReturnType<typeof getLessonQuestions>>['independent'] = []
   let microCheck: Awaited<ReturnType<typeof getLessonQuestions>>['independent'][number] | null = null
   if (subjectId) {
     try {
-      const set = await getLessonQuestions(subjectId)
+      // Scoped to the exam the lesson serves, and preferring questions
+      // tagged to the lesson's own topic: a JAMB lesson is never quizzed
+      // with a Post-UTME question, nor with one from another topic.
+      const set = await getLessonQuestions(subjectId, examId, topicId)
       diagnostic = set.diagnostic
       microCheck = set.independent[0] ?? null
       independent = set.independent.slice(1)
@@ -39,14 +65,8 @@ export default async function LessonPage({
     }
   }
 
-  // Onward path: the next lesson in authoring order. Authoring order is
-  // prerequisite order, so this is the pedagogically correct next step.
-  const subjectNotes = getNotesBySubject(note.subject)
-  const currentIndex = subjectNotes.findIndex((n) => n.slug === note.slug)
-  const nextNote = currentIndex >= 0 ? subjectNotes[currentIndex + 1] ?? null : null
-  const nextLesson = nextNote
-    ? { topic: nextNote.topic, href: `/learn/${nextNote.subject}/${nextNote.slug}` }
-    : null
+  // Onward path: the next lesson in curriculum order, from the database.
+  const nextLesson = await getNextLessonInCurriculum(note.subject, note.slug)
 
   return (
     <div className="mx-auto max-w-2xl">

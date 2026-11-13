@@ -41,14 +41,17 @@ export default async function PracticePage() {
 
   let activeSession: { id: string; examName: string } | null = null
   let userExamAccessIds: string[] = []
+  let subjectsPending = false
   if (user) {
-    const [sessions, accessRes] = await Promise.all([
+    const [sessions, accessRes, profileRes] = await Promise.all([
       getUserActiveSessions(user.id),
       supabase.from('user_exam_access').select('exam_id').eq('user_id', user.id),
+      supabase.from('profiles').select('subjects_pending').eq('id', user.id).maybeSingle(),
     ])
     const first = sessions[0]
     if (first) activeSession = { id: first.id, examName: first.exams.name }
     userExamAccessIds = (accessRes.data ?? []).map((a) => a.exam_id)
+    subjectsPending = profileRes.data?.subjects_pending ?? false
   }
 
   const accessSet = new Set(userExamAccessIds)
@@ -95,6 +98,7 @@ export default async function PracticePage() {
           allSubjects={subjects}
           examSubjectMap={scopedExamSubjectMap}
           activeSession={activeSession}
+          subjectsPending={subjectsPending}
         />
       )}
     </div>

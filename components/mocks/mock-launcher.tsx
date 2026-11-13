@@ -3,7 +3,8 @@
 import { useState, useMemo, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { Timer, FileText, Play } from 'lucide-react'
-import { createSession } from '@/lib/actions/practice'
+import { createSession, getFreeMockStatus } from '@/lib/actions/practice'
+import UpgradeCard from '@/components/paywall/upgrade-card'
 
 interface Exam {
   id: string
@@ -39,6 +40,7 @@ export default function MockLauncher({
   const [selectedSubjectIds, setSelectedSubjectIds] = useState<string[]>([])
   const [starting, setStarting] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [mockFree, setMockFree] = useState(true)
 
   const exam = exams.find((e) => e.id === selectedExamId) ?? null
   const isJamb = exam?.slug === 'jamb'
@@ -61,6 +63,19 @@ export default function MockLauncher({
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isJamb, englishId])
+
+  // Free mock allowance: past it the start button becomes the paywall.
+  useEffect(() => {
+    if (!selectedExamId) {
+      setMockFree(true)
+      return
+    }
+    let live = true
+    getFreeMockStatus(selectedExamId)
+      .then((status) => { if (live) setMockFree(status.isPro || status.used < status.allowed) })
+      .catch(() => { if (live) setMockFree(true) })
+    return () => { live = false }
+  }, [selectedExamId])
 
   const toggleSubject = (id: string) => {
     setSelectedSubjectIds((prev) =>
@@ -86,7 +101,7 @@ export default function MockLauncher({
       })
       router.push(`/mocks/session/${result.sessionId}`)
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to start mock')
+      setError(err instanceof Error ? err.message : 'Could not start the mock.')
       setStarting(false)
     }
   }
@@ -145,14 +160,14 @@ export default function MockLauncher({
                       : 'border-gray-200 bg-white text-ink-soft'
                   } ${locked ? 'cursor-default' : 'cursor-pointer'}`}
                 >
-                  {subject.name}{locked ? ' · required' : ''}
+                  {subject.name}{locked ? ' · always included' : ''}
                 </button>
               )
             })}
           </div>
           {isJamb && (
             <p className="mt-2 text-xs font-bold text-gray-500">
-              JAMB rule: English is compulsory — pick exactly 3 more. {electives.length}/3 chosen.
+              JAMB needs English plus 3 more subjects. {electives.length} of 3 picked.
             </p>
           )}
         </div>
@@ -161,16 +176,24 @@ export default function MockLauncher({
           <p className="rounded-2xl bg-red-50 border border-red-200 px-4 py-3 text-sm font-bold text-red-700">{error}</p>
         )}
 
+        {!mockFree ? (
+          <UpgradeCard
+            title="Your free mock is used"
+            body="Pro opens unlimited mocks at the same time, same conditions."
+            bullets={['Unlimited timed mocks.', 'Every subject, every time.']}
+          />
+        ) : (
         <button
           onClick={start}
           disabled={starting || !exam || !jambReady}
           className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-ink py-4 text-[16px] font-extrabold text-white hover:bg-blue-700 min-h-[56px] cursor-pointer transition-all disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <Play className="h-5 w-5" />
-          {starting ? 'Opening the hall...' : 'Enter mock exam'}
+          {starting ? 'Starting...' : 'Enter mock exam'}
         </button>
+        )}
         <p className="text-center text-xs font-semibold text-gray-500">
-          Timed, no pauses. Answers autosave as you go.
+          Timed, with no pauses. Your answers save as you go.
         </p>
       </div>
     </div>

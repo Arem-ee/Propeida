@@ -112,7 +112,7 @@ function SafeCalculator({ onClose }: { onClose: () => void }) {
           <button
             key={k.label}
             onClick={k.action}
-            className={`rounded-xl py-2.5 text-base font-extrabold min-h-[48px] cursor-pointer transition-colors ${
+            className={`rounded-xl py-2.5 text-base font-extrabold min-h-[48px] cursor-pointer transition-colors pressable ${
               k.tone === 'op'
                 ? 'bg-blue-600 text-white'
                 : k.tone === 'danger'
@@ -254,7 +254,7 @@ export default function MockPlayer({
 
   if (done) {
     return (
-      <div className="flex flex-col items-center justify-center py-16 text-center animate-pop">
+      <div className="flex flex-col items-center justify-center py-16 text-center animate-pop-in">
         <span className="flex h-20 w-20 items-center justify-center rounded-full bg-emerald-100 mb-5">
           <CheckCircle className="h-10 w-10 text-emerald-600" />
         </span>
@@ -291,7 +291,7 @@ export default function MockPlayer({
         <div className="flex items-center gap-2 overflow-x-auto">
           <button
             onClick={() => setSubjectFilter(null)}
-            className={`shrink-0 rounded-full px-3.5 py-2 text-xs font-extrabold min-h-[40px] cursor-pointer transition-all ${
+            className={`shrink-0 rounded-full px-3.5 py-2 text-xs font-extrabold min-h-[40px] cursor-pointer transition-all pressable ${
               !subjectFilter ? 'bg-blue-600 text-white' : 'bg-blue-50 text-blue-700'
             }`}
           >
@@ -301,7 +301,7 @@ export default function MockPlayer({
             <button
               key={s.id}
               onClick={() => setSubjectFilter((f) => (f === s.id ? null : s.id))}
-              className={`shrink-0 rounded-full px-3.5 py-2 text-xs font-extrabold min-h-[40px] cursor-pointer transition-all ${
+              className={`shrink-0 rounded-full px-3.5 py-2 text-xs font-extrabold min-h-[40px] cursor-pointer transition-all pressable ${
                 subjectFilter === s.id ? 'bg-blue-600 text-white' : 'bg-blue-50 text-blue-700'
               }`}
             >
@@ -328,13 +328,13 @@ export default function MockPlayer({
       </div>
 
       {calculatorOpen && (
-        <div className="fixed bottom-[150px] lg:bottom-24 right-4 z-40 animate-pop">
+        <div className="fixed bottom-[150px] lg:bottom-24 right-4 z-40 animate-pop-in">
           <SafeCalculator onClose={() => setCalculatorOpen(false)} />
         </div>
       )}
 
       {/* Question */}
-      <div className="mt-5 rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-7 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)]">
+      <div className="mt-5 rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-7 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)] animate-fade-up" key={current.id}>
         <div className="mb-4 flex items-center justify-between">
           <span className="rounded-full bg-white border border-blue-100 px-3.5 py-1.5 text-xs font-extrabold text-ink-soft shadow-sm">
             Question {index + 1} of {total}
@@ -359,11 +359,11 @@ export default function MockPlayer({
               <button
                 key={opt.key}
                 onClick={() => select(opt.key)}
-                className={`flex w-full items-center gap-3 rounded-2xl border-2 p-3.5 text-left min-h-[56px] transition-all cursor-pointer ${
-                  isSel ? 'border-blue-600 bg-blue-50/60' : 'border-gray-200 bg-white'
+                className={`flex w-full items-center gap-3 rounded-2xl border-2 p-3.5 text-left min-h-[56px] transition-all cursor-pointer pressable ${
+                  isSel ? 'border-blue-600 bg-blue-50/60' : 'border-gray-200 bg-white hover:border-blue-300'
                 }`}
               >
-                <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-xl text-sm font-extrabold border-2 ${
+                <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-xl text-sm font-extrabold border-2 transition-all ${
                   isSel ? 'bg-blue-600 border-blue-600 text-white' : 'border-gray-300 text-gray-500 bg-white'
                 }`}>
                   {opt.key}
@@ -423,7 +423,7 @@ export default function MockPlayer({
                 key={q.id}
                 onClick={() => goTo(i)}
                 aria-label={`Question ${i + 1}${answered ? ', answered' : ', unanswered'}${isFlagged ? ', flagged' : ''}`}
-                className={`relative flex h-9 items-center justify-center rounded-lg text-xs font-extrabold min-h-[36px] cursor-pointer transition-all ${
+                className={`relative flex h-9 items-center justify-center rounded-lg text-xs font-extrabold min-h-[36px] cursor-pointer transition-all pressable ${
                   isCurrent
                     ? 'bg-blue-600 text-white ring-2 ring-blue-300'
                     : answered
@@ -440,8 +440,8 @@ export default function MockPlayer({
           })}
         </div>
         <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-[11px] font-bold text-gray-500">
-          <span className="inline-flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded bg-emerald-500" /> Attempted</span>
-          <span className="inline-flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded bg-gray-200" /> Unattempted</span>
+          <span className="inline-flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded bg-emerald-500" /> Answered</span>
+          <span className="inline-flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded bg-gray-200" /> Not answered yet</span>
           <span className="inline-flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded bg-blue-600" /> Current</span>
           <span className="inline-flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-full bg-amber-400" /> Flagged</span>
         </div>
@@ -449,7 +449,7 @@ export default function MockPlayer({
 
       {confirming && (
         <div className="fixed inset-0 z-[60] flex items-end sm:items-center justify-center bg-black/50 p-4" role="dialog" aria-modal="true" aria-label="Confirm submit">
-          <div className="w-full max-w-sm rounded-3xl bg-white p-6 animate-pop">
+          <div className="w-full max-w-sm rounded-3xl bg-white p-6 animate-pop-in">
             <h2 className="font-display text-2xl font-medium text-black">End exam?</h2>
             <p className="mt-2 text-sm font-semibold text-ink-soft">
               {answeredCount} of {total} answered.

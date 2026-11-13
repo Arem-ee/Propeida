@@ -1,6 +1,35 @@
 import { createClient } from './supabase/server'
 import { createAdminClient } from './supabase/admin'
 import { getExamHorizonDays } from './cohort'
+import { getPathSubjects } from './path-subjects'
+import { getExamScope } from './exam-scope'
+import { sendCohortGhostPush } from './ghost-push'
+
+/**
+ * Exam ids whose learner-model rows are visible to this learner: their own
+ * path plus shared legacy rows (`exam_id IS NULL`, represented as the
+ * sentinel `'NULL'`). `null` means unrestricted (general scope). Every
+ * reader filters through this so no path ever sees another path's score.
+ */
+async function scopeExamIds(
+  supabase: SupabaseClient,
+  userId: string,
+): Promise<Set<string> | null> {
+  try {
+    const scope = await getExamScope(supabase, userId)
+    if (!scope.restricted) return null
+    const allowed = new Set<string>((scope.examIds ?? []).filter(Boolean))
+    allowed.add('null')
+    return allowed
+  } catch {
+    return null
+  }
+}
+
+function inScope(examId: unknown, allowed: Set<string> | null): boolean {
+  if (!allowed) return true
+  return allowed.has(examId === null || examId === undefined ? 'null' : (examId as string))
+}
 
 /**
  * Step 2 proof engine: an explainable rules engine, not ML.
@@ -91,10 +120,11 @@ export async function recordSessionEvidence(
   // caller's client first, then read the grades with the privileged one.
   const { data: session } = await supabase
     .from('exam_sessions')
-    .select('user_id')
+    .select('user_id, exam_id')
     .eq('id', sessionId)
     .maybeSingle()
   if (!session || session.user_id !== userId) return
+  const sessionExamId = (session as { exam_id?: string | null }).exam_id ?? null
 
   const admin = createAdminClient()
   const { data: answers } = await admin
@@ -117,7 +147,7 @@ export async function recordSessionEvidence(
   }
   if (bySubject.size === 0) return
 
-  await applySubjectEvidence(supabase, userId, bySubject, sessionId)
+  await applySubjectEvidence(supabase, userId, bySubject, sessionId, sessionExamId)
 }
 
 /**
@@ -130,12 +160,13 @@ export async function applySubjectEvidence(
   userId: string,
   bySubject: Map<string, { correct: number; total: number }>,
   sourceSessionId: string | null,
+  examId: string | null = null,
 ): Promise<void> {
   // Verified exam horizon, once per completion. Unverified or absent →
   // null, and the fixed ladder carries scheduling honestly.
   let horizonDays: number | null = null
   try {
-    horizonDays = await getExamHorizonDays(supabase)
+    horizonDays = await getExamHorizonDays(supabase, userId)
   } catch {
     horizonDays = null
   }
@@ -144,11 +175,15 @@ export async function applySubjectEvidence(
   // can read its own rows but holds no INSERT/UPDATE. Every caller has
   // already established the user above, so the privileged client is safe.
   const admin = createAdminClient()
+
+  // Prior state is per-path: JAMB evidence never reuses a Post-UTME score.
+  // Legacy NULL rows belong to no path, so a scoped write starts its own row.
   const { data: existing } = await admin
     .from('learner_topic_mastery')
     .select('subject_id, mastery_score, consecutive_successes')
     .eq('user_id', userId)
     .is('topic_id', null)
+    .eq('exam_id', examId)
 
   const prior = new Map<string, MasteryRow>()
   for (const row of (existing ?? []) as MasteryRow[]) {
@@ -167,11 +202,17 @@ export async function applySubjectEvidence(
     const success = accuracy >= MASTERY_CONFIG.successThreshold
     const successes = success ? (prev?.consecutive_successes ?? 0) + 1 : 0
     const nextReviewAt = new Date(now.getTime() + nextReviewInDays(successes, horizonDays) * 86400000)
+    // Secured is a milestone, not a score: fire once when a subject crosses
+    // into secured, never on every later success. Anonymous and best-effort.
+    const newlySecured =
+      statusForScore(score) === 'secured' &&
+      (!prev || statusForScore(prevScore) !== 'secured')
 
     // Explicit update-or-insert: the uniqueness lives in a partial index
     // (topic_id IS NULL), which upsert arbiters cannot address.
     const row = {
       user_id: userId,
+      exam_id: examId,
       subject_id: subjectId,
       topic_id: null,
       mastery_score: score,
@@ -187,29 +228,36 @@ export async function applySubjectEvidence(
         .update(row)
         .eq('user_id', userId)
         .eq('subject_id', subjectId)
+        .eq('exam_id', examId)
         .is('topic_id', null)
     } else {
       await admin.from('learner_topic_mastery').insert(row)
     }
 
     // The queue reflects the current model, not history: supersede stale due
-    // rows for this subject, then schedule fresh work only where needed.
+    // rows for this subject in this path, then schedule fresh work.
     await admin
       .from('review_queue')
       .update({ state: 'done', completed_at: now.toISOString() })
       .eq('user_id', userId)
       .eq('subject_id', subjectId)
+      .eq('exam_id', examId)
       .eq('state', 'due')
 
     if (!success) {
       await admin.from('review_queue').insert({
         user_id: userId,
+        exam_id: examId,
         subject_id: subjectId,
         topic_id: null,
         due_at: nextReviewAt.toISOString(),
         state: 'due',
         source_session_id: sourceSessionId,
       })
+    }
+
+    if (newlySecured) {
+      void sendCohortGhostPush(userId, subjectId)
     }
   }
 }
@@ -229,6 +277,7 @@ export async function getDueReviews(
     .from('review_queue')
     .select(`
       subject_id,
+      exam_id,
       due_at,
       subject:subject_id ( name, slug )
     `)
@@ -238,7 +287,10 @@ export async function getDueReviews(
     .order('due_at', { ascending: true })
     .limit(MASTERY_CONFIG.maxDuePerUser)
 
-  return (data ?? []).map((row) => {
+  const allowed = await scopeExamIds(supabase, userId)
+  return (data ?? [])
+    .filter((row) => inScope((row as { exam_id?: unknown }).exam_id, allowed))
+    .map((row) => {
     const s = Array.isArray(row.subject) ? row.subject[0] : row.subject
     return {
       subjectId: row.subject_id as string,
@@ -255,11 +307,14 @@ export async function getMasterySummary(
 ): Promise<{ securedCount: number; totalCount: number }> {
   const { data } = await supabase
     .from('learner_topic_mastery')
-    .select('status')
+    .select('status, exam_id')
     .eq('user_id', userId)
     .is('topic_id', null)
 
-  const rows = (data ?? []) as { status: string }[]
+  const allowed = await scopeExamIds(supabase, userId)
+  const rows = (data ?? []).filter((r) =>
+    inScope((r as { exam_id?: unknown }).exam_id, allowed),
+  ) as { status: string }[]
   return {
     securedCount: rows.filter((r) => r.status === 'secured').length,
     totalCount: rows.length,
@@ -293,20 +348,43 @@ export async function getProgressMap(
     supabase.from('subjects').select('id, name, slug').order('name'),
     supabase
       .from('learner_topic_mastery')
-      .select('subject_id, status, mastery_score')
+      .select('subject_id, status, mastery_score, exam_id')
       .eq('user_id', userId)
       .is('topic_id', null),
   ])
 
-  const bySubject = new Map(
-    ((mastery ?? []) as { subject_id: string; status: string; mastery_score: number }[]).map((m) => [
-      m.subject_id,
-      { status: m.status as MasteryStatus, score: m.mastery_score },
-    ]),
-  )
+  const scope = await getExamScope(supabase, userId)
+  const allowed =
+    scope.restricted && scope.examIds
+      ? new Set<string>([...scope.examIds, 'null'])
+      : scope.restricted
+        ? new Set<string>(['null'])
+        : null
+  // Own-path rows beat shared legacy rows for the same subject.
+  const bySubject = new Map<string, { status: MasteryStatus; score: number }>()
+  for (const m of ((mastery ?? []) as { subject_id: string; status: string; mastery_score: number; exam_id: unknown }[])) {
+    if (!inScope(m.exam_id, allowed)) continue
+    const existing = bySubject.get(m.subject_id)
+    const prefer = !existing || m.exam_id !== null
+    if (prefer) {
+      bySubject.set(m.subject_id, { status: m.status as MasteryStatus, score: m.mastery_score })
+    }
+  }
   const order: Record<string, number> = { secured: 0, developing: 1, fragile: 2, 'not-started': 3 }
 
+  // A restricted path sees only subjects its exams can teach or test — or
+  // ones this learner already has in-flight evidence for (legacy rows keep
+  // their shelf). General keeps the old all-subjects view.
+  let visibleIds: Set<string> | null = null
+  if (scope.restricted) {
+    const path =
+      scope.examIds && scope.examIds.length > 0 ? await getPathSubjects(scope.examIds) : []
+    visibleIds = new Set(path.map((s) => s.id))
+    for (const subjectId of bySubject.keys()) visibleIds.add(subjectId)
+  }
+
   return ((subjects ?? []) as { id: string; name: string; slug: string }[])
+    .filter((s) => !visibleIds || visibleIds.has(s.id))
     .map((s) => {
       const m = bySubject.get(s.id)
       return {
@@ -336,15 +414,18 @@ export async function getWeakestSubject(
     .select(`
       subject_id,
       mastery_score,
+      exam_id,
       subject:subject_id ( name, slug )
     `)
     .eq('user_id', userId)
     .is('topic_id', null)
     .neq('status', 'secured')
     .order('mastery_score', { ascending: true })
-    .limit(1)
+    .limit(10)
 
-  const row = (data ?? [])[0] as {
+  const allowed = await scopeExamIds(supabase, userId)
+  const row = ((data ?? []) as Record<string, unknown>[])
+    .find((r) => inScope(r.exam_id, allowed)) as {
     subject_id: string
     subject?: { name?: string; slug?: string } | { name?: string; slug?: string }[] | null
   } | undefined
@@ -366,6 +447,7 @@ export async function getSecuredSubjects(
     .from('learner_topic_mastery')
     .select(`
       subject_id,
+      exam_id,
       subject:subject_id ( name, slug )
     `)
     .eq('user_id', userId)
@@ -374,7 +456,10 @@ export async function getSecuredSubjects(
     .order('updated_at', { ascending: false })
     .limit(12)
 
-  return (data ?? []).map((row) => {
+  const allowed = await scopeExamIds(supabase, userId)
+  return ((data ?? []) as Record<string, unknown>[])
+    .filter((row) => inScope(row.exam_id, allowed))
+    .map((row) => {
     const s = Array.isArray(row.subject) ? row.subject[0] : row.subject
     return {
       subjectId: row.subject_id as string,
@@ -417,13 +502,15 @@ export async function getNextReviews(
   if (subjectIds.length === 0) return {}
   const { data } = await supabase
     .from('learner_topic_mastery')
-    .select('subject_id, next_review_at')
+    .select('subject_id, next_review_at, exam_id')
     .eq('user_id', userId)
     .is('topic_id', null)
     .in('subject_id', subjectIds)
 
+  const allowed = await scopeExamIds(supabase, userId)
   const out: Record<string, string | null> = {}
-  for (const row of (data ?? []) as { subject_id: string; next_review_at: string | null }[]) {
+  for (const row of (data ?? []) as { subject_id: string; next_review_at: string | null; exam_id: unknown }[]) {
+    if (!inScope(row.exam_id, allowed)) continue
     out[row.subject_id] = row.next_review_at
   }
   return out

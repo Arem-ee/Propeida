@@ -117,6 +117,7 @@ export async function fetchLockedPoolQuestions(
   const { error: poolError } = await supabase.rpc('ensure_exam_free_pool', {
     p_user_id: userId,
     p_exam_id: examId,
+    p_subject_ids: subjectIds.length > 0 ? subjectIds : null,
   })
   if (poolError) throw new Error(`Failed to load question pool: ${poolError.message}`)
 
@@ -140,8 +141,11 @@ export async function createExamSession(
   mode: 'practice' | 'mock',
   timeLimitSeconds: number | null
 ) {
-  const supabase = await createClient()
-  const { data, error } = await supabase
+  // Clients do not hold INSERT on exam_sessions: a session row is
+  // server-authored. The caller (createSession) has already authenticated
+  // the user and resolved the exam's mock defaults.
+  const admin = createAdminClient()
+  const { data, error } = await admin
     .from('exam_sessions')
     .insert({
       user_id: userId,
@@ -313,7 +317,11 @@ export async function fetchWarmupQuestions(
     const sessionIds = (recentSessions ?? []).map((s) => s.id)
     if (sessionIds.length === 0) return []
 
-    const { data: answers } = await supabase
+    // The grading columns are not readable by the learner role. The session
+    // ids above came from the user-scoped query, so this service-role read
+    // cannot cross users.
+    const admin = createAdminClient()
+    const { data: answers } = await admin
       .from('session_answers')
       .select(`
         id,
@@ -469,11 +477,13 @@ export async function findPrerequisiteRepair(
  * session path counts session_answers — same signal, both stores.
  */
 export async function countCodeRepeats(
-  supabase: SupabaseClient,
   userId: string,
   code: string,
 ): Promise<number> {
-  const { count } = await supabase
+  // misconception_code is service-role only after 20261027000002, and the
+  // user filter is explicit so the privileged read stays scoped.
+  const admin = createAdminClient()
+  const { count } = await admin
     .from('session_answers')
     .select('id, exam_sessions!inner(user_id)', { count: 'exact', head: true })
     .eq('misconception_code', code)

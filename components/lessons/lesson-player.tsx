@@ -97,7 +97,7 @@ function ConfidencePicker({ value, onChange }: { value: Confidence; onChange: (c
             key={c}
             onClick={() => onChange(c)}
             aria-pressed={value === c}
-            className={`rounded-xl px-3.5 py-1.5 text-xs font-extrabold min-h-[36px] cursor-pointer transition-all ${
+            className={`rounded-xl px-3.5 py-1.5 text-xs font-extrabold min-h-[36px] cursor-pointer transition-all pressable ${
               value === c
                 ? 'bg-blue-600 text-white'
                 : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
@@ -175,23 +175,23 @@ function BankQuestion({
                 key={opt.key}
                 disabled={revealed}
                 onClick={() => setSelected(opt.key)}
-                className={`flex w-full items-center gap-3 rounded-2xl border-2 p-3.5 text-left min-h-[56px] transition-all ${
+                className={`flex w-full items-center gap-3 rounded-2xl border-2 p-3.5 text-left min-h-[56px] transition-all pressable ${
                   revealed
                     ? isCorrectOpt
-                      ? 'border-emerald-500 bg-emerald-50/60'
+                      ? 'border-emerald-500 bg-emerald-50/60 animate-pop-in'
                       : isSel
-                        ? 'border-red-400 bg-red-50/60'
+                        ? 'border-amber-500 bg-amber-50/60'
                         : 'border-gray-200 bg-white opacity-70'
                       : isSel
                         ? 'border-blue-600 bg-blue-50/60 shadow-[0_0_0_3px_rgba(37,99,235,0.12)]'
-                        : 'border-gray-200 bg-white'
+                        : 'border-gray-200 bg-white hover:border-blue-300'
                 }`}
               >
-                <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-xl text-sm font-extrabold border-2 ${
+                <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-xl text-sm font-extrabold border-2 transition-all ${
                   revealed && isCorrectOpt
                     ? 'bg-emerald-500 border-emerald-500 text-white'
                     : revealed && isSel
-                      ? 'bg-red-500 border-red-500 text-white'
+                      ? 'bg-amber-500 border-amber-500 text-white'
                       : isSel
                         ? 'bg-blue-600 border-blue-600 text-white'
                         : 'border-gray-300 text-gray-500 bg-white'
@@ -234,10 +234,10 @@ function BankQuestion({
       )}
 
       {feedback && (
-        <div className="mt-4 space-y-3 animate-pop">
+        <div className="mt-4 space-y-3 animate-fade-up">
           {feedback.graded ? (
-            <div className={`rounded-2xl border px-4 py-3.5 font-display text-lg font-medium ${
-              feedback.isCorrect ? 'bg-emerald-50 border-emerald-200 text-emerald-700' : 'bg-red-50 border-red-200 text-red-700'
+            <div className={`rounded-2xl border px-4 py-3.5 font-display text-lg font-medium animate-pop-in ${
+              feedback.isCorrect ? 'bg-emerald-50 border-emerald-200 text-emerald-700' : 'bg-amber-50 border-amber-200 text-amber-800'
             }`}>
               {feedback.isCorrect ? 'Correct — nice.' : `Not quite — it was ${feedback.correctAnswer}`}
             </div>
@@ -265,7 +265,7 @@ function BankQuestion({
               </p>
               {feedback.misconception.repeatCount > 0 && (
                 <p className="mt-1 text-xs font-extrabold text-red-700">
-                  This exact error has come up {feedback.misconception.repeatCount + 1} times — time to fix the root, not retry harder.
+                  This exact mix-up has come up {feedback.misconception.repeatCount + 1} times for you. Fix the idea behind it, not just this question.
                 </p>
               )}
               <p className="mt-1 text-sm font-semibold leading-relaxed text-ink-soft">{feedback.misconception.explanation}</p>
@@ -274,7 +274,7 @@ function BankQuestion({
                   href={feedback.misconception.repairHref}
                   className="mt-2 inline-flex items-center gap-1 text-[13px] font-extrabold text-blue-700 min-h-[40px]"
                 >
-                  Open the repair lesson <ArrowRight className="h-3.5 w-3.5" />
+                  Open the fix-it lesson <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
               )}
               {feedback.prerequisite && (
@@ -342,7 +342,7 @@ function WorkedCard({
               <p className="mt-1 text-[13px] font-semibold text-ink-soft">{step.reason}</p>
               {isRevealed ? (
                 <>
-                  <p className="mt-2 rounded-xl bg-white border border-emerald-200 px-3 py-2.5 text-sm font-bold text-emerald-800">{step.result}</p>
+                  <p className="mt-2 rounded-xl bg-white border border-emerald-200 px-3 py-2.5 text-sm font-bold text-emerald-800 animate-pop-in">{step.result}</p>
                   <StepVisual visual={step.visual ?? null} />
                 </>
               ) : isNext ? (
@@ -528,7 +528,7 @@ export default function LessonPlayer({
 
       {/* 1 — Diagnostic: retrieve before teaching */}
       {phase === 'diagnostic' && diagnostic && (
-        <div className="rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-7 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)]">
+        <div className="rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-7 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)] animate-fade-up" key="diagnostic">
           <p className="font-display text-[22px] font-medium text-black">First — what do you already know?</p>
           <p className="mt-1 text-sm font-semibold text-ink-soft">One question. No teaching yet.</p>
           <div className="mt-5">
@@ -561,7 +561,7 @@ export default function LessonPlayer({
       {/* 2 — Teach: one concept per card, checks inline, full text on demand.
           Doing starts as fast as possible; reading never walls it. */}
       {phase === 'teach' && (
-        <div className="rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-7 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)]">
+        <div className="rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-7 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)] animate-fade-up" key="teach">
           <p className="font-display text-[22px] font-medium text-black">The idea in one line</p>
           <p className="mt-2 text-[15px] font-semibold leading-relaxed text-ink-soft">{note.summary}</p>
           <TeachSections
@@ -672,7 +672,7 @@ export default function LessonPlayer({
 
       {/* 3 — Worked examples: predict before reveal, one problem at a time */}
       {phase === 'worked' && (enhancement?.workedExamples?.length ?? 0) > 0 && (
-        <div className="space-y-4">
+        <div className="space-y-4 animate-fade-up" key="worked">
           <p className="font-display text-[22px] font-medium text-black">Watch it worked</p>
           {enhancement!.workedExamples!.map((example, ei) => (
             <WorkedCard
@@ -686,7 +686,7 @@ export default function LessonPlayer({
           {workedDone.length >= enhancement!.workedExamples!.length && (
             <button
               onClick={next}
-              className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-blue-600 py-3.5 text-[15px] font-extrabold text-white hover:bg-blue-700 min-h-[52px] animate-pop"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-blue-600 py-3.5 text-[15px] font-extrabold text-white hover:bg-blue-700 min-h-[52px] animate-pop-in pressable"
             >
               Try one with help <ArrowRight className="h-4 w-4" />
             </button>
@@ -696,8 +696,8 @@ export default function LessonPlayer({
 
       {/* 4 — Supported attempt: hints on demand */}
       {phase === 'supported' && enhancement?.supported && (
-        <div className="rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-7 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)]">
-          <p className="font-display text-[22px] font-medium text-black">Your turn — with scaffolding</p>
+        <div className="rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-7 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)] animate-fade-up" key="supported">
+          <p className="font-display text-[22px] font-medium text-black">Your turn — with hints</p>
           <p className="mt-2 text-[15px] font-semibold leading-relaxed text-ink-soft">{enhancement.supported.question}</p>
           <div className="mt-4 space-y-3">
             {revealedHints > 0 && revealedHints <= enhancement.supported.hints.length && (
@@ -723,7 +723,7 @@ export default function LessonPlayer({
             onClick={() => { void recordSupported(); next() }}
             className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-blue-600 py-3.5 text-[15px] font-extrabold text-white hover:bg-blue-700 min-h-[52px]"
           >
-            Attempt on your own <ArrowRight className="h-4 w-4" />
+            Attempt it alone <ArrowRight className="h-4 w-4" />
           </button>
         </div>
       )}
@@ -731,7 +731,7 @@ export default function LessonPlayer({
       {/* 5 — Independent: no support, with calibration. A wrong answer
           earns one checkout twin (same skill, new question). */}
       {phase === 'independent' && (
-        <div className="rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-7 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)]">
+        <div className="rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-7 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)] animate-fade-up" key="independent">
           <p className="font-display text-[22px] font-medium text-black">Prove it — no help this time</p>
           <div className="mt-4 space-y-6">
             {[...independent, ...twins].map((q, i) => (
@@ -767,12 +767,12 @@ export default function LessonPlayer({
 
       {/* 6 — Close-out */}
       {phase === 'done' && (
-        <div className="rounded-3xl border-2 border-emerald-200 bg-emerald-50/60 p-6 sm:p-8 text-center animate-pop">
+        <div className="rounded-3xl border-2 border-emerald-200 bg-emerald-50/60 p-6 sm:p-8 text-center animate-pop-in">
           <CheckCircle className="mx-auto h-12 w-12 text-emerald-600" strokeWidth={2.5} />
           <h2 className="mt-3 font-display text-3xl font-medium text-black">Lesson complete</h2>
           <p className="mt-2 text-[15px] font-semibold text-ink-soft">
             {results.length > 0
-              ? `You got ${results.filter(Boolean).length} of ${results.length} retrieval checks right.`
+              ? `You got ${results.filter(Boolean).length} of ${results.length} checks right.`
               : 'You worked through the full contract — diagnostic, lesson, and practice.'}
           </p>
           {closeout?.nextReviewAt && (

@@ -30,11 +30,13 @@ export default function PracticeConfig({
   allSubjects,
   examSubjectMap,
   activeSession,
+  subjectsPending = false,
 }: {
   exams: Exam[]
   allSubjects: Subject[]
   examSubjectMap: Record<string, string[]>
   activeSession: { id: string; examName: string } | null
+  subjectsPending?: boolean
 }) {
   const router = useRouter()
   const searchParams = useSearchParams()
@@ -56,12 +58,17 @@ export default function PracticeConfig({
     [allSubjects, presetSlugs],
   )
   const presetSubject = presetSubjects[0] ?? null
+  // Default to the learner's path when the server says one is restricted. The
+  // list itself is already path-filtered, so the first exam is the right one;
+  // a deep "review this subject" link still picks the exam that owns the subject.
   const presetExamId = useMemo(() => {
     if (!presetSubject) return null
     return exams.find((e) => (examSubjectMap[e.id] ?? []).includes(presetSubject.id))?.id ?? null
   }, [exams, examSubjectMap, presetSubject])
 
-  const [selectedExamId, setSelectedExamId] = useState<string>(presetExamId ?? exams[0]?.id ?? '')
+  const [selectedExamId, setSelectedExamId] = useState<string>(
+    presetExamId ?? exams[0]?.id ?? '',
+  )
   const [selectedSubjectIds, setSelectedSubjectIds] = useState<string[]>(
     presetSubjects.map((s) => s.id),
   )
@@ -105,7 +112,7 @@ export default function PracticeConfig({
       const qs = params.toString()
       router.push(`/practice/session/${result.sessionId}${qs ? `?${qs}` : ''}`)
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to create session')
+      setError(err instanceof Error ? err.message : 'Could not start practice.')
       setLoading(false)
     }
   }
@@ -120,6 +127,14 @@ export default function PracticeConfig({
         </div>
       )}
 
+      {subjectsPending && (
+        <div className="rounded-2xl bg-blue-50 border border-blue-100 px-4 py-3 text-[13px] font-bold text-blue-700">
+          English is always included in your free questions. For other subjects,
+          save them on your <a href="/account" className="underline">Profile</a> first
+          so your free questions cover them.
+        </div>
+      )}
+
       {activeSession && (
         <button
           onClick={() => router.push(`/practice/session/${activeSession.id}`)}
@@ -127,7 +142,7 @@ export default function PracticeConfig({
         >
           <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-amber-700">Resume</p>
           <p className="mt-1 font-display text-xl font-medium text-black">{activeSession.examName}</p>
-          <p className="text-sm font-semibold text-ink-soft">You have a session in progress.</p>
+          <p className="text-sm font-semibold text-ink-soft">You have practice in progress.</p>
         </button>
       )}
 

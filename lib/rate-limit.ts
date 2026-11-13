@@ -1,23 +1,12 @@
-import { Redis } from '@upstash/redis'
+import { getRedis } from './redis'
 
 const memoryStore = new Map<string, { count: number; resetAt: number }>()
 
-let redis: Redis | null | undefined
-function getRedis(): Redis | null {
-  if (redis !== undefined) return redis
-  if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
-    redis = Redis.fromEnv()
-  } else {
-    redis = null
-  }
-  return redis
-}
-
 /**
  * Best-effort throttling only: never an authorization or fraud-control boundary.
- * Uses shared Upstash Redis (fixed window) when UPSTASH_REDIS_REST_URL /
- * UPSTASH_REDIS_REST_TOKEN are set, so limits hold across serverless instances.
- * Falls back to per-process memory otherwise (single-instance dev / preview).
+ * Uses shared Upstash Redis (fixed window) when configured, so limits hold
+ * across serverless instances. Falls back to per-process memory otherwise
+ * (single-instance dev / preview).
  */
 export async function checkRateLimit(
   key: string,

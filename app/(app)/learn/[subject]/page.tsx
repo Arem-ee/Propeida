@@ -11,6 +11,8 @@ import {
 } from 'lucide-react'
 import { SUBJECTS, isValidSubject } from '@/lib/notes'
 import { getNextRecommendedLesson, getSubjectCurriculum } from '@/lib/actions/lessons'
+import { getProStatus } from '@/lib/entitlements'
+import { createClient } from '@/lib/supabase/server'
 
 export async function generateMetadata({ params }: { params: Promise<{ subject: string }> }) {
   const { subject } = await params
@@ -23,10 +25,18 @@ export default async function SubjectLessonsPage({ params }: { params: Promise<{
   if (!isValidSubject(subject)) notFound()
 
   const meta = SUBJECTS.find((s) => s.slug === subject)
-  const { note } = await getNextRecommendedLesson(subject)
   const { sections, recommendedLessonId } = await getSubjectCurriculum(subject)
-
+  // Free users get the first lesson of the subject. The server enforces
+  // the same rule on the lesson page; the list shows it so nobody clicks
+  // through a surprise.
+  const firstLesson = sections.flatMap((s) => s.topics).find((t) => t.lesson)
+  const supabase = await createClient()
+  const { data: { user } } = await supabase.auth.getUser()
+  const pro = user ? await getProStatus(user.id) : { isPro: true, labels: [] as string[] }
+  const isFree = !pro.isPro
   const hasCurriculum = sections.some((s) => s.topics.length > 0)
+  const { note } = await getNextRecommendedLesson(subject)
+  const recommendedIsFree = !note || !isFree || note.slug === firstLesson?.lesson?.slug
 
   return (
     <div className="mx-auto max-w-2xl">
@@ -46,7 +56,7 @@ export default async function SubjectLessonsPage({ params }: { params: Promise<{
         </p>
       </div>
 
-      {note && (
+      {note && recommendedIsFree && (
         <div className="space-y-3">
           <Link
             href={`/learn/${note.subject}/${note.slug}`}
@@ -114,20 +124,30 @@ export default async function SubjectLessonsPage({ params }: { params: Promise<{
                         </span>
                       </span>
                       {topic.lesson ? (
-                        <span className="flex shrink-0 items-center gap-1.5 text-xs font-extrabold text-blue-700">
-                          {isRecommended ? (
-                            <>
-                              <Sparkles className="h-3.5 w-3.5" />
-                              Next
-                            </>
-                          ) : (
-                            <>
-                              <ArrowRight className="h-3.5 w-3.5" />
-                              Start
-                            </>
-                          )}
-                        </span>
-                      ) : (
+                  (() => {
+                    const locked = isFree && topic.lesson.id !== firstLesson?.lesson?.id
+                    return locked ? (
+                      <span className="flex shrink-0 items-center gap-1.5 text-xs font-extrabold text-gray-400">
+                        <Lock className="h-3.5 w-3.5" />
+                        Pro
+                      </span>
+                    ) : (
+                      <span className="flex shrink-0 items-center gap-1.5 text-xs font-extrabold text-blue-700">
+                        {isRecommended ? (
+                          <>
+                            <Sparkles className="h-3.5 w-3.5" />
+                            Next
+                          </>
+                        ) : (
+                          <>
+                            <ArrowRight className="h-3.5 w-3.5" />
+                            Start
+                          </>
+                        )}
+                      </span>
+                    )
+                  })()
+                ) : (
                         <span className="flex shrink-0 items-center gap-1.5 text-xs font-extrabold text-gray-400">
                           <Lock className="h-3.5 w-3.5" />
                           Coming

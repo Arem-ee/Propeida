@@ -10,6 +10,7 @@ import type { RevisionNote } from '@/lib/notes'
 import type { NoteSection } from '@/lib/notes'
 import { toLessonVisual } from '@/lib/notes/visual'
 import type { LessonEnhancement } from '@/lib/lessons'
+import { getExamScope } from '@/lib/exam-scope'
 
 /** One inline check authored on a text block: question, options, answer index. */
 function toSectionCheck(value: unknown): NoteSection['check'] {
@@ -146,8 +147,19 @@ export async function getLessonByPath(
   english: LessonEnglish
   subjectId: string
   examId: string | null
+  lessonId: string
+  topicId: string | null
+  /**
+   * Free users get the first lesson of each subject. Everything after is
+   * Pro. The server enforces it here -- a deep link must not open what
+   * the list page hides.
+   */
+  gated: boolean
+  /** The one line shown to free users behind the gate. */
+  teaserTakeaway: string | null
 } | null> {
   const supabase = await createClient()
+  const admin = createAdminClient()
 
   const { data: subject } = await supabase
     .from('subjects')
@@ -155,17 +167,29 @@ export async function getLessonByPath(
     .eq('slug', subjectSlug)
     .single()
 
+  // Content is path-bound: a Post-UTME learner must not open a JAMB lesson,
+  // even from an old bookmark or a leaked link.
+  const { data: { user } } = await supabase.auth.getUser()
+  const scope = user ? await getExamScope(supabase, user.id) : null
+
   if (subject) {
-    const { data: lesson } = await supabase
+    // Lesson content is paid material: read it with the service role so the
+    // paywall decision happens in this action, not in what the caller can
+    // see via PostgREST. RLS denies published-lesson reads to anyone who is
+    // not the first-lesson free tier or an entitled learner.
+    const { data: lesson } = await admin
       .from('lessons')
-      .select('id, slug, title, objective, exam_id')
+      .select('id, slug, title, objective, exam_id, topic_id')
       .eq('subject_id', subject.id)
       .eq('slug', lessonSlug)
       .eq('status', 'published')
       .single()
 
     if (lesson) {
-      const { data: blocks } = await supabase
+      if (scope?.restricted && lesson.exam_id && !scope.examIds?.includes(lesson.exam_id)) {
+        return null
+      }
+      const { data: blocks } = await admin
         .from('lesson_blocks')
         .select('block_type, content')
         .eq('lesson_id', lesson.id)
@@ -266,12 +290,57 @@ export async function getLessonByPath(
             }
           : null
 
+      // Free lesson gate: the first lesson of each subject is free.
+      const teaserTakeaway =
+        sections.find((s) => (s.takeaway ?? '').trim())?.takeaway ??
+        note.summary ??
+        null
+      let gated = false
+      if (user) {
+        const { getProStatus } = await import('@/lib/entitlements')
+        const pro = await getProStatus(user.id)
+        if (!pro.isPro) {
+          const [{ data: subjectTopics }, { data: subjectLessons }] = await Promise.all([
+            supabase
+              .from('topics')
+              .select('id, sort_order')
+              .eq('subject_id', subject.id)
+              .eq('published', true)
+              .order('sort_order'),
+            admin
+              .from('lessons')
+              .select('id, topic_id, exam_id')
+              .eq('subject_id', subject.id)
+              .eq('status', 'published'),
+          ])
+          const orderOf = new Map(
+            (subjectTopics ?? []).map((t) => [t.id, t.sort_order ?? 0]),
+          )
+          const visible = (subjectLessons ?? []).filter(
+            (l) =>
+              l.exam_id === null ||
+              (scope?.examIds?.includes(l.exam_id) ?? false),
+          )
+          const first = visible
+            .filter((l) => l.topic_id && orderOf.has(l.topic_id))
+            .sort(
+              (a, b) =>
+                (orderOf.get(a.topic_id!) ?? 0) - (orderOf.get(b.topic_id!) ?? 0),
+            )[0]
+          if (first && first.id !== lesson.id) gated = true
+        }
+      }
+
       return {
         note,
         enhancement,
         english: toEnglishBlocks(byType),
         subjectId: subject.id,
         examId: lesson.exam_id ?? null,
+        lessonId: lesson.id,
+        topicId: lesson.topic_id ?? null,
+        gated,
+        teaserTakeaway,
       }
     }
   }
@@ -280,13 +349,67 @@ export async function getLessonByPath(
   const { getEnhancement } = await import('@/lib/lessons')
   const staticNote = getNoteByPath(subjectSlug, lessonSlug)
   if (!staticNote) return null
+  const { getProStatus } = await import('@/lib/entitlements')
+  const pro = user ? await getProStatus(user.id).catch(() => null) : null
+  const staticGated = !(pro?.isPro)
   return {
     note: staticNote,
     enhancement: getEnhancement(staticNote.id),
     english: { passages: [], pairs: [], rebuilds: [], reflections: [] },
     subjectId: subject?.id ?? '',
     examId: null,
+    lessonId: '',
+    topicId: null,
+    gated: staticGated,
+    teaserTakeaway: staticGated ? staticNote.summary : null,
   }
+}
+
+/**
+ * The next lesson in curriculum order, from the database.
+ *
+ * The static notes library is the seed source, not the running order — it
+ * holds five lessons and knows nothing about the syllabus, so a learner who
+ * finished "The Cloze Test" would be sent to "Parts of Speech".
+ */
+export async function getNextLessonInCurriculum(
+  subjectSlug: string,
+  currentSlug: string,
+): Promise<{ topic: string; href: string } | null> {
+  const supabase = await createClient()
+
+  const { data: subject } = await supabase
+    .from('subjects')
+    .select('id')
+    .eq('slug', subjectSlug)
+    .single()
+  if (!subject) return null
+
+  const { data: { user } } = await supabase.auth.getUser()
+  const scope = user ? await getExamScope(supabase, user.id) : null
+  const pathExamId = scope?.primaryExamId ?? null
+
+  const { data: allLessons } = await createAdminClient()
+    .from('lessons')
+    .select('slug, title, sort_order, exam_id')
+    .eq('subject_id', subject.id)
+    .eq('status', 'published')
+    .order('sort_order', { ascending: true, nullsFirst: false })
+    .order('created_at', { ascending: true })
+
+  // Shared lessons travel with every path; exam-scoped lessons stay in their
+  // own lane. The next link must never jump from a Post-UTME lesson into JAMB.
+  const lessons = (allLessons ?? []).filter(
+    (l) => l.exam_id === null || (pathExamId !== null && l.exam_id === pathExamId),
+  )
+
+  if (lessons.length === 0) return null
+
+  const index = lessons.findIndex((l) => l.slug === currentSlug)
+  if (index < 0) return null
+  const next = lessons[index + 1]
+  if (!next) return null
+  return { topic: next.title, href: `/learn/${subjectSlug}/${next.slug}` }
 }
 
 interface AttemptInput {
@@ -303,59 +426,64 @@ async function resolveExamForSubject(
   subjectId: string,
   examId?: string | null,
 ): Promise<string | null> {
-  if (examId) return examId
+  // Never infer an exam from "whichever bank is deepest". That was the
+  // original collision: shared lessons fell through to the largest bank,
+  // which meant JAMB questions inside a Post-UTME lesson (or the reverse).
+  // The caller must pass the lesson's exam, or the learner's path exam.
+  if (!examId) return null
 
-  const { data: links } = await supabase
+  const { data: link } = await supabase
     .from('exam_subjects')
     .select('exam_id')
+    .eq('exam_id', examId)
     .eq('subject_id', subjectId)
-  const examIds = (links ?? []).map((l) => l.exam_id)
-  if (examIds.length === 0) return null
+    .maybeSingle()
 
-  // Prefer the exam holding the deepest bank for this subject.
-  let best: string | null = null
-  let bestCount = -1
-  for (const examId of examIds) {
-    const { count } = await supabase
-      .from('questions')
-      .select('id', { count: 'exact', head: true })
-      .eq('exam_id', examId)
-      .eq('subject_id', subjectId)
-      .eq('status', 'published')
-    if ((count ?? 0) > bestCount) {
-      bestCount = count ?? 0
-      best = examId
-    }
-  }
-  return bestCount > 0 ? best : null
+  return link?.exam_id ?? null
 }
 
 /**
- * Lesson question set: 1 diagnostic + 2 independent, drawn from the
- * deepest bank holding this subject. Answers never leave the server —
- * checking happens in recordLessonAttempt.
+ * Lesson question set: 1 diagnostic + 2 independent, drawn from the bank's
+ * exam for this subject. Answers never leave the server — checking happens
+ * in recordLessonAttempt.
+ *
+ * When a lesson is scoped to an exam, only that exam's bank is used. A
+ * JAMB lesson must never be quizzed with a Post-UTME question.
+ *
+ * When the lesson's topic has tagged questions, those are preferred, so
+ * the micro-check tests what the learner has just been taught rather than
+ * whatever the bank happened to return.
  */
-export async function getLessonQuestions(subjectId: string): Promise<{
+export async function getLessonQuestions(
+  subjectId: string,
+  examId?: string | null,
+  topicId?: string | null,
+): Promise<{
   examId: string
   diagnostic: LessonQuestion | null
   independent: LessonQuestion[]
 }> {
   const supabase = await createClient()
   const user = await getAuthUser(supabase)
-  if (!user) throw new Error('Not authenticated')
+  if (!user) throw new Error('Please sign in again.')
 
-  const examId = await resolveExamForSubject(supabase, subjectId)
-  if (!examId) return { examId: '', diagnostic: null, independent: [] }
+  const scope = await getExamScope(supabase, user.id)
+  const requestedExamId =
+    examId && (!scope.restricted || scope.examIds?.includes(examId))
+      ? examId
+      : scope.primaryExamId
+  const scoped = await resolveExamForSubject(supabase, subjectId, requestedExamId)
+  if (!scoped) return { examId: '', diagnostic: null, independent: [] }
 
   const { data, error } = await supabase.rpc('get_session_questions', {
-    p_exam_id: examId,
+    p_exam_id: scoped,
     p_subject_ids: [subjectId],
     p_difficulty: null,
-    p_limit: 3,
+    p_limit: 12,
     p_seed: randomUUID(),
     p_response_types: ['mcq', 'text', 'derivation'],
   })
-  if (error) throw new Error('Failed to load lesson questions')
+  if (error) throw new Error('Could not load this lesson.')
 
   const rows = ((data ?? []) as {
     id: string
@@ -377,8 +505,22 @@ export async function getLessonQuestions(subjectId: string): Promise<{
       | 'derivation',
   }))
 
-  const [diagnostic, ...independent] = rows
-  return { examId, diagnostic: diagnostic ?? null, independent }
+  // Prefer questions tagged to this lesson's topic.
+  let ordered = rows
+  if (topicId && rows.length > 0) {
+    const { data: tagged } = await supabase
+      .from('question_topics')
+      .select('question_id')
+      .eq('topic_id', topicId)
+      .in('question_id', rows.map((r) => r.id))
+    const taggedIds = new Set((tagged ?? []).map((t) => t.question_id))
+    const onTopic = rows.filter((r) => taggedIds.has(r.id))
+    const rest = rows.filter((r) => !taggedIds.has(r.id))
+    ordered = [...onTopic, ...rest]
+  }
+
+  const [diagnostic, ...independent] = ordered
+  return { examId: scoped, diagnostic: diagnostic ?? null, independent }
 }
 
 /**
@@ -395,9 +537,14 @@ export async function getTwinQuestion(
 ): Promise<LessonQuestion | null> {
   const supabase = await createClient()
   const user = await getAuthUser(supabase)
-  if (!user) throw new Error('Not authenticated')
+  if (!user) return null
 
-  const scoped = await resolveExamForSubject(supabase, subjectId, examId)
+  const scope = await getExamScope(supabase, user.id)
+  const requestedExamId =
+    examId && (!scope.restricted || scope.examIds?.includes(examId))
+      ? examId
+      : scope.primaryExamId
+  const scoped = await resolveExamForSubject(supabase, subjectId, requestedExamId)
   if (!scoped) return null
 
   const { data, error } = await supabase.rpc('get_session_questions', {
@@ -466,19 +613,23 @@ export async function recordLessonAttempt(input: AttemptInput): Promise<{
 }> {
   const supabase = await createClient()
   const user = await getAuthUser(supabase)
-  if (!user) throw new Error('Not authenticated')
+  if (!user) throw new Error('Please sign in again.')
+
+  // Attempts are server-authored evidence: learners can read their own rows,
+  // but only the service role writes them (and the mastery fold below).
+  const admin = createAdminClient()
 
   if (input.confidence !== null && !['sure', 'unsure'].includes(input.confidence)) {
-    throw new Error('Invalid confidence')
+    throw new Error('Please choose how confident you feel.')
   }
   if (!['diagnostic', 'supported', 'independent'].includes(input.attemptType)) {
-    throw new Error('Invalid attempt type')
+    throw new Error('Something was wrong with that answer.')
   }
 
   // Open-ended supported prompts carry no bank question: engagement is
   // recorded (is_correct null) without polluting the mastery model.
   if (!input.questionId) {
-    const { error: insertError } = await supabase.from('learning_attempts').insert({
+    const { error: insertError } = await admin.from('learning_attempts').insert({
       user_id: user.id,
       subject_id: input.subjectId,
       question_id: null,
@@ -487,7 +638,7 @@ export async function recordLessonAttempt(input: AttemptInput): Promise<{
       is_correct: null,
       confidence: input.confidence,
     })
-    if (insertError) throw new Error('Failed to record attempt')
+    if (insertError) throw new Error('Could not save your answer.')
     return { isCorrect: false, graded: false, correctAnswer: '', explanation: '', misconception: null, prerequisite: null }
   }
 
@@ -496,13 +647,12 @@ export async function recordLessonAttempt(input: AttemptInput): Promise<{
   // an action that has already proven the caller's identity with the
   // caller's own session, and only what this action chooses to return
   // ever leaves the server.
-  const admin = createAdminClient()
   const { data: question, error: qError } = await admin
     .from('questions')
     .select('id, response_type')
     .eq('id', input.questionId)
     .single()
-  if (qError || !question) throw new Error('Question not found')
+  if (qError || !question) throw new Error('That question could not be found.')
 
   const { data: answer } = await admin
     .from('question_answers')
@@ -522,7 +672,7 @@ export async function recordLessonAttempt(input: AttemptInput): Promise<{
   let misconceptionCode: string | null = null
   let prerequisite: { name: string; href: string } | null = null
   if (!isFreeResponse && !isCorrect && input.selectedAnswer) {
-    const { data: mc } = await supabase
+    const { data: mc } = await admin
       .from('question_misconceptions')
       .select('misconception_code, misconception_name, explanation, repair_note_id')
       .eq('question_id', input.questionId)
@@ -551,7 +701,7 @@ export async function recordLessonAttempt(input: AttemptInput): Promise<{
     }
   }
 
-  const { error: insertError } = await supabase.from('learning_attempts').insert({
+  const { error: insertError } = await admin.from('learning_attempts').insert({
     user_id: user.id,
     subject_id: input.subjectId,
     question_id: input.questionId,
@@ -564,7 +714,7 @@ export async function recordLessonAttempt(input: AttemptInput): Promise<{
     misconception_code: misconceptionCode,
     ...(isFreeResponse ? { response_text: input.selectedAnswer } : {}),
   })
-  if (insertError) throw new Error('Failed to record attempt')
+  if (insertError) throw new Error('Could not save your answer.')
 
   return {
     isCorrect,
@@ -589,7 +739,7 @@ export async function completeLesson(input: {
 }): Promise<{ nextReviewAt: string | null; status: string }> {
   const supabase = await createClient()
   const user = await getAuthUser(supabase)
-  if (!user) throw new Error('Not authenticated')
+  if (!user) throw new Error('Please sign in again.')
 
   const correct = Math.max(0, Math.min(input.correct, 12))
   const total = Math.max(1, Math.min(input.total, 12))
@@ -598,7 +748,10 @@ export async function completeLesson(input: {
   bySubject.set(input.subjectId, { correct, total })
 
   try {
-    await applySubjectEvidence(supabase, user.id, bySubject, null)
+    // Lesson evidence belongs to the learner's current path exam — never to a
+    // global pool. Shared lessons still record here, under their own path.
+    const scope = await getExamScope(supabase, user.id)
+    await applySubjectEvidence(supabase, user.id, bySubject, null, scope.primaryExamId)
   } catch (err) {
     console.error('[mastery] completeLesson failed:', err)
   }
@@ -621,14 +774,14 @@ export async function saveLessonReflection(input: {
 }): Promise<void> {
   const supabase = await createClient()
   const user = await getAuthUser(supabase)
-  if (!user) throw new Error('Not authenticated')
+  if (!user) throw new Error('Please sign in again.')
 
   const { error } = await supabase.from('lesson_reflections').insert({
     user_id: user.id,
     lesson_id: input.lessonId,
     explanation_text: input.explanation,
   })
-  if (error) throw new Error('Failed to save reflection')
+  if (error) throw new Error('Could not save your reflection.')
 }
 
 export async function getNextRecommendedLesson(subjectSlug: string): Promise<{
@@ -637,7 +790,7 @@ export async function getNextRecommendedLesson(subjectSlug: string): Promise<{
 }> {
   const supabase = await createClient()
   const user = await getAuthUser(supabase)
-  if (!user) throw new Error('Not authenticated')
+  if (!user) throw new Error('Please sign in again.')
 
   // Get subject ID
   const { data: subject } = await supabase
@@ -650,13 +803,22 @@ export async function getNextRecommendedLesson(subjectSlug: string): Promise<{
 
   // Curriculum order: a lesson's place in the syllabus. Rows without a
   // place fall back to the order they were created, so nothing is lost.
-  const { data: notes } = await supabase
+  // The lesson set is path-bound: shared lessons plus the learner's own
+  // exam. A Post-UTME learner is never recommended a JAMB lesson.
+  const scope = await getExamScope(supabase, user.id)
+  const pathExamId = scope.primaryExamId
+
+  const { data: allNotes } = await supabase
     .from('lessons')
-    .select('id, title, slug, objective, status, sort_order, created_at')
+    .select('id, title, slug, objective, status, sort_order, created_at, exam_id')
     .eq('subject_id', subject.id)
     .eq('status', 'published')
     .order('sort_order', { ascending: true, nullsFirst: false })
     .order('created_at', { ascending: true })
+
+  const notes = (allNotes ?? []).filter(
+    (l) => l.exam_id === null || (pathExamId !== null && l.exam_id === pathExamId),
+  )
 
   if (!notes || notes.length === 0) return { note: null, completed: true }
 
@@ -732,6 +894,7 @@ export interface CurriculumSection {
 export async function getSubjectCurriculum(subjectSlug: string): Promise<{
   sections: CurriculumSection[]
   recommendedLessonId: string | null
+  examSlug: string | null
 }> {
   const supabase = await createClient()
 
@@ -740,20 +903,40 @@ export async function getSubjectCurriculum(subjectSlug: string): Promise<{
     .select('id')
     .eq('slug', subjectSlug)
     .single()
-  if (!subject) return { sections: [], recommendedLessonId: null }
+  if (!subject) return { sections: [], recommendedLessonId: null, examSlug: null }
+
+  // The curriculum travels with the learner's path, not with whichever exam
+  // happened to own the first topic row. Shared content stays visible to
+  // every path; exam-scoped content stays in its lane. English is the proof:
+  // JAMB's Use of English is not UNILORIN Post-UTME's, so the same subject
+  // slug cannot mean one global syllabus for everyone.
+  const { data: { user } } = await supabase.auth.getUser()
+  const scope = user ? await getExamScope(supabase, user.id) : null
+  const pathExamId = scope?.primaryExamId ?? null
+  const examSlug = scope?.primaryExamSlug ?? null
 
   const { data: topics } = await supabase
     .from('topics')
-    .select('id, slug, name, description, sort_order, section_key, section_title')
+    .select('id, slug, name, description, sort_order, section_key, section_title, exam_id')
     .eq('subject_id', subject.id)
     .eq('published', true)
     .order('sort_order', { ascending: true })
 
-  const { data: lessons } = await supabase
+  // Shared topics (no exam scope) stay visible to every path.
+  const visible = (topics ?? []).filter(
+    (t) => t.exam_id === null || (pathExamId !== null && t.exam_id === pathExamId),
+  )
+
+  const { data: allLessons } = await supabase
     .from('lessons')
-    .select('id, slug, title, objective, topic_id, estimated_minutes')
+    .select('id, slug, title, objective, topic_id, estimated_minutes, exam_id')
     .eq('subject_id', subject.id)
     .eq('status', 'published')
+
+  // Shared lessons (no exam scope) stay available to every path.
+  const lessons = (allLessons ?? []).filter(
+    (l) => l.exam_id === null || (pathExamId !== null && l.exam_id === pathExamId),
+  )
 
   const lessonByTopic = new Map<string, CurriculumLesson>()
   for (const l of lessons ?? []) {
@@ -768,7 +951,7 @@ export async function getSubjectCurriculum(subjectSlug: string): Promise<{
   }
 
   const bySection = new Map<string, CurriculumSection>()
-  for (const t of topics ?? []) {
+  for (const t of visible) {
     const key = t.section_key ?? 'A'
     if (!bySection.has(key)) {
       bySection.set(key, {
@@ -809,8 +992,8 @@ export async function getSubjectCurriculum(subjectSlug: string): Promise<{
       const ordered = (lessons ?? [])
         .filter((l) => l.topic_id)
         .sort((a, b) => {
-          const ta = topics?.find((t) => t.id === a.topic_id)?.sort_order ?? 0
-          const tb = topics?.find((t) => t.id === b.topic_id)?.sort_order ?? 0
+          const ta = visible.find((t) => t.id === a.topic_id)?.sort_order ?? 0
+          const tb = visible.find((t) => t.id === b.topic_id)?.sort_order ?? 0
           return ta - tb
         })
       recommendedLessonId = ordered.find((l) => !done.has(l.id))?.id ?? null
@@ -820,5 +1003,5 @@ export async function getSubjectCurriculum(subjectSlug: string): Promise<{
     // missing.
   }
 
-  return { sections: [...bySection.values()], recommendedLessonId }
+  return { sections: [...bySection.values()], recommendedLessonId, examSlug }
 }

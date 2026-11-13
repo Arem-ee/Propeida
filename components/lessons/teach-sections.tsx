@@ -45,7 +45,7 @@ function Progress({ current, total }: { current: number; total: number }) {
       {Array.from({ length: total }).map((_, i) => (
         <span
           key={i}
-          className={`h-1.5 flex-1 rounded-full transition-colors ${
+          className={`h-1.5 flex-1 rounded-full transition-all duration-500 ${
             i <= current ? 'bg-blue-600' : 'bg-blue-100'
           }`}
         />
@@ -57,7 +57,7 @@ function Progress({ current, total }: { current: number; total: number }) {
 function Takeaways({ section }: { section: TeachSectionData }) {
   if (!section.takeaway) return null
   return (
-    <div className="mt-4 flex gap-2.5 rounded-2xl border border-amber-200 bg-amber-50 px-3.5 py-3">
+    <div className="mt-4 flex gap-2.5 rounded-2xl border border-amber-200 bg-amber-50 px-3.5 py-3 animate-pop-in">
       <Lightbulb className="mt-0.5 h-4 w-4 shrink-0 text-amber-700" aria-hidden="true" />
       <p className="text-[13px] font-extrabold leading-relaxed text-amber-900">
         {section.takeaway}
@@ -92,7 +92,7 @@ function CheckBlock({
             : isAnswer
               ? 'border-emerald-300 bg-emerald-50 text-emerald-900'
               : isChosen
-                ? 'border-rose-200 bg-rose-50 text-rose-900'
+                ? 'border-amber-300 bg-amber-50 text-amber-900'
                 : 'border-transparent bg-white/60 text-ink-soft'
           return (
             <button
@@ -101,11 +101,11 @@ function CheckBlock({
               onClick={() => !answered && onChoose(i)}
               disabled={answered}
               aria-pressed={isChosen}
-              className={`flex w-full items-center gap-2.5 rounded-xl border px-3 py-2 text-left text-[13px] font-bold leading-snug transition-colors ${style} ${
+              className={`flex w-full items-center gap-2.5 rounded-xl border px-3 py-2 text-left text-[13px] font-bold leading-snug transition-all pressable ${style} ${
                 answered ? 'cursor-default' : 'cursor-pointer'
               }`}
             >
-              <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-white/80 text-[10px] font-extrabold text-blue-800">
+              <span className={`grid h-5 w-5 shrink-0 place-items-center rounded-full text-[10px] font-extrabold ${answered && isAnswer ? 'bg-emerald-500 text-white' : 'bg-white/80 text-blue-800'}`}>
                 {String.fromCharCode(65 + i)}
               </span>
               <span className="flex-1">{option}</span>
@@ -118,8 +118,8 @@ function CheckBlock({
       </div>
       {answered && (
         <p
-          className={`mt-2.5 text-[12px] font-bold leading-relaxed ${
-            correct ? 'text-emerald-800' : 'text-rose-800'
+          className={`mt-2.5 text-[12px] font-bold leading-relaxed animate-pop-in ${
+            correct ? 'text-emerald-800' : 'text-amber-800'
           }`}
         >
           {correct ? 'Correct.' : `Not quite — ${String.fromCharCode(65 + check.answer)}.`}
@@ -275,7 +275,7 @@ export default function TeachSections({
             <Progress current={index} total={sections.length} />
           </div>
 
-          <div className="mt-4">
+          <div className="mt-4 animate-fade-up" key={index}>
             {section.heading && (
               <h3 className="font-display text-[19px] font-medium leading-snug text-black">
                 {section.heading}
@@ -298,7 +298,7 @@ export default function TeachSections({
               <button
                 type="button"
                 onClick={() => setIndex((i) => Math.max(0, i - 1))}
-                className="rounded-2xl border border-gray-200 bg-white px-4 py-2.5 text-[13px] font-extrabold text-gray-600 min-h-[44px] hover:bg-gray-50"
+                className="rounded-2xl border border-gray-200 bg-white px-4 py-2.5 text-[13px] font-extrabold text-gray-600 min-h-[44px] hover:bg-gray-50 pressable"
               >
                 Back
               </button>
@@ -310,7 +310,7 @@ export default function TeachSections({
                 else finish()
               }}
               disabled={!canAdvance}
-              className={`inline-flex flex-1 items-center justify-center gap-2 rounded-2xl py-2.5 text-[13px] font-extrabold text-white min-h-[44px] transition-colors ${
+              className={`inline-flex flex-1 items-center justify-center gap-2 rounded-2xl py-2.5 text-[13px] font-extrabold text-white min-h-[44px] transition-colors pressable ${
                 canAdvance ? 'bg-blue-600 hover:bg-blue-700' : 'bg-gray-300 cursor-not-allowed'
               }`}
             >

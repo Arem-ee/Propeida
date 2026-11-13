@@ -19,9 +19,17 @@ async function getLookups() {
   }
 }
 
+const MAX_FILES = 10
+const MAX_FILE_BYTES = 2 * 1024 * 1024 // 2 MB
+const MAX_ROWS_PER_FILE = 2000
+
 export async function POST(request: Request) {
   try {
-    await requireAdmin()
+    try {
+      await requireAdmin()
+    } catch {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
     const supabase = createAdminClient()
 
     const formData = await request.formData()
@@ -29,18 +37,31 @@ export async function POST(request: Request) {
     if (!files || files.length === 0) {
       return NextResponse.json({ error: 'No files provided' }, { status: 400 })
     }
+    if (files.length > MAX_FILES) {
+      return NextResponse.json({ error: `Too many files (max ${MAX_FILES})` }, { status: 413 })
+    }
 
     const { examMap, subjectMap } = await getLookups()
     const allInsertErrors: string[] = []
     let totalInserted = 0
 
     for (const file of files) {
+      if (file.size > MAX_FILE_BYTES) {
+        allInsertErrors.push(`[${file.name}] File too large (max 2 MB)`)
+        continue
+      }
+
       const text = await file.text()
 
       const parsed = Papa.parse<Record<string, string>>(text, {
         header: true,
         skipEmptyLines: true,
       })
+
+      if (parsed.data.length > MAX_ROWS_PER_FILE) {
+        allInsertErrors.push(`[${file.name}] Too many rows (max ${MAX_ROWS_PER_FILE})`)
+        continue
+      }
 
       if (parsed.errors.length > 0) {
         allInsertErrors.push(`[${file.name}] Parse error: ${parsed.errors[0]!.message}`)

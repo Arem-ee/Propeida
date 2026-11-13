@@ -17,7 +17,8 @@ import {
   findPrerequisiteRepair,
   countCodeRepeats,
 } from '@/lib/practice'
-import { hasExamAccess } from '@/lib/entitlements'
+import { hasExamAccess, getFreeMockAttempts, getProStatus } from '@/lib/entitlements'
+import { getExamScope } from '@/lib/exam-scope'
 import { getNotesBySubject, isValidSubject, getNoteById } from '@/lib/notes'
 import { recordSessionEvidence, getNextReviews } from '@/lib/mastery'
 
@@ -113,7 +114,7 @@ async function fetchWeightedQuestions(
   }
 
   if (allQuestions.length === 0) {
-    throw new Error('No questions match the selected filters')
+    throw new Error('No questions fit those choices yet.')
   }
 
   return allQuestions
@@ -122,15 +123,50 @@ async function fetchWeightedQuestions(
 export async function createSession(params: CreateSessionParams) {
   const supabase = await createClient()
   const user = await getAuthUser(supabase)
-  if (!user) throw new Error('Not authenticated')
+  if (!user) throw new Error('Please sign in again.')
+
+  // Path enforcement: a restricted learner (JAMB or Post-UTME) can only open
+  // sessions in their own path. The pickers already filter, but the server is
+  // the boundary — a stale deep-link must not be able to cross into the other
+  // exam's bank.
+  const scope = await getExamScope(supabase, user.id)
+  if (scope.restricted && !scope.examIds?.includes(params.examId)) {
+    throw new Error('This exam is not in your path')
+  }
+
+  // Canonical slug from the DB: the client-supplied slug must not decide mock
+  // configuration or the JAMB branch — the exam row is the source of truth.
+  const { data: examRow } = await supabase
+    .from('exams')
+    .select('slug')
+    .eq('id', params.examId)
+    .maybeSingle()
+  const examSlug = examRow?.slug ?? params.examSlug
 
   const [examAccess, mockDefaults] = await Promise.all([
     hasExamAccess(user.id, params.examId),
-    params.mode === 'mock' ? getMockDefaults(params.examSlug) : Promise.resolve(null),
+    params.mode === 'mock' ? getMockDefaults(examSlug) : Promise.resolve(null),
   ])
 
   const hasAccess = examAccess
   const isFreeMock = !hasAccess && params.mode === 'mock'
+
+  // Free mock attempts per exam (config: default 1; unilorin 2). Past the
+  // allowance the mock is a Pro feature -- say so plainly, in one sentence.
+  if (isFreeMock) {
+    const [attempts, { count: usedMocks }] = await Promise.all([
+      getFreeMockAttempts(examSlug),
+      supabase
+        .from('exam_sessions')
+        .select('id', { count: 'exact', head: true })
+        .eq('user_id', user.id)
+        .eq('exam_id', params.examId)
+        .eq('mode', 'mock'),
+    ])
+    if ((usedMocks ?? 0) >= attempts) {
+      throw new Error('You have used your free mock. Pro unlocks unlimited mocks.')
+    }
+  }
 
   let timeLimitSeconds: number | null = null
   let effectiveCount = params.questionCount
@@ -168,7 +204,7 @@ export async function createSession(params: CreateSessionParams) {
     questions = lockedPool
       ? await fetchLockedPoolQuestions(user.id, params.examId, subjectIds, effectiveCount, session.id, params.difficulty)
       : await fetchFreePoolQuestions(user.id, params.examId, subjectIds, effectiveCount, session.id, params.difficulty)
-  } else if (params.mode === 'mock' && params.examSlug === 'jamb') {
+  } else if (params.mode === 'mock' && examSlug === 'jamb') {
     const roles = mockDefaults?.subject_roles
     if (!roles) {
       questions = await fetchWeightedQuestions(supabase, params.examId, subjectIds, effectiveCount, session.id)
@@ -179,7 +215,7 @@ export async function createSession(params: CreateSessionParams) {
         .eq('slug', 'english')
         .single()
 
-      if (!englishSubject) throw new Error('English subject not found')
+      if (!englishSubject) throw new Error('English is not ready yet.')
 
       const englishId = englishSubject.id
       const englishCount = roles.english ?? 60
@@ -209,7 +245,7 @@ export async function createSession(params: CreateSessionParams) {
         if (electiveQs) allQuestions.push(...(electiveQs as SessionQuestion[]))
       }
 
-      if (allQuestions.length === 0) throw new Error('No questions match the selected filters')
+      if (allQuestions.length === 0) throw new Error('No questions fit those choices yet.')
       questions = allQuestions
     }
   } else {
@@ -295,10 +331,15 @@ export async function createSession(params: CreateSessionParams) {
     }
   }
 
-  const { error: answersError } = await supabase.from('session_answers').insert(rows)
+  // Session rows are server-authored: the client role holds neither INSERT
+  // nor UPDATE on exam_sessions/session_answers. The question set above was
+  // selected here, so the service-role write is safe after the auth and
+  // entitlement checks in this action.
+  const admin = createAdminClient()
+  const { error: answersError } = await admin.from('session_answers').insert(rows)
   if (answersError) {
-    await supabase.from('exam_sessions').delete().eq('id', session.id)
-    throw new Error('Failed to initialize session answers')
+    await admin.from('exam_sessions').delete().eq('id', session.id)
+    throw new Error('Could not start this session.')
   }
 
   revalidatePath('/practice')
@@ -326,36 +367,40 @@ export async function submitAnswer(
 ) {
   const supabase = await createClient()
   const user = await getAuthUser(supabase)
-  if (!user) throw new Error('Not authenticated')
+  if (!user) throw new Error('Please sign in again.')
 
   const session = await getSessionById(sessionId)
-  if (session.user_id !== user.id) throw new Error('Session does not belong to user')
-  if (session.status !== 'in_progress') throw new Error('Session is not active')
+  if (session.user_id !== user.id) throw new Error('This session could not be opened.')
+  if (session.status !== 'in_progress') throw new Error('This session is already finished.')
 
 
   if (session.mode === 'mock' && isSessionExpired(session.started_at, session.time_limit_seconds)) {
     throw new Error('Time has expired for this session')
   }
 
-  const recordCall = supabase.rpc('record_session_answer', {
-    p_session_id: sessionId,
-    p_question_id: questionId,
-    p_selected_answer: selectedAnswer,
-  })
-
   if (session.mode === 'practice') {
-    const [recordRes, revealRes] = await Promise.all([
-      recordCall,
-      supabase.rpc('get_session_answer_reveal', {
-        p_session_id: sessionId,
-        p_question_id: questionId,
-      }),
-    ])
+    // record_session_answer is a pure write: it never returns the grade, so a
+    // mock cannot be interrogated option by option. The practice grade comes
+    // from the reveal RPC, which is gated to practice mode or a completed
+    // session. Await the write first so selected_answer is set when the
+    // reveal checks it.
+    const recordRes = await supabase.rpc('record_session_answer', {
+      p_session_id: sessionId,
+      p_question_id: questionId,
+      p_selected_answer: selectedAnswer,
+    })
 
-    if (recordRes.error || typeof recordRes.data !== 'boolean') throw new Error('Failed to record answer')
+    if (recordRes.error) throw new Error('Could not save your answer.')
+
+    const revealRes = await supabase.rpc('get_session_answer_reveal', {
+      p_session_id: sessionId,
+      p_question_id: questionId,
+    })
 
     const revealRow = Array.isArray(revealRes.data) ? revealRes.data[0] : null
-    if (revealRes.error || !revealRow) throw new Error('Failed to load answer feedback')
+    if (revealRes.error || !revealRow) throw new Error('Could not load the explanation.')
+
+    const isCorrect = revealRow.correct_answer === selectedAnswer
 
     // No streak update here by design (docs §3): streaks count completed
     // planned actions, and those are recorded at session completion below —
@@ -373,8 +418,12 @@ export async function submitAnswer(
       repeatCount: number
       prerequisite: { name: string; href: string } | null
     } | null = null
-    if (recordRes.data === false) {
-      const { data: mc } = await supabase
+    if (!isCorrect) {
+      // Misconception rows name the wrong options, so they are service-role
+      // only. The server has just verified the answer above and returns only
+      // the repair for the option this learner picked.
+      const admin = createAdminClient()
+      const { data: mc } = await admin
         .from('question_misconceptions')
         .select('misconception_code, misconception_name, explanation, repair_note_id')
         .eq('question_id', questionId)
@@ -384,7 +433,7 @@ export async function submitAnswer(
         const repairNote = mc.repair_note_id ? getNoteById(mc.repair_note_id) : null
         // Repeat detection: the code was just recorded on this answer by
         // record_session_answer, so a repeat means it appeared before.
-        const repeatCount = await countCodeRepeats(supabase, user.id, mc.misconception_code)
+        const repeatCount = await countCodeRepeats(user.id, mc.misconception_code)
         misconception = {
           code: mc.misconception_code,
           name: mc.misconception_name,
@@ -398,17 +447,23 @@ export async function submitAnswer(
     }
 
     return {
-      isCorrect: recordRes.data,
+      isCorrect,
       correctAnswer: revealRow.correct_answer,
       explanation: revealRow.explanation,
       misconception,
     }
   }
 
-  const record = await recordCall
-  if (record.error || typeof record.data !== 'boolean') throw new Error('Failed to record answer')
+  const record = await supabase.rpc('record_session_answer', {
+    p_session_id: sessionId,
+    p_question_id: questionId,
+    p_selected_answer: selectedAnswer,
+  })
+  if (record.error) throw new Error('Could not save your answer.')
 
-  return { isCorrect: record.data }
+  // Mock feedback is deliberately withheld: isCorrect stays null until the
+  // session is submitted and get_session_review can reveal the paper.
+  return { isCorrect: null }
 }
 
 /**
@@ -421,12 +476,12 @@ export async function submitAnswer(
 export async function completePracticeSession(sessionId: string) {
   const supabase = await createClient()
   const user = await getAuthUser(supabase)
-  if (!user) throw new Error('Not authenticated')
+  if (!user) throw new Error('Please sign in again.')
 
   const session = await getSessionById(sessionId)
-  if (session.user_id !== user.id) throw new Error('Session does not belong to user')
-  if (session.status !== 'in_progress') throw new Error('Session is not active')
-  if (session.mode !== 'practice') throw new Error('Session is not a practice session')
+  if (session.user_id !== user.id) throw new Error('This session could not be opened.')
+  if (session.status !== 'in_progress') throw new Error('This session is already finished.')
+  if (session.mode !== 'practice') throw new Error('This is not a practice session.')
 
 
   const answers = await getSessionQuestionsWithStatus(sessionId, false)
@@ -449,7 +504,7 @@ export async function completePracticeSession(sessionId: string) {
     .update({ status: 'completed', completed_at: new Date().toISOString() })
     .eq('id', sessionId)
     .eq('user_id', user.id)
-  if (sessionError) throw new Error('Failed to complete session')
+  if (sessionError) throw new Error('Could not finish this session.')
 
   const { error: resultsError } = await admin.from('results').insert({
     session_id: sessionId,
@@ -457,7 +512,7 @@ export async function completePracticeSession(sessionId: string) {
     accuracy,
     performance_by_subject: perfBySubject,
   })
-  if (resultsError) throw new Error('Failed to record results')
+  if (resultsError) throw new Error('Could not save your results.')
 
   // Proof engine: fold this session into the learner model. Best-effort —
   // completion already succeeded, so a mastery write failure must not
@@ -486,12 +541,12 @@ export async function completePracticeSession(sessionId: string) {
 export async function completeMockSession(sessionId: string) {
   const supabase = await createClient()
   const user = await getAuthUser(supabase)
-  if (!user) throw new Error('Not authenticated')
+  if (!user) throw new Error('Please sign in again.')
 
   const session = await getSessionById(sessionId)
-  if (session.user_id !== user.id) throw new Error('Session does not belong to user')
-  if (session.status !== 'in_progress') throw new Error('Session is not active')
-  if (session.mode !== 'mock') throw new Error('Session is not a mock exam')
+  if (session.user_id !== user.id) throw new Error('This session could not be opened.')
+  if (session.status !== 'in_progress') throw new Error('This session is already finished.')
+  if (session.mode !== 'mock') throw new Error('This is not a mock exam.')
   const expired = isSessionExpired(session.started_at, session.time_limit_seconds)
 
 
@@ -499,7 +554,7 @@ export async function completeMockSession(sessionId: string) {
     p_session_id: sessionId,
   })
   const completionRow = Array.isArray(completion) ? completion[0] : null
-  if (completionError || !completionRow) throw new Error('Failed to complete session')
+  if (completionError || !completionRow) throw new Error('Could not finish this session.')
 
   await supabase.rpc('update_streak', { p_user_id: user.id })
 
@@ -520,11 +575,11 @@ export async function completeMockSession(sessionId: string) {
 export async function loadSessionData(sessionId: string) {
   const supabase = await createClient()
   const user = await getAuthUser(supabase)
-  if (!user) throw new Error('Not authenticated')
+  if (!user) throw new Error('Please sign in again.')
 
   const session = await getSessionById(sessionId)
-  if (session.user_id !== user.id) throw new Error('Session does not belong to user')
-  if (session.status !== 'in_progress') throw new Error('Session is not active')
+  if (session.user_id !== user.id) throw new Error('This session could not be opened.')
+  if (session.status !== 'in_progress') throw new Error('This session is already finished.')
 
 
   const questions = await getSessionQuestionsWithStatus(sessionId, session.mode === 'practice')
@@ -551,11 +606,11 @@ export async function loadSessionData(sessionId: string) {
 export async function getSessionResults(sessionId: string) {
   const supabase = await createClient()
   const user = await getAuthUser(supabase)
-  if (!user) throw new Error('Not authenticated')
+  if (!user) throw new Error('Please sign in again.')
 
   const session = await getSessionById(sessionId)
-  if (session.user_id !== user.id) throw new Error('Session does not belong to user')
-  if (session.status !== 'completed') throw new Error('Session is not completed')
+  if (session.user_id !== user.id) throw new Error('This session could not be opened.')
+  if (session.status !== 'completed') throw new Error('This session is not finished yet.')
 
 
   const [{ data: result }, { data: exam }, reviewRes] = await Promise.all([
@@ -574,14 +629,14 @@ export async function getSessionResults(sessionId: string) {
     }),
   ])
 
-  if (!result) throw new Error('Results not found')
+  if (!result) throw new Error('Your results could not be found.')
 
   const startedAt = new Date(session.started_at).getTime()
   const completedAt = session.completed_at ? new Date(session.completed_at).getTime() : Date.now()
 
   const reviewError = reviewRes.error
   const review = reviewRes.data
-  if (reviewError) throw new Error('Failed to load session review')
+  if (reviewError) throw new Error('Could not load your review.')
   const reviewRows = (review ?? []) as {
     question_id: string
     subject_id: string
@@ -612,7 +667,8 @@ export async function getSessionResults(sessionId: string) {
   // picked wrong option per item below. Empty when nothing is mapped.
   const repairs = new Map<string, { name: string; explanation: string; repairHref: string | null }>()
   if (questionIds.length > 0) {
-    const { data: mcRows } = await supabase
+    const admin = createAdminClient()
+    const { data: mcRows } = await admin
       .from('question_misconceptions')
       .select('question_id, option_key, misconception_name, explanation, repair_note_id')
       .in('question_id', questionIds)
@@ -700,7 +756,7 @@ export async function getSessionResults(sessionId: string) {
 export async function getSessionHistory() {
   const supabase = await createClient()
   const user = await getAuthUser(supabase)
-  if (!user) throw new Error('Not authenticated')
+  if (!user) throw new Error('Please sign in again.')
 
   const { data, error } = await supabase
     .from('exam_sessions')
@@ -718,7 +774,7 @@ export async function getSessionHistory() {
     .eq('status', 'completed')
     .order('started_at', { ascending: false })
 
-  if (error) throw new Error('Failed to fetch history')
+  if (error) throw new Error('Could not load your history.')
 
   const history = (data ?? []).map((row: Record<string, unknown>) => {
     const exams = Array.isArray(row.exams) ? row.exams[0] : row.exams
@@ -735,5 +791,41 @@ export async function getSessionHistory() {
   })
 
   return history
+}
+
+/** Plan status for client surfaces (results breakdown, mock launcher). */
+export async function getMyPlan(): Promise<{ isPro: boolean; labels: string[] }> {
+  const supabase = await createClient()
+  const user = await getAuthUser(supabase)
+  if (!user) return { isPro: false, labels: [] }
+  const pro = await getProStatus(user.id)
+  return { isPro: pro.isPro, labels: pro.labels }
+}
+
+/** Free mock usage for the launcher's upgrade state. */
+export async function getFreeMockStatus(
+  examId: string,
+): Promise<{ used: number; allowed: number; isPro: boolean }> {
+  const supabase = await createClient()
+  const user = await getAuthUser(supabase)
+  if (!user) return { used: 0, allowed: 1, isPro: false }
+  const pro = await getProStatus(user.id)
+  if (pro.isPro) return { used: 0, allowed: Number.MAX_SAFE_INTEGER, isPro: true }
+
+  const { data: examRow } = await supabase
+    .from('exams')
+    .select('slug')
+    .eq('id', examId)
+    .maybeSingle()
+  const allowed = await getFreeMockAttempts(examRow?.slug ?? '')
+
+  const { count } = await supabase
+    .from('exam_sessions')
+    .select('id', { count: 'exact', head: true })
+    .eq('user_id', user.id)
+    .eq('exam_id', examId)
+    .eq('mode', 'mock')
+
+  return { used: count ?? 0, allowed, isPro: false }
 }
 

@@ -41,19 +41,19 @@ export async function getUserExamAccess() {
 export async function addUserExamAccess(examId: string) {
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
-  if (!user) throw new Error('Not authenticated')
+  if (!user) throw new Error('Please sign in again.')
 
   const { error } = await supabase
     .from('user_exam_access')
     .insert({ user_id: user.id, exam_id: examId })
 
-  if (error && error.code !== '23505') throw new Error('Failed to add institution')
+  if (error && error.code !== '23505') throw new Error('Could not add that institution.')
 }
 
 export async function removeUserExamAccess(examId: string) {
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
-  if (!user) throw new Error('Not authenticated')
+  if (!user) throw new Error('Please sign in again.')
 
   const { error } = await supabase
     .from('user_exam_access')
@@ -61,7 +61,7 @@ export async function removeUserExamAccess(examId: string) {
     .eq('user_id', user.id)
     .eq('exam_id', examId)
 
-  if (error) throw new Error('Failed to remove institution')
+  if (error) throw new Error('Could not remove that institution.')
 }
 
 

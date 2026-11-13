@@ -121,7 +121,7 @@ export default function PracticePlayer({
       celebrate()
       router.push(`/results/${result.sessionId}`)
     } catch (err) {
-      setFinishError(err instanceof Error ? err.message : 'Could not finish session')
+      setFinishError(err instanceof Error ? err.message : 'Could not finish this session.')
       setFinishing(false)
     }
   }
@@ -171,7 +171,7 @@ export default function PracticePlayer({
             </button>
             <button
               onClick={() => setShowLearn(false)}
-              className="inline-flex items-center gap-2 rounded-2xl bg-blue-600 px-7 py-3.5 text-[15px] font-extrabold text-white hover:bg-blue-700 shadow-[0_12px_28px_-12px_rgba(37,99,235,0.7)] min-h-[52px] cursor-pointer transition-all"
+              className="inline-flex items-center gap-2 rounded-2xl bg-blue-600 px-7 py-3.5 text-[15px] font-extrabold text-white hover:bg-blue-700 shadow-[0_12px_28px_-12px_rgba(37,99,235,0.7)] min-h-[52px] cursor-pointer transition-all pressable"
             >
               <Play className="h-4 w-4" />
               Start practice
@@ -227,6 +227,12 @@ export default function PracticePlayer({
         </span>
         <span className="rounded-full bg-blue-600 px-3.5 py-1.5 text-xs font-extrabold text-white">Practice</span>
       </div>
+      <div className="mb-4 h-1.5 overflow-hidden rounded-full bg-blue-100/80" role="progressbar" aria-valuenow={index + 1} aria-valuemin={1} aria-valuemax={ordered.length}>
+        <div
+          className="h-full rounded-full bg-blue-600 transition-all duration-500"
+          style={{ width: `${Math.round(((index + 1) / Math.max(1, ordered.length)) * 100)}%` }}
+        />
+      </div>
 
       {isWarmup && index === 0 && (
         <div className="mb-4 flex items-start gap-2.5 rounded-2xl border-2 border-orange-200 bg-orange-50 px-4 py-3.5">
@@ -250,23 +256,23 @@ export default function PracticePlayer({
                 aria-pressed={isSel}
                 aria-disabled={revealed}
                 onClick={() => { if (!revealed) setSelected(opt.key) }}
-                className={`flex w-full items-center gap-3.5 rounded-2xl border-2 p-4 text-left min-h-[56px] transition-all ${
+                className={`flex w-full items-center gap-3.5 rounded-2xl border-2 p-4 text-left min-h-[56px] transition-all pressable ${
                   revealed
                     ? isCorrectOpt
-                      ? 'border-emerald-500 bg-emerald-50/60'
+                      ? 'border-emerald-500 bg-emerald-50/60 animate-pop-in'
                       : isSel
-                        ? 'border-red-400 bg-red-50/60'
+                        ? 'border-amber-500 bg-amber-50/60'
                         : 'border-gray-200 bg-white opacity-70'
                     : isSel
                       ? 'border-blue-600 bg-blue-50/60 shadow-[0_0_0_3px_rgba(37,99,235,0.12)]'
-                      : 'border-gray-200 bg-white'
+                      : 'border-gray-200 bg-white hover:border-blue-300'
                 }`}
               >
-                <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-xl text-sm font-extrabold border-2 ${
+                <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-xl text-sm font-extrabold border-2 transition-all ${
                   revealed && isCorrectOpt
                     ? 'bg-emerald-500 border-emerald-500 text-white'
                     : revealed && isSel
-                      ? 'bg-red-500 border-red-500 text-white'
+                      ? 'bg-amber-500 border-amber-500 text-white'
                       : isSel
                         ? 'bg-blue-600 border-blue-600 text-white'
                         : 'border-gray-300 text-gray-500 bg-white'
@@ -280,9 +286,9 @@ export default function PracticePlayer({
         </div>
 
         {feedback && (
-          <div className="mt-6 space-y-4 animate-pop">
-            <div className={`flex items-center gap-2 rounded-2xl px-4 py-3.5 border ${
-              feedback.isCorrect ? 'bg-emerald-50 text-emerald-700 border-emerald-200' : 'bg-red-50 text-red-700 border-red-200'
+          <div className="mt-6 space-y-4 animate-fade-up">
+            <div className={`flex items-center gap-2 rounded-2xl px-4 py-3.5 border animate-pop-in ${
+              feedback.isCorrect ? 'bg-emerald-50 text-emerald-700 border-emerald-200' : 'bg-amber-50 text-amber-800 border-amber-200'
             }`}>
               {feedback.isCorrect
                 ? <Check className="h-5 w-5 shrink-0" strokeWidth={3} />
@@ -296,13 +302,13 @@ export default function PracticePlayer({
               <p className="text-sm text-ink-soft leading-relaxed font-semibold">{feedback.explanation}</p>
             </div>
             {feedback.misconception && (
-              <div className="rounded-2xl bg-amber-50 border-2 border-amber-200 p-4 sm:p-5">
+              <div className="rounded-2xl bg-amber-50 border-2 border-amber-200 p-4 sm:p-5 animate-pop-in" style={{ animationDelay: '120ms' }}>
                 <p className="font-display text-base font-medium text-amber-900 mb-2">
                   Why this tempts: {feedback.misconception.name}
                 </p>
                 {feedback.misconception.sharedPct !== null && (
                   <p className="mb-2 text-xs font-extrabold text-amber-700">
-                    {feedback.misconception.sharedPct}% of students also picked this on their first try — it&apos;s not just you.
+                    {feedback.misconception.sharedPct}% of learners also picked this first. It is not just you.
                   </p>
                 )}
                 <p className="text-sm text-ink-soft leading-relaxed font-semibold">{feedback.misconception.explanation}</p>
@@ -355,7 +361,7 @@ export default function PracticePlayer({
         {feedback ? (
           <button
             onClick={next}
-            className="inline-flex items-center gap-2 rounded-2xl bg-blue-600 px-7 py-3.5 text-[15px] font-extrabold text-white hover:bg-blue-700 shadow-[0_12px_28px_-12px_rgba(37,99,235,0.7)] min-h-[52px] cursor-pointer transition-all"
+            className="inline-flex items-center gap-2 rounded-2xl bg-blue-600 px-7 py-3.5 text-[15px] font-extrabold text-white hover:bg-blue-700 shadow-[0_12px_28px_-12px_rgba(37,99,235,0.7)] min-h-[52px] cursor-pointer transition-all pressable"
           >
             {index < ordered.length - 1 ? 'Next' : 'Finish'}
             <ArrowRight className="h-4 w-4" />

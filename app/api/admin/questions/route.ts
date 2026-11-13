@@ -207,6 +207,21 @@ export async function PUT(request: Request) {
           return NextResponse.json({ error: 'Verify the question before publishing' }, { status: 400 })
         }
       }
+
+      // Product requirement: every MCQ carries explanatory feedback.
+      // Never publish an item whose only learning value is the key.
+      const finalExplanation = typeof explanation === 'string' && explanation.trim()
+        ? explanation.trim()
+        : (
+            await supabase
+              .from('question_answers')
+              .select('explanation')
+              .eq('question_id', id)
+              .maybeSingle()
+          ).data?.explanation
+      if (!finalExplanation || !String(finalExplanation).trim()) {
+        return NextResponse.json({ error: 'Add an explanation before publishing' }, { status: 400 })
+      }
     }
 
     let misconceptions: MisconceptionInput[] | null = null

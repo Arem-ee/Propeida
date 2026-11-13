@@ -4,8 +4,9 @@ import { useState, useEffect } from 'react'
 import { use } from 'react'
 import Link from 'next/link'
 import { Check, X, Clock, BookOpen, ChevronDown, ChevronUp, Target, ArrowRight } from 'lucide-react'
-import { getSessionResults } from '@/lib/actions/practice'
+import { getSessionResults, getMyPlan } from '@/lib/actions/practice'
 import { LoadingCards, ErrorState } from '@/components/ui-states'
+import UpgradeCard from '@/components/paywall/upgrade-card'
 
 interface QuestionReview {
   questionId: string
@@ -42,6 +43,7 @@ interface ResultsData {
 export default function ResultsPage({ params }: { params: Promise<{ sessionId: string }> }) {
   const { sessionId } = use(params)
   const [data, setData] = useState<ResultsData | null>(null)
+  const [isPro, setIsPro] = useState(false)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [expanded, setExpanded] = useState<Set<string>>(new Set())
@@ -53,6 +55,7 @@ export default function ResultsPage({ params }: { params: Promise<{ sessionId: s
       .then((result) => { if (live) setData(result as ResultsData) })
       .catch((err) => { if (live) setError(err instanceof Error ? err.message : 'Failed to load results') })
       .finally(() => { if (live) setLoading(false) })
+    getMyPlan().then((plan) => { if (live) setIsPro(plan.isPro) }).catch(() => {})
     return () => { live = false }
   }, [sessionId])
 
@@ -91,13 +94,13 @@ export default function ResultsPage({ params }: { params: Promise<{ sessionId: s
     <div className="mx-auto max-w-2xl space-y-5">
       {/* Close-out: proof first */}
       <div className="rounded-3xl border-2 border-emerald-200 bg-emerald-50/60 p-5 sm:p-7 text-center animate-pop">
-        <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-emerald-700">Session complete</p>
+        <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-emerald-700">All done</p>
         <h1 className="mt-1.5 font-display text-3xl sm:text-4xl font-medium text-black">
           {correctCount}/{totalCount} · {accuracyPct}%
         </h1>
         <p className="mt-1.5 text-sm font-semibold text-ink-soft">Here&apos;s what stuck.</p>
 
-        {(secured.length > 0 || developing.length > 0) && (
+        {isPro && (secured.length > 0 || developing.length > 0) && (
           <ul className="mt-4 space-y-2 text-left">
             {secured.map((sb) => (
               <li key={sb.subjectId} className="flex items-center gap-2 rounded-2xl bg-white/70 border border-emerald-200 px-4 py-2.5 text-sm font-extrabold text-emerald-800">
@@ -120,7 +123,7 @@ export default function ResultsPage({ params }: { params: Promise<{ sessionId: s
         {data.weakestSubject ? (
           <Link
             href="/practice"
-            className="mt-5 inline-flex items-center gap-2 rounded-2xl bg-blue-600 px-6 py-3 text-sm font-extrabold text-white hover:bg-blue-700 min-h-[48px]"
+            className="mt-5 inline-flex items-center gap-2 rounded-2xl bg-blue-600 px-6 py-3 text-sm font-extrabold text-white hover:bg-blue-700 min-h-[48px] pressable"
           >
             <Target className="h-4 w-4" />
             Work on {data.weakestSubject.name} next
@@ -128,13 +131,20 @@ export default function ResultsPage({ params }: { params: Promise<{ sessionId: s
         ) : (
           <Link
             href="/practice"
-            className="mt-5 inline-flex items-center gap-2 rounded-2xl bg-blue-600 px-6 py-3 text-sm font-extrabold text-white hover:bg-blue-700 min-h-[48px]"
+            className="mt-5 inline-flex items-center gap-2 rounded-2xl bg-blue-600 px-6 py-3 text-sm font-extrabold text-white hover:bg-blue-700 min-h-[48px] pressable"
           >
-            Practice again
+            Practise again
             <ArrowRight className="h-4 w-4" />
           </Link>
         )}
       </div>
+
+      {!isPro && (
+        <UpgradeCard
+          title="Topic breakdown is Pro"
+          body="It shows which subjects are secure, which need work, and what to practise next."
+        />
+      )}
 
       {/* Review: wrong first */}
       <div className="rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-6 shadow-[0_2px_12px_-6px_rgba(16,28,51,0.12)]">
@@ -148,8 +158,8 @@ export default function ResultsPage({ params }: { params: Promise<{ sessionId: s
               return (
                 <div
                   key={q.questionId}
-                  className={`rounded-2xl border-2 overflow-hidden ${
-                    unanswered ? 'border-gray-200' : q.isCorrect ? 'border-emerald-200' : 'border-red-200'
+                  className={`rounded-2xl border-2 overflow-hidden transition-all ${
+                    unanswered ? 'border-gray-200' : q.isCorrect ? 'border-emerald-200' : 'border-amber-200'
                   }`}
                 >
                   <button
@@ -158,17 +168,17 @@ export default function ResultsPage({ params }: { params: Promise<{ sessionId: s
                   >
                     <span className="flex items-center gap-3 min-w-0">
                       <span className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-lg text-xs font-extrabold ${
-                        unanswered ? 'bg-gray-100 text-gray-500' : q.isCorrect ? 'bg-emerald-100 text-emerald-700' : 'bg-red-100 text-red-700'
+                        unanswered ? 'bg-gray-100 text-gray-500' : q.isCorrect ? 'bg-emerald-100 text-emerald-700' : 'bg-amber-100 text-amber-700'
                       }`}>
                         {unanswered ? <Clock className="h-3.5 w-3.5" /> : q.isCorrect ? <Check className="h-3.5 w-3.5" strokeWidth={3} /> : <X className="h-3.5 w-3.5" strokeWidth={3} />}
                       </span>
                       <span className="text-sm font-extrabold text-black">Question {idx + 1}</span>
                     </span>
-                    {open ? <ChevronUp className="h-4 w-4 shrink-0 text-gray-500" /> : <ChevronDown className="h-4 w-4 shrink-0 text-gray-500" />}
+                    {open ? <ChevronUp className="h-4 w-4 shrink-0 text-gray-500 transition-transform" /> : <ChevronDown className="h-4 w-4 shrink-0 text-gray-500 transition-transform" />}
                   </button>
 
                   {open && (
-                    <div className="border-t border-gray-100 px-4 py-4 space-y-3">
+                    <div className="border-t border-gray-100 px-4 py-4 space-y-3 animate-fade-up">
                       <p className="text-[15px] font-bold text-black leading-snug">{q.questionText}</p>
                       <div className="space-y-1.5">
                         {q.options.map((opt) => {
@@ -176,7 +186,7 @@ export default function ResultsPage({ params }: { params: Promise<{ sessionId: s
                           const right = opt.key === q.correctAnswer
                           let style = 'border-gray-200 bg-white text-ink-soft'
                           if (right) style = 'border-emerald-300 bg-emerald-50 text-emerald-800'
-                          if (mine && !q.isCorrect) style = 'border-red-300 bg-red-50 text-red-800'
+                          if (mine && !q.isCorrect) style = 'border-amber-300 bg-amber-50 text-amber-800'
                           return (
                             <div key={opt.key} className={`flex items-center gap-2 rounded-xl border px-3 py-2 text-xs font-bold ${style}`}>
                               <span className="shrink-0 w-4 text-center">{opt.key}</span>
