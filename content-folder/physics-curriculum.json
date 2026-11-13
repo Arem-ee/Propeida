@@ -22,6 +22,48 @@
       "section": "SECTION A",
       "order": 3,
       "description": "Measuring length with metre rules, calipers and micrometers, position and Cartesian coordinates, frame of reference, distance vs displacement, bearings with compass and protractor, reading and drawing kinematics graphs."
+    },
+    {
+      "slug": "motion",
+      "name": "Motion",
+      "section": "SECTION A",
+      "order": 4,
+      "description": "Forces as the cause of motion: inertia, mass, contact and field forces, Newton’s laws, impulse and momentum, equations of motion, projectiles, circular motion and SHM."
+    },
+    {
+      "slug": "impulse-and-momentum",
+      "name": "Impulse and Momentum",
+      "section": "SECTION A",
+      "order": 5,
+      "description": "Momentum (p = mv), impulse (FΔt = Δp), force–time graphs, law of conservation of linear momentum; one-concept split from IBASS topic 3 (Motion, items a and IBASS objective xiii, xiv, xviii)."
+    },
+    {
+      "slug": "linear-motion-and-suvat",
+      "name": "Linear Motion and the Equations of Motion",
+      "section": "SECTION A",
+      "order": 6,
+      "description": "Speed, velocity and acceleration; graphs; the equations of uniformly accelerated motion; motion under gravity; instantaneous motion. Split from IBASS topic 3 (Motion, items f; IBASS objectives ii, vi–x)."
+    },
+    {
+      "slug": "projectile-motion",
+      "name": "Projectile Motion",
+      "section": "SECTION A",
+      "order": 7,
+      "description": "Horizontal and vertical axes; range, maximum height and time of flight from the ground and from a height; applications to rockets and missiles. Split from IBASS topic 3 (Motion, items g; IBASS objectives xi, xii)."
+    },
+    {
+      "slug": "circular-motion",
+      "name": "Circular Motion",
+      "section": "SECTION A",
+      "order": 8,
+      "description": "Angular displacement, angular velocity and angular acceleration; centripetal force; centrifugal force; applications in orbits, bends and centrifuges. Split from IBASS topic 3 (Motion, items h; IBASS objectives xix, xx)."
+    },
+    {
+      "slug": "simple-harmonic-motion",
+      "name": "Simple Harmonic Motion",
+      "section": "SECTION A",
+      "order": 9,
+      "description": "Definition and examples of SHM; period, frequency, amplitude; v and a; energy changes; forced vibrations and resonance with applications. Split from IBASS topic 3 (Motion, items i; IBASS objectives xxi–xxiv)."
     }
   ],
   "lessons": [
@@ -692,6 +734,1316 @@
               "Two curves meet → that is the time of meeting"
             ],
             "takeaway": "Graphs in physics are arithmetic wearing a diagram's clothes."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "motion",
+      "topic": "motion",
+      "title": "Forces and Newton's Laws",
+      "objective": "Identify types of motion, push/pull and contact/field forces, inertia, mass and weight, and apply Newton's three laws to worked problems; compare mass and weight; read force as the cause of motion.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Forces and Newton's Laws",
+            "paragraphs": [
+              "A lorry stalls at a zebra crossing and two boys push. Why does the lorry move only now — and why does it hurt less when they push gently? Newton's laws turn that everyday argument into three questions every physics question secretly asks."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Types of motion and force",
+            "paragraphs": [
+              "Motion comes in five shapes: translational (straight-line movement of a car or train), rotational (a spinning wheel), vibrational or oscillatory (a pendulum, a tuning fork), spin (a top, the Earth itself) and random (the zigzag of gas molecules — Brownian motion).",
+              "Force is that which changes a body's state of rest or motion, or its shape — a push or a pull. Contact forces act at touching points: friction, tension, normal reaction, air resistance. Field forces act at a distance: gravity, magnetic force, electric force."
+            ],
+            "bullets": [
+              "Translational → straight-line; rotational → turning; vibrational → back-and-forth",
+              "Contact: friction, tension, reaction, drag",
+              "Field: gravity, magnetism, electric force — act across empty space"
+            ],
+            "takeaway": "Force is the cause; the body's change is the effect — never the other way round.",
+            "check": {
+              "question": "Which of the following is NOT a contact force?",
+              "options": [
+                "friction",
+                "magnetic force",
+                "tension",
+                "normal reaction"
+              ],
+              "answer": 1,
+              "why": "Magnetic force is a field force — it acts across empty space with no contact."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Inertia, mass and Newton's first law",
+            "paragraphs": [
+              "Inertia is a body's tendency to resist changes in its state of rest or of uniform motion in a straight line. More mass, more inertia. Newton's first law: a body at rest stays at rest, and a body in motion moves at constant velocity, until a resultant external force acts on it.",
+              "Mass is the measure of inertia — a scalar, in kilograms, constant everywhere. Weight is the gravitational pull on that mass — a vector, W = mg, and it changes with g: a 60 kg person registers 600 N on Earth and about 100 N on the Moon."
+            ],
+            "bullets": [
+              "1st law: resisting change — both at rest and in motion",
+              "Mass (kg) = how much; weight (N) = pull caused by gravity",
+              "g ≈ 9.8 m/s² on Earth; Moon weight ≈ Earth weight ÷ 6"
+            ],
+            "takeaway": "Heavier means harder to move, stop, swerve — that is inertia in one line.",
+            "check": {
+              "question": "A moving stone keeps moving forward mainly because of its",
+              "options": [
+                "inertia",
+                "weight",
+                "friction with the air",
+                "applied force"
+              ],
+              "answer": 0,
+              "why": "Newton's first law: the stone continues in straight-line motion until an external force stops it."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Newton's second and third laws",
+            "paragraphs": [
+              "Newton's second law: the acceleration of a body is proportional to the resultant force on it, in the direction of that force, and inversely proportional to its mass — F = ma. Double the force, double the acceleration; double the mass, halve it.",
+              "The same law in momentum form is F = (mv − mu) ÷ t — the net force equals the rate of change of momentum. That is impulse; the next lesson builds on it.",
+              "Newton's third law: for every action there is an equal and opposite reaction. A swimmer pushes water backward; the water pushes the swimmer forward. A rocket expels gas downward; the gas lifts the rocket."
+            ],
+            "bullets": [
+              "F = ma — force in newtons, mass in kg, acceleration in m/s²",
+              "Two overriding questions: size of F and direction of F",
+              "3rd law pairs always act on two different bodies"
+            ],
+            "takeaway": "F = ma is the single most-used equation in the paper — name the mass first, then the net force.",
+            "check": {
+              "question": "A 1200 kg car accelerates at 2 m/s². The resultant force on it is",
+              "options": [
+                "600 N",
+                "1200 N",
+                "2400 N",
+                "4800 N"
+              ],
+              "answer": 2,
+              "why": "F = ma = 1200 × 2 = 2400 N, in the direction of the acceleration."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Almost every force question reduces to F = ma or W = mg. First find the mass, then the net force; direction carries the sign of a 2D problem."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A 5 kg trolley is pushed by a resultant force of 15 N on a frictionless surface. Find (a) its acceleration, (b) its velocity after 4 s, starting from rest.",
+            "steps": [
+              {
+                "operation": "Acceleration",
+                "reason": "F = ma → a = F ÷ m",
+                "result": "a = 15 ÷ 5 = 3 m/s²",
+                "predictPrompt": "Which quantity do you divide by mass here — force or weight?"
+              },
+              {
+                "operation": "Velocity after 4 s",
+                "reason": "v = u + at, with u = 0",
+                "result": "v = 0 + 3 × 4 = 12 m/s",
+                "predictPrompt": "Does the acceleration change during the 4 s?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A 2 kg mass at rest is pushed by a 10 N force for 3 s. Find its acceleration and its velocity after 3 s.",
+            "hints": [
+              "a = F ÷ m = 10 ÷ 2 = 5 m/s²",
+              "v = u + at with u = 0 → v = 5 × 3 = 15 m/s",
+              "p = mv = 2 × 15 = 30 kg·m/s — useful for the next lesson"
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "A harder worked example: two forces, one motion",
+            "problem": "Forces 30 N due east and 40 N due north act simultaneously on a 10 kg body. Find (a) the resultant force, (b) the acceleration of the body.",
+            "steps": [
+              {
+                "operation": "Resultant force",
+                "reason": "forces are perpendicular — use Pythagoras",
+                "result": "R = √(30² + 40²) = 50 N",
+                "predictPrompt": "Are these forces perpendicular? Check before reaching for Pythagoras."
+              },
+              {
+                "operation": "Acceleration",
+                "reason": "a = R ÷ m",
+                "result": "a = 50 ÷ 10 = 5 m/s² in the direction of R",
+                "predictPrompt": "In which direction is 'the direction of R' — north of east or east of north?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Newton in everyday stories",
+            "paragraphs": [
+              "Book stops suddenly. When a bus brakes hard, everything inside continues forward — you lurch, and passengers who stood without holding a rail may fall forward over seats. That is inertia refusing to drop from motion to rest with the bus. A seatbelt quietly supplies the external force that forces you to stop with the vehicle.",
+              "Starting the bus reverses the effect — the body stays behind while the bus moves forward; a passenger falls backward without a handhold. The unseen actor in both cases is not friction inside the bus but inertia outside your hand's reach.",
+              "Rowing and swimming run on the third law: you push water backward; it pushes you forward. A rocket works the same way — the engine expels gas at high speed downward, and the gas pushes the rocket upward. Everyday rockets follow the same rule; launches work in space because the gas itself is the reaction mass — no ground to push against."
+            ],
+            "bullets": [
+              "Sudden stop → lurch forward; sudden start → lurch backward",
+              "Rocket launch: gas down, rocket up — no launch pad needed",
+              "Third-law pair: two bodies, two forces, equal and opposite"
+            ],
+            "takeaway": "Read the story; identify inertia, mass, contact force or field force."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: mass, weight and g on different worlds",
+            "paragraphs": [
+              "Mass is amount of matter — its SI unit is the kilogram, measured by comparison on a beam balance, and it is the same everywhere: a 60 kg crate weighs 60 kg on a spring balance marked in kg-force on Earth or the Moon. Weight is the force with which gravity pulls that mass — newtons, measured by a spring balance. On Earth, g ≈ 9.8 m/s² (physics problems often round to 10). On the Moon, g ≈ 1.6 m/s², so the same crate registers about one-sixth of its Earth weight — one-seventh when quoted in kg-force, one-sixth in newtons; JAMB expects one-sixth.",
+              "Weight acts through the centre of gravity; for a uniform object it is the geometric centre. A spring balance stretches more in a faster-rising lift in free fall — apparent weight changes, true weight does not.",
+              "g falls from the equator toward the poles (equatorial bulge — Earth is wider there, so distance from the centre grows and g shrinks) and falls with altitude. A small variation JAMB asks sometimes: mass stays put; weight does not travel well."
+            ],
+            "bullets": [
+              "Mass: scalar, kg, anywhere. Weight: vector, N, varies with g",
+              "Moon: g ≈ 1.6 m/s² ≈ Earth weight ÷ 6",
+              "Beam balance compares masses; spring balance measures weight"
+            ],
+            "takeaway": "Mass is what you are made of; weight is how hard the planet pulls you."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: how JAMB sets questions on this topic",
+            "paragraphs": [
+              "The archetypes fall into four piles. (1) 'A resultant force of X acts on mass Y — find acceleration': pure F = ma. (2) Field vs contact identification: 'Which is NOT a contact force' — answers are always field forces. (3) Inertia puzzles: a coin on a card above a glass — flick the card and the coin falls into the glass — inertia, nothing else. (4) Impulse bridges: 'a force of 5 N for 2 s' asks you to either use F = ma or Ft = Δp — both lead to the same answer; JAMB accepts the line you choose.",
+              "Force-field confusion shows up as 'an object falls because of —': gravity. 'A soap bubble rises because of —': upthrust is not on the list; the answer is buoyancy only when the stem names a fluid. 'A magnet attracts the iron filings' — field. 'A crane lifts a load' — tension, a contact force delivered through the cable.",
+              "The net-force trap: 'the net force on the bus is zero, so it is stationary' — wrong; the bus can move at constant velocity. In football and car crashes, safety belts and airbags extend the stopping time, which reduces the average force for the same momentum change — directly off Ft = Δp."
+            ],
+            "bullets": [
+              "F = ma or Ft = Δp — pick whichever numbers the question gives",
+              "Field force = no contact needed; contact = touching the body",
+              "Airbags and cushions: longer t, smaller F — same Δp"
+            ],
+            "takeaway": "JAMB asks the same force story in four costumes — learn the costumes."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "impulse-and-momentum",
+      "topic": "impulse-and-momentum",
+      "title": "Impulse and Momentum",
+      "objective": "Apply momentum (p = mv), impulse (FΔt = Δp), force–time graphs and the law of conservation of linear momentum to collisions and explosions; distinguish momentum from kinetic energy.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Impulse and Momentum",
+            "paragraphs": [
+              "A barefoot kick hurts; the same kick with a football boot hardly registers. The force is identical; the contact time is not, and that is momentum — the quantity that cares how hard and for how long something pushes."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Momentum and impulse",
+            "paragraphs": [
+              "Momentum p = mv; unit kg·m/s. A 1500 kg car at 20 m/s carries 30,000 kg·m/s; a 0.05 kg ball at 30 m/s carries 1.5.",
+              "Impulse is force × time: I = FΔt = Δp = mv − mu; unit N·s, same as kg·m/s. A longer or harder push delivers more impulse.",
+              "F = ma and FΔt = Δp are the same law seen two ways. The Δt version handles any force profile — constant, falling or spiked; ma only handles a constant net force."
+            ],
+            "bullets": [
+              "p = mv — scalar or vector? A vector, same direction as velocity",
+              "Impulse I = FΔt = Δp — unit N·s, same unit as momentum",
+              "Area depth: the area under a force–time graph = impulse"
+            ],
+            "takeaway": "Momentum is how much oomph a body carries; impulse is how quickly it gets there.",
+            "check": {
+              "question": "A 0.4 kg bat hits a stationary ball and gives it a velocity of 20 m/s. The impulse is",
+              "options": [
+                "0.8 N·s",
+                "8 N·s",
+                "80 N·s",
+                "20 N·s"
+              ],
+              "answer": 1,
+              "why": "I = Δp = m v − m u = 0.4 × 20 − 0 = 8 N·s."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Force–time graphs",
+            "paragraphs": [
+              "Plot force on the y-axis and time on the x-axis and the shaded area between the curve and the time axis equals the impulse delivered — which equals the momentum change.",
+              "For simple shapes: a rectangle gives F × t; a triangle gives ½ × base × height — e.g., a 4 s burst peaking at 10 N delivers ½ × 4 × 10 = 20 N·s of impulse (20 kg·m/s of momentum, from rest).",
+              "For a trapezium, area = ½ (a + b) × height. JAMB reads them both ways: 'estimate the impulse from the graph' (compute the area) and 'the force–time graph shows … find the momentum change'."
+            ],
+            "bullets": [
+              "Rectangle: F × t. Triangle: ½ × b × h. Trapezium: ½(a+b)h",
+              "Negative impulse? Check whether the force dips below the axis",
+              "Area under F–t graph ⇔ momentum change"
+            ],
+            "takeaway": "Area is the legal shorthand — mark the y-intercept, then sweep left to right.",
+            "check": {
+              "question": "A force–time graph shows a triangle with base 4 s and peak 10 N. The momentum gained by a body starting from rest is",
+              "options": [
+                "40 kg·m/s",
+                "20 kg·m/s",
+                "10 kg·m/s",
+                "5 kg·m/s"
+              ],
+              "answer": 1,
+              "why": "Impulse = area = ½ × 4 × 10 = 20 kg·m/s; by FΔt = Δp, the body gains 20 kg·m/s of momentum."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Conservation of momentum",
+            "paragraphs": [
+              "When no external force acts, total momentum is conserved: p_before = p_after. For two bodies, m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂, along any one axis.",
+              "Uses: cannon recoil (cannon backward, shell forward — total momentum still zero), explosion separation (two pieces fly apart — total stays zero), a car picking up a passenger (the shove is internal; total is unchanged), and inelastic collisions where the two bodies stick together.",
+              "Kinetic energy is not conserved in most collisions — the lost energy becomes heat, sound and deformation. Momentum alone tracks. Coefficient of restitution is not needed for JAMB; the diagram + 'stuck together' is the standard stem."
+            ],
+            "bullets": [
+              "m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂ — always along one axis",
+              "Sticky collisions: final masses merge, single v",
+              "Explosion: start from rest → two pieces fly apart, total p = 0"
+            ],
+            "takeaway": "Sum of momentum before = sum after — the only conservation JAMB needs on forces.",
+            "check": {
+              "question": "A 1000 kg car moving at 4 m/s collides with a stationary 2000 kg car and they move together. Their common velocity is",
+              "options": [
+                "4.0 m/s",
+                "2.0 m/s",
+                "1.33 m/s",
+                "3.0 m/s"
+              ],
+              "answer": 2,
+              "why": "v = (1000 × 4 + 2000 × 0) ÷ (1000 + 2000) = 4000 ÷ 3000 ≈ 1.33 m/s."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "JAMB never asks for restitution. Almost every collision stem is one line of momentum: sum before = sum after — draw the trolley diagram first."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A 0.05 kg ball strikes a wall at 30 m/s and rebounds at 30 m/s. Find the impulse.",
+            "steps": [
+              {
+                "operation": "Set up the equation",
+                "reason": "impulse = change in momentum; rebound reverses sign",
+                "result": "I = m v − m u = 0.05 × 30 − 0.05 × (−30)",
+                "predictPrompt": "Which way does the ball's velocity change sign? Check before subtracting."
+              },
+              {
+                "operation": "Compute",
+                "reason": "opposite signs add",
+                "result": "I = 1.5 + 1.5 = 3.0 N·s, directed away from the wall",
+                "predictPrompt": "Would the impulse differ if the ball rebounded at only 10 m/s?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A 0.5 kg ball thrown at 10 m/s hits a wall and rebounds at 6 m/s. Find the impulse.",
+            "hints": [
+              "rebound means the velocity changes sign — u = +10, v = −6",
+              "I = m(v − u) = 0.5 × (−6 − 10) = −8 N·s",
+              "magnitude 8 N·s; direction away from the wall"
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "A harder worked example: the embedded bullet",
+            "problem": "A 0.02 kg bullet travelling at 300 m/s is fired into a wooden block of mass 2 kg resting on a frictionless surface. The bullet embeds itself. Find the velocity of the block immediately after impact.",
+            "steps": [
+              {
+                "operation": "Total momentum before impact",
+                "reason": "block initially at rest",
+                "result": "p_before = 0.02 × 300 + 2 × 0 = 6 kg·m/s",
+                "predictPrompt": "Is the block moving before the bullet strikes?"
+              },
+              {
+                "operation": "Total momentum after impact",
+                "reason": "bullet embedded: block and bullet move as one mass",
+                "result": "p_after = (0.02 + 2) × V = 2.02 V",
+                "predictPrompt": "Do the masses merge in a sticky collision?"
+              },
+              {
+                "operation": "Apply conservation",
+                "reason": "p_before = p_after",
+                "result": "V = 6 ÷ 2.02 ≈ 2.97 m/s in the bullet's direction",
+                "predictPrompt": "Why is the answer much smaller than 300 m/s?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: impulse in crashes, cushions and sport",
+            "paragraphs": [
+              "The tennis follow-through and the cricket soft-catch tell the same physics: extend Δt, and a given Δp needs less force. A ball moving at 20 m/s is caught in 0.05 s or in 0.01 s: for 0.2 kg, Δp = 4 kg·m/s; force = Δp/Δt = 80 N in the soft catch, 400 N in the quick one. Airbags, cushions, bending knees — all of these extend Δt to shrink F.",
+              "Sports equipment is designed around impulse. A cricket bat is hit, not pressed — contact Δt is hundredths of a second, which concentrates force at the sweet spot. Contact Δt is a feature of the ball-and-bat combination; the same Δp with a longer Δt softens the peak force without changing the total momentum transferred.",
+              "A trampoline and a pillow do not deliver less momentum; they deliver the same momentum over a longer Δt — the total momentum exchanged is identical to the rigid case; only the peak force differs. The safest head rests in a helmet: the shell extends your head's Δt by crushing before the skull does."
+            ],
+            "bullets": [
+              "F Δt = Δp — double the time, halve the force",
+              "Airbags, helmets, knees bending: longer Δt, smaller F",
+              "Same momentum delivered in both cases — only the peak differs"
+            ],
+            "takeaway": "Impulse protects whatever extends the contact time."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: reading the force–time graph",
+            "paragraphs": [
+              "Typical JAMB graph questions: the force rises linearly from 0 to a peak (straight-line ramp) and collapses back to 0 — a symmetric triangle. Area = ½ b × h. Another variant shows a force F₁ rising then an opposing constant force F₂ — shaded area above versus below the axis: take the positive area minus the negative.",
+              "The staircase graph: force steps at 2 N, 4 N, 6 N for sequential 1 s intervals — momentum change = Σ of rectangle areas = sum, not product. A pulse of 10 N lasting 0.1 s gives 1 N·s — small numbers, but the impulse is not small in a hammer blow.",
+              "Trick variants: the y-axis is labelled in N, x-axis in ms — multiply 10⁻³ into the area; the question asks 'momentum change' — that is exactly impulse in disguise. Or it asks for 'velocity after' — divide Δp by the mass first; JAMB never needs a second physical principle past Ft = Δp for these."
+            ],
+            "bullets": [
+              "Symmetric ramp up/down → triangle; off-centre → trapezium",
+              "Do negatives? subtract areas above/below the axis",
+              "Watch the units on the x-axis: ms must become s"
+            ],
+            "takeaway": "Sweep the graph; area = impulse = Δp."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: how JAMB sets questions on collisions",
+            "paragraphs": [
+              "Archetype one: two trolley cars stick together — straightforward mass-weight, one line. Archetype two: the gun recoil — total momentum zero before, ±v after; the gun's recoil speed = mv ÷ M where m is bullet, M is gun (mass ratio always a trick — gun heavier by factor 100, recoil 100 times slower). Archetype three: 'a person of mass X jumps from a boat' — boat shoots away opposite; sign it carefully.",
+              "'Which is conserved?' stems ask for momentum versus kinetic energy. Answer momentum; KE only in elastic collisions — JAMB lists this distinction deliberately. 'How much energy is lost?' answers a subtraction of initial minus final KE, not a restitution reflex.",
+              "The relative-velocity bridge wins the long problems: before impact the relative speed of approach is u₁ − u₂; the relative speed of separation is v₁ − v₂ — the two are related to elastic bands and elastic 'coefficient 1' case the syllabus skips; but two bodies attracting-then-separating reciprocally is simple addition on a signed axis count. Track signs carefully: velocities in the opposite direction carry opposite signs; momentum survives the signs honestly."
+            ],
+            "bullets": [
+              "Gun recoil: v_gun = m v / M — one-line momentum",
+              "Conserved: momentum, not KE. KE survives only in elastic hits",
+              "Sign with rigour: opposite directions → opposite signs"
+            ],
+            "takeaway": "Before = after, in momentum; expect one-line arithmetic in JAMB."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "linear-motion-and-suvat",
+      "topic": "linear-motion-and-suvat",
+      "title": "Linear Motion and the Equations of Motion",
+      "objective": "Interpret distance–time, displacement–time and velocity–time graphs; use v = u + at, s = ut + ½at², v² = u² + 2as, s = ½(u + v)t to solve motion problems, including motion under gravity and instantaneous motion.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Linear Motion and the Equations of Motion",
+            "paragraphs": [
+              "A Lagos bus pulls away from a junction; its speed rises every second. That rising is acceleration — and its graph is the arithmetic the exam wants."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Speed, velocity, acceleration",
+            "paragraphs": [
+              "Speed is distance covered per unit time — a scalar, in m/s. Velocity is displacement per unit time — a vector. Acceleration is the rate of change of velocity — a vector: a = (v − u) ÷ t, in m/s².",
+              "Average vs instantaneous: the average velocity over a journey is total displacement ÷ total time; the instantaneous velocity at a moment is the gradient of a tangent to the displacement–time curve at that point. JAMB treats 'tangent to a curve' as its standard instantaneous-velocity step.",
+              "Uniform acceleration is constant — the net force is constant. If a question mentions changing acceleration, reaching the graph first is safer than reaching for suvat."
+            ],
+            "bullets": [
+              "speed = d ÷ t · velocity = Δx ÷ Δt · accel = Δv ÷ Δt",
+              "instantaneous = tangent gradient on x–t/s–t curve",
+              "suvat: only when acceleration is constant"
+            ],
+            "takeaway": "Speed, velocity, acceleration — read the slope first, decide later.",
+            "check": {
+              "question": "The slope of a velocity–time graph gives the",
+              "options": [
+                "distance",
+                "acceleration",
+                "momentum",
+                "force"
+              ],
+              "answer": 1,
+              "why": "Slope = change in velocity ÷ change in time = acceleration."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The equations of uniformly accelerated motion",
+            "paragraphs": [
+              "Four equations cover everything: v = u + at; s = ut + ½at²; v² = u² + 2as; s = ½(u + v)t. Derivation by the v–t line: gradient gives a; the trapezium gives s; substitute v = u + at and all four fall out.",
+              "Three of {u, v, a, s, t} known picks the equation with exactly one unknown. Units must match: m, m/s and m/s².",
+              "Time law: 'at what instant?' implies v = u + at. Displacement missing: v² = u² + 2as. Time missing: s = ½(u+v)t. Write what you know in a box; circle what you need."
+            ],
+            "bullets": [
+              "v = u + at (no displacement) · s = ut + ½at² (no final velocity)",
+              "v² = u² + 2as (no time) · s = ½(u + v)t (no acceleration)",
+              "Three knowns ⇒ one missing ⇒ exactly one usable equation"
+            ],
+            "takeaway": "Box the knowns; the equation selects itself.",
+            "check": {
+              "question": "A body starts from rest and accelerates uniformly at 2 m/s². The distance covered in 5 s is",
+              "options": [
+                "10 m",
+                "25 m",
+                "50 m",
+                "12.5 m"
+              ],
+              "answer": 1,
+              "why": "s = ½at² = ½ × 2 × 25 = 25 m (u = 0)."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Motion under gravity and graphs",
+            "paragraphs": [
+              "A falling body is a special uniformly accelerated body — a = g (≈ 9.8 or 10 m/s²), always downward. A stone thrown upward decelerates at g until v = 0 at the top, then accelerates back.",
+              "Dropped body: v = gt, s = ½gt², time to fall height h: t = √(2h/g). Upward throw at speed u: max height H = u²/2g, time to top t = u/g, time of flight T = 2u/g (back to launch level).",
+              "A distance–time graph with rising slope means increasing speed; a curve bending upward means the body accelerates; a curve flattening means it decelerates. Area under the v–t graph = distance covered — always."
+            ],
+            "bullets": [
+              "g = 9.8 m/s² (or 10 in rough problems) — always downward",
+              "Top of the throw: v = 0, but acceleration = g downward",
+              "d–t curve concave ⇒ accelerating; convex ⇒ decelerating"
+            ],
+            "takeaway": "Gravity is JAMB's favourite acceleration — u is rarely zero.",
+            "check": {
+              "question": "A stone is thrown vertically upward. At the highest point, its velocity is",
+              "options": [
+                "u",
+                "g",
+                "zero",
+                "2u"
+              ],
+              "answer": 2,
+              "why": "Kinetic energy has all become potential — the instantaneous speed is zero, though the acceleration below is still g downward."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Pick one positive direction before you touch a formula — up or forward. g is +9.8 when down is positive, −9.8 otherwise; every sign in suvat depends on the same choice."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A car accelerates uniformly from 15 m/s to 35 m/s in 5 s. Find (a) the acceleration, (b) the distance covered in those 5 s.",
+            "steps": [
+              {
+                "operation": "Acceleration",
+                "reason": "a = (v − u) ÷ t",
+                "result": "a = (35 − 15) ÷ 5 = 4 m/s²",
+                "predictPrompt": "Which suvat equation holds when time is known but distance is not?"
+              },
+              {
+                "operation": "Distance",
+                "reason": "average velocity × time",
+                "result": "s = ½(15 + 35) × 5 = 125 m",
+                "predictPrompt": "Between two speeds, is average speed the safe route here?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A body dropped from rest falls freely. Find (a) its velocity after 3 s, (b) the distance covered in the first 3 s. Take g = 10 m/s².",
+            "hints": [
+              "a = g = 10 m/s², u = 0",
+              "v = u + gt = 0 + 10 × 3 = 30 m/s",
+              "s = ½gt² = ½ × 10 × 9 = 45 m"
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "A harder worked example: up and down",
+            "problem": "A stone is thrown upward at 20 m/s. Find (a) max height, (b) time to top, (c) total flight time. Take g = 10 m/s².",
+            "steps": [
+              {
+                "operation": "Maximum height",
+                "reason": "at the top v = 0; v² = u² − 2gH",
+                "result": "H = u² ÷ 2g = 400 ÷ 20 = 20 m",
+                "predictPrompt": "Which v do you substitute at the top of the throw?"
+              },
+              {
+                "operation": "Time to the highest point",
+                "reason": "v = u − gt; v = 0 → t = u ÷ g",
+                "result": "t = 20 ÷ 10 = 2 s",
+                "predictPrompt": "Does the stone stop accelerating at the top for an instant, or does g keep working?"
+              },
+              {
+                "operation": "Total time of flight",
+                "reason": "symmetric: ascent = descent",
+                "result": "T = 2 × 2 = 4 s",
+                "predictPrompt": "If the stone is caught at a lower point, will T be bigger or smaller?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: deriving the equations from graphs",
+            "paragraphs": [
+              "Take the v–t graph of a uniformly accelerated body: a straight line from (0, u) to (t, v). The gradient of the line is (v − u) ÷ t, and that is definitionally the acceleration a. Rearranged: v = u + at.",
+              "The area under the line is a trapezium — ½ (u + v) × t — and the area in a velocity–time graph is displacement, so s = ½(u + v)t. Substitute v = u + at: s = ½(u + u + at)t = ut + ½at². Eliminate t instead of s: v² = u² + 2as.",
+              "Every one of the four equations is just bookkeeping on the same straight line. JAMB will not ask you to prove them in the exam; it will ask you to pick the right one. The four-known-data rule keeps the choice honest: with u, v, a, s, t in play, three knowns pick the equation with exactly one unknown."
+            ],
+            "bullets": [
+              "v-t line → gradient = a, area = s",
+              "Know 3 of {u, v, a, s, t} → the equation writes itself",
+              "Eliminate the missing variable, not the hard one"
+            ],
+            "takeaway": "Graphs are the engine; equations are the gearbox."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: gravity in both directions",
+            "paragraphs": [
+              "Upward: u positive; stone leaving the hand at 20 m/s, rock decelerating at 10 m/s each second — 10 m/s at 1 s, 0 at 2 s. The 'stopping' is velocity only; acceleration never ceases and never changes sign. At the top, kinetic energy equals zero and potential energy peaks; total energy is unchanged ignoring drag.",
+              "Downward: freely falling or released, u ≥ 0; velocity grows by 10 m/s every second — 10, 20, 30 — and distance fallen compounds as 5, 15, 30, 45 m in the 1st, 2nd, 3rd and 4th seconds. Because s ∝ t², each successive second adds more distance than the last.",
+              "Escape-direction rule: a stone thrown upward released at 35 m/s and another released from rest that has fallen freely for 1 s both have speed 35−10*0=35 vs 10 — a symmetric place on the same parabola of motion, just opposite directions. Trajectories in one dimension never cross themselves; velocity sign flips, path does not."
+            ],
+            "bullets": [
+              "at the top: v = 0; a = g always (there is no zero-acceleration instant)",
+              "distance each second grows: 5, 15, 25, 35 m drops in 1..4 s",
+              "up-flight time = down-flight time back to the same level"
+            ],
+            "takeaway": "Gravity never rests — not even at the peak."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: how JAMB sets graph and suvat questions",
+            "paragraphs": [
+              "Archetypes: (1) read off u, v and t from a tabulated graph and compute a = Δv/Δt; (2) shade the area on the v–t graph and compute distance; (3) given two moments, decide whether the body accelerates or decelerates from the gradient; (4) trap stems say 'falls freely' — u = 0, a = g, always; (5) 'thrown vertically downward at 20 m/s' — u = 20, a = g, still downward; (6) 'reaches the point in 2 s but is caught 2 m downwind of release' — horizontal datum misleading — read signs, not the story.",
+              "Curved d–t graphs: 'instantaneous velocity' asks for the gradient of the tangent at that point — draw it, read two clear points off it. A d–t parabola indicates uniformly increasing speed — a = constant, v growing linearly. The inverse: v grows linearly ⇒ d grows as t².",
+              "Rare exceptions JAMB tolerates: motion through a hole or cliff — 'dropped from rest' then 'hits the water'; chain two phases — free-fall then decelerate? No — a body under gravity cannot decelerate on its own unless air pushes back; any mention of 'constant velocity fall' implies terminal velocity and not JAMB-level revision of this topic — but the questions about air resistance flag it as 'not JAMB material' — skip it."
+            ],
+            "bullets": [
+              "'Falls freely' = u 0 + a g=10. 'Vertically downward at u' = u>0 + a g",
+              "instantaneous velocity = tangent gradient, two far points on it",
+              "linear v ⇒ quadratic x; curved x ⇒ non-constant v"
+            ],
+            "takeaway": "The graph is the arithmetic — learn the readout before the formula."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "projectile-motion",
+      "topic": "projectile-motion",
+      "title": "Projectile Motion",
+      "objective": "Separate horizontal and vertical motion, derive expressions for range, maximum height and time of flight from the ground and from a height; solve worked projectile problems including rocket and missile applications.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Projectile Motion",
+            "paragraphs": [
+              "A striker chips the ball and it arcs into the net. Two motions live in that arc — a steady sideways glide, and the same rise-and-fall as a stone thrown up."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Splitting the motion into two axes",
+            "paragraphs": [
+              "A launched projectile splits into horizontal motion (no force, no acceleration — velocity u cos θ, constant through the whole flight) and vertical motion (constant acceleration, g acting downward).",
+              "u cos θ = uₓ, u sin θ = u_y. At all times: x = u cos θ · t, y = u sin θ · t − ½gt². The curve, when time is eliminated, is a parabola.",
+              "Upward or downward launched — the same split holds. The sign of u_y depends on the angle above or below the horizontal; r_components always come in this pair."
+            ],
+            "bullets": [
+              "horizontal: aₓ = 0, uₓ = u cos θ constant",
+              "vertical: a_y = g (down), u_y = u sin θ",
+              "x = uₓt · y = u_y t − ½gt² — the parabola itself"
+            ],
+            "takeaway": "Horizontal keeps; vertical performs — never the same account.",
+            "check": {
+              "question": "In projectile motion, ignoring air resistance, the horizontal velocity of the projectile is",
+              "options": [
+                "zero",
+                "constant",
+                "increasing steadily",
+                "decreasing steadily"
+              ],
+              "answer": 1,
+              "why": "No horizontal force acts, so horizontal velocity never changes."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Range, maximum height and time of flight",
+            "paragraphs": [
+              "Up and down motion takes the same time both ways. Time to peak t = u sin θ ÷ g; total time of flight T = 2u sin θ ÷ g.",
+              "Maximum height H = u² sin² θ ÷ 2g. Hold that, or derive from v² = u² − 2gH at the peak.",
+              "Range from launch to landing at the same level: R = u² sin 2θ ÷ g. Its biggest value occurs at 45°, where sin 90° = 1. R at θ and at (90° − θ) are equal in range — e.g., 30° and 60°."
+            ],
+            "bullets": [
+              "T = 2usinθ ÷ g · H = u²sin²θ ÷ 2g · R = u²sin2θ ÷ g",
+              "Largest range at 45°",
+              "θ = 30° and θ = 60° fly the same distance"
+            ],
+            "takeaway": "T, H and R are all one memorised trio — the same vertical motion, rotated three ways.",
+            "check": {
+              "question": "The maximum range of a projectile occurs at a launch angle of",
+              "options": [
+                "30°",
+                "45°",
+                "60°",
+                "90°"
+              ],
+              "answer": 1,
+              "why": "sin 2θ is greatest when 2θ = 90°, i.e., θ = 45°."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "From a height above the ground",
+            "paragraphs": [
+              "From a cliff, y drops to the foot — replace the landing level with −h. The fall time becomes √(2h ÷ g) (ascent time adds only at steep angles).",
+              "Horizontal launch from height h: t = √(2h ÷ g); range = u × √(2h ÷ g). No u component of u_y exists, so the object is simply in free fall for u × t metres sideways.",
+              "Applications: missiles after fuel cutoff, football throw-ins, discus and shot put — launched high on purpose for a longer fall and further flight."
+            ],
+            "bullets": [
+              "horizontal launch: t = √(2h ÷ g), R = u × t",
+              "the equation changes, not the physics — only the Δy",
+              "lift off high ⇒ longer fall time ⇒ further range"
+            ],
+            "takeaway": "The formula book is identical; only the final Δy is different.",
+            "check": {
+              "question": "A stone is thrown horizontally at 10 m/s from a cliff 45 m high. Take g = 10 m/s². It hits the ground in",
+              "options": [
+                "9 s",
+                "4.5 s",
+                "3 s",
+                "1.5 s"
+              ],
+              "answer": 2,
+              "why": "t = √(2h ÷ g) = √(2 × 45 ÷ 10) = √9 = 3 s."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Horizontal and vertical motions are strangers to each other; only the clock is shared. Do the two problems separately, then add what is asked."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A ball is kicked at 20 m/s at 30° to the horizontal. Find (a) the time of flight, (b) the maximum height, (c) the range. Take g = 10 m/s².",
+            "steps": [
+              {
+                "operation": "Time of flight",
+                "reason": "vertical component u sin 30° = 10 m/s; T = 2u_y ÷ g",
+                "result": "T = 2 × 10 ÷ 10 = 2 s",
+                "predictPrompt": "Is the horizontal component involved in the flight time?"
+              },
+              {
+                "operation": "Maximum height",
+                "reason": "H = u² sin²θ ÷ 2g",
+                "result": "H = 100 ÷ 20 = 5 m",
+                "predictPrompt": "What vertical speed does the ball have at the very top?"
+              },
+              {
+                "operation": "Range",
+                "reason": "R = u² sin 2θ ÷ g, sin 60° = 0.866",
+                "result": "R = 400 × 0.866 ÷ 10 ≈ 34.6 m",
+                "predictPrompt": "sin 2θ for θ = 30°: is that sin 30° or sin 60°?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A gun fires a stone horizontally with a velocity of 25 m/s from a cliff 80 m high. Find (a) the time to hit the ground, (b) the distance from the foot of the cliff where it lands. Take g = 10 m/s².",
+            "hints": [
+              "u_y = 0 — pure free fall",
+              "t = √(2h ÷ g) = √(2 × 80 ÷ 10) = 4 s",
+              "R = u × t = 25 × 4 = 100 m"
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "A harder worked example: full triangle at 60°",
+            "problem": "A stone is launched at 40 m/s at 60° above the horizontal. Find (a) time of flight, (b) maximum height, (c) range. Take g = 10 m/s², sin 60° = 0.866, cos 60° = 0.5.",
+            "steps": [
+              {
+                "operation": "Vertical component and time of flight",
+                "reason": "u_y = 40 × 0.866 = 34.64 m/s; T = 2u_y ÷ g",
+                "result": "T = 2 × 34.64 ÷ 10 ≈ 6.93 s",
+                "predictPrompt": "If the launch angle doubled from 30° to 60°, what happens to T?"
+              },
+              {
+                "operation": "Maximum height",
+                "reason": "H = u² sin² θ ÷ 2g = u_y² ÷ 2g",
+                "result": "H = 34.64² ÷ 20 ≈ 60 m",
+                "predictPrompt": "Which vertical velocity survives the climb — the launch one or the peak one?"
+              },
+              {
+                "operation": "Range",
+                "reason": "R = u² sin 2θ ÷ g, sin 120° = 0.866",
+                "result": "R = 1600 × 0.866 ÷ 10 ≈ 138.6 m",
+                "predictPrompt": "At 30° and 60°, would the ranges match?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: the projectile in one master sketch",
+            "paragraphs": [
+              "Draw the launch velocity and split it. Horizontal side is a flat line — the projectile's x-axis, unchanged all flight. Vertical side rises, peaks at u_y = 0, and descends. Mirror image on both sides of the peak — the time up equals the time down if the launch and landing levels are the same.",
+              "Eliminating t between the two: y = x tan θ − (g ÷ 2u² cos² θ) x². That is the equation of the trajectory — a quadratic; at y = 0 one recovers the range; at the vertex one recovers the maximum height. JAMB rarely demands you recite it but understanding it pays off when 'angle for maximum range' appears.",
+              "45 degrees: sin 2θ max at θ = 45°; ranges from any of the 30°/60° pairs come out identical; range at 80° is far shorter — sin 160° = sin 20° small — which is why highlob lobbing rarely wins matches except in desperate situations."
+            ],
+            "bullets": [
+              "throw split → flat horizontal line + symmetric arc",
+              "y = x tanθ − (g ÷ 2u² cos²θ) x² is the trajectory",
+              "45° wins the range; 30° and 60° share it"
+            ],
+            "takeaway": "The parabola is the same shape whether launched at 45°, 60° or 80°."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: launches from above the ground",
+            "paragraphs": [
+              "Set the ground as y = 0; the launch point is now at y = h. Vertical equation: h = u_y t − ½gt² with opposite signs for downward launches; solve the quadratic and pick the positive root. For shallow angles the ascending half barely registers, and the whole flight is essentially a delayed fall.",
+              "Best mental shortcut: horizontal launch with speed u from height h — fall time t = √(2h/g), independent of u. That independence is a classic JAMB probe: 'a stone dropped and a stone projected horizontally land at the same instant' — both fall the same height, so both arrive together.",
+              "For angled launches from a height, drop-height + up-travel stack — the peak comes higher than the launch, and the extra fall distance is (h + H). Applys the same v² = u² − 2as; ranges grow. The sign of u_y makes the only difference from the flat-ground case. If the launch is below the level — a hole or dockside shot — total fall distance is (h − H_if_ascending_finishes_above_zero…) — subtract; don't chase the angle for small h."
+            ],
+            "bullets": [
+              "horizontal launch: t = √(2h ÷ g) irrespective of u",
+              "from above ground: stack H onto h, then y = h + … → solve",
+              "dropped and horizontally projected hit together — same fall h"
+            ],
+            "takeaway": "Height changes the numbers, never the bookkeeping."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: how JAMB sets projectile questions",
+            "paragraphs": [
+              "The archetypes: (1) given u, θ: find T, H or R, or the reverse; (2) 'the same range at 30°' — deduce sin 60°; (3) 'angle for maximum range' — 45°; (4) 'the horizontal and vertical components at impact' — horizontal stays u cos θ; vertical = u sin θ − gT; (5) 'the resultant velocity at impact' — square root of the squares of the two; (6) 'at what instant does the projectile have zero vertical velocity' — t = u sin θ ÷ g, always, no trick.",
+              "Rocket flight: powered rocket phase is not projectile motion — thrust dominates; the phase after fuel runs out matches it exactly. Missiles and projectiles: same as the ballistic arc after cutoff. A 'missile fired at 60°' exam stem asks exactly the u, θ, T, H, R block — not thrust calculations; rockets are a story dressing, not a new physics model.",
+              "Common wrong answer JAMB plants: 'the horizontal velocity at the highest point is zero.' NO — the projectile never loses horizontal velocity; only the vertical stops. The second plant: 'the acceleration differs between the up phase and the down phase' — no: g is one sign, never reversed. The third plant: 'the speed at impact is less than the speed at launch' — no: at the same level, energy conservation mikes the two speeds identical (neglecting air resistance)."
+            ],
+            "bullets": [
+              "horizontal at the peak: NOT zero · g: same up and down",
+              "impacts at the same level: launch speed = impact speed",
+              "rockets: thrust phase — not projectile; fuel out = projectile"
+            ],
+            "takeaway": "The whole topic is one diagram with three formulas."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "circular-motion",
+      "topic": "circular-motion",
+      "title": "Circular Motion",
+      "objective": "Use radians, angular velocity and angular acceleration; apply centripetal force F = mv²/r = mω²r; distinguish centripetal from centrifugal force and solve circular-motion problems in strings, satellite orbits and bends.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Circular Motion",
+            "paragraphs": [
+              "A car whips round a corner; the passengers lean outward. A long stone on a string loops round overhead. Both are the same mathematics — the mathematics of angular motion, where every second the body turns through an angle rather than stepping forward."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Angular displacement and angular speed",
+            "paragraphs": [
+              "Angles in radians: a complete circle is 2π radians. An arc length s subtending at the centre: s = rθ. For circular motion, θ (radians) = angle turned, measured from a reference radius.",
+              "Angular velocity ω (omega) is the rate of turning: ω = θ ÷ t. One complete revolution in T seconds ⇒ ω = 2π ÷ T = 2πf. Its unit is the radian per second (rad/s). Angular acceleration α is the rate of change of ω: α = Δω ÷ Δt (rad/s²)."
+            ],
+            "bullets": [
+              "1 revolution = 2π rad; rad is dimensionless, label it anyway",
+              "ω = θ ÷ t = 2πf = 2π ÷ T (rad/s)",
+              "linear and angular link: v = rω, a = rα"
+            ],
+            "takeaway": "Think in revolutions first; multiply by 2π only in the last line.",
+            "check": {
+              "question": "A wheel makes 60 revolutions per minute. Its angular speed in rad/s is",
+              "options": [
+                "60 rad/s",
+                "π rad/s",
+                "2π rad/s",
+                "360 rad/s"
+              ],
+              "answer": 2,
+              "why": "60 rev/min = 1 rev/s = 2π rad each second."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Centripetal force",
+            "paragraphs": [
+              "Anything in uniform circular motion is accelerating toward the centre — acceleration a = v² ÷ r = ω²r, always pointed inward along the radius. The force supplying it is the centripetal force: F = mv² ÷ r = mω²r.",
+              "Friction supplies it on a dry bend; tension on a string rides a stone overhead; gravity keeps a satellite gripped to its orbit. Remove the inward force and the body flies off along a tangent — exactly the way a stone leaves the string when the string snaps."
+            ],
+            "bullets": [
+              "F = mv² ÷ r = mω²r — toward the centre, never outward",
+              "providers: friction, tension, gravity, spring, magnetic",
+              "String snaps ⇒ object departs along a tangent, not radially"
+            ],
+            "takeaway": "Inward force or the body leaves along a tangent — radius guides its run.",
+            "check": {
+              "question": "A 1000 kg car moves at 10 m/s on a level curve of radius 50 m. The centripetal force on it is",
+              "options": [
+                "200 N",
+                "500 N",
+                "2000 N",
+                "10000 N"
+              ],
+              "answer": 2,
+              "why": "F = mv² ÷ r = 1000 × 100 ÷ 50 = 2000 N."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Centripetal versus centrifugal — and applications",
+            "paragraphs": [
+              "Centripetal force is real: the inward pull. Centrifugal force is the 'outward' pull you feel inside a rotating frame — a pseudo-force that only recipes inside a body sharing that frame's rotation; balance is still provided by the real friction or tension.",
+              "Applications: a satellite holds an orbit because gravity acts as its centripetal force; a car slides on a wet bend when friction alone cannot supply the required inward force; washing machine spinners use the small leftover outward way to fling water through holes; centrifuges — blood, milk, air — speed up separation.",
+              "JAMB loves magnitude comparison: a heavier body needs a proportionally bigger inward force at the same speed and radius; a longer radius at the same speed needs a smaller inward force."
+            ],
+            "bullets": [
+              "centrifugal is the apparent outward force inside rotating frames",
+              "all satellites: gravity = centripetal force",
+              "F ∝ m, F ∝ v², F ∝ 1/r — measure direction always inward"
+            ],
+            "takeaway": "Centripetal is the real keeper; centrifugal is the echo inside the spinning car.",
+            "check": {
+              "question": "An object in uniform circular motion has a velocity that is directed",
+              "options": [
+                "toward the centre",
+                "perpendicular to the radius, along the tangent",
+                "away from the centre",
+                "backward into the circle"
+              ],
+              "answer": 1,
+              "why": "Velocity is along the tangent; it is acceleration and force that point toward the centre."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "JAMB asks for centripetal forces far more than centrifugal ones. Every problem lists ω, v, or T — pick v = 2πr ÷ T first, then F = mv² ÷ r."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A 1 × 10²⁴ kg planet moves in a circle of radius 1 × 10¹¹ m at 2 × 10⁴ m/s. Find the centripetal force acting on it.",
+            "steps": [
+              {
+                "operation": "Write the formula",
+                "reason": "F = mv² ÷ r",
+                "result": "F = (1 × 10²⁴ × (2 × 10⁴)²) ÷ (1 × 10¹¹)",
+                "predictPrompt": "Square the velocity first — which powers dominate the exponent?"
+              },
+              {
+                "operation": "Compute",
+                "reason": "powers of ten, before and after squaring",
+                "result": "F = 10²⁴ × 4 × 10⁸ ÷ 10¹¹ = 4 × 10²¹ N",
+                "predictPrompt": "Does squaring 2 × 10⁴ raise the exponent to 8?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A 0.5 kg stone moves on a string of length 50 cm at 2 m/s. Find the tension in the string.",
+            "hints": [
+              "Tension supplies the centripetal force: T = mv² ÷ r",
+              "radius = 50 cm = 0.5 m",
+              "T = 0.5 × 4 ÷ 0.5 = 4 N"
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "A harder worked example: a satellite and its orbit",
+            "problem": "A satellite of mass 500 kg moves in a circular orbit of radius 7 × 10⁶ m around the Earth. Its period is 6000 s. Find (a) its orbital speed, (b) the centripetal acceleration.",
+            "steps": [
+              {
+                "operation": "Orbital speed",
+                "reason": "v = 2πr ÷ T",
+                "result": "v = 2 × 3.142 × 7 × 10⁶ ÷ 6000 ≈ 7330 m/s",
+                "predictPrompt": "Converting the period to hours — do you need to?"
+              },
+              {
+                "operation": "Centripetal acceleration",
+                "reason": "a = v² ÷ r",
+                "result": "a = (7330)² ÷ (7 × 10⁶) ≈ 7.66 m/s²",
+                "predictPrompt": "Do you recognise that number? It is g — why?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: radians and revolutions",
+            "paragraphs": [
+              "Radians save calculator keystrokes. One full turn is 2π radians; half a turn is π; a right angle is π ÷ 2. A wheel turning at 10 rad/s covers an arc of 10 × r units every second; for a point 0.5 m out, that is 5 m/s at the rim.",
+              "Angular acceleration ramps the speed of angular turn: α = Δω ÷ Δt. JAMB pairs α with the statement 'angular velocity is now ω'. Given starting ω, time, and final ω, α follows in one line. Angular displacement also matters: θ = initial ω · t + ½αt² — the rotational cousin of s = ut + ½at².",
+              "Connecting rotation to linear motion: every point on the body shares the same ω; the linear speed is greater the further out you sit — v = rω. JAMB loves the question comparing the rim and the hub of the same wheel — different linear v, identical ω at both locations."
+            ],
+            "bullets": [
+              "1 rad ≈ 57.3°; 1 rev = 360° = 2π rad",
+              "v = rω — same ω for whole wheel, v varies with r",
+              "rotational suvat mirror: θ = ω₀t + ½αt²"
+            ],
+            "takeaway": "Radians are just a rotated ruler — they carry all the same equations."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: where the inward force comes from",
+            "paragraphs": [
+              "A satellite holds orbit in free fall: gravity points at Earth, but the tangential velocity is so large that the stone continually misses — the orbit is the result of 'falling forever toward Earth yet always missing' — the textbook line for satellites (Newton's mountain thought experiment).",
+              "A car on a flat bend relies on friction between tyre and tarmac as its inward provider: F = mv² ÷ r ≤ μN; above that speed the car slides outward — not because of a new force outward, but because friction is simply no longer enough; the car's inertia keeps it straight.",
+              "Washing machine spin cycle: the drum acts as a rotating frame — inside it, water gets flung to the drum wall while the drum drills holes allowing it out; your clothes stay in the drum afterwards because the friction between cloth and drum holds them in. Centrifuges separate blood — cells pushed to the end by inertia in the rotating frame."
+            ],
+            "bullets": [
+              "gravity = centripetal force in every free-fall orbit",
+              "μmg ≥ mv²/r for grip — exceed it and the car slides straight on",
+              "centrifuges: rotation sends heavier components outward first"
+            ],
+            "takeaway": "Centripetal providers are ordinary forces doing an extraordinary job."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: how JAMB sets circular-motion questions",
+            "paragraphs": [
+              "Archetypes: (1) 'from n revolutions per minute, find ω in rad/s' — divide by 60, multiply by 2π; (2) 'a satellite orbits in T minutes — find its speed given the radius' — v = 2πr/T; (3) 'the tension on the string' — T = mv²/r; (4) 'the angular acceleration' — gradient of ω–t line or α = Δω/t; (5) 'at what speed does the car skid' — μgr under the square root for v_max.",
+              "Trap stems: 'centrifugal force is larger on the equator' — no; the inward providers supply exactly mv²/r; centrifugal is pseudo; JAMB tests the inertia language and the missing-friction idea instead. Another trap: 'the unit of centripetal force is N directed outward' — outward is never an answer; inward is default.",
+              "Ordering: radius, period, mass come in any combination; convert hours to seconds, minutes to seconds; never answer in rad/min — JAMB expects rad/s. In satellite problems, the formula cycles turn often: v = 2πr/T then F = mv²/r — two steps both expected; the last wraps up the force."
+            ],
+            "bullets": [
+              "f → ω: v = 2πfr — always convert at the first line",
+              "outward force is never the answer — centripetal is inward",
+              "v_max for grip = √(μgr)"
+            ],
+            "takeaway": "Circular motion is three formulas in a trench coat — learn three, pass most stems."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "simple-harmonic-motion",
+      "topic": "simple-harmonic-motion",
+      "title": "Simple Harmonic Motion",
+      "objective": "Define simple harmonic motion, identify oscillators, use T = 1/f, T = 2π√(l/g) and T = 2π√(m/k); compute v and a from ω; analyse energy changes; identify forced vibrations and resonance with applications.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Simple Harmonic Motion",
+            "paragraphs": [
+              "Watch a pendulum swing; pluck a guitar string; press a tuning fork — all keep time with the same mathematics: simple harmonic motion."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "What simple harmonic motion is",
+            "paragraphs": [
+              "Simple harmonic motion (SHM) is a motion in which the acceleration is proportional to the displacement from a fixed point and directed toward that point — a = −ω²x.",
+              "The fixed point is the mean position. The displacement from it swings between extremes (amplitudes). Every oscillator with equal opportunity on both sides of the mean — pendulum, tuning fork, spring-mass system, plucked string — obeys SHM when one keeps angle small.",
+              "Amplitude A is the maximum displacement. Period T is the time of one full back-and-forth; frequency f = 1 ÷ T. JAMB also uses the term 'oscillatory motion' — SHM is its quantitative case."
+            ],
+            "bullets": [
+              "definition: a = −ω²x — acceleration → mean, proportional to x",
+              "examples: pendulum, tuning fork, spring-mass, vibrating string",
+              "A = max displacement; T = seconds per cycle; f = 1 ÷ T"
+            ],
+            "takeaway": "The minus sign is the whole story — acceleration always pulls back to the mean.",
+            "check": {
+              "question": "In simple harmonic motion, the acceleration of the body is directed",
+              "options": [
+                "away from the mean position",
+                "toward the mean position",
+                "perpendicular to the displacement",
+                "at random"
+              ],
+              "answer": 1,
+              "why": "a = −ω²x — the minus sign forces acceleration to point opposite to displacement, i.e., toward the mean position."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Period, frequency and the two formulas",
+            "paragraphs": [
+              "f × T = 1; f = 1 ÷ T and T = 1 ÷ f. The angular frequency ω = 2π ÷ T = 2πf. Velocity: v = ω√(A² − x²); maximum v at the mean position: v_max = ωA. Acceleration: a = −ω²x; maximum at extremes: a_max = ω²A.",
+              "Pendulum: T = 2π√(l ÷ g). Doubling length quadruples T in squared time — no, doubles √l by √2 times, actually multiplies T by √2. Under small angle only.",
+              "Spring: T = 2π√(m ÷ k). Stiffer spring (larger k) ⇒ shorter T; more mass ⇒ longer T. Mass does not affect the pendulum's period at all (small-angle approximation); it does affect the spring's."
+            ],
+            "bullets": [
+              "T = 1 ÷ f · f = 1 ÷ T",
+              "pendulum: T = 2π√(l ÷ g)",
+              "spring: T = 2π√(m ÷ k)"
+            ],
+            "takeaway": "Escape by formula: square root ratios of (l/g) or (m/k) decide T.",
+            "check": {
+              "question": "A simple pendulum of length 1 m swings at a place where g = 10 m/s². Its period is about",
+              "options": [
+                "6.28 s",
+                "0.5 s",
+                "2 s",
+                "3.14 s"
+              ],
+              "answer": 2,
+              "why": "T = 2π√(l ÷ g) = 2π√0.1 ≈ 2 s."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Energy, forced vibrations and resonance",
+            "paragraphs": [
+              "As a body swings through SHM, its total energy stays constant (no friction): T.E. = ½mω²A². Kinetic energy peaks at the mean position; potential energy peaks at the extremes. Both move from one side to the other; sum is fixed.",
+              "Equations: K.E. = ½mω²(A² − x²); P.E. = ½mω²x²; total = ½mω²A². JAMB's favourite wording: 'the ratio of KE to PE at general x or given instant' — plug equations and simplify.",
+              "Forced vibration: an object driven by an external periodic force, oscillating at the driver’s frequency. Resonance: driving frequency = natural frequency — amplitude peaks to maximum."
+            ],
+            "bullets": [
+              "total energy constant; mix of KE and PE at every instant",
+              "K.E. max at mean; P.E. max at extremes",
+              "resonance: driver frequency = natural frequency ⇒ amplitude peaks"
+            ],
+            "takeaway": "KE buys amplitude at the mean; PE saves it at the extremes.",
+            "check": {
+              "question": "Resonance occurs when the driving frequency",
+              "options": [
+                "is lower than the natural frequency",
+                "is higher than the natural frequency",
+                "equals the natural frequency",
+                "is zero"
+              ],
+              "answer": 2,
+              "why": "Energy transfers most efficiently at matching frequencies — the definition of resonance."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "v, a and T questions rarely leave SHM: the three must-know symbols are ω, A, x. Keep the three symbols on your desk from the start of the question."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A mass oscillating on a spring has an amplitude of 0.1 m and a period of 0.5 s. Find (a) its frequency, (b) its maximum velocity.",
+            "steps": [
+              {
+                "operation": "Frequency",
+                "reason": "f = 1 ÷ T",
+                "result": "f = 1 ÷ 0.5 = 2 Hz",
+                "predictPrompt": "What does a 0.5-second period tell you directly about f?"
+              },
+              {
+                "operation": "Maximum velocity",
+                "reason": "v_max = ωA, where ω = 2πf",
+                "result": "ω = 2π × 2 = 4π; v_max = 0.4π ≈ 1.26 m/s",
+                "predictPrompt": "Which speed does the mass hold as it passes the mean position?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A pendulum of length 2.5 m swings at a place where g = 10 m/s². Find its period.",
+            "hints": [
+              "T = 2π√(l ÷ g)",
+              "l ÷ g = 2.5 ÷ 10 = 0.25",
+              "√0.25 = 0.5; T = 2π × 0.5 = π ≈ 3.14 s"
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "A harder worked example: spring-mass with numbers",
+            "problem": "A spring of stiffness constant 200 N/m carries a 0.5 kg mass set into SHM with amplitude 0.05 m. Find (a) the period, (b) the maximum speed of the mass.",
+            "steps": [
+              {
+                "operation": "Simple harmonic period",
+                "reason": "T = 2π√(m ÷ k)",
+                "result": "T = 2π√(0.5 ÷ 200) = 2π × 0.05 = 0.314 s",
+                "predictPrompt": "Why does the mass (0.5 kg) enter this formula but not the pendulum's?"
+              },
+              {
+                "operation": "Angular frequency",
+                "reason": "ω = 2π ÷ T",
+                "result": "ω = 2π ÷ 0.314 ≈ 20 rad/s",
+                "predictPrompt": "How does ω relate to k ÷ m anyway?"
+              },
+              {
+                "operation": "Maximum speed",
+                "reason": "v_max = ωA",
+                "result": "v_max = 20 × 0.05 = 1 m/s",
+                "predictPrompt": "At which point in the swing does the mass attain this speed?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: deriving the pendulum and spring periods",
+            "paragraphs": [
+              "A pendulum of length l displaced by small angle θ swings because of the restoring component mg sin θ ≈ mg θ. Newton's second law along the arc: ml²(θ'' ) = −mgl θ → θ'' = −(g ÷ l) θ. Comparing a = −ω²x gives ω² = g ÷ l, so T = 2π√(l ÷ g). The algebra requires the small-angle trick — sin θ ≈ θ — JAMB never asks you to prove this but knowing it sharpens the formula's meaning.",
+              "Check this from the energy side: K.E. + P.E. cancelling out gives total = ½m g × x_height rise = a spiral decay without damping. For a spring: F = −kx, m(a) = −kx with x'' = −(k ÷ m) x, so ω² = k ÷ m, so T = 2π√(m ÷ k).",
+              "There is no mass in the pendulum formula — increasing mass raises both inertia and gravitational pull equally; they cancel. JAMB loves exactly this twist: 'what happens to T if mass increases' — no change, provided l, and g, are unchanged."
+            ],
+            "bullets": [
+              "small angle: sin θ ≈ θ enables everything",
+              "ω² pendulum = g ÷ l; ω² spring = k ÷ m",
+              "mass cancels out of the pendulum period — independent"
+            ],
+            "takeaway": "Periods come from the restoring force constant — not the mass alone."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: energy through a full swing",
+            "paragraphs": [
+              "At the mean position: x = 0, so P.E. = 0 and v = v_max — K.E. = ½ m ω² A² = the full total energy. At the extreme: v = 0, so K.E. = 0 and P.E. = ½ m ω² A² = total. At general x: K.E. = ½ m ω² (A² − x²), P.E. = ½ m ω² x². The pair sums to ½ m ω² A² at every x — the invariant.",
+              "For a spring: total energy = ½ k A². JAMB may mix: 'behold, a spring of stiffness 400 N/m stretched 0.1 m — how much energy stored?' answer into P.E. against the spring: ½ × 400 × 0.01 = 2 J. When set free, the mass moves through with KE peaks 2 J as it crosses the mean.",
+              "Real systems decay: friction and drag bleed energy — amplitude falls over time (damping). Underdamped systems oscillate smaller and smaller; critical damping stops the motion in the shortest time — shock absorbers; overdamping drags slowly — doors on museums, brakes to the floor."
+            ],
+            "bullets": [
+              "mean: KE max · PE zero · extremes reverse",
+              "½ m ω² A² (mass-spring)· ½ k A² (spring energy)",
+              "damping: energy loss till stop · critical: fastest · overdamped: slow"
+            ],
+            "takeaway": "Total energy is the only fixed book in the library — both ledgers dance in step."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: forced vibrations and resonance",
+            "paragraphs": [
+              "Natural (free) frequency: an object oscillating freely after a single kick at its own rate. Forced frequency: an object driven by external rhythm; the object swings at the driving frequency, not at its own. Every building, bridge, machine and molecule prefers one rate; force it off that rate and it resists; force it at that rate and amplitudes climb dangerously.",
+              "Resonance test cases: soldiers route-march on a bridge — the bridge may start swaying at its own natural rate to the boot rhythm; soldiers break step crossing. Radio antenna: the incoming radio wave carries one EM frequency; antenna resonates only at the station's; tunes away the others off — strong reception.",
+              "Shadow applications: microwave ovens resonate the water molecule 2.45 GHz — food heats. A singer at a soda-go glass's natural frequency cracks the glass. Drums and piano chords — the string lifting its amplitude when the resonator box matches — acoustics exploits resonance deliberately. Negative roles: machinery hum ramps into fatigue, phone vibration builds at cover frequencies; insurance note counts these."
+            ],
+            "bullets": [
+              "free frequency = the object's own; forced = the driver's",
+              "matching rates = resonance = max amplitude",
+              "examples: bridges, radios, microwaves, glass breaking — soldiers break step"
+            ],
+            "takeaway": "Forced is a car listening to the road; resonance is the bridge deciding to agree."
           }
         }
       ]
