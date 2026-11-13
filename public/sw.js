@@ -1,4 +1,4 @@
-const CACHE = 'propeida-v2'
+const CACHE = 'propeida-v3'
 const ASSETS = ['/', '/offline', '/manifest.json']
 
 self.addEventListener('install', (e) => {
@@ -20,21 +20,29 @@ self.addEventListener('activate', (e) => {
 self.addEventListener('fetch', (e) => {
   const url = new URL(e.request.url)
 
-  // Supabase API calls — network first
+  // Only cache GET requests; never cache writes or range requests.
+  if (e.request.method !== 'GET' || e.request.headers.has('range')) {
+    e.respondWith(fetch(e.request))
+    return
+  }
+
+  // Supabase API calls — network only, never cached. They carry account and
+  // entitlement data and must not survive sign-out in Cache Storage.
   if (url.hostname.endsWith('.supabase.co')) {
-    e.respondWith(networkFirst(e.request))
+    e.respondWith(fetch(e.request).catch(() => new Response('Offline', { status: 503 })))
     return
   }
 
-  // Own API calls — network first
+  // Own API calls — network only, never cached (user-specific JSON).
   if (url.pathname.startsWith('/api/')) {
-    e.respondWith(networkFirst(e.request))
+    e.respondWith(fetch(e.request).catch(() => new Response('Offline', { status: 503 })))
     return
   }
 
-  // Navigations — network first, fallback to offline page
+  // Navigations — network, with the offline page as fallback. HTML is not
+  // stored in Cache Storage (it can embed the learner's own session data).
   if (e.request.mode === 'navigate') {
-    e.respondWith(networkFirst(e.request, '/offline'))
+    e.respondWith(networkFirstUncached(e.request, '/offline'))
     return
   }
 
@@ -46,10 +54,9 @@ self.addEventListener('fetch', (e) => {
   }
 
   // The landing page's own files keep stable names (styles.css, map-scene.png)
-  // but change on every deploy. Serving them cache-first froze the page on
-  // whatever the first visitor happened to load. The stylesheet decides the
-  // layout, so it has to be network-first; images and fonts can go stale for
-  // a visit without breaking anything.
+  // but change on every deploy. The stylesheet decides the layout, so it has
+  // to be network-first; images and fonts can go stale for a visit without
+  // breaking anything.
   if (url.pathname === '/landing/styles.css') {
     e.respondWith(networkFirst(e.request))
     return
@@ -60,15 +67,29 @@ self.addEventListener('fetch', (e) => {
     return
   }
 
-  // Static assets (JS, CSS, images, fonts) — cache first
+  // Static assets (JS, CSS, images, fonts) on this origin — cache first.
   if (url.origin === self.location.origin) {
     e.respondWith(cacheFirst(e.request))
     return
   }
 
-  // Everything else — network only
+  // Everything else — network only.
   e.respondWith(fetch(e.request))
 })
+
+// Network-first WITHOUT writing the response to Cache Storage. Used for
+// navigations so personal HTML never persists on shared devices.
+async function networkFirstUncached(req, fallbackUrl) {
+  try {
+    return await fetch(req)
+  } catch {
+    if (fallbackUrl) {
+      const offline = await caches.match(fallbackUrl)
+      if (offline) return offline
+    }
+    return new Response('Offline', { status: 503 })
+  }
+}
 
 async function networkFirst(req, fallbackUrl) {
   try {

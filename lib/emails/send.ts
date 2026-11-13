@@ -58,6 +58,49 @@ export async function sendWelcomeEmail(email: string, _name?: string): Promise<{
   }
 }
 
+/**
+ * Generic transactional sender for cron/report mail. Kept separate from the
+ * welcome flow so the one-time guard and copy stay untouched.
+ */
+export async function sendEmail(input: {
+  to: string
+  subject: string
+  text: string
+  html: string
+}): Promise<{ ok: boolean; message?: string }> {
+  const apiKey = process.env.RESEND_API_KEY
+  const mailFrom = process.env.EMAIL_FROM
+
+  if (!apiKey) return { ok: false, message: 'RESEND_API_KEY is not configured' }
+  if (!mailFrom || !parseMailFrom(mailFrom)) {
+    return { ok: false, message: `EMAIL_FROM is not a valid sender: "${mailFrom}"` }
+  }
+
+  const resend = new Resend(apiKey)
+  try {
+    const res = await resend.emails.send({
+      from: mailFrom,
+      to: input.to.toLowerCase(),
+      replyTo: 'propeida.help@gmail.com',
+      subject: input.subject,
+      text: input.text,
+      html: input.html,
+    })
+    if (res.error) {
+      return {
+        ok: false,
+        message: `Resend error ${res.error.statusCode ?? ''} ${res.error.name ?? ''}: ${res.error.message}`,
+      }
+    }
+    return { ok: true, message: res.data?.id ?? 'sent' }
+  } catch (err) {
+    return {
+      ok: false,
+      message: `Exception while sending email: ${err instanceof Error ? err.message : String(err)}`,
+    }
+  }
+}
+
 export type WelcomeEmailResult =
   | { status: 'sent'; message: string }
   | { status: 'already_sent' }
@@ -74,14 +117,15 @@ export async function maybeSendWelcomeEmail(userId: string): Promise<WelcomeEmai
 
   const { data: au, error } = await supabase.auth.admin.getUserById(userId)
   if (error || !au?.user) {
-    console.error(`[welcome] user lookup failed for ${userId}:`, error?.message ?? 'not found')
+    // Never log the id or email — they are PII. The error code is enough.
+    console.error('[welcome] user lookup failed:', error?.code ?? error?.message ?? 'not found')
     return { status: 'invalid_user' }
   }
 
   const user = au.user
   const email = user.email
   if (!email) {
-    console.warn(`[welcome] user ${userId} has no email`)
+    console.warn('[welcome] target user has no email')
     return { status: 'no_email' }
   }
 
@@ -91,7 +135,7 @@ export async function maybeSendWelcomeEmail(userId: string): Promise<WelcomeEmai
 
   const result = await sendWelcomeEmail(email)
   if (!result.ok) {
-    console.error(`[welcome] send failed for ${email}:`, result.message)
+    console.error('[welcome] send failed:', result.message)
     return { status: 'send_failed', message: result.message ?? 'send failed' }
   }
 
@@ -101,7 +145,7 @@ export async function maybeSendWelcomeEmail(userId: string): Promise<WelcomeEmai
   }
   const { error: updateError } = await supabase.auth.admin.updateUserById(userId, { user_metadata: mark })
   if (updateError) {
-    console.error(`[welcome] failed to mark sent for ${email}:`, updateError.message)
+    console.error('[welcome] failed to mark sent:', updateError.message)
   }
 
   return { status: 'sent', message: result.message ?? 'sent' }

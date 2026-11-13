@@ -4,18 +4,19 @@ const PAYSTACK_AMOUNT = 150000
 
 const FETCH_TIMEOUT_MS = 15000
 
-const VALID_PRODUCTS = ['putme_pro', 'jamb_pro', 'jamb_premium_ai'] as const
+const VALID_PRODUCTS = [
+  'putme_pro',
+  'putme_pro_yearly',
+  'jamb_pro',
+  'jamb_pro_yearly',
+] as const
 
 const PRODUCT_AMOUNTS: Record<string, number> = {
-  putme_pro: 150000,
-  jamb_pro: 150000,
-  jamb_premium_ai: 300000,
+  putme_pro: 100000,
+  putme_pro_yearly: 840000,
+  jamb_pro: 400000,
+  jamb_pro_yearly: 3360000,
 }
-
-export const SUPPORT_PRODUCT = 'support'
-
-export const SUPPORT_MIN_AMOUNT = 100
-export const SUPPORT_MAX_AMOUNT = 10000000
 
 async function paystackFetch(url: string, options: RequestInit = {}): Promise<Response> {
   const controller = new AbortController()
@@ -76,43 +77,6 @@ export async function initializeTransaction(email: string, userId: string, produ
   }
 }
 
-export async function initializeSupportTransaction(email: string, amountKobo: number, userId: string | null, idempotencyKey?: string) {
-  const headers: Record<string, string> = {
-    Authorization: `Bearer ${getSecretKey()}`,
-    'Content-Type': 'application/json',
-  }
-  if (idempotencyKey) {
-    headers['X-Paystack-Idempotency-Key'] = idempotencyKey
-  }
-
-  const response = await paystackFetch('https://api.paystack.co/transaction/initialize', {
-    method: 'POST',
-    headers,
-    body: JSON.stringify({
-      email,
-      amount: amountKobo,
-      currency: 'NGN',
-      metadata: { user_id: userId, product: SUPPORT_PRODUCT },
-      callback_url: `${process.env.NEXT_PUBLIC_BASE_URL}/support/callback`,
-    }),
-  })
-
-  if (!response.ok) {
-    throw new Error(`Paystack initialization failed with status ${response.status}`)
-  }
-
-  const data = await response.json()
-  if (!data.status) {
-    throw new Error(data.message ?? 'Failed to initialize payment')
-  }
-
-  return {
-    authorizationUrl: data.data.authorization_url,
-    reference: data.data.reference,
-    accessCode: data.data.access_code,
-  }
-}
-
 export async function verifyTransaction(reference: string) {
   const response = await paystackFetch(
     `https://api.paystack.co/transaction/verify/${encodeURIComponent(reference)}`,
@@ -134,6 +98,7 @@ export async function verifyTransaction(reference: string) {
 
   return {
     status: data.data.status as string,
+    refunded: (data.data.refunded as boolean | undefined) ?? false,
     amount: data.data.amount as number,
     currency: data.data.currency as string,
     gatewayResponse: data.data.gateway_response as string,

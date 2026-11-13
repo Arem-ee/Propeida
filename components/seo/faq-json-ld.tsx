@@ -20,7 +20,9 @@ export default function FaqJsonLd({ items }: { items: FaqItem[] }) {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      // JSON.stringify alone leaves "<\\/script>" intact; escape "<" so the
+      // payload can never break out of the script element.
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
     />
   )
 }

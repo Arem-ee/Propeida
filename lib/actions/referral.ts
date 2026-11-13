@@ -7,7 +7,7 @@ import { revalidatePath } from 'next/cache'
 export async function claimReferral(code: string) {
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
-  if (!user) throw new Error('Not authenticated')
+  if (!user) throw new Error('Please sign in again.')
 
   const { data: profile } = await supabase
     .from('profiles')
@@ -19,7 +19,7 @@ export async function claimReferral(code: string) {
   if (profile.referred_by) throw new Error('Already referred by someone')
 
   if (profile.referral_code === code) {
-    throw new Error('Cannot use your own referral code')
+    throw new Error('You cannot use your own referral code.')
   }
 
   const { data: referrer } = await supabase
@@ -30,20 +30,12 @@ export async function claimReferral(code: string) {
 
   if (!referrer) throw new Error('Invalid referral code')
 
-  // referred_by is server-managed: clients hold no UPDATE grant on it and the
-  // guard trigger rejects any client write. Apply it with the service role
-  // after the ownership, self-referral and duplicate-claim checks above.
+  // Insert the referrals row FIRST so the unique constraint on referred_id
+  // is the arbiter of concurrent claims; only then stamp referred_by. If the
+  // profile update fails, roll back the referrals row to keep the two in
+  // step. (Previously the order was reversed: two racing claims could both
+  // update the profile and one then 500 on the insert.)
   const admin = createAdminClient()
-  const { error: updateError } = await admin
-    .from('profiles')
-    .update({ referred_by: referrer.id })
-    .eq('id', user.id)
-
-  if (updateError) throw new Error('Failed to apply referral')
-
-  // Referral claims are server-authored: referrals has a read-only own-row
-  // policy and no client INSERT grant. The checks above established that the
-  // claim is valid, so record it with the service role.
   const { error: referralError } = await admin
     .from('referrals')
     .insert({
@@ -52,7 +44,26 @@ export async function claimReferral(code: string) {
       status: 'pending',
     })
 
-  if (referralError) throw new Error('Failed to record referral')
+  if (referralError) {
+    if (referralError.code === '23505') {
+      throw new Error('This referral has already been claimed.')
+    }
+    throw new Error('Could not record your referral.')
+  }
+
+  const { error: updateError } = await admin
+    .from('profiles')
+    .update({ referred_by: referrer.id })
+    .eq('id', user.id)
+
+  if (updateError) {
+    await admin
+      .from('referrals')
+      .delete()
+      .eq('referrer_id', referrer.id)
+      .eq('referred_id', user.id)
+    throw new Error('Could not apply your referral code.')
+  }
 
   revalidatePath('/home')
   return { referrerUsername: referrer.username }
@@ -61,7 +72,7 @@ export async function claimReferral(code: string) {
 export async function getReferralStats() {
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
-  if (!user) throw new Error('Not authenticated')
+  if (!user) throw new Error('Please sign in again.')
 
   const { data: profile } = await supabase
     .from('profiles')
