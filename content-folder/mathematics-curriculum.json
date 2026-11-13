@@ -1488,7 +1488,7 @@
               },
               {
                 "operation": "Do the third draw",
-                "reason": "Only 2 red in 5 remain, and 'and' means multiply.",
+                "reason": "Only 2 red in 5 remain, and 'and' means multiply. BEST: sequential multiplication for each red draw; fall back: C(4,3) ÷ C(7,3) for any order.",
                 "result": "P = 4/7 × 3/6 × 2/5 = 4/35.",
                 "predictPrompt": "How would you sanity-check the size and sign of this answer?"
               },
@@ -1885,7 +1885,7 @@
             "steps": [
               {
                 "operation": "Reduce the base",
-                "reason": "13 ÷ 7 leaves 6, so 13 ≡ 6 mod 7",
+                "reason": "13 ÷ 7 leaves 6, so 13 ≡ 6 mod 7. BEST: reduce base first, then square; fall back: repeated reduction if the cycle looks long.",
                 "result": "13^2 ≡ 6^2 mod 7",
                 "predictPrompt": "Which part of the question does this step answer?"
               },
@@ -3694,7 +3694,7 @@
               },
               {
                 "operation": "Try it on the left",
-                "reason": "A two-sided identity must also give e ∘ a = a.",
+                "reason": "A two-sided identity must also give e ∘ a = a. BEST: check both sides (right-test alone misses half the story); fall back: tabulate small results to spot the pattern.",
                 "result": "0 + 2a = 2a, not a",
                 "predictPrompt": "Which part of the question does this step answer?"
               },
@@ -3931,7 +3931,7 @@
             "steps": [
               {
                 "operation": "Check the inner sizes match",
-                "reason": "Inner sizes must match for multiplication",
+                "reason": "Inner sizes must match for multiplication. BEST: (m×n)(n×p) → m×p; fall back: row-dot-column if you keep slipping.",
                 "result": "AB exists and is a 2 by 2 matrix.",
                 "predictPrompt": "In your own words, why does this step come before the next one?"
               },
@@ -4816,7 +4816,7 @@
             "steps": [
               {
                 "operation": "Name the equal-distance rule",
-                "reason": "Equal distance from A and B places P on the perpendicular bisector of AB.",
+                "reason": "Equal distance from A and B places P on the perpendicular bisector of AB. BEST: bisector for equidistance; fall back: midpoint + 90° through the point always works.",
                 "result": "First locus: a straight line.",
                 "predictPrompt": "What exactly does the question want you to write down first?"
               },
@@ -4920,7 +4920,7 @@
               },
               {
                 "operation": "Name the fixed-distance rule",
-                "reason": "Exactly 5 cm from M places P on a circle centred at M",
+                "reason": "Exactly 5 cm from M places P on a circle centred at M. BEST: circle for fixed distance; fall back: midpoint-and-radius direct if coordinates are easier.",
                 "result": "Second locus: a circle of radius 5 cm about M.",
                 "predictPrompt": "In your own words, why does this step come before the next one?"
               },
@@ -6640,7 +6640,7 @@
           "content": {
             "heading": "Logarithms",
             "paragraphs": [
-              "A trader in Onitsha keeps stock by doubling: 8 sacks, then 16, then 32, then 64. The question 'after how many doublings do I reach 512 sacks?' is a logarithm. That question, not a new operation, is the lesson."
+              "A trader in Onitsha doubles stock: 8 sacks, then 16, 32, 64. 'After how many doublings do I reach 512?' — that question is a logarithm."
             ],
             "bullets": []
           }
@@ -6744,7 +6744,7 @@
             "steps": [
               {
                 "operation": "Apply the power law",
-                "reason": "The term 2 log_3 9 is a power and becomes log_3 (9^2).",
+                "reason": "The term 2 log_3 9 is a power and becomes log_3 (9^2). BEST: k·logₐb = logₐ(b^k); fall back: expand k·logₐb manually.",
                 "result": "The expression becomes log_3 729 − log_3 81 + log_3 27.",
                 "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
@@ -6842,7 +6842,7 @@
             "steps": [
               {
                 "operation": "Change the base",
-                "reason": "Use base 10 because only log₁₀2 is known, via the change-of-base formula.",
+                "reason": "Use base 10 because only log₁₀2 is known, via the change-of-base formula. BEST: logₐb = log₁₀b ÷ log₁₀a; fall back: remember log₃ 9 = 2 for a sanity check.",
                 "result": "log₈32 = log₁₀32 ÷ log₁₀8.",
                 "predictPrompt": "Which numbers or terms work with each other first?"
               },
