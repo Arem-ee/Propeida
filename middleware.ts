@@ -1,5 +1,6 @@
 import { type NextRequest, NextResponse } from 'next/server'
 import { createServerClient } from '@supabase/ssr'
+import { safeInternalPath } from '@/lib/safe-redirect'
 
 const PROTECTED_PREFIXES = [
   '/home',
@@ -11,6 +12,9 @@ const PROTECTED_PREFIXES = [
   '/account',
   '/target',
   '/admin',
+  '/recall',
+  '/squad',
+  '/diagnostic',
 ]
 const EXACT_PROTECTED = ['/onboarding']
 
@@ -63,10 +67,10 @@ export async function middleware(request: NextRequest) {
 
   let user
   try {
-    // Local cookie decode — no network round-trip per navigation. Token
-    // refresh happens client-side (dashboard layout) and on auth routes.
-    const result = await supabase.auth.getSession()
-    user = result.data.session?.user ?? null
+    // Verified against the auth server — do not substitute getSession(),
+    // which only decodes the cookie locally without checking the signature.
+    const result = await supabase.auth.getUser()
+    user = result.data.user ?? null
   } catch {
     return response
   }
@@ -85,7 +89,7 @@ export async function middleware(request: NextRequest) {
     // Honor a safe internal destination (e.g. /login?redirect=/learn);
     // otherwise signed-in users land in the app, not the marketing page.
     const redirect = request.nextUrl.searchParams.get('redirect')
-    url.pathname = redirect && redirect.startsWith('/') && !redirect.startsWith('//') ? redirect : '/home'
+    url.pathname = safeInternalPath(redirect)
     url.search = ''
     return NextResponse.redirect(url)
   }
@@ -102,10 +106,14 @@ export const config = {
     '/results', '/results/:path*',
     '/mocks', '/mocks/:path*',
     '/progress',
+    '/target', '/target/:path*',
     '/account', '/account/:path*',
     '/admin', '/admin/:path*',
     '/auth/set-username',
     '/login', '/signup',
     '/onboarding',
+    '/recall',
+    '/squad', '/squad/:path*',
+    '/diagnostic',
   ],
 }

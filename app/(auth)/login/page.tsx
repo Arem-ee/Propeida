@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/client'
 import { claimReferral } from '@/lib/actions/referral'
+import { safeInternalPath } from '@/lib/safe-redirect'
 import { CheckCircle } from 'lucide-react'
 import Logo from '@/components/logo'
 
@@ -16,10 +17,7 @@ function LoginForm() {
   const [googleLoading, setGoogleLoading] = useState(false)
   const router = useRouter()
   const searchParams = useSearchParams()
-  const requestedRedirect = searchParams.get('redirect')
-  const redirect = requestedRedirect && requestedRedirect.startsWith('/') && !requestedRedirect.startsWith('//')
-    ? requestedRedirect
-    : '/home'
+  const redirect = safeInternalPath(searchParams.get('redirect'))
   const confirmed = searchParams.get('confirmed') === 'true'
   const errParam = searchParams.get('error')
 
