@@ -92,6 +92,7 @@ Lessons follow `docs/lesson-authoring-standard.md` for structure (one concept pe
 - **Never** open with `In this lesson we will…` or `By the end you will…` — start with the content
 - **Every line the learner reads** (bullets, `why` lines, takeaways, guided prompts) must be a full, spoken sentence in common words (see rule 7) — telegraphic fragments are rewritten, never just stripped
 - **Worked example steps and checks** read as if spoken aloud: concrete subject, concrete verb, no jargon-compounds invented by the author
+- **Say it to a friend** — every line is one full sentence you would say to the person sitting next to you; one-liners break lines instead of ending with a full stop, and full stops stay only where normal writing genuinely needs them
 
 ## Anti-patterns (never write these)
 
