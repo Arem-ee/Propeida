@@ -1,9 +1,10 @@
 'use server'
 
 import { createClient, getAuthUser } from '@/lib/supabase/server'
-import { getDueReviews, getMasterySummary, getSecuredSubjects, getPresenceStats, getProgressMap, getWeakestSubject } from '@/lib/mastery'
+import { getDueReviews, getMasterySummary, getSecuredSubjects, getProgressMap, getWeakestSubject } from '@/lib/mastery'
 import { getUserActiveSessions } from '@/lib/practice'
 import { getNearestCohort } from '@/lib/cohort'
+import { getCachedPresenceStats } from '@/lib/presence'
 import { getNoteById } from '@/lib/notes'
 
 interface DashboardPayload {
@@ -45,7 +46,7 @@ function isActiveEntitlement(status: string, expiresAt: string | null): boolean 
 export async function getDashboardData() {
   const supabase = await createClient()
   const user = await getAuthUser(supabase)
-  if (!user) throw new Error('Not authenticated')
+  if (!user) throw new Error('Please sign in again.')
 
   let payload = await fetchDashboardPayload(supabase, user.id)
 
@@ -55,8 +56,8 @@ export async function getDashboardData() {
     payload = await fetchDashboardPayload(supabase, user.id)
   }
 
-  if (!payload) throw new Error('Failed to load dashboard data')
-  if (!payload.profile) throw new Error('Profile not found')
+  if (!payload) throw new Error('Could not load your dashboard.')
+  if (!payload.profile) throw new Error('Your profile could not be found.')
 
   const entitlements = payload.entitlements ?? []
   const activeEntitlements = entitlements.filter((e) => isActiveEntitlement(e.status, e.expires_at))
@@ -138,9 +139,9 @@ export async function getDashboardData() {
       getDueReviews(supabase, user.id),
       getMasterySummary(supabase, user.id),
       getSecuredSubjects(supabase, user.id),
-      getPresenceStats(supabase),
+      getCachedPresenceStats(),
       getUserActiveSessions(user.id),
-      getNearestCohort(supabase),
+      getNearestCohort(supabase, user.id),
       getProgressMap(supabase, user.id),
       getWeakestSubject(supabase, user.id),
     ])
