@@ -349,13 +349,13 @@
             "steps": [
               {
                 "operation": "Split each surd",
-                "reason": "Only lowest-form surds reveal whether the terms can combine.",
+                "reason": "Only reduced surds reveal whether terms can combine. Use the split √(a·b) = √a · √b here, because it works for every surd; if the factor is hidden, list small primes until a square shows up.",
                 "result": "√50 = 5√2 and √18 = 3√2.",
                 "predictPrompt": "Both terms now carry √2. What happens next?"
               },
               {
                 "operation": "Combine like surds",
-                "reason": "Like surds add and subtract exactly like like terms.",
+                "reason": "Like surds add and subtract exactly like like terms. Use the same-radical rule — once each surd is in simplest form, only the coefficients change; if an example stalls, check whether the smallest radicand was missed.",
                 "result": "5√2 − 3√2 = 2√2.",
                 "predictPrompt": "How would you verify this answer?"
               },
@@ -393,7 +393,7 @@
             "steps": [
               {
                 "operation": "Multiply by the conjugate",
-                "reason": "The conjugate 2 + √3 turns the denominator into a difference of squares.",
+                "reason": "The conjugate 2 + √3 turns the denominator into a difference of squares. Use this pair because it cancels every surd in the denominator; if you prefer, rationalise by clearing each surd one at a time.",
                 "result": "Denominator becomes (2−√3)(2+√3) = 4 − 3 = 1.",
                 "predictPrompt": "Which numbers or terms work with each other first?"
               },
@@ -566,7 +566,7 @@
             "steps": [
               {
                 "operation": "Split the fractional power",
-                "reason": "The denominator is the root and the numerator is the power.",
+                "reason": "The denominator is the root and the numerator is the power. Use the m/n rule with the root first because small numbers stay small; if you need another check, square the result and compare with the original. Use the m/n rule because the format asks for it directly; if you lose confidence, break the fraction into small checkable steps.",
                 "result": "32^(2/5) = (fifth root of 32)^2.",
                 "predictPrompt": "What whole number raised to the fifth power gives 32?"
               },
@@ -610,7 +610,7 @@
             "steps": [
               {
                 "operation": "Take the cube root first",
-                "reason": "The denominator 3 means cube root, and small bases keep the numbers manageable.",
+                "reason": "The denominator 3 means cube root. Use the m/n rule because it is the only sensible approach here; if you prefer, convert the base to a simple power and expand by hand.",
                 "result": "8^(2/3) = (cube root of 8)² = 2² and 27^(1/3) = 3.",
                 "predictPrompt": "What would a weaker answer look like here?"
               },
@@ -783,7 +783,7 @@
             "steps": [
               {
                 "operation": "Find the product ac",
-                "reason": "When a is not 1, the pair multiplies to ac and adds to b.",
+                "reason": "When a is not 1, find two numbers that multiply to ac and add to b. Use this method because it is often the quickest path; if the numbers refuse to cooperate, reach for the quadratic formula instead.",
                 "result": "ac = 2 × (−3) = −6, and b = −5, so the pair is −6 and 1.",
                 "predictPrompt": "How do you use the pair to split the middle term?"
               },
@@ -827,7 +827,7 @@
             "steps": [
               {
                 "operation": "Compute the discriminant",
-                "reason": "The discriminant shows the roots are real before the formula is used.",
+                "reason": "The discriminant shows whether the roots are real before you touch the formula. Use it to check whether factoring is even possible; if Δ is a perfect square, factor by grouping and skip the formula entirely.",
                 "result": "b² − 4ac = 4 − (−12) = 16, so √16 = 4.",
                 "predictPrompt": "What do you substitute, into which formula?"
               },
@@ -1030,7 +1030,7 @@
             "steps": [
               {
                 "operation": "Name the sides against the angle",
-                "reason": "The height is opposite the angle and the 30 m distance is adjacent.",
+                "reason": "The height is opposite the angle; the 30 m distance lies adjacent. Use tan because the angle relates opposite to adjacent; if the question swaps the angle to 60°, switch to cot and double the work backwards.",
                 "result": "opposite = h and adjacent = 30, so tangent links them.",
                 "predictPrompt": "What is tan 30° exactly?"
               },
@@ -1074,7 +1074,7 @@
             "steps": [
               {
                 "operation": "Draw the triangle",
-                "reason": "The north and east moves are the legs of a right triangle.",
+                "reason": "The north and east moves form a right triangle. Use a sketch before anything else; if it feels hard, draw the triangle first and label the sides — that removes half the confusion.",
                 "result": "The hypotenuse joins the start to the finish.",
                 "predictPrompt": "What would a weaker answer look like here?"
               },
@@ -1444,7 +1444,7 @@
               },
               {
                 "operation": "Multiply for 'and'",
-                "reason": "Both draws must happen in sequence.",
+                "reason": "Both draws must happen in sequence. Use the multiplication rule for consecutive events because each draw affects the pool; if the order is unknown but the same, add the two possible orderings.",
                 "result": "3/5 × 1/2 = 3/10.",
                 "predictPrompt": "How would you verify this answer satisfies the question?"
               },
@@ -1482,13 +1482,13 @@
               },
               {
                 "operation": "Write the second draw",
-                "reason": "One red ball is gone, leaving 3 red out of 6.",
+                "reason": "One red ball is gone, leaving 3 red out of 6. Use the multiplication rule because each draw affects the pool; if you can list all outcomes concisely, do that as a cross-check.",
                 "result": "P(second red) = 3/6 = 1/2.",
                 "predictPrompt": "What do you draw first, and what does it show?"
               },
               {
                 "operation": "Do the third draw",
-                "reason": "Only 2 red in 5 remain, and 'and' means multiply. BEST: sequential multiplication for each red draw; fall back: C(4,3) ÷ C(7,3) for any order.",
+                "reason": "only 2 red in 5 remain; the word 'and' means multiply. Best move: multiply in order — first 4/7, then 3/6, then 2/5. If order is easier, use combinations: C(4,3) ÷ C(7,3).",
                 "result": "P = 4/7 × 3/6 × 2/5 = 4/35.",
                 "predictPrompt": "How would you sanity-check the size and sign of this answer?"
               },
@@ -1622,7 +1622,7 @@
             "steps": [
               {
                 "operation": "Verify the digits",
-                "reason": "Each digit must be smaller than four",
+                "reason": "Each digit must be smaller than four. Use the place-value rule because it explains where every digit sits; if lost, write down the first few multiples and read off by hand.",
                 "result": "1, 3 and 2 are valid, so 132 is a base-four number",
                 "predictPrompt": "Which numbers or terms work with each other first?"
               },
@@ -1724,7 +1724,7 @@
             "steps": [
               {
                 "operation": "Multiply the units",
-                "reason": "Base-eight carries come in eights, so 20 is 2 eights with 4 left over.",
+                "reason": "Base-eight carries come in eights; 20 is 2 eights with 4 left over. Use column addition then carry out in groups of eight; if you slip, convert to decimal, add normally, then convert back.",
                 "result": "5 × 4 = 20, so write 4 and carry 2.",
                 "predictPrompt": "Which numbers or terms work with each other first?"
               },
@@ -1885,7 +1885,7 @@
             "steps": [
               {
                 "operation": "Reduce the base",
-                "reason": "13 ÷ 7 leaves 6, so 13 ≡ 6 mod 7. BEST: reduce base first, then square; fall back: repeated reduction if the cycle looks long.",
+                "reason": "13 ÷ 7 leaves 6. Use reduction before squaring because it keeps the numbers tiny; if you prefer, square first then reduce, but the first route is faster. — 13 ≡ 6 mod 7. Best move: shrink the base to 6 first, then square. If stuck, take repeated squares and reduce after each.",
                 "result": "13^2 ≡ 6^2 mod 7",
                 "predictPrompt": "Which part of the question does this step answer?"
               },
@@ -1982,7 +1982,7 @@
             "steps": [
               {
                 "operation": "Split the power",
-                "reason": "Powers multiply, so 2^7 is 2, then 2^3, then 2^3.",
+                "reason": "Powers multiply, so 2^7 = 2 × (2^3)^2. Use this split because it makes the modulus small enough to work with; if you prefer, group into four-bit residues and simplify by inspection.",
                 "result": "2^7 = 2 × 2^3 × 2^3.",
                 "predictPrompt": "In your own words, why does this step come before the next one?"
               },
@@ -2126,7 +2126,7 @@
             "steps": [
               {
                 "operation": "Find a common denominator",
-                "reason": "3 and 4 multiply to 12, so 12 is common",
+                "reason": "3 and 4 multiply to 12, so 12 is common. Use the smallest common denominator because it keeps the arithmetic light; if you cannot see it, list multiples of 4 until one sits.",
                 "result": "2/3 = 8/12 and 3/4 = 9/12",
                 "predictPrompt": "Which numbers or terms work with each other first?"
               },
@@ -2227,7 +2227,7 @@
             "steps": [
               {
                 "operation": "Simplify the brackets first",
-                "reason": "The minus sign inside applies before dividing, so the outer fraction waits.",
+                "reason": "The minus sign inside applies before dividing, so the outer fraction waits. Use the order of operations strictly; if you relax it, do the inner step twice and compare.",
                 "result": "2/3 − 1/4 = 8/12 − 3/12 = 5/12",
                 "predictPrompt": "In your own words, why does this step come before the next one?"
               },
@@ -2371,7 +2371,7 @@
             "steps": [
               {
                 "operation": "Find the profit",
-                "reason": "Profit is 15 per cent of the cost price",
+                "reason": "Profit is 15 per cent of the cost price. Use the percentage-of-a-whole formula because profit is measured on cost; if they ask for selling price directly, multiply by 1.15 outright.",
                 "result": "15 × 40,000 ÷ 100 = 6,000",
                 "predictPrompt": "Which numbers or terms work with each other first?"
               },
@@ -2469,7 +2469,7 @@
             "steps": [
               {
                 "operation": "Apply the discount first",
-                "reason": "The shop removes its 20% before tax, so reduce the marked price.",
+                "reason": "The shop removes its 20% before tax, so reduce the marked price first. Use the discount multiplier (0.80) because VAT is charged on the discounted amount; if they want one number, combine the two steps in one line.",
                 "result": "₦80,000 × 80/100 = ₦64,000",
                 "predictPrompt": "In your own words, why does this step come before the next one?"
               },
@@ -2614,7 +2614,7 @@
             "steps": [
               {
                 "operation": "Find the union",
-                "reason": "Add the sets, then subtract the overlap counted twice",
+                "reason": "Add the sets, then subtract the overlap counted twice. Use the inclusion–exclusion formula because it avoids double-counting the intersection; if the class is small enough, draw three overlapping circles and count directly.",
                 "result": "25 + 20 − 12 = 33 study at least one",
                 "predictPrompt": "Which numbers or terms work with each other first?"
               },
@@ -2716,13 +2716,13 @@
             "steps": [
               {
                 "operation": "Find the union",
-                "reason": "Neither is outside the union, so subtract it from 60.",
+                "reason": "Neither is outside the union, so subtract it from 60. Use subtraction of the union because the rest outside must vanish; if you prefer, list the learners one by one and cross-check your totals.",
                 "result": "60 − 8 = 52 study at least one",
                 "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Find the overlap",
-                "reason": "Adding both sets double-counts the overlap, so subtract the union.",
+                "reason": "Adding both sets double-counts the overlap, so subtract the union. Use the inclusion–exclusion rule because it is the one formula for set sizes; if you prefer, draw a three-circle Venn and count directly.",
                 "result": "35 + 30 − 52 = 13 study both",
                 "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
@@ -2862,7 +2862,7 @@
             "steps": [
               {
                 "operation": "Find the constant",
-                "reason": "k = y ÷ x for a direct variation",
+                "reason": "k = y ÷ x for a direct variation. Use this ratio because direct variation is a straight-line relationship; if the data disagree, suspect a different variation type (inverse or square).",
                 "result": "k = 18 ÷ 6 = 3",
                 "predictPrompt": "In your own words, why does this step come before the next one?"
               },
@@ -2962,7 +2962,7 @@
             "steps": [
               {
                 "operation": "Find the constant",
-                "reason": "Joint variation means y = kxz, so divide y by both variables.",
+                "reason": "Joint variation means y = kxz, so divide y by both variables. Use this product rule because two quantities stack multiplicatively; if one disagrees, split into two single-variation questions and solve in turn.",
                 "result": "k = 48 ÷ (3 × 4) = 4",
                 "predictPrompt": "In your own words, why does this step come before the next one?"
               },
@@ -3107,7 +3107,7 @@
             "steps": [
               {
                 "operation": "Divide by −3",
-                "reason": "The divisor is negative, so the sign reverses",
+                "reason": "The divisor is negative, so the sign reverses. Use the flip rule because negative multipliers reverse order; if the number is positive, the sign stays exactly as it is.",
                 "result": "x ≤ −3",
                 "predictPrompt": "How would you verify this answer?"
               },
@@ -3206,13 +3206,13 @@
             "steps": [
               {
                 "operation": "Subtract 2 from all three parts",
-                "reason": "Removing +2 from the whole chain keeps the inequality intact on every side.",
+                "reason": "Removing +2 from the whole chain keeps the inequality intact on every side. Use identical operations on all three parts because the chain behaves like a single expression; if you only touch one part, the relationship breaks immediately.",
                 "result": "−6 < −2x ≤ 4",
                 "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Divide each part by −2",
-                "reason": "Dividing by a negative reverses every sign, so each inequality flips direction.",
+                "reason": "Dividing by a negative reverses the sign of every part. Use the flip rule because sign reversal is compulsory; if you want to skip the flip, multiply through by −1 on all three parts instead.",
                 "result": "3 > x ≥ −2",
                 "predictPrompt": "Which part of the question does this step answer?"
               },
@@ -3349,13 +3349,13 @@
             "steps": [
               {
                 "operation": "Name the progression",
-                "reason": "Each term adds 3, so it is arithmetic with a = 3 and d = 3",
+                "reason": "Each term adds 3, so it is arithmetic with a = 3 and d = 3. Use Sₙ = n/2 (2a + (n−1)d) because the sum needs only the first term, common difference and count; if you know the last term, Sₙ = n(a + l)/2 is a quicker route.",
                 "result": "Use the sum formula",
                 "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Apply the sum formula",
-                "reason": "Sum = n/2 × (2a + (n − 1)d)",
+                "reason": "Use the arithmetic series formula Sₙ = n/2(2a + (n−1)d) because it computes the total from the first term and common difference directly; if you know the last term instead, Sₙ = n(a + l)/2 is quicker.",
                 "result": "10/2 × (6 + 27) = 5 × 33 = 165",
                 "predictPrompt": "How would you verify this answer satisfies the question?"
               },
@@ -3448,7 +3448,7 @@
             "steps": [
               {
                 "operation": "Name the progression",
-                "reason": "Each term is a third of the last, so a = 96, r = 1/3 < 1.",
+                "reason": "Each term is a third of the last, so a = 96 and r = 1/3 < 1. Use S∞ = a/(1 − r) because the series shrinks to a finite limit; if r ≥ 1, the sum is infinite and you swap to the finite Sₙ formula instead. Use S∞ = a/(1 − r) because the series converges; if r ≥ 1, the sum is infinite and you swap to the finite Sₙ formula.",
                 "result": "A convergent geometric series",
                 "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
@@ -3590,7 +3590,7 @@
             "steps": [
               {
                 "operation": "Write the identity test",
-                "reason": "The identity e must satisfy a * e = a for every a.",
+                "reason": "The identity e must satisfy a * e = a for every a. Use this definition because it is exactly what identity means; if you see a different operation, test a small value such as 1 * e directly.",
                 "result": "a + e + 1 = a gives e + 1 = 0.",
                 "predictPrompt": "What do you need to find before you can solve this?"
               },
@@ -3688,13 +3688,13 @@
             "steps": [
               {
                 "operation": "Try right identity",
-                "reason": "The right identity e must give a ∘ e = a for every a.",
+                "reason": "The right identity e must give a ∘ e = a for every a. Use this trial because it is the only honest test; if it fails, the operation has no right identity by definition.",
                 "result": "a + 2e = a, so e = 0",
                 "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Try it on the left",
-                "reason": "A two-sided identity must also give e ∘ a = a. BEST: check both sides (right-test alone misses half the story); fall back: tabulate small results to spot the pattern.",
+                "reason": "a two-sided identity must satisfy both orders. Best move: try both — e ∘ a and a ∘ e. If confused, write out a few small cases to spot the pattern.",
                 "result": "0 + 2a = 2a, not a",
                 "predictPrompt": "Which part of the question does this step answer?"
               },
@@ -3833,7 +3833,7 @@
             "steps": [
               {
                 "operation": "Compute the determinant",
-                "reason": "The inverse needs ad minus bc",
+                "reason": "The inverse needs ad − bc. Use the determinant formula because it is the shortest path for 2×2; if the determinant is zero, no inverse exists for this matrix.",
                 "result": "3 times 2 minus 1 times 1 equals 5",
                 "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
@@ -3931,7 +3931,7 @@
             "steps": [
               {
                 "operation": "Check the inner sizes match",
-                "reason": "Inner sizes must match for multiplication. BEST: (m×n)(n×p) → m×p; fall back: row-dot-column if you keep slipping.",
+                "reason": "inner sizes must match to multiply matrices. Best move: (m×n)(n×p) produces (m×p) — line the middle numbers. If row-by-column feels slippery, do dot products on paper.",
                 "result": "AB exists and is a 2 by 2 matrix.",
                 "predictPrompt": "In your own words, why does this step come before the next one?"
               },
@@ -4076,7 +4076,7 @@
             "steps": [
               {
                 "operation": "Apply the power rule to 2x^4",
-                "reason": "The exponent 4 comes down and the power falls by one.",
+                "reason": "The exponent 4 comes down and the power falls by one. Use the power rule because it is the shortest route for plain polynomial terms; if the term is multiplied or divided, tackle each one in turn with the product or quotient rule. Use the power rule because it is the fastest for plain polynomial terms; if the term is multiplied or divided, tackle them one at a time with the product or quotient rule.",
                 "result": "The term becomes 8x^3.",
                 "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
@@ -4173,7 +4173,7 @@
             "steps": [
               {
                 "operation": "Name the outer and inner parts",
-                "reason": "The cube is outside and 2x+1 is inside",
+                "reason": "The cube is outside and 2x+1 is inside. Use the chain rule because the function is nested; if you lose the thread, expand (2x+1)³ using the binomial theorem and differentiate term by term.. Use the chain rule because the function has layers; if you lose the trail, expand (2x+1)³ by the binomial theorem and differentiate term by term instead.",
                 "result": "Outer: u³; inner: 2x+1.",
                 "predictPrompt": "Which part of the question does this step answer?"
               },
@@ -4273,7 +4273,7 @@
             "bullets": [
               "The interior angles of a triangle sum to 180°.",
               "The exterior angles of any polygon sum to 360°.",
-              "A regular n-sided polygon has each interior angle equal to (n − 2) × 180° ÷ n."
+              "A regular n-sided polygon has each interior angle equal to (n − 2) × 180° ÷ n. Use the interior-angle formula because it is exact; if the question hands you the exterior angle, use n = 360° ÷ exterior far sooner."
             ],
             "takeaway": "Triangle angles sum to 180° and polygon angles follow (n − 2) × 180°.",
             "check": {
@@ -4332,7 +4332,7 @@
             "steps": [
               {
                 "operation": "Write the interior-angle formula",
-                "reason": "A regular n-sided polygon has each interior angle equal to (n − 2) × 180° ÷ n.",
+                "reason": "A regular n-sided polygon has each interior angle equal to (n − 2) × 180° ÷ n. Use the interior-angle formula because it is exact; if the question hands you the exterior angle, use n = 360° ÷ exterior far sooner.",
                 "result": "(n − 2) × 180 ÷ n = 140.",
                 "predictPrompt": "What do you need to find before you can solve this?"
               },
@@ -4430,7 +4430,7 @@
             "steps": [
               {
                 "operation": "Use opposite angles A and C",
-                "reason": "Cyclic opposites sum to 180°",
+                "reason": "Cyclic opposites sum to 180°. Use the cyclic-quadrilateral opposite rule because it is a single clean fact; if you forget, remember that every angle subtended by the other two diametrically opposite endpoints matches its supplement.",
                 "result": "5x+10=180, so x=34, A=68°, C=112°.",
                 "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
@@ -4575,7 +4575,7 @@
             "steps": [
               {
                 "operation": "Find the fraction of the circle",
-                "reason": "A sector is the angle fraction of the whole circle.",
+                "reason": "A sector is the angle fraction of the whole circle. Use the fraction-of-circle formula because 360° maps onto one turn; if the angle is in radians, switch to ½r²θ instead of carrying pi around.",
                 "result": "90°/360° = 1/4 of the circle.",
                 "predictPrompt": "Which part of the question does this step answer?"
               },
@@ -4679,7 +4679,7 @@
               },
               {
                 "operation": "Find the triangle area",
-                "reason": "The two radii at right angles form a right triangle",
+                "reason": "The two radii at right angles form a right triangle. Use the area ½ × base × height because it is the cleanest for 90°; if the angle is not 90°, use ½ab sin θ and keep the angle inside.",
                 "result": "(1/2) × 14 × 14 = 98 cm².",
                 "predictPrompt": "Which numbers or terms work with each other first?"
               },
@@ -4816,7 +4816,7 @@
             "steps": [
               {
                 "operation": "Name the equal-distance rule",
-                "reason": "Equal distance from A and B places P on the perpendicular bisector of AB. BEST: bisector for equidistance; fall back: midpoint + 90° through the point always works.",
+                "reason": "equal distance from A and B — the set of all such points. Best move: the perpendicular bisector, always. If easier, find the midpoint, then draw 90° through it — same line.",
                 "result": "First locus: a straight line.",
                 "predictPrompt": "What exactly does the question want you to write down first?"
               },
@@ -4920,7 +4920,7 @@
               },
               {
                 "operation": "Name the fixed-distance rule",
-                "reason": "Exactly 5 cm from M places P on a circle centred at M. BEST: circle for fixed distance; fall back: midpoint-and-radius direct if coordinates are easier.",
+                "reason": "exactly 5 cm from M — one fixed distance. Best move: a circle centred at M with radius 5 cm. If coordinates are simpler, plug them into the distance formula.",
                 "result": "Second locus: a circle of radius 5 cm about M.",
                 "predictPrompt": "In your own words, why does this step come before the next one?"
               },
@@ -5057,7 +5057,7 @@
             "steps": [
               {
                 "operation": "Use the point-slope form",
-                "reason": "The gradient and one point are known, so substitute into y − y₁ = m(x − x₁).",
+                "reason": "The gradient and one point are known, so substitute into y − y₁ = m(x − x₁). Use the point-slope form because it is the universal line formula; if you prefer, expand it manually and check by substituting the known point.",
                 "result": "y − 3 = 2(x − 2).",
                 "predictPrompt": "Which numbers or terms work with each other first?"
               },
@@ -5155,7 +5155,7 @@
             "steps": [
               {
                 "operation": "Find the midpoint of the join",
-                "reason": "The bisector must pass halfway along the join",
+                "reason": "The bisector must pass halfway along the join. Use the perpendicular bisector of AB because the question asks for equal distance from A and B; if the slope is friendlier, the equation through the midpoint is a one-liner.",
                 "result": "M = ((2+6)/2, (3+7)/2) = (4, 5).",
                 "predictPrompt": "Which part of the question does this step answer?"
               },
@@ -5395,7 +5395,7 @@
             "steps": [
               {
                 "operation": "Write volume as a function of radius",
-                "reason": "The sphere volume formula links V to r alone",
+                "reason": "The sphere volume formula V = (4/3)πr³ links V to r alone. Use the chain rule because the variables are stacked (V depends on r, r depends on t); if the formula escapes you, differentiate V = (4/3)πr³ explicitly and carry dr/dt through.",
                 "result": "V = (4/3)πr³.",
                 "predictPrompt": "Which part of the question does this step answer?"
               },
@@ -5545,7 +5545,7 @@
               },
               {
                 "operation": "Substitute the limits",
-                "reason": "A definite integral needs F(b) − F(a), and c cancels.",
+                "reason": "A definite integral needs F(b) − F(a), and c cancels. Use the fundamental theorem of calculus because it turns the area problem into subtraction; if you forget it, integrate to find the antiderivative first and evaluate at the limits.",
                 "result": "F(2) = 8 + 8 = 16 and F(0) = 0.",
                 "predictPrompt": "What exactly does the question want you to write down first?"
               },
@@ -5637,7 +5637,7 @@
             "steps": [
               {
                 "operation": "Substitute u=3x+1",
-                "reason": "Inside is linear, so substitution avoids expansion because dx=du/3.",
+                "reason": "Inside is linear, so substitution avoids expansion because dx = du/3. Use u-substitution because it collapses the chain; if you cannot see the substitution, expand (3x+1)² and integrate term by term.",
                 "result": "x=0 gives u=1; x=2 gives u=7, so integral is (1/3)∫₁⁷u²du.",
                 "predictPrompt": "In your own words, why does this step come before the next one?"
               },
@@ -5788,7 +5788,7 @@
               },
               {
                 "operation": "Compute each angle",
-                "reason": "Angle equals frequency divided by total times 360 degrees",
+                "reason": "Angle equals frequency divided by total times 360 degrees. Use the proportional-angle rule because every pie slice is a fraction of the whole; if you prefer, work in decimal fractions and scale to the full circle at the end.",
                 "result": "Biology 144 degrees, Chemistry 90 degrees, Physics 72 degrees, Mathematics 54 degrees",
                 "predictPrompt": "How would you verify this answer?"
               },
@@ -5880,7 +5880,7 @@
             "steps": [
               {
                 "operation": "Write the fraction",
-                "reason": "Angle is the share of the circle, so share is angle ÷ 360°.",
+                "reason": "Angle is the share of the circle, so share equals angle divided by 360 degrees. Use the proportional-angle rule because every share must sum to the full total; if you prefer, convert the angle to a fraction first and then scale to the total farmers.",
                 "result": "Share = 126°/360° = 0.35.",
                 "predictPrompt": "What would a weaker answer look like here?"
               },
@@ -6025,7 +6025,7 @@
             "steps": [
               {
                 "operation": "Write class marks",
-                "reason": "Each class needs its midpoint",
+                "reason": "Each class needs its midpoint. Use the mean of class midpoints weighted by frequency because it is the only honest way to estimate from grouped data; if the data were ungrouped, average every single value directly.",
                 "result": "4.5, 14.5, 24.5, 34.5",
                 "predictPrompt": "Which numbers or terms work with each other first?"
               },
@@ -6120,7 +6120,7 @@
             "steps": [
               {
                 "operation": "Find the position",
-                "reason": "75% lie below the 75th percentile, so use 0.75×N.",
+                "reason": "75% of the data lie below the 75th percentile, so use 0.75N. Use the ogive interpolation formula because it locates the exact value; if the graph is drawn, read off the x-axis value directly instead.",
                 "result": "0.75×40=30, so 30th lowest score.",
                 "predictPrompt": "What would a weaker answer look like here?"
               },
@@ -6265,7 +6265,7 @@
             "steps": [
               {
                 "operation": "Find the mean",
-                "reason": "Add all scores and divide by 5, then subtract extremes for range.",
+                "reason": "Add all scores and divide by 5. Use the mean (and then range / mean deviation / variance formulas) in that order because variance depends on the mean; if outliers dominate, lead with the median and IQR instead., then subtract extremes for range.",
                 "result": "Mean = 50 ÷ 5 = 10; range = 13 − 7 = 6.",
                 "predictPrompt": "In your own words, why does this step come before the next one?"
               },
@@ -6360,7 +6360,7 @@
             "steps": [
               {
                 "operation": "Find the mean",
-                "reason": "Mean is total score shared equally, so weight each mark by frequency.",
+                "reason": "Mean is total score shared equally, so weight each mark by frequency. Use the grouped-frequency mean because it handles large datasets efficiently; if you suspect a grouping error, recalculate with the raw values and compare.",
                 "result": "Σfx=10+120+30=160; mean=160÷8=20.",
                 "predictPrompt": "In your own words, why does this step come before the next one?"
               },
@@ -6503,7 +6503,7 @@
             "steps": [
               {
                 "operation": "Write the permutation",
-                "reason": "Order matters and no letter repeats, so choose ordered positions.",
+                "reason": "Order matters and no letter repeats, so choose ordered positions (first place 8, second 7, third 6). Use the permutation formula ⁸P₃ because the order is fixed; if the order did not matter, switch to combinations instead.",
                 "result": "8P3 = 8! / 5!.",
                 "predictPrompt": "Which numbers or terms work with each other first?"
               },
@@ -6601,7 +6601,7 @@
             "steps": [
               {
                 "operation": "Bind the pair",
-                "reason": "Together is a restriction, so glue the pair into one block first.",
+                "reason": "Together is a restriction, so glue the pair into one block first. Use the block-glue method because it removes the restriction cleanly; if they were merely adjacent, add them as an extension instead of reducing them.",
                 "result": "Block + 4 others = 5 units.",
                 "predictPrompt": "What would a weaker answer look like here?"
               },
@@ -6744,7 +6744,7 @@
             "steps": [
               {
                 "operation": "Apply the power law",
-                "reason": "The term 2 log_3 9 is a power and becomes log_3 (9^2). BEST: k·logₐb = logₐ(b^k); fall back: expand k·logₐb manually.",
+                "reason": "the term 2 log_3 9 is a power. Best move: lift the small power up — 2 log₉ means log₈₁. If you prefer, multiply out manually: 2 × log₃ 9.",
                 "result": "The expression becomes log_3 729 − log_3 81 + log_3 27.",
                 "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
@@ -6842,7 +6842,7 @@
             "steps": [
               {
                 "operation": "Change the base",
-                "reason": "Use base 10 because only log₁₀2 is known, via the change-of-base formula. BEST: logₐb = log₁₀b ÷ log₁₀a; fall back: remember log₃ 9 = 2 for a sanity check.",
+                "reason": "use base 10 because only log₁₀2 is known. Best move: the change-of-base formula — logₐb = log₁₀b ÷ log₁₀a. If you want to double-check, memorise log₃ 9 = 2.",
                 "result": "log₈32 = log₁₀32 ÷ log₁₀8.",
                 "predictPrompt": "Which numbers or terms work with each other first?"
               },
@@ -6985,7 +6985,7 @@
             "steps": [
               {
                 "operation": "Try P(3)",
-                "reason": "An easy small integer that makes the arithmetic simple",
+                "reason": "An easy small integer that makes the arithmetic simple — try +1 or +2. Use the factor theorem because a root makes P(x) = 0, yielding an exact factor; if it stalls, try smaller integers or the rational-root theorem.",
                 "result": "P(3) = 27 − 81 + 78 − 24 = 0",
                 "predictPrompt": "Which numbers or terms work with each other first?"
               },
@@ -7422,7 +7422,7 @@
             "steps": [
               {
                 "operation": "Read the leading coefficient",
-                "reason": "Negative coefficient means the parabola opens downward",
+                "reason": "Negative coefficient means the parabola opens downward. Use the discriminant (b² − 4ac) because it tells you exactly whether the x-axis is crossed; if you need the vertex, compute x = −b/(2a) and substitute back.",
                 "result": "Opens downward; a = −1",
                 "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },

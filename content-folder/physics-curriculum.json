@@ -267,7 +267,7 @@
             "steps": [
               {
                 "operation": "Dimension of each term",
-                "reason": "v, u velocities (LT⁻¹); a acceleration (LT⁻²); s displacement (L). BEST: compare every side by M-L-T powers; fall back: check each term separately against M, L, T.",
+                "reason": "v, u velocities (LT⁻¹); a acceleration (LT⁻²); s displacement (L). Best: match M, L and T powers on both sides — if they differ, the equation cannot hold. If unsure, check each term separately.",
                 "result": "v² = L²T⁻²; u² = L²T⁻²; 2as = L²T⁻²",
                 "predictPrompt": "What powers of L and T hide inside v²? Work them out before looking."
               },
@@ -305,7 +305,7 @@
             "steps": [
               {
                 "operation": "Write each quantity in fundamentals",
-                "reason": "pressure = N/m² = kg·m⁻¹·s⁻²; volume m³ — P × V removes one m. BEST: substitute units into the equation for the unknown; fall back: dimensional match on PV = nRT itself.",
+                "reason": "pressure = N/m² = kg·m⁻¹·s⁻²; volume m³ — P × V removes one m. Best: cancel unit symbols to reach the missing unit. If unsure, write each piece in M, L, T and compare powers.",
                 "result": "P × V = kg·m²·s⁻² = mol·K × R",
                 "predictPrompt": "What powers of m survive when you multiply kg·m⁻¹·s⁻² by m³?"
               },
@@ -476,7 +476,7 @@
           "content": {
             "title": "Exam tip",
             "tone": "tip",
-            "body": "JAMB's vector trap: two forces of equal size do not automatically add up. Unless it says 'same direction' or 'at right angles', reach for the parallelogram formula or a scale diagram."
+            "body": "JAMB's vector trap: equal forces do not just add up — reach for the parallelogram formula unless the angle is exactly 90°."
           }
         },
         {
@@ -486,7 +486,7 @@
             "steps": [
               {
                 "operation": "Write the parallelogram formula",
-                "reason": "R² = P² + Q² + 2PQcosθ; P = 5 N, Q = 7 N, θ = 60°. BEST: parallelogram law (non-perpendicular); fall back: Pythagoras after resolving into X/Y.",
+                "reason": "R² = P² + Q² + 2PQcosθ; P = 5 N, Q = 7 N, θ = 60°. Best: parallelogram law (no trick when the angle is clear). If stuck, split into X and Y parts and Pythagoras.",
                 "result": "R² = 25 + 49 + 2 × 5 × 7 × cos60°",
                 "predictPrompt": "cos60° without a calculator — what is it?"
               },
@@ -524,7 +524,7 @@
             "steps": [
               {
                 "operation": "Heading angle",
-                "reason": "the swimmer's upstream component must cancel the current: sinθ = current ÷ own speed. BEST: split into perpendicular components; fall back: R = √(u² + v²) for the resultant.",
+                "reason": "the swimmer's upstream component must cancel the current: sinθ = current ÷ own speed. Best: split the velocity into two perpendicular parts and use those. If stuck, reach for Pythagoras on them.",
                 "result": "sinθ = 3/4 → θ ≈ 46.9° upstream",
                 "predictPrompt": "If the current were faster than his swimming speed, could he ever land opposite?"
               },
@@ -712,7 +712,7 @@
             "steps": [
               {
                 "operation": "Distance",
-                "reason": "distance = total walked; ignore direction. BEST: Pythagoras (3-4-5); fall back: resolve into E/N components then re-join.",
+                "reason": "distance = total walked; ignore direction. Best: Pythagoras (3-4-5) for the straight-line change. If stuck, split east–north parts, then re-join with Pythagoras.",
                 "result": "distance = 3 + 4 = 7 km",
                 "predictPrompt": "Would you still get 7 km if he walked 4 km north before the 3 km east?"
               },
@@ -750,7 +750,7 @@
             "steps": [
               {
                 "operation": "Distance in the acceleration phase",
-                "reason": "graph starts at 6 m/s, ends at 18 m/s. BEST: area under the v–t line if distance is asked; fall back: suvat if only motion quantities are wanted.",
+                "reason": "graph starts at 6 m/s, ends at 18 m/s. Best: area under the v–t line for distance. If stuck, use suvat — everything needed should be printed.",
                 "result": "area = ½ × (6 + 18) × 4 = 48 m",
                 "predictPrompt": "Is the shape a triangle, a rectangle or a trapezium? Look at the start and end points."
               },
@@ -936,7 +936,7 @@
             "steps": [
               {
                 "operation": "Acceleration",
-                "reason": "F = ma → a = F ÷ m. BEST: F = ma (net force given); fall back: F = (mv − mu) ÷ t if time appears instead of a.",
+                "reason": "F = ma gives acceleration straight from force and mass. Best move: use it when you hold force and mass together. If you have time instead, use F = (mv − mu) ÷ t.",
                 "result": "a = 15 ÷ 5 = 3 m/s²",
                 "predictPrompt": "Which quantity do you divide by mass here — force or weight?"
               },
@@ -968,7 +968,7 @@
             "steps": [
               {
                 "operation": "Resultant force",
-                "reason": "forces are perpendicular — use Pythagoras. BEST: Pythagoras for R; fall back: R = √(P² + Q² + 2PQcosθ) if the angle drifts from 90°.",
+                "reason": "forces act at right angles, so use Pythagoras for R. Best: stick with Pythagoras when the angle is 90°. If you doubt it, full cosine formula always works.",
                 "result": "R = √(30² + 40²) = 50 N",
                 "predictPrompt": "Are these forces perpendicular? Check before reaching for Pythagoras."
               },
@@ -1150,7 +1150,7 @@
             "steps": [
               {
                 "operation": "Set up the equation",
-                "reason": "impulse = change in momentum; rebound reverses sign. BEST: FΔt = Δp = m(v − u); fall back: F = ma if the force is printed outright.",
+                "reason": "impulse = change in momentum; rebound flips the sign. Best: build Δp from scratch first. If the force is printed, F = ma works the same in that case.",
                 "result": "I = m v − m u = 0.05 × 30 − 0.05 × (−30)",
                 "predictPrompt": "Which way does the ball's velocity change sign? Check before subtracting."
               },
@@ -1188,7 +1188,7 @@
               },
               {
                 "operation": "Total momentum after impact",
-                "reason": "bullet embedded: block and bullet move as one mass. BEST: conservation of momentum (sticky collision); fall back: FΔt = Δp if the contact time is printed instead.",
+                "reason": "bullet embedded: block and bullet move as one mass. Best: conservation of momentum — total momentum before equals after. If time is printed, use FΔt = Δp.",
                 "result": "p_after = (0.02 + 2) × V = 2.02 V",
                 "predictPrompt": "Do the masses merge in a sticky collision?"
               },
@@ -1370,7 +1370,7 @@
             "steps": [
               {
                 "operation": "Acceleration",
-                "reason": "a = (v − u) ÷ t. BEST: a = Δv ÷ t (no force involved); fall back: F = ma only with a net-force twist.",
+                "reason": "a = (v − u) ÷ t. Best: acceleration = velocity change ÷ time — from the definition, no force enters. If net force appears, F = ma still works.",
                 "result": "a = (35 − 15) ÷ 5 = 4 m/s²",
                 "predictPrompt": "Which suvat equation holds when time is known but distance is not?"
               },
@@ -1402,7 +1402,7 @@
             "steps": [
               {
                 "operation": "Maximum height",
-                "reason": "at the top v = 0; v² = u² − 2gH. BEST: v² = u² − 2gH (time not asked); fall back: H = u² ÷ 2g — same answer without the squared step.",
+                "reason": "at the top v = 0; v² = u² − 2gH. Best: square-velocity equation — it never asks for time. If you want simpler, H = u² ÷ 2g gives the same answer.",
                 "result": "H = u² ÷ 2g = 400 ÷ 20 = 20 m",
                 "predictPrompt": "Which v do you substitute at the top of the throw?"
               },
@@ -1590,7 +1590,7 @@
             "steps": [
               {
                 "operation": "Time of flight",
-                "reason": "vertical component u sin 30° = 10 m/s; T = 2u_y ÷ g. BEST: split axes then T = 2usinθ ÷ g; fall back: range formula only if R is what the stem asks.",
+                "reason": "vertical component u sin 30° = 10 m/s; T = 2u_y ÷ g. Best: split the motion into two parts and work the vertical one first. Use range formula only if distance is asked.",
                 "result": "T = 2 × 10 ÷ 10 = 2 s",
                 "predictPrompt": "Is the horizontal component involved in the flight time?"
               },
@@ -1628,7 +1628,7 @@
             "steps": [
               {
                 "operation": "Vertical component and time of flight",
-                "reason": "u_y = 40 × 0.866 = 34.64; T = 2u_y ÷ g. BEST: split axes first; fall back: v² = u_y² − 2gH.",
+                "reason": "u_y = 40 × 0.866 = 34.64; T = 2u_y ÷ g. Best: split the motion into pieces, solve the vertical first. If you need height only, use v² = u_y² − 2gH.",
                 "result": "T = 2 × 34.64 ÷ 10 ≈ 6.93 s",
                 "predictPrompt": "If the launch angle doubled from 30° to 60°, what happens to T?"
               },
@@ -1814,7 +1814,7 @@
             "steps": [
               {
                 "operation": "Write the formula",
-                "reason": "F = mv² ÷ r. BEST: F = mv² ÷ r (speed printed); fall back: F = mω²r if period is offered instead.",
+                "reason": "F = mv² ÷ r. Best: use it when speed is printed. If the period is printed instead, the same force is F = mω²r.",
                 "result": "F = (1 × 10²⁴ × (2 × 10⁴)²) ÷ (1 × 10¹¹)",
                 "predictPrompt": "Square the velocity first — which powers dominate the exponent?"
               },
@@ -1846,7 +1846,7 @@
             "steps": [
               {
                 "operation": "Orbital speed",
-                "reason": "v = 2πr ÷ T. BEST: orbital pace first — everything else needs v; fall back: solve for a = ω²r directly if ω is handed to you.",
+                "reason": "v = 2πr ÷ T. Best: find the orbital speed first — every later step needs it. If ω is printed, skip and compute a = ω²r.",
                 "result": "v = 2 × 3.142 × 7 × 10⁶ ÷ 6000 ≈ 7330 m/s",
                 "predictPrompt": "Converting the period to hours — do you need to?"
               },
@@ -2028,7 +2028,7 @@
             "steps": [
               {
                 "operation": "Frequency",
-                "reason": "f = 1 ÷ T. BEST: f = 1 ÷ T (period printed outright); fall back: ω = 2πf if angular frequency comes next.",
+                "reason": "f = 1 ÷ T. Best: read the period first, then flip it for frequency. If ω is asked next, turn it into ω = 2πf.",
                 "result": "f = 1 ÷ 0.5 = 2 Hz",
                 "predictPrompt": "What does a 0.5-second period tell you directly about f?"
               },
@@ -2060,7 +2060,7 @@
             "steps": [
               {
                 "operation": "Simple harmonic period",
-                "reason": "T = 2π√(m ÷ k). BEST: spring formula (mass + stiffness, no gravity part); fall back: T = 2π√(l ÷ g) for a pendulum flavour instead.",
+                "reason": "T = 2π√(m ÷ k). Best: the spring formula — mass and stiffness give the timing. If it is a pendulum instead, use T = 2π√(l ÷ g).",
                 "result": "T = 2π√(0.5 ÷ 200) = 2π × 0.05 = 0.314 s",
                 "predictPrompt": "Why does the mass (0.5 kg) enter this formula but not the pendulum's?"
               },
@@ -2246,7 +2246,7 @@
             "steps": [
               {
                 "operation": "Write the formula",
-                "reason": "Newton’s law of gravitation applies — F = Gm₁m₂ / r². BEST: F = Gm₁m₂ / r² (two masses + gap); fall back: L = W ÷ g near the surface for weight problems.",
+                "reason": "Newton’s law of gravitation — F = Gm₁m₂ / r². Best: two masses and the gap. Near the surface, use L = W ÷ g with weight.",
                 "result": "F = 6.67 × 10⁻¹¹ × 4 × 3 ÷ 2²",
                 "predictPrompt": "What is the value of r² for r = 2 m?"
               },
@@ -2278,7 +2278,7 @@
             "steps": [
               {
                 "operation": "Write the formula",
-                "reason": "v = √(2GM/R). BEST: escape-velocity line (planet mass + radius); fall back: v = √(2gR) with local g when g is the figure supplied.",
+                "reason": "v = √(2GM/R). Best: the Newton form — it carries mass and radius. If g is printed, use v = √(2gR).",
                 "result": "v = √(2 × 6.67 × 10⁻¹¹ × 6 × 10²⁴ ÷ 6.4 × 10⁶)",
                 "predictPrompt": "Which comes first in the root — 2GM or the divide-by-R?"
               },
@@ -2460,7 +2460,7 @@
             "steps": [
               {
                 "operation": "Resolve into components",
-                "reason": "ΣFₓ and ΣF_y on the chosen axes. BEST: Pythagoras (perpendicular legs); fall back: parallelogram law if component maths stalls.",
+                "reason": "ΣFₓ and ΣF_y on the chosen axes. Best: add the parts on each axis, then Pythagoras when the legs are right angles. If components feel messy, use the parallelogram law.",
                 "result": "X = 50 + 30 cos 60° = 50 + 15 = 65 N; Y = 30 sin 60° ≈ 26 N",
                 "predictPrompt": "What is cos 60°?"
               },
@@ -2498,7 +2498,7 @@
             "steps": [
               {
                 "operation": "Identify the sides of a force triangle",
-                "reason": "the three forces are in equilibrium so they form a 6-8-10 triangle. BEST: Lami’s theorem (three concurrent forces); fall back: resolve on two axes instead.",
+                "reason": "the three forces in equilibrium form a closed triangle. Best: Lami’s theorem for three concurrent forces. If that feels awkward, resolve on two axes.",
                 "result": "6² + 8² = 10² — a right-angle triangle",
                 "predictPrompt": "Which is the longest side — the 10 N force?"
               },
@@ -2686,7 +2686,7 @@
             "steps": [
               {
                 "operation": "Total reaction",
-                "reason": "both supports carry beam weight + woman. BEST: total load first, then moments about one support; fall back: moments about the load point if support data are missing.",
+                "reason": "both supports hold the beam’s weight plus the woman. Best: bundle the load first, then moments about one support. If reactions are a puzzle, pivot about the load.",
                 "result": "R₁ + R₂ = 200 + 300 = 500 N",
                 "predictPrompt": "Which reaction will be larger — the near one or the far one?"
               },
@@ -2724,7 +2724,7 @@
             "steps": [
               {
                 "operation": "Total load reaction",
-                "reason": "both supports together carry beam weight + load. BEST: same route — total R₁ + R₂, then moments; fall back: two separate moment equations if subtraction smells.",
+                "reason": "both supports hold beam + load. Best: bundled load (R₁ + R₂), then moments about one end. If subtraction feels awkward, write two separate moment equations.",
                 "result": "R₁ + R₂ = 100 + 60 = 160 kgf = 160 × 10 N = 1600 N",
                 "predictPrompt": "Which side carries more, the near load or the far?"
               },
@@ -2912,7 +2912,7 @@
             "steps": [
               {
                 "operation": "Compute the normal reaction",
-                "reason": "on a horizontal surface, N = weight of the body. BEST: F = μN for any rough floor; fall back: tan θ = μ for the lean angle alternative.",
+                "reason": "on a flat surface the normal equals the body’s weight. Best: F = μN for any flat floor. If an angle is supplied instead, tan θ = μ.",
                 "result": "N = mg = 5 × 10 = 50 N",
                 "predictPrompt": "Is N ever anything other than mg on a flat floor? Try angled."
               },
@@ -2944,7 +2944,7 @@
             "steps": [
               {
                 "operation": "Resolve weight into components",
-                "reason": "perpendicular to plane: mg cos θ; along plane: mg sin θ. BEST: resolve into plane components; fall back: F = μmg cos θ — skip the tan θ if only answers matter.",
+                "reason": "resolve the force: mg cos θ across the plane, mg sin θ along it. Best: split the force along and across the slope. If only friction is asked, F = μmg cos θ.",
                 "result": "cos θ = 4/5 = 0.8 (since tan θ = 3/4); N = 10 × 10 × 0.8 = 80 N",
                 "predictPrompt": "Three-four-five — this is the only triangle you see at 37°."
               },
@@ -3132,7 +3132,7 @@
             "steps": [
               {
                 "operation": "Identify force and displacement",
-                "reason": "force directly along motion, so cos 0° = 1. BEST: W = Fs cos θ; fall back: W = Fd when the angle is absent.",
+                "reason": "force directly along the motion, so cos 0° = 1. Best: W = Fs cos θ — always carries the angle. If no angle is printed, it reduces to Fs.",
                 "result": "F = 500 N, s = 30 m",
                 "predictPrompt": "Is 5000 N at an angle, or you pushing straight forward?"
               },
@@ -3164,7 +3164,7 @@
             "steps": [
               {
                 "operation": "Kinetic energy at launch",
-                "reason": "KE = ½mv². BEST: KE = ½mv² (mass + speed given, height silent); fall back: mgh for the destination leg of the trip.",
+                "reason": "KE = ½mv². Best: use this with mass and speed — height never enters. If height is the variable instead, mgh is your formula.",
                 "result": "KE = ½ × 1 × 20² = 200 J",
                 "predictPrompt": "What does 'just before it lands' suggest — the same level or lower?"
               },
@@ -3352,7 +3352,7 @@
             "steps": [
               {
                 "operation": "Energy consumed in kWh",
-                "reason": "power × time ÷ 1000 — power in kW. BEST: drop W first (0.06 kW) then hours × tariff; fall back: joules route P × t if kWh is not demanded.",
+                "reason": "power times hours, then ÷ 1000. Best: convert to kW (0.06 kW), times hours, times tariff. If kWh is not asked, use plain P × t in joules.",
                 "result": "60 W = 0.06 kW; 5 h/day; 30 days → 0.06 × 5 × 30 = 9 kWh",
                 "predictPrompt": "60 W — does W stay in watts here, or do you divide by 1000 first?"
               },
@@ -3384,7 +3384,7 @@
             "steps": [
               {
                 "operation": "Energy equivalence",
-                "reason": "PE lost = KE gained (conservation). BEST: energy conservation mgh = ½mv² (losses zero); fall back: v² = 2gh rearranged if only h is asked.",
+                "reason": "PE lost equals KE gained; energy is conserved. Best: mgh = ½mv² when nothing escapes. If only height is asked, rearrange v² = 2gh.",
                 "result": "mgh = ½mv² → h = v² ÷ (2g)",
                 "predictPrompt": "The mass cancels — always?"
               },
@@ -3569,7 +3569,7 @@
             "steps": [
               {
                 "operation": "Compute hf",
-                "reason": "energy of the photon. BEST: hf − W = KE (f is printed); fall back: W = hf₀ from threshold if W is the unknown instead.",
+                "reason": "the photon’s energy. Best: hf − W = KE — frequency is already printed. If W is printed instead, W = hf₀ from the threshold.",
                 "result": "E = h × f = 6.63 × 10⁻³⁴ × 5 × 10¹⁴ = 3.3 × 10⁻¹⁹ J",
                 "predictPrompt": "Is 6.63 × 5 = 33.15 or 5.63?"
               },
@@ -3607,7 +3607,7 @@
             "steps": [
               {
                 "operation": "Work function",
-                "reason": "W = hf₀. BEST: W = hf₀ (threshold frequency printed); fall back: hf = W + KE the moment W is in hand.",
+                "reason": "W = hf₀. Best: threshold frequency straight into Planck's equation. If W is now in hand, hf = W + KE finishes it.",
                 "result": "W = 6.63 × 10⁻³⁴ × 5 × 10¹⁴ = 3.315 × 10⁻¹⁹ J = 2.07 eV",
                 "predictPrompt": "Convert J → eV by dividing by 1.6 × 10⁻¹⁹!"
               },
@@ -3792,7 +3792,7 @@
             "steps": [
               {
                 "operation": "Velocity ratio",
-                "reason": "VR = effort distance ÷ load distance. BEST: VR = effort distance ÷ load distance (no friction needed); fall back: MA = Load ÷ Effort to cross-check.",
+                "reason": "VR = effort distance ÷ load distance. Best: use VR — distances only, friction ignored. If stuck, cash-check MA = Load ÷ Effort.",
                 "result": "VR = 1.8 ÷ 0.6 = 3",
                 "predictPrompt": "Which is the longer distance — the load or the hand?"
               },
@@ -3824,13 +3824,13 @@
             "steps": [
               {
                 "operation": "Mechanical advantage",
-                "reason": "MA = load ÷ effort. BEST: MA = load ÷ effort (load and effort printed); fall back: VR = effort distance ÷ load distance if distances appear.",
+                "reason": "MA = load ÷ effort. Best: MA — loads and efforts printed only. If distances appear, cross-check with VR instead.",
                 "result": "MA = 400 ÷ 100 = 4",
                 "predictPrompt": "What does MA = 4 mean about the effort required?"
               },
               {
                 "operation": "Velocity ratio",
-                "reason": "VR = effort distance ÷ load distance. BEST: VR = effort distance ÷ load distance (no friction needed); fall back: MA = Load ÷ Effort to cross-check.",
+                "reason": "VR = effort distance ÷ load distance. Best: use VR — distances only, friction ignored. If stuck, cash-check MA = Load ÷ Effort.",
                 "result": "VR = 4 ÷ 1 = 4",
                 "predictPrompt": "If VR = 4, does the load rise by 1 m for every 4 m of pull?"
               },
@@ -4015,7 +4015,7 @@
             "steps": [
               {
                 "operation": "Spring constant",
-                "reason": "F = kx → k = F ÷ x. BEST: F = kx directly (force + extension); fall back: W = ½kx² if energy also wanted.",
+                "reason": "F = kx — force and extension ride together. Best: Hooke’s law directly. If energy is also asked, use W = ½kx².",
                 "result": "k = 10 ÷ 0.05 = 200 N/m",
                 "predictPrompt": "At 5 N, how much would the same spring stretch?"
               },
@@ -4047,7 +4047,7 @@
             "steps": [
               {
                 "operation": "Apply Young’s modulus",
-                "reason": "Y = (F/A) ÷ (ΔL/L) → F = Y · A · ΔL ÷ L. BEST: Young’s modulus as a ratio; fall back: W = ½FΔL if energy surfaces next.",
+                "reason": "Young’s modulus is a ratio of stress to strain. Best: Y = (F/A) ÷ (ΔL/L). If energy comes next, use W = ½FΔL.",
                 "result": "F = 1.2 × 10¹¹ × 1.0 × 10⁻⁶ × 0.08 ÷ 2 = 4800 N",
                 "predictPrompt": "Units: does ΔL need to be in metres here?"
               },
@@ -4232,13 +4232,13 @@
             "steps": [
               {
                 "operation": "Convert the column to metres",
-                "reason": "P = ρgh directly on a fluid column. BEST: P = ρgh (the column itself); fall back: P = F ÷ A if area is the figure surrendered instead.",
+                "reason": "P = ρgh — directly from the fluid column. Best: density × gravity × height — no area needed. If only area is printed, use P = F ÷ A.",
                 "result": "h = 74 cm = 0.74 m",
                 "predictPrompt": "Give me the column height in metres before the formula."
               },
               {
                 "operation": "Compute the pressure",
-                "reason": "P = ρgh. BEST: P = ρgh (depth only, never the shape); fall back: P = ρgh + P_atm if total pressure wanted instead.",
+                "reason": "P = ρgh. Best: depth sets pressure, not the shape. If the question asks, add the atmosphere to get P = ρgh + P_atm.",
                 "result": "P = 13,600 × 10 × 0.74 = 100,640 Pa ≈ 1.01 × 10⁵ N/m²",
                 "predictPrompt": "Which gives a familiar number — would you say 100,640 or more likely 101,000?"
               }
@@ -4264,7 +4264,7 @@
             "steps": [
               {
                 "operation": "Substitute into P = ρgh",
-                "reason": "pressure difference from the column of mercury. BEST: ρgh on the column (difference form); fall back: P = 1 atm ± ρgh for the absolute form.",
+                "reason": "the pressure difference from the mercury column. Best: ρgh on the difference only. If asked total, P = 1 atm ± ρgh.",
                 "result": "ΔP = 13,600 × 10 × 0.15 = 20,400 Pa",
                 "predictPrompt": "0.15 m is 15 cm — watch the units."
               },
@@ -4449,7 +4449,7 @@
             "steps": [
               {
                 "operation": "Pressure from the water column",
-                "reason": "P = ρgh. BEST: P = ρgh (depth only, never the shape); fall back: P = ρgh + P_atm if total pressure wanted instead.",
+                "reason": "P = ρgh. Best: depth sets pressure, not the shape. If the question asks, add the atmosphere to get P = ρgh + P_atm.",
                 "result": "P = 1000 × 10 × 30 = 300,000 Pa",
                 "predictPrompt": "Do you remember ρ for water? Off-you-go: 1000 or 1.0 × 10³."
               },
@@ -4481,7 +4481,7 @@
             "steps": [
               {
                 "operation": "Difference in pressure",
-                "reason": "ΔP = ρgh. BEST: ΔP = ρgh on the difference first; fall back: P_total = 1 atm + ΔP for the absolute value.",
+                "reason": "ΔP = ρgh, on the difference only. Best: the difference itself — no atmosphere. If it asks total, P_total = 1 atm + ΔP.",
                 "result": "ΔP = 13,600 × 10 × 0.25 = 34,000 Pa",
                 "predictPrompt": "What does 25 cm equal in metres?"
               },
@@ -4672,7 +4672,7 @@
             "steps": [
               {
                 "operation": "Weight of the body",
-                "reason": "W = mg. BEST: compare W vs U (whichever is bigger sinks); fall back: U = ρgV is fixed — only W is in play.",
+                "reason": "W = mg — the weight pulls the body down. Best: test it against buoyant force — bigger one decides if it sinks. ρgV upthrust is fixed — only the weight is flexible.",
                 "result": "W = 0.5 × 10 = 5 N",
                 "predictPrompt": "5 N — will it float in air and water?"
               },
@@ -4710,7 +4710,7 @@
             "steps": [
               {
                 "operation": "Mass of water",
-                "reason": "subtraction from bottle readings. BEST: equals-volume subtraction — no units needed; fall back: ρ = m ÷ V if a reading is missing.",
+                "reason": "the difference between empty and filled bottle readings. Best: equal volumes — the units cancel. If one reading is missing, go back to ρ = m ÷ V.",
                 "result": "mass of water = 120 − 20 = 100 g",
                 "predictPrompt": "Would it be 120 or 100?"
               },

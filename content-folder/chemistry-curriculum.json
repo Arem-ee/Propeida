@@ -243,7 +243,7 @@
               },
               {
                 "operation": "Multiply and add",
-                "reason": "Each mass is weighted by how common it is. BEST: weighted arithmetic mean (abundance-printed); fall back: simple mean for Br’s 50:50 otherwise.",
+                "reason": "each isotope is weighted by how common it is. Best move: multiply each mass by its abundance, add, divide by 100. If both abundances are equal (Br: 50:50), average them plainly.",
                 "result": "75 × 35 = 2625 and 25 × 37 = 925; sum = 3550",
                 "predictPrompt": "Which numbers or terms work with each other first?"
               },
@@ -451,7 +451,7 @@
             "steps": [
               {
                 "operation": "Write the mass relation",
-                "reason": "Mass is what weighs, moles is what counts, Mr links them. BEST: m = n × Mr (always, when moles ↔ mass); fall back: n = m ÷ Mr — flip only the division.",
+                "reason": "mass (what weighs) and moles (what counts), linked by Mr. Best move: m = n × Mr, from count to grams. If you need moles instead, flip to n = m ÷ Mr.",
                 "result": "mass = moles × Mr",
                 "predictPrompt": "What do you substitute, into which formula?"
               },
@@ -762,7 +762,7 @@
             "steps": [
               {
                 "operation": "Write PV = nRT rearranged",
-                "reason": "Volume is what is asked, so it goes alone. BEST: PV = nRT rearranged for V (find the unknown first); fall back: 22.4 dm³/mol at s.t.p. if T and P are already standard.",
+                "reason": "volume is asked, so it goes alone in the formula. Best move: PV = nRT rearranged for V. If T and P are already at standard conditions, use 22.4 dm³ per mol outright.",
                 "result": "V = 0.5 × 0.082 × 273 ÷ 1",
                 "predictPrompt": "Which numbers or terms work with each other first?"
               },
@@ -1006,7 +1006,7 @@
               },
               {
                 "operation": "Apply the across-period rule",
-                "reason": "Electronegativity rises left to right in a period. BEST: across-period rule (trend, not recall); fall back: Coulombic pull via shell count if the trend fails you for the whole group.",
+                "reason": "electronegativity rises left to right across a period. Best move: the left-to-right trend, no memory needed. If a group baffles you, count the shells — closer to the nucleus means stronger pull.",
                 "result": "Na < Mg < Cl",
                 "predictPrompt": "What exactly does the question want you to write down first?"
               },
@@ -1214,7 +1214,7 @@
             "steps": [
               {
                 "operation": "Read both configurations",
-                "reason": "Magnesium has 2 outer electrons; chlorine needs 1 to fill its shell. BEST: electron-dot transfer for metals above carbon in the series; fall back: electronegativity difference if the configurations are not given.",
+                "reason": "Mg has 2 outer electrons; Cl wants 1. Best move: draw the electron-dot sharing between them. If the configurations are not printed, use the electronegativity difference instead.",
                 "result": "Mg (2,8,2); Cl (2,8,7)",
                 "predictPrompt": "What information do you compare before deciding?"
               },
@@ -1448,7 +1448,7 @@
             "steps": [
               {
                 "operation": "Filter the mixture",
-                "reason": "Sand is insoluble; filter paper traps it while salt water passes. BEST: filter → distil for sand + salt + water; fall back: evaporation if only salt is wanted.",
+                "reason": "sand is insoluble; filter traps it, salt water passes. Best move: filter, then distil for pure water. If only salt is wanted, just evaporate to dryness.",
                 "result": "Sand is removed as a solid",
                 "predictPrompt": "Which part of the question does this step answer?"
               },
@@ -1680,7 +1680,7 @@
             "steps": [
               {
                 "operation": "Find moles of NaCl",
-                "reason": "Moles count particles; Mr(NaCl) = 58.5. BEST: n = m ÷ Mr (given masses); fall back: g/100 cm³ ratio if grams is all they hand you.",
+                "reason": "moles = mass ÷ Mr. Best move: this formula works on any masses you hold. If only grams per 100 cm³ are printed, work it as a ratio straight out.",
                 "result": "n = 11 ÷ 58.5 = 0.188 mol",
                 "predictPrompt": "Which numbers or terms work with each other first?"
               },
@@ -1897,7 +1897,7 @@
             "steps": [
               {
                 "operation": "Assign hydrogen and oxygen",
-                "reason": "Hydrogen is +1 and oxygen is −2 by the rules. BEST: assign H and O first (fixed anyway); fall back: total-charge sum = 0 for neutral molecules.",
+                "reason": "H is +1, O is −2 — these rarely budge. Best move: assign those first. If the molecule is neutral, make every oxidation number add up to zero.",
                 "result": "2(+1) + 3(−2) = 2 − 6 = −4 from H and O",
                 "predictPrompt": "What would a weaker answer look like here?"
               },
@@ -2138,7 +2138,7 @@
             "steps": [
               {
                 "operation": "Write the mole ratio",
-                "reason": "HCl + NaOH → NaCl + H₂O is a 1:1 ratio. BEST: mole ratio × known side ÷ volume of unknown side; fall back: C₁V₁ = C₂V₂ for 1:1 (same equation).",
+                "reason": "HCl + NaOH → NaCl + H₂O, 1:1. Best move: moles ratio first, then volume into concentration. For this 1:1 case, C₁V₁ = C₂V₂ does the same thing.",
                 "result": "moles HCl = moles NaOH",
                 "predictPrompt": "In your own words, why does this step come before the next one?"
               },
@@ -2432,7 +2432,7 @@
             "steps": [
               {
                 "operation": "Find the quantity of electricity",
-                "reason": "Q = It, with the time in seconds. BEST: Q = It (charge needed for Faradays); fall back: moles of e⁻ = Q ÷ 96500 once Q is in hand.",
+                "reason": "Q = I × t, always in coulombs. Best move: find Q first — every Faraday problem needs it. Once Q is in hand, moles of electrons = Q ÷ 96500.",
                 "result": "Q = 2.0 × 965 = 1930 C",
                 "predictPrompt": "Which part of the question does this step answer?"
               },
@@ -2644,7 +2644,7 @@
             "steps": [
               {
                 "operation": "Count the half-lives",
-                "reason": "Time divided by half-life gives the number of halvings. BEST: divide by half-life (gets 3; always easier); fall back: original × (½)ⁿ directly if the stem supplies the halves.",
+                "reason": "time ÷ half-life equals the number of halvings. Best move: divide first — 15 years ÷ 5 years = 3, done. If the question gives the number of halves directly, use original × (½)ⁿ.",
                 "result": "15 ÷ 5 = 3 half-lives",
                 "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
@@ -2940,7 +2940,7 @@
             "steps": [
               {
                 "operation": "Write the Gibbs equation",
-                "reason": "ΔG° = ΔH° − TΔS° is the only formula needed. BEST: Gibbs test (ΔS given); fall back: ΔH sign alone when ΔS is negligible.",
+                "reason": "ΔG° = ΔH° − TΔS°. Best move: this one formula covers spontaneity. If ΔS is tiny it can be ignored — ΔH sign alone predicts the reaction.",
                 "result": "ΔG° = −80 − 298 × 0.20",
                 "predictPrompt": "In your own words, why does this step come before the next one?"
               },
@@ -3235,7 +3235,7 @@
               },
               {
                 "operation": "Divide the volume by the seconds",
-                "reason": "Both numbers are given directly, so no conversion is needed. BEST: rate = Δvolume ÷ Δtime (direct); fall back: tangent slope if a graph appears instead.",
+                "reason": "both numbers are printed outright. Best move: rate = Δvolume ÷ Δtime, directly. If a graph appears instead, measure the slope of the tangent at that moment.",
                 "result": "4 cm³/s",
                 "predictPrompt": "What exactly does the question want you to write down first?"
               },
@@ -3472,7 +3472,7 @@
             "steps": [
               {
                 "operation": "Identify the disturbance",
-                "reason": "Raising temperature adds heat, which the endothermic direction absorbs. BEST: Le Chatelier ‘resist the disturbance’ rule; fall back: K_p shift by van 't Hoff principle if you must quantify.",
+                "reason": "raising temperature adds heat — the endothermic side absorbs it. Best move: Le Chatelier — the system fights change. If you must quantify, use van 't Hoff.",
                 "result": "The reaction favours the forward direction",
                 "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
@@ -3690,7 +3690,7 @@
             "steps": [
               {
                 "operation": "Choose a pollutant",
-                "reason": "Carbon monoxide is a colourless, poisonous gas. BEST: CO = classified by look + source; fall back: NO₂ (brown) as the next easiest memorisation anchor.",
+                "reason": "carbon monoxide is colourless and poisonous. Best move: classify by look (colourless) and source (poor burning). If lost, use NO₂ — its colour gives it away.",
                 "result": "Pollutant: carbon monoxide (CO)",
                 "predictPrompt": "What would a weaker answer look like here?"
               },
@@ -3904,7 +3904,7 @@
             "steps": [
               {
                 "operation": "Classify the drug plant",
-                "reason": "It makes small quantities of pure, high-value products. BEST: purity vs bulk classifies both plants; fall back: margin or raw-material check if the industrial type ambiguity arises.",
+                "reason": "It makes small quantities of pure, valuable product. Best move: classify by purity vs bulk — drugs are pure, cement is bulk. If ambiguous, check the margin or the raw materials.",
                 "result": "Fine chemicals; raw materials are refined intermediates",
                 "predictPrompt": "Which part of the question does this step answer?"
               },
@@ -4117,7 +4117,7 @@
             "steps": [
               {
                 "operation": "Name the gas layer",
-                "reason": "Air surrounds the planet and is mostly nitrogen. BEST: mantle ≠ core ≠ crust recall-by-detail; fall back: standard three-layer textbook list.",
+                "reason": "air wraps the planet, mostly nitrogen. Best move: dust off the three layers — crust, mantle, core — and what each is made of. If stuck, fall back on the standard textbook list.",
                 "result": "Atmosphere: nitrogen (78%) and oxygen (21%)",
                 "predictPrompt": "What exactly does the question want you to write down first?"
               },
@@ -4335,7 +4335,7 @@
               },
               {
                 "operation": "Apply the equation ratio",
-                "reason": "One mole of Zn gives one mole of H₂. BEST: stoichiometry mole ratio (given or derived); fall back: 22.4 dm³ per mol direct-to-volume.",
+                "reason": "Zn + 2HCl → ZnCl₂ + H₂ — one mole of zinc, one mole of hydrogen. Best move: use the equation ratio. If you need volume at s.t.p., jump to 22.4 dm³ per mole.",
                 "result": "0.10 mol H₂",
                 "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
@@ -4541,7 +4541,7 @@
             "steps": [
               {
                 "operation": "Find moles of chlorine",
-                "reason": "Mr(Cl₂) = 71, so grams convert by dividing by 71. BEST: Faraday law — Q/F = moles of e⁻; fall back: mole ratio first to moles of product.",
+                "reason": "Mr(Cl₂) = 71. Best move: grams ÷ 71 gets you moles of chlorine. If electrons are the focus, go via the mole ratio first, then faraday-to-electron conversion.",
                 "result": "7.1 ÷ 71 = 0.10 mol Cl₂",
                 "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
@@ -4757,7 +4757,7 @@
             "steps": [
               {
                 "operation": "Read the lather test",
-                "reason": "Poor lathering means calcium or magnesium salts are present. BEST: lather-test diagnosis for hardness type; fall back: boiling-residue check to separate permanent from temporary.",
+                "reason": "poor lathering means calcium and magnesium salts are present. Best move: run the lather test. If stuck, try boiling — if the problem persists it is permanent hardness.",
                 "result": "The water is hard",
                 "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
@@ -4973,7 +4973,7 @@
             "steps": [
               {
                 "operation": "Read the precipitate",
-                "reason": "Barium chloride precipitates sulphate as barium sulphate. BEST: insolubilisation in acid is the standard sulphate probe; fall back: write full ionic equation if confusion persists.",
+                "reason": "barium chloride drops sulphate as white BaSO₄. Best move: barium chloride in acid is the standard sulphate probe. If confused, write the full ionic equation to see where each particle lands.",
                 "result": "White precipitate = BaSO₄",
                 "predictPrompt": "Which part of the question does this step answer?"
               },
@@ -5195,7 +5195,7 @@
               },
               {
                 "operation": "Apply the mole ratio",
-                "reason": "One mole of N₂ gives two moles of NH₃. BEST: equation coefficients set the 1:2 ratio; fall back: grams → moles → ratio → grams if you lose track.",
+                "reason": "one mole of N₂ yields two moles of NH₃. Best move: let the coefficients set the 1:2 ratio. If you lose track, walk it through: grams → moles → ratio → grams.",
                 "result": "2.0 mol NH₃",
                 "predictPrompt": "Which part of the question does this step answer?"
               },
@@ -5410,7 +5410,7 @@
               },
               {
                 "operation": "Apply the mole ratio",
-                "reason": "One mole of carbonate gives one mole of CO₂. BEST: stoichiometry via the equation (1:1:1); fall back: 22.4 dm³/mol at s.t.p. once moles are in hand.",
+                "reason": "one mole of carbonate gives one mole of CO₂. Best move: the equation 1:1:1 settles it. If gas volume at s.t.p. is asked, use 22.4 dm³ per mole.",
                 "result": "0.10 mol CO₂",
                 "predictPrompt": "What would a weaker answer look like here?"
               },
@@ -5639,7 +5639,7 @@
             "steps": [
               {
                 "operation": "Place zinc and copper in the series",
-                "reason": "Zinc sits above copper, so zinc is more reactive. BEST: reactivity series (position above); fall back: half-reaction E° if the series fails you.",
+                "reason": "zinc sits above copper in the series, so it is more reactive. Best move: their positions decide — above means faster to displace. If pressed, check half-reaction E°.",
                 "result": "Zn above Cu: displacement will happen",
                 "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
@@ -5859,7 +5859,7 @@
               },
               {
                 "operation": "Combine to the neutral solid",
-                "reason": "Three hydroxides balance one aluminium charge. BEST: 3OH : 1Al³⁺ ratio by charge balance; fall back: use molecular equation plus spectator cancellation.",
+                "reason": "three hydroxides balance one aluminium ion. Best move: match the charges — three OH⁻ for every Al³⁺. If you get lost, write the molecular equation and cross off the spectators.",
                 "result": "Al³⁺ + 3OH⁻ → Al(OH)₃",
                 "predictPrompt": "What exactly does the question want you to write down first?"
               },
@@ -6068,7 +6068,7 @@
             "steps": [
               {
                 "operation": "Identify the shells",
-                "reason": "Sea shells are calcium carbonate (CaCO₃). BEST: thermal decomposition rule for carbonates; fall back: products with CO₂ check if stuck.",
+                "reason": "sea shells are calcium carbonate. Best move: heat any carbonate and it splits into the oxide plus CO₂. If stuck, watch for the CO₂ — it always fizzes off.",
                 "result": "Starting material: CaCO₃",
                 "predictPrompt": "In your own words, why does this step come before the next one?"
               },
@@ -6294,7 +6294,7 @@
               },
               {
                 "operation": "Name the electrode",
-                "reason": "Metal ions gain electrons at the cathode. BEST: cathode = reduction, never oxidation; fall back: electrolysis series for empirical mapping.",
+                "reason": "metal ions gain electrons at the cathode. Best move: cathode = reduction, always. If you need a picture, the electrolysis series maps it for you.",
                 "result": "Aluminium deposits at the cathode",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
               },
@@ -6497,7 +6497,7 @@
             "steps": [
               {
                 "operation": "Balance the iron atoms",
-                "reason": "Two irons on the left need two on the right",
+                "reason": "Two irons on the left need two on the right. Use the Fe → C → O balancing order here because it keeps the atom count cleanest; if cloudy, balance Fe first then finish C and O afterwards.",
                 "result": "Fe₂O₃ + CO → 2Fe + CO₂",
                 "predictPrompt": "In your own words, why does this step come before the next one?"
               },
@@ -6710,7 +6710,7 @@
             "steps": [
               {
                 "operation": "Identify the reactants",
-                "reason": "A base (oxide) plus an acid gives a salt plus water. BEST: acid + base → salt + water map; fall back: back-trace the ions if confused.",
+                "reason": "base (oxide) plus acid gives salt plus water. Best move: write acid + base → salt + water. If confused, back-trace each ion to see where it ends up.",
                 "result": "CuO + H₂SO₄ → CuSO₄ + H₂O",
                 "predictPrompt": "What would a weaker answer look like here?"
               },
@@ -6926,7 +6926,7 @@
             "steps": [
               {
                 "operation": "Divide percentages by Ar",
-                "reason": "Carbon 92.3 ÷ 12, hydrogen 7.7 ÷ 1. BEST: empirical formula by ratio of atoms (C : H); fall back: scale up via Mr at the end.",
+                "reason": "carbon 92.3 ÷ 12, hydrogen 7.7 ÷ 1. Best move: turn masses into moles and simplify the ratio. If the answer looks wrong, scale the simplest ratio up via Mr.",
                 "result": "7.69 and 7.7",
                 "predictPrompt": "Which numbers or terms work with each other first?"
               },
@@ -7176,7 +7176,7 @@
               },
               {
                 "operation": "Apply the equation ratio and gas volume",
-                "reason": "2 mol butane needs 13 mol O₂, so 0.10 mol needs 0.65 mol; 1 mol = 22.4 dm³ at s.t.p. BEST: equation coefficients set the ratio; fall back: just the ratio first if you panic.",
+                "reason": "2 mol butane needs 13 mol O₂, so 0.10 mol needs 0.65 mol. Best move: the equation coefficients will always set the ratio. If you panic, compute the ratio first, worry about volume later.",
                 "result": "0.65 × 22.4 = 14.56 dm³ O₂",
                 "predictPrompt": "How would you prove this claim to a sceptic?"
               },
@@ -7405,7 +7405,7 @@
             "steps": [
               {
                 "operation": "Write the addition equation",
-                "reason": "Bromine adds across the double bond, one molecule per ethene. BEST: addition reaction pattern across double bonds; fall back: count halogens in vs halogens out.",
+                "reason": "bromine adds across the double bond, one molecule per ethene. Best move: the addition pattern — always a single addition across C=C. If lost, count halogens in vs halogens out.",
                 "result": "C₂H₄ + Br₂ → C₂H₄Br₂",
                 "predictPrompt": "Which part of the question does this step answer?"
               },
@@ -7628,7 +7628,7 @@
               },
               {
                 "operation": "Find moles of oxygen",
-                "reason": "One mole of benzene needs 7.5 moles of oxygen. BEST: c = 3n/2 for the oxygen ratio; fall back: double-check by molecular balance.",
+                "reason": "one mole of benzene needs 7.5 moles of oxygen. Best move: apply c = 3n/2 — it gives oxygen grams directly. If it looks wrong, balance the full equation.",
                 "result": "0.10 × 7.5 = 0.75 mol O₂",
                 "predictPrompt": "In your own words, why does this step come before the next one?"
               },
@@ -7844,7 +7844,7 @@
               },
               {
                 "operation": "Apply the mole ratio",
-                "reason": "One mole of ethanol needs three moles of oxygen. BEST: same pattern as alkanes — O₂/n = 3 per mol; fall back: sub into c-formula, keep one for COOH family.",
+                "reason": "one mole of ethanol needs three moles of oxygen. Best move: same shape as long-chain alcohols — O₂/n per mole. If lost, fall back to the CₙH₂ₙ₊₁OH general formula rule.",
                 "result": "0.10 × 3 = 0.30 mol O₂",
                 "predictPrompt": "What would a weaker answer look like here?"
               },
@@ -8056,7 +8056,7 @@
             "steps": [
               {
                 "operation": "Write the oxidation equation",
-                "reason": "Aldehydes oxidise to carboxylic acids. BEST: aldehyde-to-acid map, one-step; fall back: smell test — bitter almond vs vinegar.",
+                "reason": "aldehydes oxidise to carboxylic acids. Best move: the aldehyde → acid step — one stage straight through. If you can smell it, bitter almond vs vinegar are clues.",
                 "result": "CH₃CHO + [O] → CH₃COOH",
                 "predictPrompt": "In your own words, why does this step come before the next one?"
               },
@@ -8285,7 +8285,7 @@
               },
               {
                 "operation": "Find the ester mass",
-                "reason": "One mole of acid gives one mole of ester. BEST: 1:1:1 pattern — acid + alkanol ↔ ester + water; fall back: decrease of moles track if balanced.",
+                "reason": "one mole of ethanoic acid gives one mole of ester. Best move: the 1:1:1 map — acid plus alkanol → ester plus water. If stuck, track the drop in moles to confirm.",
                 "result": "0.10 × 88 = 8.8 g",
                 "predictPrompt": "How would you test this answer before writing it down?"
               },
@@ -8496,7 +8496,7 @@
               },
               {
                 "operation": "Apply the mole ratio",
-                "reason": "One mole of amine gives one mole of N₂. BEST: primary amine rule, one N per NH₃ group; fall back: Van Slyke test to identify primary vs tertiary.",
+                "reason": "one mole of amine gives one mole of N₂. Best move: the primary-amine rule — one nitrogen out per primary amine. If unsure, the Van Slyke test distinguishes primary from other types.",
                 "result": "0.1 mol N₂",
                 "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
@@ -8713,7 +8713,7 @@
               },
               {
                 "operation": "Apply the mole ratio",
-                "reason": "One mole of sucrose gives one mole of glucose. BEST: disaccharide → two monosaccharides 1:1:2; fall back: carbon balance first.",
+                "reason": "sucrose → glucose + fructose. Best move: the disaccharide rule — one sugar splitting into two. If lost, count carbons first — twelve in, six out.",
                 "result": "0.10 mol glucose",
                 "predictPrompt": "What would a weaker answer look like here?"
               },
@@ -8932,7 +8932,7 @@
               },
               {
                 "operation": "Count the joins",
-                "reason": "Each new amino acid adds one peptide bond. BEST: n residues → n−1 bonds rule; fall back: count OH off and H off explicitly.",
+                "reason": "every amino acid adds one peptide bond. Best move: n residues give n − 1 bonds — always. If lost, count OH off each residue plus H off each neighbour, one pair per bond.",
                 "result": "99 peptide bonds",
                 "predictPrompt": "What exactly does the question want you to write down first?"
               },
@@ -9158,7 +9158,7 @@
               },
               {
                 "operation": "Classify the process",
-                "reason": "No small molecule is lost. BEST: addition vs condensation determined by water loss; fall back: mole-count for atom balance against the raw monomers.",
+                "reason": "no small molecule is lost here. Best move: addition polymer — everything sticks. Condensation polymer — water drops out. If lost, count atoms against the starting monomers.",
                 "result": "Addition polymerisation",
                 "predictPrompt": "How would you prove this claim to a sceptic?"
               },
@@ -9363,7 +9363,7 @@
             "steps": [
               {
                 "operation": "List the electrons that can be lost",
-                "reason": "The 4s and 3d electrons have similar energy, so both can leave. BEST: 4s leaves before 3d (remove the outermost first); fall back: half-filled 3d⁵ electron order.",
+                "reason": "4s and 3d run close in energy, so either can leave. Best move: outermost first — 4s goes before 3d. If confused, fall back on the half-filled 3d⁵ special case.",
                 "result": "4s² and 3d⁶ are both removable",
                 "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
@@ -9608,7 +9608,7 @@
               },
               {
                 "operation": "Name the bacterial change",
-                "reason": "Nitrosomonas then Nitrobacter convert ammonium through nitrite to nitrate. BEST: pathway recall by arrow-chase; fall back: concrete order memory: ammonium → nitrite → nitrate → protein → nitrogen gas.",
+                "reason": "Nitrosomonas then Nitrobacter — ammonium → nitrite → nitrate. Best move: follow the arrows one by one. If you blank, chant the order: ammonium, nitrite, nitrate, protein, nitrogen gas.",
                 "result": "Nitrate is ready in soil water",
                 "predictPrompt": "What exactly does the question want you to write down first?"
               },
@@ -9816,7 +9816,7 @@
             "steps": [
               {
                 "operation": "Balance the iron atoms",
-                "reason": "Two irons on the right need two on the left. BEST: balance Fe first, O second, C last (traditional order); fall back: trial-and-error with coefficients at the end.",
+                "reason": "balance the iron atoms on both sides. Best move: Fe first, oxygen second, carbon last. If stuck, keep trying coefficient pairs until they match.",
                 "result": "2FeS2 + O2 → Fe2O3 + SO2",
                 "predictPrompt": "Which part of the question does this step answer?"
               },
@@ -10055,7 +10055,7 @@
             "steps": [
               {
                 "operation": "Spot the added metal",
-                "reason": "Tin mixed with copper points to bronze, not brass. BEST: tin ⇒ bronze, zinc ⇒ brass (mnemonic); fall back: look up the alloy by colour from memory.",
+                "reason": "tin plus copper is bronze; tin plus zinc is brass. Best move: copper/bronze, zinc/brass — linked pairs. If lost, check colour: bronze brown-red, brass yellow.",
                 "result": "Alloy is bronze (Cu plus Sn)",
                 "predictPrompt": "Which part of the question does this step answer?"
               },

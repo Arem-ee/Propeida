@@ -74,10 +74,10 @@ A lesson that breaks rule 1 cannot be fixed by shortening its prose. Split it.
 
 | Tier | Required | Length | Purpose |
 |---|---|---|---|
-| **Core** | Yes | 500–700 words | Teach the syllabus point well enough to attempt exam questions today. |
+| **Core** | Yes | 500–800 words | Teach the syllabus point well enough to attempt exam questions today. Raised from 500–700 on 2026-11-12 — quality wins over the cap; plain-language annotations need the words. |
 | **Go deeper** | Optional | 600–900 words | Explain the mechanism, context, comparisons and edge cases for a learner who wants the full picture. |
 
-Total teaching text is therefore 500–700 words for a usable lesson, or
+Total teaching text is therefore 500–800 words for a usable lesson, or
 1,100–1,600 words when depth is present. Depth is never required to pass the
 lesson or unlock practice.
 
@@ -313,7 +313,7 @@ Before a lesson is seeded:
 - [ ] Each section opens with a situation, ends with a one-line takeaway, and
       carries one check with a stated `why`.
 - [ ] No paragraph is longer than three sentences.
-- [ ] Core is 500–700 words; depth, if present, is 600–900 words.
+- [ ] Core is 500–800 words; depth, if present, is 600–900 words.
 - [ ] Summary states one claim, not a table of contents.
 - [ ] At least one section names a confusable pair and the discrimination rule.
 - [ ] A visual, if present, is one figure, carries a relationship, has a

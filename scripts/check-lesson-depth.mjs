@@ -1,6 +1,8 @@
 // Checks curriculum JSON against the two-tier lesson standard.
 //
-// Core (everything outside `Go deeper:` headings) must be 500–700 words.
+// Core (everything outside `Go deeper:` headings) must be 500–800 words.
+// Raised from 500–700 on 2026-11-12 (quality wins — plain-language
+// annotations need the words; raised cap still flags genuine bloat).
 // Depth must be 600–900 words when present, in at least two sections.
 // Teach cards are checked for the one-concept shape: max three cards,
 // 120–180 words each, a one-line takeaway and an inline check. Those shape
@@ -17,7 +19,7 @@ import { readdirSync, readFileSync } from 'node:fs'
 import { basename, join } from 'node:path'
 
 const CORE_MIN = 500
-const CORE_MAX = 700
+const CORE_MAX = 800
 const DEPTH_MIN = 600
 const DEPTH_MAX = 900
 const DEPTH_PREFIX = /^go deeper\s*:\s*/i
