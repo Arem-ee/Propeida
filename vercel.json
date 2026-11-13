@@ -1,0 +1,12 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron/cohort-report",
+      "schedule": "0 17 * * 0"
+    },
+    {
+      "path": "/api/cron/squad-nudge",
+      "schedule": "30 17 * * 0"
+    }
+  ]
+}
