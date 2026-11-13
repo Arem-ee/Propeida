@@ -1,5 +1,6 @@
 {
-  "_note": "The Lekki Headmaster (Kabir Alabi Garba) question bank, built from the text of the novel. Format: 4 options (A-D), as JAMB sets since 2013. Tagged to topic 'comprehension-and-summary' (Section A covers the reading text). Every question was written against the novel's actual text; every key was re-verified against the text. Source: original authored content — not a reproduction of any published paper.",
+  "topic": "comprehension-and-summary",
+  "_note": "72 original JAMB-style Section A questions on The Lekki Headmaster (authored 2026-11-12, independently verified against the OCR'd scan — 16 wording slips fixed then), PLUS 35 extension items authored 2026-11-13 from content-folder/lekki-headmaster-summary.md, deduped against the originals (near-duplicates dropped at author time; an invented proverb removed, not fixed). Total 107 items: coverage spans all 12 chapters and the under-represented skills (setting, technique, vocabulary, character, sub-plot, inference). Every item: topic=comprehension-and-summary, options a–d, answer in options, explanation attached. For internal paper-construction reference; not shown to learners as-is. Do not seed to production without explicit go/no-go.",
   "questions": [
     {
       "topic": "comprehension-and-summary",
@@ -1944,6 +1945,951 @@
       ],
       "answer": "b",
       "explanation": "Bookending the 'dusk' of the opening breakdown, the book ends with dawn — his return, the anthem, and communal triumph."
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 1,
+      "skill": "detail",
+      "difficulty": "easy",
+      "question": "How long before the opening assembly had Stardom's pep-talk tradition been running?",
+      "options": [
+        {
+          "key": "a",
+          "text": "About seven years"
+        },
+        {
+          "key": "b",
+          "text": "One term"
+        },
+        {
+          "key": "c",
+          "text": "About three years"
+        },
+        {
+          "key": "d",
+          "text": "Since Stardom was founded"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The assembly that opens the novel is thrown off-course at the very moment the pep talk — launched seven years earlier — has everyone excited."
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 1,
+      "skill": "detail",
+      "difficulty": "medium",
+      "question": "After the boarding fees were cut from ₦250,000 to ₦165,000, what did Stardom quietly raise to recover income?",
+      "options": [
+        {
+          "key": "a",
+          "text": "Excursion and Other Items, by ₦93,000"
+        },
+        {
+          "key": "b",
+          "text": "The lunch levy, by ₦10,000"
+        },
+        {
+          "key": "c",
+          "text": "The uniform price, by ₦25,000"
+        },
+        {
+          "key": "d",
+          "text": "Nothing — the school had no way to recover the shortfall"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Above 80% of parents moved their children into boarding; the school then quietly raised Excursion and Other Items by ₦93,000 — the boarding-fee relief was not free."
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 1,
+      "skill": "detail",
+      "difficulty": "medium",
+      "question": "After Stardom's over-90% WASSCE pass rate, how much did teachers of distinction-scoring subjects receive?",
+      "options": [
+        {
+          "key": "a",
+          "text": "₦30,000, on top of the ₦20,000 all SSS 3 teachers received"
+        },
+        {
+          "key": "b",
+          "text": "₦50,000 each, flat"
+        },
+        {
+          "key": "c",
+          "text": "Nothing — the only celebration was snacks and wine"
+        },
+        {
+          "key": "d",
+          "text": "₦93,000 each, the same levy increase"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Every SSS 3 teacher received ₦20,000 in cash plus snacks and wine; teachers of distinction-scoring subjects received ₦30,000. Only Obong Ukaku (Chemistry) and Taye Kareem (Geography) had two-candidate D-lines to answer — and no one scored F9."
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 1,
+      "skill": "detail",
+      "difficulty": "easy",
+      "question": "Vice-Principal Grace Apeh ordered which teacher to close the assembly and send learners to classes?",
+      "options": [
+        {
+          "key": "a",
+          "text": "Mr Justus Anabel, the chemistry teacher"
+        },
+        {
+          "key": "b",
+          "text": "Mr Oyelana, the CRK teacher"
+        },
+        {
+          "key": "c",
+          "text": "Mr Oye Wande, the physics teacher"
+        },
+        {
+          "key": "d",
+          "text": "Mr Audu, the fine arts teacher"
+        }
+      ],
+      "answer": "a",
+      "explanation": "As Bepo lay broken on the podium, Apeh ordered Justus Anabel — chemistry — to dissolve the assembly and send learners to classes fast."
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 1,
+      "skill": "technique",
+      "difficulty": "medium",
+      "question": "How does the novel choose to open Chapter 1?",
+      "options": [
+        {
+          "key": "a",
+          "text": "In the middle of the action — Bepo freezes at the podium mid-assembly and collapses into tears, with no preamble about his career"
+        },
+        {
+          "key": "b",
+          "text": "With a prologue tracing Bepo's childhood in Benin City before his first posting"
+        },
+        {
+          "key": "c",
+          "text": "With Seri phoning Bepo from London about the passport renewal"
+        },
+        {
+          "key": "d",
+          "text": "With the narrator explaining the founding of Stardom Schools"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The novel drops the reader straight into the morning of Bepo's breakdown — no history lesson, just a pep talk, an unexpected silence, and a man failing publicly. The reader learns who Bepo is only through the fragments people say and do around the collapse."
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 1,
+      "skill": "character",
+      "difficulty": "medium",
+      "question": "Which pronunciation habit does Bepo insist on with his staff?",
+      "options": [
+        {
+          "key": "a",
+          "text": "He insists it is 'PrinciPL', not 'Principo', and corrects anyone who says otherwise"
+        },
+        {
+          "key": "b",
+          "text": "He insists staff call him 'Chief Executive' at all times"
+        },
+        {
+          "key": "c",
+          "text": "He accepts 'Principo' with good-humoured grace and never corrects it"
+        },
+        {
+          "key": "d",
+          "text": "He bans the use of any title and demands plain 'Ade'"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The staffroom joke about him runs on two rails: King Oloja of 'Village Headmaster' (the nickname that stuck) and his own relentless 'it is PrinciPL, not Principo.'"
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 2,
+      "skill": "setting",
+      "difficulty": "hard",
+      "question": "At the height of his financial drought, where did Bepo 'eat' ₦2,500 of tenants' electricity tariff money?",
+      "options": [
+        {
+          "key": "a",
+          "text": "Tyana Ipaja — a crowded face-me-I-face-you house in Iyana Ipaja, Lagos"
+        },
+        {
+          "key": "b",
+          "text": "His self-built, unplastered house in Ifo, Ogun State"
+        },
+        {
+          "key": "c",
+          "text": "The Stardom staff quarters in Lekki"
+        },
+        {
+          "key": "d",
+          "text": "His father's compound in Benin City"
+        }
+      ],
+      "answer": "a",
+      "explanation": "At Tyana Ipaja he collected the tariff on behalf of the other tenants and spent it; when NEPA disconnected the cable the furious tenants mocked him as 'Oga Tisa' and Iya Mathew dumped a bowl of elubo over his head. It is the cruelest shame he carries."
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 2,
+      "skill": "character",
+      "difficulty": "easy",
+      "question": "Which of the following is true of Seri, Bepo's wife?",
+      "options": [
+        {
+          "key": "a",
+          "text": "She works as a nurse in London and is the strongest force pressing Bepo to emigrate"
+        },
+        {
+          "key": "b",
+          "text": "She is a doctor in Kaduna who manages his health"
+        },
+        {
+          "key": "c",
+          "text": "She teaches at Stardom alongside him and is resigning on her own"
+        },
+        {
+          "key": "d",
+          "text": "She is a university lecturer in Ibadan who chairs Stardom's board"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Seri is the nurse in London who has long settled there with the children — Nike at university, Kike in secondary — and regularly presses Bepo on the phone about the passport and the move."
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 2,
+      "skill": "vocabulary",
+      "difficulty": "medium",
+      "question": "What does the nickname 'Oga Tisa', which the Ipaja tenants gave Bepo, literally mean?",
+      "options": [
+        {
+          "key": "a",
+          "text": "'Teacher Oga' — a mocking label for a teacher reduced to joblessness and debt"
+        },
+        {
+          "key": "b",
+          "text": "'Lord of the market' — a trader's honorific"
+        },
+        {
+          "key": "c",
+          "text": "'Chief Accountant' — a payroll title"
+        },
+        {
+          "key": "d",
+          "text": "'Master Principal' — a term of respect used at Stardom"
+        }
+      ],
+      "answer": "a",
+      "explanation": "'Oga Tisa' fuses Yoruba/Pidgin address terms with the Portuguese 'Tisa' (teacher). The tenants sang 'Oga Tisa, ole! O na owo ina!' — 'Mr Teacher, thief! He spent the electricity tariff!'"
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 2,
+      "skill": "inference",
+      "difficulty": "medium",
+      "question": "What is Mr Oyelana's counter-argument to Bepo's remittance arithmetic?",
+      "options": [
+        {
+          "key": "a",
+          "text": "He will be spending in pounds, not naira — so comparing pound-pay to his naira salary does not work"
+        },
+        {
+          "key": "b",
+          "text": "He will be taxed so heavily that remittance is impossible"
+        },
+        {
+          "key": "c",
+          "text": "The pound is certain to crash within a year of his arrival"
+        },
+        {
+          "key": "d",
+          "text": "His teaching certificate will not be recognised in the UK"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Oyelana points out that pounds spent in London are not naira remitted home; Audu waves this off — 'if he sends £1,000 home a month, that is above ₦1.7 million — nobody making ₦400,000 can match that.'"
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 2,
+      "skill": "detail",
+      "difficulty": "medium",
+      "question": "At about ₦1,700 per pound, what does Bepo's prospective UK monthly entitlement of about £3,600 come to?",
+      "options": [
+        {
+          "key": "a",
+          "text": "About ₦6 million a month"
+        },
+        {
+          "key": "b",
+          "text": "About ₦600,000 a month"
+        },
+        {
+          "key": "c",
+          "text": "About ₦60 million a month"
+        },
+        {
+          "key": "d",
+          "text": "About ₦1.7 million a month"
+        }
+      ],
+      "answer": "a",
+      "explanation": "£3,600 × ₦1,700 ≈ ₦6.1 million — versus his ₦400,000 Stardom salary. The arithmetic, not a sermon, is what keeps the offer alive in his mind."
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 3,
+      "skill": "detail",
+      "difficulty": "easy",
+      "question": "How many doctors, by the Nigerian government's own admission, emigrate every year?",
+      "options": [
+        {
+          "key": "a",
+          "text": "About 3,000"
+        },
+        {
+          "key": "b",
+          "text": "About 300"
+        },
+        {
+          "key": "c",
+          "text": "About 9,000"
+        },
+        {
+          "key": "d",
+          "text": "None — emigration of doctors is illegal"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The summary cites the official figure: the government admits about 3,000 doctors emigrate yearly — and the mass exodus includes many Master's-degree-seeking graduates and nurses."
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 3,
+      "skill": "detail",
+      "difficulty": "medium",
+      "question": "Why are study visas the preferred route for households 'japa-ing' abroad, according to the tales Bepo hears?",
+      "options": [
+        {
+          "key": "a",
+          "text": "They cover the holder plus spouse plus children — so whole families relocate, and families sell all their assets to fund them"
+        },
+        {
+          "key": "b",
+          "text": "They are processed in two working days anywhere"
+        },
+        {
+          "key": "c",
+          "text": "They come with free university degrees"
+        },
+        {
+          "key": "d",
+          "text": "They cannot be revoked once stamped"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Study visas allow the holder, spouse and children to travel, so families sell houses, land, cars and household goods; some sold what was not theirs, some fled unpaid loans."
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 3,
+      "skill": "detail",
+      "difficulty": "hard",
+      "question": "A Nigerian who switches from driving to a maintenance job abroad can earn how much per day?",
+      "options": [
+        {
+          "key": "a",
+          "text": "About $500 a day — roughly ₦800,000 daily"
+        },
+        {
+          "key": "b",
+          "text": "About $50 a day — roughly ₦80,000 daily"
+        },
+        {
+          "key": "c",
+          "text": "About $1,500 a day — roughly ₦2.4 million daily"
+        },
+        {
+          "key": "d",
+          "text": "Minimum wage — about $10 a day"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The summary gives the maintenance-job switch at about $500 a day, ≈ ₦800,000 daily — and notes cabbies outrun toilet-cleaners in pay even in developed economies."
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 3,
+      "skill": "character",
+      "difficulty": "medium",
+      "question": "Why did Jare weep, despite landing a job in London?",
+      "options": [
+        {
+          "key": "a",
+          "text": "Caring for an old couple in London docked the dignity of a former banker — he could not bear what it made of him"
+        },
+        {
+          "key": "b",
+          "text": "His visa was refused at the arrival hall"
+        },
+        {
+          "key": "c",
+          "text": "His wife refused to fund his Master's degree"
+        },
+        {
+          "key": "d",
+          "text": "He broke his leg in the freight yard"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Jare left a banking job and wept to discover that caring for an old couple in London — lawful, honest, paying — still docked his dignity. The japa dream does not only deliver pounds; it also delivers what those pounds were bought with."
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 3,
+      "skill": "character",
+      "difficulty": "medium",
+      "question": "What had Riike, a Nigerian now in the United States, achieved in under three years?",
+      "options": [
+        {
+          "key": "a",
+          "text": "She bought two houses in Ibadan and has brought two of her sisters over"
+        },
+        {
+          "key": "b",
+          "text": "She finished a nursing degree and was posted to a London hospital"
+        },
+        {
+          "key": "c",
+          "text": "She opened a petrol station outside Lagos"
+        },
+        {
+          "key": "d",
+          "text": "She built a mansion on the island within two years"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Riike's household went fee-free for schooling; in under three years she bought two Ibadan houses, brought two sisters, and was still working to clear visa hurdles for her youngest brother, Wemimo."
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 3,
+      "skill": "detail",
+      "difficulty": "medium",
+      "question": "What emergency-response fact from the tales Bepo hears made the deepest point about the UK health system?",
+      "options": [
+        {
+          "key": "a",
+          "text": "A three-year-old who had a seizure drew two ambulances plus a car in under five minutes — and had her birthday in hospital with gifts from staff"
+        },
+        {
+          "key": "b",
+          "text": "Ambulances never come to private homes in Britain"
+        },
+        {
+          "key": "c",
+          "text": "The NHS requires a deposit before any emergency call-out"
+        },
+        {
+          "key": "d",
+          "text": "Paramedics waited two days before attending"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Sola's call with Bepo passes on exactly this: a three-year-old who had a seizure drew two ambulances plus a car in under five minutes — birthday in hospital, gifts showered by staff. It lands as the sharpest contrast between the two systems."
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 4,
+      "skill": "setting",
+      "difficulty": "medium",
+      "question": "Where does Mrs Mary Ladele — the woman watching a Nollywood film at 1 p.m. with sleeping children — live?",
+      "options": [
+        {
+          "key": "a",
+          "text": "GRA, the Government Residential Area in Abuja"
+        },
+        {
+          "key": "b",
+          "text": "Lekki Phase 1, behind Stardom Schools"
+        },
+        {
+          "key": "c",
+          "text": "Adeniyi Jones, Ikeja — Bepo's room in that chapter"
+        },
+        {
+          "key": "d",
+          "text": "Ifo, Ogun State — Fafore's home"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The parallel thread in Chapter 4 places Mary Ladele in GRA, watching Nollywood at 1 p.m. Her husband Dele is a senior civil servant in Abuja. The nightmare with Ayesoro is what follows."
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 4,
+      "skill": "inference",
+      "difficulty": "hard",
+      "question": "Why does Lyi suspect the visas were refused on paternity grounds rather than for any other reason?",
+      "options": [
+        {
+          "key": "a",
+          "text": "Visa rules require paternity evidence for applicants below 18 — and the DNA test had already shown Favour is not Ibe's daughter"
+        },
+        {
+          "key": "b",
+          "text": "The embassy said so in a letter read on television"
+        },
+        {
+          "key": "c",
+          "text": "His father told him so on the phone"
+        },
+        {
+          "key": "d",
+          "text": "The school administration leaked the DNA result to him"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Lyi is the only member of the family who has quietly connected the dots: DNA showed Favour (15, SS2) is not Ibe's daughter, and below-18 visa rules demand paternity evidence — so the refusal makes sense to him, if not to his father."
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 4,
+      "skill": "detail",
+      "difficulty": "medium",
+      "question": "What did Yoruba braids such as suku, kojusoko and onilegogoro (and the bridal art of irun didi) fetch per head in the UK, according to the bridal-art plan the embassy case reveals?",
+      "options": [
+        {
+          "key": "a",
+          "text": "$100 per head — about ₦160,000"
+        },
+        {
+          "key": "b",
+          "text": "$10 per head — about ₦16,000"
+        },
+        {
+          "key": "c",
+          "text": "$1,000 per head — about ₦1.6 million"
+        },
+        {
+          "key": "d",
+          "text": "A flat ₦5,000 per head"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Mrs Ignatius had learned tailoring, hairdressing and irun didi, and went in for specific Yoruba braids with the promise of $100 per head in the UK — about ₦160,000 — the arithmetic that pulled them toward the move."
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 5,
+      "skill": "detail",
+      "difficulty": "medium",
+      "question": "How large was the Stardom staff cooperative's purse when the MD caught sight of the parked cars?",
+      "options": [
+        {
+          "key": "a",
+          "text": "₦95 million, of which over ₦50 million had been loaned out"
+        },
+        {
+          "key": "b",
+          "text": "₦9.5 million, fully loaned out"
+        },
+        {
+          "key": "c",
+          "text": "₦950 million, mostly as fixed deposits"
+        },
+        {
+          "key": "d",
+          "text": "₦50 million, entirely unloaned"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The accountant, Jeremi Amos, explains the soft soothing position: the cooperative purse held about ₦95 million, over ₦50 million was out as loans, and deductions came straight from source. No one was stealing."
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 5,
+      "skill": "detail",
+      "difficulty": "easy",
+      "question": "Who chairs the family board that met after the parked-cars inspection to restrain the cooperative?",
+      "options": [
+        {
+          "key": "a",
+          "text": "Chief Mrs Solape Bayo — the MD's mother"
+        },
+        {
+          "key": "b",
+          "text": "Mrs Ibidun Gloss herself"
+        },
+        {
+          "key": "c",
+          "text": "Martins Bayo, the non-executive director"
+        },
+        {
+          "key": "d",
+          "text": "Oye Bayo, the board secretary"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Mrs Solape Bayo convened the family board — Martins (non-exec) and Oye Bayo (last-born, board secretary) — and delivered the verdict: no staff member may borrow more than ₦250,000, every loan needs the MD's sign-off, and the management must be informed of cooperative elections."
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 6,
+      "skill": "detail",
+      "difficulty": "medium",
+      "question": "Why can't Mr Fafore simply rent near Stardom in Lekki?",
+      "options": [
+        {
+          "key": "a",
+          "text": "Lekki two-bedroom rents pass ₦2 million per annum, far beyond his ₦175,000 salary"
+        },
+        {
+          "key": "b",
+          "text": "Stardom policy forbids staff from living in Lekki"
+        },
+        {
+          "key": "c",
+          "text": "He prefers village life on principle"
+        },
+        {
+          "key": "d",
+          "text": "His house in Ifo is a Stardom-provided residence"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Fafore — 22 years of service, Most Punctual Teacher twice — wakes at 4 a.m., leaves by 4:30 and reaches Stardom by 6, naps at his desk, and still cannot afford a Lekki two-bedroom over ₦2 million per annum. Hence the self-built, unplastered house in Ifo."
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 6,
+      "skill": "detail",
+      "difficulty": "medium",
+      "question": "What do the Gbayi family send Stardom in the run-up to Open Day — and why that gift?",
+      "options": [
+        {
+          "key": "a",
+          "text": "Packets of beverages — Mrs Nike Gbayi's husband works for a leading beverage company"
+        },
+        {
+          "key": "b",
+          "text": "Bottles of fine wine from an owned vineyard"
+        },
+        {
+          "key": "c",
+          "text": "School bags for the deserving"
+        },
+        {
+          "key": "d",
+          "text": "Fuel vouchers for all drivers"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Open Day gifts cut both ways — parents bring complaints and gifts. The Gbayis, whose principal-job connection is the beverage industry, drop packets of beverages; parents also come loaded with complaints for any teacher who steps on a pupil's toes."
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 8,
+      "skill": "plot",
+      "difficulty": "medium",
+      "question": "Where did the Banky–Tosh feud begin, long before the prefect-squabble speech?",
+      "options": [
+        {
+          "key": "a",
+          "text": "The JSS 3 Best Dancer hip-hop finale — judges crowned Banky on a 3–2 vote, and Tosh's mother never accepted the result"
+        },
+        {
+          "key": "b",
+          "text": "The PTA treasurer election their mothers contested"
+        },
+        {
+          "key": "c",
+          "text": "The two parties' primaries their fathers contested"
+        },
+        {
+          "key": "d",
+          "text": "A chess final in SS1 decided on a disputed rule"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The houses were political rivals — two leading parties, a PTA treasurer contest their mothers fought — but the sons' powder-keg lit at the JSS 3 Best Dancer hip-hop final: Banky took it 3–2 over Tosh, and Tosh's mother complained bitterly about the judging."
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 9,
+      "skill": "setting",
+      "difficulty": "hard",
+      "question": "What is the 'Point of No Return' visited at the end of the Badagry excursion?",
+      "options": [
+        {
+          "key": "a",
+          "text": "The jetty on the Badagry beach from which enslaved Africans were shipped across the Atlantic"
+        },
+        {
+          "key": "b",
+          "text": "A memorial park in Lagos for returnee slaves built in 1925"
+        },
+        {
+          "key": "c",
+          "text": "The cliff edge at Gurara Falls the students dare each other to stand on"
+        },
+        {
+          "key": "d",
+          "text": "The First Storey Building Ajayi Crowther used as a mission house"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The Badagry leg closes at the Point of No Return — the jetty that shipped human cargo to the Americas. Standing there is what undoes Bepo and turns his 'japa' arithmetic into 'chains on the economy, not on the wrists.'"
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 9,
+      "skill": "detail",
+      "difficulty": "medium",
+      "question": "Who discovered Gurara Falls (Niger State), and when, according to the summary?",
+      "options": [
+        {
+          "key": "a",
+          "text": "A Gwari hunter named Buba, around 1748 — nearly two centuries before Europeans arrived in 1925"
+        },
+        {
+          "key": "b",
+          "text": "Rev. John S. McGee in 1852, from his Igede-Ekiti mission base (that is Ikogosi)"
+        },
+        {
+          "key": "c",
+          "text": "A daughter of Oduduwa, in 1140 AD (that is Erin-Ijesa / Olumirin)"
+        },
+        {
+          "key": "d",
+          "text": "Its discoverer is unknown and unknowable"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Gurara was discovered by a Gwari hunter named Buba around 1748 — nearly two centuries before Europeans reached it in 1925. Ikogosi (1852, McGee) and Erin-Ijesa (1140 AD) are different waterfalls."
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 10,
+      "skill": "detail",
+      "difficulty": "easy",
+      "question": "By when had Bepo's lapsed passport become an emergency?",
+      "options": [
+        {
+          "key": "a",
+          "text": "By the first quarter of 2022"
+        },
+        {
+          "key": "b",
+          "text": "In 2020, when the pandemic began"
+        },
+        {
+          "key": "c",
+          "text": "Only after the UK appointment was signed in 2023"
+        },
+        {
+          "key": "d",
+          "text": "At the 2021 WASSCE celebration"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two years of procrastination plus COVID-19 made renewal impossible; by the first quarter of 2022 he could no longer bear the Lagos crowds — and the Ibadan option opened up."
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 10,
+      "skill": "detail",
+      "difficulty": "hard",
+      "question": "What extra token did Bepo part with at the capture hall when officials offered to expedite his renewal?",
+      "options": [
+        {
+          "key": "a",
+          "text": "₦2,000 as a courtesy"
+        },
+        {
+          "key": "b",
+          "text": "₦20,000 for the booklet"
+        },
+        {
+          "key": "c",
+          "text": "$200 in cash"
+        },
+        {
+          "key": "d",
+          "text": "Nothing — he refused on principle"
+        }
+      ],
+      "answer": "a",
+      "explanation": "When officials offered to expedite, Bepo parted with an extra ₦2,000 as courtesy — learning the terrible waiting game up close, distinct from Tai's ₦100,000 + ₦20,000 fees for the 10-year 64-page booklet."
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 10,
+      "skill": "detail",
+      "difficulty": "medium",
+      "question": "What did Tai, the unofficial agent in Ibadan, charge for a 10-year 64-page passport — and what extra for capture?",
+      "options": [
+        {
+          "key": "a",
+          "text": "₦100,000 for the booklet, plus a further ₦20,000 to expedite capture"
+        },
+        {
+          "key": "b",
+          "text": "₦10,000 flat, government tariff"
+        },
+        {
+          "key": "c",
+          "text": "₦1,000,000 — a bribe, plain and simple"
+        },
+        {
+          "key": "d",
+          "text": "Nothing — the Ibadan office was free"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Tai, a business-centre operator with a direct line at Agodi-Gate, charges ₦100,000 for the 10-year 64-page booklet plus ₦20,000 to push it to capture within about three weeks — the same service the government promises at a fraction of the cost."
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 11,
+      "skill": "detail",
+      "difficulty": "medium",
+      "question": "What full name does the farewell banner stretched across the main hall reveal for 'Bepo'?",
+      "options": [
+        {
+          "key": "a",
+          "text": "Adebepo Adewale"
+        },
+        {
+          "key": "b",
+          "text": "Adewale Adebepo"
+        },
+        {
+          "key": "c",
+          "text": "Adepoju Adewale"
+        },
+        {
+          "key": "d",
+          "text": "Oluwole Adebepo"
+        }
+      ],
+      "answer": "a",
+      "explanation": "'Adebepo Adewale' goes up publicly for the first time: 'To our most committed principal…' — the school learns what its principal is actually called."
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 11,
+      "skill": "detail",
+      "difficulty": "medium",
+      "question": "What happens in the students-versus-staff novelty match at the farewell?",
+      "options": [
+        {
+          "key": "a",
+          "text": "The referee — later identified as Audu — rejects goals and awards five penalties; the game ends in a goalless stalemate"
+        },
+        {
+          "key": "b",
+          "text": "The staff win 3–1 with a last-minute goal"
+        },
+        {
+          "key": "c",
+          "text": "The match is abandoned after a fight"
+        },
+        {
+          "key": "d",
+          "text": "The students win 2–0 in a heart-stopper"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Wednesday's match vs staff: the referee (Audu) repeatedly disallows goals, awards five penalties, and the game ends stalemate — a fittingly stubborn farewell, goals left standing for the kids."
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 11,
+      "skill": "detail",
+      "difficulty": "medium",
+      "question": "What did the arts team argue — and win with — at the farewell debate on Nigeria's strongest cultural-export?",
+      "options": [
+        {
+          "key": "a",
+          "text": "That film, music and culture — not science and technology — are Nigeria's strongest international exports"
+        },
+        {
+          "key": "b",
+          "text": "That crude oil remains the only real export"
+        },
+        {
+          "key": "c",
+          "text": "That agriculture is Nigeria's only viable export"
+        },
+        {
+          "key": "d",
+          "text": "That Nigeria has no exports worth debating"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Friday's debate asked which Nigeria gains most from — artistic/cultural output or science/technology. The arts team won, citing film, music and culture as the strongest international exports; Bepo watches his seed pay off."
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 11,
+      "skill": "detail",
+      "difficulty": "medium",
+      "question": "Which 'pillar' qualities did the MD name in Bepo at the farewell — earning him the school's highest disengagement gift?",
+      "options": [
+        {
+          "key": "a",
+          "text": "Skill, drive, empathy and morals"
+        },
+        {
+          "key": "b",
+          "text": "Speed, courage, wealth and fame"
+        },
+        {
+          "key": "c",
+          "text": "Punctuality, neatness, thrift and silence"
+        },
+        {
+          "key": "d",
+          "text": "Talent, memory, strength and height"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The MD recounts that her father, Chief David Aje, hired Bepo after he never showed for the interview — only a chat — and waited eight days; she praises his pillar qualities of skill, drive, empathy and morals, and calls him a blessing to Stardom."
+    },
+    {
+      "topic": "comprehension-and-summary",
+      "chapter": 12,
+      "skill": "detail",
+      "difficulty": "easy",
+      "question": "Which song erupts at Stardom on the Monday after Bepo returns?",
+      "options": [
+        {
+          "key": "a",
+          "text": "The Stardom school anthem — 'We're Stars, we're Stars! We're Stars of Stardom! We're Stars and we have won!'"
+        },
+        {
+          "key": "b",
+          "text": "The National Anthem, second stanza"
+        },
+        {
+          "key": "c",
+          "text": "'Nigeria, we hail thee'"
+        },
+        {
+          "key": "d",
+          "text": "A Yoruba praise chant for the principal"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Monday at Stardom is jarring: the school turns down, until shouts echo — 'I'm back! I'm back! I didn't go!' — and the assembly erupts in tears, dancing and the Stardom anthem, with Bepo in his place."
     }
   ]
 }
