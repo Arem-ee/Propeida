@@ -96,7 +96,7 @@ export default function LessonPreviewPage() {
         </span>
       </div>
 
-      <div className="rounded-3xl border border-blue-100/70 bg-white p-5 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)] sm:p-7">
+      <div className="rounded-3xl border border-blue-100/70 bg-white p-5 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)] sm:p-7 animate-fade-up">
         <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-blue-700">
           Government · Basic Concepts of Government
         </p>
@@ -118,7 +118,7 @@ export default function LessonPreviewPage() {
 
         <Link
           href="/signup"
-          className="mt-4 inline-flex w-full items-center justify-center rounded-2xl bg-blue-600 py-3.5 text-[15px] font-extrabold text-white min-h-[52px] hover:bg-blue-700"
+          className="mt-4 inline-flex w-full items-center justify-center rounded-2xl bg-blue-600 py-3.5 text-[15px] font-extrabold text-white min-h-[52px] hover:bg-blue-700 pressable"
         >
           Start practising
         </Link>
