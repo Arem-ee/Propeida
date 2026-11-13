@@ -1,14 +1,30 @@
 import { createClient } from './supabase/server'
 import { hasCampaignAccess } from './campaign'
 
-type Product = 'jamb_pro' | 'jamb_premium_ai' | 'putme_pro'
+type Product =
+  | 'jamb_pro'
+  | 'jamb_pro_yearly'
+  | 'jamb_lifetime'
+  | 'jamb_premium_ai'
+  | 'putme_pro'
+  | 'putme_pro_yearly'
 
 interface EntitlementStatus {
   status: string
   expires_at: string | null
 }
 
-const PRODUCT_JAMB: Product[] = ['jamb_pro', 'jamb_premium_ai']
+const PRODUCT_JAMB: Product[] = [
+  'jamb_pro',
+  'jamb_pro_yearly',
+  'jamb_lifetime',
+  'jamb_premium_ai',
+]
+
+const PRODUCT_PUTME: Product[] = [
+  'putme_pro',
+  'putme_pro_yearly',
+]
 
 function isActive(entitlement: EntitlementStatus): boolean {
   if (entitlement.status !== 'active') return false
@@ -59,7 +75,7 @@ export async function hasExamAccess(userId: string, examId: string): Promise<boo
     return entitlements.some((e) => PRODUCT_JAMB.includes(e.product as Product) && isActive(e))
   }
 
-  return entitlements.some((e) => e.product === 'putme_pro' && isActive(e))
+  return entitlements.some((e) => PRODUCT_PUTME.includes(e.product as Product) && isActive(e))
 }
 
 export async function getUsageCounters(userId: string, examId: string): Promise<{ free_questions_answered: number; free_mocks_started: number }> {
@@ -104,4 +120,75 @@ export async function getActiveProducts(userId: string): Promise<Product[]> {
   if (!data) return []
 
   return data.filter(isActive).map((e) => e.product as Product)
+}
+
+export interface ProStatus {
+  /** Any active Pro entitlement (any product) or an active campaign. */
+  isPro: boolean
+  /** Human labels for the active products, e.g. ['PUTME Pro']. */
+  labels: string[]
+  /** Where the access came from, for honest UI copy. */
+  source: 'payment' | 'referral_trial' | 'admin_grant' | 'campaign' | null
+  expiresAt: string | null
+}
+
+const PRODUCT_LABELS: Record<Product, string> = {
+  putme_pro: 'PUTME Pro',
+  putme_pro_yearly: 'PUTME Pro (Yearly)',
+  jamb_pro: 'JAMB Pro',
+  jamb_pro_yearly: 'JAMB Pro (Yearly)',
+  jamb_lifetime: 'JAMB All Access',
+  jamb_premium_ai: 'JAMB Premium AI',
+}
+
+/**
+ * One call that answers "is this learner Pro" for the paywall gates.
+ * Trial/campaign grants slot in here without changing the gates.
+ */
+export async function getProStatus(userId: string): Promise<ProStatus> {
+  const none: ProStatus = { isPro: false, labels: [], source: null, expiresAt: null }
+
+  const [campaign, supabase] = await Promise.all([
+    hasCampaignAccess().catch(() => false),
+    createClient(),
+  ])
+
+  if (campaign) {
+    return { isPro: true, labels: ['Pro'], source: 'campaign', expiresAt: null }
+  }
+
+  const { data } = await supabase
+    .from('entitlements')
+    .select('product, source, expires_at')
+    .eq('user_id', userId)
+    .eq('status', 'active')
+
+  const rows = (data ?? []).filter((r) =>
+    !r.expires_at || new Date(r.expires_at) > new Date(),
+  )
+  if (rows.length === 0) return none
+
+  const latest = [...rows].sort((a, b) =>
+    (b.expires_at ?? '9999-12-31').localeCompare(a.expires_at ?? '9999-12-31'),
+  )[0]
+  const first = rows[0]
+
+  // Trials read as what they are: a trial, not a purchase.
+  if (rows.every((r) => r.source === 'referral_trial')) {
+    return {
+      isPro: true,
+      labels: ['Trial'],
+      source: 'referral_trial',
+      expiresAt: latest?.expires_at ?? null,
+    }
+  }
+
+  const labels = [...new Set(rows.map((r) => PRODUCT_LABELS[r.product as Product] ?? r.product))]
+
+  return {
+    isPro: true,
+    labels,
+    source: (first?.source ?? null) as ProStatus['source'],
+    expiresAt: latest?.expires_at ?? null,
+  }
 }
