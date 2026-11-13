@@ -64,6 +64,90 @@
       "section": "SECTION A",
       "order": 9,
       "description": "Definition and examples of SHM; period, frequency, amplitude; v and a; energy changes; forced vibrations and resonance with applications. Split from IBASS topic 3 (Motion, items i; IBASS objectives xxi–xxiv)."
+    },
+    {
+      "slug": "gravitational-field",
+      "name": "Gravitational Field",
+      "section": "SECTION A",
+      "order": 10,
+      "description": "Newton’s universal gravitation, g and its variation, gravitational field vs potential, conservative fields, weight vs mass, escape velocity, geostationary orbits."
+    },
+    {
+      "slug": "equilibrium-of-forces",
+      "name": "Equilibrium of Coplanar Forces",
+      "section": "SECTION A",
+      "order": 11,
+      "description": "Conditions for equilibrium, resolution of forces into perpendicular components, triangle and polygon laws, Lami’s theorem, resultant and equilibrant."
+    },
+    {
+      "slug": "moments-and-stability",
+      "name": "Moments of Forces and Stability",
+      "section": "SECTION A",
+      "order": 12,
+      "description": "Moment of a force, torque and couples, principle of moments, reactions of beams, centre of gravity, stable/unstable/neutral equilibrium. Split from IBASS A.5."
+    },
+    {
+      "slug": "friction",
+      "name": "Friction",
+      "section": "SECTION A",
+      "order": 13,
+      "description": "Static and dynamic friction, limiting friction coefficient and measurement, advantages/disadvantages, reduction methods, viscosity, terminal velocity, Stoke’s law."
+    },
+    {
+      "slug": "work-energy-and-power",
+      "name": "Work, Energy and Power",
+      "section": "SECTION A",
+      "order": 14,
+      "description": "Work (Fs cos θ), energy forms and conservation, F–d curve areas, kWh, power (P = W ÷ t = Fv), numerical problems."
+    },
+    {
+      "slug": "energy-and-society",
+      "name": "Energy and the Needs of Society",
+      "section": "SECTION A",
+      "order": 15,
+      "description": "Sources of energy, renewable vs non-renewable, conversion devices, dams and energy production, energy and development, environmental impacts, energy diversification, safe use."
+    },
+    {
+      "slug": "photoelectric-and-photovoltaic",
+      "name": "Photoelectric Effect and Photovoltaic Cells",
+      "section": "SECTION A",
+      "order": 16,
+      "description": "Photoelectric effect, Einstein’s equation hf = W + KE_max, work function, threshold frequency, Planck constant, photovoltaic cells, solar collectors and panels."
+    },
+    {
+      "slug": "simple-machines",
+      "name": "Simple Machines",
+      "section": "SECTION A",
+      "order": 17,
+      "description": "Levers (three classes), pulleys, wheel and axle, inclined plane, wedge, screw; mechanical advantage, velocity ratio, efficiency."
+    },
+    {
+      "slug": "elasticity",
+      "name": "Elasticity",
+      "section": "SECTION A",
+      "order": 18,
+      "description": "Hooke’s law, Young’s modulus, force–extension curves, elastic limit and beyond, work done in stretching springs, energy per unit volume."
+    },
+    {
+      "slug": "pressure",
+      "name": "Pressure and the Atmosphere",
+      "section": "SECTION A",
+      "order": 19,
+      "description": "Pressure definition and SI unit (Pa), mercury and aneroid barometers, manometer, variation of pressure with height, barometer as altimeter."
+    },
+    {
+      "slug": "pressure-in-liquids",
+      "name": "Pressure in Liquids",
+      "section": "SECTION A",
+      "order": 20,
+      "description": "Pressure at depth (P = ρgh), Pascal’s principle, transmission of pressure, hydraulic brakes and car jacks, sealed systems."
+    },
+    {
+      "slug": "liquids-at-rest",
+      "name": "Liquids at Rest: Density, Archimedes and Floatation",
+      "section": "SECTION A",
+      "order": 21,
+      "description": "Density measurement (overflow, density bottle), relative density, upthrust, Archimedes’ principle, law of floatation, hydrometers, ships, submarines."
     }
   ],
   "lessons": [
@@ -2044,6 +2128,2658 @@
               "examples: bridges, radios, microwaves, glass breaking — soldiers break step"
             ],
             "takeaway": "Forced is a car listening to the road; resonance is the bridge deciding to agree."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "gravitational-field",
+      "topic": "gravitational-field",
+      "title": "The Gravitational Field",
+      "objective": "Apply Newton’s law of universal gravitation, find gravitational field and potential, distinguish conservative fields, state variation of g with height and latitude, relate mass and weight, and determine escape velocity.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "The Gravitational Field",
+            "paragraphs": [
+              "Everything falls toward the Earth — a coin, an apple, a satellite. That quiet, invisible pull is the gravitational field, and it shapes everything from rainfall to rocket launches."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Newton’s law of gravitation and g",
+            "paragraphs": [
+              "Every body pulls every other body with a force F = Gm₁m₂ / r². G is the universal constant, 6.67 × 10⁻¹¹ N·m²/kg²; r is the distance between centres of mass. The force acts along the line joining them and is mutual — Earth pulls us, we pull Earth, equally.",
+              "Near the surface the same law reduces to W = mg, where g = 9.8 m/s² (or 10 in rough problems). g varies with height (g’ = g(1 − 2h/R)) and with latitude — Earth is not a perfect sphere, it bulges at the equator, so g is slightly smaller there."
+            ],
+            "bullets": [
+              "F = Gm₁m₂ ÷ r² — attractive along the line joining centres",
+              "g = GM ÷ R² — the strength of the field at a point",
+              "smaller at poles > smaller at the equator; smaller with height"
+            ],
+            "takeaway": "G anchors the universe; g is G in our neighbourhood.",
+            "check": {
+              "question": "If the distance between two bodies is doubled, the gravitational force between them becomes",
+              "options": [
+                "double",
+                "half",
+                "a quarter",
+                "unchanged"
+              ],
+              "answer": 2,
+              "why": "F is inversely proportional to the square of the distance — doubling r quarters F."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Field, potential and conservative fields",
+            "paragraphs": [
+              "A field is a region where a force acts without contact. The gravitational field strength at a point is the gravitational force per unit mass — g itself. Potential (Φ) at a point is the gravitational potential energy per unit mass; V = −GM/r relative to infinity (zero), always negative.",
+              "A conservative field is one where the work done moving a body between two points does not depend on the path — gravity and electrostatics are conservative; friction and drag are non-conservative. Associated with conservative fields is potential energy: falling releases it, climbing stores it."
+            ],
+            "bullets": [
+              "g = force per unit mass (N/kg = m/s²)",
+              "Φ = potential energy per unit mass; always negative; ∞ is zero reference",
+              "Conservative: gravity, electrostatic — friction: non-conservative"
+            ],
+            "takeaway": "Field tells the push; potential tells the debt.",
+            "check": {
+              "question": "Which of these is a conservative field?",
+              "options": [
+                "friction",
+                "air resistance",
+                "gravity",
+                "water resistance"
+              ],
+              "answer": 2,
+              "why": "Gravity is conservative — energy gained by falling is path-independent; friction and drag are not."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Weight, escape velocity and orbits",
+            "paragraphs": [
+              "Mass is a scalar constant (the amount of matter, kg); weight is a vector: W = mg — the pull of gravity on that mass (newtons, varies with g). A 60 kg person weighs 600 N on Earth.",
+              "Escape velocity is the minimum speed needed to break free of a planet’s gravity: v = √(2GM/R). For Earth ≈ 11.2 km/s. Below it, a thrown object returns; at it, the object drifts away forever.",
+              "Parking orbit (geostationary) circles at ~36,000 km above the equator with 24-hour period — to TV dishes it looks parked. Weightlessness is not absent gravity — it is free fall: both the space station and the astronaut fall together, so the astronaut floats."
+            ],
+            "bullets": [
+              "weight mg — vector, varies with g. mass — scalar, constant",
+              "escape velocity √(2GM/R) — for Earth ≈ 11.2 km/s",
+              "parking orbit = geostationary; weightlessness = mutual free fall"
+            ],
+            "takeaway": "Gravity never switches off for the station — you float because you fall too.",
+            "check": {
+              "question": "The escape velocity from Earth is about",
+              "options": [
+                "3.1 km/s",
+                "7.8 km/s",
+                "11.2 km/s",
+                "42 km/s"
+              ],
+              "answer": 2,
+              "why": "v = √(2GM/R) for Earth ≈ 11.2 km/s."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "g and G are two letters the exam mixes up on purpose: G is the universal constant (6.67 × 10⁻¹¹); g is Earth’s field at your feet (9.8). Weight depends on g; F between planets depends on G."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Two objects of masses 4 kg and 3 kg are 2 m apart. Find the force of attraction between them. (G = 6.67 × 10⁻¹¹ N·m²/kg²)",
+            "steps": [
+              {
+                "operation": "Write the formula",
+                "reason": "Newton’s law of gravitation applies — F = Gm₁m₂ / r²",
+                "result": "F = 6.67 × 10⁻¹¹ × 4 × 3 ÷ 2²",
+                "predictPrompt": "What is the value of r² for r = 2 m?"
+              },
+              {
+                "operation": "Compute",
+                "reason": "multiply the numerators, divide by r²",
+                "result": "F = 6.67 × 10⁻¹¹ × 12 ÷ 4 = 2 × 10⁻¹⁰ N",
+                "predictPrompt": "Is 6.67 × 3 = 20.01 or 6.67 × 12 = 80? Watch the numbers"
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "The acceleration due to gravity on another planet is 3.7 m/s². What weight does a 70 kg astronaut register on that planet?",
+            "hints": [
+              "weight = mass × g — use the planet’s g, not Earth’s",
+              "W = 70 × 3.7",
+              "W = 259 N"
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "A harder worked example: escape velocity",
+            "problem": "The Earth’s mass is 6 × 10²⁴ kg and radius 6.4 × 10⁶ m. Find the escape velocity from Earth’s surface. (G = 6.67 × 10⁻¹¹ N·m²/kg²)",
+            "steps": [
+              {
+                "operation": "Write the formula",
+                "reason": "v = √(2GM/R)",
+                "result": "v = √(2 × 6.67 × 10⁻¹¹ × 6 × 10²⁴ ÷ 6.4 × 10⁶)",
+                "predictPrompt": "Which comes first in the root — 2GM or the divide-by-R?"
+              },
+              {
+                "operation": "Compute the inside of the root",
+                "reason": "2 × 6.67 × 6 = 80 × 10¹³ ÷ 6.4 × 10⁶ — powers of ten",
+                "result": "v² = 80 × 10¹³ ÷ 6.4 × 10⁶ ≈ 125 × 10⁶ → v ≈ 11.2 × 10³ m/s",
+                "predictPrompt": "Which of these is 80/6.4 — 1.25 or 12.5?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: G and g — neighbours, not twins",
+            "paragraphs": [
+              "G is universal — it works on every body everywhere; g is private to each planet — Earth's surface g ≈ 9.8 N/kg; the Moon's ≈ 1.6; Jupiter's ≈ 24.8. The book where they belong together is Newton's law: F = Gm₁m₂/r². Set m₂ = mass of Earth at r = R and you get W = mg with g = GM/R² — gravity testing your ability to relate the two constants in one step.",
+              "Use g for surface weight questions, G for planet-scale questions: 'mass of the planet' asks for GM; 'weight of an astronaut' asks for m × g. JAMB rarely crosses the wires at once; knowing which is G and which is g saves half the marks.",
+              "Mass vs weight on different planets: mass is constant, weight changes — the moon-scale in the pharmacy measures weight, not mass (a coil spring stretches under pull); a balance scale compares two objects against a standard mass — mechanical, unaffected by g. JAMB loves 'weighing machine reads zero' for freely falling frames."
+            ],
+            "bullets": [
+              "G ≈ 6.67×10⁻¹¹ everywhere; g ≈ 9.8 at Earth's surface",
+              "g = GM ÷ R² — links the two",
+              "balance = mass (comparison); spring = weight (stretch)"
+            ],
+            "takeaway": "g answers 'the pull on me'; G answers 'the pull between us'."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: gravitational field and potential",
+            "paragraphs": [
+              "Field strength g at a point = the force on unit mass placed there: g = GM ÷ r². Field lines diverge outward — radial. Potential at that point Φ = −GM ÷ r: the work done per unit mass bringing a body from infinity to the point, and it is always negative because infinity is zero and bringing the body downhill releases energy.",
+              "Potential energy difference between two heights near Earth is ΔPE = mgh only for small height changes; the full account is ΔPE = −GM(1/r₂ − 1/r₁). JAMB's stem will rarely detail beyond the small-h limit — use mgh for ordinary launches and keep Φ in mind for satellite topics.",
+              "Conservative field test: repositioning a body anywhere brings the same energy debt; friction and drag do not — how long you walked does matter at your legs. In a conservative gravitational field, total energy is conserved between any two points; work done by gravity = −ΔPE."
+            ],
+            "bullets": [
+              "field g = GM ÷ r² (radial lines outward)",
+              "Φ = −GM/r — negative at finite r, zero at infinity",
+              "ΔPE near Earth = mgh; in orbit use −GM(1/r₂ − 1/r₁)"
+            ],
+            "takeaway": "g is push/unit mass; Φ is winter of where energy goes."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: how JAMB sets gravitation questions",
+            "paragraphs": [
+              "Archetypes: (1) 'force between two masses' — direct F = Gm₁m₂/r², often in powers of ten; (2) 'if r doubles, F becomes' — inverse square; (3) 'a planet with different g' — weight scales linearly with g, mass constant; (4) 'escape velocity' — no trick, two substitutions into √(2GM/R); (5) 'an object weighs X at surface and Y at height' — g falls off with r; (6) 'parking orbit' — equator-aligned, 24 h; (7) 'why do astronauts float' — mutual free fall.",
+              "Value of g itself appears: 'at the surface of a planet of mass M and radius R' — write g = GM/R² and plug; or find 'the mass of the planet given surface g and R'. Cross-planet ratios: g ∝ M/R² dominates — doubling mass multiplies g by two; doubling radius quarters it.",
+              "Trap stems: 'the astronaut in ISS orbits at 400 km — his/her weight is zero' — no: roughly 90% of surface g acts there; he has mass, she has inertia; it is apparent weightlessness. Reading too much into 'parking orbit' — means geostationary (24-hour) AND orbiting above the equator — the satellite appears parked; they are technically 'fixed' to one longitude."
+            ],
+            "bullets": [
+              "inverse square: doubling r quarters F",
+              "g at surface: GM/R² — two unknowns often given at once",
+              "weightlessness = mutual free fall — never 'no gravity'"
+            ],
+            "takeaway": "Two constants, mixed slides, every question — draw the planet chain."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "equilibrium-of-forces",
+      "topic": "equilibrium-of-forces",
+      "title": "Equilibrium of Coplanar Forces",
+      "objective": "Apply the conditions for equilibrium of coplanar forces, use triangle and polygon laws, Lami’s theorem and resolution of forces into perpendicular components; find resultant and equilibrant; apply to roadside and building problems.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Equilibrium of Coplanar Forces",
+            "paragraphs": [
+              "Three ropes tie a market stall together; the stall sits still. Four pulls in four directions — yet nothing moves. Physicists call this equilibrium: forces are real but balance to nothing and no motion replaces rest."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The conditions for equilibrium",
+            "paragraphs": [
+              "For coplanar forces — all lying in one plane — a body stays at rest (or at constant speed) when (1) the vector sum of forces is zero, or (2) the resolution in two perpendicular directions is zero in both directions: ΣFₓ = 0 and ΣF_y = 0.",
+              "For two or more forces: if they act in line, add with signs; at angle, resolve into components; the polygon-of-forces closed figure test says resultant = 0 when the forces drawn tip-to-tail form a closed loop.",
+              "Equilibrant is the single force that exactly balances a resultant — equal magnitude, opposite direction."
+            ],
+            "bullets": [
+              "ΣFₓ = 0 AND ΣF_y = 0 — both components zero",
+              "or ΣF vector = 0 — one rule in all shapes",
+              "closed polygon ⟺ resultant is zero"
+            ],
+            "takeaway": "If all forces cancel out, the restful body has earned its rest.",
+            "check": {
+              "question": "Three coplanar forces keep a body in equilibrium. Which is the necessary condition?",
+              "options": [
+                "only ΣFₓ = 0",
+                "only ΣF_y = 0",
+                "ΣFₓ = 0 and ΣF_y = 0",
+                "sum of forces is equal to the weight"
+              ],
+              "answer": 2,
+              "why": "Equilibrium requires zero net force in both perpendicular directions."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Triangle law and polygon law",
+            "paragraphs": [
+              "Triangle law: if two forces acting at a point are represented by two sides of a triangle in order, the third side taken in reverse represents their resultant in magnitude and direction.",
+              "Polygon law: extends the triangle law to any number of coplanar forces — draw all forces tip-to-tail, join the open ends; the closing side is the resultant. A closed polygon means zero resultant — the equilibrium case.",
+              "These are graphical methods — a scale drawing honest enough for JAMB; construct with protractor and ruler, check the closing side against the table."
+            ],
+            "bullets": [
+              "two forces → triangle; close the triangle, the third side is R",
+              "many forces → polygon; open ends joined give the resultant",
+              "closed polygon = equilibrium, no movement"
+            ],
+            "takeaway": "Arrows closed in a loop spell 'rest'; arrows open spell 'motion'.",
+            "check": {
+              "question": "The resultant of two forces represented by two sides of a triangle is given by the",
+              "options": [
+                "remaining side",
+                "other two sides added",
+                "remaining side reversed",
+                "sum of all three sides"
+              ],
+              "answer": 2,
+              "why": "The triangle is drawn in order — the third side, reversed, closes it in the resultant's direction."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Lami’s theorem and resolution of forces",
+            "paragraphs": [
+              "Lami’s theorem: if three coplanar forces keep a body in equilibrium, each force is proportional to the sine of the angle opposite it: F₁/sin α = F₂/sin β = F₃/sin γ. Use it when the angles are known but not the magnitudes.",
+              "Resolution: every force has two perpendicular components: Fcosθ along the axis, Fsinθ across it. Add the components on each axis, then check: ΣFx = 0, ΣFy = 0.",
+              "Resultant: after resolving, the net pair (X, Y) rebuilds R = √(X² + Y²). Equilibrant: the single force opposite the resultant in direction and equal in magnitude."
+            ],
+            "bullets": [
+              "Lami: F₁/sin α = F₂/sin β = F₃/sin γ",
+              "resolve into perpendicular components first",
+              "resultant √(Fx² + Fy²); equilibrant = same size, opposite sense"
+            ],
+            "takeaway": "Lami for when the angles shout and the sizes whisper.",
+            "check": {
+              "question": "Three coplanar forces keep a body in equilibrium. The ratio of a force to the sine of its opposite angle is",
+              "options": [
+                "different for each force",
+                "the same for all three forces",
+                "twice for the largest force",
+                "always equal to the resultant"
+              ],
+              "answer": 1,
+              "why": "Lami’s theorem: the three ratios are identical."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Draw the force diagram before any formula. Y = T sin θ, X = T cos θ; check X, then Y. Almost every equilibrium stem asks for tension or compression — one line, always with an angle."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Forces 50 N and 30 N act at 60°. Find (a) their resultant, (b) the angle the resultant makes with the 50 N force.",
+            "steps": [
+              {
+                "operation": "Resolve into components",
+                "reason": "ΣFₓ and ΣF_y on the chosen axes",
+                "result": "X = 50 + 30 cos 60° = 50 + 15 = 65 N; Y = 30 sin 60° ≈ 26 N",
+                "predictPrompt": "What is cos 60°?"
+              },
+              {
+                "operation": "Resultant",
+                "reason": "R = √(X² + Y²)",
+                "result": "R = √(65² + 26²) ≈ √(4225 + 676) ≈ 70 N",
+                "predictPrompt": "Compute 65² + 26² — does the answer pass 70 easily?"
+              },
+              {
+                "operation": "Direction",
+                "reason": "tan θ = Y ÷ X",
+                "result": "tan θ = 26 ÷ 65 = 0.4 → θ ≈ 22°",
+                "predictPrompt": "If the 30 N force were doubled, the angle would — grow or shrink?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A mass of 5 kg hangs from a string which makes 30° with the wall. Find the tension using Lami’s theorem. (g = 10 m/s²)",
+            "hints": [
+              "weight = 50 N; two tensions+wall reaction oppose it",
+              "angles opposite each force are needed — draw the triangle",
+              "answer: tension = 25 N (sin relations)"
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "A harder worked example: apply Lami’s theorem directly",
+            "problem": "Three coplanar forces 6 N, 8 N and 10 N hold a point in equilibrium. Find the angle opposite the 6 N force.",
+            "steps": [
+              {
+                "operation": "Identify the sides of a force triangle",
+                "reason": "the three forces are in equilibrium so they form a 6-8-10 triangle",
+                "result": "6² + 8² = 10² — a right-angle triangle",
+                "predictPrompt": "Which is the longest side — the 10 N force?"
+              },
+              {
+                "operation": "Lami applies",
+                "reason": "F₁/sin α = constant for a stable equilibrium",
+                "result": "angle opposite 6 N: sin α = 6/k; angle opposite 8 N: sin β = 8/k; angle opposite 10 N: sin γ = 10/k",
+                "predictPrompt": "What is k? Adding all three angles reaches 360°."
+              },
+              {
+                "operation": "Decide α",
+                "reason": "the biggest force (10) opposes the biggest angle (90° for the closed triangle)",
+                "result": "α = 36.9° (arcsin 6/10); β = 53.1° (arcsin 8/10)",
+                "predictPrompt": "α + β + 90° = 180° for a closed triangle — does 36.9 + 53.1 + 90 = 180?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: resolving forces in two directions",
+            "paragraphs": [
+              "Forces act in one plane; split them into horizontal and vertical components. A force of 50 N at 30° above horizontal: X = 50 cos 30° ≈ 43.3 N eastward, Y = 50 sin 30° = 25 N upward. The net force is a single pair (43.3 east, 25 up) and any problem reduces to those two components.",
+              "When several forces act, add the Xs among themselves and the Ys among themselves; equilibrium holds when both sets cancel: ΣFx = 0 and ΣFy = 0. A boy pulling a cart north while the wind pushes east is steady when his pull's forward part and the wind's backward drag cancel on both axes separately.",
+              "Components can fail when the angle is wrong: selecting sin instead of cos. The fastest check is physical: the bigger component is always opposite the shallower angle — cos of the shallower angle gives the bigger part."
+            ],
+            "bullets": [
+              "X = F cos θ · Y = F sin θ",
+              "ΣFx = 0 for horizontal balance; ΣFy = 0 for vertical balance",
+              "sin θ pairs with its θ; cos θ pairs with its plane — stay consistent"
+            ],
+            "takeaway": "Two opposing axes are easier than three opposing angles."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Lami’s theorem from the quiet inside",
+            "paragraphs": [
+              "Three forces in equilibrium form a closed triangle. Each side represents one force; each interior angle opposes its own force — draw the triangle with the forces tip-to-tail and everything you want sits on the page.",
+              "The mathematics behind Lami is just the sine rule applied to the force triangle: F₁ ÷ sin α, F₂ ÷ sin β, F₃ ÷ sin γ are equal constants. For the 6-8-10 case above, the constants are 10 (opposite the 90° angle) and 6-8 give 0.6-0.8 — matches arcsin values.",
+              "When Lami's theorem is too slow, fall back on X/Y: resolution always works; labelling the correct angle every time is where it breaks. Pipeline for examinations: draw the force triangle → compute angles → F₁/sin α = F₂/sin β = F₃/sin γ — any one force equals the others per sine."
+            ],
+            "bullets": [
+              "closed tip-to-tail force triangle",
+              "F ÷ sin(opposite) is constant",
+              "solve sin ratios: F unknown = F_other × sin ratio"
+            ],
+            "takeaway": "Force triangles are slower on paper but cost zero formula errors."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: how JAMB sets equilibrium problems",
+            "paragraphs": [
+              "Archetypes: (1) 'three forces keep a body in equilibrium — find angle or force': Lami ratio or closed triangle; (2) 'the tension in the rope holding a weight' — cos or sin of the angle with the wall; (3) 'a man holds a load with two ropes' — symmetry: each rope bears W ÷ (2 sin θ); (4) 'a lamp hangs from two chains making angles θ and β with the wall, find their tensions' — Lami answer √(T₁/ sin α = T₂/sin β) or resolve on both axes; (5) 'a block resting is pulled by two horizontal forces — find the remaining friction' — ΣFx = 0 tells you where the missing number lives.",
+              "Traps: the angle in the problem can be measured from the wall or the vertical — get it consistent before substituting into sin or cos; 'coplanar' all forces in one plane — JAMB rarely leaves the plane; a force pair of equal size at 60° is not the equilibrant of the third — do the sum of all three, not two; 'stable equilibrium' wording belongs to the stability topic — moments — don't answer on dimensions from this section.",
+              "'Resultant' vs 'equilibrant': in equilibrium, the resultant of the applied forces is cancelled by a further force — the equilibrant. Equal in size, opposite in sense. JAMB swaps the two keywords on purpose; read which one the question asks for."
+            ],
+            "bullets": [
+              "resolve on both axes; ΣFx = 0, ΣFy = 0",
+              "angle from vertical ÷ angle from horizontal — consistently",
+              "equilibrant = resultant, other way round"
+            ],
+            "takeaway": "Every equilibrium question: draw four arrows. Whichever section of the page has three arrows moving, the fourth is visible."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "moments-and-stability",
+      "topic": "moments-and-stability",
+      "title": "Moments of Forces and Stability",
+      "objective": "Apply the principle of moments, find moments and couples, compute torques, applications in levers and machines, locate centres of gravity, and distinguish stable, unstable and neutral equilibrium.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Moments of Forces and Stability",
+            "paragraphs": [
+              "A tyre sticks on a spanner. A bodybuilder lifts a weight near his body — never at arm's length. That is the moment of a force doing work: the ruler is in on the secret."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Moment of a force and the principle of moments",
+            "paragraphs": [
+              "Moment of a force about a point = F × perpendicular distance from the point (newton-metre, N·m); direction: clockwise or anticlockwise.",
+              "Principle of moments for equilibrium: sum of clockwise moments = sum of anticlockwise moments about any point. A beam balanced: 4 kg at 50 cm left, 10 kg at 20 cm right ⇒ 4 × 50 = 200 balances 10 × 20 = 200.",
+              "A couple is two parallel, equal, opposite forces not in the same line; torque (its moment) = one force × distance between them. Couples spin taps and keys — pure rotation, no net force."
+            ],
+            "bullets": [
+              "M = F × d — clockwise or anticlockwise",
+              "equilibrium: CW moments = ACW moments about any point",
+              "couple: resultant zero, moment (torque) = F × d"
+            ],
+            "takeaway": "Small force, big distance moves heavy loads — every machine lives on this.",
+            "check": {
+              "question": "A force of 80 N acts 0.5 m from a pivot. The moment is",
+              "options": [
+                "160 N·m",
+                "40 N·m",
+                "16 N·m",
+                "1.6 N·m"
+              ],
+              "answer": 1,
+              "why": "M = F × d = 80 × 0.5 = 40 N·m."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Conditions for equilibrium of rigid bodies",
+            "paragraphs": [
+              "Rigid body: ΣFx = 0, ΣFy = 0 AND ΣM = 0 — no net force and no net moment.",
+              "A beam supported at two points: take moments about one support — the unknown reaction on that point drops out (moment zero), the other stays in one term.",
+              "A couple is two parallel, equal, opposite forces not in the same line; its moment (torque) = one force × distance between them. Couples spin taps, keys and screwdrivers — no net force, pure rotation."
+            ],
+            "bullets": [
+              "rigid body: ΣFx = 0, ΣFy = 0, AND ΣM = 0",
+              "take moments about awkward pivots to eliminate unknown forces",
+              "couple = pure rotation, zero net force"
+            ],
+            "takeaway": "Rigid bodies fail by rotation, not sliding — power belongs to moments.",
+            "check": {
+              "question": "Two equal and opposite forces of 20 N act at 0.4 m apart on a wheel. The couple is",
+              "options": [
+                "40 N·m",
+                "8 N·m",
+                "0.8 N·m",
+                "20 N·m"
+              ],
+              "answer": 1,
+              "why": "Couple = F × d = 20 × 0.4 = 8 N·m; resultant forces cancel."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Centre of gravity and stability",
+            "paragraphs": [
+              "The centre of gravity (CG) is the point through which the body's total weight acts. It matters for balance: hang a body from any point and the CG sits directly below the hang point at rest.",
+              "Stable equilibrium: small tilt returns the body upright — CG rises and falls. Unstable: small tilt topples — CG falls. Neutral: CG keeps the same height anywhere along the path.",
+              "Stability rises with a lower centre of gravity and a wider base — loaded double-decker buses wobble less than empty ones, race cars hug the ground, and a pencil on its tip falls at a breath."
+            ],
+            "bullets": [
+              "CG: total weight acts through it",
+              "stable → small push returns; unstable → topples; neutral → stays put",
+              "wide base, low CG — the stable trio"
+            ],
+            "takeaway": "Low CG, wide base — the first law of anything not meant to fall over.",
+            "check": {
+              "question": "A book lying flat on a table is in what kind of equilibrium?",
+              "options": [
+                "unstable",
+                "neutral",
+                "stable",
+                "visual"
+              ],
+              "answer": 2,
+              "why": "Any small tilt lifts the CG and it settles back — stable equilibrium."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Moments = bulk of mechanics credits: list the forces, list the arms, take moments about the awkward pivot."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A uniform 200 N beam 4 m long is supported at its ends. A 300 N woman sits 1 m from the left. Find each support reaction.",
+            "steps": [
+              {
+                "operation": "Total reaction",
+                "reason": "both supports carry beam weight + woman",
+                "result": "R₁ + R₂ = 200 + 300 = 500 N",
+                "predictPrompt": "Which reaction will be larger — the near one or the far one?"
+              },
+              {
+                "operation": "Take moments about the left support",
+                "reason": "moments eliminate the near support — only R₂ stays",
+                "result": "R₂ × 4 = 200 × 2 + 300 × 1 = 700 → R₂ = 175 N",
+                "predictPrompt": "Why does the beam weight act at 2 m — its centre of gravity?"
+              },
+              {
+                "operation": "Other reaction by subtraction",
+                "reason": "R₁ = total − R₂",
+                "result": "R₁ = 500 − 175 = 325 N",
+                "predictPrompt": "Does R₁ + R₂ = 500 N settle to 175 + 325?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A uniform 5 kg beam 1 m long is pivoted at its centre. A 2 kg weight hangs 0.3 m from the left support; a 4 kg weight hangs 0.2 m from the right support. Show whether the beam balances.",
+            "hints": [
+              "moments on each side must cancel — take moments about the pivot",
+              "left moment = 2 kg × 0.3; right = 4 kg × 0.2",
+              "left = 0.6 kg·m vs right = 0.8 kg·m — not balanced; add 0.2 kg at 1.0 m on the left side"
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "A harder worked example: reactions at two supports",
+            "problem": "A 100 kg beam 4 m long rests on two supports at its ends. A 60 kg load sits 1 m from one end. Find the reaction at each support.",
+            "steps": [
+              {
+                "operation": "Total load reaction",
+                "reason": "both supports together carry beam weight + load",
+                "result": "R₁ + R₂ = 100 + 60 = 160 kgf = 160 × 10 N = 1600 N",
+                "predictPrompt": "Which side carries more, the near load or the far?"
+              },
+              {
+                "operation": "Take moments about one support",
+                "reason": "unknown R₂ becomes the only lever term on the other side",
+                "result": "R₂ × 4 = 100 × 2 + 60 × 1 = 260 kg·m → R₂ = 65 kgf = 650 N",
+                "predictPrompt": "What lever confirms 100 × 2? — centre of gravity of the beam sits at the beam's centre"
+              },
+              {
+                "operation": "Compute the other reaction",
+                "reason": "subtract or take moments anew",
+                "result": "R₁ = 160 − 65 = 95 kgf = 950 N",
+                "predictPrompt": "Does R₁ + R₂ = 1600 N check out?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: the levers of life",
+            "paragraphs": [
+              "Every machine in motion lives on moments or levers. First-class lever: fulcrum between effort and load — see-saw, scissors, crowbar — can multiply force or distance. Second-class: load between fulcrum and effort — wheelbarrow, nutcracker — multiplies force strongly but moves load in a short range. Third-class: effort between fulcrum and load — tongs, fishing rod, human forearm — never multiplies force, trades force for distance.",
+              "Wheel and axle: outer radius R and inner r; M.A. = R ÷ r; e.g., a door knob — small force at big wheel turns through a big torque at the axle. Pulleys: fixed pulley changes direction; movable pulley halves the needed force (M.A. = 2); compound pulleys trade force for cord length per pulley added.",
+              "Gear systems — bicycle chainwheel, differential: gear ratio multiplies torque; angular velocity of driver ∝ 1 ÷ ratio. Heavy: wheelbarrows leaned at 45° with load near the wheel — perfect moment arm equals torque management without force friction."
+            ],
+            "bullets": [
+              "classed 1/2/3 by fulcrum-load-effort ordering",
+              "movable pulley: halves force; fixed changes direction",
+              "all machines: force × short distance in → force × long distance out"
+            ],
+            "takeaway": "Moments make the machine; the correct fulcrum makes the job done."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: three equilibriums, topplings and centres of gravity",
+            "paragraphs": [
+              "Stable equilibrium — push the body; CG rises then falls to its former level; upright wooden pyramid; cup of tea flat on table. Unstable — push it; CG drops; more tilt follows; pencil on its tip; drum of barrels on a corner; usually instant destruction. Neutral — whatever the push, CG keeps its height; sliding coin; rolling marble; shift anywhere along rails.",
+              "Stability rises with a lower CG and wider base: the flat-bottomed double-decker bus bends at corners but never over; a model race car low to the track; a helicopter's skids. A racing tripod narrow and tall topples in a stiff wind — every guy wire out-tops it.",
+              "CG location for uneven shapes: divide the object into parts, find each part's CG, weight-weight x coordinates about a reference, coordinate-weight sum ÷ total weight — that x is the CG. Find y the same way. Hang the object twice; the grey area contains the CG."
+            ],
+            "bullets": [
+              "stable: small tilt → CG rises → falls back",
+              "neutral: CG stays at same height anywhere",
+              "unstable: any push releases the CG drop — imminent crash"
+            ],
+            "takeaway": "Stable objects keep their CG low when invited to fall."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: how JAMB sets moment and stability problems",
+            "paragraphs": [
+              "Archetypes: (1) 'moments about a pivot' — identify every force and its perpendicular arm — pitfall: arms measured from the wrong pivot; (2) 'beam reactions at two supports' — take moments about one, other yields; (3) 'centre of gravity of a composite body' — weighted coordinate sums; (4) 'equilibrium type from descriptions' — recognition of the vector trick; (5) 'couple' — direction of rotation, magnitude F×d.",
+              "Traps: moments added without direction — adding CW and ACW where signs differ; beam width vanishes from the problem — a 3 m beam supported at both ends with 60 kg in the middle gets 300 N each reaction; forgetting the beam's own weight (uniform beam = moment at its centre); taking moments about the point where the unknown force acts — self-eliminating (moment about acting point = 0).",
+              "'Where should the mass be added to bring it to balance?' — no hints; write down everything: total weight × x = CW moment sum, x = Σ(CW moments) ÷ ΣW. Stable/unstable/neutral: y-coordinate of CG rises for stable; falls for unstable; unaffected for neutral. Questions ask to 'state with a reason' — the reason should reference CG height, not aesthetic terms."
+            ],
+            "bullets": [
+              "arms are measured perpendicular from the acting force to the pivot",
+              "uniform beam: self-weight acts at its midpoint",
+              "which type: stable (CG rises) / unstable (drops) / neutral (constant)"
+            ],
+            "takeaway": "Moments: same direction, same point, Add with direction. That is the end of the list."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "friction",
+      "topic": "friction",
+      "title": "Friction",
+      "objective": "Differentiate static and dynamic friction, determine limiting coefficient of friction, compare advantages and disadvantages, suggest reduction methods, and analyse viscosity, terminal velocity and Stoke’s law for bodies moving in fluids.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Friction",
+            "paragraphs": [
+              "Drag your feet forward on a rough floor; they grip and slide with resistance. That resistance is friction — the silent force at all your tyres, brakes and soles."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Static and dynamic friction",
+            "paragraphs": [
+              "Friction opposes relative motion. Static friction: acts on a body at rest when force is applied. Dynamic friction: acts on a body actually sliding. Dynamic is always smaller than the limiting static value.",
+              "Limiting friction is the maximum friction just before motion starts: F_lim = μR, where R is the normal reaction and μ (mu) is the coefficient of static friction.",
+              "Measuring μ: place the body on a plane, tilt it until it just begins to slide — tan θ = μ. Inclination of textile patches yields the coefficient; pharmaceutical bottles use it the same way."
+            ],
+            "bullets": [
+              "static grows with applied force up to a limit; dynamic is constant below it",
+              "F_lim = μR — the whole story",
+              "tilt test: tan θ = μ at the slip angle"
+            ],
+            "takeaway": "Static friction wins until the body decides to slide — the slip-limit of motion.",
+            "check": {
+              "question": "The coefficient of limiting friction is the ratio of the force of limiting friction to the",
+              "options": [
+                "mass of the body",
+                "normal reaction",
+                "weight",
+                "applied force"
+              ],
+              "answer": 1,
+              "why": "μ = F_lim ÷ R — friction divided by the normal reaction."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Advantages, disadvantages and reduction of friction",
+            "paragraphs": [
+              "Without friction: tyres would slip on roads, brakes would fail, books would slide off tables, walking is impossible. Friction enables grip, walking, machines, sandpapering — everything needs a handle. A waxed road at drizzle is a mechanical leak.",
+              "The other side: wear and tear (ball bearings die), heat (fires start), energy loss (cars slow on roads), squeaking joints. Every engine sacrifices power to it.",
+              "Reduction methods: lubrication with oil/grease, ball bearings, streamlining bodies (aerodynamics), polishing surfaces, using low-friction materials (Teflon on pans)."
+            ],
+            "bullets": [
+              "Friction is good: walking, braking, sandpaper",
+              "friction hurts: wear, heat, wasted power",
+              "reduce by oil, bearings, streams, polish, Teflon"
+            ],
+            "takeaway": "Never eliminate friction — without it your every move would slide into nothing.",
+            "check": {
+              "question": "Which of these is NOT a way of reducing friction?",
+              "options": [
+                "lubrication",
+                "ball bearings",
+                "streamlining",
+                "roughening surfaces"
+              ],
+              "answer": 3,
+              "why": "Roughening a surface increases friction — the others reduce it."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Viscosity and terminal velocity",
+            "paragraphs": [
+              "In liquids and gases, viscosity is the internal friction of the fluid — the resistance to a body sliding through it. Unit is poise or Pa·s. Higher temperature ⇒ less viscosity in liquids (warm honey runs thinner); the reverse in gases.",
+              "A falling body in a fluid accelerates until the drag equals its weight; beyond that it stops accelerating and moves at constant speed — terminal velocity.",
+              "Stokes’ law: drag force on a small sphere F = 6πηrv — η (eta) is viscosity, r is sphere radius, v is terminal velocity. JAMB uses it with oil-drop or raindrop-style scenarios."
+            ],
+            "bullets": [
+              "viscosity = internal friction of fluid — decreases with heat",
+              "terminal velocity: when drag balances weight, acceleration = 0",
+              "Stokes: F = 6πηrv"
+            ],
+            "takeaway": "Every falling body in fluid eventually stops accelerating — drag always wins time.",
+            "check": {
+              "question": "At terminal velocity, the acceleration of the falling body is",
+              "options": [
+                "g",
+                "zero",
+                "greater than g",
+                "negative"
+              ],
+              "answer": 1,
+              "why": "Weight equals drag; net force is zero ⇒ acceleration is zero — constant speed."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "F = μR is JAMB's friend: normal reaction first, coefficient second, friction third. Beware the angled pull — both arrow and cos enter the chat before you answer."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A body of mass 5 kg rests on a rough horizontal surface. The coefficient of friction is 0.4. Find the force required to slide the body. (g = 10 m/s²)",
+            "steps": [
+              {
+                "operation": "Compute the normal reaction",
+                "reason": "on a horizontal surface, N = weight of the body",
+                "result": "N = mg = 5 × 10 = 50 N",
+                "predictPrompt": "Is N ever anything other than mg on a flat floor? Try angled."
+              },
+              {
+                "operation": "Slip force",
+                "reason": "F_lim = μ × N",
+                "result": "F = 0.4 × 50 = 20 N",
+                "predictPrompt": "Does the body start moving at 10 N? At 25 N?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A body of mass 3 kg lies on a horizontal table. A coefficient of limiting friction is 0.5. What force slides the body along the table? (g = 10 m/s²)",
+            "hints": [
+              "N = 3 × 10 = 30 N",
+              "F = μ × N = 0.5 × 30",
+              "F = 15 N — answers a pull less than 15 N; slides only at 15 N"
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "A harder worked example: friction on an inclined plane",
+            "problem": "A 10 kg block rests on an incline θ where tan θ = 0.75. The coefficient of friction is 0.3. Find (a) the normal reaction, (b) the force of friction acting on the block.",
+            "steps": [
+              {
+                "operation": "Resolve weight into components",
+                "reason": "perpendicular to plane: mg cos θ; along plane: mg sin θ",
+                "result": "cos θ = 4/5 = 0.8 (since tan θ = 3/4); N = 10 × 10 × 0.8 = 80 N",
+                "predictPrompt": "Three-four-five — this is the only triangle you see at 37°."
+              },
+              {
+                "operation": "Friction by coefficient",
+                "reason": "F = μ × N",
+                "result": "F = 0.3 × 80 = 24 N",
+                "predictPrompt": "But should F always equal μN? Does sliding happen?"
+              },
+              {
+                "operation": "Decide whether sliding occurs",
+                "reason": "friction can be at most μN — here attempting step asks |mg sin θ|",
+                "result": "mg sin θ = 10 × 10 × 0.6 = 60 N > 24 N → the block slides; friction stays at 24 N (dynamic, often a little lower)",
+                "predictPrompt": "Which falls away first — static friction or the applied force?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: sliding and rolling",
+            "paragraphs": [
+              "Sliding friction is bigger than rolling friction — wheels roll better than roofs skate. Friction also rises with the normal reaction; angled forces change both components; a steeply dragged crate still stays below μN as the horizontal component has reduced normal load; a crate dragged at 37° experiences a less severe verticalnormal effect — N falls by F sin θ, so F pulls while the pass falls faster with less friction force needed.",
+              "Walking works because friction acts at your sole backward — ground pushes you forward (reaction) — a friction of at least µR is the only requirement; design of leather soles — Timberland-style ribbed patterns boost µ for light rain.",
+              "JAMB lane: 'while driving on a wet road, what happens' — µ drops; braking distances lengthen; lane-keeping gets harder. Skidding is friction taking back its invoice."
+            ],
+            "bullets": [
+              "rolling < sliding, lubrication beats all",
+              "angled pull: sin drops N, cos provides pull — θ helps both",
+              "wet roads: µ drops, braking distance rises"
+            ],
+            "takeaway": "Angled forces shrink the reaction and the friction — never forget the subtraction."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: viscosity, terminal velocity, Stokes’ law",
+            "paragraphs": [
+              "Fluids resist shear. Honey flows slower than water — honey has greater viscosity. Measuring viscosity: poiseuille's capillary tube experiments or Stoke's sphere fall — measure fall time, compute η. Unit poise = 10⁻¹ Pa·s. JAMB's oil drop compute: everything is round here.",
+              "Falling small sphere under gravity — accelerates until drag matches weight; equation F_net = mg − 6πηrv − upthrust = 0 → v_terminal = (density_sphere − density_fluid) × (4/3 π r³g) ÷ (6πη r) = (2 r² g (ρ_p − ρ_f)) ÷ 9 η. JAMB rarely expects that full derivation; the packet has the answer often.",
+              "Raindrops, sand in water, helicopter tumbleweed seeds, blood cells in plasma — all settle in their own terminal velocity. One JAMB stem asks to compare terminal speeds of same radius differing density; answer: ratio = density difference ratio."
+            ],
+            "bullets": [
+              "ν decreases with temperature in liquids; increases in gases",
+              "terminal velocity: drag = weight — acceleration stops",
+              "Stokes: F = 6π η r v"
+            ],
+            "takeaway": "Viscosity is the fluid's brake; terminal velocity is the trip limit."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: how JAMB sets friction questions",
+            "paragraphs": [
+              "Archetypes: (1) direct 'F = μR' with horizontal push — plug in; (2) 'force needed just to move the body' — ALWAYS μR; think static; (3) 'a horizontal force P is pulled — if P is above µN the body slides, tells you acceleration' — (P − F) ÷ m; (4) 'at what angle does a block just slide' — tan θ = μ; (5) 'a mass on an accelerating bus — what force holds it down' — horizontal pseudo, friction acts to balance; (6) 'how much force decelerates a sliding body' — dynamic F = µR — one line.",
+              "Trap families: (a) N computed from weight without cos (incline); (b) Stokes answer now is expected in mg and v terminal, both small numbers — decimal mistakes abound; (c) 'viscosity increases with temperature' — for gases yes, for liquids NO — tape a magnet to thefridge to remember; (d) 'terminal velocity is low for dense spheres' — exactly the reverse; (e) 'friction increases with surface area' — not in JAMB range; force µ·N does not contain area — memorise it if they ever trick it.",
+              "'Coefficient of kinetic friction equals / less than' — less; 'why brakes overheat' — heat from friction = μRN per second; 'rate of heat please' — P = fv — JUB asks for heats produced with power — chips to energy (next lesson)."
+            ],
+            "bullets": [
+              "μR formula — normal force first, µ second",
+              "static ≠ dynamic; μ_static > μ_kinetic always",
+              "on incline: N = mg cos θ — never forget the cos"
+            ],
+            "takeaway": "Friction is simply µ times the normal force — every nuance is a cosine away."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "work-energy-and-power",
+      "topic": "work-energy-and-power",
+      "title": "Work, Energy and Power",
+      "objective": "Define work, energy and power; compare forms of energy; apply conservation and transformation; interpret area under a force–distance curve; solve numerical problems.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Work, Energy and Power",
+            "paragraphs": [
+              "Push a concrete block along a rough floor; every sweated metre is work. Fill the lorry with petrol; every drop is their stored energy; how fast both happen is power. Three quantities, one economy."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Work, energy and power defined",
+            "paragraphs": [
+              "Work is force times displacement in the direction of the force: W = Fs cos θ. Units: joule (J). No motion, no work, however hard you push against a wall — the wall does not receive work.",
+              "Energy is the capacity to do work. Kinetic energy (E_k = ½mv²), potential energy (E_p = mgh), heat, light, sound, chemical, nuclear, electrical, elastic — all are the same currency in different denominations.",
+              "Power is the rate of doing work: P = W ÷ t. Unit: watt (W) = 1 J/s. Kilowatt (kW) = 1000 W; horsepower ≈ 746 W. Electric bills read kilowatt-hours: 1 kWh ≈ 3.6 MJ."
+            ],
+            "bullets": [
+              "W = Fs cos θ — moved along the force or not at all",
+              "Energy = how much work is doable; J or kWh",
+              "P = W ÷ t — watts; kW for 1,000 W; kWh = energy, J × 3.6 × 10⁶?"
+            ],
+            "takeaway": "Work is the bill paid, energy the wallet contents, power the speed of paying.",
+            "check": {
+              "question": "A force of 20 N pushes a crate 5 m along the floor. The work done is",
+              "options": [
+                "4 J",
+                "25 J",
+                "100 J",
+                "500 J"
+              ],
+              "answer": 2,
+              "why": "W = Fs = 20 × 5 = 100 J."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Forms of energy and conservation",
+            "paragraphs": [
+              "Energy flows between forms but never disappears: Total energy in the universe stays constant — law of conservation of energy. It only changes from useful to less useful forms, often as heat.",
+              "Examples: dropping stone — E_p → E_k; hydroelectric dam — water's E_p drives turbines → E_k → electrical energy; bulb — electrical → light + heat; petrol engine — chemical → E_k + heat + sound.",
+              "Elastic band: stretched — E_p elastic; fired — E_k. Battery: chemical changes first to electrical, then heat and light."
+            ],
+            "bullets": [
+              "total energy constant — it only swaps forms",
+              "gravitational E_p → E_k → thermal — the usual route downhill",
+              "byproduct: heat is never ‘lost’, only scattered"
+            ],
+            "takeaway": "Energy never vanishes — it may be useful or it may be warm; the ledger balances.",
+            "check": {
+              "question": "When a stone falls freely, the energy that changes most directly is",
+              "options": [
+                "heat to kinetic",
+                "potential to kinetic",
+                "chemical to kinetic",
+                "nuclear to heat"
+              ],
+              "answer": 1,
+              "why": "Gravitational potential energy becomes kinetic energy as the speed grows."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Force–distance area and numerical problems",
+            "paragraphs": [
+              "The area under a force–distance curve gives the work done by that force. Constant force: rectangle — F × s. Triangular variation: ½ × base × height. Trapezium: ½ (a + b) × h. Once the area is computed, work is computed.",
+              "Numerical problems follow one chain: read the problem → draw it → identify F and s (or the graph) → pick the formula. Kinetic energy problems: first get v, then ½mv².",
+              "Typical stems: 'area under force–distance graph', 'energy change of a body of mass m dropped through h', 'the work done against friction', 'a 100 kW engine does it in 20 s' → W = P × t."
+            ],
+            "bullets": [
+              "area under F–d graph = work",
+              "kWh = kW × h; 1 kWh = 3.6 × 10⁶ J",
+              "route: visualise; find F and s; plug"
+            ],
+            "takeaway": "Every F–d graph is secretly a workbook in disguise.",
+            "check": {
+              "question": "The area under a force–extension graph gives the",
+              "options": [
+                "spring constant",
+                "work done on the spring",
+                "extension",
+                "elastic limit"
+              ],
+              "answer": 1,
+              "why": "Area between the curve and distance axis is the work done during extension."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "If you see distance or speed-plotted against force, the answer is always 'area' — don't substitute a formula. Units for work: joules = N × m."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A 2000 N car is pushed along 30 m with a force of 500 N. Find the work done.",
+            "steps": [
+              {
+                "operation": "Identify force and displacement",
+                "reason": "force directly along motion, so cos 0° = 1",
+                "result": "F = 500 N, s = 30 m",
+                "predictPrompt": "Is 5000 N at an angle, or you pushing straight forward?"
+              },
+              {
+                "operation": "Compute the work",
+                "reason": "W = Fs cos θ",
+                "result": "W = 500 × 30 = 15000 J = 15 kJ",
+                "predictPrompt": "Does the weight enter this calculation at all?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A crane lifts a 500 kg mass to a height of 20 m in 25 s. Find (a) the work done, (b) the power used. Take g = 10 m/s².",
+            "hints": [
+              "force = weight = 500 × 10 = 5000 N",
+              "W = F × s = 5000 × 20 = 100 000 J",
+              "P = W ÷ t = 100 000 ÷ 25 = 4000 W = 4 kW"
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "A harder worked example: energy transformation",
+            "problem": "A 1 kg stone is thrown vertically upward at 20 m/s. Find (a) its kinetic energy at launch, (b) its potential energy at the highest point, (c) its kinetic energy just before it lands. Take g = 10 m/s².",
+            "steps": [
+              {
+                "operation": "Kinetic energy at launch",
+                "reason": "KE = ½mv²",
+                "result": "KE = ½ × 1 × 20² = 200 J",
+                "predictPrompt": "What does 'just before it lands' suggest — the same level or lower?"
+              },
+              {
+                "operation": "Potential energy at the top",
+                "reason": "at the top all KE has become PE (no losses)",
+                "result": "PE = 200 J; also PE = mgh where h = u²/2g = 20 m → mgh = 1 × 10 × 20 = 200 J ✓",
+                "predictPrompt": "Does the answer pass the same both ways?"
+              },
+              {
+                "operation": "KE before landing",
+                "reason": "total energy conserved; back at the same level",
+                "result": "KE = 200 J — same as launch (neglecting air resistance)",
+                "predictPrompt": "Is the speed the same on the way down?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: energy conversions you meet daily",
+            "paragraphs": [
+              "Charging phone: electrical → chemical (battery). Cooking: chemical (gas or kerosene) → thermal. Typing: muscular chemical → small heat + kinetic finger motion. Falling object: gravitational potential → kinetic → sound + heat at impact.",
+              "Electric fan: electrical → kinetic energy of blades → air motion + a small bit of heat at the motor. Electric car: electrical energy stored in battery packs → motor kinetic energy → wheel rotation → motion.",
+              "Energy exchange puzzles: 'the energy used' is tracked in two steps — total input × efficiency = useful output. 50% efficient bulb: half of what a 60 W bulb draws is heat; only 30 W of light. Kilowatt-hour cost: charge × kWh — multiply number by rate. Break that chain and you have JAMB marks on word problems involving electricity tariffs."
+            ],
+            "bullets": [
+              "charge phoned: electric → chemical",
+              "engines: chemical → kinetic + heat",
+              "deceleration: kinetic → heat and sound"
+            ],
+            "takeaway": "Every machine is an exchange bureau — energy in, energy out, nothing invented, nothing lost."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: the force–distance graph",
+            "paragraphs": [
+              "A constant force on paper: imagine a truck pushing a car 10 m on the floor; the graph is a flat line at F for 10 m; the rectangular area equals F × 10 = work done. It pays to notice small numbers: 2 N × 10 m = 20 J.",
+              "A ramp of force on paper: another machine increases force gradually from zero to F over a distance; the graph is a triangle; area = ½ F × d; work = half the rectangle. Many JAMB F-d problems are exactly this shape.",
+              "Trapezium: force falls from 8 N to 2 N linearly over 5 m — area = ½ (8 + 2) × 5 = 25 J. Calculating work from a piecewise-linear graph is always area-vs.-formula; a calculator drum-roll handles both."
+            ],
+            "bullets": [
+              "rectangle: F × d",
+              "triangle: ½ × F × d",
+              "trapezium: ½ (a + b) × h — really just two triangles stacked"
+            ],
+            "takeaway": "Under a force curve, sweep and count — area is work."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: how JAMB sets work and power problems",
+            "paragraphs": [
+              "Archetypes: (1) 'work done by a force through a distance' — W = Fs cos θ; (2) 'power of a machine that does W in t' — P = W/t; (3) 'cost of electrical energy' — kWh × tariff; (4) 'a force applied at angle θ' — cos θ enters; (5) 'stretched spring work' — ½ k x² or read the area under F–x graph; (6) 'energy transformation' — identify before and after forms; (7) 'area under F–d graph' — composite area only.",
+              "Truck vs car question: 'a force of 5000 N is required to move a vehicle at a constant speed of 20 m/s — find the power exerted' — this is P = Fv, not just P = W/t. JAMB loves to wrap the same physics in algebra slightly rearranged.",
+              "Missteps: cosine angle ignored in W = Fs cos θ; W omitted when pushing a wall (no distance); $kWh confused with W; inconsistent units — convert mm to m and minutes to seconds before touching the formula. Separately, the sentence 'a crane lifts a 500 kg load through 20 m in 25 s' silently requires you to multiply weight first — mass has no power; weight does."
+            ],
+            "bullets": [
+              "P = Fv — the fast rewrite of P = W ÷ t",
+              "θ matters — W = Fs cosθ",
+              "life cycle of the paper question: F → W → P, each one feeds the next"
+            ],
+            "takeaway": "Energy chain in exam order: find F, then W, then P — nothing else matters until all three flow."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "energy-and-society",
+      "topic": "energy-and-society",
+      "title": "Energy and the Needs of Society",
+      "objective": "Itemise sources of energy; distinguish renewable and non-renewable; identify energy conversion devices, dams, energy and development, environmental impacts, diversification and safe use.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Energy and the Needs of Society",
+            "paragraphs": [
+              "No fuel, no light in the hallway; no light, no hospital at night; no energy, no laptop, no machine at the market, no bus from Ibadan. Energy is how a country moves, feeds itself, cares for the sick, and grows."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Sources of energy",
+            "paragraphs": [
+              "Primary sources: those not derived from another (coal, crude oil, sun, wind, water, nuclear). Secondary: those derived (petrol from crude, electricity from falling water).",
+              "Renewable energy — sunlight, wind, water (hydro), biomass, geothermal — replenishes naturally. Non-renewable — coal, crude oil, natural gas, nuclear fuels — are finite; Nigeria has oil and gas but volatile prices, import dependence, imported fuel exchange costs.",
+              "Nigeria's giants: Kainji, Jebba and Shiroro dams supply hydroelectric power; gas thermal plants feed Lagos; solar mini-grids in Sokoto, Kaduna and savannah settlements reach off-grid communities."
+            ],
+            "bullets": [
+              "primary: not derived from another; secondary: derived",
+              "renewable: sun, wind, hydro, biomass, geothermal",
+              "non-renewable: coal, oil, gas, uranium"
+            ],
+            "takeaway": "Every light bulb is a decision about which source it drinks from.",
+            "check": {
+              "question": "Which of these is a renewable source of energy?",
+              "options": [
+                "coal",
+                "crude oil",
+                "sunlight",
+                "natural gas"
+              ],
+              "answer": 2,
+              "why": "Sunlight is endlessly supplied; coal, oil and gas are finite."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Energy uses and energy conversion",
+            "paragraphs": [
+              "Homes: cooking, lighting, entertainment, refrigeration. Work: factories, clinics, schools, shops, farms. Transport: vehicles run on petrol (chemical to mechanical), public transport mostly of the same source. Hotels in Lagos run round-the-clock air-conditioning off the grid when it works, and off gensets when it doesn't.",
+              "Energy conversions: mechanical → electrical (generator), chemical → thermal (stove), electrical → thermal (heater), solar → electrical (photovoltaic). Every device is an exchange — none makes energy; all move it from one mould to another.",
+              "Devices: power stations (dams, thermal gas plants, wind, solar), transformers, diesel generators, NEPA/PH supply, distribution lines, solar panels, biogas plants, kerosene stoves."
+            ],
+            "bullets": [
+              "mechanical → electrical: generators",
+              "chemical → thermal: stoves",
+              "solar → electrical: photovoltaics"
+            ],
+            "takeaway": "Every appliance in the house is an energy translator.",
+            "check": {
+              "question": "The conversion in a hydroelectric dam is",
+              "options": [
+                "chemical → electrical",
+                "mechanical → electrical",
+                "solar → electrical",
+                "thermal → electrical"
+              ],
+              "answer": 1,
+              "why": "Falling water drives turbines — gravitational potential energy (stored water) becomes mechanical, then electrical."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Energy, society and the environment",
+            "paragraphs": [
+              "Energy powers development: electrified clinics deliver vaccines at night; electrified schools keep children reading after dark; electrified factories create jobs. Nigeria spends billions on diesels while grumbling about fuel prices — the paradox of energy poverty.",
+              "Impact of energy use: global warming, greenhouse gas (CO₂ from petrol, coal, gas), air pollution (sulfur, oxides of nitrogen), oil spills (Bodo, Niger Delta, Ogoniland), gas flaring, deforestation from firewood.",
+              "Safe use: fuel-efficient cooking stoves, switching off when leaving a room, solar home systems for rural areas, safe disposal of batteries, public education; electricity accidents account for a large fraction of NIIE emergencies."
+            ],
+            "bullets": [
+              "energy poverty ruins health, education and jobs",
+              "greenhouse gases carry heat from the earth and warm it",
+              "switch off, cook efficiently, respect wires"
+            ],
+            "takeaway": "How a country burns decides whether it thrives or cooks.",
+            "check": {
+              "question": "The main environmental effect of petrol use is",
+              "options": [
+                "earthquakes",
+                "greenhouse effects",
+                "flooding",
+                "desertification"
+              ],
+              "answer": 1,
+              "why": "Burning petrol releases CO₂, a greenhouse gas that traps heat."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "The exam wants you to argue, not guess: renewable = examples, non-renewable = examples, side effects of petrol = always CO₂ and greenhouse. 'Diversification' is the magic word for mixing sources."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A 60 W electric bulb is used for 5 hours a day for 30 days. If electricity costs ₦70 per kWh, find the total bill.",
+            "steps": [
+              {
+                "operation": "Energy consumed in kWh",
+                "reason": "power × time ÷ 1000 — power in kW",
+                "result": "60 W = 0.06 kW; 5 h/day; 30 days → 0.06 × 5 × 30 = 9 kWh",
+                "predictPrompt": "60 W — does W stay in watts here, or do you divide by 1000 first?"
+              },
+              {
+                "operation": "Cost",
+                "reason": "kWh × tariff",
+                "result": "9 × 70 = ₦630",
+                "predictPrompt": "Would the same formula work for a kW's electric kettle used 10 times?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Give three reasons why Nigeria should diversify its energy sources away from crude oil.",
+            "hints": [
+              "price volatility",
+              "environmental damage",
+              "development of renewables for remote communities without the grid"
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "A harder worked example: dam energy",
+            "problem": "Water from a dam flows through a turbine at 20 m/s. The turbine generates electrical energy from mechanical energy. What height h must the water fall to get that speed neglecting losses? Take g = 10 m/s².",
+            "steps": [
+              {
+                "operation": "Energy equivalence",
+                "reason": "PE lost = KE gained (conservation)",
+                "result": "mgh = ½mv² → h = v² ÷ (2g)",
+                "predictPrompt": "The mass cancels — always?"
+              },
+              {
+                "operation": "Compute",
+                "reason": "plug values",
+                "result": "h = 20² ÷ (2 × 10) = 400 ÷ 20 = 20 m",
+                "predictPrompt": "Does a higher turbine get more energy, or the same?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: dams, solar and nuclear in Nigeria",
+            "paragraphs": [
+              "Hydropower: Kainji, Jebba and Shiroro — the hydro triad, combined ≈ 1.9 GW; output falls in the dry season. Other hydro: Ikere Gorge, Zungeru.",
+              "A typical 2 kW rooftop solar array in Lagos yields about 10 kWh on a clear day — enough to run a fridge, fans, a TV and efficient lighting. In the wet season yield can drop below 40% of that, so generators persist as backup. Off-grid cooperatives resell surplus power to neighbours at mini-grid rates.",
+              "Nigeria energy crises: unmet demand costs an estimated 2-3% of GDP yearly; about 45 million Nigerians have no electricity at all. Kerosene and diesel still power millions of businesses — rationalising that dependence is the diversification story the exam wants.",
+              "Solar: one of the cheapest today; Sokoto, Kaduna and Borno pilot farms feed national grid; prepaid solar meters popular in villages; pv panels 25% efficiency typical.",
+              "Nuclear: Nigeria has a research reactor at Zaria (not yet commercial power). Wind: Katsina wind farm. Oil spills: Niger Delta creeks carry the scars."
+            ],
+            "bullets": [
+              "Kainji, Jebba, Shiroro — the hydro triad",
+              "Sokoto and Kaduna feed the solar grid",
+              "Zaria: research reactor, not yet commercial"
+            ],
+            "takeaway": "Nigeria's grid is a patchwork — dams, gas, imports, and off-grid solutions."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: energy and the environment",
+            "paragraphs": [
+              "CO₂ from petrol and coal — captured in the atmosphere; heat from the sun cannot escape back; global temperatures rise; sea levels climb; savanna expands; coastal settlements drown.",
+              "Gas flaring in the Niger Delta: light, heat, wasted fuel and diseases of the lungs and eyes nearby; Nigeria has committed to end it — commitments slow.",
+              "Nigeria owns the largest natural gas reserves in Africa but imports refined petrol — mismatch of resource and value; agriculture (firewood and charcoal) drives deforestation; biomass energy can be cheap but must be harvested renewably.",
+              "Efficient cooking stoves cut firewood use by about half, slowing local deforestation — proposed as one of Nigeria's cheapest reforestation measures; replacement trees recycle wind and rainfall further than most concrete plans ever will."
+            ],
+            "bullets": [
+              "CO₂ from petrol → greenhouse → global warming",
+              "gas flaring: poisoning local health and air",
+              "firewood: deforestation driver — recoverable stoves required"
+            ],
+            "takeaway": "Every megawatt has a receipt."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: how JAMB sets energy-society questions",
+            "paragraphs": [
+              "Archetypes: (1) 'renewable vs non-renewable' — examples from list; (2) 'a device' — identify conversion type; (3) 'which is best for a remote village' — answer: off-grid solar; (4) 'environmental impact of petrol' — always CO₂ + greenhouse effect; (5) 'safe energy use' — switch off, kerosene stove away from children, no open flames; (6) 'energy crises' — price volatility + import dependency + transmission losses.",
+              "'Diversification' means mixing sources — sun, wind, hydro, gas reserves — to reduce shock exposure. Nigeria has 60% dependence on gas thermal plus dams; solar would diversify 30% via mini-grids.",
+              "Recall the three-answer triad in every exam question — renewable examples, petrol's environmental side-effects (CO₂ → greenhouse warming), and the magic word 'diversification'. Recite all three, every time.",
+              "Nigeria generates barely 40% of its installed ~12 GW at any moment; maintenance, gas supply hitches and transmission losses bleed the rest — that is the exam's whole Nigerian energy diagnosis in one line.",
+              "Nigeria questions: 'three renewable sources in Nigeria' — sun, water, wind (Katsina); 'three non-renewables used in Nigeria' — crude oil, natural gas, coal (Enugu coal historically); 'a dam in Nigeria' — Kainji, Jebba or Shiroro; 'a nuclear facility' — the research reactor at Zaria. The exam expects you to know these."
+            ],
+            "bullets": [
+              "renewable in Nigeria: sun, water, wind",
+              "non-renewable: crude oil, gas, coal",
+              "diversify — or suffer single-source shock"
+            ],
+            "takeaway": "Exam answer bnbbb: name, explain, example."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "photoelectric-and-photovoltaic",
+      "topic": "photoelectric-and-photovoltaic",
+      "title": "Photoelectric Effect and Photovoltaic Cells",
+      "objective": "State photoelectric emission, write Einstein’s equation hf = W + ½mv²_max, define threshold frequency, work function and Planck’s constant; explain photovoltaic cells and solar collectors.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Photoelectric Effect and Photovoltaic Cells",
+            "paragraphs": [
+              "Shine UV light on zinc and electrons sail off its surface. This short letter — the photoelectric effect — forced physics to accept that light, once a simple wave, carries energy in parcels. Each parcel is a photon."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "What the photoelectric effect is",
+            "paragraphs": [
+              "Photoemission: light of frequency above threshold ejects electrons from a metal. Failure below the threshold means every photon carries too little energy. Brighter below that threshold changes nothing; brighter above steps up how many electrons fly.",
+              "Einstein’s equation: hf = W + ½mv²_max — energy in = work function + kinetic energy max of the escaped electron. h is Planck’s constant (6.63 × 10⁻³⁴ J·s), f is the frequency of the light, W is the work function of the metal."
+            ],
+            "bullets": [
+              "hf = W + KE max — the photoelectric equation",
+              "h = 6.63 × 10⁻³⁴ J·s",
+              "below threshold frequency — nothing comes out"
+            ],
+            "takeaway": "Light cares about colour, not just brightness — violet works, red often doesn’t.",
+            "check": {
+              "question": "In Einstein’s photoelectric equation hf = W + ½mv², the symbol W stands for the",
+              "options": [
+                "work done on the electron",
+                "work function of the metal",
+                "weight of the photoelectron",
+                "wavelength of the light"
+              ],
+              "answer": 1,
+              "why": "W is the minimum energy needed to pull an electron from the metal’s surface."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Threshold frequency and work function",
+            "paragraphs": [
+              "Threshold frequency (f₀) is the lowest frequency at which photoemission happens. Work function W = hf₀. Below f₀ for a metal, no electron emerges regardless of intensity — intensity affects how many electrons, not whether. A bright red lamp fired as hard as you like makes no electrons emerge; a faint violet just above threshold does.",
+              "Different metals have different W: sodium ~2.3 eV, zinc ~4.3 eV. Photons carry packet sizes e = hf — higher frequency photons dribble the most powerful punch. Once above threshold the photon’s energy splits into escape work plus KE."
+            ],
+            "bullets": [
+              "W = hf₀",
+              "higher photon frequency → more KE per electron",
+              "brightness affects number of photoelectrons, not their KE"
+            ],
+            "takeaway": "Low-frequency light of the brightest flame cannot knock electrons off — colour rules.",
+            "check": {
+              "question": "If the photon energy exceeds the metal’s work function, the excess is",
+              "options": [
+                "lost as heat in the metal",
+                "carried off by the photoelectron as kinetic energy",
+                "used to remove another electron",
+                "re-emitted as lower-frequency light"
+              ],
+              "answer": 1,
+              "why": "hf − W = ½mv²_max — the leftover is the escaped electron’s kinetic energy."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Photovoltaic cells and solar panels",
+            "paragraphs": [
+              "Photovoltaic cell: semiconductor that converts photon energy directly into electric energy. Used in calculators, satellites, remote traffic lights, rooftop solar. Combined cells form a solar panel.",
+              "Solar collector: a box with a black plate, water tubes, glazing; sun heats water directly — used for showers and pool heating.",
+              "Photovoltaic vs photoelectric: photovoltaic = DC output, semiconductor p-n junction, current produced even at low illumination; photoelectric wants UV and escape from metal surface — two sides of the same photon. One rooftop array in Lagos can power a whole house without a single moving part."
+            ],
+            "bullets": [
+              "photovoltaic cells → DC electricity",
+              "solar panels = cells wired together for greater wattage",
+              "collectors heat water directly — no electricity"
+            ],
+            "takeaway": "Every solar roof is a silicon meadow catching photons for lunch.",
+            "check": {
+              "question": "Electric current produced in a solar cell is",
+              "options": [
+                "alternating current (AC)",
+                "direct current (DC)",
+                "both AC and DC",
+                "pulsating light"
+              ],
+              "answer": 1,
+              "why": "A photovoltaic cell delivers DC like a battery."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "JAMB wants one equation: hf = W + KE. Master it with eV: 1 eV = 1.6 × 10⁻¹⁹ J, and substitute f or wavelength only with c = fλ."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A metal with a work function of 2.5 eV is illuminated by ultraviolet light of frequency 5 × 10¹⁴ Hz. Find the maximum kinetic energy of the emitted electrons. (h = 6.63 × 10⁻³⁴ J·s, 1 eV = 1.6 × 10⁻¹⁹ J)",
+            "steps": [
+              {
+                "operation": "Compute hf",
+                "reason": "energy of the photon",
+                "result": "E = h × f = 6.63 × 10⁻³⁴ × 5 × 10¹⁴ = 3.3 × 10⁻¹⁹ J",
+                "predictPrompt": "Is 6.63 × 5 = 33.15 or 5.63?"
+              },
+              {
+                "operation": "Convert KE to eV",
+                "reason": "KE = hf − W",
+                "result": "hf in eV = 3.3 × 10⁻¹⁹ ÷ 1.6 × 10⁻¹⁹ ≈ 2.06 eV",
+                "predictPrompt": "Which unit does the work function speak in here?"
+              },
+              {
+                "operation": "Final KE",
+                "reason": "KE = 2.06 − 2.5",
+                "result": "hf < W — no emission occurs; this trick question has one answer: 0",
+                "predictPrompt": "What does it mean when the photon is too weak?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A sodium cathode needs 2.28 eV to release electrons. With what maximum KE do photoelectrons emerge when struck by light of frequency 1 × 10¹⁵ Hz? (h = 6.63 × 10⁻³⁴, 1 eV = 1.6 × 10⁻¹⁹ J)",
+            "hints": [
+              "hf = 6.63 × 10⁻³⁴ × 1 × 10¹⁵ = 6.63 × 10⁻¹⁹ J",
+              "W = 2.28 eV × 1.6 × 10⁻¹⁹ = 3.65 × 10⁻¹⁹ J",
+              "KE = 6.63 × 10⁻¹⁹ − 3.65 × 10⁻¹⁹ ≈ 2.98 × 10⁻¹⁹ J"
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "A harder worked example: threshold wavelength",
+            "problem": "A metal has threshold frequency 5 × 10¹⁴ Hz. Find (a) the work function in eV, (b) the maximum KE with incident light of frequency 8 × 10¹⁴ Hz.",
+            "steps": [
+              {
+                "operation": "Work function",
+                "reason": "W = hf₀",
+                "result": "W = 6.63 × 10⁻³⁴ × 5 × 10¹⁴ = 3.315 × 10⁻¹⁹ J = 2.07 eV",
+                "predictPrompt": "Convert J → eV by dividing by 1.6 × 10⁻¹⁹!"
+              },
+              {
+                "operation": "Max KE at 8 × 10¹⁴ Hz",
+                "reason": "KE = hf − W",
+                "result": "hf = 6.63 × 10⁻³⁴ × 8 × 10¹⁴ = 5.304 × 10⁻¹⁹ J; KE = 5.304 − 3.315 = 1.99 × 10⁻¹⁹ J ≈ 1.24 eV",
+                "predictPrompt": "Of the two terms in hf − W, which is the big one — and which is the small one?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: how photoelectric experiments actually run",
+            "paragraphs": [
+              "First verified by Hertz in 1887 — spark gaps shorted by UV. Hallwachs saw discharge only with high-frequency light. J.J. Thomson clarified charge dependence; Millikan measured h to 0.5% accuracy — the metal work function, the charge of electron, e restores mastery.",
+              "Each metal has its own work function — sodium 2.28 eV, caesium lower ~2.1 eV, zinc 4.3 eV. A beam's intensity decides number of electrons, not their energy; that is why the mass light above the threshold work function matters, and the mass light below it does nothing.",
+              "Photocurrent vs voltage: with negative potential sufficiently large on the anode, no electrons reach — this 'stopping potential' V₀ × e = KEmax.  JAMB may ask: 'find the stopping potential for given light' — V₀ = KE ÷ e awkward in eV → e cancels (KE in eV equals V₀ in volts)."
+            ],
+            "bullets": [
+              "stopping potential V₀ (V) = KE_max (eV) — same numerical value",
+              "work function per metal: sodium 2.28, zinc 4.3 eV",
+              "Hertz → Hallwachs → Thomson → Millikan — the history JAMB recycles"
+            ],
+            "takeaway": "Every photoelectric stem boils down to one hf number vs one W number."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: photovoltaics and solar collectors",
+            "paragraphs": [
+              "p-n junction solar cells: silicon doped with phosphorus (n-type, extra electrons) and boron (p-type, shortage — holes). Photons with energy ≥ band-gap (1.1 eV for silicon) driven into more motion. Single cells reach ~25% efficiency; commercial panels commonly 15–20%.",
+              "Collectors: black plate absorbs, tubes carry water, glass top traps heat — a greenhouse effect on your roof. Simple, flat, inexpensive — Kenya built one of the world's biggest rooftop collector arrays; Nigeria is growing them in the northern solar belt.",
+              "Net energy: sunlight delivers ~1 kW/m² at peak noon. Rooftop photovoltaic arrays of 2–5 kW cover a typical home's load, and net-metering (Nigeria started gradually) lets you sell back.",
+              "A village off-grid mini-grid: one 20 kW array feeds 80 homes with LED light, a pump and a clinic; batteries charge all day for the night shift; diesel gensets sleep.",
+              "Hospitals, schools and clinics outside grid reach use the same formula daily — solar lantern → phone charge → bank app — the exam's cartography of what 'energy for development' actually means.",
+              "Solar lessons stay colourful: UV knocks electrons free; infra-red keeps hand-warmers honest; anything past violet gets the escape energy."
+            ],
+            "bullets": [
+              "PV: p-n junction; ≥1.1 eV band-gap for silicon",
+              "collectors: black plate + tubes — heats water directly",
+              "peak sun ≈ 1 kW/m²"
+            ],
+            "takeaway": "A solar roof is a photon oven with silicon bread inside."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: how JAMB sets photoelectric questions",
+            "paragraphs": [
+              "The archetypes: (1) 'photoelectric equation — what is hf, KE or W' — direct substitution; (2) 'threshold colour' — violet or UV works, red does not; (3) 'stopping potential' — the voltage where emission ceases; convert KEmax to volts; (4) 'work function of a metal in J or eV' — one small conversion, easy to flub; (5) 'photovoltaic cells — what type current' — DC.",
+              "Trap: 'below threshold frequency' — nothing emerges. Trap: 'brightness increasing' — nothing happens to emitted electrons' max energy; number grows instead. Trap: 'if frequency doubles' — KE max does not double: it increases by hf, not by factor two.",
+              "Photoelectric E = hf − W forces everything in Joules; convert from eV first — the unit kills more JAMBs than any concept disagreement. Keep h = 6.63 × 10⁻³⁴ memorised, 1 eV = 1.6 × 10⁻¹⁹ J. h × typical frequency = ~10⁻¹⁹ J — JAMB loves this scale and anything else."
+            ],
+            "bullets": [
+              "hf − W = KE — everything in Joules",
+              "stopping potential trade: KE (eV) ≡ V₀ (V)",
+              "red below threshold = silence, regardless of brightness"
+            ],
+            "takeaway": "Two constants, one subtraction — the three-line exam skill."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "simple-machines",
+      "topic": "simple-machines",
+      "title": "Simple Machines",
+      "objective": "Identify types of simple machines (lever, pulley, wheel and axle, inclined plane, wedge, screw); solve problems involving mechanical advantage, velocity ratio, efficiency.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Simple Machines",
+            "paragraphs": [
+              "A knife is a wedge; a bicycle a wheel-and-axle; a winch a pulley; a car ramp an inclined plane; a can-opener a complex of two machines. Wherever the human body cannot reach, machines take over — step across them and you cross the river."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Types of machines",
+            "paragraphs": [
+              "Lever: a rigid bar that turns around a fixed point. Three classes — first class: fulcrum between load and effort (scissors, see-saw); second class: load between fulcrum and effort (wheelbarrow, nutcracker); third class: effort between fulcrum and load (tweezers, fishing rod, human arm).",
+              "Pulley: wheel + axle + cable. Fixed pulley changes direction of effort; movable pulley halves required force. Multiple pulleys form blocks — Ma = n.",
+              "Others: Wheel and axle (door handles, screwdrivers, windlass), inclined plane (ramp), wedge (chisels, knives, axes), screw (jacks, bolts, vices), gear (bikes, cars, clocks)."
+            ],
+            "bullets": [
+              "levers: 1st class = fulcrum central; 2nd = load central; 3rd = effort central",
+              "pulley blocks: one movable doubles force, combine more to double again",
+              "wheel and axle, inclined plane, wedge, screw — each for specific jobs"
+            ],
+            "takeaway": "Simple machines come in six flavours; combined they become almost anything.",
+            "check": {
+              "question": "Which class of lever is a wheelbarrow?",
+              "options": [
+                "first class",
+                "second class",
+                "third class",
+                "mixed class"
+              ],
+              "answer": 1,
+              "why": "In a wheelbarrow, the load sits between the fulcrum (wheel) and the effort (hands) — second-class lever."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Mechanical advantage, velocity ratio and efficiency",
+            "paragraphs": [
+              "MA = Load ÷ Effort — how many times the device multiplies your force. VR = distance moved by effort ÷ distance moved by load — Vрыр. Ideal machine (no friction): MA = VR.",
+              "Efficiency = (useful work out ÷ total work in) = MA ÷ VR × 100%. Never above 100% — impossible to get back more useful work than you put in. Real machines: 20–90%.",
+              "Compound machines: combined advantage MA = MA₁ × MA₂. Pulley + inclined plane systems multiply forces."
+            ],
+            "bullets": [
+              "MA = Load ÷ Effort",
+              "VR = effort distance ÷ load distance",
+              "efficiency = MA ÷ VR × 100% — never above 100"
+            ],
+            "takeaway": "Force × distance in = force × distance out — energy condensed, never free.",
+            "check": {
+              "question": "A machine has MA = 4 and VR = 5. Its efficiency is",
+              "options": [
+                "125%",
+                "80%",
+                "20%",
+                "100%"
+              ],
+              "answer": 1,
+              "why": "Efficiency = MA ÷ VR × 100 = 4 ÷ 5 × 100 = 80%."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Machines in practice",
+            "paragraphs": [
+              "Examples: the car jack multiplies force for lifting a tyre; the screw-jack bridge of a skyscraper bridge uses hundredths of a metre per turn to raise hundreds of tonnes; racquetball paddle — two classes of machines in one.",
+              "Distance that force travels is always sacrificed: the more force multiplication, the more stretch the effort has to cover. No free lunch — force × distance remains balanced on the scales of energy.",
+              "In pulleys: effort up 3 m for load up 1 m with 2 movable pulleys — MA = 3 or 4. A cam and lever lets workers crank a 10-tonne steel plate with two hands."
+            ],
+            "bullets": [
+              "car jack lifts tons by tiny turns — force multiplied by VR",
+              "MA × VR = efficiency × 100",
+              "more MA, less line-length moved — one trade or the other"
+            ],
+            "takeaway": "Work-in = work-out; machines just pick the ratchet hands.",
+            "check": {
+              "question": "A machine has MA = 5 and VR = 5. Its efficiency is",
+              "options": [
+                "50%",
+                "25%",
+                "100%",
+                "0%"
+              ],
+              "answer": 2,
+              "why": "Efficiency = 5 ÷ 5 × 100 = 100% — an ideal (frictionless) machine."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "MA first, VR in the second breath, efficiency once you have both. Answers always sit between observed force and ideal devices."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A pulley system has a mechanical advantage of 3. To raise a 120 N load through 0.6 m, the effort end is pulled down 1.8 m with 50 N. Find (a) VR, (b) efficiency.",
+            "steps": [
+              {
+                "operation": "Velocity ratio",
+                "reason": "VR = effort distance ÷ load distance",
+                "result": "VR = 1.8 ÷ 0.6 = 3",
+                "predictPrompt": "Which is the longer distance — the load or the hand?"
+              },
+              {
+                "operation": "Efficiency",
+                "reason": "efficiency = MA ÷ VR × 100",
+                "result": "efficiency = 3 ÷ 3 × 100 = 100%",
+                "predictPrompt": "Is MA = VR a sign of zero losses or terrible friction?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A wheel and axle has a radius of 0.5 m (wheel) and 0.05 m (axle). What force applied to the wheel will raise a 150 N load?",
+            "hints": [
+              "MA = radius ratio = wheel ÷ axle = 0.5 ÷ 0.05 = 10",
+              "effort = load ÷ MA = 150 ÷ 10",
+              "effort = 15 N"
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "A harder worked example: lifting with a block and tackle",
+            "problem": "A load of 400 N is raised by an effort of 100 N using a pulley system. The rope is pulled 4 m to raise the load 1 m. Find (a) MA, (b) VR, (c) efficiency.",
+            "steps": [
+              {
+                "operation": "Mechanical advantage",
+                "reason": "MA = load ÷ effort",
+                "result": "MA = 400 ÷ 100 = 4",
+                "predictPrompt": "What does MA = 4 mean about the effort required?"
+              },
+              {
+                "operation": "Velocity ratio",
+                "reason": "VR = effort distance ÷ load distance",
+                "result": "VR = 4 ÷ 1 = 4",
+                "predictPrompt": "If VR = 4, does the load rise by 1 m for every 4 m of pull?"
+              },
+              {
+                "operation": "Efficiency",
+                "reason": "MA ÷ VR × 100",
+                "result": "efficiency = 4 ÷ 4 × 100 = 100%",
+                "predictPrompt": "Would you accept that answer, or would you suspect a typo?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: six simple machines from scratch",
+            "paragraphs": [
+              "Lever: pivot and bar. Distinguishing order: 1st – pivot in middle (scissors, see-saw); 2nd – load in middle (wheelbarrow, bottle opener); 3rd – effort in middle (arm, tongs). Effort arm ≠ load arm classes neatly only for lever (VR = effort arm ÷ load arm).",
+              "Inclined plane: one length, one height; VR = length ÷ height; MA = load ÷ effort. The Trade-off: distance costs. A 4 m ramp for a 1 m potion — 4 m of pushing instead of 1 m of heavy lifting, but 1/4 of the force.",
+              "Pulley blocks: each supporting strand counts one MA point; MA for n-strand blocks is n; a two-block tackle lifts a carton with half your force — the reason pulleys belong on every workshop ceiling.",
+              "Compound leverage stacks — MAs multiply; a block and tackle on a lever arm doubles plus doubles; two simple machines can beat six separate trials of muscle alone.",
+              "A JAMB-proof rule: there is no 'simple machine' without a moving piece — they are all levers wearing hats — the exam loves to ask which class, never whether one exists.",
+              "Wedge: double inclined plane — axe, knife, splitting logs; Screw: continuous inclined plane around a cylinder — jack, camera tripod bolt, vice. Wheel and axle: crank, windlass, capstan; tape measures and bicycle gear-sets include many."
+            ],
+            "bullets": [
+              "simple machines: lever, pulley, wheel/axle, inclined plane, wedge, screw",
+              "each multiplies force with distance cost",
+              "compound kits mend more than their parts"
+            ],
+            "takeaway": "Choosing the correct class — the whole machine counts, parts or no parts."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: mechanical advantage numbers everywhere",
+            "paragraphs": [
+              "Pulley block: an ideal 4-pulley system gives MA = 4 (each movable unit doubles its number). Real efficiency: bearings, rope weight and friction drop it — measure efficiency and see ~70%; enough for a 400 kg load — 100 kg effort.",
+              "Ramp formula: h ÷ L — lowly inclined plane saves muscle with longer push-time. New Lagos Island buildings use the same principle in loading goods to the third floor.",
+              "Gears comparison: effort on the big gear to crank a small one yields high speed, low force; small input to make big output yields high force low speed (bicycle climbing)."
+            ],
+            "bullets": [
+              "VR ramp = L ÷ h; MA = load ÷ effort",
+              "real-world pulley MA = 3–4, efficiency 70–80%",
+              "bike gear ratio: force ÷ speed exchange"
+            ],
+            "takeaway": "Know the order of wheels and you can run the whole workshop without spares."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: how JAMB sets simple-machine questions",
+            "paragraphs": [
+              "Archetypes: (1) 'find MA given load and effort' — load ÷ effort; (2) 'find efficiency given MA and VR' — one division; (3) 'gear system with 1000 teeth driving 250 teeth — find ratio' — 4 : 1, wheel-diameter implies direct ratio; (4) 'a 3 pulley block — find MA or distance pulled' — rope distance is 3× height; (5) 'force = 50 N raises 200 N load — MA?' — 4; (6) 'which class of lever is this image' — 1st/2nd/3rd.",
+              "Trap: 'MA and VR are always equal' — only in frictionless machines. Trap: 'VR for a pulley block is equal to number of pulleys' — number of supporting strands, perhaps (three strands double the MA; MA = 2; VR = 2). Trap: efficiency never exceeds 100% — a result >100% means wrong substitution, not a super-machine.",
+              "Hybrid trading question: 'a 200 N load requires 50 N effort, and the rope moves 4 m to raise the load 1 m' — combined MA = 4, VR = 4, efficiency = 100% (or honest opposite: 400 N MA, 4 — but you're stopped by the same old 100% bookkeeping)."
+            ],
+            "bullets": [
+              "MA = load ÷ effort",
+              "VR = effort distance ÷ load distance",
+              "efficiency = MA ÷ VR × 100 — honest below 100"
+            ],
+            "takeaway": "A machine: three numbers, one question — the exam stays polite."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "elasticity",
+      "topic": "elasticity",
+      "title": "Elasticity",
+      "objective": "Interpret force–extension curves; apply Hooke’s law and Young’s modulus; use the spring balance to measure force; determine work done per unit volume in springs and elastic strings.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Elasticity",
+            "paragraphs": [
+              "Stretch a rubber band: it pulls back. Bounce on a trampoline; the mat returns you. Every elastic system follows one law — stress, strain, and a constant called Young’s modulus."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Hooke’s law and Young’s modulus",
+            "paragraphs": [
+              "Hooke’s law: up to the elastic limit, extension is proportional to load: F = kx, where k is the spring constant (stiffness), x the extension.",
+              "Young’s modulus (Y) measures how stiff a material is: Y = stress ÷ strain = (F/A) ÷ (x/L). Unit: N/m² or Pa. Steel ~2 × 10¹¹ Pa; rubber ~10⁷; copper ~10¹¹.",
+              "If a force-extension graph is a straight line through the origin, Hooke holds; its gradient equals the spring constant k. Beyond the elastic limit, the material deforms plastically and never recovers."
+            ],
+            "bullets": [
+              "F = kx — Hooke’s law",
+              "Y = (F/A) ÷ (x/L)",
+              "gradient of force-extension graph = k"
+            ],
+            "takeaway": "Hooke holds until the strain exceeds the spring’s limits — then permanence follows.",
+            "check": {
+              "question": "Hooke’s law states that the extension of an elastic body is",
+              "options": [
+                "directly proportional to the load",
+                "inversely proportional to the load",
+                "equal to the load",
+                "twice the load"
+              ],
+              "answer": 0,
+              "why": "F = kx — in the elastic range, extension and force are proportional."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Force–extension curves and the spring balance",
+            "paragraphs": [
+              "Typical graph: straight rise (proportional) → knee at limit of proportionality → yield point → necking → fracture. Every material that is ductile has necking; brittle materials snap without much stretch.",
+              "Spring balance measures force by stretching a spring and reading the scale — direct reading of newtons (or grams-force). For accurate work, calibrate with known masses (mg).",
+              "A spring bend beyond the elastic limit never returns; repeated loadings hysteresis loop — internal energy lost as heat over each cycle — used in automobile shock absorbers deliberately."
+            ],
+            "bullets": [
+              "graph stages: straight → knee → yield → fracture",
+              "spring balance: stretch ∝ pull",
+              "hysteresis: energy loss by cycle, used in dampers"
+            ],
+            "takeaway": "The spring is just a stretchy ruler — read it honestly and it answers you back.",
+            "check": {
+              "question": "The gradient of a force vs extension graph gives",
+              "options": [
+                "the extension",
+                "the spring constant",
+                "the force",
+                "Young’s modulus"
+              ],
+              "answer": 1,
+              "why": "For F = kx, gradient = k."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Work done in stretching a spring",
+            "paragraphs": [
+              "Work done = Force × distance; but F = kx grows linearly, so the average force on the trip is ½kx; work = ½kx².",
+              "Equivalently, work done in stretching a spring = area under the F–extension graph (triangle or trapezium). JAMB loves that reading; the question says 'area under the graph' as an obfuscator for ½kx².",
+              "Work per unit volume: energy density in stretched material = ½ × stress × strain = ½ F x ÷ (A L). A stiffer spring stores more energy per volume; that's why bows are springy and trampolines work."
+            ],
+            "bullets": [
+              "W = ½kx² for a linear spring",
+              "area under F–extension graph = stored energy",
+              "energy density = ½ stress × strain"
+            ],
+            "takeaway": "Half the spring’s force, full the spring’s X — that is the tiny-workman’s title deed.",
+            "check": {
+              "question": "The work done stretching a spring from zero to extension x is",
+              "options": [
+                "kx",
+                "½kx",
+                "kx²",
+                "½kx²"
+              ],
+              "answer": 3,
+              "why": "F grows linearly with x, so work = average force × extension = ½kx × x = ½kx²."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "½ is your friend: ½kx² for work, ½ stress × strain for density, ½ × base × height for F–x triangle. If the answer lacks ½, you skipped the average."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A spring extends by 0.05 m when a 10 N force is applied. Find (a) its spring constant, (b) the work done extending it by that amount.",
+            "steps": [
+              {
+                "operation": "Spring constant",
+                "reason": "F = kx → k = F ÷ x",
+                "result": "k = 10 ÷ 0.05 = 200 N/m",
+                "predictPrompt": "At 5 N, how much would the same spring stretch?"
+              },
+              {
+                "operation": "Work done",
+                "reason": "W = ½kx² (equivalently ½Fx)",
+                "result": "W = ½ × 200 × 0.05² = ½ × 200 × 0.0025 = 0.25 J",
+                "predictPrompt": "A second way to compute it — which one did you trust more?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A wire 3 m long, cross-section 2 × 10⁻⁶ m², stretches 0.01 m under a 1000 N load. Find Young’s modulus.",
+            "hints": [
+              "stress = F/A = 1000 ÷ (2 × 10⁻⁶)",
+              "strain = x/L = 0.01 ÷ 3",
+              "Y = stress ÷ strain ≈ 1.5 × 10¹¹ N/m²"
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "A harder worked example: energy stored in a stretched wire",
+            "problem": "A copper wire of natural length 2 m and Young’s modulus 1.2 × 10¹¹ N/m² is stretched by 80 mm using a load. Cross-sectional area 1.0 × 10⁻⁶ m². Find (a) the load, (b) the energy stored.",
+            "steps": [
+              {
+                "operation": "Apply Young’s modulus",
+                "reason": "Y = (F/A) ÷ (ΔL/L) → F = Y · A · ΔL ÷ L",
+                "result": "F = 1.2 × 10¹¹ × 1.0 × 10⁻⁶ × 0.08 ÷ 2 = 4800 N",
+                "predictPrompt": "Units: does ΔL need to be in metres here?"
+              },
+              {
+                "operation": "Energy stored",
+                "reason": "W = ½ F · ΔL",
+                "result": "W = ½ × 4800 × 0.08 = 192 J",
+                "predictPrompt": "Would W = ½kΔL² also work — if so, what is k?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: force–extension graphs in exam dress",
+            "paragraphs": [
+              "Graph anatomy: straight line from origin rises hooke-ly; it kinks at the limit of proportionality, bends down past the elastic limit (permanent set), yields with increasing strain under barely more stress, then necks and snaps.",
+              "Diagnostic read: the knee is the last moment where Hooke applies; the yield point is where bonds snap in earnest; the breaking point is fracture; a material's twilight records stress relaxing amid growing strain without extra force.",
+              "JAMB's numbers live in gigapascals — anywhere near '5 × 10¹⁰ Pa' is metal under test; '5 × 10⁹' is polymer; hair at '5 × 10⁷' is everyday fibre; the magnitudes separate metals from rope.",
+              "In JAMB the last line of hope: 'gradient gives' — answer: spring constant (k). 'Which material is stiffest from the curves' — steepest graph wins. 'Which is strongest' — the one yielding at the highest force.",
+              "The point where a material fractures is the breaking point; between proportional limit and fracture is plastic range: only breaking the shape, not Hooke — but the body refuses to recover when the load releases."
+            ],
+            "bullets": [
+              "straight line stops at limit of proportionality",
+              "yield point → necking → fracture",
+              "steepest gradient = stiffest = largest k"
+            ],
+            "takeaway": "Read the graph like a doctor reads an ECG — steep lines speak loudest."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Young’s modulus across the material world",
+            "paragraphs": [
+              "Units of Y: N/m² (or Pa). Y for steel ~2 × 10¹¹; copper ~1.1 × 10¹¹; aluminium ~0.7 × 10¹¹; brass ~1 × 10¹¹; rubber ~10⁷ — seven orders of magnitude. JAMB loves a comparison like 'a copper and steel wire stretched the same, which springs back less'.",
+              "Wire stretched under load: δl = FL/(AY). Both sides and A have same stretch difference — double length doubles extension, double A halves it; Y multiplies inverse for craft formulas.",
+              "Elastic potential energy stored in a wire: U = ½ Y A Δl² ÷ L = ½ F² L/(Y A). This is the reason elasticity drains in a rubber band looped around a tree trunk — pull/release thousands of times and the material grows warm: internal friction at molecular bonds dissolves stored energy."
+            ],
+            "bullets": [
+              "δl = FL ÷ (A Y)",
+              "stiffer → less stretch; higher ΔY = harder",
+              "elastic energy = ½ F Δl = ½ Y A Δl² ÷ L"
+            ],
+            "takeaway": "Young’s modulus is the springboard rate — jumps stiffer = shorter trampoline."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: how JAMB sets elasticity questions",
+            "paragraphs": [
+              "Archetypes: (1) 'load-extension graph', gradient = k; (2) 'find Young's modulus from F, x, L, A' — one target formula rearrangement; (3) 'two materials compared' — Y with bigger number returns less stretch under the same load; (4) 'spring is stretched from x₁ to x₂ — work done' — ½k(x₂² − x₁²); (5) 'work done by F against spring' — area interpretation: piecewise trapezia; (6) 'spring balance reading in a lift' — apparent weight, a.",
+              "Backup rule: the difference trick saves the day every time — work = ½k x₂² − ½k x₁²; the same formula reads as the area of the strip underneath the F–x curve; both views are true and the exam loves to mix them.",
+              "Trap: 'if the load doubles, the extension halves' — wrong: Hooke directs × 2; trap: 'the work done stretching is ½ F x' — true; trap: 'beyond proportional limit hooke remains' — wrong: beyond that everything is plastic.",
+              "Once more to wheels: measuring stiffness of metal plate 'a plate bent 2 mm under a load of 500 N' — if the problem wants Y, cross-section geometry is given; if extension falls beyond elastic limit, Y no longer applies — JAMB reminds you rather than tricks."
+            ],
+            "bullets": [
+              "gradient = k; Δl formula = FL/(AY)",
+              "½k(x₂² − x₁²) when stretch grows from x₁ to x₂",
+              "beyond elastic limit — no Hooke"
+            ],
+            "takeaway": "Hooke manages the light loads; beyond limit, new rules apply."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "pressure",
+      "topic": "pressure",
+      "title": "Pressure and the Atmosphere",
+      "objective": "State the SI unit of pressure, name and use pressure-measuring instruments (mercury barometer, aneroid barometer, manometer); relate variation of pressure with height; use a barometer as an altimeter.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Pressure and the Atmosphere",
+            "paragraphs": [
+              "Press a fingertip into the table — the indentation is pressure at work. A tyre pump presses air into a space tiny enough to hold it. Atmospheric pressure is the heavier air pressing on your whole body with every breath."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Pressure, units and measurement",
+            "paragraphs": [
+              "Pressure is force per unit area: P = F ÷ A. Unit: pascal (Pa) = N/m². Atmospheric pressure at sea level ≈ 1.01 × 10⁵ Pa = 101 kPa = 76 cm Hg = 760 mm Hg.",
+              "Measurement instruments: mercury barometer — long glass tube filled with mercury, open end down in a dish; clear column ≈ 76 cm — measures atmospheric pressure directly; aneroid barometer — flexible metal box, needle reads pressure, used in weather-cocks; manometer — U-tube, difference of heights inside and outside is pressure difference.",
+              "Useful conversions: 1 cm Hg ≈ 1333 Pa; 1 mm Hg = 1 torr ≈ 133 Pa; 1 atmosphere = 760 mm Hg = 1.01 × 10⁵ Pa."
+            ],
+            "bullets": [
+              "1 Pa = 1 N/m²",
+              "1 atm ≈ 1.01 × 10⁵ Pa ≈ 760 mm Hg",
+              "mercury barometer, aneroid barometer, manometer — the three instruments"
+            ],
+            "takeaway": "Pressure is the tide of the air — always pressing, always winning.",
+            "check": {
+              "question": "The SI unit of pressure is",
+              "options": [
+                "newton per metre",
+                "newton per square metre",
+                "kilogram per cubic metre",
+                "joule per second"
+              ],
+              "answer": 1,
+              "why": "P = F ÷ A — the pascal is N/m²."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Variation of pressure with height",
+            "paragraphs": [
+              "Pressure falls with height — 90% of the air lies below 10 km; Mt Everest's summit has less than 30% sea-level pressure; aircraft cabins pressurise to keep breathing possible.",
+              "A barometer reads the weight of the air column pressing on top. As you climb the column above you shortens; pressure falls. The rate of fall is approximately exponential — atmospheric pressure at 30 km is about 1% of sea level.",
+              "Altimeter: a sensitive aneroid barometer labelled in metres — an aircraft reads altitude by the pressure drop. The principle is the same one you use to guess your altitude at Lagos's altitude."
+            ],
+            "bullets": [
+              "pressure falls off with height — air is compressible",
+              "altimeter = aneroid barometer calibrated in metres",
+              "10 km: ~26% of sea level; 30 km: ~1%"
+            ],
+            "takeaway": "The higher you look, the thinner the sea of air above.",
+            "check": {
+              "question": "As an aircraft climbs, the reading on an aneroid altimeter",
+              "options": [
+                "rises — altimeter reads higher numbers at altitude",
+                "falls — altimeter reads lower numbers",
+                "stays the same",
+                "oscillates"
+              ],
+              "answer": 0,
+              "why": "Less atmospheric pressure above the plane — calibrated as greater height."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "The mercury barometer and the altimeter",
+            "paragraphs": [
+              "Mercury barometer anatomy: a glass tube about 1 m long, closed at one end, filled with mercury and inverted into a dish of mercury; vacuum space forms at the top; the column height equals atmospheric pressure — 760 mm at sea level, lower with rain, higher before rain falls.",
+              "Porbarometer; aneroid; manometer — differences: aneroid measures atmospheric pressure relative flexibility (weather), manometer measures pressure difference between a tank and outside or between two points, often for gas or vacuum systems.",
+              "Altimeter numbers to remember: Lagus airport sits at a few hundred metres; mountains carry lower pressure; perfect JAMB numbers — the classic drop per km is about 10% per breathing of the column."
+            ],
+            "bullets": [
+              "mercury barometer: vacuum on top, 76 cm Hg at sea level",
+              "aneroid: no liquid — used for planes and weather",
+              "manometer: U-tube compares two pressures"
+            ],
+            "takeaway": "Three instruments, one job: pin down the push of the air.",
+            "check": {
+              "question": "A mercury barometer reads 76 cm at sea level. At a mountain top, the reading would typically be",
+              "options": [
+                "higher than 76 cm",
+                "lower than 76 cm",
+                "exactly 76 cm",
+                "zero"
+              ],
+              "answer": 1,
+              "why": "Less air above the mountain, so the column supported is smaller."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "76 cm Hg, 1.01 × 10⁵ Pa, 760 mm Hg — learn the trio instantly. 'When rain is about to fall, the barometer falls' — memorise or lose the mark."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A mercury barometer reads 74 cm on a day when pressure changes. Convert this reading to N/m². Take g = 10 m/s² and density of mercury = 13,600 kg/m³.",
+            "steps": [
+              {
+                "operation": "Convert the column to metres",
+                "reason": "P = ρgh directly on a fluid column",
+                "result": "h = 74 cm = 0.74 m",
+                "predictPrompt": "Give me the column height in metres before the formula."
+              },
+              {
+                "operation": "Compute the pressure",
+                "reason": "P = ρgh",
+                "result": "P = 13,600 × 10 × 0.74 = 100,640 Pa ≈ 1.01 × 10⁵ N/m²",
+                "predictPrompt": "Which gives a familiar number — would you say 100,640 or more likely 101,000?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A man climbs a hill. His barometer readings drop from 76 cm to 70 cm. Estimate his height above sea level. Take g = 10 m/s², ρₐᵢᵣ ≈ 1.2 kg/m³.",
+            "hints": [
+              "ΔP = ρₘₑᵣᶜᵤʳʸ g Δh — pressure-per-unit-length cancels with ρ air",
+              "ΔP = (0.76 − 0.70) × 13,600 × 10 = 8,160 Pa — pressure difference in Pascals",
+              "altitude gain = ΔP ÷ (ρ_air × g) = 8,160 ÷ (1.2 × 10) ≈ 680 m"
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "A harder worked example: siphon and pressure difference",
+            "problem": "A manometer reads a difference of 15 cm. It is connected between atmospheric pressure and a gas. Find the gas pressure in Pascals. Take density of mercury = 13,600 kg/m³, g = 10 m/s².",
+            "steps": [
+              {
+                "operation": "Substitute into P = ρgh",
+                "reason": "pressure difference from the column of mercury",
+                "result": "ΔP = 13,600 × 10 × 0.15 = 20,400 Pa",
+                "predictPrompt": "0.15 m is 15 cm — watch the units."
+              },
+              {
+                "operation": "Final pressure",
+                "reason": "gas could be at higher or lower pressure than air — we need the context",
+                "result": "if the gas is above 1 atm → 101,325 + 20,400 = 121,725 Pa; if below → 80,925 Pa",
+                "predictPrompt": "Is 'higher' or 'lower' the likely context for a manometer?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: barometer mechanics",
+            "paragraphs": [
+              "Mercury column hangs suspended by air's push; remove the air pressure and the vacuum holds the column suspended 760 mm tall by its own weight. Water is about 13.6 times less dense than mercury, so a water barometer would need a column of ≈ 10.3 m — Torricelli proved that it's not the tube's material holding it; it's the weight of the air above.",
+              "Barometer waves: pressure falls before rain arrives; pressure rises during dry seasons; storm forecasts once depended entirely on mercury barometers. Wind is the sucking, the vacuum pulls it before any droplet forms.",
+              "Aneroid vs mercury: aneroid is mechanical — a sealed thin box, a spring, a link to a pointer; simpler to read at extreme altitude; almost universally used in aircraft. Mercury is more precise — lab work."
+            ],
+            "bullets": [
+              "Torricelli's invention: 1643 — the weight of the air itself, proven",
+              "water column of 10.3 m — one atmosphere can hold it",
+              "aneroid for portable height; mercury for precision labs"
+            ],
+            "takeaway": "A 76 cm column of mercury = same press as air: balance at the top."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: pressure above and below sea level",
+            "paragraphs": [
+              "Pressure halves about every 5.5 km: sea level ≈ 101 kPa, 5.5 km ≈ 50 kPa, 11 km ≈ 25 kPa. Underwater, pressure rises by ≈ 1 atm every 10 m — 20 m depth feels like 3 atm total.",
+              "Aircraft cabins pressurise to ~1 atm because tissue would fail without; mountain climbers risk altitude sickness above 3 km where pressure is ~70% of sea level.",
+              "At sea level the air overhead is about 100,000 pascals; at 5 km only a third; at Mount Everest summit (8.8 km) atmosphere sits at about 30%. Climbers breathe oxygen bottles and acclimatise for days.",
+              "Diving at depth accepts the same 1 atm per 10 m of seawater — 20 m deep sees 3 atmospheres; anything shallower than 30 m is recreational-safe territory in exam tradition.",
+              "Weather pressure numbers: 1012 hPa is normal; 1000 hPa falling = rain coming; 1025 hPa rising = fair. JAMB never asks real-time numbers — textbook numbers instead."
+            ],
+            "bullets": [
+              "diving: +1 atm per 10 m depth",
+              "altitude sickness > 3 km",
+              "1013 hPa sea level; falls with altitude — check instrument"
+            ],
+            "takeaway": "Pressure writes itself from stratosphere to sea floor."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: how JAMB sets atmospheric-pressure questions",
+            "paragraphs": [
+              "Archetypes: (1) 'a column of mercury sits at 76 cm' — straight P = ρgh; (2) 'the barometer is taken to a mountain' — new reading, compare; (3) 'find the depth in water equivalent to 76 cm Hg' — ρₘgh matches ρ_w h_w; (4) 'aneroid vs mercury' — purpose comparison; (5) 'air pressure at sea level' — 1.01 × 10⁵ Pa / 760 mm Hg; (6) 'flight altitude read from pressure' — 10% drops per kilometre approximate.",
+              "Traps: 'the column in the mercury barometer has vacuum, but the air presses nowhere' — wrong: completely opposite — vacuum exerts no pressure, so it absorbs the column's own weight by falling; trap: 'water columns work equally' — yes, but the column would stand 10.3 m; trap: 'mass of air above your head' — roughly 10 tonnes per square metre — overwhelming intuition reset.",
+              "Conversion between mmHg and Pascals — 1 mmHg = 133 Pa; JAMB never reverses, always forward; remember 13.6 × ρ water and you're safe.",
+              "The whole toolkit: 1 cm Hg = 133 Pa; 1 atm ≈ 1.01 × 10⁵ Pa; 10.3 m water column holds the same weight of air — learn the trio cold."
+            ],
+            "bullets": [
+              "P = ρgh — the only formula needed today",
+              "10.34 m equivalent water column",
+              "aneroid vs mercury: clarity vs. sensitivity"
+            ],
+            "takeaway": "Three dozen conversions, one equals sign armed on every page."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "pressure-in-liquids",
+      "topic": "pressure-in-liquids",
+      "title": "Pressure in Liquids",
+      "objective": "Relate pressure to depth and density (P = ρgh); apply Pascal’s principle of transmission of pressure; solve hydraulic problems; explain applications in brakes and car lifts.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Pressure in Liquids",
+            "paragraphs": [
+              "Press on a deep pond; water presses back far harder. Swim one metre down — your ears do the rest of the talking. Liquids carry the push of gravity directly on every cubic centimetre of their volume."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Pressure, depth and density",
+            "paragraphs": [
+              "P = ρgh: pressure at a depth h below the surface of a liquid of density ρ. Specific cases require g = 9.8 or 10 m/s²; ρ for water = 1000 kg/m³.",
+              "The pressure at all points at the same level in one static liquid is identical. It does not depend on the shape of the vessel — a pool, a swimming tunnel, a U-tube bent the same depth still read the same.",
+              "Total pressure at a depth h in a liquid open to the atmosphere = atmosphere + ρgh. In sealed tanks, only liquid head remains."
+            ],
+            "bullets": [
+              "P = ρgh — at every point on a level",
+              "shape independent for static liquids",
+              "open tank: add 1 atm on top of ρgh"
+            ],
+            "takeaway": "The uniform rule: depth decides, head follows.",
+            "check": {
+              "question": "Pressure in a static liquid depends on the",
+              "options": [
+                "shape of the container",
+                "depth below the surface",
+                "quantity of water taken",
+                "size of the bottom hole"
+              ],
+              "answer": 1,
+              "why": "ρgh — only depth and density, never shape."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Pascal’s principle and hydraulic machines",
+            "paragraphs": [
+              "Pascal’s principle: pressure applied to an enclosed liquid is transmitted undiminished in all directions. In a tube open at both ends, a small force on a small piston raises the pressure in the whole tube — and a large piston at one end responds with a big force.",
+              "Hydraulic vehicle lift: F₁/A₁ = F₂/A₂ — small effort pushes large mass up with essentially the same pressure everywhere. You sit in the driver's seat and press the foot-brake — brake fluid transmits the force to all four wheels instantly.",
+              "Hydraulic brake lines leak easily — air bubble ruins pressure transfer, hence bleeding. Car jacks, forklift rams, aircraft flap actuators — all Pascal."
+            ],
+            "bullets": [
+              "ρgh rules once at the surface; P = F/A for applied force elsewhere",
+              "F₁/A₁ = F₂/A₂ for hydraulic: pressure is the same",
+              "brakes and lifts carry fluid, not rods"
+            ],
+            "takeaway": "Pressure travels without weakening in a still liquid — Pascal’s gift to engineers.",
+            "check": {
+              "question": "In a hydraulic lift, a small piston of area 0.01 m² exerts 100 N. The large piston has area 0.5 m². The force on the large piston is",
+              "options": [
+                "2 N",
+                "200 N",
+                "5000 N",
+                "50 N"
+              ],
+              "answer": 2,
+              "why": "F₂ = F₁ × (A₂/A₁) = 100 × (0.5 ÷ 0.01) = 100 × 50 = 5000 N."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Where pressure in liquids is not quiet",
+            "paragraphs": [
+              "Suction cups fail at high temperatures because air leaks past the seal — all because of pressure difference; communication happens across external pressure and pit-held one.",
+              "Three celebrates law: net pressure at a depth below the surface is the same everywhere at that depth. In a vessel with corrugated walls, water: P ∝ depth; the corrugation has no effect on pressure but changes load.",
+              "Buoyancy connects here too (full story next lesson) — when fluid is displaced upward on a submerged body by ρgV, Pascal preserves it throughout the body."
+            ],
+            "bullets": [
+              "pressure at the same depth is the same in every direction",
+              "gridners do not weaken the transmission, only the walls burden",
+              "the same Pascal thread becomes Archimedes’ flea"
+            ],
+            "takeaway": "Uniform depth, uniform pressure; every direction counted.",
+            "check": {
+              "question": "At the same depth in the same liquid, pressure is",
+              "options": [
+                "greater on the bottom than at the sides",
+                "equal in all directions",
+                "zero, because there is no air above",
+                "half at the sides and full at the bottom"
+              ],
+              "answer": 1,
+              "why": "Pascal’s principle — at a given depth, pressure is equal in all directions."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "ρgh and F₁/A₁ = F₂/A₂ carry the whole hydraulic family. Add 10 m of seawater = 1 atm and you have every puzzle essay on water pressure."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A diver is 30 m below the surface of fresh water. Take g = 10 m/s² and density of water = 1000 kg/m³. Find (a) the pressure due to water alone at that depth, (b) the total pressure there including atmosphere (1.01 × 10⁵ Pa).",
+            "steps": [
+              {
+                "operation": "Pressure from the water column",
+                "reason": "P = ρgh",
+                "result": "P = 1000 × 10 × 30 = 300,000 Pa",
+                "predictPrompt": "Do you remember ρ for water? Off-you-go: 1000 or 1.0 × 10³."
+              },
+              {
+                "operation": "Total pressure",
+                "reason": "P_total = P_atm + ρgh",
+                "result": "P_total = 1.01 × 10⁵ + 3.00 × 10⁵ = 4.01 × 10⁵ Pa",
+                "predictPrompt": "Will the diver feel it as 'total' or just'gp's?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "In a hydraulic press, the small piston has area 0.02 m² and the large piston 0.5 m². A 100 N force on the small piston lifts a car. What weight car? Ignore losses.",
+            "hints": [
+              "F₁/A₁ = F₂/A₂",
+              "F₂ = F₁ × (A₂/A₁)",
+              "F₂ = 100 × 0.5 ÷ 0.02 = 2500 N"
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "A harder worked example: manometer on a tank",
+            "problem": "A U-tube manometer reads 25 cm of mercury. It connects a gas tank to the atmosphere. Density of mercury = 13,600 kg/m³; g = 10 m/s². Find (a) the gas pressure (if the gas side is higher), (b) the gas pressure (if the gas side is lower). Take atmospheric pressure as 1.01 × 10⁵ Pa.",
+            "steps": [
+              {
+                "operation": "Difference in pressure",
+                "reason": "ΔP = ρgh",
+                "result": "ΔP = 13,600 × 10 × 0.25 = 34,000 Pa",
+                "predictPrompt": "What does 25 cm equal in metres?"
+              },
+              {
+                "operation": "Higher gas pressure",
+                "reason": "gas side higher → gas pressure > atm pressure",
+                "result": "P_gas = 1.01 × 10⁵ + 34,000 = 135,000 Pa",
+                "predictPrompt": "If gas were pushed below atm, would pressure be lower instead?"
+              },
+              {
+                "operation": "Lower gas pressure",
+                "reason": "gas side lower → gas pressure < atm pressure",
+                "result": "P_gas = 1.01 × 10⁵ − 34,000 = 67,000 Pa",
+                "predictPrompt": "Does the sign of the difference matter here?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: honest numbers in liquids",
+            "paragraphs": [
+              "Lake pressure on a diver: pressure increases by ~10,000 Pa per metre — an extra atmosphere per 10 m. In Lagos Bay on a calm day, every villager knows the swimming rule: deeper = things heavier on the eardrums.",
+              "Wording matters — gauge pressure starts at zero; absolute pressure starts from vacuum. When the question says 'due to the water column' it wants the bare ρgh; when it says 'total pressure' it wants the sum with atmosphere.",
+              "Brake systems: a tiny hole means vapour/pressure failure; double cylinder requires identical pressure at all wheels; modern electronic programs do brake balance internally. Bicycle quirks share the same principle — a bleed loop banishes air and the pedal returns to honesty.",
+              "You stop the nightmare: a sealed hydraulic line behaves uniformly; open-top overflow tanks beat Pascal; trick questions will pit 'total pressure' against 'the due-to-water pressure' — read the wording and keep both numbers ready.",
+              "Bench-top estimate for any pool: 1 m of water adds ~10,000 Pa — twice at 2 m depth-total-head; tanks and swimming pools both pay with walls at the deep end.",
+              "One height-order check: adult human breathing at 2 m below surface feels twice standard water-push — depth is always a small linear debt against ρgh."
+            ],
+            "bullets": [
+              "diving deeper: +1 atm per 10 m",
+              "gauge vs absolute — designation matters",
+              "brakes: uniform pressure everywhere, no air bobbles"
+            ],
+            "takeaway": "The ocean's pressure grows with every metre; swimmers know it in their ears."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: Pascal’s principle in every system domestic",
+            "paragraphs": [
+              "Pascal lived at a time of cart wheels and taverns; his law works just the same today: press a small area with F small; the same pressure reaches every point of the fluid. This is the hydraulic jack, the car brake, the forklift, the aircraft landing gear — everything we trust.",
+              "Transmission fluid isn't magic: it's the same density anywhere, incompressible enough to treat as rigid body for steady-state motion. The pressure is high but so is the leverage: F₂ = F₁ × A₂/A₁ — Pascal's trick for making small efforts move tons.",
+              "And the system breaks if air gets in — air compresses, liquids do not; bicycle brakes develop the same failure the same way."
+            ],
+            "bullets": [
+              "hydraulic jack: effort is small, load is huge",
+              "brake fluid: sealed system, no air bubbles",
+              "pressure real time = surface × force on the same surface at the same instant"
+            ],
+            "takeaway": "A sealed fluid is a secret handshake — pressure switched before anyone says a word."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: how JAMB sets pressure questions in liquids",
+            "paragraphs": [
+              "Archetypes: (1) 'ρgh at depth' — radius unneeded; (2) 'hydraulic press' — F/A equal everywhere; (3) 'at what depth does pressure equal X' — rearrange; (4) 'compare pressure on a diver vs a swimmer at surface' — add ρgh to 1 atm; (5) 'pressure at bottom of a tank' — include head only; (6) 'will this floating roof sink' — weight check; (7) 'Pascal on a brake system' — all liquids, all wheels, one pressure.",
+              "Trap: 'P = ρgh — if fluid is water or mercury matters' — remember mercury has density 13,600 vs water 1000 vs oil 900; trap: 'shape affects pressure' — never for static fluids; trap: '4 m tank and 1 m tank at the bottom both feel the same — they don't; depth is all'.",
+              "Remember constants: ρ_water = 1000 kg/m³; ρ_mercury = 13,600 kg/m³; g = 10 for rough, 9.8 for careful arithmetic — typically 10 is fine; JAMB tolerance."
+            ],
+            "bullets": [
+              "ρgh only — no shape, no volume, just depth",
+              "Pascal: same pressure everywhere in a sealed, static liquid",
+              "constants: 1000 water, 13,600 mercury, 10 g"
+            ],
+            "takeaway": "Water, oil, mercury — the same formula leads every time."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "liquids-at-rest",
+      "topic": "liquids-at-rest",
+      "title": "Liquids at Rest: Density, Archimedes and Floatation",
+      "objective": "Determine densities of solids and liquids (measuring cylinder, density bottle); define relative density; find upthrust on a body immersed; apply Archimedes’ principle and the law of floatation (ships, hydrometers).",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Liquids at Rest",
+            "paragraphs": [
+              "Float a piece of cork on water — it bobs back up. So does a ship; so does an airship. Archimedes proved 2,200 years back why: a body immersed in fluid pushes fluid away — and that displaced fluid pushes back."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Density: measured and compared",
+            "paragraphs": [
+              "Density of a solid: mass ÷ volume. Solids: measure volume by displacement (overflow can or measuring cylinder). Liquids: weigh empty beaker, weigh with liquid, weigh with water — compare.",
+              "Relative density (specific gravity) of a substance = its density ÷ density of water. No units — it's a ratio. Relative density of mercury = 13.6; steel 7.8; aluminium 2.7.",
+              "Density bottle: measure mass empty, with water, with the test liquid — same volume; simple subtraction and division gives relative density of the liquid accurately."
+            ],
+            "bullets": [
+              "density: ρ = mass ÷ volume; kg/m³ or g/cm³",
+              "relative density: no units, pure ratio to water",
+              "density bottle — three weighings, one ratio"
+            ],
+            "takeaway": "Density is mass per space — relative density is a comparison with water.",
+            "check": {
+              "question": "Relative density is the ratio of the density of a substance to the density of",
+              "options": [
+                "air",
+                "water",
+                "oil",
+                "alcohol"
+              ],
+              "answer": 1,
+              "why": "Relative density uses water as the benchmark (in physics)."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Upthrust on immersed bodies",
+            "paragraphs": [
+              "Every body in a fluid receives an upward push — upthrust. Its magnitude equals the weight of the displaced fluid. A denser block of iron sinks because its displaced fluid weighs less; wood floats because it displaces its own weight of water.",
+              "For a totally immersed body: upthrust = weight of fluid with volume equal to the body's volume. For a partly immersed floating body: upthrust = the body's own weight.",
+              "U-tube terms: if the upthrust from displaced water is 20 N, the body 'loses' 20 N in water — spring balance reads less; in air it reads its true weight."
+            ],
+            "bullets": [
+              "upthrust = weight of displaced fluid",
+              "immersed: upthrust = ρVg",
+              "floating: upthrust = weight of body"
+            ],
+            "takeaway": "Upthrust pays you back whatever you displace — water wants you out.",
+            "check": {
+              "question": "A body displaces 5 cm³ of water. The upthrust is",
+              "options": [
+                "0.005 N",
+                "0.05 N",
+                "0.5 N",
+                "5 N"
+              ],
+              "answer": 1,
+              "why": "Upthrust = ρgV = 1000 × 10 × 5 × 10⁻⁶ = 0.05 N."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Archimedes’ principle and floatation",
+            "paragraphs": [
+              "Archimedes’ principle: a body fully or partly immersed in a fluid displaces an equal weight of that fluid — upthrust equals that weight. Mathematically U = ρVg (for uniform bodies).",
+              "Law of floatation: a floating body displaces a weight of fluid equal to its own weight; it takes the position where its centre of buoyancy and its centre of gravity stay on the same vertical line. Stability: wide hull, low centre → stable (ship at sea).",
+              "Applications: ships — massive but hull spreads weight; submarines — ballast tanks control depth; hydrometer — weighted bulb floats higher in denser liquids; laundromats use hydrometers to assess alcohol syrup; fuel gauges in cars are simple hydrometers."
+            ],
+            "bullets": [
+              "Archimedes: U = weight of displaced fluid = ρVg",
+              "floating body: U = body weight; submerged fraction = relative density",
+              "hydrometer: sinks lower in lighter fluids"
+            ],
+            "takeaway": "The miracle of a ship floating is just arithmetic on displaced tonnes.",
+            "check": {
+              "question": "According to the law of floatation, a floating body displaces a weight of liquid",
+              "options": [
+                "greater than its own weight",
+                "equal to its own weight",
+                "less than its own weight",
+                "independent of its own weight"
+              ],
+              "answer": 1,
+              "why": "The body floats when displaced weight equals its weight."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "ρgV and the Nevada phrase 'heavier than the displaced water' tie it together — Archimedes always wins in a race between weight and upthrust."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A body of mass 500 g displaces 500 cm³ of water when fully immersed. Does it sink or float? What holds it up if floating? Take g = 10 m/s².",
+            "steps": [
+              {
+                "operation": "Weight of the body",
+                "reason": "W = mg",
+                "result": "W = 0.5 × 10 = 5 N",
+                "predictPrompt": "5 N — will it float in air and water?"
+              },
+              {
+                "operation": "Upthrust",
+                "reason": "U = ρgV",
+                "result": "U = 1000 × 10 × 500 × 10⁻⁶ = 5 N",
+                "predictPrompt": "Comparison says float or sink?"
+              },
+              {
+                "operation": "Verdict",
+                "reason": "equal forces up and down",
+                "result": "the body floats with upthrust = weight (5 N)",
+                "predictPrompt": "If only partly immersed, is that enough?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "A block of wood of volume 0.01 m³ floats with 60% of its volume below water. Find (a) the upthrust, (b) the weight of the wood block. Take g = 10.",
+            "hints": [
+              "displaced volume = 60% × 0.01 = 0.006 m³",
+              "upthrust = ρ_water g V_displaced = 1000 × 10 × 0.006 = 60 N",
+              "as it floats: weight = upthrust = 60 N"
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "A harder worked example: relative density calculation",
+            "problem": "A density bottle weighs 20 g empty, 120 g filled with water, and 100 g filled with an unknown liquid. Find (a) the relative density of the liquid, (b) its density in kg/m³.",
+            "steps": [
+              {
+                "operation": "Mass of water",
+                "reason": "subtraction from bottle readings",
+                "result": "mass of water = 120 − 20 = 100 g",
+                "predictPrompt": "Would it be 120 or 100?"
+              },
+              {
+                "operation": "Mass of liquid",
+                "reason": "same subtraction again",
+                "result": "mass of liquid = 100 − 20 = 80 g",
+                "predictPrompt": "Difference again?"
+              },
+              {
+                "operation": "Relative density",
+                "reason": "relative density = mass of given liquid ÷ mass of equal volume of water",
+                "result": "RD = 80 ÷ 100 = 0.8; density = 0.8 × 1000 = 800 kg/m³",
+                "predictPrompt": "Is oil denser than water here?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: overflow measurement and density bottles",
+            "paragraphs": [
+              "Overflow can: fill to brim; drop a body in; water spills out into a collecting cylinder — volume of displaced water = volume of body. Use for irregular solids. For a sinker: volume = weight out / (ρg) — or simply measure the displaced water volume.",
+              "Density bottle: typical 25 cm³ calibration; fill with water; dry and weigh; refill with test liquid; dry and weigh; subtract. Hitting 100 g accurately for water is the key — subtract the tare.",
+              "Twice-checked evidence: 'ball of iron in water' finds true volume the same; measuring cylinder or overflow; density = mass ÷ volume; common error: forgetting to read water volume before adding the body."
+            ],
+            "bullets": [
+              "overflow method for irregular solids",
+              "density bottle — three masses, one ratio",
+              "always empty and full readings are identical in volume, different in content"
+            ],
+            "takeaway": "Mass minus tare, volume counted in ml — density answered in grams or kilograms."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: ships, submarines and hydrometers",
+            "paragraphs": [
+              "Ships: a 10,000-ton ship floats because its average density (steel + air) is less than water; the hollowing steel hull displaces volume equal to its total weight. The waterline versus load marks — known as Plimsoll lines — tell harbour officers exactly how much stays above.",
+              "Seawater is about 3% denser than fresh water (1025 vs 1000 kg/m³), so the same ship sits higher afloat at sea and lower inland — a niche detail JAMB loves to slip into flotation stems.",
+              "Submarine: pump ballast tanks with water to sink; blow with compressed air to surface; depth control by minute adjustments — the same submerged/undisturbed bargain the whale and the piton fish keep.",
+              "Hydrometer: graduated glass tube with lead shot, floating higher in denser fluid; used for battery acid, milk, alcohol and fuels; car battery density runs ~1.1 (flat) to ~1.2 (full). JAMB also trades in 'relative density' stems — float/sink the same substance in two liquids."
+            ],
+            "bullets": [
+              "ship: mean density < water → floats",
+              "submarine: ballast in to dive, out to rise",
+              "submarine: ballast in to dive, out to rise",
+              "hydrometer: floats higher in denser liquids"
+            ],
+            "takeaway": "From canoe to cruise liner, the same ρgV answer."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: how JAMB sets liquids-at-rest questions",
+            "paragraphs": [
+              "Archetypes: (1) 'a floating body displaces X ml of water — weight?' — equals weight of displaced fluid; (2) 'relative density from bottle readings' — three masses; (3) 'will solid of density Y float in water' — check number vs 1000; (4) 'two immiscible liquids mix in a flask — what's on top?' — lighter first (oil on water); (5) 'upthrust on fully immersed' — ρgV; (6) 'a fish and a stone — which sinks?' — density beats; (7) 'if a body displaces more than its own mass of water, it floats' — always own-weight displaced at equilibrium.",
+              "Traps: 'relative density matters' — never with unit; '0.8 sinks in water' — no, floats; 'displacement counts only when immersed' — yes; 'a cork weighs less than 1 newton will float' — check before you leap; 'heavier than displaced liquid fails' — correct framing, not a shortcut; 'a swimmer floats by lungs full of air' — density decreases, upthrust same, rise.",
+              "Remember: ρgV always; answer in newtons or grams times g. If you see 'remaining fraction submerged' — use ratio of densities; if you see 'float related to specific gravity' — no unit; if asked for 'what weight must be added to make it sink' — subtract displaced vs body weight."
+            ],
+            "bullets": [
+              "ρVg or equality to body weight — pick the one that rests",
+              "bottle three masses, one ratio",
+              "submerged fraction = relative density of body"
+            ],
+            "takeaway": "All floating answers are rho times V — conjure the comparative ratio."
           }
         }
       ]
