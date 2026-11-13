@@ -309,19 +309,19 @@
             "steps": [
               {
                 "operation": "Find the relevant paragraph",
-                "reason": "The question asks about the council, so scan for the sentence that names it.",
+                "reason": "The question asks about the council, so scan for the sentence that names it. Reach for the answer-control discipline because it keeps you inside the text. If stuck, circle where the stem's key noun first appears.",
                 "result": "Paragraph 1 says the council met several times but had no money for a borehole.",
                 "predictPrompt": "Does that show ignorance, indifference or a lack of resources?"
               },
               {
                 "operation": "Separate the cause from the excuse",
-                "reason": "The passage says the council knew about the problem, so awareness was not the failure.",
+                "reason": "The passage says the council knew about the problem, so awareness was not the failure. Reach for the answer-control discipline because it keeps you inside the text. If stuck, list what the passage blames and cross off what it clears.",
                 "result": "The failure was money, not knowledge or concern.",
                 "predictPrompt": "How would you choose between the possible routes?"
               },
               {
                 "operation": "Choose the matching option",
-                "reason": "The answer must restate the evidence without adding to it.",
+                "reason": "The answer must restate the evidence without adding to it. Reach for the answer-control discipline because it keeps you inside the text. If stuck, mark every detail the answer ignores outside the text and cross them off.",
                 "result": "The correct option is 'resources, not awareness'.",
                 "predictPrompt": "How would you prove this claim to a sceptic?"
               }
@@ -903,19 +903,19 @@
             "steps": [
               {
                 "operation": "Mark each paragraph's point",
-                "reason": "You cannot choose what to keep until you know what each paragraph contributes.",
+                "reason": "You cannot choose what to keep until you know what each paragraph contributes. Reach for the answer-control discipline because it keeps you inside the text. If stuck, write one line on what each paragraph contributes before choosing.",
                 "result": "Growth, cause, and threat: three points.",
                 "predictPrompt": "Which point carries the passage's argument?"
               },
               {
                 "operation": "Find the carrying paragraph",
-                "reason": "The last paragraph usually states what the passage has been driving at.",
+                "reason": "The last paragraph usually states what the passage has been driving at. Reach for the answer-control discipline because it keeps you inside the text. If stuck, ask which paragraph the earlier ones build towards and why.",
                 "result": "The threat to the land gives the passage its point: the market may not survive.",
                 "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Compress into one sentence",
-                "reason": "One subordinate clause can carry the cause while the main clause carries the threat.",
+                "reason": "One subordinate clause can carry the cause while the main clause carries the threat. Reach for the answer-control discipline because it keeps you inside the text. If stuck, mark every detail you added outside the text and cross them off.",
                 "result": "A fast-growing night market has drawn traders because it is cheap, but its future is uncertain because the land is needed for a road.",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
@@ -1321,19 +1321,19 @@
             "steps": [
               {
                 "operation": "Classify the passage",
-                "reason": "There is no sequence and no argument, only a building being shown.",
+                "reason": "There is no sequence and no argument, only a building being shown. Reach for the passage-type key because the stem tips you off to a description. If stuck, re-read the first sentence and name its role.",
                 "result": "It is description.",
                 "predictPrompt": "Which sentence names the subject?"
               },
               {
                 "operation": "Find the topic sentence",
-                "reason": "The sentence that names the subject and its character carries the main idea.",
+                "reason": "The sentence that names the subject and its character carries the main idea. Reach for the topic-sentence test because it carries a description's main idea. If stuck, underline the subject and list what is said about it.",
                 "result": "The first sentence gives the hall's size, material and shape.",
                 "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Match the option to the topic sentence",
-                "reason": "History and supervision are details or absent; the main point is the hall's physical character.",
+                "reason": "History and supervision are details or absent; the main point is the hall's physical character. Reach for detail pairing because the correct option restates the topic sentence and nothing else. If stuck, cross off options that add or omit a detail.",
                 "result": "Choose 'the physical and sensory character of the market hall'.",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
@@ -1739,19 +1739,19 @@
             "steps": [
               {
                 "operation": "Track the timeline",
-                "reason": "The delay is the event that changes the day.",
+                "reason": "The delay is the event that changes the day. Reach for the passage-type key and a timeline tracker because narration moves through events in order. If stuck, note each time marker and order them.",
                 "result": "He was due at dawn but arrived after trading began.",
                 "predictPrompt": "What does he do after arriving late?"
               },
               {
                 "operation": "Read the final action",
-                "reason": "In narration, feelings are shown through what a character does.",
+                "reason": "In narration, feelings are shown through what a character does. Reach for the action-over-dialogue filter because narration shows feeling through what characters do. If stuck, list the last action and what it avoids doing.",
                 "result": "He unloads and leaves instead of staying to sell.",
                 "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Infer the feeling",
-                "reason": "The action must support the inference without contradicting the text.",
+                "reason": "The action must support the inference without contradicting the text. Reach for detail pairing because the inference must rest on what the text shows. If stuck, cross off any option the final action contradicts.",
                 "result": "He is resigned or defeated, not cheerful about the delay.",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
@@ -2172,19 +2172,19 @@
             "steps": [
               {
                 "operation": "Identify the pattern",
-                "reason": "The words first, next and as a result mark a process with a cause.",
+                "reason": "The words first, next and as a result mark a process with a cause. Reach for the passage-type key because the stem tips you off to an exposition. If stuck, re-read the first sentence and name its role.",
                 "result": "This is a process explanation.",
                 "predictPrompt": "What does the flame do to the water?"
               },
               {
                 "operation": "Locate the causal link",
-                "reason": "The result clause tells you what the earlier steps produce.",
+                "reason": "The result clause tells you what the earlier steps produce. Reach for the cause-and-effect chain because expositions explain how one step produces the next. If stuck, underline each verb and ask what it makes happen.",
                 "result": "Heating causes the water to rise, so the water must already be there.",
                 "predictPrompt": "How would you choose between the possible routes?"
               },
               {
                 "operation": "Choose the option that states the dependency",
-                "reason": "The answer must explain the order, not merely repeat it.",
+                "reason": "The answer must explain the order, not merely repeat it. Reach for detail pairing because the answer must state the dependency the passage shows. If stuck, cross off options that repeat the order without explaining it.",
                 "result": "The filling must come first because there is nothing to heat otherwise.",
                 "predictPrompt": "How would you prove this claim to a sceptic?"
               }
@@ -2585,19 +2585,19 @@
             "steps": [
               {
                 "operation": "Separate claim from concession",
-                "reason": "The opening agrees the roads are overcrowded, which is common ground rather than the argument.",
+                "reason": "The opening agrees the roads are overcrowded, which is common ground rather than the argument. Reach for the passage-type key with a claim-concession split because the stem tips you off to an argument. If stuck, ask what the writer accepts.",
                 "result": "The claim is about how to change, not whether to change.",
                 "predictPrompt": "What action does the writer recommend?"
               },
               {
                 "operation": "Read the recommendation",
-                "reason": "In persuasion, the purpose is usually the action urged on the reader.",
+                "reason": "In persuasion, the purpose is usually the action urged on the reader. Reach for the purpose probe because persuasion asks the reader to act. If stuck, underline the final instruction and ask what it demands.",
                 "result": "Improve alternatives before restricting cars.",
                 "predictPrompt": "How would you choose between the possible routes?"
               },
               {
                 "operation": "Choose the option that matches",
-                "reason": "The answer must include the recommendation, not just the problem.",
+                "reason": "The answer must include the recommendation, not just the problem. Reach for detail pairing because the answer must carry the recommendation, not just the problem. If stuck, cross off options that name only the overcrowded roads.",
                 "result": "The writer wants affordable alternatives before any restriction.",
                 "predictPrompt": "How would you test this answer before writing it down?"
               }
@@ -2994,19 +2994,19 @@
             "steps": [
               {
                 "operation": "Read around the gap",
-                "reason": "The clause describes a change caused by the iodine.",
+                "reason": "The clause describes a change caused by the iodine. Reach for the answer-control discipline because it keeps you inside the text. If stuck, read the sentence before and after the gap for the clue.",
                 "result": "The leaves changed colour when the solution was applied.",
                 "predictPrompt": "Which verb describes a colour change?"
               },
               {
                 "operation": "Test the options",
-                "reason": "Each option must fit the grammar and the scientific sense.",
+                "reason": "Each option must fit the grammar and the scientific sense. Reach for the answer-control discipline because it keeps you inside the text. If stuck, check the grammar first, then the sense, and cut what fails either.",
                 "result": "'Turned' fits the change; 'grew' and 'dried' do not describe colour, and 'fell' is unrelated.",
                 "predictPrompt": "What does the question tell you to find first?"
               },
               {
                 "operation": "Re-read the sentence",
-                "reason": "The chosen word must sound natural in the whole clause.",
+                "reason": "The chosen word must sound natural in the whole clause. Reach for the answer-control discipline because it keeps you inside the text. If stuck, say the whole sentence aloud and listen for a wrong note.",
                 "result": "'The leaves turned blue-black when the iodine solution was applied.'",
                 "predictPrompt": "How would you explain why this beats the other options?"
               }
@@ -3559,19 +3559,19 @@
             "steps": [
               {
                 "operation": "Read the sentence for sense",
-                "reason": "The adjective describes the teacher's reaction to good work.",
+                "reason": "The adjective describes the teacher's reaction to good work. Reach for the collocation map because the words around the blank reveal the sense carried. If stuck, paraphrase the sentence in plain words first.",
                 "result": "Pleased means satisfied or glad.",
                 "predictPrompt": "Which options share that sense?"
               },
               {
                 "operation": "Test each option",
-                "reason": "A synonym must fit the same slot without changing the meaning.",
+                "reason": "A synonym must fit the same slot without changing the meaning. Reach for the slot-substitution test because a true synonym drops into the same slot. If stuck, swap each option in and cross off the clashes.",
                 "result": "'Delighted' fits; 'angry' and 'disappointed' reverse the meaning.",
                 "predictPrompt": "What information do you compare before deciding?"
               },
               {
                 "operation": "Compare the close options",
-                "reason": "When several options fit, intensity decides.",
+                "reason": "When several options fit, intensity decides. Reach for the intensity dial because close synonyms differ in strength. If stuck, rank the survivors from mild to strong and pick the nearest.",
                 "result": "'Delighted' is stronger than 'pleased' but keeps the positive sense, so it is the nearest.",
                 "predictPrompt": "How would you test this answer before writing it down?"
               }
@@ -3869,19 +3869,19 @@
             "steps": [
               {
                 "operation": "Identify the sense",
-                "reason": "Spacious describes a room with plenty of space.",
+                "reason": "Spacious describes a room with plenty of space. Reach for the collocation map because the sentence shows how the word behaves in use. If stuck, paraphrase the sentence in plain words first.",
                 "result": "The word means large and roomy.",
                 "predictPrompt": "Which option describes too little space?"
               },
               {
                 "operation": "Test the options",
-                "reason": "The antonym must reverse the sense, not merely differ from it.",
+                "reason": "The antonym must reverse the sense, not merely differ from it. Reach for the morpheme breakdown because roots and endings expose a word's sense. If stuck, drop each option in and read the sentence aloud.",
                 "result": "'Cramped' means too small for comfort; 'narrow' covers only width.",
                 "predictPrompt": "How would you verify this answer?"
               },
               {
                 "operation": "Check the sentence",
-                "reason": "The replacement must keep the sentence logical.",
+                "reason": "The replacement must keep the sentence logical. Reach for the sentence-logic check because the antonym must reverse the sense. If stuck, swap it in and ask whether the sentence still holds.",
                 "result": "'The room was cramped enough for a family of six' is odd, so the option describes the opposite condition rather than fitting positively.",
                 "predictPrompt": "How would you explain why this beats the other options?"
               }
@@ -4180,19 +4180,19 @@
             "steps": [
               {
                 "operation": "Identify the two past actions",
-                "reason": "One action happened before the other in the past.",
+                "reason": "One action happened before the other in the past. Reach for the parse ladder because naming each verb builds the clause map. If stuck, underline every finite verb and label its time.",
                 "result": "The film started before we arrived.",
                 "predictPrompt": "Which tense marks the earlier action?"
               },
               {
                 "operation": "Choose the earlier tense",
-                "reason": "The past perfect marks the action completed before another past action.",
+                "reason": "The past perfect marks the action completed before another past action. Reach for the tense map because it orders past actions against their reference point. If stuck, find which action happened first and make it past perfect.",
                 "result": "The earlier action takes 'had started'.",
                 "predictPrompt": "What does the question tell you to find first?"
               },
               {
                 "operation": "Read the sentence",
-                "reason": "The finished sentence must show the order clearly.",
+                "reason": "The finished sentence must show the order clearly. Reach for the parse ladder because re-reading rebuilds the clause with its verb. If stuck, swap in had started and check the order still reads true.",
                 "result": "'By the time we arrived, the film had started.'",
                 "predictPrompt": "How would you prove this claim to a sceptic?"
               }
@@ -4555,19 +4555,19 @@
             "steps": [
               {
                 "operation": "Test the first position",
-                "reason": "A word after 'the' and before a verb is usually the subject.",
+                "reason": "A word after 'the' and before a verb is usually the subject. Reach for the parse ladder because position reveals what a word does in the clause. If stuck, ask who or what the verb is about.",
                 "result": "'Light' names a thing, so it is a noun in (a).",
                 "predictPrompt": "What does it modify in the second sentence?"
               },
               {
                 "operation": "Test the second position",
-                "reason": "A word between a determiner and a noun modifies that noun.",
+                "reason": "A word between a determiner and a noun modifies that noun. Reach for the parse ladder because each rung tests one job. If stuck, check whether the word sits before a noun it describes.",
                 "result": "'Light' describes the bag, so it is an adjective in (b).",
                 "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Test the third position",
-                "reason": "A word modifying the verb 'travel' answers how.",
+                "reason": "A word modifying the verb 'travel' answers how. Reach for the parse ladder because the last rung tests how the verb is done. If stuck, ask whether the word answers how after the verb.",
                 "result": "'Light' is an adverb in (c).",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
@@ -4782,19 +4782,19 @@
             "steps": [
               {
                 "operation": "Identify the time reference",
-                "reason": "'By next June' points to a moment in the future.",
+                "reason": "'By next June' points to a moment in the future. Reach for the tense map because it pins the sentence to a time point. If stuck, circle the time phrase and place it on the line.",
                 "result": "The sentence needs a future form.",
                 "predictPrompt": "Is the five-year period complete at that moment?"
               },
               {
                 "operation": "Identify the aspect",
-                "reason": "'For five years' measures a period completed by the reference point.",
+                "reason": "'For five years' measures a period completed by the reference point. Reach for the tense map because aspect marks completion by the reference point. If stuck, ask whether the five years are finished at that moment.",
                 "result": "The action will be complete by next June, so the future perfect fits.",
                 "predictPrompt": "How would you choose between the possible routes?"
               },
               {
                 "operation": "Select and check",
-                "reason": "The future perfect is will + have + past participle.",
+                "reason": "The future perfect is will + have + past participle. Reach for the tense map because it builds the future perfect from its parts. If stuck, assemble will, have and the past participle aloud.",
                 "result": "Ada will have lived here for five years.",
                 "predictPrompt": "How would you explain why this beats the other options?"
               }
@@ -5014,19 +5014,19 @@
             "steps": [
               {
                 "operation": "Find the head noun",
-                "reason": "The verb agrees with the subject, not with the nearest noun.",
+                "reason": "The verb agrees with the subject, not with the nearest noun. Reach for the agreement mirror because it reflects the true subject behind the phrases. If stuck, strip every prepositional phrase and see what remains.",
                 "result": "The subject is 'quality', which is singular.",
                 "predictPrompt": "What phrase sits between the subject and the verb?"
               },
               {
                 "operation": "Remove the interrupting phrase",
-                "reason": "Prepositional phrases do not change the number of the subject.",
+                "reason": "Prepositional phrases do not change the number of the subject. Reach for the agreement mirror because stripping the phrase shows what the verb matches. If stuck, cross out everything after quality and read the bare sentence.",
                 "result": "The sentence reduces to 'The quality ... is impressive'.",
                 "predictPrompt": "How would you choose between the possible routes?"
               },
               {
                 "operation": "Choose the verb",
-                "reason": "A singular subject takes a singular verb.",
+                "reason": "A singular subject takes a singular verb. Reach for the agreement mirror because singular subjects take singular verbs. If stuck, read it aloud with is and then with are and hear the match.",
                 "result": "'The quality of the students' projects is impressive.'",
                 "predictPrompt": "How would you explain why this beats the other options?"
               }
@@ -5246,19 +5246,19 @@
             "steps": [
               {
                 "operation": "Count the items",
-                "reason": "The degree depends on how many things are compared.",
+                "reason": "The degree depends on how many things are compared. Reach for the degrees chart because the degree depends on how many are compared. If stuck, count the nouns that tell you what is being compared.",
                 "result": "Three tests are being compared.",
                 "predictPrompt": "Which degree handles three or more?"
               },
               {
                 "operation": "Check whether the adjective is regular",
-                "reason": "Irregular adjectives do not take -er or -est.",
+                "reason": "Irregular adjectives do not take -er or -est. Reach for the irregular-list check because some adjectives change shape entirely. If stuck, say good, better, best aloud and notice the shift.",
                 "result": "'Good' is irregular: good, better, best.",
                 "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Apply the superlative",
-                "reason": "A superlative normally takes 'the'.",
+                "reason": "A superlative normally takes 'the'. Reach for the degrees chart because the superlative row carries the article. If stuck, place good, better, best on the chart and pick the last.",
                 "result": "This is the best result of the three tests.",
                 "predictPrompt": "How would you test this answer before writing it down?"
               }
@@ -5473,19 +5473,19 @@
             "steps": [
               {
                 "operation": "Find the auxiliary",
-                "reason": "The tag repeats the auxiliary of the statement.",
+                "reason": "The tag repeats the auxiliary of the statement. Reach for the tag chart because the tag repeats the sentence's own auxiliary. If stuck, underline the helping verb and copy it into the tag slot.",
                 "result": "The auxiliary is 'had'.",
                 "predictPrompt": "Is the statement positive or negative?"
               },
               {
                 "operation": "Reverse the polarity",
-                "reason": "A positive statement takes a negative tag.",
+                "reason": "A positive statement takes a negative tag. Reach for the tag chart because the polarity column flips positive to negative. If stuck, check whether the statement is positive and take the negative twin.",
                 "result": "The tag begins 'hadn't'.",
                 "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Add the pronoun",
-                "reason": "The subject must become a pronoun that matches in person and number.",
+                "reason": "The subject must become a pronoun that matches in person and number. Reach for the tag chart because the pronoun column matches the subject's person and number. If stuck, turn the subject into a pronoun.",
                 "result": "'The students' becomes 'they', so the tag is 'hadn't they?'.",
                 "predictPrompt": "How would you explain why this beats the other options?"
               }
@@ -5705,19 +5705,19 @@
             "steps": [
               {
                 "operation": "Expand the contraction",
-                "reason": "'Its' without an apostrophe is possessive, but the sentence needs 'it is'.",
+                "reason": "'Its' without an apostrophe is possessive, but the sentence needs 'it is'. Reach for the apostrophe chart because it splits it's into it is. If stuck, say it is aloud and see whether the sentence still works.",
                 "result": "'Its' becomes 'It's'.",
                 "predictPrompt": "Which noun owns the books?"
               },
               {
                 "operation": "Form the plural possessive",
-                "reason": "'Children' is an irregular plural that does not end in s.",
+                "reason": "'Children' is an irregular plural that does not end in s. Reach for the apostrophe chart because it shows where the mark goes in plurals without s. If stuck, write the plural first, then add the mark.",
                 "result": "The possessive is 'children's'.",
                 "predictPrompt": "What does the question tell you to find first?"
               },
               {
                 "operation": "Read the corrected sentence",
-                "reason": "Both marks must now carry the right meaning.",
+                "reason": "Both marks must now carry the right meaning. Reach for the apostrophe chart because it re-checks both marks against their jobs. If stuck, circle each apostrophe and say what each one stands for.",
                 "result": "'It's raining, so the children's books are wet.'",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
@@ -5937,19 +5937,19 @@
             "steps": [
               {
                 "operation": "Recognise the fixed expression",
-                "reason": "The words form an idiom, so their literal meanings do not apply.",
+                "reason": "The words form an idiom, so their literal meanings do not apply. Reach for the fixed-expression scan because idioms are memorised as whole units. If stuck, check whether the literal reading makes no sense.",
                 "result": "'Cost an arm and a leg' is a set phrase.",
                 "predictPrompt": "What does the phrase usually mean?"
               },
               {
                 "operation": "Recall the meaning",
-                "reason": "Idioms must be learned as whole units.",
+                "reason": "Idioms must be learned as whole units. Reach for the collocation map because idioms keep fixed company in everyday speech. If stuck, match the phrase to a plain paraphrase you already know.",
                 "result": "It means to be very expensive.",
                 "predictPrompt": "How would you verify this answer?"
               },
               {
                 "operation": "Check the sentence",
-                "reason": "The meaning must fit the context of a tax.",
+                "reason": "The meaning must fit the context of a tax. Reach for the context probe because the tax sets the scene for the meaning. If stuck, substitute the paraphrase and see whether the sentence still holds.",
                 "result": "A tax that is very expensive for the company fits the meaning.",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
@@ -6310,19 +6310,19 @@
             "steps": [
               {
                 "operation": "Say each word slowly",
-                "reason": "The vowel is the part that carries the syllable.",
+                "reason": "The vowel is the part that carries the syllable. Reach for the vowel chart because it fixes each vowel by length and quality. If stuck, find each vowel on the chart before deciding.",
                 "result": "All four are one-syllable words with one vowel each.",
                 "predictPrompt": "Now listen for movement inside that vowel."
               },
               {
                 "operation": "Listen for a glide",
-                "reason": "A diphthong changes quality within the same syllable.",
+                "reason": "A diphthong changes quality within the same syllable. Reach for the minimal-pair list because it splits steady vowels from gliding ones. If stuck, stretch the vowel and notice whether it changes.",
                 "result": "Sight moves from /a/ towards /ɪ/; the other three stay steady.",
                 "predictPrompt": "How would you choose between the possible routes?"
               },
               {
                 "operation": "Select the answer",
-                "reason": "The question asks for a diphthong, not merely a long vowel.",
+                "reason": "The question asks for a diphthong, not merely a long vowel. Reach for the vowel chart because the diphthong row lists the gliding vowels. If stuck, match each option to the chart and pick the gliding one.",
                 "result": "Sight /saɪt/ is the answer.",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
@@ -6542,19 +6542,19 @@
             "steps": [
               {
                 "operation": "Say the word slowly",
-                "reason": "The syllable must be heard before it can be counted.",
+                "reason": "The syllable must be heard before it can be counted. Reach for the consonant chart because it maps each sound to its symbol. If stuck, break the word into sounds, not letters.",
                 "result": "Strengths is one syllable: /streŋθs/.",
                 "predictPrompt": "Which sounds are vowels?"
               },
               {
                 "operation": "List the sounds",
-                "reason": "Each distinct sound counts once, even when several letters spell it.",
+                "reason": "Each distinct sound counts once, even when several letters spell it. Reach for the phoneme inventory because every distinct sound earns one count. If stuck, write each sound down as you say it, letters ignored.",
                 "result": "The sounds are /s/, /t/, /r/, /e/, /ŋ/, /θ/ and /s/.",
                 "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Count the consonants",
-                "reason": "Remove the vowel /e/ and count what remains.",
+                "reason": "Remove the vowel /e/ and count what remains. Reach for the consonant chart because it separates vowels from consonants. If stuck, cross out the vowel symbols and count what remains.",
                 "result": "Six consonants: s, t, r, ŋ, θ, s.",
                 "predictPrompt": "How would you test this answer before writing it down?"
               }
@@ -6774,19 +6774,19 @@
             "steps": [
               {
                 "operation": "Say each pair aloud",
-                "reason": "Homophones must sound identical in standard pronunciation.",
+                "reason": "Homophones must sound identical in standard pronunciation. Reach for the minimal-pair list because homophones are identical sound with different spelling. If stuck, say each pair three times and listen for any stray sound.",
                 "result": "Write and right are both /raɪt/; the others differ.",
                 "predictPrompt": "Check the remaining pairs for a single differing sound."
               },
               {
                 "operation": "Test the near misses",
-                "reason": "One changed consonant can separate two similar words.",
+                "reason": "One changed consonant can separate two similar words. Reach for the minimal-pair list because it isolates the one sound that separates lookalikes. If stuck, swap the suspect sound and hear whether the word changes.",
                 "result": "Loose /luːs/ and lose /luːz/ differ in voicing; food /uː/ and foot /ʊ/ differ in length; advice /s/ and advise /z/ differ in voicing.",
                 "predictPrompt": "How would you verify this answer?"
               },
               {
                 "operation": "Confirm meaning and spelling",
-                "reason": "A homophone pair must also differ in spelling and sense.",
+                "reason": "A homophone pair must also differ in spelling and sense. Reach for the homophone card because it pairs identical sound with different spelling and sense. If stuck, write both words, then say what each one means.",
                 "result": "Write and right are spelled differently and mean different things.",
                 "predictPrompt": "How would you explain why this beats the other options?"
               }
@@ -7007,19 +7007,19 @@
             "steps": [
               {
                 "operation": "Start from the base word",
-                "reason": "The stress of the family is easier to see from the short form.",
+                "reason": "The stress of the family is easier to see from the short form. Reach for the stress worksheet because it charts where the base word lands. If stuck, tap the stressed syllable and feel the beat.",
                 "result": "Politics stresses the first syllable: POL-i-tics.",
                 "predictPrompt": "Which suffix is added in each longer word?"
               },
               {
                 "operation": "Apply the -ical rule",
-                "reason": "Words ending in -ical stress the syllable before the suffix.",
+                "reason": "Words ending in -ical stress the syllable before the suffix. Reach for the suffix stress table because -ical shifts stress to the syllable before it. If stuck, tap the syllable before -ical and feel the beat.",
                 "result": "Political becomes po-LIT-i-cal.",
                 "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Apply the -ian rule",
-                "reason": "Words ending in -ian also stress the syllable before it.",
+                "reason": "Words ending in -ian also stress the syllable before it. Reach for the suffix stress table because -ian likewise stresses the syllable before it. If stuck, tap the syllable before -ian and feel the beat.",
                 "result": "Politician becomes pol-i-TI-cian.",
                 "predictPrompt": "How would you explain why this beats the other options?"
               }
@@ -7242,19 +7242,19 @@
             "steps": [
               {
                 "operation": "Locate the stressed word",
-                "reason": "The capitalised word is the contrast.",
+                "reason": "The capitalised word is the contrast. Reach for the stress worksheet because the capital marks the contrast beat. If stuck, cap a different word and hear how the meaning shifts.",
                 "result": "PARTY is stressed.",
                 "predictPrompt": "Which question asks about that item?"
               },
               {
                 "operation": "Match the item to a question",
-                "reason": "The stressed word must be the answer to the question.",
+                "reason": "The stressed word must be the answer to the question. Reach for the question-match drill because each question type demands one stressed answer. If stuck, write the question whose answer is the capped word.",
                 "result": "The question asks where Mary sang.",
                 "predictPrompt": "How would you verify this answer?"
               },
               {
                 "operation": "Check the alternatives",
-                "reason": "A question about who or what would stress a different word.",
+                "reason": "A question about who or what would stress a different word. Reach for the stress worksheet because moving the capital moves the question. If stuck, cap each other word in turn and see which question it springs.",
                 "result": "'Who sang at the party?' would stress MARY, and 'What did Mary do?' would stress SANG.",
                 "predictPrompt": "How would you explain why this beats the other options?"
               }
@@ -7444,19 +7444,19 @@
             "steps": [
               {
                 "operation": "Extract the main claim of each passage",
-                "reason": "Synthesis starts from each text's actual claims, not its examples",
+                "reason": "Synthesis starts from each text's actual claims, not its examples. Reach for the answer-control discipline because it keeps you inside the text. If stuck, underline the single claim in each passage and ignore the examples.",
                 "result": "A claims nutrition gains; B claims rising costs for schools",
                 "predictPrompt": "What information do you compare before deciding?"
               },
               {
                 "operation": "Compare the claims for agreement and tension",
-                "reason": "The summary must hold both voices and show their relationship clearly",
+                "reason": "The summary must hold both voices and show their relationship clearly. Reach for the answer-control discipline because it keeps you inside the text. If stuck, write the two claims side by side and circle the shared word.",
                 "result": "Gains and costs are two sides of the same project",
                 "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Merge both claims into one sentence in fresh words",
-                "reason": "One sentence must cover both claims in new wording",
+                "reason": "One sentence must cover both claims in new wording. Reach for the answer-control discipline because it keeps you inside the text. If stuck, join the two claims with but and drop everything outside them.",
                 "result": "The garden improves diets but demands careful budgeting from schools",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
@@ -7641,19 +7641,19 @@
             "steps": [
               {
                 "operation": "Identify the figure and its source",
-                "reason": "The library is called light, which is a metaphor because it declares identity without like or as.",
+                "reason": "The library is called light, which is a metaphor because it declares identity without like or as. Reach for the figure-to-meaning bridge because the metaphor declares an identity to unpack. If stuck, ask what the source and target are and underline both.",
                 "result": "Source is light; target is the library.",
                 "predictPrompt": "What plain meaning can replace the image?"
               },
               {
                 "operation": "Contrast literal and figurative readings",
-                "reason": "A library cannot shine as a lamp does, so the literal reading fails in context.",
+                "reason": "A library cannot shine as a lamp does, so the literal reading fails in context. Reach for the figure-to-meaning bridge because the literal reading fails in context. If stuck, test the literal reading against the library and watch it break.",
                 "result": "Figuratively, light means knowledge and hope that remove ignorance.",
                 "predictPrompt": "How would you choose between the possible routes?"
               },
               {
                 "operation": "Choose the meaning the passage supports",
-                "reason": "The surrounding idea is that the library ends illiteracy, not that it replaces electricity.",
+                "reason": "The surrounding idea is that the library ends illiteracy, not that it replaces electricity. Reach for the answer-control discipline because it keeps you inside the text. If stuck, cross off every option that reaches beyond the passage.",
                 "result": "The answer is that the library brings knowledge and hope.",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
               }
@@ -7841,19 +7841,19 @@
             "steps": [
               {
                 "operation": "Count finite verbs",
-                "reason": "Each finite verb marks one clause in the sentence.",
+                "reason": "Each finite verb marks one clause in the sentence. Reach for the parse ladder because each finite verb marks one clause boundary. If stuck, hunt the sentence for every verb and mark its subject.",
                 "result": "Three verbs show three clauses: worked, succeeded, prepared.",
                 "predictPrompt": "What does the who part do if it is not the main clause?"
               },
               {
                 "operation": "Split the clauses",
-                "reason": "Students who worked hard succeeded is main; who and because parts are dependent.",
+                "reason": "Students who worked hard succeeded is main; who and because parts are dependent. Reach for the parse ladder because splitting clauses shows which depend on which. If stuck, bracket each clause and ask what each one is doing.",
                 "result": "Who part describes students; because part gives the cause.",
                 "predictPrompt": "What exactly does the question want you to write down first?"
               },
               {
                 "operation": "Name the pattern",
-                "reason": "A main clause with dependent clauses is complex.",
+                "reason": "A main clause with dependent clauses is complex. Reach for the parse ladder because naming the pattern locks in the structure. If stuck, count main clauses and match to simple, compound or complex.",
                 "result": "Complex sentence with adjective and adverbial clauses.",
                 "predictPrompt": "How would you prove this claim to a sceptic?"
               }
