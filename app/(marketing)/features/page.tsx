@@ -8,64 +8,64 @@ export const metadata: Metadata = {
   title: 'Features',
   alternates: { canonical: '/features' },
   description:
-    'Practice JAMB and Post-UTME past questions with CBT mock exam simulators, topic drills, and performance analytics built for Nigerian students.',
+    'Learn a topic. Keep it. Perform under exam conditions. Lessons, timed mocks, and reviews for JAMB and Post-UTME.',
 }
 
 const featureTiles = [
   {
-    icon: Timer,
-    title: 'CBT Mock Exam Mode',
+    icon: BookOpen,
+    title: 'Lessons teach first',
     description:
-      'A full-length timed mock exam that mirrors the real computer-based test screen. Set the number of questions and time limit per exam. The countdown clock runs on screen and the exam auto-submits when time expires. No paper, no PDF, no browser tabs to cheat with.',
+      'We teach before we test. Each lesson covers one small idea. You see a worked example, answer a quick check, and only then practise.',
+    color: 'bg-rose-100 text-rose-600',
+    hero: true,
+  },
+  {
+    icon: Timer,
+    title: 'Mocks like the real exam',
+    description:
+      'A full-length timed mock that mirrors the real computer-based test screen. The countdown runs on screen and the exam submits itself when time expires. No paper, no PDF, no second screen.',
     color: 'bg-blue-100 text-blue-600',
     hero: true,
   },
   {
     icon: Target,
-    title: 'Practice Mode',
+    title: 'Practice that explains',
     description:
-      'Pick one subject at a time and go through questions one by one. Every question shows the correct answer and an explanation immediately after you answer. No timer, no pressure. Focus on understanding each topic before moving to the next.',
+      'Answer one question. Get the explanation straight away. Learn from the mistake, not just the score.',
     color: 'bg-green-100 text-green-600',
-    hero: true,
-  },
-  {
-    icon: BarChart3,
-    title: 'Performance Analytics',
-    description:
-      'After every session, see your score, accuracy percentage, time taken, and a per-subject breakdown of which topics you got right and wrong. The dashboard highlights your weakest subject so you know where to focus next.',
-    color: 'bg-purple-100 text-purple-600',
-    hero: false,
-  },
-  {
-    icon: BookOpen,
-    title: 'Step-by-Step Explanations',
-    description:
-      'Every question includes an explanation of the correct answer. In practice mode the explanation appears right after you answer. In mock mode it becomes available when the session ends. Use them to learn from mistakes, not just collect scores.',
-    color: 'bg-amber-100 text-amber-600',
-    hero: false,
-  },
-  {
-    icon: NotebookPen,
-    title: 'Revision Notes',
-    description:
-      'Short, focused notes for core JAMB subjects live alongside practice. Read a topic, then prove you kept it with targeted questions — learning and testing in one loop.',
-    color: 'bg-rose-100 text-rose-600',
     hero: false,
   },
   {
     icon: Zap,
-    title: 'Learning Days',
+    title: 'We name your mix-up',
     description:
-      'Propeida counts days with a finished session or lesson — never mere logins. Pauses do not erase anything; only new learning extends the count.',
-    color: 'bg-cyan-100 text-cyan-600',
+      'When you miss one, we name the error kindly and show the missing relationship. Then we point to the lesson that repairs it.',
+    color: 'bg-amber-100 text-amber-600',
+    hero: false,
+  },
+  {
+    icon: BarChart3,
+    title: 'It finds your weak subjects',
+    description:
+      'A short check at the start places you by doing, not by survey. After every practice your progress shows which subjects are secure, which are developing, and what to work on next.',
+    color: 'bg-purple-100 text-purple-600',
     hero: false,
   },
   {
     icon: TrendingUp,
-    title: 'Spaced Review',
+    title: 'Review that remembers',
     description:
-      'Topics you have seen return on a schedule tuned to your exam date. Each review is a small retrieval check that proves the knowledge stuck.',
+      'Topics return before you forget them, on a schedule tuned to your exam date. Each review proves it stuck.',
     color: 'bg-indigo-100 text-indigo-600',
+    hero: false,
+  },
+  {
+    icon: NotebookPen,
+    title: 'Counts learning, never punishes',
+    description:
+      'Propeida counts days with a finished practice or lesson — never mere logins. Pauses do not erase anything. There are no streak threats, no public ranks, no shame. Only learning.',
+    color: 'bg-cyan-100 text-cyan-600',
     hero: false,
   },
 ]
@@ -76,9 +76,11 @@ export default function FeaturesPage() {
       <MarketingHeader />
       <main className="px-4 py-20 sm:py-24">
         <div className="mx-auto max-w-3xl text-center mb-16">
-          <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Features</h1>
+          <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">What Propeida does</h1>
           <p className="mt-4 text-lg text-gray-500 leading-relaxed">
-            Every feature in Propeida serves one purpose: helping you practice effectively on the device and network you already have.
+            Learn a topic. Keep it. Perform under exam conditions. Propeida is not
+            a question bank with a chatbot attached. It is the system around the
+            questions.
           </p>
         </div>
 

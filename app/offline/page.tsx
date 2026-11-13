@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function OfflinePage() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center px-4 bg-gray-50">
-      <div className="w-full max-w-sm text-center">
+      <div className="w-full max-w-sm text-center animate-fade-up">
         <div className="flex justify-center mb-6">
           <Logo />
         </div>

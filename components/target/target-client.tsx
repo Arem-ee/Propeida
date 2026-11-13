@@ -66,7 +66,7 @@ export default function TargetClient({ initial }: { initial: TargetState }) {
         window.location.reload()
       }
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Could not save target')
+      setError(err instanceof Error ? err.message : 'Could not save your target.')
     } finally {
       setSaving(false)
     }

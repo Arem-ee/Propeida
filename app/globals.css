@@ -27,6 +27,11 @@
 
   --animate-pop: pop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) both;
   --animate-float-slow: floatSlow 7s ease-in-out infinite;
+  --animate-fade-up: fadeUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-pop-in: popIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+
+  --ease-touch: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-settle: cubic-bezier(0.22, 1, 0.36, 1);
 
   @keyframes pop {
     from { transform: scale(0.92); opacity: 0; }
@@ -35,6 +40,14 @@
   @keyframes floatSlow {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-8px); }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes popIn {
+    from { opacity: 0; transform: scale(0.96); }
+    to { opacity: 1; transform: scale(1); }
   }
 }
 
@@ -95,4 +108,32 @@ button, a {
    `font-display` utility itself is generated from --font-display above. */
 .font-display {
   letter-spacing: -0.01em;
+}
+
+/* ── Wave 1 micro-interactions ──
+   Calm, quick, and honest: press confirms the tap, lift invites
+   the next thing. No streak threats, no rank motion, no rain. */
+.pressable {
+  transition:
+    transform 0.18s var(--ease-touch),
+    box-shadow 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+.pressable:active {
+  transform: scale(0.97);
+}
+
+.card-lift {
+  transition:
+    transform 0.28s var(--ease-settle),
+    box-shadow 0.28s ease,
+    border-color 0.2s ease;
+}
+.card-lift:hover {
+  transform: translateY(-2px);
+}
+.card-lift:active {
+  transform: translateY(0) scale(0.99);
 }

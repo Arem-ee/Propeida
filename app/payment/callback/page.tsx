@@ -67,7 +67,7 @@ function CallbackContent() {
   }, [poll])
 
   return (
-    <div className="w-full max-w-sm rounded-xl border border-gray-100 bg-white p-6 text-center shadow-xs">
+    <div className="w-full max-w-sm rounded-xl border border-gray-100 bg-white p-6 text-center shadow-xs animate-fade-up">
       {status === 'verifying' && (
         <div>
           <Loader2 className="mx-auto h-10 w-10 text-blue-600 animate-spin mb-4" />
@@ -89,7 +89,7 @@ function CallbackContent() {
           </p>
           <Link
             href="/home"
-            className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 py-3 text-sm font-bold text-white hover:bg-blue-700 min-h-[44px]"
+            className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 py-3 text-sm font-bold text-white hover:bg-blue-700 min-h-[44px] pressable"
           >
             Go to dashboard
             <ArrowRight className="h-4 w-4" />
@@ -102,23 +102,22 @@ function CallbackContent() {
           <Loader2 className="mx-auto h-10 w-10 text-amber-500 mb-4" />
           <h1 className="text-lg font-extrabold text-gray-900">Still confirming your payment</h1>
           <p className="mt-2 text-sm text-gray-500 leading-relaxed">
-            The confirmation from Paystack is taking longer than usual. Your payment was received, and your Pro access
-            will be activated automatically once the confirmation arrives. You do not need to pay again.
+            We are still waiting for Paystack to confirm. Your payment went through. Pro turns on when the reply arrives. Please do not pay again.
           </p>
           <p className="mt-3 text-xs text-gray-500 leading-relaxed">
-            If you go to the dashboard now, your account will update to Pro once the confirmation is complete.
+            The dashboard turns Pro on its own when the reply arrives.
           </p>
           <div className="mt-6 flex flex-col gap-3">
             <button
               onClick={poll}
-              className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 py-3 text-sm font-bold text-white hover:bg-blue-700 min-h-[44px] cursor-pointer"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 py-3 text-sm font-bold text-white hover:bg-blue-700 min-h-[44px] cursor-pointer pressable"
             >
               <RefreshCw className="h-4 w-4" />
               Check again
             </button>
             <Link
               href="/home"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-gray-200 bg-white py-3 text-sm font-bold text-gray-700 hover:bg-gray-50 min-h-[44px]"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-gray-200 bg-white py-3 text-sm font-bold text-gray-700 hover:bg-gray-50 min-h-[44px] pressable"
             >
               Go to dashboard
               <ArrowRight className="h-4 w-4" />
@@ -139,13 +138,13 @@ function CallbackContent() {
           <div className="mt-6 flex flex-col gap-3">
             <Link
               href="/account"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 py-3 text-sm font-bold text-white hover:bg-blue-700 min-h-[44px]"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 py-3 text-sm font-bold text-white hover:bg-blue-700 min-h-[44px] pressable"
             >
               Try again
             </Link>
             <button
               onClick={poll}
-              className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-gray-200 bg-white py-3 text-sm font-bold text-gray-700 hover:bg-gray-50 min-h-[44px] cursor-pointer"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-gray-200 bg-white py-3 text-sm font-bold text-gray-700 hover:bg-gray-50 min-h-[44px] cursor-pointer pressable"
             >
               <RefreshCw className="h-4 w-4" />
               Check again
@@ -165,7 +164,7 @@ export default function PaymentCallbackPage() {
       </Link>
 
       <Suspense fallback={
-        <div className="w-full max-w-sm rounded-xl border border-gray-100 bg-white p-6 text-center shadow-xs">
+        <div className="w-full max-w-sm rounded-xl border border-gray-100 bg-white p-6 text-center shadow-xs animate-fade-up">
           <Loader2 className="mx-auto h-10 w-10 text-blue-600 animate-spin mb-4" />
           <p className="text-sm text-gray-500">Loading...</p>
         </div>

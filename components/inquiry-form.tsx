@@ -61,7 +61,7 @@ export default function InquiryForm({
       })
       setSent(true)
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Something went wrong')
+      setError(err instanceof Error ? err.message : 'Something went wrong.')
     } finally {
       setSending(false)
     }

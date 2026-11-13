@@ -27,7 +27,25 @@ export default function TermsPage() {
           <section>
             <h2 className="text-base font-extrabold text-gray-900 mb-3">Free Tier and Pro Upgrade</h2>
             <p>
-              Propeida offers a free tier with limited access to practice questions and mock exams. Paid plans are subscriptions that renew on the billing schedule shown at checkout, unless you cancel before the next renewal. Access is tied to your account and is non-transferable. Plan prices, limits, renewal terms, and cancellation instructions are shown before payment.
+              Propeida offers a free tier with limited access to practice questions and mock exams. Paid plans are monthly or yearly: each payment grants the period shown at checkout, and Pro continues when you pay again — nothing renews on its own. Access is tied to your account and is non-transferable. Plan prices, limits, and how renewal works are shown before payment.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-extrabold text-gray-900 mb-3">Refunds</h2>
+            <p>
+              Pro access unlocks instantly when a payment succeeds, so a payment that
+              succeeded without unlocking Pro is always refunded in full. A duplicate
+              payment for the same product is also refunded in full.
+            </p>
+            <p className="mt-3">
+              If you pay and change your mind within 7 days, write to us and ask.
+            </p>
+            <p className="mt-3">
+              After 7 days, or after you have used Pro for lessons, mocks, or
+              reviews, payments are not refundable — the product has already been
+              enjoyed. When a payment is refunded, your account and your study
+              history stay. You return to the free tier and can pay again normally.
             </p>
           </section>
 

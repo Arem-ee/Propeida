@@ -69,7 +69,7 @@ export default function DownloadsClient() {
             )}
           </p>
           <p className="mt-1.5 text-[13px] font-semibold leading-relaxed text-ink-soft">
-            Lessons ship inside the app and open offline once loaded. Question banks sync per session and need a connection for now — downloadable subject packs arrive with the packs system.
+            Lessons ship inside the app. They open offline once loaded. Question banks still need a connection. Offline subject packs are coming.
           </p>
         </div>
 

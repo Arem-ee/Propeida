@@ -1,13 +1,14 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useTransition } from 'react'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 import { getPreferences, setPreference, type FontScale, type Theme } from '@/lib/settings'
+import { setCohortUpdatesEnabled } from '@/lib/actions/notifications'
 
 function Row({ label, hint, children }: { label: string; hint: string; children: React.ReactNode }) {
   return (
-    <div className="rounded-3xl border border-blue-100/70 bg-white p-5 shadow-[0_2px_12px_-6px_rgba(16,28,51,0.12)]">
+    <div className="rounded-3xl border border-blue-100/70 bg-white p-5 shadow-[0_2px_12px_-6px_rgba(16,28,51,0.12)] animate-fade-up">
       <p className="font-display text-lg font-medium text-black">{label}</p>
       <p className="mt-0.5 text-[13px] font-semibold text-ink-soft">{hint}</p>
       <div className="mt-3.5">{children}</div>
@@ -31,7 +32,7 @@ function Choice<T extends string>({
           key={o.value}
           onClick={() => onPick(o.value)}
           aria-pressed={value === o.value}
-          className={`flex-1 rounded-2xl border-2 px-4 py-3 text-sm font-extrabold min-h-[52px] cursor-pointer transition-all ${
+          className={`flex-1 rounded-2xl border-2 px-4 py-3 text-sm font-extrabold min-h-[52px] cursor-pointer transition-all pressable ${
             value === o.value
               ? 'border-blue-600 bg-blue-50 text-blue-700'
               : 'border-gray-200 bg-white text-ink-soft'
@@ -44,11 +45,22 @@ function Choice<T extends string>({
   )
 }
 
-export default function SettingsClient() {
+export default function SettingsClient({
+  initialNotificationsEnabled = true,
+  planLabel = 'Free',
+  planHint = 'Free practice and one mock per exam. Pro opens everything.',
+}: {
+  initialNotificationsEnabled?: boolean
+  planLabel?: string
+  planHint?: string
+}) {
   const [font, setFont] = useState<FontScale>('standard')
   const [theme, setTheme] = useState<Theme>('default')
   const [sound, setSound] = useState(true)
   const [haptics, setHaptics] = useState(true)
+  const [notifications, setNotifications] = useState(initialNotificationsEnabled)
+  const [notificationsError, setNotificationsError] = useState<string | null>(null)
+  const [savingNotifications, startNotifications] = useTransition()
   const [deleting, setDeleting] = useState(false)
   const [confirmDelete, setConfirmDelete] = useState(false)
   const [deleteError, setDeleteError] = useState<string | null>(null)
@@ -70,7 +82,7 @@ export default function SettingsClient() {
       if (!res.ok) throw new Error(data.error ?? 'Could not delete account')
       window.location.href = '/'
     } catch (err) {
-      setDeleteError(err instanceof Error ? err.message : 'Could not delete account')
+      setDeleteError(err instanceof Error ? err.message : 'Could not delete your account.')
       setDeleting(false)
       setConfirmDelete(false)
     }
@@ -91,7 +103,19 @@ export default function SettingsClient() {
       </div>
 
       <div className="space-y-4">
-        <Row label="Text size" hint="Larger text is easier in sunlight and on small screens.">
+        <Row label="Plan" hint={planHint}>
+          <p className="font-display text-xl font-medium text-black">{planLabel}</p>
+          {planLabel === 'Free' && (
+            <Link
+              href="/pricing"
+              className="mt-3 inline-flex items-center justify-center rounded-2xl bg-blue-600 px-5 py-3 text-sm font-extrabold text-white hover:bg-blue-700 min-h-[48px] pressable"
+            >
+              See Pro
+            </Link>
+          )}
+        </Row>
+
+        <Row label="Text size" hint="This device only. Separate from the accessibility needs saved on your Profile.">
           <Choice<FontScale>
             value={font}
             onPick={(v) => { setFont(v); setPreference('font', v) }}
@@ -102,7 +126,7 @@ export default function SettingsClient() {
           />
         </Row>
 
-        <Row label="Appearance" hint="Sunlight mode is maximum contrast for outdoors. Cream is softer for night reading.">
+        <Row label="Appearance" hint="This device only. Sunlight is maximum contrast outdoors. Saved profile accessibility is separate.">
           <Choice<Theme>
             value={theme}
             onPick={(v) => { setTheme(v); setPreference('theme', v) }}
@@ -136,6 +160,34 @@ export default function SettingsClient() {
           />
         </Row>
 
+        <Row
+          label="Cohort updates"
+          hint="Short anonymous updates about your study group, plus a weekly summary. Never a ranking."
+        >
+          <Choice
+            value={notifications ? 'on' : 'off'}
+            onPick={(v) => {
+              const enabled = v === 'on'
+              setNotifications(enabled)
+              setNotificationsError(null)
+              startNotifications(async () => {
+                try {
+                  await setCohortUpdatesEnabled(enabled)
+                } catch {
+                  setNotifications(!enabled)
+                  setNotificationsError('Could not save this preference.')
+                }
+              })
+            }}
+            options={[
+              { value: 'on', label: 'On' },
+              { value: 'off', label: 'Off' },
+            ]}
+          />
+          {savingNotifications && <p className="mt-2 text-xs font-bold text-ink-soft">Saving...</p>}
+          {notificationsError && <p className="mt-2 text-xs font-bold text-red-700">{notificationsError}</p>}
+        </Row>
+
         <div className="rounded-3xl border-2 border-red-200 bg-red-50/50 p-5">
           <p className="font-display text-lg font-medium text-black">Delete account</p>
           <p className="mt-0.5 text-[13px] font-semibold text-ink-soft">
@@ -144,7 +196,7 @@ export default function SettingsClient() {
           {!confirmDelete ? (
             <button
               onClick={() => setConfirmDelete(true)}
-              className="mt-3.5 rounded-2xl border-2 border-red-300 bg-white px-5 py-2.5 text-sm font-extrabold text-red-700 min-h-[48px] cursor-pointer"
+              className="mt-3.5 rounded-2xl border-2 border-red-300 bg-white px-5 py-2.5 text-sm font-extrabold text-red-700 min-h-[48px] cursor-pointer pressable"
             >
               Delete my account...
             </button>

@@ -107,12 +107,12 @@ export default function SetUsernamePage() {
         <Logo />
       </Link>
 
-      <div className="w-full max-w-sm rounded-xl border border-gray-100 bg-white p-6 shadow-xs">
+      <div className="w-full max-w-sm rounded-xl border border-gray-100 bg-white p-6 shadow-xs animate-fade-up">
         <h1 className="text-xl font-extrabold text-gray-900">Choose your username</h1>
         <p className="mt-1 text-sm text-gray-500">One last step before you can start practicing.</p>
 
         <form onSubmit={handleSubmit} className="mt-6 space-y-4">
-          {error && <div className="rounded-xl bg-red-50 px-4 py-3 text-xs font-semibold text-red-700">{error}</div>}
+          {error && <div className="rounded-xl bg-red-50 px-4 py-3 text-xs font-semibold text-red-700 animate-fade-up">{error}</div>}
 
           <div>
             <label htmlFor="username" className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">
@@ -149,7 +149,7 @@ export default function SetUsernamePage() {
           <button
             type="submit"
             disabled={saving || usernameStatus === 'checking' || usernameStatus === 'taken'}
-            className="w-full rounded-xl bg-blue-600 py-3 text-sm font-bold text-white hover:bg-blue-700 active:bg-blue-800 disabled:bg-blue-400 min-h-[44px] cursor-pointer"
+            className="w-full rounded-xl bg-blue-600 py-3 text-sm font-bold text-white hover:bg-blue-700 active:bg-blue-800 disabled:bg-blue-400 min-h-[44px] cursor-pointer pressable"
           >
             {saving ? 'Saving...' : 'Continue'}
           </button>

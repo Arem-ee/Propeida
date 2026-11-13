@@ -3,7 +3,7 @@
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import {
-  Home, BookOpen, BarChart3, Timer, TrendingUp, User, LogOut, Settings, X, Download, Crosshair,
+  Home, BookOpen, BarChart3, Timer, TrendingUp, User, LogOut, Settings, X, Download, Crosshair, Users,
 } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import Logo from '@/components/logo'
@@ -18,6 +18,7 @@ const TABS = [
 
 const ACCOUNT_LINKS = [
   { href: '/account', label: 'Profile', icon: User },
+  { href: '/squad', label: 'Study squad', icon: Users },
   { href: '/target', label: 'My target', icon: Crosshair },
   { href: '/account/downloads', label: 'Downloads', icon: Download },
   { href: '/account/settings', label: 'Settings', icon: Settings },
@@ -69,7 +70,7 @@ export default function AppShell({ children, email, isAdmin, onLogout }: {
                 key={item.href}
                 href={item.href}
                 aria-current={active ? 'page' : undefined}
-                className={`group flex items-center gap-3 rounded-2xl px-3.5 py-3 text-[15px] font-extrabold min-h-[52px] transition-all ${
+                className={`group flex items-center gap-3 rounded-2xl px-3.5 py-3 text-[15px] font-extrabold min-h-[52px] transition-all pressable ${
                   active
                     ? 'bg-blue-600 text-white shadow-[0_8px_20px_-8px_rgba(37,99,235,0.6)]'
                     : 'text-ink-soft hover:text-black hover:bg-blue-50/70'
@@ -111,7 +112,7 @@ export default function AppShell({ children, email, isAdmin, onLogout }: {
             </span>
           </button>
           {accountOpen && (
-            <div id="account-menu-desktop" className="mt-1.5 space-y-0.5 rounded-2xl border border-blue-100/70 bg-white p-1.5">
+            <div id="account-menu-desktop" className="mt-1.5 space-y-0.5 rounded-2xl border border-blue-100/70 bg-white p-1.5 animate-pop-in">
               {ACCOUNT_LINKS.map((item) => {
                 const Icon = item.icon
                 return (
@@ -154,7 +155,7 @@ export default function AppShell({ children, email, isAdmin, onLogout }: {
           </button>
         </div>
         {accountOpen && (
-          <div id="account-menu-mobile" className="border-t border-blue-100/60 bg-paper px-4 py-3">
+          <div id="account-menu-mobile" className="border-t border-blue-100/60 bg-paper px-4 py-3 animate-pop-in">
             <p className="truncate px-1 text-xs font-extrabold text-black">{email}</p>
             <div className="mt-1 space-y-0.5">
               {ACCOUNT_LINKS.map((item) => {
@@ -217,14 +218,14 @@ export default function AppShell({ children, email, isAdmin, onLogout }: {
                 key={item.href}
                 href={item.href}
                 aria-current={active ? 'page' : undefined}
-                className={`relative flex flex-col items-center justify-center gap-1 min-w-0 flex-1 px-1 py-1.5 rounded-2xl transition-colors min-h-[52px] ${
+                className={`relative flex flex-col items-center justify-center gap-1 min-w-0 flex-1 px-1 py-1.5 rounded-2xl transition-all pressable min-h-[52px] ${
                   active ? 'text-blue-700' : 'text-gray-500 hover:text-gray-600'
                 }`}
               >
-                <Icon className="h-[22px] w-[22px]" strokeWidth={active ? 2.5 : 2} />
+                <Icon className="h-[22px] w-[22px] transition-transform duration-200" strokeWidth={active ? 2.5 : 2} />
                 <span className="text-[10px] font-extrabold leading-tight">{item.label}</span>
                 {active && (
-                  <span className="absolute bottom-[3px] h-1 w-8 rounded-full bg-blue-600" />
+                  <span className="absolute bottom-[3px] h-1 w-8 rounded-full bg-blue-600 animate-pop-in" />
                 )}
               </Link>
             )

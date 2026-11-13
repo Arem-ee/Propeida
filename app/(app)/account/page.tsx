@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 import { createClient } from '@/lib/supabase/server'
 import ProfileEditor from '@/components/account/profile-editor'
+import OnboardingPreferencesEditor from '@/components/account/onboarding-preferences-editor'
 
 export const metadata = { title: 'Profile' }
 
@@ -13,12 +14,17 @@ export default async function AccountPage() {
 
   const { data: profile } = await supabase
     .from('profiles')
-    .select('username')
+    .select('username, subject_combinations, intended_course, exam_target, heard_about, study_time, target_score, accessibility_needs, subjects_pending')
     .eq('id', user.id)
     .single()
 
+  const { data: subjects } = await supabase
+    .from('subjects')
+    .select('id, name, slug')
+    .order('name')
+
   return (
-    <div className="mx-auto max-w-2xl">
+    <div className="mx-auto max-w-2xl animate-fade-up">
       <Link
         href="/progress"
         className="mb-4 inline-flex items-center gap-1 text-sm font-bold text-ink-soft hover:text-blue-700 min-h-[36px]"
@@ -33,6 +39,17 @@ export default async function AccountPage() {
       <ProfileEditor
         username={profile?.username ?? 'Student'}
         email={user.email ?? ''}
+      />
+      <OnboardingPreferencesEditor
+        examTarget={profile?.exam_target ?? null}
+        subjectCombinations={(profile?.subject_combinations as string[]) ?? []}
+        intendedCourse={profile?.intended_course ?? null}
+        heardAbout={profile?.heard_about ?? null}
+        studyTime={profile?.study_time ?? null}
+        targetScore={profile?.target_score ?? null}
+        accessibilityNeeds={profile?.accessibility_needs as { large_font?: boolean; high_contrast?: boolean; sound_off?: boolean } ?? { large_font: false, high_contrast: false, sound_off: false }}
+        subjectsPending={profile?.subjects_pending ?? false}
+        subjects={(subjects ?? []) as { id: string; name: string; slug: string }[]}
       />
     </div>
   )

@@ -23,7 +23,7 @@ export const siteConfig = {
       tagline: 'The real pattern: English, Mathematics, Current Affairs.',
       description:
         'Timed and scored like the actual University of Ilorin aptitude test. Practice mode for learning, mock mode for exam conditions.',
-      href: '/practice?hub=universities',
+      href: '/practice?hub=post-utme',
     },
     jamb: {
       name: 'JAMB (UTME)',

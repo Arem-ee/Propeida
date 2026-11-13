@@ -28,7 +28,7 @@ export interface TargetState {
 export async function getTargetState(): Promise<TargetState> {
   const supabase = await createClient()
   const user = await getAuthUser(supabase)
-  if (!user) throw new Error('Not authenticated')
+  if (!user) throw new Error('Please sign in again.')
 
   const [{ data: schools }, { data: targets }] = await Promise.all([
     supabase.from('schools').select('id, name, slug').order('name'),
@@ -76,7 +76,7 @@ export async function getTargetState(): Promise<TargetState> {
 export async function setTargetSchool(schoolId: string | null): Promise<void> {
   const supabase = await createClient()
   const user = await getAuthUser(supabase)
-  if (!user) throw new Error('Not authenticated')
+  if (!user) throw new Error('Please sign in again.')
 
   // One active target: clear, then set.
   await supabase.from('student_targets').update({ active: false }).eq('user_id', user.id)
@@ -92,7 +92,7 @@ export async function setTargetSchool(schoolId: string | null): Promise<void> {
       { user_id: user.id, school_id: schoolId, priority: 1, active: true },
       { onConflict: 'user_id,school_id' },
     )
-    if (error) throw new Error('Failed to save target')
+    if (error) throw new Error('Could not save your target.')
     await supabase
       .from('student_targets')
       .update({ active: true })
