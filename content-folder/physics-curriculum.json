@@ -1,0 +1,700 @@
+{
+  "subject": "physics",
+  "source": "JAMB UTME Physics syllabus IBASS",
+  "topics": [
+    {
+      "slug": "measurements-and-units",
+      "name": "Measurements and Units",
+      "section": "SECTION A",
+      "order": 1,
+      "description": "Fundamental and derived SI units, prefixes, regular and irregular solid measurements, instrument least counts, errors, significant figures, standard form and dimensions with homogeneity checks."
+    },
+    {
+      "slug": "scalars-and-vectors",
+      "name": "Scalars and Vectors",
+      "section": "SECTION A",
+      "order": 2,
+      "description": "Scalar and vector quantities, resultant of vectors, resolution into perpendicular components, relative velocity and graphical methods."
+    },
+    {
+      "slug": "measurement-position-distance-and-displacement",
+      "name": "Measurement, position, distance and displacement",
+      "section": "SECTION A",
+      "order": 3,
+      "description": "Measuring length with metre rules, calipers and micrometers, position and Cartesian coordinates, frame of reference, distance vs displacement, bearings with compass and protractor, reading and drawing kinematics graphs."
+    }
+  ],
+  "lessons": [
+    {
+      "slug": "measurements-and-units",
+      "topic": "measurements-and-units",
+      "title": "Measurements and Units",
+      "objective": "Apply SI units without hesitation: identify fundamental and derived units, measure regular and irregular bodies, read instruments to their least count, estimate errors, write standard form and check equations by dimensions.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Measurements and Units",
+            "paragraphs": [
+              "A painter quotes 2.1 metres on a wall; a grocer sells 1 kilogram of tomatoes. Every honest physics answer carries a number and a unit — no unit, no meaning."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "SI units, area and volume",
+            "paragraphs": [
+              "SI has seven fundamental quantities and their units: length (metre, m), mass (kilogram, kg), time (second, s), electric current (ampere, A), temperature (kelvin, K), amount of substance (mole, mol) and luminous intensity (candela, cd). Everything else is derived from these.",
+              "Derived units come by multiplication and division: area m², volume m³, speed m/s; force = mass × acceleration = kg·m/s² = newton (N); energy = kg·m²/s² = joule (J); power = J/s = watt (W). Regular bodies use formulas: square a², rectangle lw, circle πr², cube a³, cuboid lwh, cylinder πr²h, sphere ⁴⁄₃πr³.",
+              "Prefixes: 1 km = 10³ m, 1 cm = 10⁻² m, 1 mm = 10⁻³ m, 1 μm = 10⁻⁶ m."
+            ],
+            "bullets": [
+              "Fundamentals: m, kg, s, A, K, mol, cd",
+              "Derived: m², m³, m/s, N, J, W",
+              "Regular: square a², circle πr², cuboid lwh, cylinder πr²h"
+            ],
+            "takeaway": "A unit is an identity card — carry it through every line of the calculation.",
+            "check": {
+              "question": "Which of these is an SI derived unit?",
+              "options": [
+                "kilometre",
+                "ampere",
+                "newton",
+                "kelvin"
+              ],
+              "answer": 2,
+              "why": "The newton combines fundamental units (kg·m/s²); the ampere and the kelvin are fundamental, and the kilometre is a prefixed metre."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Measuring instruments and their least counts",
+            "paragraphs": [
+              "Instruments match their job: metre rule ±1 mm; vernier caliper ±0.1 mm (measures tubes inside); micrometer screw gauge ±0.01 mm; measuring cylinder — irregular solid volume by displacement; stop watch 0.01–0.1 s; beam balance (Buchert’s/chemical) matches unknown masses.",
+              "Least count is the smallest interval on the scale; the best reading any instrument gives is true ± half its least count. Accuracy is how near the truth a reading lies; precision is how finely it reads.",
+              "Common errors: parallax (view from above — the object appears shifted), zero error (reads non-zero at zero — subtract for positive, add for negative), calibration (marks misplaced). Estimate simple error as ± half a least count."
+            ],
+            "bullets": [
+              "metre rule ±1 mm; vernier ±0.1 mm; micrometer ±0.01 mm",
+              "Irregular solids: displacement method with a measuring cylinder",
+              "Simple error estimate: half a least count; fix zero error first"
+            ],
+            "takeaway": "Match the instrument to the size — a ruler cannot do a micrometer's job.",
+            "check": {
+              "question": "The least count of a micrometer screw gauge is",
+              "options": [
+                "1 mm",
+                "0.1 mm",
+                "0.01 mm",
+                "0.001 mm"
+              ],
+              "answer": 2,
+              "why": "Each thimble division advances the spindle by 0.01 mm, which is the least count of a standard micrometer."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Dimensions, homogeneity and standard form",
+            "paragraphs": [
+              "Every derived unit has a dimension in M, L and T. Speed LT⁻¹; acceleration LT⁻²; force MLT⁻²; energy ML²T⁻²; pressure ML⁻¹T⁻²; power ML²T⁻³.",
+              "Get dimensions from definitions: force = mass × acceleration = MLT⁻². Use them to (1) deduce forgotten units — replace unit letters with dimensions and compare powers; (2) test homogeneity — both sides must carry identical powers of M, L and T.",
+              "Standard form: exactly one digit left of the point — 46,200 = 4.62 × 10⁴; 0.000321 = 3.21 × 10⁻⁴. Significant figures: non-zero digits count; zeros between non-zero digits count; leading zeros do not; closing zeros in a decimal do."
+            ],
+            "bullets": [
+              "M, L and T alone — never kg or seconds",
+              "Both sides of an equation must match: v² = u² + 2as → each side L²T⁻²",
+              "46,200 = 4.62 × 10⁴; 0.000321 = 3.21 × 10⁻⁴"
+            ],
+            "takeaway": "An equation can be dimensionally correct and numerically wrong — dimensions check possibility, not truth.",
+            "check": {
+              "question": "The dimension of power is",
+              "options": [
+                "MLT⁻²",
+                "ML²T⁻³",
+                "ML²T⁻²",
+                "ML²T⁻¹"
+              ],
+              "answer": 1,
+              "why": "Power = work ÷ time = (ML²T⁻²) ÷ T = ML²T⁻³."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "JAMB derives units and homogeneity most years. Replace unit letters with dimensions, compare powers on each side, and impossible formulas collapse on sight."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Check whether v² = u² + 2as is dimensionally homogeneous.",
+            "steps": [
+              {
+                "operation": "Dimension of each term",
+                "reason": "v, u velocities (LT⁻¹); a acceleration (LT⁻²); s displacement (L)",
+                "result": "v² = L²T⁻²; u² = L²T⁻²; 2as = L²T⁻²",
+                "predictPrompt": "What powers of L and T hide inside v²? Work them out before looking."
+              },
+              {
+                "operation": "Add the terms",
+                "reason": "only terms with identical dimensions can be added",
+                "result": "u² + 2as = L²T⁻² + L²T⁻² = L²T⁻²",
+                "predictPrompt": "Can you add terms whose powers differ?"
+              },
+              {
+                "operation": "Conclude",
+                "reason": "homogeneity is necessary for any equation to be possible",
+                "result": "Both sides are L²T⁻² — the equation is homogeneous",
+                "predictPrompt": "What would mismatched powers tell you?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Use dimensions to show that the newton (N) is equivalent to kg·m/s².",
+            "hints": [
+              "Start with Force = Mass × Acceleration.",
+              "Dimension is MLT⁻² — collect the powers of M, L and T.",
+              "So a newton must carry one  M, one  L and T to the power −2; that is kg·m/s²."
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "A harder worked example: find a missing unit with dimensions",
+            "problem": "Use the equation PV = nRT to find the unit of the gas constant R. P is pressure (N/m²), V is volume (m³), n in moles, T in kelvin.",
+            "steps": [
+              {
+                "operation": "Write each quantity in fundamentals",
+                "reason": "pressure = N/m² = kg·m⁻¹·s⁻²; volume m³ — P × V removes one m",
+                "result": "P × V = kg·m²·s⁻² = mol·K × R",
+                "predictPrompt": "What powers of m survive when you multiply kg·m⁻¹·s⁻² by m³?"
+              },
+              {
+                "operation": "Solve for R",
+                "reason": "R = kg·m²·s⁻² ÷ (mol·K) = kg·m²·s⁻²·mol⁻¹·K⁻¹",
+                "result": "R has the unit kg·m²·s⁻²·mol⁻¹·K⁻¹ — identical to J·mol⁻¹·K⁻¹",
+                "predictPrompt": "Which IS-unit does that product equal?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: reading a vernier caliper and a micrometer",
+            "paragraphs": [
+              "A vernier caliper refines one main-scale millimetre into ten equal vernier divisions, so each vernier division is 0.1 mm. Its reading is MSR (main scale reading just before the vernier zero) + the division on the vernier scale that coincides with a main-scale mark × 0.1 mm. Example: MSR = 2.4 cm and the 7th vernier division coincides — length = 2.4 + 0.07 = 2.47 cm.",
+              "A micrometer screw gauge goes smaller: each sleeve mark is 0.5 mm (half a millimetre), and the thimble is divided into 50, so each thimble division advances the spindle by 0.01 mm. Its reading is sleeve reading + thimble division coinciding × 0.01 mm. Example: sleeve reads 6.5 mm and the 27th thimble division aligns with the sleeve line — length = 6.5 + 0.27 = 6.77 mm.",
+              "Both instruments have an optional depth rod or outside jaws (vernier) and an anvil/spindle (micrometer). Strings and dividers measure non-straight objects: wind a string along the curve, mark its ends, then measure the straight string against a ruler. A zero error is corrected BEFORE adding anything: if the micrometer reads +0.02 mm at zero, subtract 0.02 mm from every reading."
+            ],
+            "bullets": [
+              "Vernier: MSR + (coinciding vernier division) × 0.1 mm",
+              "Micrometer: sleeve + (coinciding thimble division) × 0.01 mm",
+              "No device can beat its least count — estimate ± half a division"
+            ],
+            "takeaway": "Add the main scale and the vernier/thimble reading — then fix the zero error."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: errors, accuracy and significant figures",
+            "paragraphs": [
+              "Errors come in two families. Systematic errors push every reading the same way — a mismarked scale, a zero error, parallax viewed from above (the object appears shifted toward the eye). Random errors scatter readings either way and cancel over many tries. JAMB consistently asks the difference, and 'calibrate before you measure' is the exam's expected fix.",
+              "Accuracy is how near the truth a reading lies; precision is how repeatable or fine it is. A leaky beam balance is precise (same wrong reading every time) but inaccurate (never sees the truth). Percentage error is |(experimental − accepted) ÷ accepted| × 100% — a lab favourite; simple estimate error is half the least count.",
+              "Significant figures follow three rules: non-zero digits are always significant; zeros between non-zero digits are significant (205 has three); leading zeros never are (0.0024 has two: 2 and 4); closing zeros after a decimal point are (4.50 has three). In standard form every digit shown is significant — 4.50 × 10³ signals three figures, while 4.5 × 10³ signals two."
+            ],
+            "bullets": [
+              "Systematic: same-way push; random: scatters then cancels",
+              "Percent error = (exp − acc) ÷ acc × 100%",
+              "4.50 × 10³ ≠ 4.5 × 10³ — closing zeros signal precision"
+            ],
+            "takeaway": "Quote as many figures as the instrument actually delivers."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: how JAMB sets questions on this topic",
+            "paragraphs": [
+              "The IBASS syllabus lists this topic as the entry point to physics — and JAMB's question bank reflects it. Internally this topic carries one of the biggest single-topic totals in the 1983–2004 archive (27 mapped items). The recurring archetypes are: (1) 'which of these is a fundamental unit?' — the safe order is m, kg, s, A, K, mol, cd; (2) 'deduce the unit of X' with dimensions; (3) 'which equation is homogeneous?' — or which term fits the gap; (4) standard form conversion, either direction; (5) significant figures counting.",
+              "Instrument variation: metre rule vs vernier vs micrometer — the silt test is 'how precisely does this measure a diameter?' Answer: micrometer > vernier > metre rule. An irregular stone in an overflow can collects a measured volume of water — that is the stone's volume (top up the can to the brim first). A stop watch never measures anything well to 0.1 s below; small falls need light gates.",
+              "Compound variations fold two operations into one stem: 'a vernier reads 2.47 cm — write it in standard form and express its percentage error vs an accepted 2.50 cm.' Answer in two steps: 2.47 × 10⁻² m; error = |2.47 − 2.50| / 2.50 × 100 = 1.2%. Practise both moves until the sequence is automatic — most candidates drop the mark on the percent step, not the subtraction."
+            ],
+            "bullets": [
+              "Fundamental vs derived pick-the-odd-one-out",
+              "Homogeneity: term missing from u² + 2as — try LT counterweights",
+              "Overflow can value = volume of the solid placed in it"
+            ],
+            "takeaway": "The archive shows the recurring variation list — drill the eight, not the hundred."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "scalars-and-vectors",
+      "topic": "scalars-and-vectors",
+      "title": "Scalars and Vectors",
+      "objective": "Distinguish scalars from vectors, resolve and combine vectors by the parallelogram law, find components and solve relative-velocity problems for river crossings, rain and travelling bodies.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Scalars and Vectors",
+            "paragraphs": [
+              "5 metres, or 5 metres north — the number is the same; the direction changes everything. Physics values both."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Scalars versus vectors",
+            "paragraphs": [
+              "A scalar has magnitude only: mass, length, area, volume, time, speed, energy, work, temperature, density, pressure, distance. A vector has magnitude and direction: displacement, velocity, acceleration, force, momentum, weight, thrust, moment of a couple.",
+              "The one-line test: does a change in direction change the answer? If not, it is a scalar (60 km is 60 km whichever way it goes); if yes, it is a vector. Distance is the path walked; displacement is the straight line from start to finish with direction. Velocity is a vector; speed is not."
+            ],
+            "bullets": [
+              "Scalars: m, kg, s, time, distance, speed, energy, work, temperature, pressure",
+              "Vectors: displacement, velocity, acceleration, force, momentum, weight",
+              "watch the speed–velocity trap"
+            ],
+            "takeaway": "Add arrows on vectors only — adding arrows to scalars changes nothing.",
+            "check": {
+              "question": "Which list contains only scalar quantities?",
+              "options": [
+                "mass, distance, area",
+                "velocity, force, mass",
+                "length, thrust, acceleration",
+                "speed, work, velocity"
+              ],
+              "answer": 0,
+              "why": "Only mass, distance and area are direction-free; the others contain at least one vector."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Resultant of two or more vectors",
+            "paragraphs": [
+              "Same line: vectors add algebraically. 20 N east + 12 N east = 32 N east; opposite lines subtract. At right angles, use Pythagoras — e.g. a force of 3 N east and 4 N north give R = √(3² + 4²) = 5 N.",
+              "Any angle θ: R = √(P² + Q² + 2PQcosθ). For equal forces P: R = 2Pcos(θ/2). cosθ goes negative beyond 90° — for obtuse angles R shrinks below √(P² + Q²).",
+              "Resolution reverses it: F splits into Fcosθ (along) and Fsinθ (across). A 20 N force at 30° to the horizontal → 17.3 N along, 10 N up — the move JAMB uses on inclined planes."
+            ],
+            "bullets": [
+              "Same line: add; right angle: R = √(P² + Q²)",
+              "Any angle: R = √(P² + Q² + 2PQcosθ)",
+              "Components: Fcosθ (along), Fsinθ (across)"
+            ],
+            "takeaway": "Draw a rough sketch first — vectors are safer on paper than in memory.",
+            "check": {
+              "question": "Forces of 3 N and 4 N act at right angles to each other. Their resultant is",
+              "options": [
+                "7 N",
+                "5 N",
+                "1 N",
+                "12 N"
+              ],
+              "answer": 1,
+              "why": "Perpendicular forces: R = √(3² + 4²) = √25 = 5 N. Direction θ = tan⁻¹(4/3) = 53°."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Relative velocity",
+            "paragraphs": [
+              "Relative velocity = your velocity minus mine on the same frame. Same direction: u − v; opposite direction: u + v. Two cars meeting at 25 m/s and 15 m/s pass at 40 m/s.",
+              "Crossing motion (frames perpendicular): a swimmer at 4 m/s faces a river flowing at 3 m/s — R = √(4² + 3²) = 5 m/s, crossing time = width ÷ 4 m/s regardless of current, drift = 3 m/s × time.",
+              "Rain and running-man: apparent slant tanθ = run ÷ rain; apparent speed = √(rain² + run²). Rain at 12 m/s on a man running at 5 m/s → slant ≈ 23°, apparent speed 13 m/s."
+            ],
+            "bullets": [
+              "Same line: u − v same direction; u + v opposite",
+              "Across a river: R = √(u² + v²); drift = v × crossing time",
+              "Rain: tanθ = speed of runner ÷ speed of rain"
+            ],
+            "takeaway": "Relative velocity is vector addition — draw two arrows and close the triangle.",
+            "check": {
+              "question": "A swimmer swims at 4 m/s across a river flowing at 3 m/s. The resultant speed is",
+              "options": [
+                "1 m/s",
+                "5 m/s",
+                "7 m/s",
+                "12 m/s"
+              ],
+              "answer": 1,
+              "why": "Frames are perpendicular: R = √(4² + 3²) = √25 = 5 m/s."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "JAMB's vector trap: two forces of equal size do not automatically add up. Unless it says 'same direction' or 'at right angles', reach for the parallelogram formula or a scale diagram."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "Two forces 5 N and 7 N act at 60° to each other. Find the magnitude of their resultant.",
+            "steps": [
+              {
+                "operation": "Write the parallelogram formula",
+                "reason": "R² = P² + Q² + 2PQcosθ; P = 5 N, Q = 7 N, θ = 60°",
+                "result": "R² = 25 + 49 + 2 × 5 × 7 × cos60°",
+                "predictPrompt": "cos60° without a calculator — what is it?"
+              },
+              {
+                "operation": "Substitute cos60° = 0.5",
+                "reason": "cos60° = ½ exactly",
+                "result": "R² = 74 + 70 × 0.5 = 74 + 35 = 109",
+                "predictPrompt": "What number replaces 70 × 0.5?"
+              },
+              {
+                "operation": "Conclude",
+                "reason": "take the positive square root — force is a magnitude",
+                "result": "R = √109 ≈ 10.4 N",
+                "predictPrompt": "If θ were 120°, would R be bigger or smaller?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "Resolve a 20 N force acting at 30° to the horizontal into its horizontal and vertical components.",
+            "hints": [
+              "cos30° = √3/2 ≈ 0.866; sin30° = 0.5",
+              "Horizontal: Fcos30° = 20 × 0.866",
+              "Vertical: Fsin30° = 20 × 0.5 = 10 N; horizontal ≈ 17.3 N"
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "A harder worked example: the river-crossing triplet",
+            "problem": "A swimmer swims at 4 m/s in still water. A river is 50 m wide and flows at 3 m/s. Find (a) the angle upstream to land directly opposite, (b) the crossing time, (c) the resultant speed.",
+            "steps": [
+              {
+                "operation": "Heading angle",
+                "reason": "the swimmer's upstream component must cancel the current: sinθ = current ÷ own speed",
+                "result": "sinθ = 3/4 → θ ≈ 46.9° upstream",
+                "predictPrompt": "If the current were faster than his swimming speed, could he ever land opposite?"
+              },
+              {
+                "operation": "Crossing time",
+                "reason": "crossing uses his own speed across the river, not the resultant",
+                "result": "t = 50 ÷ 4 = 12.5 s",
+                "predictPrompt": "Why does the current not enter this calculation?"
+              },
+              {
+                "operation": "Resultant speed",
+                "reason": "velocity is the vector sum of his speed and the current",
+                "result": "R = √(4² + 3²) = 5 m/s",
+                "predictPrompt": "What would (c) be if he ignored the current and swam straight across?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: the parallelogram law, step by step",
+            "paragraphs": [
+              "Two forces acting on a body can be replaced by a single force. Draw one force from O: e.g. 5 N along the line OX. Draw the second force from the same O at the given angle: e.g. 7 N along the line OA. These two arrows are two sides of a parallelogram; complete the opposite two sides by drawing parallellines; the diagonal from O is the resultant.",
+              "Measure the diagonal with a ruler against your chosen scale (e.g. 1 cm = 1 N) and measure its angle with a protractor from OX. Expect some small measurement error — JAMB allows a window (e.g. R between 10 N and 11 N) in graphical questions.",
+              "Analytical alternative for the same wheelhouse: R² = P² + Q² + 2PQcosθ (for an angle θ between P and Q). If θ = 180°, R = |P − Q| — the vectors cancel. If θ = 0°, R = P + Q — pure addition. Obtuse angles shrink R; do not be surprised to get R smaller than either force."
+            ],
+            "bullets": [
+              "Draw OX for P and OA for Q; parallel sides complete the figure",
+              "Measure the diagonal with the scale you started with",
+              "cosθ is negative for obtuse angles — the law still works"
+            ],
+            "takeaway": "Paper first: a quick sketch decides which formula applies."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: resolving vectors into perpendicular parts",
+            "paragraphs": [
+              "Any vector can be split into two perpendicular components. For the vector F at angle θ from the horizontal, the horizontal (adjacent) component is Fcosθ and the vertical (opposite) component is Fsinθ. This is why a 20 N pull at 30° to the ground moves a crate with 17.3 N horizontal force and 10 N lifting vertically.",
+              "The reverse: from components you can rebuild the vector — F = √(Fₓ² + F_y²), tanθ = F_y/Fₓ. In two dimensions this is exactly the Cartesian resynthesis from vectors (x, y) to their length, and it mirrors the x-y plane you use in displacement questions.",
+              "JAMB loves components on an inclined plane: a block of weight W on a slope at angle θ experiences Wcosθ into the slope and Wsinθ along the slope downward. The friction needed to keep it still is therefore f = μWcosθ, and to keep it from sliding, the applied force along the plane must equal Wsinθ − f."
+            ],
+            "bullets": [
+              "Horizontal (adjacent): Fcosθ",
+              "Vertical (opposite): Fsinθ; rebuild: √(Fₓ² + F_y), tanθ = F_y/Fₓ",
+              "Incline: Wparallel = Wsinθ; Wperpendicular = Wcosθ"
+            ],
+            "takeaway": "Resolution is not a trick — it is how physics splits problems into convenient directions."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: how JAMB sets relative-velocity questions",
+            "paragraphs": [
+              "Relative motion is a favourite because it hides a simple idea inside a busy story. The archive maps 23 items against this topic. The archetypes: (1) same-line opposite pass — add the two speeds, e.g. two trains approaching, relative velocity is their sum; (2) same direction — subtract, e.g. the faster overtaking the slower; (3) perpendicular crossing — boats, swimmers and river currents; use R = √(u² + v²).",
+              "Time-related variations ask for (a) crossing time = width ÷ own swim speed; (b) drift distance = current speed × crossing time; (c) landing angle = tan⁻¹(drift ÷ width). Rain and running man: apparent slant θ = tan⁻¹(run speed ÷ rain speed) and apparent velocity √(rain² + run²). Both questions expect a scale sketch or a tan⁻¹ press after substitution.",
+              "One trap JAMB sets repeatedly: 'a boat crosses a 40 m river in 10 s; the current is 3 m/s; find the boat's own swimming speed.' The crossing time uses own speed — divide 40 by 10 to get 4 m/s, then R = √(4² + 3²) = 5 m/s resultant. The reverse trap: 'find the actual speed of the boat' invites √(3² + 4²) while the 'crossing component' is simply 40/10 = 4 m/s."
+            ],
+            "bullets": [
+              "Same direction: subtract; opposite: add",
+              "River: t = width ÷ own speed; drift = current × t",
+              "Rain: tanθ = run speed ÷ rain speed"
+            ],
+            "takeaway": "Boats, rain and trains are the same question wearing three hats."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "measurement-position-distance-and-displacement",
+      "topic": "measurement-position-distance-and-displacement",
+      "title": "Measurement, position, distance and displacement",
+      "objective": "Measure length and angles with accurate instruments, locate positions on Cartesian and compass-bearing grids, distinguish distance from displacement, and read or infer from kinematic graphs.",
+      "estimatedMinutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "content": {
+            "heading": "Measurement, position, distance and displacement",
+            "paragraphs": [
+              "A driver from Kano to Kaduna travels 200 km of road; the towns are barely 175 km apart in a straight line. Both figures are true — distance walks, displacement cuts. Physics needs both."
+            ],
+            "bullets": []
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Measuring lengths with least counts",
+            "paragraphs": [
+              "Instruments match their job: metre rule ±1 mm; vernier caliper ±0.1 mm (inner/outer jaws, depth rod); micrometer screw gauge ±0.01 mm; measuring cylinder millilitres; stopwatch 0.01–0.1 s; beam balance (Buchert’s/chemical) matches masses.",
+              "Accuracy is how near the truth; precision is how fine. Both fall to zero error — the instrument reads non-zero at zero. Correct before calculating: add for negative zero error, subtract for positive. Estimate simple error as ± half a least count.",
+              "Strings and dividers measure curves: wind a string along the bend, mark the ends, read the straight string on a ruler. A compass and a protractor lay off and read bearings — angles clockwise from north, 0°–360°."
+            ],
+            "bullets": [
+              "metre rule ±1 mm; vernier ±0.1 mm; micrometer ±0.01 mm",
+              "Simple error estimate: ± half a least count",
+              "Compass + protractor: bearings 0°–360° clockwise from north"
+            ],
+            "takeaway": "Match instrument size to object size — a ruler never does a micrometer's job.",
+            "check": {
+              "question": "The least count of a vernier caliper is",
+              "options": [
+                "1 mm",
+                "0.1 mm",
+                "0.01 mm",
+                "0.001 mm"
+              ],
+              "answer": 1,
+              "why": "The vernier subdivides one millimetre of main scale into ten parts, so each vernier division is 0.1 mm."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Position, distance and displacement",
+            "paragraphs": [
+              "Position is a point in space from a fixed reference (origin). On Cartesian (x, y) coordinates, x is measured east and y north; (6, 8) is 6 east, 8 north of (0, 0).",
+              "Distance is total path — a scalar: 3 km east plus 4 km north is 7 km. Displacement is the straight line start→finish with direction — a vector: √(3² + 4²) = 5 km, tanθ = 4/3, θ ≈ 53° north of east.",
+              "Frame of reference fixes motion. In a moving train, your friend beside you barely moves; from the rails you both do. Physics always names its observer."
+            ],
+            "bullets": [
+              "Position: a point measured from (0, 0), e.g. (2, 3)",
+              "Distance = 7 km (scalar) vs displacement = 5 km at 53° (vector)",
+              "Always state the frame — train/ground/car/ship"
+            ],
+            "takeaway": "Distance is the walk; displacement is the arrow from start to finish.",
+            "check": {
+              "question": "A body moves from (2, 3) to (6, 6) on a grid. Its displacement magnitude is",
+              "options": [
+                "7 units",
+                "5 units",
+                "4 units",
+                "3 units"
+              ],
+              "answer": 1,
+              "why": "The coordinate difference is (4, 3), so displacement = √(4² + 3²) = √25 = 5 units."
+            }
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Graphs of motion and their inference",
+            "paragraphs": [
+              "Distance–time graph: gradient = speed, steeper line = faster. Displacement–time graph: gradient = velocity (negative = returning). Velocity–time graph: gradient = acceleration, area under it = distance travelled.",
+              "Constant velocity → flat line; acceleration → straight line, gradient ≠ 0; deceleration → sloping down. Area: triangle ½bh, rectangle bh, trapezium ½(a + b)h.",
+              "Reading a drawn graph: intercept (value at x = 0); gradient from two far-apart points ((y₂ − y₁) ÷ (x₂ − x₁)); area below the curve. JAMB wants: (i) gradient or area, (ii) labelled axes, (iii) best-fit line, (iv) where two curves cross — when two bodies meet."
+            ],
+            "bullets": [
+              "gradient of distance–time = speed; of displacement–time = velocity",
+              "gradient of velocity–time = acceleration",
+              "area under velocity–time = distance"
+            ],
+            "takeaway": "Every graph is a formula waiting to be read — gradient tells one law, area tells another.",
+            "check": {
+              "question": "On a velocity–time graph, the gradient gives the",
+              "options": [
+                "distance",
+                "acceleration",
+                "momentum",
+                "work done"
+              ],
+              "answer": 1,
+              "why": "Gradient = change in velocity ÷ time elapsed = acceleration."
+            }
+          }
+        },
+        {
+          "type": "callout",
+          "content": {
+            "title": "Exam tip",
+            "tone": "tip",
+            "body": "Motion: the most-mapped archive topic (71 items). The split: scalar vs vector, read the gradient, find the area — three moves."
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "problem": "A man walks 3 km east then 4 km north. Find (a) distance travelled, (b) displacement (magnitude and direction).",
+            "steps": [
+              {
+                "operation": "Distance",
+                "reason": "distance = total walked; ignore direction",
+                "result": "distance = 3 + 4 = 7 km",
+                "predictPrompt": "Would you still get 7 km if he walked 4 km north before the 3 km east?"
+              },
+              {
+                "operation": "Displacement magnitude",
+                "reason": "start & finish join by the shortest line; legs are perpendicular",
+                "result": "|R| = √(3² + 4²) = √25 = 5 km",
+                "predictPrompt": "Before you open roots: is 3-4-5 triangle or not?"
+              },
+              {
+                "operation": "Displacement direction",
+                "reason": "tanθ = northward ÷ eastward = 4/3",
+                "result": "tanθ = 4/3 → θ = 53° north of east",
+                "predictPrompt": "Would a calculator give θ ≈ 53.13°? Why is the exam-writer's expected answer 53°?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "guided_question",
+          "content": {
+            "question": "From a velocity–time graph, a car accelerates uniformly from rest to 20 m/s in 5 s. Find (i) its acceleration; (ii) the distance covered in those 5 s.",
+            "hints": [
+              "Gradient = Δv ÷ Δt; area under v–t graph = distance",
+              "Acceleration = (20 − 0) ÷ 5 = 4 m/s²",
+              "Distance = area of triangle = ½ × 5 × 20 = 50 m"
+            ]
+          }
+        },
+        {
+          "type": "worked_example",
+          "content": {
+            "heading": "A harder worked example: triangular and rectangular areas on one graph",
+            "problem": "A bus accelerates uniformly from 6 m/s to 18 m/s in 4 s, then travels at constant speed for 6 s. Find (a) the distance covered in the first 4 s, (b) the distance covered in the next 6 s, (c) the average speed for the whole journey.",
+            "steps": [
+              {
+                "operation": "Distance in the acceleration phase",
+                "reason": "graph starts at 6 m/s, ends at 18 m/s — trapezium",
+                "result": "area = ½ × (6 + 18) × 4 = 48 m",
+                "predictPrompt": "Is the shape a triangle, a rectangle or a trapezium? Look at the start and end points."
+              },
+              {
+                "operation": "Distance in the constant-speed phase",
+                "reason": "rectangle under constant speed",
+                "result": "area = 18 × 6 = 108 m",
+                "predictPrompt": "What is the gradient in this part? Does it matter for the area?"
+              },
+              {
+                "operation": "Average speed",
+                "reason": "total distance ÷ total time",
+                "result": "average = (48 + 108) ÷ 10 = 15.6 m/s",
+                "predictPrompt": "If you instead averaged just the speeds, 12 and 18 — the answer would still differ. Which is correct?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: vernier and micrometer practice",
+            "paragraphs": [
+              "A worked vernier reading: main scale 2.4 cm, the 7th vernier mark aligns — length = 2.47 cm. That is honest precision to 1 hundredth of a centimetre, ±0.0005 cm by half a least count. A worked micrometer reading: sleeve 6.5 mm visible, thimble mark 27 on the reference line — length = 6.5 + 0.27 = 6.77 mm, ±0.005 mm.",
+              "Zero error can creep either way. Vernier placed so its zeros do not coincide, with the vernier zero left of main zero: error is positive — subtract |the reading|. If the reading at zero is 0.06 mm, every measurement is 0.06 mm too high; subtract it. Micrometer zero behaves the same; always zero-check before you trust a result.",
+              "Composite reading: add MSR and the vernier part, then apply the zero correction last — never in the middle. JAMB's signature stem: 'A measurement reads 3.26 cm; the vernier actually reads 0 after zero check; express the error relative to an accepted 3.20 cm.' Answer in two steps: absolute error = 0.06 cm; percentage error = 0.06 ÷ 3.20 × 100 = 1.875%."
+            ],
+            "bullets": [
+              "MSR + vernier part − zero correction",
+              "Never chain the zero correction into the vernier count",
+              "Percentage error = |exp − acc| ÷ acc × 100%"
+            ],
+            "takeaway": "Zero-check first, then add, then correct."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: bearings, compass and protractor",
+            "paragraphs": [
+              "A bearing is an angle measured clockwise from north, running 0° (north) through 90° (east), 180° (south) and 270° (west) back to 360°. Vector directions in physics are often stated as bearings — 'N 53° E' or 'bearing 053°' both mean the same direction, 53° east of north.",
+              "Reduced bearings shorten it further — e.g. N 40° E is bearing 040°, S 25° W is bearing 205°. A compass sets the plane: map north lies toward page top; a clockwise protractor reads bearings sweeping from that line.",
+              "JAMB uses this for riverbanks, ship lanes and runways. A question may give a sketch to scale — 'A boat leaves A and heads N 60° E for 100 m. B is the destination. Find its scale displacement.' Convert to x–y: east component = 100sin60° = 86.6 m; north = 100cos60° = 50 m. The bearing structure rides unchanged into vector addition."
+            ],
+            "bullets": [
+              "Bearings clockwise from north: 0–360°",
+              "N 53° E = bearing 053°; S 25° W = bearing 205°",
+              "Split by bearing: N = Rcosθ, E = Rsinθ for N x E phrasing"
+            ],
+            "takeaway": "Draw the compass rose on paper first — bearings never confuse the drawn page."
+          }
+        },
+        {
+          "type": "text",
+          "content": {
+            "heading": "Go deeper: archetypes in kinematic graphs",
+            "paragraphs": [
+              "The archive puts motion among the most-tested physics topics (71 mapped items). Graph variations concentrate into four: (1) read gradient — speed or acceleration between two drawn points; (2) find area — distance travelled between two times (usually a triangle, rectangle or trapezium); (3) draw the best-fit line and infer proportionality — distance ∝ time signals constant speed; (4) two bodies on one graph — 'when do they meet?' = read the x where the two curves intersect.",
+              "Compound archetype: a table with times and distances, plot and compute speed. Trend lines straight ⇒ speed = gradient = Δy ÷ Δx. Where non-linearity appears, acceleration is changing, and the graph turns up or down from a parabola-like curve; the gradient at one instant is the tangent slope, not the secant.",
+              "Trap variations to expect: the axes deliberately swap ('time along y, distance along x' — gradient then gives seconds per metre, the reciprocal of speed — reverse the labels before calculating); the shaded band is 'uncertainty' to be added as a result range; a second graph includes deceleration — remember area still wins: every square centimetre below the curve counts, up to the last axis point."
+            ],
+            "bullets": [
+              "gradient = speed (d–t graph) or acceleration (v–t graph)",
+              "area under v–t = distance; intercept = initial value",
+              "Two curves meet → that is the time of meeting"
+            ],
+            "takeaway": "Graphs in physics are arithmetic wearing a diagram's clothes."
+          }
+        }
+      ]
+    }
+  ]
+}
