@@ -26,3 +26,21 @@ tsconfig.tsbuildinfo
 # Python bytecode
 __pycache__/
 *.pyc
+
+# Scratch diagnostics (not part of the app)
+_verify_ts.js
+_temp_tree.txt
+
+# Third-party past papers and their parsed dumps (JAMB IP).
+# Kept on disk for the authoring pipeline; never committed.
+content-folder/_work/
+content-folder/_parsed/
+content-folder/_dump/
+content-folder/_archive/
+content-folder/_answers/
+content-folder/_figures/
+content-folder/*.pdf
+!content-folder/jamb-syllabus/**/*.pdf
+# Staged English inventory derived from past papers (internal review only)
+content-folder/english-jamb-staged*.json
+content-folder/english-jamb-bank-expanded.json
