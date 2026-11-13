@@ -390,6 +390,13 @@ def parse(pages_text: list[str]):
             b = current()
             if b is not None and stem:
                 b['lines'].append(stem)
+        elif variants and variants[-1].get('options') and n < max((num for num, _ in order), default=0) - 3:
+            # Sequence guard: A repeat of an already completed number far behind
+            # current progress (e.g. Q3 seen when we are at Q21+) is a diagram label
+            # or fragment, not a genuine second paper variant.
+            b = current()
+            if b is not None and stem:
+                b['lines'].append(stem)
         else:
             variants.append({'number': n, 'lines': [stem] if stem else [], 'options': {}, 'opt': None})
             order.append((n, len(variants) - 1))
@@ -470,7 +477,7 @@ def parse(pages_text: list[str]):
                 parts = re.split(r'(?<=\s)(?=[A-E]\.\s)', ln)
                 expanded.extend(p for p in parts if p.strip())
             else:
-                qparts = re.split(r'(?<=\s)(?=\d{1,3}\.\s)', ln)
+                qparts = re.split(r'(?<!\bFig\.)(?<!\bFigure)(?<!\bTable)\s+(?=\d{1,3}\.\s+[A-Z"\(])', ln, flags=re.IGNORECASE)
                 if len(qparts) > 1:
                     expanded.extend(p for p in qparts if p.strip())
                 else:
@@ -704,6 +711,16 @@ def parse(pages_text: list[str]):
                 n = int(m_q.group(1))
                 has_period = '.' in (m_q.group(2) or '')
                 rest = (m_q.group(3) or '').strip()
+                # Decimal guard: e.g. '1.0 x 10^-2kg' or '2.5 N'
+                if has_period and re.match(r'^\d', (m_q.group(3) or '')):
+                    b = current()
+                    if b is not None:
+                        if b.get('opt'):
+                            put_option(b['options'], b['opt'], ln)
+                        else:
+                            b['lines'].append(ln)
+                    continue
+
                 if has_period:
                     # Figure labels masquerade as numbered markers: '0.1N
                     # 0.4N' (decimal read as n=0), '2. 2Ohms', '9. 10cm',
@@ -730,11 +747,36 @@ def parse(pages_text: list[str]):
                         and ' ' not in rest and len(rest) < 15
                     )
                     if not (figlab0 or figlab_n):
-                        open_number(n, rest)
+                        if 1 <= n <= 55:
+                            open_number(n, rest)
+                        else:
+                            b = current()
+                            if b is not None:
+                                if b.get('opt'):
+                                    put_option(b['options'], b['opt'], ln)
+                                else:
+                                    b['lines'].append(ln)
                     continue
-                if len(rest) > 12:
+                # Bare numbers without period ('1  A < 10', '5 kg Rice')
+                max_seen = max((num for num, _ in order), default=0)
+                if n <= max_seen - 2 or not re.match(r'^[A-Z][a-z]{2,}', rest) or not (1 <= n <= 55):
+                    b = current()
+                    if b is not None:
+                        if b.get('opt'):
+                            put_option(b['options'], b['opt'], ln)
+                        else:
+                            b['lines'].append(ln)
+                    continue
+                if len(rest) > 12 and 1 <= n <= 55:
                     open_number(n, rest)
                     continue
+                b = current()
+                if b is not None:
+                    if b.get('opt'):
+                        put_option(b['options'], b['opt'], ln)
+                    else:
+                        b['lines'].append(ln)
+                continue
             m_o = OPT_RE.match(ln)
             b = current()
             if m_o and b is not None:

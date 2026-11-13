@@ -79,10 +79,12 @@ try {
   pass('mock #1 unique within session', new Set(mock1.map((x) => x.id)).size === 100)
   pass('mock #1 all from pool', mock1.every((x) => poolIds.includes(x.id)))
 
-  const { data: session, error: sessErr } = await user.from('exam_sessions').insert({ user_id: userId, exam_id: unilorin.id, mode: 'mock', status: 'completed' }).select('id').single()
-  pass('test user inserted exam_session', !sessErr)
-  const { error: ansErr } = await user.from('session_answers').insert(mock1.map((q) => ({ session_id: session.id, question_id: q.id })))
-  pass('test user pre-filled session_answers', !ansErr)
+  // Session rows are server-authored after phase 1; seed them with the
+  // service role, as createSession/createExamSession now do.
+  const { data: session, error: sessErr } = await admin.from('exam_sessions').insert({ user_id: userId, exam_id: unilorin.id, mode: 'mock', status: 'completed' }).select('id').single()
+  pass('admin seeded exam_session', !sessErr)
+  const { error: ansErr } = await admin.from('session_answers').insert(mock1.map((q) => ({ session_id: session.id, question_id: q.id })))
+  pass('admin pre-filled session_answers', !ansErr)
 
   const mock2 = await rpc('mock-2', 100)
   const overlap2 = mock2.filter((x) => mock1.some((y) => y.id === x.id))
