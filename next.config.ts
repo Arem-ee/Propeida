@@ -8,6 +8,11 @@ const commit = process.env.VERCEL_GIT_COMMIT_SHA ?? 'local'
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  // Isolated build dir for parallel verification builds — an `npm run dev`
+  // elsewhere on the same machine (or by the harness) otherwise wipes and
+  // rewrites `.next` underneath production builds. Leave unset in normal
+  // development and deployment.
+  distDir: process.env.DIST_DIR || '.next',
   async rewrites() {
     return {
       beforeFiles: [

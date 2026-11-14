@@ -44,3 +44,6 @@ content-folder/*.pdf
 # Staged English inventory derived from past papers (internal review only)
 content-folder/english-jamb-staged*.json
 content-folder/english-jamb-bank-expanded.json
+
+# Isolated verification builds
+.next-prod/
