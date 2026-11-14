@@ -1,7 +1,8 @@
 import type { MetadataRoute } from 'next'
 import { articles } from '@/lib/blog'
+import { siteUrl } from '@/lib/site-url'
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://propeida.online'
+const baseUrl = siteUrl()
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

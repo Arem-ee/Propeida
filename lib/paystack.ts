@@ -1,4 +1,5 @@
 import { createHmac, timingSafeEqual } from 'node:crypto'
+import { siteUrl } from '@/lib/site-url'
 
 const PAYSTACK_AMOUNT = 150000
 
@@ -57,7 +58,7 @@ export async function initializeTransaction(email: string, userId: string, produ
       amount,
       currency: 'NGN',
       metadata: { user_id: userId, product },
-      callback_url: `${process.env.NEXT_PUBLIC_BASE_URL}/payment/callback`,
+      callback_url: `${siteUrl()}/payment/callback`,
     }),
   })
 

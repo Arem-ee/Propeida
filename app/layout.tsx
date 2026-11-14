@@ -20,7 +20,9 @@ const nunito = Nunito({
   display: 'swap',
 })
 
-const siteUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://propeida.online'
+import { siteUrl as getSiteUrl } from '@/lib/site-url'
+
+const siteUrl = getSiteUrl()
 const supabaseOrigin = process.env.NEXT_PUBLIC_SUPABASE_URL
   ? new URL(process.env.NEXT_PUBLIC_SUPABASE_URL).origin
   : null

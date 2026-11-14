@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next'
+import { siteUrl } from '@/lib/site-url'
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://propeida.online'
+const baseUrl = siteUrl()
 
 export default function robots(): MetadataRoute.Robots {
   return {
