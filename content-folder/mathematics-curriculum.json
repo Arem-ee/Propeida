@@ -432,7 +432,7 @@
           "content": {
             "heading": "Indices",
             "paragraphs": [
-              "A candidate rewrites 4^x = 8 as 2^x = 3 and loses the mark. The bases must match before the indices can be compared."
+              "A candidate rewrites 4ˣ = 8 as 2ˣ = 3 and loses the mark. The bases must match before the indices can be compared."
             ],
             "bullets": []
           }
@@ -442,9 +442,9 @@
           "content": {
             "heading": "Laws that come from counting factors",
             "paragraphs": [
-              "An index counts how many times a base is multiplied by itself. Because a^m means m copies of a, multiplying a^m by a^n gives m+n copies, so a^m × a^n = a^(m+n).",
-              "Division cancels copies: a^m ÷ a^n = a^(m-n). A power of a power repeats the whole block n times, so (a^m)^n = a^(mn). The same counting gives (ab)^m = a^m b^m and (a/b)^m = a^m/b^m.",
-              "Any non-zero base to the power zero is 1, because a^m ÷ a^m = a^0 and also equals 1. Zero itself is excluded, since 0^0 is undefined."
+              "An index counts how many times a base is multiplied by itself. Because aᵐ means m copies of a, multiplying aᵐ by aⁿ gives m+n copies, so aᵐ × aⁿ = a⁽ᵐ⁺ⁿ⁾.",
+              "Division cancels copies: aᵐ ÷ aⁿ = a⁽ᵐ⁻ⁿ⁾. A power of a power repeats the whole block n times, so (aᵐ)ⁿ = a⁽ᵐⁿ⁾. The same counting gives (ab)ᵐ = aᵐ bᵐ and (a/b)ᵐ = aᵐ/bᵐ.",
+              "Any non-zero base to the power zero is 1, because aᵐ ÷ aᵐ = a⁰ and also equals 1. Zero itself is excluded, since 0⁰ is undefined."
             ],
             "bullets": [
               "Multiply powers of the same base by adding indices.",
@@ -453,12 +453,12 @@
             ],
             "takeaway": "Every law is a shortcut for counting repeated factors.",
             "check": {
-              "question": "Simplify 2^3 × 2^4.",
+              "question": "Simplify 2³ × 2⁴.",
               "options": [
-                "2^7",
-                "2^12",
-                "4^7",
-                "2^1"
+                "2⁷",
+                "2¹²",
+                "4⁷",
+                "2¹"
               ],
               "answer": 0,
               "why": "The bases are the same, so add the indices: 3 + 4 = 7."
@@ -470,8 +470,8 @@
           "content": {
             "heading": "Negative and fractional powers",
             "paragraphs": [
-              "A negative power is a reciprocal: a^-m = 1/a^m, so 3^-2 = 1/9. The minus sign does not make the value negative; it moves the power across the fraction line.",
-              "A fractional power is a root: a^(1/n) = the nth root of a, so 8^(1/3) = 2. A general fraction applies the root first and the power second: a^(m/n) = (nth root of a)^m, so 27^(2/3) = 3^2 = 9.",
+              "A negative power is a reciprocal: a⁻ᵐ = 1/aᵐ, so 3⁻² = 1/9. The minus sign does not make the value negative; it moves the power across the fraction line.",
+              "A fractional power is a root: a⁽¹⁄ⁿ⁾ = the nth root of a, so 8⁽¹⁄³⁾ = 2. A general fraction applies the root first and the power second: a⁽ᵐ⁄ⁿ⁾ = (nth root of a)ᵐ, so 27⁽²⁄³⁾ = 3² = 9.",
               "Take the root before the power when the numbers are large, because the root keeps them small. Convert every root to a fractional power before applying the laws."
             ],
             "bullets": [
@@ -481,7 +481,7 @@
             ],
             "takeaway": "A negative index flips the fraction; a fractional index takes a root.",
             "check": {
-              "question": "Evaluate 16^(3/4).",
+              "question": "Evaluate 16⁽³⁄⁴⁾.",
               "options": [
                 "8",
                 "12",
@@ -501,8 +501,8 @@
               "rows": [
                 {
                   "feature": "Expression",
-                  "left": "a^m × a^n",
-                  "right": "(a^m)^n"
+                  "left": "aᵐ × aⁿ",
+                  "right": "(aᵐ)ⁿ"
                 },
                 {
                   "feature": "Law",
@@ -511,8 +511,8 @@
                 },
                 {
                   "feature": "Example",
-                  "left": "2^3 × 2^4 = 2^7",
-                  "right": "(2^3)^4 = 2^12"
+                  "left": "2³ × 2⁴ = 2⁷",
+                  "right": "(2³)⁴ = 2¹²"
                 },
                 {
                   "feature": "Trap",
@@ -528,9 +528,9 @@
           "content": {
             "heading": "Equations and traps",
             "paragraphs": [
-              "To solve an exponential equation, write both sides with the same base and equate the indices. For 4^x = 8, rewrite as (2^2)^x = 2^3, so 2x = 3 and x = 3/2.",
-              "If the terms are multiplied, add the indices first: 2^x × 2^(x+1) = 32 becomes 2^(2x+1) = 2^5, so x = 2. If the bases cannot be matched directly, factor each term into a common base.",
-              "Watch the traps. (a+b)^2 is not a^2+b^2, and a^m × b^n cannot be combined into one base. Also note that 2x^2 means 2(x^2), while (2x)^2 = 4x^2, and -2^2 = -4 while (-2)^2 = 4."
+              "To solve an exponential equation, write both sides with the same base and equate the indices. For 4ˣ = 8, rewrite as (2²)ˣ = 2³, so 2x = 3 and x = 3/2.",
+              "If the terms are multiplied, add the indices first: 2ˣ × 2⁽ˣ⁺¹⁾ = 32 becomes 2⁽²ˣ⁺¹⁾ = 2⁵, so x = 2. If the bases cannot be matched directly, factor each term into a common base.",
+              "Watch the traps. (a+b)² is not a²+b², and aᵐ × bⁿ cannot be combined into one base. Also note that 2x² means 2(x²), while (2x)² = 4x², and -2² = -4 while (-2)² = 4."
             ],
             "bullets": [
               "Match the base before equating indices.",
@@ -539,7 +539,7 @@
             ],
             "takeaway": "Most index equations are solved by the single move of matching bases.",
             "check": {
-              "question": "If 9^x = 27, what is x?",
+              "question": "If 9ˣ = 27, what is x?",
               "options": [
                 "3/2",
                 "2/3",
@@ -547,7 +547,7 @@
                 "2"
               ],
               "answer": 0,
-              "why": "9 = 3^2 and 27 = 3^3, so 2x = 3 and x = 3/2."
+              "why": "9 = 3² and 27 = 3³, so 2x = 3 and x = 3/2."
             }
           }
         },
@@ -562,29 +562,29 @@
         {
           "type": "worked_example",
           "content": {
-            "problem": "Evaluate 32^(2/5) without a calculator.",
+            "problem": "Evaluate 32⁽²⁄⁵⁾ without a calculator.",
             "steps": [
               {
                 "operation": "Split the fractional power",
                 "reason": "The denominator is the root and the numerator is the power. Use the m/n rule with the root first because small numbers stay small; if you need another check, square the result and compare with the original. Use the m/n rule because the format asks for it directly; if you lose confidence, break the fraction into small checkable steps.",
-                "result": "32^(2/5) = (fifth root of 32)^2.",
+                "result": "32⁽²⁄⁵⁾ = (fifth root of 32)².",
                 "predictPrompt": "What whole number raised to the fifth power gives 32?"
               },
               {
                 "operation": "Take the root",
-                "reason": "2^5 = 32, so the fifth root is 2.",
-                "result": "The expression becomes 2^2.",
+                "reason": "2⁵ = 32, so the fifth root is 2.",
+                "result": "The expression becomes 2².",
                 "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
                 "operation": "Apply the remaining power",
                 "reason": "The outer square was waiting throughout.",
-                "result": "2^2 = 4.",
+                "result": "2² = 4.",
                 "predictPrompt": "How would you explain why this beats the other options?"
               },
               {
                 "operation": "Prime-factor case",
-                "reason": "32 = 2^5, so (2^5)^(2/5) = 2^2",
+                "reason": "32 = 2⁵, so (2⁵)⁽²⁄⁵⁾ = 2²",
                 "result": "The prime-factor route reaches the same 4 without roots",
                 "predictPrompt": "How does the prime-factor method reach the same answer?"
               }
@@ -594,7 +594,7 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "Evaluate 16^(3/4).",
+            "question": "Evaluate 16⁽³⁄⁴⁾.",
             "hints": [
               "The denominator 4 means the fourth root.",
               "The fourth root of 16 is 2.",
@@ -606,18 +606,18 @@
           "type": "worked_example",
           "content": {
             "heading": "A harder worked example: a fraction power with a negative power",
-            "problem": "Evaluate 8^(2/3) − 27^(−1/3) without a calculator.",
+            "problem": "Evaluate 8⁽²⁄³⁾ − 27⁽⁻¹⁄³⁾ without a calculator.",
             "steps": [
               {
                 "operation": "Take the cube root first",
                 "reason": "The denominator 3 means cube root. Use the m/n rule because it is the only sensible approach here; if you prefer, convert the base to a simple power and expand by hand.",
-                "result": "8^(2/3) = (cube root of 8)² = 2² and 27^(1/3) = 3.",
+                "result": "8⁽²⁄³⁾ = (cube root of 8)² = 2² and 27⁽¹⁄³⁾ = 3.",
                 "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Apply the powers",
                 "reason": "The fraction 2/3 keeps the square, while the negative sign makes a reciprocal.",
-                "result": "8^(2/3) = 2² = 4 and 27^(−1/3) = 1/3.",
+                "result": "8⁽²⁄³⁾ = 2² = 4 and 27⁽⁻¹⁄³⁾ = 1/3.",
                 "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
@@ -629,7 +629,7 @@
               {
                 "operation": "Sign case",
                 "reason": "Negative exponent: reciprocal, not negation",
-                "result": "27^(−1/3) = 1/3, not −3",
+                "result": "27⁽⁻¹⁄³⁾ = 1/3, not −3",
                 "predictPrompt": "What does a negative exponent mean here?"
               }
             ]
@@ -1820,7 +1820,7 @@
             "heading": "Arithmetic on remainders",
             "paragraphs": [
               "Remainders add and multiply without leaving the modulus. To find (a + b) mod m, add a mod m and b mod m and reduce again. To find (a × b) mod m, multiply the remainders and reduce again.",
-              "Powers therefore reduce at each step. To find 7^3 mod 5, note 7 ≡ 2, so 7^3 ≡ 2^3 = 8 ≡ 3. Working with remainders instead of the whole numbers is why modular arithmetic is short.",
+              "Powers therefore reduce at each step. To find 7³ mod 5, note 7 ≡ 2, so 7³ ≡ 2³ = 8 ≡ 3. Working with remainders instead of the whole numbers is why modular arithmetic is short.",
               "Negatives reduce by adding the modulus. In mod five, −1 ≡ 4 and −3 ≡ 2. That reduction lets a subtraction be done as an addition, which is often shorter."
             ],
             "bullets": [
@@ -1881,24 +1881,24 @@
         {
           "type": "worked_example",
           "content": {
-            "problem": "Find 13^2 mod 7.",
+            "problem": "Find 13² mod 7.",
             "steps": [
               {
                 "operation": "Reduce the base",
                 "reason": "13 ÷ 7 leaves 6. Use reduction before squaring because it keeps the numbers tiny; if you prefer, square first then reduce, but the first route is faster. 13 ≡ 6 mod 7. Best move: shrink the base to 6 first, then square. If stuck, take repeated squares and reduce after each.",
-                "result": "13^2 ≡ 6^2 mod 7",
+                "result": "13² ≡ 6² mod 7",
                 "predictPrompt": "Which part of the question does this step answer?"
               },
               {
                 "operation": "Square the remainder",
-                "reason": "6^2 = 36 is small enough to reduce directly",
+                "reason": "6² = 36 is small enough to reduce directly",
                 "result": "36 mod 7 = 1, because 35 is a multiple of 7",
                 "predictPrompt": "What exactly does the question want you to write down first?"
               },
               {
                 "operation": "State the congruence",
                 "reason": "The square of 13 leaves the same remainder as the square of 6",
-                "result": "13^2 ≡ 1 (mod 7)",
+                "result": "13² ≡ 1 (mod 7)",
                 "predictPrompt": "How would you test this answer before writing it down?"
               },
               {
@@ -1916,7 +1916,7 @@
             "heading": "Go deeper: Why remainders are enough",
             "paragraphs": [
               "A remainder is enough because only the remainder decides divisibility and congruence. Two numbers with the same remainder behave alike in every addition and multiplication, so the whole numbers can be replaced by their remainders.",
-              "That replacement is why a large power can be computed in a few steps. Instead of 13^2, the work is done on 6^2. The answer is the same because the remainders are congruent.",
+              "That replacement is why a large power can be computed in a few steps. Instead of 13², the work is done on 6². The answer is the same because the remainders are congruent.",
               "An examination rewards that shortness. A candidate who reduces early finishes in seconds, while one who multiplies out runs out of time. The remainder is therefore a time skill as well as a concept.",
               "A candidate who writes remainders everywhere finishes faster than one who divides fully every time. Modular shortcuts exist precisely so the arithmetic stays small in the exam hall.",
               "Divisibility tests are modular arguments in disguise: a number is divisible by 9 exactly when its digit sum is, which is why the two facts keep appearing together in past questions.",
@@ -1966,10 +1966,10 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "Find 4^3 mod 9. Reduce the base first, then square or cube the remainder.",
+            "question": "Find 4³ mod 9. Reduce the base first, then square or cube the remainder.",
             "hints": [
               "Reduce 4 mod 9; it is already less than 9",
-              "Compute 4^2, then multiply by 4 again",
+              "Compute 4², then multiply by 4 again",
               "Reduce the final product mod 9"
             ]
           }
@@ -1977,30 +1977,30 @@
         {
           "type": "worked_example",
           "content": {
-            "heading": "Go deeper: A harder worked example: reducing 2^7 step by step",
-            "problem": "Find 2^7 mod 9 without a long multiplication.",
+            "heading": "Go deeper: A harder worked example: reducing 2⁷ step by step",
+            "problem": "Find 2⁷ mod 9 without a long multiplication.",
             "steps": [
               {
                 "operation": "Split the power",
-                "reason": "Powers multiply, so 2^7 = 2 × (2^3)^2. Use this split because it makes the modulus small enough to work with; if you prefer, group into four-bit residues and simplify by inspection.",
-                "result": "2^7 = 2 × 2^3 × 2^3.",
+                "reason": "Powers multiply, so 2⁷ = 2 × (2³)². Use this split because it makes the modulus small enough to work with; if you prefer, group into four-bit residues and simplify by inspection.",
+                "result": "2⁷ = 2 × 2³ × 2³.",
                 "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
-                "operation": "Reduce the block 2^3",
+                "operation": "Reduce the block 2³",
                 "reason": "A block equal to 8 can be replaced by −1 when reducing mod 9.",
-                "result": "2^3 = 8 ≡ −1 (mod 9).",
+                "result": "2³ = 8 ≡ −1 (mod 9).",
                 "predictPrompt": "What would a weaker answer look like here?"
               },
               {
                 "operation": "Finish the product",
                 "reason": "The −1 makes the square 1, leaving a single 2.",
-                "result": "2 × (−1)² = 2, so 2^7 ≡ 2 (mod 9).",
+                "result": "2 × (−1)² = 2, so 2⁷ ≡ 2 (mod 9).",
                 "predictPrompt": "How would you sanity-check the size and sign of this answer?"
               },
               {
                 "operation": "Cycle case",
-                "reason": "2^6 ≡ 1 (mod 9), so 2^7 = 2^6 × 2 ≡ 2",
+                "reason": "2⁶ ≡ 1 (mod 9), so 2⁷ = 2⁶ × 2 ≡ 2",
                 "result": "Cycle of length 6 knocks the big power down",
                 "predictPrompt": "What is the cycle length of 2 mod 9?"
               }
@@ -2660,7 +2660,7 @@
               "A proper subset excludes equality. It has fewer elements and every one is in the larger set. That exclusion is why ∅ is a proper subset of every non-empty set.",
               "That definition is why the empty set is the most tested subset. It belongs everywhere without adding anything.",
               "The empty set has no elements and is written as a pair of braces. That emptiness is why it is a subset of every set.",
-              "The only improper subset of a set is the set itself. That is why a set with n elements has 2^n subsets, and 2^n - 1 proper subsets.",
+              "The only improper subset of a set is the set itself. That is why a set with n elements has 2ⁿ subsets, and 2ⁿ - 1 proper subsets.",
               "A complement is the set of everything not in the subset, measured against the universal set. Choosing the right universal set is the examiner’s favourite way to make a simple question look hard."
             ],
             "bullets": [
@@ -3283,13 +3283,13 @@
           "content": {
             "heading": "Geometric progressions",
             "paragraphs": [
-              "A geometric progression multiplies by the same number each term. That number is the common ratio r, and the first term is a. The nth term is therefore ar^(n−1).",
-              "The sum of the first n terms is a(r^n − 1) ÷ (r − 1). That formula needs r not equal to one. If r equals one, every term is a and the sum is na.",
+              "A geometric progression multiplies by the same number each term. That number is the common ratio r, and the first term is a. The nth term is therefore ar⁽ⁿ⁻¹⁾.",
+              "The sum of the first n terms is a(rⁿ − 1) ÷ (r − 1). That formula needs r not equal to one. If r equals one, every term is a and the sum is na.",
               "A geometric progression grows by multiplication rather than addition. That growth is why a sum to a large n becomes large quickly, which is why the formula must be used."
             ],
             "bullets": [
-              "GP: constant ratio r; nth term ar^(n−1)",
-              "Sum is a(r^n − 1) ÷ (r − 1) for r ≠ 1",
+              "GP: constant ratio r; nth term ar⁽ⁿ⁻¹⁾",
+              "Sum is a(rⁿ − 1) ÷ (r − 1) for r ≠ 1",
               "r = 1 gives na"
             ],
             "takeaway": "A geometric progression is decided by its first term and its ratio.",
@@ -3380,8 +3380,8 @@
             "question": "Find the 6th term of 4, 12, 36, … . Name the progression first.",
             "hints": [
               "Each term multiplies by 3, so it is geometric",
-              "Use ar^(n−1) with a = 4 and r = 3",
-              "Compute 3^5, then multiply by 4"
+              "Use ar⁽ⁿ⁻¹⁾ with a = 4 and r = 3",
+              "Compute 3⁵, then multiply by 4"
             ]
           }
         },
@@ -3991,7 +3991,7 @@
             ],
             "takeaway": "A limit is the value approached every time x closes in.",
             "check": {
-              "question": "If f(x) = x^2 + 3x, find lim x->2 f(x).",
+              "question": "If f(x) = x² + 3x, find lim x->2 f(x).",
               "options": [
                 "10",
                 "8",
@@ -4019,15 +4019,15 @@
             ],
             "takeaway": "Bring the exponent down, reduce it by one, and keep the coefficient.",
             "check": {
-              "question": "Differentiate y = 5x^3 - 2x.",
+              "question": "Differentiate y = 5x³ - 2x.",
               "options": [
-                "15x^2 - 2",
-                "5x^2 - 2",
-                "15x^2",
-                "3x^2 - 2"
+                "15x² - 2",
+                "5x² - 2",
+                "15x²",
+                "3x² - 2"
               ],
               "answer": 0,
-              "why": "The power rule gives 3 x 5x^2 = 15x^2, and the derivative of -2x is -2."
+              "why": "The power rule gives 3 x 5x² = 15x², and the derivative of -2x is -2."
             }
           }
         },
@@ -4072,12 +4072,12 @@
         {
           "type": "worked_example",
           "content": {
-            "problem": "If y = 2x^4 - 5x + 3 sin x, find dy/dx.",
+            "problem": "If y = 2x⁴ - 5x + 3 sin x, find dy/dx.",
             "steps": [
               {
-                "operation": "Apply the power rule to 2x^4",
+                "operation": "Apply the power rule to 2x⁴",
                 "reason": "The exponent 4 comes down and the power falls by one. Use the power rule because it is the shortest route for plain polynomial terms; if the term is multiplied or divided, tackle each one in turn with the product or quotient rule. Use the power rule because it is the fastest for plain polynomial terms; if the term is multiplied or divided, tackle them one at a time with the product or quotient rule.",
-                "result": "The term becomes 8x^3.",
+                "result": "The term becomes 8x³.",
                 "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
@@ -4089,7 +4089,7 @@
               {
                 "operation": "Combine the parts",
                 "reason": "Add the derivatives of each term to give the full derivative.",
-                "result": "dy/dx = 8x^3 - 5 + 3 cos x.",
+                "result": "dy/dx = 8x³ - 5 + 3 cos x.",
                 "predictPrompt": "How would you explain why this beats the other options?"
               },
               {
@@ -4104,9 +4104,9 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "If y = 4x^3 + 2x - cos x, find dy/dx.",
+            "question": "If y = 4x³ + 2x - cos x, find dy/dx.",
             "hints": [
-              "Bring the exponent down on 4x^3 and keep the coefficient.",
+              "Bring the exponent down on 4x³ and keep the coefficient.",
               "Differentiate 2x by the power rule and keep the coefficient.",
               "Differentiate -cos x and watch the sign: the derivative is positive sine."
             ]
@@ -5445,23 +5445,23 @@
             "heading": "Integration undoes differentiation",
             "paragraphs": [
               "A rider in Lagos notes the van's speed each minute, but the office needs total distance. Adding the speeds directly gives the wrong answer. Integration recovers the distance from the speed, because it reverses differentiation.",
-              "Differentiation sends x^(n+1) to (n+1)x^n. Dividing by (n+1) reverses that step, so ∫x^n dx = x^(n+1)/(n+1) + c. The rule fails for x^(−1), whose integral is ln|x| + c (ln x means log base e, which you will meet in the logarithms lesson).",
-              "The constant c appears because differentiation removes every constant. The functions x^2 + 1, x^2 + 5 and x^2 share the derivative 2x. An indefinite integral therefore names a whole family differing only by c."
+              "Differentiation sends x⁽ⁿ⁺¹⁾ to (n+1)xⁿ. Dividing by (n+1) reverses that step, so ∫xⁿ dx = x⁽ⁿ⁺¹⁾/(n+1) + c. The rule fails for x⁽⁻¹⁾, whose integral is ln|x| + c (ln x means log base e, which you will meet in the logarithms lesson).",
+              "The constant c appears because differentiation removes every constant. The functions x² + 1, x² + 5 and x² share the derivative 2x. An indefinite integral therefore names a whole family differing only by c."
             ],
             "bullets": [
               "Integration reverses differentiation, so the derivative of the answer must return the start.",
-              "For n ≠ −1, ∫x^n dx = x^(n+1)/(n+1) + c.",
+              "For n ≠ −1, ∫xⁿ dx = x⁽ⁿ⁺¹⁾/(n+1) + c.",
               "The constant c records every constant that differentiation removes.",
               "Each term is integrated separately, and constants multiply through the integral."
             ],
             "takeaway": "To integrate a power, raise the power, divide by it and add c.",
             "check": {
-              "question": "What is ∫x^3 dx?",
+              "question": "What is ∫x³ dx?",
               "options": [
-                "x^4/4 + c",
-                "x^4 + c",
-                "4x^3 + c",
-                "x^3 + c"
+                "x⁴/4 + c",
+                "x⁴ + c",
+                "4x³ + c",
+                "x³ + c"
               ],
               "answer": 0,
               "why": "Raise the power by one and divide by the new power 4."
@@ -5475,7 +5475,7 @@
             "paragraphs": [
               "A swing's height rises through the morning, then falls again. A candidate who treats sine like a power rule misses the sign. The integrals of sine and cosine reverse their derivatives, so each flips the other's sign.",
               "Differentiation sends cos x to −sin x, so ∫cos x dx = sin x + c and ∫sin x dx = −cos x + c. The simple case is ∫tan x dx = −ln|cos x| + c.",
-              "A definite integral carries limits a to b and stops at a number. The constant c cancels in [F(b)+c] − [F(a)+c]. It is written ∫_a^b f(x) dx = F(b) − F(a)."
+              "A definite integral carries limits a to b and stops at a number. The constant c cancels in [F(b)+c] − [F(a)+c]. It is written ∫_aᵇ f(x) dx = F(b) − F(a)."
             ],
             "bullets": [
               "∫sin x dx = −cos x + c, while ∫cos x dx = sin x + c.",
@@ -5501,18 +5501,18 @@
           "content": {
             "heading": "Area under a curve",
             "paragraphs": [
-              "A student plots y = x^2 from 0 to 2 and shades the region under it. The shaded pieces are not rectangles, so counting squares is slow. Integration sums those thin strips into the exact area.",
-              "The area between the curve y = f(x), the x-axis, and the vertical lines x = a and x = b is ∫_a^b f(x) dx. Each strip has width dx and height f(x), so its area is f(x) dx. Adding the strips is exactly the definite integral.",
-              "If the curve lies above the axis, f(x) is positive and the integral is positive. If the curve lies below the axis, f(x) is negative and the integral is negative. The geometric area is therefore always |∫_a^b f(x) dx|, with sign ignored."
+              "A student plots y = x² from 0 to 2 and shades the region under it. The shaded pieces are not rectangles, so counting squares is slow. Integration sums those thin strips into the exact area.",
+              "The area between the curve y = f(x), the x-axis, and the vertical lines x = a and x = b is ∫_aᵇ f(x) dx. Each strip has width dx and height f(x), so its area is f(x) dx. Adding the strips is exactly the definite integral.",
+              "If the curve lies above the axis, f(x) is positive and the integral is positive. If the curve lies below the axis, f(x) is negative and the integral is negative. The geometric area is therefore always |∫_aᵇ f(x) dx|, with sign ignored."
             ],
             "bullets": [
-              "Area against the x-axis is ∫_a^b f(x) dx.",
+              "Area against the x-axis is ∫_aᵇ f(x) dx.",
               "Above the axis the integral is positive; below it is negative.",
               "Geometric area uses the absolute value of the integral."
             ],
             "takeaway": "A definite integral gives area, but area itself is never negative.",
             "check": {
-              "question": "What is the area between y = x^2 and the x-axis from 0 to 1?",
+              "question": "What is the area between y = x² and the x-axis from 0 to 1?",
               "options": [
                 "1/3",
                 "1",
@@ -5520,7 +5520,7 @@
                 "0"
               ],
               "answer": 0,
-              "why": "∫_0^1 x^2 dx = [x^3/3]_0^1 = 1/3, and the curve is above the axis."
+              "why": "∫_0¹ x² dx = [x³/3]_0¹ = 1/3, and the curve is above the axis."
             }
           }
         },
@@ -5539,8 +5539,8 @@
             "steps": [
               {
                 "operation": "Integrate term by term",
-                "reason": "The power rule reverses differentiation, so 3x^2 becomes x^3 and 4x becomes 2x^2.",
-                "result": "F(x) = x^3 + 2x^2 + c.",
+                "reason": "The power rule reverses differentiation, so 3x² becomes x³ and 4x becomes 2x².",
+                "result": "F(x) = x³ + 2x² + c.",
                 "predictPrompt": "What do you substitute, into which formula?"
               },
               {
@@ -5559,7 +5559,7 @@
                 "operation": "Loop case",
                 "reason": "sin x from 0 to π integrates to 2; from 0 to 2π to 0",
                 "result": "Symmetric limits cancel in periodic functions",
-                "predictPrompt": "What does ∫₀^2π sin x dx equal?"
+                "predictPrompt": "What does ∫₀²π sin x dx equal?"
               }
             ]
           }
@@ -5567,9 +5567,9 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "Evaluate ∫₁² (4x^3 − 2x) dx.",
+            "question": "Evaluate ∫₁² (4x³ − 2x) dx.",
             "hints": [
-              "Integrate term by term to get x^4 − x^2 + c.",
+              "Integrate term by term to get x⁴ − x² + c.",
               "At x = 2, the value is 16 − 4 = 12.",
               "Subtract the value at x = 1, which is 1 − 1 = 0."
             ]
@@ -5581,8 +5581,8 @@
             "heading": "Go deeper: Why integration loses the constant",
             "paragraphs": [
               "Differentiation answers the question 'how fast is this changing?' A constant such as 7 never changes, so its derivative is always zero. The same holds for any fixed number added to a function, however large or small.",
-              "That loss is why an antiderivative is never unique. The functions x^2, x^2 + 1 and x^2 − 4 all differentiate to 2x, so integration must restore the whole family with + c. Geometrically, the graphs are identical curves shifted above and below each other.",
-              "A single point on the graph fixes c. If y = 3x^2 + c passes through (1, 5), then 5 = 3 + c gives c = 2. Finding c is therefore not a ritual; it is using extra information to choose one curve from the family.",
+              "That loss is why an antiderivative is never unique. The functions x², x² + 1 and x² − 4 all differentiate to 2x, so integration must restore the whole family with + c. Geometrically, the graphs are identical curves shifted above and below each other.",
+              "A single point on the graph fixes c. If y = 3x² + c passes through (1, 5), then 5 = 3 + c gives c = 2. Finding c is therefore not a ritual; it is using extra information to choose one curve from the family.",
               "A definite integral removes c for a structural reason. Both F(b) + c and F(a) + c carry the same shift, so the shift subtracts away. The integral measures the change between the endpoints, not the height of the shift itself.",
               "Candidates sometimes invent a value for c in a definite integral and carry it through. That value cancels at the end but wastes time and invites slips. Leave c out of definite integrals, and restore it only when the question asks for the general function or gives a point."
             ],
@@ -5600,7 +5600,7 @@
             "paragraphs": [
               "Start with a speed that changes every minute. The distance in one minute is about speed × 1 minute, but that is only an estimate. Dividing the time into twelve five-minute strips gives twelve rectangles whose areas can be added.",
               "With more strips the rectangles hug the curve more closely, so the total of their areas improves. The definite integral is the limit of that process when the strips become as thin as possible. That is why it is called an accumulation: many small amounts become one total.",
-              "The same picture explains ∫_a^b f(x) dx. The width dx gives the thinness of each strip, and f(x) gives its height. Multiplying them gives a small area, and integrating adds all those areas between a and b.",
+              "The same picture explains ∫_aᵇ f(x) dx. The width dx gives the thinness of each strip, and f(x) gives its height. Multiplying them gives a small area, and integrating adds all those areas between a and b.",
               "A speed–time graph makes the idea visible. The area under the speed curve between two times is the distance travelled between them. That area is the definite integral of speed with respect to time.",
               "The reverse direction matters in exams. If distance is known as a function of time, differentiating gives speed, and integrating speed gives distance. Asking which direction the question wants is therefore the first decision."
             ],
@@ -5619,7 +5619,7 @@
               "A curve may sit above the x-axis for part of an interval and below it for the rest. The integral over the whole interval then mixes positive and negative strips. The positive part adds, and the negative part subtracts.",
               "Geometric area never subtracts. A piece below the axis still occupies space, so its area is positive. That is the discrimination: the integral gives signed area, while the question usually asks for geometric area.",
               "The method is to split at the roots. Find where f(x) = 0 inside [a, b], integrate separately on either side, and take absolute values before adding. Each piece then contributes a positive area.",
-              "Consider y = x^2 − 1 from 0 to 2. The root at x = 1 divides the interval. The integral from 0 to 1 is negative, so its absolute value is taken, while the integral from 1 to 2 is positive.",
+              "Consider y = x² − 1 from 0 to 2. The root at x = 1 divides the interval. The integral from 0 to 1 is negative, so its absolute value is taken, while the integral from 1 to 2 is positive.",
               "For a simple non-negative curve the split is unnecessary. A question that asks for 'the area' without saying 'signed' expects the absolute total. Check the sketch first: if the axis cuts the region, splitting is not optional."
             ],
             "bullets": [
@@ -6651,11 +6651,11 @@
             "heading": "What power of the base makes this number?",
             "paragraphs": [
               "A school in Abeokuta quadruples its band each year: 8 members, then 32, then 128. The principal asks after how many quadruplings it will reach 512 members.",
-              "For a base b above 0 except 1, log_b x is the power y with b^y = x. The logarithm is the inverse of an index: the index builds the number and the log recovers it. It exists for any positive x, because powers cover every positive value.",
-              "Evaluate with small powers: log_2 8 = 3 because 2^3 = 8, log_3 27 = 3 because 3^3 = 27. Swap each log for 'to what power must I raise the base to get this number?'."
+              "For a base b above 0 except 1, log_b x is the power y with bʸ = x. The logarithm is the inverse of an index: the index builds the number and the log recovers it. It exists for any positive x, because powers cover every positive value.",
+              "Evaluate with small powers: log_2 8 = 3 because 2³ = 8, log_3 27 = 3 because 3³ = 27. Swap each log for 'to what power must I raise the base to get this number?'."
             ],
             "bullets": [
-              "log_b x = y means b^y = x for positive x.",
+              "log_b x = y means bʸ = x for positive x.",
               "The logarithm asks for the missing index, the inverse of a power.",
               "log_2 8 = 3 and log_3 27 = 3 from small powers."
             ],
@@ -6669,7 +6669,7 @@
                 "8"
               ],
               "answer": 0,
-              "why": "log_2 8 asks for the power of 2 that gives 8, and 2^3 = 8."
+              "why": "log_2 8 asks for the power of 2 that gives 8, and 2³ = 8."
             }
           }
         },
@@ -6679,13 +6679,13 @@
             "heading": "Logarithm laws",
             "paragraphs": [
               "log_2 (32 × 8) looks hard until you notice 32 × 8 = 256. The product law splits it into log_2 32 + log_2 8 = 5 + 3 = 8. That split is why the laws exist.",
-              "The product law is log_b (mn) = log_b m + log_b n. The quotient law is log_b (m ÷ n) = log_b m − log_b n, and the power law is log_b (m^n) = n log_b m. Each mirrors an index law.",
-              "Product: log_2 (4 × 8) = log_2 4 + log_2 8 = 2 + 3 = 5. Quotient: log_3 (81 ÷ 9) = log_3 81 − log_3 9 = 4 − 2 = 2. Power: log_2 (32^2) = 2 × 5 = 10."
+              "The product law is log_b (mn) = log_b m + log_b n. The quotient law is log_b (m ÷ n) = log_b m − log_b n, and the power law is log_b (mⁿ) = n log_b m. Each mirrors an index law.",
+              "Product: log_2 (4 × 8) = log_2 4 + log_2 8 = 2 + 3 = 5. Quotient: log_3 (81 ÷ 9) = log_3 81 − log_3 9 = 4 − 2 = 2. Power: log_2 (32²) = 2 × 5 = 10."
             ],
             "bullets": [
               "log_b (mn) = log_b m + log_b n makes a product a sum.",
               "log_b (m ÷ n) = log_b m − log_b n makes a quotient a difference.",
-              "log_b (m^n) = n log_b m brings a power down."
+              "log_b (mⁿ) = n log_b m brings a power down."
             ],
             "takeaway": "Products add, quotients subtract and powers multiply inside the log.",
             "check": {
@@ -6707,17 +6707,17 @@
             "heading": "Changing the base to solve for the index",
             "paragraphs": [
               "A calculator gives ln and log keys, but no log_5 key. To evaluate log_5 100 you must rewrite it from those logs. That rewriting is the change of base rule.",
-              "The change of base rule is log_b x = ln x ÷ ln b. It works because y = log_b x means b^y = x, so y ln b = ln x. With base 10, log_b x = log x ÷ log b.",
-              "To solve a^x = c when bases do not match, take logs and divide by the log of the base. For 5^x = 100, x = ln 100 ÷ ln 5 ≈ 2.86. For 2^x = 40, x = ln 40 ÷ ln 2 ≈ 5.32."
+              "The change of base rule is log_b x = ln x ÷ ln b. It works because y = log_b x means bʸ = x, so y ln b = ln x. With base 10, log_b x = log x ÷ log b.",
+              "To solve aˣ = c when bases do not match, take logs and divide by the log of the base. For 5ˣ = 100, x = ln 100 ÷ ln 5 ≈ 2.86. For 2ˣ = 40, x = ln 40 ÷ ln 2 ≈ 5.32."
             ],
             "bullets": [
               "log_b x = ln x ÷ ln b for calculator use.",
               "log_b x = log x ÷ log b for base-10 use.",
-              "To solve a^x = c, set x = ln c ÷ ln a."
+              "To solve aˣ = c, set x = ln c ÷ ln a."
             ],
             "takeaway": "Change the base to compute, and take logs to solve for the index.",
             "check": {
-              "question": "Solve 3^x = 50. Which expression gives x?",
+              "question": "Solve 3ˣ = 50. Which expression gives x?",
               "options": [
                 "ln 50 ÷ ln 3",
                 "ln 3 ÷ ln 50",
@@ -6762,7 +6762,7 @@
               },
               {
                 "operation": "Domain case",
-                "reason": "log to base 1 is impossible (1^x = 1 always)",
+                "reason": "log to base 1 is impossible (1ˣ = 1 always)",
                 "result": "Log needs base > 0 and ≠ 1; log 0 is undefined",
                 "predictPrompt": "What is log to base 1?"
               }
@@ -6774,7 +6774,7 @@
           "content": {
             "question": "Evaluate log_2 128 − 3 log_2 2 + log_2 8.",
             "hints": [
-              "2^7 = 128, so log_2 128 = 7.",
+              "2⁷ = 128, so log_2 128 = 7.",
               "Any log_b b = 1.",
               "Now combine 7, 3 and 3."
             ]
@@ -6785,9 +6785,9 @@
           "content": {
             "heading": "Go deeper: Why the laws mirror the index laws",
             "paragraphs": [
-              "The index laws count repeated factors. Multiplying b^m by b^n joins m copies to n copies, so the indices add, and taking logs reverses that joining: a product becomes a sum. The product law is therefore the index law read backwards.",
-              "Division cancels factors, so the corresponding indices subtract. Writing m ÷ n as m × n^{-1} shows that the subtraction comes directly from the negative index n^{-1}. The quotient law is nothing but that cancellation counted in the log direction.",
-              "A power repeats the same block n times. Raising to the nth power therefore writes n copies of the whole block, and the log brings the multiplier n straight down. That is exactly the log form of (b^y)^n = b^{ny}, with the power law as the reversal.",
+              "The index laws count repeated factors. Multiplying bᵐ by bⁿ joins m copies to n copies, so the indices add, and taking logs reverses that joining: a product becomes a sum. The product law is therefore the index law read backwards.",
+              "Division cancels factors, so the corresponding indices subtract. Writing m ÷ n as m × n⁽⁻¹⁾ shows that the subtraction comes directly from the negative index n⁽⁻¹⁾. The quotient law is nothing but that cancellation counted in the log direction.",
+              "A power repeats the same block n times. Raising to the nth power therefore writes n copies of the whole block, and the log brings the multiplier n straight down. That is exactly the log form of (bʸ)ⁿ = b⁽ⁿʸ⁾, with the power law as the reversal.",
               "The mirroring gives a fast personal check. To verify any log answer, rewrite it back as a power and see whether the power returns the original number. If it does not, the law was applied in the wrong direction, and that check catches most law traps in seconds.",
               "There is also a historical reason the laws mattered. Before electronic computers, long multiplication was done by turning products into sums. Tables of logarithms made three-digit multiplication a matter of addition, which is why the product law was once the fastest arithmetic tool in science."
             ],
@@ -6804,14 +6804,14 @@
             "heading": "Go deeper: Why base 10 and base e are special",
             "paragraphs": [
               "Base 10 dominates measurement because human counting is decimal. The common logarithm log x means log_10 x, so log 1000 = 3 is read off the number of zeros. That reading made log tables practical for engineers long before calculators existed.",
-              "Base e is special for a different reason. The number e ≈ 2.718 is the limit that makes the slope of e^x at zero equal to one. Differentiation of e^x is therefore e^x itself, which no other base gives without a correction factor.",
-              "The natural logarithm ln x means log_e x. It is the inverse of e^x, so equations with e^x are solved most cleanly with ln. That is why calculus and exponential growth naturally produce ln, even though everyday measurement prefers base 10.",
+              "Base e is special for a different reason. The number e ≈ 2.718 is the limit that makes the slope of eˣ at zero equal to one. Differentiation of eˣ is therefore eˣ itself, which no other base gives without a correction factor.",
+              "The natural logarithm ln x means log_e x. It is the inverse of eˣ, so equations with eˣ are solved most cleanly with ln. That is why calculus and exponential growth naturally produce ln, even though everyday measurement prefers base 10.",
               "The change of base rule connects them all. Since ln b is just one number, dividing by it rescales every log to base e. The same rescaling with log b rescales to base 10, so any log you know gives every other log.",
               "A base-10 scale is a good picture for earthquakes: each step multiplies intensity by ten. A base-e scale would be less readable there, which shows that 'special' means convenient for the problem, not mathematically unique. JAMB favours base 10, but the rule works for either."
             ],
             "bullets": [
               "log x means base 10; log 1000 = 3.",
-              "ln x means base e ≈ 2.718 and pairs with e^x in calculus.",
+              "ln x means base e ≈ 2.718 and pairs with eˣ in calculus.",
               "Change of base rescales between them by division."
             ]
           }
@@ -6823,7 +6823,7 @@
             "paragraphs": [
               "A real logarithm needs three conditions at once: the base b is above 0 and not equal to 1, and the argument x is positive. With base 1 the powers stay at 1 and can never make other numbers, so log_1 is meaningless. With a zero or negative base the powers do not cover all positives in the usual way.",
               "The argument cannot be zero or negative in real numbers. No power of 2 makes 0, because powers stay positive, and no power of 2 makes −8. An equation that would need log 0 or log of a negative number therefore has no real solution and must be rejected.",
-              "Two special values are worth memorising precisely. Every log of 1 is 0, because b^0 = 1 for any allowed base. Every log of its own base is 1, because b^1 = b, and those two facts evaluate many JAMB items without any law.",
+              "Two special values are worth memorising precisely. Every log of 1 is 0, because b⁰ = 1 for any allowed base. Every log of its own base is 1, because b¹ = b, and those two facts evaluate many JAMB items without any law.",
               "The classic false laws cause most losses. A logarithm does not split a sum: log(a + b) is not log a + log b, and a logarithm does not split a product's outer form: log(ab) is not (log a)(log b). Only products, quotients and powers split, and only in the ways the three laws state.",
               "When solving, guard the domain throughout. A step that creates a non-positive argument can add extra roots. Check each candidate and discard any asking for log of zero, a negative, or base 1."
             ],
@@ -6848,7 +6848,7 @@
               },
               {
                 "operation": "Expand both logs",
-                "reason": "Powers become multiples by the power law, so log₁₀(2^k) equals k times log₁₀2.",
+                "reason": "Powers become multiples by the power law, so log₁₀(2ᵏ) equals k times log₁₀2.",
                 "result": "log₁₀32=5×0.3010=1.5050; log₁₀8=3×0.3010=0.9030.",
                 "predictPrompt": "Which numbers or terms work with each other first?"
               },
@@ -6860,9 +6860,9 @@
               },
               {
                 "operation": "Numeric check",
-                "reason": "8^(5/3) = 2^5 = 32, exact in both forms",
+                "reason": "8⁽⁵⁄³⁾ = 2⁵ = 32, exact in both forms",
                 "result": "5/3 is both the surds answer and the decimal one",
-                "predictPrompt": "What is 8^(5/3) directly?"
+                "predictPrompt": "What is 8⁽⁵⁄³⁾ directly?"
               }
             ]
           }
