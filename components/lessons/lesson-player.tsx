@@ -18,6 +18,7 @@ import type { LessonEnglish } from '@/lib/actions/lessons'
 import PassageReader, { PairComparator, RebuildCard, ReflectionCard } from './english-blocks'
 import TeachSections from './teach-sections'
 import LessonVisualBlock from './visuals'
+import { GlossText } from './gloss-text'
 
 type Phase = 'diagnostic' | 'teach' | 'worked' | 'supported' | 'independent' | 'done'
 type Confidence = 'sure' | 'unsure' | null
@@ -46,7 +47,7 @@ function SectionText({ section }: { section: NoteSection }) {
       )}
       {(section.paragraphs ?? []).map((paragraph, i) => (
         <p key={i} className="mt-2 text-[15px] font-semibold leading-relaxed text-ink">
-          {paragraph}
+          <GlossText text={paragraph} />
         </p>
       ))}
       {section.bullets.length > 0 && (
@@ -54,7 +55,7 @@ function SectionText({ section }: { section: NoteSection }) {
           {section.bullets.map((b, i) => (
             <li key={i} className="flex gap-2.5 text-sm font-semibold leading-relaxed text-ink-soft">
               <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400" />
-              {b}
+              <GlossText text={b} />
             </li>
           ))}
         </ul>
@@ -562,21 +563,25 @@ export default function LessonPlayer({
           Doing starts as fast as possible; reading never walls it. */}
       {phase === 'teach' && (
         <div className="rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-7 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)] animate-fade-up" key="teach">
-          <p className="font-display text-[22px] font-medium text-black">The idea in one line</p>
-          <p className="mt-2 text-[15px] font-semibold leading-relaxed text-ink-soft">{note.summary}</p>
+          <h1 className="font-display text-2xl font-semibold leading-tight text-black">{note.topic}</h1>
+          <p className="mt-2 text-[15px] font-semibold leading-relaxed text-ink-soft">
+            <GlossText text={note.summary} />
+          </p>
           <TeachSections
             summary={note.summary}
             sections={coreSections}
             onComplete={() => setSectionsDone(true)}
           />
           {depthSections.length > 0 && (
-            <details className="group mt-3 rounded-2xl border border-amber-200 bg-amber-50/40 px-4 py-3">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-extrabold text-amber-900">
-                <span>Go deeper — optional</span>
-                <span className="text-xs font-bold text-amber-700 transition-transform group-open:rotate-180">⌄</span>
+            <details className="group mt-4 border-t border-gray-100 pt-3">
+              <summary className="flex cursor-pointer list-none items-baseline justify-between gap-3 text-[12px] font-extrabold uppercase tracking-[0.12em] text-gray-500 hover:text-gray-700">
+                <span>Go deeper · optional</span>
+                <span className="text-[13px] normal-case tracking-normal text-gray-400 transition-transform group-open:rotate-180">
+                  show
+                </span>
               </summary>
-              <p className="mt-3 text-[13px] font-semibold leading-relaxed text-amber-900/80">
-                Extra context for the same topic. Skip it now and come back when you want the full picture.
+              <p className="mt-2 text-[13px] font-semibold leading-relaxed text-ink-soft">
+                Extra context for the same topic — skip it now and come back when you want the full picture
               </p>
               <div className="mt-4 space-y-5">
                 {depthSections.map((section, sectionIndex) => (

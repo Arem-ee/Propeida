@@ -1,9 +1,10 @@
 'use client'
 
 import { useMemo, useState } from 'react'
-import { ArrowRight, CheckCircle2, Lightbulb, RotateCcw } from 'lucide-react'
+import { ArrowRight, CheckCircle2, RotateCcw } from 'lucide-react'
 import type { NoteSection, SectionCheck } from '@/lib/notes'
 import LessonVisualBlock from './visuals'
+import { GlossText } from './gloss-text'
 
 /**
  * The core reading flow: one concept per lesson, split into at most three
@@ -13,6 +14,11 @@ import LessonVisualBlock from './visuals'
  *
  * Depth is deliberately absent here: `Go deeper:` sections stay in the
  * player's collapsed disclosure and never enter this flow.
+ *
+ * Layout hierarchy, deliberately: heading and body copy dominate; the
+ * position indicator is one quiet line; secondary actions ("Skip to
+ * recap", "Read everything") are quiet text links at the same weight as
+ * each other, never competing with the primary Next button.
  */
 export type TeachSectionData = NoteSection
 
@@ -57,10 +63,12 @@ function Progress({ current, total }: { current: number; total: number }) {
 function Takeaways({ section }: { section: TeachSectionData }) {
   if (!section.takeaway) return null
   return (
-    <div className="mt-4 flex gap-2.5 rounded-2xl border border-amber-200 bg-amber-50 px-3.5 py-3 animate-pop-in">
-      <Lightbulb className="mt-0.5 h-4 w-4 shrink-0 text-amber-700" aria-hidden="true" />
-      <p className="text-[13px] font-extrabold leading-relaxed text-amber-900">
-        {section.takeaway}
+    <div className="mt-4 border-l-2 border-amber-400 pl-3 animate-pop-in">
+      <p className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-amber-700">
+        The takeaway
+      </p>
+      <p className="mt-0.5 text-[13px] font-bold leading-snug text-amber-900">
+        <GlossText text={section.takeaway} />
       </p>
     </div>
   )
@@ -82,7 +90,9 @@ function CheckBlock({
       <p className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-blue-700">
         10-second check
       </p>
-      <p className="mt-1 text-sm font-extrabold leading-snug text-black">{check.question}</p>
+      <p className="mt-1 text-sm font-extrabold leading-snug text-black">
+        <GlossText text={check.question} />
+      </p>
       <div className="mt-2.5 space-y-1.5">
         {check.options.map((option, i) => {
           const isChosen = chosen === i
@@ -108,7 +118,9 @@ function CheckBlock({
               <span className={`grid h-5 w-5 shrink-0 place-items-center rounded-full text-[10px] font-extrabold ${answered && isAnswer ? 'bg-emerald-500 text-white' : 'bg-white/80 text-blue-800'}`}>
                 {String.fromCharCode(65 + i)}
               </span>
-              <span className="flex-1">{option}</span>
+              <span className="flex-1">
+                <GlossText text={option} />
+              </span>
               {answered && isAnswer && (
                 <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-600" aria-hidden="true" />
               )}
@@ -122,8 +134,8 @@ function CheckBlock({
             correct ? 'text-emerald-800' : 'text-amber-800'
           }`}
         >
-          {correct ? 'Correct.' : `Not quite — ${String.fromCharCode(65 + check.answer)}.`}
-          {check.why ? ` ${check.why}` : ''}
+          {correct ? 'You got it right' : `Not quite, the answer is ${String.fromCharCode(65 + check.answer)}`}
+          {check.why ? <> <GlossText text={check.why} /></> : null}
         </p>
       )}
     </div>
@@ -135,7 +147,7 @@ function SectionBody({ section }: { section: TeachSectionData }) {
     <>
       {(section.paragraphs ?? []).map((paragraph, i) => (
         <p key={i} className="mt-2.5 text-[14.5px] font-semibold leading-relaxed text-ink">
-          {paragraph}
+          <GlossText text={paragraph} />
         </p>
       ))}
       {section.bullets.length > 0 && (
@@ -143,7 +155,7 @@ function SectionBody({ section }: { section: TeachSectionData }) {
           {section.bullets.map((b, i) => (
             <li key={i} className="flex gap-2.5 text-[13.5px] font-semibold leading-relaxed text-ink-soft">
               <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400" aria-hidden="true" />
-              {b}
+              <GlossText text={b} />
             </li>
           ))}
         </ul>
@@ -221,17 +233,38 @@ export default function TeachSections({
 
   return (
     <div className="mt-4">
-      <div className="flex flex-wrap items-center justify-between gap-2">
-        <p className="inline-flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-[0.12em] text-blue-700">
-          About {minutes} min read
+      {/* One quiet orientation line: where am I + the two secondary exits,
+          both at the same weight, never competing with Next. */}
+      <div className="flex flex-wrap items-baseline justify-between gap-3">
+        <p className="text-[11px] font-extrabold uppercase tracking-[0.12em] text-gray-500">
+          {mode === 'all'
+            ? `All ${sections.length} sections · ~${minutes} min read`
+            : `Section ${index + 1} of ${sections.length} · ~${minutes} min read`}
         </p>
-        <button
-          type="button"
-          onClick={() => setMode((m) => (m === 'cards' ? 'all' : 'cards'))}
-          className="rounded-full border border-blue-200 bg-white px-3 py-1 text-[11px] font-extrabold text-blue-800 hover:bg-blue-50"
-        >
-          {mode === 'cards' ? 'Read it all at once' : 'Back to section cards'}
-        </button>
+        <div className="flex items-baseline gap-4">
+          {mode === 'cards' && (
+            <button
+              type="button"
+              onClick={() => {
+                setFinished(true)
+                onComplete?.()
+              }}
+              className="text-[12px] font-extrabold text-gray-500 underline-offset-2 hover:underline"
+            >
+              Skip to recap
+            </button>
+          )}
+          <button
+            type="button"
+            onClick={() => setMode((m) => (m === 'cards' ? 'all' : 'cards'))}
+            className="text-[12px] font-extrabold text-blue-700 underline-offset-2 hover:underline"
+          >
+            {mode === 'cards' ? 'Read everything' : 'Back to sections'}
+          </button>
+        </div>
+      </div>
+      <div className="mt-2">
+        <Progress current={index} total={sections.length} />
       </div>
 
       {mode === 'all' ? (
@@ -256,25 +289,6 @@ export default function TeachSections({
         </div>
       ) : (
         <div className="mt-3">
-          <div className="flex items-center justify-between gap-3">
-            <p className="text-[11px] font-extrabold uppercase tracking-[0.12em] text-gray-500">
-              Section {index + 1} of {sections.length}
-            </p>
-            <button
-              type="button"
-              onClick={() => {
-                setFinished(true)
-                onComplete?.()
-              }}
-              className="text-[11px] font-extrabold text-gray-500 underline underline-offset-2 hover:text-gray-700"
-            >
-              Skip to recap
-            </button>
-          </div>
-          <div className="mt-2">
-            <Progress current={index} total={sections.length} />
-          </div>
-
           <div className="mt-4 animate-fade-up" key={index}>
             {section.heading && (
               <h3 className="font-display text-[19px] font-medium leading-snug text-black">
