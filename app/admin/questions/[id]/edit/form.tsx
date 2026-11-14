@@ -200,9 +200,9 @@ export default function EditQuestionForm({
             <div>
               <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Verification</label>
               <select name="verified_state" defaultValue={question.verified_state ?? 'unverified'} required className="w-full rounded-xl border border-gray-200 bg-white px-4 py-2.5 text-sm min-h-[44px]">
-                <option value="unverified">Unverified 🔴</option>
-                <option value="source_cited">Source-cited 🔶</option>
-                <option value="human_verified">Human-verified ✅</option>
+                <option value="unverified">Unverified</option>
+                <option value="source_cited">Source-cited</option>
+                <option value="human_verified">Human-verified</option>
               </select>
             </div>
           </div>

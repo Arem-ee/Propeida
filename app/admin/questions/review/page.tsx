@@ -273,14 +273,14 @@ export default function QuestionReviewPage() {
                   onClick={() => void transition(item, { verified_state: 'source_cited' })}
                   className="inline-flex items-center gap-1.5 rounded-xl border border-amber-300 px-4 py-2 text-xs font-extrabold text-amber-800 hover:bg-amber-50 min-h-[44px] cursor-pointer disabled:opacity-50"
                 >
-                  <Quote className="h-3.5 w-3.5" /> Source-cited 🔶
+                  <Quote className="h-3.5 w-3.5" /> Source-cited
                 </button>
                 <button
                   disabled={busy}
                   onClick={() => void transition(item, { verified_state: 'human_verified' })}
                   className="inline-flex items-center gap-1.5 rounded-xl border border-emerald-300 px-4 py-2 text-xs font-extrabold text-emerald-800 hover:bg-emerald-50 min-h-[44px] cursor-pointer disabled:opacity-50"
                 >
-                  <ShieldCheck className="h-3.5 w-3.5" /> Human-verified ✅
+                  <ShieldCheck className="h-3.5 w-3.5" /> Human-verified
                 </button>
                 <button
                   disabled={busy}
