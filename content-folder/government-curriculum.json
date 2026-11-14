@@ -3,162 +3,6 @@
  "source": "JAMB UTME Government syllabus (IBASS)",
  "topics": [
   {
-   "slug": "definition-scope-government",
-   "name": "Definition and Scope of Government",
-   "section": "Elements of Government",
-   "order": 1,
-   "description": "What government is, what it does, and how it differs from the state."
-  },
-  {
-   "slug": "basic-concepts",
-   "name": "Basic Concepts of Government",
-   "section": "Elements of Government",
-   "order": 2,
-   "description": "Power, authority, legitimacy, sovereignty, state, nation and political processes."
-  },
-  {
-   "slug": "forms-systems-government",
-   "name": "Forms of Government",
-   "section": "Elements of Government",
-   "order": 3,
-   "description": "Democracy, monarchy, aristocracy, oligarchy, autocracy and the republic."
-  },
-  {
-   "slug": "arms-of-government",
-   "name": "Arms of Government",
-   "section": "Elements of Government",
-   "order": 4,
-   "description": "The legislature, executive and judiciary: functions, powers and checks."
-  },
-  {
-   "slug": "structures-of-governance",
-   "name": "Structures of Governance",
-   "section": "Elements of Government",
-   "order": 5,
-   "description": "Unitary, federal and confederal arrangements."
-  },
-  {
-   "slug": "systems-of-government",
-   "name": "Systems of Government",
-   "syllabus_ref": "A.6",
-   "section": "Elements of Government",
-   "order": 6,
-   "description": "Presidential, parliamentary and monarchical systems, and how they differ from structures."
-  },
-  {
-   "slug": "political-ideologies",
-   "name": "Political Ideologies",
-   "section": "Elements of Government",
-   "order": 7,
-   "description": "Communalism, feudalism, capitalism, socialism, communism and fascism."
-  },
-  {
-   "slug": "constitution-rule-of-law",
-   "name": "Constitution",
-   "section": "Principles of Government",
-   "order": 8,
-   "description": "Definition, sources and types of constitutions; supremacy and judicial review."
-  },
-  {
-   "slug": "principles-of-democratic-government",
-   "name": "Principles of Democratic Government",
-   "syllabus_ref": "A.9",
-   "section": "Principles of Government",
-   "order": 9,
-   "description": "Rule of law, separation of powers, checks and balances, responsibility and constitutionalism."
-  },
-  {
-   "slug": "the-electoral-process",
-   "name": "The Electoral Process",
-   "syllabus_ref": "A.12",
-   "section": "Principles of Government",
-   "order": 12,
-   "description": "Suffrage and participation, election types, free and fair elections, electoral systems and INEC."
-  },
-  {
-   "slug": "political-parties-elections",
-   "name": "Political Parties and Party Systems",
-   "section": "Principles of Government",
-   "order": 13,
-   "description": "Party organisation and functions, party systems, candidate selection and finance."
-  },
-  {
-   "slug": "pressure-groups",
-   "name": "Pressure Groups",
-   "syllabus_ref": "A.14",
-   "section": "Principles of Government",
-   "order": 14,
-   "description": "Types of pressure group, modes of operation, and the difference from political parties."
-  },
-  {
-   "slug": "citizenship",
-   "name": "Citizenship",
-   "section": "Principles of Government",
-   "order": 11,
-   "description": "Acquisition of citizenship and the duties and obligations of a citizen."
-  },
-  {
-   "slug": "pre-colonial-colonial-administration",
-   "name": "Pre-colonial Nigerian Polities",
-   "section": "Nigerian Government",
-   "order": 17,
-   "description": "The Yoruba monarchy, the Igbo assembly and the Hausa/Fulani emirate."
-  },
-  {
-   "slug": "constitutional-development-in-nigeria",
-   "name": "Colonial Rule and Constitutional Development",
-   "syllabus_ref": "B.4",
-   "section": "Nigerian Government",
-   "order": 18,
-   "description": "Colonial takeover, indirect rule, and the constitutions from Clifford to independence."
-  },
-  {
-   "slug": "nigerian-federalism-military-rule",
-   "name": "Nigerian Federalism",
-   "section": "Nigerian Government",
-   "order": 19,
-   "description": "The federal principle, legislative lists, state creation, revenue and federal character."
-  },
-  {
-   "slug": "the-military-in-nigerian-politics",
-   "name": "The Military in Nigerian Politics",
-   "syllabus_ref": "B.12",
-   "section": "Nigerian Government",
-   "order": 20,
-   "description": "Why soldiers intervened, how military regimes worked, their legacy and the exit to civil rule."
-  },
-  {
-   "slug": "local-government",
-   "name": "Local Government",
-   "syllabus_ref": "B.11",
-   "section": "Nigerian Government",
-   "order": 21,
-   "description": "The 1976 reforms, council functions and finance, traditional rulers and state control."
-  },
-  {
-   "slug": "foreign-policy-international-organisations",
-   "name": "Foreign Policy",
-   "section": "Nigerian Government",
-   "order": 22,
-   "description": "Goals, principles, instruments and cases in Nigeria's Afrocentric foreign policy."
-  },
-  {
-   "slug": "nigeria-in-international-organizations",
-   "name": "Nigeria in International Organisations",
-   "syllabus_ref": "C.4",
-   "section": "Nigerian Government",
-   "order": 23,
-   "description": "The UN, African Union, ECOWAS, Commonwealth and OPEC, and the decision rules of each."
-  },
-  {
-   "slug": "the-civil-service-public-service",
-   "name": "The Civil Service and Public Service",
-   "syllabus_ref": "A.16",
-   "section": "Principles of Government",
-   "order": 16,
-   "description": "The civil service and public service: features, control, problems and the difference between them."
-  },
-  {
    "slug": "processes-of-legislation",
    "name": "Processes of Legislation",
    "section": "Elements of Government",
@@ -253,13 +97,169 @@
    "order": 33,
    "description": "ECOWAS, the AU, the Commonwealth, OPEC, the UNO and the African Petroleum Producers' Association: origin, objectives, structure and functions.",
    "syllabus_ref": "D.1"
+  },
+  {
+   "slug": "definition-scope-government",
+   "name": "Definition and Scope of Government",
+   "section": "Elements of Government",
+   "order": 1,
+   "description": "What government is, what it does, and how it differs from the state."
+  },
+  {
+   "slug": "basic-concepts",
+   "name": "Basic Concepts of Government",
+   "section": "Elements of Government",
+   "order": 2,
+   "description": "Power, authority, legitimacy, sovereignty, state, nation and political processes."
+  },
+  {
+   "slug": "forms-systems-government",
+   "name": "Forms of Government",
+   "section": "Elements of Government",
+   "order": 3,
+   "description": "Democracy, monarchy, aristocracy, oligarchy, autocracy and the republic."
+  },
+  {
+   "slug": "arms-of-government",
+   "name": "Arms of Government",
+   "section": "Elements of Government",
+   "order": 4,
+   "description": "The legislature, executive and judiciary: functions, powers and checks."
+  },
+  {
+   "slug": "structures-of-governance",
+   "name": "Structures of Governance",
+   "section": "Elements of Government",
+   "order": 5,
+   "description": "Unitary, federal and confederal arrangements."
+  },
+  {
+   "slug": "political-ideologies",
+   "name": "Political Ideologies",
+   "section": "Elements of Government",
+   "order": 7,
+   "description": "Communalism, feudalism, capitalism, socialism, communism and fascism."
+  },
+  {
+   "slug": "constitution-rule-of-law",
+   "name": "Constitution",
+   "section": "Principles of Government",
+   "order": 8,
+   "description": "Definition, sources and types of constitutions; supremacy and judicial review."
+  },
+  {
+   "slug": "political-parties-elections",
+   "name": "Political Parties and Party Systems",
+   "section": "Principles of Government",
+   "order": 13,
+   "description": "Party organisation and functions, party systems, candidate selection and finance."
+  },
+  {
+   "slug": "citizenship",
+   "name": "Citizenship",
+   "section": "Principles of Government",
+   "order": 11,
+   "description": "Acquisition of citizenship and the duties and obligations of a citizen."
+  },
+  {
+   "slug": "pre-colonial-colonial-administration",
+   "name": "Pre-colonial Nigerian Polities",
+   "section": "Nigerian Government",
+   "order": 17,
+   "description": "The Yoruba monarchy, the Igbo assembly and the Hausa/Fulani emirate."
+  },
+  {
+   "slug": "foreign-policy-international-organisations",
+   "name": "Foreign Policy",
+   "section": "Nigerian Government",
+   "order": 22,
+   "description": "Goals, principles, instruments and cases in Nigeria's Afrocentric foreign policy."
+  },
+  {
+   "slug": "systems-of-government",
+   "name": "Systems of Government",
+   "syllabus_ref": "A.6",
+   "section": "Elements of Government",
+   "order": 6,
+   "description": "Presidential, parliamentary and monarchical systems, and how they differ from structures."
+  },
+  {
+   "slug": "principles-of-democratic-government",
+   "name": "Principles of Democratic Government",
+   "syllabus_ref": "A.9",
+   "section": "Principles of Government",
+   "order": 9,
+   "description": "Rule of law, separation of powers, checks and balances, responsibility and constitutionalism."
+  },
+  {
+   "slug": "the-electoral-process",
+   "name": "The Electoral Process",
+   "syllabus_ref": "A.12",
+   "section": "Principles of Government",
+   "order": 12,
+   "description": "Suffrage and participation, election types, free and fair elections, electoral systems and INEC."
+  },
+  {
+   "slug": "pressure-groups",
+   "name": "Pressure Groups",
+   "syllabus_ref": "A.14",
+   "section": "Principles of Government",
+   "order": 14,
+   "description": "Types of pressure group, modes of operation, and the difference from political parties."
+  },
+  {
+   "slug": "constitutional-development-in-nigeria",
+   "name": "Colonial Rule and Constitutional Development",
+   "syllabus_ref": "B.4",
+   "section": "Nigerian Government",
+   "order": 18,
+   "description": "Colonial takeover, indirect rule, and the constitutions from Clifford to independence."
+  },
+  {
+   "slug": "nigerian-federalism-military-rule",
+   "name": "Nigerian Federalism",
+   "section": "Nigerian Government",
+   "order": 19,
+   "description": "The federal principle, legislative lists, state creation, revenue and federal character."
+  },
+  {
+   "slug": "the-military-in-nigerian-politics",
+   "name": "The Military in Nigerian Politics",
+   "syllabus_ref": "B.12",
+   "section": "Nigerian Government",
+   "order": 20,
+   "description": "Why soldiers intervened, how military regimes worked, their legacy and the exit to civil rule."
+  },
+  {
+   "slug": "local-government",
+   "name": "Local Government",
+   "syllabus_ref": "B.11",
+   "section": "Nigerian Government",
+   "order": 21,
+   "description": "The 1976 reforms, council functions and finance, traditional rulers and state control."
+  },
+  {
+   "slug": "nigeria-in-international-organizations",
+   "name": "Nigeria in International Organisations",
+   "syllabus_ref": "C.4",
+   "section": "Nigerian Government",
+   "order": 23,
+   "description": "The UN, African Union, ECOWAS, Commonwealth and OPEC, and the decision rules of each."
+  },
+  {
+   "slug": "the-civil-service-public-service",
+   "name": "The Civil Service and Public Service",
+   "syllabus_ref": "A.16",
+   "section": "Principles of Government",
+   "order": 16,
+   "description": "The civil service and public service: features, control, problems and the difference between them."
   }
  ],
  "lessons": [
   {
    "slug": "definition-scope-government",
    "title": "Definition and Scope of Government",
-   "objective": "Define government, distinguish it from the state, and explain why its scope covers the functions only public authority can perform.",
+   "objective": "Define government, tell it apart from the state, and explain why its scope covers the functions only public authority can perform.",
    "estimatedMinutes": 10,
    "blocks": [
     {
@@ -267,7 +267,7 @@
      "content": {
       "heading": "Government in one sentence",
       "paragraphs": [
-       "Government is the set of institutions that make, enforce and interpret binding rules for a society. Its scope is the work that needs public authority: keeping order, providing public goods and acting for the state."
+       "Heavy rain has brought down the only bridge into your market town, and no company will rebuild it, because no firm can charge every driver who uses it. That gap is where government comes in: it is the set of institutions that make, enforce and interpret binding rules for a society, and its scope is the work that needs public authority."
       ],
       "bullets": []
      }
@@ -277,15 +277,14 @@
      "content": {
       "heading": "A bridge no business will rebuild",
       "paragraphs": [
-       "A bridge on a rural road collapses after heavy rain. Drivers cannot cross, farmers cannot move produce, and no private firm will rebuild it because it cannot charge every user. The council, state or federal agency with the road must act.",
+       "After heavy rain, a bridge on a rural road collapses. Drivers cannot cross, farmers cannot move produce, and no private firm will rebuild it, because it cannot charge every user. The council, state or federal agency that owns the road must act.",
        "Government is the institution that makes, enforces and interprets the rules of a society. Its characteristics include a defined jurisdiction, a hierarchy of offices, taxing power and a claim to a monopoly on legitimate force.",
-       "It acts through three arms: the legislature makes law, the executive carries it out, and the judiciary settles disputes and interprets the law. Government is not the state; the state is the permanent political community of territory, population, government and sovereignty, while government is the replaceable machinery that rules it."
+       "It works through three arms: the legislature makes the law, the executive carries it out, and the judiciary settles disputes and interprets the law. Government is not the state. The state is the permanent political community of territory, population, government and sovereignty; government is the replaceable machinery that rules it."
       ],
       "bullets": [
        "Government makes, enforces and interprets binding rules.",
-       "It has a defined jurisdiction and a hierarchy of offices.",
-       "It claims a monopoly on the legitimate use of force.",
-       "Its three arms are the legislature, executive and judiciary."
+       "It has a defined jurisdiction, a hierarchy of offices and taxing power.",
+       "Its three arms are the legislature, the executive and the judiciary."
       ],
       "takeaway": "Government is the ruling machinery of a permanent state.",
       "check": {
@@ -297,7 +296,7 @@
         "It settles disputes between citizens."
        ],
        "answer": 0,
-       "why": "A defined jurisdiction and hierarchy describe what government is; the others are services it provides."
+       "why": "A defined jurisdiction and hierarchy describe what government is. The others are services it provides."
       }
      }
     },
@@ -306,7 +305,8 @@
      "content": {
       "heading": "Why the bridge is not a business",
       "paragraphs": [
-       "Markets supply most of what people want: traders sell food, builders put up houses and banks lend money. Some goods are different. A defence force, a street light or a drainage system cannot easily be sold to one buyer, and everyone benefits whether they pay or not.",
+       "Markets give you most of what you want. Traders sell food, builders put up houses and banks lend money. Some goods are different.",
+       "A defence force, a street light or a drainage system cannot easily be sold to one buyer, and everyone benefits whether they pay or not.",
        "Government keeps law and order and protects life and property. It defends the territory, conducts relations with other states and provides public goods such as roads, schools, health care, water and security.",
        "It also protects rights, regulates the economy and settles disputes. Taxes pay for these functions, which is why government must raise revenue."
       ],
@@ -334,15 +334,14 @@
      "content": {
       "heading": "The coup that changed the government",
       "paragraphs": [
-       "In January 1966, soldiers took over Nigeria's government. The flag, territory, population and international borders stayed; the rulers changed. A coup replaces a government, not the state.",
-       "The state is the permanent political community: territory, population, government and sovereignty. Government is the temporary set of institutions that exercises the state's authority, which is why one state can have many governments.",
-       "The distinction also fixes the scope. Government acts for the state but does not own it, and its powers are limited by the constitution. In Nigeria, that scope is divided among federal, state and local tiers."
+       "In January 1966, soldiers took over Nigeria's government. The flag, the territory, the population and the international borders stayed; only the rulers changed. A coup replaces a government, not the state.",
+       "The state is the permanent political community: territory, population, government and sovereignty. Government is the temporary set of institutions that exercises the state's authority, which is why one state can pass through many governments.",
+       "The distinction also fixes the scope. Government acts for the state, but it does not own the state, and its powers are limited by the constitution. In Nigeria, that scope is divided among federal, state and local tiers."
       ],
       "bullets": [
        "The state is permanent; a government is replaceable.",
        "Government exercises the state's authority within constitutional limits.",
-       "Its scope is divided among federal, state and local tiers.",
-       "Public office is not private ownership."
+       "Its scope is divided among federal, state and local tiers."
       ],
       "takeaway": "The state outlives the government that acts for it.",
       "check": {
@@ -354,7 +353,7 @@
         "The state's international borders"
        ],
        "answer": 1,
-       "why": "A coup replaces rulers; the state's territory, population and sovereignty remain."
+       "why": "A coup replaces the rulers. The state's territory, population and sovereignty remain."
       },
       "visual": {
        "kind": "compare",
@@ -403,21 +402,21 @@
       "steps": [
        {
         "operation": "Define both terms",
-        "reason": "The state is the permanent political community; government is the machinery that rules it.",
+        "reason": "The state is the permanent political community. Government is the machinery that rules it.",
         "result": "Look for an option that keeps that direction.",
         "predictPrompt": "Which term survives a change of rulers?"
        },
        {
         "operation": "Test permanence",
-        "reason": "The state survives changes of rulers, so any option calling government permanent is wrong.",
+        "reason": "The state outlives every set of rulers, so any option calling government permanent is wrong.",
         "result": "Options A and D fail.",
         "predictPrompt": "What would a weaker answer look like here?"
        },
        {
         "operation": "Test the direction",
-        "reason": "Government acts for the state; the state is not the machinery of government.",
+        "reason": "Government acts for the state. The state never acts for the government.",
         "result": "Option C is correct.",
-        "predictPrompt": "How would you sanity-check this answer against the evidence?"
+        "predictPrompt": "How would you check this answer against the evidence?"
        }
       ]
      }
@@ -427,9 +426,9 @@
      "content": {
       "question": "A newly elected government promises to build roads, fund schools and defend the border. Explain why these are government functions rather than ordinary business activities. Then state one function that a private firm could perform.",
       "hints": [
-       "Ask whether the service can be sold to one buyer and withheld from others.",
+       "Ask yourself whether the service can be sold to one buyer and withheld from others.",
        "Defence and roads benefit people who do not pay, so markets under-supply them.",
-       "A private firm can build houses, sell food or run a bus service, but it needs the legal order that government maintains."
+       "A firm can build houses, sell food or run a bus service, but it needs the legal order government maintains."
       ]
      }
     },
@@ -438,15 +437,17 @@
      "content": {
       "heading": "Go deeper: Why the state outlives its government",
       "paragraphs": [
-       "Permanence is a legal idea, not a physical one. A state continues when its government falls because its territory, population, constitution and international obligations continue. Other states recognise the state, not the regime.",
-       "This continuity matters in practice. Treaties signed by one government bind its successors, public debt survives a change of government, and civil servants, courts and police remain when ministers leave. A new government inherits both assets and obligations.",
-       "Sovereignty belongs to the state, not to the officeholder. The government exercises it for the time being: it makes treaties, declares war and passes laws, but it does not own the state's territory or people. That is why a coup can be illegal and still leave the state intact.",
+       "Permanence is a legal idea, not a physical one. When a government falls, the state continues, because its territory, population, constitution and international obligations continue. Other states recognise the state, not the regime that happens to be in charge.",
+       "That continuity matters in practice. Treaties signed by one government bind the next one. Public debt survives a change of government.",
+       "Civil servants, courts and the police remain when ministers leave. A new government inherits both the assets and the obligations.",
+       "Sovereignty belongs to the state, not to the person in the villa. The government exercises sovereignty for the time being: it makes treaties, declares war and passes laws. It does not own the state's territory or people.",
+       "That is why a coup can be illegal and still leave the state intact.",
        "Exam questions often test this by asking what changes after a coup. The rulers change; the state's territory, population and sovereignty do not. The same logic explains why a country can lose its government without losing its statehood."
       ],
       "bullets": [
        "Treaties, debts and borders survive a change of government.",
-       "Sovereignty belongs to the state; the government exercises it temporarily.",
-       "A coup changes rulers, not statehood."
+       "Sovereignty belongs to the state; the government only exercises it.",
+       "A coup changes the rulers, not the state."
       ]
      }
     },
@@ -455,8 +456,9 @@
      "content": {
       "heading": "Go deeper: Public goods and the limits of markets",
       "paragraphs": [
-       "A public good has two features: one person's use does not reduce another's, and non-payers cannot easily be excluded. Defence, street lighting and flood control are close examples. Because a firm cannot charge every beneficiary, it cannot recover the cost, so the good is under-supplied without public funding.",
-       "Some goods are not pure public goods but create externalities. A factory that pollutes imposes a cost on neighbours who did not agree to it. Government can tax the pollution, regulate the factory or require compensation, so that the private decision faces its social cost.",
+       "A public good has two features. One person's use does not reduce another person's, and non-payers cannot easily be excluded. Defence, street lighting and flood control are close examples.",
+       "Because a firm cannot charge every beneficiary, it cannot recover the cost. So the good is under-supplied without public funding.",
+       "Some goods are not pure public goods but create externalities. A factory that pollutes imposes a cost on neighbours who did not agree to it. Government can tax the pollution, regulate the factory or require compensation, so the private decision faces its social cost.",
        "Other functions rest on coordination and trust. Courts settle disputes because private enforcement invites revenge, and standards for weights, measures and money reduce the cost of every transaction. Regulation of banks protects depositors who cannot inspect a balance sheet.",
        "The scope is not unlimited. Government may fail too: monopolies can be inefficient, officials can be corrupt, and subsidies can outlive their purpose. The exam point is not that government should do everything, but that some functions cannot be left to a market alone."
       ],
@@ -489,7 +491,7 @@
   {
    "slug": "basic-concepts",
    "title": "Basic Concepts of Government",
-   "objective": "Distinguish power, authority, legitimacy and sovereignty, and tell a state from a nation.",
+   "objective": "Tell power, authority, legitimacy and sovereignty apart, and tell a state from a nation.",
    "estimatedMinutes": 10,
    "blocks": [
     {
@@ -497,7 +499,7 @@
      "content": {
       "heading": "Power, authority and the state",
       "paragraphs": [
-       "Power is the ability to make others act; authority is power accepted as rightful; legitimacy is the belief that justifies it. Sovereignty is supreme power, and a state is the political organisation that holds it over a territory and people."
+       "Your landlord can threaten you with eviction, but only the government can make you obey because of who it is. That gap between raw force and accepted rule is what this lesson is about: power is the ability to make others act, authority is power accepted as rightful, legitimacy is the belief that justifies it, and sovereignty is supreme power. A state is the political organisation that holds that power over a territory and its people."
       ],
       "bullets": []
      }
@@ -507,7 +509,7 @@
      "content": {
       "heading": "Power, authority and legitimacy",
       "paragraphs": [
-       "A coup leader controls the army and the radio but still needs people to accept his orders. Power is the ability to affect behaviour, even against resistance; influence shapes what others think without commanding them.",
+       "A coup leader controls the army and the radio, but he still needs people to accept his orders. Power is the ability to affect behaviour, even against resistance; influence shapes what others think without commanding them.",
        "Authority is power accepted as rightful, and legitimacy is the belief that makes it rightful. Authority may be traditional, charismatic or legal-rational; modern states rely on the last, so authority attaches to the office rather than the person.",
        "Power need not be legitimate. A government can hold office and still lose legitimacy, which is why legitimate governments need less coercion to collect taxes or enforce court orders."
       ],
@@ -584,7 +586,7 @@
         "a single ethnic group"
        ],
        "answer": 1,
-       "why": "A state is defined by territory, population, government and sovereignty; a nation is defined by shared identity, which a state may contain several of."
+       "why": "A state is defined by territory, population, government and sovereignty. A nation is defined by shared identity, which a state may contain several of."
       }
      }
     },
@@ -593,8 +595,8 @@
      "content": {
       "heading": "Political processes",
       "paragraphs": [
-       "A child learns to trust or suspect government at home, at school and through the media long before voting. That is political socialisation.",
-       "Political participation is activity through which people take part: voting, campaigning, protesting, contacting officials and standing for office. Political culture is the pattern of beliefs and values a society holds about politics, such as whether authority is trusted or suspected.",
+       "A child learns to trust or suspect government at home, at school and through the media long before voting day. That is political socialisation.",
+       "Political participation is the activity through which you take part: voting, campaigning, protesting, contacting officials and standing for office. Political culture is the pattern of beliefs and values a society holds about politics, such as whether authority is trusted or suspected.",
        "Socialisation forms attitudes, culture is the shared pattern they form, and participation expresses them. Low turnout can reflect apathy, but it can also reflect institutions that do not respond."
       ],
       "bullets": [
@@ -611,7 +613,7 @@
         "public opinion"
        ],
        "answer": 1,
-       "why": "Socialisation is the learning process; culture is the resulting pattern of beliefs, and participation is the activity itself."
+       "why": "Socialisation is the learning process. Culture is the resulting pattern of beliefs, and participation is the activity itself."
       }
      }
     },
@@ -620,7 +622,7 @@
      "content": {
       "title": "Exam tip",
       "tone": "tip",
-      "body": "When a question asks where authority is vested, name the source of legitimacy — the state or the people — not an agent such as the judiciary or the police."
+      "body": "When a question asks where authority is vested, name the source of legitimacy (the state or the people), not an agent such as the judiciary or the police."
      }
     },
     {
@@ -630,9 +632,9 @@
       "steps": [
        {
         "operation": "Define authority",
-        "reason": "Authority is legitimate power — the right to command.",
+        "reason": "Authority is legitimate power: the right to command.",
         "result": "Find the body that owns political power, not one of its agents.",
-        "predictPrompt": "Is the judiciary the source of authority or an arm that exercises it?"
+        "predictPrompt": "Is the judiciary the source of authority, or an arm that exercises it?"
        },
        {
         "operation": "Identify the owner",
@@ -654,9 +656,11 @@
      "content": {
       "heading": "Go deeper: Why legitimacy is harder to keep than to win",
       "paragraphs": [
-       "Legality and legitimacy are not the same. A law can be passed correctly and still be rejected as illegitimate if the process or the rulers are seen as unfair. Courts decide legality; people decide legitimacy. A government that confuses the two keeps winning cases while losing obedience.",
-       "Legitimacy has several sources. Input legitimacy comes from how power is won and exercised: free elections, the rule of law, consent. Output legitimacy comes from what government delivers: security, schools, roads, economic stability. A government can survive a deficit in one if the other is strong, but rarely both.",
-       "Coups expose the difference. A coup leader may control the army, the radio and the treasury — full power — yet lack authority, because no accepted rule makes his command rightful. To convert power into authority he must win recognition: from citizens, from other states, and often from an election.",
+       "Legality and legitimacy are not the same. A law can be passed correctly and still be rejected as illegitimate if the process, or the people involved, are seen as unfair. Courts decide legality; people decide legitimacy.",
+       "A government that confuses the two keeps winning cases while losing obedience.",
+       "Legitimacy has several sources. Input legitimacy comes from how power is won and exercised: free elections, the rule of law, consent. Output legitimacy comes from what government delivers: security, schools, roads, economic stability.",
+       "A government can survive a deficit in one if the other is strong, but rarely both.",
+       "Coups expose the difference. A coup leader may control the army, the radio and the treasury: full power, yet no authority, because no accepted rule makes his command rightful. To convert power into authority he must win recognition: from citizens, from other states and often from an election.",
        "Legitimacy is also cheaper than coercion. A legitimate government collects taxes, enforces court orders and recruits soldiers with less force, because people comply voluntarily. Once legitimacy erodes, every policy costs more to enforce."
       ],
       "bullets": [
@@ -672,9 +676,9 @@
      "content": {
       "heading": "Go deeper: Sovereignty in a world of interdependence",
       "paragraphs": [
-       "Sovereignty sounds absolute, but no modern state exercises it without limits. A state joins the United Nations and accepts its charter; it signs treaties that bind future governments; it borrows money on conditions set by lenders. Each commitment is a voluntary limit on external sovereignty.",
-       "Pooled sovereignty is the formal name for this. Members of ECOWAS, the African Union and the United Nations delegate some decisions to collective bodies in exchange for influence and protection. Nigeria can shape ECOWAS decisions, but it must also accept decisions it dislikes.",
-       "Internal sovereignty is constrained too. Federalism divides authority between national and state governments; constitutions entrench rights that no majority may remove; independent courts can strike down laws. These are not failures of sovereignty but its organisation.",
+       "Sovereignty sounds absolute, but no modern state exercises it without limits. A state joins the United Nations and accepts its charter; it signs treaties that bind future governments; it borrows money on conditions set by lenders. Each is a voluntary limit on external sovereignty.",
+       "Pooled sovereignty is the formal name. Members of ECOWAS, the African Union and the United Nations delegate some decisions to collective bodies in exchange for influence and protection. Nigeria can shape ECOWAS decisions, but it must also accept decisions it dislikes.",
+       "Internal sovereignty is constrained too. Federalism divides authority between national and state governments; constitutions entrench rights that no majority may remove; independent courts can strike down laws. These are not failures of sovereignty but of its organisation.",
        "Economic dependence adds a harder limit. Debt service, import dependence and foreign investment give outsiders leverage over budgets and policy. A state may be legally sovereign and still have little room to choose."
       ],
       "bullets": [
@@ -691,14 +695,15 @@
       "paragraphs": [
        "Political culture is not opinion polling. It is the durable pattern of beliefs about authority, participation and the state. Almond and Verba distinguished parochial culture, where people barely identify with the state; subject culture, where they obey but do not participate; and participant culture, where they expect to influence decisions.",
        "Most states mix the three. A village may be parochial about national politics while a capital city is participant. The mix explains why the same constitution produces different behaviour in different places.",
-       "Participation is shaped by resources and institutions. Educated, urban and organised citizens vote, lobby and protest more; proportional systems and strong parties raise turnout; repression lowers it. Low turnout is therefore not always apathy — it can be a rational response to institutions that do not respond.",
+       "Participation is shaped by resources and institutions. Educated, urban and organised citizens vote, lobby and protest more; proportional systems and strong parties raise turnout; repression lowers it. Low turnout is therefore not always apathy.",
+       "It can be a rational response to institutions that do not respond.",
        "For exams, keep the map clean: socialisation explains how attitudes form, culture describes the pattern, participation describes the action."
       ],
       "bullets": [
        "Parochial, subject and participant cultures differ in whether people identify, obey or engage.",
        "Most states contain a mixture of cultures rather than one pure type.",
        "Participation tracks resources and institutions, not just individual interest.",
-       "Socialisation → culture → participation is the causal chain to remember."
+       "Socialisation → culture → participation is the chain to remember."
       ]
      }
     },
@@ -708,8 +713,8 @@
       "question": "A traditional ruler is obeyed because people believe his office is rightful. Is that power, authority or legitimacy? Explain in one sentence.",
       "hints": [
        "Power is the ability to influence; authority is accepted power.",
-       "The people accept the office as rightful — that belief is legitimacy.",
-       "The best answer names authority and explains that legitimacy is the belief supporting it."
+       "The people accept the office as rightful. That belief is legitimacy.",
+       "A strong answer names authority and explains that legitimacy is the belief supporting it."
       ]
      }
     }
@@ -718,7 +723,7 @@
   {
    "slug": "forms-systems-government",
    "title": "Forms of Government: Who Rules?",
-   "objective": "Distinguish democracy, monarchy, aristocracy, oligarchy, autocracy and the republic, and give the features, merits and demerits of each.",
+   "objective": "Tell democracy, monarchy, aristocracy, oligarchy, autocracy and the republic apart, and give the features, merits and demerits of each.",
    "estimatedMinutes": 10,
    "blocks": [
     {
@@ -726,7 +731,7 @@
      "content": {
       "heading": "Form in one sentence",
       "paragraphs": [
-       "A form of government answers one question: who holds ruling power, and on what claim?"
+       "On election day you queue at your polling unit and choose who will rule you. Some countries do it differently and keep a king who reigns but does not rule. Either way, one question names the form of government: who holds ruling power, and on what claim?"
       ],
       "bullets": []
      }
@@ -738,7 +743,8 @@
       "paragraphs": [
        "One country elects a president every four years; another keeps a king who reigns but does not rule. Both can be democratic, because the test is whether the people choose and can remove their rulers, not the title at the top.",
        "Democracy is rule by the people, exercised directly in a town meeting or, more commonly, through elected representatives. Its features are free and fair elections, majority rule with minority rights, the rule of law, accountability and a free press.",
-       "Its merits are participation, legitimacy and peaceful change; its demerits are slow decisions, the risk of majority tyranny and the cost of elections. Republicanism is narrower: an elected head of state instead of a hereditary monarch, and a republic may still be undemocratic."
+       "Its merits are participation, legitimacy and peaceful change. Its demerits are slow decisions, the risk of majority tyranny and the cost of elections. Republicanism is narrower: an elected head of state instead of a hereditary monarch.",
+       "A republic may still be undemocratic."
       ],
       "bullets": [
        "Democracy: the people choose and can remove their rulers.",
@@ -755,7 +761,7 @@
         "theocracy"
        ],
        "answer": 1,
-       "why": "An elected head of state without a hereditary monarch is a republic; whether it is democratic depends on elections and rights."
+       "why": "An elected head of state without a hereditary monarch is a republic. Whether it is democratic depends on elections and rights."
       }
      }
     },
@@ -764,9 +770,10 @@
      "content": {
       "heading": "A crown, a council of nobles, a wealthy few",
       "paragraphs": [
-       "A king inherits the throne, a council of nobles claims to rule because of birth and virtue, and a handful of wealthy families controls the state. The first is monarchy, the second aristocracy, the third oligarchy.",
-       "Monarchy is rule by one person, usually hereditary; it is absolute when the monarch rules and constitutional when the monarch reigns but a parliament governs. Aristocracy is rule by a small group claiming superior birth or education. Oligarchy is rule by a few, often through wealth, family or force; plutocracy is rule by the rich.",
-       "Monarchy offers continuity and clear succession, but suffers disputed successions and weak accountability. Aristocracy can draw on experience, yet excludes outsiders; oligarchy can decide quickly, but serves a narrow interest."
+       "A king inherits the throne. A council of nobles claims to rule because of birth and virtue. A handful of wealthy families controls the state.",
+       "The first is monarchy, the second aristocracy, the third oligarchy.",
+       "Monarchy is rule by one person, usually hereditary; it is absolute when the monarch rules, and constitutional when the monarch reigns while a parliament governs. Aristocracy is rule by a small group claiming superior birth or education. Oligarchy is rule by a few, often through wealth, family or force; plutocracy is rule by the rich.",
+       "Monarchy offers continuity and clear succession, but suffers disputed successions and weak accountability. Aristocracy can draw on experience, yet excludes outsiders. Oligarchy can decide quickly, but serves a narrow interest."
       ],
       "bullets": [
        "Monarchy: one hereditary ruler; absolute or constitutional.",
@@ -783,7 +790,7 @@
         "gerontocracy"
        ],
        "answer": 0,
-       "why": "Aristocracy claims rule by the best; oligarchy is rule by a few without that claim, and gerontocracy is rule by the old."
+       "why": "Aristocracy claims rule by the best. Oligarchy is rule by a few without that claim, and gerontocracy is rule by the old."
       }
      }
     },
@@ -792,9 +799,10 @@
      "content": {
       "heading": "One man, the elders, the priests",
       "paragraphs": [
-       "One man rules by decree; elsewhere only elders may hold office; in another state, priests interpret the law. Autocracy, gerontocracy and theocracy each concentrate power, but they justify it differently.",
+       "One man rules by decree. Elsewhere only elders may hold office. In another state, priests interpret the law.",
+       "Autocracy, gerontocracy and theocracy each concentrate power, but they justify it differently.",
        "Autocracy is one person with unlimited power, checked by no institution; dictatorship is its modern form. Gerontocracy gives power to the oldest, theocracy to religious authority, and a military junta to a council of officers. Mobocracy is rule by an unruly crowd, which is disorder rather than a constitution.",
-       "Autocracy can act quickly in a crisis, but it lacks accountability and peaceful succession. Gerontocracy respects age and memory, but excludes the young; theocracy offers divine legitimacy, but narrows dissent; a junta can restore order, but rarely wins legitimacy."
+       "Autocracy can act quickly in a crisis, but it lacks accountability and peaceful succession. Gerontocracy respects age and memory, but excludes the young. Theocracy offers divine legitimacy, but narrows dissent; a junta can restore order, but rarely wins legitimacy."
       ],
       "bullets": [
        "Autocracy: one ruler with unlimited power.",
@@ -811,7 +819,7 @@
         "mobocracy"
        ],
        "answer": 2,
-       "why": "The officers' council in power is a junta; stratocracy is the wider term for military rule."
+       "why": "The officers' council in power is a junta. Stratocracy is the wider term for military rule."
       }
      }
     },
@@ -820,7 +828,7 @@
      "content": {
       "title": "Exam tip",
       "tone": "tip",
-      "body": "Form = who rules. System = how the executive and legislature relate. A republic is not automatically a democracy, and a constitutional monarch reigns but does not rule."
+      "body": "Form is who rules. System is how the executive and legislature relate. A republic is not automatically a democracy, and a constitutional monarch reigns but does not rule."
      }
     },
     {
@@ -867,7 +875,8 @@
       "paragraphs": [
        "Both terms describe rule by a small group, so questions test the claim each makes. Aristocracy means rule by those regarded as the best, through birth, education or virtue. Oligarchy means rule by a few through wealth, family or force, without claiming special merit.",
        "Plutocracy narrows oligarchy to the rich, as when only people above a property threshold may stand for office. An aristocratic council may instead draw on experts, chiefs or senior officials whose claim is competence. Examiners separate the source of the claim from the number of rulers.",
-       "Gerontocracy, theocracy, stratocracy and junta name other small-group claims. Gerontocracy reserves office for the old, theocracy for religious authority and stratocracy for military command. A junta is officers governing as a council. Mobocracy is an unruly crowd; it is disorder, not a constitution.",
+       "Gerontocracy, theocracy, stratocracy and junta name other small-group claims. Gerontocracy reserves office for the old, theocracy for religious authority and stratocracy for military command. A junta is officers governing as a council.",
+       "Mobocracy is an unruly crowd; it is disorder, not a constitution.",
        "Nigeria shows why the distinction survives criticism of a narrow circle. A republic with an elected president keeps that form even when a strong executive or dominant party is called oligarchic in everyday speech. The test remains who holds power and on what claim."
       ],
       "bullets": [
@@ -883,9 +892,11 @@
      "content": {
       "heading": "Go deeper: Why a democracy can look democratic and act otherwise",
       "paragraphs": [
-       "Democracy depends on more than counting votes. Free and fair elections choose rulers, but the rule of law, freedom of expression, a free press and accountable institutions decide whether those rulers remain removable. When courts are ignored, journalists are harassed or election bodies are captured, the ballot may still take place while the possibility of genuine change shrinks.",
-       "Majority rule creates a special danger. A majority that can pass any law and punish any minority turns popular consent into a weapon. That is why democratic constitutions protect rights that a simple majority cannot remove, such as freedom of expression and association. Minority rights are not a decoration on democracy; they are the reason a majority must govern within limits.",
-       "Accountability is the day-to-day mechanism. Ministers answer to the legislature, officials justify spending, courts strike down unlawful acts and the press exposes failure. Each channel is separate, so a defect in one does not automatically destroy the others. A state can hold regular elections and still lose accountability when every channel points to the same office.",
+       "Democracy depends on more than counting votes. Free and fair elections choose rulers, but the rule of law, freedom of expression, a free press and accountable institutions decide whether those rulers remain removable. When courts are ignored, journalists harassed or election bodies captured, the ballot may still take place while the possibility of genuine change shrinks.",
+       "Majority rule creates a special danger. A majority that can pass any law and punish any minority turns popular consent into a weapon. That is why democratic constitutions protect rights that a simple majority cannot remove, such as freedom of expression and association.",
+       "Minority rights are not a decoration on democracy; they are the reason a majority must govern within limits.",
+       "Accountability is the day-to-day mechanism. Ministers answer to the legislature, officials justify spending, courts strike down unlawful acts and the press exposes failure. Each channel is separate, so a defect in one does not automatically destroy the others.",
+       "A state can hold regular elections and still lose accountability when every channel points to the same office.",
        "Nigeria illustrates the distinction between republic and democracy. The republic describes an elected president instead of a hereditary ruler, while the democratic test asks whether elections are free, rights are protected and rulers can be removed in practice. A republic without those features is a republic but not yet a democratic one, which is exactly the confusion many questions try to create."
       ],
       "bullets": [
@@ -902,12 +913,14 @@
       "heading": "Go deeper: Constitutional monarchy, absolute rule and the cost of succession",
       "paragraphs": [
        "Monarchy divides into constitutional and absolute forms because the title matters less than the power. A constitutional monarch reigns but does not govern: ministers rule, parliament makes law and the monarch performs ceremonial duties under the constitution. An absolute monarch rules directly, makes law and controls the executive, so no institution can overrule the throne.",
-       "Hereditary succession explains both the attraction and the weakness. It promises continuity because the next ruler is known at birth, yet it offers no test of fitness. A child, an incapable adult or a disputed succession can therefore create a crisis that an elected office avoids by separating succession from family. That is why some monarchies appoint a regent or a council to act while the heir is young or disputed.",
-       "Autocracy concentrates the same problem in one person without the hereditary claim. Power is unlimited, institutions are checked by the ruler rather than the reverse, and succession depends on force or favour. A coup leader who suspends the constitution and governs by decree is not a monarch by birth, but the absence of accountability places that government close to autocracy. A junta spreads that power among officers without making it accountable.",
+       "Hereditary succession explains both the attraction and the weakness. It promises continuity because the next ruler is known at birth, yet it offers no test of fitness. A child, an incapable adult or a disputed succession can therefore create a crisis that an elected office avoids by separating succession from family.",
+       "That is why some monarchies appoint a regent or a council to act while the heir is young or disputed.",
+       "Autocracy concentrates the same problem in one person without the hereditary claim. Power is unlimited, institutions are checked by the ruler rather than the reverse, and succession depends on force or favour. A coup leader who suspends the constitution and governs by decree is not a monarch by birth, but the absence of accountability places that government close to autocracy.",
+       "A junta spreads that power among officers without making it accountable.",
        "The exam rule is to ask about power before title. If parliament governs, call the arrangement constitutional monarchy even when a queen or king is present. If one person or a council rules without the constitution, focus on the absence of choice and check rather than the uniform, the palace or the family name."
       ],
       "bullets": [
-       "Constitutional monarch reigns while ministers and parliament govern.",
+       "A constitutional monarch reigns while ministers and parliament govern.",
        "Hereditary succession gives continuity but no guarantee of fitness.",
        "Autocracy and junta rule differ in personnel, not in accountability.",
        "Ask who can overrule the ruler before naming the form."
@@ -927,7 +940,7 @@
      "content": {
       "heading": "Three arms, one government",
       "paragraphs": [
-       "The legislature makes law, the executive implements it, and the judiciary interprets it. Separation of powers also lets each arm check the others, so no arm governs alone."
+       "The National Assembly passes a law, a ministry builds what the law asks for, and the courts decide who is right when someone breaks it. You see all three every single day: the legislature makes the law, the executive implements it, and the judiciary interprets it. Separation of powers also lets each arm check the others, so no arm governs alone."
       ],
       "bullets": []
      }
@@ -940,7 +953,7 @@
        "A senator proposes a bill to fund rural roads. It is introduced, debated, examined in committee and passed by both chambers. Assent turns it into an Act; a veto can be overridden.",
        "The legislature is the law-making arm. It may be unicameral, with one chamber, or bicameral, with two. Nigeria's National Assembly has a Senate and a House of Representatives, and each state has a House of Assembly.",
        "It makes, amends and repeals laws, approves the budget, oversees public spending and represents constituencies; the Senate confirms appointments. A bill passes first reading, second reading, committee stage and third reading before assent.",
-       "In Britain Parliament is supreme; in Nigeria the Constitution is supreme, so the National Assembly cannot make any law it likes."
+       "In Britain, Parliament is supreme; in Nigeria, the Constitution is supreme, so the National Assembly cannot make any law it likes."
       ],
       "bullets": [
        "The legislature makes, amends and repeals laws.",
@@ -995,7 +1008,7 @@
      "content": {
       "heading": "The court reads the Act",
       "paragraphs": [
-       "A contractor is denied payment and sues the ministry. The court reads the Act, examines the minister's decision and orders payment. It interpreted the law and checked the executive.",
+       "A contractor is denied payment and sues the ministry. The court reads the Act, examines the minister's decision and orders payment. It has interpreted the law and checked the executive.",
        "The judiciary interprets laws and settles disputes. Its components are the courts: the Supreme Court, Court of Appeal, Federal High Court, State High Courts, Sharia and Customary Courts of Appeal, and tribunals.",
        "It interprets the Constitution, protects rights, punishes offenders and reviews government action. Judicial review lets it declare a law or executive act unconstitutional, which checks both other arms.",
        "Judicial independence means judges decide without legislative or executive pressure. Security of tenure, salaries charged to the Consolidated Revenue Fund and appointment through the Federal Judicial Service Commission and National Judicial Council protect it."
@@ -1099,7 +1112,7 @@
        "A bill is a proposed law. In Nigeria, it may be introduced in either chamber of the National Assembly, except a money bill, which starts in the House of Representatives.",
        "The first reading is a formal introduction; no debate takes place. Debate begins at the second reading, where members discuss the general principles. The committee stage then examines the clauses in detail, and the report stage brings the amended bill back to the chamber.",
        "The third reading is the final passage vote. The other chamber must concur, and any disagreement is resolved by a conference committee. The bill then goes to the president for assent.",
-       "If the president withholds assent, he returns it with reasons. The National Assembly can override the veto by a two-thirds majority of each chamber, and the bill becomes law. A state bill follows the same path through the State House of Assembly and the governor.",
+       "If the president withholds assent, he returns the bill with reasons. The National Assembly can override the veto by a two-thirds majority of each chamber, and the bill becomes law. A state bill follows the same path through the State House of Assembly and the governor.",
        "Courts do not make the bill law, but they may later interpret it or declare it unconstitutional. That is why the process is a chain across the three arms, not a single legislative act."
       ],
       "bullets": [
@@ -1132,7 +1145,7 @@
       "heading": "Go deeper: Judicial independence and the appointment of judges",
       "paragraphs": [
        "Judicial independence has two sides: the courts must be free from interference, and judges must be accountable to the law. Nigeria protects the first through security of tenure, salaries charged to the Consolidated Revenue Fund, and a disciplined removal process.",
-       "Federal judicial appointments begin with the Federal Judicial Service Commission, which advises the National Judicial Council on nominees. The NJC recommends candidates to the President, and the Senate confirms the senior federal appointments, including the Chief Justice of Nigeria and the justices of the Supreme Court.",
+       "Federal judicial appointments begin with the Federal Judicial Service Commission, which advises the National Judicial Council on nominees. The NJC recommends those people to the President, and the Senate confirms the senior federal appointments, including the Chief Justice of Nigeria and the justices of the Supreme Court.",
        "State appointments follow a similar path through the State Judicial Service Commission and the governor, with the NJC involved and the State House of Assembly confirming the Chief Judge. The process is designed to keep patronage out of the bench, though critics say it remains political.",
        "Independence does not mean judges ignore the law or answer to no one. They can be removed for misconduct, and their decisions can be appealed. What it forbids is a president or legislature punishing a judge for an unpopular ruling.",
        "The judiciary also checks the other arms through judicial review. It can declare a statute unconstitutional, quash an executive action, or order a public body to act lawfully. That power is strongest when judges are seen to be independent, because a ruling that looks politically dictated loses authority."
@@ -1157,7 +1170,7 @@
      "content": {
       "heading": "Constitution in one sentence",
       "paragraphs": [
-       "A constitution is the fundamental law that creates public offices and limits them; everything else must comply with it."
+       "You have just watched a governor sign an order detaining a critic with no trial, and you are wondering who can stop him. One document can: a constitution is the fundamental law that creates public offices and limits them, and everything else must comply with it."
       ],
       "bullets": []
      }
@@ -1169,7 +1182,7 @@
       "paragraphs": [
        "A new government wants to detain a critic without trial. It cannot simply order the police to act, because the constitution sets the procedure and the courts can strike the order down. That is what makes it fundamental law.",
        "A constitution creates the main institutions, distributes their powers, limits what they may do, protects rights and gives the regime legitimacy. Its sources include the constitutional text itself, statutes, judicial precedents, conventions, customary law and international treaties.",
-       "It also fixes offices and qualifications. The 1979 Constitution required a presidential candidate to be at least 35, a rule the 1999 Constitution keeps. Under the 1999 Constitution the Attorney-General is the Chief Law Officer, while the Chief Justice heads the Supreme Court."
+       "It also fixes offices and qualifications. The 1979 Constitution required a presidential aspirant to be at least 35, a rule the 1999 Constitution keeps. Under the 1999 Constitution the Attorney-General is the Chief Law Officer, while the Chief Justice heads the Supreme Court."
       ],
       "bullets": [
        "Creates institutions, distributes power, limits government.",
@@ -1186,7 +1199,7 @@
         "edicts"
        ],
        "answer": 0,
-       "why": "The constitution is the fundamental law; manifestoes and edicts are party or military instruments, not the fundamental law."
+       "why": "The constitution is the fundamental law. Manifestoes and edicts are party or military instruments, not the fundamental law."
       }
      }
     },
@@ -1214,7 +1227,7 @@
         "Sierra Leone"
        ],
        "answer": 1,
-       "why": "The United Kingdom has no single codified constitution; Nigeria, the United States and Sierra Leone have written constitutions."
+       "why": "The United Kingdom has no single codified constitution. Nigeria, the United States and Sierra Leone have written constitutions."
       }
      }
     },
@@ -1319,7 +1332,8 @@
       "heading": "Go deeper: How supremacy is tested in a Nigerian court",
       "paragraphs": [
        "Supremacy becomes real when someone argues that a law does not fit the constitution. A detained critic, a state claiming a federal power or a trader taxed contrary to free movement can ask a court to measure the act against the text. The court asks about consistency, not policy preference.",
-       "The remedy is precise rather than destructive. The court declares the inconsistent part void to the extent of the inconsistency, so the remainder of the statute may stand. An executive order without constitutional backing may fall entirely. Only the offending rule is removed.",
+       "The remedy is precise rather than destructive. The court declares the inconsistent part void to the extent of the inconsistency, so the remainder of the statute may stand. An executive order without constitutional backing may fall entirely.",
+       "Only the offending rule is removed.",
        "Nigeria provides several forums. The Federal High Court and State High Courts hear many rights cases, the Court of Appeal corrects errors of law and the Supreme Court gives final authority. The Attorney-General of the Federation is the Chief Law Officer, while the Chief Justice heads the Supreme Court.",
        "The National Assembly is bound as well. It cannot use ordinary legislation to abolish a protected right or transfer a residual power to the centre. A law passed by both chambers and assented to by the President can still be void if it conflicts with the constitution."
       ],
@@ -1339,7 +1353,8 @@
        "Written and unwritten describe where rules sit, while rigid and flexible describe how they change. Nigeria places its main rules in one codified document that can only be amended by a special procedure, so it is written and rigid. Britain keeps much of its constitution across statutes, court decisions and conventions, and can change most of it by ordinary legislation, so it is unwritten and flexible.",
        "Conventions show why an unwritten system can still be stable. A convention may not be enforceable in court, yet ministers, parliament and the courts treat it as binding because breaking it would damage trust in the whole arrangement. Codification trades that flexibility for certainty: everyone can read the allocation of powers, but reform must follow the stated procedure rather than ordinary majority voting.",
        "Rigidity protects a bargain. In a diverse federation, the centre and the states can accept a division of powers only if a temporary majority cannot rewrite it at will. Exclusive, concurrent and residual functions are therefore likely to be entrenched, because each tier needs assurance that the other will not capture the bargain after an election or a census dispute.",
-       "The price is delay and litigation. A rigid text may keep an imperfect rule long after circumstances change, and disputes over its meaning move to court. Flexible constitutions amend quickly but risk instability when a majority rewrites the rules after every contest. Neither option is automatically democratic; each simply locates the difficulty in a different place."
+       "The price is delay and litigation. A rigid text may keep an imperfect rule long after circumstances change, and disputes over its meaning move to court. Flexible constitutions amend quickly but risk instability when a majority rewrites the rules after every contest.",
+       "Neither option is automatically democratic; each simply locates the difficulty in a different place."
       ],
       "bullets": [
        "Written is about one document; rigid is about a special amendment procedure.",
@@ -1354,7 +1369,8 @@
      "content": {
       "heading": "Go deeper: Where a constitution draws its authority",
       "paragraphs": [
-       "A constitution claims authority from more than its own words. The text creates offices and distributes powers, while statutes add detail, court decisions give the text a working meaning and conventions grow around brief clauses. Customary practice also survives unless the constitution displaces it. Treaties add obligations the state has accepted.",
+       "A constitution claims authority from more than its own words. The text creates offices and distributes powers, while statutes add detail, court decisions give the text a working meaning and conventions grow around brief clauses. Customary practice also survives unless the constitution displaces it.",
+       "Treaties add obligations the state has accepted.",
        "Precedent is the engine of that development. When a higher court explains a clause, later courts normally follow the explanation, so one case can shape how detention, taxation or federal powers are understood for years. A constitution is therefore the document as interpreted, amended and practised over time.",
        "Federal character shows how procedure creates legitimacy. In a country of many ethnic and regional groups, the 1999 Constitution as amended spreads federal offices and resources so no section owns the centre. Appointment and allocation must visibly recognise diversity, or the bargain loses the consent that sustains it.",
        "Military rule reveals the opposite condition. A regime that suspends parts of the constitution and governs by decree may run the state, but it breaks the chain from text to consent. When civilian institutions return, courts must decide which acts followed the constitution and which did not."
@@ -1380,7 +1396,7 @@
      "content": {
       "heading": "Pre-colonial polities in one sentence",
       "paragraphs": [
-       "Before colonial rule, the Yoruba, Igbo and Hausa/Fulani organised government in three different ways."
+       "Long before indirect rule, your great-grandparents in the Yoruba, Igbo and Hausa/Fulani lands lived under three very different governments. That is what this lesson unpacks."
       ],
       "bullets": []
      }
@@ -1409,7 +1425,7 @@
         "democratic"
        ],
        "answer": 0,
-       "why": "A central Oba or Alaafin ruled through the Oyomesi and Ogboni; the other labels describe systems without a hereditary throne."
+       "why": "A central Oba or Alaafin ruled through the Oyomesi and Ogboni. The other labels describe systems without a hereditary throne."
       }
      }
     },
@@ -1437,7 +1453,7 @@
         "Ofo"
        ],
        "answer": 2,
-       "why": "The Okpara was the oldest man who presided over the assembly; Obi and Eze are titles in other systems, and Ofo is a symbol of authority."
+       "why": "The Okpara was the oldest man who presided over the assembly. Obi and Eze are titles in other systems, and Ofo is a symbol of authority."
       },
       "visual": {
        "kind": "compare",
@@ -1495,7 +1511,7 @@
         "officer in charge of the army"
        ],
        "answer": 1,
-       "why": "The Galadima administered the capital; the Alkali judged and the Madaki commanded the army."
+       "why": "The Galadima administered the capital. The Alkali judged and the Madaki commanded the army."
       }
      }
     },
@@ -1550,9 +1566,12 @@
       "heading": "Go deeper: Three answers to the problem of a bad ruler",
       "paragraphs": [
        "Every pre-colonial system had to solve the same practical problem: what happens when the person in charge becomes unjust? The Yoruba, Igbo and Hausa/Fulani solutions differed because each located authority in a different place. Their differences are clearer when each is read as a device for restraint rather than as a simple story about who was in charge.",
-       "In Yoruba kingdoms the Oba or Alaafin ruled from a palace but not alone. The Oyomesi acted as a senior council that advised and could resist, while the Ogboni combined religious standing with judicial functions and could restrain a ruler who ignored counsel. A ruler who treated both bodies as ornaments risked deposition, so hierarchy carried a built-in warning. Power moved through a centre that had to listen.",
-       "Igbo communities removed the centre itself. The village assembly, presided over by the Okpara as the oldest man, argued until consensus emerged, while age grades enforced the result and title societies gave prestige without creating a throne. That design prevented a single tyrant but slowed decisions and left no obvious signatory. The absence of a paramount ruler was itself the restraint.",
-       "The Hausa/Fulani emirates placed restraint inside a centralised order. The Emir ruled under Islamic law, the Galadima managed the capital, the Madaki handled military command and the Alkali judged cases. Authority looked absolute from a distance, yet it ran through named offices with distinct duties. A lower head could administer, command or judge without becoming the Emir, because the offices defined the limits."
+       "In Yoruba kingdoms the Oba or Alaafin ruled from a palace but not alone. The Oyomesi acted as a senior council that advised and could resist, while the Ogboni combined religious standing with judicial functions and could restrain a ruler who ignored counsel. A ruler who treated both bodies as ornaments risked deposition, so hierarchy carried a built-in warning.",
+       "Power moved through a centre that had to listen.",
+       "Igbo communities removed the centre itself. The village assembly, presided over by the Okpara as the oldest man, argued until consensus emerged, while age grades enforced the result and title societies gave prestige without creating a throne. That design prevented a single tyrant but slowed decisions and left no obvious signatory.",
+       "The absence of a paramount ruler was itself the restraint.",
+       "The Hausa/Fulani emirates placed restraint inside a centralised order. The Emir ruled under Islamic law, the Galadima managed the capital, the Madaki handled military command and the Alkali judged cases. Authority looked absolute from a distance, yet it ran through named offices with distinct duties.",
+       "A lower head could administer, command or judge without becoming the Emir, because the offices defined the limits."
       ],
       "bullets": [
        "Yoruba restraint ran through the Oyomesi and the Ogboni.",
@@ -1568,9 +1587,12 @@
       "heading": "Go deeper: Why indirect rule fitted the emirates and strained Igboland",
       "paragraphs": [
        "Indirect rule was, for colonial officers, an administrative shortcut. Instead of governing every village directly, a district officer ruled through an existing hierarchy that collected taxes, kept order and supplied information. Where that hierarchy already existed, the claims of chiefs and the needs of the colonial state could be made to point in the same direction.",
-       "The emirates supplied that hierarchy with unusual clarity. An Emir at the top, district heads below and alkali courts for judgement gave officers a chain they could recognise and use. The colonial state could therefore present itself as the protector of the emirate order while quietly taking control of its external relations. Centralisation made the bargain visible on both sides.",
-       "Igbo assembly government offered no equivalent chain. Decisions emerged from the Oha-na-eze after wide debate, enforcement ran through age grades and prestige through title societies, but no single chief could bind the whole area. Officers who needed one partner therefore created warrant chiefs through warrants issued by the colonial authority. Those appointments invented a form of paramountcy that the assembly system had deliberately avoided.",
-       "The result was not simply that Igboland was harder to govern. It was that indirect rule changed what it touched. In the emirates it worked through institutions that already commanded obedience; in Igboland it manufactured an authority that lacked the older consent. That contrast explains why the warrant system attracted resistance while the emirate hierarchy endured longer within the colonial structure."
+       "The emirates supplied that hierarchy with unusual clarity. An Emir at the top, district heads below and Alkali courts for judgement gave officers a chain they could recognise and use. The colonial state could therefore present itself as the protector of the emirate order while quietly taking control of its external relations.",
+       "Centralisation made the bargain visible on both sides.",
+       "Igbo assembly government offered no equivalent chain. Decisions emerged from the Oha-na-eze after wide debate, enforcement ran through age grades and prestige through title societies, but no single chief could bind the whole area. Officers who needed one partner therefore created warrant chiefs through warrants issued by the colonial authority.",
+       "Those appointments invented a form of paramountcy that the assembly system had deliberately avoided.",
+       "The result was not simply that Igboland was harder to govern. It was that indirect rule changed what it touched. In the emirates it worked through institutions that already commanded obedience; in Igboland it manufactured an authority that lacked the older consent.",
+       "That contrast explains why the warrant system attracted resistance while the emirate hierarchy endured longer within the colonial structure."
       ],
       "bullets": [
        "Indirect rule needed an existing hierarchy it could rule through.",
@@ -1586,7 +1608,8 @@
       "heading": "Go deeper: The Tiv and the danger of calling the North one thing",
       "paragraphs": [
        "Nigeria is often described through three great systems, but the description can mislead if it treats every group in the north as an emirate. The Hausa/Fulani emirates shared Islamic law, a central throne and ranked offices, yet the Tiv organised authority without a comparable central ruler and without the same Islamic political culture. That single exception changes the map.",
-       "The Kanuri, Fulani and Nupe also caution against a single northern label. Their histories, languages and relations to the emirate order differed, even where Islam influenced courts and kingship. To call them all theocratic before checking the evidence is to replace three different arrangements with a convenient slogan. The examiner uses the Tiv precisely to punish that shortcut.",
+       "The Kanuri, Fulani and Nupe also caution against a single northern label. Their histories, languages and relations to the emirate order differed, even where Islam influenced courts and kingship. To call them all theocratic before checking the evidence is to replace three different arrangements with a convenient slogan.",
+       "The examiner uses the Tiv precisely to punish that shortcut.",
        "The same caution applies to the south. Yoruba monarchy and Igbo acephalous consensus look like opposites, but both contained checks: councils and cults checked an Oba, while elders, age grades and title societies checked the assembly. Focusing only on the presence or absence of a throne misses the shared concern with limiting a single will.",
        "Understanding that variation protects against a common trap. A question that asks about a non-centralised group in the north does not expect the emirate answer, and a question about the Igbo does not expect a council of nobles. Locate each people in its own arrangement first; only then compare them."
       ],
@@ -1611,7 +1634,7 @@
      "content": {
       "heading": "Parties in one sentence",
       "paragraphs": [
-       "A political party is an organised group that seeks to win elections and control government."
+       "Every election season, you watch a new party open a ward office, print a manifesto and rush through INEC registration hoping to win. That ambition to govern is what separates a party from a discussion club: a political party is an organised group that seeks to win elections and control government."
       ],
       "bullets": []
      }
@@ -1675,10 +1698,10 @@
     {
      "type": "text",
      "content": {
-      "heading": "Organisation, candidates and money",
+      "heading": "Organisation, choices on the ballot and money",
       "paragraphs": [
-       "A national chairman overrules a state chapter's choice of candidate, and the loser defects to another party. Both incidents show that party organisation and candidate selection decide who reaches the ballot.",
-       "Candidates are chosen through primaries, direct or indirect, and the national executive can sometimes impose a candidate. Internal democracy is weak when a few leaders control the list, and defections follow.",
+       "A national chairman overrules a state chapter's choice of flagbearer, and the loser defects to another party. Both incidents show that party organisation, and the way aspirants are picked, decide who reaches the ballot.",
+       "Aspirants are chosen through primaries, direct or indirect, and the national executive can sometimes impose a name. Internal democracy is weak when a few leaders control the list, and defections follow.",
        "Parties are financed by dues, levies, donations and, in some countries, public funds. Without disclosure, wealthy sponsors can capture the party and its manifesto."
       ],
       "bullets": [
@@ -1686,7 +1709,7 @@
        "Finance: dues, levies, donations, public funds.",
        "Weak internal democracy produces defections."
       ],
-      "takeaway": "Party organisation decides who gets on the ballot; party finance decides who can afford to.",
+      "takeaway": "Party organisation decides who gets on the ballot; party finance decides who can afford the race.",
       "check": {
        "question": "The party body that runs the party between national conventions is the ______.",
        "options": [
@@ -1751,9 +1774,12 @@
       "heading": "Go deeper: How party systems shape stability and representation",
       "paragraphs": [
        "A party system is not a register of parties. It describes the pattern of competition that results from how many effective parties exist and whether elections can change the government. A state with dozens of registered parties may still have a stable two-party contest, while a state with only a few parties may offer no genuine choice if the same party always wins.",
-       "Two-party systems reward convergence. With only two serious contenders, each must appeal to the median voter, so governments tend to be moderate and alternation is clear. That clarity brings stability, but it can also crowd out minority interests. Nigeria showed the alternation logic in the First Republic contest between the NPC and NCNC, and again when the PDP and the APC contested national power from 2015.",
-       "Multi-party systems reward breadth. Several parties can enter the legislature, minority views can survive, and governments often depend on coalitions. Representation improves, but coalition bargaining can make policy slow and difficult for voters to reward or punish. A coalition that no single party controls is harder to hold responsible than a government of one party.",
-       "Dominant-party systems sit between competition and closure. Other parties are legal and campaign, yet one party wins repeatedly because it controls resources, patronage or the grievances of others. The NPN period from 1979 to 1983 and the PDP era from 1999 to 2015 fit that description. Stability is real, but it is purchased by weakening the expectation that a loss is possible."
+       "Two-party systems reward convergence. With only two serious contenders, each must appeal to the median voter, so governments tend to be moderate and alternation is clear. That clarity brings stability, but it can also crowd out minority interests.",
+       "Nigeria showed the alternation logic in the First Republic contest between the NPC and NCNC, and again when the PDP and the APC contested national power from 2015.",
+       "Multi-party systems reward breadth. Several parties can enter the legislature, minority views can survive, and governments often depend on coalitions. Representation improves, but coalition bargaining can make policy slow and difficult for voters to reward or punish.",
+       "A coalition that no single party controls is harder to hold responsible than a government of one party.",
+       "Dominant-party systems sit between competition and closure. Other parties are legal and campaign, yet one party wins repeatedly because it controls resources, patronage or the grievances of others. The NPN period from 1979 to 1983 and the PDP era from 1999 to 2015 fit that description.",
+       "Stability is real, but it is purchased by weakening the expectation that a loss is possible."
       ],
       "bullets": [
        "A system describes effective competition and whether power can change hands.",
@@ -1769,9 +1795,11 @@
       "heading": "Go deeper: Primaries, imposition and the quiet collapse of discipline",
       "paragraphs": [
        "Getting on the ballot often matters more than getting elected, because a primary decides who carries the party label into the general contest. Direct primaries ask members to choose, indirect primaries ask delegates, and imposition removes the choice from voters in the ward or constituency. The label stays the same, but the degree of internal democracy behind it changes completely.",
-       "National machinery can overturn local choices. The national convention is the supreme body when it meets, while the national executive committee runs the party between conventions. If state chapters, ward executives and national officers disagree, the public sees factions rather than one membership. Losers who believe the process was rigged often defect to a rival party, carrying their structures with them.",
-       "Finance deepens the distortion. Dues and levies spread cost widely, while large donations concentrate influence in sponsors who can fund campaigns, offices and litigation. Without disclosure and limits, candidates begin to answer to financiers rather than members. Public funding, where it exists, can reduce that dependence but creates a new question about who decides the rate and the recipients.",
-       "Discipline is therefore not a slogan. It is the outcome of fair primaries, predictable conventions, honest registers and finance that members can inspect. A party that selects candidates by favour and pays for organisation through a few hands should expect defections, because excluded aspirants have no reason to remain loyal to a label that gave them no chance."
+       "National machinery can overturn local choices. The national convention is the supreme body when it meets, while the national executive committee runs the party between conventions. If state chapters, ward executives and national officers disagree, the public sees factions rather than one membership.",
+       "Losers who believe the process was rigged often defect to a rival party, carrying their structures with them.",
+       "Finance deepens the distortion. Dues and levies spread cost widely, while large donations concentrate influence in sponsors who can fund campaigns, offices and litigation. Without disclosure and limits, aspirants begin to answer to financiers rather than members.",
+       "Public funding, where it exists, can reduce that dependence but creates a new question about who decides the rate and the recipients.",
+       "Discipline is therefore not a slogan. It is the outcome of fair primaries, predictable conventions, honest registers and finance that members can inspect. A party that selects aspirants by favour and pays for organisation through a few hands should expect defections, because excluded hopefuls have no reason to remain loyal to a label that gave them no chance."
       ],
       "bullets": [
        "Direct, indirect and imposed selection produce different levels of internal democracy.",
@@ -1786,10 +1814,14 @@
      "content": {
       "heading": "Go deeper: National outlook is about people, not branch offices",
       "paragraphs": [
-       "A party can open offices in every state and still remain regional in spirit. Branch offices prove logistics, not belonging. The national question concerns where members come from, where leaders are drawn from and which interests the manifesto must satisfy. A party of one ethnic or regional group has not solved that problem by renting in the capital.",
-       "Aggregation tests the claim. Parties must combine farmers and traders, workers and professionals, religious groups and regions into a programme broad enough for a national majority. An aggregating convention debates policy and balances tickets across groups. Without that combination, a party may dominate one region and lack votes and legitimacy for the federation.",
-       "Nigeria makes the test strict. The Independent National Electoral Commission registers parties under constitutional conditions, and national ambition requires campaigning across federal and state tiers. A state party may be effective locally, but without alliances it cannot command a federal majority. The federation punishes purely local appeal nationally.",
-       "The exam trap reverses the logic. It offers branches, registration, famous leaders or an imposing headquarters as proof. None proves that membership and leadership cut across ethnic and regional lines. One group's support under many office signs is a regional party with national offices."
+       "A party can open offices in every state and still remain regional in spirit. Branch offices prove logistics, not belonging. The national question concerns where members come from, where leaders are drawn from and which interests the manifesto must satisfy.",
+       "A party of one ethnic or regional group has not solved that problem by renting in the capital.",
+       "Aggregation tests the claim. Parties must combine farmers and traders, workers and professionals, religious groups and regions into a programme broad enough for a national majority. An aggregating convention debates policy and balances tickets across groups.",
+       "Without that combination, a party may dominate one region and lack votes and legitimacy for the federation.",
+       "Nigeria makes the test strict. The Independent National Electoral Commission registers parties under constitutional conditions, and national ambition requires campaigning across federal and state tiers. A state party may be effective locally, but without alliances it cannot command a federal majority.",
+       "The federation punishes purely local appeal nationally.",
+       "The exam trap reverses the logic. It offers branches, registration, famous leaders or an imposing headquarters as proof. None proves that membership and leadership cut across ethnic and regional lines.",
+       "One group's support under many office signs is a regional party with national offices."
       ],
       "bullets": [
        "Branch offices prove organisation, not national outlook.",
@@ -1812,7 +1844,7 @@
      "content": {
       "heading": "Foreign policy in one sentence",
       "paragraphs": [
-       "Foreign policy is a state's strategy for dealing with other states and international organisations."
+       "Your country just summoned the ambassador over a border incident with a neighbour, and the news bulletin leads with it tonight. Everything Nigeria does beyond its borders, and every way it does it, is foreign policy: the state's strategy for dealing with other states and international organisations."
       ],
       "bullets": []
      }
@@ -1841,7 +1873,7 @@
         "national prestige"
        ],
        "answer": 2,
-       "why": "Diplomacy is a method a state uses; security, economic advantage and prestige are goals it pursues."
+       "why": "Diplomacy is a method a state uses. Security, economic advantage and prestige are goals it pursues."
       }
      }
     },
@@ -1869,7 +1901,7 @@
         "anti-apartheid"
        ],
        "answer": 1,
-       "why": "Afrocentrism was declared at independence; anti-apartheid was one part of it, and the other options misdescribe the declared basis."
+       "why": "Afrocentrism was declared at independence. Anti-apartheid was one part of it, and the other options misdescribe the declared basis."
       }
      }
     },
@@ -1973,26 +2005,28 @@
      "content": {
       "heading": "Go deeper: Non-alignment from the weak side of the table",
       "paragraphs": [
-       "Non-alignment is not silence or agreement with everyone. It is a strategy for states that cannot defend themselves alone: refuse rival blocs, keep alliances temporary and use organisations to turn legal equality into influence. A small delegation still counts as one vote in a general assembly, and a treaty still binds a powerful neighbour.",
+       "Non-alignment is not silence, or agreement with everyone. It is a strategy for states that cannot defend themselves alone: refuse rival blocs, keep alliances temporary and use organisations to turn legal equality into influence. A small delegation still counts as one vote in a general assembly, and a treaty still binds a powerful neighbour.",
        "Sovereign equality gives that strategy its footing. Each state is legally equal regardless of population or wealth, so a bloc of African votes can shape the agenda of the United Nations or the African Union in a way no single state could. Non-interference protects the same point: stronger powers may persuade, but cannot decide domestic matters without breaking the norm.",
-       "Peaceful settlement is the working method. Courts, mediation and peacekeeping mandates give Nigeria a forum where Cameroon, a rebel movement or a distant sponsor must at least answer. The process creates a record, attracts support and raises the cost of force. For a middle power, talk is not empty when the alternative is an unsustainable war.",
-       "Neighbourhood comes first. Geography places Nigeria among states with porous borders, shared ties and competing resources. ECOWAS and border settlements decide whether news arrives as a diplomatic note or as a raid. A strategy that works in a distant capital but fails on the border has missed its purpose."
+       "Peaceful settlement is the working method. Courts, mediation and peacekeeping mandates give Nigeria a forum where Cameroon, a rebel movement or a distant sponsor must at least answer. The process creates a record, attracts support and raises the cost of force.",
+       "For a middle power, talk is not empty when the alternative is an unsustainable war.",
+       "Neighbourhood comes first. Geography places Nigeria among states with porous borders, shared ties and competing resources. ECOWAS and border settlements decide whether news arrives as a diplomatic note or as a raid.",
+       "A strategy that works in a distant capital but fails on the border has missed its purpose."
       ],
       "bullets": [
        "Non-alignment keeps alliances temporary and preserves a free vote.",
        "Sovereign equality turns many weak votes into influence.",
        "International forums raise the cost of force.",
-       "Neighbourhood security is tested first on Nigeria’s borders."
+       "Neighbourhood security is tested first on Nigeria's borders."
       ]
      }
     },
     {
      "type": "text",
      "content": {
-      "heading": "Go deeper: Why law, protest and peacekeeping suited Nigeria’s position",
+      "heading": "Go deeper: Why law, protest and peacekeeping suited Nigeria's position",
       "paragraphs": [
        "Nigeria could not fight every dispute it cared about, so it chose instruments whose cost matched its power. Taking Bakassi to the International Court of Justice placed the case where maps, treaties and argument mattered more than army size. The Court ruled in 2002 and the Greentree Agreement of 2006 carried out the handover.",
-       "The Edinburgh withdrawal in 1986 used a different economy of power. Leaving the Commonwealth Games did not move a border or impose a sanction, but it denied Britain a celebration and publicised Nigeria’s anger at Britain’s refusal to impose sanctions on apartheid South Africa. A boycott is cheap, visible and reversible.",
+       "The Edinburgh withdrawal in 1986 used a different economy of power. Leaving the Commonwealth Games did not move a border or impose a sanction, but it denied Britain a celebration and publicised Nigeria's anger at Britain's refusal to impose sanctions on apartheid South Africa. A boycott is cheap, visible and reversible.",
        "Peacekeeping through ECOMOG in Liberia and Sierra Leone reversed the voice. Nigeria supplied troops, money and command, and showed neighbours it could protect order as well as demand it. That role bought prestige and a reputation for regional responsibility, while exposing soldiers to danger and budgets to heavy costs.",
        "Together the cases teach one choice. Use law where a court can bind, use symbolism where only opinion can move, and use soldiers only where regional cover and a clear mandate make the expense defensible. Each instrument carries a different bill."
       ],
@@ -2011,7 +2045,8 @@
       "paragraphs": [
        "Nigeria declared itself Afrocentric at independence in 1960, yet the Balewa government still protected trade and security links with Britain. That caution was not hypocrisy; it reflected an economy that needed markets, investors and manufactured goods. A new state can proclaim African solidarity while depending on the very partners whose colonial ties it criticises, and the tension shapes every decision.",
        "The review of 1975 under the Murtala/Obasanjo regime, conducted by the Adedeji Commission, pushed the balance toward assertion. Nigeria opposed apartheid and white minority rule more openly and treated African liberation as a central test of respect. The shift was political before it was economic, because the immediate aim was to prove that an African state could set its own agenda without seeking permission from former colonial powers.",
-       "Economic diplomacy, prominent after 1999, added a second ledger. Trade, investment, energy sales and technology now compete with liberation rhetoric. A government that needs foreign capital cannot easily threaten the investors it courts, while a government that ignores liberation loses the African leadership it claims. The result is not a choice between principle and interest but a constant negotiation between them.",
+       "Economic diplomacy, prominent after 1999, added a second ledger. Trade, investment, energy sales and technology now compete with liberation rhetoric. A government that needs foreign capital cannot easily threaten the investors it courts, while a government that ignores liberation loses the African leadership it claims.",
+       "The result is not a choice between principle and interest but a constant negotiation between them.",
        "Domestic politics decides how that negotiation sounds. A leader who needs votes at home may speak firmly abroad, while the same leader in a capital of investors may speak softly. Foreign policy is therefore domestic policy continued with weaker enforcement: budgets, elections and public anger at home all limit what a president can promise or threaten thousands of miles away."
       ],
       "bullets": [
@@ -2035,7 +2070,7 @@
      "content": {
       "heading": "Citizenship in one sentence",
       "paragraphs": [
-       "Citizenship is the legal bond between a person and a state, and it carries rights, duties and protection that residence alone never creates."
+       "Your cousin was born in Lagos to parents from Enugu, the woman next door married a Nigerian in Kano, and the Chadian tailor on your street has lived here for twenty years. Only two of the three are citizens. Citizenship is the legal bond between a person and a state, and it carries rights, duties and protection that residence alone never creates."
       ],
       "bullets": []
      }
@@ -2092,7 +2127,7 @@
         "Freedom of movement"
        ],
        "answer": 2,
-       "why": "Paying tax is a section 24 duty; conscience, fair hearing and movement are Chapter IV rights."
+       "why": "Paying tax is a section 24 duty. Conscience, fair hearing and movement are Chapter IV rights."
       }
      }
     },
@@ -2177,13 +2212,13 @@
         "operation": "Classify the trader",
         "reason": "Sixteen years' residence, good character and the oath meet the naturalisation conditions.",
         "result": "(b) Citizen by naturalisation.",
-        "predictPrompt": "In your own words, why does this step come before the next one?"
+        "predictPrompt": "Why does this step come before the next one, in your own words?"
        },
        {
         "operation": "Classify the engineer",
         "reason": "A citizen by birth may hold another citizenship without losing Nigerian citizenship.",
         "result": "(c) Still a Nigerian citizen.",
-        "predictPrompt": "How would you sanity-check this answer against the evidence?"
+        "predictPrompt": "How would you check this answer against the evidence?"
        }
       ]
      }
@@ -2223,8 +2258,8 @@
       "heading": "Go deeper: Dual citizenship and public office",
       "paragraphs": [
        "Dual citizenship is lawful in Nigeria, but not for everyone on the same terms. A citizen by birth may hold another nationality and travel on either passport; a citizen by registration or naturalisation cannot, because voluntary acquisition of another nationality ends the Nigerian status.",
-       "Public office sharpens the question. The President and state governors must be citizens by birth under sections 131 and 177, so a naturalised citizen cannot contest those offices even after decades of service. For other offices the Constitution requires citizenship, and election petitions have turned on whether a candidate lost it.",
-       "The practical trap is documentary. A candidate who naturalised abroad, or who renounced Nigerian citizenship and later reacquired it by registration, may satisfy the age and party tests yet fail the citizenship test. Read the constitutional text, not the passport in hand.",
+       "Public office sharpens the question. The President and state governors must be citizens by birth under sections 131 and 177, so a naturalised citizen cannot contest those offices even after decades of service. For other offices the Constitution requires citizenship, and election petitions have turned on whether a contender lost it.",
+       "The practical trap is documentary. A contender who naturalised abroad, or who renounced Nigerian citizenship and later reacquired it by registration, may satisfy the age and party tests yet fail the citizenship test. Read the constitutional text, not the passport in hand.",
        "Dual citizenship also affects duties. A citizen abroad still owes allegiance, may be called to defend Nigeria, and remains liable to tax on Nigerian-source income. A second passport does not switch off section 24."
       ],
       "bullets": [
@@ -2242,7 +2277,7 @@
        "The syllabus asks you to assess the obligations of the state, and the Constitution splits them in two. Chapter IV rights, from life and fair hearing to expression, movement and property, are enforceable: a citizen can sue a public officer who violates them. Chapter II duties, covering security, welfare, education and health, are directive principles that guide government but are not directly enforceable.",
        "That distinction explains why an underfunded school rarely produces a successful lawsuit, while a detention without trial can be challenged at once. Section 14(2) still declares that the security and welfare of the people shall be the primary purpose of government, but section 6(6)(c) keeps Chapter II out of the courts.",
        "Abroad, the state owes diplomatic and consular protection. A Nigerian arrested in another country can ask the embassy for help, though the embassy cannot override that country's courts. At home, the police and armed forces carry the duty to protect life and property, and their failure can ground a claim in damages.",
-       "The bargain is unequal but real: the citizen pays tax, obeys the law and may be conscripted; the state protects rights, provides security and pursues welfare. Exams reward the student who can say which side is enforceable."
+       "The bargain is unequal but real: the citizen pays tax, obeys the law and may be conscripted; the state protects rights, provides security and pursues welfare. In the exam, the smart move is to say which side is enforceable."
       ],
       "bullets": [
        "Chapter IV rights are enforceable; Chapter II goals are not directly justiciable.",
@@ -2264,7 +2299,7 @@
      "content": {
       "heading": "Ideology in one sentence",
       "paragraphs": [
-       "An ideology is an organised set of beliefs about who should own wealth, how production should be run, and how much liberty the state should allow."
+       "Your neighbour says the land belongs to the family, the market woman says her shop is her own, and the professor says the state should own the mill. Each is quoting an ideology: an organised set of beliefs about who should own wealth, how production should be run, and how much liberty the state should allow."
       ],
       "bullets": []
      }
@@ -2491,7 +2526,7 @@
      "content": {
       "heading": "Structure in one sentence",
       "paragraphs": [
-       "A structure of government describes how power is shared between the centre and the regions, not who holds the top office."
+       "Think of the last time Abuja announced a new national curriculum and it reached every school from Sokoto to Port Harcourt on the same day. One centre deciding for everywhere is one structure; sharing that power is another. A structure of government describes how power is shared between the centre and the regions, not who holds the top office."
       ],
       "bullets": []
      }
@@ -2661,10 +2696,14 @@
      "content": {
       "heading": "Go deeper: Federal, decentralised or merely busy at the centre",
       "paragraphs": [
-       "Many states have local councils, regional offices and national ministries without being federal. The question is not how many tiers exist but who can abolish whom. In a decentralised unitary state the centre creates local bodies by ordinary law and can reorganise or abolish them at will. In a federation the constitution protects the lower tier, so the centre cannot cancel the bargain by a simple vote.",
-       "Nigeria answers that test as a federation. A written constitution divides power into exclusive functions for the federal tier, concurrent functions for federal and state tiers, and residual functions for the states. Federal law prevails where the two conflict on concurrent matters, but that supremacy does not erase the state sphere. Neither tier can abolish the other.",
-       "Centralised administration can mislead observers. Nigeria has a single national police, a Federation Account that channels oil revenue, federal roads and a presidency that dominates national attention. Those features pull power toward Abuja, yet they do not make the structure unitary. A federal constitution can still share revenue, staff offices and publicity unevenly; only the abolition test decides the form.",
-       "Confederation fails that same test from the opposite side. Its units keep sovereignty, decide by agreement and retain a right of withdrawal, so the centre cannot command them within their own states. A federal centre may be strong, but it governs units that the constitution guarantees. A confederal centre is weak before units it cannot overrule."
+       "Many states have local councils, regional offices and national ministries without being federal. The question is not how many tiers exist but who can abolish whom. In a decentralised unitary state the centre creates local bodies by ordinary law and can reorganise or abolish them at will.",
+       "In a federation the constitution protects the lower tier, so the centre cannot cancel the bargain by a simple vote.",
+       "Nigeria answers that test as a federation. A written constitution divides power into exclusive functions for the federal tier, concurrent functions for federal and state tiers, and residual functions for the states. Federal law prevails where the two conflict on concurrent matters, but that supremacy does not erase the state sphere.",
+       "Neither tier can abolish the other.",
+       "Centralised administration can mislead observers. Nigeria has a single national police, a Federation Account that channels oil revenue, federal roads and a presidency that dominates national attention. Those features pull power toward Abuja, yet they do not make the structure unitary.",
+       "A federal constitution can still share revenue, staff offices and publicity unevenly; only the abolition test decides the form.",
+       "Confederation fails that same test from the opposite side. Its units keep sovereignty, decide by agreement and retain a right of withdrawal, so the centre cannot command them within their own states. A federal centre may be strong, but it governs units that the constitution guarantees.",
+       "A confederal centre is weak before units it cannot overrule."
       ],
       "bullets": [
        "Ask who can abolish whom; tiers alone do not prove federalism.",
@@ -2679,14 +2718,16 @@
      "content": {
       "heading": "Go deeper: Why federations centralise and confederations stall",
       "paragraphs": [
-       "Federations rarely stay neatly divided. Railways, currency, defence, inter-state security and national markets create pressure for common rules, while minorities inside each state demand federal protection from the state majority. New functions therefore drift upward, especially when the centre controls the tax base that pays for them. Centralisation is less a betrayal than an outcome of money and mobility.",
-       "Nigeria shows that mechanism clearly. Oil revenue gathered in the Federation Account, a federal police and the military era’s habit of governing by decree all strengthened federal institutions at the expense of state autonomy. A strong centre can arbitrate between states, fund national infrastructure and protect rights from a hostile state government, but each intervention also teaches state actors to look to Abuja rather than to their own legislatures.",
-       "Confederations face the mirror problem. A centre that cannot tax, conscript or compel must ask sovereign members to agree, and unanimity gives each member a veto. Defence plans wait, trade rules fragment and one holdout can block the rest. The Articles of Confederation era in America illustrated the stall, which is why it was replaced by a constitution that created a centre able to act.",
-       "The comparison explains why the labels survive. Federalism must manage a permanent tension between autonomy and coordination, while confederalism must survive chronic weakness in urgent matters. A JAMB question that mentions a veto and a right of withdrawal is pointing to the confederal weakness; one that mentions a written division and a supreme court is pointing to the federal bargain."
+       "Federations rarely stay neatly divided. Railways, currency, defence, inter-state security and national markets create pressure for common rules, while minorities inside each state demand federal protection from the state majority. New functions therefore drift upward, especially when the centre controls the tax base that pays for them.",
+       "Centralisation is less a betrayal than an outcome of money and mobility.",
+       "Nigeria shows that mechanism clearly. Oil revenue gathered in the Federation Account, a federal police and the military era's habit of governing by decree all strengthened federal institutions at the expense of state autonomy. A strong centre can arbitrate between states, fund national infrastructure and protect rights from a hostile state government, but each intervention also teaches state actors to look to Abuja rather than to their own legislatures.",
+       "Confederations face the mirror problem. A centre that cannot tax, conscript or compel must ask sovereign members to agree, and unanimity gives each member a veto. Defence plans wait, trade rules fragment and one holdout can block the rest.",
+       "The Articles of Confederation era in America illustrated the stall, which is why it was replaced by a constitution that created a centre able to act.",
+       "The comparison explains why the labels survive. Federalism must manage a permanent tension between autonomy and coordination, while confederalism must survive chronic weakness in urgent matters. A question that mentions a veto and a right of withdrawal is pointing to the confederal weakness; one that mentions a written division and a supreme court is pointing to the federal bargain."
       ],
       "bullets": [
        "Money, markets and security push federations toward the centre.",
-       "Nigeria’s Federation Account and single police pull power upward.",
+       "Nigeria's Federation Account and single police pull power upward.",
        "Confederal unanimity grants each member a veto.",
        "Veto plus withdrawal signals confederal weakness; amendment plus review signals federalism."
       ]
@@ -2698,12 +2739,15 @@
       "heading": "Go deeper: Quasi-federal Nigeria and the traps in between",
       "paragraphs": [
        "Nigeria is often called quasi-federal because practice leans toward the centre while the text remains federal. State creation, revenue control and the legacy of military decrees gave the federal government tools that a classic federation distributes more evenly. Practice can look unitary even when the constitution still guarantees state powers.",
-       "Edge cases blur the textbook from the other side. A unitary state with elected regional councils and real budgets may behave like a federation while remaining unitary in law. A federation whose states depend on federal transfers may keep residual powers on paper while lacking money to use them. Apply the legal test before the impression.",
-       "Structure also sits beside form and system. Form asks who holds the top office, a president in a republic or a monarch in a monarchy. System asks how the executive meets the legislature, as in presidential or parliamentary arrangements. Structure asks how the centre shares power with units. Nigeria thus combines a federal structure, a republican form and a presidential system.",
-       "Decentralisation and devolution need the same care. Delegating administration that the centre can recall is decentralisation within a unitary frame. Transferring authority the centre cannot abolish is federal devolution. If the centre appoints governors or dissolves assemblies, the structure is not federal, however many tiers it contains."
+       "Edge cases blur the textbook from the other side. A unitary state with elected regional councils and real budgets may behave like a federation while remaining unitary in law. A federation whose states depend on federal transfers may keep residual powers on paper while lacking money to use them.",
+       "Apply the legal test before the impression.",
+       "Structure also sits beside form and system. Form asks who holds the top office, a president in a republic or a monarch in a monarchy. System asks how the executive meets the legislature, as in presidential or parliamentary arrangements.",
+       "Structure asks how the centre shares power with units. Nigeria thus combines a federal structure, a republican form and a presidential system.",
+       "Decentralisation and devolution need the same care. Delegating administration that the centre can recall is decentralisation within a unitary frame. Transferring authority the centre cannot abolish is federal devolution.",
+       "If the centre appoints governors or dissolves assemblies, the structure is not federal, however many tiers it contains."
       ],
       "bullets": [
-       "Nigeria’s centre is strong, but its states remain protected.",
+       "Nigeria's centre is strong, but its states remain protected.",
        "Elected local bodies do not by themselves make a state federal.",
        "Form, system and structure ask different questions.",
        "Recallable delegation is decentralisation; protected power is federal devolution."
@@ -2723,7 +2767,7 @@
      "content": {
       "heading": "Federalism in one sentence",
       "paragraphs": [
-       "Nigerian federalism divides power between a federal government and state governments, each protected by the constitution within its own sphere."
+       "Both the federal government and each state have their own powers under the constitution. Neither can cancel the other. That is the question every Nigerian learns to answer before age ten."
       ],
       "bullets": []
      }
@@ -2948,7 +2992,7 @@
      "content": {
       "heading": "System in one sentence",
       "paragraphs": [
-       "A system of government describes how the executive and legislature relate, not who holds the title of ruler."
+       "Parliamentary countries smash the Prime Minister and his cabinet right into Parliament. Presidential ones build a wall between the President and Congress. Your answer to “who rules here?” is just a matter of where the wall sits."
       ],
       "bullets": []
      }
@@ -3085,7 +3129,7 @@
     {
      "type": "text",
      "content": {
-      "heading": "Go deeper: Gridlock and instability — the two opposite risks",
+      "heading": "Go deeper: Gridlock and instability: the two opposite risks",
       "paragraphs": [
        "A presidential system separates the election of the executive from the election of the legislature. When the president and the assembly majority belong to different parties, neither can remove the other at will. The result is not collapse but negotiation, delay and public blame that continues until the next election.",
        "That friction is the price of stability. The president holds a fixed term, ministers remain in office through a budget dispute, and a government cannot fall mid-term merely because a coalition breaks. Critics call the delay gridlock, but supporters call it the protection that prevents a temporary majority from sweeping away a government.",
@@ -3119,7 +3163,7 @@
     {
      "type": "text",
      "content": {
-      "heading": "Go deeper: When titles mislead — republics, monarchies and juntas",
+      "heading": "Go deeper: When titles mislead: republics, monarchies and juntas",
       "paragraphs": [
        "The word president can describe three different arrangements. In a presidential republic the president governs. In a parliamentary republic the president is ceremonial and a prime minister governs from the assembly. In a military junta an officer may title himself president while ruling by decree without any separate election.",
        "The same warning applies to the word king. A monarch who chooses the government and issues decrees on his own stands at the head of an absolute monarchy. A monarch who opens parliament and appoints the leader of the majority party as prime minister reigns in a constitutional monarchy and belongs to a parliamentary system.",
@@ -3146,7 +3190,7 @@
      "content": {
       "heading": "Civil service in one sentence",
       "paragraphs": [
-       "The civil service is the permanent staff of ministries; the public service is wider and includes corporations and councils."
+       "The civil service is the people who never leave. They outlast ministers, outlast governors, outlast regimes. The public service is wider: it swallows in corporations, councils, parastatals and every agency that gets tax money."
       ],
       "bullets": []
      }
@@ -3323,7 +3367,7 @@
     {
      "type": "text",
      "content": {
-      "heading": "Go deeper: Who controls the controller — audits, commissions and courts",
+      "heading": "Go deeper: Who controls the controller: audits, commissions and courts",
       "paragraphs": [
        "Control begins inside the ministry. A permanent secretary allocates work among directors, directors supervise units, and written rules govern recruitment, promotion and discipline. Hierarchy catches error early because each officer reviews the work of the officer below before it reaches the minister.",
        "External control follows a different path. The National Assembly votes funds through appropriation, questions ministers on spending, and can investigate through committees. A ministry that spends beyond its vote or for a forbidden purpose faces queries, surcharges and political sanction.",
@@ -3367,7 +3411,7 @@
      "content": {
       "heading": "Principles in one sentence",
       "paragraphs": [
-       "Democratic government rests on principles that stop power from becoming arbitrary: the rule of law, separation of powers and accountability."
+       "If leaders can do anything they want, at any time, for whatever reason — then where does that leave you? Three principles say: not like that, not like this, and not anywhere like that either."
       ],
       "bullets": []
      }
@@ -3596,7 +3640,7 @@
      "content": {
       "heading": "Military rule in one sentence",
       "paragraphs": [
-       "Military rule is government by officers who take power by force, suspend the constitution and make law by decree."
+       "Men in uniform walk into the room where the law is made and change nothing except who sits in the chair. Constitutions stay written. Human rights stay listed. The jokes stay silent, because people know who holds the keys."
       ],
       "bullets": []
      }
@@ -3767,7 +3811,7 @@
     {
      "type": "text",
      "content": {
-      "heading": "Go deeper: The military as a federal actor — creating states while centralising power",
+      "heading": "Go deeper: The military as a federal actor: creating states while centralising power",
       "paragraphs": [
        "Military governments created states with one hand and centralised power with the other. Decree No. 34 of 1966 unified the public service under the federal government, and control of oil revenue and the Federation Account kept states dependent on Abuja. The federation grew more fragmented at the same time as it grew more central.",
        "New states solved a political problem for the regime. Each creation rewarded a loyal constituency, divided a large rival region, and answered a demand for recognition without conceding control of the centre. The governor of the new state remained an appointee, so autonomy began as status rather than fiscal power.",
@@ -3794,7 +3838,7 @@
      "content": {
       "heading": "Local government in one sentence",
       "paragraphs": [
-       "Local government is the third tier of government, created to bring administration closer to the people."
+       "The President doesn’t know your street. The Governor knows your state. The man or woman who runs your Local Government Area knows your name, your street, and where the borehole broke. That’s the point."
       ],
       "bullets": []
      }
@@ -4022,7 +4066,7 @@
      "content": {
       "heading": "Pressure groups in one sentence",
       "paragraphs": [
-       "A pressure group is an organised group that seeks to influence policy without contesting elections to govern."
+       "These groups want something from government, but they don’t want to be government. They want the law changed, the taxes dropped, the port opened, the school built. They want you to see them."
       ],
       "bullets": []
      }
@@ -4250,7 +4294,7 @@
      "content": {
       "heading": "The electoral process in one sentence",
       "paragraphs": [
-       "The electoral process is the set of rules and institutions through which citizens choose their representatives."
+       "From putting your name on the register to putting a paper in the box to watching the result published — this is how you claim power by paper, not by force."
       ],
       "bullets": []
      }
@@ -4478,7 +4522,7 @@
      "content": {
       "heading": "International organisations in one sentence",
       "paragraphs": [
-       "Nigeria belongs to global and regional bodies, and each one gives it a different platform and a different set of rules."
+       "Each one gives Nigeria a different voice in different rooms. ECOWAS lets your passport work from Conakry to Lagos. The Commonwealth lets you work in London. The UN lets Nigerian soldiers serve in Liberia."
       ],
       "bullets": []
      }
@@ -4654,7 +4698,7 @@
        "Membership is a privilege that can be priced or withdrawn. Nigeria discovered the political price in 1995 when the Commonwealth suspended it over human-rights abuses and the execution of Ken Saro-Wiwa, and restored it only in 1999 after the return to civilian rule. Suspension did not expel Nigeria from world affairs, but it stripped away a platform, a network and a badge of good standing among former British colonies.",
        "Withdrawal is the sharper instrument. Mauritania's departure from ECOWAS in 2000 showed that a member can leave the community that hosts its trade and movement rules, though the economic and diplomatic costs remain with the departing state. A withdrawal announcement concentrates minds precisely because it threatens the free movement and market access that membership was meant to secure.",
        "OPEC adds a quieter discipline: the quota. Because Nigeria joined in 1971 and depends on crude exports, its production is set within collective ceilings aimed at stabilising prices, and breaches invite pressure from the cartel and from buyers. The discipline is softer than a suspension but constant, and it reminds a producer that stabilising world prices also stabilises the federal revenue from which budgets and allocations flow.",
-       "The edge case is the voluntary limit on sovereignty. Treaties on peace, trade and money bind future Nigerian governments in return for voice, protection and market access. Exams reward the student who names the exchange: a state pools a slice of freedom to gain influence it could not shape alone, and it keeps the platform only while it honours the rules that make it valuable."
+       "Exams reward you who names the exchange: a state pools a slice of freedom to gain influence it could not shape alone, and it keeps the platform only while it honours the rules that make it valuable."
       ],
       "bullets": [
        "Suspension strips the platform; withdrawal surrenders it at a cost.",
@@ -4676,7 +4720,7 @@
      "content": {
       "heading": "Colonial rule in one sentence",
       "paragraphs": [
-       "Colonial rule moved from company charter to Crown control and then through a series of constitutions that widened Nigerian participation."
+       "Colony, protectorate, region, federation, republic — each step answered “who rules?” with a different line on a map, a different name at the top, and a different amount of say for Nigerians."
       ],
       "bullets": []
      }
