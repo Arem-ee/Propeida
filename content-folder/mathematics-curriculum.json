@@ -182,7 +182,7 @@
       "name": "Probability",
       "section": "STATISTICS",
       "order": 26,
-      "description": "Chance, quantified — with and without replacement."
+      "description": "Chance, quantified: with and without replacement."
     },
     {
       "slug": "indices-logarithms-and-surds",
@@ -355,7 +355,7 @@
               },
               {
                 "operation": "Combine like surds",
-                "reason": "Like surds add and subtract exactly like like terms. Use the same-radical rule — once each surd is in simplest form, only the coefficients change; if an example stalls, check whether the smallest radicand was missed.",
+                "reason": "Like surds add and subtract exactly like like terms. Use the same-radical rule; once each surd is in simplest form, only the coefficients change; if an example stalls, check whether the smallest radicand was missed.",
                 "result": "5√2 − 3√2 = 2√2.",
                 "predictPrompt": "How would you verify this answer?"
               },
@@ -412,7 +412,7 @@
               {
                 "operation": "Numeric check",
                 "reason": "Compute (2 + √3)/(2 − √3) ≈ 3.732/0.268 ≈ 13.93",
-                "result": "7 + 4√3 ≈ 13.93 — the algebra matches",
+                "result": "7 + 4√3 ≈ 13.93; the algebra matches",
                 "predictPrompt": "How would you verify this answer?"
               }
             ]
@@ -747,7 +747,7 @@
             "paragraphs": [
               "For ax² + bx + c = 0, the sum of the roots is −b/a and the product is c/a. Check x² + 3x − 10 = 0: the roots 2 and −5 sum to −3 and multiply to −10.",
               "From the roots, x² − (sum)x + (product) = 0: roots 3 and 4 give x² − 7x + 12 = 0.",
-              "Word problems are the same process in disguise — translate, solve, then reject impossible roots, such as negative lengths."
+              "Word problems are the same process in disguise: translate, solve, then reject impossible roots, such as negative lengths."
             ],
             "bullets": [
               "Sum of roots = −b/a.",
@@ -1074,7 +1074,7 @@
             "steps": [
               {
                 "operation": "Draw the triangle",
-                "reason": "The north and east moves form a right triangle. Use a sketch before anything else; if it feels hard, draw the triangle first and label the sides — that removes half the confusion.",
+                "reason": "The north and east moves form a right triangle. Use a sketch before anything else; if it feels hard, draw the triangle first and label the sides; that removes half the confusion.",
                 "result": "The hypotenuse joins the start to the finish.",
                 "predictPrompt": "What would a weaker answer look like here?"
               },
@@ -1451,7 +1451,7 @@
               {
                 "operation": "Replacement case",
                 "reason": "With replacement: 3/5 × 3/5 = 9/25",
-                "result": "Without: 3/10; with: 9/25 — the adverb decides",
+                "result": "Without: 3/10; with: 9/25; the adverb decides",
                 "predictPrompt": "What changes if the balls are put back each time?"
               }
             ]
@@ -1488,13 +1488,13 @@
               },
               {
                 "operation": "Do the third draw",
-                "reason": "only 2 red in 5 remain; the word 'and' means multiply. Best move: multiply in order — first 4/7, then 3/6, then 2/5. If order is easier, use combinations: C(4,3) ÷ C(7,3).",
+                "reason": "only 2 red in 5 remain; the word 'and' means multiply. Best move: multiply in order: first 4/7, then 3/6, then 2/5. If order is easier, use combinations: C(4,3) ÷ C(7,3).",
                 "result": "P = 4/7 × 3/6 × 2/5 = 4/35.",
                 "predictPrompt": "How would you sanity-check the size and sign of this answer?"
               },
               {
                 "operation": "Combination case",
-                "reason": "C(4,3)/C(7,3) = 4/35 — same answer by counting",
+                "reason": "C(4,3)/C(7,3) = 4/35, same answer by counting",
                 "result": "Two methods agree on 4/35",
                 "predictPrompt": "How would you count all outcomes directly?"
               }
@@ -1586,7 +1586,7 @@
               "Addition in base b works like decimal addition except that the carrying threshold is b. In base five, 3 + 3 = 11 because 6 is one five and one unit. The carry is therefore smaller than in decimal.",
               "Subtraction borrows the same way: 31₄ − 12₄ borrows one four as four units. Only the threshold and the borrow differ.",
               "Multiplication by a single digit also follows the threshold. In base five, 4 × 4 = 31 because 16 is three fives and one unit. A table of products up to base minus one is therefore enough.",
-              "Multiplication and division are done column-wise with the same threshold. In base five, 23 × 14 = 432: work in columns as in decimal, carrying at five — 4 × 23 = 202, then 1 × 23 shifted one place = 230, and 202 + 230 = 432."
+              "Multiplication and division are done column-wise with the same threshold. In base five, 23 × 14 = 432: work in columns as in decimal, carrying at five: 4 × 23 = 202, then 1 × 23 shifted one place = 230, and 202 + 230 = 432."
             ],
             "bullets": [
               "Carry at b, not at ten",
@@ -1693,7 +1693,7 @@
             "heading": "Go deeper: The trap in a base question",
             "paragraphs": [
               "The trap is a digit that is valid in decimal but invalid in the base. A candidate who does not test the digits will add 5 in base five and get a sum that cannot be written. That test is therefore the first step.",
-              "The second trap is a decimal sum that looks like a base sum. In base five, 33 plus 24 is 112 (32 in decimal). Adding each column in decimal — 3+4 = 7, 3+2 = 5 — and writing 57 answers a different question.",
+              "The second trap is a decimal sum that looks like a base sum. In base five, 33 plus 24 is 112 (32 in decimal). Adding each column in decimal (3+4 = 7, 3+2 = 5) and writing 57 answers a different question.",
               "Time must be budgeted as in any exam. A conversion that resists can be left and returned to. A test that is finished is worth more than a perfect answer to three items.",
               "That budget is why a first sweep is useful. The easy conversions can be answered at once, and the hard ones can be left until the base is clear.",
               "The trap is therefore the option that is correct in sense but wrong in form. A candidate who reads only for meaning will choose it."
@@ -1743,7 +1743,7 @@
               {
                 "operation": "Column case",
                 "reason": "4 × 25₈ = 124₈: carry 2 from 4 × 5 = 24₈; 2 × 4 + 2 = 12₈",
-                "result": "124₈ either way — two methods, one answer",
+                "result": "124₈ either way, two methods, one answer",
                 "predictPrompt": "How would you multiply directly in base eight?"
               }
             ]
@@ -1885,7 +1885,7 @@
             "steps": [
               {
                 "operation": "Reduce the base",
-                "reason": "13 ÷ 7 leaves 6. Use reduction before squaring because it keeps the numbers tiny; if you prefer, square first then reduce, but the first route is faster. — 13 ≡ 6 mod 7. Best move: shrink the base to 6 first, then square. If stuck, take repeated squares and reduce after each.",
+                "reason": "13 ÷ 7 leaves 6. Use reduction before squaring because it keeps the numbers tiny; if you prefer, square first then reduce, but the first route is faster. 13 ≡ 6 mod 7. Best move: shrink the base to 6 first, then square. If stuck, take repeated squares and reduce after each.",
                 "result": "13^2 ≡ 6^2 mod 7",
                 "predictPrompt": "Which part of the question does this step answer?"
               },
@@ -2144,7 +2144,7 @@
               },
               {
                 "operation": "Magnitude case",
-                "reason": "2/3 + 3/4 = 17/12 exceeds 1 — write a mixed number",
+                "reason": "2/3 + 3/4 = 17/12 exceeds 1; write a mixed number",
                 "result": "1 5/12 sits between 1 and 2",
                 "predictPrompt": "How do you know the sum exceeds 1?"
               }
@@ -2203,7 +2203,7 @@
           "content": {
             "heading": "Go deeper: Recurring decimals and approximations",
             "paragraphs": [
-              "Look at the denominator: only 2s and 5s — terminating; any other prime factor — recurring. Test the denominator first — it sorts every case in seconds, before any conversion is attempted.",
+              "Look at the denominator: only 2s and 5s, terminating; any other prime factor, recurring. Test the denominator first; it sorts every case in seconds, before any conversion is attempted.",
               "The conversion sets x equal to the decimal and uses the repetend to eliminate it. A decimal that starts with a non-repeating part needs a longer step. That step is algebraic, not arithmetic.",
               "An approximation rounds a decimal to a stated place. That rounding must follow the next digit, not the size of the number. A candidate who rounds by guesswork therefore loses the mark.",
               "That rule is why 0.75 rounds to 0.8 to one decimal place. The next digit is five, so the kept digit rises.",
@@ -2389,7 +2389,7 @@
               },
               {
                 "operation": "Reverse case",
-                "reason": "Original = 64,000 ÷ 0.8 = 80,000 — the inverse recovers the start",
+                "reason": "Original = 64,000 ÷ 0.8 = 80,000; the inverse recovers the start",
                 "result": "Reverse multiplication recovers the original price",
                 "predictPrompt": "How do you recover the marked price from the sale price?"
               }
@@ -2416,7 +2416,7 @@
               "Profit and loss therefore use the cost price because that is what the trader invested. A percentage profit that used the selling price would measure a different quantity. The base is therefore part of the definition.",
               "Interest uses the principal for the same reason. The principal is what was borrowed, so the rate is charged on that amount. A rate on any other base would charge the wrong quantity.",
               "That naming is the first step of every percentage question. A candidate who names the base cannot choose the wrong one.",
-              "A percentage question always hides a base, and the base is named by the phrase of. 25% of the price uses the price as the base; 25% more uses the original quantity instead. Naming the base before computing is the single most reliable step in any percentage question you will ever meet — name it first, and the mark is yours before the calculator switches on."
+              "A percentage question always hides a base, and the base is named by the phrase of. 25% of the price uses the price as the base; 25% more uses the original quantity instead. Naming the base before computing is the single most reliable step in any percentage question you will ever meet: name it first, and the mark is yours before the calculator switches on."
             ],
             "bullets": [
               "Profit is over the cost price; interest is over the principal",
@@ -2487,7 +2487,7 @@
               },
               {
                 "operation": "Reverse case",
-                "reason": "Original = 64,000 ÷ 0.8 = 80,000 — the inverse recovers the start",
+                "reason": "Original = 64,000 ÷ 0.8 = 80,000; the inverse recovers the start",
                 "result": "Reverse multiplication recovers the original price",
                 "predictPrompt": "How do you recover the marked price from the sale price?"
               }
@@ -2626,7 +2626,7 @@
               },
               {
                 "operation": "Overlap case",
-                "reason": "Both = 25 + 20 − 33 = 12 — the overlap verifies neither",
+                "reason": "Both = 25 + 20 − 33 = 12; the overlap verifies neither",
                 "result": "n(A∩B) = 12 feeds back into n(A∪B) = 33",
                 "predictPrompt": "How would you verify the overlap count?"
               },
@@ -2980,7 +2980,7 @@
               },
               {
                 "operation": "Substitute back",
-                "reason": "k = 6: 6 × 3 × 2 = 36 — recovers the given value",
+                "reason": "k = 6: 6 × 3 × 2 = 36, recovers the given value",
                 "result": "k recovers the data exactly",
                 "predictPrompt": "How would you verify your k value?"
               }
@@ -3120,7 +3120,7 @@
               {
                 "operation": "Flip case",
                 "reason": "Dividing by a negative flips the sign",
-                "result": "x ≤ −3 — the flip is the whole rule",
+                "result": "x ≤ −3; the flip is the whole rule",
                 "predictPrompt": "When exactly does the inequality flip?"
               },
               {
@@ -3152,7 +3152,7 @@
               "A candidate who understands the reflection will not need to memorise the rule. The rule is the geometry of the line.",
               "That geometry is why the check matters. A solution that violates the original inequality has reflected incorrectly.",
               "Picture the number line being folded over. Every point that was to the left of the fold goes to the right of it, so a statement that was true before the fold is reversed after it. That folding is the geometry behind every sign reversal.",
-              "Multiplying by a negative reflects the number line. A number that sat to the left of zero is now to the right of it, and the order of the two sides flips with it. Textbook rule and geometric rule are one and the same. Picture multiplying by −1: positions mirror across zero, and every comparison flips with them — that is the whole sign rule in one line of geometry."
+              "Multiplying by a negative reflects the number line. A number that sat to the left of zero is now to the right of it, and the order of the two sides flips with it. Textbook rule and geometric rule are one and the same. Picture multiplying by −1: positions mirror across zero, and every comparison flips with them. That is the whole sign rule in one line of geometry."
             ],
             "bullets": [
               "A negative multiplier reflects the line and reverses order",
@@ -3497,7 +3497,7 @@
           "content": {
             "heading": "What a binary operation is and closure",
             "paragraphs": [
-              "The two yam counts combine into one total — that combining is a binary operation.",
+              "The two yam counts combine into one total; that combining is a binary operation.",
               "A binary operation takes two elements of a set, in that order, and returns one element. It is called binary because two inputs are used. The operation * is not the multiplication sign here; it is only the name of the rule.",
               "Closure means the answer never leaves the set. Whole numbers are closed under a * b = a + b + 1 because two whole numbers always give a whole number. Subtraction is not closed on whole numbers because 1 − 3 = −2 falls outside."
             ],
@@ -3525,7 +3525,7 @@
           "content": {
             "heading": "Commutativity, associativity and distributivity",
             "paragraphs": [
-              "Two bundles priced in opposite order give the same bill — swapping is commutativity; regrouping is associativity. Keep the tests separate.",
+              "Two bundles priced in opposite order give the same bill. Swapping is commutativity; regrouping is associativity. Keep the tests separate.",
               "Test a * b = a + b + 1 on each property. Since 2 * 3 = 6 and 3 * 2 = 6, it is commutative, and since (2 * 3) * 4 = 11 and 2 * (3 * 4) = 11, it is associative. But 2 * (3 + 4) = 10 while 2 * 3 + 2 * 4 = 13, so it fails distributivity over addition."
             ],
             "bullets": [
@@ -3609,7 +3609,7 @@
               {
                 "operation": "Two-sided case",
                 "reason": "e = −1 works from both sides here",
-                "result": "An identity must be two-sided — that is the trap",
+                "result": "An identity must be two-sided; that is the trap",
                 "predictPrompt": "What if e worked from only one side?"
               }
             ]
@@ -3694,7 +3694,7 @@
               },
               {
                 "operation": "Try it on the left",
-                "reason": "a two-sided identity must satisfy both orders. Best move: try both — e ∘ a and a ∘ e. If confused, write out a few small cases to spot the pattern.",
+                "reason": "a two-sided identity must satisfy both orders. Best move: try both: e ∘ a and a ∘ e. If confused, write out a few small cases to spot the pattern.",
                 "result": "0 + 2a = 2a, not a",
                 "predictPrompt": "Which part of the question does this step answer?"
               },
@@ -3706,7 +3706,7 @@
               },
               {
                 "operation": "One-sided case",
-                "reason": "Right test gives e = 0; left test e ∘ a = 2a ≠ a — no identity",
+                "reason": "Right test gives e = 0; left test e ∘ a = 2a ≠ a; no identity",
                 "result": "No identity means no inverse for 3",
                 "predictPrompt": "Why does a one-sided identity not count?"
               }
@@ -3931,7 +3931,7 @@
             "steps": [
               {
                 "operation": "Check the inner sizes match",
-                "reason": "inner sizes must match to multiply matrices. Best move: (m×n)(n×p) produces (m×p) — line the middle numbers. If row-by-column feels slippery, do dot products on paper.",
+                "reason": "inner sizes must match to multiply matrices. Best move: (m×n)(n×p) produces (m×p); line the middle numbers. If row-by-column feels slippery, do dot products on paper.",
                 "result": "AB exists and is a 2 by 2 matrix.",
                 "predictPrompt": "In your own words, why does this step come before the next one?"
               },
@@ -3950,7 +3950,7 @@
               {
                 "operation": "Dimension case",
                 "reason": "2×3 · 3×2 → 2×2; row by row against column by column",
-                "result": "Shapes must match — everything else is arithmetic",
+                "result": "Shapes must match; everything else is arithmetic",
                 "predictPrompt": "What must be true of the row and column counts to multiply?"
               }
             ]
@@ -4095,7 +4095,7 @@
               {
                 "operation": "Constant case",
                 "reason": "Constant terms vanish; 3 differentiates to 0",
-                "result": "The -5 drops out — it is a constant",
+                "result": "The -5 drops out; it is a constant",
                 "predictPrompt": "What happens to a constant's derivative?"
               }
             ]
@@ -4192,7 +4192,7 @@
               {
                 "operation": "Forgot case",
                 "reason": "The inner 2 is the whole chain rule",
-                "result": "6(2x+1)² — never skip the inner factor",
+                "result": "6(2x+1)²; never skip the inner factor",
                 "predictPrompt": "What is the derivative of the bracket?"
               }
             ]
@@ -4654,7 +4654,7 @@
             "paragraphs": [
               "Solid formulas are plane formulas applied once more. A prism and a cuboid are a base extruded through a height, so volume is base area times height. A pyramid and a cone taper to a point, so their volume is one third of the corresponding extrusion.",
               "Surface area is found by unwrapping. A cylinder unwraps into a rectangle 2πr by h plus two circles, giving 2πr(r + h) for a closed drum. A cone unwraps into a sector of radius ℓ whose arc is 2πr, giving πrℓ plus the base πr².",
-              "The sphere does not unwrap, and its area 4πr² is four times the great circle. Its volume (4/3)πr³ is two-thirds of the volume of the cylinder circumscribed about it, as Archimedes proved — the sphere fits inside, filling two-thirds of the space. In composite solids, add the pieces and subtract any shared face no longer exposed.",
+              "The sphere does not unwrap, and its area 4πr² is four times the great circle. Its volume (4/3)πr³ is two-thirds of the volume of the cylinder circumscribed about it, as Archimedes proved; the sphere fits inside, filling two-thirds of the space. In composite solids, add the pieces and subtract any shared face no longer exposed.",
               "On a sphere the shortest surface distance lies along a great circle, and Earth questions use that arc. Along the equator or a meridian the radius is R, so distance is Rθ with θ in radians. Along a parallel the radius is R cos latitude, so the same longitude difference gives a shorter distance.",
               "A simple JAMB case uses the equator directly. With R = 6370 km, towns 10° apart have θ = π/18 radians. The distance is 6370 × (22/7) ÷ 18 ≈ 1112 km using π = 22/7, with no correction because the equator is a great circle."
             ],
@@ -4692,7 +4692,7 @@
               {
                 "operation": "Size check",
                 "reason": "Minor segment = sector minus triangle; 60° < 180°, so less than half the circle",
-                "result": "Segment ≈ 17.7 cm² — positive and smaller than the sector",
+                "result": "Segment ≈ 17.7 cm², positive and smaller than the sector",
                 "predictPrompt": "How small is the segment compared with the sector?"
               }
             ]
@@ -4752,7 +4752,7 @@
             "paragraphs": [
               "Two villages want a meeting point that is fair to both. Any site exactly halfway in the sense of equal distance from the two village centres would satisfy them. Such sites form one straight line, not a single marked spot.",
               "That line is the perpendicular bisector. It cuts the segment joining the centres at its midpoint at right angles. Every point on it is equally distant from both centres, and every point off it is nearer to one.",
-              "The angle bisector follows the same idea: every point on it is equally far from both sides — that is why it cuts the angle exactly in half."
+              "The angle bisector follows the same idea: every point on it is equally far from both sides; that is why it cuts the angle exactly in half."
             ],
             "bullets": [
               "The perpendicular bisector is the locus of points equidistant from two fixed points.",
@@ -4816,7 +4816,7 @@
             "steps": [
               {
                 "operation": "Name the equal-distance rule",
-                "reason": "equal distance from A and B — the set of all such points. Best move: the perpendicular bisector, always. If easier, find the midpoint, then draw 90° through it — same line.",
+                "reason": "equal distance from A and B: the set of all such points. Best move: the perpendicular bisector, always. If easier, find the midpoint, then draw 90° through it, same line.",
                 "result": "First locus: a straight line.",
                 "predictPrompt": "What exactly does the question want you to write down first?"
               },
@@ -4920,7 +4920,7 @@
               },
               {
                 "operation": "Name the fixed-distance rule",
-                "reason": "exactly 5 cm from M — one fixed distance. Best move: a circle centred at M with radius 5 cm. If coordinates are simpler, plug them into the distance formula.",
+                "reason": "exactly 5 cm from M: one fixed distance. Best move: a circle centred at M with radius 5 cm. If coordinates are simpler, plug them into the distance formula.",
                 "result": "Second locus: a circle of radius 5 cm about M.",
                 "predictPrompt": "In your own words, why does this step come before the next one?"
               },
@@ -5076,7 +5076,7 @@
               {
                 "operation": "Check case",
                 "reason": "(2,3) fits y = 2x − 1: 3 = 4 − 1 ✓",
-                "result": "The point substitutes cleanly — the rearrangement is right",
+                "result": "The point substitutes cleanly; the rearrangement is right",
                 "predictPrompt": "Does (2,3) satisfy y = 2x − 1?"
               }
             ]
@@ -5174,7 +5174,7 @@
               {
                 "operation": "Midpoint check",
                 "reason": "The bisector passes through the midpoint (3,5) and is perpendicular",
-                "result": "Equidistant from both ends — symmetric by construction",
+                "result": "Equidistant from both ends, symmetric by construction",
                 "predictPrompt": "Which line satisfies the two-end distance test?"
               }
             ]
@@ -5262,7 +5262,7 @@
             "paragraphs": [
               "A farmer in Jos has 40 metres of fence to build a rectangular pen against a straight wall. Only three sides need fencing, so length plus twice the width equals 40. The area then becomes a function of one variable, which can be maximised.",
               "A farmer has a fence against a straight wall: length plus twice the width equals the fence total. Area in terms of width x, then differentiate and set to zero gives the optimum.",
-              "Negative second derivative means a maximum — width 10 and length 20 give the peak area."
+              "Negative second derivative means a maximum; width 10 and length 20 give the peak area."
             ],
             "bullets": [
               "Use the fixed perimeter or surface to write one-variable function first.",
@@ -5655,7 +5655,7 @@
               },
               {
                 "operation": "Expansion check",
-                "reason": "(3x+1)² = 9x² + 6x + 1 — integrate directly to 38",
+                "reason": "(3x+1)² = 9x² + 6x + 1; integrate directly to 38",
                 "result": "Two methods, one answer: 38",
                 "predictPrompt": "How would you verify this by expanding first?"
               }
@@ -6138,7 +6138,7 @@
               },
               {
                 "operation": "CDF check",
-                "reason": "n/2 = 25 sits between cf 12 and cf 32 — median class 20–30",
+                "reason": "n/2 = 25 sits between cf 12 and cf 32: median class 20–30",
                 "result": "Median ≈ 26 on the ogive",
                 "predictPrompt": "Which class contains the median?"
               }
@@ -6640,7 +6640,7 @@
           "content": {
             "heading": "Logarithms",
             "paragraphs": [
-              "A trader in Onitsha doubles stock: 8 sacks, then 16, 32, 64. 'After how many doublings do I reach 512?' — that question is a logarithm."
+              "A trader in Onitsha doubles stock: 8 sacks, then 16, 32, 64. 'After how many doublings do I reach 512?' That question is a logarithm."
             ],
             "bullets": []
           }
@@ -6744,7 +6744,7 @@
             "steps": [
               {
                 "operation": "Apply the power law",
-                "reason": "the term 2 log_3 9 is a power. Best move: lift the small power up — 2 log₉ means log₈₁. If you prefer, multiply out manually: 2 × log₃ 9.",
+                "reason": "the term 2 log_3 9 is a power. Best move: lift the small power up; 2 log₉ means log₈₁. If you prefer, multiply out manually: 2 × log₃ 9.",
                 "result": "The expression becomes log_3 729 − log_3 81 + log_3 27.",
                 "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
@@ -6842,7 +6842,7 @@
             "steps": [
               {
                 "operation": "Change the base",
-                "reason": "use base 10 because only log₁₀2 is known. Best move: the change-of-base formula — logₐb = log₁₀b ÷ log₁₀a. If you want to double-check, memorise log₃ 9 = 2.",
+                "reason": "use base 10 because only log₁₀2 is known. Best move: the change-of-base formula: logₐb = log₁₀b ÷ log₁₀a. If you want to double-check, memorise log₃ 9 = 2.",
                 "result": "log₈32 = log₁₀32 ÷ log₁₀8.",
                 "predictPrompt": "Which numbers or terms work with each other first?"
               },
@@ -6860,7 +6860,7 @@
               },
               {
                 "operation": "Numeric check",
-                "reason": "8^(5/3) = 2^5 = 32 — exact in both forms",
+                "reason": "8^(5/3) = 2^5 = 32, exact in both forms",
                 "result": "5/3 is both the surds answer and the decimal one",
                 "predictPrompt": "What is 8^(5/3) directly?"
               }
@@ -6985,7 +6985,7 @@
             "steps": [
               {
                 "operation": "Try P(3)",
-                "reason": "An easy small integer that makes the arithmetic simple — try +1 or +2. Use the factor theorem because a root makes P(x) = 0, yielding an exact factor; if it stalls, try smaller integers or the rational-root theorem.",
+                "reason": "An easy small integer that makes the arithmetic simple; try +1 or +2. Use the factor theorem because a root makes P(x) = 0, yielding an exact factor; if it stalls, try smaller integers or the rational-root theorem.",
                 "result": "P(3) = 27 − 81 + 78 − 24 = 0",
                 "predictPrompt": "Which numbers or terms work with each other first?"
               },
@@ -7069,7 +7069,7 @@
               "The third trap is assuming the cubic has three real roots because two are visible. A cubic always has at least one real root, but the other two may be complex, and only the real ones appear on the graph and in the factorization.",
               "The fourth trap is about the sign of the leading coefficient. A positive cubic falls on the far left and rises on the far right, so the ends go in opposite directions; a negative cubic does the reverse.",
               "Finally, remembering the sum and product of roots saves full factorization in many items. For (x − a)(x − b)(x − c), the sum of the roots is −b and the product is −d in the standard form x³ + bx² + cx + d.",
-              "A candidate who sees the whole pattern — evaluate, factor, divide, read off — will finish a polynomial question in under two minutes, which is the time budget for a JAMB arithmetic item."
+              "A candidate who sees the whole pattern (evaluate, factor, divide, read off) will finish a polynomial question in under two minutes, which is the time budget for a JAMB arithmetic item."
             ],
             "bullets": [
               "Evaluate at the negative of the divisor's constant",
@@ -7214,7 +7214,7 @@
               },
               {
                 "operation": "Discriminant case",
-                "reason": "1 − 4(1)(−4) = 17 > 0 — roots are real here",
+                "reason": "1 − 4(1)(−4) = 17 > 0; roots are real here",
                 "result": "Discriminant decides whether there are solutions at all",
                 "predictPrompt": "What happens if the discriminant were negative?"
               }
