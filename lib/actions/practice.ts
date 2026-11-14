@@ -29,6 +29,9 @@ interface CreateSessionParams {
   questionCount: number
   difficulty: string | null
   mode: 'practice' | 'mock'
+  /** Optional topic routing — when provided, route practice to those topics
+   *  only. Mock mode ignores this; mock selection stays blueprint-weighted. */
+  topicIds?: string[]
 }
 
 interface SessionQuestion {

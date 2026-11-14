@@ -7,6 +7,7 @@ interface SessionConfig {
   questionCount: number
   difficulty: string | null
   mode: 'practice' | 'mock'
+  topicIds?: string[]
 }
 
 interface SessionQuestion {
@@ -43,6 +44,7 @@ export async function fetchQuestionsForSession(config: SessionConfig, sessionId:
     p_difficulty: config.difficulty || null,
     p_limit: effectiveCount,
     p_seed: sessionId,
+    p_topic_ids: config.topicIds ?? null,
   })
 
   if (error) throw new Error(`Failed to fetch questions: ${error.message}`)

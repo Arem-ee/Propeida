@@ -17,6 +17,12 @@ interface Subject {
   slug: string
 }
 
+interface Topic {
+  id: string
+  name: string
+  slug: string
+}
+
 const COUNTS = [5, 10, 15, 20]
 const DIFFICULTIES = [
   { value: '', label: 'Mixed' },
@@ -31,12 +37,14 @@ export default function PracticeConfig({
   examSubjectMap,
   activeSession,
   subjectsPending = false,
+  topicsBySubject,
 }: {
   exams: Exam[]
   allSubjects: Subject[]
   examSubjectMap: Record<string, string[]>
   activeSession: { id: string; examName: string } | null
   subjectsPending?: boolean
+  topicsBySubject: Record<string, Topic[]>
 }) {
   const router = useRouter()
   const searchParams = useSearchParams()
@@ -72,6 +80,7 @@ export default function PracticeConfig({
   const [selectedSubjectIds, setSelectedSubjectIds] = useState<string[]>(
     presetSubjects.map((s) => s.id),
   )
+  const [selectedTopicIds, setSelectedTopicIds] = useState<string[]>([])
   const [questionCount, setQuestionCount] = useState(10)
   const [difficulty, setDifficulty] = useState('')
   const [loading, setLoading] = useState(false)
@@ -90,9 +99,34 @@ export default function PracticeConfig({
     )
   }
 
+  const toggleTopic = (id: string) => {
+    setSelectedTopicIds((prev) =>
+      prev.includes(id) ? prev.filter((t) => t !== id) : [...prev, id],
+    )
+  }
+
+  const selectedTopicNames = useMemo(() => {
+    const names: string[] = []
+    for (const t of Object.values(topicsBySubject).flat()) {
+      if (selectedTopicIds.includes(t.id)) names.push(t.name)
+    }
+    return names
+  }, [selectedTopicIds, topicsBySubject])
+
+  // Drop any topic IDs that no longer belong because a subject was untoggled.
+  const effectiveTopicIds = useMemo(
+    () =>
+      selectedTopicIds.filter((id) =>
+        Object.entries(topicsBySubject)
+          .filter(([subjectId]) => selectedSubjectIds.includes(subjectId))
+          .some(([, topics]) => topics.some((t) => t.id === id)),
+      ),
+    [selectedTopicIds, selectedSubjectIds, topicsBySubject],
+  )
+
   const handleStart = async () => {
     if (!selectedExamId || selectedSubjectIds.length === 0) {
-      setError('Choose an exam and at least one subject.')
+      setError('Choose an exam and at least one subject')
       return
     }
     setLoading(true)
@@ -105,6 +139,7 @@ export default function PracticeConfig({
         questionCount,
         difficulty: difficulty || null,
         mode: 'practice',
+        topicIds: effectiveTopicIds.length > 0 ? effectiveTopicIds : undefined,
       })
       const params = new URLSearchParams()
       if (result.warmupIds.length > 0) params.set('warmup', result.warmupIds.join(','))
@@ -153,7 +188,7 @@ export default function PracticeConfig({
             {exams.map((exam) => (
               <button
                 key={exam.id}
-                onClick={() => { setSelectedExamId(exam.id); setSelectedSubjectIds([]) }}
+                onClick={() => { setSelectedExamId(exam.id); setSelectedSubjectIds([]); setSelectedTopicIds([]) }}
                 className={`rounded-2xl px-4 py-2.5 text-sm font-extrabold min-h-[48px] cursor-pointer transition-all ${
                   selectedExamId === exam.id
                     ? 'bg-blue-600 text-white shadow-[0_8px_20px_-8px_rgba(37,99,235,0.6)]'
@@ -189,6 +224,48 @@ export default function PracticeConfig({
                   </button>
                 )
               })}
+            </div>
+          )}
+        </div>
+
+        <div>
+          <p className="mb-2 text-[11px] font-extrabold uppercase tracking-[0.14em] text-gray-500">Topics <span className="normal-case text-gray-400">(optional)</span></p>
+          <p className="mb-2 text-[12px] font-semibold text-gray-500">Pick specific syllabus points or leave blank for the whole subject.</p>
+          {examSubjects.filter((s) => topicsBySubject?.[s.id]?.length).length === 0 ? (
+            <p className="text-sm font-semibold text-gray-500">Topic mapping coming soon for these subjects</p>
+          ) : (
+            <div className="space-y-4">
+              {examSubjects
+            .filter((s) => selectedSubjectIds.includes(s.id) && topicsBySubject?.[s.id]?.length)
+                .map((subject) => (
+                  <div key={subject.id}>
+                    <p className="mb-1.5 text-[11px] font-extrabold uppercase tracking-[0.1em] text-ink-soft">{subject.name}</p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {topicsBySubject[subject.id]!.map((topic) => {
+                        const active = selectedTopicIds.includes(topic.id)
+                        return (
+                          <button
+                            key={topic.id}
+                            onClick={() => toggleTopic(topic.id)}
+                            aria-pressed={active}
+                            className={`rounded-xl px-3 py-1.5 text-[12px] font-extrabold min-h-[34px] cursor-pointer transition-all border-2 ${
+                              active
+                                ? 'border-blue-600 bg-blue-50 text-blue-700'
+                                : 'border-gray-200 bg-white text-ink-soft hover:border-blue-300'
+                            }`}
+                          >
+                            {topic.name}
+                          </button>
+                        )
+                      })}
+                    </div>
+                  </div>
+                ))}
+              {selectedTopicNames.length > 0 && (
+                <p className="text-[12px] font-bold text-blue-700">
+                  Routing to {selectedTopicNames.length} topic{selectedTopicNames.length === 1 ? '' : 's'}: {selectedTopicNames.slice(0, 3).join(', ')}{selectedTopicNames.length > 3 ? ` and ${selectedTopicNames.length - 3} more` : ''}
+                </p>
+              )}
             </div>
           )}
         </div>

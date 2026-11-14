@@ -10,7 +10,7 @@ export const metadata = { title: 'Practice' }
 export default async function PracticePage() {
   const supabase = await createClient()
 
-  const [examsRes, subjectsRes, examSubjectsRes, userRes, questionRows] = await Promise.all([
+  const [examsRes, subjectsRes, examSubjectsRes, userRes, questionRows, topicsRes] = await Promise.all([
     supabase.from('exams').select('id, name, slug, subject_selection_mode, school_id').order('name'),
     supabase.from('subjects').select('id, name, slug').order('name'),
     supabase.from('exam_subjects').select('exam_id, subject_id'),
@@ -18,6 +18,9 @@ export default async function PracticePage() {
     // Content-gating by presence, not permission: exams with no bank
     // simply don't appear.
     supabase.from('questions').select('exam_id').limit(20000),
+    // Published topics — shown as checkboxes under each subject so the
+    // learner can route practice to a named syllabus point.
+    supabase.from('topics').select('id, subject_id, name, slug, sort_order').eq('published', true).order('sort_order'),
   ])
 
   const allExams = examsRes.data ?? []
@@ -66,6 +69,12 @@ export default async function PracticePage() {
   )
   const pathLabel = scope ? examPathLabel(scope) : null
 
+  // Subject-scoped topic graph — the picker shows everything below per subject.
+  const topicsBySubject: Record<string, { id: string; name: string; slug: string }[]> = {}
+  for (const t of topicsRes.data ?? []) {
+    ;(topicsBySubject[t.subject_id] ??= []).push({ id: t.id, name: t.name, slug: t.slug })
+  }
+
   return (
     <div className="mx-auto max-w-2xl">
       <div className="mb-7">
@@ -99,6 +108,7 @@ export default async function PracticePage() {
           examSubjectMap={scopedExamSubjectMap}
           activeSession={activeSession}
           subjectsPending={subjectsPending}
+          topicsBySubject={topicsBySubject}
         />
       )}
     </div>
