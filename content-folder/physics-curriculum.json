@@ -164,6 +164,30 @@
    "order": 22,
    "description": "Heat as a form of energy, heat capacity and specific heat capacity, simple determination by the method of mixtures, the electrical method and Newton's law of cooling, with solved numerical problems of JAMB standard.",
    "syllabus_ref": "A.13"
+  },
+  {
+   "slug": "change-of-state",
+   "name": "Change of State",
+   "section": "Core",
+   "order": 23,
+   "description": "Latent heat, specific latent heats of fusion and vaporisation, specific heat capacity mixed problems, melting, evaporation and boiling, and the influence of pressure and solutes on boiling and melting points, with appliances.",
+   "syllabus_ref": "A.14"
+  },
+  {
+   "slug": "thermal-expansion",
+   "name": "Thermal Expansion",
+   "section": "Core",
+   "order": 24,
+   "description": "Linear, area and volume expansivities, determination of expansivities, real and apparent expansivities of liquids, anomalous expansion of water, and everyday effects and applications.",
+   "syllabus_ref": "A.15"
+  },
+  {
+   "slug": "gas-laws",
+   "name": "Gas Laws",
+   "section": "Core",
+   "order": 25,
+   "description": "Boyle's law, Charles' law and the pressure law, absolute zero and the absolute temperature scale, the general gas equation pV/T = constant, the ideal gas equation PV = nRT and the Van der Waals correction for real gases.",
+   "syllabus_ref": "A.16"
   }
  ],
  "lessons": [
@@ -6100,6 +6124,1455 @@
        "answer": 1,
        "why": "7200 J in, water drinks 5040 J, leaving 2160 J over 6 K, so 360 J/K."
       }
+     }
+    }
+   ]
+  },
+  {
+   "slug": "change-of-state",
+   "topic": "change-of-state",
+   "title": "The Heat That Hides: Latent Heat and Changing State",
+   "objective": "Distinguish between melting, evaporation and boiling; define and use specific latent heat of fusion and vaporisation in Q = mL; solve mixed sensible and latent heat problems of JAMB standard.",
+   "estimatedMinutes": 10,
+   "syllabus_ref": "A.14",
+   "blocks": [
+    {
+     "type": "text",
+     "content": {
+      "heading": "The heat that does no temperature work",
+      "paragraphs": [
+       "You drop ice into a glass of warm zobo and the drink turns chilly while the ice is still there, and the glass says the same temperature the whole time the ice melts. Heat is flowing in, but the thermometer refuses to move. That hidden heat is called latent heat, from the Latin for hidden.",
+       "To melt a solid at its melting point, or to turn a liquid to vapour at its boiling point, each kilogram needs an exact dose of heat without changing temperature. The dose is the specific latent heat, L, and the bill is Q = mL.",
+       "For melting and freezing that L is the specific latent heat of fusion. For vaporisation and condensation it is the specific latent heat of vaporisation. Water keeps two firm figures to memory for you: about 3.34 x 10^5 J per kg to melt ice, about 2.26 x 10^6 J per kg to boil water away."
+      ],
+      "bullets": [
+       "Latent heat changes state, never temperature, while the change is happening.",
+       "Q = mL for melting, freezing, boiling and condensing.",
+       "Fusion is for solid to liquid; vaporisation is for liquid to gas."
+      ],
+      "takeaway": "State changes drink heat without warming up.",
+      "check": {
+       "question": "While ice melts at 0 C in a warm drink, the ice-water mixture:",
+       "options": [
+        "Rises rapidly above 0 C",
+        "Stays at 0 C until it all melts",
+        "Drops below freezing",
+        "Turns instantly to steam"
+       ],
+       "answer": 1,
+       "why": "Latent heat of fusion keeps the temperature pinned until the state change completes."
+      }
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "heading": "Evaporation is a surface event; boiling is a full committee",
+      "paragraphs": [
+       "Evaporation happens at any temperature, only from the surface, and faster when the air is dry and moving. The quickest molecules escape and carry energy with them, so what stays behind cools down. That is evaporative cooling, and it is why you feel relief when sweat dries.",
+       "Boiling happens at one fixed temperature throughout the liquid. Bubbles of vapour form inside the liquid itself, rise and burst, and added heat only converts more liquid to gas without raising temperature.",
+       "The two feel different on the stove. A pot at a rolling boil sits at 100 C no matter how hard you turn the flame; turn it down and it still boils at 100 C, just slower. Meanwhile a hanging wet cloth cools well below room temperature."
+      ],
+      "bullets": [
+       "Evaporation: any temperature, surface only, cooling effect.",
+       "Boiling: one fixed temperature, throughout the liquid, bubbles.",
+       "Sweat and clay pots cool by evaporation, never by boiling."
+      ],
+      "takeaway": "Evaporation steals quietly from the surface; boiling announces itself everywhere.",
+      "check": {
+       "question": "Wet laundry dries faster on a windy afternoon because wind:",
+       "options": [
+        "Raises the water to boiling point",
+        "Carries away vapour-laden air and speeds evaporation",
+        "Stops the sun heating the cloth",
+        "Turns moisture into ice first"
+       ],
+       "answer": 1,
+       "why": "Removing humid air near the surface lets more molecules escape, so drying speeds up."
+      }
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "heading": "Reading the heat bills: sensible versus latent",
+      "paragraphs": [
+       "Two kinds of heat share every exam problem. Sensible heat moves the thermometer and uses Q = mc delta theta. Latent heat moves the state and uses Q = mL. The two never mix in the same line; you always do them one after another.",
+       "The classic plan is: warm the solid to melting point, melt it with L_f, warm the liquid, boil it with L_v if the question asks that far. Label every stage before touching a number.",
+       "For water keep these figures in your head: L_f = 3.34 x 10^5 J per kg and L_v = 2.26 x 10^6 J per kg. Boiling away is about seven times pricier than melting, which is why steam scalds hurt worse than hot water."
+      ],
+      "bullets": [
+       "Sensible: Q = mc delta theta, moves temperature.",
+       "Latent: Q = mL, moves state only.",
+       "L_v is about seven times L_f for water."
+      ],
+      "takeaway": "One law per stage; temperature still, state moving.",
+      "check": {
+       "question": "The heat needed to raise 1 kg of water from 0 C to 100 C compared with melting 1 kg of ice is:",
+       "options": [
+        "Equal, both use the same L",
+        "Smaller, heating uses mc delta theta not mL",
+        "Seven times bigger",
+        "Infinite, water cannot be heated"
+       ],
+       "answer": 1,
+       "why": "Heating 1 kg water by 100 C takes 420,000 J while melting takes 334,000 J, and they use different formulas."
+      }
+     }
+    },
+    {
+     "type": "callout",
+     "content": {
+      "title": "Exam tip",
+      "body": "If a temperature-time graph flattens while heat is still added, you are on a plateau: use Q = mL. The length of the plateau tells you L, not mc."
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "A 200 g block of ice at 0 C is heated until it becomes water at 20 C. L_f = 3.34 x 10^5 J per kg, c_water = 4200 J per kg K. Find the total heat supplied.",
+      "steps": [
+       {
+        "operation": "Melt the ice: Q1 = mL",
+        "reason": "Reach for Q = mL because the ice changes state at 0 C and temperature refuses to move until it is finished",
+        "result": "Q1 = 0.2 x 334,000 = 66,800 J",
+        "predictPrompt": "Why must the first job be melting, not warming?"
+       },
+       {
+        "operation": "Warm the new water: Q2 = mc delta theta",
+        "reason": "Reach for Q = mc delta theta because, state change done, only temperature is left to fight for",
+        "result": "Q2 = 0.2 x 4200 x 20 = 16,800 J",
+        "predictPrompt": "Which specific heat applies now, the ice's or the water's?"
+       },
+       {
+        "operation": "Add the two bills",
+        "reason": "Each stage has its own formula, so the total is the sum of the stages, never one average",
+        "result": "Q = 66,800 + 16,800 = 83,600 J (about 83.6 kJ)",
+        "predictPrompt": "Is 83.6 kJ plausible for a small cup of water?"
+       },
+       {
+        "operation": "Check to confirm: run both formulas backwards",
+        "reason": "Substitute each result back: Q1 / L_f must give 0.2 kg and Q2 / (m c) must give 20 C, so a slip outs itself",
+        "result": "66,800 / 334,000 = 0.2 kg; 16,800 / (0.2 x 4200) = 20 C, both true",
+        "predictPrompt": "Which number would catch a calculator slip here?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "guided_question",
+     "content": {
+      "question": "Your turn. 150 g of ice at 0 C is melted and the water produced is heated to 80 C. L_f = 3.34 x 10^5 J per kg, c_water = 4200 J per kg K. Find the total heat supplied.",
+      "hints": [
+       "Q1 = mL for the melt; Q2 = mc delta theta for the warm-up. Stages, not averages.",
+       "Q1 = 0.15 x 334,000 = 50,100 J. Q2 = 0.15 x 4200 x 80 = 50,400 J.",
+       "Total = 50,100 + 50,400 = 100,500 J (100.5 kJ). Check: 50,400 / (0.15 x 4200) = 80 C."
+      ]
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "heading": "Go deeper: why evaporation chills the drink by the glass",
+      "paragraphs": [
+       "Liquids hide a brutal honesty: the fastest molecules leave, the slowest stay behind, and the drink gets colder every minute it is left open. Evaporation is therefore a personal cooling system for anything wet, from your skin to a suya tray wrapped in damp cloth.",
+       "Air that is already humid pushes back against escaping molecules, so evaporation slows. Dry, windy air carries vapour away and evaporation accelerates. The same physics dries cocoa beans faster on a breezy afternoon than on a still, sticky one.",
+       "Surface area decides the rate too. Spread water thin and it vanishes quickly; keep it in a narrow bottle and it lingers. Shallow pots, clay zeer pots and hanging wet cloth all work because they cheat evaporation with geometry.",
+       "Energy has to come from somewhere. The latent heat of vaporisation is pulled from the remaining liquid and from anything touching it, so a damp hand feels cold even in a warm room. That chill is not the cloth; it is your own arm paying the bill.",
+       "JAMB asks this as a story question and a calculation. The story version: colder feeling, cause, condition. The calculation version: Q = mL_v for water carried away as vapour. Both come home to the same sentence: escaping molecules take the energy with them."
+      ],
+      "bullets": [
+       "Evaporation cools because the fastest molecules escape first.",
+       "Dry, moving air and large surfaces speed it up.",
+       "Humid, still air smothers it."
+      ],
+      "takeaway": "Cooling is not magic; it is escaping energy.",
+      "check": {
+       "question": "A zeer (evaporative) pot cools water because:",
+       "options": [
+        "Clay absorbs the sun's heat",
+        "Escaping vapour carries heat out of the water",
+        "The pot blocks all radiation",
+        "Water conducts cold better than clay"
+       ],
+       "answer": 1,
+       "why": "Evaporation pulls latent heat from the remaining water, lowering its temperature."
+      }
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "heading": "Go deeper: the plateau, the graph and the seven times bigger bill",
+      "paragraphs": [
+       "Heat ice gently on a burner with a thermometer in the beaker and you will draw the friendliest graph in physics. Straight uphill lines for warming, flat plateaus at 0 C and 100 C, and the 100 C plateau stretches about seven times longer because L_v dwarfs L_f.",
+       "On the flat stretch, Q = mc delta theta gives zero because delta theta is zero, yet heat is still being swallowed. Shortcut seekers slide straight into that trap and lose marks. The flat line is not a fault; it is the fingerprint of latent heat.",
+       "Ratio L_v to L_f for water is 2.26 x 10^6 over 3.34 x 10^5, about 6.8. So the steam plateau is nearly seven times the ice plateau. The same ratio is why a steam burn leaves you scarred faster than a hot-water scald.",
+       "On a cooling curve the two plateaus reappear in reverse: steam condenses at 100 C and holds, then water cools, then ice freezes and holds at 0 C. Recognising both plateaus on one graph is a JAMB favourite ambush.",
+       "The graph earns you another question type: slope of the warming lines gives mc; length of the plateau gives mL. That is how JAMB hands you half an experiment and expects you to complete the laboratories notes it never gave you.",
+       "If pressed for the odd value, remember the sequence: fusion first at 0 C, then heating of liquid, then vaporisation at 100 C. Skipping a stage is the fastest route to a wrong answer in a counting question."
+      ],
+      "bullets": [
+       "Plateau length is proportional to L, not to mc.",
+       "L_v about 6.8 times L_f.",
+       "Two plateaus on one graph: 0 C and 100 C."
+      ],
+      "takeaway": "Flat lines still cost joules.",
+      "check": {
+       "question": "On a temperature-time graph for water heated from ice to steam, the longer plateau is:",
+       "options": [
+        "The melting of ice at 0 C",
+        "The vaporisation of water at 100 C",
+        "The warming of liquid water",
+        "The condensation at 0 C"
+       ],
+       "answer": 1,
+       "why": "L_v is about 6.8 times L_f, so the boiling plateau stretches far longer."
+      }
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "heading": "Go deeper: where latent heat hides in daily life",
+      "paragraphs": [
+       "A refrigerator is a loop of evaporation and condensation. Liquid refrigerant hisses through the evaporator, boils away there and steals heat out of the food compartment. The compressor then squeezes the vapour into liquid outside, dumping the heat into the kitchen.",
+       "Steam turns freezers honest warnings into fridge stickers everywhere. A steam burn hurts more than a hot-water burn because every gram condensing on your skin drops 2.26 MJ per kg before it even cools, a soldier's quiet ambush you never saw coming.",
+       "Distillation runs the same trick twice by design. Alcohol or petroleum vapour boils inside a still, is led away, condenses on a cool surface and drips into a flask. One cycle, one compound at a time, every mark on a JAMB diagram traceable to latent heat.",
+       "Evaporative cooling guards farm grain too. Grain stores and our own clay water pots cope with brutal afternoon heat because escaping vapour takes real energy with it. The dairies, the suya man, the painter drying his pot, all quietly practice physics.",
+       "Even soup cools faster when you blow on it, because your breath is drier than soup and strips vapour-laden air off the surface. The humble buka trick beats waiting for the pot to stop steaming.",
+       "Whenever a question mentions cooling without ice, cooling of the body, freezing of ice cream or a fridge motor clicking on, latent heat is working the night shift. Name the mechanism in two words and the marks follow."
+      ],
+      "bullets": [
+       "Fridges cool by evaporation inside, condensation outside.",
+       "Steam scalds worse than hot water for the same reason.",
+       "Distillation is latent heat in a pipeline."
+      ],
+      "takeaway": "Latent heat is the unpaid worker of every kitchen.",
+      "check": {
+       "question": "A refrigerator cools its contents mainly by:",
+       "options": [
+        "Pumping cold air in from outside",
+        "Evaporating refrigerant inside and condensing it outside",
+        "Using ice made the night before",
+        "Radiation of cold through the walls"
+       ],
+       "answer": 1,
+       "why": "The working cycle moves latent heat: absorption inside, release outside."
+      }
+     }
+    },
+    {
+     "type": "reflection",
+     "content": {
+      "prompt": "Next time you watch ice take ten minutes to vanish in a warm drink while the drink stays cold, explain the pause with one equation.",
+      "modelResponse": "The melt is a state change, so Q = mL applies and the temperature sits pinned at 0 C while the ice finishes. Once every cube is gone the sensible phase begins and the drink climbs toward room temperature with Q = mc delta theta."
+     }
+    }
+   ]
+  },
+  {
+   "slug": "boiling-melting-points-and-appliances",
+   "topic": "change-of-state",
+   "title": "Why the Pressure Cooker Wins: Pressure, Solutes and Appliances",
+   "objective": "Explain how pressure and dissolved substances shift boiling and melting points; identify everyday applications including pressure cookers, refrigeration and evaporative cooling.",
+   "estimatedMinutes": 10,
+   "syllabus_ref": "A.14",
+   "blocks": [
+    {
+     "type": "text",
+     "content": {
+      "heading": "Pressure moves the finish line",
+      "paragraphs": [
+       "A pressure cooker is not magic; it is just a sealed pot that will not let vapour leave. Inside, pressure climbs to roughly twice atmospheric, and water stops boiling at 100 C and boils near 120 C instead. Your beans surrender in a fraction of the open-flame time.",
+       "The rule generalises: higher pressure, higher boiling point. Lower the pressure and water boils colder than 100 C, which is why water boils around 96 C on highland plateaus and cooks food stubbornly slowly there.",
+       "Melting points travel the other way for most substances. Squeeze a solid harder and it generally needs a warmer room before it melts. Ice is the famous rebel: press on it and it melts at slightly below 0 C."
+      ],
+      "bullets": [
+       "Pressure up, boiling point up; pressure down, boiling point down.",
+       "Pressure cooker: about twice atmospheric, boiling near 120 C.",
+       "Ice is the rebel: pressure lowers its melting point."
+      ],
+      "takeaway": "Raise the pressure and water waits longer to boil.",
+      "check": {
+       "question": "Water in a pressure cooker boils at about:",
+       "options": [
+        "80 C",
+        "100 C",
+        "120 C",
+        "150 C"
+       ],
+       "answer": 2,
+       "why": "Twice atmospheric pressure pushes the boiling point to roughly 120 C."
+      }
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "heading": "Dissolved substances play the same game",
+      "paragraphs": [
+       "Add anything dissolved to water, salt or sugar, and the boiling point climbs while the freezing point drops. The more particles you dissolve, the stronger the shift, so brine refuses to freeze where clean water already has.",
+       "That is why the freezing point of sea water is about minus 2 C and why road-salt mixtures keep ice at bay in colder climates. The effect is not dramatic, a fraction of a degree in most kitchen cases, but it is always in the same direction.",
+       "The melting point of solutions drops for the same reason the freezing point does: they are the same point, just approached from different sides. Solutes tug the boundary both ways apart from the plain liquid."
+      ],
+      "bullets": [
+       "Dissolved substances raise boiling points.",
+       "Dissolved substances lower freezing and melting points.",
+       "More dissolved particles, bigger shift."
+      ],
+      "takeaway": "Salt pushes the water boundary at both ends.",
+      "check": {
+       "question": "Sea water freezes at about minus 2 C because dissolved salts:",
+       "options": [
+        "Raise its melting point",
+        "Lower its melting point",
+        "Have no effect on it",
+        "Evaporate before it freezes"
+       ],
+       "answer": 1,
+       "why": "Dissolved solutes always depress the freezing point below the pure solvent's."
+      }
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "heading": "Appliances that live off these rules",
+      "paragraphs": [
+       "Car radiators run under capped pressure, pushing the boiling point above 100 C so coolant refuses to boil away on a Lagos traffic afternoon. The cap is not decoration; it is a pressure cooker in reverse.",
+       "Refrigerators pump refrigerant through a quiet loop: it evaporates in the inside coils, stealing latent heat from the food, and it condenses in the outside coils, dumping heat into the kitchen. The cycle never adds cold; it only moves heat.",
+       "Clay zeer pots, sweat and wet cloth cool by evaporation, while pressure cookers, distillery stills and ice factories lean on controlled boiling and condensation. One handful of facts covers half the applications JAMB can name."
+      ],
+      "bullets": [
+       "Radiator cap raises boiling point to protect the engine.",
+       "Fridge: evaporate inside, condense outside, heat walks away.",
+       "Zeer pots and stills all run on latent heat."
+      ],
+      "takeaway": "Every cooling or boiling gadget moves heat, not cold.",
+      "check": {
+       "question": "The radiator cap on a car raises the boiling point so that:",
+       "options": [
+        "The engine looks sleeker",
+        "Coolant resists boiling at high temperature",
+        "Water freezes sooner in winter",
+        "The cap melts and spills safely"
+       ],
+       "answer": 1,
+       "why": "Higher pressure lifts the boiling point, keeping coolant liquid under heavy heat."
+      }
+     }
+    },
+    {
+     "type": "callout",
+     "content": {
+      "title": "Exam tip",
+      "body": "Boiling point questions are directional: pressure up means boiling point up; dissolved solute up means boiling point up and freezing point down. Every appliance in the list is just that sentence wearing overalls."
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "How much heat is needed to turn 250 g of water at 100 C completely into steam at 100 C? L_v for water = 2.26 x 10^6 J per kg.",
+      "steps": [
+       {
+        "operation": "Choose the formula for a boiling process",
+        "reason": "Reach for Q = mL_v because the temperature is pinned at 100 C and the whole job is state change",
+        "result": "Q = m times 2.26 x 10^6",
+        "predictPrompt": "Why is mc delta theta useless here?"
+       },
+       {
+        "operation": "Convert mass to kilograms",
+        "reason": "Every constant in the problem is per kilogram, so grams must become kilograms before they meet",
+        "result": "m = 250 / 1000 = 0.25 kg",
+        "predictPrompt": "What goes wrong if you forget this conversion?"
+       },
+       {
+        "operation": "Compute the heat",
+        "reason": "Multiply the mass by the latent heat of vaporisation because that is the definition of the constant",
+        "result": "Q = 0.25 x 2.26 x 10^6 = 565,000 J (565 kJ)",
+        "predictPrompt": "Rough figure: more or less than half a million joules?"
+       },
+       {
+        "operation": "Check to confirm: divide the answer back by L_v",
+        "reason": "Substitute back to recover the mass, because a wrong exponent would leave the answer off by a factor of 1000",
+        "result": "565,000 / 2.26 x 10^6 = 0.25 kg, exactly the mass we started with",
+        "predictPrompt": "If you got 565 J instead, which step betrayed you?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "guided_question",
+     "content": {
+      "question": "Your turn. How much heat turns 500 g of water at 100 C into steam at 100 C? L_v = 2.26 x 10^6 J per kg. Then state the mass of steam produced if only 1.13 x 10^6 J is supplied.",
+      "hints": [
+       "Q = mL_v again. m = 0.5 kg.",
+       "Q = 0.5 x 2.26 x 10^6 = 1.13 x 10^6 J.",
+       "For the second part, m = Q / L_v = 1.13 x 10^6 / 2.26 x 10^6 = 0.5 kg of steam. Check: the two answers should match because the same energy makes the same steam."
+      ]
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "heading": "Go deeper: regelation and why glaciers flow",
+      "paragraphs": [
+       "Press an ice block hard and its melting point dips a fraction below 0 C. Release the pressure and the water refreezes. Repeat that press-release cycle and solid ice can creep, which is why glaciers ooze downhill like cold slow rivers.",
+       "Wire cutting through an ice block demonstrates the whole trick at the kitchen table. The wire presses a melted film ahead of itself, slips through, and the film behind it snaps back solid, leaving the block in two clean pieces.",
+       "Regelation also protects engine blocks on icy nights, sort of. Water trapped in a closed space expands about nine percent on freezing and bursts whatever held it, which is why drivers leave expansion room in their water tanks all year round.",
+       "Roads heave for the same reason. Water seeps into cracks, freezes at night, expands, and pries the asphalt open by freeze-thaw cycles. Nigerian highland roads feel this every harmattan season.",
+       "The exam answer never needs drama: pressure lowers ice's melting point, liquid refreezes when pressure lifts, and the cycle repeats until the load slips. Say it simply and move on."
+      ],
+      "bullets": [
+       "Pressure lowers ice's melting point; release raises it back.",
+       "Regelation explains wire-through-ice and glacier flow.",
+       "Water expands on freezing and bursts closed containers."
+      ],
+      "takeaway": "Press, melt, release, freeze, repeat.",
+      "check": {
+       "question": "A wire passing through an ice block works because ice:",
+       "options": [
+        "Melts behind the wire and freezes ahead",
+        "Melts ahead of the wire and refreezes behind it",
+        "Conducts electricity backward",
+        "Evaporates under pressure"
+       ],
+       "answer": 1,
+       "why": "Pressure melts the film ahead; the film refreezes behind as pressure lifts."
+      }
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "heading": "Go deeper: inside the refrigerator's quiet loop",
+      "paragraphs": [
+       "Every fridge runs the same four-act play. Liquid refrigerant enters the evaporator inside, where pressure drops and it boils quietly, stealing latent heat from the food. The vapour travels to the compressor, which squeezes it hot.",
+       "Hot pressurised vapour then flows to the condenser coils at the back. It surrenders heat to the kitchen and returns to liquid. A capillary tube drops the pressure again and the liquid slides back for another act.",
+       "Nothing cold exists inside the box. Cold is never added or pumped; heat is only removed, one gram of evaporating refrigerant at a time. That is the single conceptual step JAMB tests with its fridge questions.",
+       "The same loop works backwards in a heat pump for winter, pumping warmth into houses. Air conditioners, freezers and car ACs share the family tree, each tuned for different temperatures.",
+       "If asked where the coldness comes from, answer in one sentence: from the inside, out, as evaporating refrigerant carries latent heat away and dumps it outside."
+      ],
+      "bullets": [
+       "Evaporation inside absorbs latent heat; condensation outside releases it.",
+       "The compressor is the pump, not the cooler.",
+       "Cold is never added; heat is always moved."
+      ],
+      "takeaway": "The fridge moves heat, it never makes cold.",
+      "check": {
+       "question": "The cold inside a refrigerator comes from:",
+       "options": [
+        "Cold air pumped from outside",
+        "Heat being removed as refrigerant evaporates",
+        "Ice blocks made in a factory",
+        "The compressor radiating cold"
+       ],
+       "answer": 1,
+       "why": "The cycle absorbs latent heat inside and releases it elsewhere."
+      }
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "heading": "Go deeper: reading the double plateau on one graph",
+      "paragraphs": [
+       "Melt ice slowly in a beaker with a thermometer and the line climbs to 0 C, flattens, climbs again through the tepid water, and flattens once more at 100 C while the last of the water boils away. Two plateaus, one honest graph.",
+       "Measure the lengths and JAMB will hand you half a laboratory. The 0 C plateau stretches with the latent heat of fusion times mass; the 100 C plateau stretches with the latent heat of vaporisation times the same mass.",
+       "Because L_v is about 6.8 times L_f, the steam plateau dominates. If your sketch shows them nearly equal, your drawing is wrong, and a sharp examiner will draw a red line under your freehand mountain.",
+       "Some freeze on decimal numbers, but few graphs mislead on the ratio. Fusion shorter, vaporisation longer, every single time, because boiling away costs nearly seven times what melting does.",
+       "Exam writers compress infinite variety into this one sketch: labels on the axes, plateaus identified, ratio named. Learn the picture once and half the change-of-state paper reads itself."
+      ],
+      "bullets": [
+       "Two plateaus: 0 C (melting) and 100 C (boiling).",
+       "Vaporisation plateau is about 6.8 times fusion plateau.",
+       "Plateau length uses Q = mL, not mc delta theta."
+      ],
+      "takeaway": "Draw the 0 C plateau shorter than the 100 C one.",
+      "check": {
+       "question": "On a heating curve for water, the plateau at 100 C is longer than the one at 0 C because:",
+       "options": [
+        "Water boils faster than ice melts",
+        "L_v is much larger than L_f",
+        "Ice is denser than steam",
+        "The flame weakens at high temperature"
+       ],
+       "answer": 1,
+       "why": "Stretching further needs more heat per kilogram, and L_v is about 6.8 times L_f."
+      }
+     }
+    },
+    {
+     "type": "reflection",
+     "content": {
+      "prompt": "Sketch the two-plateau graph from memory and mark which stage is the fusion plateau and which is the vaporisation plateau.",
+      "modelResponse": "A rising line, a short flat at 0 C for melting, a rising line through the liquid, then a long flat at 100 C for boiling away to steam. The 100 C flat runs about seven times the 0 C flat because L_v beats L_f by that margin."
+     }
+    }
+   ]
+  },
+  {
+   "slug": "thermal-expansion-of-solids",
+   "topic": "thermal-expansion",
+   "title": "The Gap at the Bridge: How Solids Expand",
+   "objective": "Define linear, area and cubical expansivities; use delta L = alpha L delta theta; describe determination of expansivities and everyday effects and applications.",
+   "estimatedMinutes": 10,
+   "syllabus_ref": "A.15",
+   "blocks": [
+    {
+     "type": "text",
+     "content": {
+      "heading": "Every solid grows when heated",
+      "paragraphs": [
+       "Heat a steel rail on a fierce afternoon and it stretches a few millimetres, enough to buckle a line laid without a gap. The same growth hides in bridges, glass doors and bimetallic strips, waiting to show itself when the temperature climbs.",
+       "Solids expand in every direction because vibrating particles jostle into wider neighbourhoods. The stretch obeys one line: delta L = alpha L delta theta, where alpha is the linear expansivity, different for every material.",
+       "Alpha has units per degree Celsius, or per kelvin, and JAMB quotes typical values freely. Steel about 1.2 x 10^-5, aluminium about 2.4 x 10^-5, brass about 1.9 x 10^-5 per degree Celsius."
+      ],
+      "bullets": [
+       "delta L = alpha L delta theta for length.",
+       "Steel about 1.2 x 10^-5 per C; aluminium about 2.4 x 10^-5.",
+       "Expansion acts in every direction at once."
+      ],
+      "takeaway": "Heat stretches, cold squeezes, the alpha decides.",
+      "check": {
+       "question": "A steel rod of length 2 m and alpha = 1.2 x 10^-5 per C, heated from 20 C to 70 C, expands by about:",
+       "options": [
+        "1.2 mm",
+        "1.2 cm",
+        "4 mm",
+        "0.12 mm"
+       ],
+       "answer": 0,
+       "why": "delta L = 1.2 x 10^-5 x 2 x 50 = 1.2 x 10^-3 m = 1.2 mm."
+      }
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "heading": "The counting rules: linear, area, volume",
+      "paragraphs": [
+       "Expansion sneaks into area and volume too. An area expansivity beta covers flat surfaces, and a cubical (volume) expansivity gamma covers everything solid. The counting flows from the directions involved.",
+       "Two perpendicular directions share the area job, so beta is about twice alpha. Three share the volume job, so gamma is about three times alpha. These are approximations, but JAMB adores them and so should you.",
+       "Glass flasks expanded in every direction is why the liquid level mystery exists, but that story belongs to the next lesson. Hold on to the chain: alpha, then beta = 2 alpha, then gamma = 3 alpha."
+      ],
+      "bullets": [
+       "beta about 2 alpha, area expansivity.",
+       "gamma about 3 alpha, volume expansivity.",
+       "One alpha for one material ties all three."
+      ],
+      "takeaway": "One, two, three: line, area, volume.",
+      "check": {
+       "question": "A metal with linear expansivity 1.5 x 10^-5 per C has a cubical expansivity of about:",
+       "options": [
+        "1.5 x 10^-5 per C",
+        "3.0 x 10^-5 per C",
+        "4.5 x 10^-5 per C",
+        "7.5 x 10^-5 per C"
+       ],
+       "answer": 2,
+       "why": "Gamma is about three times alpha: 3 x 1.5 x 10^-5 = 4.5 x 10^-5 per C."
+      }
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "heading": "Effects, applications and the heat-tower practical",
+      "paragraphs": [
+       "Expansion prints itself across the landscape if you look. Railway lines buckle without expansion gaps, overhead lines sag on hot days, doors stick in radio harmattan heat and unstick in the evening.",
+       "Engineers answer with slots: bridges rest on rollers, pipelines grow expansion loops, bimetallic strips flip irons and thermostats. Missing slots turn long steel into expensive modern art.",
+       "The classic school practical sets up a long rod, a side pin and a microscope. Fix the near end, heat the rod through a measured delta theta, and read the far end's sideways drift with the microscope. Alpha = drift over (original length x delta theta)."
+      ],
+      "bullets": [
+       "Gaps and rollers absorb the growth in rails and bridges.",
+       "Bimetallic strips run irons, kettles and thermostats.",
+       "Practical: drift measured by microscope over mean length."
+      ],
+      "takeaway": "Build the slot before the strain arrives.",
+      "check": {
+       "question": "Bimetallic strips bend when heated because:",
+       "options": [
+        "Both metals melt at the same time",
+        "The two metals have different expansivities",
+        "One metal is magnetic",
+        "The strip carries current and heats"
+       ],
+       "answer": 1,
+       "why": "Uneven growth bends the strip toward the metal with the smaller expansivity."
+      }
+     }
+    },
+    {
+     "type": "callout",
+     "content": {
+      "title": "Exam tip",
+      "body": "Every expansion calculation runs in three beats: write delta L = alpha L delta theta, convert units, and only then divide. Marks disappear on the conversion, never on the formula."
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "A steel bridge deck is 40 m long at 15 C. How much does it lengthen at 45 C? alpha_steel = 1.2 x 10^-5 per C.",
+      "steps": [
+       {
+        "operation": "Find the temperature rise",
+        "reason": "Expansion depends on delta theta, not on the final temperature, so subtract before anything else",
+        "result": "delta theta = 45 - 15 = 30 C",
+        "predictPrompt": "Would 60 - 30 give the same delta theta?"
+       },
+       {
+        "operation": "Write the expansion equation",
+        "reason": "Reach for delta L = alpha L delta theta because three quantities are already handed to you",
+        "result": "delta L = 1.2 x 10^-5 x 40 x 30",
+        "predictPrompt": "What is the unit of alpha again?"
+       },
+       {
+        "operation": "Compute the lengthening",
+        "reason": "Multiply the constants straight through; meters stay meters until you decide to convert",
+        "result": "delta L = 0.0144 m = 14.4 mm",
+        "predictPrompt": "Does 14 mm of growth on a bridge feel plausible?"
+       },
+       {
+        "operation": "Check to confirm: solve the equation for alpha",
+        "reason": "Rearranging the same equation must rebuild the given alpha, so any slip in powers of ten outs itself",
+        "result": "alpha = 0.0144 / (40 x 30) = 1.2 x 10^-5 per C, exactly as given",
+        "predictPrompt": "If you got 1.2 x 10^-3, which step gave it away?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "guided_question",
+     "content": {
+      "question": "Your turn. A copper rod of length 2.0 m and alpha = 1.7 x 10^-5 per C is heated from 20 C to 120 C. Find its new length.",
+      "hints": [
+       "delta theta = 120 - 20 = 100 C.",
+       "delta L = 1.7 x 10^-5 x 2 x 100 = 3.4 x 10^-3 m = 3.4 mm.",
+       "New length = 2.0034 m. Check: 3.4 x 10^-3 / (2 x 100) = 1.7 x 10^-5 per C."
+      ]
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "heading": "Go deeper: engineering slots and stress lines",
+      "paragraphs": [
+       "Steel under constraint does not move, so it pushes back instead. A railway track clamped at both ends accumulates compressive stress with every hot day, until the track kinks sideways into a dramatic S-bend. Rail engineers now weld rails end to end and pre-tension them in mild weather so the line stays put at both extremes.",
+       "Bridges solve the same problem by leaving one end free to slide on rollers, usually hidden under the deck. Watch an older flyover on a brutal afternoon; the visible joint gap is doing quiet, elegant work.",
+       "Overhead power lines, including the tall transmission towers you see crossing highways, are deliberately strung with sag. Taut by morning at cool temperature, they would snap under evening load if stringing crews ignored thermal growth.",
+       "Even pipelines crossing the Niger delta snake in long loops, not straight lines, so the metal can breathe horizontally without tearing welded points apart. Straight pipe is for short indoor runs only.",
+       "Cracks in freshly dried masonry columns whisper one lesson: concrete shrinks as it dries and grows as it warms, always ignoring the architect's ruler. Slots and soft joints are the cheapest insurance a builder can buy."
+      ],
+      "bullets": [
+       "Rails are welded and pre-tensioned, not left gapped.",
+       "Bridge end slides on rollers; the joint does the breathing.",
+       "Pipelines curve in loops, never straight runs."
+      ],
+      "takeaway": "Engineering gold is the gap you never see.",
+      "check": {
+       "question": "Overhead power lines are strung with sag because:",
+       "options": [
+        "Towers look nicer at dusk",
+        "The cables contract and would snap in cold weather if taut",
+        "Birds need the perch height",
+        "Current travels faster in curved lines"
+       ],
+       "answer": 1,
+       "why": "Cold contraction on a taut line would overload and break it."
+      }
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "heading": "Go deeper: why hot water cracks glass but borosilicate survives",
+      "paragraphs": [
+       "Pour boiling water into a cold thick glass bottle and the inner skin stretches instantly while the outer skin still sits cool and tight. The brittle wall cannot stretch, so the stress tears it with a loud ping.",
+       "Borosilicate glass, the laboratory and cookware kind, has a linear expansivity under half of ordinary glass. Beaker walls stretch almost evenly under sudden heat, so nobody in the lab reaches for the dustbin after a tea break.",
+       "Clay pots and enamel mugs negotiate the same treaty by tolerating cracks. Enamel survives because the metal underneath flexes and the glaze rides it. Pure porcelain survives because it barely moves at all.",
+       "Engine cylinders crack from the same physics: sudden start of a cold motor with scalding coolant racing through inner walls only. Gentle warm-up loops are the cheapest cure on the mechanic's checklist.",
+       "The general rule seals the topic: brittleness fails when one face expands faster than its opposite. Change the material, not the drink, and the problem dissolves."
+      ],
+      "bullets": [
+       "Ordinary glass: low twist strength, high expansivity.",
+       "Borosilicate: half the expansivity, laboratory grade.",
+       "Warm up engines gently to spare the block."
+      ],
+      "takeaway": "Uneven expansion is the true enemy of brittle walls.",
+      "check": {
+       "question": "Laboratory beakers survive boiling water better than thick kitchen glass because:",
+       "options": [
+        "Beakers are filled with liquid first",
+        "Borosilicate has a much lower expansivity",
+        "Kitchen glass contains sugar",
+        "Beakers are thicker everywhere"
+       ],
+       "answer": 1,
+       "why": "Near-even growth prevents the tensile stress that tears ordinary glass."
+      }
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "heading": "Go deeper: the bimetallic strip in your iron and kettle",
+      "paragraphs": [
+       "Weld a brass strip and a steel strip back to back and you have built physics in a ruler. Heat the pair and the brass, alpha about 1.9 x 10^-5, grows roughly twice as eagerly as the steel at about 1.2 x 10^-5.",
+       "The mismatch curls the strip away from its flat shape. Hook that curl to a contact in an iron thermostat and it snaps the circuit open at the set temperature. The clothes cool down; the strip straightens; the circuit remakes; full cycle.",
+       "Kettles, toasters, old filament flashers and burglar alarms all borrow the same bend. The engineering hiding inside every kitchen appliance is literally one confident little arc.",
+       "Why not use mercury and a glass tube like the lab thermometer? Cost, fragility and speed. A bimetallic coil reacts in seconds and bolts to a contact with no wires of its own.",
+       "Selection criteria are boringly practical: high sister-alpha difference, robust under repeated cycling, stable across the intended working range. Brass and steel beat every matchmaker JAMB can list."
+      ],
+      "bullets": [
+       "Brass grows faster than steel, so the welded pair curls.",
+       "Thermostats, irons and kettles run on that curl.",
+       "Fast, cheap, robust: the reasons it won the kitchen."
+      ],
+      "takeaway": "One bent strip runs half your kitchen.",
+      "check": {
+       "question": "In a bimetallic strip of brass and steel, heating makes it curl toward:",
+       "options": [
+        "The brass side",
+        "The steel side",
+        "Neither, it expands evenly",
+        "Whichever side is thicker"
+       ],
+       "answer": 1,
+       "why": "Brass grows more, so the strip bends toward its slower-growing steel partner."
+      }
+     }
+    },
+    {
+     "type": "reflection",
+     "content": {
+      "prompt": "Recall a door that sticks every afternoon and asks for a hinge-taking screwdriver in the evening. Explain it in one sentence.",
+      "modelResponse": "Heat makes the hinged frame and the door stretch in every direction, so the door grows into its frame by a few millimetres on hot days and slides free again when the wood cools at night."
+     }
+    }
+   ]
+  },
+  {
+   "slug": "thermal-expansion-of-liquids",
+   "topic": "thermal-expansion",
+   "title": "The Bottle Cheats You: Expansion of Liquids",
+   "objective": "Distinguish real and apparent expansion of a liquid; use gamma_real = gamma_apparent + gamma_container; explain anomalous expansion of water and its effects.",
+   "estimatedMinutes": 10,
+   "syllabus_ref": "A.15",
+   "blocks": [
+    {
+     "type": "text",
+     "content": {
+      "heading": "Liquids only grow one way: by volume",
+      "paragraphs": [
+       "Liquids carry no fixed shape, so only cubical expansion makes sense for them. The law mirrors the solid case: delta V = gamma V delta theta, with gamma the volume (cubical) expansivity of the liquid.",
+       "Water grows about 2 x 10^-4 per C, mercury about 1.8 x 10^-4 per C, while alcohol grows around 1 x 10^-3. Liquids expand far more than solids of the same mass would suggest, and that is why mercury fills the thermometer tube so eagerly.",
+       "Even so, the container joins the dance. Glass swells too, just more politely. What you see in the tube is the liquid's expansion minus the container's expansion, never the raw meal."
+      ],
+      "bullets": [
+       "delta V = gamma V delta theta for liquids.",
+       "Liquid gammas run around 10^-4 per C or bigger.",
+       "The container expands along, quietly shrinking your observation."
+      ],
+      "takeaway": "The level you see is never the whole story.",
+      "check": {
+       "question": "Liquids expand appreciably mainly in:",
+       "options": [
+        "Length",
+        "Area",
+        "Volume",
+        "Mass"
+       ],
+       "answer": 2,
+       "why": "With no fixed shape, only volume expansivity applies to a liquid."
+      }
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "heading": "Real expansion and the lying flask",
+      "paragraphs": [
+       "The flask grows as the liquid warms, so the level rises less than it would in a rigid bottle. The shortfall is the apparent expansion; the truth, available expansion had the flask stayed rock still, is the real expansion.",
+       "The chain-joiner is simple: gamma_real = gamma_apparent + gamma_container. The container's gamma is the cubical expansivity of whatever holds the liquid, 3 alpha for a uniform solid like glass.",
+       "School labs expose both numbers. Choose vessels of different materials, watch the same liquid rise differently, and the difference hands you the container's gamma. Density bottles polish the trick into a real measurement."
+      ],
+      "bullets": [
+       "Apparent expansion is what the tube shows you.",
+       "Real expansion needs the container's own growth added back.",
+       "Gamma_real = gamma_apparent + gamma_container."
+      ],
+      "takeaway": "Add the flask's growth back to see the truth.",
+      "check": {
+       "question": "A liquid appears to expand less than it really does because:",
+       "options": [
+        "Heat escapes from the surface",
+        "The container expands too and hides part of the rise",
+        "The liquid freezes at the top",
+        "The thermometer reads falsely"
+       ],
+       "answer": 1,
+       "why": "The level you watch is the difference between liquid growth and vessel growth."
+      }
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "heading": "Water from 0 C to 4 C goes backwards",
+      "paragraphs": [
+       "Water is the rebel of the liquid family. From 0 C to 4 C it shrinks on warming instead of expanding, squeezing its molecules into the most compact arrangement you will ever meet.",
+       "Above 4 C water behaves. At 4 C exactly, density crests at 1000 kg per cubic metre. That single peak runs the survival of fish in frozen lakes and the cracking of engine blocks on cold nights.",
+       "Ice floats because frozen water occupies about nine percent more volume than liquid. Imagine the absurd alternative: ice sinking, lakes freezing from the bottom up, fish meeting freezers every harmattan."
+      ],
+      "bullets": [
+       "Water contracts from 0 C to 4 C on warming, then expands.",
+       "Maximum density at 4 C, 1000 kg per cubic metre.",
+       "Ice is about nine percent less dense, so it floats."
+      ],
+      "takeaway": "Water is densest at 4 C and floats its own ice.",
+      "check": {
+       "question": "Water's anomalous expansion is fixed between:",
+       "options": [
+        "0 C to 4 C",
+        "4 C to 14 C",
+        "0 C to 100 C",
+        "-10 C to 0 C"
+       ],
+       "answer": 0,
+       "why": "Density peaks at 4 C; the anomaly is confined to 0-4 C."
+      }
+     }
+    },
+    {
+     "type": "callout",
+     "content": {
+      "title": "Exam tip",
+      "body": "Every apparent-expansion problem is one rearrangement: gamma_real = gamma_apparent + gamma_container. Subtract the container term when the parcel expects the apparent one and every question closes itself."
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "A liquid shows an apparent expansivity of 1.2 x 10^-4 per C in a glass flask with alpha_glass = 9 x 10^-6 per C. Find (i) the cubical expansivity of the glass, (ii) the real expansivity of the liquid.",
+      "steps": [
+       {
+        "operation": "Get the glass's cubical expansivity",
+        "reason": "Reach for gamma = 3 alpha because the flask grows in length, breadth and depth together",
+        "result": "gamma_glass = 3 x 9 x 10^-6 = 2.7 x 10^-5 per C",
+        "predictPrompt": "Why triple and not double?"
+       },
+       {
+        "operation": "Write the apparent-real relation",
+        "reason": "Reach for gamma_real = gamma_apparent + gamma_container because the flask subtracts a hidden slice from what you see",
+        "result": "gamma_real = 1.2 x 10^-4 + 2.7 x 10^-5",
+        "predictPrompt": "Would the real value be bigger or smaller than the apparent?"
+       },
+       {
+        "operation": "Add the two contributions",
+        "reason": "Watch the powers of ten and align them before adding",
+        "result": "gamma_real = 1.20 x 10^-4 + 0.27 x 10^-4 = 1.47 x 10^-4 per C",
+        "predictPrompt": "Which term did the container hand you for free?"
+       },
+       {
+        "operation": "Check to confirm: subtract the container back",
+        "reason": "Rebuilding the apparent value from the real one proves the addition stood on solid ground",
+        "result": "1.47 x 10^-4 - 2.7 x 10^-5 = 1.2 x 10^-4 per C, exactly the apparent given",
+        "predictPrompt": "If your check returned 1.47 x 10^-4, what did you forget?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "guided_question",
+     "content": {
+      "question": "Your turn. A liquid appears to expand by 9 x 10^-5 per C in a copper vessel, alpha_copper = 1.7 x 10^-5 per C. Find the real expansivity of the liquid.",
+      "hints": [
+       "First the copper's cubical expansivity: gamma = 3 alpha.",
+       "gamma_copper = 3 x 1.7 x 10^-5 = 5.1 x 10^-5 per C.",
+       "gamma_real = 9 x 10^-5 + 5.1 x 10^-5 = 1.41 x 10^-4 per C. Check: 1.41 x 10^-4 - 5.1 x 10^-5 = 9 x 10^-5 per C."
+      ]
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "heading": "Go deeper: how two flasks beat one",
+      "paragraphs": [
+       "One flask can only ever give you the apparent number. Two flasks of different materials, filled to the same mark, turn the same liquid’s two rises into the container’s own gamma.",
+       "The method runs cold and quiet. Flask A’s cubical expansivity is known or measured separately; flask B’s is the question. Mark both levels at one temperature, heat to a second, and the differing rises hand you B’s cubical expansivity by subtraction alone.",
+       "Density bottles push the same honesty further. Weigh the liquid at one temperature, weigh the bottle empty at another, and you ride on exactly how much more space the liquid spilled into rather than lifted away.",
+       "Mercury’s small gamma sits near water, and alcohol’s is bigger, so equal tubes read unequal lines. School practicals exist precisely to turn that observation into a number rather than a hunch.",
+       "For the exam, the story is always the same: the visible rise lies short. Give the flask its payment with gamma = 3 alpha, then read the truth as a sum of the two expansions, and remember that the heavier liquid is never the problem."
+      ],
+      "bullets": [
+       "Two vessels, one liquid: kills the unknown flask.",
+       "Density bottles price the overflow precisely.",
+       "Compare different liquids in identical tubes for another angle."
+      ],
+      "takeaway": "Two bottles solve what one cannot.",
+      "check": {
+       "question": "In the two-flask method for apparent expansion, the difference between the two rises gives:",
+       "options": [
+        "The liquid's real expansivity directly",
+        "The cubical expansivity of the second flask",
+        "The temperature of the room",
+        "The mass of the flask"
+       ],
+       "answer": 1,
+       "why": "Subtracting the two rises isolates the container contribution."
+      }
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "heading": "Go deeper: the frozen tap and the lily under ice",
+      "paragraphs": [
+       "Water on freezing refuses to squeeze into tighter quarters; the crystal lattice locks each molecule to its neighbours in an open hexagonal honeycomb, nine percent roomier than the liquid it escaped from.",
+       "Fish under frozen lakes owe their lives to this tenth. The coldest liquid sits at the surface and freezes first, capping the lake, while 4 C water sinks and waits underneath like a heated floor nobody asked for.",
+       "Metal pipes betray taps everywhere in harmattan-brittle cold. Water left in a thin tube expands on turning to ice, builds hydraulic pressure, and snaps the weakest joint with a bang heard three houses away.",
+       "Engine blocks crack the same way. Water draining plugs left open before harmattan nights are customary wisdom among drivers up north, and clay jars left full in the cold meet the same fate on a smaller stage.",
+       "Bar stock, beers stored in freezers, garden hose left coupled at the tap: same damage, same physics. Leave crawl space for water to grow and the trouble never happens, not once, not ever."
+      ],
+      "bullets": [
+       "Ice's open lattice is nine percent roomier than liquid water.",
+       "4 C water sinks; fish live under the frozen cap.",
+       "Freezing water bursts pipes, jars and engine blocks."
+      ],
+      "takeaway": "Ice expands; that single fact cracks and keeps.",
+      "check": {
+       "question": "Fish survive winter under frozen lakes because:",
+       "options": [
+        "Ice sinks and insulates the bottom",
+        "Dense 4 C water stays under the frozen surface",
+        "Fish generate enough heat",
+        "Lakes never fully freeze"
+       ],
+       "answer": 1,
+       "why": "The temperature inversion keeps the warm liquid deep and liquid."
+      }
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "heading": "Go deeper: why a thermometer rejects water entirely",
+      "paragraphs": [
+       "A thermometer needs a smooth, predictable rise. Water curves from 0 to 4 C, levels off, and only then behaves, so the same room temperature could read three different heights. Designers banish it before the first draft.",
+       "Liquids that earned the tube job: mercury for wide ranges (freezes minus 39 C, boils 357 C) and coloured alcohol for bitter cold (works well below minus 100 C). Each obeys one straight-ish line through the working range.",
+       "Mercury also conducts electricity through its thin thread, enabling mercury tilt switches in heaters and car hood lights. One liquid, two careers, no water anywhere on the resume.",
+       "Alcohol’s staying power shows in weather stations on high mountains where mercury would freeze solid on the coldest mornings. The sun climbs, the mercury column refuses to move, the alcohol column marches on.",
+       "The exam closes the circle here: candidate answers to thermometric properties note current ones clearly and never once reach for boring, wayward H2O, the fuel of every wrong-option gag."
+      ],
+      "bullets": [
+       "Water's bent graph disqualifies it as a thermometer liquid.",
+       "Mercury: wide range; alcohol: extreme cold.",
+       "Mercury also triggers tilt switches."
+      ],
+      "takeaway": "Thermometers run on reliable obedience, never on rebels.",
+      "check": {
+       "question": "Water is unsuitable as a thermometer liquid mainly because:",
+       "options": [
+        "It is transparent",
+        "It contracts from 0 C to 4 C and does not expand evenly",
+        "It conducts heat too well",
+        "It boils at exactly 100 C"
+       ],
+       "answer": 1,
+       "why": "A bent expansivity curve breaks the one-to-one temperature mapping."
+      }
+     }
+    },
+    {
+     "type": "reflection",
+     "content": {
+      "prompt": "Fill a glass nearly to the brim with cold water and leave it in the sun. Explain what happens to the level by the evening.",
+      "modelResponse": "The water expands faster than the glass, so the meniscus climbs over the rim and spills. Water's gamma is bigger than the container's, and no glass in the cupboard votes against that."
+     }
+    }
+   ]
+  },
+  {
+   "slug": "gas-laws-boyle-charles-pressure",
+   "topic": "gas-laws",
+   "title": "The Three Gas Laws and Absolute Zero",
+   "objective": "State and use Boyle's law, Charles' law and the pressure law; use absolute zero and the general gas equation p1V1/T1 = p2V2/T2 in calculations.",
+   "estimatedMinutes": 10,
+   "syllabus_ref": "A.16",
+   "blocks": [
+    {
+     "type": "text",
+     "content": {
+      "heading": "Boyle keeps the temperature on hold",
+      "paragraphs": [
+       "Squeeze a bicycle pump slowly and the air inside fights back harder every millimetre the shaft sinks. Boyle noticed that the product of pressure and volume stays constant for a fixed mass of gas at a steady temperature.",
+       "In symbols, pV = constant when T is held. The practical form is p1V1 = p2V2, and the classic demo is a gas syringe with its plunger inching down while a pressure gauge climbs up.",
+       "Scuba divers live it daily. Descend and the pressure climbs, the air in their lungs squeezes smaller, and buoyancy drops. Slow breathing fights the squeeze; panic fights the physics, and the physics always wins."
+      ],
+      "bullets": [
+       "Boyle's law: pV = constant at constant T.",
+       "p1V1 = p2V2 is the exam-ready form.",
+       "p against 1/V is a straight line through the origin."
+      ],
+      "takeaway": "Steady temperature, fixed mass, pressure times volume stays constant.",
+      "check": {
+       "question": "At constant temperature, tripling the pressure on a fixed gas makes its volume:",
+       "options": [
+        "Triple",
+        "One third",
+        "Half",
+        "Unchanged"
+       ],
+       "answer": 1,
+       "why": "Boyle's law: volume moves inversely with pressure at fixed T."
+      }
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "heading": "Charles lets the balloon breathe",
+      "paragraphs": [
+       "Warm a sealed balloon and it swells; chill it and it deflates. Charles found that volume rises in step with absolute temperature when pressure stays constant, so V over T is the keeper.",
+       "The catch is absolute temperature. Celsius must become kelvin first by adding 273. A balloon from 0 C to 273 C doubles its volume, not 273 times anything, because the scale only makes sense from zero up.",
+       "Stretch the V-line backwards through the data and it crosses the temperature axis at minus 273 C. Below that impossible depth every gas would collapse to nothing, so Lord Kelvin renamed minus 273 C as zero kelvin, the floor of all cold."
+      ],
+      "bullets": [
+       "Charles' law: V/T = constant at constant pressure.",
+       "Temperature in kelvin = Celsius + 273 first.",
+       "Extrapolated volume zero at minus 273 C, which is 0 K."
+      ],
+      "takeaway": "Absolute temperature is the one and only legal currency here.",
+      "check": {
+       "question": "A gas at 0 C held at constant pressure expands to twice its volume when heated to:",
+       "options": [
+        "273 C",
+        "100 C",
+        "546 C",
+        "10 C"
+       ],
+       "answer": 0,
+       "why": "Double volume needs double temperature: 273 K times 2 is 546 K, which is 273 C."
+      }
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "heading": "The pressure law and the one honest equation",
+      "paragraphs": [
+       "Charge a rigid gas-filled cylinder and its pressure climbs in step with absolute temperature. That third law, p/T = constant at constant volume, rules tyres, sealed sterilisers and high-pressure gas cylinders everywhere.",
+       "Three laws, one family fortunes. Fuse them and you get the general gas equation: p1V1/T1 = p2V2/T2. Every one of the three is just this line with one of the letters frozen.",
+       "JAMB problems wear the same costume every time. Units in, equation written, algebra solved, and the answer wears the correct unit. When in doubt, convert everything to SI before the algebra starts."
+      ],
+      "bullets": [
+       "Pressure law: p/T = constant at constant volume.",
+       "General gas equation: p1V1/T1 = p2V2/T2.",
+       "Freezing one variable gives each of the three laws."
+      ],
+      "takeaway": "Freeze one variable; the family falls out.",
+      "check": {
+       "question": "A sealed rigid gas cylinder is heated from 27 C to 327 C. Its pressure becomes:",
+       "options": [
+        "Twice as big",
+        "Twelve times as big",
+        "Half as big",
+        "Unchanged"
+       ],
+       "answer": 0,
+       "why": "Kelvin, not Celsius: 300 K rising to 600 K doubles the pressure at fixed volume."
+      }
+     }
+    },
+    {
+     "type": "callout",
+     "content": {
+      "title": "Exam tip",
+      "body": "Every gas-law question fails at the same checkpoint: Celsius never survives the first line. Add 273 before touching a formula and the rest is honest arithmetic."
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "400 cm3 of a gas sits at 27 C and normal pressure. It is heated at constant pressure to 127 C. Find its new volume.",
+      "steps": [
+       {
+        "operation": "Convert both temperatures to kelvin",
+        "reason": "Reach for T(K) = C + 273 because Celsius is banned until the last line of every gas problem",
+        "result": "T1 = 300 K, T2 = 400 K",
+        "predictPrompt": "What does 400 - 300 mean in kelvin?"
+       },
+       {
+        "operation": "Write Charles' law in proportion form",
+        "reason": "Reach for V/T = constant because pressure is held steady and volume moves with absolute temperature",
+        "result": "V2 = V1 x T2 / T1",
+        "predictPrompt": "Which law dies if pressure doubles halfway?"
+       },
+       {
+        "operation": "Compute the new volume",
+        "reason": "Divide by the old temperature, multiply by the new one",
+        "result": "V2 = 400 x 400 / 300 = 533 cm3 (about)",
+        "predictPrompt": "Volume must rise when heated, right?"
+       },
+       {
+        "operation": "Check to confirm: compare both sides back",
+        "reason": "Rebuild the proportion V2 over T2 and V1 over T1; both must agree, so the answer proves itself",
+        "result": "533 / 400 = 1.33; 400 / 300 = 1.33, the same ratio",
+        "predictPrompt": "Which ratio would betray a wrong kelvin?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "guided_question",
+     "content": {
+      "question": "Your turn. 600 cm3 of gas at 27 C and 100 kPa is compressed at constant temperature to 200 kPa. Find the new volume.",
+      "hints": [
+       "Constant T means Boyle's law: p1V1 = p2V2.",
+       "100 x 600 = 200 x V2, so V2 = 300 cm3.",
+       "Half the pressure, double the volume: 200 x 300 = 100 x 600 = 60,000. Check to confirm by splitting both sides by 100."
+      ]
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "heading": "Go deeper: the graphs JAMB buys for breakfast",
+      "paragraphs": [
+       "Sketch p against V for a fixed mass at steady temperature and you will draw a hyperbola that never touches either axis. Double the volume and the pressure halves; triple it and pressure falls to one third; the curve keeps its manners forever.",
+       "Plot p against 1 over V instead and the hyperbola transforms into a straight line through the origin. That conversion is JAMB’s favourite graph question, and it never fails to show up in one disguise or another.",
+       "Plot V against T at constant pressure and the line is straight, and it slices the axis at minus 273 C. The intercept hands you absolute zero, and JAMB will absolutely ask you to name it.",
+       "Plot p against T at constant volume and you meet the same straight line, sliced at the same minus 273 C. All three are the same family portrait from different chairs in the room.",
+       "Read the axes before every sketch. Confusing p-V for p-1/V, or forgetting the minus 273 intercept, costs marks on questions that should have been free, so name the axes aloud before drawing anything."
+      ],
+      "bullets": [
+       "p vs V: hyperbola.",
+       "p vs 1/V: straight line through origin.",
+       "V vs T and p vs T: straight lines crossing at minus 273 C."
+      ],
+      "takeaway": "Straight or hyperbola, the axis gives it away.",
+      "check": {
+       "question": "A graph of p against 1/V at constant temperature is:",
+       "options": [
+        "A hyperbola",
+        "A straight line through the origin",
+        "A parabola",
+        "A line parallel to the x-axis"
+       ],
+       "answer": 1,
+       "why": "p is directly proportional to 1/V, so the graph is linear through zero."
+      }
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "heading": "Go deeper: what absolute zero really is",
+      "paragraphs": [
+       "Absolute zero is the temperature at which the pressure and volume of an ideal gas extrapolate to zero, precisely minus 273.15 C, better rounded in every Nigerian exam to minus 273 C.",
+       "At 0 K, classically, molecular motion would freeze to a standstill. Nature never grants the meeting, partly because real gases liquify long before arrival, standing in the way like a bouncer at an impossible door.",
+       "Scientists have touched within a tenth of a billionth of a kelvin using laser cooling. Even the coldest cloud in the universe, the Boomerang Nebula, sits about 1 degree above zero.",
+       "The kelvin is therefore a positive scale without a below; negatives are Fahrenheit’s bad habit. Every temperature referenced in every law you will meet this year folds through the same +273 door.",
+       "When a question asks what absolute zero means in molecular terms, answer the motion stopped version. When it asks for the number, answer minus 273 C or 0 K, and move on without ceremony."
+      ],
+      "bullets": [
+       "Absolute zero: 0 K, which is minus 273 C.",
+       "Ideal gas: p and V would extrapolate to zero there.",
+       "Real gases liquefy first; absolute zero is never reached."
+      ],
+      "takeaway": "Absolute zero: the molecules freeze, nature never lets them print the cheque.",
+      "check": {
+       "question": "Absolute zero is the temperature at which:",
+       "options": [
+        "Water freezes at sea level",
+        "An ideal gas's pressure and volume approach zero",
+        "Any metal superconducts at room temperature",
+        "A thermometer reads minus 100 C"
+       ],
+       "answer": 1,
+       "why": "Extrapolation of gas laws collapses p and V to zero at 0 K."
+      }
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "heading": "Go deeper: where the laws break and nobody warns you",
+      "paragraphs": [
+       "Real gas obedience shatters near two extremes: very high pressure, when molecules are forced close enough to feel each other, and very low temperature, when the molecules creep sluggishly past each other.",
+       "Van der Waals patched the holes with two adjustments, detailed in the ideal-gas lesson. For now, hold the moral: the three laws describe the gentle middle of the map, not the wild corners.",
+       "Boyle’s law testifies in every compressed-air tyre gauge. Pressure law keeps pressure cookers sane. Charles’ law floats hot-air balloons and refuses the aeroplane its dry-ice pleasure.",
+       "A closing trap: constant-temperature squashing heats real gas, and constant-pressure heating leaks heat to the walls. The sworn enemies of every gas-law question are heat exchanges with the room, so slow, furtive steps keep the laws honest.",
+       "Practise spotting the fixed letter in any story. Fixed T, fixed p, fixed V: each silence selects a law, and the story always confesses its fixed variable if you read it twice before solving."
+      ],
+      "bullets": [
+       "Laws fail at high pressure and low temperature.",
+       "Exam problems assume gentle, sealed, quiet conditions.",
+       "Each law is one frozen variable of p1V1/T1 = p2V2/T2."
+      ],
+      "takeaway": "The laws are the gentle middle, never the wild corners.",
+      "check": {
+       "question": "The gas laws are least reliable when:",
+       "options": [
+        "The temperature is moderate and pressure low",
+        "The gas is near liquefaction at high pressure",
+        "The container is sealed",
+        "The mass of gas is fixed"
+       ],
+       "answer": 1,
+       "why": "Intermolecular forces dominate near liquefaction, breaking ideal behaviour."
+      }
+     }
+    },
+    {
+     "type": "reflection",
+     "content": {
+      "prompt": "A football that feels firm in the cool morning sagging by the hot afternoon: name the law working and say which value it guards.",
+      "modelResponse": "The pressure law. Fixed volume, fixed mass, so pressure rises in step with kelvin when the sun heats the leather. It is the same reason the tyre-pressure gauge drops on cold Harmattans and climbs on bakery afternoons."
+     }
+    }
+   ]
+  },
+  {
+   "slug": "ideal-gas-equation",
+   "topic": "gas-laws",
+   "title": "PV = nRT and the Van der Waals Patch",
+   "objective": "Use PV = nRT to solve numerical problems; explain Van der Waals corrections a and b and why real gases deviate from ideal behaviour.",
+   "estimatedMinutes": 10,
+   "syllabus_ref": "A.16",
+   "blocks": [
+    {
+     "type": "text",
+     "content": {
+      "heading": "One line that contains all three laws",
+      "paragraphs": [
+       "Boyle, Charles and pressure law are siblings waiting to meet. Fuse them and you get pV = nRT, the ideal gas equation, with R equal to about 8.3 joules per mole per kelvin.",
+       "n counts moles. One mole is the gramme-atom of gas, holding its particles by the Avogadro weight, 6.02 x 10^23 of them. Mass, molar mass and moles waltz through every rearrangement.",
+       "Every gas-law result you have memorised reappears here as a special case: freeze T and you recover Boyle; freeze p and Charles steps out; freeze V and the pressure law bows."
+      ],
+      "bullets": [
+       "PV = nRT, with R about 8.3 J per mol K.",
+       "n = mass in grams divided by molar mass.",
+       "Each single law is one frozen variable of this line."
+      ],
+      "takeaway": "One equation, three family members.",
+      "check": {
+       "question": "In PV = nRT, n stands for:",
+       "options": [
+        "Number of molecules",
+        "Number of moles",
+        "Number density",
+        "Avogadro's number"
+       ],
+       "answer": 1,
+       "why": "n is the number of moles, each parcel carrying an Avogadro number of particles."
+      }
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "heading": "What n, M and the constants mean in the exam hall",
+      "paragraphs": [
+       "Given a mass of gas, compute n as mass over molar mass. Oxygen gas O2 has molar mass 32 g; nitrogen N2 carries 28 g; for carbon dioxide it is 44 g. The calculators love these three.",
+       "Typical exam gearbox: mole counts, volume in cubic metres, pressure in pascals, temperature in kelvin. Every answer that comes out in wrong units dies on the last line; conversion discipline is half the marks.",
+       "One mole of any ideal gas occupies 22.4 dm3 at STP (0 C, 1 atm) and 24 dm3 at RTP (25 C, 1 atm). Density links in through P = density times R times T over M, handy when JAMB asks for the density of a gas."
+      ],
+      "bullets": [
+       "n = mass / molar mass; O2 is 32 g per mol.",
+       "Molar volume: 22.4 dm3 at STP, 24 dm3 at RTP.",
+       "P = d R T / M links density to the equation."
+      ],
+      "takeaway": "Mass to moles first; the equation does the rest.",
+      "check": {
+       "question": "The number of moles in 32 g of O2 is:",
+       "options": [
+        "0.5 mol",
+        "1 mol",
+        "2 mol",
+        "32 mol"
+       ],
+       "answer": 1,
+       "why": "Molar mass of O2 is 32 g, so 32 g is exactly one mole."
+      }
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "heading": "When the perfect gas wobbles: Van der Waals",
+      "paragraphs": [
+       "An ideal gas pretends particles are points with no attractions. Nature laughs at both claims when gas is squeezed hard or chilled near its boiling point; real gas molecules cuddle and collide.",
+       "Van der Waals patched the equation with two brackets: (P + a/V2)(V - b) = nRT. The a/V2 term pays the attractive forces debt; the b pulls the molar volume in for the finite size of the particles.",
+       "Two games shadow every mark here. a grows with stronger intermolecular pull, largest for steam and ammonia; b grows with bigger molecules. Ideal passport: hydrogen and helium, light and lonely.",
+       "Peak pressure or floor temperature is where the corrections actually matter. Liquefying gas, vapour cycles and industrial cylinders live there; the ordinary JAMB problem stays in the gentle middle."
+      ],
+      "bullets": [
+       "Ideal gas assumes point particles and no attractions.",
+       "(P + a/V2)(V - b) = nRT patches both.",
+       "a: attraction strength; b: finite molecular volume."
+      ],
+      "takeaway": "Van der Waals pays the two hidden debts.",
+      "check": {
+       "question": "In Van der Waals equation, the a term corrects for:",
+       "options": [
+        "The finite size of gas molecules",
+        "The attractive forces between molecules",
+        "The speed of sound in the gas",
+        "The mass of the gas"
+       ],
+       "answer": 1,
+       "why": "The a/V2 term pays for intermolecular attraction; b pays for the molecule's own bulk."
+      }
+     }
+    },
+    {
+     "type": "callout",
+     "content": {
+      "title": "Exam tip",
+      "body": "One line, four jobs: PV = nRT solves for pressure, volume, moles and temperature. Circle the unknown, park the rest at the edge, rearrange once, and let the arithmetic walk."
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "What pressure does 0.4 mol of an ideal gas exert in a 5 dm3 container at 300 K? Take R = 8.3 J per mol K.",
+      "steps": [
+       {
+        "operation": "Convert the volume to SI units",
+        "reason": "The ideal gas equation only speaks cubic metres, so dm3 must change clothes first",
+        "result": "V = 5 dm3 = 0.005 m3",
+        "predictPrompt": "How many litres hide inside a dm3?"
+       },
+       {
+        "operation": "Rearrange the equation for pressure",
+        "reason": "Reach for P = nRT / V because heights, volumes and moles all obey that one line",
+        "result": "P = (0.4 x 8.3 x 300) / 0.005",
+        "predictPrompt": "Where does 8.3 actually come from?"
+       },
+       {
+        "operation": "Compute the pressure",
+        "reason": "Multiply the numerator, then divide; keep the joules straight",
+        "result": "P = 996 / 0.005 = 199,200 Pa (about 199 kPa)",
+        "predictPrompt": "Is 199 kPa nearer one or two atmospheres?"
+       },
+       {
+        "operation": "Check to confirm: evaluate PV / nR",
+        "reason": "Substituting back must rebuild 300 K; anything else betrays a decimal slip",
+        "result": "199,200 x 0.005 / (0.4 x 8.3) = 996 / 3.32 = 300 K, exactly the given temperature",
+        "predictPrompt": "Which digit would you change to keep it honest?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "guided_question",
+     "content": {
+      "question": "Your turn. 0.2 mol of gas occupies 8 dm3 at 300 K. Find the pressure exerted, R = 8.3 J per mol K.",
+      "hints": [
+       "Convert 8 dm3 to cubic metres: 0.008 m3.",
+       "P = nRT / V = 0.2 x 8.3 x 300 / 0.008 = 498 / 0.008 = 62,250 Pa.",
+       "Check: 62,250 x 0.008 / (0.2 x 8.3) = 498 / 1.66 = 300 K. It closes the loop."
+      ]
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "heading": "Go deeper: reading PV = nRT like a story",
+      "paragraphs": [
+       "Cover any one letter and the other three improvise a story. Double T with sealed volume and pressure doubles in obedience. Halve V with same T and P doubles instantly. The equation is a machine that dramatises every variable.",
+       "Take a tyre on a fierce Lagos afternoon. Vol up with driver count, T same as the road's, yet a burst happens anyway, because the pressure crosses rubber physics long before the iron calendar ticks.",
+       "Or watch a sealed aerosol can by a hot dashboard. Same number of moles, same box, rising temperature: pressure climbs past the can's steel friendship in minutes. Cabin trash cans are not decoration.",
+       "Dive experts complete the circle for piston-engine aircraft engines. Higher octane at altitude cranks combustion hotter, each explosion shorter, each expansion fiercer, PV = nRT always on duty.",
+       "Every exam story with gas sealed, heated, compressed or added up is this equation wearing a hat. Strip the story and the line appears untouched beneath it."
+      ],
+      "bullets": [
+       "Heat a sealed can and pressure climbs.",
+       "Shrink volume at constant T and pressure climbs.",
+       "Add moles in a fixed space and pressure climbs."
+      ],
+      "takeaway": "Cover a letter; the others improvise.",
+      "check": {
+       "question": "A sealed aerosol can left on a hot dashboard eventually bursts because:",
+       "options": [
+        "The metal oxidises through",
+        "Gas pressure rises with temperature at fixed volume",
+        "Sunlight melts the plastic cap",
+        "The contents evaporate and escape"
+       ],
+       "answer": 1,
+       "why": "PV = nRT: same n, same V, T up means P up beyond the can's limit."
+      }
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "heading": "Go deeper: where gases hide their stickiness",
+      "paragraphs": [
+       "Cool any ammonia cylinder and the pressure falls further than the ideal prophecy, because molecules start grabbing each other. Van der Waals spotted the gap and handed nature back her margin.",
+       "The a constant bakes attraction into the equation. Bigger, stickier molecules carry the bigger a: water already vaporises into nuisance, ammonia and sulphur dioxide ambushed factories and salons for decades.",
+       "The b constant books volume for the bodies of the particles themselves. Gas stops compressing when the particles press shoulder to shoulder, like dancers who cannot breathe past the bounce.",
+       "Irony keeps us honest: the best approximations of ideal behaviour, helium and hydrogen, are the two gases humanity ships by cylinder every harmattan-free hour of the year.",
+       "Van der Waals gas still breaks near its own collapse, near that last gasp of liquidation. Remember the order: gentle middle obeys ideals; the freezing crowded corner obeys van der Waals; the liquefied floor obeys neither."
+      ],
+      "bullets": [
+       "a measures attraction; grows with van der Waals stickiness.",
+       "b measures molecules' own volume; grows with size.",
+       "Helium and hydrogen are nearest ideal."
+      ],
+      "takeaway": "Real gases confess hardest near liquefaction.",
+      "check": {
+       "question": "The b term in van der Waals equation accounts for:",
+       "options": [
+        "Attraction between molecules",
+        "The finite volume of the gas molecules",
+        "The speed of diffusion",
+        "The mass of the molecules"
+       ],
+       "answer": 1,
+       "why": "b subtracts the molecules' own bulk from the available volume."
+      }
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "heading": "Go deeper: the 22.4 litre trick at STP",
+      "paragraphs": [
+       "One mole of any ideal gas at standard temperature and pressure fills exactly 22.4 dm3. That figure unlocks a family of one-step solves: grams to moles to dm3, or backwards, all in one lungful.",
+       "At RTP (25 C, 1 atm) the same mole balloons to 24 dm3, a favourite JAMB twist. Identify which condition the paper sets before reaching for the 22.4 default.",
+       "Density rides the same bus: P = dRT/M. Rearranged, d = PM / RT, handy when JAMB asks the density of a gas, which it plans to do in the next paper after this one.",
+       "A handful of mental conversions to keep warm: 32 g O2 is one mole is 22.4 dm3 at STP. 44 g CO2 is the same parcel at the same price. 2 g H2 likewise, because Avogadro deals in head counts, never in grams.",
+       "Nine of ten exam booklets bury one silent question down here. Whoever spots it nails it without breaking stride; the rest keep writing PV = nRT from scratch and run out of minutes."
+      ],
+      "bullets": [
+       "22.4 dm3 per mole at STP; 24 dm3 at RTP.",
+       "d = PM / RT for gas density.",
+       "Mass to moles to dm3: one fluid move."
+      ],
+      "takeaway": "Memorise 22.4 and RTP rewards you.",
+      "check": {
+       "question": "One mole of any ideal gas at STP occupies:",
+       "options": [
+        "24 dm3",
+        "22.4 dm3",
+        "1 dm3",
+        "100 dm3"
+       ],
+       "answer": 1,
+       "why": "Standard molar volume at STP is 22.4 dm3."
+      }
+     }
+    },
+    {
+     "type": "reflection",
+     "content": {
+      "prompt": "Write the two things Van der Waals fixed, and say when each matters most.",
+      "modelResponse": "He fixed attraction (the a term) and the molecules' own bulk (the b term). Both bite hardest when the gas crowds and chills near liquefaction; the gentle middle of the syllabus remains happily ideal."
      }
     }
    ]
