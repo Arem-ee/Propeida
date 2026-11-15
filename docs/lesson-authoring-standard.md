@@ -113,8 +113,15 @@ Structure, in order:
    - Where the lesson has a confusable pair, name it in a section and give the
      discrimination rule.
 3. **Exam tip** — 1–2 sentences, 30–50 words. A decision rule, not a summary.
-4. **Worked example** — one exam-style item, 3–5 named steps. Each step says
-   what was done and why, not just the arithmetic or the answer.
+4. **Worked example** - one exam-style item, 3-6 named steps. Each step says
+   what was done and why, not just the arithmetic or the answer. Calculations
+   are laid out step by step, one step per line, and every step carries its
+   explanation (the `reason` line): the tool to reach for and why it fits. The
+   final step **checks to confirm**: it verifies the answer in a second,
+   independent way (substitution back into the original relation, a rearrangement,
+   or a units-and-magnitude sanity check), so a wrong answer announces itself.
+   Confirmed 2026-11-14, recorded in `docs/question-bank-ingestion.md`
+   ("Explanation format for maths and calculation questions").
 5. **Guided attempt** — one prompt with hints that scaffold the same skill.
 6. **Independent attempt** — one or two questions without hints. These normally
    come from the topic-tagged question bank, not from the lesson JSON.

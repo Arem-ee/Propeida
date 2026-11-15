@@ -102,7 +102,7 @@ Lessons follow `docs/lesson-authoring-standard.md` for structure (one concept pe
 
 - **Takeaways** are one sentence, under 20 words, no full stop
 - **Check `why` explanations** are one line, no full stop
-- **Worked example steps** say what was done and why, no full stops
+- **Worked example steps** say what was done and why, no full stops. The worked example closes with a final step that checks to confirm the answer (substitution, rearrangement or units and magnitude sanity check)
 - **Guided prompts** speak directly to the learner: `Now you try` not `The learner should attempt`
 - **Exam tips** are decision rules, not summaries, no full stops
 - **Never** open with `In this lesson we will…` or `By the end you will…` — start with the content
