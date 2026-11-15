@@ -5213,6 +5213,38 @@
      }
     },
     {
+     "type": "worked_example",
+     "content": {
+      "problem": "Water boils at 100 C. What is that in Kelvin and in Fahrenheit? Later, an American radio reports 68 F. What is it in Celsius and Kelvin?",
+      "steps": [
+       {
+        "operation": "Convert Celsius to Kelvin first",
+        "reason": "K = C + 273, the simplest conversion you will ever use in this topic",
+        "result": "373 K",
+        "predictPrompt": "Why 273, and why not Fahrenheit first?"
+       },
+       {
+        "operation": "Convert Celsius to Fahrenheit",
+        "reason": "F = (C x 9/5) + 32, and the multiply comes before the add",
+        "result": "212 F",
+        "predictPrompt": "Estimate: is the Fahrenheit answer bigger or smaller than the Celsius one?"
+       },
+       {
+        "operation": "Go backwards from Fahrenheit",
+        "reason": "C = (F - 32) x 5/9; subtract 32 first, then scale",
+        "result": "68 F = 20 C = 293 K",
+        "predictPrompt": "68 is the everyday room temperature almost exactly — which unit pair is it?"
+       },
+       {
+        "operation": "Check to confirm: apply both directions",
+        "reason": "going up 100 C gives 373 K; going back gives 100 C exactly and 212 F exactly",
+        "result": "both directions land exactly back on the originals",
+        "predictPrompt": "Do the two directions undo each other exactly?"
+       }
+      ]
+     }
+    },
+    {
      "type": "guided_question",
      "content": {
       "question": "Your turn. A Jos harmattan night dips to 19 degrees C. What is that in Kelvin? Then a bakery oven reads 473 K; what is that in Celsius?",
@@ -5414,6 +5446,38 @@
         "reason": "75 C must put the thread back at exactly 35 cm",
         "result": "L = 20 + (75 / 100) x (40 - 20) = 20 + 15 = 35 cm ✓ the very reading that gave us 75 C",
         "predictPrompt": "Scale it up. Does 75 C put the thread at 35 cm?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "A clinical thermometer reads 36 C at the ice point (thread at 10 cm) and 106 C at the steam point (thread at 50 cm). What does the thread at 30 cm represent?",
+      "steps": [
+       {
+        "operation": "Find the scale of the thread",
+        "reason": "steam minus ice reads 106 - 36 = 70 C across 40 cm",
+        "result": "1.75 C per cm",
+        "predictPrompt": "Is this reading more than 1 degree per centimetre or less?"
+       },
+       {
+        "operation": "Measure distance above the ice mark",
+        "reason": "30 - 10 = 20 cm above the ice mark",
+        "result": "20 cm",
+        "predictPrompt": "Why measure from the ice mark and not from the bottom?"
+       },
+       {
+        "operation": "Apply the scale",
+        "reason": "temperature rise = 1.75 x 20 = 35 C above 36 C",
+        "result": "36 + 35 = 71 C",
+        "predictPrompt": "Does the answer sit between the ice and steam marks?"
+       },
+       {
+        "operation": "Check to confirm: reverse the calculation",
+        "reason": "from 71 C backwards: (71 - 36) / 1.75 + 10 = 20 + 10 = 30 cm",
+        "result": "30 cm lands exactly on the mark the question gave",
+        "predictPrompt": "Feed it 71 C backwards — do you get the same 30 cm?"
        }
       ]
      }
@@ -5626,6 +5690,38 @@
         "reason": "delta theta = Q / (m c) must rebuild the 78 - 22 = 56 K rise exactly",
         "result": "delta theta = 75,600 / (1.5 x 900) = 75,600 / 1350 = 56 K ✓ exactly 78 - 22",
         "predictPrompt": "Feed it Q and m and c. Do you get 56 K out?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "A 2.0 kg brass block (c = 380 J per kg K) warms from 15 C to 45 C on a dusty ledge. How much heat does it absorb?",
+      "steps": [
+       {
+        "operation": "List: m = 2.0 kg, c = 380, change in temperature = 45 - 15",
+        "reason": "delta theta is the change, never the final temperature",
+        "result": "delta theta = 30 K",
+        "predictPrompt": "Why 45 - 15 and not just 45?"
+       },
+       {
+        "operation": "Q = m c delta theta = 2.0 x 380 x 30",
+        "reason": "master formula: every heat story in this unit reduces to it",
+        "result": "Q = 22,800 J",
+        "predictPrompt": "Estimate first: 2 x 380 = 760; does 760 x 30 land near 22,800?"
+       },
+       {
+        "operation": "Express in kJ like JAMB does",
+        "reason": "JAMB often tidied answers in kJ or in J with scientific notation",
+        "result": "22.8 kJ absorbed",
+        "predictPrompt": "If the block were copper (385), would this change much?"
+       },
+       {
+        "operation": "Check to confirm: solve for the temperature rise",
+        "reason": "delta theta = Q / (m c) = 22,800 / (2.0 x 380) = 22,800 / 760 = 30 K exactly",
+        "result": "30 K, matching 45 - 15 to the limit of the figures",
+        "predictPrompt": "Feed it 22,800 back — do you get 30 K?"
        }
       ]
      }
@@ -5848,6 +5944,38 @@
      }
     },
     {
+     "type": "worked_example",
+     "content": {
+      "problem": "A 150 g copper calorimeter (c = 380 J per kg K) at 100 C is dropped into 100 g of water at 15 C. Find the final equilibrium temperature (ignore the second container).",
+      "steps": [
+       {
+        "operation": "Write the two heat balances",
+        "reason": "heat lost by copper = heat gained by water: m{{sub:c}} c{{sub:c}} (100 - T) = m{{sub:w}} c{{sub:w}} (T - 15)",
+        "result": "0.150 x 380 (100 - T) = 0.100 x 4200 (T - 15)",
+        "predictPrompt": "Why does the copper lose what the water must gain?"
+       },
+       {
+        "operation": "Solve the linear equation",
+        "reason": "57 (100 - T) = 420 (T - 15) gives 5700 - 57T = 420T - 6300",
+        "result": "12,000 = 477T, so T = 25.16 C",
+        "predictPrompt": "What does the equation tell you happens when the masses were equal?"
+       },
+       {
+        "operation": "Sanity-check the direction",
+        "reason": "water\"s mass and its latent capacity both dominate; a modest rise makes sense",
+        "result": "T = 25.2 C, comfortably between 15 and 100",
+        "predictPrompt": "Is 25 C more reasonable than 50 for this setup?"
+       },
+       {
+        "operation": "Check to confirm: swap heat terms",
+        "reason": "heat lost by copper = 57 x (100 - 25.16) = 57 x 74.84 = 4,263 J; heat gained by water = 420 x (25.16 - 15) = 420 x 10.16 = 4,267 J — equal (rounding)",
+        "result": "the two terms agree within rounding",
+        "predictPrompt": "Do the two sides match to being equal?"
+       }
+      ]
+     }
+    },
+    {
      "type": "guided_question",
      "content": {
       "question": "Your turn. A 150 g copper block (c = 385) heated to 200 C is plunged into 250 g of water at 25 C in a negligible container. Find the final temperature. Repeat if the block were iron (c = 460).",
@@ -6061,6 +6189,38 @@
         "reason": "The model must land on 80 C at the t you just found",
         "result": "T = 25 + 75 e{{sup:-0.0286 x 10.8}} ≈ 25 + 55 = 80 C ✓",
         "predictPrompt": "Fast-forward 10.8 minutes. Has the cube landed on 80 C?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "A hot metal cube cools from 100 C to 90 C in 5 minutes in a room at 25 C. How long does it take to cool all the way from 100 C to 80 C, assuming Newton’s law holds?",
+      "steps": [
+       {
+        "operation": "State the law for this setup",
+        "reason": "T - T{{sub:s}} = (T{{sub:0}} - T{{sub:s}}) e{{sup:-kt}}",
+        "result": "only k changes between readings; the constant product stays",
+        "predictPrompt": "What does the exponential form imply about the cooling rate?"
+       },
+       {
+        "operation": "Find k from the first reading",
+        "reason": "90 - 25 = (100 - 25) e{{sup:-5k}}, so e{{sup:-5k}} = 65/75 = 13/15",
+        "result": "k = ln(15/13) / 5 ≈ 0.0287 per minute",
+        "predictPrompt": "Estimate k from the logs: is it about 0.03?"
+       },
+       {
+        "operation": "Apply k to the second target",
+        "reason": "80 - 25 = 75 e{{sup:-kt}}, so e{{sup:-kt}} = 55/75 = 11/15 and t = ln(15/11)/k",
+        "result": "t = 5 x ln(15/11) / ln(15/13) ≈ 10.8 minutes",
+        "predictPrompt": "Estimate the time: the last 10 degrees must take longer than 5 minutes"
+       },
+       {
+        "operation": "Check to confirm: repeat the rate ratio test",
+        "reason": "the ratio of excess temperatures 75 → 65 → 55 over two 10-degree steps must follow a fixed multiplier; 13/15 ≈ 0.867 matches 55/65 ≈ 0.846 — close (the law is exact only in the small-step limit)",
+        "result": "multipliers match within the usual law-of-cooling tolerance",
+        "predictPrompt": "Do the two 10-degree steps slow down by a similar multiplier?"
        }
       ]
      }
@@ -6565,6 +6725,38 @@
      }
     },
     {
+     "type": "worked_example",
+     "content": {
+      "problem": "How much heat turns 150 g of water at 100 C completely into steam at the same temperature? L{{sub:v}} for water = 2.26 x 10{{sup:6}} J per kg.",
+      "steps": [
+       {
+        "operation": "Use the latent heat formula directly",
+        "reason": "no temperature change is involved: Q = m L",
+        "result": "Q = m L",
+        "predictPrompt": "Why is there no temperature change term in this formula?"
+       },
+       {
+        "operation": "Substitute the mass",
+        "reason": "m = 150 g = 0.150 kg",
+        "result": "0.150 x 2.26 x 10{{sup:6}}",
+        "predictPrompt": "Convert the mass in grams to the SI base unit first"
+       },
+       {
+        "operation": "Compute",
+        "reason": "0.150 x 2.26 x 10^6 J = 339,000 J",
+        "result": "Q = 3.39 x 10{{sup:5}} J = 339 kJ",
+        "predictPrompt": "Is it larger than the heat to warm the water from 20 to 100 C (~50 kJ)?"
+       },
+       {
+        "operation": "Check to confirm: compare with Q = mc delta theta",
+        "reason": "heating water 0 → 100 C needs ~63 kJ; changing state costs the same mass ~4.8 times more",
+        "result": "339 kJ dwarfs 63 kJ — far more energy hides in a phase change",
+        "predictPrompt": "Should the sense of this ratio surprise you?"
+       }
+      ]
+     }
+    },
+    {
      "type": "guided_question",
      "content": {
       "question": "Your turn. 150 g of ice at 0 C is melted and the water produced is heated to 80 C. L{{sub:f}} = 3.34 x 10{{sup:5}} J per kg, c{{sub:water}} = 4200 J per kg K. Find the total heat supplied.",
@@ -6803,6 +6995,38 @@
         "reason": "Substitute back to recover the mass, because a wrong exponent would leave the answer off by a factor of 1000",
         "result": "565,000 / 2.26 x 10{{sup:6}} = 0.25 kg, exactly the mass we started with",
         "predictPrompt": "If you got 565 J instead, which step betrayed you?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "How much heat turns 120 g of ice at 0 C completely into water at 60 C? L{{sub:f}} for water = 3.34 x 10{{sup:5}} J per kg.",
+      "steps": [
+       {
+        "operation": "Two heat steps: melt the ice, then warm the water",
+        "reason": "neither step fits a single formula alone; Q{{sub:1}} = m Lf and Q{{sub:2}} = m c delta theta",
+        "result": "two additive Q parts",
+        "predictPrompt": "Why is this not a one-formula problem?"
+       },
+       {
+        "operation": "Step 1: melt the ice",
+        "reason": "Q{{sub:1}} = 0.120 x 3.34 x 10{{sup:5}}",
+        "result": "Q{{sub:1}} = 40,080 J",
+        "predictPrompt": "Estimate: 1/8 of a kilogram, a third of a megajoule"
+       },
+       {
+        "operation": "Step 2: warm the water to 60 C",
+        "reason": "Q{{sub:2}} = 0.120 x 4200 x 60",
+        "result": "Q{{sub:2}} = 30,240 J",
+        "predictPrompt": "Does warming liquid cost more than melting ice?"
+       },
+       {
+        "operation": "Add the two contributions",
+        "reason": "Q{{sub:total}} = 40,080 + 30,240",
+        "result": "70,320 J = 70.3 kJ total",
+        "predictPrompt": "Is the added Q more than the Q for melting alone?"
        }
       ]
      }
@@ -7049,6 +7273,38 @@
      }
     },
     {
+     "type": "worked_example",
+     "content": {
+      "problem": "A copper rod is 2.0 m long at 20 C. Find its length at 80 C. alpha{{sub:copper}} = 1.7 x 10{{sup:-5}} per C.",
+      "steps": [
+       {
+        "operation": "List: original length, alpha, temperature change",
+        "reason": "delta theta is 80 - 20 = 60 K",
+        "result": "delta theta = 60 K, alpha = 1.7 x 10{{sup:-5}}",
+        "predictPrompt": "What would dazzle you about alpha — its tininess?"
+       },
+       {
+        "operation": "Compute delta L = alpha L delta theta",
+        "reason": "units: per C x m x K — length comes out in metres",
+        "result": "1.7 x 10{{sup:-5}} x 2.0 x 60 = 0.00204 m",
+        "predictPrompt": "Estimate delta L in mm: about 2?"
+       },
+       {
+        "operation": "Add to the original length",
+        "reason": "new length = 2.0 + 0.00204",
+        "result": "2.00204 m ≈ 2.002 m",
+        "predictPrompt": "Is a 2 mm expansion sensible for this rod?"
+       },
+       {
+        "operation": "Check to confirm: swap alpha directions",
+        "reason": "going back down by 60 K, the rod must lose exactly the 0.00204 m it gained — the relationship is reversible",
+        "result": "2.00204 - 0.00204 = 2.0 m exactly back to the start",
+        "predictPrompt": "Do you land back on 2.0 m exactly?"
+       }
+      ]
+     }
+    },
+    {
      "type": "guided_question",
      "content": {
       "question": "Your turn. A copper rod of length 2.0 m and alpha = 1.7 x 10{{sup:-5}} per C is heated from 20 C to 120 C. Find its new length.",
@@ -7285,6 +7541,38 @@
         "reason": "Rebuilding the apparent value from the real one proves the addition stood on solid ground",
         "result": "1.47 x 10{{sup:-4}} - 2.7 x 10{{sup:-5}} = 1.2 x 10{{sup:-4}} per C, exactly the apparent given",
         "predictPrompt": "If your check returned 1.47 x 10{{sup:-4}}, what did you forget?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "A liquid whose real expansivity is 2.0 x 10{{sup:-4}} per C sits in a glass flask whose cubical expansivity is 2.7 x 10{{sup:-5}} per C. Find the apparent expansivity, then the apparent expansion of 500 cm3 of the liquid when heated by 10 C.",
+      "steps": [
+       {
+        "operation": "Difference of expansivities gives the apparent value",
+        "reason": "apparent = real - cubical glass",
+        "result": "2.0 x 10{{sup:-4}} - 2.7 x 10{{sup:-5}} = 1.73 x 10{{sup:-4}} /C",
+        "predictPrompt": "Does the liquid appear to expand less than it really does?"
+       },
+       {
+        "operation": "Apply to the volume and temperature gap",
+        "reason": "V{{sub:app}} = apparent x V x delta theta",
+        "result": "1.73 x 10{{sup:-4}} x 500 x 10",
+        "predictPrompt": "Does the answer come out in cm3?"
+       },
+       {
+        "operation": "Compute",
+        "reason": "1.73 x 10{{sup:-4}} x 5000 = 0.865 cm3",
+        "result": "apparent expansion = 0.865 cm3",
+        "predictPrompt": "Is under 1 cm3 sensible for 500 cm3?"
+       },
+       {
+        "operation": "Check to confirm: add back the glass expansion",
+        "reason": "true expansion of liquid = 1.73 x 10{{sup:-4}} x 5000 + 0.865... better: real = 2.0 x 10{{sup:-4}} x 5000 = 1.0 cm3; glass would account for 2.7 x 10{{sup:-5}} x 5000 = 0.135 cm3; 1.0 - 0.135 = 0.865 ✓",
+        "result": "identical 0.865 cm3 reconstructed from the real side",
+        "predictPrompt": "Do the two paths agree to the same 0.865 cm3?"
        }
       ]
      }
@@ -7531,6 +7819,38 @@
      }
     },
     {
+     "type": "worked_example",
+     "content": {
+      "problem": "A gas occupies 300 cm3 at minus 23 C. At constant pressure, what volume does it occupy at 127 C?",
+      "steps": [
+       {
+        "operation": "Convert both temperatures to Kelvin first",
+        "reason": "K = C + 273: minus 23 C = 250 K, 127 C = 400 K",
+        "result": "T{{sub:1}} = 250 K, T{{sub:2}} = 400 K",
+        "predictPrompt": "Why does the Celsius scale fail for gas laws?"
+       },
+       {
+        "operation": "State Charles’s law",
+        "reason": "at constant pressure, V/T is constant",
+        "result": "V{{sub:2}} = V{{sub:1}} x T{{sub:2}} / T{{sub:1}}",
+        "predictPrompt": "Why is heating the gas pushes it into more volume?"
+       },
+       {
+        "operation": "Substitute and compute",
+        "reason": "300 x 400 / 250 = 300 x 1.6",
+        "result": "V{{sub:2}} = 480 cm3",
+        "predictPrompt": "Is it bigger than 300, as it must be when heated?"
+       },
+       {
+        "operation": "Check to confirm: compare ratios",
+        "reason": "T{{sub:2}}/T{{sub:1}} = 400/250 = 8/5 = 1.6; V increases by exactly the same 60 percent: 300 x 1.6 = 480",
+        "result": "heating by 60% expands the volume by the same 60%",
+        "predictPrompt": "Do the ratios match to the identical 60%?"
+       }
+      ]
+     }
+    },
+    {
      "type": "guided_question",
      "content": {
       "question": "Your turn. 600 cm3 of gas at 27 C and 100 kPa is compressed at constant temperature to 200 kPa. Find the new volume.",
@@ -7768,6 +8088,38 @@
         "reason": "Substituting back must rebuild 300 K; anything else betrays a decimal slip",
         "result": "199,200 x 0.005 / (0.4 x 8.3) = 996 / 3.32 = 300 K, exactly the given temperature",
         "predictPrompt": "Which digit would you change to keep it honest?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "A 12 dm3 cylinder of carbon dioxide (Mr = 44) sits at 300 K under a pressure of 1.5 x 10{{sup:5}} Pa. Find the mass of the gas.",
+      "steps": [
+       {
+        "operation": "Write the ideal gas equation and solve for n",
+        "reason": "n = PV/RT",
+        "result": "n = (1.5 x 10{{sup:5}} x 12 x 10{{sup:-3}}) / (8.3 x 300)",
+        "predictPrompt": "What unit trap waits inside the volume?"
+       },
+       {
+        "operation": "Compute n",
+        "reason": "numerator = 1800 J; denominator = 2490 J per mol",
+        "result": "n ≈ 0.72 mol",
+        "predictPrompt": "Is 0.72 mol plausible for a 12-litre cylinder?"
+       },
+       {
+        "operation": "Convert moles to mass",
+        "reason": "mass = n x Mr",
+        "result": "0.723 x 44 ≈ 31.8 g",
+        "predictPrompt": "Is 31.8 g a cylinder-sized mass here?"
+       },
+       {
+        "operation": "Check to confirm: push P back out",
+        "reason": "P = nRT/V = 0.723 x 8.3 x 300 / 0.012",
+        "result": "0.723 x 8.3 x 300 = 1,800; 1800 / 0.012 = 150,000 Pa exactly 1.5 x 10{{sup:5}}",
+        "predictPrompt": "Do you land back on the original pressure?"
        }
       ]
      }

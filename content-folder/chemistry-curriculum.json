@@ -269,6 +269,38 @@
      }
     },
     {
+     "type": "worked_example",
+     "content": {
+      "problem": "Copper is 69% copper-63 and 31% copper-65. Calculate the relative atomic mass of copper.",
+      "steps": [
+       {
+        "operation": "Set up the weighted average",
+        "reason": "Ar is the weighted mean of the isotope masses",
+        "result": "Ar = (63 x 69 + 65 x 31) / 100",
+        "predictPrompt": "Why is the abundance the weight, not the isotope number?"
+       },
+       {
+        "operation": "Compute the two contributions",
+        "reason": "63 x 69 = 4347; 65 x 31 = 2015",
+        "result": "4347 + 2015 = 6362",
+        "predictPrompt": "Estimate: must land between 63 and 65"
+       },
+       {
+        "operation": "Divide by 100",
+        "reason": "percentages sum to 100, so this is the mean over 100 parts",
+        "result": "Ar = 63.62",
+        "predictPrompt": "Does 63.62 sit closer to 63 than to 65?"
+       },
+       {
+        "operation": "Check to confirm: sanity check against the nearer isotope",
+        "reason": "the heavier isotope is 31% present, so the mean must stay under the halfway 64",
+        "result": "63.62 < 64 ✓",
+        "predictPrompt": "Would 64.4 ever be possible here?"
+       }
+      ]
+     }
+    },
+    {
      "type": "guided_question",
      "content": {
       "question": "Bromine has isotopes Br-79 (50%) and Br-81 (50%). Calculate its relative atomic mass.",
@@ -484,6 +516,38 @@
         "reason": "Rearranging back to n = m ÷ Mr must return 0.5 mol; a slip shows here.",
         "result": "8 ÷ 16 = 0.5 mol, the given amount",
         "predictPrompt": "Which rearrangement gives you back the 0.5 mol?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "Calculate the mass of 0.25 mol of sulfuric acid, H{{sub:2SO}}{{sub:4}} (Mr = 98).",
+      "steps": [
+       {
+        "operation": "Mass = moles x molar mass",
+        "reason": "mass = n x Mr, the single mole-mass law",
+        "result": "m = 0.25 x 98",
+        "predictPrompt": "Why does the mole count include Mr?"
+       },
+       {
+        "operation": "Compute",
+        "reason": "0.25 x 98 = 24.5",
+        "result": "24.5 g",
+        "predictPrompt": "Estimate: a quarter of 98 is {{frac:49|2}}"
+       },
+       {
+        "operation": "State the unit",
+        "reason": "grams, not g per mol and not moles",
+        "result": "24.5 g of H{{sub:2SO}}{{sub:4}}",
+        "predictPrompt": "Should the number have a unit?"
+       },
+       {
+        "operation": "Check to confirm: travel back",
+        "reason": "24.5 g / 98 g per mol = 0.25 mol",
+        "result": "recover exactly 0.25 mol",
+        "predictPrompt": "Does the reverse divide cleanly?"
        }
       ]
      }
@@ -800,6 +864,38 @@
      }
     },
     {
+     "type": "worked_example",
+     "content": {
+      "problem": "2.0 g of a gas occupies 800 cm3 at s.t.p. Find its relative molecular mass.",
+      "steps": [
+       {
+        "operation": "Use the s.t.p. molar volume",
+        "reason": "one mole of gas at s.t.p. occupies 22,400 cm3 — one mole, one molar volume",
+        "result": "moles = 800 / 22,400 = 0.036 mol",
+        "predictPrompt": "Why 22,400 cm3 and not 22.4 dm3?"
+       },
+       {
+        "operation": "Mr = mass / moles",
+        "reason": "mass divided between moles gives molar mass in g per mol",
+        "result": "Mr = 2.0 / 0.0357 ≈ 56",
+        "predictPrompt": "Is 56 near Fe?"
+       },
+       {
+        "operation": "State the answer",
+        "reason": "relative molecular mass is 56, matching the Mr of iron gas",
+        "result": "Mr ≈ 56",
+        "predictPrompt": "Does Round that land near 56?"
+       },
+       {
+        "operation": "Check to confirm: travel back",
+        "reason": "0.036 mol x 56 = 2.0 g, exact",
+        "result": "recover the original 2.0 g",
+        "predictPrompt": "Does the product return 2.0 g?"
+       }
+      ]
+     }
+    },
+    {
      "type": "guided_question",
      "content": {
       "question": "Calculate the volume of 0.5 mol of an ideal gas at 546 K and 1 atm, using R = 0.082 dm{{sup:3}}·atm·K{{sup:-1}}·mol{{sup:-1}}.",
@@ -1044,6 +1140,38 @@
      }
     },
     {
+     "type": "worked_example",
+     "content": {
+      "problem": "Arrange sodium, chlorine and oxygen in order of increasing first ionisation energy, and explain the order using the charge-versus-shielding argument.",
+      "steps": [
+       {
+        "operation": "Place the three in one row of the table",
+        "reason": "Na (period 3, group 1), O (period 2, group 16), Cl (period 3, group 17)",
+        "result": "so they share nearby positions and very different nuclear charges",
+        "predictPrompt": "Which two share a period, and which one sits above one of them?"
+       },
+       {
+        "operation": "Apply the trends",
+        "reason": "across a period ionisation energy rises; down a group it falls",
+        "result": "O highest, Cl next, Na lowest",
+        "predictPrompt": "Why does the period position win here over the group?"
+       },
+       {
+        "operation": "Reason with charge vs shielding",
+        "reason": "Na holds only one 3s electron weakly; O and Cl hold outer electrons much tighter; O is one period up, so less shielding and still higher",
+        "result": "Na < Cl < O",
+        "predictPrompt": "Why does O beat Cl even though Cl has more protons?"
+       },
+       {
+        "operation": "Check to confirm: use the data",
+        "reason": "Na 496, Cl 1251, O 1314 kJ per mol — a widening gap consistent with the shielding argument",
+        "result": "the numbers match the order exactly",
+        "predictPrompt": "Do the values confirm the order, or overturn it?"
+       }
+      ]
+     }
+    },
+    {
      "type": "guided_question",
      "content": {
       "question": "Arrange fluorine, chlorine and bromine in order of increasing atomic radius, and say why.",
@@ -1259,6 +1387,38 @@
         "reason": "One Mg{{sup:2+}} and two Cl{{sup:-}} must total zero; a wrong count breaks the neutral formula.",
         "result": "(+2) + 2 × (−1) = 0, so MgCl{{sub:2}} is neutral as written",
         "predictPrompt": "Do the charges add to zero in MgCl{{sub:2}}?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "Predict and explain the shape and polarity of CO₂, given that carbon has 4 outer electrons and oxygen has 6.",
+      "steps": [
+       {
+        "operation": "Count shared electrons",
+        "reason": "each oxygen shares 2 with carbon; carbon shares its own 4 two-at-a-time",
+        "result": "two C=O double bonds, no lone pairs on carbon",
+        "predictPrompt": "Why double bonds rather than single?"
+       },
+       {
+        "operation": "Apply VSEPR logic",
+        "reason": "the two double bonds repel each other and arrange 180° apart",
+        "result": "linear molecule",
+        "predictPrompt": "Why do the two repelling regions pull to opposite ends?"
+       },
+       {
+        "operation": "Decide polarity",
+        "reason": "each C=O bond is polar, but the two bond dipoles are equal and cancel across the linear axis",
+        "result": "CO₂ is non-polar overall",
+        "predictPrompt": "Why do the two identical dipoles cancel instead of adding?"
+       },
+       {
+        "operation": "Check to confirm: compare the sibling bent water molecule",
+        "reason": "water bent at ~105° does not cancel its dipoles — CO₂ does because both ends are identical",
+        "result": "asymmetry decides polarity, not bond count",
+        "predictPrompt": "What makes the one cancel and the other not?"
        }
       ]
      }
@@ -1504,6 +1664,38 @@
      }
     },
     {
+     "type": "worked_example",
+     "content": {
+      "problem": "A mixture of two dyes is chromatographed on paper. After 20 minutes the solvent front is at 5.0 cm from the baseline. One dye has travelled 4.5 cm, the other 3.0 cm from the baseline. Calculate the Rf value of the faster dye.",
+      "steps": [
+       {
+        "operation": "Write the definition",
+        "reason": "Rf = distance travelled by the spot / distance travelled by the solvent front",
+        "result": "Rf = 4.5 / 5.0",
+        "predictPrompt": "Why divide by the solvent front and not 100?"
+       },
+       {
+        "operation": "Compute",
+        "reason": "4.5 ÷ 5.0 = 0.9",
+        "result": "Rf = 0.9",
+        "predictPrompt": "Is this plausible between 0 and 1?"
+       },
+       {
+        "operation": "Interpret what it means",
+        "reason": "an Rf of 0.9 means this dye travels nearly as fast as the solvent front under these conditions",
+        "result": "the faster dye has Rf 0.9; the slower has Rf 3.0 / 5.0 = 0.6",
+        "predictPrompt": "Why the other dye is slower — what differs?"
+       },
+       {
+        "operation": "Check to confirm: the other dye",
+        "reason": "Rf(slower) = 3.0 / 5.0 = 0.6 — ratio of 4.5 to 3.0 equals Rf ratio 0.9 to 0.6 = 3/2",
+        "result": "both dyes measured from the same front give consistent results",
+        "predictPrompt": "Do the two Rf values confirm the same solvent conditions?"
+       }
+      ]
+     }
+    },
+    {
      "type": "guided_question",
      "content": {
       "question": "A mixture holds iron filings, sand and water. Give a two-step separation that recovers the iron and the water.",
@@ -1742,6 +1934,38 @@
      }
     },
     {
+     "type": "worked_example",
+     "content": {
+      "problem": "40 g of potassium nitrate dissolves in 0.2 dm3 of solution. Find its molar solubility. (Ar K=39, N=14, O=16)",
+      "steps": [
+       {
+        "operation": "Mr of KNO{{sub:3}}",
+        "reason": "39 + 14 + 3 x 16 = 101",
+        "result": "Mr = 101",
+        "predictPrompt": "Why 3 x 16 and not 16 alone?"
+       },
+       {
+        "operation": "Moles in 0.2 dm3",
+        "reason": "moles = mass / Mr = 40 / 101",
+        "result": "0.396 mol",
+        "predictPrompt": "Estimate: under 0.4, yes?"
+       },
+       {
+        "operation": "Molar solubility = moles / dm3",
+        "reason": "one mole dissolves per 101 g — divide by volume",
+        "result": "c = 0.396 / 0.2 ≈ 1.98 mol per dm3",
+        "predictPrompt": "Is this more or less than 2 M?"
+       },
+       {
+        "operation": "Check to confirm: travel back",
+        "reason": "1.98 x 0.2 = 0.396 mol; x 101 = 40.0 g",
+        "result": "recover the 40 g exactly",
+        "predictPrompt": "Do you land on the original 40 g?"
+       }
+      ]
+     }
+    },
+    {
      "type": "guided_question",
      "content": {
       "question": "23.4 g of NaCl dissolves in 0.2 dm{{sup:3}} of solution. Calculate its molar solubility.",
@@ -1960,6 +2184,38 @@
         "reason": "H{{sub:2S}}{{sub:2O}}{{sub:3}} is neutral, so the numbers must total zero; a wrong S value breaks the sum.",
         "result": "2(+1) + 2(+2) + 3(−2) = 0",
         "predictPrompt": "Does your S value make the whole molecule neutral?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "What is the oxidation number of chromium in Cr{{sub:2}}O{{sub:7}}{{sup:2-}}?",
+      "steps": [
+       {
+        "operation": "Set the sum equal to the charge",
+        "reason": "sum = -2 because of the {{sub:7}} charge on the ion",
+        "result": "2x + 7(-2) = -2",
+        "predictPrompt": "Why -2 and not +2?"
+       },
+       {
+        "operation": "Solve for x",
+        "reason": "2x = -2 + 14 = 12; x = 6",
+        "result": "oxidation number of Cr = +6",
+        "predictPrompt": "Does this line snap back?"
+       },
+       {
+        "operation": "State the result",
+        "reason": "chromium sits at +6 in dichromate",
+        "result": "+6",
+        "predictPrompt": "Is this the famous orange colour level?"
+       },
+       {
+        "operation": "Check to confirm: sum the whole ion",
+        "reason": "2(+6) + 7(-2) = 12 - 14 = -2 exactly equal the ion charge",
+        "result": "charge balances to exactly -2",
+        "predictPrompt": "Do the parts add to the whole?"
        }
       ]
      }
@@ -2207,6 +2463,44 @@
         "reason": "Multiplying back, both sides must give 0.0020 mol; a mismatch means the ratio slipped.",
         "result": "0.080 × 0.025 = 0.0020 mol and 0.10 × 0.020 = 0.0020 mol",
         "predictPrompt": "Do both sides multiply back to the same moles?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "25.0 cm3 of 0.10 M sodium hydroxide is neutralised by sulfuric acid, H{{sub:2SO}}{{sub:4}} (0.05 M). Find the volume of acid used.",
+      "steps": [
+       {
+        "operation": "Write the equation and the ratio",
+        "reason": "H{{sub:2SO}}{{sub:4}} + 2NaOH → Na{{sub:2SO}}{{sub:4}} + 2H{{sub:2O}}, so 1 mole acid: 2 moles base",
+        "result": "2 mol NaOH per mol H{{sub:2SO}}{{sub:4}}",
+        "predictPrompt": "Why does sulfuric acid carry two H’s?"
+       },
+       {
+        "operation": "Moles of NaOH",
+        "reason": "0.025 dm3 x 0.10 mol per dm3",
+        "result": "0.0025 mol NaOH",
+        "predictPrompt": "Estimate: under 0.003, yes?"
+       },
+       {
+        "operation": "Moles of acid needed",
+        "reason": "half, because of the 2:1 ratio",
+        "result": "0.00125 mol H{{sub:2SO}}{{sub:4}}",
+        "predictPrompt": "Is 0.00125 right for half of 0.0025?"
+       },
+       {
+        "operation": "Volume of 0.05 M acid",
+        "reason": "V = n / C = 0.00125 / 0.05",
+        "result": "0.025 dm3 = 25 cm3",
+        "predictPrompt": "Does 25 cm3 quadrant with the volumes given?"
+       },
+       {
+        "operation": "Check to confirm: reconstruct the ratio",
+        "reason": "25 x 0.05 / 1000 = 0.00125 mol acid; x 2 = 0.0025 mol NaOH; / 0.025 = 0.10 M ✓ exact",
+        "result": "both sides agree exactly",
+        "predictPrompt": "Do the pieces fit back together?"
        }
       ]
      }
@@ -2510,6 +2804,44 @@
      }
     },
     {
+     "type": "worked_example",
+     "content": {
+      "problem": "A current of 10 A is passed through copper(II) sulphate solution for 1930 s. Calculate the mass of copper deposited. (Cu{{sup:2+}} + 2e{{sup:-}} → Cu; Ar Cu = 63.5)",
+      "steps": [
+       {
+        "operation": "Calculate total charge",
+        "reason": "Q = I x t",
+        "result": "Q = 10 x 1930 = 19,300 C",
+        "predictPrompt": "Does 10 x 1930 land near 19,000?"
+       },
+       {
+        "operation": "Convert to moles of electrons",
+        "reason": "moles of electrons = Q / F",
+        "result": "moles e = 19,300 / 96,500 = 0.2 mol",
+        "predictPrompt": "Is it exactly a five-step fraction?"
+       },
+       {
+        "operation": "Moles of copper",
+        "reason": "2 electrons deposit 1 copper atom",
+        "result": "moles Cu = 0.2 / 2 = 0.1 mol",
+        "predictPrompt": "Why divide by 2 and not multiply?"
+       },
+       {
+        "operation": "Mass deposited",
+        "reason": "mass = moles x Ar",
+        "result": "0.1 x 63.5 = 6.35 g",
+        "predictPrompt": "Estimate: is 6.35 g plausible for 10 A?"
+       },
+       {
+        "operation": "Check to confirm: reverse F",
+        "reason": "6.35 g / 63.5 = 0.1 mol Cu; x 2 = 0.2 mol e; x 96,500 = 19,300 C ✓ exact",
+        "result": "recover the original 19,300 C",
+        "predictPrompt": "Does it land on the original current?"
+       }
+      ]
+     }
+    },
+    {
      "type": "guided_question",
      "content": {
       "question": "A current of 1.5 A flows for 1930 s through aqueous CuSO{{sub:4}}. Calculate the mass of copper deposited at the cathode. (Cu{{sup:2+}} + 2e{{sup:-}} → Cu; Ar Cu = 63.5)",
@@ -2723,6 +3055,38 @@
         "reason": "The closed form must agree with three halvings; a mismatch means a halving was miscounted.",
         "result": "800 × (½){{sup:3}} = 800 × 0.125 = 100 g",
         "predictPrompt": "Does 800 × (½){{sup:3}} also land on 100 g?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "A medical sample of iodine-131 has a half-life of 8 days. Starting with 100 g, how much remains after 32 days?",
+      "steps": [
+       {
+        "operation": "Number of half-lives",
+        "reason": "32 / 8 = 4 half-lives",
+        "result": "4 half-lives",
+        "predictPrompt": "Why does the count of half-lives matter more than the days?"
+       },
+       {
+        "operation": "Apply the halving 4 times",
+        "reason": "100 → 50 → 25 → 12.5 → 6.25 g",
+        "result": "6.25 g remaining",
+        "predictPrompt": "Does halving 4 times land under 7?"
+       },
+       {
+        "operation": "State the answer",
+        "reason": "6.25 g of iodine-131 remains",
+        "result": "6.25 g",
+        "predictPrompt": "Is that far below half of 12.5?"
+       },
+       {
+        "operation": "Check to confirm: forward multiply back",
+        "reason": "4 days backwards: 6.25 → 12.5 → 25 → 50 → 100 g ✓ exact",
+        "result": "returns exactly to the start",
+        "predictPrompt": "Does it trace exactly backwards?"
        }
       ]
      }
@@ -3030,6 +3394,38 @@
      }
     },
     {
+     "type": "worked_example",
+     "content": {
+      "problem": "For the dissolution of NaCl in water, ΔH° = +3.9 kJ/mol and ΔS° = +43 J per mol K. Calculate ΔG° at 298 K and state whether the process is spontaneous.",
+      "steps": [
+       {
+        "operation": "Write ΔG = ΔH - TΔS",
+        "reason": "the spontaneity equation, unit-consistent",
+        "result": "ΔG = 3.9 - 298 x 0.043",
+        "predictPrompt": "Why does T get multiplied by ΔS and not ΔH?"
+       },
+       {
+        "operation": "Subtract",
+        "reason": "298 x 0.043 = 12.8 kJ per mol; 3.9 - 12.8",
+        "result": "ΔG° = -8.9 kJ / mol",
+        "predictPrompt": "Is the answer negative?"
+       },
+       {
+        "operation": "State spontaneity",
+        "reason": "ΔG < 0 means the process is spontaneous",
+        "result": "dissolving NaCl is spontaneous, driven by entropy",
+        "predictPrompt": "Would a positive ΔG be spontaneous too?"
+       },
+       {
+        "operation": "Check to confirm: convert ΔS to J",
+        "reason": "+43 J x 298 K = 12,814 J = 12.8 kJ; 3.9 - 12.8 = -8.9 ✓ same answer",
+        "result": "consistent across unit conventions",
+        "predictPrompt": "Do the two unit routes agree?"
+       }
+      ]
+     }
+    },
+    {
      "type": "guided_question",
      "content": {
       "question": "For a reaction ΔH° = +120 kJ/mol and ΔS° = +0.40 kJ/mol·K, calculate ΔG° at 298 K. Is it spontaneous?",
@@ -3325,6 +3721,38 @@
      }
     },
     {
+     "type": "worked_example",
+     "content": {
+      "problem": "60 cm3 of hydrogen is collected in 20 s from a magnesium-acid reaction at s.t.p. Find the average rate in cm3 per second and in mol per minute.",
+      "steps": [
+       {
+        "operation": "Rate from volume/time",
+        "reason": "average rate = volume / time",
+        "result": "rate = 60 / 20 = 3 cm3 per second",
+        "predictPrompt": "Why divide and not multiply?"
+       },
+       {
+        "operation": "Convert to mol per minute",
+        "reason": "multiply by 60 and divide by 22,400",
+        "result": "rate = 180 / 22,400 = 0.0080 mol per min",
+        "predictPrompt": "Why 22,400 and not 24,000?"
+       },
+       {
+        "operation": "State both numbers",
+        "reason": "3 cm3 per second = 0.0080 mol per min",
+        "result": "the same rate in two unit systems",
+        "predictPrompt": "Does doubling the time triple the volume?"
+       },
+       {
+        "operation": "Check to confirm: round trip",
+        "reason": "0.0080 x 60 x 22,400 / 60 = 60.3... recheck: 0.0080 x 60 x 22,400 / 60 = 0.0080 x 22,400 = 179.2 ≈ 180 ✓",
+        "result": "the two rates describe the same reaction",
+        "predictPrompt": "Do the two rates agree within rounding?"
+       }
+      ]
+     }
+    },
+    {
      "type": "guided_question",
      "content": {
       "question": "The same reaction collects 300 cm{{sup:3}} of hydrogen in 60 s. Calculate the average rate and compare it with the first run.",
@@ -3574,6 +4002,44 @@
      }
     },
     {
+     "type": "worked_example",
+     "content": {
+      "problem": "For the Haber process: N{{sub:2}}(g) + 3H{{sub:2}}(g) ⇌ 2NH{{sub:3}}(g), ΔH = −46 kJ per mol. Explain the effect of (i) increasing pressure and (ii) decreasing temperature on the yield of ammonia.",
+      "steps": [
+       {
+        "operation": "Count gas molecules on each side",
+        "reason": "4 moles reactants → 2 moles product",
+        "result": "products occupy fewer gas molecules",
+        "predictPrompt": "Which side does pressure favour?"
+       },
+       {
+        "operation": "Apply Le Chatelier",
+        "reason": "higher pressure shifts equilibrium to the side with fewer gas molecules",
+        "result": "ammonia yield increases on raising pressure",
+        "predictPrompt": "Why does the reaction move toward fewer molecules?"
+       },
+       {
+        "operation": "Apply Le Chatelier to temperature",
+        "reason": "forward reaction is exothermic; lowering temperature favours the exothermic (forward) direction",
+        "result": "ammonia yield increases on lowering temperature (in theory)",
+        "predictPrompt": "Why does cold favour ammonia and hot favour the reverse?"
+       },
+       {
+        "operation": "Reconcile with practice",
+        "reason": "low temperature would be too slow, so 450 °C is a compromise between yield and rate",
+        "result": "450 °C, 200 atm, iron catalyst, with recycling of unreacted gases",
+        "predictPrompt": "Why not just use very cold conditions then?"
+       },
+       {
+        "operation": "Check to confirm: combine both",
+        "reason": "pressure pushes forward, low temperature pushes forward — industry uses moderate values for rate as well as yield",
+        "result": "industry conditions are a compromise between both",
+        "predictPrompt": "Does the combination make sense for a plant, not just the exam?"
+       }
+      ]
+     }
+    },
+    {
      "type": "guided_question",
      "content": {
       "question": "In N{{sub:2O}}{{sub:4}} ⇌ 2NO{{sub:2}}, what happens if the pressure on the container is increased? State the colour change.",
@@ -3793,6 +4259,38 @@
         "reason": "The control must chemically undo what the effect describes, and oxidation to CO{{sub:2}} does that.",
         "result": "2CO + O{{sub:2}} → 2CO{{sub:2}} in the converter undoes the poisoning route",
         "predictPrompt": "Does a catalytic converter actually undo CO's chemistry?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "Describe how a flue-gas scrubber in a coal-fired power station removes SO{{sub:2}} from the exhaust gases, write the overall reaction involved, and state why the captured product cannot be released untreated.",
+      "steps": [
+       {
+        "operation": "Name the scrubber action",
+        "reason": "SO₂ in the flue gas is captured by limewater or CaO slurry in the scrubber vessel",
+        "result": "acidic oxide reacts with the base",
+        "predictPrompt": "Why is the base used here?"
+       },
+       {
+        "operation": "Write the overall reaction",
+        "reason": "SO{{sub:2}} + Ca(OH){{sub:2}} → CaSO{{sub:3}} + H{{sub:2O}}",
+        "result": "calcium sulphite is the captured product",
+        "predictPrompt": "Is the product a salt or something else?"
+       },
+       {
+        "operation": "State why treatment is required",
+        "reason": "calcium sulphite is a sludge residue, sometimes oxidised to gypsum; it must be handled as industrial waste",
+        "result": "if released untreated it would defeat the purpose — it must be disposed of safely",
+        "predictPrompt": "Where does the sludge end up?"
+       },
+       {
+        "operation": "Check to confirm: relate to the lesson",
+        "reason": "this is the same acid-rain cycle: sulphur oxides + water → sulphuric acid; the scrubber intercepts the gas before it escapes",
+        "result": "the scrubber closes the pollution pathway taught in the lesson",
+        "predictPrompt": "Where is the connection to the acid rain section?"
        }
       ]
      }
@@ -4018,6 +4516,38 @@
      }
     },
     {
+     "type": "worked_example",
+     "content": {
+      "problem": "Drugs are made in fine-chemical plants; cement is made in heavy-industry plants. Explain why the two plant types differ in design, and name two differences in what goes in and what comes out.",
+      "steps": [
+       {
+        "operation": "State the product difference",
+        "reason": "fine chemicals: small tonnage, high purity and high value; heavy chemicals: huge tonnage, lower purity and low value per tonne",
+        "result": "chemicals per kilogram differ by orders of magnitude",
+        "predictPrompt": "Why is a kilo of drug worth far more than a tonne of cement?"
+       },
+       {
+        "operation": "Explain the design difference",
+        "reason": "fine plants run batch processes with strict purity testing; heavy plants run continuous processes with throughput and cheap feedstocks",
+        "result": "batch vs continuous",
+        "predictPrompt": "Why can cement be made in a continuous kiln but a drug cannot?"
+       },
+       {
+        "operation": "Name the inputs",
+        "reason": "cement: limestone + clay, capital-heavy; pharmaceutical: refined intermediates, knowledge-heavy",
+        "result": "different feedstocks and different cost structures",
+        "predictPrompt": "Which plant needs cleaner raw materials?"
+       },
+       {
+        "operation": "Check to confirm: both feed the economy",
+        "reason": "heavy chemicals supply the cheap building blocks; fine chemicals supply the targeted high-value products",
+        "result": "the two levels feed each other, not compete",
+        "predictPrompt": "Is there a way fine chemicals can exist without heavy ones?"
+       }
+      ]
+     }
+    },
+    {
      "type": "guided_question",
      "content": {
       "question": "A fertiliser plant uses natural gas and air nitrogen. Is it a heavy or fine chemical industry, and why?",
@@ -4232,6 +4762,38 @@
         "reason": "The composition figures must add sensibly and fit the layered picture; a mismatch means a misremembered figure.",
         "result": "Nitrogen 78% + oxygen 21% = 99% of air; 97% ocean leaves 3% fresh",
         "predictPrompt": "Do the figures add up to a believable picture?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "State the approximate percentage composition of dry air, name the layer of the atmosphere in which the ozone layer is found, and explain why oxygen alone is not enough for combustion.",
+      "steps": [
+       {
+        "operation": "Write the atmospheric composition",
+        "reason": "nitrogen ≈ 78%, oxygen ≈ 21%, argon ≈ 0.9%, carbon(IV) oxide ≈ 0.04% (traces of neon, helium, water vapour)",
+        "result": "air is mostly nitrogen; oxygen is only about one fifth",
+        "predictPrompt": "Why is nitrogen the majority even though we breathe oxygen?"
+       },
+       {
+        "operation": "Name the ozone layer’s home",
+        "reason": "the stratosphere, above the troposphere where weather happens",
+        "result": "stratospheric ozone absorbs UV",
+        "predictPrompt": "Why is it placed above the weather layer?"
+       },
+       {
+        "operation": "Explain oxygen’s role in combustion",
+        "reason": "combustion requires an oxidant — oxygen — plus heat and fuel; the nitrogen is inert spectator",
+        "result": "fire needs oxygen, not just heat and fuel",
+        "predictPrompt": "Why does smothering a fire with a blanket work?"
+       },
+       {
+        "operation": "Check to confirm: connect the three",
+        "reason": "air = mixture (not formula); ozone = protective shield above; fire = oxidant + fuel + heat",
+        "result": "the three facts are one atmospheric system",
+        "predictPrompt": "Do the three statements together describe the same air?"
        }
       ]
      }
@@ -4455,6 +5017,38 @@
      }
     },
     {
+     "type": "worked_example",
+     "content": {
+      "problem": "3.25 g of zinc reacts with excess dilute hydrochloric acid. Calculate the volume of hydrogen at s.t.p. (Zn + 2HCl → ZnCl{{sub:2}} + H{{sub:2}}; Ar Zn = 65)",
+      "steps": [
+       {
+        "operation": "Moles of zinc",
+        "reason": "mass / Ar = 3.25 / 65",
+        "result": "0.05 mol",
+        "predictPrompt": "Estimate: 65 × 0.05 = 3.25 ✓"
+       },
+       {
+        "operation": "Ratio to hydrogen",
+        "reason": "1 mol Zn produces 1 mol H{{sub:2}}",
+        "result": "0.05 mol H{{sub:2}}",
+        "predictPrompt": "Why 1:1 and not 1:2?"
+       },
+       {
+        "operation": "Volume at s.t.p.",
+        "reason": "volume = moles x 22,400",
+        "result": "0.05 x 22,400 = 1,120 cm3 = 1.12 dm3",
+        "predictPrompt": "Is 1.12 dm3 plausible for 5 g of zinc?"
+       },
+       {
+        "operation": "Check to confirm: back-substitute",
+        "reason": "1.12 dm3 / 22.4 = 0.05 mol, exact match to the zinc",
+        "result": "consistent round trip",
+        "predictPrompt": "Does the count land exactly?"
+       }
+      ]
+     }
+    },
+    {
      "type": "guided_question",
      "content": {
       "question": "13.0 g of zinc reacts with excess dilute acid. Calculate the volume of hydrogen at s.t.p. (Ar Zn = 65).",
@@ -4668,6 +5262,38 @@
         "reason": "Halving the electron moles and scaling by 71 must return the given chlorine mass; a slip shows here.",
         "result": "0.20 mol e{{sup:-}} ÷ 2 = 0.10 mol Cl{{sub:2}} × 71 = 7.1 g; 19,300 ÷ 96,500 = 0.20 F",
         "predictPrompt": "Does the electron count rebuild the 7.1 g of chlorine?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "A current of 2.0 F is passed through concentrated brine. Calculate the mass of chlorine liberated. (2Cl{{sup:-}} - 2e{{sup:-}} → Cl{{sub:2}}; Ar Cl = 35.5)",
+      "steps": [
+       {
+        "operation": "Write the electrode equation",
+        "reason": "2Cl{{sup:-}} - 2e{{sup:-}} → Cl{{sub:2}}, one mol of Cl{{sub:2}} per 2 mol e{{sup:-}}",
+        "result": "2 F per mol Cl{{sub:2}}",
+        "predictPrompt": "Why 2 faradays per chlorine molecule?"
+       },
+       {
+        "operation": "Apply 2.0 F",
+        "reason": "2 F liberates exactly 1 mol of Cl{{sub:2}}",
+        "result": "1 mol Cl{{sub:2}}",
+        "predictPrompt": "Is the faraday count exactly the mole count times 2?"
+       },
+       {
+        "operation": "Mass of chlorine",
+        "reason": "mass = moles x Mr = 1.0 x 71",
+        "result": "71 g",
+        "predictPrompt": "Would you ever see 71 g of chlorine released?"
+       },
+       {
+        "operation": "Check to confirm: reverse to e{{sup:-}}",
+        "reason": "71 g / 71 = 1 mol; x 2 moles e = 2.0 F ✓ exactly the current passed",
+        "result": "recovers the 2 F exactly",
+        "predictPrompt": "Does the Faraday count come back exact?"
        }
       ]
      }
@@ -4895,6 +5521,38 @@
      }
     },
     {
+     "type": "worked_example",
+     "content": {
+      "problem": "A water sample lathers poorly and its hardness is not removed by boiling. Identify the ions responsible for the hardness, state the source of these ions, and name two methods that would soften this water.",
+      "steps": [
+       {
+        "operation": "Classify the hardness",
+        "reason": "hardness that persists after boiling is permanent hardness; temporary hardness would boil away",
+        "result": "permanent hardness — sulphates of Ca and Mg",
+        "predictPrompt": "Why does boiling fail here?"
+       },
+       {
+        "operation": "Name the guilty ions",
+        "reason": "calcium ions, Ca²⁺, and magnesium ions, Mg²⁺",
+        "result": "they prevent lather and form scum",
+        "predictPrompt": "Why these two and not sodium?"
+       },
+       {
+        "operation": "Name the softening methods",
+        "reason": "washing soda (Na₂CO₃) precipitates the Ca/Mg ions as insoluble carbonates; ion-exchange resins swap them for Na⁺ or H⁺",
+        "result": "precipitation as carbonate or ion exchange",
+        "predictPrompt": "Which one physically pours out a solid?"
+       },
+       {
+        "operation": "Check to confirm: link to temporary hardness",
+        "reason": "temporary hardness is hydrogencarbonates and boils away; permanent is sulphates and persists — two different chemistry routes",
+        "result": "one test distinguishes the two kinds",
+        "predictPrompt": "What single test separates them?"
+       }
+      ]
+     }
+    },
+    {
      "type": "guided_question",
      "content": {
       "question": "Water lathers poorly but softens on boiling. Classify the hardness and state the cause.",
@@ -5112,6 +5770,38 @@
         "reason": "Carbonate and sulphite dissolve in acid with effervescence, chloride never precipitates; only sulphate survives both tests.",
         "result": "Ba{{sup:2+}} + SO{{sub:4}}{{sup:2-}} → BaSO{{sub:4}}↓ with charge +2 − 2 = 0",
         "predictPrompt": "Which other anions would fail the acid test?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "100 cm3 of 0.2 M barium chloride solution is added to excess dilute sulfuric acid. Calculate the mass of barium sulfate precipitated. (BaCl{{sub:2}} + H{{sub:2SO}}{{sub:4}} → BaSO{{sub:4}} + 2HCl; Mr BaSO{{sub:4}} = 233)",
+      "steps": [
+       {
+        "operation": "Moles of BaCl{{sub:2}}",
+        "reason": "c x V = 0.2 x 0.100",
+        "result": "0.020 mol",
+        "predictPrompt": "Is 0.020 mol about right for 100 cm3?"
+       },
+       {
+        "operation": "Ratio to BaSO{{sub:4}}",
+        "reason": "1 mol BaCl{{sub:2}} → 1 mol BaSO{{sub:4}}",
+        "result": "0.020 mol BaSO{{sub:4}}",
+        "predictPrompt": "Why 1:1 and not 1:2?"
+       },
+       {
+        "operation": "Mass of precipitate",
+        "reason": "mass = moles x Mr = 0.020 x 233",
+        "result": "4.66 g",
+        "predictPrompt": "Is 4.66 g visible as a white solid?"
+       },
+       {
+        "operation": "Check to confirm: reverse moles",
+        "reason": "4.66 g / 233 = 0.020 mol; x 1000/0.2 = 100 cm3 of solution ✓",
+        "result": "recovers the original 100 cm3",
+        "predictPrompt": "Do you land back on the exact volume?"
        }
       ]
      }
@@ -5339,6 +6029,38 @@
      }
     },
     {
+     "type": "worked_example",
+     "content": {
+      "problem": "14 g of nitrogen is used in the Haber process. Calculate the mass of ammonia formed, assuming complete conversion. (N{{sub:2}} + 3H{{sub:2}} ⇌ 2NH{{sub:3}}; N = 14, H = 1)",
+      "steps": [
+       {
+        "operation": "Moles of nitrogen gas",
+        "reason": "mass / Mr = 14 / 28",
+        "result": "0.5 mol N{{sub:2}}",
+        "predictPrompt": "Why 28 and not 14?"
+       },
+       {
+        "operation": "Apply the ratio",
+        "reason": "1 mole N{{sub:2}} gives 2 mol NH{{sub:3}}",
+        "result": "1.0 mol NH{{sub:3}}",
+        "predictPrompt": "Double, double — why?"
+       },
+       {
+        "operation": "Mass of ammonia",
+        "reason": "Mr NH{{sub:3}} = 14 + 3 = 17; 1.0 x 17",
+        "result": "17 g",
+        "predictPrompt": "Does that add up?"
+       },
+       {
+        "operation": "Check to confirm: reverse mass",
+        "reason": "17 g / 17 = 1 mol NH{{sub:3}}; / 2 = 0.5 mol N{{sub:2}}; x 28 = 14 g ✓",
+        "result": "recovers the original 14 g",
+        "predictPrompt": "Do the parts reassemble exactly?"
+       }
+      ]
+     }
+    },
+    {
      "type": "guided_question",
      "content": {
       "question": "If 3.0 g of hydrogen is used in the Haber process, calculate the mass of ammonia formed. (H = 1, N = 14)",
@@ -5555,6 +6277,38 @@
         "reason": "Working backwards through the 1:1 ratio must return the given 10 g; a mismatch means the ratio slipped.",
         "result": "2.24 ÷ 22.4 = 0.10 mol CO{{sub:2}} = 0.10 mol CaCO{{sub:3}} × 100 = 10 g",
         "predictPrompt": "Can you walk backwards from 2.24 dm{{sup:3}} to 10 g?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "8 g of methane burns completely in excess oxygen. Calculate the volume of carbon dioxide released at s.t.p. (CH{{sub:4}} + 2O{{sub:2}} → CO{{sub:2}} + 2H{{sub:2O}}; Mr CH{{sub:4}} = 16)",
+      "steps": [
+       {
+        "operation": "Moles of methane",
+        "reason": "mass / Mr = 8 / 16",
+        "result": "0.5 mol CH{{sub:4}}",
+        "predictPrompt": "Estimate: 16 × 0.5 = 8 ✓"
+       },
+       {
+        "operation": "Ratio to CO₂",
+        "reason": "1 mol CH{{sub:4}} → 1 mol CO{{sub:2}}",
+        "result": "0.5 mol CO{{sub:2}}",
+        "predictPrompt": "Why 1:1 and not 1:2?"
+       },
+       {
+        "operation": "Volume at s.t.p.",
+        "reason": "volume = moles x 22,400",
+        "result": "0.5 x 22,400 = 11,200 cm3 = 11.2 dm3",
+        "predictPrompt": "Is 11.2 dm3 plausible for 8 g of methane?"
+       },
+       {
+        "operation": "Check to confirm: reverse moles",
+        "reason": "11.2 dm3 / 22.4 = 0.5 mol; x 16 = 8.0 g ✓",
+        "result": "recovers the 8.0 g methane",
+        "predictPrompt": "Does the round trip land exactly?"
        }
       ]
      }
@@ -5801,6 +6555,38 @@
      }
     },
     {
+     "type": "worked_example",
+     "content": {
+      "problem": "6.5 g of zinc is dipped into excess copper(II) sulphate solution. Calculate the mass of copper deposited. (Ar Zn = 65, Cu = 63.5)",
+      "steps": [
+       {
+        "operation": "Moles of zinc",
+        "reason": "mass / Ar = 6.5 / 65",
+        "result": "0.1 mol",
+        "predictPrompt": "Estimate: is it 0.1?"
+       },
+       {
+        "operation": "Zinc is more reactive, so it displaces copper",
+        "reason": "1 mol Zn displaces 1 mol Cu",
+        "result": "0.1 mol Cu",
+        "predictPrompt": "Why 1:1 and not 1:2?"
+       },
+       {
+        "operation": "Mass of copper",
+        "reason": "mass = moles x Ar = 0.1 x 63.5",
+        "result": "6.35 g",
+        "predictPrompt": "Is 6.35 g about right?"
+       },
+       {
+        "operation": "Check to confirm: reverse moles",
+        "reason": "6.35 g / 63.5 = 0.1 mol Cu; x 65 = 6.5 g of zinc ✓",
+        "result": "recovers the 6.5 g zinc",
+        "predictPrompt": "Do you land exactly back?"
+       }
+      ]
+     }
+    },
+    {
      "type": "guided_question",
      "content": {
       "question": "Iron is dipped in zinc sulphate solution. Does any reaction happen? Give a reason from the series.",
@@ -6016,6 +6802,44 @@
         "reason": "Charges must total zero into a neutral solid and atoms must balance; the molecular route must cancel to the same equation.",
         "result": "(+3) + 3(−1) = 0; Al, O, H balance; AlCl{{sub:3}} + 3NaOH cancels to the same equation",
         "predictPrompt": "Do the charges and the atoms both balance?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "4.0 g of sodium hydroxide reacts with excess aluminium chloride solution. Calculate the mass of aluminium hydroxide precipitated. (3NaOH + AlCl{{sub:3}} → Al(OH){{sub:3}} + 3NaCl; Ar Na = 23, O = 16, H = 1, Al = 27)",
+      "steps": [
+       {
+        "operation": "Mr of NaOH and Al(OH){{sub:3}}",
+        "reason": "23 + 16 + 1 = 40; 27 + 3(16 + 1) = 78",
+        "result": "Mr NaOH = 40, Mr Al(OH){{sub:3}} = 78",
+        "predictPrompt": "Why compute both Mr first?"
+       },
+       {
+        "operation": "Moles of NaOH",
+        "reason": "mass / Mr = 4.0 / 40",
+        "result": "0.1 mol",
+        "predictPrompt": "Is 0.1 exact?"
+       },
+       {
+        "operation": "Ratio",
+        "reason": "3 mol NaOH gives 1 mol Al(OH){{sub:3}}",
+        "result": "moles Al(OH){{sub:3}} = 0.1 / 3 = 0.0333",
+        "predictPrompt": "Why divide by 3?"
+       },
+       {
+        "operation": "Mass of precipitate",
+        "reason": "mass = moles x Mr = 0.0333 x 78",
+        "result": "2.6 g",
+        "predictPrompt": "Is 2.6 g plausible for 4 g of NaOH?"
+       },
+       {
+        "operation": "Check to confirm: reverse 3-times",
+        "reason": "2.6 g / 78 = 0.0333 mol; x 3 = 0.1 mol NaOH; x 40 = 4.0 g ✓",
+        "result": "recovers the 4.0 g exactly",
+        "predictPrompt": "Does it land back on the original 4.0 g?"
        }
       ]
      }
@@ -6242,6 +7066,44 @@
      }
     },
     {
+     "type": "worked_example",
+     "content": {
+      "problem": "Sea shells (calcium carbonate) are heated strongly. Calculate the mass of calcium oxide produced from 10 g of CaCO{{sub:3}}. (Ar Ca = 40, C = 12, O = 16)",
+      "steps": [
+       {
+        "operation": "Mr of CaCO{{sub:3}} and CaO",
+        "reason": "40 + 12 + 3(16) = 100; 40 + 16 = 56",
+        "result": "Mr CaCO{{sub:3}} = 100, Mr CaO = 56",
+        "predictPrompt": "Why compute Mr first?"
+       },
+       {
+        "operation": "Moles of CaCO{{sub:3}}",
+        "reason": "mass / Mr = 10 / 100",
+        "result": "0.1 mol",
+        "predictPrompt": "Is it 0.1?"
+       },
+       {
+        "operation": "1 mole → 1 mole",
+        "reason": "CaCO{{sub:3}} → CaO + CO{{sub:2}}; one mole of each",
+        "result": "0.1 mol CaO",
+        "predictPrompt": "Why 1:1?"
+       },
+       {
+        "operation": "Mass of CaO",
+        "reason": "mass = moles x Mr = 0.1 x 56",
+        "result": "5.6 g",
+        "predictPrompt": "Is 5.6 g about right?"
+       },
+       {
+        "operation": "Check to confirm: reverse moles",
+        "reason": "5.6 g / 56 = 0.1 mol; x 100 = 10 g of CaCO{{sub:3}} ✓",
+        "result": "recovers the 10 g",
+        "predictPrompt": "Does it land exactly?"
+       }
+      ]
+     }
+    },
+    {
      "type": "guided_question",
      "content": {
       "question": "Quicklime (CaO) is slaked with water. Write the equation and name the product.",
@@ -6457,6 +7319,38 @@
         "reason": "The series says carbon cannot reduce Al, and cathode reduction says Al{{sup:3+}} plates out there; both point the same way.",
         "result": "Al above C rules out carbon reduction; Al{{sup:3+}} + 3e{{sup:-}} → Al at the cathode",
         "predictPrompt": "Do the series clue and the electrode clue both say electrolysis?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "A current of 10 A is passed through molten aluminium oxide for 9650 s. Calculate the mass of aluminium deposited. (Al{{sup:3+}} + 3e{{sup:-}} → Al; Ar Al = 27)",
+      "steps": [
+       {
+        "operation": "Total charge",
+        "reason": "Q = I x t = 10 x 9650",
+        "result": "96,500 C = 1.0 faraday",
+        "predictPrompt": "Why exactly one faraday?"
+       },
+       {
+        "operation": "Moles of aluminium",
+        "reason": "3 electrons deposit 1 Al atom; 1 mol e repays 1/3 mol Al",
+        "result": "moles Al = 1/3 mol",
+        "predictPrompt": "Why divide by 3 and not 9?"
+       },
+       {
+        "operation": "Mass of Al",
+        "reason": "mass = moles x Ar = 1/3 x 27",
+        "result": "9 g",
+        "predictPrompt": "Is 9 g about right for 10 A and 9650 s?"
+       },
+       {
+        "operation": "Check to confirm: reverse faraday",
+        "reason": "9 g / 27 = 0.333 mol; x 3 = 1.0 mol e; x 96,500 = 96,500 C ✓",
+        "result": "recovers the full charge exactly",
+        "predictPrompt": "Do you return to the same 96,500 C?"
        }
       ]
      }
@@ -6683,6 +7577,44 @@
      }
     },
     {
+     "type": "worked_example",
+     "content": {
+      "problem": "In the blast furnace, haematite is reduced by carbon monoxide and limestone is the flux. Name the three raw materials charged into the furnace and state what the slag floats on.",
+      "steps": [
+       {
+        "operation": "Name the charge",
+        "reason": "haematite ore (Fe₂O₃), limestone (flux), and coke (fuel/reducer)",
+        "result": "ore + limestone + coke",
+        "predictPrompt": "Why do you need all three?"
+       },
+       {
+        "operation": "Explain coke’s role",
+        "reason": "coke burns in hot air to make CO, which reduces the oxide to molten iron: Fe₂O₃ + 3CO → 2Fe + 3CO₂",
+        "result": "CO is the actual reducing agent, coke is its source",
+        "predictPrompt": "Why start from coke and not CO directly?"
+       },
+       {
+        "operation": "Explain limestone’s role",
+        "reason": "limestone decomposes to CaO, which combines with silica impurities in the ore to form slag — calcium silicate",
+        "result": "slag — liquid at furnace temperature",
+        "predictPrompt": "Why must the impurities leave and not the iron?"
+       },
+       {
+        "operation": "State the separation by density",
+        "reason": "slag is less dense than molten iron, so it floats on the iron and is tapped off separately",
+        "result": "slag floats on iron; two liquids tapped separately",
+        "predictPrompt": "Which tap is which?"
+       },
+       {
+        "operation": "Check to confirm: reductant terminology",
+        "reason": "coke is the fuel; CO is the reductant; limestone is the flux — three distinct jobs",
+        "result": "no single input does two jobs",
+        "predictPrompt": "Which does reduction alone?"
+       }
+      ]
+     }
+    },
+    {
      "type": "guided_question",
      "content": {
       "question": "Why is limestone added to the blast furnace charge? Give its chemical role.",
@@ -6898,6 +7830,44 @@
         "reason": "Every element must balance and Cu{{sup:2+}} in solution is blue; a mismatch means the equation or the observation slipped.",
         "result": "O: 1 + 4 = 5 both sides; Cu, S, H balance; black oxide to blue solution",
         "predictPrompt": "Do the atoms balance and does the colour fit Cu{{sup:2+}}?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "8.0 g of copper(II) oxide is reduced by passing hydrogen over it. Calculate the mass of copper obtained. (CuO + H{{sub:2}} → Cu + H{{sub:2O}}; Ar Cu = 63.5, O = 16)",
+      "steps": [
+       {
+        "operation": "Mr of CuO",
+        "reason": "63.5 + 16 = 79.5",
+        "result": "Mr = 79.5",
+        "predictPrompt": "Should you check this?"
+       },
+       {
+        "operation": "Moles of CuO",
+        "reason": "mass / Mr = 8.0 / 79.5",
+        "result": "0.1006 mol",
+        "predictPrompt": "Is 0.1006 about right?"
+       },
+       {
+        "operation": "Moles of Cu — 1:1",
+        "reason": "1 mol CuO → 1 mol Cu",
+        "result": "0.1006 mol Cu",
+        "predictPrompt": "Why 1:1?"
+       },
+       {
+        "operation": "Mass of copper",
+        "reason": "mass = moles x Ar = 0.1006 x 63.5",
+        "result": "6.39 g",
+        "predictPrompt": "Is 6.39 g about right?"
+       },
+       {
+        "operation": "Check to confirm: reverse moles",
+        "reason": "6.39 g / 63.5 = 0.1006 mol; x 79.5 = 8.0 g ✓",
+        "result": "recovers the 8.0 g",
+        "predictPrompt": "Does it land exactly?"
        }
       ]
      }
@@ -7121,6 +8091,38 @@
         "reason": "C{{sub:6H}}{{sub:6}} must reproduce the given figures; any wrong multiple would miss them.",
         "result": "{{frac:72|78}} = 92.3% C and {{frac:6|78}} = 7.7% H",
         "predictPrompt": "Does C{{sub:6H}}{{sub:6}} give back the given percentages?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "A hydrocarbon is 80% carbon and 20% hydrogen by mass. Determine its empirical formula. (Ar C = 12, H = 1)",
+      "steps": [
+       {
+        "operation": "Convert percentages to moles",
+        "reason": "moles C = 80/12 = 6.67; moles H = 20/1 = 20",
+        "result": "C:H = 6.67 : 20",
+        "predictPrompt": "Why divide by atomic masses and not use the percentages directly?"
+       },
+       {
+        "operation": "Find the smallest whole-number ratio",
+        "reason": "divide both by 6.67: 1 : 3",
+        "result": "empirical formula = CH₃",
+        "predictPrompt": "Why is CH₃ not a real molecule on its own?"
+       },
+       {
+        "operation": "Scale correctly to a molecular formula",
+        "reason": "if the Mr were known we could scale, but with percentages alone the empirical formula is the answer",
+        "result": "empirical formula: CH₃",
+        "predictPrompt": "What is missing for the true formula?"
+       },
+       {
+        "operation": "Check to confirm: combine with Mr",
+        "reason": "if the Mr were 30, then 2 x 15 = 30, giving C₂H₆ (ethane) — the percentages fit",
+        "result": "the ratio is consistent with ethane",
+        "predictPrompt": "What Mr would give this exact composition?"
        }
       ]
      }
@@ -7365,6 +8367,38 @@
         "reason": "Reactant and product masses must match through the balanced equation; a misbalanced ratio breaks the books.",
         "result": "5.8 + (0.65 × 32) = 26.6 g = 17.6 g CO{{sub:2}} + 9.0 g H{{sub:2O}}",
         "predictPrompt": "Does mass balance across the burning equation?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "3 g of ethane burns in excess oxygen. Calculate the volume of carbon dioxide released at s.t.p. (2C{{sub:2H}}{{sub:6}} + 7O{{sub:2}} → 4CO{{sub:2}} + 6H{{sub:2O}}; Mr C{{sub:2H}}{{sub:6}} = 30)",
+      "steps": [
+       {
+        "operation": "Moles of ethane",
+        "reason": "mass / Mr = 3 / 30",
+        "result": "0.1 mol",
+        "predictPrompt": "Is 0.1 exact?"
+       },
+       {
+        "operation": "Ratio to CO₂",
+        "reason": "2 mol ethane → 4 mol CO{{sub:2}} = 1:2",
+        "result": "0.2 mol CO{{sub:2}}",
+        "predictPrompt": "Why 1:2 rather than 1:1?"
+       },
+       {
+        "operation": "Volume at s.t.p.",
+        "reason": "V = moles x 22,400",
+        "result": "0.2 x 22,400 = 4.48 dm3",
+        "predictPrompt": "Is 4.48 dm3 plausible?"
+       },
+       {
+        "operation": "Check to confirm: reverse moles",
+        "reason": "4.48 dm3 / 22.4 = 0.2 mol; / 2 = 0.1 mol ethane; x 30 = 3 g ✓",
+        "result": "recovers the 3.0 g",
+        "predictPrompt": "Do you land back on the original?"
        }
       ]
      }
@@ -7618,6 +8652,38 @@
      }
     },
     {
+     "type": "worked_example",
+     "content": {
+      "problem": "2.8 g of ethene burns in excess oxygen. Calculate the volume of carbon dioxide released at s.t.p. (C{{sub:2H}}{{sub:4}} + 3O{{sub:2}} → 2CO{{sub:2}} + 2H{{sub:2O}}; Mr C{{sub:2H}}{{sub:4}} = 28)",
+      "steps": [
+       {
+        "operation": "Moles of ethene",
+        "reason": "mass / Mr = 2.8 / 28",
+        "result": "0.1 mol",
+        "predictPrompt": "Is 0.1 exact?"
+       },
+       {
+        "operation": "Ratio to CO₂",
+        "reason": "1 mol ethene → 2 mol CO{{sub:2}}",
+        "result": "0.2 mol CO{{sub:2}}",
+        "predictPrompt": "Why 2 and not 1?"
+       },
+       {
+        "operation": "Volume at s.t.p.",
+        "reason": "V = moles x 22,400",
+        "result": "0.2 x 22,400 = 4.48 dm3",
+        "predictPrompt": "Is 4.48 dm3 about right?"
+       },
+       {
+        "operation": "Check to confirm: reverse moles",
+        "reason": "4.48 dm3 / 22.4 = 0.2 mol; / 2 = 0.1 mol; x 28 = 2.8 g ✓",
+        "result": "recovers the 2.8 g exactly",
+        "predictPrompt": "Does the round trip land right?"
+       }
+      ]
+     }
+    },
+    {
      "type": "guided_question",
      "content": {
       "question": "5.6 g of ethene reacts with excess bromine. Calculate the mass of dibromoethane formed. (Mr ethene = 28, product = 188)",
@@ -7841,6 +8907,44 @@
      }
     },
     {
+     "type": "worked_example",
+     "content": {
+      "problem": "Explain why benzene undergoes substitution with bromine in the presence of iron(III) chloride but does not undergo addition, and write the equation for the bromination reaction.",
+      "steps": [
+       {
+        "operation": "Recall benzene’s structure",
+        "reason": "C₆H₆ — a ring of six carbons with a delocalised electron system",
+        "result": "aromatic — stable ring",
+        "predictPrompt": "Why is the ring not three separate double bonds?"
+       },
+       {
+        "operation": "Explain why addition is resisted",
+        "reason": "addition would break the delocalised ring and destroy the stability — benzene avoids it",
+        "result": "addition would forfeit the aromatic stability",
+        "predictPrompt": "What else would the ring lose?"
+       },
+       {
+        "operation": "Explain why substitution occurs",
+        "reason": "FeCl₃ generates a Br⁺-like electrophile, which attacks the ring, one H is swapped out and the delocalised system reforms",
+        "result": "substitution preserves the ring",
+        "predictPrompt": "What does the ring gain by surviving?"
+       },
+       {
+        "operation": "Write the equation",
+        "reason": "C{{sub:6H}}{{sub:6}} + Br{{sub:2}} → C{{sub:6H}}{{sub:5Br}} + HBr",
+        "result": "bromobenzene + hydrogen bromide",
+        "predictPrompt": "What does the ring keep?"
+       },
+       {
+        "operation": "Check to confirm: the bromine-water test",
+        "reason": "bromine water is not decolourised by benzene because it substitutes, not adds — benzene is not an alkene",
+        "result": "benzene and alkenes behave completely differently with bromine water",
+        "predictPrompt": "Why does the bottle not clear up like with ethene?"
+       }
+      ]
+     }
+    },
+    {
      "type": "guided_question",
      "content": {
       "question": "15.6 g of benzene burns completely. Calculate the oxygen volume at s.t.p. (Mr = 78).",
@@ -8059,6 +9163,38 @@
         "reason": "Oxygen is the fiddliest atom here; both sides must show 7 or the 3O{{sub:2}} coefficient slipped.",
         "result": "Left: 1 + 6 = 7; right: 4 + 3 = 7",
         "predictPrompt": "Do both sides show seven oxygens?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "Write the chemical equation for the fermentation of glucose by yeast, and state the role of yeast in the process (why the reaction is slow without it).",
+      "steps": [
+       {
+        "operation": "Write the fermentation equation",
+        "reason": "C{{sub:6H}}{{sub:1}}{{sub:2O}}{{sub:6}} → 2C{{sub:2H}}{{sub:5OH}} + 2CO{{sub:2}}",
+        "result": "glucose → ethanol + carbon dioxide",
+        "predictPrompt": "What happens to the sugar?"
+       },
+       {
+        "operation": "Explain the role of yeast",
+        "reason": "yeast contains enzymes (zymase), which are the biological catalysts that break down glucose at practical temperatures",
+        "result": "yeast supplies the enzyme needed to lower activation energy",
+        "predictPrompt": "Why does sugar not turn to ethanol on its own overnight?"
+       },
+       {
+        "operation": "State the conditions",
+        "reason": "warm temperature (≈ 30 °C), anaerobic conditions, and the right yeast strains",
+        "result": "too cold = slow; too hot = enzymes denature and sugar spoils instead",
+        "predictPrompt": "Why does hot brewing fail?"
+       },
+       {
+        "operation": "Check to confirm: industrial relevance",
+        "reason": "the same fermentation makes palm wine, gin, beer, and bioethanol for fuel",
+        "result": "one enzyme, many products",
+        "predictPrompt": "What is the difference between palm wine and gin, then?"
        }
       ]
      }
@@ -8288,6 +9424,38 @@
      }
     },
     {
+     "type": "worked_example",
+     "content": {
+      "problem": "Describe one chemical test that distinguishes propanal (an aldehyde) from propanone (a ketone), and state the observation in each case.",
+      "steps": [
+       {
+        "operation": "Choose the test",
+        "reason": "Tollens’ reagent (ammoniacal silver nitrate) is the classic aldehyde test; Fehling’s solution gives the same distinction with copper",
+        "result": "Tollens’ — the silver mirror",
+        "predictPrompt": "Why is it called a mirror test?"
+       },
+       {
+        "operation": "Apply to both compounds",
+        "reason": "propanal (an aldehyde) reduces Ag⁺ to Ag metal, which deposits as a mirror; propanone (a ketone) has no reaction",
+        "result": "propanal gives a silver mirror; propanone does not",
+        "predictPrompt": "Why the aldehyde only and not the ketone?"
+       },
+       {
+        "operation": "Explain the chemical reason",
+        "reason": "the aldehyde carbonyl carbon carries a hydrogen that can be removed by oxidation; the ketone carbonyl carbon has only carbon neighbours, so it cannot be oxidised further",
+        "result": "oxidisable H decides the result",
+        "predictPrompt": "What single atom separates them?"
+       },
+       {
+        "operation": "Check to confirm: alternative test",
+        "reason": "Fehling’s gives a red precipitate of copper(I) oxide for propanal, and stays blue for propanone",
+        "result": "two independent tests agree: aldehyde vs ketone",
+        "predictPrompt": "Why do exam questions ask for one test if two are possible?"
+       }
+      ]
+     }
+    },
+    {
      "type": "guided_question",
      "content": {
       "question": "Propanone is warmed with Tollens' reagent. Predict the result and give the reason.",
@@ -8505,6 +9673,38 @@
         "reason": "The ester plus water must equal the acid plus alkanol; a slipped Mr or ratio breaks the books.",
         "result": "6.0 + 4.6 = 10.6 g = 8.8 g ester + 1.8 g H{{sub:2O}} (60 + 46 = 88 + 18)",
         "predictPrompt": "Does mass balance across the esterification?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "State the name of the reaction that converts a fat into soap and glycerol, write the equation for the hydrolysis of a simple fat, and name the two products.",
+      "steps": [
+       {
+        "operation": "Name the reaction",
+        "reason": "saponification — alkaline hydrolysis of an ester (fat) with NaOH",
+        "result": "saponification",
+        "predictPrompt": "Why is it not called esterification?"
+       },
+       {
+        "operation": "Write the equation",
+        "reason": "fat + 3 NaOH → glycerol + 3 sodium salts of fatty acids (soap)",
+        "result": "CH{{sub:2}}OCO·R⋯ + 3NaOH → glycerol + 3R·COONa",
+        "predictPrompt": "Why 3 molecules of NaOH for one fat?"
+       },
+       {
+        "operation": "State what the products are",
+        "reason": "sodium stearate (soap) and glycerol (propan-1,2,3-triol)",
+        "result": "soap + glycerol",
+        "predictPrompt": "Are both products actually sold?"
+       },
+       {
+        "operation": "Check to confirm: link to the lesson",
+        "reason": "soap cleans by emulsifying grease into micelles; glycerol is syrupy and sweet — the two together make soap valuable",
+        "result": "saponification delivers both a cleanser and a valuable by-product",
+        "predictPrompt": "What is glycerol used for, then?"
        }
       ]
      }
@@ -8733,6 +9933,44 @@
      }
     },
     {
+     "type": "worked_example",
+     "content": {
+      "problem": "Distinguish between ethylamine (a primary amine), dimethylamine (a secondary amine) and trimethylamine (a tertiary amine) using cold nitrous acid, stating the observation in each case.",
+      "steps": [
+       {
+        "operation": "Name the reagent",
+        "reason": "nitrous acid, produced in situ from sodium nitrite and dilute HCl",
+        "result": "HNO₂ made fresh in the test tube",
+        "predictPrompt": "Why not dispense HNO₂ directly from a bottle?"
+       },
+       {
+        "operation": "Apply to the primary amine",
+        "reason": "ethylamine (primary, 1°, two N–H hydrogens) reacts to give nitrogen gas (vigorous effervescence)",
+        "result": "ethylamine → nitrogen gas, visible bubbles",
+        "predictPrompt": "Why two N–H hydrogens matter?"
+       },
+       {
+        "operation": "Apply to the secondary amine",
+        "reason": "dimethylamine (secondary, 2°, one N–H hydrogen) gives a yellow oily N-nitroso compound, no gas",
+        "result": "dimethylamine → yellow oil, no bubbles",
+        "predictPrompt": "What is missing for primary-style gas?"
+       },
+       {
+        "operation": "Apply to the tertiary amine",
+        "reason": "trimethylamine (tertiary, 3°, no N–H hydrogen) does not react with cold nitrous acid",
+        "result": "trimethylamine → no reaction in the cold",
+        "predictPrompt": "Why is the cold restriction important?"
+       },
+       {
+        "operation": "Check to confirm: the test is a classification system",
+        "reason": "one reagent, three outcomes, three classes — the test sits in a row, not a guess",
+        "result": "primary = gas; secondary = oil; tertiary = nothing",
+        "predictPrompt": "Can you recall which amine smells like rotten fish?"
+       }
+      ]
+     }
+    },
+    {
      "type": "guided_question",
      "content": {
       "question": "0.2 mol of a primary amine reacts with excess nitrous acid. Calculate the nitrogen volume at s.t.p.",
@@ -8951,6 +10189,38 @@
         "reason": "Sucrose plus water must weigh what glucose plus fructose weigh; a miscounted Mr breaks the books.",
         "result": "34.2 + 1.8 = 36.0 g = 18.0 g glucose + 18.0 g fructose (342 + 18 = 360)",
         "predictPrompt": "Do the masses balance across the arrow?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "3.6 g of glucose burns completely in excess oxygen. Calculate the volume of CO{{sub:2}} at s.t.p. (C{{sub:6H}}{{sub:12}}O{{sub:6}} + 6O{{sub:2}} → 6CO{{sub:2}} + 6H{{sub:2O}}; Mr glucose = 180)",
+      "steps": [
+       {
+        "operation": "Moles of glucose",
+        "reason": "mass / Mr = 3.6 / 180",
+        "result": "0.02 mol",
+        "predictPrompt": "Is 0.02 exact?"
+       },
+       {
+        "operation": "Ratio to CO₂",
+        "reason": "1 mol glucose → 6 mol CO{{sub:2}}",
+        "result": "0.12 mol CO{{sub:2}}",
+        "predictPrompt": "Why 6 and not 2?"
+       },
+       {
+        "operation": "Volume at s.t.p.",
+        "reason": "V = moles x 22,400",
+        "result": "0.12 x 22,400 = 2,688 cm3 = 2.688 dm3",
+        "predictPrompt": "Is 2.688 dm3 plausible?"
+       },
+       {
+        "operation": "Check to confirm: reverse moles",
+        "reason": "2.688 dm3 / 22.4 = 0.12 mol; / 6 = 0.02 mol; x 180 = 3.6 g ✓",
+        "result": "recovers the 3.6 g exactly",
+        "predictPrompt": "Does it land back on the original?"
        }
       ]
      }
@@ -9180,6 +10450,44 @@
      }
     },
     {
+     "type": "worked_example",
+     "content": {
+      "problem": "Describe the biuret test for proteins — the reagents used and the colour obtained — and explain why boiling egg white loses its gel-forming ability (denaturation).",
+      "steps": [
+       {
+        "operation": "Name the reagents",
+        "reason": "copper(II) sulphate solution and dilute sodium hydroxide (or an ordinary alkali)",
+        "result": "CuSO₄ + NaOH",
+        "predictPrompt": "Why the alkali is needed?"
+       },
+       {
+        "operation": "State the observation",
+        "reason": "a violet (purple) colour develops — the deeper the colour, the more peptide bonds detected",
+        "result": "violet = positive",
+        "predictPrompt": "What does a pale colour mean?"
+       },
+       {
+        "operation": "Explain the chemistry",
+        "reason": "the biuret reagent complexes with peptide bonds — any compound with at least two peptide bonds in a row reacts",
+        "result": "targets peptide bonds specifically, not amino acids or single bonds",
+        "predictPrompt": "Why is an amino acid alone not enough?"
+       },
+       {
+        "operation": "Explain denaturation",
+        "reason": "boiling unravels the secondary and tertiary structure — the protein unfolds and its function is lost, irreversibly",
+        "result": "shape is function; once unfolded, the protein cannot re-fold on cooling",
+        "predictPrompt": "Can the egg white be uncooked to undo this?"
+       },
+       {
+        "operation": "Check to confirm: contrast with hydrolysis",
+        "reason": "hydrolysis breaks the peptide bonds to release amino acids; denaturation unfolds without breaking them — different fates",
+        "result": "denaturation unfolds; hydrolysis destroys the chain",
+        "predictPrompt": "Which one keeps the sequence intact?"
+       }
+      ]
+     }
+    },
+    {
      "type": "guided_question",
      "content": {
       "question": "A protein has 50 amino acids in one chain. How many peptide bonds does it contain?",
@@ -9404,6 +10712,44 @@
      }
     },
     {
+     "type": "worked_example",
+     "content": {
+      "problem": "Distinguish between addition polymerisation and condensation polymerisation, state which one loses water as a by-product, and give one example of each.",
+      "steps": [
+       {
+        "operation": "State addition polymerisation",
+        "reason": "monomers with double bonds join by opening the double bond, with nothing lost — the repeat unit appears unchanged",
+        "result": "no by-product is lost",
+        "predictPrompt": "What about a double bond happens?"
+       },
+       {
+        "operation": "Give an example of addition",
+        "reason": "ethene → poly(ethene); styrene → polystyrene",
+        "result": "addition: polythene, polystyrene",
+        "predictPrompt": "Where does the by-product go?"
+       },
+       {
+        "operation": "State condensation polymerisation",
+        "reason": "monomers join by eliminating a small molecule, typically water (sometimes an alcohol), so the repeat unit loses atoms",
+        "result": "water (or alcohol) is lost",
+        "predictPrompt": "Why is the repeat unit no longer identical to either monomer?"
+       },
+       {
+        "operation": "Give an example of condensation",
+        "reason": "amino acids → protein + water; ethanoic acid + ethanol → ethyl ethanoate + water",
+        "result": "condensation: proteins, nylon, polyester",
+        "predictPrompt": "Why do soaps also fit this pattern?"
+       },
+       {
+        "operation": "Check to confirm: the by-product decides",
+        "reason": "if water appears in the equation, it was condensation; if not, it was addition",
+        "result": "water presence settles the classification in any equation",
+        "predictPrompt": "Which two categories are rivals in every polymer question?"
+       }
+      ]
+     }
+    },
+    {
      "type": "guided_question",
      "content": {
       "question": "Amino acids join to form proteins with water lost at each join. Classify the polymerisation.",
@@ -9622,6 +10968,38 @@
         "reason": "Configurations must total the right electron numbers; a dropped electron breaks the count.",
         "result": "Fe: 18+2+6 = 26; Fe{{sup:2+}}: 18+6 = 24; Fe{{sup:3+}}: 18+5 = 23",
         "predictPrompt": "Do the three configurations total 26, 24 and 23?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "Explain why transition metals (unlike main-group metals) form coloured compounds, and state which ligand behaviour makes ammonia a stronger ligand than water.",
+      "steps": [
+       {
+        "operation": "Name the root cause",
+        "reason": "transition metals have partly filled d-subshells that split into two sets of different energy when ligands approach",
+        "result": "ligand splitting of d-orbitals",
+        "predictPrompt": "Why only partly filled d-subshells?"
+       },
+       {
+        "operation": "Explain where the colour comes from",
+        "reason": "light of the right energy promotes an electron across the gap; the observed colour is the complement of what was absorbed",
+        "result": "colour = electron jumps across the split",
+        "predictPrompt": "If the gap is larger, is the absorbed light higher or lower energy?"
+       },
+       {
+        "operation": "Rank ligands by strength",
+        "reason": "stronger ligands (e.g. NH₃) split the d-levels wider than weaker ones (H₂O); [Cu(NH₃)₄]²⁺ is deep blue, [Cu(H₂O)₆]²⁺ is pale blue",
+        "result": "ammonia splits wider — stronger ligand",
+        "predictPrompt": "What colour is deep-blue vs pale-blue copper?"
+       },
+       {
+        "operation": "Check to confirm: colour belongs to the complex",
+        "reason": "change the ligand and the colour changes: Cu²⁺ is not “blue” — it is blue with water and deep blue with ammonia",
+        "result": "a colour is always “with what ligand around”",
+        "predictPrompt": "What if the metal were the same but always stayed the same colour?"
        }
       ]
      }
@@ -9871,6 +11249,44 @@
      }
     },
     {
+     "type": "worked_example",
+     "content": {
+      "problem": "State the role of each of the following in the nitrogen cycle: lightning, Nitrosomonas bacteria, Nitrobacter bacteria, and denitrifying bacteria. Name the nitrogen compound (if any) each produces or consumes.",
+      "steps": [
+       {
+        "operation": "Name lightning’s role",
+        "reason": "the intense heat fixes atmospheric N₂ with O₂ into nitrogen oxides, which dissolve in rain and reach the soil",
+        "result": "lightning produces nitrogen oxides (NO, NO₂)",
+        "predictPrompt": "What state does the nitrogen start in?"
+       },
+       {
+        "operation": "Name Nitrosomonas’s role",
+        "reason": "Nitrosomonas oxidises ammonium ions, produced by rotting plant and animal matter, into nitrite ions",
+        "result": "Nitrosomonas: NH₄⁺ → NO₂⁻",
+        "predictPrompt": "What does it do to the ammonia?"
+       },
+       {
+        "operation": "Name Nitrobacter’s role",
+        "reason": "Nitrobacter oxidises nitrite ions into nitrate ions, which plants absorb through their roots to build proteins",
+        "result": "Nitrobacter: NO₂⁻ → NO₃⁻",
+        "predictPrompt": "What do plants absorb, then?"
+       },
+       {
+        "operation": "Name denitrifying bacteria’s role",
+        "reason": "in airless soil, denitrifying bacteria convert nitrate back to nitrogen gas and release it to the atmosphere",
+        "result": "denitrifying bacteria: NO₃⁻ → N₂",
+        "predictPrompt": "Why do they work only in wet soil?"
+       },
+       {
+        "operation": "Check to confirm: a nitrogen atom’s path",
+        "reason": "air → (lightning or bacterium) → ammonia/nitrate → plant → animal → rotting → denitrification → air",
+        "result": "it is a loop — nothing created or lost, just changed",
+        "predictPrompt": "Which stage feeds the plant, and which stage releases the gas?"
+       }
+      ]
+     }
+    },
+    {
      "type": "guided_question",
      "content": {
       "question": "A soil sample has plenty of nitrogen gas but crops still grow poorly. Which cycle step is failing, and what would you check?",
@@ -10086,6 +11502,38 @@
         "reason": "All three elements must balance in the doubled equation; one mismatch means a coefficient slipped.",
         "result": "Fe 4 = 4; S 8 = 8; O 22 = 6 + 16 = 22",
         "predictPrompt": "Do Fe, S and O all balance in the doubled equation?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "Explain why sulphide ores must be roasted before reduction in the blast furnace. Write the balanced equation for the roasting of pyrite, and explain why the sulphur must be removed before steelmaking.",
+      "steps": [
+       {
+        "operation": "State why roasting is required",
+        "reason": "sulphide ores cannot be reduced directly with CO — the sulphur would remain in the iron and spoil it",
+        "result": "roasting is oxidation: sulphur leaves as SO₂",
+        "predictPrompt": "What would happen to the iron if roasting were skipped?"
+       },
+       {
+        "operation": "Write the balanced equation",
+        "reason": "4FeS₂ + 11O₂ → 2Fe₂O₃ + 8SO₂",
+        "result": "pyrite burns to iron(III) oxide and sulphur dioxide",
+        "predictPrompt": "Where does the sulphur go?"
+       },
+       {
+        "operation": "Explain the steelmaking constraint",
+        "reason": "residual sulphur makes steel brittle and hard to weld — it must be removed before the steel is made",
+        "result": "sulphur embrittles steel",
+        "predictPrompt": "What practical consequence does brittleness create?"
+       },
+       {
+        "operation": "Check to confirm: contrast with oxide ores",
+        "reason": "haematite (Fe₂O₃) goes straight to the furnace — no roasting needed, no sulphur, no roasting step",
+        "result": "the two ore families take different paths",
+        "predictPrompt": "Why are oxide ores easier?"
        }
       ]
      }
@@ -10331,6 +11779,44 @@
         "reason": "The Cu + Sn naming rule and the hardness-and-ring property rule must agree; pure copper fails the bell test.",
         "result": "Copper + tin = bronze by name, and harder with a ring by property",
         "predictPrompt": "Do the naming rule and the property rule both say bronze?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "Name the alloy used for (i) aircraft frames and (ii) joining copper pipes, and state one key property of each that makes it the right choice over the pure metal.",
+      "steps": [
+       {
+        "operation": "Name the aircraft-frame alloy",
+        "reason": "duralumin — aluminium with copper, magnesium and manganese",
+        "result": "duralumin",
+        "predictPrompt": "Which metal is the light one?"
+       },
+       {
+        "operation": "State why it beats pure aluminium",
+        "reason": "pure aluminium is soft and weak; the added metals raise its strength to nearly that of steel while keeping it about a third the weight",
+        "result": "strong but a third the weight of steel",
+        "predictPrompt": "Why this balance and not just strength?"
+       },
+       {
+        "operation": "Name the pipe-joining alloy",
+        "reason": "soft solder — a lead–tin alloy",
+        "result": "soft solder",
+        "predictPrompt": "What about its melting point?"
+       },
+       {
+        "operation": "State why it beats pure lead or pure tin",
+        "reason": "low melting point lets it join without melting the pipe; it wets the joint cleanly; low cost",
+        "result": "melts low, wets joints, cheap",
+        "predictPrompt": "What would happen with pure lead or pure tin alone?"
+       },
+       {
+        "operation": "Check to confirm: connect to the rule",
+        "reason": "an alloy beats the pure metal for one job: duralumin for lightness-plus-strength; solder for joining-without-damage",
+        "result": "each alloy wins on its designated property",
+        "predictPrompt": "What do these two not have in common?"
        }
       ]
      }
