@@ -11,7 +11,7 @@ export default function VerifyPage() {
       <div className="w-full max-w-sm rounded-xl border border-gray-100 bg-white p-6 shadow-xs text-center">
         <h1 className="text-xl font-extrabold text-gray-900">Verify your email</h1>
         <p className="mt-2 text-sm text-gray-500">
-          Enter the verification code sent to your email, or click the link in the email to activate your account.
+          You need to confirm your email before you can sign in. Open the link we sent you and your account will be ready
         </p>
         <Link
           href="/login"
