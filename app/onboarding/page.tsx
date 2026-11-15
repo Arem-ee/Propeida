@@ -12,6 +12,10 @@ import {
 } from '@/lib/actions/onboarding'
 import { isStandaloneSubject } from '@/lib/subject-scope'
 import { ArrowRight, ChevronLeft, HelpCircle, Check } from 'lucide-react'
+import { Mascot, type MascotExpression } from '@/components/mascot'
+import { MascotSays } from '@/components/celebrations/speech-bubble'
+import { Confetti } from '@/components/celebrations/confetti'
+import { WinToastList, useWins } from '@/components/celebrations/win-toast-list'
 
 type Step =
   | 'welcome'
@@ -53,6 +57,67 @@ const STUDY_TIME: { value: StudyTime; label: string }[] = [
   { value: 'flexible', label: 'Flexible / varies' },
 ]
 
+/**
+ * Encouraging micro-copy per step. Keeps tone warm but never
+ * childish: serious where it matters (accessibility, errors),
+ * delightful where it's just a form field.
+ */
+const STEP_COPY: Record<
+  Step,
+  { mascot: MascotExpression; heading?: string; lead?: string; footnote?: string }
+> = {
+  welcome: {
+    mascot: 'welcome',
+    lead: 'This setup takes under a minute',
+  },
+  exam: {
+    mascot: 'thinking',
+    heading: 'What are you preparing for?',
+    lead: 'This shapes everything you see, including lessons, questions, and mocks',
+  },
+  subjects: {
+    mascot: 'encourage',
+    heading: 'Your subjects',
+    lead: 'You pick what you want to study, and you can change this later',
+    footnote: 'You can choose whenever you are ready and nothing is locked',
+  },
+  name: {
+    mascot: 'encourage',
+    heading: 'Your full name',
+    lead: 'We use this for certificates and support messages',
+  },
+  course: {
+    mascot: 'thinking',
+    heading: 'Course you intend to study',
+    lead: 'This is optional, and you can set your Post-UTME target school later',
+  },
+  'heard-about': {
+    mascot: 'encourage',
+    heading: 'How did you hear about us?',
+    lead: 'This helps us reach more people preparing for the same exams',
+  },
+  'study-time': {
+    mascot: 'encourage',
+    heading: 'Preferred study time',
+    lead: "We will show 'Today's review' at a good time for you",
+  },
+  'target-score': {
+    mascot: 'thinking',
+    heading: 'Target score',
+    lead: "This sets your personal goal on the progress map",
+  },
+  accessibility: {
+    mascot: 'encourage',
+    heading: 'Accessibility needs',
+    lead: 'You can turn on anything that helps you, and you can change it later',
+  },
+  summary: {
+    mascot: 'celebrate',
+    heading: 'You are all set',
+    lead: "You can tap 'Start learning' when you are ready",
+  },
+}
+
 const CARD_CLASS = 'rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-7 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)]'
 
 export default function OnboardingPage() {
@@ -64,6 +129,9 @@ export default function OnboardingPage() {
   const [error, setError] = useState<string | null>(null)
   const [subjects, setSubjects] = useState<Subject[]>([])
   const [subjectsLoading, setSubjectsLoading] = useState(true)
+  const [showConfetti, setShowConfetti] = useState(false)
+
+  const { add } = useWins()
 
   const [examTarget, setExamTarget] = useState<ExamTarget | null>(null)
   const [selectedSubjects, setSelectedSubjects] = useState<string[]>([])
@@ -138,22 +206,22 @@ export default function OnboardingPage() {
   const stepError = useCallback((): string | null => {
     switch (step) {
       case 'exam':
-        return examTarget ? null : 'Please select what you are preparing for.'
+        return examTarget ? null : 'Please select what you are preparing for'
       case 'subjects':
         return selectedSubjects.length > 0 || subjectsPending
           ? null
-          : 'Please select at least one subject, or choose to pick subjects later.'
+          : 'Please select at least one subject, or choose to pick subjects later'
       case 'name':
-        return name.trim().length >= 2 ? null : 'Please enter your full name.'
+        return name.trim().length >= 2 ? null : 'Please enter your full name'
       case 'heard-about':
-        return heardAbout ? null : 'Please select how you heard about us.'
+        return heardAbout ? null : 'Please select how you heard about us'
       case 'study-time':
-        return studyTime ? null : 'Please select your preferred study time.'
+        return studyTime ? null : 'Please select your preferred study time'
       case 'target-score': {
         const n = Number(targetScore)
-        if (!n || n < 1) return 'Please enter a valid target score.'
-        if (examTarget === 'jamb' && n > 400) return 'JAMB scores run from 1 to 400.'
-        if (examTarget === 'post-utme' && n > 100) return 'Post-UTME scores are typically out of 100.'
+        if (!n || n < 1) return 'Please enter a valid target score'
+        if (examTarget === 'jamb' && n > 400) return 'JAMB scores run from 1 to 400'
+        if (examTarget === 'post-utme' && n > 100) return 'Post-UTME scores are typically out of 100'
         return null
       }
       default:
@@ -178,19 +246,27 @@ export default function OnboardingPage() {
         accessibility_needs: accessibility,
         subjects_pending: subjectsPending,
       })
+      add({
+        kind: 'onboarded',
+        message: 'You are all set',
+        subtext: 'Welcome to Propeida, and you can start learning now',
+        mascot: true,
+        duration: 5000,
+      })
+      setShowConfetti(true)
       router.push('/home')
     } catch (err: unknown) {
       if (err instanceof Error && (err as { name?: string }).name === 'OnboardingError') {
         setError(err.message)
       } else {
-        setError('Something went wrong. Please try again.')
+        setError('Something went wrong, so please try again')
       }
     } finally {
       setLoading(false)
     }
   }, [
     examTarget, selectedSubjects, course, heardAbout, studyTime, targetScore,
-    accessibility, subjectsPending, router, stepError,
+    accessibility, subjectsPending, router, stepError, add,
   ])
 
   if (loading) {
@@ -203,6 +279,8 @@ export default function OnboardingPage() {
 
   return (
     <div className="flex min-h-screen flex-col bg-paper">
+      <WinToastList />
+      <Confetti enabled={showConfetti} count={70} onEnd={() => setShowConfetti(false)} />
       <div className="w-full max-w-4xl mx-auto px-4 py-6">
         <div className="flex items-center justify-between mb-2">
           <span className="text-xs font-extrabold text-ink-soft uppercase tracking-wider">
@@ -247,18 +325,22 @@ export default function OnboardingPage() {
         <div className={`${CARD_CLASS} min-h-[60vh] flex flex-col animate-fade-up`} key={step}>
           {step === 'welcome' && (
             <div className="text-center flex-1">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 mb-6">
-                <Check className="h-8 w-8 text-blue-600" strokeWidth={3} />
+              <div className="flex items-center justify-center mb-6">
+                <MascotSays expression="welcome" size="lg" text="It takes about a minute" />
               </div>
               <h1 className="font-display text-3xl sm:text-4xl font-semibold leading-tight text-black mb-3">
                 Welcome to Propeida
               </h1>
               <p className="mx-auto mt-3 max-w-sm text-[15px] font-semibold leading-relaxed text-ink-soft mb-8">
-                Tell us what you are preparing for. We will show you the right lessons, questions, and mocks.
+                {STEP_COPY.welcome.lead}, and you tell us what you are preparing for so we can show you the right
+                lessons, questions, and mocks
               </p>
               <button
-                onClick={goNext}
-                className="w-full sm:w-auto rounded-2xl bg-blue-600 px-8 py-4 text-[16px] font-extrabold text-white hover:bg-blue-700 min-h-[56px] cursor-pointer transition-all"
+                onClick={() => {
+                  add({ kind: 'onboarded', message: 'We are glad you are here', mascot: true, duration: 3000 })
+                  goNext()
+                }}
+                className="w-full sm:w-auto rounded-2xl bg-blue-600 px-8 py-4 text-[16px] font-extrabold text-white hover:bg-blue-700 min-h-[56px] cursor-pointer transition-all win-pulse pressable"
               >
                 Get started
                 <ArrowRight className="h-5 w-5" />
@@ -284,9 +366,14 @@ export default function OnboardingPage() {
           )}
           {step === 'exam' && (
             <div className="flex-1 space-y-6">
-              <div>
-                <h2 className="font-display text-2xl font-semibold text-black mb-2">What are you preparing for?</h2>
-                <p className="text-[14px] text-ink-soft">We will show you lessons and mocks that fit it.</p>
+              <div className="flex items-center justify-start gap-3 mb-2">
+                <Mascot expression={STEP_COPY.exam.mascot} size="sm" className="shrink-0 animate-pop-in" />
+                <div>
+                  <h2 className="font-display text-2xl font-semibold text-black mb-0.5">
+                    {STEP_COPY.exam.heading}
+                  </h2>
+                  <p className="text-[14px] text-ink-soft">{STEP_COPY.exam.lead}</p>
+                </div>
               </div>
               <div className="space-y-3">
                 {EXAM_TARGETS.map((t) => (
@@ -311,14 +398,21 @@ export default function OnboardingPage() {
           )}
           {step === 'summary' && (
             <div className="flex-1 space-y-6">
+              <div className="flex items-center justify-start gap-3 mb-4">
+                <MascotSays
+                  expression={STEP_COPY.summary.mascot}
+                  size="md"
+                  text="You are ready for this one"
+                />
+              </div>
               <div>
-                <h2 className="font-display text-2xl font-semibold text-black mb-2">Review your choices</h2>
-                <p className="text-[14px] text-ink-soft">Everything looks good? Tap &ldquo;Start learning&rdquo; to begin.</p>
+                <h2 className="font-display text-2xl font-semibold text-black mb-0.5">{STEP_COPY.summary.heading}</h2>
+                <p className="text-[14px] text-ink-soft">{STEP_COPY.summary.lead}</p>
               </div>
               <div className="space-y-4 text-[14px]">
                 <div className="flex justify-between text-black">
                   <span className="font-semibold text-ink-soft">Preparing for</span>
-                  <span className="font-medium">{EXAM_TARGETS.find((t) => t.value === examTarget)?.label ?? '—'}</span>
+                  <span className="font-medium">{EXAM_TARGETS.find((t) => t.value === examTarget)?.label ?? 'Not set'}</span>
                 </div>
                 <div className="flex justify-between text-black">
                   <span className="font-semibold text-ink-soft">Subjects</span>
@@ -326,8 +420,8 @@ export default function OnboardingPage() {
                     {selectedSubjects.length > 0
                       ? selectedSubjects.join(', ')
                       : subjectsPending
-                        ? 'Pick later'
-                        : '—'}
+                        ? 'You will pick these later'
+                        : 'Not set'}
                   </span>
                 </div>
                 {name && (
@@ -344,11 +438,11 @@ export default function OnboardingPage() {
                 )}
                 <div className="flex justify-between text-black">
                   <span className="font-semibold text-ink-soft">Heard about us</span>
-                  <span className="font-medium">{HEARD_ABOUT.find((o) => o.value === heardAbout)?.label ?? '—'}</span>
+                  <span className="font-medium">{HEARD_ABOUT.find((o) => o.value === heardAbout)?.label ?? 'Not set'}</span>
                 </div>
                 <div className="flex justify-between text-black">
                   <span className="font-semibold text-ink-soft">Study time</span>
-                  <span className="font-medium">{STUDY_TIME.find((t) => t.value === studyTime)?.label ?? '—'}</span>
+                  <span className="font-medium">{STUDY_TIME.find((t) => t.value === studyTime)?.label ?? 'Not set'}</span>
                 </div>
                 <div className="flex justify-between text-black">
                   <span className="font-semibold text-ink-soft">Target score</span>
@@ -357,7 +451,7 @@ export default function OnboardingPage() {
                 <div className="flex justify-between text-black">
                   <span className="font-semibold text-ink-soft">Accessibility</span>
                   <span className="font-medium">
-                    {Object.entries(accessibility).filter(([, v]) => v).map(([k]) => k.replace('_', ' ')).join(', ') || 'None'}
+                    {Object.entries(accessibility).filter(([, v]) => v).map(([k]) => k.replace('_', ' ')).join(', ') || 'You turned none on'}
                   </span>
                 </div>
               </div>
@@ -365,9 +459,14 @@ export default function OnboardingPage() {
           )}
           {step === 'subjects' && (
             <div className="flex-1 space-y-6">
-              <div>
-                <h2 className="font-display text-2xl font-semibold text-black mb-2">Your subjects</h2>
-                <p className="text-[14px] text-ink-soft">Pick the subjects you want to study. You can change them later.</p>
+              <div className="flex items-center justify-start gap-3 mb-2">
+                <Mascot expression={STEP_COPY.subjects.mascot} size="sm" className="shrink-0 animate-pop-in" />
+                <div>
+                  <h2 className="font-display text-2xl font-semibold text-black mb-0.5">
+                    {STEP_COPY.subjects.heading}
+                  </h2>
+                  <p className="text-[14px] text-ink-soft">{STEP_COPY.subjects.lead}</p>
+                </div>
               </div>
 
               <button
@@ -375,7 +474,7 @@ export default function OnboardingPage() {
                 className="w-full rounded-2xl border-2 border-dashed border-gray-200 bg-white/50 px-4 py-4 text-left transition-all hover:bg-gray-50"
               >
                 <HelpCircle className="h-4 w-4 text-gray-400 mr-2" />
-                <span className="text-[14px] font-semibold text-ink-soft">I&apos;m not sure yet. Show me everything.</span>
+                <span className="text-[14px] font-semibold text-ink-soft">I&apos;m not sure yet, so show me everything</span>
               </button>
 
               {subjectsLoading ? (
@@ -421,17 +520,25 @@ export default function OnboardingPage() {
               )}
 
               {subjectsPending && (
-                <div className="p-4 rounded-2xl bg-blue-50 border border-blue-100 text-[13px] font-semibold text-blue-800">
-                  Nothing is locked. Choose whenever you are ready.
+                <div className="flex items-center gap-3 rounded-2xl border border-blue-100 bg-blue-50 p-4 animate-pop-in">
+                  <Mascot expression="thinking" size="sm" />
+                  <p className="text-[13px] font-semibold leading-snug text-blue-800">
+                    You can choose whenever you are ready and nothing is locked
+                  </p>
                 </div>
               )}
             </div>
           )}
           {step === 'name' && (
             <div className="flex-1 space-y-6">
-              <div>
-                <h2 className="font-display text-2xl font-semibold text-black mb-2">Your full name</h2>
-                <p className="text-[14px] text-ink-soft">Only for certificates and support messages.</p>
+              <div className="flex items-center justify-start gap-3 mb-2">
+                <Mascot expression={STEP_COPY.name.mascot} size="sm" className="shrink-0 animate-pop-in" />
+                <div>
+                  <h2 className="font-display text-2xl font-semibold text-black mb-0.5">
+                    {STEP_COPY.name.heading}
+                  </h2>
+                  <p className="text-[14px] text-ink-soft">{STEP_COPY.name.lead}</p>
+                </div>
               </div>
               <input
                 autoComplete="name"
@@ -444,9 +551,14 @@ export default function OnboardingPage() {
           )}
           {step === 'course' && (
             <div className="flex-1 space-y-6">
-              <div>
-                <h2 className="font-display text-2xl font-semibold text-black mb-2">Course you intend to study</h2>
-                <p className="text-[14px] text-ink-soft">Optional. Helps us match your Post-UTME target school later.</p>
+              <div className="flex items-center justify-start gap-3 mb-2">
+                <Mascot expression={STEP_COPY.course.mascot} size="sm" className="shrink-0 animate-pop-in" />
+                <div>
+                  <h2 className="font-display text-2xl font-semibold text-black mb-0.5">
+                    {STEP_COPY.course.heading}
+                  </h2>
+                  <p className="text-[14px] text-ink-soft">{STEP_COPY.course.lead}</p>
+                </div>
               </div>
               <input
                 autoComplete="off"
@@ -460,9 +572,14 @@ export default function OnboardingPage() {
 
           {step === 'heard-about' && (
             <div className="flex-1 space-y-6">
-              <div>
-                <h2 className="font-display text-2xl font-semibold text-black mb-2">How did you hear about us?</h2>
-                <p className="text-[14px] text-ink-soft">Helps us reach more students like you.</p>
+              <div className="flex items-center justify-start gap-3 mb-2">
+                <Mascot expression={STEP_COPY['heard-about'].mascot} size="sm" className="shrink-0 animate-pop-in" />
+                <div>
+                  <h2 className="font-display text-2xl font-semibold text-black mb-0.5">
+                    {STEP_COPY['heard-about'].heading}
+                  </h2>
+                  <p className="text-[14px] text-ink-soft">{STEP_COPY['heard-about'].lead}</p>
+                </div>
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {HEARD_ABOUT.map((o) => (
@@ -487,9 +604,14 @@ export default function OnboardingPage() {
 
           {step === 'study-time' && (
             <div className="flex-1 space-y-6">
-              <div>
-                <h2 className="font-display text-2xl font-semibold text-black mb-2">Preferred study time</h2>
-                <p className="text-[14px] text-ink-soft">We&apos;ll use this to surface &ldquo;Today&rsquo;s review&rdquo; at a good time for you.</p>
+              <div className="flex items-center justify-start gap-3 mb-2">
+                <Mascot expression={STEP_COPY['study-time'].mascot} size="sm" className="shrink-0 animate-pop-in" />
+                <div>
+                  <h2 className="font-display text-2xl font-semibold text-black mb-0.5">
+                    {STEP_COPY['study-time'].heading}
+                  </h2>
+                  <p className="text-[14px] text-ink-soft">{STEP_COPY['study-time'].lead}</p>
+                </div>
               </div>
               <div className="grid grid-cols-2 gap-3">
                 {STUDY_TIME.map((t) => (
@@ -514,9 +636,14 @@ export default function OnboardingPage() {
 
           {step === 'target-score' && (
             <div className="flex-1 space-y-6">
-              <div>
-                <h2 className="font-display text-2xl font-semibold text-black mb-2">Target score</h2>
-                <p className="text-[14px] text-ink-soft">Sets your personal goal on the progress map.</p>
+              <div className="flex items-center justify-start gap-3 mb-2">
+                <Mascot expression={STEP_COPY['target-score'].mascot} size="sm" className="shrink-0 animate-pop-in" />
+                <div>
+                  <h2 className="font-display text-2xl font-semibold text-black mb-0.5">
+                    {STEP_COPY['target-score'].heading}
+                  </h2>
+                  <p className="text-[14px] text-ink-soft">{STEP_COPY['target-score'].lead}</p>
+                </div>
               </div>
               <div className="space-y-3">
                 <label className="text-sm font-semibold text-black">
@@ -536,9 +663,14 @@ export default function OnboardingPage() {
 
           {step === 'accessibility' && (
             <div className="flex-1 space-y-6">
-              <div>
-                <h2 className="font-display text-2xl font-semibold text-black mb-2">Accessibility needs</h2>
-                <p className="text-[14px] text-ink-soft">Toggle any preferences you&apos;d like. These apply immediately and can be changed later.</p>
+              <div className="flex items-center justify-start gap-3 mb-2">
+                <Mascot expression={STEP_COPY.accessibility.mascot} size="sm" className="shrink-0 animate-pop-in" />
+                <div>
+                  <h2 className="font-display text-2xl font-semibold text-black mb-0.5">
+                    {STEP_COPY.accessibility.heading}
+                  </h2>
+                  <p className="text-[14px] text-ink-soft">{STEP_COPY.accessibility.lead}</p>
+                </div>
               </div>
               <div className="space-y-3">
                 <label

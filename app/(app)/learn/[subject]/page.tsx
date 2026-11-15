@@ -52,7 +52,7 @@ export default async function SubjectLessonsPage({ params }: { params: Promise<{
           {meta?.label ?? subject}
         </h1>
         <p className="mt-1.5 text-[15px] font-semibold text-ink-soft">
-          {note ? 'Your next step' : 'Your curriculum'}
+          {note ? 'You start with this lesson' : 'This is your full curriculum'}
         </p>
       </div>
 
@@ -188,7 +188,7 @@ export default async function SubjectLessonsPage({ params }: { params: Promise<{
           <CheckCircle2 className="mx-auto h-16 w-16 text-emerald-600" />
           <h2 className="mt-4 font-display text-2xl font-medium text-black">All caught up</h2>
           <p className="mx-auto mt-2 max-w-sm text-sm font-semibold text-ink-soft">
-            You&apos;ve completed every lesson in this subject. Time to practise or review!
+            You have completed every lesson in this subject, so it is time to practise or review
           </p>
           <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
             <Link

@@ -13,7 +13,7 @@ export default function AppError({ error, reset }: { error: Error & { digest?: s
       <div role="alert">
         <h2 className="font-display text-2xl font-medium text-black">That did not load</h2>
         <p className="mt-2 max-w-sm text-sm font-semibold leading-relaxed text-ink-soft">
-          Something interrupted this page. Your answers so far are saved.
+          Something interrupted this page, but your answers so far are saved
         </p>
       </div>
       <div className="mt-7 flex flex-col gap-3 sm:flex-row">

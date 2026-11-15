@@ -89,7 +89,7 @@ export default async function SquadPage({ searchParams }: { searchParams: Search
             Study squad
           </h1>
           <p className="mt-1.5 text-[15px] font-semibold text-ink-soft">
-            You&rsquo;re in a small group with other people doing the same exam and everyone goes at their own speed
+            You&rsquo;re in a small group with other people doing the same exam and you each go at your own speed
           </p>
         </div>
 
@@ -98,7 +98,7 @@ export default async function SquadPage({ searchParams }: { searchParams: Search
             <Users className="h-8 w-8" />
           </span>
           <h2 className="mt-5 font-display text-2xl font-medium leading-tight text-black">
-            Everyone in your squad is studying for the same exam and nobody ranks you against anyone else
+            The other people in your squad are studying for the same exam and nobody ranks you against anyone else
           </h2>
           <p className="mt-2 text-[15px] font-semibold leading-relaxed text-ink-soft">
             You&rsquo;re with other people doing <strong>{status.pathLabel}</strong> and you study whenever you want so you&rsquo;re not on your own
@@ -123,7 +123,7 @@ export default async function SquadPage({ searchParams }: { searchParams: Search
           <div className="mt-6 space-y-2 border-t border-blue-100/60 pt-5 text-sm font-semibold text-ink-soft">
             <p className="flex items-start gap-2">
               <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
-              Your squad is built around one exam, so everyone here is working toward the same test
+              Your squad is built around one exam, so you and the other people here are working toward the same test
             </p>
             <p className="flex items-start gap-2">
               <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />

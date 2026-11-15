@@ -10,7 +10,8 @@ export default async function SettingsPage() {
 
   let notificationsEnabled = true
   let planLabel = 'Free'
-  let planHint = 'Free practice and one mock per exam. Pro opens everything.'
+  let planHint = 'Free practice and one mock per exam, and Pro opens everything'
+  let planCtaLabel = 'See Pro'
   if (user) {
     const [{ data }, pro] = await Promise.all([
       supabase
@@ -28,12 +29,26 @@ export default async function SettingsPage() {
         : null
       planHint =
         pro.source === 'campaign'
-          ? 'Your free promo is active. Thank you.'
+          ? 'Your free promo is active'
           : pro.source === 'referral_trial'
-            ? `Trial ends ${expiry ?? 'soon'}. Pay to keep going.`
-            : expiry
-              ? `Active until ${expiry}. Pay again to renew.`
-              : 'Pro is active. Thank you.'
+            ? `Your trial ends ${expiry ?? 'soon'}, so pay to keep going`
+            : pro.hasJambPro && !pro.hasPutmePro
+              ? expiry
+                ? `JAMB Pro is active until ${expiry}, and PUTME Pro is a separate plan`
+                : 'JAMB Pro is active, and PUTME Pro is a separate plan'
+              : pro.hasPutmePro && !pro.hasJambPro
+                ? expiry
+                  ? `PUTME Pro is active until ${expiry}, and JAMB Pro is a separate plan`
+                  : 'PUTME Pro is active, and JAMB Pro is a separate plan'
+                : expiry
+                  ? `Pro is active until ${expiry}, and you can pay again to renew`
+                  : 'Pro is active'
+      planCtaLabel =
+        pro.hasJambPro && !pro.hasPutmePro
+          ? 'Add PUTME Pro'
+          : pro.hasPutmePro && !pro.hasJambPro
+            ? 'Add JAMB Pro'
+            : 'See all plans'
     }
   }
 
@@ -42,6 +57,7 @@ export default async function SettingsPage() {
       initialNotificationsEnabled={notificationsEnabled}
       planLabel={planLabel}
       planHint={planHint}
+      planCtaLabel={planCtaLabel}
     />
   )
 }

@@ -19,7 +19,7 @@ function SessionInner({ sessionId }: { sessionId: string }) {
       .then((data) => {
         if (!live) return
         if (data.mode !== 'practice') {
-          setError('This session is not a practice session.')
+          setError('This session is not a practice session')
           return
         }
         setQuestions(data.questions)
@@ -49,7 +49,7 @@ function SessionInner({ sessionId }: { sessionId: string }) {
   if (questions.length === 0) {
     return (
       <div className="mx-auto max-w-2xl">
-        <ErrorState message="This session has no questions." backHref="/practice" backLabel="Back to Practice" />
+        <ErrorState message="This session has no questions" backHref="/practice" backLabel="Back to Practice" />
       </div>
     )
   }

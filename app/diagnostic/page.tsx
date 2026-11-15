@@ -41,7 +41,7 @@ export default function DiagnosticPage() {
       setQuestions(qs)
       setPhase('questions')
     } catch (err: unknown) {
-      setError(err instanceof Error ? err.message : 'Could not load the placement check.')
+      setError(err instanceof Error ? err.message : 'Could not load the placement check')
     } finally {
       setLoading(false)
     }
@@ -56,7 +56,7 @@ export default function DiagnosticPage() {
       setSummary(result.summary)
       setPhase('summary')
     } catch (err: unknown) {
-      setError(err instanceof Error ? err.message : 'Could not submit your answers. Please try again.')
+      setError(err instanceof Error ? err.message : 'Could not submit your answers, so please try again')
     } finally {
       setLoading(false)
     }
@@ -86,8 +86,8 @@ export default function DiagnosticPage() {
               Placement check
             </h1>
             <p className="mx-auto mt-3 max-w-sm text-[15px] font-semibold leading-relaxed text-ink-soft mb-8">
-              Five quick questions in English and Mathematics. Wrong answers just show us where to start —
-              no pressure, no teaching, no scores shared with anyone.
+              You answer five quick questions in English and Mathematics, and wrong answers just show us
+              where to start, with no pressure, no teaching, and no scores shared with anyone
             </p>
             <div className="flex flex-col gap-3 items-center">
               <button
@@ -95,14 +95,14 @@ export default function DiagnosticPage() {
                 disabled={loading}
                 className="w-full sm:w-auto rounded-2xl bg-blue-600 px-8 py-4 text-[16px] font-extrabold text-white hover:bg-blue-700 min-h-[56px] cursor-pointer disabled:opacity-50 transition-all"
               >
-                {loading ? 'Loading...' : 'Start placement check'}
+                {loading ? 'Loading the questions' : 'Start placement check'}
                 <ArrowRight className="h-5 w-5" />
               </button>
               <Link
                 href="/home"
                 className="mt-3 w-full sm:w-auto rounded-2xl border border-gray-200 bg-white px-8 py-3 text-[15px] font-extrabold text-ink-soft hover:bg-gray-50 min-h-[52px] cursor-pointer transition-all"
               >
-                Skip — go to home
+                Skip this and go to home
               </Link>
             </div>
             {error && <p className="mt-4 text-sm font-bold text-red-600">{error}</p>}
@@ -120,9 +120,9 @@ export default function DiagnosticPage() {
             <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100 mb-4">
               <Check className="h-8 w-8 text-emerald-600" strokeWidth={3} />
             </span>
-            <h1 className="font-display text-3xl font-medium text-black mb-3">Placement complete.</h1>
+            <h1 className="font-display text-3xl font-medium text-black mb-3">Placement complete</h1>
             <p className="mx-auto mt-3 max-w-sm text-[15px] font-semibold leading-relaxed text-ink-soft mb-6">
-              Your results are recorded — they help us seed your review queue and target practice.
+              Your results are saved, and they help us seed your review queue and target practice
             </p>
             <div className="mx-auto mt-4 max-w-sm space-y-2 text-left">
               {summary?.map((s) => (

@@ -91,7 +91,7 @@ export default async function PracticePage() {
           Practice
         </h1>
         <p className="mt-1.5 text-[15px] font-semibold text-ink-soft">
-          {pathLabel ? `${pathLabel} · ` : ''}Targeted questions. Every wrong answer teaches.
+          {pathLabel ? `${pathLabel} · ` : ''}You answer targeted questions and every wrong answer teaches you something
         </p>
       </div>
 
@@ -100,8 +100,8 @@ export default async function PracticePage() {
           <h2 className="font-display text-2xl font-medium text-black">No practice material yet</h2>
           <p className="mx-auto mt-2 max-w-sm text-sm font-semibold text-ink-soft">
             {pathLabel
-              ? `Nothing for ${pathLabel} is checked yet. Lessons are ready to read meanwhile.`
-              : 'Question banks are still being checked. Lessons are ready to read meanwhile.'}
+              ? `We are still checking the questions for ${pathLabel}, and lessons are ready to read meanwhile`
+              : 'We are still checking the question banks, and lessons are ready to read meanwhile'}
           </p>
           <Link
             href="/learn"

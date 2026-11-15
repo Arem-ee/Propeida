@@ -39,7 +39,7 @@ export default async function LessonPage({
         </Link>
         <UpgradeCard
           title={note.topic}
-          body={lesson.teaserTakeaway ?? 'This lesson is part of Pro.'}
+          body={lesson.teaserTakeaway ?? 'You get this lesson with Pro'}
           bullets={PRO_BULLETS}
         />
       </div>
@@ -94,7 +94,7 @@ export default async function LessonPage({
         <div className="rounded-3xl border-2 border-dashed border-blue-200 bg-white/70 p-8 text-center">
           <h1 className="font-display text-2xl font-medium text-black">{note.topic}</h1>
           <p className="mx-auto mt-2 max-w-sm text-sm font-semibold text-ink-soft">
-            Bank questions for this subject are still being checked — the interactive lesson opens with them.
+            We are still checking bank questions for this subject, and the interactive lesson opens with them
           </p>
         </div>
       )}

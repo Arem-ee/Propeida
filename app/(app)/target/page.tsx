@@ -18,7 +18,7 @@ export default async function TargetPage() {
           My target
         </h1>
         <p className="mt-1.5 text-[15px] font-semibold text-ink-soft">
-          One school in sight. Screening facts, then your number.
+          You keep one school in sight, then you check its screening facts and your estimate
         </p>
       </div>
       <TargetClient initial={initial} />

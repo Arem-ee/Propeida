@@ -16,7 +16,7 @@ export default function OfflinePage() {
         </div>
         <h1 className="text-2xl font-extrabold text-gray-900">You are offline</h1>
         <p className="mt-2 text-sm text-gray-500 leading-relaxed">
-          Connect to the internet and try again. Your progress is saved and will sync when you are back online.
+          Connect to the internet and try again, and your progress will sync when you are back online
         </p>
       </div>
     </div>

@@ -70,8 +70,8 @@ export default function SetUsernamePage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (usernameStatus === 'taken') { setError(`Username "${username}" is already taken. Try "${suggestion}" instead.`); return }
-    if (username.length < 2) { setError('Username must be at least 2 characters.'); return }
+    if (usernameStatus === 'taken') { setError(`Username "${username}" is already taken, so try "${suggestion}" instead`); return }
+    if (username.length < 2) { setError('Username must be at least 2 characters'); return }
     setSaving(true)
     setError(null)
 
@@ -109,7 +109,7 @@ export default function SetUsernamePage() {
 
       <div className="w-full max-w-sm rounded-xl border border-gray-100 bg-white p-6 shadow-xs animate-fade-up">
         <h1 className="text-xl font-extrabold text-gray-900">Choose your username</h1>
-        <p className="mt-1 text-sm text-gray-500">One last step before you can start practicing.</p>
+        <p className="mt-1 text-sm text-gray-500">One last step before you can start practising</p>
 
         <form onSubmit={handleSubmit} className="mt-6 space-y-4">
           {error && <div className="rounded-xl bg-red-50 px-4 py-3 text-xs font-semibold text-red-700 animate-fade-up">{error}</div>}
@@ -137,11 +137,11 @@ export default function SetUsernamePage() {
               </span>
             </div>
             <p className="mt-1.5 text-xs text-gray-500 leading-relaxed">
-              This will be shown on your profile — use your real name or a nickname, whichever you&apos;re comfortable with.
+              This is shown on your profile, so use your real name or a nickname, whichever you&apos;re comfortable with
             </p>
             {usernameStatus === 'taken' && suggestion && (
               <p className="mt-1 text-xs text-red-600">
-                Taken. Try <button type="button" onClick={() => { setUsername(suggestion); checkUsername(suggestion) }} className="font-bold text-blue-600 hover:text-blue-700 underline cursor-pointer">{suggestion}</button> instead.
+                That name is already taken, so try <button type="button" onClick={() => { setUsername(suggestion); checkUsername(suggestion) }} className="font-bold text-blue-600 hover:text-blue-700 underline cursor-pointer">{suggestion}</button> instead
               </p>
             )}
           </div>
@@ -151,13 +151,13 @@ export default function SetUsernamePage() {
             disabled={saving || usernameStatus === 'checking' || usernameStatus === 'taken'}
             className="w-full rounded-xl bg-blue-600 py-3 text-sm font-bold text-white hover:bg-blue-700 active:bg-blue-800 disabled:bg-blue-400 min-h-[44px] cursor-pointer pressable"
           >
-            {saving ? 'Saving...' : 'Continue'}
+            {saving ? 'Saving your username' : 'Continue'}
           </button>
           <Link
             href="/home"
             className="block w-full text-center text-xs font-semibold text-gray-500 hover:text-gray-700 mt-4"
           >
-            Skip for now — practice first, choose a username later
+            Skip this for now and choose a username later
           </Link>
         </form>
       </div>

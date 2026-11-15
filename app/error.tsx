@@ -13,7 +13,7 @@ export default function Error({ error, reset }: { error: Error & { digest?: stri
       <div role="alert">
         <h1 className="font-display text-2xl font-medium text-black">Something went wrong</h1>
         <p className="mt-2 max-w-sm text-sm font-semibold leading-relaxed text-ink-soft">
-          We could not load this page. Your saved progress is safe.
+          We could not load this page, but your saved progress is safe
         </p>
       </div>
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">

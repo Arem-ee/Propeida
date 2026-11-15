@@ -27,15 +27,15 @@ export default async function RecallPage() {
           Quick recall
         </h1>
         <p className="mt-1.5 text-[15px] font-semibold text-ink-soft">
-          One fact at a time. Say it in your head, then flip.
+          You see one fact at a time, and you say it in your head before you flip the card
         </p>
       </div>
 
       {!pro.isPro ? (
         <UpgradeCard
           title="Quick recall is Pro"
-          body="It keeps one-fact knowledge in your head until exam day."
-          bullets={['A short round every time you learn.', 'Due cards come back on their own.']}
+          body="It keeps one-fact knowledge in your head until exam day"
+          bullets={['You get a short round every time you learn', 'Due cards come back on their own']}
         />
       ) : (
         <RecallBody />
@@ -49,9 +49,9 @@ async function RecallBody() {
   if (cards.length === 0) {
     return (
       <div className="rounded-3xl border-2 border-emerald-200 bg-emerald-50/60 p-8 text-center animate-pop-in">
-        <h2 className="font-display text-2xl font-medium text-black">Nothing due for recall.</h2>
+        <h2 className="font-display text-2xl font-medium text-black">Nothing is due for recall right now</h2>
         <p className="mx-auto mt-2 max-w-sm text-sm font-semibold text-ink-soft">
-          Learn a lesson or finish some practice. Your recall round comes back here.
+          Learn a lesson or finish some practice, and your recall round comes back here
         </p>
         <Link
           href="/learn"

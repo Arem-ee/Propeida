@@ -19,7 +19,7 @@ export default async function MockSessionPage({ params }: { params: Promise<{ se
   if (session.mode !== 'mock' || !session.timeLimitSeconds) {
     return (
       <div className="mx-auto max-w-2xl">
-        <ErrorState message="This session is not a mock exam." backHref="/mocks" backLabel="Back to Mocks" />
+        <ErrorState message="This session is not a mock exam" backHref="/mocks" backLabel="Back to Mocks" />
       </div>
     )
   }

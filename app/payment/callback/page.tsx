@@ -71,9 +71,9 @@ function CallbackContent() {
       {status === 'verifying' && (
         <div>
           <Loader2 className="mx-auto h-10 w-10 text-blue-600 animate-spin mb-4" />
-          <h1 className="text-lg font-extrabold text-gray-900">Verifying payment...</h1>
+          <h1 className="text-lg font-extrabold text-gray-900">Checking your payment</h1>
           <p className="mt-2 text-sm text-gray-500">
-            Confirming your transaction with Paystack. This should only take a moment.
+            We are checking the payment with Paystack and this should only take a moment
           </p>
         </div>
       )}
@@ -83,15 +83,15 @@ function CallbackContent() {
           <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-green-50 text-green-600 border border-green-100 mb-4">
             <Check className="h-6 w-6" />
           </div>
-          <h1 className="text-lg font-extrabold text-gray-900">Payment successful!</h1>
+          <h1 className="text-lg font-extrabold text-gray-900">Your payment went through</h1>
           <p className="mt-2 text-sm text-gray-500">
-            Your Pro account is now active. You have unlimited access to all features.
+            Your Pro account is active and you can use every feature now
           </p>
           <Link
             href="/home"
             className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 py-3 text-sm font-bold text-white hover:bg-blue-700 min-h-[44px] pressable"
           >
-            Go to dashboard
+            Go home
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
@@ -100,12 +100,12 @@ function CallbackContent() {
       {status === 'processing' && (
         <div>
           <Loader2 className="mx-auto h-10 w-10 text-amber-500 mb-4" />
-          <h1 className="text-lg font-extrabold text-gray-900">Still confirming your payment</h1>
+          <h1 className="text-lg font-extrabold text-gray-900">We are still checking your payment</h1>
           <p className="mt-2 text-sm text-gray-500 leading-relaxed">
-            We are still waiting for Paystack to confirm. Your payment went through. Pro turns on when the reply arrives. Please do not pay again.
+            Your payment went through and Pro turns on as soon as Paystack confirms it, so please do not pay again
           </p>
           <p className="mt-3 text-xs text-gray-500 leading-relaxed">
-            The dashboard turns Pro on its own when the reply arrives.
+            The dashboard turns Pro on by itself when the confirmation arrives
           </p>
           <div className="mt-6 flex flex-col gap-3">
             <button
@@ -119,7 +119,7 @@ function CallbackContent() {
               href="/home"
               className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-gray-200 bg-white py-3 text-sm font-bold text-gray-700 hover:bg-gray-50 min-h-[44px] pressable"
             >
-              Go to dashboard
+              Go home
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
@@ -133,7 +133,7 @@ function CallbackContent() {
           </div>
           <h1 className="text-lg font-extrabold text-gray-900">Payment was not completed</h1>
           <p className="mt-2 text-sm text-gray-500">
-            {error ?? 'Your payment could not be completed. No charge has been made.'}
+            {error ?? 'Your payment did not go through and no charge was made'}
           </p>
           <div className="mt-6 flex flex-col gap-3">
             <Link
@@ -166,7 +166,7 @@ export default function PaymentCallbackPage() {
       <Suspense fallback={
         <div className="w-full max-w-sm rounded-xl border border-gray-100 bg-white p-6 text-center shadow-xs animate-fade-up">
           <Loader2 className="mx-auto h-10 w-10 text-blue-600 animate-spin mb-4" />
-          <p className="text-sm text-gray-500">Loading...</p>
+          <p className="text-sm text-gray-500">Loading your payment</p>
         </div>
       }>
         <CallbackContent />
