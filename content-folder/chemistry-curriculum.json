@@ -7026,13 +7026,13 @@
      "content": {
       "heading": "General formulae and naming",
       "paragraphs": [
-       "Each family of organic compounds has a general formula: alkanes are C{{sub:nH}}{{sub:2}}{{sub:n}}_+_2, alkenes C{{sub:nH}}{{sub:2}}{{sub:n}}, alkynes C{{sub:nH}}{{sub:2}}{{sub:n}}_-_2, alkanols C{{sub:nH}}{{sub:2}}{{sub:n}}_+_1OH. The n tells how many carbons; the formula then gives the hydrogens. Methane is CH{{sub:4}}, ethane C{{sub:2H}}{{sub:6}}.",
+       "Each family of organic compounds has a general formula: alkanes are C{{sub:n}}H{{sub:2n+2}}, alkenes C{{sub:nH}}{{sub:2}}{{sub:n}}, alkynes C{{sub:n}}H{{sub:2n-2}}, alkanols C{{sub:n}}H{{sub:2n+1}}OH. The n tells how many carbons; the formula then gives the hydrogens. Methane is CH{{sub:4}}, ethane C{{sub:2H}}{{sub:6}}.",
        "The name reads the chain length and the group: ‘eth’ means two carbons, ‘an’ means single bonds, ‘ene’ a double bond, ‘yne’ a triple bond, ‘ol’ an OH group, ‘oic acid’ a COOH group. Butane is four carbons, single bonds; ethene is two carbons with a double bond.",
        "IUPAC (the international naming rules) encodes structure: given the name, the skeleton can be drawn; given the skeleton, the name can be built. The skill is translation in both directions.",
        "Isomer counting follows chain length: pentane (C{{sub:5H}}{{sub:1}}{{sub:2}}) has 3 structural isomers and hexane (C{{sub:6H}}{{sub:1}}{{sub:4}}) has 5, each drawn by rearranging the skeleton."
       ],
       "bullets": [
-       "Alkanes C{{sub:nH}}{{sub:2}}{{sub:n}}_+_2; alkenes C{{sub:nH}}{{sub:2}}{{sub:n}}; alkynes C{{sub:nH}}{{sub:2}}{{sub:n}}_-_2.",
+       "Alkanes C{{sub:n}}H{{sub:2n+2}}; alkenes C{{sub:nH}}{{sub:2}}{{sub:n}}; alkynes C{{sub:n}}H{{sub:2n-2}}.",
        "Name = chain length + bond type + functional group.",
        "IUPAC names encode the skeleton both ways.",
        "Isomers: C{{sub:5H}}{{sub:1}}{{sub:2}} 3 (n, iso, neo); C{{sub:6H}}{{sub:1}}{{sub:4}} 5."
@@ -7041,9 +7041,9 @@
       "check": {
        "question": "The general formula of the alkenes is",
        "options": [
-        "C{{sub:nH}}{{sub:2}}{{sub:n}}_+_2",
+        "C{{sub:n}}H{{sub:2n+2}}",
         "C{{sub:nH}}{{sub:2}}{{sub:n}}",
-        "C{{sub:nH}}{{sub:2}}{{sub:n}}_-_2",
+        "C{{sub:n}}H{{sub:2n-2}}",
         "C{{sub:nH}}{{sub:n}}"
        ],
        "answer": 1,
@@ -7162,7 +7162,7 @@
       "heading": "Go deeper: Homologous series and general formulae",
       "paragraphs": [
        "A homologous series is a family differing by CH{{sub:2}} units with the same functional group: methanol, ethanol, propanol. The fixed difference means properties change gradually down the series (boiling points rise, solubility falls) in a regular pattern.",
-       "The general formula C{{sub:nH}}{{sub:2}}{{sub:n}}_+_2 for alkanes is that pattern in algebra: each extra carbon adds CH{{sub:2}}. Deriving a formula is therefore counting the difference, not memorising each member.",
+       "The general formula C{{sub:n}}H{{sub:2n+2}} for alkanes is that pattern in algebra: each extra carbon adds CH{{sub:2}}. Deriving a formula is therefore counting the difference, not memorising each member.",
        "Gradual property change within a series is why the series concept matters: it predicts unseen members. Know the pattern and you can state the properties of a compound never taught.",
        "The exam loves that prediction: given the properties of two members, the third follows the trend. The series is a prophecy machine.",
        "The regular property change is why the series concept matters beyond naming: it predicts the properties of unseen members, which is exactly what examination items test.",
@@ -7219,13 +7219,13 @@
      "content": {
       "heading": "Alkanes: the saturated family",
       "paragraphs": [
-       "Alkanes are hydrocarbons with only single bonds: general formula C{{sub:nH}}{{sub:2}}{{sub:n}}_+_2 (methane, ethane, propane, butane...). They are saturated, meaning every carbon holds the maximum hydrogens, and they are the petroleum family.",
+       "Alkanes are hydrocarbons with only single bonds: general formula C{{sub:n}}H{{sub:2n+2}} (methane, ethane, propane, butane...). They are saturated, meaning every carbon holds the maximum hydrogens, and they are the petroleum family.",
        "Physical properties change gradually down the series: melting and boiling points rise with chain length, and density increases. Methane is a gas at room temperature; hexane is a liquid; waxes are solids. The pattern is the homologous series at work.",
        "Alkanes react mainly by substitution: in ultraviolet light a hydrogen is replaced by a halogen. CH{{sub:4}} + Cl{{sub:2}} → CH{{sub:3Cl}} + HCl, then CH{{sub:3Cl}} + Cl{{sub:2}} → CH{{sub:2Cl}}{{sub:2}} + HCl. The reaction needs light, and products are mixtures.",
        "Halogenated products were widely used: chloroform served as an anaesthetic, carbon tetrachloride as a solvent and in fire extinguishers, and DDT as an insecticide. DDT's persistence later led to its restriction."
       ],
       "bullets": [
-       "Alkanes: C{{sub:nH}}{{sub:2}}{{sub:n}}_+_2, single bonds only, saturated.",
+       "Alkanes: C{{sub:n}}H{{sub:2n+2}}, single bonds only, saturated.",
        "Boiling point rises with chain length.",
        "Substitution: UV light replaces H with halogen.",
        "Uses: chloroform anaesthetic, CCl{{sub:4}} solvent/fire extinguishing, DDT insecticide."
@@ -7427,7 +7427,7 @@
      "content": {
       "heading": "Go deeper: Exam traps in alkanes and petroleum",
       "paragraphs": [
-       "The classic trap is the general formula. Alkanes are C{{sub:nH}}{{sub:2}}{{sub:n}}_+_2, the saturated family. Alkenes (C{{sub:nH}}{{sub:2}}{{sub:n}}) and alkynes (C{{sub:nH}}{{sub:2}}{{sub:n}}_-_2) differ by two hydrogens per bond. Count the bonds and you have the formula, not the other way round.",
+       "The classic trap is the general formula. Alkanes are C{{sub:n}}H{{sub:2n+2}}, the saturated family. Alkenes (C{{sub:nH}}{{sub:2}}{{sub:n}}) and alkynes (C{{sub:n}}H{{sub:2n-2}}) differ by two hydrogens per bond. Count the bonds and you have the formula, not the other way round.",
        "The second trap is isomer counting. Structural isomers rearrange the skeleton; geometric isomers (cis/trans) rearrange around a double bond. The two types belong to different families and are never interchangeable.",
        "The third trap is the fractionating tower order. Petrol comes off near the top, bitumen at the bottom. Reversing them reverses every fraction's boiling point.",
        "The fourth trap is cracking's purpose. Cracking shortens chains to meet demand for petrol; it does not purify crude oil. Purification is distillation's job.",
@@ -7498,7 +7498,7 @@
         {
          "feature": "General formula",
          "left": "C{{sub:nH}}{{sub:2}}{{sub:n}}, one double bond",
-         "right": "C{{sub:nH}}{{sub:2}}{{sub:n}}_+_2, single bonds only"
+         "right": "C{{sub:n}}H{{sub:2n+2}}, single bonds only"
         },
         {
          "feature": "Bromine water test",
@@ -7547,13 +7547,13 @@
      "content": {
       "heading": "Alkynes and ethyne",
       "paragraphs": [
-       "Alkynes have one carbon–carbon triple bond: general formula C{{sub:nH}}{{sub:2}}{{sub:n}}_-_2 (ethyne C{{sub:2H}}{{sub:2}}, propyne C{{sub:3H}}{{sub:4}}). The triple bond adds twice, so ethyne takes on two molecules of hydrogen and then two of bromine.",
+       "Alkynes have one carbon–carbon triple bond: general formula C{{sub:n}}H{{sub:2n-2}} (ethyne C{{sub:2H}}{{sub:2}}, propyne C{{sub:3H}}{{sub:4}}). The triple bond adds twice, so ethyne takes on two molecules of hydrogen and then two of bromine.",
        "Ethyne is produced from calcium carbide and water: CaC{{sub:2}} + 2H{{sub:2O}} → C{{sub:2H}}{{sub:2}} + Ca(OH){{sub:2}}. It burns with a very hot flame (oxy-ethyne welding) because its combustion releases great energy.",
        "Terminal alkynes (with H on the triple bond, like ethyne) give a red precipitate with ammoniacal silver nitrate, the specific test. Non-terminal alkynes do not.",
        "Ethyne is also the feedstock for solvents and plastics, and its acetylene flame slices through steel, which is why workshops keep carbide and water instead of a hot gas cylinder."
       ],
       "bullets": [
-       "Alkynes: C{{sub:nH}}{{sub:2}}{{sub:n}}_-_2 with one C≡C triple bond.",
+       "Alkynes: C{{sub:n}}H{{sub:2n-2}} with one C≡C triple bond.",
        "Ethyne: CaC{{sub:2}} + water; welding flame.",
        "Terminal alkyne test: red precipitate with ammoniacal AgNO{{sub:3}}."
       ],
@@ -8050,7 +8050,7 @@
        },
        {
         "operation": "General rule",
-        "reason": "All alcohols fit C{{sub:nH}}{{sub:2}}{{sub:n}}_+_2O + 3n/2 O{{sub:2}} → nCO{{sub:2}} + (n+1)H{{sub:2O}}.",
+        "reason": "All alcohols fit C{{sub:n}}H{{sub:2n+2}}O + 3n/2 O{{sub:2}} → nCO{{sub:2}} + (n+1)H{{sub:2O}}.",
         "result": "3 O{{sub:2}} per ethanol is the C{{sub:2}} member of that pattern",
         "predictPrompt": "How many O{{sub:2}} per mole for other alcohols?"
        },

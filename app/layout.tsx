@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Fredoka, Nunito } from 'next/font/google'
 import './globals.css'
+import 'katex/dist/katex.min.css'
 import PwaInit from '@/components/pwa-init'
 import GoogleAnalytics from '@/components/analytics/google-analytics'
 
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     template: '%s | Propeida',
   },
   description:
-    'Prepare smarter for JAMB and Post-UTME with realistic CBT practice, clear explanations, and progress tracking. Start free, then upgrade when you need more.',
+    'Prepare smarter for JAMB and Post-UTME with realistic CBT practice, clear explanations, and progress tracking, and start free before you upgrade when you need more',
   keywords: [
     'free JAMB past questions',
     'Post UTME practice',
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Propeida | Free JAMB & Post-UTME Practice with CBT Mock Exams',
     description:
-      'Real CBT mock exams, human-checked questions, and progress tracking for Nigerian students. Start free and upgrade for more practice.',
+      'Real CBT mock exams, human-checked questions, and progress tracking for your JAMB and Post-UTME preparation, with a free start and an upgrade when you want more practice',
     url: siteUrl,
     siteName: 'Propeida',
     type: 'website',
@@ -56,7 +57,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Propeida | Free JAMB & Post-UTME Practice with CBT Mock Exams',
     description:
-      'Real CBT mock exams, human-checked questions, and progress tracking for Nigerian students. Start free and upgrade for more practice.',
+      'Real CBT mock exams, human-checked questions, and progress tracking for your JAMB and Post-UTME preparation, with a free start and an upgrade when you want more practice',
     images: ['/opengraph-image'],
   },
   robots: {
@@ -65,8 +66,8 @@ export const metadata: Metadata = {
   },
   manifest: '/manifest.json',
   icons: {
-    icon: [{ url: '/icon', type: 'image/svg+xml' }],
-    apple: [{ url: '/icon', type: 'image/svg+xml' }],
+    icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
+    apple: [{ url: '/icon.svg', type: 'image/svg+xml' }],
   },
   appleWebApp: { capable: true, title: 'Propeida' },
 }

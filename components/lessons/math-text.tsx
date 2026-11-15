@@ -1,6 +1,7 @@
 'use client'
 
 import type { ReactNode } from 'react'
+import katex from 'katex'
 
 /**
  * MathText: renders inline mathematics the learner reads inside lesson
@@ -9,75 +10,178 @@ import type { ReactNode } from 'react'
  * Authoring tokens (ASCII, safe in JSON, never visible to learners raw):
  *   x{{sub:1}}     subscript            -> x with lowered small 1
  *   x{{sup:2}}     superscript          -> x with raised small 2
- *   {{frac:3|4}}   stacked fraction     -> 3 over 4 with a vinculum
+ *   {{frac:3|4}}   stacked fraction     -> 3 over 4
  *
- * The tokens survive every database round-trip untouched and are parsed
- * in reading order. Nesting is intentionally unsupported: factors belong
- * in sibling tokens, e.g. y{{sup:2}} is fine but {{frac:{{sup:1}}|2}} is
- * not legal; sqrt stays inline as √3 and the fraction carries it: {{frac:√3|2}}.
+ * LaTeX is the rendering engine (KaTeX): tokens carry tiny LaTeX fragments,
+ * and the spaces-and-atoms method decides what inside plain text is math and
+ * what is prose. Prose stays prose: only atoms that carry math meaning are
+ * typeset, everything else is upright reading text.
  */
 const TOKEN = /(\{\{(?:sub|sup|frac):[^{}]*\}\})/g
 
-function parseToken(token: string): { kind: 'sub' | 'sup' | 'frac'; a: string; b?: string } | null {
-  const m = /^\{\{(sub|sup|frac):([^{}]*)\}\}$/.exec(token)
-  if (!m) return null
-  const [, kind, body = ''] = m
-  if (kind === 'frac') {
-    const separator = body.indexOf('|')
-    if (separator === -1) return null
-    return { kind: 'frac', a: body.slice(0, separator).trim(), b: body.slice(separator + 1).trim() }
-  }
-  return { kind: kind as 'sub' | 'sup', a: body.trim() }
+// Raw → LaTeX character mapping. Applied to everything fed into KaTeX,
+// including the bodies of tokens.
+const LATEX_MAP: Array<[RegExp, string]> = [
+  [/√\(([^()]*)\)/g, '\\sqrt{$1}'],
+  [/√([0-9a-zA-Zπ]+)/g, '\\sqrt{$1}'],
+  [/∛\(([^()]*)\)/g, '\\sqrt[3]{$1}'],
+  [/∛([0-9a-zA-Z]+)/g, '\\sqrt[3]{$1}'],
+  [/×/g, ' \\times '],
+  [/·/g, ' \\cdot '],
+  [/÷/g, ' \\div '],
+  [/−/g, '-'],
+  [/≤/g, ' \\leq '],
+  [/≥/g, ' \\geq '],
+  [/≠/g, ' \\neq '],
+  [/≈/g, ' \\approx '],
+  [/±/g, ' \\pm '],
+  [/∝/g, ' \\propto '],
+  [/∪/g, ' \\cup '],
+  [/∩/g, ' \\cap '],
+  [/∅/g, ' \\emptyset '],
+  [/Σ/g, ' \\Sigma '],
+  [/∫/g, ' \\int '],
+  [/∂/g, ' \\partial '],
+  [/π/g, ' \\pi '],
+  [/θ/g, ' \\theta '],
+  [/Δ/g, ' \\Delta '],
+  [/δ/g, ' \\delta '],
+  [/σ/g, ' \\sigma '],
+  [/α/g, ' \\alpha '],
+  [/β/g, ' \\beta '],
+  [/γ/g, ' \\gamma '],
+  [/λ/g, ' \\lambda '],
+  [/μ/g, ' \\mu '],
+  [/ε/g, ' \\epsilon '],
+  [/φ/g, ' \\phi '],
+  [/ω/g, ' \\omega '],
+  [/Ω/g, ' \\Omega '],
+  [/ρ/g, ' \\rho '],
+  [/τ/g, ' \\tau '],
+  [/ν/g, ' \\nu '],
+  [/∞/g, ' \\infty '],
+  [/→/g, ' \\rightarrow '],
+  [/°/g, '^\\circ{} '],
+]
+
+const MATH_SYMBOLS = /[√∛πθαΣλμ∫∂∈×·÷≤≥≠≈±∝∞∪∩∅→^_−{%0-9]/
+const GREEK_OR_MATH = /[πθΔδσαβγλεμΣϕφωΩρτν∂∫]/
+const SHORT_VARIABLE = /^[A-Za-z]{1,2}$/
+// Words of 1–2 characters that read as English interjections/articles inside
+// math lines. They stay upright prose even inside a math run.
+const PROSE_SHORT = new Set(['a', 'an', 'so', 'to', 'in', 'on', 'it', 'is', 'as', 'at', 'an', 'if', 'or', 'we', 'me', 'be', 'by', 'no', 'my', 'of', 'and'])
+
+function isMathPiece(piece: string): boolean {
+  const t = piece.trim()
+  if (!t) return false
+  if (t.includes('{{')) return true
+  if (PROSE_SHORT.has(t.toLowerCase())) return false
+  if (MATH_SYMBOLS.test(t)) return true
+  if (GREEK_OR_MATH.test(t)) return true
+  if (SHORT_VARIABLE.test(t)) return true
+  return false
 }
 
-function renderNodes(text: string, keyPrefix: string): ReactNode[] {
-  const parts = String(text ?? '').split(TOKEN)
-  const out: ReactNode[] = []
-  for (let i = 0; i < parts.length; i += 1) {
-    const part = parts[i] ?? ''
-    if (i % 2 === 0) {
-      out.push(<span key={`${keyPrefix}-t${i}`}>{part}</span>)
-      continue
-    }
-    const parsed = parseToken(part)
-    if (!parsed) {
-      out.push(<span key={`${keyPrefix}-x${i}`}>{part}</span>)
-      continue
-    }
-    const inner = (s: string) => renderNodes(s, `${keyPrefix}-${i}`)
-    if (parsed.kind === 'sub') {
-      out.push(
-        <sub key={`${keyPrefix}-s${i}`} className="text-[0.72em] leading-none">
-          {inner(parsed.a)}
-        </sub>,
-      )
-      continue
-    }
-    if (parsed.kind === 'sup') {
-      out.push(
-        <sup key={`${keyPrefix}-p${i}`} className="text-[0.72em] leading-none">
-          {inner(parsed.a)}
-        </sup>,
-      )
-      continue
-    }
-    const num = inner(parsed.a)
-    const den = inner(parsed.b ?? '')
-    out.push(
-      <span
-        key={`${keyPrefix}-f${i}`}
-        role="math"
-        className="inline-flex flex-col items-center align-[-0.32em] px-[0.18em] font-semibold leading-none"
-      >
-        <span className="px-[0.25em] pb-[0.1em] leading-none">{num}</span>
-        <span aria-hidden="true" className="w-full border-t-[1.5px] border-current" />
-        <span className="px-[0.25em] pt-[0.12em] leading-none">{den}</span>
-      </span>,
-    )
-  }
+function convert(src: string): string {
+  let out = String(src)
+  // Tokens were split out before this ran, so any raw braces left are
+  // literal braces the author meant, not LaTeX delimiters.
+  out = out.replace(/\{/g, '\\{').replace(/\}/g, '\\}')
+  for (const [re, to] of LATEX_MAP) out = out.replace(re, to)
+  // Raw % is a comment char in LaTeX; keep it readable in math mode.
+  out = out.replace(/([0-9]+(?:\.[0-9]+)?)%/g, '$1\\\\%')
   return out
 }
 
+/** Token body → LaTeX. Single long English words inside frac args read as words, not variables. */
+function tokenToLatex(token: string): string | null {
+  const m = /^\{\{(sub|sup|frac):([^{}]*)\}\}$/.exec(token)
+  if (!m) return null
+  const [, kind, body = ''] = m
+  const wrapArg = (arg: string) => {
+    const t = arg.trim()
+    return /^[a-z]{4,}$/.test(t) ? `\\text{${t}}` : convert(t)
+  }
+  if (kind === 'frac') {
+    const i = body.indexOf('|')
+    if (i === -1) return null
+    return `\\frac{${wrapArg(body.slice(0, i))}}{${wrapArg(body.slice(i + 1))}}`
+  }
+  const inner = convert(body.trim())
+  return kind === 'sub' ? `_{${inner}}` : `^{${inner}}`
+}
+
+function renderKaTeX(src: string): string | null {
+  try {
+    return katex.renderToString(src, { throwOnError: true, strict: false, output: 'html' })
+  } catch {
+    return null
+  }
+}
+
+function renderToken(token: string, key: number): ReactNode {
+  const latex = tokenToLatex(token)
+  const html = latex ? renderKaTeX(latex) : null
+  if (!html) return <span key={key}>{token}</span>
+  return <span key={key} className="mathx" dangerouslySetInnerHTML={{ __html: html }} />
+}
+
+function splitRuns(text: string): Array<{ math: boolean; src: string }> {
+  const pieces = String(text ?? '').split(/(\s+)/)
+  const runs: { math: boolean; src: string }[] = []
+  let buf = ''
+  let bufMath = false
+  for (const piece of pieces) {
+    if (!piece) continue
+    if (!piece.trim()) {
+      buf += piece
+      continue
+    }
+    const math = isMathPiece(piece)
+    if (buf === '') {
+      buf = piece
+      bufMath = math
+      continue
+    }
+    if (math === bufMath) {
+      buf += piece
+      continue
+    }
+    runs.push({ math: bufMath, src: buf })
+    buf = piece
+    bufMath = math
+  }
+  if (buf) runs.push({ math: bufMath, src: buf })
+  return runs
+}
+
 export function MathText({ text }: { text: string }) {
-  return <>{renderNodes(text, 'm')}</>
+  const parts = String(text ?? '').split(TOKEN)
+  const out: ReactNode[] = []
+  parts.forEach((piece, index) => {
+    if (index % 2 === 1) {
+      out.push(renderToken(piece, index))
+      return
+    }
+    const runs = splitRuns(piece)
+    runs.forEach((run, r) => {
+      if (run.math) {
+        const html = renderKaTeX(convert(run.src))
+        if (html) {
+          out.push(
+            <span
+              key={`${index}-math-${r}`}
+              className="mathx"
+              role="math"
+              aria-label="mathematics"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />,
+          )
+          return
+        }
+      }
+      out.push(<span key={`${index}-text-${r}`}>{run.src}</span>)
+    })
+  })
+  return <>{out}</>
 }
