@@ -1,5 +1,6 @@
 import { createClient } from './supabase/server'
 import { createAdminClient } from './supabase/admin'
+import { parseExplanation } from './lessons'
 
 interface SessionConfig {
   examId: string
@@ -245,6 +246,9 @@ export async function getSessionQuestionsWithStatus(sessionId: string, includeRe
     const q = Array.isArray(sa.question) ? sa.question[0] : sa.question
     if (!q) return []
     const answer = answerByQuestion.get(q.id)
+    const parsed = includeReveal
+      ? parseExplanation(answer?.explanation ?? null)
+      : { explanationText: '', steps: undefined }
     return [{
       answerId: sa.id,
       questionId: q.id,
@@ -254,7 +258,8 @@ export async function getSessionQuestionsWithStatus(sessionId: string, includeRe
       selectedAnswer: sa.selected_answer,
       isCorrect: sa.is_correct,
       correctAnswer: includeReveal ? (answer?.correct_answer ?? null) : undefined,
-      explanation: includeReveal ? (answer?.explanation ?? null) : undefined,
+      explanation: includeReveal ? parsed.explanationText : undefined,
+      steps: includeReveal ? parsed.steps : undefined,
     }]
   })
 

@@ -259,3 +259,45 @@ const EXTRA_ENHANCEMENTS: Record<string, LessonEnhancement> = {
 for (const [key, value] of Object.entries(EXTRA_ENHANCEMENTS)) {
   ENHANCEMENTS[key] = value
 }
+
+export interface ParsedExplanation {
+  explanationText: string
+  steps?: WorkedStep[]
+  format: 'prose' | 'worked-steps-v1'
+}
+
+/**
+ * Decode an answer explanation. Plain strings stay as-is. JSON-wrapped
+ * worked-steps payloads produced by the bank tooling are decoded and the
+ * steps returned so the practice player can render them with <WorkedSteps>.
+ * Falls back to prose when the payload isn't recognised — never throws on a
+ * learner-visible string.
+ */
+export function parseExplanation(input: string | null | undefined): ParsedExplanation {
+  if (!input) return { explanationText: '', format: 'prose' }
+  const trimmed = input.trim()
+  if (!trimmed.startsWith('{')) return { explanationText: input, format: 'prose' }
+  try {
+    const parsed = JSON.parse(trimmed) as { format?: string; steps?: unknown }
+    if (parsed?.format === 'worked-steps-v1' && Array.isArray(parsed.steps)) {
+      const steps = parsed.steps as unknown[]
+      const cleanSteps: WorkedStep[] = []
+      for (const raw of steps) {
+        if (!raw || typeof raw !== 'object') continue
+        const s = raw as Record<string, unknown>
+        const operation = typeof s.operation === 'string' ? s.operation : ''
+        const reason = typeof s.reason === 'string' ? s.reason : ''
+        const result = typeof s.result === 'string' ? s.result : ''
+        const predictPrompt = typeof s.predictPrompt === 'string' ? s.predictPrompt : ''
+        if (operation || result) cleanSteps.push({ operation, reason, result, predictPrompt })
+      }
+      const summary = cleanSteps.length > 0
+        ? cleanSteps.map((s, i) => `Step ${i + 1}: ${s.operation} — ${s.result}`).join('. ')
+        : input
+      return { explanationText: summary, steps: cleanSteps.length > 0 ? cleanSteps : undefined, format: 'worked-steps-v1' }
+    }
+  } catch {
+    // not JSON — fall through to prose
+  }
+  return { explanationText: input, format: 'prose' }
+}

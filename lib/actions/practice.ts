@@ -21,6 +21,13 @@ import { hasExamAccess, getFreeMockAttempts, getProStatus } from '@/lib/entitlem
 import { getExamScope } from '@/lib/exam-scope'
 import { getNotesBySubject, isValidSubject, getNoteById } from '@/lib/notes'
 import { recordSessionEvidence, getNextReviews } from '@/lib/mastery'
+import { parseExplanation } from '@/lib/lessons'
+
+function practiceParseExplanation(explanation: string | null) {
+  if (!explanation) return { explanationText: '', steps: undefined as ReturnType<typeof parseExplanation>['steps'] | undefined }
+  const parsed = parseExplanation(explanation)
+  return { explanationText: parsed.explanationText, steps: parsed.steps }
+}
 
 interface CreateSessionParams {
   examId: string
@@ -449,10 +456,12 @@ export async function submitAnswer(
       }
     }
 
+    const { explanationText, steps } = practiceParseExplanation(revealRow.explanation)
     return {
       isCorrect,
       correctAnswer: revealRow.correct_answer,
-      explanation: revealRow.explanation,
+      explanation: explanationText,
+      steps,
       misconception,
     }
   }
@@ -594,6 +603,7 @@ export async function loadSessionData(sessionId: string) {
     selectedAnswer: q.selectedAnswer,
     correctAnswer: q.correctAnswer,
     explanation: q.explanation,
+    steps: q.steps,
   }))
 
   return {
@@ -689,6 +699,7 @@ export async function getSessionResults(sessionId: string) {
     const repair = row.selected_answer
       ? repairs.get(`${row.question_id}:${row.selected_answer}`) ?? null
       : null
+    const { explanationText, steps } = practiceParseExplanation(row.explanation)
     return [{
       questionId: row.question_id,
       questionText: row.question_text,
@@ -697,7 +708,8 @@ export async function getSessionResults(sessionId: string) {
       selectedAnswer: row.selected_answer,
       correctAnswer: row.correct_answer,
       isCorrect: row.is_correct,
-      explanation: row.explanation,
+      explanation: explanationText,
+      steps,
       timeTakenSeconds: row.time_taken_seconds,
       misconception: repair,
     }]

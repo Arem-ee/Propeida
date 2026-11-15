@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 import MisconceptionFields, { collectMisconceptions, type MisconceptionInitial } from '../../misconception-fields'
 import TopicFields, { collectTopics } from '../../topic-fields'
+import { parseExplanation } from '@/lib/lessons'
 
 interface Question {
   id: string
@@ -182,7 +183,22 @@ export default function EditQuestionForm({
 
         <div>
           <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Explanation (optional)</label>
+          {(() => {
+            const parsed = parseExplanation(question.explanation)
+            if (parsed.format !== 'worked-steps-v1' || !parsed.steps) return null
+            return (
+              <div className="mb-2 rounded-xl border border-blue-100 bg-blue-50/50 px-3 py-2 text-[12px] text-gray-600">
+                <span className="block text-[10px] font-extrabold uppercase tracking-[0.14em] text-blue-700/70">Worked steps (saved as structured data)</span>
+                <ol className="mt-1 list-decimal space-y-0.5 pl-5">
+                  {parsed.steps.map((s, i) => (
+                    <li key={i}><span className="font-bold text-gray-800">{s.operation}</span> — {s.result}</li>
+                  ))}
+                </ol>
+              </div>
+            )
+          })()}
           <textarea name="explanation" defaultValue={question.explanation ?? ''} rows={2} className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm resize-y" />
+          <p className="mt-1 text-[11px] font-semibold text-gray-400">If this shows structured worked-steps, save it unchanged unless you mean to rewrite them.</p>
         </div>
 
         <div className="rounded-2xl border border-gray-200 bg-gray-50/60 p-4">

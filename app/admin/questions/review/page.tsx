@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import { ArrowLeft, Check, ShieldCheck, Quote, XCircle } from 'lucide-react'
 import { createClient } from '@/lib/supabase/client'
+import { parseExplanation } from '@/lib/lessons'
 
 interface ReviewItem {
   id: string
@@ -236,9 +237,22 @@ export default function QuestionReviewPage() {
                   </div>
                 ))}
               </div>
-              {item.explanation && (
-                <p className="mt-2 text-[13px] font-semibold text-gray-500">{item.explanation}</p>
-              )}
+              {item.explanation && (() => {
+                const parsed = parseExplanation(item.explanation)
+                if (parsed.format === 'worked-steps-v1' && parsed.steps) {
+                  return (
+                    <div className="mt-2 text-[13px] font-semibold text-gray-500">
+                      <span className="mb-0.5 block text-[10px] font-extrabold uppercase tracking-[0.14em] text-blue-700/70">Worked steps</span>
+                      <ol className="mt-1 list-decimal space-y-0.5 pl-5">
+                        {parsed.steps.map((s, i) => (
+                          <li key={i}><span className="font-bold text-gray-800">{s.operation}</span> — {s.result}</li>
+                        ))}
+                      </ol>
+                    </div>
+                  )
+                }
+                return <p className="mt-2 text-[13px] font-semibold text-gray-500">{item.explanation}</p>
+              })()}
               {item.review_note && (
                 <p className="mt-2 rounded-xl bg-amber-50 border border-amber-200 px-3 py-2 text-[13px] font-bold text-amber-800">
                   Note: {item.review_note}

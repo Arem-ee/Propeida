@@ -9,7 +9,7 @@ import { getNoteById } from '@/lib/notes'
 import type { RevisionNote } from '@/lib/notes'
 import type { NoteSection } from '@/lib/notes'
 import { toLessonVisual } from '@/lib/notes/visual'
-import type { LessonEnhancement } from '@/lib/lessons'
+import { parseExplanation, type LessonEnhancement, type WorkedStep } from '@/lib/lessons'
 import { getExamScope } from '@/lib/exam-scope'
 
 /** One inline check authored on a text block: question, options, answer index. */
@@ -608,6 +608,7 @@ export async function recordLessonAttempt(input: AttemptInput): Promise<{
   graded: boolean
   correctAnswer: string
   explanation: string
+  steps?: WorkedStep[] | null
   misconception: { name: string; explanation: string; repeatCount: number; repairHref: string | null } | null
   prerequisite: { name: string; href: string } | null
 }> {
@@ -716,11 +717,14 @@ export async function recordLessonAttempt(input: AttemptInput): Promise<{
   })
   if (insertError) throw new Error('Could not save your answer.')
 
+  const parsedExplanation = parseExplanation(answer?.explanation ?? null)
+
   return {
     isCorrect,
     graded: !isFreeResponse,
     correctAnswer: answer?.correct_answer ?? '',
-    explanation: answer?.explanation ?? '',
+    explanation: parsedExplanation.explanationText,
+    steps: parsedExplanation.steps ?? null,
     misconception,
     prerequisite,
   }

@@ -7,6 +7,8 @@ import { Check, X, Clock, BookOpen, ChevronDown, ChevronUp, Target, ArrowRight }
 import { getSessionResults, getMyPlan } from '@/lib/actions/practice'
 import { LoadingCards, ErrorState } from '@/components/ui-states'
 import UpgradeCard from '@/components/paywall/upgrade-card'
+import { WorkedSteps } from '@/components/celebrations/worked-steps'
+import type { WorkedStep } from '@/lib/lessons'
 
 interface QuestionReview {
   questionId: string
@@ -17,6 +19,7 @@ interface QuestionReview {
   correctAnswer: string
   isCorrect: boolean | null
   explanation: string
+  steps?: WorkedStep[] | null
   timeTakenSeconds: number | null
   misconception: { name: string; explanation: string; repairHref: string | null } | null
 }
@@ -201,6 +204,7 @@ export default function ResultsPage({ params }: { params: Promise<{ sessionId: s
                           Explanation
                         </p>
                         <p className="text-[13px] font-semibold text-ink-soft leading-relaxed">{q.explanation}</p>
+                        {q.steps && q.steps.length > 0 && <WorkedSteps steps={q.steps} />}
                       </div>
                       {!q.isCorrect && q.misconception && (
                         <div className="rounded-2xl bg-amber-50 border-2 border-amber-200 p-3.5">

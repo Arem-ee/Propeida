@@ -7,6 +7,8 @@ import { ArrowRight, RotateCcw, CheckCircle, Flame, BookOpen, Play, Check, X } f
 import { submitAnswer, completePracticeSession } from '@/lib/actions/practice'
 import { getNoteById } from '@/lib/notes'
 import { celebrate } from '@/lib/celebrate'
+import { WorkedSteps } from '@/components/celebrations/worked-steps'
+import type { WorkedStep } from '@/lib/lessons'
 
 export interface PlayerQuestion {
   id: string
@@ -16,12 +18,15 @@ export interface PlayerQuestion {
   selectedAnswer?: string | null
   correctAnswer?: string | null
   explanation?: string | null
+  /** Optional structured derivation (maths/science). Same shape as lesson WorkedStep. */
+  steps?: WorkedStep[] | null
 }
 
 interface Feedback {
   isCorrect: boolean
   correctAnswer: string
   explanation: string
+  steps?: WorkedStep[] | null
   misconception?: {
     code: string
     name: string
@@ -83,6 +88,7 @@ export default function PracticePlayer({
         isCorrect: q.correctAnswer === selected,
         correctAnswer: q.correctAnswer,
         explanation: q.explanation ?? '',
+        steps: q.steps ?? null,
       })
       setAnswered((n) => n + 1)
       void submitAnswer(sessionId, q.id, selected).catch(() => {})
@@ -300,6 +306,7 @@ export default function PracticePlayer({
             <div className="rounded-2xl bg-blue-50/50 border border-blue-100 p-4 sm:p-5">
               <p className="font-display text-base font-medium text-blue-900 mb-2">Explanation</p>
               <p className="text-sm text-ink-soft leading-relaxed font-semibold">{feedback.explanation}</p>
+              {feedback.steps && feedback.steps.length > 0 && <WorkedSteps steps={feedback.steps} />}
             </div>
             {feedback.misconception && (
               <div className="rounded-2xl bg-amber-50 border-2 border-amber-200 p-4 sm:p-5 animate-pop-in" style={{ animationDelay: '120ms' }}>

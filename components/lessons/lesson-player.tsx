@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { ArrowRight, CheckCircle, Eye, Lightbulb, Wrench, Target } from 'lucide-react'
 import { celebrate } from '@/lib/celebrate'
 import StepVisual from '@/components/lessons/step-visual'
+import { WorkedSteps } from '@/components/celebrations/worked-steps'
 import { MathText } from './math-text'
 import {
   recordLessonAttempt,
@@ -14,7 +15,7 @@ import {
   type LessonQuestion,
 } from '@/lib/actions/lessons'
 import type { RevisionNote } from '@/lib/notes'
-import type { LessonEnhancement } from '@/lib/lessons'
+import type { LessonEnhancement, WorkedStep } from '@/lib/lessons'
 import type { LessonEnglish } from '@/lib/actions/lessons'
 import PassageReader, { PairComparator, RebuildCard, ReflectionCard } from './english-blocks'
 import TeachSections from './teach-sections'
@@ -72,6 +73,7 @@ interface AttemptFeedback {
   graded: boolean
   correctAnswer: string
   explanation: string
+  steps?: WorkedStep[] | null
   misconception: { name: string; explanation: string; repeatCount: number; repairHref: string | null } | null
   prerequisite: { name: string; href: string } | null
 }
@@ -258,6 +260,7 @@ function BankQuestion({
           )}
           <div className="rounded-2xl bg-blue-50/50 border border-blue-100 p-4">
             <p className="text-sm font-semibold leading-relaxed text-ink-soft">{feedback.explanation}</p>
+            {feedback.steps && feedback.steps.length > 0 && <WorkedSteps steps={feedback.steps} />}
           </div>
           {feedback.misconception && (
             <div className="rounded-2xl bg-amber-50 border-2 border-amber-200 p-4">
