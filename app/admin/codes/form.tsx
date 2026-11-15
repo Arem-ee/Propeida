@@ -2,6 +2,8 @@
 
 import { useState } from 'react'
 
+import { inputClass, textareaClass, labelClass, FormError } from '@/components/admin/form'
+
 export default function NewCodeForm({ subjects }: { subjects: { id: string; name: string }[] }) {
   const [subjectId, setSubjectId] = useState('')
   const [code, setCode] = useState('')
@@ -25,7 +27,7 @@ export default function NewCodeForm({ subjects }: { subjects: { id: string; name
       })
       const data = await res.json()
       if (!res.ok) throw new Error(data.error ?? 'Failed to add code')
-      setDone(`Code "${data.code}" added.`)
+      setDone(`Code "${data.code}" added`)
       setCode('')
       setName('')
       setDefinition('')
@@ -37,15 +39,13 @@ export default function NewCodeForm({ subjects }: { subjects: { id: string; name
     }
   }
 
-  const inputClass = 'w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm min-h-[44px]'
-
   return (
-    <form onSubmit={(e) => void submit(e)} className="rounded-2xl border border-gray-200 bg-white p-5 space-y-4">
-      <h2 className="text-base font-extrabold text-gray-900">Add a code</h2>
+    <form onSubmit={(e) => void submit(e)} className="space-y-4 rounded-2xl border border-blue-100/70 bg-white p-5 shadow-[0_1px_2px_rgba(16,24,40,0.05)]">
+      <h2 className="text-base font-extrabold text-black">Add a code</h2>
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Subject</label>
-          <select value={subjectId} onChange={(e) => setSubjectId(e.target.value)} required className={inputClass}>
+          <label className={labelClass} htmlFor="code-subject">Subject</label>
+          <select id="code-subject" value={subjectId} onChange={(e) => setSubjectId(e.target.value)} required className={inputClass}>
             <option value="">Select subject</option>
             {subjects.map((s) => (
               <option key={s.id} value={s.id}>{s.name}</option>
@@ -53,8 +53,9 @@ export default function NewCodeForm({ subjects }: { subjects: { id: string; name
           </select>
         </div>
         <div>
-          <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Code</label>
+          <label className={labelClass} htmlFor="code-code">Code</label>
           <input
+            id="code-code"
             value={code}
             onChange={(e) => setCode(e.target.value)}
             required
@@ -64,8 +65,9 @@ export default function NewCodeForm({ subjects }: { subjects: { id: string; name
         </div>
       </div>
       <div>
-        <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Name</label>
+        <label className={labelClass} htmlFor="code-name">Name</label>
         <input
+          id="code-name"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
@@ -74,27 +76,29 @@ export default function NewCodeForm({ subjects }: { subjects: { id: string; name
         />
       </div>
       <div>
-        <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Definition</label>
+        <label className={labelClass} htmlFor="code-definition">Definition</label>
         <textarea
+          id="code-definition"
           value={definition}
           onChange={(e) => setDefinition(e.target.value)}
           required
           rows={2}
           placeholder="What error does this code name, precisely?"
-          className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm resize-y"
+          className={textareaClass}
         />
       </div>
       <div>
-        <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Example (optional)</label>
+        <label className={labelClass} htmlFor="code-example">Example (optional)</label>
         <input
+          id="code-example"
           value={example}
           onChange={(e) => setExample(e.target.value)}
           placeholder="A concrete instance"
           className={inputClass}
         />
       </div>
-      {error && <p className="text-sm font-bold text-red-600">{error}</p>}
-      {done && <p className="text-sm font-bold text-green-700">{done}</p>}
+      {error && <FormError>{error}</FormError>}
+      {done && <p role="status" className="text-sm font-bold text-emerald-700">{done}</p>}
       <button
         type="submit"
         disabled={saving}

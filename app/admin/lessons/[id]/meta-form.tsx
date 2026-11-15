@@ -2,8 +2,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import Link from 'next/link'
-import { ArrowLeft } from 'lucide-react'
+import { inputClass, selectClass, textareaClass, labelClass, FormError, FormNotice } from '@/components/admin/form'
 
 const STATUSES = ['draft', 'review', 'published', 'retired'] as const
 
@@ -59,38 +58,36 @@ export default function LessonMetaForm({
     }
   }
 
-  const inputClass = 'w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm min-h-[44px]'
-
   return (
-    <div className="rounded-2xl border border-gray-200 bg-white p-5 space-y-4">
+    <div className="space-y-4 rounded-2xl border border-blue-100/70 bg-white p-5 shadow-[0_1px_2px_rgba(16,24,40,0.05)]">
       <div className="flex items-center justify-between">
-        <h2 className="text-base font-extrabold text-gray-900">Lesson</h2>
-        <span className="text-xs font-bold text-gray-500">v{lesson.version}</span>
+        <h2 className="text-base font-extrabold text-black">Lesson</h2>
+        <span className="rounded-full bg-gray-100 px-2.5 py-1 text-[11px] font-extrabold text-ink-soft">v{lesson.version}</span>
       </div>
       <div>
-        <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Title</label>
-        <input value={title} onChange={(e) => setTitle(e.target.value)} className={inputClass} />
+        <label className={labelClass} htmlFor="lesson-title">Title</label>
+        <input id="lesson-title" value={title} onChange={(e) => setTitle(e.target.value)} className={inputClass} />
       </div>
       <div>
-        <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Objective</label>
-        <textarea value={objective} onChange={(e) => setObjective(e.target.value)} rows={2} className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm resize-y" />
+        <label className={labelClass} htmlFor="lesson-objective">Objective</label>
+        <textarea id="lesson-objective" value={objective} onChange={(e) => setObjective(e.target.value)} rows={2} className={textareaClass} />
       </div>
       <div className="grid grid-cols-3 gap-3">
         <div>
-          <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Minutes</label>
-          <input value={minutes} onChange={(e) => setMinutes(e.target.value)} inputMode="numeric" placeholder="10" className={inputClass} />
+          <label className={labelClass} htmlFor="lesson-minutes">Minutes</label>
+          <input id="lesson-minutes" value={minutes} onChange={(e) => setMinutes(e.target.value)} inputMode="numeric" placeholder="10" className={inputClass} />
         </div>
         <div>
-          <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Status</label>
-          <select value={status} onChange={(e) => setStatus(e.target.value)} className={inputClass}>
+          <label className={labelClass} htmlFor="lesson-status">Status</label>
+          <select id="lesson-status" value={status} onChange={(e) => setStatus(e.target.value)} className={selectClass}>
             {STATUSES.map((s) => (
               <option key={s} value={s}>{s}{s === 'published' ? ' (bumps version)' : ''}</option>
             ))}
           </select>
         </div>
         <div>
-          <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Topic</label>
-          <select value={topicId} onChange={(e) => setTopicId(e.target.value)} className={inputClass}>
+          <label className={labelClass} htmlFor="lesson-topic">Topic</label>
+          <select id="lesson-topic" value={topicId} onChange={(e) => setTopicId(e.target.value)} className={selectClass}>
             <option value="">None</option>
             {topics.map((t) => (
               <option key={t.id} value={t.id}>{t.name}</option>
@@ -98,20 +95,15 @@ export default function LessonMetaForm({
           </select>
         </div>
       </div>
-      {error && <p className="text-sm font-bold text-red-600">{error}</p>}
-      {saved && <p className="text-sm font-bold text-green-700">Saved.</p>}
+      {error && <FormError>{error}</FormError>}
+      {saved && <FormNotice>Saved</FormNotice>}
       <button
         onClick={() => void save()}
         disabled={saving}
-        className="rounded-xl bg-blue-600 px-6 py-2.5 text-sm font-bold text-white hover:bg-blue-700 disabled:opacity-50 min-h-[44px] cursor-pointer"
+        className="cursor-pointer rounded-xl bg-blue-600 px-6 py-2.5 text-sm font-bold text-white hover:bg-blue-700 disabled:opacity-50 min-h-[44px]"
       >
         {saving ? 'Saving...' : 'Save lesson'}
       </button>
-      <div>
-        <Link href="/admin/lessons" className="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700">
-          <ArrowLeft className="h-4 w-4" /> All lessons
-        </Link>
-      </div>
     </div>
   )
 }

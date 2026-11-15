@@ -34,7 +34,7 @@ export default function DuplicateLessonButton({ lessonId, baseSlug }: { lessonId
       <button
         onClick={() => setOpen(true)}
         title="Copy this lesson with all its blocks into a new draft"
-        className="rounded-lg px-3 py-1.5 text-xs font-semibold text-gray-500 hover:bg-gray-100 min-h-[36px] cursor-pointer"
+        className="min-h-[36px] cursor-pointer rounded-lg px-3 py-1.5 text-xs font-semibold text-ink-soft hover:bg-gray-100"
       >
         Duplicate
       </button>

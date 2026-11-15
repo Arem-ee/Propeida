@@ -30,15 +30,15 @@ export default function NewSchoolForm({ onAdded }: { onAdded: () => void }) {
   }
 
   return (
-    <form onSubmit={(e) => void submit(e)} className="rounded-2xl border border-gray-200 bg-white p-5">
-      <h2 className="text-base font-extrabold text-gray-900">Add a school</h2>
-      <p className="mt-1 text-xs text-gray-500">Type the full name — the URL slug is generated for you.</p>
+    <form onSubmit={(e) => void submit(e)} className="rounded-2xl border border-blue-100/70 bg-white p-5 shadow-[0_1px_2px_rgba(16,24,40,0.05)]">
+      <h2 className="text-base font-extrabold text-black">Add a school</h2>
+      <p className="mt-1 text-xs text-gray-500">Type the full name and we generate the URL slug for you</p>
       <div className="mt-3 flex gap-2.5">
         <input
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="e.g. University of Lagos"
-          className="flex-1 rounded-xl border border-gray-200 px-4 py-2.5 text-sm min-h-[44px]"
+          className="flex-1 rounded-xl border border-gray-200 bg-white px-4 py-2.5 text-sm min-h-[44px] placeholder:text-gray-400 focus:border-blue-600 focus:outline-none"
         />
         <button
           type="submit"

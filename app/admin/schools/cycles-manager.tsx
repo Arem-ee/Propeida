@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
+import { inputClass, labelClass, FormError } from '@/components/admin/form'
+import { useConfirm } from '@/components/admin/confirm'
 
 interface Cycle {
   id: string
@@ -12,9 +14,6 @@ interface Cycle {
   source: string | null
   exams: { name: string } | { name: string }[] | null
 }
-
-const inputClass = 'w-full rounded-xl border border-gray-200 px-3 py-2 text-sm min-h-[44px]'
-const labelClass = 'block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5'
 
 function toDateInput(iso: string | null): string {
   if (!iso) return ''
@@ -34,6 +33,7 @@ export default function CyclesManager({ exams }: { exams: { id: string; name: st
   const [editingId, setEditingId] = useState<string | null>(null)
   const [saving, setSaving] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const { confirm, dialog } = useConfirm()
 
   const load = useCallback(async () => {
     const res = await fetch('/api/admin/cycles')
@@ -88,7 +88,13 @@ export default function CyclesManager({ exams }: { exams: { id: string; name: st
   }
 
   const remove = async (id: string) => {
-    if (!window.confirm('Delete this exam cycle? Countdowns depending on it go quiet.')) return
+    const ok = await confirm({
+      title: 'Delete this exam cycle?',
+      body: 'Countdowns that depend on it go quiet',
+      confirmLabel: 'Delete cycle',
+      tone: 'danger',
+    })
+    if (!ok) return
     await fetch(`/api/admin/cycles?id=${encodeURIComponent(id)}`, { method: 'DELETE' })
     await load()
   }
@@ -100,29 +106,30 @@ export default function CyclesManager({ exams }: { exams: { id: string; name: st
 
   return (
     <div className="space-y-4">
+      {dialog}
       {cycles.map((c) => (
-        <div key={c.id} className="rounded-2xl border border-gray-200 bg-white p-4">
-          <div className="flex items-center justify-between gap-3">
+        <div key={c.id} className="rounded-2xl border border-blue-100/70 bg-white p-4 shadow-[0_1px_2px_rgba(16,24,40,0.05)]">
+          <div className="flex flex-wrap items-center justify-between gap-3">
             <div>
-              <p className="text-base font-extrabold text-gray-900">
+              <p className="text-base font-extrabold text-black">
                 {examName(c)} {c.year}
               </p>
-              <p className="text-xs font-semibold text-gray-500">
+              <p className="text-xs font-semibold text-ink-soft">
                 {c.verified
                   ? `Verified${c.starts_at ? ` · starts ${toDateInput(c.starts_at)}` : ''}`
                   : 'Unverified — no countdown renders'}
               </p>
             </div>
-            <div className="flex gap-2 shrink-0">
+            <div className="flex shrink-0 gap-2">
               <button
                 onClick={() => startEdit(c)}
-                className="rounded-xl border border-gray-200 px-3.5 py-2 text-xs font-bold text-gray-600 min-h-[40px] cursor-pointer"
+                className="min-h-[40px] cursor-pointer rounded-xl border border-gray-200 px-3.5 py-2 text-xs font-bold text-ink-soft hover:bg-gray-50"
               >
                 Edit
               </button>
               <button
                 onClick={() => void remove(c.id)}
-                className="rounded-xl border border-red-200 px-3.5 py-2 text-xs font-bold text-red-600 min-h-[40px] cursor-pointer"
+                className="min-h-[40px] cursor-pointer rounded-xl border border-red-200 px-3.5 py-2 text-xs font-bold text-red-600 hover:bg-red-50"
               >
                 Delete
               </button>
@@ -132,71 +139,72 @@ export default function CyclesManager({ exams }: { exams: { id: string; name: st
       ))}
 
       {cycles.length === 0 && (
-        <p className="rounded-2xl border-2 border-dashed border-gray-200 p-6 text-center text-sm text-gray-500">
-          No exam cycles yet. Add the first one below.
+        <p className="rounded-2xl border-2 border-dashed border-gray-200 p-6 text-center text-sm text-ink-soft">
+          No exam cycles are here yet, so add the first one below
         </p>
       )}
 
-      <div className="rounded-2xl border-2 border-blue-100 bg-blue-50/40 p-4 space-y-3">
-        <p className="text-sm font-extrabold text-gray-900">{editingId ? 'Edit cycle' : 'Add exam cycle'}</p>
+      <div className="space-y-3 rounded-2xl border border-blue-200/70 bg-blue-50/40 p-4">
+        <p className="text-sm font-extrabold text-black">{editingId ? 'Edit cycle' : 'Add exam cycle'}</p>
         {!editingId && (
           <div className="grid grid-cols-2 gap-2.5">
             <div>
-              <label className={labelClass}>Exam</label>
-              <select value={examId} onChange={(e) => setExamId(e.target.value)} className={inputClass}>
+              <label className={labelClass} htmlFor="cycle-exam">Exam</label>
+              <select id="cycle-exam" value={examId} onChange={(e) => setExamId(e.target.value)} className={inputClass}>
                 {exams.map((e) => (
                   <option key={e.id} value={e.id}>{e.name}</option>
                 ))}
               </select>
             </div>
             <div>
-              <label className={labelClass}>Year</label>
-              <input value={year} onChange={(e) => setYear(e.target.value)} inputMode="numeric" className={inputClass} />
+              <label className={labelClass} htmlFor="cycle-year">Year</label>
+              <input id="cycle-year" value={year} onChange={(e) => setYear(e.target.value)} inputMode="numeric" className={inputClass} />
             </div>
           </div>
         )}
         <div className="grid grid-cols-2 gap-2.5">
           <div>
-            <label className={labelClass}>Starts (optional)</label>
-            <input type="date" value={startsAt} onChange={(e) => setStartsAt(e.target.value)} className={inputClass} />
+            <label className={labelClass} htmlFor="cycle-starts">Starts (optional)</label>
+            <input id="cycle-starts" type="date" value={startsAt} onChange={(e) => setStartsAt(e.target.value)} className={inputClass} />
           </div>
           <div>
-            <label className={labelClass}>Ends (optional)</label>
-            <input type="date" value={endsAt} onChange={(e) => setEndsAt(e.target.value)} className={inputClass} />
+            <label className={labelClass} htmlFor="cycle-ends">Ends (optional)</label>
+            <input id="cycle-ends" type="date" value={endsAt} onChange={(e) => setEndsAt(e.target.value)} className={inputClass} />
           </div>
         </div>
-        <label className="flex items-center gap-2.5 cursor-pointer rounded-xl border border-gray-200 bg-white px-3.5 py-2.5 min-h-[48px]">
+        <label className="flex min-h-[48px] cursor-pointer items-center gap-2.5 rounded-xl border border-gray-200 bg-white px-3.5 py-2.5">
           <input
             type="checkbox"
             checked={verified}
             onChange={(e) => setVerified(e.target.checked)}
-            className="h-5 w-5 rounded border-gray-300 text-blue-600 cursor-pointer"
+            className="h-5 w-5 cursor-pointer rounded border-gray-300 text-blue-600"
           />
           <span className="text-sm font-bold text-gray-800">
-            Verified <span className="font-semibold text-gray-500">— only checked with an official source. This switch turns countdowns on.</span>
+            Verified <span className="font-semibold text-ink-soft">— someone checked this against an official source, and this switch turns countdowns on</span>
           </span>
         </label>
         <div>
-          <label className={labelClass}>Source</label>
+          <label className={labelClass} htmlFor="cycle-source">Source</label>
           <input
+            id="cycle-source"
             value={source} onChange={(e) => setSource(e.target.value)}
             placeholder="e.g. JAMB weekly bulletin, 14 Apr 2026"
             className={inputClass}
           />
         </div>
-        {error && <p className="text-sm font-bold text-red-600">{error}</p>}
+        {error && <FormError>{error}</FormError>}
         <div className="flex gap-2.5">
           <button
             onClick={() => void save()}
             disabled={saving}
-            className="rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-bold text-white hover:bg-blue-700 disabled:opacity-50 min-h-[44px] cursor-pointer"
+            className="min-h-[44px] cursor-pointer rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-bold text-white hover:bg-blue-700 disabled:opacity-50"
           >
             {saving ? 'Saving...' : editingId ? 'Save changes' : 'Add cycle'}
           </button>
           {editingId && (
             <button
               onClick={reset}
-              className="rounded-xl border border-gray-200 px-5 py-2.5 text-sm font-bold text-gray-600 min-h-[44px] cursor-pointer"
+              className="min-h-[44px] cursor-pointer rounded-xl border border-gray-200 px-5 py-2.5 text-sm font-bold text-ink-soft hover:bg-gray-50"
             >
               Cancel
             </button>

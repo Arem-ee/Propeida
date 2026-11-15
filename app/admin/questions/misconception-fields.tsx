@@ -45,7 +45,7 @@ export default function MisconceptionFields({
       .catch(() => setCodes([]))
   }, [subjectId])
   return (
-    <div className="rounded-2xl border border-gray-200 p-5 space-y-5">
+    <div className="rounded-2xl border border-blue-100/70 bg-white p-5 space-y-5 shadow-[0_1px_2px_rgba(16,24,40,0.05)]">
       <div>
         <h3 className="text-sm font-extrabold text-gray-900">Misconceptions (optional)</h3>
         <p className="mt-1 text-xs leading-relaxed text-gray-500">
@@ -114,7 +114,7 @@ export default function MisconceptionFields({
                 defaultValue={prev?.explanation ?? ''}
                 disabled={isCorrect}
                 rows={2}
-                placeholder="Why a student picks this, and the one thing that fixes it."
+                placeholder="Why a student picks this and the one thing that fixes it"
                 className="w-full rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm resize-y"
               />
             </div>

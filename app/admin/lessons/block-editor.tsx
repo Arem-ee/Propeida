@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useConfirm } from '@/components/admin/confirm'
 
 export interface Block {
   id: string
@@ -243,6 +244,7 @@ export default function BlockEditor({
   const [selected, setSelected] = useState<Set<string>>(new Set())
   const [moveTo, setMoveTo] = useState('')
   const [moving, setMoving] = useState(false)
+  const { confirm, dialog } = useConfirm()
 
   const patch = (id: string, p: Record<string, unknown> | string) => {
     setBlocks((prev) =>
@@ -271,7 +273,7 @@ export default function BlockEditor({
       })
       const data = await res.json()
       if (!res.ok) throw new Error(data.error ?? 'Save failed')
-      setNotice('Saved.')
+      setNotice('Saved')
     } catch (err) {
       setRowError((prev) => ({ ...prev, [block.id]: err instanceof Error ? err.message : 'Save failed' }))
     } finally {
@@ -280,7 +282,13 @@ export default function BlockEditor({
   }
 
   const remove = async (id: string) => {
-    if (!window.confirm('Delete this block?')) return
+    const ok = await confirm({
+      title: 'Delete this block?',
+      body: 'You cannot undo this',
+      confirmLabel: 'Delete block',
+      tone: 'danger',
+    })
+    if (!ok) return
     await fetch(`/api/admin/lesson-blocks?id=${encodeURIComponent(id)}`, { method: 'DELETE' })
     setBlocks((prev) => prev.filter((b) => b.id !== id))
   }
@@ -331,11 +339,13 @@ export default function BlockEditor({
     const target = moveTargets.find((t) => t.id === moveTo)
     if (
       (lessonStatus === 'published' || target?.status === 'published') &&
-      !window.confirm(
-        `This changes a PUBLISHED lesson — learners see it immediately. Move ${selected.size} block(s)${
+      !(await confirm({
+        title: 'This changes a published lesson',
+        body: `Learners see it immediately. Move ${selected.size} block(s)${
           target?.status === 'published' ? ` into "${target.title}"` : ''
         }${lessonStatus === 'published' ? ' out of this lesson' : ''}?`,
-      )
+        confirmLabel: 'Move anyway',
+      }))
     ) {
       return
     }
@@ -350,7 +360,7 @@ export default function BlockEditor({
       if (!res.ok) throw new Error(data.error ?? 'Move failed')
       setBlocks((prev) => prev.filter((b) => !selected.has(b.id)))
       setSelected(new Set())
-      setNotice(`Moved ${data.moved} block(s).`)
+      setNotice(`Moved ${data.moved} block(s)`)
     } catch (err) {
       setNotice(err instanceof Error ? err.message : 'Move failed')
     } finally {
@@ -360,7 +370,12 @@ export default function BlockEditor({
 
   const deleteSelected = async () => {
     if (selected.size === 0 || moving) return
-    if (!window.confirm(`Delete ${selected.size} block(s)? This cannot be undone.`)) return
+    if (!(await confirm({
+      title: `Delete ${selected.size} block(s)?`,
+      body: 'You cannot undo this',
+      confirmLabel: 'Delete',
+      tone: 'danger',
+    }))) return
     setMoving(true)
     try {
       const res = await fetch('/api/admin/lesson-blocks/bulk-delete', {
@@ -372,7 +387,7 @@ export default function BlockEditor({
       if (!res.ok) throw new Error(data.error ?? 'Delete failed')
       setBlocks((prev) => prev.filter((b) => !selected.has(b.id)))
       setSelected(new Set())
-      setNotice(`Deleted ${data.deleted} block(s).`)
+      setNotice(`Deleted ${data.deleted} block(s)`)
     } catch (err) {
       setNotice(err instanceof Error ? err.message : 'Delete failed')
     } finally {
@@ -382,6 +397,7 @@ export default function BlockEditor({
 
   return (
     <div className="space-y-4">
+      {dialog}
       <div className="flex items-center justify-between">
         <h2 className="text-base font-extrabold text-gray-900">Blocks ({blocks.length})</h2>
         {notice && <p className="text-xs font-bold text-green-700">{notice}</p>}
@@ -424,7 +440,7 @@ export default function BlockEditor({
       )}
 
       {blocks.map((block, i) => (
-        <div key={block.id} className="rounded-2xl border border-gray-200 bg-white p-4 space-y-3">
+        <div key={block.id} className="rounded-2xl border border-blue-100/70 bg-white p-4 space-y-3 shadow-[0_1px_2px_rgba(16,24,40,0.05)]">
           <div className="flex items-center gap-2">
             <input
               type="checkbox"
@@ -473,7 +489,7 @@ export default function BlockEditor({
         </div>
       ))}
 
-      <div className="flex gap-2.5 rounded-2xl border border-gray-200 bg-white p-4">
+      <div className="flex gap-2.5 rounded-2xl border border-blue-100/70 bg-white p-4 shadow-[0_1px_2px_rgba(16,24,40,0.05)]">
         <select
           value={newType}
           onChange={(e) => setNewType(e.target.value)}

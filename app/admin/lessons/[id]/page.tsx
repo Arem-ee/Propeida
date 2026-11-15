@@ -2,8 +2,10 @@ import { notFound } from 'next/navigation'
 import { createAdminClient } from '@/lib/supabase/admin'
 import LessonMetaForm from './meta-form'
 import BlockEditor from '../block-editor'
+import PageHeader from '@/components/admin/page-header'
 
 export const metadata = { title: 'Edit lesson' }
+export const dynamic = 'force-dynamic'
 
 export default async function EditLessonPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
@@ -37,8 +39,12 @@ export default async function EditLessonPage({ params }: { params: Promise<{ id:
 
   return (
     <div>
-      <h1 className="text-2xl font-extrabold text-gray-900 mb-8">Edit Lesson</h1>
-      <div className="grid gap-6 lg:grid-cols-[380px_1fr] items-start">
+      <PageHeader
+        eyebrow="Content · Lesson"
+        title={lesson.title}
+        description="Blocks render top to bottom exactly as learners see them. Save each block as you go"
+      />
+      <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-[380px_1fr]">
         <LessonMetaForm
           lesson={{
             id: lesson.id,

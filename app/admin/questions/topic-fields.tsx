@@ -57,7 +57,7 @@ export default function TopicFields({
   if (topics.length === 0) return null
 
   return (
-    <div className="rounded-2xl border border-gray-200 p-5 space-y-4">
+    <div className="rounded-2xl border border-blue-100/70 bg-white p-5 space-y-4 shadow-[0_1px_2px_rgba(16,24,40,0.05)]">
       <div>
         <h3 className="text-sm font-extrabold text-gray-900">Topics (optional)</h3>
         <p className="mt-1 text-xs leading-relaxed text-gray-500">

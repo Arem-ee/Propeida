@@ -2,6 +2,8 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { inputClass, labelClass, FormError } from '@/components/admin/form'
+import { useConfirm } from '@/components/admin/confirm'
 
 export interface Screening {
   id: string
@@ -20,9 +22,6 @@ const MODES = [
   { value: 'online_proctored', label: 'Online proctored test' },
   { value: 'documentary', label: 'Documentary screening (no test)' },
 ]
-
-const inputClass = 'w-full rounded-xl border border-gray-200 px-3 py-2 text-sm min-h-[44px]'
-const labelClass = 'block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5'
 
 function emptyForm() {
   return {
@@ -50,6 +49,7 @@ export default function ScreeningsManager({
   const [editingId, setEditingId] = useState<string | null>(null)
   const [saving, setSaving] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const { confirm, dialog } = useConfirm()
 
   const set = (k: string, v: string) => setForm((prev) => ({ ...prev, [k]: v }))
 
@@ -104,15 +104,22 @@ export default function ScreeningsManager({
   }
 
   const remove = async (id: string, year: number) => {
-    if (!window.confirm(`Delete the ${year} screening facts?`)) return
+    const ok = await confirm({
+      title: `Delete the ${year} screening facts?`,
+      body: 'The student app shows dashes for unknowns — deleting removes even the sourced numbers',
+      confirmLabel: 'Delete year',
+      tone: 'danger',
+    })
+    if (!ok) return
     await fetch(`/api/admin/screenings?id=${encodeURIComponent(id)}`, { method: 'DELETE' })
     await reload()
   }
 
   return (
     <div className="space-y-4">
+      {dialog}
       {rows.map((row) => (
-        <div key={row.id} className="rounded-2xl border border-gray-200 bg-white p-4">
+        <div key={row.id} className="rounded-2xl border border-blue-100/70 bg-white p-4 shadow-[0_1px_2px_rgba(16,24,40,0.05)]">
           <div className="flex items-center justify-between gap-3">
             <div>
               <p className="text-base font-extrabold text-gray-900">{row.year}</p>
@@ -145,11 +152,11 @@ export default function ScreeningsManager({
 
       {rows.length === 0 && (
         <p className="rounded-2xl border-2 border-dashed border-gray-200 p-6 text-center text-sm text-gray-500">
-          No screening facts yet. Add the first year below — unknowns stay blank, never guessed.
+          No screening facts are here yet, so add the first year below, and unknown values stay blank instead of being guessed
         </p>
       )}
 
-      <div className="rounded-2xl border-2 border-blue-100 bg-blue-50/40 p-4 space-y-3">
+      <div className="space-y-3 rounded-2xl border border-blue-200/70 bg-blue-50/40 p-4">
         <p className="text-sm font-extrabold text-gray-900">{editingId ? 'Edit screening' : 'Add screening year'}</p>
         <div className="grid grid-cols-3 gap-2.5">
           <div>
@@ -211,7 +218,7 @@ export default function ScreeningsManager({
             className={inputClass}
           />
         </div>
-        {error && <p className="text-sm font-bold text-red-600">{error}</p>}
+        {error && <FormError>{error}</FormError>}
         <div className="flex gap-2.5">
           <button
             onClick={() => void save()}

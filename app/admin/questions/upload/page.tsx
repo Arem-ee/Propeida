@@ -1,9 +1,10 @@
 'use client'
 
 import { useState, useRef } from 'react'
-import { Upload, ArrowLeft, Check, X, File, ClipboardPaste, Download } from 'lucide-react'
-import Link from 'next/link'
+import { Upload, Check, X, File, ClipboardPaste, Download } from 'lucide-react'
 import { parsePastedQuestions } from '@/lib/question-text'
+import PageHeader from '@/components/admin/page-header'
+import { FormError, FormNotice } from '@/components/admin/form'
 
 interface PreviewRow {
   row: number
@@ -67,19 +68,19 @@ function PastePreview({
   return (
     <div className="mt-4 space-y-4">
       <div className="flex items-center gap-2 text-sm">
-        <Check className="h-4 w-4 text-green-500" />
+        <Check className="h-4 w-4 text-green-500" aria-hidden />
         <span className="font-semibold text-green-700">{questions.length} valid question(s)</span>
         {issues.length > 0 && (
           <>
-            <X className="h-4 w-4 text-red-500 ml-2" />
+            <X className="ml-2 h-4 w-4 text-red-500" aria-hidden />
             <span className="font-semibold text-red-700">{issues.length} problem block(s)</span>
           </>
         )}
       </div>
 
       {issues.length > 0 && (
-        <div className="rounded-lg bg-red-50 border border-red-100 p-4">
-          <p className="text-xs font-bold text-red-600 uppercase mb-2">Fix these blocks</p>
+        <div role="alert" className="rounded-xl border border-red-100 bg-red-50 p-4">
+          <p className="mb-2 text-xs font-bold uppercase text-red-600">Fix these blocks</p>
           <ul className="space-y-1">
             {issues.map((item, i) => (
               <li key={i} className="text-sm text-red-700">
@@ -94,17 +95,17 @@ function PastePreview({
         <button
           onClick={onImport}
           disabled={loading}
-          className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-2.5 text-sm font-bold text-white hover:bg-blue-700 min-h-[44px] cursor-pointer disabled:opacity-50"
+          className="inline-flex cursor-pointer items-center gap-2 rounded-xl bg-blue-600 px-6 py-2.5 text-sm font-bold text-white hover:bg-blue-700 min-h-[44px] disabled:opacity-50"
         >
-          <ClipboardPaste className="h-4 w-4" />
+          <ClipboardPaste className="h-4 w-4" aria-hidden />
           {loading ? 'Importing...' : `Import ${questions.length} question(s)`}
         </button>
       )}
 
       {result && (
-        <div className="rounded-xl bg-green-50 border border-green-100 p-4">
+        <div className="rounded-xl border border-green-100 bg-green-50 p-4">
           <p className="text-sm font-semibold text-green-800">
-            Successfully inserted {result.inserted} question(s)
+            Successfully inserted {result.inserted} question(s) — they are waiting in the review queue
           </p>
           {result.errors.length > 0 && (
             <ul className="mt-2 space-y-1">
@@ -116,11 +117,7 @@ function PastePreview({
         </div>
       )}
 
-      {error && (
-        <div className="rounded-xl bg-red-50 border border-red-100 p-4">
-          <p className="text-sm text-red-700">{error}</p>
-        </div>
-      )}
+      {error && <FormError>{error}</FormError>}
     </div>
   )
 }
@@ -215,42 +212,55 @@ export default function AdminUploadPage() {
     }
   }
 
+  const tabClass = (active: boolean) =>
+    `cursor-pointer rounded-xl px-5 py-2.5 text-sm font-bold min-h-[44px] transition-colors ${
+      active ? 'bg-gray-900 text-white' : 'border border-gray-200 bg-white text-ink-soft hover:bg-gray-50'
+    }`
+
   return (
     <div>
-      <Link href="/admin/questions" className="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700 mb-6">
-        <ArrowLeft className="h-4 w-4" /> Back to Questions
-      </Link>
-
-      <h1 className="text-2xl font-extrabold text-gray-900 mb-2">Bulk Import</h1>
-      <p className="text-sm text-gray-500 mb-6">
-        Two ways in: CSV files, or pasted text in a human format that survives Word and Google Docs.
-      </p>
-
-      <div className="mb-6 flex gap-2">
-        {(['csv', 'paste'] as const).map((t) => (
+      <PageHeader
+        eyebrow="Step 1 · Content"
+        title="Import questions"
+        description="Two ways in — CSV files, or pasted text that survives Word and Google Docs. Everything you import lands in the review queue, nothing publishes from this page"
+        actions={
           <button
-            key={t}
-            onClick={() => { setTab(t); setError(null); setResult(null) }}
-            className={`rounded-xl px-5 py-2.5 text-sm font-bold min-h-[44px] cursor-pointer transition-colors ${
-              tab === t ? 'bg-blue-600 text-white' : 'bg-white border border-gray-200 text-gray-600'
-            }`}
+            onClick={downloadTemplate}
+            className="inline-flex min-h-[44px] cursor-pointer items-center gap-1.5 rounded-xl border border-gray-200 bg-white px-4 py-2.5 text-sm font-bold text-ink-soft hover:bg-gray-50"
           >
-            {t === 'csv' ? 'CSV files' : 'Paste text'}
+            <Download className="h-4 w-4" aria-hidden />
+            CSV template
           </button>
-        ))}
-        <div className="flex-1" />
-        <button
-          onClick={downloadTemplate}
-          className="inline-flex items-center gap-1.5 rounded-xl border border-gray-200 bg-white px-4 py-2.5 text-sm font-bold text-gray-600 min-h-[44px] cursor-pointer"
-        >
-          <Download className="h-4 w-4" />
-          CSV template
+        }
+      />
+
+      <div className="mb-6 flex gap-2" role="tablist" aria-label="Import method">
+        <button role="tab" aria-selected={tab === 'csv'} onClick={() => { setTab('csv'); setError(null); setResult(null) }} className={tabClass(tab === 'csv')}>
+          CSV files
+        </button>
+        <button role="tab" aria-selected={tab === 'paste'} onClick={() => { setTab('paste'); setError(null); setResult(null) }} className={tabClass(tab === 'paste')}>
+          Paste text
         </button>
       </div>
 
+      {result && tab === 'csv' && (
+        <div className="mb-4">
+          <FormNotice>
+            Successfully inserted {result.inserted} question(s) — they are waiting in the review queue
+            {result.errors.length > 0 && (
+              <ul className="mt-2 space-y-1">
+                {result.errors.map((err, i) => (
+                  <li key={i} className="text-sm font-semibold text-amber-700">{err}</li>
+                ))}
+              </ul>
+            )}
+          </FormNotice>
+        </div>
+      )}
+
       {tab === 'paste' ? (
-        <div className="rounded-xl border border-gray-200 bg-white p-6">
-          <p className="text-sm text-gray-500 mb-3">
+        <div className="rounded-2xl border border-blue-100/70 bg-white p-6 shadow-[0_1px_2px_rgba(16,24,40,0.05)]">
+          <p className="mb-3 text-sm font-semibold leading-relaxed text-ink-soft">
             One <code className="rounded bg-gray-100 px-1.5 py-0.5 text-xs font-bold"># header</code> sets
             subject, exam, and difficulty — then blocks separated by <code className="rounded bg-gray-100 px-1.5 py-0.5 text-xs font-bold">---</code>.
             Preview updates as you type; the server re-validates on import.
@@ -271,7 +281,8 @@ export default function AdminUploadPage() {
             rows={14}
             placeholder={PASTE_EXAMPLE}
             spellCheck={false}
-            className="w-full rounded-xl border border-gray-200 px-4 py-3 font-mono text-[13px] leading-relaxed resize-y min-h-[280px] focus:border-blue-600 focus:outline-none"
+            aria-label="Paste questions"
+            className="min-h-[280px] w-full resize-y rounded-xl border border-gray-200 px-4 py-3 font-mono text-[13px] leading-relaxed focus:border-blue-600 focus:outline-none"
           />
 
           {pasteText.trim() && (
@@ -285,113 +296,88 @@ export default function AdminUploadPage() {
             />
           )}
 
-          {error && (
-            <div className="mt-4 rounded-xl bg-red-50 border border-red-100 p-4">
-              <p className="text-sm text-red-700">{error}</p>
-            </div>
-          )}
+          {error && !pasteText.trim() && <div className="mt-4"><FormError>{error}</FormError></div>}
         </div>
       ) : (
-      <div className="rounded-xl border border-gray-200 bg-white p-6">
-        <div
-          className="flex flex-col items-center justify-center rounded-xl border-2 border-dashed border-gray-300 bg-gray-50 px-6 py-12"
-          onDragOver={(e) => e.preventDefault()}
-          onDrop={(e) => {
-            e.preventDefault()
-            handleFiles(e.dataTransfer.files)
-          }}
-        >
-          <Upload className="h-10 w-10 text-gray-500 mb-4" />
-          <p className="text-sm font-semibold text-gray-700 mb-1">Drop one or more CSV files here, or click to browse</p>
-          <p className="text-xs text-gray-500 mb-4">CSV files only</p>
-          <input
-            ref={fileInputRef}
-            type="file"
-            accept=".csv"
-            multiple
-            onChange={(e) => handleFiles(e.target.files)}
-            className="hidden"
-          />
-          <button
-            onClick={() => fileInputRef.current?.click()}
-            className="rounded-xl bg-blue-600 px-4 py-2 text-sm font-bold text-white hover:bg-blue-700 min-h-[44px] cursor-pointer"
+        <div className="rounded-2xl border border-blue-100/70 bg-white p-6 shadow-[0_1px_2px_rgba(16,24,40,0.05)]">
+          <div
+            className="flex flex-col items-center justify-center rounded-2xl border-2 border-dashed border-gray-300 bg-gray-50/60 px-6 py-12"
+            onDragOver={(e) => e.preventDefault()}
+            onDrop={(e) => {
+              e.preventDefault()
+              handleFiles(e.dataTransfer.files)
+            }}
           >
-            Select Files
-          </button>
-        </div>
-
-        {files.length > 0 && !preview && !loading && (
-          <div className="mt-4 flex items-center gap-2 text-sm text-gray-600">
-            <File className="h-4 w-4" />
-            {files.length} file(s) selected: {files.map((f) => f.name).join(', ')}
-          </div>
-        )}
-
-        {loading && (
-          <div className="mt-6 flex items-center justify-center py-4">
-            <div className="h-6 w-6 animate-spin rounded-full border-4 border-blue-600 border-t-transparent" />
-          </div>
-        )}
-
-        {preview && !loading && (
-          <div className="mt-6 space-y-4">
-            <div className="flex items-center gap-2 text-sm">
-              <Check className="h-4 w-4 text-green-500" />
-              <span className="font-semibold text-green-700">{preview.valid} valid rows across {preview.fileCount} file(s)</span>
-              {preview.invalid.length > 0 && (
-                <>
-                  <X className="h-4 w-4 text-red-500 ml-2" />
-                  <span className="font-semibold text-red-700">{preview.invalid.length} invalid rows</span>
-                </>
-              )}
-            </div>
-
-            {preview.invalid.length > 0 && (
-              <div className="rounded-lg bg-red-50 border border-red-100 p-4">
-                <p className="text-xs font-bold text-red-600 uppercase mb-2">Invalid rows</p>
-                <ul className="space-y-1">
-                  {preview.invalid.map((item, i) => (
-                    <li key={i} className="text-sm text-red-700">
-                      [{item.file}:{item.row}] {item.reason}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
+            <Upload className="mb-4 h-10 w-10 text-gray-400" aria-hidden />
+            <p className="mb-1 text-sm font-semibold text-gray-700">Drop one or more CSV files here, or click to browse</p>
+            <p className="mb-4 text-xs text-gray-500">CSV files only</p>
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept=".csv"
+              multiple
+              onChange={(e) => handleFiles(e.target.files)}
+              className="hidden"
+              aria-label="Choose CSV files"
+            />
             <button
-              onClick={handleUpload}
-              className="rounded-xl bg-blue-600 px-6 py-2 text-sm font-bold text-white hover:bg-blue-700 min-h-[44px] cursor-pointer"
+              onClick={() => fileInputRef.current?.click()}
+              className="cursor-pointer rounded-xl bg-blue-600 px-4 py-2 text-sm font-bold text-white hover:bg-blue-700 min-h-[44px]"
             >
-              Insert {preview.valid} valid question(s)
+              Select Files
             </button>
           </div>
-        )}
 
-        {result && (
-          <div className="mt-6 rounded-xl bg-green-50 border border-green-100 p-4">
-            <div className="flex items-center gap-2">
-              <Check className="h-5 w-5 text-green-600" />
-              <p className="text-sm font-semibold text-green-800">
-                Successfully inserted {result.inserted} question(s)
-              </p>
+          {files.length > 0 && !preview && !loading && (
+            <div className="mt-4 flex items-center gap-2 text-sm font-semibold text-ink-soft">
+              <File className="h-4 w-4" aria-hidden />
+              {files.length} file(s) selected: {files.map((f) => f.name).join(', ')}
             </div>
-            {result.errors.length > 0 && (
-              <ul className="mt-2 space-y-1">
-                {result.errors.map((err, i) => (
-                  <li key={i} className="text-sm text-amber-700">{err}</li>
-                ))}
-              </ul>
-            )}
-          </div>
-        )}
+          )}
 
-        {error && (
-          <div className="mt-6 rounded-xl bg-red-50 border border-red-100 p-4">
-            <p className="text-sm text-red-700">{error}</p>
-          </div>
-        )}
-      </div>
+          {loading && (
+            <div className="mt-6 flex items-center justify-center py-4" role="status" aria-label="Processing">
+              <div className="h-6 w-6 animate-spin rounded-full border-4 border-blue-600 border-t-transparent" />
+            </div>
+          )}
+
+          {preview && !loading && (
+            <div className="mt-6 space-y-4">
+              <div className="flex items-center gap-2 text-sm">
+                <Check className="h-4 w-4 text-green-500" aria-hidden />
+                <span className="font-semibold text-green-700">{preview.valid} valid rows across {preview.fileCount} file(s)</span>
+                {preview.invalid.length > 0 && (
+                  <>
+                    <X className="ml-2 h-4 w-4 text-red-500" aria-hidden />
+                    <span className="font-semibold text-red-700">{preview.invalid.length} invalid rows</span>
+                  </>
+                )}
+              </div>
+
+              {preview.invalid.length > 0 && (
+                <div role="alert" className="rounded-xl border border-red-100 bg-red-50 p-4">
+                  <p className="mb-2 text-xs font-bold uppercase text-red-600">Invalid rows</p>
+                  <ul className="space-y-1">
+                    {preview.invalid.map((item, i) => (
+                      <li key={i} className="text-sm text-red-700">
+                        [{item.file}:{item.row}] {item.reason}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              <button
+                onClick={handleUpload}
+                className="cursor-pointer rounded-xl bg-blue-600 px-6 py-2 text-sm font-bold text-white hover:bg-blue-700 min-h-[44px]"
+              >
+                Insert {preview.valid} valid question(s)
+              </button>
+            </div>
+          )}
+
+          {error && <div className="mt-4"><FormError>{error}</FormError></div>}
+        </div>
       )}
     </div>
   )
