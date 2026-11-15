@@ -1,4 +1,4 @@
-import { notFound } from 'next/navigation'
+import { redirect } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
 import { loadSessionData } from '@/lib/actions/practice'
 import MockPlayer from '@/components/mocks/mock-player'
@@ -10,10 +10,15 @@ export default async function MockSessionPage({ params }: { params: Promise<{ se
   const { sessionId } = await params
 
   let session: Awaited<ReturnType<typeof loadSessionData>>
+  // A finished mock (or a session this user cannot open, or a signed-out
+  // visitor) lands here after submit and on later visits or reloads. None of
+  // these is a 404: /results renders completed sessions and shows an inline
+  // error otherwise. A redirect also stops the server action that just ended
+  // the mock from swapping this page for the 404 boundary.
   try {
     session = await loadSessionData(sessionId)
   } catch {
-    notFound()
+    redirect(`/results/${sessionId}`)
   }
 
   if (session.mode !== 'mock' || !session.timeLimitSeconds) {
