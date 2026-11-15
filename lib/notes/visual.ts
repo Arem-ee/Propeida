@@ -100,6 +100,18 @@ export function toLessonVisual(value: unknown): LessonVisual | null {
     return { kind: 'chart', caption, xLabel, yLabel, series }
   }
 
+  if (v.kind === 'image') {
+    const src = text(v.src)
+    const alt = text(v.alt)
+    const aspect = v.aspect === 'portrait' ? 'portrait' : 'wide'
+    if (!src || !alt) return null
+    // Local assets only. An external URL leaks user data via the Referer header
+    // and can rot; anything that belongs to the app ships under /public.
+    if (!src.startsWith('/') || src.startsWith('//')) return null
+    if (src.length > 200 || alt.length > 240) return null
+    return { kind: 'image', src, alt, caption, aspect }
+  }
+
   return null
 }
 

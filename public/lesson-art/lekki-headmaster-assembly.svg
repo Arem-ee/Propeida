@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Stylized sunrise assembly scene at a Nigerian secondary school">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fdf3e3"/>
+      <stop offset="0.55" stop-color="#f7dcb0"/>
+      <stop offset="1" stop-color="#eec37f"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7a5138"/>
+      <stop offset="1" stop-color="#5c3a28"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffd98a"/>
+      <stop offset="0.6" stop-color="#f6b45c"/>
+      <stop offset="1" stop-color="#ef9d4c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <circle cx="800" cy="565" r="420" fill="url(#sun)"/>
+  <circle cx="800" cy="565" r="130" fill="#ffd98a" opacity="0.9"/>
+
+  <g fill="#b98a63" opacity="0.85">
+    <rect x="60" y="520" width="220" height="180" rx="4"/>
+    <rect x="1310" y="520" width="230" height="180" rx="4"/>
+    <rect x="330" y="555" width="140" height="145" rx="4"/>
+    <rect x="1130" y="555" width="150" height="145" rx="4"/>
+  </g>
+  <g stroke="#f7dcb0" stroke-width="3" opacity="0.7">
+    <line x1="110" y1="560" x2="230" y2="560"/><line x1="110" y1="600" x2="230" y2="600"/><line x1="110" y1="640" x2="230" y2="640"/>
+    <line x1="1370" y1="560" x2="1490" y2="560"/><line x1="1370" y1="600" x2="1490" y2="600"/><line x1="1370" y1="640" x2="1490" y2="640"/>
+  </g>
+
+  <g fill="#6e4f36">
+    <rect x="560" y="330" width="480" height="290" rx="6"/>
+    <polygon points="540,330 800,230 1060,330"/>
+    <rect x="790" y="270" width="20" height="60" fill="#5c3a28"/>
+    <rect x="770" y="212" width="60" height="34" fill="#6e4f36"/>
+    <polygon points="760,212 800,176 840,212" fill="#5c3a28"/>
+  </g>
+  <g fill="#f7dcb0" opacity="0.9">
+    <rect x="620" y="430" width="46" height="82" rx="3"/>
+    <rect x="720" y="430" width="46" height="82" rx="3"/>
+    <rect x="835" y="430" width="46" height="82" rx="3"/>
+    <rect x="935" y="430" width="46" height="82" rx="3"/>
+    <rect x="775" y="540" width="55" height="80" rx="3"/>
+  </g>
+  <rect x="585" y="620" width="430" height="26" fill="#5c3a28"/>
+
+  <g fill="#3f2a1d">
+    <rect x="262" y="470" width="22" height="230" rx="3"/>
+    <path d="M273 470 C 210 430, 190 330, 300 310 C 280 360, 330 420, 273 470 Z"/>
+    <path d="M273 470 C 330 420, 360 330, 255 315 C 300 365, 235 425, 273 470 Z" opacity="0.92"/>
+    <rect x="1315" y="470" width="22" height="230" rx="3"/>
+    <path d="M1326 470 C 1260 430, 1255 330, 1365 312 C 1340 365, 1395 425, 1326 470 Z"/>
+    <path d="M1326 470 C 1385 425, 1410 330, 1290 318 C 1335 360, 1275 425, 1326 470 Z" opacity="0.92"/>
+  </g>
+
+  <rect x="0" y="640" width="1600" height="260" fill="url(#ground)"/>
+
+  <g fill="#432d1f">
+    <polygon points="700,645 900,645 945,900 655,900"/>
+    <rect x="755" y="600" width="90" height="70" rx="3"/>
+    <rect x="788" y="525" width="24" height="80"/>
+    <line x1="800" y1="525" x2="852" y2="470" stroke="#432d1f" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="800" cy="505" r="16"/>
+    <rect x="700" y="770" width="200" height="18" rx="2" fill="#33231a"/>
+  </g>
+
+  <g fill="#2f1f15" opacity="0.95">
+    <circle cx="430" cy="700" r="17"/><circle cx="360" cy="712" r="15"/><circle cx="500" cy="712" r="15"/>
+    <circle cx="1170" cy="700" r="17"/><circle cx="1240" cy="712" r="15"/><circle cx="1100" cy="712" r="15"/>
+    <circle cx="300" cy="770" r="14"/><circle cx="550" cy="770" r="14"/><circle cx="1050" cy="770" r="14"/><circle cx="1300" cy="770" r="14"/>
+  </g>
+  <g fill="#241811">
+    <rect x="180" y="720" width="1240" height="16" rx="2" opacity="0.55"/>
+    <rect x="120" y="795" width="1360" height="18" rx="2" opacity="0.7"/>
+    <rect x="60" y="868" width="1480" height="18" rx="2" opacity="0.85"/>
+  </g>
+
+  <g stroke="#4a3223" stroke-width="5" stroke-linecap="round" fill="none">
+    <path d="M420 190 Q 450 175 480 190"/>
+    <path d="M1120 150 Q 1155 130 1190 150"/>
+    <path d="M760 120 Q 785 105 810 120"/>
+  </g>
+</svg>

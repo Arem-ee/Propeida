@@ -71,6 +71,17 @@ export type LessonVisual =
       /** Up to three series, in reading order. */
       series: ChartSeries[]
     }
+  | {
+      kind: 'image'
+      /** Path under /public, never an external URL. */
+      src: string
+      /** What a screen reader hears instead of the picture. */
+      alt: string
+      /** One line under the picture; say what to look at, not what it is. */
+      caption: string
+      /** How the picture is shaped so it scales without a layout jump. */
+      aspect: 'wide' | 'portrait'
+    }
 
 export interface NoteSection {
   heading: string

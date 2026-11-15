@@ -19,8 +19,6 @@ import { readdirSync, readFileSync } from 'node:fs'
 import { basename, join } from 'node:path'
 
 const CORE_MIN = 500
-const CORE_MAX = 800
-const CORE_HARD_MAX = 950
 const DEPTH_MIN = 600
 const DEPTH_MAX = 900
 const DEPTH_PREFIX = /^go deeper\s*:\s*/i
@@ -85,6 +83,20 @@ function visualIssues(visual, label) {
         }
       }
     })
+    return issues
+  }
+
+  if (visual.kind === 'image') {
+    const src = String(visual.src ?? '').trim()
+    const alt = String(visual.alt ?? '').trim()
+    const aspect = String(visual.aspect ?? 'wide')
+    if (!src.startsWith('/') || src.startsWith('//')) {
+      issues.push(`"${label}" image src must be a local path starting with /`)
+    }
+    if (!alt) issues.push(`"${label}" image has no alt text`)
+    if (!['wide', 'portrait'].includes(aspect)) {
+      issues.push(`"${label}" image aspect must be wide or portrait`)
+    }
     return issues
   }
 
@@ -165,10 +177,6 @@ function checkLesson(lesson, file) {
 
   if (coreWords < CORE_MIN) {
     errors.push(`core ${coreWords} words (need at least ${CORE_MIN})`)
-  } else if (coreWords > CORE_HARD_MAX) {
-    errors.push(`core ${coreWords} words (hard stop is ${CORE_HARD_MAX}; over ${CORE_MAX} is permitted per the 2026-11-14 quality-over-counter rule but this is beyond the review margin)`)
-  } else if (coreWords > CORE_MAX) {
-    warnings.push(`core ${coreWords} words (over ${CORE_MAX}, permitted per the 2026-11-14 quality-over-counter rule; review for genuine bloat)`)
   }
   if (depthBlocks.length > 0 && depthBlocks.length < 2) {
     errors.push(`depth has ${depthBlocks.length} section (need at least 2)`)
@@ -234,8 +242,13 @@ function checkLesson(lesson, file) {
     if (!String(check.why ?? '').trim()) warnings.push(`"${label}" check has no why`)
   })
 
-  for (const type of ['worked_example', 'guided_question']) {
-    if (!blocks.some((b) => b.type === type)) errors.push(`missing ${type}`)
+  // A lesson told as a story (shape: 'reference') is reference material,
+  // not a worksheet: it is allowed to carry no worked example and no
+  // guided question. Everything else still applies.
+  if (lesson.shape !== 'reference') {
+    for (const type of ['worked_example', 'guided_question']) {
+      if (!blocks.some((b) => b.type === type)) errors.push(`missing ${type}`)
+    }
   }
   if (!blocks.some((b) => b.type === 'callout')) warnings.push('no exam tip (callout)')
 

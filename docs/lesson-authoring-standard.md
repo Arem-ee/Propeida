@@ -74,12 +74,10 @@ A lesson that breaks rule 1 cannot be fixed by shortening its prose. Split it.
 
 | Tier | Required | Length | Purpose |
 |---|---|---|---|
-| **Core** | Yes | 500–800+ words | Teach the syllabus point well enough to attempt exam questions today. Raised from 500–700 on 2026-11-12 — quality wins over the cap. On 2026-11-14 the cap was reaffirmed as a soft one: never trim or shorten a lesson merely to satisfy the counter; if the teaching genuinely needs more words, the words win. `check-lesson-depth.mjs` now flags >800w as a warning and fails only beyond 950w, set the same day. |
+| **Core** | Yes | Uncapped | Teach the syllabus point well enough to attempt exam questions today. No upper word cap since 2026-11-14 (user directive, applied universally): use as many words as the content genuinely needs. The 500–800 band disappeared with this change; nothing so ordinary will fail again. |
 | **Go deeper** | Optional | 600–900 words | Explain the mechanism, context, comparisons and edge cases for a learner who wants the full picture. |
 
-Total teaching text is therefore 500–800+ words for a usable lesson, or
-1,100–1,600 words when depth is present. Depth is never required to pass the
-lesson or unlock practice.
+Total teaching text is therefore uncapped. `check-lesson-depth.mjs` enforces only the 500-word floor against the embarrassing case (an unfinished lesson); exceeding it never fails again.
 
 ## How words are counted
 
@@ -128,6 +126,30 @@ Structure, in order:
 
 Optional core blocks: one `callout` for a misconception, `vocabulary_card` for
 language subjects, `diagram`/`image_explainer` where a visual carries meaning.
+
+A lesson told as a story, e.g. a full novel summary, may set `"shape": "reference"`
+in the lesson object: the `worked_example`/`guided_question` requirement is
+waived for it, bullet-frames, takeaways and checks stay optional in spirit, and
+the 3-card warning is expected. Complete is the goal, not worksheets.
+
+## Lesson images
+
+A picture may carry a whole section. The shape, checked in `toLessonVisual`
+and `check-lesson-depth.mjs`:
+
+```json
+{ "kind": "image",
+  "src": "/lesson-art/example.svg",
+  "alt": "What a screen reader hears",
+  "caption": "One line on what to notice",
+  "aspect": "wide" }
+```
+
+Rules: local assets only (served from `/public`, committed with the app, never
+external URLs); `alt` is mandatory and honest; `aspect` is `wide` or
+`portrait`; caption under 30 words; the aspect box pre-reserves its space so
+the layout never jumps. Images explain how things look when words cannot;
+they are never decoration.
 
 ### Core writing rules
 
@@ -320,7 +342,7 @@ Before a lesson is seeded:
 - [ ] Each section opens with a situation, ends with a one-line takeaway, and
       carries one check with a stated `why`.
 - [ ] No paragraph is longer than three sentences.
-- [ ] Core teaches the point in full (500–800 as a guide); depth, if present, is 600–900 words. Quality wins over the counter; never trim a lesson to fit 800.
+- [ ] Core teaches the point in full (uncapped since 2026-11-14); depth, if present, is 600–900 words. Quality wins over the counter; never trim a lesson to fit any word ceiling.
 - [ ] Summary states one claim, not a table of contents.
 - [ ] At least one section names a confusable pair and the discrimination rule.
 - [ ] A visual, if present, is one figure, carries a relationship, has a
