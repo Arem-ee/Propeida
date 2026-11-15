@@ -5,15 +5,15 @@ export const campaignExpiredEmail = {
 
   text: `Hi,
 
-Your 24-hour full access to the Propeida question bank has ended — this is expected, and nothing about your account or subscription changed.
+Your 24-hour full access to the Propeida question bank has ended, and this is expected, so nothing about your account or subscription changed.
 
-If the full question bank helped you practice, you can keep using it with Pro. UNILORIN Post-UTME is only a few days away, and Pro gives you every question, full mock exams, and detailed explanations for the final stretch.
+If the full question bank helped you practise, you can keep using it with Pro. Your exam is coming up soon, and Pro gives you every question, full mock exams, and detailed explanations for the final stretch.
 
 Upgrade here: ${CAMPAIGN_CTA_URL}
 
-Whatever you decide, good luck on the exam — you've got this.
+Whatever you decide, good luck on the exam. You've got this.
 
-— The Propeida Team
+The Propeida Team
 propeida.help@gmail.com`,
 
   html: `<!DOCTYPE html>
@@ -42,18 +42,18 @@ propeida.help@gmail.com`,
             <td style="padding: 16px 32px 32px 32px; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.6; color: #374151;">
               <p style="margin: 0 0 16px 0;">Hi,</p>
               <p style="margin: 0 0 16px 0;">
-                Your <strong>24-hour full access</strong> to the Propeida question bank has ended — this is expected, and nothing about your account or subscription changed.
+                Your <strong>24-hour full access</strong> to the Propeida question bank has ended, and this is expected, so nothing about your account or subscription changed.
               </p>
               <p style="margin: 0 0 16px 0;">
-                If the full question bank helped you practice, you can <strong>keep using it with Pro</strong>. UNILORIN Post-UTME is only a few days away, and Pro gives you every question, full mock exams, and detailed explanations for the final stretch.
+                If the full question bank helped you practise, you can <strong>keep using it with Pro</strong>. Your exam is coming up soon, and Pro gives you every question, full mock exams, and detailed explanations for the final stretch.
               </p>
               <p style="margin: 0 0 20px 0;">
                 <a href="${CAMPAIGN_CTA_URL}" style="display: inline-block; background-color: #2563eb; color: #ffffff; font-weight: bold; text-decoration: none; border-radius: 8px; padding: 12px 24px;">Upgrade to Pro</a>
               </p>
               <p style="margin: 0 0 16px 0;">
-                Whatever you decide, good luck on the exam — you've got this.
+                Whatever you decide, good luck on the exam. You've got this.
               </p>
-              <p style="margin: 0;">— <strong>The Propeida Team</strong><br /><a href="mailto:propeida.help@gmail.com" style="color: #2563eb; text-decoration: none;">propeida.help@gmail.com</a></p>
+              <p style="margin: 0;"><strong>The Propeida Team</strong><br /><a href="mailto:propeida.help@gmail.com" style="color: #2563eb; text-decoration: none;">propeida.help@gmail.com</a></p>
             </td>
           </tr>
         </table>

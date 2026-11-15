@@ -1,13 +1,13 @@
 import { CAMPAIGN_CTA_URL } from '../campaign/messages.ts'
 
 export const campaignUnlockEmail = {
-  subject: "Don't wait until the night before UNILORIN Post-UTME",
+  subject: "Don't wait until the night before your exam",
 
   text: `Hi,
 
-UNILORIN Post-UTME is in 4 days.
+Your exam is coming up soon.
 
-For the next 24 hours, we've unlocked the entire Propeida question bank for everyone who has already signed up.
+For the next 24 hours, we've unlocked the entire Propeida question bank for you.
 
 Use today to go through questions you haven't seen before, identify the topics you're still weak in, and take a few mock exams under real exam conditions.
 
@@ -19,7 +19,7 @@ Open Propeida: ${CAMPAIGN_CTA_URL}
 
 Whatever you decide, make these last four days count.
 
-— The Propeida Team
+The Propeida Team
 propeida.help@gmail.com`,
 
   html: `<!DOCTYPE html>
@@ -27,7 +27,7 @@ propeida.help@gmail.com`,
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Don't wait until the night before UNILORIN Post-UTME</title>
+  <title>Don't wait until the night before your exam</title>
 </head>
 <body style="margin: 0; padding: 0; background-color: #f3f4f6;">
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #f3f4f6; padding: 32px 16px;">
@@ -40,7 +40,7 @@ propeida.help@gmail.com`,
                 Propeida
               </p>
               <h1 style="margin: 12px 0 0 0; font-family: Arial, Helvetica, sans-serif; font-size: 24px; line-height: 1.3; color: #111827;">
-                Don't wait until the night before UNILORIN Post-UTME
+                Don't wait until the night before your exam
               </h1>
             </td>
           </tr>
@@ -48,10 +48,10 @@ propeida.help@gmail.com`,
             <td style="padding: 16px 32px 32px 32px; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.6; color: #374151;">
               <p style="margin: 0 0 16px 0;">Hi,</p>
               <p style="margin: 0 0 16px 0;">
-                <strong>UNILORIN Post-UTME is in 4 days.</strong>
+                <strong>Your exam is coming up soon.</strong>
               </p>
               <p style="margin: 0 0 16px 0;">
-                For the next <strong>24 hours</strong>, we've unlocked the <strong>entire Propeida question bank</strong> for everyone who has already signed up.
+                For the next <strong>24 hours</strong>, we've unlocked the <strong>entire Propeida question bank</strong> for you.
               </p>
               <p style="margin: 0 0 16px 0;">
                 Use today to go through questions you haven't seen before, identify the topics you're still weak in, and take a few mock exams under real exam conditions.
@@ -68,7 +68,7 @@ propeida.help@gmail.com`,
               <p style="margin: 0 0 16px 0;">
                 Whatever you decide, <strong>make these last four days count</strong>.
               </p>
-              <p style="margin: 0;">— <strong>The Propeida Team</strong><br /><a href="mailto:propeida.help@gmail.com" style="color: #2563eb; text-decoration: none;">propeida.help@gmail.com</a></p>
+              <p style="margin: 0;"><strong>The Propeida Team</strong><br /><a href="mailto:propeida.help@gmail.com" style="color: #2563eb; text-decoration: none;">propeida.help@gmail.com</a></p>
             </td>
           </tr>
         </table>

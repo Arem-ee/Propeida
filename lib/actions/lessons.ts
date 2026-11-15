@@ -4,6 +4,7 @@ import { randomUUID } from 'node:crypto'
 import { createClient, getAuthUser } from '@/lib/supabase/server'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { applySubjectEvidence, getNextReviews } from '@/lib/mastery'
+import { fetchCurrentStreak } from '@/lib/streak'
 import { findPrerequisiteRepair } from '@/lib/practice'
 import { getNoteById } from '@/lib/notes'
 import type { RevisionNote } from '@/lib/notes'
@@ -482,6 +483,7 @@ export async function getLessonQuestions(
     p_limit: 12,
     p_seed: randomUUID(),
     p_response_types: ['mcq', 'text', 'derivation'],
+    p_topic_ids: [],
   })
   if (error) throw new Error('Could not load this lesson.')
 
@@ -554,6 +556,7 @@ export async function getTwinQuestion(
     p_limit: 8,
     p_seed: randomUUID(),
     p_response_types: ['mcq', 'text', 'derivation'],
+    p_topic_ids: [],
   })
   if (error) return null
 
@@ -740,7 +743,7 @@ export async function completeLesson(input: {
   subjectId: string
   correct: number
   total: number
-}): Promise<{ nextReviewAt: string | null; status: string }> {
+}): Promise<{ nextReviewAt: string | null; status: string; streak?: number | null }> {
   const supabase = await createClient()
   const user = await getAuthUser(supabase)
   if (!user) throw new Error('Please sign in again.')
@@ -767,9 +770,10 @@ export async function completeLesson(input: {
   } catch (err) {
     console.error('[streak] update_streak failed:', err)
   }
+  const streak = await fetchCurrentStreak(supabase, user.id)
 
   const reviews = await getNextReviews(supabase, user.id, [input.subjectId])
-  return { nextReviewAt: reviews[input.subjectId] ?? null, status: 'recorded' }
+  return { nextReviewAt: reviews[input.subjectId] ?? null, status: 'recorded', streak }
 }
 
 export async function saveLessonReflection(input: {

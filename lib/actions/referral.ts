@@ -7,7 +7,7 @@ import { revalidatePath } from 'next/cache'
 export async function claimReferral(code: string) {
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
-  if (!user) throw new Error('Please sign in again.')
+  if (!user) throw new Error('Please sign in again')
 
   const { data: profile } = await supabase
     .from('profiles')
@@ -19,7 +19,7 @@ export async function claimReferral(code: string) {
   if (profile.referred_by) throw new Error('Already referred by someone')
 
   if (profile.referral_code === code) {
-    throw new Error('You cannot use your own referral code.')
+    throw new Error('You cannot use your own referral code')
   }
 
   const { data: referrer } = await supabase
@@ -46,9 +46,9 @@ export async function claimReferral(code: string) {
 
   if (referralError) {
     if (referralError.code === '23505') {
-      throw new Error('This referral has already been claimed.')
+      throw new Error('This referral has already been claimed')
     }
-    throw new Error('Could not record your referral.')
+    throw new Error('Could not record your referral')
   }
 
   const { error: updateError } = await admin
@@ -62,7 +62,7 @@ export async function claimReferral(code: string) {
       .delete()
       .eq('referrer_id', referrer.id)
       .eq('referred_id', user.id)
-    throw new Error('Could not apply your referral code.')
+    throw new Error('Could not apply your referral code')
   }
 
   revalidatePath('/home')
@@ -72,7 +72,7 @@ export async function claimReferral(code: string) {
 export async function getReferralStats() {
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
-  if (!user) throw new Error('Please sign in again.')
+  if (!user) throw new Error('Please sign in again')
 
   const { data: profile } = await supabase
     .from('profiles')

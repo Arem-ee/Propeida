@@ -47,7 +47,7 @@ function isActiveEntitlement(status: string, expiresAt: string | null): boolean 
 export async function getDashboardData() {
   const supabase = await createClient()
   const user = await getAuthUser(supabase)
-  if (!user) throw new Error('Please sign in again.')
+  if (!user) throw new Error('Please sign in again')
 
   let payload = await fetchDashboardPayload(supabase, user.id)
 
@@ -57,13 +57,20 @@ export async function getDashboardData() {
     payload = await fetchDashboardPayload(supabase, user.id)
   }
 
-  if (!payload) throw new Error('Could not load your dashboard.')
-  if (!payload.profile) throw new Error('Your profile could not be found.')
+  if (!payload) throw new Error('Could not load your dashboard')
+  if (!payload.profile) throw new Error('Your profile could not be found')
 
   const entitlements = payload.entitlements ?? []
   const activeEntitlements = entitlements.filter((e) => isActiveEntitlement(e.status, e.expires_at))
-  const jambEntitlement = activeEntitlements.find((e) => e.product === 'jamb_pro') ?? null
-  const isJambPro = !!(jambEntitlement || activeEntitlements.some((e) => e.product === 'jamb_premium_ai'))
+  const JAMB_PRODUCTS = [
+    'jamb_pro',
+    'jamb_pro_weekly',
+    'jamb_pro_yearly',
+    'jamb_lifetime',
+    'jamb_premium_ai',
+  ]
+  const jambEntitlement = activeEntitlements.find((e) => JAMB_PRODUCTS.includes(e.product)) ?? null
+  const isJambPro = !!jambEntitlement
   const isTrial = jambEntitlement?.source === 'referral_trial'
   const trialExpiresAt = jambEntitlement?.expires_at ?? null
 

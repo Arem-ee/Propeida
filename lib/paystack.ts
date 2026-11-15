@@ -1,21 +1,25 @@
 import { createHmac, timingSafeEqual } from 'node:crypto'
 import { siteUrl } from '@/lib/site-url'
 
-const PAYSTACK_AMOUNT = 150000
+const PAYSTACK_AMOUNT = 400000
 
 const FETCH_TIMEOUT_MS = 15000
 
 const VALID_PRODUCTS = [
   'putme_pro',
+  'putme_pro_weekly',
   'putme_pro_yearly',
   'jamb_pro',
+  'jamb_pro_weekly',
   'jamb_pro_yearly',
 ] as const
 
 const PRODUCT_AMOUNTS: Record<string, number> = {
   putme_pro: 100000,
+  putme_pro_weekly: 40000,
   putme_pro_yearly: 840000,
   jamb_pro: 400000,
+  jamb_pro_weekly: 100000,
   jamb_pro_yearly: 3360000,
 }
 
@@ -40,7 +44,7 @@ export function isValidProduct(product: string): product is typeof VALID_PRODUCT
   return (VALID_PRODUCTS as readonly string[]).includes(product)
 }
 
-export async function initializeTransaction(email: string, userId: string, product: string = 'putme_pro', idempotencyKey?: string) {
+export async function initializeTransaction(email: string, userId: string, product: string = 'jamb_pro', idempotencyKey?: string) {
   const amount = PRODUCT_AMOUNTS[product] ?? PAYSTACK_AMOUNT
   const headers: Record<string, string> = {
     Authorization: `Bearer ${getSecretKey()}`,

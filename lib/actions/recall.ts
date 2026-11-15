@@ -28,10 +28,10 @@ function inScope(examId: string | null, allowed: string[] | undefined | null): b
 export async function getDueRecallCards(limit = 10): Promise<RecallCard[]> {
   const supabase = await createClient()
   const user = await getAuthUser(supabase)
-  if (!user) throw new Error('Please sign in again.')
+  if (!user) throw new Error('Please sign in again')
 
   const pro = await getProStatus(user.id)
-  if (!pro.isPro) throw new Error('Quick recall is part of Pro.')
+  if (!pro.isPro) throw new Error('Quick recall is part of Pro')
 
   const scope = await getExamScope(supabase, user.id)
 
@@ -116,7 +116,7 @@ export async function submitRecallMark(input: {
 }): Promise<void> {
   const supabase = await createClient()
   const user = await getAuthUser(supabase)
-  if (!user) throw new Error('Please sign in again.')
+  if (!user) throw new Error('Please sign in again')
 
   const admin = createAdminClient()
 
@@ -125,7 +125,7 @@ export async function submitRecallMark(input: {
     .select('id, subject_id')
     .eq('id', input.cardId)
     .single()
-  if (!card) throw new Error('That card could not be found.')
+  if (!card) throw new Error('That card could not be found')
 
   const { error } = await admin.from('learning_attempts').insert({
     user_id: user.id,
@@ -137,7 +137,7 @@ export async function submitRecallMark(input: {
     is_correct: input.known,
     confidence: null,
   })
-  if (error) throw new Error('Could not save your answer.')
+  if (error) throw new Error('Could not save your answer')
 
   try {
     const scope = await getExamScope(supabase, user.id)

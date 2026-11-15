@@ -3,10 +3,12 @@ import { hasCampaignAccess } from './campaign'
 
 type Product =
   | 'jamb_pro'
+  | 'jamb_pro_weekly'
   | 'jamb_pro_yearly'
   | 'jamb_lifetime'
   | 'jamb_premium_ai'
   | 'putme_pro'
+  | 'putme_pro_weekly'
   | 'putme_pro_yearly'
 
 interface EntitlementStatus {
@@ -16,6 +18,7 @@ interface EntitlementStatus {
 
 const PRODUCT_JAMB: Product[] = [
   'jamb_pro',
+  'jamb_pro_weekly',
   'jamb_pro_yearly',
   'jamb_lifetime',
   'jamb_premium_ai',
@@ -23,6 +26,7 @@ const PRODUCT_JAMB: Product[] = [
 
 const PRODUCT_PUTME: Product[] = [
   'putme_pro',
+  'putme_pro_weekly',
   'putme_pro_yearly',
 ]
 
@@ -125,6 +129,10 @@ export async function getActiveProducts(userId: string): Promise<Product[]> {
 export interface ProStatus {
   /** Any active Pro entitlement (any product) or an active campaign. */
   isPro: boolean
+  /** True when a JAMB product is active. JAMB and PUTME are separate plans. */
+  hasJambPro: boolean
+  /** True when a PUTME product is active. */
+  hasPutmePro: boolean
   /** Human labels for the active products, e.g. ['PUTME Pro']. */
   labels: string[]
   /** Where the access came from, for honest UI copy. */
@@ -134,8 +142,10 @@ export interface ProStatus {
 
 const PRODUCT_LABELS: Record<Product, string> = {
   putme_pro: 'PUTME Pro',
+  putme_pro_weekly: 'PUTME Pro (Weekly)',
   putme_pro_yearly: 'PUTME Pro (Yearly)',
   jamb_pro: 'JAMB Pro',
+  jamb_pro_weekly: 'JAMB Pro (Weekly)',
   jamb_pro_yearly: 'JAMB Pro (Yearly)',
   jamb_lifetime: 'JAMB All Access',
   jamb_premium_ai: 'JAMB Premium AI',
@@ -146,7 +156,14 @@ const PRODUCT_LABELS: Record<Product, string> = {
  * Trial/campaign grants slot in here without changing the gates.
  */
 export async function getProStatus(userId: string): Promise<ProStatus> {
-  const none: ProStatus = { isPro: false, labels: [], source: null, expiresAt: null }
+  const none: ProStatus = {
+    isPro: false,
+    hasJambPro: false,
+    hasPutmePro: false,
+    labels: [],
+    source: null,
+    expiresAt: null,
+  }
 
   const [campaign, supabase] = await Promise.all([
     hasCampaignAccess().catch(() => false),
@@ -154,7 +171,14 @@ export async function getProStatus(userId: string): Promise<ProStatus> {
   ])
 
   if (campaign) {
-    return { isPro: true, labels: ['Pro'], source: 'campaign', expiresAt: null }
+    return {
+      isPro: true,
+      hasJambPro: true,
+      hasPutmePro: true,
+      labels: ['Pro'],
+      source: 'campaign',
+      expiresAt: null,
+    }
   }
 
   const { data } = await supabase
@@ -174,9 +198,14 @@ export async function getProStatus(userId: string): Promise<ProStatus> {
   const first = rows[0]
 
   // Trials read as what they are: a trial, not a purchase.
+  const hasJambPro = rows.some((r) => PRODUCT_JAMB.includes(r.product as Product))
+  const hasPutmePro = rows.some((r) => PRODUCT_PUTME.includes(r.product as Product))
+
   if (rows.every((r) => r.source === 'referral_trial')) {
     return {
       isPro: true,
+      hasJambPro,
+      hasPutmePro,
       labels: ['Trial'],
       source: 'referral_trial',
       expiresAt: latest?.expires_at ?? null,
@@ -187,6 +216,8 @@ export async function getProStatus(userId: string): Promise<ProStatus> {
 
   return {
     isPro: true,
+    hasJambPro,
+    hasPutmePro,
     labels,
     source: (first?.source ?? null) as ProStatus['source'],
     expiresAt: latest?.expires_at ?? null,

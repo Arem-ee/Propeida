@@ -66,7 +66,7 @@ export async function submitInquiry(data: {
   const headersList = await headers()
   const ip = getClientIp((name) => headersList.get(name))
   const { allowed } = await checkRateLimit(rateLimitKey(ip, data.type), 3, 60000)
-  if (!allowed) throw new Error('Too many messages. Please wait a moment.')
+  if (!allowed) throw new Error('Too many messages. Please wait a moment')
 
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
@@ -96,7 +96,7 @@ export async function submitInquiry(data: {
     })
 
   if (error) {
-    throw new Error('Could not send that message.')
+    throw new Error('Could not send that message')
   }
 
   return { success: true }

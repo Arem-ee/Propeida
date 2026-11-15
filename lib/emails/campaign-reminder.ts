@@ -5,9 +5,9 @@ export const campaignReminderEmail = {
 
   text: `Hi,
 
-UNILORIN Post-UTME is very close now.
+Your exam is very close now.
 
-Your full access to the Propeida question bank is still active — but the unlock ends soon, so this is the time to use it.
+Your full access to the Propeida question bank is still active, but the unlock ends soon, so this is the time to use it.
 
 Try to get through as many questions as you can before it's gone: go after the topics you're still weak in, and take a mock exam or two under real exam timing.
 
@@ -15,7 +15,7 @@ Open Propeida: ${CAMPAIGN_CTA_URL}
 
 Make these last hours count.
 
-— The Propeida Team
+The Propeida Team
 propeida.help@gmail.com`,
 
   html: `<!DOCTYPE html>
@@ -44,10 +44,10 @@ propeida.help@gmail.com`,
             <td style="padding: 16px 32px 32px 32px; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.6; color: #374151;">
               <p style="margin: 0 0 16px 0;">Hi,</p>
               <p style="margin: 0 0 16px 0;">
-                <strong>UNILORIN Post-UTME is very close now.</strong>
+                <strong>Your exam is very close now.</strong>
               </p>
               <p style="margin: 0 0 16px 0;">
-                Your full access to the <strong>Propeida question bank</strong> is still active — but the unlock ends soon, so this is the time to use it.
+                Your full access to the <strong>Propeida question bank</strong> is still active, but the unlock ends soon, so this is the time to use it.
               </p>
               <p style="margin: 0 0 16px 0;">
                 Try to get through as many questions as you can before it's gone: go after the topics you're still weak in, and take a mock exam or two under real exam timing.
@@ -58,7 +58,7 @@ propeida.help@gmail.com`,
               <p style="margin: 0 0 16px 0;">
                 Make these last hours count.
               </p>
-              <p style="margin: 0;">— <strong>The Propeida Team</strong><br /><a href="mailto:propeida.help@gmail.com" style="color: #2563eb; text-decoration: none;">propeida.help@gmail.com</a></p>
+              <p style="margin: 0;"><strong>The Propeida Team</strong><br /><a href="mailto:propeida.help@gmail.com" style="color: #2563eb; text-decoration: none;">propeida.help@gmail.com</a></p>
             </td>
           </tr>
         </table>

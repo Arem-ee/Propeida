@@ -10,14 +10,14 @@ import { getExamScope } from '@/lib/exam-scope'
 export async function completeOnboarding() {
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
-  if (!user) throw new Error('Please sign in again.')
+  if (!user) throw new Error('Please sign in again')
 
   const { error } = await supabase
     .from('profiles')
     .update({ onboarding_completed: true })
     .eq('id', user.id)
 
-  if (error) throw new Error('Could not update your status.')
+  if (error) throw new Error('Could not update your status')
 
   revalidatePath('/home')
 }
@@ -40,7 +40,7 @@ export async function getOnboardingCheck(): Promise<CheckQuestion[]> {
   const supabase = await createClient()
   const admin = createAdminClient()
   const user = await getAuthUser(supabase)
-  if (!user) throw new Error('Please sign in again.')
+  if (!user) throw new Error('Please sign in again')
 
   const scope = await getExamScope(supabase, user.id)
   const candidates = scope.restricted ? (scope.examIds ?? []) : null
@@ -86,6 +86,7 @@ export async function getOnboardingCheck(): Promise<CheckQuestion[]> {
       p_difficulty: null,
       p_limit: count,
       p_seed: randomUUID(),
+      p_topic_ids: [],
     })
     for (const q of (data ?? []) as { id: string; question_text?: string; questionText?: string; options: { key: string; text: string }[] }[]) {
       out.push({
@@ -105,8 +106,8 @@ export async function submitOnboardingCheck(
 ): Promise<{ summary: { subjectName: string; correct: number; total: number }[] }> {
   const supabase = await createClient()
   const user = await getAuthUser(supabase)
-  if (!user) throw new Error('Please sign in again.')
-  if (answers.length === 0 || answers.length > 5) throw new Error('Please answer all the questions first.')
+  if (!user) throw new Error('Please sign in again')
+  if (answers.length === 0 || answers.length > 5) throw new Error('Please answer all the questions first')
 
   // The answer key lives in question_answers, which the learner role
   // cannot read. Grading reads it with the service-role client, inside
@@ -193,7 +194,7 @@ export async function submitOnboardingCheck(
 export async function updateOnboardingProfile(payload: Partial<OnboardingProfileInput>) {
   const supabase = await createClient()
   const user = await getAuthUser(supabase)
-  if (!user) throw new Error('Please sign in again.')
+  if (!user) throw new Error('Please sign in again')
 
   const { error } = await supabase
     .from('profiles')
@@ -215,7 +216,7 @@ export async function updateOnboardingProfile(payload: Partial<OnboardingProfile
     })
     .eq('id', user.id)
 
-  if (error) throw new Error('Could not save your preferences.')
+  if (error) throw new Error('Could not save your preferences')
 
   revalidatePath('/account')
   revalidatePath('/home')
@@ -256,7 +257,7 @@ class OnboardingError extends Error {
 export async function saveOnboardingProfile(payload: OnboardingProfileInput) {
   const supabase = await createClient()
   const user = await getAuthUser(supabase)
-  if (!user) throw new Error('Please sign in again.')
+  if (!user) throw new Error('Please sign in again')
 
   // ---- Compulsory validation ----
   if (!payload.exam_target) throw new OnboardingError('Please select what you are preparing for.')
@@ -291,7 +292,7 @@ export async function saveOnboardingProfile(payload: OnboardingProfileInput) {
     })
     .eq('id', user.id)
 
-  if (error) throw new Error('Could not save your profile.')
+  if (error) throw new Error('Could not save your profile')
 
   revalidatePath('/home')
   revalidatePath('/account')

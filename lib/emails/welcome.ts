@@ -7,11 +7,11 @@ Welcome to Propeida.
 
 Thanks for creating an account.
 
-Propeida is built for students preparing for JAMB, Post-UTME, and other entrance exams, and the goal is simple: help you prepare in a way that feels closer to the real exam.
+Propeida is built for you if you are preparing for JAMB, Post-UTME, or another entrance exam, and the goal is simple: help you prepare in a way that feels closer to the real exam.
 
 Here's what you can do right now:
 
-- Practice CBT-style questions
+- Practise CBT-style questions
 - Take timed mock exams
 - Track your progress
 - Use Revision Notes for quick topic-by-topic revision
@@ -29,7 +29,7 @@ If anything feels confusing, broken, or could be improved, just reply to this em
 
 Thanks again for joining us.
 
-— The Propeida Team
+The Propeida Team
 propeida.help@gmail.com`,
 
   html: `<!DOCTYPE html>
@@ -64,11 +64,11 @@ propeida.help@gmail.com`,
                 Thanks for creating an account.
               </p>
               <p style="margin: 0 0 16px 0;">
-                Propeida is built for students taking <strong>JAMB, Post-UTME, and other entrance exams</strong>, and the goal is simple: help you prepare in a way that feels closer to the real exam.
+                Propeida is built for you if you are preparing for <strong>JAMB, Post-UTME, or another entrance exam</strong>, and the goal is simple: help you prepare in a way that feels closer to the real exam.
               </p>
               <p style="margin: 0 0 8px 0;"><strong>Here's what you can do right now:</strong></p>
               <ul style="margin: 0 0 16px 0; padding-left: 20px;">
-                <li style="margin-bottom: 6px;">Practice CBT-style questions</li>
+                <li style="margin-bottom: 6px;">Practise CBT-style questions</li>
                 <li style="margin-bottom: 6px;">Take timed mock exams</li>
                 <li style="margin-bottom: 6px;">Track your progress</li>
                 <li style="margin-bottom: 6px;">Use <strong>Revision Notes</strong> for quick topic-by-topic revision</li>
@@ -88,7 +88,7 @@ propeida.help@gmail.com`,
                 If anything feels confusing, broken, or could be improved, just reply to this email. We read the feedback ourselves.
               </p>
               <p style="margin: 0 0 24px 0;">Thanks again for joining us.</p>
-              <p style="margin: 0;">— <strong>The Propeida Team</strong><br /><a href="mailto:propeida.help@gmail.com" style="color: #2563eb; text-decoration: none;">propeida.help@gmail.com</a></p>
+              <p style="margin: 0;"><strong>The Propeida Team</strong><br /><a href="mailto:propeida.help@gmail.com" style="color: #2563eb; text-decoration: none;">propeida.help@gmail.com</a></p>
             </td>
           </tr>
         </table>

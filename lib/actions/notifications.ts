@@ -11,14 +11,14 @@ import { createClient, getAuthUser } from '@/lib/supabase/server'
 export async function setCohortUpdatesEnabled(enabled: boolean) {
   const supabase = await createClient()
   const user = await getAuthUser(supabase)
-  if (!user) throw new Error('Please sign in again.')
+  if (!user) throw new Error('Please sign in again')
 
   const { error } = await supabase
     .from('profiles')
     .update({ notifications_enabled: enabled })
     .eq('id', user.id)
 
-  if (error) throw new Error('Could not save that change.')
+  if (error) throw new Error('Could not save that change')
 
   revalidatePath('/account/settings')
 }

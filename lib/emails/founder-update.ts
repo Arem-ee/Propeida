@@ -3,11 +3,11 @@ export const founderUpdateEmail = {
 
   text: `Hi,
 
-Thank you for being one of the first students to use Propeida.
+Thank you for being one of the first candidates to use Propeida.
 
 Over the past few weeks, we've been working on improving the platform, and we wanted to let you know what has changed.
 
-We're still building Propeida step by step, and we're trying to make exam preparation more useful and accessible for Nigerian students.
+We're still building Propeida step by step, and we're trying to make exam preparation more useful and accessible for Nigerian candidates.
 
 Here are a few things that are new:
 
@@ -24,11 +24,11 @@ We've also created an official WhatsApp channel where we'll post updates about P
 
 https://whatsapp.com/channel/0029Vb7q1taHFxP1Dr5TSJ2V
 
-If you know someone preparing for UNILORIN Post-UTME or JAMB, we'd really appreciate it if you shared Propeida with them.
+If you know someone preparing for JAMB or UNILORIN Post-UTME, we'd really appreciate it if you shared Propeida with them.
 
 Thanks again for being here early.
 
-— The Propeida Team
+The Propeida Team
 propeida.help@gmail.com`,
 
   html: `<!DOCTYPE html>
@@ -57,13 +57,13 @@ propeida.help@gmail.com`,
             <td style="padding: 16px 32px 32px 32px; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.6; color: #374151;">
               <p style="margin: 0 0 16px 0;">Hi,</p>
               <p style="margin: 0 0 16px 0;">
-                Thank you for being one of the first students to use <strong>Propeida</strong>.
+                Thank you for being one of the first candidates to use <strong>Propeida</strong>.
               </p>
               <p style="margin: 0 0 16px 0;">
                 Over the past few weeks, we've been working on improving the platform, and we wanted to let you know what has changed.
               </p>
               <p style="margin: 0 0 16px 0;">
-                We're still building Propeida step by step, and we're trying to make exam preparation more useful and accessible for Nigerian students.
+                We're still building Propeida step by step, and we're trying to make exam preparation more useful and accessible for Nigerian candidates.
               </p>
               <p style="margin: 0 0 8px 0;"><strong>Here are a few things that are new:</strong></p>
               <ul style="margin: 0 0 16px 0; padding-left: 20px;">
@@ -83,10 +83,10 @@ propeida.help@gmail.com`,
                 <a href="https://whatsapp.com/channel/0029Vb7q1taHFxP1Dr5TSJ2V" style="color: #2563eb; font-weight: bold; text-decoration: none;">https://whatsapp.com/channel/0029Vb7q1taHFxP1Dr5TSJ2V</a>
               </p>
               <p style="margin: 0 0 16px 0;">
-                If you know someone preparing for <strong>UNILORIN Post-UTME or JAMB</strong>, we'd really appreciate it if you shared Propeida with them.
+                If you know someone preparing for <strong>JAMB or UNILORIN Post-UTME</strong>, we'd really appreciate it if you shared Propeida with them.
               </p>
               <p style="margin: 0 0 24px 0;">Thanks again for being here early.</p>
-              <p style="margin: 0;">— <strong>The Propeida Team</strong><br /><a href="mailto:propeida.help@gmail.com" style="color: #2563eb; text-decoration: none;">propeida.help@gmail.com</a></p>
+              <p style="margin: 0;"><strong>The Propeida Team</strong><br /><a href="mailto:propeida.help@gmail.com" style="color: #2563eb; text-decoration: none;">propeida.help@gmail.com</a></p>
             </td>
           </tr>
         </table>
