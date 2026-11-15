@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useEffect, useCallback, useRef } from 'react'
 import { useRouter } from 'next/navigation'
-import { Flag, CheckCircle, Calculator } from 'lucide-react'
+import { CheckCircle, Calculator } from 'lucide-react'
 import { Mascot } from '@/components/mascot'
 import { useWins } from '@/components/celebrations/use-wins'
 import { celebrateStreakIfNew } from '@/components/celebrations/streak-celebration'
@@ -189,7 +189,6 @@ export default function MockPlayer({
     }
     return init
   })
-  const [flagged, setFlagged] = useState<Set<string>>(new Set())
   const [confirming, setConfirming] = useState(false)
   const [finalizing, setFinalizing] = useState(false)
   const [done, setDone] = useState(false)
@@ -199,6 +198,7 @@ export default function MockPlayer({
   const total = questions.length
   const current = questions[index]
   const answeredCount = Object.keys(selections).length
+  const allAnswered = answeredCount >= total
 
   const submitAll = useCallback(async () => {
     if (finalizing) return
@@ -220,7 +220,8 @@ export default function MockPlayer({
   }, [submitAll])
 
   const left = useCountdown(startedAt, timeLimitSeconds, handleExpire)
-  const urgent = left < 300
+  const inDanger = left <= 600
+  const inWarning = left <= 1800 && !inDanger
 
   const subjects = useMemo(() => {
     const seen = new Map<string, string>()
@@ -243,16 +244,6 @@ export default function MockPlayer({
     if (!current || done) return
     setSelections((prev) => ({ ...prev, [current.id]: key }))
     void submitAnswer(sessionId, current.id, key).catch(() => {})
-  }
-
-  const toggleFlag = () => {
-    if (!current) return
-    setFlagged((prev) => {
-      const nextSet = new Set(prev)
-      if (nextSet.has(current.id)) nextSet.delete(current.id)
-      else nextSet.add(current.id)
-      return nextSet
-    })
   }
 
   const goTo = (i: number) => setIndex(Math.min(Math.max(0, i), total - 1))
@@ -325,7 +316,9 @@ export default function MockPlayer({
             Calc
           </button>
           <span className={`ml-auto shrink-0 rounded-full px-3.5 py-2 font-display text-base font-semibold tabular-nums min-h-[40px] inline-flex items-center ${
-            urgent ? 'bg-red-100 text-red-700 animate-pulse' : 'bg-ink text-white'
+            inDanger ? 'bg-red-100 text-red-700 animate-pulse'
+            : inWarning ? 'bg-amber-100 text-amber-800'
+            : 'bg-ink text-white'
           }`}>
             {formatClock(left)}
           </span>
@@ -344,16 +337,6 @@ export default function MockPlayer({
           <span className="rounded-full bg-white border border-blue-100 px-3.5 py-1.5 text-xs font-extrabold text-ink-soft shadow-sm">
             Question {index + 1} of {total}
           </span>
-          <button
-            onClick={toggleFlag}
-            aria-pressed={flagged.has(current.id)}
-            className={`inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs font-extrabold min-h-[40px] cursor-pointer transition-all ${
-              flagged.has(current.id) ? 'bg-amber-400 text-black' : 'bg-gray-100 text-gray-500'
-            }`}
-          >
-            <Flag className="h-3.5 w-3.5" />
-            {flagged.has(current.id) ? 'Flagged' : 'Flag'}
-          </button>
         </div>
 
         <h3 className="font-display text-lg sm:text-xl font-medium leading-snug text-black mb-5">{current.questionText}</h3>
@@ -407,7 +390,7 @@ export default function MockPlayer({
       <div className="mt-5 rounded-3xl border border-blue-100/70 bg-white p-5 shadow-[0_2px_12px_-6px_rgba(16,28,51,0.12)]">
         <div className="mb-3 flex items-center justify-between">
           <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-gray-500">
-            {answeredCount}/{total} answered{flagged.size > 0 ? ` · ${flagged.size} flagged` : ''}
+            {answeredCount}/{total} answered
           </p>
           <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-gray-400">
             Exam palette
@@ -417,12 +400,11 @@ export default function MockPlayer({
           {questions.map((q, i) => {
             const answered = q.id in selections
             const isCurrent = i === index
-            const isFlagged = flagged.has(q.id)
             return (
               <button
                 key={q.id}
                 onClick={() => goTo(i)}
-                aria-label={`Question ${i + 1}${answered ? ', answered' : ', unanswered'}${isFlagged ? ', flagged' : ''}`}
+                aria-label={`Question ${i + 1}${answered ? ', answered' : ', unanswered'}`}
                 className={`relative flex h-9 items-center justify-center rounded-lg text-xs font-extrabold min-h-[36px] cursor-pointer transition-all pressable ${
                   isCurrent
                     ? 'bg-blue-600 text-white ring-2 ring-blue-300'
@@ -432,9 +414,6 @@ export default function MockPlayer({
                 }`}
               >
                 {i + 1}
-                {isFlagged && (
-                  <span className="absolute -top-1 -right-1 h-3 w-3 rounded-full bg-amber-400 border-2 border-white" />
-                )}
               </button>
             )
           })}
@@ -443,7 +422,6 @@ export default function MockPlayer({
           <span className="inline-flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded bg-emerald-500" /> Answered</span>
           <span className="inline-flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded bg-gray-200" /> Not answered yet</span>
           <span className="inline-flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded bg-blue-600" /> Current</span>
-          <span className="inline-flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-full bg-amber-400" /> Flagged</span>
         </div>
       </div>
 
@@ -486,10 +464,19 @@ export default function MockPlayer({
       {!confirming && (
         <div className="fixed bottom-[76px] lg:bottom-6 left-0 right-0 z-40 px-4">
           <div className="mx-auto max-w-2xl flex items-center justify-between gap-3 rounded-2xl bg-ink text-white px-5 py-3 shadow-[0_16px_40px_-12px_rgba(0,0,0,0.5)]">
-            <span className="text-xs font-extrabold tabular-nums">{formatClock(left)} · {answeredCount}/{total}</span>
+            <span className={`text-xs font-extrabold tabular-nums transition-colors ${
+              inDanger ? 'text-red-400' : inWarning ? 'text-amber-300' : 'text-white'
+            }`}>
+              {formatClock(left)} · {answeredCount}/{total}
+            </span>
             <button
               onClick={() => setConfirming(true)}
-              className="rounded-xl bg-white px-5 py-2.5 text-sm font-extrabold text-black min-h-[44px] cursor-pointer"
+              aria-label={allAnswered ? 'All questions answered - end your exam' : `Only ${answeredCount} of ${total} answered - check before you end your exam`}
+              className={`rounded-xl px-5 py-2.5 text-sm font-extrabold text-white min-h-[44px] cursor-pointer transition-colors ${
+                allAnswered
+                  ? 'bg-emerald-600 hover:bg-emerald-500 hover:ring-1 hover:ring-emerald-300'
+                  : 'bg-red-600 hover:bg-red-500 hover:ring-1 hover:ring-red-300'
+              }`}
             >
               End exam
             </button>
