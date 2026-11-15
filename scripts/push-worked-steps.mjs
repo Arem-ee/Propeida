@@ -21,7 +21,7 @@ import { createClient } from '@supabase/supabase-js'
 const args = process.argv.slice(2)
 const APPLY = args.includes('--apply')
 const bankArg = args.find(a => a.startsWith('--bank='))
-const BANK = bankArg ?? 'chemistry'
+const BANK = bankArg ? bankArg.slice('--bank='.length) : 'chemistry'
 const SUBJECT = ['physics', 'economics'].includes(BANK) ? BANK : 'chemistry'
 const BANK_FILE = SUBJECT === 'physics'
   ? 'content-folder/physics-jamb-bank.json'
