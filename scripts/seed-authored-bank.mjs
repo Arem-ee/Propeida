@@ -43,10 +43,18 @@ if (!Array.isArray(source.questions) || source.questions.length === 0) {
 }
 
 // --- Validate before touching the database --------------------------------
+// A bank's option count must be uniform. JAMB papers printed four options
+// (recent years) or five (the 1960s-70s typesetting); both are accepted as a
+// set, but the file decides once. Held items are skipped from the count.
 
-const KEY_ORDER = ['a', 'b', 'c', 'd']
+const fourCount = source.questions.filter((q) => !q.hold_reason && (q.options ?? []).length === 4).length
+const fiveCount = source.questions.filter((q) => !q.hold_reason && (q.options ?? []).length === 5).length
+const KEY_ORDER = fiveCount >= fourCount ? ['a', 'b', 'c', 'd', 'e'] : ['a', 'b', 'c', 'd']
 const seenText = new Set()
 const problems = []
+if (fourCount > 0 && fiveCount > 0) {
+  problems.push(`mixed option counts in one bank (${fourCount} four-option, ${fiveCount} five-option); a bank must be uniform`)
+}
 
 source.questions.forEach((q, i) => {
   const label = `question ${i + 1} (${q.topic ?? 'no topic'})`
@@ -57,7 +65,7 @@ source.questions.forEach((q, i) => {
 
   if (!q.topic) problems.push(`${label}: missing topic`)
   if (!text) problems.push(`${label}: empty question text`)
-  if (options.length !== 4) problems.push(`${label}: ${options.length} options, expected 4`)
+  if (options.length !== KEY_ORDER.length) problems.push(`${label}: ${options.length} options, expected ${KEY_ORDER.length}`)
   if (keys.join('') !== KEY_ORDER.join('')) {
     problems.push(`${label}: option keys "${keys.join('')}", expected "${KEY_ORDER.join('')}"`)
   }
