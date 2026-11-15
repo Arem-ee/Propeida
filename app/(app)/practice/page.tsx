@@ -1,4 +1,6 @@
 import { createClient } from '@/lib/supabase/server'
+import { unstable_cache } from 'next/cache'
+import { createAdminClient } from '@/lib/supabase/admin'
 import { getExamScope, filterExamsForScope, examPathLabel, filterSubjectsForScope, filterExamSubjectMapForScope, isExamInScope } from '@/lib/exam-scope'
 import Link from 'next/link'
 import PracticeConfig from '@/components/practice/practice-config'
@@ -7,17 +9,31 @@ import { getUserActiveSessions } from '@/lib/practice'
 
 export const metadata = { title: 'Practice' }
 
+/**
+ * Exams with no bank simply don't appear — content-gating by presence.
+ * Reading the whole questions table per page view got expensive as the
+ * bank grew, so the published-exam id list is cached for five minutes.
+ */
+const getPublishedExamIds = unstable_cache(
+  async (): Promise<string[]> => {
+    const db = createAdminClient()
+    const { data, error } = await db.from('questions').select('exam_id').limit(20000)
+    if (error) return []
+    return [...new Set((data ?? []).map((q) => q.exam_id as string))]
+  },
+  ['practice-published-exam-ids'],
+  { revalidate: 300 },
+)
+
 export default async function PracticePage() {
   const supabase = await createClient()
 
-  const [examsRes, subjectsRes, examSubjectsRes, userRes, questionRows, topicsRes] = await Promise.all([
+  const [examsRes, subjectsRes, examSubjectsRes, userRes, publishedExamIds, topicsRes] = await Promise.all([
     supabase.from('exams').select('id, name, slug, subject_selection_mode, school_id').order('name'),
     supabase.from('subjects').select('id, name, slug').order('name'),
     supabase.from('exam_subjects').select('exam_id, subject_id'),
     supabase.auth.getUser(),
-    // Content-gating by presence, not permission: exams with no bank
-    // simply don't appear.
-    supabase.from('questions').select('exam_id').limit(20000),
+    getPublishedExamIds(),
     // Published topics — shown as checkboxes under each subject so the
     // learner can route practice to a named syllabus point.
     supabase.from('topics').select('id, subject_id, name, slug, sort_order').eq('published', true).order('sort_order'),
@@ -69,7 +85,7 @@ export default async function PracticePage() {
   const accessSet = new Set(userExamAccessIds)
   const campaign = user ? await getCampaignStatus() : null
   const campaignAccess = campaign?.hasAccess ?? false
-  const examsWithContent = new Set((questionRows.data ?? []).map((q) => q.exam_id))
+  const examsWithContent = new Set(publishedExamIds)
   const pathExams = scope
     ? filterExamsForScope(allExams, scope)
     : allExams

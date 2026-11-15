@@ -1,4 +1,5 @@
 import { createClient } from '@/lib/supabase/server'
+import { unstable_cache } from 'next/cache'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { getExamScope, filterExamsForScope, examPathLabel, filterSubjectsForScope, filterExamSubjectMapForScope } from '@/lib/exam-scope'
 import MockLauncher from '@/components/mocks/mock-launcher'
@@ -21,8 +22,11 @@ export interface MockableExam {
  * Published questions per exam and subject. Counts only, read through the
  * service role so a learner who has not opened a school bank yet still sees
  * an honest readiness figure. The page never renders question content.
+ * The full-table scan is cached for five minutes so page views do not
+ * re-read every question row on each visit.
  */
-async function getPublishedCounts(): Promise<Record<string, Record<string, number>>> {
+const getPublishedCounts = unstable_cache(
+  async (): Promise<Record<string, Record<string, number>>> => {
   const admin = createAdminClient()
   const counts: Record<string, Record<string, number>> = {}
   const PAGE = 1000
@@ -46,7 +50,10 @@ async function getPublishedCounts(): Promise<Record<string, Record<string, numbe
   }
 
   return counts
-}
+  },
+  ['mock-published-counts'],
+  { revalidate: 300 },
+)
 
 export default async function MocksPage() {
   const supabase = await createClient()
