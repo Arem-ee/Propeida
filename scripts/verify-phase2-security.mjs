@@ -177,8 +177,23 @@ try {
         p_session_id: session.id,
         p_question_id: question.id,
       })
-      const revealRow = Array.isArray(completedReveal) ? completedReveal[0] : null
-      pass('completed session reveal returns the key', revealRow?.correct_answer === correct)
+      pass(
+        'completed mock reveal still returns no key',
+        Array.isArray(completedReveal) && completedReveal.length === 0,
+      )
+
+      const { data: completedReview } = await user.rpc('get_session_review', {
+        p_session_id: session.id,
+      })
+      pass(
+        'completed mock review returns no paper',
+        Array.isArray(completedReview) && completedReview.length === 0,
+      )
+
+      const { data: mockTelemetry } = await user.rpc('get_session_topic_breakdown', {
+        p_session_id: session.id,
+      })
+      pass('completed mock telemetry returns aggregates', Array.isArray(mockTelemetry))
 
       // Practice still gets immediate feedback: the reveal is gated on
       // mode = 'practice' and a recorded selected_answer, not on completion.

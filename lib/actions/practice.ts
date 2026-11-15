@@ -671,11 +671,10 @@ export async function getSessionResults(sessionId: string) {
 
   const { data: subjects } = await supabase
     .from('subjects')
-    .select('id, name, slug')
+    .select('id, name')
     .in('id', Array.from(subjectIds))
 
   const subjectNames = new Map((subjects ?? []).map((s) => [s.id, s.name]))
-  const subjectSlugs = new Map((subjects ?? []).map((s) => [s.id, s.slug as string]))
 
   // Misconception repairs for review: keyed by question, matched to the
   // picked wrong option per item below. Empty when nothing is mapped.
@@ -724,8 +723,9 @@ export async function getSessionResults(sessionId: string) {
         }]
       }).flat()
 
-  // Topic-level weak-spot telemetry for mocks, computed from question_topics.
-  // Empty when this session had no tagged questions.
+  // Topic-level weak-spot telemetry for mocks, served by a definer function
+  // that aggregates inside the database. No question ids, stems, options,
+  // answers or explanations cross the wire for a mock session.
   const topicBreakdown: {
     slug: string
     name: string
@@ -735,56 +735,29 @@ export async function getSessionResults(sessionId: string) {
     total: number
     accuracyPct: number
   }[] = []
-  if (isMock && questionIds.length > 0) {
-    const { data: qTopics } = await createAdminClient()
-      .from('question_topics')
-      .select('question_id, topic_id')
-      .in('question_id', questionIds)
-    const rows = (qTopics ?? []) as { question_id: string; topic_id: string }[]
-    if (rows.length > 0) {
-      const correctness = new Map(reviewRows.map((r) => [r.question_id, r.is_correct === true]))
-      const subjectByQuestion = new Map(reviewRows.map((r) => [r.question_id, r.subject_id]))
-      const stat = new Map<string, { total: number; right: number; subjectId: string }>()
-      for (const row of rows) {
-        const entry = stat.get(row.topic_id) ?? {
-          total: 0,
-          right: 0,
-          subjectId: subjectByQuestion.get(row.question_id) ?? '',
-        }
-        entry.total += 1
-        if (correctness.get(row.question_id)) entry.right += 1
-        entry.subjectId = entry.subjectId || subjectByQuestion.get(row.question_id) || ''
-        stat.set(row.topic_id, entry)
-      }
-      const missedTopicIds = [...stat.entries()]
-        .filter(([, s]) => s.right < s.total)
-        .map(([id]) => id)
-      if (missedTopicIds.length > 0) {
-        const { data: tps } = await createAdminClient()
-          .from('topics')
-          .select('id, slug, name, subject_id')
-          .in('id', missedTopicIds)
-        const topicInfo = new Map(
-          ((tps ?? []) as { id: string; slug: string; name: string; subject_id: string }[]).map((t) => [t.id, t]),
-        )
-        for (const [topicId, s] of stat) {
-          const t = topicInfo.get(topicId)
-          if (!t) continue
-          const missCount = s.total - s.right
-          if (missCount === 0) continue
-          topicBreakdown.push({
-            slug: t.slug,
-            name: t.name,
-            subjectSlug: subjectSlugs.get(t.subject_id) ?? '',
-            subjectName: subjectNames.get(t.subject_id) ?? '',
-            missCount,
-            total: s.total,
-            accuracyPct: s.total > 0 ? Math.round((s.right / s.total) * 100) : 0,
-          })
-        }
-        topicBreakdown.sort((a, b) => b.missCount - a.missCount || b.total - a.total)
-        topicBreakdown.splice(6)
-      }
+  if (isMock) {
+    const { data: topicRows, error: topicError } = await supabase.rpc('get_session_topic_breakdown', {
+      p_session_id: sessionId,
+    })
+    if (topicError) throw new Error('Could not load your weak spots.')
+    for (const row of (topicRows ?? []) as {
+      slug: string
+      name: string
+      subject_slug: string
+      subject_name: string
+      miss_count: number
+      total: number
+      accuracy_pct: number
+    }[]) {
+      topicBreakdown.push({
+        slug: row.slug,
+        name: row.name,
+        subjectSlug: row.subject_slug,
+        subjectName: row.subject_name,
+        missCount: row.miss_count,
+        total: row.total,
+        accuracyPct: row.accuracy_pct,
+      })
     }
   }
 
