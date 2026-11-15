@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Propeida Delight — Mascot & Wins Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #000; --ink-soft: #3d4b63; --paper: #fffdf8;
+    --blue: #2563eb;
+    --ease-touch: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --ease-settle: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  body {
+    background: var(--paper); color: var(--ink);
+    font-family: 'Nunito', system-ui, sans-serif;
+    margin: 0; padding: 40px 24px; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; }
+  h1 { font-family: 'Fredoka', sans-serif; font-weight: 500; font-size: 34px; letter-spacing: -0.01em; margin: 0 0 6px; }
+  .sub { color: var(--ink-soft); font-weight: 700; font-size: 14px; margin: 0 0 40px; }
+  h2 { font-family: 'Fredoka', sans-serif; font-weight: 500; font-size: 20px; margin: 40px 0 16px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; }
+  .expr-card {
+    background: #fff; border: 1px solid rgba(37,99,235,0.16); border-radius: 24px;
+    padding: 20px; text-align: center; box-shadow: 0 2px 16px -8px rgba(16,28,51,0.15);
+  }
+  .expr-card .label { margin-top: 12px; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-soft); line-height: 1.4; }
+
+  /* ── the alive layer ── */
+  .mascot { display: inline-block; overflow: hidden; border-radius: 26%; background: #FAF3E4; box-shadow: 0 2px 10px -4px rgba(16,28,51,0.25); }
+  .mascot img { display: block; width: 100%; }
+  .s-sm { width: 52px; } .s-md { width: 84px; } .s-lg { width: 120px; }
+
+  @keyframes breathe {
+    0%, 100% { transform: scale(1, 1) rotate(0deg); }
+    30% { transform: scale(1.035, 0.96) rotate(-1.3deg); }
+    55% { transform: scale(0.975, 1.04) rotate(1.1deg); }
+    80% { transform: scale(1.015, 0.99) rotate(-0.5deg); }
+  }
+  .breathe { animation: breathe 3.6s ease-in-out infinite; transform-origin: 50% 100%; }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0) scale(1); }
+    40% { transform: translateY(-14px) scale(1.05); }
+    60% { transform: translateY(-4px) scale(1.02); }
+  }
+  .bounce { animation: bounce 1.2s var(--ease-touch) infinite; transform-origin: 50% 100%; }
+  @keyframes pop {
+    0% { opacity: 0; transform: scale(0.4) rotate(-12deg); }
+    55% { opacity: 1; transform: scale(1.22) rotate(5deg); }
+    75% { transform: scale(0.9) rotate(-2deg); }
+    100% { opacity: 1; transform: scale(1) rotate(0deg); }
+  }
+  .pop { animation: pop 0.7s var(--ease-touch) both; transform-origin: 50% 100%; }
+
+  /* ── speech bubbles ── */
+  .bubble {
+    position: relative; display: inline-block; max-width: 230px;
+    background: #fff; border: 1px solid #dbeafe; border-radius: 16px;
+    padding: 10px 16px; font-size: 13px; font-weight: 800; color: var(--ink-soft);
+    line-height: 1.35; box-shadow: 0 6px 20px -8px rgba(16,28,51,0.25);
+    animation: bubblepop 0.5s var(--ease-touch) 0.18s both; transform-origin: 0% 100%;
+  }
+  @keyframes bubblepop {
+    0% { opacity: 0; transform: translateY(8px) scale(0.7); }
+    60% { opacity: 1; transform: translateY(-2px) scale(1.05); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  .bubble::after {
+    content: ""; position: absolute; left: 20px; bottom: -7px; width: 13px; height: 13px;
+    background: #fff; border-right: 1px solid #dbeafe; border-bottom: 1px solid #dbeafe;
+    transform: rotate(45deg);
+  }
+  .say { display: flex; align-items: flex-end; gap: 12px; }
+
+  /* ── mascot delivers explanations ── */
+  .explain { display: flex; align-items: flex-start; gap: 12px; }
+  .explain-bubble {
+    position: relative; flex: 1; border-radius: 16px; border: 1px solid #bfdbfe;
+    background: rgba(239,246,255,0.5); padding: 18px 20px; max-width: 460px;
+  }
+  .explain-bubble::before {
+    content: ""; position: absolute; left: -8px; top: 20px; width: 16px; height: 16px;
+    background: #eff6ff; border-left: 1px solid #bfdbfe; border-bottom: 1px solid #bfdbfe;
+    transform: rotate(45deg);
+  }
+  .explain-label { font-family: 'Fredoka', sans-serif; font-weight: 500; font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: #1e40af; }
+  .explain-text { margin: 6px 0 0; font-size: 14px; line-height: 1.6; font-weight: 700; color: var(--ink-soft); }
+  .badge { display: inline-flex; align-items: center; gap: 8px; border-radius: 16px; padding: 14px 16px; font-family: 'Fredoka', sans-serif; font-weight: 500; font-size: 18px; background: #ecfdf5; border: 1px solid #a7f3d0; color: #047857; margin-bottom: 10px; }
+  .badge svg { stroke: currentColor; stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; width: 20px; height: 20px; }
+  .badge.wrong { background: #fffbeb; border-color: #fde68a; color: #92400e; }
+
+  /* ── worked steps (maths/science) ── */
+  .steps { margin: 10px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .step { display: flex; gap: 12px; }
+  .step-num { margin-top: 2px; display: flex; align-items: center; justify-content: center; width: 24px; height: 24px; flex-shrink: 0; border-radius: 999px; border: 2px solid #bfdbfe; background: #fff; font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 11px; color: #1d4ed8; }
+  .step-body { min-width: 0; flex: 1; }
+  .step-op { display: block; font-family: 'Fredoka', sans-serif; font-weight: 500; font-size: 13px; line-height: 1.3; color: #000; }
+  .step-why { display: block; margin-top: 2px; font-size: 12px; line-height: 1.35; font-weight: 700; color: var(--ink-soft); }
+  .step-result { display: block; margin-top: 6px; padding: 6px 12px; border-radius: 12px; border: 1px solid #dbeafe; background: rgba(239,246,255,0.6); font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace; font-size: 13px; line-height: 1.35; color: #1e3a8a; }
+
+  .toasts { display: flex; flex-direction: column; gap: 10px; max-width: 460px; }
+  .toast {
+    display: flex; align-items: center; gap: 12px; border-radius: 16px;
+    padding: 14px 16px; min-height: 64px; box-shadow: 0 12px 28px -12px rgba(16,28,51,0.25);
+    animation: slide 0.35s var(--ease-settle) both; background: #fff;
+  }
+  @keyframes slide { 0% { opacity:0; transform: translateY(12px) scale(0.96);} 100% { opacity:1; transform: translateY(0) scale(1);} }
+  .toast .msg { font-size: 13px; font-weight: 800; color: #000; line-height: 1.35; }
+  .toast .sub2 { font-size: 11px; font-weight: 700; color: var(--ink-soft); line-height: 1.3; }
+  .emerald { background: #ecfdf5; border: 1px solid #a7f3d0; }
+  .amber { background: #fffbeb; border: 1px solid #fde68a; }
+  .dismiss { margin-left: auto; color: #9ca3af; flex-shrink: 0; }
+  .icon { width: 20px; height: 20px; stroke: currentColor; stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  .dismiss.icon { color: #9ca3af; }
+
+  .onboard-card {
+    background: #fff; border: 1px solid rgba(37,99,235,0.16); border-radius: 24px;
+    padding: 28px; box-shadow: 0 2px 16px -8px rgba(16,28,51,0.15); max-width: 600px;
+  }
+  .dots { display: flex; gap: 8px; margin-bottom: 20px; }
+  .dot { width: 32px; height: 8px; border-radius: 999px; background: #e5e7eb; }
+  .dot.done { background: var(--blue); }
+  .opt { display: flex; align-items: center; gap: 12px; border: 2px solid #e5e7eb; border-radius: 16px; padding: 16px; margin-top: 10px; font-weight: 800; font-size: 14px; }
+  .opt.sel { border-color: var(--blue); background: #eff6ff; }
+  .opt .check { margin-left: auto; color: var(--blue); font-weight: 900; }
+
+  .spray {
+    display: inline-block; margin-top: 24px; background: var(--blue); color: #fff;
+    padding: 16px 32px; border-radius: 16px; font-weight: 800; font-size: 16px; min-height: 56px;
+    border: 0; cursor: pointer; box-shadow: 0 0 0 0 rgba(37,99,235,0.4); animation: pulse 2s infinite;
+  }
+  @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(37,99,235,0.4);} 50% { box-shadow: 0 0 0 6px rgba(37,99,235,0);} }
+  #confetti { position: fixed; inset: 0; pointer-events: none; z-index: 60; }
+</style>
+</head>
+<body>
+<canvas id="confetti"></canvas>
+<div class="wrap">
+  <h1>Propeida delight layer</h1>
+  <p class="sub">The mascot is alive (squash-stretch breathing + spring pop), confetti sprays from the corners, and the mascot talks in speech bubbles</p>
+
+  <h2>Mascot — alive, not static</h2>
+  <div class="grid">
+    <div class="expr-card"><span class="mascot s-md pop"><span class="breathe" style="display:block"><img src="../public/mascot/mascot-9.svg" alt="Idle"></span></span><div class="label">idle · squash &amp; stretch</div></div>
+    <div class="expr-card"><span class="mascot s-md pop"><span class="breathe" style="display:block"><img src="../public/mascot/mascot-0.svg" alt="Welcome"></span></span><div class="label">welcome · waving hello</div></div>
+    <div class="expr-card"><span class="mascot s-md pop"><span class="bounce" style="display:block"><img src="../public/mascot/mascot-5.svg" alt="Celebrate"></span></span><div class="label">celebrate · big wins</div></div>
+    <div class="expr-card"><span class="mascot s-md pop"><span class="breathe" style="display:block"><img src="../public/mascot/mascot-8.svg" alt="Proud"></span></span><div class="label">proud · correct answers</div></div>
+    <div class="expr-card"><span class="mascot s-md pop"><span class="bounce" style="display:block"><img src="../public/mascot/mascot-2.svg" alt="Streak"></span></span><div class="label">streak · answer streaks</div></div>
+    <div class="expr-card"><span class="mascot s-md pop"><span class="breathe" style="display:block"><img src="../public/mascot/mascot-6.svg" alt="Encourage"></span></span><div class="label">encourage · supportive</div></div>
+    <div class="expr-card"><span class="mascot s-md"><img src="../public/mascot/mascot-4.svg" alt="Thinking"></span><div class="label">thinking · choices</div></div>
+    <div class="expr-card"><span class="mascot s-md"><img src="../public/mascot/mascot-11.svg" alt="Confused"></span><div class="label">confused · help moments</div></div>
+    <div class="expr-card"><span class="mascot s-md"><img src="../public/mascot/mascot-3.svg" alt="Worried"></span><div class="label">worried · gentle struggle</div></div>
+  </div>
+
+  <h2>Speech balloons — the mascot's voice</h2>
+  <div style="display: flex; flex-direction: column; gap: 20px;">
+    <div class="say"><span class="mascot s-lg pop"><span class="breathe" style="display:block"><img src="../public/mascot/mascot-0.svg" alt=""></span></span><span class="bubble">It takes about a minute</span></div>
+    <div class="say"><span class="mascot s-sm pop"><span class="breathe" style="display:block"><img src="../public/mascot/mascot-8.svg" alt=""></span></span><span class="bubble">You got that right</span></div>
+    <div class="say"><span class="mascot s-sm pop"><span class="breathe" style="display:block"><img src="../public/mascot/mascot-3.svg" alt=""></span></span><span class="bubble">This is how the trick works</span></div>
+  </div>
+
+  <h2>The mascot delivers explanations</h2>
+  <div style="max-width: 640px;">
+    <span class="badge"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>You got it right</span>
+    <div class="explain">
+      <span class="mascot s-md pop"><span class="breathe" style="display:block"><img src="../public/mascot/mascot-8.svg" alt=""></span></span>
+      <div class="explain-bubble">
+        <p class="explain-label">Here's why it clicks</p>
+        <p class="explain-text">Charges on a conductor in electrostatic equilibrium always move to the outer surface, so the field inside the metal stays zero. That's why a hollow conductor shields whatever is inside it — your phone in a metal tin is safe even from lightning-adjacent effects.</p>
+      </div>
+    </div>
+    <span class="badge wrong" style="margin-top: 24px;"><svg viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>Not quite, the answer is B</span>
+    <div class="explain">
+      <span class="mascot s-md pop"><span class="breathe" style="display:block"><img src="../public/mascot/mascot-4.svg" alt=""></span></span>
+      <div class="explain-bubble">
+        <p class="explain-label">Here's the trick</p>
+        <ol class="steps">
+          <li class="step"><span class="step-num">1</span><span class="step-body"><span class="step-op">Name the unknown</span><span class="step-why">The question asks what the 8% portion is, so give it a symbol</span><code class="step-result">invested at 8% = x; invested at 6% = 50,000 − x</code></span></li>
+          <li class="step"><span class="step-num">2</span><span class="step-body"><span class="step-op">Write the yield equation</span><span class="step-why">The two portions sum to #50,000 and each pays its own dividend rate</span><code class="step-result">0.08x + 0.06 × (50,000 − x) = 3,700</code></span></li>
+          <li class="step"><span class="step-num">3</span><span class="step-body"><span class="step-op">Distribute the 0.06</span><span class="step-why">Expand the bracket so the two products sit side by side and the equation is linear in x</span><code class="step-result">0.08x + 3,000 − 0.06x = 3,700</code></span></li>
+          <li class="step"><span class="step-num">4</span><span class="step-body"><span class="step-op">Collect the x terms</span><span class="step-why">0.08x − 0.06x = 0.02x — the constant terms can now be moved across</span><code class="step-result">0.02x = 3,700 − 3,000 = 700</code></span></li>
+          <li class="step"><span class="step-num">5</span><span class="step-body"><span class="step-op">Divide both sides by 0.02</span><span class="step-why">To isolate x, divide by its coefficient</span><code class="step-result">x = 700 / 0.02 = #35,000</code></span></li>
+        </ol>
+      </div>
+    </div>
+
+    <h3 style="font-family: 'Fredoka', sans-serif; font-weight: 500; font-size: 17px; color: #1e3a8a; margin-top: 24px;">Longer derivation — any number of steps works</h3>
+    <div class="explain">
+      <span class="mascot s-md pop"><span class="breathe" style="display:block"><img src="../public/mascot/mascot-9.svg" alt=""></span></span>
+      <div class="explain-bubble">
+        <p class="explain-label">Here's the trick</p>
+        <ol class="steps">
+          <li class="step"><span class="step-num">1</span><span class="step-body"><span class="step-op">Set the curves equal</span><span class="step-why">Where the integrand crosses, the area is bounded by both curves</span><code class="step-result">x² = 2x</code></span></li>
+          <li class="step"><span class="step-num">2</span><span class="step-body"><span class="step-op">Solve for the bounds</span><span class="step-why">Bring everything to one side and factor out x</span><code class="step-result">x² − 2x = 0 → x(x − 2) = 0 → x = 0, x = 2</code></span></li>
+          <li class="step"><span class="step-num">3</span><span class="step-body"><span class="step-op">Identify which curve is upper</span><span class="step-why">Test a point midway — x = 1: 2(1) = 2 vs 1² = 1, so the line is above</span><code class="step-result">2x ≥ x² on [0, 2]</code></span></li>
+          <li class="step"><span class="step-num">4</span><span class="step-body"><span class="step-op">Set up the area integral</span><span class="step-why">Area = integral of (upper − lower) across the bounds</span><code class="step-result">A = ∫₀² (2x − x²) dx</code></span></li>
+          <li class="step"><span class="step-num">5</span><span class="step-body"><span class="step-op">Find the antiderivative</span><span class="step-why">Integrate term by term: ∫2x dx = x², ∫x² dx = x³/3</span><code class="step-result">F(x) = x² − x³/3</code></span></li>
+          <li class="step"><span class="step-num">6</span><span class="step-body"><span class="step-op">Evaluate at the upper limit</span><span class="step-why">Substitute x = 2 into F(x)</span><code class="step-result">F(2) = 4 − 8/3 = 4/3</code></span></li>
+          <li class="step"><span class="step-num">7</span><span class="step-body"><span class="step-op">Evaluate at the lower limit</span><span class="step-why">Substitute x = 0 into F(x)</span><code class="step-result">F(0) = 0 − 0 = 0</code></span></li>
+          <li class="step"><span class="step-num">8</span><span class="step-body"><span class="step-op">Subtract lower from upper</span><span class="step-why">The area is the difference of the two evaluations</span><code class="step-result">A = 4/3 − 0 = 4/3</code></span></li>
+          <li class="step"><span class="step-num">9</span><span class="step-body"><span class="step-op">State the answer with units</span><span class="step-why">Always carry square units when working with area</span><code class="step-result">A = 4/3 square units</code></span></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <h2>The mascot owns the repair moments</h2>
+  <div style="max-width: 640px;">
+    <span class="badge wrong"><svg viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>Not quite, the answer is B</span>
+    <div class="explain" style="margin-top: 12px;">
+      <span class="mascot s-md pop"><span class="breathe" style="display:block"><img src="../public/mascot/mascot-3.svg" alt=""></span></span>
+      <div class="explain-bubble" style="border-color:#fde68a; background:#fffbeb;">
+        <p class="explain-label" style="color:#b45309;">Why this tempts</p>
+        <p class="explain-text" style="color:#92400e;">Conserving velocity instead of momentum</p>
+        <p class="explain-text" style="margin-top:8px; color:#3d4b63;">Velocity is not conserved in collisions — momentum is. Swap the two and the masses do all the talking.</p>
+        <p class="explain-text" style="margin-top:8px; font-size:11px; color:#b45309; font-weight:800;">46% of people also picked this first, so it is not just you</p>
+        <p class="explain-text" style="font-size:11px; color:#be123c; font-weight:800;">You have hit this exact error 3 times, so fix the root instead of retrying harder</p>
+      </div>
+    </div>
+    <p class="sub" style="margin-top:12px; font-size:13px;">Repair lesson and foundation links stay below, full-width — sober, no confetti, just a way forward.</p>
+
+    <span class="badge" style="margin-top: 28px; background:#fef3c7; border-color:#fcd34d; color:#92400e;"><svg viewBox="0 0 24 24" style="stroke:#b45309;"><path d="M9 18h6"/><path d="M12 3a7 7 0 0 0-4.5 12.3c.8.6 1.3 1.7 1.3 2.7h6.4c0-1 .5-2.1 1.3-2.7A7 7 0 0 0 12 3z"/></svg>In the Learn-first screen</span>
+    <div class="explain" style="margin-top: 12px;">
+      <span class="mascot s-md pop"><span class="breathe" style="display:block"><img src="../public/mascot/mascot-4.svg" alt=""></span></span>
+      <div class="explain-bubble" style="border-color:#fde68a; background:#fffbeb;">
+        <p class="explain-label" style="color:#b45309;">Exam tip</p>
+        <p class="explain-text" style="color:#92400e;">Draw the arrow before you touch the equation. Every momentum problem in JAMB is solvable in under two minutes if the sign convention is settled before the arithmetic starts.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>The "Are you sure" moments — honest, never coercive</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+    <div class="onboard-card" style="max-width: 420px; background: #fff;">
+      <div class="say" style="align-items: flex-start;">
+        <span class="mascot s-md"><img src="../public/mascot/mascot-3.svg" alt=""></span>
+        <div>
+          <h3 style="font-family:'Fredoka';font-weight:500;font-size:22px;margin:0;line-height:1.2;">Do you want to end the exam now?</h3>
+          <p style="margin:6px 0 0;font-size:14px;color:var(--ink-soft);font-weight:700;">Think it through before you submit</p>
+        </div>
+      </div>
+      <p style="margin-top:12px;font-size:14px;font-weight:700;color:var(--ink-soft);">You answered 27 of 40 questions, and the ones you left out stay blank</p>
+      <div class="opt sel" style="justify-content:center; margin-top:12px; background:#2563eb; color:#fff; border-color:#2563eb;">Submit exam</div>
+      <div class="opt" style="justify-content:center; border-color:#e5e7eb;">Keep going</div>
+      <p class="sub" style="margin:12px 0 0;font-size:11px;">Buttons stay equal weight. No fake urgency, no guilt — the mascot only witnesses the moment.</p>
+    </div>
+    <div class="onboard-card" style="max-width: 380px; background:#fff;">
+      <p style="font-family:'Fredoka';font-weight:500;font-size:20px;margin:0;">Delete account</p>
+      <p style="margin:6px 0 0;font-size:13px;color:var(--ink-soft);font-weight:700;">This removes your profile, history, results, and learning records, and you cannot undo it</p>
+      <div class="say" style="margin-top:14px; align-items:center;">
+        <span class="mascot s-sm"><img src="../public/mascot/mascot-3.svg" alt=""></span>
+        <p style="margin:0;font-size:13px;font-weight:800;color:#b91c1c;line-height:1.4;">Are you sure? There is no undo for this</p>
+      </div>
+      <div class="opt" style="justify-content:center; border-color:#fecaca; background:#fef2f2; color:#b91c1c; margin-top:14px;">Yes, delete everything</div>
+      <div class="opt" style="justify-content:center;">Keep my account</div>
+    </div>
+  </div>
+
+  <h2>Win toasts — little wins, real celebration</h2>
+  <div class="toasts">
+    <div class="toast emerald">
+      <span class="mascot s-sm pop"><span class="breathe" style="display:block"><img src="../public/mascot/mascot-8.svg" alt=""></span></span>
+      <div><div class="msg">You got it right</div></div>
+      <svg class="icon dismiss" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </div>
+    <div class="toast amber">
+      <span class="mascot s-sm pop"><span class="bounce" style="display:block"><img src="../public/mascot/mascot-2.svg" alt=""></span></span>
+      <div><div class="msg">You are on a streak</div><div class="sub2">You keep showing up</div></div>
+      <svg class="icon dismiss" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </div>
+    <div class="toast emerald">
+      <span class="mascot s-sm pop"><span class="bounce" style="display:block"><img src="../public/mascot/mascot-5.svg" alt=""></span></span>
+      <div><div class="msg">You are all set</div><div class="sub2">Welcome to Propeida and you can start learning now</div></div>
+      <svg class="icon dismiss" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </div>
+  </div>
+
+  <h2>Onboarding — the greeting you actually want to see</h2>
+  <div class="onboard-card">
+    <div class="dots"><div class="dot done"></div><div class="dot done"></div><div class="dot done"></div><div class="dot"></div><div class="dot"></div></div>
+    <div class="say"><span class="mascot s-md pop"><span class="breathe" style="display:block"><img src="../public/mascot/mascot-4.svg" alt=""></span></span><div><h3 style="font-family:'Fredoka';font-weight:500;font-size:24px;margin:0 0 2px;">What are you preparing for?</h3><p style="margin:0;font-size:14px;color:var(--ink-soft);font-weight:700;">This shapes everything you'll see — lessons, questions, mocks.</p></div></div>
+    <div class="opt sel">JAMB UTME <span class="check">✓</span></div>
+    <div class="opt">Post-UTME</div>
+    <div class="opt">General study</div>
+  </div>
+
+  <button class="spray" id="spray">Watch the confetti spray</button>
+  <p class="sub" style="margin-top:16px;">Serious stays serious: errors, accessibility, and payment screens get no confetti. Wins stay wins: correct answers, finished lessons, session done, onboarding done.</p>
+</div>
+
+<script>
+const canvas = document.getElementById('confetti')
+const ctx = canvas.getContext('2d')
+const colors = ['#fbbf24', '#f472b6', '#34d399', '#60a5fa', '#fde047', '#a78bfa', '#fb923c']
+let raf = null
+
+function resize() { canvas.width = innerWidth; canvas.height = innerHeight }
+addEventListener('resize', resize)
+resize()
+
+function spray() {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return
+  const W = canvas.width, H = canvas.height
+  const cannons = [
+    { x: -10, y: H * 0.92, angle: -52, speed: [7, 15] },
+    { x: W + 10, y: H * 0.92, angle: -128, speed: [7, 15] },
+    { x: W * 0.5, y: H + 10, angle: -90, speed: [9, 18] },
+  ]
+  const particles = []
+  for (const c of cannons) {
+    for (let i = 0; i < 70; i++) {
+      const spread = (Math.random() - 0.5) * 44
+      const a = ((c.angle + spread) * Math.PI) / 180
+      const s = c.speed[0] + Math.random() * (c.speed[1] - c.speed[0])
+      particles.push({
+        x: c.x, y: c.y,
+        vx: Math.cos(a) * s, vy: Math.sin(a) * s,
+        size: 4 + Math.random() * 7,
+        color: colors[(Math.random() * colors.length) | 0],
+        rot: Math.random() * 360, vr: (Math.random() - 0.5) * 24,
+        circle: Math.random() < 0.35,
+      })
+    }
+  }
+  const start = performance.now(), duration = 1700
+  function tick(now) {
+    const progress = Math.min((now - start) / duration, 1)
+    ctx.clearRect(0, 0, W, H)
+    const wind = Math.sin(progress * Math.PI) * 0.06
+    for (const p of particles) {
+      p.x += p.vx + wind * 10; p.y += p.vy
+      p.vy += 0.22; p.vx *= 0.995; p.rot += p.vr
+      ctx.save(); ctx.translate(p.x, p.y); ctx.rotate((p.rot * Math.PI) / 180)
+      ctx.globalAlpha = Math.max(0, 1 - progress)
+      ctx.fillStyle = p.color
+      if (p.circle) { ctx.beginPath(); ctx.arc(0, 0, p.size * 0.5, 0, Math.PI * 2); ctx.fill() }
+      else ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.65)
+      ctx.restore()
+    }
+    if (progress < 1) raf = requestAnimationFrame(tick)
+    else ctx.clearRect(0, 0, W, H)
+  }
+  if (raf) cancelAnimationFrame(raf)
+  raf = requestAnimationFrame(tick)
+}
+document.getElementById('spray').addEventListener('click', spray)
+</script>
+</body>
+</html>

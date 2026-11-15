@@ -120,6 +120,12 @@ Structure, in order:
    or a units-and-magnitude sanity check), so a wrong answer announces itself.
    Confirmed 2026-11-14, recorded in `docs/question-bank-ingestion.md`
    ("Explanation format for maths and calculation questions").
+   **An algorithm is taught only as worked examples, never as prose.** A procedure
+   shipped inside a paragraph ("divide by b repeatedly, reading remainders upward")
+   produces confident wrong work. Prose explains why the procedure exists; only a
+   worked example shows it. Added 2026-11-14 after the Number Bases lesson shipped
+   §2 "Converting between bases" as four prose sentences and failed comprehension
+   review.
 5. **Guided attempt** — one prompt with hints that scaffold the same skill.
 6. **Independent attempt** — one or two questions without hints. These normally
    come from the topic-tagged question bank, not from the lesson JSON.
