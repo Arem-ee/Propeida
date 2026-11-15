@@ -423,6 +423,44 @@
        }
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: find the exact value of 1/(√2 + 1) + 1/(√3 + √2) + 1/(√4 + √3) + ... + 1/(√100 + √99).",
+      "steps": [
+       {
+        "operation": "Rationalise the first term",
+        "reason": "1/(√n+1 + √n) equals √(n+1) − √n is the trick; every term in the chain has this shape",
+        "result": "1/(√2 + 1) x (√2 − 1)/(√2 − 1) = √2 − 1",
+        "predictPrompt": "What do you multiply the top and bottom by to clear a two-radical denominator?"
+       },
+       {
+        "operation": "Do the same to the next terms",
+        "reason": "The same pattern applies every time - chain of square roots cancels",
+        "result": "1/(√3 + √2) = √3 − √2; 1/(√4 + √3) = √4 − √3; and so on",
+        "predictPrompt": "What is 1/(√5 + √4) when it is rationalised?"
+       },
+       {
+        "operation": "Line up the telescoping sum",
+        "reason": "Every term cancels the next: only the first and last survive",
+        "result": "(√2 − 1) + (√3 − √2) + ... + (√100 − √99) = √100 − 1",
+        "predictPrompt": "Which terms survive the cancellation?"
+       },
+       {
+        "operation": "Evaluate √100 − 1",
+        "reason": "Only perfect squares are left",
+        "result": "10 − 1 = 9",
+        "predictPrompt": "What is √100?"
+       },
+       {
+        "operation": "Check to confirm: add the first three terms numerically",
+        "reason": "The chained identity must hold before the shortcut is trusted",
+        "result": "0.4142 + 0.3178 + 0.2679 ≈ 1.0000; √4 − 1 = 1 ✓",
+        "predictPrompt": "What does the partial chain sum to at three terms?"
+       }
+      ]
+     }
     }
    ]
   },
@@ -646,6 +684,50 @@
        }
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: solve the equation 4{{sup:x}} - 3 x 2{{sup:(x + 1)}} + 8 = 0.",
+      "steps": [
+       {
+        "operation": "Rewrite 4{{sup:x}} as (2{{sup:2}}){{sup:x}}",
+        "reason": "The shared base 2 is what makes the substitution work",
+        "result": "4{{sup:x}} = 2{{sup:2x}}",
+        "predictPrompt": "What is 4 to the power x written as a power of 2?"
+       },
+       {
+        "operation": "Rewrite 2{{sup:(x + 1)}} as 2 x 2{{sup:x}}",
+        "reason": "Law of indices: a{{sup:m + n}} = a{{sup:m}} a{{sup:n}}",
+        "result": "2{{sup:(x + 1)}} = 2 x 2{{sup:x}}",
+        "predictPrompt": "What is 2 to the power (x + 1)?"
+       },
+       {
+        "operation": "Substitute u = 2{{sup:x}}",
+        "reason": "2{{sup:2x}} = (2{{sup:x}})² = u², so the equation is quadratic in u",
+        "result": "u² - 6u + 8 = 0",
+        "predictPrompt": "What does 2{{sup:2x}} become in terms of u?"
+       },
+       {
+        "operation": "Factorise the quadratic",
+        "reason": "Split 8 into factors that sum to -6",
+        "result": "(u - 2)(u - 4) = 0; u = 2 or u = 4",
+        "predictPrompt": "Which two numbers multiply to 8 and add to -6?"
+       },
+       {
+        "operation": "Recover x from 2{{sup:x}}",
+        "reason": "Write both powers of 2 in the same form",
+        "result": "2{{sup:x}} = 2 = 2{{sup:1}} → x = 1; 2{{sup:x}} = 4 = 2{{sup:2}} → x = 2",
+        "predictPrompt": "How is 4 written as a power of 2?"
+       },
+       {
+        "operation": "Check to confirm: substitute both solutions",
+        "reason": "A missed root will fail substitution, so test both",
+        "result": "x = 1: 4 - 12 + 8 = 0 ✓; x = 2: 16 - 24 + 8 = 0 ✓",
+        "predictPrompt": "What does the equation give at x = 2?"
+       }
+      ]
+     }
     }
    ]
   },
@@ -866,6 +948,44 @@
         "reason": "Check x = {{frac:1|3}}: 3({{frac:1|9}}) + {{frac:2|3}} − 1 = 0",
         "result": "The formula roots each satisfy the original",
         "predictPrompt": "Does x = {{frac:1|3}} satisfy the original equation?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: find the set of values of m for which the equation x² + 2(m + 1)x + (m + 1) = 0 has real roots.",
+      "steps": [
+       {
+        "operation": "State the condition for real roots",
+        "reason": "A quadratic has real roots exactly when Δ ≥ 0",
+        "result": "Δ = b² - 4ac ≥ 0 with a = 1, b = 2(m + 1), c = m + 1",
+        "predictPrompt": "What does the discriminant look like for this equation?"
+       },
+       {
+        "operation": "Write down Δ in terms of m",
+        "reason": "Substitute the coefficients carefully",
+        "result": "Δ = 4(m + 1)² - 4(m + 1)",
+        "predictPrompt": "What is b² for b = 2(m + 1)?"
+       },
+       {
+        "operation": "Factor Δ",
+        "reason": "Common factor 4(m + 1) comes out first",
+        "result": "Δ = 4(m + 1)(m + 1 - 1) = 4(m + 1)m",
+        "predictPrompt": "What is (m + 1)² - (m + 1)?"
+       },
+       {
+        "operation": "Solve the inequality",
+        "reason": "4 is positive, so m(m + 1) ≥ 0; roots 0 and -1, outside the bracket",
+        "result": "m ≤ -1 or m ≥ 0",
+        "predictPrompt": "Where is m(m + 1) not negative?"
+       },
+       {
+        "operation": "Check to confirm: test m = -1 and m = 0",
+        "reason": "Both endpoints are included because Δ = 0 is allowed",
+        "result": "m = -1: x² = 0 (repeated root ✓); m = 0: x² + 2x + 1 = (x + 1)² (repeated root ✓)",
+        "predictPrompt": "What kind of root does the equation have at m = -1?"
        }
       ]
      }
@@ -1282,6 +1402,44 @@
        "Works for angles beyond 360° and for negative angles"
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: simplify (1 - cos 2x)/sin 2x and use it to find the exact value of tan 15°.",
+      "steps": [
+       {
+        "operation": "Use the double angle identities",
+        "reason": "1 - cos 2x = 2 sin²x and sin 2x = 2 sin x cos x",
+        "result": "(1 - cos 2x)/sin 2x = 2 sin²x / (2 sin x cos x) = tan x",
+        "predictPrompt": "What is 1 - cos 2x in terms of sin x?"
+       },
+       {
+        "operation": "Plug in x = 15°",
+        "reason": "The simplified form is only useful if the target angle can be found",
+        "result": "(1 - cos 30°)/sin 30° = tan 15°",
+        "predictPrompt": "What is 2x if x = 15°?"
+       },
+       {
+        "operation": "Evaluate cos 30° and sin 30°",
+        "reason": "Standard values from the 30-60-90 triangle",
+        "result": "cos 30° = √3/2; sin 30° = 1/2",
+        "predictPrompt": "What is cos 30°?"
+       },
+       {
+        "operation": "Simplify the fraction",
+        "reason": "Subtract, divide, then rationalise the surd denominator",
+        "result": "(1 - √3/2)/(1/2) = (2 - √3)/1 = 2 - √3",
+        "predictPrompt": "What is (1 - √3/2) x 2?"
+       },
+       {
+        "operation": "Check to confirm: tan 15° computed two ways",
+        "reason": "tan(45° - 30°) = (tan 45° - tan 30°)/(1 + tan 45° tan 30°) is the independent check",
+        "result": "(1 - 1/√3)/(1 + 1/√3) = (√3 - 1)/(√3 + 1) = (2 - √3) ✓",
+        "predictPrompt": "Does tan 15° come out positive here?"
+       }
+      ]
+     }
     }
    ]
   },
@@ -1534,6 +1692,38 @@
         "reason": "C(4,3)/C(7,3) = {{frac:4|35}}, same answer by counting",
         "result": "Two methods agree on {{frac:4|35}}",
         "predictPrompt": "How would you count all outcomes directly?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: a fair die is thrown repeatedly until a 6 appears. Find the probability that the game needs at most 3 throws.",
+      "steps": [
+       {
+        "operation": "Find the complement probability",
+        "reason": "At most 3 throws = 1 - (6 needs 4 or more throws)",
+        "result": "P(no 6 in 3 throws) = (5/6)³",
+        "predictPrompt": "What is the chance of no 6 in one throw?"
+       },
+       {
+        "operation": "Compute (5/6)³",
+        "reason": "125 over 216",
+        "result": "(5/6)³ = 125/216",
+        "predictPrompt": "What is 5³?"
+       },
+       {
+        "operation": "Subtract from 1",
+        "reason": "Chance of at most three = 1 - chance of none",
+        "result": "P(at most 3) = 1 - 125/216 = 91/216",
+        "predictPrompt": "What is 1 - 125/216?"
+       },
+       {
+        "operation": "Check to confirm: add the three disjoint cases",
+        "reason": "P(first, second, or third throw) must each contribute and sum to the same value",
+        "result": "P(1) = 1/6; P(2) = (5/6)(1/6) = 5/36; P(3) = (5/6)²(1/6) = 25/216; sum = 36 + 30 + 25 / 216 = 91/216 ✓",
+        "predictPrompt": "What is the probability of a 6 on the second throw?"
        }
       ]
      }
@@ -1853,6 +2043,38 @@
        "Backward route: multiply back to verify in the original base"
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: find the number r such that the base-r numeral 122{{sub:r}} + 10{{sub:r}} = 202{{sub:r}}, and convert the sum to base 10.",
+      "steps": [
+       {
+        "operation": "Set up column addition",
+        "reason": "Units first, then the tens column, then the hundreds",
+        "result": "Units: 2 + 0 = 2 ✓ (no carry). Tens: 2 + 1 = 3 → write 0 carry 1. Hundreds: 1 + 0 + 1 (from carry) = 2 ✓",
+        "predictPrompt": "What does the tens column of 122 + 10 give in base r?"
+       },
+       {
+        "operation": "Use the tens column rule",
+        "reason": "A written 0 with a carry of 1 means 3 equalled r exactly",
+        "result": "r = 3",
+        "predictPrompt": "In base r, when does 2 + 1 = 0 with carry 1?"
+       },
+       {
+        "operation": "Verify the full numeral in base 3",
+        "reason": "122{{sub:3}} = 1 x 9 + 2 x 3 + 2 = 17; 10{{sub:3}} = 3; 17 + 3 = 20; 202{{sub:3}} = 2 x 9 + 0 + 2 = 20 ✓",
+        "result": "122{{sub:3}} + 10{{sub:3}} = 202{{sub:3}} = 20 (base 10)",
+        "predictPrompt": "What is 122 in base 3, in decimal?"
+       },
+       {
+        "operation": "Check to confirm: re-add in base 10 only",
+        "reason": "If both routes reach 20, the base choice is secure",
+        "result": "17 + 3 = 20 ✓ matches 202{{sub:3}} = 20",
+        "predictPrompt": "Does the denary sum agree with the base-3 result?"
+       }
+      ]
+     }
     }
    ]
   },
@@ -2094,6 +2316,44 @@
         "reason": "2{{sup:6}} ≡ 1 (mod 9), so 2{{sup:7}} = 2{{sup:6}} × 2 ≡ 2",
         "result": "Cycle of length 6 knocks the big power down",
         "predictPrompt": "What is the cycle length of 2 mod 9?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: find the remainder when 10{{sup:100}} is divided by 7.",
+      "steps": [
+       {
+        "operation": "Reduce the base modulo 7",
+        "reason": "Remainders depend on residues, not on size",
+        "result": "10 ≡ 3 (mod 7), so 10{{sup:100}} ≡ 3{{sup:100}} (mod 7)",
+        "predictPrompt": "What is 10 mod 7?"
+       },
+       {
+        "operation": "Find the cycle of powers of 3 mod 7",
+        "reason": "If the powers repeat with period 6, large exponents become small",
+        "result": "3, 2, 6, 4, 5, 1  - period 6",
+        "predictPrompt": "What is 3{{sup:2}} mod 7?"
+       },
+       {
+        "operation": "Reduce 100 modulo 6",
+        "reason": "Only the position in the cycle matters",
+        "result": "100 ≡ 4 (mod 6), so 3{{sup:100}} ≡ 3{{sup:4}} (mod 7)",
+        "predictPrompt": "What is 100 mod 6?"
+       },
+       {
+        "operation": "Evaluate 3{{sup:4}} mod 7",
+        "reason": "The 4th position in the cycle is 4",
+        "result": "3{{sup:4}} = 81 ≡ 4 (mod 7)",
+        "predictPrompt": "What is 81 mod 7?"
+       },
+       {
+        "operation": "Check to confirm: test a small case",
+        "reason": "10{{sup:4}} ÷ 7 must leave 4 if the pattern holds",
+        "result": "10{{sup:4}} = 10000; 10000 = 7 x 1428 + 4 ✓",
+        "predictPrompt": "Does 10{{sup:4}} split as 7 x 1428 + 4?"
        }
       ]
      }
@@ -2345,6 +2605,44 @@
        }
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: express (√3 + 1)/(√3 − 1) in the form a + b√3, where a and b are rational numbers.",
+      "steps": [
+       {
+        "operation": "Rationalise the denominator",
+        "reason": "Multiply top and bottom by the conjugate",
+        "result": "[(√3 + 1)²] / [(√3 − 1)(√3 + 1)] = (4 + 2√3) / 2",
+        "predictPrompt": "What is the conjugate of √3 − 1?"
+       },
+       {
+        "operation": "Simplify the denominator",
+        "reason": "Difference of squares: (√3)² − 1² = 3 − 1 = 2",
+        "result": "(√3 − 1)(√3 + 1) = 2",
+        "predictPrompt": "What is (√3 − 1)(√3 + 1)?"
+       },
+       {
+        "operation": "Simplify the numerator",
+        "reason": "(√3 + 1)² = 3 + 2√3 + 1 = 4 + 2√3",
+        "result": "(√3 + 1)² = 4 + 2√3",
+        "predictPrompt": "What is (√3 + 1)²?"
+       },
+       {
+        "operation": "Divide through",
+        "reason": "Both terms carry a factor of 2",
+        "result": "(4 + 2√3)/2 = 2 + √3",
+        "predictPrompt": "What is (4 + 2√3)/2?"
+       },
+       {
+        "operation": "Check to confirm: multiply back and compare",
+        "reason": "If 2 + √3 is right, multiplying by (√3 − 1) must return (√3 + 1)",
+        "result": "(2 + √3)(√3 − 1) = 2√3 − 2 + 3 − √3 = √3 + 1 ✓",
+        "predictPrompt": "Does (2 + √3) x (√3 − 1) give √3 + 1?"
+       }
+      ]
+     }
     }
    ]
   },
@@ -2592,6 +2890,38 @@
        }
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: a trader discounts a television by 25% on Monday, then raises the price back up by 25% on Tuesday. What percentage above or below the original is the television on Tuesday?",
+      "steps": [
+       {
+        "operation": "Apply the discount",
+        "reason": "Reduce the original price P to 75% of it",
+        "result": "After discount: 0.75P",
+        "predictPrompt": "What is 75% of P?"
+       },
+       {
+        "operation": "Apply the markup",
+        "reason": "Raise the discounted price by one quarter of itself, not of P",
+        "result": "After markup: 0.75P x 1.25 = 0.9375P",
+        "predictPrompt": "What is 0.75P x 1.25?"
+       },
+       {
+        "operation": "Compare with the original",
+        "reason": "Subtract from P",
+        "result": "P - 0.9375P = 0.0625P = 6.25% below",
+        "predictPrompt": "What is P minus 0.9375P?"
+       },
+       {
+        "operation": "Check to confirm: use money numbers",
+        "reason": "Try P = ₦160 to make the arithmetic easy",
+        "result": "Discount: 160 → 120; markup: 120 → 150; final 150 is ₦10 less than 160 = 6.25% ✓",
+        "predictPrompt": "What is 25% of 120?"
+       }
+      ]
+     }
     }
    ]
   },
@@ -2833,6 +3163,44 @@
         "reason": "52 in either set + 8 neither = 60; only English = 30 − 13 = 17",
         "result": "22 + 17 + 13 + 8 = 60, so the counts agree",
         "predictPrompt": "How does the union cross-check your neither answer?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: in a class, |A| = 25, |B| = 16, |C| = 21; |A ∩ B| = 9, |A ∩ C| = 10, |B ∩ C| = 8; |A ∪ B ∪ C| = 42. Find |A ∩ B ∩ C| and the number of students who study exactly one of A, B or C.",
+      "steps": [
+       {
+        "operation": "Apply the inclusion-exclusion formula",
+        "reason": "|A ∪ B ∪ C| = sum |A| etc. minus pair intersections + triple intersection",
+        "result": "42 = 25 + 16 + 21 - 9 - 10 - 8 + |A ∩ B ∩ C|",
+        "predictPrompt": "What is the sum of the three individual sizes?"
+       },
+       {
+        "operation": "Solve for the triple intersection",
+        "reason": "42 = 62 - 27 + |A ∩ B ∩ C|",
+        "result": "|A ∩ B ∩ C| = 42 - 35 = 7",
+        "predictPrompt": "What does the triple intersection work out to?"
+       },
+       {
+        "operation": "Count inside each set only its unique part",
+        "reason": "Subtract the intersections, then add the triple back where it was removed",
+        "result": "Only A = 25 - 9 - 10 + 7 = 13; only B = 16 - 9 - 8 + 7 = 6; only C = 21 - 10 - 8 + 7 = 10",
+        "predictPrompt": "How many study A only after subtracting the overlapping zones?"
+       },
+       {
+        "operation": "Sum the exactly-one regions",
+        "reason": "13 + 6 + 10",
+        "result": "29 students",
+        "predictPrompt": "What is the total of the three exactly-one counts?"
+       },
+       {
+        "operation": "Check to confirm: compute everyone exactly once",
+        "reason": "The three exactly-two regions are 9-7=2, 10-7=3 and 8-7=1, totalling 6",
+        "result": "29 + (2 + 3 + 1) + 7 = 42 - the union reconciles",
+        "predictPrompt": "Do the regions sum to the stated union of 42?"
        }
       ]
      }
@@ -3085,6 +3453,44 @@
         "reason": "k = 4: 4 × 3 × 4 = 48, recovers the given value",
         "result": "k recovers the data exactly",
         "predictPrompt": "How would you verify your k value?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: x varies directly as y² and inversely as z. If x = 12 when y = 2 and z = 3, find x when y = 3 and z = 4.",
+      "steps": [
+       {
+        "operation": "Write the combined variation",
+        "reason": "Direct with y² and inverse with z: one variable, two proportional relationships",
+        "result": "x = k y² / z, where k is a constant",
+        "predictPrompt": "How would you combine direct and inverse variation in one formula?"
+       },
+       {
+        "operation": "Use the provided values to find k",
+        "reason": "Solve 12 = k x 4 / 3",
+        "result": "k = 12 x 3 / 4 = 9",
+        "predictPrompt": "What is the value of k from the given data?"
+       },
+       {
+        "operation": "Write the complete formula",
+        "reason": "The rule is now uniquely determined",
+        "result": "x = 9 y² / z",
+        "predictPrompt": "What is the full formula once k is known?"
+       },
+       {
+        "operation": "Substitute the new values",
+        "reason": "y = 3, z = 4",
+        "result": "x = 9 x 9 / 4 = {{frac:81|4}} = 20.25",
+        "predictPrompt": "What is 9 x 9 / 4?"
+       },
+       {
+        "operation": "Check to confirm: scale the original",
+        "reason": "y ×1.5 squares to ×2.25; z increases by 4/3, so divide; overall ×1.6875",
+        "result": "12 x 2.25 / (4/3) = 12 x 1.6875 = 20.25 ✓",
+        "predictPrompt": "Does rescaling the original values reproduce 81/4?"
        }
       ]
      }
@@ -3342,6 +3748,44 @@
        }
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: solve the inequality (2x + 1)/(x - 2) > 3.",
+      "steps": [
+       {
+        "operation": "Move everything to one side",
+        "reason": "Combining into one fraction makes the sign of the result countable",
+        "result": "(2x + 1)/(x - 2) - 3 > 0",
+        "predictPrompt": "What does the left side look like before you simplify?"
+       },
+       {
+        "operation": "Subtract to a common denominator",
+        "reason": "Single-fraction form: the numerator must be a single expression of degree 1",
+        "result": "(2x + 1 - 3(x - 2))/(x - 2) = (7 - x)/(x - 2) > 0",
+        "predictPrompt": "What does the numerator simplify to?"
+       },
+       {
+        "operation": "Draw the sign chart",
+        "reason": "Ratio is positive when both parts have the same sign",
+        "result": "Sign flips at x = 2 and x = 7; the quotient is positive only where numerator and denominator share a sign",
+        "predictPrompt": "Where does the expression change sign?"
+       },
+       {
+        "operation": "Read the chart correctly",
+        "reason": "Test the three regions: x = 0 (negative), x = 3 (positive), x = 8 (negative) - the solution is the middle region",
+        "result": "2 < x < 7",
+        "predictPrompt": "What value does the expression give at x = 0?"
+       },
+       {
+        "operation": "Check to confirm: test a value inside the interval",
+        "reason": "x = 3 is in the candidate solution; the original inequality must hold there",
+        "result": "x = 3: (2x + 1)/(x - 2) = 7/1 = 7 > 3 ✓; x = 0: 1/(-2) = -0.5, never > 3 ✓ excluded as intended",
+        "predictPrompt": "Does x = 3 survive the original inequality?"
+       }
+      ]
+     }
     }
    ]
   },
@@ -3587,6 +4031,44 @@
         "reason": "Multiplying the infinite sum by (1 − r) must return the first term, so a wrong division or formula outs itself here.",
         "result": "144 × (1 − {{frac:1|3}}) = 144 × {{frac:2|3}} = 96 ✓, exactly the given first term",
         "predictPrompt": "Multiply 144 by (1 − r). Do you recover 96?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: the sum of an infinite geometric progression is 20 and the common ratio is {{frac:3|5}}. Find the first term, and the sum of the first three terms.",
+      "steps": [
+       {
+        "operation": "Recall the infinite-series formula",
+        "reason": "S = a / (1 - r) for |r| < 1",
+        "result": "a = S(1 - r)",
+        "predictPrompt": "What is the sum to infinity of a geometric progression?"
+       },
+       {
+        "operation": "Substitute S = 20 and r = 3/5",
+        "reason": "Solve for a directly",
+        "result": "a = 20 x (1 - 3/5) = 20 x 2/5 = 8",
+        "predictPrompt": "What is 1 - 3/5?"
+       },
+       {
+        "operation": "Write the series explicitly",
+        "reason": "Useful for the finite sum term by term",
+        "result": "8 + 8(3/5) + 8(9/25) + ...",
+        "predictPrompt": "What are the first three terms?"
+       },
+       {
+        "operation": "Find the first three terms",
+        "reason": "Term 1: 8; term 2: 24/5; term 3: 72/25",
+        "result": "8 + 4.8 + 2.88 = 15.68",
+        "predictPrompt": "What is 8 x 9/25?"
+       },
+       {
+        "operation": "Check to confirm: use the partial sum formula",
+        "reason": "S_n = a(1 - r{{sup:n}})/(1 - r) must give the same 15.68",
+        "result": "S_3 = 8 x (1 - 27/125)/(2/5) = 8 x {{frac:98|125}} x {{frac:5|2}} = {{frac:392|25}} = 15.68 ✓",
+        "predictPrompt": "Does the partial sum formula agree with the direct addition?"
        }
       ]
      }
@@ -3842,6 +4324,44 @@
        }
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: define a * b = a + b - ab on the real numbers. Prove that * is commutative and associative, and find the identity element and the inverse of x.",
+      "steps": [
+       {
+        "operation": "Check commutativity",
+        "reason": "a * b and b * a must give the same result",
+        "result": "a * b = a + b - ab = b + a - ba = b * a ✓",
+        "predictPrompt": "Does the operation look the same when read right-to-left?"
+       },
+       {
+        "operation": "Check associativity",
+        "reason": "(a * b) * c and a * (b * c) must reach the same value",
+        "result": "(a*b)*c = (a + b - ab) + c - (a + b - ab)c = a + b - ab + c - ac - bc + abc; a*(b*c) = a + (b + c - bc) - a(b + c - bc) = a + b + c - bc - ab - ac + abc - identical ✓",
+        "predictPrompt": "What does (a * b) * c expand to?"
+       },
+       {
+        "operation": "Find the identity e",
+        "reason": "a * e must equal a, solve for e",
+        "result": "a + e - ae = a → e - ae = 0 → e(1 - a) = 0 for all a → e = 0",
+        "predictPrompt": "What value of e satisfies a * e = a for every a?"
+       },
+       {
+        "operation": "Find the inverse of x",
+        "reason": "Solve x * y = e = 0 for y",
+        "result": "x + y - xy = 0 → y(1 - x) = -x → y = x/(x - 1), x ≠ 1",
+        "predictPrompt": "What does the equation for the inverse look like?"
+       },
+       {
+        "operation": "Check to confirm: verify the inverse of 2",
+        "reason": "2 * y = 2 + y - 2y = 2 - y; set equal to 0 → y = 2",
+        "result": "x/(x-1) at x = 2 gives 2/1 = 2 ✓ - and 2 * 2 = 2 + 2 - 4 = 0 ✓",
+        "predictPrompt": "What is 2 * 2 under this operation?"
+       }
+      ]
+     }
     }
    ]
   },
@@ -4094,6 +4614,44 @@
         "reason": "A(B v) and (AB) v must agree on the same v, so an entry slip outs itself here.",
         "result": "v = (1, 1): Bv = (2, 4, 2); A(Bv) = (2 + 8 + 6, 4 + 8) = (16, 12) ✓; (AB)v = (7 + 9, 5 + 7) = (16, 12) ✓",
         "predictPrompt": "Push v = (1, 1) through A and B separately. Does A(Bv) match (AB)v?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: find the value of x for which the determinant of the matrix [1 2 3; 4 5 6; 7 8 x] equals zero.",
+      "steps": [
+       {
+        "operation": "Write out the determinant formula",
+        "reason": "Expansion along the first row",
+        "result": "det = 1(5x - 48) - 2(4x - 42) + 3(32 - 35)",
+        "predictPrompt": "What minors are needed for the first-row expansion?"
+       },
+       {
+        "operation": "Simplify each term",
+        "reason": "Compute the three minors individually",
+        "result": "= (5x - 48) - 2(4x - 42) + 3(-3)",
+        "predictPrompt": "What is 5x - 6 x 8?"
+       },
+       {
+        "operation": "Expand and collect x terms",
+        "reason": "Distribute the -2 and +3",
+        "result": "5x - 48 - 8x + 84 - 9 = -3x + 27",
+        "predictPrompt": "What is -48 + 84 - 9?"
+       },
+       {
+        "operation": "Set determinant equal to zero",
+        "reason": "-3x + 27 = 0",
+        "result": "x = 9",
+        "predictPrompt": "What value does x take when -3x + 27 = 0?"
+       },
+       {
+        "operation": "Check to confirm: substitute x = 9 and expand",
+        "reason": "The determinant must actually collapse to 0",
+        "result": "[1 2 3; 4 5 6; 7 8 9]: columns differ by constant - det = 1(45 - 48) - 2(36 - 42) + 3(32 - 35) = -3 + 12 - 9 = 0 ✓",
+        "predictPrompt": "What does the full determinant give at x = 9?"
        }
       ]
      }
@@ -4366,6 +4924,44 @@
        "Name the pattern before differentiating."
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: use implicit differentiation to find dy/dx for x² + xy + y² = 7, and find the gradient at the point (2, 1).",
+      "steps": [
+       {
+        "operation": "Differentiate term by term",
+        "reason": "Every term goes down with the power rule, treating y as a function of x",
+        "result": "2x + (x dy/dx + y) + 2y dy/dx = 0",
+        "predictPrompt": "What is d(xy)/dx by the product rule?"
+       },
+       {
+        "operation": "Group the dy/dx terms",
+        "reason": "Collect the terms that contain dy/dx",
+        "result": "(x + 2y) dy/dx = -(2x + y)",
+        "predictPrompt": "What coefficient multiplies dy/dx?"
+       },
+       {
+        "operation": "Solve for dy/dx",
+        "reason": "Divide through by (x + 2y)",
+        "result": "dy/dx = -(2x + y) / (x + 2y)",
+        "predictPrompt": "What is the gradient in terms of x and y?"
+       },
+       {
+        "operation": "Evaluate at (2, 1)",
+        "reason": "Check the point lies on the curve first: 4 + 2 + 1 = 7 ✓",
+        "result": "dy/dx = -(4 + 1)/(2 + 2) = -5/4",
+        "predictPrompt": "What is -(2x + y)/(x + 2y) at (2, 1)?"
+       },
+       {
+        "operation": "Check to confirm: verify the point lies on the curve",
+        "reason": "Implicit differentiation only counts at points on the curve",
+        "result": "(2)² + (2)(1) + (1)² = 7 ✓ - point confirmed",
+        "predictPrompt": "Does (2, 1) satisfy x² + xy + y² = 7?"
+       }
+      ]
+     }
     }
    ]
   },
@@ -4610,6 +5206,44 @@
         "reason": "The four expressions must rebuild from x = 34 and y = 35, and the opposite pairs must snap to 180°.",
         "result": "A = 2(34) = 68° ✓; C = 3(34) + 10 = 112° ✓; B = 3(35) + 20 = 125° ✓; D = 35 + 20 = 55° ✓; 68 + 112 = 180° ✓ and 125 + 55 = 180° ✓",
         "predictPrompt": "Substitute x = 34 and y = 35 back into A, B, C and D. Do opposite pairs sum to 180°?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: from an external point P, PA and PB are tangents to a circle with centre O, where PA = 12 cm and the angle APB = 60°. Find the radius of the circle.",
+      "steps": [
+       {
+        "operation": "Draw the symmetry",
+        "reason": "Triangles AOP and BOP are congruent right triangles",
+        "result": "OP bisects angle APB and OA ⊥ PA",
+        "predictPrompt": "What does the symmetry of PA and PB tell you about angle APB?"
+       },
+       {
+        "operation": "Find the angle between OP and PA",
+        "reason": "Half of 60°",
+        "result": "angle APO = 30°",
+        "predictPrompt": "What is half of 60 degrees?"
+       },
+       {
+        "operation": "Set up the trig ratio for PA and OA",
+        "reason": "In right triangle OAP, tan(angle APO) = opposite/adjacent = OA/PA",
+        "result": "tan 30° = r / 12",
+        "predictPrompt": "What is the opposite side of angle APO?"
+       },
+       {
+        "operation": "Solve for r",
+        "reason": "tan 30° = 1/√3",
+        "result": "r = 12 tan 30° = 12 / √3 = 4√3 ≈ 6.93 cm",
+        "predictPrompt": "What is 1/√3 expressed as a surd?"
+       },
+       {
+        "operation": "Check to confirm: find OP and compare with OA² + AP²",
+        "reason": "OP = PA / cos 30° = 12 / (√3/2) = 24/√3; check OA² + AP² = OP²",
+        "result": "OP² = (24/√3)² = 192; OA² + AP² = (4√3)² + 144 = 48 + 144 = 192 ✓",
+        "predictPrompt": "Does OA² + AP² equal OP²?"
        }
       ]
      }
@@ -4859,6 +5493,44 @@
         "reason": "Minor segment = sector minus triangle; an angle smaller than 180° means less than half the circle",
         "result": "The segment must be smaller than the sector and bigger than zero",
         "predictPrompt": "How small is the segment compared with the sector?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: the area of a circle is increased by 44%, while it remains a circle. By what percentage does the radius increase?",
+      "steps": [
+       {
+        "operation": "Write the area formula",
+        "reason": "The new area is 1.44A = πr² x 1.44",
+        "result": "A_new = 1.44 π r²",
+        "predictPrompt": "What is 44% added to a whole expressed as a multiplier?"
+       },
+       {
+        "operation": "Express A_new = π R² in terms of R",
+        "reason": "The new radius R is unknown; the area increased by the stated factor",
+        "result": "π R² = 1.44 π r²",
+        "predictPrompt": "What is the area of the enlarged circle?"
+       },
+       {
+        "operation": "Solve for R",
+        "reason": "Divide out π, then take the square root",
+        "result": "R² = 1.44 r² → R = 1.2 r",
+        "predictPrompt": "What is √1.44?"
+       },
+       {
+        "operation": "Find the percentage increase",
+        "reason": "(R - r)/r x 100",
+        "result": "20%",
+        "predictPrompt": "What is the percentage increase from r to 1.2r?"
+       },
+       {
+        "operation": "Check to confirm: substitute numbers",
+        "reason": "Original area π (r = 1) = π; new area 1.44π = π(1.2)² ✓",
+        "result": "π x 1.44 = π x 1.44 ✓ - the radii check reconciles",
+        "predictPrompt": "Does area π x 1.2² equal the declared 1.44π?"
        }
       ]
      }
@@ -5115,6 +5787,50 @@
        }
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: find the equation of the locus of points whose distance from (2, 3) is twice their distance from (8, 0).",
+      "steps": [
+       {
+        "operation": "Write the distance statement algebraically",
+        "reason": "Two distance constraints, one variable x and y each",
+        "result": "(x - 2)² + (y - 3)² = 4[(x - 8)² + y²]",
+        "predictPrompt": "What is the distance from (8, 0) for the right side?"
+       },
+       {
+        "operation": "Expand both sides",
+        "reason": "Repeated expansion distributes the 4",
+        "result": "x² - 4x + 4 + y² - 6y + 9 = 4x² - 64x + 256 + 4y²",
+        "predictPrompt": "What does (x - 2)² expand to?"
+       },
+       {
+        "operation": "Group like terms",
+        "reason": "Move all terms to one side",
+        "result": "3x² - 60x + 3y² + 6y + 243 = 0",
+        "predictPrompt": "What is the coefficient of x when everything is moved to one side?"
+       },
+       {
+        "operation": "Divide by 3 and complete the square",
+        "reason": "x² - 20x + y² + 2y + 81 = 0",
+        "result": "(x - 10)² - 100 + (y + 1)² - 1 + 81 = 0 → (x - 10)² + (y + 1)² = 20",
+        "predictPrompt": "What are the centres to complete the square on?"
+       },
+       {
+        "operation": "Check to confirm: the centre and radius",
+        "reason": "The locus is a circle; identify centre and radius",
+        "result": "Centre (10, -1), radius 2√5 (Apollonius circle) ✓",
+        "predictPrompt": "What is the radius of this locus?"
+       },
+       {
+        "operation": "Check to confirm: test a point from the formula",
+        "reason": "Pick a clean point on the locus and verify both distances",
+        "result": "The point (10 + √20, -1) = (10 + 2√5, -1): distances to (2, 3) and to (8, 0) satisfy the 2x relation ✓",
+        "predictPrompt": "Does a point generated from the equation satisfy the original distances?"
+       }
+      ]
+     }
     }
    ]
   },
@@ -5359,6 +6075,50 @@
         "reason": "The line must pass through (4, 5), leave A and B equally far, and carry the perpendicular gradient, so any sign slip outs itself here.",
         "result": "M = (4, 5): 4 + 5 = 9 ✓ on the line; MA = MB = √((4 − 2){{sup:2}} + (5 − 3){{sup:2}}) = √8 ✓; gradients 1 and −1, and 1 × (−1) = −1 ✓",
         "predictPrompt": "Does (4, 5) satisfy x + y = 9, are MA and MB equal, and do the gradients multiply to −1?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: show that the points A(1, 2), B(4, 2) and C(4, 6) form a right-angled triangle, then find the equation of its circumcircle.",
+      "steps": [
+       {
+        "operation": "Compute the slopes of AB and BC",
+        "reason": "AB is horizontal and BC is vertical, so the angle at B is 90°",
+        "result": "slope AB = 0; slope BC is undefined (vertical)",
+        "predictPrompt": "What is the slope of a vertical line?"
+       },
+       {
+        "operation": "Measure the three side lengths",
+        "reason": "Pythagoras then ranks the right angle honestly",
+        "result": "AB = 3, BC = 4, AC = √((4-1)² + (6-2)²) = √(9 + 16) = 5",
+        "predictPrompt": "What is the length of AC?"
+       },
+       {
+        "operation": "Verify Pythagoras",
+        "reason": "AB² + BC² must equal AC²",
+        "result": "3² + 4² = 9 + 16 = 25 = 5² ✓",
+        "predictPrompt": "Does AB² + BC² match AC²?"
+       },
+       {
+        "operation": "Find the circumcircle",
+        "reason": "The hypotenuse of a right triangle is a diameter of the circumcircle; its centre is the midpoint of AC",
+        "result": "Midpoint of AC = ((1+4)/2, (2+6)/2) = (2.5, 4); radius = AC/2 = 2.5",
+        "predictPrompt": "Where is the centre of the circle?"
+       },
+       {
+        "operation": "Write the circle equation",
+        "reason": "(x - h)² + (y - k)² = r²",
+        "result": "(x - 2.5)² + (y - 4)² = 6.25",
+        "predictPrompt": "What radius does the equation carry?"
+       },
+       {
+        "operation": "Check to confirm: substitute B into the circle",
+        "reason": "B must lie on the circumcircle if the calculation is right",
+        "result": "(4 - 2.5)² + (2 - 4)² = 1.5² + (-2)² = 2.25 + 4 = 6.25 ✓",
+        "predictPrompt": "Does B satisfy the circle equation?"
        }
       ]
      }
@@ -5614,6 +6374,44 @@
        }
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: the curve y = x³ - 6x² + 9x + 1. Find its stationary points and classify them.",
+      "steps": [
+       {
+        "operation": "Differentiate",
+        "reason": "Gradient is needed everywhere a condition on the gradient is stated",
+        "result": "dy/dx = 3x² - 12x + 9 = 3(x² - 4x + 3)",
+        "predictPrompt": "What is dy/dx of this cubic?"
+       },
+       {
+        "operation": "Factor the derivative",
+        "reason": "x² - 4x + 3 factors as (x - 1)(x - 3)",
+        "result": "dy/dx = 3(x - 1)(x - 3)",
+        "predictPrompt": "What are the roots of x² - 4x + 3?"
+       },
+       {
+        "operation": "Find the stationary points",
+        "reason": "Solve dy/dx = 0",
+        "result": "x = 1 and x = 3",
+        "predictPrompt": "What x-values annihilate the gradient?"
+       },
+       {
+        "operation": "Evaluate the function at the stationary points",
+        "reason": "y(1) and y(3) are the candidates for max and min",
+        "result": "y(1) = 1 - 6 + 9 + 1 = 5 (local maximum); y(3) = 27 - 54 + 27 + 1 = 1 (local minimum)",
+        "predictPrompt": "What is y at x = 1?"
+       },
+       {
+        "operation": "Check to confirm: second derivative test",
+        "reason": "y'' = 6x - 12: y''(1) = -6 < 0 (max), y''(3) = 6 > 0 (min)",
+        "result": "y''(1) = -6 confirms the local maximum at x = 1; y''(3) = 6 confirms the local minimum at x = 3 ✓",
+        "predictPrompt": "What does the second derivative say at x = 1?"
+       }
+      ]
+     }
     }
    ]
   },
@@ -5859,6 +6657,56 @@
         "reason": "(3x+1){{sup:2}} = 9x{{sup:2}} + 6x + 1; integrate directly to 38",
         "result": "Two methods, one answer: 38",
         "predictPrompt": "How would you verify this by expanding first?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: find ∫ e{{sup:2x}} cos x dx.",
+      "steps": [
+       {
+        "operation": "Call the integral I",
+        "reason": "Naming the integral makes the cyclic argument manageable",
+        "result": "I = ∫ e{{sup:2x}} cos x dx",
+        "predictPrompt": "Which is easier to integrate, sine or cosine here?"
+       },
+       {
+        "operation": "Use integration by parts with u = e{{sup:2x}}, dv = cos x dx",
+        "reason": "u = e{{sup:2x}} differentiates down to itself; dv = cos x integrates to sin x",
+        "result": "I = e{{sup:2x}} sin x - 2 ∫ e{{sup:2x}} sin x dx",
+        "predictPrompt": "What is the rule of parts in terms of u and dv?"
+       },
+       {
+        "operation": "Integrate e{{sup:2x}} sin x by parts",
+        "reason": "Same trick: u = e{{sup:2x}}, dv = sin x dx",
+        "result": "∫ e{{sup:2x}} sin x dx = e{{sup:2x}}(-cos x) + 2 ∫ e{{sup:2x}} cos x dx = -e{{sup:2x}} cos x + 2I",
+        "predictPrompt": "What is -cos x when differentiated twice?"
+       },
+       {
+        "operation": "Substitute back into the expression for I",
+        "reason": "The integral I reappears, so solve the equation for I",
+        "result": "I = e{{sup:2x}} sin x - 2(-e{{sup:2x}} cos x + 2I) = e{{sup:2x}} sin x + 2e{{sup:2x}} cos x - 4I",
+        "predictPrompt": "What does I equal in terms of itself?"
+       },
+       {
+        "operation": "Collect I on one side",
+        "reason": "I + 4I = 5I",
+        "result": "5I = e{{sup:2x}}(sin x + 2 cos x)",
+        "predictPrompt": "What is the combined coefficient of e{{sup:2x}}?"
+       },
+       {
+        "operation": "Solve for I",
+        "reason": "Final step of the equation",
+        "result": "I = {{frac:1|5}} e{{sup:2x}}(sin x + 2 cos x) + C",
+        "predictPrompt": "What is 5I divided by 5?"
+       },
+       {
+        "operation": "Check to confirm: differentiate the answer",
+        "reason": "d/dx of e{{sup:2x}}(sin x + 2 cos x)/5 must give e{{sup:2x}} cos x",
+        "result": "[2e{{sup:2x}}(sin x + 2 cos x) + e{{sup:2x}}(cos x - 2 sin x)] / 5 = e{{sup:2x}}(2 sin x + 4 cos x + cos x - 2 sin x)/5 = e{{sup:2x}} cos x ✓",
+        "predictPrompt": "Does differentiating give back e{{sup:2x}} cos x?"
        }
       ]
      }
@@ -6117,6 +6965,50 @@
        }
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: the scores of 17 students in a quiz are 0, 1, 4, 6, 4, 1, 1, 0, 4, 4, 1, 0, 6, 4, 1, 1, 3. Compute the mean, the variance and the standard deviation of the raw scores.",
+      "steps": [
+       {
+        "operation": "Count the frequency of each score",
+        "reason": "Six distinct values: 0, 1, 3, 4, 6. Frequency counts make sums quick.",
+        "result": "Frequency: 0 -> 3 times; 1 -> 6 times; 3 -> 1 time; 4 -> 5 times; 6 -> 2 times",
+        "predictPrompt": "How many times does the score 0 appear?"
+       },
+       {
+        "operation": "Copy the frequencies into a table and check the total",
+        "reason": "The counts must add to 17 - check them",
+        "result": "3 + 6 + 1 + 5 + 2 = 17 ✓",
+        "predictPrompt": "Does the frequency count reconcile to 17?"
+       },
+       {
+        "operation": "Compute Σfx",
+        "reason": "Frequency x value, summed",
+        "result": "Σfx = 0×3 + 1×6 + 3×1 + 4×5 + 6×2 = 0 + 6 + 3 + 20 + 12 = 41",
+        "predictPrompt": "What is 6 + 3 + 20 + 6?"
+       },
+       {
+        "operation": "Compute Σfx²",
+        "reason": "Same again, using the squares",
+        "result": "Σfx² = 0×3 + 1×6 + 9×1 + 16×5 + 36×2 = 6 + 9 + 80 + 72 = 167",
+        "predictPrompt": "What is 6 + 9 + 80 + 72?"
+       },
+       {
+        "operation": "Use the variance formula",
+        "reason": "Var = (Σfx² / n) - (Σfx / n)²",
+        "result": "Var = (167/17) - (41/17)² ≈ 9.8235 - 5.8166 ≈ 4.007; SD ≈ 2.002",
+        "predictPrompt": "What is 167/17?"
+       },
+       {
+        "operation": "Check to confirm: compute the mean directly from raw values",
+        "reason": "The mean straight from the raw values must match - a typo catch",
+        "result": "0+1+4+6+4+1+1+0+4+4+1+0+6+4+1+1+3 = 41; 41/17 ≈ 2.412, matching the frequency route ✓",
+        "predictPrompt": "What does the direct sum of all 17 scores come to?"
+       }
+      ]
+     }
     }
    ]
   },
@@ -6369,6 +7261,44 @@
        }
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: 40 students score on average 45 out of 100, and 60 students score on average 55 out of 100. Find the combined mean of the whole group.",
+      "steps": [
+       {
+        "operation": "Write the total marks for group one",
+        "reason": "Sum = mean x number",
+        "result": "40 x 45 = 1800",
+        "predictPrompt": "What is the total mark for the first group?"
+       },
+       {
+        "operation": "Write the total marks for group two",
+        "reason": "Same idea",
+        "result": "60 x 55 = 3300",
+        "predictPrompt": "What is the total mark for the second group?"
+       },
+       {
+        "operation": "Write the combined mean formula",
+        "reason": "(n{{sub:1}}x̄{{sub:1}} + n{{sub:2}}x̄{{sub:2}})/(n{{sub:1}} + n{{sub:2}}) - weighted average of the two means",
+        "result": "(1800 + 3300)/(40 + 60)",
+        "predictPrompt": "What comes on top of the weighted mean formula?"
+       },
+       {
+        "operation": "Compute the combined mean",
+        "reason": "1800 + 3300 = 5100; 5100 / 100 = 51",
+        "result": "Combined mean = 51",
+        "predictPrompt": "What is the sum of the two totals?"
+       },
+       {
+        "operation": "Check to confirm: reverse the operation",
+        "reason": "40 x 51 + 60 x 51 must come back to 5100",
+        "result": "40 x 51 + 60 x 51 = 2040 + 3060 = 5100 ✓",
+        "predictPrompt": "Does multiplying back by the group count reproduce the total?"
+       }
+      ]
+     }
     }
    ]
   },
@@ -6618,6 +7548,32 @@
         "reason": "The textbook formula and the Σfx{{sup:2}} − n·mean{{sup:2}} route must agree exactly, so a slip in either outs itself here.",
         "result": "Σfx{{sup:2}}/Σf − mean{{sup:2}} = 425 − 400 = 25 ✓; and 25 × 8 = 200 = 3400 − 8 × 400 ✓, both routes agree",
         "predictPrompt": "Compute 3400 ÷ 8 − 400. Do you get 25, the variance?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: the standard deviation of a set of values is 4. What is the standard deviation of the transformed set 3x + 7 (each value multiplied by 3, then 7 added)?",
+      "steps": [
+       {
+        "operation": "Recall the scaling law for standard deviation",
+        "reason": "Multiplying every value by a constant multiplies the spread by |constant|; adding a constant shifts the centre but does not change the spread",
+        "result": "SD(ax + b) = |a| SD(x)",
+        "predictPrompt": "What happens to spread when every value is multiplied by 3?"
+       },
+       {
+        "operation": "Apply the law",
+        "reason": "Only the multiplier matters",
+        "result": "SD(3x + 7) = 3 x 4 = 12",
+        "predictPrompt": "What is 3 x 4?"
+       },
+       {
+        "operation": "Check to confirm: why does the shift not count",
+        "reason": "Adding 7 pulls every point 7 units right; pairwise distances are unchanged; hence variance is unchanged",
+        "result": "SD around the new mean (3x̄ + 7) equals SD around x̄",
+        "predictPrompt": "What is the centre of the transformed set?"
        }
       ]
      }
@@ -6874,6 +7830,38 @@
        }
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: how many distinct arrangements of the eleven letters in MISSISSIPPI are there?",
+      "steps": [
+       {
+        "operation": "Count the letters",
+        "reason": "M + I(4) + S(4) + P(2) = 1 + 4 + 4 + 2 = 11 ✓",
+        "result": "11 letters in total",
+        "predictPrompt": "How many letters are in MISSISSIPPI?"
+       },
+       {
+        "operation": "List the frequencies of repeated letters",
+        "reason": "Division by the factorial of each repeat removes indistinguishable permutations",
+        "result": "M: 1; I: 4; S: 4; P: 2",
+        "predictPrompt": "How many S letters are there in MISSISSIPPI?"
+       },
+       {
+        "operation": "Apply the repeated-letter formula",
+        "reason": "11! / (1! 4! 4! 2!)",
+        "result": "39916800 / (1 x 24 x 24 x 2) = 39916800 / 1152 = 34650",
+        "predictPrompt": "What is 11!"
+       },
+       {
+        "operation": "Check to confirm: divide stepwise",
+        "reason": "11! / 4! = 1663200; / 4! = 69300; / 2! = 34650",
+        "result": "11 x 10 x 9 x 8 x 7 x 6 x 5 x 4 x 3 x 2 x 1 / 1152 = 34650 ✓ - the two routes agree",
+        "predictPrompt": "What does (11! / 4!) / 4! give?"
+       }
+      ]
+     }
     }
    ]
   },
@@ -7121,6 +8109,38 @@
        }
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: given log 2 ≈ 0.3010 and log 3 ≈ 0.4771 (base 10), find log 5, log 15, and log{{sub:2}} 15 to three decimal places.",
+      "steps": [
+       {
+        "operation": "Use log 10 = 1",
+        "reason": "log 10 = log 2 + log 5 = 1, so log 5 = 1 - log 2",
+        "result": "log 5 = 1 - 0.3010 = 0.6990",
+        "predictPrompt": "What is 1 - 0.3010?"
+       },
+       {
+        "operation": "Use log(ab) = log a + log b",
+        "reason": "15 = 3 x 5",
+        "result": "log 15 = log 3 + log 5 = 0.4771 + 0.6990 = 1.1761",
+        "predictPrompt": "What is 0.4771 + 0.6990?"
+       },
+       {
+        "operation": "Convert log{{sub:2}} 15 via the change-of-base rule",
+        "reason": "log{{sub:2}} 15 = log 15 / log 2",
+        "result": "log{{sub:2}} 15 = 1.1761 / 0.3010 ≈ 3.907",
+        "predictPrompt": "What is 1.1761 divided by 0.3010?"
+       },
+       {
+        "operation": "Check to confirm: raise 2 to the calculated power",
+        "reason": "2{{sup:3.907}} must come back to 15",
+        "result": "2{{sup:3.907}} ≈ 15.0 ✓ (within rounding)",
+        "predictPrompt": "What is 2{{sup:3.907}} to three significant figures?"
+       }
+      ]
+     }
     }
    ]
   },
@@ -7336,6 +8356,38 @@
        "Evaluate at the negative of the divisor's constant",
        "Remainder = f value; do not divide fully unless needed",
        "Use sum and product of roots as a shortcut"
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: if α and β are roots of 2x² - 3x + 5 = 0, find α² + β² and α³ + β³.",
+      "steps": [
+       {
+        "operation": "Use the sum and product of roots",
+        "reason": "α + β = 3/2 and αβ = 5/2, straight from the coefficients",
+        "result": "α + β = {{frac:3|2}}; αβ = {{frac:5|2}}",
+        "predictPrompt": "What is the sum of the roots of 2x² - 3x + 5?"
+       },
+       {
+        "operation": "Find α² + β²",
+        "reason": "α² + β² = (α + β)² - 2αβ",
+        "result": "α² + β² = {{frac:9|4}} - 2 x {{frac:5|2}} = {{frac:9|4}} - 5 = -{{frac:11|4}}",
+        "predictPrompt": "What is (3/2)²?"
+       },
+       {
+        "operation": "Find α³ + β³",
+        "reason": "α³ + β³ = (α + β)³ - 3αβ(α + β)",
+        "result": "α³ + β³ = {{frac:27|8}} - 3 x {{frac:5|2}} x {{frac:3|2}} = {{frac:27|8}} - {{frac:45|4}} = {{frac:-63|8}}",
+        "predictPrompt": "What is 3 x 5/2 x 3/2?"
+       },
+       {
+        "operation": "Check to confirm: expand 2 x α³ + 2 x β³ using the equation",
+        "reason": "2α² = 3α - 5 for each root; α³ = α(3α - 5)/2 = (3α² - 5α)/2 = (3(3α - 5)/2 - 5α)/2 = (-α - 15)/4; similarly for β = (-β - 15)/4; sum = -(α + β)/4 - 15/2",
+        "result": "α³ + β³ = -{{frac:3|2}} / 4 - {{frac:15|2}} = -{{frac:3|8}} - {{frac:60|8}} = -{{frac:63|8}} ✓",
+        "predictPrompt": "Does the trick with 2α² = 3α - 5 agree with the identity?"
+       }
       ]
      }
     }
@@ -7569,6 +8621,44 @@
        "Steps: substitute, simplify, solve, read y"
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: solve x² + y² = 25 and x + y = 7.",
+      "steps": [
+       {
+        "operation": "Square the linear equation",
+        "reason": "(x + y)² = x² + 2xy + y², so the circle equation can link the pair",
+        "result": "x² + 2xy + y² = 49",
+        "predictPrompt": "What is 7²?"
+       },
+       {
+        "operation": "Use the circle equation to find xy",
+        "reason": "Substitute x² + y² = 25",
+        "result": "25 + 2xy = 49 → xy = 12",
+        "predictPrompt": "What is 49 - 25, divided by 2?"
+       },
+       {
+        "operation": "Find x and y as roots of a quadratic",
+        "reason": "Sum 7, product 12 - the pair is a sum and product problem",
+        "result": "t² - 7t + 12 = 0 → t = 3 or t = 4",
+        "predictPrompt": "Which two numbers multiply to 12 and add to 7?"
+       },
+       {
+        "operation": "Give the solutions",
+        "reason": "Either assignments works because of symmetry",
+        "result": "(x, y) = (3, 4) or (4, 3)",
+        "predictPrompt": "What are the two solution pairs?"
+       },
+       {
+        "operation": "Check to confirm: substitute both pairs into both equations",
+        "reason": "If both equations hold, both answers are right",
+        "result": "(3, 4): 9 + 16 = 25 ✓ and 3 + 4 = 7 ✓; (4, 3): 16 + 9 = 25 ✓ and 4 + 3 = 7 ✓",
+        "predictPrompt": "Does (4, 3) satisfy x² + y² = 25?"
+       }
+      ]
+     }
     }
    ]
   },
@@ -7784,6 +8874,44 @@
        "Positive leading + negative constant: two crossings possible",
        "Quartic ends point the same way, both up or both down by sign",
        "Repeated root means a touch, not a cross"
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: without drawing fully, describe the key features of the curve y = 2(x - 3)(x + 1)².",
+      "steps": [
+       {
+        "operation": "Expand the factors to see the degree",
+        "reason": "Degree 3 determines the basic shape",
+        "result": "(x - 3)(x + 1)² = (x - 3)(x² + 2x + 1) = x³ - x² - 5x - 3; y = 2x³ - 2x² - 10x - 6",
+        "predictPrompt": "What is the leading term after full expansion?"
+       },
+       {
+        "operation": "Find the roots",
+        "reason": "Set each factor to zero",
+        "result": "x = 3 (simple root); x = -1 (double root)",
+        "predictPrompt": "Where does the graph cross the x-axis once?"
+       },
+       {
+        "operation": "Identify the nature of each root",
+        "reason": "Simple root = crosses; double root = touches",
+        "result": "Crossing at x = 3; touching at x = -1",
+        "predictPrompt": "What happens at x = -1 when the curve touches the x-axis?"
+       },
+       {
+        "operation": "State the end behaviour",
+        "reason": "Odd degree with positive leading coefficient sends the ends in opposite directions",
+        "result": "y → ∞ as x → ∞; y → -∞ as x → -∞",
+        "predictPrompt": "Where does the curve come from as x → -∞?"
+       },
+       {
+        "operation": "Check to confirm: evaluate at x = 0",
+        "reason": "The y-intercept must be consistent with the sign chart",
+        "result": "y = 2(0 - 3)(0 + 1)² = 2 x -3 x 1 = -6 ✓ - matches the expanded form",
+        "predictPrompt": "What is y at x = 0?"
+       }
       ]
      }
     }
