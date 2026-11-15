@@ -671,10 +671,11 @@ export async function getSessionResults(sessionId: string) {
 
   const { data: subjects } = await supabase
     .from('subjects')
-    .select('id, name')
+    .select('id, name, slug')
     .in('id', Array.from(subjectIds))
 
   const subjectNames = new Map((subjects ?? []).map((s) => [s.id, s.name]))
+  const subjectSlugs = new Map((subjects ?? []).map((s) => [s.id, s.slug as string]))
 
   // Misconception repairs for review: keyed by question, matched to the
   // picked wrong option per item below. Empty when nothing is mapped.
@@ -695,25 +696,97 @@ export async function getSessionResults(sessionId: string) {
     }
   }
 
-  const questions = reviewRows.map((row) => {
-    const repair = row.selected_answer
-      ? repairs.get(`${row.question_id}:${row.selected_answer}`) ?? null
-      : null
-    const { explanationText, steps } = practiceParseExplanation(row.explanation)
-    return [{
-      questionId: row.question_id,
-      questionText: row.question_text,
-      options: row.options as { key: string; text: string }[],
-      subjectId: row.subject_id,
-      selectedAnswer: row.selected_answer,
-      correctAnswer: row.correct_answer,
-      isCorrect: row.is_correct,
-      explanation: explanationText,
-      steps,
-      timeTakenSeconds: row.time_taken_seconds,
-      misconception: repair,
-    }]
-  }).flat()
+  // Mock boundary: after a mock session the bank is closed. Subject- and
+  // topic-level telemetry travels back, never the questions themselves:
+  // the learner mirrors a real exam, and the bank must not bleed.
+  // Practice keeps full feedback; it is the deliberate teacher.
+  const isMock = session.mode === 'mock'
+
+  const questions = isMock
+    ? []
+    : reviewRows.map((row) => {
+        const repair = row.selected_answer
+          ? repairs.get(`${row.question_id}:${row.selected_answer}`) ?? null
+          : null
+        const { explanationText, steps } = practiceParseExplanation(row.explanation)
+        return [{
+          questionId: row.question_id,
+          questionText: row.question_text,
+          options: row.options as { key: string; text: string }[],
+          subjectId: row.subject_id,
+          selectedAnswer: row.selected_answer,
+          correctAnswer: row.correct_answer,
+          isCorrect: row.is_correct,
+          explanation: explanationText,
+          steps,
+          timeTakenSeconds: row.time_taken_seconds,
+          misconception: repair,
+        }]
+      }).flat()
+
+  // Topic-level weak-spot telemetry for mocks, computed from question_topics.
+  // Empty when this session had no tagged questions.
+  const topicBreakdown: {
+    slug: string
+    name: string
+    subjectSlug: string
+    subjectName: string
+    missCount: number
+    total: number
+    accuracyPct: number
+  }[] = []
+  if (isMock && questionIds.length > 0) {
+    const { data: qTopics } = await createAdminClient()
+      .from('question_topics')
+      .select('question_id, topic_id')
+      .in('question_id', questionIds)
+    const rows = (qTopics ?? []) as { question_id: string; topic_id: string }[]
+    if (rows.length > 0) {
+      const correctness = new Map(reviewRows.map((r) => [r.question_id, r.is_correct === true]))
+      const subjectByQuestion = new Map(reviewRows.map((r) => [r.question_id, r.subject_id]))
+      const stat = new Map<string, { total: number; right: number; subjectId: string }>()
+      for (const row of rows) {
+        const entry = stat.get(row.topic_id) ?? {
+          total: 0,
+          right: 0,
+          subjectId: subjectByQuestion.get(row.question_id) ?? '',
+        }
+        entry.total += 1
+        if (correctness.get(row.question_id)) entry.right += 1
+        entry.subjectId = entry.subjectId || subjectByQuestion.get(row.question_id) || ''
+        stat.set(row.topic_id, entry)
+      }
+      const missedTopicIds = [...stat.entries()]
+        .filter(([, s]) => s.right < s.total)
+        .map(([id]) => id)
+      if (missedTopicIds.length > 0) {
+        const { data: tps } = await createAdminClient()
+          .from('topics')
+          .select('id, slug, name, subject_id')
+          .in('id', missedTopicIds)
+        const topicInfo = new Map(
+          ((tps ?? []) as { id: string; slug: string; name: string; subject_id: string }[]).map((t) => [t.id, t]),
+        )
+        for (const [topicId, s] of stat) {
+          const t = topicInfo.get(topicId)
+          if (!t) continue
+          const missCount = s.total - s.right
+          if (missCount === 0) continue
+          topicBreakdown.push({
+            slug: t.slug,
+            name: t.name,
+            subjectSlug: subjectSlugs.get(t.subject_id) ?? '',
+            subjectName: subjectNames.get(t.subject_id) ?? '',
+            missCount,
+            total: s.total,
+            accuracyPct: s.total > 0 ? Math.round((s.right / s.total) * 100) : 0,
+          })
+        }
+        topicBreakdown.sort((a, b) => b.missCount - a.missCount || b.total - a.total)
+        topicBreakdown.splice(6)
+      }
+    }
+  }
 
   const perfBySubject = result.performance_by_subject as Record<string, { correct: number; total: number }> | undefined
   let weakestSubject: { subjectId: string; name: string; correct: number; total: number; accuracy: number } | null = null
@@ -765,6 +838,7 @@ export async function getSessionResults(sessionId: string) {
     subjectBreakdown,
     weakestSubject,
     nextReview,
+    topicBreakdown,
   }
 }
 

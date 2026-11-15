@@ -41,6 +41,15 @@ interface ResultsData {
   subjectBreakdown: SubjectBreakdown[]
   weakestSubject: { subjectId: string; name: string } | null
   nextReview: Record<string, string | null>
+  topicBreakdown: {
+    slug: string
+    name: string
+    subjectSlug: string
+    subjectName: string
+    missCount: number
+    total: number
+    accuracyPct: number
+  }[]
 }
 
 export default function ResultsPage({ params }: { params: Promise<{ sessionId: string }> }) {
@@ -149,13 +158,56 @@ export default function ResultsPage({ params }: { params: Promise<{ sessionId: s
         />
       )}
 
-      {/* Review: wrong first */}
-      <div className="rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-6 shadow-[0_2px_12px_-6px_rgba(16,28,51,0.12)]">
-        <h2 className="font-display text-xl font-medium text-black mb-4">Review</h2>
-        <div className="space-y-3">
-          {[...data.questions]
-            .sort((a, b) => Number(a.isCorrect === true) - Number(b.isCorrect === true))
-            .map((q, idx) => {
+      {data.session.mode === 'mock' ? (
+        <div className="rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-6 shadow-[0_2px_12px_-6px_rgba(16,28,51,0.12)]">
+          <h2 className="font-display text-xl font-medium text-black">What cost you marks today</h2>
+          <p className="mt-1 text-sm font-semibold leading-relaxed text-ink-soft">
+            The papers stay closed for a mock. Here is where to point your practice next.
+          </p>
+          <div className="mt-4 space-y-2">
+            {data.topicBreakdown.length > 0 ? (
+              data.topicBreakdown.map((topic) => (
+                <div
+                  key={topic.slug}
+                  className="flex items-center justify-between gap-3 rounded-2xl border border-amber-100 bg-amber-50/60 px-4 py-3"
+                >
+                  <div className="min-w-0">
+                    <p className="text-sm font-extrabold leading-snug text-black">{topic.name}</p>
+                    <p className="text-[10px] font-bold uppercase tracking-wide text-amber-700">
+                      {topic.subjectName} · {topic.missCount} of {topic.total} missed
+                    </p>
+                  </div>
+                  <div className="text-right">
+                    <p className="font-display text-lg font-medium text-amber-800">{topic.accuracyPct}%</p>
+                    <p className="text-[10px] font-bold uppercase text-amber-600">accuracy</p>
+                  </div>
+                </div>
+              ))
+            ) : (
+              <p className="rounded-2xl border border-blue-100 bg-blue-50/50 px-4 py-3 text-sm font-semibold leading-relaxed text-ink-soft">
+                This paper did not carry topic tags, so the honest signal is your subject split above. Your weakest subject is where the next marks are sitting.
+              </p>
+            )}
+          </div>
+          <Link
+            href="/learn"
+            className="mt-4 inline-flex min-h-[48px] items-center gap-2 rounded-2xl border-2 border-blue-600 px-5 py-2 text-sm font-extrabold text-blue-700 hover:border-blue-700 hover:bg-blue-50"
+          >
+            {data.topicBreakdown[0]
+              ? `Start with ${data.topicBreakdown[0].name}`
+              : 'Back to the lessons'}
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+      ) : (
+        <>
+          {/* Review: wrong first */}
+          <div className="rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-6 shadow-[0_2px_12px_-6px_rgba(16,28,51,0.12)]">
+            <h2 className="font-display text-xl font-medium text-black mb-4">Review</h2>
+            <div className="space-y-3">
+              {[...data.questions]
+                .sort((a, b) => Number(a.isCorrect === true) - Number(b.isCorrect === true))
+                .map((q, idx) => {
               const open = expanded.has(q.questionId)
               const unanswered = q.selectedAnswer === null
               return (
@@ -226,9 +278,11 @@ export default function ResultsPage({ params }: { params: Promise<{ sessionId: s
                   )}
                 </div>
               )
-            })}
-        </div>
-      </div>
+              })}
+            </div>
+          </div>
+        </>
+      )}
     </div>
   )
 }
