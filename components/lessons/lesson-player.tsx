@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { ArrowRight, CheckCircle, Eye, Lightbulb, Wrench, Target } from 'lucide-react'
 import { celebrate } from '@/lib/celebrate'
 import StepVisual from '@/components/lessons/step-visual'
+import { MathText } from './math-text'
 import {
   recordLessonAttempt,
   completeLesson,
@@ -339,18 +340,18 @@ function WorkedCard({
           const isNext = i === revealed
           return (
             <div key={i} className={`rounded-2xl border p-4 ${isRevealed ? 'border-emerald-200 bg-emerald-50/50' : 'border-gray-200 bg-white'}`}>
-              <p className="text-sm font-extrabold text-black">{i + 1}. {step.operation}</p>
-              <p className="mt-1 text-[13px] font-semibold text-ink-soft">{step.reason}</p>
+              <p className="text-sm font-extrabold text-black">{i + 1}. <MathText text={step.operation} /></p>
+              <p className="mt-1 text-[13px] font-semibold text-ink-soft"><MathText text={step.reason} /></p>
               {isRevealed ? (
                 <>
-                  <p className="mt-2 rounded-xl bg-white border border-emerald-200 px-3 py-2.5 text-sm font-bold text-emerald-800 animate-pop-in">{step.result}</p>
+                  <p className="mt-2 rounded-xl bg-white border border-emerald-200 px-3 py-2.5 text-sm font-bold text-emerald-800 animate-pop-in"><MathText text={step.result} /></p>
                   <StepVisual visual={step.visual ?? null} />
                 </>
               ) : isNext ? (
                 <div className="mt-2 space-y-2">
                   {step.predictPrompt && (
                     <>
-                      <p className="text-[13px] font-bold italic text-blue-700">{step.predictPrompt}</p>
+                      <p className="text-[13px] font-bold italic text-blue-700"><MathText text={step.predictPrompt} /></p>
                       <input
                         value={predictionInput}
                         onChange={(e) => setPredictionInput(e.target.value)}

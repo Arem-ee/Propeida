@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { MathText } from './math-text'
 import { GLOSSARY } from '@/lib/glossary'
 
 function escapeForRegex(value: string) {
@@ -9,6 +10,7 @@ function escapeForRegex(value: string) {
 
 const TERMS = Object.keys(GLOSSARY).sort((a, b) => b.length - a.length)
 const PATTERN = new RegExp(`\\b(${TERMS.map(escapeForRegex).join('|')})\\b`, 'gi')
+const MATH_TOKEN = /(\{\{(?:sub|sup|frac):[^{}]*\}\})/g
 
 function GlossTerm({ term }: { term: string }) {
   const [open, setOpen] = useState(false)
@@ -46,14 +48,20 @@ function GlossTerm({ term }: { term: string }) {
  * terms. Matching is whole-word, case-insensitive, longest term first.
  */
 export function GlossText({ text }: { text: string }) {
-  const parts = text.split(PATTERN)
+  const mathPieces = text.split(MATH_TOKEN)
   return (
     <>
-      {parts.map((part, i) =>
-        i % 2 === 1 && GLOSSARY[part.toLowerCase()] ? (
-          <GlossTerm key={i} term={part} />
+      {mathPieces.map((mathPiece, mi) =>
+        mi % 2 === 1 ? (
+          <MathText key={mi} text={mathPiece} />
         ) : (
-          <span key={i}>{part}</span>
+          mathPiece.split(PATTERN).map((part, i) =>
+            i % 2 === 1 && GLOSSARY[part.toLowerCase()] ? (
+              <GlossTerm key={`${mi}-${i}`} term={part} />
+            ) : (
+              <span key={`${mi}-${i}`}>{part}</span>
+            ),
+          )
         ),
       )}
     </>
