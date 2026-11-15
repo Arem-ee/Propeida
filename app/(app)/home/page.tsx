@@ -7,28 +7,6 @@ import UpgradeCard from '@/components/paywall/upgrade-card'
 
 const PRESENCE_MIN_WEEKLY_ACTIVE = 10
 
-const STATUS_STYLE: Record<string, { chip: string; dot: string; label: string }> = {
-  secured: {
-    chip: 'border-emerald-200 bg-emerald-50 text-emerald-800',
-    dot: 'bg-emerald-500',
-    label: 'Secured',
-  },
-  developing: {
-    chip: 'border-amber-200 bg-amber-50 text-amber-800',
-    dot: 'bg-amber-500',
-    label: 'Developing',
-  },
-  fragile: {
-    chip: 'border-red-200 bg-red-50 text-red-800',
-    dot: 'bg-red-400',
-    label: 'Needs work',
-  },
-  'not-started': {
-    chip: 'border-gray-200 bg-white text-gray-500',
-    dot: 'bg-gray-300',
-    label: 'Not started',
-  },
-}
 
 export const metadata = { title: 'Home' }
 
@@ -55,7 +33,6 @@ export default async function HomePage() {
   const continueLesson = data.continueLesson
   const presence = data.presence
   const cohort = data.cohort
-  const progressMap = data.progressMap ?? []
   const weakest = data.weakest
   const learningDays = data.streak?.current_streak ?? 0
 
@@ -408,27 +385,6 @@ export default async function HomePage() {
           </Link>
         ) : null}
 
-        {/* 5 — Progress map: calm states, never a mountain */}
-        {progressMap.length > 0 && (
-          <div className="sm:col-span-2 rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-6 shadow-[0_2px_12px_-6px_rgba(16,28,51,0.12)]">
-            <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-gray-500">Progress map</p>
-            <div className="mt-3 flex flex-wrap gap-2">
-              {progressMap.map((s) => {
-                const style = STATUS_STYLE[s.status] ?? STATUS_STYLE['not-started']!
-                return (
-                  <span
-                    key={s.subjectId}
-                    title={style.label}
-                    className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-extrabold ${style.chip}`}
-                  >
-                    <span className={`h-2 w-2 rounded-full ${style.dot}`} />
-                    {s.subjectName}
-                  </span>
-                )
-              })}
-            </div>
-          </div>
-        )}
       </div>
     </div>
   )
