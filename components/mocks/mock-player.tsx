@@ -3,6 +3,9 @@
 import { useState, useMemo, useEffect, useCallback, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import { Flag, Send, CheckCircle, Calculator } from 'lucide-react'
+import { Mascot } from '@/components/mascot'
+import { useWins } from '@/components/celebrations/use-wins'
+import { celebrateStreakIfNew } from '@/components/celebrations/streak-celebration'
 import { submitAnswer, completeMockSession } from '@/lib/actions/practice'
 import { celebrate } from '@/lib/celebrate'
 
@@ -177,6 +180,7 @@ export default function MockPlayer({
   startedAt: string
 }) {
   const router = useRouter()
+  const { add } = useWins()
   const [index, setIndex] = useState(0)
   const [selections, setSelections] = useState<Record<string, string>>(() => {
     const init: Record<string, string> = {}
@@ -201,13 +205,14 @@ export default function MockPlayer({
     setFinalizing(true)
     setConfirming(false)
     try {
-      await completeMockSession(sessionId)
+      const result = await completeMockSession(sessionId)
+      celebrateStreakIfNew(result.streak, add)
       celebrate()
       setDone(true)
     } catch {
       setFinalizing(false)
     }
-  }, [finalizing, sessionId])
+  }, [finalizing, sessionId, add])
 
   const handleExpire = useCallback(() => {
     setTimedOut(true)
@@ -259,10 +264,10 @@ export default function MockPlayer({
           <CheckCircle className="h-10 w-10 text-emerald-600" />
         </span>
         <h2 className="font-display text-3xl font-medium text-black">
-          {timedOut ? 'Time is up — submitted' : 'Mock submitted'}
+          {timedOut ? 'Time is up, so your exam is submitted' : 'Your mock is submitted'}
         </h2>
         <p className="mt-2 text-[15px] font-semibold text-ink-soft mb-7">
-          {answeredCount} of {total} answered. Answers autosaved throughout.
+          You answered {answeredCount} of {total} questions, and your answers were saved throughout
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
           <button
@@ -450,10 +455,18 @@ export default function MockPlayer({
       {confirming && (
         <div className="fixed inset-0 z-[60] flex items-end sm:items-center justify-center bg-black/50 p-4" role="dialog" aria-modal="true" aria-label="Confirm submit">
           <div className="w-full max-w-sm rounded-3xl bg-white p-6 animate-pop-in">
-            <h2 className="font-display text-2xl font-medium text-black">End exam?</h2>
-            <p className="mt-2 text-sm font-semibold text-ink-soft">
-              {answeredCount} of {total} answered.
-              {answeredCount < total ? ' Unanswered questions stay blank.' : ' Everything is in.'}
+            <div className="flex items-start gap-3">
+              <Mascot expression="worried" size="md" className="shrink-0" />
+              <div>
+                <h2 className="font-display text-2xl font-medium text-black leading-tight">Do you want to end the exam now?</h2>
+                <p className="mt-1.5 text-sm font-semibold text-ink-soft leading-snug">
+                  Think it through before you submit
+                </p>
+              </div>
+            </div>
+            <p className="mt-3 text-sm font-semibold text-ink-soft">
+              You answered {answeredCount} of {total} questions
+              {answeredCount < total ? ', and the ones you left out stay blank' : ', so every question is in'}
             </p>
             <div className="mt-5 space-y-2.5">
               <button
@@ -461,7 +474,7 @@ export default function MockPlayer({
                 disabled={finalizing}
                 className="w-full rounded-2xl bg-blue-600 py-3.5 text-[15px] font-extrabold text-white min-h-[52px] cursor-pointer disabled:opacity-50"
               >
-                {finalizing ? 'Submitting...' : 'Submit exam'}
+                {finalizing ? 'Submitting your exam' : 'Submit exam'}
               </button>
               <button
                 onClick={() => setConfirming(false)}

@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react'
 import { Check, X, Eye } from 'lucide-react'
+import { MascotExplains, MascotSays } from '@/components/celebrations/speech-bubble'
 
 export interface PassageQuestion {
   question: string
@@ -166,11 +167,11 @@ function PassageReader({
             disabled={tapped.size === 0}
             className="mt-3 w-full rounded-2xl border-2 border-dashed border-blue-300 py-2.5 text-[13px] font-extrabold text-blue-700 min-h-[48px] cursor-pointer disabled:opacity-40"
           >
-            {evidenceChecked === false ? 'Not quite — reread, then tap again' : 'Tap the evidence first, then check'}
+            {evidenceChecked === false ? 'That is not quite right, so reread and tap again' : 'Tap the evidence first, then check'}
           </button>
         )}
         {evidenceChecked === true && !done && (
-          <p className="mt-2 text-[13px] font-extrabold text-emerald-700">Evidence found — now answer.</p>
+          <p className="mt-2 text-[13px] font-extrabold text-emerald-700">You found the evidence, so now answer the question</p>
         )}
 
         <div className="mt-3 space-y-2">
@@ -222,9 +223,12 @@ function PassageReader({
           <div className="mt-3 space-y-2.5 animate-pop">
             <p className={`flex items-center gap-1.5 font-display text-lg font-medium ${correct ? 'text-emerald-700' : 'text-red-700'}`}>
               {correct ? <Check className="h-5 w-5" strokeWidth={3} /> : <X className="h-5 w-5" strokeWidth={3} />}
-              {correct ? 'Correct — and evidenced.' : `Not quite — the answer is ${q.answer}.`}
+              {correct ? 'You got it right and found the evidence' : `Not quite, the answer is ${q.answer}`}
             </p>
-            <p className="text-sm font-semibold leading-relaxed text-ink-soft">{q.explanation}</p>
+            <MascotExplains
+              correct={correct}
+              explanation={q.explanation}
+            />
             {qi < passage.questions.length - 1 && (
               <button
                 onClick={next}
@@ -254,7 +258,7 @@ export function PairComparator({ pair, onAnswered }: { pair: MinimalPair; onAnsw
 
   return (
     <div className="rounded-2xl border-2 border-blue-100 bg-blue-50/40 p-4">
-      <p className="text-[11px] font-extrabold uppercase tracking-wider text-gray-500">Which stands?</p>
+      <p className="text-[11px] font-extrabold uppercase tracking-wider text-gray-500">Which sentence is correct?</p>
       <div className="mt-2.5 grid gap-2">
         {pair.pair.map((sentence, i) => {
           const right = done && i === pair.correctIndex
@@ -278,9 +282,11 @@ export function PairComparator({ pair, onAnswered }: { pair: MinimalPair; onAnsw
         })}
       </div>
       {done && (
-        <div className="mt-3 rounded-2xl bg-white border border-blue-100 p-3.5 animate-pop">
-          <p className="text-sm font-extrabold text-black">Rule: {pair.rule}</p>
-          <p className="mt-1 text-[13px] font-semibold text-ink-soft">Counterexample: {pair.counterexample}</p>
+        <div className="mt-3 animate-pop">
+          <MascotExplains
+            correct={picked === pair.correctIndex}
+            explanation={`Rule: ${pair.rule}. Counterexample: ${pair.counterexample}`}
+          />
         </div>
       )}
     </div>
@@ -302,9 +308,11 @@ export function RebuildCard({ item }: { item: SentenceRebuild }) {
           Commit to an answer, then reveal
         </button>
       ) : (
-        <div className="mt-3 rounded-2xl bg-white border border-emerald-200 p-3.5 animate-pop">
-          <p className="text-sm font-extrabold text-emerald-800">{item.answer}</p>
-          <p className="mt-1 text-[13px] font-semibold text-ink-soft">{item.rule}</p>
+        <div className="mt-3 animate-pop">
+          <MascotExplains
+            correct
+            explanation={`${item.answer}. ${item.rule}`}
+          />
         </div>
       )}
     </div>
@@ -326,8 +334,8 @@ export function ReflectionCard({ item }: { item: Reflection }) {
           Decide first, then compare
         </button>
       ) : (
-        <div className="mt-3 rounded-2xl bg-white border border-violet-200 p-3.5 animate-pop">
-          <p className="text-sm font-semibold leading-relaxed text-ink-soft">{item.modelResponse}</p>
+        <div className="mt-3 animate-pop">
+          <MascotSays expression="thinking" text={item.modelResponse} />
         </div>
       )}
     </div>

@@ -3,25 +3,36 @@
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import {
-  Home, BookOpen, BarChart3, Timer, TrendingUp, User, LogOut, Settings, X, Download, Crosshair, Users,
+  Home, BookOpen, BarChart3, Timer, TrendingUp, User, LogOut, Settings, X, Download, Crosshair, Users, ChevronRight, Sparkles,
 } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import Logo from '@/components/logo'
+import { WinToastList } from '@/components/celebrations/win-toast-list'
 
 const TABS = [
-  { href: '/home', label: 'Home', icon: Home },
-  { href: '/learn', label: 'Learn', icon: BookOpen },
-  { href: '/practice', label: 'Practice', icon: BarChart3 },
-  { href: '/mocks', label: 'Mocks', icon: Timer },
-  { href: '/progress', label: 'Progress', icon: TrendingUp },
+  { href: '/home', label: 'Home', icon: Home, tour: 'home-tab' },
+  { href: '/learn', label: 'Learn', icon: BookOpen, tour: 'learn-tab' },
+  { href: '/practice', label: 'Practice', icon: BarChart3, tour: 'practice-tab' },
+  { href: '/mocks', label: 'Mocks', icon: Timer, tour: 'mocks-tab' },
+  { href: '/progress', label: 'Progress', icon: TrendingUp, tour: 'progress-tab' },
 ]
 
 const ACCOUNT_LINKS = [
   { href: '/account', label: 'Profile', icon: User },
+  { href: '/pricing', label: 'Pro plans', icon: Sparkles },
   { href: '/squad', label: 'Study squad', icon: Users },
   { href: '/target', label: 'My target', icon: Crosshair },
   { href: '/account/downloads', label: 'Downloads', icon: Download },
   { href: '/account/settings', label: 'Settings', icon: Settings },
+]
+
+const ACCOUNT_ITEMS = [
+  { href: '/account', label: 'Profile', caption: 'Your account details', icon: User },
+  { href: '/pricing', label: 'Pro plans', caption: 'What Pro opens', icon: Sparkles },
+  { href: '/squad', label: 'Study squad', caption: 'Practise with people', icon: Users },
+  { href: '/target', label: 'My target', caption: 'The course you want', icon: Crosshair },
+  { href: '/account/downloads', label: 'Downloads', caption: 'Your files', icon: Download },
+  { href: '/account/settings', label: 'Settings', caption: 'Your preferences', icon: Settings },
 ]
 
 export default function AppShell({ children, email, isAdmin, onLogout }: {
@@ -41,6 +52,10 @@ export default function AppShell({ children, email, isAdmin, onLogout }: {
     window.addEventListener('keydown', onKeyDown)
     return () => window.removeEventListener('keydown', onKeyDown)
   }, [accountOpen])
+
+  useEffect(() => {
+    setAccountOpen(false)
+  }, [pathname])
 
   const isActive = (href: string) => pathname === href || pathname.startsWith(href + '/')
   const initial = (email?.[0] ?? '?').toUpperCase()
@@ -68,6 +83,7 @@ export default function AppShell({ children, email, isAdmin, onLogout }: {
             return (
               <Link
                 key={item.href}
+                data-tour={item.tour}
                 href={item.href}
                 aria-current={active ? 'page' : undefined}
                 className={`group flex items-center gap-3 rounded-2xl px-3.5 py-3 text-[15px] font-extrabold min-h-[52px] transition-all pressable ${
@@ -110,33 +126,80 @@ export default function AppShell({ children, email, isAdmin, onLogout }: {
               <span className="block truncate text-xs font-extrabold text-black">{email}</span>
               <span className="block text-[11px] font-bold text-ink-soft">Account</span>
             </span>
+            <ChevronRight className={`h-4 w-4 shrink-0 text-gray-400 transition-transform ${accountOpen ? 'rotate-90' : ''}`} />
           </button>
-          {accountOpen && (
-            <div id="account-menu-desktop" className="mt-1.5 space-y-0.5 rounded-2xl border border-blue-100/70 bg-white p-1.5 animate-pop-in">
-              {ACCOUNT_LINKS.map((item) => {
+        </div>
+      </aside>
+
+      {/* Desktop account panel: floats on the right-hand side, away from the sidebar */}
+      {accountOpen && (
+        <>
+          <button
+            aria-hidden="true"
+            tabIndex={-1}
+            onClick={() => setAccountOpen(false)}
+            className="fixed inset-0 z-40 hidden cursor-default bg-black/15 lg:block"
+            aria-label="Close account menu"
+          />
+          <div
+            role="dialog"
+            aria-modal="false"
+            id="account-menu-desktop"
+            aria-label="Account menu"
+            className="fixed bottom-4 z-50 hidden w-[340px] max-w-[calc(100vw-17rem-1rem)] rounded-3xl border border-blue-100/80 bg-white p-4 shadow-[0_24px_60px_-24px_rgba(16,28,51,0.35)] animate-pop-in lg:block"
+            style={{ left: 'calc(17rem + 0.75rem)' }}
+          >
+            <div className="flex items-center gap-3 border-b border-blue-100/60 pb-3">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-600 font-display text-base text-white">
+                {initial}
+              </span>
+              <span className="min-w-0">
+                <span className="block truncate text-[12px] font-extrabold text-black">{email}</span>
+                <span className="block text-[11px] font-bold text-ink-soft">Your Propeida account</span>
+              </span>
+            </div>
+            <nav aria-label="Account" className="mt-2 space-y-1">
+              {ACCOUNT_ITEMS.map((item) => {
                 const Icon = item.icon
+                const active = pathname === item.href
                 return (
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm font-bold text-ink-soft hover:text-black hover:bg-blue-50/70 min-h-[44px]"
+                    aria-current={active ? 'page' : undefined}
+                    className={`group flex items-center gap-3.5 rounded-2xl px-3 py-2.5 transition-colors min-h-[52px] ${
+                      active ? 'bg-blue-50/80' : 'hover:bg-blue-50/70'
+                    }`}
                   >
-                    <Icon className="h-4 w-4 text-gray-500" />
-                    {item.label}
+                    <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl ${
+                      active ? 'bg-blue-600 text-white' : 'bg-blue-50 text-blue-600'
+                    }`}>
+                      <Icon className="h-[18px] w-[18px]" />
+                    </span>
+                    <span className="min-w-0 flex-1">
+                      <span className={`block text-sm font-extrabold ${active ? 'text-blue-800' : 'text-black'}`}>{item.label}</span>
+                      <span className="block text-[11px] font-semibold text-ink-soft">{item.caption}</span>
+                    </span>
+                    <ChevronRight className={`h-4 w-4 shrink-0 ${active ? 'text-blue-500' : 'text-gray-300 group-hover:text-gray-400'}`} />
                   </Link>
                 )
               })}
-              <button
-                onClick={onLogout}
-                className="flex w-full items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm font-extrabold text-red-600 hover:bg-red-50 min-h-[44px] cursor-pointer"
-              >
-                <LogOut className="h-4 w-4" />
-                Sign out
-              </button>
-            </div>
-          )}
-        </div>
-      </aside>
+            </nav>
+            <button
+              onClick={onLogout}
+              className="mt-2 flex w-full items-center gap-3.5 rounded-2xl border-t border-blue-100/60 px-3 pb-2 pt-3 text-left cursor-pointer hover:bg-red-50/60"
+            >
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-red-50 text-red-500">
+                <LogOut className="h-[18px] w-[18px]" />
+              </span>
+              <span className="min-w-0 flex-1">
+                <span className="block text-sm font-extrabold text-red-600">Sign out</span>
+                <span className="block text-[11px] font-semibold text-ink-soft">Sign out of Propeida</span>
+              </span>
+            </button>
+          </div>
+        </>
+      )}
 
       {/* Mobile top bar */}
       <div className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-paper/90 backdrop-blur border-b border-blue-100/60">
@@ -202,6 +265,7 @@ export default function AppShell({ children, email, isAdmin, onLogout }: {
       </div>
 
       <main id="main-content" tabIndex={-1} className="flex-1 lg:ml-68 pt-16 lg:pt-0 pb-24 lg:pb-0 focus:outline-none">
+        <WinToastList />
         <div className="mx-auto max-w-3xl px-4 py-6 sm:px-6 lg:py-10">
           {children}
         </div>
@@ -216,6 +280,7 @@ export default function AppShell({ children, email, isAdmin, onLogout }: {
             return (
               <Link
                 key={item.href}
+                data-tour={item.tour}
                 href={item.href}
                 aria-current={active ? 'page' : undefined}
                 className={`relative flex flex-col items-center justify-center gap-1 min-w-0 flex-1 px-1 py-1.5 rounded-2xl transition-all pressable min-h-[52px] ${

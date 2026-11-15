@@ -224,7 +224,7 @@ export function SquadIdentityEditor({
         Squad identity
       </p>
       <p className="mt-1 text-xs font-semibold text-ink-soft">
-        Anyone in the squad can change this. It is shared, not personal
+        Anyone in the squad can change this, because it belongs to the whole squad
       </p>
 
       <label htmlFor="squad-name" className="mt-4 block text-xs font-bold text-ink-soft">
@@ -408,8 +408,8 @@ export function WeeklyGoalCard({
 
       {goal.current == null ? (
         <p className="mt-4 text-sm font-semibold leading-relaxed text-ink-soft">
-          Target set: <strong>{goal.target.toLocaleString('en-NG')} {preset.unit}</strong>. Squad
-          totals appear after three people join.
+          Your squad target is <strong>{goal.target.toLocaleString('en-NG')} {preset.unit}</strong>, and squad
+          totals appear after three people join
         </p>
       ) : (
         <>
@@ -484,13 +484,13 @@ export function MockWindowCard({
           <div>
             <p className="text-sm font-extrabold text-black">The squad takes one mock together</p>
             <p className="text-xs font-semibold text-gray-500">
-              Everyone starts at the same time
+              The mock starts at the same time for every member
             </p>
           </div>
         </div>
         <p className="mt-4 font-display text-xl font-medium leading-snug text-black">{label}</p>
         <p className="mt-1 text-xs font-semibold text-ink-soft">
-          Taking it together does not share your scores and it only sets the same start time for everyone
+          Taking it together does not share your scores and it only sets the same start time for the whole squad
         </p>
         <div className="mt-4 flex flex-wrap gap-2">
           <a
@@ -547,7 +547,7 @@ export function MockWindowCard({
         <div>
           <p className="text-sm font-extrabold text-black">Pick one mock time for the squad</p>
           <p className="text-xs font-semibold text-gray-500">
-            Pick one time for the squad and everyone takes the mock together without comparing scores
+            Pick one time for the squad and the whole squad takes the mock together without comparing scores
           </p>
         </div>
       </div>

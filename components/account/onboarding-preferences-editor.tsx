@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from 'react'
 import { ChevronRight } from 'lucide-react'
+import { Mascot } from '@/components/mascot'
 import {
   updateOnboardingProfile,
   type ExamTarget,
@@ -84,7 +85,7 @@ export default function OnboardingPreferencesEditor({
         subjects_pending: subjectsPending,
       })
     } catch (err: unknown) {
-      setError(err instanceof Error ? err.message : 'Could not save your preferences.')
+      setError(err instanceof Error ? err.message : 'Could not save your preferences')
     } finally {
       setLoading(false)
     }
@@ -100,7 +101,7 @@ export default function OnboardingPreferencesEditor({
         <h2 className="font-display text-lg font-medium text-black">Learning preferences</h2>
       </div>
       <p className="text-[13px] font-semibold text-ink-soft">
-        Update what you&rsquo;re preparing for and how you like to study. Changes apply immediately.
+        Update what you&rsquo;re preparing for and how you like to study, and changes apply immediately
       </p>
 
       {error && (
@@ -135,10 +136,10 @@ export default function OnboardingPreferencesEditor({
           <p className="font-display text-lg font-medium text-black mb-1">Subjects</p>
           <p className="mt-0.5 text-[13px] font-semibold text-ink-soft mb-3.5">
             {subjectsPending && selectedSubjects.length === 0
-              ? 'Pick later'
+              ? 'You will pick these later'
               : selectedSubjects.length > 0
                 ? selectedSubjects.join(', ')
-                : 'None selected'}
+                : 'You have not picked any subject yet'}
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
             {subjects.map((s) => {
@@ -177,8 +178,14 @@ export default function OnboardingPreferencesEditor({
             }}
             className="mt-3 inline-flex items-center gap-1.5 text-[12px] font-bold text-blue-600 hover:text-blue-700 min-h-[36px] cursor-pointer"
           >
-            {subjectsPending ? 'I have chosen my subjects' : 'I&apos;m not sure yet — pick later'}
+            {subjectsPending ? 'I have chosen my subjects' : 'I am not sure yet, so I will pick later'}
           </button>
+          {subjectsPending && (
+            <div className="mt-1.5 flex items-center gap-2 animate-pop-in">
+              <Mascot expression="thinking" size="sm" />
+              <p className="text-[11px] font-bold leading-snug text-ink-soft">Nothing is locked and you see everything until you pick</p>
+            </div>
+          )}
         </div>
 
         <div className="rounded-3xl border border-blue-100/70 bg-white p-5 shadow-[0_2px_12px_-6px_rgba(16,28,51,0.12)]">
@@ -245,7 +252,7 @@ export default function OnboardingPreferencesEditor({
 
         <div className="rounded-3xl border border-blue-100/70 bg-white p-5 shadow-[0_2px_12px_-6px_rgba(16,28,51,0.12)]">
           <p className="font-display text-lg font-medium text-black mb-1">Accessibility needs</p>
-          <p className="mt-0.5 text-[13px] font-semibold text-ink-soft">Saved to your profile. These are separate from the device display options under Settings.</p>
+          <p className="mt-0.5 text-[13px] font-semibold text-ink-soft">You save these to your profile, and they stay separate from the device display options under Settings</p>
           <div className="mt-2.5 space-y-2">
             <label className="flex items-center gap-3 cursor-pointer select-none">
               <input
@@ -283,7 +290,7 @@ export default function OnboardingPreferencesEditor({
         disabled={loading}
         className="w-full rounded-2xl bg-blue-600 px-8 py-4 text-[15px] font-extrabold text-white hover:bg-blue-700 min-h-[56px] transition-all cursor-pointer disabled:opacity-50 pressable"
       >
-        {loading ? 'Saving...' : 'Save preferences'}
+        {loading ? 'Saving your preferences' : 'Save preferences'}
       </button>
     </div>
   )

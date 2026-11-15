@@ -32,7 +32,7 @@ export default function RecallPlayer({ cards }: { cards: RecallCard[] }) {
       setFlipped(false)
       setIndex((i) => i + 1)
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Could not save your answer.')
+      setError(err instanceof Error ? err.message : 'Could not save your answer')
     } finally {
       setBusy(false)
     }
@@ -42,10 +42,10 @@ export default function RecallPlayer({ cards }: { cards: RecallCard[] }) {
     return (
       <div className="rounded-3xl border-2 border-emerald-200 bg-emerald-50/60 p-6 sm:p-8 text-center animate-pop-in">
         <CheckCircle2 className="mx-auto h-12 w-12 text-emerald-600" strokeWidth={2.5} />
-        <h2 className="mt-3 font-display text-3xl font-medium text-black">Round done.</h2>
+        <h2 className="mt-3 font-display text-3xl font-medium text-black">You finished this round</h2>
         <p className="mt-2 text-[15px] font-semibold text-ink-soft">
-          You recalled {marked.gotIt} of {marked.gotIt + marked.learning}. The rest come
-          back soon.
+          You recalled {marked.gotIt} of {marked.gotIt + marked.learning}, and the rest come
+          back soon
         </p>
         <div className="mt-6 flex flex-col gap-2.5 sm:flex-row sm:justify-center">
           <Link
@@ -130,7 +130,7 @@ export default function RecallPlayer({ cards }: { cards: RecallCard[] }) {
       </div>
       {!flipped && (
         <p className="mt-2.5 text-center text-[12px] font-semibold text-gray-500">
-          Flip the card first.
+          Flip the card before you mark it
         </p>
       )}
     </div>

@@ -1,10 +1,11 @@
 'use client'
 
-import { useMemo, useState } from 'react'
-import { ArrowRight, CheckCircle2, RotateCcw } from 'lucide-react'
+import { useEffect, useState } from 'react'
+import { ArrowRight, Bookmark, CheckCircle2, RotateCcw } from 'lucide-react'
 import type { NoteSection, SectionCheck } from '@/lib/notes'
 import LessonVisualBlock from './visuals'
 import { GlossText } from './gloss-text'
+import { MascotExplains } from '@/components/celebrations/speech-bubble'
 
 /**
  * The core reading flow: one concept per lesson, split into at most three
@@ -16,46 +17,43 @@ import { GlossText } from './gloss-text'
  * player's collapsed disclosure and never enter this flow.
  *
  * Layout hierarchy, deliberately: heading and body copy dominate; the
- * position indicator is one quiet line; secondary actions ("Skip to
- * recap", "Read everything") are quiet text links at the same weight as
- * each other, never competing with the primary Next button.
+ * position indicator is one quiet line; the reading-mode toggle is one
+ * small visible button, never competing with the primary Next control.
  */
 export type TeachSectionData = NoteSection
 
 export type { SectionCheck }
 
-export function countSectionWords(sections: TeachSectionData[], summary = ''): number {
-  const count = (text: string) => text.trim().split(/\s+/).filter(Boolean).length
+/** Tappable segments — backward jumps free, forward jumps unlock as the learner advances. */
+function Progress({
+  current,
+  total,
+  maxVisited,
+  onJump,
+}: {
+  current: number
+  total: number
+  maxVisited: number
+  onJump: (index: number) => void
+}) {
   return (
-    count(summary) +
-    sections.reduce(
-      (total, section) =>
-        total +
-        count(section.heading) +
-        (section.paragraphs ?? []).reduce((n, p) => n + count(p), 0) +
-        section.bullets.reduce((n, b) => n + count(b), 0) +
-        (section.takeaway ? count(section.takeaway) : 0),
-      0,
-    )
-  )
-}
-
-export function readingMinutes(sections: TeachSectionData[], summary = ''): number {
-  // 200 words per minute is a comfortable pace for study reading, not skimming.
-  return Math.max(1, Math.round(countSectionWords(sections, summary) / 200))
-}
-
-function Progress({ current, total }: { current: number; total: number }) {
-  return (
-    <div className="flex items-center gap-2" aria-hidden="true">
-      {Array.from({ length: total }).map((_, i) => (
-        <span
-          key={i}
-          className={`h-1.5 flex-1 rounded-full transition-all duration-500 ${
-            i <= current ? 'bg-blue-600' : 'bg-blue-100'
-          }`}
-        />
-      ))}
+    <div className="flex items-center gap-1.5" role="group" aria-label="Lesson sections">
+      {Array.from({ length: total }).map((_, i) => {
+        const visited = i <= maxVisited
+        return (
+          <button
+            key={i}
+            type="button"
+            disabled={!visited}
+            onClick={() => visited && onJump(i)}
+            aria-current={i === current ? 'step' : undefined}
+            aria-label={`Section ${i + 1}`}
+            className={`h-1.5 flex-1 cursor-pointer rounded-full transition-all disabled:cursor-not-allowed ${
+              i <= current ? 'bg-blue-600' : 'bg-blue-100'
+            } ${visited ? '' : 'opacity-60'}`}
+          />
+        )
+      })}
     </div>
   )
 }
@@ -63,13 +61,16 @@ function Progress({ current, total }: { current: number; total: number }) {
 function Takeaways({ section }: { section: TeachSectionData }) {
   if (!section.takeaway) return null
   return (
-    <div className="mt-4 border-l-2 border-amber-400 pl-3 animate-pop-in">
-      <p className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-amber-700">
-        The takeaway
-      </p>
-      <p className="mt-0.5 text-[13px] font-bold leading-snug text-amber-900">
-        <GlossText text={section.takeaway} />
-      </p>
+    <div className="mt-5 flex items-start gap-3 rounded-2xl border border-amber-300 bg-amber-50 px-4 py-3 animate-pop-in">
+      <Bookmark className="mt-0.5 h-4 w-4 shrink-0 fill-amber-300 text-amber-600" aria-hidden="true" />
+      <div className="min-w-0">
+        <p className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-amber-700">
+          The line to keep
+        </p>
+        <p className="mt-0.5 text-[14px] font-bold leading-snug text-amber-950">
+          <GlossText text={section.takeaway} />
+        </p>
+      </div>
     </div>
   )
 }
@@ -86,14 +87,14 @@ function CheckBlock({
   const answered = chosen !== undefined
   const correct = answered && chosen === check.answer
   return (
-    <div className="mt-4 rounded-2xl border border-blue-100 bg-blue-50/40 p-3.5">
+    <div className="mt-4 rounded-2xl border border-blue-200 bg-white p-4 sm:p-5 shadow-[0_1px_2px_rgba(16,24,40,0.05)]">
       <p className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-blue-700">
         10-second check
       </p>
-      <p className="mt-1 text-sm font-extrabold leading-snug text-black">
+      <p className="mt-1.5 text-[15px] font-extrabold leading-snug text-black">
         <GlossText text={check.question} />
       </p>
-      <div className="mt-2.5 space-y-1.5">
+      <div className="mt-3 space-y-2">
         {check.options.map((option, i) => {
           const isChosen = chosen === i
           const isAnswer = check.answer === i
@@ -111,7 +112,7 @@ function CheckBlock({
               onClick={() => !answered && onChoose(i)}
               disabled={answered}
               aria-pressed={isChosen}
-              className={`flex w-full items-center gap-2.5 rounded-xl border px-3 py-2 text-left text-[13px] font-bold leading-snug transition-all pressable ${style} ${
+              className={`flex w-full items-center gap-2.5 rounded-xl border px-3.5 py-2.5 text-left text-[13.5px] font-bold leading-snug transition-all pressable ${style} ${
                 answered ? 'cursor-default' : 'cursor-pointer'
               }`}
             >
@@ -129,14 +130,20 @@ function CheckBlock({
         })}
       </div>
       {answered && (
-        <p
-          className={`mt-2.5 text-[12px] font-bold leading-relaxed animate-pop-in ${
-            correct ? 'text-emerald-800' : 'text-amber-800'
-          }`}
-        >
-          {correct ? 'You got it right' : `Not quite, the answer is ${String.fromCharCode(65 + check.answer)}`}
-          {check.why ? <> <GlossText text={check.why} /></> : null}
-        </p>
+        <div className="mt-3.5 animate-pop-in">
+          <MascotExplains
+            correct={correct}
+            explanation={check.why
+              ? `${correct ? 'You got it right' : `Not quite, the answer is ${String.fromCharCode(65 + check.answer)}`}, ${check.why}`
+              : correct ? 'You got it right' : `Not quite, the answer is ${String.fromCharCode(65 + check.answer)}`}
+            steps={
+              <span className="text-sm font-semibold leading-relaxed text-ink-soft">
+                {correct ? 'You got it right' : `Not quite, the answer is ${String.fromCharCode(65 + check.answer)}`}
+                {check.why ? <>, <GlossText text={check.why} /></> : null}
+              </span>
+            }
+          />
+        </div>
       )}
     </div>
   )
@@ -146,19 +153,24 @@ function SectionBody({ section }: { section: TeachSectionData }) {
   return (
     <>
       {(section.paragraphs ?? []).map((paragraph, i) => (
-        <p key={i} className="mt-2.5 text-[14.5px] font-semibold leading-relaxed text-ink">
+        <p key={i} className="mt-3.5 text-[15px] font-semibold leading-relaxed text-ink">
           <GlossText text={paragraph} />
         </p>
       ))}
       {section.bullets.length > 0 && (
-        <ul className="mt-2.5 space-y-1.5">
-          {section.bullets.map((b, i) => (
-            <li key={i} className="flex gap-2.5 text-[13.5px] font-semibold leading-relaxed text-ink-soft">
-              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400" aria-hidden="true" />
-              <GlossText text={b} />
-            </li>
-          ))}
-        </ul>
+        <div className="mt-3.5 rounded-2xl border border-blue-100 bg-blue-50/50 p-4 sm:p-5">
+          <p className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-blue-800">
+            Quick reference
+          </p>
+          <ul className="mt-2 space-y-2">
+            {section.bullets.map((b, i) => (
+              <li key={i} className="flex gap-2.5 text-[14px] font-semibold leading-relaxed text-ink-soft">
+                <ArrowRight className="mt-0.5 h-4 w-4 shrink-0 text-blue-500" aria-hidden="true" />
+                <GlossText text={b} />
+              </li>
+            ))}
+          </ul>
+        </div>
       )}
     </>
   )
@@ -176,10 +188,14 @@ export default function TeachSections({
 }) {
   const [mode, setMode] = useState<'cards' | 'all'>('cards')
   const [index, setIndex] = useState(0)
+  const [maxVisited, setMaxVisited] = useState(0)
   const [answers, setAnswers] = useState<Record<number, number>>({})
   const [finished, setFinished] = useState(false)
 
-  const minutes = useMemo(() => readingMinutes(sections, summary), [sections, summary])
+  useEffect(() => {
+    setMaxVisited((max) => Math.max(max, index))
+  }, [index])
+
   const section = sections[index]
   const chosen = answers[index]
   const canAdvance = !section?.check || chosen !== undefined
@@ -205,9 +221,9 @@ export default function TeachSections({
       .filter((line): line is string => Boolean(line))
       .slice(0, 3)
     return (
-      <div className="mt-5 rounded-2xl border border-emerald-200 bg-emerald-50/50 p-4">
+      <div className="mt-5 rounded-2xl border border-emerald-200 bg-emerald-50/50 p-5 sm:p-7">
         <p className="font-display text-base font-medium text-emerald-950">Quick recap</p>
-        <ul className="mt-2.5 space-y-2">
+        <ul className="mt-3 space-y-2.5">
           {recap.map((line, i) => (
             <li key={i} className="flex gap-2.5 text-[13.5px] font-bold leading-relaxed text-emerald-950">
               <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" aria-hidden="true" />
@@ -220,6 +236,7 @@ export default function TeachSections({
           onClick={() => {
             setFinished(false)
             setIndex(0)
+            setMaxVisited(0)
             setAnswers({})
           }}
           className="mt-3 inline-flex items-center gap-1.5 text-[12px] font-extrabold text-emerald-800 underline underline-offset-2"
@@ -233,46 +250,35 @@ export default function TeachSections({
 
   return (
     <div className="mt-4">
-      {/* One quiet orientation line: where am I + the two secondary exits,
-          both at the same weight, never competing with Next. */}
-      <div className="flex flex-wrap items-baseline justify-between gap-3">
-        <p className="text-[11px] font-extrabold uppercase tracking-[0.12em] text-gray-500">
-          {mode === 'all'
-            ? `All ${sections.length} sections · ~${minutes} min read`
-            : `Section ${index + 1} of ${sections.length} · ~${minutes} min read`}
+      {/* One quiet orientation line: where the learner is in the lesson.
+          The mode toggle is a visible control, never a naked text link. */}
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-gray-500">
+          {mode === 'all' ? `All ${sections.length} sections` : `Section ${index + 1} of ${sections.length}`}
         </p>
-        <div className="flex items-baseline gap-4">
-          {mode === 'cards' && (
-            <button
-              type="button"
-              onClick={() => {
-                setFinished(true)
-                onComplete?.()
-              }}
-              className="text-[12px] font-extrabold text-gray-500 underline-offset-2 hover:underline"
-            >
-              Skip to recap
-            </button>
-          )}
-          <button
-            type="button"
-            onClick={() => setMode((m) => (m === 'cards' ? 'all' : 'cards'))}
-            className="text-[12px] font-extrabold text-blue-700 underline-offset-2 hover:underline"
-          >
-            {mode === 'cards' ? 'Read everything' : 'Back to sections'}
-          </button>
-        </div>
+        <button
+          type="button"
+          onClick={() => setMode((m) => (m === 'cards' ? 'all' : 'cards'))}
+          className="inline-flex min-h-[36px] cursor-pointer items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-1.5 text-[12px] font-extrabold text-blue-800 transition-colors hover:border-blue-300 hover:bg-blue-50"
+        >
+          {mode === 'cards' ? 'Read everything' : 'Back to sections'}
+        </button>
       </div>
-      <div className="mt-2">
-        <Progress current={index} total={sections.length} />
+      <div className="mt-3">
+        <Progress current={index} total={sections.length} maxVisited={maxVisited} onJump={setIndex} />
       </div>
 
       {mode === 'all' ? (
-        <div className="mt-4 space-y-5">
+        <div className="mt-4 space-y-7">
           {sections.map((s, i) => (
             <section key={i}>
               {s.heading && (
-                <h3 className="font-display text-base font-medium text-black">{s.heading}</h3>
+                <div className="flex items-center gap-3">
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-gray-900 font-display text-[11px] font-semibold text-white">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <h3 className="font-display text-lg font-semibold leading-snug text-black">{s.heading}</h3>
+                </div>
               )}
               <SectionBody section={s} />
               {s.visual && <LessonVisualBlock visual={s.visual} />}
@@ -288,12 +294,17 @@ export default function TeachSections({
           </button>
         </div>
       ) : (
-        <div className="mt-3">
-          <div className="mt-4 animate-fade-up" key={index}>
+        <div className="mt-4">
+          <div className="mt-5 animate-fade-up" key={index}>
             {section.heading && (
-              <h3 className="font-display text-[19px] font-medium leading-snug text-black">
-                {section.heading}
-              </h3>
+              <div className="flex items-center gap-3">
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gray-900 font-display text-[13px] font-semibold text-white">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <h3 className="font-display text-[21px] font-semibold leading-snug text-black">
+                  {section.heading}
+                </h3>
+              </div>
             )}
             <SectionBody section={section} />
             {section.visual && <LessonVisualBlock visual={section.visual} />}

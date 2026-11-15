@@ -3,6 +3,7 @@
 import { useState, useEffect, useTransition } from 'react'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
+import { Mascot } from '@/components/mascot'
 import { getPreferences, setPreference, type FontScale, type Theme } from '@/lib/settings'
 import { setCohortUpdatesEnabled } from '@/lib/actions/notifications'
 
@@ -48,11 +49,13 @@ function Choice<T extends string>({
 export default function SettingsClient({
   initialNotificationsEnabled = true,
   planLabel = 'Free',
-  planHint = 'Free practice and one mock per exam. Pro opens everything.',
+  planHint = 'Free practice and one mock per exam, and Pro opens everything',
+  planCtaLabel = 'See Pro',
 }: {
   initialNotificationsEnabled?: boolean
   planLabel?: string
   planHint?: string
+  planCtaLabel?: string
 }) {
   const [font, setFont] = useState<FontScale>('standard')
   const [theme, setTheme] = useState<Theme>('default')
@@ -82,7 +85,7 @@ export default function SettingsClient({
       if (!res.ok) throw new Error(data.error ?? 'Could not delete account')
       window.location.href = '/'
     } catch (err) {
-      setDeleteError(err instanceof Error ? err.message : 'Could not delete your account.')
+      setDeleteError(err instanceof Error ? err.message : 'Could not delete your account')
       setDeleting(false)
       setConfirmDelete(false)
     }
@@ -105,17 +108,15 @@ export default function SettingsClient({
       <div className="space-y-4">
         <Row label="Plan" hint={planHint}>
           <p className="font-display text-xl font-medium text-black">{planLabel}</p>
-          {planLabel === 'Free' && (
-            <Link
-              href="/pricing"
-              className="mt-3 inline-flex items-center justify-center rounded-2xl bg-blue-600 px-5 py-3 text-sm font-extrabold text-white hover:bg-blue-700 min-h-[48px] pressable"
-            >
-              See Pro
-            </Link>
-          )}
+          <Link
+            href="/pricing"
+            className="mt-3 inline-flex items-center justify-center rounded-2xl bg-blue-600 px-5 py-3 text-sm font-extrabold text-white hover:bg-blue-700 min-h-[48px] pressable"
+          >
+            {planCtaLabel}
+          </Link>
         </Row>
 
-        <Row label="Text size" hint="This device only. Separate from the accessibility needs saved on your Profile.">
+        <Row label="Text size" hint="This device only and separate from the accessibility needs saved on your profile">
           <Choice<FontScale>
             value={font}
             onPick={(v) => { setFont(v); setPreference('font', v) }}
@@ -126,7 +127,7 @@ export default function SettingsClient({
           />
         </Row>
 
-        <Row label="Appearance" hint="This device only. Sunlight is maximum contrast outdoors. Saved profile accessibility is separate.">
+        <Row label="Appearance" hint="This device only, and sunlight gives you maximum contrast outdoors while profile accessibility is separate">
           <Choice<Theme>
             value={theme}
             onPick={(v) => { setTheme(v); setPreference('theme', v) }}
@@ -138,7 +139,7 @@ export default function SettingsClient({
           />
         </Row>
 
-        <Row label="Celebration sound" hint="One short chime when a session ends. Never during questions.">
+        <Row label="Celebration sound" hint="One short chime when a session ends and never during questions">
           <Choice
             value={sound ? 'on' : 'off'}
             onPick={(v) => { setSound(v === 'on'); setPreference('sound', v) }}
@@ -149,7 +150,7 @@ export default function SettingsClient({
           />
         </Row>
 
-        <Row label="Haptics" hint="One soft vibration on session completion, where supported.">
+        <Row label="Haptics" hint="One soft vibration on session completion, where supported">
           <Choice
             value={haptics ? 'on' : 'off'}
             onPick={(v) => { setHaptics(v === 'on'); setPreference('haptics', v) }}
@@ -162,7 +163,7 @@ export default function SettingsClient({
 
         <Row
           label="Cohort updates"
-          hint="Short anonymous updates about your study group, plus a weekly summary. Never a ranking."
+          hint="Short anonymous updates about your study group and a weekly summary, never a ranking"
         >
           <Choice
             value={notifications ? 'on' : 'off'}
@@ -175,7 +176,7 @@ export default function SettingsClient({
                   await setCohortUpdatesEnabled(enabled)
                 } catch {
                   setNotifications(!enabled)
-                  setNotificationsError('Could not save this preference.')
+                  setNotificationsError('Could not save this preference')
                 }
               })
             }}
@@ -184,32 +185,37 @@ export default function SettingsClient({
               { value: 'off', label: 'Off' },
             ]}
           />
-          {savingNotifications && <p className="mt-2 text-xs font-bold text-ink-soft">Saving...</p>}
+          {savingNotifications && <p className="mt-2 text-xs font-bold text-ink-soft">Saving your settings</p>}
           {notificationsError && <p className="mt-2 text-xs font-bold text-red-700">{notificationsError}</p>}
         </Row>
 
         <div className="rounded-3xl border-2 border-red-200 bg-red-50/50 p-5">
           <p className="font-display text-lg font-medium text-black">Delete account</p>
           <p className="mt-0.5 text-[13px] font-semibold text-ink-soft">
-            Removes your profile, history, results, and learning records. This cannot be undone.
+            This removes your profile, history, results, and learning records, and you cannot undo it
           </p>
           {!confirmDelete ? (
             <button
               onClick={() => setConfirmDelete(true)}
               className="mt-3.5 rounded-2xl border-2 border-red-300 bg-white px-5 py-2.5 text-sm font-extrabold text-red-700 min-h-[48px] cursor-pointer pressable"
             >
-              Delete my account...
+              Delete your account
             </button>
           ) : (
             <div className="mt-3.5 space-y-2.5">
-              <p className="text-sm font-extrabold text-red-700">Are you sure? Everything goes.</p>
+              <div className="flex items-center gap-3">
+                <Mascot expression="worried" size="sm" className="shrink-0" />
+                <p className="text-sm font-extrabold text-red-700 leading-snug">
+                  Are you sure? There is no undo for this
+                </p>
+              </div>
               <div className="flex gap-2.5">
                 <button
                   onClick={() => void removeAccount()}
                   disabled={deleting}
                   className="flex-1 rounded-2xl bg-red-600 py-3 text-sm font-extrabold text-white min-h-[48px] cursor-pointer disabled:opacity-50"
                 >
-                  {deleting ? 'Deleting...' : 'Yes, delete everything'}
+                  {deleting ? 'Deleting your account' : 'Yes, delete everything'}
                 </button>
                 <button
                   onClick={() => setConfirmDelete(false)}

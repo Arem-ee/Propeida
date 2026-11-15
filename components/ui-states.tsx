@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { WifiOff, RotateCcw } from 'lucide-react'
+import { Mascot } from '@/components/mascot'
 
 /** Loading: skeleton cards in layout shape, never blank spinners. */
 export function LoadingCards({ count = 2 }: { count?: number }) {
@@ -42,9 +43,7 @@ export function EmptyState({
 }) {
   return (
     <div className="rounded-3xl border-2 border-dashed border-blue-200 bg-white/70 p-8 text-center">
-      <div className="mx-auto mb-4 h-16 w-16 rounded-3xl bg-blue-50 flex items-center justify-center">
-        <span className="font-display text-3xl text-blue-300">?</span>
-      </div>
+      <Mascot expression="rest" size="md" className="mx-auto mb-4" />
       <h2 className="font-display text-2xl font-medium text-black">{title}</h2>
       <p className="mx-auto mt-2 max-w-sm text-sm font-semibold leading-relaxed text-ink-soft">{body}</p>
       <Link
@@ -73,8 +72,8 @@ export function OfflineBar({ queuedCount = 0 }: { queuedCount?: number }) {
     >
       <WifiOff className="h-4 w-4 shrink-0 text-amber-600" />
       <p className="text-xs font-bold text-amber-800">
-        Offline — answers save on this device and sync later.
-        {queuedCount > 0 && ` ${queuedCount} waiting to sync.`}
+        You are offline, so answers save on this device and sync later
+        {queuedCount > 0 && `, and ${queuedCount} answers are still waiting to sync`}
       </p>
     </div>
   )
@@ -94,6 +93,7 @@ export function ErrorState({
 }) {
   return (
     <div className="rounded-3xl border border-red-200 bg-red-50/60 p-8 text-center">
+      <Mascot expression="worried" size="md" className="mx-auto mb-4" />
       <p className="text-[15px] font-bold text-red-700">{message}</p>
       <div className="mt-5 flex flex-col sm:flex-row items-center justify-center gap-3">
         {onRetry && (

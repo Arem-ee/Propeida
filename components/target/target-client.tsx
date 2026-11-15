@@ -66,7 +66,7 @@ export default function TargetClient({ initial }: { initial: TargetState }) {
         window.location.reload()
       }
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Could not save your target.')
+      setError(err instanceof Error ? err.message : 'Could not save your target')
     } finally {
       setSaving(false)
     }
@@ -98,11 +98,11 @@ export default function TargetClient({ initial }: { initial: TargetState }) {
             disabled={saving}
             className="rounded-2xl bg-blue-600 px-6 py-3 text-sm font-extrabold text-white hover:bg-blue-700 min-h-[52px] cursor-pointer disabled:opacity-50"
           >
-            {saving ? 'Saving...' : 'Save'}
+            {saving ? 'Saving your goal' : 'Save'}
           </button>
         </div>
         {error && <p className="mt-2 text-sm font-bold text-red-600">{error}</p>}
-        {saved && <p className="mt-2 text-sm font-extrabold text-emerald-600">Saved.</p>}
+        {saved && <p className="mt-2 text-sm font-extrabold text-emerald-600">Saved</p>}
       </div>
 
       {screeningFacts ? (
@@ -120,7 +120,7 @@ export default function TargetClient({ initial }: { initial: TargetState }) {
               ['O-level', screeningFacts.olevelWeight],
             ].map(([label, w]) => (
               <div key={label as string} className="rounded-2xl bg-white border border-blue-100 px-3 py-2.5 text-center">
-                <p className="font-display text-xl font-semibold text-black">{w === null ? '—' : `${w}%`}</p>
+                <p className="font-display text-xl font-semibold text-black">{w === null ? 'Not set' : `${w}%`}</p>
                 <p className="text-[11px] font-extrabold text-gray-500">{label}</p>
               </div>
             ))}
@@ -137,7 +137,7 @@ export default function TargetClient({ initial }: { initial: TargetState }) {
         schoolId !== '' && (
           <div className="rounded-3xl border-2 border-dashed border-blue-200 bg-white/70 p-5 text-center">
             <p className="text-sm font-semibold text-ink-soft">
-              No screening facts on file for this school yet — they land here once verified.
+              No screening facts are on file for this school yet, and they appear here once someone verifies them
             </p>
           </div>
         )
@@ -147,7 +147,7 @@ export default function TargetClient({ initial }: { initial: TargetState }) {
         <div className="rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-6 shadow-[0_2px_12px_-6px_rgba(16,28,51,0.12)]">
           <p className="font-display text-xl font-medium text-black">Aggregate estimator</p>
           <p className="mt-0.5 text-[13px] font-semibold text-ink-soft">
-            O-level: sum your 5 best grades (A1 = 4 each, max 20).
+            O-level: sum your 5 best grades (A1 = 4 each, max 20)
           </p>
           <div className="mt-3.5 grid grid-cols-3 gap-2.5">
             <div>
@@ -169,14 +169,14 @@ export default function TargetClient({ initial }: { initial: TargetState }) {
               : 'bg-blue-50 text-blue-800'
           }`}>
             {aggregate === null ? (
-              <p className="text-sm font-bold">Fill all three for your estimate.</p>
+              <p className="text-sm font-bold">Fill all three to get your estimate</p>
             ) : (
               <>
                 <p className="font-display text-3xl font-semibold">{aggregate.toFixed(1)}</p>
                 <p className="mt-0.5 text-xs font-extrabold">
                   {screeningFacts?.cutoff !== null && screeningFacts?.cutoff !== undefined
-                    ? `Last published cutoff: ${screeningFacts.cutoff} — cutoffs move yearly, treat this as a guide.`
-                    : 'Estimate only — no published cutoff on file to compare against.'}
+                    ? `Last published cutoff is ${screeningFacts.cutoff}, and cutoffs move every year, so treat this as a guide`
+                    : 'This is only an estimate because no published cutoff is on file to compare against'}
                 </p>
               </>
             )}

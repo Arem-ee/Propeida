@@ -7,7 +7,7 @@ import Logo from '@/components/logo'
 
 interface BillingOption {
   key: string
-  cycle: 'monthly' | 'yearly'
+  cycle: 'weekly' | 'monthly' | 'yearly'
   price: string
   amountLabel: string
 }
@@ -27,13 +27,13 @@ const PLANS: PlanCard[] = [
   {
     key: 'free',
     name: 'Free Practice',
-    description: 'Limited practice questions and one mock exam per exam you engage with.',
+    description: 'You get limited practice questions and one mock exam for each exam you engage with',
     features: [
-      { text: 'One full practice per exam (180 questions for JAMB)', included: true },
-      { text: '1 mock exam simulation per exam', included: true },
-      { text: 'Step-by-step explanations for all questions', included: true },
-      { text: 'Performance analytics and tracking', included: false },
-      { text: 'School-specific Post-UTME banks', included: false },
+      { text: 'You get one full practice per exam, with 180 questions for JAMB', included: true },
+      { text: 'You get one mock exam simulation per exam', included: true },
+      { text: 'You see step-by-step explanations for all questions', included: true },
+      { text: 'You get performance analytics and tracking', included: false },
+      { text: 'You get school-specific Post-UTME banks', included: false },
     ],
     options: null,
     purchasable: false,
@@ -41,37 +41,19 @@ const PLANS: PlanCard[] = [
     badge: null,
   },
   {
-    key: 'putme_pro',
-    name: 'PUTME Pro Pass',
-    description: 'Unlock the question bank and mock simulations for any university you have added.',
-    features: [
-      { text: 'Unlimited questions for any university', included: true },
-      { text: 'Unlimited school-specific mock simulations', included: true },
-      { text: 'Performance analytics and speed feedback', included: true },
-      { text: 'All university Post-UTME banks', included: true },
-      { text: 'JAMB practice questions', included: false },
-    ],
-    options: [
-      { key: 'putme_pro', cycle: 'monthly', price: '₦1,000', amountLabel: '₦1,000' },
-      { key: 'putme_pro_yearly', cycle: 'yearly', price: '₦8,400', amountLabel: '₦8,400' },
-    ],
-    purchasable: true,
-    comingSoon: false,
-    badge: null,
-  },
-  {
     key: 'jamb_pro',
     name: 'JAMB Pro Pass',
-    description: 'Full access to JAMB past questions, mocks, and analytics.',
+    description: 'You get full access to JAMB past questions, mocks, and analytics',
     features: [
-      { text: 'Unlimited JAMB practice questions', included: true },
-      { text: 'Unlimited JAMB CBT mock simulations', included: true },
-      { text: 'Performance analytics and speed feedback', included: true },
-      { text: 'All lessons, reviews, and progress maps', included: true },
-      { text: 'School-specific Post-UTME banks', included: false },
-      { text: 'AI-powered explanations (coming soon)', included: false },
+      { text: 'You can answer unlimited JAMB practice questions', included: true },
+      { text: 'You can take unlimited JAMB CBT mock simulations', included: true },
+      { text: 'You see performance analytics and speed feedback', included: true },
+      { text: 'You unlock all lessons, reviews, and progress maps', included: true },
+      { text: 'You get school-specific Post-UTME banks', included: false },
+      { text: 'You get AI-powered explanations (coming soon)', included: false },
     ],
     options: [
+      { key: 'jamb_pro_weekly', cycle: 'weekly', price: '₦1,000', amountLabel: '₦1,000' },
       { key: 'jamb_pro', cycle: 'monthly', price: '₦4,000', amountLabel: '₦4,000' },
       { key: 'jamb_pro_yearly', cycle: 'yearly', price: '₦33,600', amountLabel: '₦33,600' },
     ],
@@ -80,15 +62,35 @@ const PLANS: PlanCard[] = [
     badge: null,
   },
   {
+    key: 'putme_pro',
+    name: 'PUTME Pro Pass',
+    description: 'You unlock the question bank and mock simulations for any university you add',
+    features: [
+      { text: 'You can answer unlimited questions for any university', included: true },
+      { text: 'You can take unlimited school-specific mock simulations', included: true },
+      { text: 'You see performance analytics and speed feedback', included: true },
+      { text: 'You unlock all university Post-UTME banks', included: true },
+      { text: 'You get JAMB practice questions', included: false },
+    ],
+    options: [
+      { key: 'putme_pro_weekly', cycle: 'weekly', price: '₦400', amountLabel: '₦400' },
+      { key: 'putme_pro', cycle: 'monthly', price: '₦1,000', amountLabel: '₦1,000' },
+      { key: 'putme_pro_yearly', cycle: 'yearly', price: '₦8,400', amountLabel: '₦8,400' },
+    ],
+    purchasable: true,
+    comingSoon: false,
+    badge: null,
+  },
+  {
     key: 'jamb_premium_ai',
     name: 'JAMB Premium AI',
-    description: 'Everything in JAMB Pro, plus AI-powered step-by-step explanations.',
+    description: 'You get everything in JAMB Pro plus AI-powered step-by-step explanations',
     features: [
-      { text: 'Unlimited JAMB practice questions', included: true },
-      { text: 'Unlimited JAMB CBT mock simulations', included: true },
-      { text: 'AI-powered step-by-step explanations', included: true },
-      { text: 'Performance analytics and speed feedback', included: true },
-      { text: 'School-specific Post-UTME banks', included: false },
+      { text: 'You can answer unlimited JAMB practice questions', included: true },
+      { text: 'You can take unlimited JAMB CBT mock simulations', included: true },
+      { text: 'You get AI-powered step-by-step explanations', included: true },
+      { text: 'You see performance analytics and speed feedback', included: true },
+      { text: 'You get school-specific Post-UTME banks', included: false },
     ],
     options: null,
     purchasable: false,
@@ -97,20 +99,32 @@ const PLANS: PlanCard[] = [
   },
 ]
 
-export default function MarketingPricing({ variant = 'marketing', authEmail = null }: { variant?: 'marketing' | 'dashboard'; authEmail?: string | null }) {
+export default function MarketingPricing({
+  variant = 'marketing',
+  authEmail = null,
+  hasJambPro = false,
+  hasPutmePro = false,
+}: {
+  variant?: 'marketing' | 'dashboard'
+  authEmail?: string | null
+  hasJambPro?: boolean
+  hasPutmePro?: boolean
+}) {
   const [showCheckout, setShowCheckout] = useState(false)
-  const [checkoutProduct, setCheckoutProduct] = useState<string>('putme_pro')
+  const [checkoutProduct, setCheckoutProduct] = useState<string>('jamb_pro')
   const [checkoutAmount, setCheckoutAmount] = useState<string>('₦4,000')
-  const [cycles, setCycles] = useState<Record<string, 'monthly' | 'yearly'>>({})
+  const [cycles, setCycles] = useState<Record<string, 'weekly' | 'monthly' | 'yearly'>>({})
   const [isPaying, setIsPaying] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const router = useRouter()
 
   const plans = variant === 'dashboard' ? PLANS.filter((p) => !p.comingSoon) : PLANS
+  const isOwned = (planKey: string) =>
+    (planKey === 'jamb_pro' && hasJambPro) || (planKey === 'putme_pro' && hasPutmePro)
 
   const handleBuyClick = (productKey: string, amountLabel: string) => {
     if (productKey === 'free') {
-      router.push('/signup')
+      router.push(authEmail ? '/home' : '/signup')
       return
     }
     if (!authEmail) {
@@ -140,7 +154,7 @@ export default function MarketingPricing({ variant = 'marketing', authEmail = nu
 
       window.location.href = data.authorizationUrl
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Payment could not be completed.')
+      setError(err instanceof Error ? err.message : 'Your payment did not go through')
       setIsPaying(false)
     }
   }
@@ -153,8 +167,17 @@ export default function MarketingPricing({ variant = 'marketing', authEmail = nu
             Plain, direct pricing
           </h2>
           <p className="mt-4 text-lg text-gray-500 leading-relaxed">
-            Start free. Pro opens every lesson, unlimited practice, and every mock.
+            You start free, and Pro opens every lesson, unlimited practice, and every mock
           </p>
+          {authEmail && (hasJambPro || hasPutmePro) && (
+            <p className="mt-3 text-sm font-semibold text-blue-700">
+              {hasJambPro && hasPutmePro
+                ? 'Both plans are active on your account'
+                : hasJambPro
+                  ? 'Your JAMB Pro is active, and PUTME Pro is a separate plan'
+                  : 'Your PUTME Pro is active, and JAMB Pro is a separate plan'}
+            </p>
+          )}
         </div>
 
         <div className={`mx-auto grid max-w-lg grid-cols-1 gap-8 ${variant === 'dashboard' ? 'lg:max-w-3xl lg:grid-cols-2' : 'lg:max-w-5xl lg:grid-cols-2'}`}>
@@ -162,6 +185,7 @@ export default function MarketingPricing({ variant = 'marketing', authEmail = nu
             const isPopular = idx === 1
             const cycle = cycles[plan.key] ?? 'monthly'
             const option = plan.options?.find((o) => o.cycle === cycle) ?? plan.options?.[0] ?? null
+            const owned = isOwned(plan.key)
 
             return (
               <div
@@ -178,7 +202,14 @@ export default function MarketingPricing({ variant = 'marketing', authEmail = nu
                 )}
 
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900">{plan.name}</h3>
+                  <div className="flex items-start justify-between gap-3">
+                    <h3 className="text-xl font-bold text-gray-900">{plan.name}</h3>
+                    {owned && (
+                      <span className="shrink-0 rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-700">
+                        Your plan
+                      </span>
+                    )}
+                  </div>
                   <p className="mt-2 text-sm text-gray-500 leading-relaxed">
                     {plan.description}
                   </p>
@@ -204,7 +235,7 @@ export default function MarketingPricing({ variant = 'marketing', authEmail = nu
                                     : 'text-gray-600 hover:text-gray-900'
                                 }`}
                               >
-                                {o.cycle === 'monthly' ? 'Monthly' : 'Yearly'}
+                                {o.cycle === 'weekly' ? 'Weekly' : o.cycle === 'monthly' ? 'Monthly' : 'Yearly'}
                               </button>
                             ))}
                           </div>
@@ -212,7 +243,7 @@ export default function MarketingPricing({ variant = 'marketing', authEmail = nu
                         <div className="flex items-baseline flex-wrap gap-2">
                           <span className="text-4xl font-extrabold tracking-tight text-gray-900">{option?.price}</span>
                           <span className="rounded-xl bg-blue-50 px-2.5 py-1 text-xs font-bold text-blue-600">
-                            {option?.cycle === 'yearly' ? 'per year · save 30%' : 'per month'}
+                            {option?.cycle === 'yearly' ? 'per year · save 30%' : option?.cycle === 'weekly' ? 'per week' : 'per month'}
                           </span>
                         </div>
                       </>
@@ -241,7 +272,7 @@ export default function MarketingPricing({ variant = 'marketing', authEmail = nu
                       onClick={() => handleBuyClick(option!.key, option!.amountLabel)}
                       className="block w-full rounded-xl bg-blue-600 px-4 py-3 text-center text-sm font-bold text-white transition-colors hover:bg-blue-700 active:bg-blue-800 min-h-[44px] cursor-pointer"
                     >
-                      {plan.name.includes('PUTME') ? 'Get PUTME Pro' : 'Get JAMB Pro'}
+                      {owned ? 'Renew or switch' : plan.name.includes('PUTME') ? 'Get PUTME Pro' : 'Get JAMB Pro'}
                     </button>
                   ) : (
                     <button
@@ -263,7 +294,7 @@ export default function MarketingPricing({ variant = 'marketing', authEmail = nu
 
         <div className="mx-auto mt-8 max-w-lg rounded-xl border border-gray-100 bg-white p-6 text-center lg:max-w-5xl">
           <p className="text-sm text-gray-500">
-            Start free. No card needed. Pro monthly or yearly — pay again to renew.
+            You start free without a card, and you pay weekly, monthly, or yearly for Pro, then pay again when you want to renew
           </p>
         </div>
       </div>
@@ -302,7 +333,7 @@ export default function MarketingPricing({ variant = 'marketing', authEmail = nu
               <div className="rounded-xl bg-gray-50 border border-gray-100 p-4 mb-6 flex items-center gap-3">
                 <ShieldCheck className="h-5 w-5 text-blue-600 shrink-0" />
                 <p className="text-xs text-gray-500 leading-normal">
-                  You will be redirected to Paystack&apos;s secure checkout page to complete your payment.
+                  Paystack opens its secure checkout next so you can finish your payment
                 </p>
               </div>
 
@@ -321,7 +352,7 @@ export default function MarketingPricing({ variant = 'marketing', authEmail = nu
                 {isPaying ? (
                   <span className="flex items-center gap-2">
                     <Loader2 className="h-4 w-4 animate-spin" />
-                    Redirecting to Paystack...
+                    Opening Paystack
                   </span>
                 ) : (
                   `Pay ${checkoutAmount}`

@@ -56,7 +56,7 @@ export default function UpgradeCard({
 }
 
 export const PRO_BULLETS = [
-  'Every lesson, every subject.',
-  'Unlimited practice and mocks.',
-  'Reviews that keep things in memory.',
+  'You get every lesson in every subject',
+  'You can practise and take as many mocks as you want',
+  'Reviews bring topics back before you forget them',
 ]

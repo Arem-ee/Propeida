@@ -147,7 +147,7 @@ export default function PracticeConfig({
       const qs = params.toString()
       router.push(`/practice/session/${result.sessionId}${qs ? `?${qs}` : ''}`)
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Could not start practice.')
+      setError(err instanceof Error ? err.message : 'Could not start practice')
       setLoading(false)
     }
   }
@@ -157,16 +157,14 @@ export default function PracticeConfig({
       {presetSubjects.length > 0 && (
         <div className="rounded-2xl bg-blue-50 border border-blue-100 px-4 py-3 text-[13px] font-bold text-blue-700">
           {presetSubjects.length > 1
-            ? `Mixed review: ${presetSubjects.map((s) => s.name).join(' + ')} — pre-selected below.`
-            : `From your review: ${presetSubjects[0]!.name} — pre-selected below.`}
+            ? `You are reviewing ${presetSubjects.map((s) => s.name).join(', ')} and they are already selected below`
+            : `This round comes from your review of ${presetSubjects[0]!.name} and that subject is already selected below`}
         </div>
       )}
 
       {subjectsPending && (
         <div className="rounded-2xl bg-blue-50 border border-blue-100 px-4 py-3 text-[13px] font-bold text-blue-700">
-          English is always included in your free questions. For other subjects,
-          save them on your <a href="/account" className="underline">Profile</a> first
-          so your free questions cover them.
+          English is always included in your free questions, so save your other subjects on your <a href="/account" className="underline">Profile</a> first and your free questions will cover them
         </div>
       )}
 
@@ -177,7 +175,7 @@ export default function PracticeConfig({
         >
           <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-amber-700">Resume</p>
           <p className="mt-1 font-display text-xl font-medium text-black">{activeSession.examName}</p>
-          <p className="text-sm font-semibold text-ink-soft">You have practice in progress.</p>
+          <p className="text-sm font-semibold text-ink-soft">You have practice in progress</p>
         </button>
       )}
 
@@ -204,7 +202,7 @@ export default function PracticeConfig({
         <div>
           <p className="mb-2 text-[11px] font-extrabold uppercase tracking-[0.14em] text-gray-500">Subjects</p>
           {examSubjects.length === 0 ? (
-            <p className="text-sm font-semibold text-gray-500">No subjects linked to this exam yet.</p>
+            <p className="text-sm font-semibold text-gray-500">No subjects are linked to this exam yet</p>
           ) : (
             <div className="flex flex-wrap gap-2">
               {examSubjects.map((subject) => {
@@ -230,7 +228,7 @@ export default function PracticeConfig({
 
         <div>
           <p className="mb-2 text-[11px] font-extrabold uppercase tracking-[0.14em] text-gray-500">Topics <span className="normal-case text-gray-400">(optional)</span></p>
-          <p className="mb-2 text-[12px] font-semibold text-gray-500">Pick specific syllabus points or leave blank for the whole subject.</p>
+          <p className="mb-2 text-[12px] font-semibold text-gray-500">Pick specific syllabus points, or leave it blank for the whole subject</p>
           {examSubjects.filter((s) => topicsBySubject?.[s.id]?.length).length === 0 ? (
             <p className="text-sm font-semibold text-gray-500">Topic mapping coming soon for these subjects</p>
           ) : (
@@ -311,8 +309,11 @@ export default function PracticeConfig({
           className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-blue-600 py-4 text-[16px] font-extrabold text-white hover:bg-blue-700 shadow-[0_12px_28px_-12px_rgba(37,99,235,0.7)] min-h-[56px] cursor-pointer transition-all disabled:opacity-50"
         >
           <Play className="h-5 w-5" />
-          {loading ? 'Setting up...' : 'Start practicing'}
+          {loading ? 'Setting up your session' : 'Start practising'}
         </button>
+        <p className="text-center text-[11px] font-semibold text-gray-400">
+          Question source: JAMB past papers · Propeida is not affiliated with JAMB
+        </p>
       </div>
 
     </div>

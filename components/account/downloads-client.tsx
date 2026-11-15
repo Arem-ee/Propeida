@@ -52,7 +52,7 @@ export default function DownloadsClient() {
           Downloads
         </h1>
         <p className="mt-1.5 text-[15px] font-semibold text-ink-soft">
-          What lives on this device.
+          This is what lives on this device
         </p>
       </div>
 
@@ -63,13 +63,13 @@ export default function DownloadsClient() {
             Storage used
           </p>
           <p className="mt-2 font-display text-3xl font-semibold text-black">
-            {usage === null ? '—' : formatMB(usage)}
+            {usage === null ? 'Not yet' : formatMB(usage)}
             {quota !== null && (
               <span className="ml-2 align-middle text-sm font-bold text-gray-500">of {formatMB(quota)}</span>
             )}
           </p>
           <p className="mt-1.5 text-[13px] font-semibold leading-relaxed text-ink-soft">
-            Lessons ship inside the app. They open offline once loaded. Question banks still need a connection. Offline subject packs are coming.
+            Lessons ship inside the app and open offline once they load, while question banks still need a connection, and offline subject packs are coming
           </p>
         </div>
 
@@ -79,7 +79,7 @@ export default function DownloadsClient() {
             Install Propeida
           </p>
           <p className="mt-1.5 text-[13px] font-semibold leading-relaxed text-ink-soft">
-            Add Propeida to your home screen for fullscreen study and faster opens.
+            You can add Propeida to your home screen so it opens fullscreen and faster
           </p>
           {canInstall && deferred ? (
             <button
@@ -91,7 +91,7 @@ export default function DownloadsClient() {
           ) : (
             <p className="mt-3 flex items-center gap-2 text-[13px] font-bold text-gray-500">
               <WifiOff className="h-4 w-4" />
-              Use your browser&apos;s “Add to Home screen” — or you&apos;re already installed.
+              Open your browser menu and choose “Add to Home screen”, unless you already installed the app
             </p>
           )}
         </div>

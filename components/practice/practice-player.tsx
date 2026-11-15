@@ -3,11 +3,16 @@
 import { useState, useMemo } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { ArrowRight, RotateCcw, CheckCircle, Flame, BookOpen, Play, Check, X } from 'lucide-react'
+import { ArrowRight, RotateCcw, Flame, BookOpen, Play, Check, X } from 'lucide-react'
 import { submitAnswer, completePracticeSession } from '@/lib/actions/practice'
 import { getNoteById } from '@/lib/notes'
 import { celebrate } from '@/lib/celebrate'
+import { useWins } from '@/components/celebrations/use-wins'
+import { celebrateStreakIfNew } from '@/components/celebrations/streak-celebration'
+import { MascotSays, MascotExplains, MascotMisconception, MascotExamTip } from '@/components/celebrations/speech-bubble'
 import { WorkedSteps } from '@/components/celebrations/worked-steps'
+import { StepFeedback } from '@/components/practice/step-feedback'
+import { Confetti } from '@/components/celebrations/confetti'
 import type { WorkedStep } from '@/lib/lessons'
 
 export interface PlayerQuestion {
@@ -21,6 +26,17 @@ export interface PlayerQuestion {
   /** Optional structured derivation (maths/science). Same shape as lesson WorkedStep. */
   steps?: WorkedStep[] | null
 }
+
+/** Rotated by question index so the line never repeats back-to-back. */
+const CORRECT_TOASTS = [
+  'You got that right',
+  'That one is locked in',
+  'You knew it',
+  'You studied that properly',
+  'You read it well',
+]
+const pickToast = (i: number): string =>
+  CORRECT_TOASTS[i % CORRECT_TOASTS.length] ?? CORRECT_TOASTS[0] ?? 'You got that right'
 
 interface Feedback {
   isCorrect: boolean
@@ -78,20 +94,31 @@ export default function PracticePlayer({
   const [finishError, setFinishError] = useState<string | null>(null)
   const [answered, setAnswered] = useState(0)
 
+  const { add } = useWins()
+
   const q = ordered[index]
   const isWarmup = index < warmupCount
 
   const check = async () => {
     if (!selected || !q || feedback) return
     if (q.correctAnswer) {
+      const isCorrect = q.correctAnswer === selected
       setFeedback({
-        isCorrect: q.correctAnswer === selected,
+        isCorrect,
         correctAnswer: q.correctAnswer,
         explanation: q.explanation ?? '',
         steps: q.steps ?? null,
       })
       setAnswered((n) => n + 1)
       void submitAnswer(sessionId, q.id, selected).catch(() => {})
+      if (isCorrect) {
+        add({
+          kind: 'correct',
+          message: pickToast(index),
+          mascot: true,
+          duration: 2500,
+        })
+      }
       return
     }
     setChecking(true)
@@ -100,8 +127,17 @@ export default function PracticePlayer({
       const result = await submitAnswer(sessionId, q.id, selected)
       setFeedback(result as Feedback)
       setAnswered((n) => n + 1)
+      const serverFeedback = result as Feedback
+      if (serverFeedback.isCorrect) {
+        add({
+          kind: 'correct',
+          message: pickToast(index),
+          mascot: true,
+          duration: 2500,
+        })
+      }
     } catch {
-      setCheckError('We could not check that answer. Check your connection and try again.')
+      setCheckError('We could not check that answer, so check your connection and try again')
     } finally {
       setChecking(false)
     }
@@ -124,10 +160,18 @@ export default function PracticePlayer({
     setFinishError(null)
     try {
       const result = await completePracticeSession(sessionId)
+      celebrateStreakIfNew(result.streak, add)
+      add({
+        kind: 'session-done',
+        message: 'You finished this session',
+        subtext: `You answered ${answered} of ${ordered.length} questions`,
+        mascot: true,
+        duration: 5000,
+      })
       celebrate()
       router.push(`/results/${result.sessionId}`)
     } catch (err) {
-      setFinishError(err instanceof Error ? err.message : 'Could not finish this session.')
+      setFinishError(err instanceof Error ? err.message : 'Could not finish this session')
       setFinishing(false)
     }
   }
@@ -162,12 +206,7 @@ export default function PracticePlayer({
               </div>
             ))}
           </div>
-          {lesson.examTip && (
-            <div className="mt-6 rounded-2xl border-2 border-amber-200 bg-amber-50 p-4">
-              <p className="font-display text-sm font-medium text-amber-800">Exam tip</p>
-              <p className="mt-1 text-sm leading-relaxed text-amber-900 font-semibold">{lesson.examTip}</p>
-            </div>
-          )}
+          {lesson.examTip && <MascotExamTip tip={lesson.examTip} className="mt-6" />}
           <div className="mt-8 flex items-center justify-between gap-3">
             <button
               onClick={() => setShowLearn(false)}
@@ -191,12 +230,16 @@ export default function PracticePlayer({
   if (finished) {
     return (
       <div className="flex flex-col items-center justify-center py-16 text-center animate-pop">
-        <span className="flex h-20 w-20 items-center justify-center rounded-full bg-emerald-100 mb-5">
-          <CheckCircle className="h-10 w-10 text-emerald-600" />
-        </span>
-        <h2 className="font-display text-3xl font-medium text-black">Session complete</h2>
+        <Confetti enabled />
+        <MascotSays
+          expression="celebrate"
+          size="lg"
+          text="You finished this one"
+          className="mb-6"
+        />
+        <h2 className="font-display text-3xl font-medium text-black">You finished this session</h2>
         <p className="mt-2 text-[15px] font-semibold text-ink-soft mb-7">
-          You answered {answered} of {ordered.length} questions.
+          You answered {answered} of {ordered.length} questions
         </p>
         {finishError && <p className="mb-4 text-sm font-bold text-red-600">{finishError}</p>}
         <div className="flex flex-col sm:flex-row gap-3">
@@ -205,7 +248,7 @@ export default function PracticePlayer({
             disabled={finishing}
             className="inline-flex items-center gap-2 rounded-2xl bg-blue-600 px-7 py-3.5 text-[15px] font-extrabold text-white hover:bg-blue-700 min-h-[52px] cursor-pointer disabled:opacity-60 transition-all"
           >
-            {finishing ? 'Wrapping up...' : 'See what stuck'}
+            {finishing ? 'Wrapping up your session' : 'See what stuck'}
             <ArrowRight className="h-4 w-4" />
           </button>
           <button
@@ -244,7 +287,7 @@ export default function PracticePlayer({
         <div className="mb-4 flex items-start gap-2.5 rounded-2xl border-2 border-orange-200 bg-orange-50 px-4 py-3.5">
           <Flame className="h-5 w-5 shrink-0 text-orange-500 mt-0.5" />
           <p className="text-[13px] leading-relaxed font-bold text-orange-900">
-            Still got it? These are from last time — quick retrieval before new material.
+            Do you still remember these? They come from last time, so this is a quick retrieval before new material
           </p>
         </div>
       )}
@@ -300,34 +343,31 @@ export default function PracticePlayer({
                 ? <Check className="h-5 w-5 shrink-0" strokeWidth={3} />
                 : <X className="h-5 w-5 shrink-0" strokeWidth={3} />}
               <span className="font-display text-lg font-medium">
-                {feedback.isCorrect ? 'Correct — nice.' : `Not quite — it was ${feedback.correctAnswer}`}
+                {feedback.isCorrect ? 'You got it right' : `Not quite, the answer is ${feedback.correctAnswer}`}
               </span>
             </div>
-            <div className="rounded-2xl bg-blue-50/50 border border-blue-100 p-4 sm:p-5">
-              <p className="font-display text-base font-medium text-blue-900 mb-2">Explanation</p>
-              <p className="text-sm text-ink-soft leading-relaxed font-semibold">{feedback.explanation}</p>
-              {feedback.steps && feedback.steps.length > 0 && <WorkedSteps steps={feedback.steps} />}
-            </div>
+            <MascotExplains
+              correct={feedback.isCorrect}
+              explanation={feedback.explanation}
+              steps={feedback.steps ? <WorkedSteps steps={feedback.steps} /> : undefined}
+              popKey={answered}
+            />
+            {feedback.steps && feedback.steps.length > 0 && (
+              <StepFeedback questionId={q.id} />
+            )}
             {feedback.misconception && (
-              <div className="rounded-2xl bg-amber-50 border-2 border-amber-200 p-4 sm:p-5 animate-pop-in" style={{ animationDelay: '120ms' }}>
-                <p className="font-display text-base font-medium text-amber-900 mb-2">
-                  Why this tempts: {feedback.misconception.name}
-                </p>
-                {feedback.misconception.sharedPct !== null && (
-                  <p className="mb-2 text-xs font-extrabold text-amber-700">
-                    {feedback.misconception.sharedPct}% of learners also picked this first. It is not just you.
-                  </p>
-                )}
-                <p className="text-sm text-ink-soft leading-relaxed font-semibold">{feedback.misconception.explanation}</p>
-                {feedback.misconception.repeatCount > 0 && (
-                  <p className="mt-1.5 text-xs font-extrabold text-red-700">
-                    This exact error has come up {feedback.misconception.repeatCount + 1} times — time to fix the root, not retry harder.
-                  </p>
-                )}
+              <>
+                <MascotMisconception
+                  name={feedback.misconception.name}
+                  explanation={feedback.misconception.explanation}
+                  sharedPct={feedback.misconception.sharedPct}
+                  repeatCount={feedback.misconception.repeatCount}
+                  popKey={answered}
+                />
                 {feedback.misconception.repairHref && (
                   <Link
                     href={feedback.misconception.repairHref}
-                    className="mt-2 inline-flex items-center gap-1 text-[13px] font-extrabold text-blue-700 min-h-[40px]"
+                    className="-mt-1 inline-flex items-center gap-1 text-[13px] font-extrabold text-blue-700 min-h-[40px]"
                   >
                     Open the repair lesson
                   </Link>
@@ -335,7 +375,7 @@ export default function PracticePlayer({
                 {feedback.misconception.prerequisite && (
                   <Link
                     href={feedback.misconception.prerequisite.href}
-                    className="mt-2 flex items-center gap-2 rounded-2xl border-2 border-violet-300 bg-violet-50 px-4 py-3 min-h-[52px] transition-all hover:bg-violet-100"
+                    className="-mt-1 flex items-center gap-2 rounded-2xl border-2 border-violet-300 bg-violet-50 px-4 py-3 min-h-[52px] transition-all hover:bg-violet-100"
                   >
                     <span className="text-[13px] font-extrabold text-violet-800">
                       Strengthen the foundation first: {feedback.misconception.prerequisite.name}
@@ -343,7 +383,7 @@ export default function PracticePlayer({
                     <ArrowRight className="ml-auto h-4 w-4 shrink-0 text-violet-700" />
                   </Link>
                 )}
-              </div>
+              </>
             )}
           </div>
         )}
@@ -381,7 +421,7 @@ export default function PracticePlayer({
               selected && !checking ? 'bg-blue-600 hover:bg-blue-700 shadow-[0_12px_28px_-12px_rgba(37,99,235,0.7)] cursor-pointer' : 'bg-gray-300'
             }`}
           >
-            {checking ? 'Checking...' : 'Check answer'}
+            {checking ? 'Checking your answer' : 'Check answer'}
           </button>
         )}
       </div>

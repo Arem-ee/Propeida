@@ -2,11 +2,14 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
-import { ArrowRight, CheckCircle, Eye, Lightbulb, Wrench, Target } from 'lucide-react'
+import { ArrowRight, CheckCircle, ChevronDown, Eye, Lightbulb, Target } from 'lucide-react'
 import { celebrate } from '@/lib/celebrate'
-import StepVisual from '@/components/lessons/step-visual'
+import { MascotExplains, MascotMisconception } from '@/components/celebrations/speech-bubble'
 import { WorkedSteps } from '@/components/celebrations/worked-steps'
-import { MathText } from './math-text'
+import { useWins } from '@/components/celebrations/use-wins'
+import { celebrateStreakIfNew } from '@/components/celebrations/streak-celebration'
+import StepVisual from '@/components/lessons/step-visual'
+import { MathText } from '@/components/lessons/math-text'
 import {
   recordLessonAttempt,
   completeLesson,
@@ -14,7 +17,8 @@ import {
   saveLessonReflection,
   type LessonQuestion,
 } from '@/lib/actions/lessons'
-import type { RevisionNote } from '@/lib/notes'
+import type { RevisionNote, SubjectSlug } from '@/lib/notes'
+import { getSubjectLabel } from '@/lib/notes'
 import type { LessonEnhancement, WorkedStep } from '@/lib/lessons'
 import type { LessonEnglish } from '@/lib/actions/lessons'
 import PassageReader, { PairComparator, RebuildCard, ReflectionCard } from './english-blocks'
@@ -94,7 +98,7 @@ function PhaseDots({ phases, current }: { phases: string[]; current: number }) {
 function ConfidencePicker({ value, onChange }: { value: Confidence; onChange: (c: Confidence) => void }) {
   return (
     <div className="flex items-center gap-2">
-      <span className="text-xs font-bold text-gray-500">How sure?</span>
+      <span className="text-xs font-bold text-gray-500">How sure are you?</span>
       <div className="flex gap-1.5">
         {(['sure', 'unsure'] as const).map((c) => (
           <button
@@ -210,7 +214,7 @@ function BankQuestion({
           <textarea
             value={textInput ?? ''}
             onChange={(e) => setTextInput(e.target.value)}
-            placeholder="Type your answer..."
+            placeholder="Type your answer"
             className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm min-h-[56px] focus:border-blue-600 focus:outline-none"
           />
         )}
@@ -232,7 +236,7 @@ function BankQuestion({
                 : 'bg-gray-300'
             }`}
           >
-            {checking ? 'Checking...' : ctaLabel}
+            {checking ? 'Checking your answer' : ctaLabel}
           </button>
         </div>
       )}
@@ -243,12 +247,12 @@ function BankQuestion({
             <div className={`rounded-2xl border px-4 py-3.5 font-display text-lg font-medium animate-pop-in ${
               feedback.isCorrect ? 'bg-emerald-50 border-emerald-200 text-emerald-700' : 'bg-amber-50 border-amber-200 text-amber-800'
             }`}>
-              {feedback.isCorrect ? 'Correct — nice.' : `Not quite — it was ${feedback.correctAnswer}`}
+              {feedback.isCorrect ? 'You got it right' : `Not quite, the answer is ${feedback.correctAnswer}`}
             </div>
           ) : (
             <>
               <div className="rounded-2xl border border-blue-200 bg-blue-50 px-4 py-3.5 font-display text-lg font-medium text-blue-800">
-                Submitted. Here&apos;s the model answer.
+                You submitted your answer, so here is the model answer
               </div>
               {feedback.correctAnswer && (
                 <div className="rounded-2xl border border-emerald-200 bg-emerald-50/60 p-4">
@@ -258,26 +262,19 @@ function BankQuestion({
               )}
             </>
           )}
-          <div className="rounded-2xl bg-blue-50/50 border border-blue-100 p-4">
-            <p className="text-sm font-semibold leading-relaxed text-ink-soft">{feedback.explanation}</p>
-            {feedback.steps && feedback.steps.length > 0 && <WorkedSteps steps={feedback.steps} />}
-          </div>
+          <MascotExplains correct={feedback.graded && feedback.isCorrect} explanation={feedback.explanation} steps={feedback.steps ? <WorkedSteps steps={feedback.steps} /> : undefined} />
           {feedback.misconception && (
-            <div className="rounded-2xl bg-amber-50 border-2 border-amber-200 p-4">
-              <p className="flex items-center gap-1.5 text-sm font-extrabold text-amber-800">
-                <Wrench className="h-4 w-4" />
-                Why this tempts: {feedback.misconception.name}
-              </p>
-              {feedback.misconception.repeatCount > 0 && (
-                <p className="mt-1 text-xs font-extrabold text-red-700">
-                  This exact mix-up has come up {feedback.misconception.repeatCount + 1} times for you. Fix the idea behind it, not just this question.
-                </p>
-              )}
-              <p className="mt-1 text-sm font-semibold leading-relaxed text-ink-soft">{feedback.misconception.explanation}</p>
+            <>
+              <MascotMisconception
+                name={feedback.misconception.name}
+                explanation={feedback.misconception.explanation}
+                sharedPct={null}
+                repeatCount={feedback.misconception.repeatCount}
+              />
               {feedback.misconception.repairHref && (
                 <Link
                   href={feedback.misconception.repairHref}
-                  className="mt-2 inline-flex items-center gap-1 text-[13px] font-extrabold text-blue-700 min-h-[40px]"
+                  className="-mt-1 inline-flex items-center gap-1 text-[13px] font-extrabold text-blue-700 min-h-[40px]"
                 >
                   Open the fix-it lesson <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
@@ -293,7 +290,7 @@ function BankQuestion({
                   <ArrowRight className="ml-auto h-4 w-4 shrink-0 text-violet-700" />
                 </Link>
               )}
-            </div>
+            </>
           )}
         </div>
       )}
@@ -328,7 +325,7 @@ function WorkedCard({
   }, [revealed, example.steps.length, onDone])
 
   return (
-    <div className="rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-7 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)]">
+    <div className="rounded-3xl border border-blue-100/70 bg-white p-6 sm:p-8 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)]">
       {total > 1 && (
         <p className="text-[11px] font-extrabold uppercase tracking-wider text-gray-500">
           Worked example {index + 1} of {total}
@@ -358,11 +355,11 @@ function WorkedCard({
                       <input
                         value={predictionInput}
                         onChange={(e) => setPredictionInput(e.target.value)}
-                        placeholder="Type your prediction..."
+                        placeholder="Type your prediction"
                         className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm min-h-[44px] focus:border-blue-600 focus:outline-none"
                       />
                       {predictionInput.trim() === '' && (
-                        <p className="text-xs font-bold text-red-600">Type your prediction before revealing.</p>
+                        <p className="text-xs font-bold text-red-600">Type your prediction before you reveal the answer</p>
                       )}
                     </>
                   )}
@@ -379,7 +376,7 @@ function WorkedCard({
                   </button>
                 </div>
               ) : (
-                <p className="mt-2 text-xs font-bold text-gray-500">Locked — submit the prediction above first.</p>
+                <p className="mt-2 text-xs font-bold text-gray-500">This is locked until you submit the prediction above</p>
               )}
             </div>
           )
@@ -427,6 +424,7 @@ export default function LessonPlayer({
   const [workedDone, setWorkedDone] = useState<number[]>([])
   const [supportedDone, setSupportedDone] = useState(false)
   const [results, setResults] = useState<boolean[]>([])
+  const { add } = useWins()
   const [diagnosticDone, setDiagnosticDone] = useState(false)
   const [independentDone, setIndependentDone] = useState(0)
   const [microCheckDone, setMicroCheckDone] = useState(false)
@@ -435,7 +433,7 @@ export default function LessonPlayer({
   const [twinnedIds, setTwinnedIds] = useState<Set<string>>(new Set())
   const [twinLoading, setTwinLoading] = useState(false)
   const [finishing, setFinishing] = useState(false)
-  const [closeout, setCloseout] = useState<{ nextReviewAt: string | null } | null>(null)
+  const [closeout, setCloseout] = useState<{ nextReviewAt: string | null; status?: string; streak?: number | null } | null>(null)
   const [reflectionText, setReflectionText] = useState('')
   const [reflectionSubmitted, setReflectionSubmitted] = useState(false)
   // Frozen at first render: "review in N days" must not shift under re-renders.
@@ -497,6 +495,7 @@ export default function LessonPlayer({
       }
       const correct = results.filter(Boolean).length
       const summary = await completeLesson({ subjectId, correct, total: results.length })
+      celebrateStreakIfNew(summary.streak, add)
       setCloseout(summary)
       celebrate()
     } catch {
@@ -523,7 +522,7 @@ export default function LessonPlayer({
   const teachGate = (hasSectionChecks && !sectionsDone) || (Boolean(microCheck) && !microCheckDone)
 
   return (
-    <div className="mx-auto max-w-2xl">
+    <div className="mx-auto max-w-3xl">
       <div className="mb-5 flex items-center justify-between gap-3">
         <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-blue-700">
           {subjectLabel} · {note.topic}
@@ -533,9 +532,9 @@ export default function LessonPlayer({
 
       {/* 1 — Diagnostic: retrieve before teaching */}
       {phase === 'diagnostic' && diagnostic && (
-        <div className="rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-7 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)] animate-fade-up" key="diagnostic">
-          <p className="font-display text-[22px] font-medium text-black">First — what do you already know?</p>
-          <p className="mt-1 text-sm font-semibold text-ink-soft">One question. No teaching yet.</p>
+        <div className="rounded-3xl border border-blue-100/70 bg-white p-6 sm:p-8 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)] animate-fade-up" key="diagnostic">
+          <p className="font-display text-[22px] font-medium text-black">Before the lesson, one question</p>
+          <p className="mt-1 text-sm font-semibold text-ink-soft">Answer honestly so your starting point reflects what you know</p>
           <div className="mt-5">
             <BankQuestion
               question={diagnostic}
@@ -566,7 +565,7 @@ export default function LessonPlayer({
       {/* 2 — Teach: one concept per card, checks inline, full text on demand.
           Doing starts as fast as possible; reading never walls it. */}
       {phase === 'teach' && (
-        <div className="rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-7 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)] animate-fade-up" key="teach">
+        <div className="rounded-3xl border border-blue-100/70 bg-white p-6 sm:p-8 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)] animate-fade-up" key="teach">
           <h1 className="font-display text-2xl font-semibold leading-tight text-black">{note.topic}</h1>
           <p className="mt-2 text-[15px] font-semibold leading-relaxed text-ink-soft">
             <GlossText text={note.summary} />
@@ -577,15 +576,20 @@ export default function LessonPlayer({
             onComplete={() => setSectionsDone(true)}
           />
           {depthSections.length > 0 && (
-            <details className="group mt-4 border-t border-gray-100 pt-3">
-              <summary className="flex cursor-pointer list-none items-baseline justify-between gap-3 text-[12px] font-extrabold uppercase tracking-[0.12em] text-gray-500 hover:text-gray-700">
-                <span>Go deeper · optional</span>
-                <span className="text-[13px] normal-case tracking-normal text-gray-400 transition-transform group-open:rotate-180">
-                  show
+            <details className="group mt-5 border-t border-gray-100 pt-4">
+              <summary className="flex min-h-[52px] cursor-pointer list-none items-center justify-between gap-3 rounded-2xl border border-blue-200 bg-blue-50/50 px-4 py-3 transition-colors hover:border-blue-300 hover:bg-blue-50">
+                <span className="inline-flex items-center gap-2.5 text-[13px] font-extrabold normal-case text-blue-900">
+                  <Lightbulb className="h-4 w-4 shrink-0 text-blue-700" aria-hidden="true" />
+                  Go deeper · optional
+                </span>
+                <span className="inline-flex shrink-0 items-center gap-1.5 text-[12px] font-extrabold text-blue-700">
+                  <span className="group-open:hidden">Show more</span>
+                  <span className="hidden group-open:inline">Show less</span>
+                  <ChevronDown className="h-4 w-4 transition-transform group-open:rotate-180" aria-hidden="true" />
                 </span>
               </summary>
               <p className="mt-2 text-[13px] font-semibold leading-relaxed text-ink-soft">
-                Extra context for the same topic — skip it now and come back when you want the full picture
+                You get extra context for the same topic, so skip it now and come back when you want the full picture
               </p>
               <div className="mt-4 space-y-5">
                 {depthSections.map((section, sectionIndex) => (
@@ -624,7 +628,7 @@ export default function LessonPlayer({
             <div className="mt-6">
               <p className="font-display text-lg font-medium text-black">Words to own</p>
               <p className="mt-1 text-[13px] font-semibold text-ink-soft">
-                Plain meaning, contrast word, and a sentence each — say each sentence aloud once.
+                You get a plain meaning, a contrast word, and a sentence for each word, so say each sentence aloud once
               </p>
               <div className="mt-3 grid gap-2.5 sm:grid-cols-2">
                 {enhancement.vocabulary.map((w) => (
@@ -632,7 +636,7 @@ export default function LessonPlayer({
                     <p className="font-display text-base font-medium text-black">{w.word}</p>
                     <p className="mt-0.5 text-[13px] font-semibold text-ink-soft">{w.definition}</p>
                     <p className="mt-1.5 text-xs font-bold text-gray-500">
-                      Not: {w.contrast}
+                      It does not mean {w.contrast}
                     </p>
                     <p className="mt-1 text-[13px] italic font-semibold text-blue-900">“{w.sentence}”</p>
                   </div>
@@ -705,8 +709,8 @@ export default function LessonPlayer({
 
       {/* 4 — Supported attempt: hints on demand */}
       {phase === 'supported' && enhancement?.supported && (
-        <div className="rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-7 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)] animate-fade-up" key="supported">
-          <p className="font-display text-[22px] font-medium text-black">Your turn — with hints</p>
+        <div className="rounded-3xl border border-blue-100/70 bg-white p-6 sm:p-8 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)] animate-fade-up" key="supported">
+          <p className="font-display text-[22px] font-medium text-black">Your turn, and you can use hints</p>
           <p className="mt-2 text-[15px] font-semibold leading-relaxed text-ink-soft">{enhancement.supported.question}</p>
           <div className="mt-4 space-y-3">
             {revealedHints > 0 && revealedHints <= enhancement.supported.hints.length && (
@@ -722,10 +726,10 @@ export default function LessonPlayer({
                 onClick={() => setRevealedHints((n) => n + 1)}
                 className="w-full rounded-2xl border-2 border-dashed border-blue-300 py-3 text-sm font-extrabold text-blue-700 min-h-[52px] cursor-pointer"
               >
-                {revealedHints === 0 ? 'Need a hint?' : 'Next hint →'} ({revealedHints}/{enhancement.supported.hints.length} used)
+                {revealedHints === 0 ? 'Do you want a hint?' : 'Show me the next hint →'} ({revealedHints}/{enhancement.supported.hints.length} used)
               </button>
             ) : (
-              <p className="text-xs font-bold text-gray-500">All hints used — work it through, then move on.</p>
+              <p className="text-xs font-bold text-gray-500">You have used all the hints, so work it through and then move on</p>
             )}
           </div>
           <button
@@ -740,8 +744,8 @@ export default function LessonPlayer({
       {/* 5 — Independent: no support, with calibration. A wrong answer
           earns one checkout twin (same skill, new question). */}
       {phase === 'independent' && (
-        <div className="rounded-3xl border border-blue-100/70 bg-white p-5 sm:p-7 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)] animate-fade-up" key="independent">
-          <p className="font-display text-[22px] font-medium text-black">Prove it — no help this time</p>
+        <div className="rounded-3xl border border-blue-100/70 bg-white p-6 sm:p-8 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)] animate-fade-up" key="independent">
+          <p className="font-display text-[22px] font-medium text-black">Prove it with no help this time</p>
           <div className="mt-4 space-y-6">
             {[...independent, ...twins].map((q, i) => (
               <div key={q.id} className={i > 0 ? 'border-t border-gray-100 pt-6' : ''}>
@@ -769,7 +773,7 @@ export default function LessonPlayer({
               finishing || independentDone < independent.length + twins.length ? 'bg-gray-300 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'
             }`}
           >
-            {finishing ? 'Wrapping up...' : `Finish lesson${independentDone < independent.length + twins.length ? ` (${independentDone}/${independent.length + twins.length} checked)` : ''}`} <ArrowRight className="h-4 w-4" />
+            {finishing ? 'Wrapping up your lesson' : `Finish lesson${independentDone < independent.length + twins.length ? ` (${independentDone}/${independent.length + twins.length} checked)` : ''}`} <ArrowRight className="h-4 w-4" />
           </button>
         </div>
       )}
@@ -778,27 +782,27 @@ export default function LessonPlayer({
       {phase === 'done' && (
         <div className="rounded-3xl border-2 border-emerald-200 bg-emerald-50/60 p-6 sm:p-8 text-center animate-pop-in">
           <CheckCircle className="mx-auto h-12 w-12 text-emerald-600" strokeWidth={2.5} />
-          <h2 className="mt-3 font-display text-3xl font-medium text-black">Lesson complete</h2>
+          <h2 className="mt-3 font-display text-3xl font-medium text-black">You finished this lesson</h2>
           <p className="mt-2 text-[15px] font-semibold text-ink-soft">
             {results.length > 0
-              ? `You got ${results.filter(Boolean).length} of ${results.length} checks right.`
-              : 'You worked through the full contract — diagnostic, lesson, and practice.'}
+              ? `You got ${results.filter(Boolean).length} of ${results.length} checks right`
+              : 'You worked through the whole lesson, from the diagnostic to the practice'}
           </p>
           {closeout?.nextReviewAt && (
             <p className="mt-1 text-sm font-bold text-emerald-700">
-              Back for review {daysUntil(closeout.nextReviewAt)}.
+              This comes back for review {daysUntil(closeout.nextReviewAt)}
             </p>
           )}
           {!reflectionSubmitted && (
             <div className="mt-6">
               <p className="font-display text-lg font-medium text-black">Teach it to someone else</p>
               <p className="mt-1 text-sm font-semibold text-ink-soft">
-                Explain this concept in your own words, as if teaching it to a friend who missed class.
+                Explain this concept in your own words, as if you are teaching a friend who missed class
               </p>
               <textarea
                 value={reflectionText}
                 onChange={(e) => setReflectionText(e.target.value)}
-                placeholder="Write your explanation here..."
+                placeholder="Write your explanation here"
                 className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm min-h-[56px] focus:border-blue-600 focus:outline-none"
                 rows={3}
               />
@@ -821,7 +825,7 @@ export default function LessonPlayer({
           )}
           {reflectionSubmitted && (
             <div className="mt-6 rounded-2xl border-2 border-emerald-200 bg-emerald-50/60 p-4">
-              <p className="text-sm font-semibold text-emerald-700">Saved — thanks for putting it in your own words.</p>
+              <p className="text-sm font-semibold text-emerald-700">Your answer is saved, and thanks for putting it in your own words</p>
             </div>
           )}
           <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
@@ -844,7 +848,7 @@ export default function LessonPlayer({
                 href={`/learn/${note.subject}`}
                 className="inline-flex items-center justify-center gap-2 rounded-2xl border-2 border-gray-200 bg-white px-6 py-3 text-sm font-extrabold text-ink-soft min-h-[48px]"
               >
-                Back to {note.subject === 'current-affairs' ? 'Current Affairs' : note.subject === 'mathematics' ? 'Mathematics' : 'English'}
+                Back to {getSubjectLabel(note.subject as SubjectSlug)}
               </Link>
             )}
           </div>

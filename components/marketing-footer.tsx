@@ -22,7 +22,7 @@ export default function MarketingFooter() {
           <div>
             <Logo />
             <p className="mt-4 text-sm text-gray-500 leading-relaxed">
-              Real CBT practice for every ambitious student. Learn the topic, practise the question, walk in ready.
+              You get real CBT practice, you learn the topic, you practise the question, and you walk in ready
             </p>
             <div className="mt-4 flex flex-col gap-2">
               <a
@@ -72,6 +72,9 @@ export default function MarketingFooter() {
             <h4 className={colTitleClass}>Exams &amp; resources</h4>
             <ul className="space-y-3">
               <li>
+                <Link href="/learn" className={linkClass}>JAMB (UTME)</Link>
+              </li>
+              <li>
                 <Link href="/unilorin-putme" className={linkClass}>UNILORIN Post-UTME (PUTME)</Link>
               </li>
               <li>
@@ -116,7 +119,7 @@ export default function MarketingFooter() {
 
         <div className="mt-12 border-t border-gray-100 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-gray-500">
-            &copy; 2026 Propeida. Built for every ambitious student.
+            &copy; 2026 Propeida, built for every ambitious candidate
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
             <Link href="/privacy" className="text-xs font-semibold text-gray-500 hover:text-blue-600">

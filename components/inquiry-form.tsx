@@ -61,7 +61,7 @@ export default function InquiryForm({
       })
       setSent(true)
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Something went wrong.')
+      setError(err instanceof Error ? err.message : 'Something went wrong')
     } finally {
       setSending(false)
     }
@@ -75,7 +75,7 @@ export default function InquiryForm({
         </div>
         <h3 className="text-lg font-bold text-gray-900">Message sent</h3>
         <p className="mt-2 text-sm text-gray-600">
-          Thanks for reaching out. The team will respond as soon as possible.
+          Thanks for reaching out and the team will reply as soon as possible
         </p>
       </div>
     )
@@ -223,7 +223,7 @@ export default function InquiryForm({
           className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-bold text-white hover:bg-blue-700 active:bg-blue-800 disabled:bg-blue-400 min-h-[44px] cursor-pointer"
         >
           <Send className="h-4 w-4" />
-          {sending ? 'Sending...' : ctaLabel}
+          {sending ? 'Sending your message' : ctaLabel}
         </button>
       </div>
     </form>
