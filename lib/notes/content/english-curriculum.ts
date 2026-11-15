@@ -141,7 +141,7 @@ export const CURRICULUM: CurriculumTopic[] = [
     syllabusObjective:
       'identify the grammatical functions of words, phrases, clauses and figurative/idiomatic expressions',
     description:
-      'Ten questions from one gapped passage. The gaps are grammar questions wearing a passage costume — learn to read the gap, not the story.',
+      'Ten questions from one gapped passage. The gaps are grammar questions wearing a passage costume, so learn to read the gap, not the story.',
     estimatedMinutes: 15,
     prerequisites: ['comprehension-question-skills', 'word-classes-and-functions'],
   },
@@ -168,7 +168,7 @@ export const CURRICULUM: CurriculumTopic[] = [
     syllabusItem: 'B(b)',
     syllabusObjective: 'determine similar and opposite meanings of words',
     description:
-      'Opposites — and the harder grade question: which word is the opposite in this context, not in general.',
+      'Opposites, and the harder grade question: which word is the opposite in this context, not in general.',
     estimatedMinutes: 12,
   },
   {
@@ -195,7 +195,7 @@ export const CURRICULUM: CurriculumTopic[] = [
     syllabusObjective:
       'identify the grammatical functions of words, phrases, clauses and figurative/idiomatic expressions',
     description:
-      'Nouns, verbs, adjectives, adverbs and the rest — what each does in a sentence, and how function beats form when they disagree.',
+      'Nouns, verbs, adjectives, adverbs and the rest, and what each one does in a sentence. You will also see how function beats form when they disagree.',
     existingLesson: 'parts-of-speech',
     estimatedMinutes: 16,
   },
@@ -208,7 +208,7 @@ export const CURRICULUM: CurriculumTopic[] = [
     syllabusItem: 'B(e)',
     syllabusObjective: 'identify various grammatical patterns in use',
     description:
-      'Four tenses but three times: past, present, future — and the aspect that says whether the action is finished or ongoing.',
+      'Four tenses but three times: past, present, future. You also need the aspect that says whether the action is finished or ongoing.',
     estimatedMinutes: 16,
     prerequisites: ['word-classes-and-functions'],
   },
@@ -235,7 +235,7 @@ export const CURRICULUM: CurriculumTopic[] = [
     syllabusItem: 'B(e)',
     syllabusObjective: 'identify various grammatical patterns in use',
     description:
-      'Positive, comparative and superlative — including the irregular forms and the one-word rule that catches most candidates.',
+      'Positive, comparative and superlative, including the irregular forms and the one-word rule that catches most candidates.',
     estimatedMinutes: 12,
     prerequisites: ['word-classes-and-functions'],
   },
@@ -261,7 +261,7 @@ export const CURRICULUM: CurriculumTopic[] = [
     syllabusItem: 'B(f)',
     syllabusObjective: 'differentiate between correct and incorrect spellings',
     description:
-      'Correct spelling and the punctuation marks JAMB tests — the apostrophe, the comma, the full stop, the colon.',
+      'Correct spelling and the punctuation marks JAMB tests, including the apostrophe, the comma, the full stop, and the colon.',
     estimatedMinutes: 14,
   },
   {

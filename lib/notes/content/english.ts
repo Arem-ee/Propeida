@@ -7,7 +7,7 @@ export const englishNotes: RevisionNote[] = [
     topic: 'Parts of Speech',
     slug: 'parts-of-speech',
     summary:
-      'The eight word classes every English question depends on — and how to spot them in a sentence.',
+      'Every English question depends on eight word classes, and this note shows you how to spot them in a sentence.',
     practiceTopic: 'parts-of-speech',
     sections: [
       {
@@ -34,7 +34,7 @@ export const englishNotes: RevisionNote[] = [
         ],
         bullets: [
           'Decide the class by position and function in the sentence, not by memory.',
-          '"The" before a noun is an article; before an adjective it can turn the adjective into a noun — "the rich" means rich people.',
+          '"The" before a noun is an article; before an adjective it can turn the adjective into a noun, so "the rich" means rich people.',
         ],
       },
       {
@@ -45,7 +45,7 @@ export const englishNotes: RevisionNote[] = [
         bullets: [
           'Do not call "the" an adjective; examiners classify it as an article (or determiner).',
           'Possessive adjectives (my, your, our) must be followed by a noun: "my book", never "I book".',
-          'A full sentence needs a finite verb — one marked for tense — not just a participle.',
+          'A full sentence needs a finite verb that is marked for tense, not just a participle.',
           'Adverbs of frequency (always, often, rarely) go before the main verb but after "am/is/are": He is always late.',
         ],
       },
@@ -58,16 +58,16 @@ export const englishNotes: RevisionNote[] = [
     subject: 'english',
     topic: 'Concord Rules',
     slug: 'concord-rules',
-    summary: 'The rules of agreement between subject and verb — a heavily tested area of Nigerian English exams.',
+    summary: 'These are the rules of agreement between subject and verb, and this is a heavily tested area of Nigerian English exams.',
     practiceTopic: 'concord-rules',
     sections: [
       {
-        heading: 'Core subject–verb agreement',
+        heading: 'Core subject-verb agreement',
         paragraphs: [
-          'Concord means agreement: a singular subject takes a singular verb, and a plural subject takes a plural verb. In the present tense this usually just means adding or removing an –s.',
+          'Concord means agreement: a singular subject takes a singular verb, and a plural subject takes a plural verb. In the present tense this usually just means adding or removing an -s.',
         ],
         bullets: [
-          'A singular subject takes a singular verb: The student studies. (add –s to the verb in the present tense)',
+          'A singular subject takes a singular verb: The student studies. (add -s to the verb in the present tense)',
           'A plural subject takes a plural verb: The students study.',
           'Words between the subject and verb do not decide the verb: The box of matches is on the shelf. ("box" governs the verb, not "matches")',
         ],
@@ -143,11 +143,11 @@ export const englishNotes: RevisionNote[] = [
         ],
         bullets: [
           'Double negatives are ungrammatical: "I did not see nothing" → "I did not see anything".',
-          'Redundancy: "return back", except "repeat again", "advance forward" — one word carries the idea.',
+          'Redundancy: "return back", "repeat again", "advance forward". One word already carries the idea.',
           'Prepositions: "running for the bus" vs "running to the bus" changes meaning; say "good at", "different from", "prefer … to …", "insist on", "arrive at/in".',
           'Quantifiers: "much" for uncountable (much water), "many" for plural countable (many books); "fewer" for countable, "less" for uncountable.',
           'Confusables: its/it’s, whose/who’s, there/their/they’re, affect/effect, borrow/lend, advice/advise.',
-          'Dangling modifier: "Walking to school, the bell rang" — the person walked, not the bell. Attach the modifier to the right subject.',
+          'Dangling modifier: "Walking to school, the bell rang". The person walked, not the bell, so attach the modifier to the right subject.',
         ],
       },
     ],
@@ -168,7 +168,7 @@ export const englishNotes: RevisionNote[] = [
           'Do not read the passage first. Read the questions first so you know what to look for, then read the passage with those questions already in your mind. Every answer must come from the text, not from real-world knowledge.',
         ],
         bullets: [
-          'Scan the questions in one sweep — they tell you what to look for.',
+          'Scan the questions in one sweep, because they tell you what to look for.',
           'Notice the question verbs: what (fact), why (reason), whom (person), how (manner).',
           'Never guess an answer without checking the passage; every answer must be supported by the text.',
         ],
@@ -179,10 +179,10 @@ export const englishNotes: RevisionNote[] = [
           'Read actively: underline the main idea of each paragraph and tick anything the questions asked about. Understanding where each idea sits makes finding answers fast.',
         ],
         bullets: [
-          'Note the topic sentence of each paragraph — usually the first sentence.',
+          'Note the topic sentence of each paragraph, which is usually the first sentence.',
           'Circle proper nouns, dates and figures; questions love to reuse them.',
           'Slow down at signal words: however, but, therefore, because, in addition, for example.',
-          'If a word is unfamiliar, keep going — the surrounding words usually hint at its meaning.',
+          'If a word is unfamiliar, keep going, because the surrounding words usually hint at its meaning.',
         ],
       },
       {
@@ -205,14 +205,14 @@ export const englishNotes: RevisionNote[] = [
           'When you are stuck, eliminate rather than guess blindly. Wrong comprehension options usually leave a tell: an extreme word, real-world truth not in the passage, or vagueness.',
         ],
         bullets: [
-          'Reject options with extreme words (always, never, everyone) — passages rarely support them.',
+          'Reject options with extreme words (always, never, everyone), because passages rarely support them.',
           'Reject options that are true in real life but absent from the passage.',
           'If two options look alike, re-read the supporting sentence; the correct one is usually the more specific.',
         ],
       },
     ],
     examTip:
-      'Never leave a comprehension question blank. If stuck, pick the option with the strongest textual support — examiners reward exactness, not imagination.',
+      'Never leave a comprehension question blank. If stuck, pick the option with the strongest textual support, because examiners reward exactness, not imagination.',
   },
   {
     id: 'english-vocabulary-and-idioms',
@@ -229,9 +229,9 @@ export const englishNotes: RevisionNote[] = [
         ],
         bullets: [
           'Read two or three lines around the word before you choose.',
-          'Watch for a definition packed into the same sentence: "a remedy — a cure".',
+          'Watch for a definition packed into the same sentence, as in "a remedy, which means a cure".',
           'Use restatement and examples: "facilitate, that is, ease" or "for instance, …".',
-          'Look for contrast words — however, but, although — they signal the opposite meaning.',
+          'Look for contrast words such as however, but, and although, because they signal the opposite meaning.',
         ],
       },
       {
@@ -243,7 +243,7 @@ export const englishNotes: RevisionNote[] = [
           'Reduce the target word to a simple everyday synonym, then match from the options.',
           'Ignore similar sounds: synonyms must match in meaning, not in rhythm.',
           'Use prefixes: un-, in-, im-, dis-, non- mean "not" (unclear, impossible); re- means "again" (rewrite); pre- means "before".',
-          'Suffixes show the word class: –ion, –ment; –y; –able (adjectives) usually form nouns; –ly forms adverbs.',
+          'Suffixes show the word class: -ion and -ment usually form nouns, -able forms adjectives, and -ly forms adverbs.',
         ],
       },
       {

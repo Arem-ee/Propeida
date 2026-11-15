@@ -45,7 +45,10 @@ export async function fetchQuestionsForSession(config: SessionConfig, sessionId:
     p_difficulty: config.difficulty || null,
     p_limit: effectiveCount,
     p_seed: sessionId,
-    p_topic_ids: config.topicIds ?? null,
+    // An empty array means "no topic filter". The previous selector treated
+    // NULL as no filter in the type signature but then dropped every row, so
+    // every untagged fetch came back empty.
+    p_topic_ids: config.topicIds?.length ? config.topicIds : [],
   })
 
   if (error) throw new Error(`Failed to fetch questions: ${error.message}`)
@@ -130,6 +133,7 @@ export async function fetchLockedPoolQuestions(
     p_difficulty: difficulty || null,
     p_limit: count,
     p_seed: seed,
+    p_topic_ids: [],
   })
 
   if (error) throw new Error(`Failed to fetch pool questions: ${error.message}`)
@@ -268,6 +272,9 @@ export async function getSessionQuestionsWithStatus(sessionId: string, includeRe
 
 export async function getUserActiveSessions(userId: string) {
   const supabase = await createClient()
+  // The inner join drops session rows that were created but never received a
+  // question set. Those orphans cannot be continued, so they stay out of the
+  // list and out of the free mock allowance.
   const { data, error } = await supabase
     .from('exam_sessions')
     .select(`
@@ -275,20 +282,28 @@ export async function getUserActiveSessions(userId: string) {
       exam_id,
       mode,
       started_at,
-      exams!inner(name, slug)
+      exams!inner(name, slug),
+      session_answers!inner(id)
     `)
     .eq('user_id', userId)
     .eq('status', 'in_progress')
     .order('started_at', { ascending: false })
 
   if (error) throw new Error('Failed to fetch active sessions')
-  return (data ?? []).map((d: Record<string, unknown>) => ({
-    id: d.id as string,
-    exam_id: d.exam_id as string,
-    mode: d.mode as 'practice' | 'mock',
-    started_at: d.started_at as string,
-    exams: (Array.isArray(d.exams) ? d.exams[0] : d.exams) as unknown as { name: string; slug: string },
-  }))
+
+  const seen = new Set<string>()
+  return (data ?? []).flatMap((d: Record<string, unknown>) => {
+    const id = d.id as string
+    if (seen.has(id)) return []
+    seen.add(id)
+    return [{
+      id,
+      exam_id: d.exam_id as string,
+      mode: d.mode as 'practice' | 'mock',
+      started_at: d.started_at as string,
+      exams: (Array.isArray(d.exams) ? d.exams[0] : d.exams) as unknown as { name: string; slug: string },
+    }]
+  })
 }
 
 export function isSessionExpired(startedAt: string, timeLimitSeconds: number | null): boolean {

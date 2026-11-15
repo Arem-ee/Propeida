@@ -60,7 +60,7 @@ const ENHANCEMENTS: Record<string, LessonEnhancement> = {
         {
           operation: 'Write the equation in standard form',
           reason: 'Factorization needs the form ax² + bx + c = 0 before anything else.',
-          result: 'x² − 5x + 6 = 0 — already in standard form.',
+          result: 'x² − 5x + 6 = 0 is already in standard form.',
           predictPrompt: 'Two numbers multiply to +6 and add to −5. What are they?',
         },
         {
@@ -93,7 +93,7 @@ const ENHANCEMENTS: Record<string, LessonEnhancement> = {
       question: 'Now you try with scaffolding: solve x² − 7x + 12 = 0 by factorization.',
       hints: [
         'What two numbers multiply to +12 and add to −7?',
-        'Write the two brackets first — then solve each one separately.',
+        'Write the two brackets first, then solve each one separately.',
         'Still stuck? Both numbers are negative. Check by substituting back.',
       ],
     },
@@ -146,7 +146,7 @@ const EXTRA_ENHANCEMENTS: Record<string, LessonEnhancement> = {
       steps: [
         {
           operation: 'Split the fractional power into root-then-power',
-          reason: 'a^(m/n) = (ⁿ√a)ᵐ — roots first keeps the numbers small.',
+          reason: 'a^(m/n) = (ⁿ√a)ᵐ, so take the root first to keep the numbers small.',
           result: '32^(2/5) = (⁵√32)².',
           predictPrompt: 'What whole number, raised to 5, gives 32?',
         },
@@ -167,7 +167,7 @@ const EXTRA_ENHANCEMENTS: Record<string, LessonEnhancement> = {
     supported: {
       question: 'Now you try with scaffolding: evaluate 16^(3/4).',
       hints: [
-        'Split it: root first — which root does /4 mean?',
+        'Split it and take the root first. Which root does /4 mean?',
         '⁴√16 = 2. What power is still waiting?',
         'Compute 2³.',
       ],
@@ -203,7 +203,7 @@ const EXTRA_ENHANCEMENTS: Record<string, LessonEnhancement> = {
       hints: [
         'Draw it: which sides do 12 and 13 label?',
         'Pythagoras for the missing side: 13² − 12² = ?',
-        'sin θ = opposite/hypotenuse — read it off.',
+        'sin θ = opposite/hypotenuse, so read it off the triangle.',
       ],
     },
   },
@@ -233,7 +233,7 @@ const EXTRA_ENHANCEMENTS: Record<string, LessonEnhancement> = {
       ],
     }],
     supported: {
-      question: 'Now you try with scaffolding: a box has 4 green and 6 yellow pens. Two drawn without replacement — P(both green)?',
+      question: 'Now you try with scaffolding: a box has 4 green and 6 yellow pens. Two are drawn without replacement. What is P(both green)?',
       hints: [
         'First draw: how many green out of how many total?',
         'After one green leaves, recount both numbers.',

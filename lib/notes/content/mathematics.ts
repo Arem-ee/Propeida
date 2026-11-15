@@ -6,13 +6,13 @@ export const mathematicsNotes: RevisionNote[] = [
     subject: 'mathematics',
     topic: 'Surds',
     slug: 'surds',
-    summary: 'Simplify, rationalise and compare surds — the irrational roots that show up in nearly every paper.',
+    summary: 'Simplify, rationalise and compare surds, because these irrational roots show up in nearly every paper.',
     practiceTopic: 'surds',
     sections: [
       {
         heading: 'What surds are',
         paragraphs: [
-          'A surd is an irrational number left in square-root form. It is "irrational" because it cannot be written as a whole number or a simple fraction — the digits go on forever without repeating.',
+          'A surd is an irrational number left in square-root form. It is "irrational" because it cannot be written as a whole number or a simple fraction, and the digits go on forever without repeating.',
         ],
         bullets: [
           'A surd is an irrational square root that stays in root form: √2, √3, √5 (√4 = 2, so it is not a surd).',
@@ -35,7 +35,7 @@ export const mathematicsNotes: RevisionNote[] = [
       {
         heading: 'Rationalising the denominator',
         paragraphs: [
-          'A fraction containing a surd in the denominator is not considered simplified. Multiply the top and bottom by something that clears the surd from the bottom — that is rationalising.',
+          'A fraction containing a surd in the denominator is not considered simplified. Multiply the top and bottom by something that clears the surd from the bottom, and that is rationalising.',
         ],
         bullets: [
           'A fraction is simplified only when its denominator is a whole number.',
@@ -57,7 +57,7 @@ export const mathematicsNotes: RevisionNote[] = [
       },
     ],
     examTip:
-      'Before answering, always reduce every surd to its simplest form — the answer options in exams are given in lowest terms.',
+      'Before answering, always reduce every surd to its simplest form, because the answer options in exams are given in lowest terms.',
   },
   {
     id: 'mathematics-indices',
@@ -110,14 +110,14 @@ export const mathematicsNotes: RevisionNote[] = [
           'Most marks are lost on careless sign and bracket mistakes. Check the two rules below before you select.',
         ],
         bullets: [
-          '(a + b)² is not a² + b² — expand fully.',
+          '(a + b)² is not a² + b², so expand fully.',
           'Do not combine unlike terms: aᵐ × bⁿ has no single base, it stays as aᵐbⁿ.',
           'a⁰ = 1 only when a is not zero.',
           'Watch the bracket: 2x² means 2(x²), while (2x)² = 4x².',
         ],
       },
     ],
-    examTip: 'Convert every expression to a single base before comparing powers — most index questions only test that one move.',
+    examTip: 'Convert every expression to a single base before comparing powers, because most index questions only test that one move.',
   },
   {
     id: 'mathematics-quadratic-equations',
@@ -130,7 +130,7 @@ export const mathematicsNotes: RevisionNote[] = [
       {
         heading: 'The standard form',
         paragraphs: [
-          'A quadratic equation has the form ax² + bx + c = 0, where a is not zero. The unknown is squared, so the equation has two roots (solutions) — sometimes the same root twice.',
+          'A quadratic equation has the form ax² + bx + c = 0, where a is not zero. The unknown is squared, so the equation has two roots (solutions), and sometimes the same root appears twice.',
         ],
         bullets: [
           'A quadratic is of the form ax² + bx + c = 0, where a is not zero.',
@@ -158,7 +158,7 @@ export const mathematicsNotes: RevisionNote[] = [
           'Quadratic formula: x = (−b ± √(b² − 4ac)) / 2a.',
           'The discriminant, b² − 4ac, tells the nature of the roots: positive → two distinct real roots; zero → one repeated root; negative → no real roots.',
           'Completing the square rewrites x² + bx as (x + b/2)² − (b/2)², which also gives the vertex of the curve.',
-          'Pick the formula when factorisation is not obvious — it always works in MCQs.',
+          'Pick the formula when factorisation is not obvious, because it always works in MCQs.',
         ],
       },
       {
@@ -244,13 +244,13 @@ export const mathematicsNotes: RevisionNote[] = [
           'For triangles without a right angle, the sine and cosine rules replace the basic ratios. Pick the rule from the information given.',
         ],
         bullets: [
-          'Sine rule: a/sin A = b/sin B = c/sin C — use when you know a side and its opposite angle.',
-          'Cosine rule: a² = b² + c² − 2bc cos A — use when two sides and the included angle are known.',
+          'Sine rule: a/sin A = b/sin B = c/sin C. Use it when you know a side and its opposite angle.',
+          'Cosine rule: a² = b² + c² − 2bc cos A. Use it when two sides and the included angle are known.',
           'Bearings: three-figure bearings are measured clockwise from north, e.g. 045°, 315°.',
         ],
       },
     ],
-    examTip: 'Check your calculator is in degree mode and never miss the sign of an angle in the third or fourth quadrant — that alone shifts marks.',
+    examTip: 'Check your calculator is in degree mode and never miss the sign of an angle in the third or fourth quadrant, and that alone shifts marks.',
   },
   {
     id: 'mathematics-probability',
@@ -276,7 +276,7 @@ export const mathematicsNotes: RevisionNote[] = [
       {
         heading: 'Complementary events',
         paragraphs: [
-          'When a question asks for "at least one", it is usually faster to find the opposite — the chance that the event does not happen at all — and subtract it from 1.',
+          'When a question asks for "at least one", it is usually faster to find the opposite (the chance that the event does not happen at all) and subtract it from 1.',
         ],
         bullets: [
           'P(not A) = 1 − P(A).',
@@ -307,6 +307,6 @@ export const mathematicsNotes: RevisionNote[] = [
         ],
       },
     ],
-    examTip: 'State the sample space first in awkward questions — listing outcomes makes most probability MCQs mechanical.',
+    examTip: 'State the sample space first in awkward questions, because listing outcomes makes most probability MCQs mechanical.',
   },
 ]

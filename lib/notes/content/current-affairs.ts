@@ -15,9 +15,9 @@ export const currentAffairsNotes: RevisionNote[] = [
           'Nigerian government works through three separate arms that balance one another. Nearly every "which arm belongs to…" question tests whether you can attach an institution to the correct arm.',
         ],
         bullets: [
-          'Executive — implements laws: the President, governors, ministers, and their agencies.',
-          'Legislature — makes laws: the National Assembly (Senate + House of Representatives) and state Houses of Assembly.',
-          'Judiciary — interprets laws and settles disputes: courts from magistrate level up to the Supreme Court, the apex court.',
+          'The executive implements laws, and it includes the President, governors, ministers, and their agencies.',
+          'The legislature makes laws, and it includes the National Assembly (Senate and House of Representatives) and state Houses of Assembly.',
+          'The judiciary interprets laws and settles disputes, and it runs from magistrate courts up to the Supreme Court, the apex court.',
           'Separation of powers keeps the arms independent; checks and balances let each arm limit the others.',
         ],
       },
@@ -59,29 +59,29 @@ export const currentAffairsNotes: RevisionNote[] = [
       },
     ],
     examTip:
-      'For "which arm does X belong to?" questions, attach every agency to one of the three arms first — the wrong options are usually agencies from another arm.',
+      'For "which arm does X belong to?" questions, attach every agency to one of the three arms first, because the wrong options are usually agencies from another arm.',
   },
   {
     id: 'current-affairs-national-institutions',
     subject: 'current-affairs',
     topic: 'Major National Institutions',
     slug: 'major-national-institutions',
-    summary: 'Match the acronym to the function — the standard Current Affairs question in Nigerian exams.',
+    summary: 'Match the acronym to the function, because this is the standard Current Affairs question in Nigerian exams.',
     practiceTopic: 'national-institutions',
     sections: [
       {
         heading: 'Institutions you will be asked to match',
         paragraphs: [
-          'Most Current Affairs questions give an acronym and expect one function. Learn the big six first — they cover the majority of questions.',
+          'Most Current Affairs questions give an acronym and expect one function. Learn the big six first, because they cover the majority of questions.',
         ],
         bullets: [
-          'INEC — Independent National Electoral Commission: organises and conducts elections.',
-          'EFCC — Economic and Financial Crimes Commission: investigates and prosecutes financial crimes such as fraud and money laundering.',
-          'CBN — Central Bank of Nigeria: issues the naira, sets monetary policy, and supervises banks.',
-          'NAFDAC — National Agency for Food and Drug Administration and Control: regulates food, drugs, and related products.',
-          'NNPC Ltd — Nigerian National Petroleum Company: manages the country’s oil and gas interests.',
-          'NUC — National Universities Commission: accredits university programmes and sets academic standards.',
-          'JAMB — Joint Admissions and Matriculation Board: conducts the Unified Tertiary Matriculation Examination (UTME) and centralises admissions.',
+          'INEC is the Independent National Electoral Commission, and it organises and conducts elections.',
+          'EFCC is the Economic and Financial Crimes Commission, and it investigates and prosecutes financial crimes such as fraud and money laundering.',
+          'CBN is the Central Bank of Nigeria, and it issues the naira, sets monetary policy, and supervises banks.',
+          'NAFDAC is the National Agency for Food and Drug Administration and Control, and it regulates food, drugs, and related products.',
+          'NNPC Ltd is the Nigerian National Petroleum Company, and it manages the country’s oil and gas interests.',
+          'NUC is the National Universities Commission, and it accredits university programmes and sets academic standards.',
+          'JAMB is the Joint Admissions and Matriculation Board, and it conducts the Unified Tertiary Matriculation Examination (UTME) and centralises admissions.',
         ],
       },
       {
@@ -90,12 +90,12 @@ export const currentAffairsNotes: RevisionNote[] = [
           'A second wave of institutions regulates specific sectors. Pair each with the industry it touches, from phones and power to tax and national service.',
         ],
         bullets: [
-          'NCC — Nigerian Communications Commission: regulates telecoms (SIM cards, networks).',
-          'NERC — Nigerian Electricity Regulatory Commission regulates the electricity market; TCN — Transmission Company of Nigeria runs the grid.',
-          'FIRS — Federal Inland Revenue Service collects federal taxes such as VAT and company income tax.',
-          'NYSC — National Youth Service Corps runs the mandatory one-year service for graduates.',
-          'NDLEA — National Drug Law Enforcement Agency fights drug trafficking and abuse.',
-          'NIA (foreign intelligence) and DSS (domestic intelligence) handle intelligence internally and externally.',
+          'NCC is the Nigerian Communications Commission, and it regulates telecoms (SIM cards and networks).',
+          'NERC is the Nigerian Electricity Regulatory Commission, and it regulates the electricity market, while TCN is the Transmission Company of Nigeria, which runs the grid.',
+          'FIRS is the Federal Inland Revenue Service, and it collects federal taxes such as VAT and company income tax.',
+          'NYSC is the National Youth Service Corps, and it runs the mandatory one-year service for graduates.',
+          'NDLEA is the National Drug Law Enforcement Agency, and it fights drug trafficking and abuse.',
+          'NIA handles foreign intelligence and the DSS handles domestic intelligence.',
         ],
       },
       {
@@ -127,16 +127,16 @@ export const currentAffairsNotes: RevisionNote[] = [
           'The United Nations and its agencies dominate this part of the syllabus. Nigeria joined the UN at independence in 1960.',
         ],
         bullets: [
-          'UN — United Nations: founded 1945, headquarters in New York; Nigeria joined in 1960 on independence.',
+          'UN is the United Nations. It was founded in 1945, has its headquarters in New York, and Nigeria joined in 1960 on independence.',
           'The UN Security Council has five permanent members (China, France, Russia, the UK, the US) with veto power.',
-          'WHO — World Health Organization: global health, based in Geneva.',
-          'UNESCO — United Nations Educational, Scientific and Cultural Organization: education, science and culture.',
-          'IMF and the World Bank: international finance; both are headquartered in Washington, DC.',
-          'WTO — World Trade Organization: rules of international trade.',
-          'UNICEF — United Nations Children’s Fund: children’s welfare.',
-          'ILO — International Labour Organization: labour standards.',
-          'ICJ — International Court of Justice: settles legal disputes between states, seated in The Hague.',
-          'FAO — Food and Agriculture Organization: works on food security and farming, a UN agency based in Rome.',
+          'WHO is the World Health Organization, and it works on global health from Geneva.',
+          'UNESCO is the United Nations Educational, Scientific and Cultural Organization, and it covers education, science and culture.',
+          'IMF and the World Bank handle international finance, and both are headquartered in Washington, DC.',
+          'WTO is the World Trade Organization, and it sets the rules of international trade.',
+          'UNICEF is the United Nations Children’s Fund, and it works on children’s welfare.',
+          'ILO is the International Labour Organization, and it sets labour standards.',
+          'ICJ is the International Court of Justice, and it settles legal disputes between states from The Hague.',
+          'FAO is the Food and Agriculture Organization, and it works on food security and farming as a UN agency based in Rome.',
         ],
       },
       {
@@ -145,10 +145,10 @@ export const currentAffairsNotes: RevisionNote[] = [
           'Nigeria sits at the heart of African and West African groupings. Know each headquarters, what the body does, and roughly how many members it claims.',
         ],
         bullets: [
-          'AU — African Union: 55 member states, headquartered in Addis Ababa; successor to the OAU (founded in 1963, transformed in 2002).',
-          'ECOWAS — Economic Community of West African States: 15 West African member states; headquarters in Abuja.',
-          'AfDB — African Development Bank: finances development across the continent.',
-          'The Commonwealth: an association of mainly former British colonies, including Nigeria, linking countries through shared values and the English language.',
+          'AU is the African Union, and it has 55 member states with headquarters in Addis Ababa. It is the successor to the OAU, which was founded in 1963 and transformed in 2002.',
+          'ECOWAS is the Economic Community of West African States, and it has 15 member states with headquarters in Abuja.',
+          'AfDB is the African Development Bank, and it finances development across the continent.',
+          'The Commonwealth is an association of mainly former British colonies, including Nigeria, and it links countries through shared values and the English language.',
         ],
       },
       {
@@ -157,13 +157,13 @@ export const currentAffairsNotes: RevisionNote[] = [
           'Nigeria, as a major oil producer, sits in the bodies that shape energy and trade policy.',
         ],
         bullets: [
-          'OPEC — Organization of the Petroleum Exporting Countries: coordinates oil policy; Nigeria has been a member since 1971; headquarters in Vienna.',
-          'AfCFTA — African Continental Free Trade Area: aims to create a single continental market for goods and services.',
+          'OPEC is the Organization of the Petroleum Exporting Countries, and it coordinates oil policy. Nigeria has been a member since 1971, and the headquarters is in Vienna.',
+          'AfCFTA is the African Continental Free Trade Area, and it aims to create a single continental market for goods and services.',
         ],
       },
     ],
     examTip:
-      'Pair each acronym with its HQ: UN — New York, WHO — Geneva, AU — Addis Ababa, ECOWAS — Abuja, OPEC — Vienna. HQ questions are guaranteed marks.',
+      'Pair each acronym with its headquarters: UN with New York, WHO with Geneva, AU with Addis Ababa, ECOWAS with Abuja, and OPEC with Vienna. Headquarters questions are guaranteed marks.',
   },
   {
     id: 'current-affairs-recent-developments',
@@ -174,7 +174,7 @@ export const currentAffairsNotes: RevisionNote[] = [
     practiceTopic: 'recent-developments',
     sections: [
       {
-        heading: 'Economy and reform (2023–2026)',
+        heading: 'Economy and reform (2023 to 2026)',
         paragraphs: [
           'The defining economic story of the current years is a cluster of reforms: subsidy removal, exchange-rate liberalisation, and tax restructuring.',
         ],
@@ -193,7 +193,7 @@ export const currentAffairsNotes: RevisionNote[] = [
           'On the political side, remember who won in 2023, how the result was administered, and what comes next.',
         ],
         bullets: [
-          'The 2023 general elections returned Bola Ahmed Tinubu of the APC as President, with the 2023–2027 administration still in office as of 2026.',
+          'The 2023 general elections returned Bola Ahmed Tinubu of the APC as President, with the 2023 to 2027 administration still in office as of 2026.',
           'INEC conducted the 2023 elections under the new Electoral Act, 2022, including electronic transmission of results.',
           'The next general election (presidential and National Assembly) is constitutionally due in 2027; by 2026 parties were already holding primaries.',
           'The student loan scheme (NELFUND) began disbursing loans to students in tertiary institutions in 2024.',
@@ -208,7 +208,7 @@ export const currentAffairsNotes: RevisionNote[] = [
         bullets: [
           'Revision notes age; check dates and names against the news before exam day.',
           'Prefer asking "what has changed recently in X?" to memorising an old year’s facts.',
-          'State institutions carry most of the marks — be careful with office holders’ names that often change.',
+          'State institutions carry most of the marks, so be careful with office holders’ names that often change.',
         ],
       },
     ],

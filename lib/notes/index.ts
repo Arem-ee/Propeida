@@ -2,7 +2,37 @@ import { englishNotes } from '@/lib/notes/content/english'
 import { mathematicsNotes } from '@/lib/notes/content/mathematics'
 import { currentAffairsNotes } from '@/lib/notes/content/current-affairs'
 
-export type SubjectSlug = 'english' | 'mathematics' | 'current-affairs'
+export type SubjectSlug =
+  | 'english'
+  | 'mathematics'
+  | 'current-affairs'
+  | 'accounting'
+  | 'agricultural-science'
+  | 'arabic'
+  | 'art'
+  | 'biology'
+  | 'chemistry'
+  | 'christian-religious-studies'
+  | 'commerce'
+  | 'computer-studies'
+  | 'economics'
+  | 'french'
+  | 'general-paper'
+  | 'geography'
+  | 'government'
+  | 'hausa'
+  | 'history'
+  | 'home-economics'
+  | 'igbo'
+  | 'islamic-studies'
+  | 'literature'
+  | 'logical-reasoning'
+  | 'music'
+  | 'physical-and-health-education'
+  | 'physics'
+  | 'quantitative-reasoning'
+  | 'verbal-reasoning'
+  | 'yoruba'
 
 export type InstitutionId = 'unilorin'
 
@@ -111,6 +141,33 @@ export const SUBJECTS: { slug: SubjectSlug; label: string; description: string }
   { slug: 'english', label: 'English', description: 'Grammar, comprehension and vocabulary essentials.' },
   { slug: 'mathematics', label: 'Mathematics', description: 'Core topics for objective-style questions.' },
   { slug: 'current-affairs', label: 'Current Affairs', description: 'Government, institutions and recent developments.' },
+  { slug: 'biology', label: 'Biology', description: 'From cells to ecosystems, by specimen and system.' },
+  { slug: 'chemistry', label: 'Chemistry', description: 'Molecules, reactions, rates and measurements.' },
+  { slug: 'commerce', label: 'Commerce', description: 'Business, trade and administration.' },
+  { slug: 'economics', label: 'Economics', description: 'Markets, business and public policy in Nigeria.' },
+  { slug: 'government', label: 'Government', description: 'Politics and institutions in Nigeria and beyond.' },
+  { slug: 'physics', label: 'Physics', description: 'Mechanics, waves, electricity and modern physics.' },
+  { slug: 'accounting', label: 'Accounting', description: 'Bookkeeping, analysis and financial reporting.' },
+  { slug: 'agricultural-science', label: 'Agricultural Science', description: 'Farming systems, soils and food production.' },
+  { slug: 'arabic', label: 'Arabic', description: 'The Arabic language in grammar, composition and comprehension.' },
+  { slug: 'art', label: 'Art', description: 'Drawing, design and visual arts practice.' },
+  { slug: 'christian-religious-studies', label: 'Christian Religious Studies', description: 'Christianity, scripture and values in society.' },
+  { slug: 'computer-studies', label: 'Computer Studies', description: 'Computers, systems and basic programming.' },
+  { slug: 'french', label: 'French', description: 'French grammar, vocabulary and comprehension.' },
+  { slug: 'general-paper', label: 'General Paper', description: 'Broad-based general knowledge and common sense.' },
+  { slug: 'geography', label: 'Geography', description: 'Earth systems, maps and environments.' },
+  { slug: 'hausa', label: 'Hausa', description: 'Hausa language, literature and culture.' },
+  { slug: 'history', label: 'History', description: 'Events, people and forces that shaped nations.' },
+  { slug: 'home-economics', label: 'Home Economics', description: 'Homes, families, nutrition and household management.' },
+  { slug: 'igbo', label: 'Igbo', description: 'Igbo language, literature and culture.' },
+  { slug: 'islamic-studies', label: 'Islamic Studies', description: 'The Quran, Hadith and Islamic practice.' },
+  { slug: 'literature', label: 'Literature', description: 'Literature in English across African and world writing.' },
+  { slug: 'logical-reasoning', label: 'Logical Reasoning', description: 'Arguments, statements and structured thought.' },
+  { slug: 'music', label: 'Music', description: 'Music theory, performance and listening.' },
+  { slug: 'physical-and-health-education', label: 'Physical and Health Education', description: 'Health, fitness and physical education.' },
+  { slug: 'quantitative-reasoning', label: 'Quantitative Reasoning', description: 'Number sense and quantitative problem solving.' },
+  { slug: 'verbal-reasoning', label: 'Verbal Reasoning', description: 'Language accuracy and verbal intelligence.' },
+  { slug: 'yoruba', label: 'Yoruba', description: 'Yoruba language, literature and culture.' },
 ]
 
 export const ALL_NOTES: RevisionNote[] = [...englishNotes, ...mathematicsNotes, ...currentAffairsNotes]

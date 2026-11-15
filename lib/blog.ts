@@ -7,7 +7,6 @@ export type Article = {
   imageAlt: string
   publishedAt: string
   publishedLabel: string
-  readingTime: string
 }
 
 export const articles: Article[] = [
@@ -18,10 +17,9 @@ export const articles: Article[] = [
     description:
       'How to study smarter for JAMB: active recall, spaced study sessions, timed CBT practice and an error log that turns every wrong answer into marks.',
     image: '/landing/assets/blog-1.png',
-    imageAlt: 'Nigerian student studying with open textbooks and a digital tablet',
+    imageAlt: 'A young Nigerian studying with open textbooks and a digital tablet',
     publishedAt: '2026-10-21',
     publishedLabel: '21 October 2026',
-    readingTime: '8 min read',
   },
   {
     slug: 'build-a-calm-effective-exam-routine',
@@ -30,10 +28,9 @@ export const articles: Article[] = [
     description:
       'Build a calm, effective exam routine: a weekly template, fixed anchor points, realistic focus blocks and recovery habits that hold up in exam week.',
     image: '/landing/assets/blog-2.png',
-    imageAlt: 'Nigerian student organising an exam timetable and checklist',
+    imageAlt: 'A young Nigerian organising an exam timetable and checklist',
     publishedAt: '2026-10-21',
     publishedLabel: '21 October 2026',
-    readingTime: '7 min read',
   },
   {
     slug: 'choose-a-course-and-career-you-will-enjoy',
@@ -42,10 +39,9 @@ export const articles: Article[] = [
     description:
       'Choosing a course in Nigeria: how JAMB subject combinations affect eligibility, the three filters for a good course choice, and how to research a course before you commit.',
     image: '/landing/assets/blog-3.png',
-    imageAlt: 'Two Nigerian students collaborating around an interactive formula screen',
+    imageAlt: 'Two young Nigerians collaborating around an interactive formula screen',
     publishedAt: '2026-10-21',
     publishedLabel: '21 October 2026',
-    readingTime: '9 min read',
   },
 ]
 

@@ -21,6 +21,7 @@ import { hasExamAccess, getFreeMockAttempts, getProStatus } from '@/lib/entitlem
 import { getExamScope } from '@/lib/exam-scope'
 import { getNotesBySubject, isValidSubject, getNoteById } from '@/lib/notes'
 import { recordSessionEvidence, getNextReviews } from '@/lib/mastery'
+import { fetchCurrentStreak } from '@/lib/streak'
 import { parseExplanation } from '@/lib/lessons'
 
 function practiceParseExplanation(explanation: string | null) {
@@ -69,9 +70,34 @@ async function sharedStrugglePct(
   return Math.round((same / total) * 100)
 }
 
+/**
+ * Free mocks count only mocks that actually ran. A session row is written
+ * before its question set, so a failed or abandoned start can leave one with
+ * no session_answers, and that orphan must not consume the learner's free
+ * attempt.
+ */
+async function countUsedFreeMocks(
+  supabase: Awaited<ReturnType<typeof createClient>>,
+  userId: string,
+  examId: string,
+): Promise<number> {
+  const { data } = await supabase
+    .from('exam_sessions')
+    .select('id, session_answers(id)')
+    .eq('user_id', userId)
+    .eq('exam_id', examId)
+    .eq('mode', 'mock')
+
+  return (data ?? []).filter((row) => {
+    const answers = (row as { session_answers?: { id?: string }[] | null }).session_answers
+    return Array.isArray(answers) && answers.length > 0
+  }).length
+}
+
 async function fetchWeightedQuestions(
   supabase: Awaited<ReturnType<typeof createClient>>,
   examId: string,
+  examSlug: string,
   subjectIds: string[],
   totalCount: number,
   seed: string,
@@ -82,9 +108,13 @@ async function fetchWeightedQuestions(
     .eq('key', 'subject_weighting')
     .single()
 
-  const rawWeighting = weighting?.value as Record<string, number> | undefined
+  // subject_weighting is keyed by exam slug, then subject slug.
+  const rawWeighting = weighting?.value as
+    | Record<string, Record<string, number>>
+    | undefined
+  const examWeighting = rawWeighting?.[examSlug] ?? null
 
-  if (!rawWeighting) {
+  if (!examWeighting) {
     return fetchQuestionsForSession({ examId, subjectIds, questionCount: totalCount, difficulty: null, mode: 'mock' }, seed)
   }
 
@@ -104,7 +134,9 @@ async function fetchWeightedQuestions(
   for (let i = 0; i < subjectIds.length; i++) {
     const subjectId = subjectIds[i]!
     const slug = slugMap[subjectId]
-    const weight = slug ? (rawWeighting[slug] ?? Math.floor(totalCount / subjectIds.length)) : Math.floor(totalCount / subjectIds.length)
+    const weight = slug
+      ? (examWeighting[slug] ?? Math.floor(totalCount / subjectIds.length))
+      : Math.floor(totalCount / subjectIds.length)
     const count = i < subjectIds.length - 1 ? weight : remainingCount
 
     if (count <= 0) continue
@@ -115,6 +147,7 @@ async function fetchWeightedQuestions(
       p_difficulty: null,
       p_limit: count,
       p_seed: seed,
+      p_topic_ids: [],
     })
 
     if (questions) {
@@ -164,16 +197,11 @@ export async function createSession(params: CreateSessionParams) {
   // Free mock attempts per exam (config: default 1; unilorin 2). Past the
   // allowance the mock is a Pro feature -- say so plainly, in one sentence.
   if (isFreeMock) {
-    const [attempts, { count: usedMocks }] = await Promise.all([
+    const [attempts, usedMocks] = await Promise.all([
       getFreeMockAttempts(examSlug),
-      supabase
-        .from('exam_sessions')
-        .select('id', { count: 'exact', head: true })
-        .eq('user_id', user.id)
-        .eq('exam_id', params.examId)
-        .eq('mode', 'mock'),
+      countUsedFreeMocks(supabase, user.id, params.examId),
     ])
-    if ((usedMocks ?? 0) >= attempts) {
+    if (usedMocks >= attempts) {
       throw new Error('You have used your free mock. Pro unlocks unlimited mocks.')
     }
   }
@@ -209,62 +237,87 @@ export async function createSession(params: CreateSessionParams) {
   ] as const)
 
   let questions: SessionQuestion[]
+  // JAMB papers keep their real shape (English 60 and 3 electives at 40)
+  // for everyone. The free attempt is counted separately, and the JAMB bank
+  // is open to free national practice by design.
+  const isJambMock = params.mode === 'mock' && examSlug === 'jamb'
 
-  if (isFreeMock || (isFree && params.mode === 'practice')) {
-    questions = lockedPool
-      ? await fetchLockedPoolQuestions(user.id, params.examId, subjectIds, effectiveCount, session.id, params.difficulty)
-      : await fetchFreePoolQuestions(user.id, params.examId, subjectIds, effectiveCount, session.id, params.difficulty)
-  } else if (params.mode === 'mock' && examSlug === 'jamb') {
-    const roles = mockDefaults?.subject_roles
-    if (!roles) {
-      questions = await fetchWeightedQuestions(supabase, params.examId, subjectIds, effectiveCount, session.id)
-    } else {
-      const { data: englishSubject } = await supabase
-        .from('subjects')
-        .select('id')
-        .eq('slug', 'english')
-        .single()
+  try {
+    if (!isJambMock && (isFreeMock || (isFree && params.mode === 'practice'))) {
+      questions = lockedPool
+        ? await fetchLockedPoolQuestions(user.id, params.examId, subjectIds, effectiveCount, session.id, params.difficulty)
+        : await fetchFreePoolQuestions(user.id, params.examId, subjectIds, effectiveCount, session.id, params.difficulty)
+    } else if (params.mode === 'mock' && examSlug === 'jamb') {
+      const roles = mockDefaults?.subject_roles
+      if (!roles) {
+        questions = await fetchWeightedQuestions(supabase, params.examId, examSlug, subjectIds, effectiveCount, session.id)
+      } else {
+        const { data: englishSubject } = await supabase
+          .from('subjects')
+          .select('id')
+          .eq('slug', 'english')
+          .single()
 
-      if (!englishSubject) throw new Error('English is not ready yet.')
+        if (!englishSubject) throw new Error('English is not ready yet')
 
-      const englishId = englishSubject.id
-      const englishCount = roles.english ?? 60
-      const electiveCount = roles.elective ?? 40
-      const electiveIds = subjectIds.filter((id: string) => id !== englishId)
+        const englishId = englishSubject.id
+        const englishCount = roles.english ?? 60
+        const electiveCount = roles.elective ?? 40
+        const electiveIds = subjectIds.filter((id: string) => id !== englishId)
 
-      const allQuestions: SessionQuestion[] = []
+        const allQuestions: SessionQuestion[] = []
 
-      const { data: englishQs } = await supabase.rpc('get_session_questions', {
-        p_exam_id: params.examId,
-        p_subject_ids: [englishId],
-        p_difficulty: null,
-        p_limit: englishCount,
-        p_seed: session.id,
-      })
-
-      if (englishQs) allQuestions.push(...(englishQs as SessionQuestion[]))
-
-      for (const electiveId of electiveIds) {
-        const { data: electiveQs } = await supabase.rpc('get_session_questions', {
+        const { data: englishQs, error: englishError } = await supabase.rpc('get_session_questions', {
           p_exam_id: params.examId,
-          p_subject_ids: [electiveId],
+          p_subject_ids: [englishId],
           p_difficulty: null,
-          p_limit: electiveCount,
+          p_limit: englishCount,
           p_seed: session.id,
+          p_topic_ids: [],
         })
-        if (electiveQs) allQuestions.push(...(electiveQs as SessionQuestion[]))
-      }
 
-      if (allQuestions.length === 0) throw new Error('No questions fit those choices yet.')
-      questions = allQuestions
+        if (englishError) throw new Error('Could not load the English questions')
+        if (englishQs) allQuestions.push(...(englishQs as SessionQuestion[]))
+
+        for (const electiveId of electiveIds) {
+          const { data: electiveQs, error: electiveError } = await supabase.rpc('get_session_questions', {
+            p_exam_id: params.examId,
+            p_subject_ids: [electiveId],
+            p_difficulty: null,
+            p_limit: electiveCount,
+            p_seed: session.id,
+            p_topic_ids: [],
+          })
+          if (electiveError) throw new Error('Could not load one of your elective banks')
+          if (electiveQs) allQuestions.push(...(electiveQs as SessionQuestion[]))
+        }
+
+        if (allQuestions.length === 0) throw new Error('No questions fit those choices yet')
+        questions = allQuestions
+      }
+    } else {
+      questions = subjectIds.length > 1 && params.mode === 'mock'
+        ? await fetchWeightedQuestions(supabase, params.examId, examSlug, subjectIds, effectiveCount, session.id)
+        : await fetchQuestionsForSession(
+            { ...params, subjectIds, questionCount: effectiveCount },
+            session.id
+          )
     }
-  } else {
-    questions = subjectIds.length > 1 && params.mode === 'mock'
-      ? await fetchWeightedQuestions(supabase, params.examId, subjectIds, effectiveCount, session.id)
-      : await fetchQuestionsForSession(
-          { ...params, subjectIds, questionCount: effectiveCount },
-          session.id
-        )
+  } catch (err) {
+    // The session row is written before the question set. If selection fails,
+    // remove it so the learner is never left with an empty session that counts
+    // against their free mock allowance.
+    await createAdminClient().from('exam_sessions').delete().eq('id', session.id)
+    throw err instanceof Error ? err : new Error('Could not start this session')
+  }
+
+  // A mock is a full paper. A short bank must not produce a half mock that
+  // looks like the real hall, so stop cleanly and say what is missing.
+  if (params.mode === 'mock' && questions.length < effectiveCount) {
+    await createAdminClient().from('exam_sessions').delete().eq('id', session.id)
+    throw new Error(
+      `This mock needs ${effectiveCount} questions, and the bank has ${questions.length} ready for those subjects, so pick subjects with more questions or practise them first`,
+    )
   }
 
   const rows = questions.map((q) => ({
@@ -542,12 +595,13 @@ export async function completePracticeSession(sessionId: string) {
   } catch (err) {
     console.error('[streak] update_streak failed:', err)
   }
+  const streak = await fetchCurrentStreak(supabase, user.id)
 
   revalidatePath('/practice')
   revalidatePath(`/practice/session/${sessionId}`)
   revalidatePath('/history')
 
-  return { sessionId }
+  return { sessionId, streak }
 }
 
 export async function completeMockSession(sessionId: string) {
@@ -569,6 +623,7 @@ export async function completeMockSession(sessionId: string) {
   if (completionError || !completionRow) throw new Error('Could not finish this session.')
 
   await supabase.rpc('update_streak', { p_user_id: user.id })
+  const streak = await fetchCurrentStreak(supabase, user.id)
 
   try {
     await recordSessionEvidence(supabase, user.id, sessionId)
@@ -581,7 +636,7 @@ export async function completeMockSession(sessionId: string) {
 
   const totalQuestions = Object.values(completionRow.performance_by_subject as Record<string, { total: number }>)
     .reduce((total, subject) => total + subject.total, 0)
-  return { score: completionRow.score, accuracy: completionRow.accuracy, totalQuestions, timedOut: expired }
+  return { score: completionRow.score, accuracy: completionRow.accuracy, totalQuestions, timedOut: expired, streak }
 }
 
 export async function loadSessionData(sessionId: string) {
@@ -871,8 +926,11 @@ export async function getFreeMockStatus(
   const supabase = await createClient()
   const user = await getAuthUser(supabase)
   if (!user) return { used: 0, allowed: 1, isPro: false }
-  const pro = await getProStatus(user.id)
-  if (pro.isPro) return { used: 0, allowed: Number.MAX_SAFE_INTEGER, isPro: true }
+
+  // JAMB and PUTME are separate plans, so the honest check is exam access
+  // rather than "any Pro product".
+  const hasAccess = await hasExamAccess(user.id, examId)
+  if (hasAccess) return { used: 0, allowed: Number.MAX_SAFE_INTEGER, isPro: true }
 
   const { data: examRow } = await supabase
     .from('exams')
@@ -880,14 +938,8 @@ export async function getFreeMockStatus(
     .eq('id', examId)
     .maybeSingle()
   const allowed = await getFreeMockAttempts(examRow?.slug ?? '')
+  const used = await countUsedFreeMocks(supabase, user.id, examId)
 
-  const { count } = await supabase
-    .from('exam_sessions')
-    .select('id', { count: 'exact', head: true })
-    .eq('user_id', user.id)
-    .eq('exam_id', examId)
-    .eq('mode', 'mock')
-
-  return { used: count ?? 0, allowed, isPro: false }
+  return { used, allowed, isPro: false }
 }
 
