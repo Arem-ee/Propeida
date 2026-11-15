@@ -1564,7 +1564,7 @@
       "paragraphs": [
        "A base is the number of symbols a system uses. In base ten the symbols are 0 to 9 and each place is ten times the one to its right. In base five the symbols are 0 to 4 and each place is five times the one to its right.",
        "A digit must therefore be smaller than the base. The digit 5 cannot appear in base five because the system has only 0 to 4. That test alone rejects a distractor without any calculation.",
-       "The rightmost place is ones, the next is base, the next is base squared. A three-digit base-five number 243 is therefore 2×25 + 4×5 + 3 = 73 in decimal. The position, not the shape of the digit, decides the value."
+       "The rightmost place is ones, the next is b, the next is b{{sup:2}}. A three-digit base-five number 243{{sub:5}} is therefore 2 × 5{{sup:2}} + 4 × 5 + 3 = 73 in decimal. The position, not the shape of the digit, decides the value."
       ],
       "bullets": [
        "In base b, each place is b times the one to its right",
@@ -1586,18 +1586,68 @@
      }
     },
     {
+     "type": "worked_example",
+     "content": {
+      "problem": "Write 210 in base three as a decimal number.",
+      "steps": [
+       {
+        "operation": "Write the place values from the right",
+        "reason": "Each place is three times the one to its right",
+        "result": "place values are 9, 3 and 1",
+        "predictPrompt": "What power of three does each position count?"
+       },
+       {
+        "operation": "Multiply each digit by its place value",
+        "reason": "Expansion is distributive multiplication across the places",
+        "result": "2×9 + 1×3 + 0×1",
+        "predictPrompt": "Which digit sits over which power of three?"
+       },
+       {
+        "operation": "Add the products",
+        "reason": "Place values sum to the whole number",
+        "result": "18 + 3 + 0 = 21",
+        "predictPrompt": "What is left to combine?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "Write 25 in decimal as a base-five number.",
+      "steps": [
+       {
+        "operation": "Divide by five repeatedly, keeping the remainder",
+        "reason": "Each division peels off one base-five digit from the back",
+        "result": "25 ÷ 5 = 5 r 0, 5 ÷ 5 = 1 r 0, 1 ÷ 5 = 0 r 1",
+        "predictPrompt": "Which remainder comes out first?"
+       },
+       {
+        "operation": "Read the remainders from the last one upward",
+        "reason": "The last remainder is the most significant digit",
+        "result": "100 in base five",
+        "predictPrompt": "Which remainder takes the biggest place?"
+       },
+       {
+        "operation": "Check by expanding back",
+        "reason": "1×25 + 0×5 + 0×1 = 25",
+        "result": "100 in base five is 25, exactly as expected",
+        "predictPrompt": "What does 100 in base five expand to?"
+       }
+      ]
+     }
+    },
+    {
      "type": "text",
      "content": {
-      "heading": "Converting between bases",
+      "heading": "The rule that covers every conversion",
       "paragraphs": [
-       "To convert from base b to decimal, expand by place value: base-three 210 is 2×9 + 1×3 + 0 = 21, while base-two 1011 is 11.",
-       "To go the other way, divide by b repeatedly: 25 ÷ 5 = 5 r0, 5 ÷ 5 = 1 r0, 1 ÷ 5 = 0 r1, so 25 is 100 in base five; read the remainders upward.",
-       "Between two non-decimal bases, pass through decimal: expand to decimal, then divide to the new base, since no direct shortcut exists.",
-       "Fractional parts multiply out: 0.5{{sub:1}}{{sub:0}} = 0.1{{sub:2}} since 0.5×2 = 1.0."
+       "Between two bases that are not decimal, pass through decimal: expand to decimal first, then divide to the new base. No direct shortcut exists.",
+       "Fractional parts multiply out: 0.5{{sub:10}} = 0.1{{sub:2}} since 0.5×2 = 1.0."
       ],
       "bullets": [
        "Base b to decimal: expand by powers of b",
-       "Decimal to base b: divide by b, read remainders upward",
+       "Decimal to base b: divide by b, read the remainders upward",
        "Between two non-decimal bases: pass through decimal",
        "Fractional parts: multiply by b, carry whole parts upward"
       ],
@@ -1620,10 +1670,10 @@
      "content": {
       "heading": "Adding and subtracting in another base",
       "paragraphs": [
-       "Addition in base b works like decimal addition except that the carrying threshold is b. In base five, 3 + 3 = 11 because 6 is one five and one unit. The carry is therefore smaller than in decimal.",
+       "Addition in base b works like decimal addition except that the carrying threshold is b. In base five, 3 + 3 = 11{{sub:5}} because 6 is one five and one unit. The carry is therefore smaller than in decimal.",
        "Subtraction borrows the same way: 31{{sub:4}} − 12{{sub:4}} borrows one four as four units. Only the threshold and the borrow differ.",
-       "Multiplication by a single digit also follows the threshold. In base five, 4 × 4 = 31 because 16 is three fives and one unit. A table of products up to base minus one is therefore enough.",
-       "Multiplication and division are done column-wise with the same threshold. In base five, 23 × 14 = 432: work in columns as in decimal, carrying at five: 4 × 23 = 202, then 1 × 23 shifted one place = 230, and 202 + 230 = 432."
+       "Multiplication by a single digit also follows the threshold. In base five, 4 × 4 = 31{{sub:5}} because 16 is three fives and one unit. A table of products up to base minus one is therefore enough.",
+       "Multiplication and division are done column-wise with the same threshold. In base five, 23{{sub:5}} × 14{{sub:5}} = 432{{sub:5}}: work in columns as in decimal, carrying at five: 4 × 23{{sub:5}} = 202{{sub:5}}, then 1 × 23 shifted one place = 230{{sub:5}}, and 202{{sub:5}} + 230{{sub:5}} = 432{{sub:5}}."
       ],
       "bullets": [
        "Carry at b, not at ten",
@@ -1696,7 +1746,7 @@
       "heading": "Go deeper: Why base ten is a habit, not a law",
       "paragraphs": [
        "Base ten is used because humans have ten fingers. It is a habit of counting, not a property of numbers. A number written in base five is the same quantity as a number written in decimal; only the place values differ.",
-       "That is why a bag priced at 34 in base five is not thirty-four in the price. The digits are the same, but the place values are 25, 5 and 1 rather than 100, 10 and 1. Read the base before you read the number.",
+       "That is why a bag priced at 34{{sub:5}} is not thirty-four in the price. The digits are the same, but the place values are 25, 5 and 1 rather than 100, 10 and 1. Read the base before you read the number.",
        "Examiners test that habit directly. A question that asks for a base-five sum in decimal is testing whether you convert, not whether you can add. The conversion is the skill.",
        "Base ten is therefore a cultural fact rather than a mathematical law. That distinction is why a number in another base can be mistaken for a decimal one."
       ],
@@ -1713,7 +1763,7 @@
       "heading": "Go deeper: Base two and the computer",
       "paragraphs": [
        "Base two uses only 0 and 1 because a circuit can be on or off. Each place is a power of two, so a byte of eight bits can represent 256 values. That economy is why computers count in binary.",
-       "A binary number such as 1011 is therefore 8 + 0 + 2 + 1 = 11. The expansion is the same as in any base, only the place values are powers of two. The method does not change with the base.",
+       "A binary number such as 1011{{sub:2}} is therefore 8 + 0 + 2 + 1 = 11. The expansion is the same as in any base, only the place values are powers of two. The method does not change with the base.",
        "A hexadecimal digit packs four binary digits. That packing is why two hexadecimal digits stand for a whole byte, which is how addresses are written in fewer symbols.",
        "The eight bits of a byte can therefore represent 256 values. That economy is why a byte is the unit of storage."
       ],
@@ -1730,7 +1780,7 @@
       "heading": "Go deeper: The trap in a base question",
       "paragraphs": [
        "The trap is a digit that is valid in decimal but invalid in the base. If you do not test the digits, you will add 5 in base five and get a sum that cannot be written. That test is therefore the first step.",
-       "The second trap is a decimal sum that looks like a base sum. In base five, 33 plus 24 is 112 (32 in decimal). Adding each column in decimal (3+4 = 7, 3+2 = 5) and writing 57 answers a different question.",
+       "The second trap is a decimal sum that looks like a base sum. In base five, 33{{sub:5}} + 24{{sub:5}} = 112{{sub:5}} (32 in decimal). Adding each column in decimal (3+4 = 7, 3+2 = 5) and writing 57 answers a different question.",
        "Budget your time as you would in any paper. A conversion that resists can be left and returned to. A test that is finished is worth more than a perfect answer to three items.",
        "The easy-first sweep is why this matters. The easy conversions can be answered at once, and the hard ones can be left until the base is clear.",
        "The trap is therefore the option that is correct in sense but wrong in form. If you read only for meaning, you will choose it."
@@ -1792,7 +1842,7 @@
       "heading": "Go deeper: Multiplication and division in base two and beyond",
       "paragraphs": [
        "Two-digit multiplication in base b is carried out one digit at a time exactly as in decimal, and the carry threshold is always b. In base eight, 12 × 6 means (2×6 = 14{{sub:8}}, write 4 and carry 1; 1×6 + 1 = 7{{sub:8}}), so the answer is 74{{sub:8}}.",
-       "Division in another base is the same repeated subtraction, with remainders read in that base. In base two, 1101 ÷ 11 = 100 r 1, because 11 goes into 11 exactly once and into 01 is zero times, remainder 1.",
+       "Division in another base is the same repeated subtraction, with remainders read in that base. In base two, 1101{{sub:2}} ÷ 11{{sub:2}} = 100{{sub:2}} r 1{{sub:2}}, because 11 goes into 11 exactly once and into 01 is zero times, remainder 1.",
        "A shortcut when the question is in base ten: convert the numbers to decimal, do the division there, then convert back. That route is reliable, but reading the question carefully prevents the commonest error of writing a decimal answer labelled as a base answer.",
        "Binary multiplication is the engine of every computer, and each bit shift doubles or halves the number. Multiplying by 1000{{sub:2}} in base two is shifting three places left, the same as multiplying by eight.",
        "Fractional conversion also tests understanding rather than memory. To check 0.1{{sub:2}}, multiply 0.1 × 2 = 0.2, take the whole part, multiply the remainder by 2 again, and continue; the pattern either repeats or terminates."
