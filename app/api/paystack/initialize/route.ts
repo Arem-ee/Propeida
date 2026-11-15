@@ -15,10 +15,10 @@ export async function POST(request: NextRequest) {
   const ip = getClientIp((name) => headersList.get(name))
   const { allowed } = await checkRateLimit(rateLimitKey(ip, 'paystack-initialize'), 10, 60000)
   if (!allowed) {
-    return NextResponse.json({ error: 'Too many requests. Please wait before trying again.' }, { status: 429 })
+    return NextResponse.json({ error: 'Too many requests, so please wait before trying again' }, { status: 429 })
   }
 
-  let product = 'putme_pro'
+  let product = 'jamb_pro'
   try {
     const body = await request.json()
     if (body.product) product = body.product
@@ -29,7 +29,7 @@ export async function POST(request: NextRequest) {
   }
 
   if (!user.email) {
-    return NextResponse.json({ error: 'Email is required for payment. Please update your profile.' }, { status: 400 })
+    return NextResponse.json({ error: 'Add an email to your profile before you pay' }, { status: 400 })
   }
 
   const idempotencyKey = request.headers.get('x-idempotency-key') ?? undefined

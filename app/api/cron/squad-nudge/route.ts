@@ -123,7 +123,7 @@ export async function GET(request: NextRequest) {
         '',
         `Your study squad for ${examName} is moving.`,
         '',
-        `The squad completed ${totalSessions} session${totalSessions === 1 ? '' : 's'} and secured ${totalSecured} subject${totalSecured === 1 ? '' : 's'} this week. No names, no scores — just people showing up for the same exam.`,
+        `Your squad completed ${totalSessions} session${totalSessions === 1 ? '' : 's'} and secured ${totalSecured} subject${totalSecured === 1 ? '' : 's'} this week. No names or scores are shared, and you just see people showing up for the same exam.`,
         '',
         'Open Propeida and pick up where you left off: https://propeida.online/home',
         '',
@@ -133,7 +133,7 @@ export async function GET(request: NextRequest) {
         <div style="font-family:system-ui,-apple-system,'Segoe UI',sans-serif;max-width:560px;margin:0 auto;padding:24px;color:#101c33">
           <p style="margin:0 0 16px 0;font-size:16px">Hi <strong>${escapeHtml(name)}</strong>,</p>
           <p style="margin:0 0 16px 0;font-size:16px">Your study squad for <strong>${escapeHtml(examName)}</strong> is moving.</p>
-          <p style="margin:0 0 16px 0;font-size:15px">The squad completed <strong>${totalSessions}</strong> session${totalSessions === 1 ? '' : 's'} and secured <strong>${totalSecured}</strong> subject${totalSecured === 1 ? '' : 's'} this week. No names, no scores — just people showing up for the same exam.</p>
+          <p style="margin:0 0 16px 0;font-size:15px">Your squad completed <strong>${totalSessions}</strong> session${totalSessions === 1 ? '' : 's'} and secured <strong>${totalSecured}</strong> subject${totalSecured === 1 ? '' : 's'} this week. No names or scores are shared, and you just see people showing up for the same exam.</p>
           <p style="margin:0 0 16px 0"><a href="https://propeida.online/home" style="display:inline-block;background:#2563eb;color:#ffffff;text-decoration:none;font-weight:700;padding:12px 20px;border-radius:14px">Open Propeida</a></p>
           <p style="margin:0;font-size:12px;color:#667085">Want fewer emails? Turn cohort updates off in <a href="https://propeida.online/account/settings" style="color:#2563eb">Settings</a>.</p>
         </div>

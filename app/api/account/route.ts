@@ -16,7 +16,10 @@ export async function DELETE() {
     const admin = createAdminClient()
     const { error } = await admin.auth.admin.deleteUser(user.id)
     if (error) throw error
-    await supabase.auth.signOut()
+    // The account no longer exists, so the session cookie points at a
+    // deleted user. Middleware will bounce every subsequent request to
+    // /login; no client-side sign-out call is needed here, and calling it
+    // would ask Next to mutate cookies in a context that does not allow it.
     return NextResponse.json({ ok: true })
   } catch {
     return NextResponse.json({ error: 'Could not delete account' }, { status: 500 })

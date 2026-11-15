@@ -38,7 +38,7 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ status: 'success' })
     }
     if (payment.status === 'refunded') {
-      return NextResponse.json({ status: 'error', error: 'This payment was refunded.' }, { status: 400 })
+      return NextResponse.json({ status: 'error', error: 'This payment was refunded' }, { status: 400 })
     }
   }
 

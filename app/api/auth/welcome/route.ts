@@ -9,7 +9,7 @@ export async function POST() {
   const ip = getClientIp((name) => headersList.get(name))
   const { allowed } = await checkRateLimit(rateLimitKey(ip, 'welcome'), 10, 60000)
   if (!allowed) {
-    return NextResponse.json({ error: 'Too many requests. Please wait before trying again.' }, { status: 429 })
+    return NextResponse.json({ error: 'Too many requests, so please wait before trying again' }, { status: 429 })
   }
 
   // Only the caller's own account may trigger its welcome email. The user id

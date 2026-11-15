@@ -10,7 +10,7 @@ export default function GlobalError({ reset }: { reset: () => void }) {
         >
           <h1 style={{ fontSize: 24, fontWeight: 800, margin: '0 0 8px' }}>Something went wrong</h1>
           <p style={{ fontSize: 15, lineHeight: 1.6, color: '#3d4b63', margin: '0 0 28px' }}>
-            Propeida hit an unexpected error. Your saved progress is safe.
+            Propeida hit an unexpected error, but your saved progress is safe
           </p>
           <button
             type="button"

@@ -137,3 +137,136 @@ button, a {
 .card-lift:active {
   transform: translateY(0) scale(0.99);
 }
+
+/* ── Wave 3: a mascot that is literally alive ──
+   Squash-and-stretch breathing (origin at the base so the
+   baked ground shadow stays planted), plus a spring "pop out"
+   entrance for the right moment, and speech bubbles that pop in. */
+@keyframes mascot-breathe {
+  0%, 100% { transform: scale(1, 1) rotate(0deg); }
+  30% { transform: scale(1.035, 0.96) rotate(-1.3deg); }
+  55% { transform: scale(0.975, 1.04) rotate(1.1deg); }
+  80% { transform: scale(1.015, 0.99) rotate(-0.5deg); }
+}
+.mascot-breathe {
+  animation: mascot-breathe 3.6s ease-in-out infinite;
+  transform-origin: 50% 100%;
+}
+
+/* One-shot spring pop for appearing at the right moment */
+@keyframes mascot-pop {
+  0% { opacity: 0; transform: scale(0.4) rotate(-12deg); }
+  55% { opacity: 1; transform: scale(1.22) rotate(5deg); }
+  75% { transform: scale(0.9) rotate(-2deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+.mascot-pop {
+  animation: mascot-pop 0.7s var(--ease-touch) both;
+  transform-origin: 50% 100%;
+}
+
+/* Mascot reacts on hover/press — interactive, not decorative */
+.mascot-live {
+  transition: transform 0.25s var(--ease-touch);
+  transform-origin: 50% 100%;
+}
+.mascot-live:hover { transform: scale(1.09) rotate(1.5deg); }
+.mascot-live:active { transform: scale(0.94) rotate(-1deg); }
+
+/* Speech bubble pops in after the mascot does */
+@keyframes speech-pop {
+  0% { opacity: 0; transform: translateY(8px) scale(0.7); }
+  60% { opacity: 1; transform: translateY(-2px) scale(1.05); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+.speech-pop {
+  animation: speech-pop 0.5s var(--ease-touch) 0.18s both;
+  transform-origin: 0% 100%;
+}
+
+/* Streak flame: a warm, quick flicker — alive, never urgent */
+@keyframes flame-pulse {
+  0%, 100% { transform: translateY(0) scale(1, 1) rotate(0deg); }
+  25% { transform: translateY(-1px) scale(1.05, 0.96) rotate(-1.6deg); }
+  50% { transform: translateY(0) scale(0.96, 1.04) rotate(1.3deg); }
+  75% { transform: translateY(-1px) scale(1.02, 0.98) rotate(-1deg); }
+}
+.flame-pulse {
+  animation: flame-pulse 1.8s ease-in-out infinite;
+  transform-origin: 50% 100%;
+}
+
+/* The streak chip itself breathes a soft amber glow */
+@keyframes chip-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.35); }
+  50% { box-shadow: 0 0 18px 2px rgba(245, 158, 11, 0.45); }
+}
+.chip-glow {
+  animation: chip-glow 2.6s ease-in-out infinite;
+}
+
+/* Wave 2 delight: emotional feedback & micro-interactions ──
+   Celebrating little wins while staying serious where it matters.
+   All motion respects prefers-reduced-motion. */
+
+/* Mascot bounces in to greet or celebrate */
+@keyframes mascot-bounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  40% { transform: translateY(-14px) scale(1.05); }
+  60% { transform: translateY(-4px) scale(1.02); }
+}
+.mascot-bounce {
+  animation: mascot-bounce 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
+}
+
+/* Gentle float for idle delight */
+@keyframes mascot-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.mascot-float {
+  animation: mascot-float 4s ease-in-out infinite;
+}
+
+/* Pop-in for win toasts */
+@keyframes win-slide {
+  0% { opacity: 0; transform: translateY(12px) scale(0.96); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+.win-slide-in {
+  animation: win-slide 0.35s var(--ease-settle) both;
+}
+
+/* Gentle shake for "try again" */
+@keyframes gentle-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+.gentle-shake {
+  animation: gentle-shake 0.4s var(--ease-touch) both;
+}
+
+/* Confetti particle */
+.confetti-piece {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 2px;
+  opacity: 0;
+}
+.confetti-fall {
+  animation: confetti-fall linear forwards;
+}
+@keyframes confetti-fall {
+  0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
+/* Encouraging pulse for CTAs */
+@keyframes gentle-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4); }
+  50% { box-shadow: 0 0 0 6px rgba(37, 99, 235, 0); }
+}
+.win-pulse {
+  animation: gentle-pulse 2s infinite;
+}
