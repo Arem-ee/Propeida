@@ -1,23 +1,24 @@
 import type { Metadata, Viewport } from 'next'
-import { Fredoka, Nunito } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
 import 'katex/dist/katex.min.css'
 import PwaInit from '@/components/pwa-init'
 import GoogleAnalytics from '@/components/analytics/google-analytics'
 
-// Same voice as the landing page: Fredoka display + Nunito body,
-// self-hosted (works offline, no render-blocking Google Fonts request).
-const fredoka = Fredoka({
-  subsets: ['latin'],
-  weight: ['500', '600', '700'],
+// Same voice as the landing page: Fredoka display + Nunito body.
+// Self-hosted (works offline, no network round-trip at build time).
+// Paths are relative to this file (app/layout.tsx).
+const fredoka = localFont({
+  src: '../public/fonts/fredoka_latin.woff2',
   variable: '--font-display',
+  weight: '500 700',
   display: 'swap',
 })
 
-const nunito = Nunito({
-  subsets: ['latin'],
-  weight: ['400', '600', '700', '800'],
+const nunito = localFont({
+  src: '../public/fonts/nunito_latin.woff2',
   variable: '--font-sans',
+  weight: '400 800',
   display: 'swap',
 })
 
