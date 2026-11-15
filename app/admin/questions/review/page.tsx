@@ -2,8 +2,11 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
-import { ArrowLeft, Check, ShieldCheck, Quote, XCircle } from 'lucide-react'
+import { Check, ShieldCheck, Quote, XCircle, Inbox, PenLine } from 'lucide-react'
 import { createClient } from '@/lib/supabase/client'
+import PageHeader from '@/components/admin/page-header'
+import { FormError } from '@/components/admin/form'
+import { QuestionStatusPill } from '@/components/admin/badge'
 import { parseExplanation } from '@/lib/lessons'
 
 interface ReviewItem {
@@ -14,6 +17,7 @@ interface ReviewItem {
   options: { key: string; text: string }[] | Record<string, string>
   correct_answer: string
   explanation: string | null
+  steps: { operation: string; reason: string; result: string; predictPrompt?: string }[] | null
   difficulty: string
   cognitive_level: string | null
   status: string
@@ -37,6 +41,7 @@ interface ReviewHistory {
 
 export default function QuestionReviewPage() {
   const [items, setItems] = useState<ReviewItem[]>([])
+  const [loading, setLoading] = useState(true)
   const [history, setHistory] = useState<Record<string, ReviewHistory[]>>({})
   const [selected, setSelected] = useState<Set<string>>(new Set())
   const [acting, setActing] = useState<string | null>(null)
@@ -53,6 +58,7 @@ export default function QuestionReviewPage() {
     const rows = (data ?? []) as unknown as ReviewItem[]
     setItems(rows)
     setSelected((prev) => new Set([...prev].filter((id) => rows.some((r) => r.id === id))))
+    setLoading(false)
     if (rows.length > 0) {
       const { data: hist } = await supabase
         .from('question_reviews')
@@ -142,22 +148,27 @@ export default function QuestionReviewPage() {
 
   return (
     <div>
-      <Link
-        href="/admin/questions"
-        className="mb-4 inline-flex items-center gap-1 text-sm font-bold text-gray-500 hover:text-blue-700 min-h-[36px]"
-      >
-        <ArrowLeft className="h-4 w-4" /> Questions
-      </Link>
-      <h1 className="text-2xl font-extrabold text-gray-900">Review queue</h1>
-      <p className="mt-1 text-sm font-semibold text-gray-500">
-        {items.length} waiting · nothing publishes while unverified — verify first, then publish.
-      </p>
+      <PageHeader
+        eyebrow="Content · Review"
+        title="Review queue"
+        description="Verify each question against its source before publishing. Source-cited means you saw where the answer comes from. Human-verified means you solved it yourself. Unverified stays out of learner sessions"
+        actions={
+          <Link
+            href="/admin/questions"
+            className="inline-flex min-h-[44px] items-center rounded-xl border border-gray-200 px-4 py-2 text-sm font-bold text-ink-soft hover:bg-gray-50"
+          >
+            Question bank
+          </Link>
+        }
+      />
 
       {error && (
-        <p className="mt-4 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-bold text-red-700">{error}</p>
+        <div className="mt-4">
+          <FormError>{error}</FormError>
+        </div>
       )}
       {refused.length > 0 && (
-        <div className="mt-4 rounded-xl border border-amber-300 bg-amber-50 px-4 py-3">
+        <div role="alert" className="mt-4 rounded-2xl border border-amber-300 bg-amber-50 px-4 py-3">
           <p className="text-sm font-extrabold text-amber-800">Still unverified — verify these first, then re-publish:</p>
           <ul className="mt-1.5 list-disc pl-5 text-[13px] font-semibold text-amber-900">
             {refused.map((r) => (
@@ -168,13 +179,13 @@ export default function QuestionReviewPage() {
       )}
 
       {items.length > 0 && (
-        <div className="mt-6 flex flex-wrap items-center gap-2.5 rounded-2xl border border-blue-200 bg-blue-50/60 p-3.5">
-          <label className="inline-flex cursor-pointer items-center gap-2 text-xs font-extrabold text-blue-900 min-h-[44px]">
+        <div className="mt-5 flex flex-wrap items-center gap-2.5 rounded-2xl border border-blue-200 bg-blue-50/60 p-3.5">
+          <label className="inline-flex min-h-[44px] cursor-pointer items-center gap-2 text-xs font-extrabold text-blue-900">
             <input
               type="checkbox"
               checked={selected.size === items.length}
               onChange={toggleSelectAll}
-              className="h-4 w-4 rounded border-gray-300 text-blue-600 cursor-pointer"
+              className="h-4 w-4 cursor-pointer rounded border-gray-300 text-blue-600"
             />
             Select all ({items.length})
           </label>
@@ -182,147 +193,214 @@ export default function QuestionReviewPage() {
           <button
             onClick={() => void bulkPublish()}
             disabled={selected.size === 0 || publishing}
-            className="ml-auto rounded-xl bg-blue-600 px-5 py-2.5 text-xs font-extrabold text-white hover:bg-blue-700 min-h-[44px] cursor-pointer disabled:opacity-50"
+            className="ml-auto cursor-pointer rounded-xl bg-blue-600 px-5 py-2.5 text-xs font-extrabold text-white hover:bg-blue-700 min-h-[44px] disabled:opacity-50"
           >
             {publishing ? 'Publishing…' : `Publish selected (${selected.size})`}
           </button>
         </div>
       )}
 
-      <div className="mt-6 space-y-4">
+      <div className="mt-5 space-y-5">
         {items.map((item) => {
           const exam = Array.isArray(item.exams) ? item.exams[0] : item.exams
           const subject = Array.isArray(item.subjects) ? item.subjects[0] : item.subjects
           const busy = acting === item.id
+          const itemHistory = history[item.id] ?? []
+          const meta = [
+            (exam as { name?: string })?.name,
+            (subject as { name?: string })?.name,
+            item.difficulty,
+            item.cognitive_level,
+          ].filter(Boolean) as string[]
+
           return (
-            <article key={item.id} className="rounded-2xl border border-gray-200 bg-white p-5">
-              <div className="flex flex-wrap items-center gap-2 text-xs font-bold text-gray-500">
+            <article
+              key={item.id}
+              className="overflow-hidden rounded-2xl border border-blue-100/70 bg-white shadow-[0_1px_2px_rgba(16,24,40,0.05)]"
+            >
+              {/* 1 · meta strip — context only, deliberately quiet */}
+              <div className="flex items-center gap-2 border-b border-gray-100 bg-gray-50/70 py-2 pl-4 pr-4 text-[11px] font-bold text-ink-soft">
                 <input
                   type="checkbox"
                   checked={selected.has(item.id)}
                   onChange={() => toggleSelect(item.id)}
                   aria-label="Select for bulk publish"
-                  className="h-4 w-4 rounded border-gray-300 text-blue-600 cursor-pointer"
+                  className="h-4 w-4 cursor-pointer rounded border-gray-300 text-blue-600"
                 />
-                <span>{(exam as { name?: string })?.name ?? '-'}</span>
-                <span aria-hidden>·</span>
-                <span>{(subject as { name?: string })?.name ?? '-'}</span>
-                <span aria-hidden>·</span>
-                <span>{item.difficulty}</span>
-                {item.cognitive_level && (
-                  <>
-                    <span aria-hidden>·</span>
-                    <span>{item.cognitive_level}</span>
-                  </>
-                )}
-                <span className={`ml-auto inline-flex items-center rounded-full px-2.5 py-0.5 ${
-                  item.status === 'in_review' ? 'bg-amber-100 text-amber-800' : 'bg-gray-100 text-gray-600'
-                }`}>
-                  {item.status.replace('_', ' ')}
+                <span className="min-w-0 truncate capitalize">
+                  {meta.join(' · ')}
                 </span>
+                <span className="ml-auto shrink-0"><QuestionStatusPill status={item.status} /></span>
               </div>
 
-              <p className="mt-2 text-[15px] font-bold text-gray-900">{item.question_text}</p>
-              <div className="mt-3 grid gap-1.5 sm:grid-cols-2">
-                {optionsList(item.options).map((o) => (
-                  <div
-                    key={o.key}
-                    className={`rounded-xl border px-3 py-2 text-sm font-semibold ${
-                      o.key === item.correct_answer
-                        ? 'border-emerald-400 bg-emerald-50 text-emerald-900'
-                        : 'border-gray-200 text-gray-600'
-                    }`}
-                  >
-                    <span className="font-extrabold">{o.key.toUpperCase()}.</span> {o.text}
-                  </div>
-                ))}
+              {/* 2 · the question — the dominant voice in the card */}
+              <div className="px-5 pt-4">
+                <h3 className="font-display text-[17px] font-medium leading-snug text-black">
+                  {item.question_text}
+                </h3>
               </div>
-              {item.explanation && (() => {
-                const parsed = parseExplanation(item.explanation)
-                if (parsed.format === 'worked-steps-v1' && parsed.steps) {
+
+              {/* 3 · options — scannable grid, key marked only for the reviewer */}
+              <div className="grid gap-2 px-5 pt-3 sm:grid-cols-2">
+                {optionsList(item.options).map((o) => {
+                  const isKey = o.key === item.correct_answer
                   return (
-                    <div className="mt-2 text-[13px] font-semibold text-gray-500">
-                      <span className="mb-0.5 block text-[10px] font-extrabold uppercase tracking-[0.14em] text-blue-700/70">Worked steps</span>
-                      <ol className="mt-1 list-decimal space-y-0.5 pl-5">
-                        {parsed.steps.map((s, i) => (
-                          <li key={i}><span className="font-bold text-gray-800">{s.operation}</span> — {s.result}</li>
-                        ))}
-                      </ol>
+                    <div
+                      key={o.key}
+                      className={`flex items-start gap-2.5 rounded-xl border px-3 py-2.5 ${
+                        isKey
+                          ? 'border-emerald-400 bg-emerald-50/70'
+                          : 'border-gray-200 bg-white'
+                      }`}
+                    >
+                      <span
+                        className={`mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-md text-[10px] font-extrabold ${
+                          isKey ? 'bg-emerald-600 text-white' : 'bg-gray-100 text-ink-soft'
+                        }`}
+                      >
+                        {o.key.toUpperCase()}
+                      </span>
+                      <span className={`min-w-0 text-[13px] font-semibold leading-snug ${isKey ? 'text-emerald-900' : 'text-ink-soft'}`}>
+                        {o.text}
+                      </span>
+                      {isKey && <Check className="ml-auto h-4 w-4 shrink-0 self-center text-emerald-600" aria-hidden />}
                     </div>
                   )
-                }
-                return <p className="mt-2 text-[13px] font-semibold text-gray-500">{item.explanation}</p>
-              })()}
-              {item.review_note && (
-                <p className="mt-2 rounded-xl bg-amber-50 border border-amber-200 px-3 py-2 text-[13px] font-bold text-amber-800">
-                  Note: {item.review_note}
-                </p>
-              )}
-              {(history[item.id] ?? []).length > 0 && (
-                <details className="mt-2 text-[13px]">
-                  <summary className="cursor-pointer font-extrabold text-gray-500 min-h-[32px]">
-                    Verification trail ({(history[item.id] ?? []).length})
-                  </summary>
-                  <ul className="mt-1.5 space-y-1.5">
-                    {(history[item.id] ?? []).map((h, i) => (
-                      <li key={i} className="rounded-lg bg-gray-50 border border-gray-100 px-3 py-2 font-semibold text-gray-600">
-                        {h.verified_state.replace('_', ' ')} · {new Date(h.created_at).toLocaleDateString('en-NG', { day: 'numeric', month: 'short', year: 'numeric' })}
-                        {h.note ? ` — ${h.note}` : ''}
+                })}
+              </div>
+
+              {Array.isArray(item.steps) && item.steps.length > 0 && (
+                <div className="mx-5 mt-3 rounded-xl border border-blue-100 bg-blue-50/40 px-4 py-3">
+                  <span className="mb-1 block text-[10px] font-extrabold uppercase tracking-[0.14em] text-blue-700/70">Worked steps</span>
+                  <ol className="list-decimal space-y-1 pl-5 text-[13px] font-semibold leading-relaxed text-ink-soft">
+                    {item.steps.map((s, i) => (
+                      <li key={i}>
+                        <span className="font-bold text-black">{s.operation}</span> — {s.reason}{' '}
+                        <em className="not-italic text-ink-soft/80">⇒ {s.result}</em>
                       </li>
                     ))}
-                  </ul>
-                </details>
+                  </ol>
+                </div>
               )}
 
-              <div className="mt-4 flex flex-wrap gap-2">
+              {/* 4 · reasoning — one quiet panel, small caps labels, only when present */}
+              {(item.explanation || item.review_note) && (
+                <div className="mx-5 mt-4 space-y-2.5 rounded-xl border border-gray-100 bg-gray-50/60 px-4 py-3">
+                  {item.explanation && (() => {
+                    const parsed = parseExplanation(item.explanation)
+                    if (parsed.format === 'worked-steps-v1' && parsed.steps) {
+                      return (
+                        <div className="text-[13px] font-semibold leading-relaxed text-ink-soft">
+                          <span className="mb-0.5 block text-[10px] font-extrabold uppercase tracking-[0.14em] text-ink-soft/60">Worked steps</span>
+                          <ol className="mt-1 list-decimal space-y-1 pl-5">
+                            {parsed.steps.map((s, i) => (
+                              <li key={i}><span className="font-bold text-black">{s.operation}</span> — {s.reason} <em className="not-italic text-ink-soft/80">⇒ {s.result}</em></li>
+                            ))}
+                          </ol>
+                        </div>
+                      )
+                    }
+                    return (
+                      <p className="text-[13px] font-semibold leading-relaxed text-ink-soft">
+                        <span className="mb-0.5 block text-[10px] font-extrabold uppercase tracking-[0.14em] text-ink-soft/60">Reasoning</span>
+                        {item.explanation}
+                      </p>
+                    )
+                  })()}
+                  {item.review_note && (
+                    <p className="border-t border-gray-200/60 pt-2 text-[13px] font-semibold leading-relaxed text-amber-900">
+                      <span className="mb-0.5 block text-[10px] font-extrabold uppercase tracking-[0.14em] text-amber-700/70">Review note</span>
+                      {item.review_note}
+                    </p>
+                  )}
+                </div>
+              )}
+
+              {/* 5 · verification trail — collapsed by default */}
+              {itemHistory.length > 0 && (
+                <div className="px-5 pt-3">
+                  <details className="text-[13px]">
+                    <summary className="min-h-[32px] cursor-pointer font-extrabold text-ink-soft">
+                      Verification trail ({itemHistory.length})
+                    </summary>
+                    <ul className="mt-1.5 space-y-1.5">
+                      {itemHistory.map((h, i) => (
+                        <li key={i} className="rounded-lg border border-gray-100 bg-gray-50 px-3 py-2 font-semibold text-gray-600">
+                          {h.verified_state.replace('_', ' ')} · {new Date(h.created_at).toLocaleDateString('en-NG', { day: 'numeric', month: 'short', year: 'numeric' })}
+                          {h.note ? ` — ${h.note}` : ''}
+                        </li>
+                      ))}
+                    </ul>
+                  </details>
+                </div>
+              )}
+
+              {/* 6 · actions — grouped by intent, one primary button */}
+              <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-gray-100 px-5 py-3">
+                <Link
+                  href={`/admin/questions/${item.id}/edit`}
+                  className="inline-flex min-h-[40px] items-center gap-1.5 rounded-xl px-3 py-2 text-xs font-bold text-ink-soft hover:bg-gray-100"
+                >
+                  <PenLine className="h-3.5 w-3.5" aria-hidden />
+                  Full edit
+                </Link>
                 <button
                   disabled={busy}
                   onClick={() => void transition(item, { status: 'in_review' })}
-                  className="rounded-xl border border-gray-200 px-4 py-2 text-xs font-extrabold text-gray-600 hover:bg-gray-50 min-h-[44px] cursor-pointer disabled:opacity-50"
+                  className="min-h-[40px] cursor-pointer rounded-xl px-3 py-2 text-xs font-bold text-ink-soft hover:bg-gray-100 disabled:opacity-50"
                 >
                   Mark in review
                 </button>
+                <span className="hidden h-5 w-px bg-gray-200 sm:block" aria-hidden />
                 <button
                   disabled={busy}
                   onClick={() => void transition(item, { verified_state: 'source_cited' })}
-                  className="inline-flex items-center gap-1.5 rounded-xl border border-amber-300 px-4 py-2 text-xs font-extrabold text-amber-800 hover:bg-amber-50 min-h-[44px] cursor-pointer disabled:opacity-50"
+                  className="inline-flex min-h-[40px] cursor-pointer items-center gap-1.5 rounded-xl border border-amber-300 px-3 py-2 text-xs font-extrabold text-amber-800 hover:bg-amber-50 disabled:opacity-50"
                 >
-                  <Quote className="h-3.5 w-3.5" /> Source-cited
+                  <Quote className="h-3.5 w-3.5" aria-hidden />
+                  Source-cited
                 </button>
                 <button
                   disabled={busy}
                   onClick={() => void transition(item, { verified_state: 'human_verified' })}
-                  className="inline-flex items-center gap-1.5 rounded-xl border border-emerald-300 px-4 py-2 text-xs font-extrabold text-emerald-800 hover:bg-emerald-50 min-h-[44px] cursor-pointer disabled:opacity-50"
+                  className="inline-flex min-h-[40px] cursor-pointer items-center gap-1.5 rounded-xl border border-emerald-300 px-3 py-2 text-xs font-extrabold text-emerald-800 hover:bg-emerald-50 disabled:opacity-50"
                 >
-                  <ShieldCheck className="h-3.5 w-3.5" /> Human-verified
+                  <ShieldCheck className="h-3.5 w-3.5" aria-hidden />
+                  Human-verified
                 </button>
-                <button
-                  disabled={busy}
-                  onClick={() => void transition(item, { status: 'published' })}
-                  className="inline-flex items-center gap-1.5 rounded-xl bg-blue-600 px-4 py-2 text-xs font-extrabold text-white hover:bg-blue-700 min-h-[44px] cursor-pointer disabled:opacity-50"
-                >
-                  <Check className="h-3.5 w-3.5" /> {busy ? 'Working…' : 'Publish'}
-                </button>
-                <button
-                  disabled={busy}
-                  onClick={() => void transition(item, { status: 'rejected' })}
-                  className="inline-flex items-center gap-1.5 rounded-xl border border-red-200 px-4 py-2 text-xs font-extrabold text-red-600 hover:bg-red-50 min-h-[44px] cursor-pointer disabled:opacity-50"
-                >
-                  <XCircle className="h-3.5 w-3.5" /> Reject
-                </button>
-                <Link
-                  href={`/admin/questions/${item.id}/edit`}
-                  className="inline-flex items-center rounded-xl px-4 py-2 text-xs font-extrabold text-blue-600 hover:bg-blue-50 min-h-[44px]"
-                >
-                  Full edit
-                </Link>
+
+                <span className="ml-auto flex items-center gap-2">
+                  <button
+                    disabled={busy}
+                    onClick={() => void transition(item, { status: 'rejected' })}
+                    className="inline-flex min-h-[40px] cursor-pointer items-center gap-1.5 rounded-xl px-3 py-2 text-xs font-extrabold text-red-600 hover:bg-red-50 disabled:opacity-50"
+                  >
+                    <XCircle className="h-3.5 w-3.5" aria-hidden />
+                    Reject
+                  </button>
+                  <button
+                    disabled={busy}
+                    onClick={() => void transition(item, { status: 'published' })}
+                    className="inline-flex min-h-[40px] cursor-pointer items-center gap-1.5 rounded-xl bg-blue-600 px-4 py-2 text-xs font-extrabold text-white hover:bg-blue-700 disabled:opacity-50"
+                  >
+                    <Check className="h-3.5 w-3.5" aria-hidden />
+                    {busy ? 'Working…' : 'Publish'}
+                  </button>
+                </span>
               </div>
             </article>
           )
         })}
-        {items.length === 0 && (
-          <p className="rounded-2xl border border-dashed border-gray-200 bg-white p-12 text-center text-sm font-semibold text-gray-500">
-            Queue clear — every question is published or rejected.
+        {!loading && items.length === 0 && (
+          <div className="rounded-2xl border border-dashed border-gray-200 bg-white p-14 text-center">
+            <Inbox className="mx-auto h-8 w-8 text-gray-300" aria-hidden />
+            <p className="mt-3 text-sm font-extrabold text-black">Queue clear</p>
+            <p className="mt-1 text-sm font-semibold text-ink-soft">Every question is published or rejected</p>
+          </div>
+        )}
+        {loading && (
+          <p className="rounded-2xl border border-gray-100 bg-white p-14 text-center text-sm font-semibold text-ink-soft">
+            Loading the queue...
           </p>
         )}
       </div>
