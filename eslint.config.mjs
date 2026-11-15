@@ -20,14 +20,22 @@ const eslintConfig = [
   },
   globalIgnores([
     '.next/**',
+    '.next-prod/**',
+    '.landing-source/**',
     'out/**',
     'build/**',
     'next-env.d.ts',
     'public/landing/**',
     // Authoring/scratch scripts are CommonJS by design and not part of the app.
     'content-folder/**',
+    'scripts/**',
     '_verify_ts.js',
     '_temp_tree.txt',
+    // One-off root scratch scripts: CommonJS by design, not app code.
+    '_parse-pdf.cjs',
+    '_review.js',
+    'db-state.cjs',
+    'exam-subject-map.cjs',
   ]),
 ]
 
