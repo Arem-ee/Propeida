@@ -20,12 +20,12 @@ const faqs: FAQItem[] = [
   {
     question: 'How does Propeida make money?',
     answer:
-      'Propeida is supported by student subscriptions. The free tier remains available so students can try the platform before deciding whether to upgrade.',
+      'Propeida is supported by Pro subscriptions. The free tier remains available so you can try the platform before you decide whether to upgrade.',
   },
   {
     question: 'Does Propeida work on slow networks and budget Android phones?',
     answer:
-      'Yes. Propeida is built for the network conditions and devices Nigerian students actually use. The platform uses text-first serialization, so a full mock exam uses little data, and it works on Chrome, Samsung Internet, Opera, and Safari, including budget Android phones.',
+      'Yes. Propeida is built for the network conditions and devices you actually use. The platform uses text-first serialization, so a full mock exam uses little data, and it works on Chrome, Samsung Internet, Opera, and Safari, including budget Android phones.',
   },
   {
     question: 'Where do the practice questions come from?',
@@ -33,12 +33,12 @@ const faqs: FAQItem[] = [
       'The question bank is built from the recollections of past candidates who previously sat the University of Ilorin Post-UTME, then checked and reworked by hand. These are not official past questions, and Propeida is not affiliated with the University of Ilorin, JAMB, or any examination body.',
   },
   {
-    question: 'Can I practice for multiple exams with one account?',
+    question: 'Can I practise for multiple exams with one account?',
     answer:
       'Yes. One account keeps your practice history, plans, and access in one place across the exams and universities Propeida supports. Your exact access depends on your current plan.',
   },
   {
-    question: 'How is Propeida different from practicing with past question PDFs?',
+    question: 'How is Propeida different from practising with past question PDFs?',
     answer:
       'PDFs do not enforce CBT timing, track your accuracy by subject, or simulate the actual exam screen. Propeida gives you the real countdown clock, multi-subject navigation, explanations, and a report of which topics you need to improve.',
   },
@@ -50,7 +50,7 @@ const faqs: FAQItem[] = [
   {
     question: 'Who owns my data?',
     answer:
-      'You do. We never sell student data. We use your activity to provide your practice history, recommendations, and account access.',
+      'You do. We never sell your data. We use your activity to provide your practice history, recommendations, and account access.',
   },
 ]
 
@@ -107,7 +107,7 @@ export default function FAQPage() {
 
         <div className="mt-12 rounded-xl border border-gray-100 bg-gray-50/30 p-6 text-center">
           <p className="text-sm text-gray-500">
-            Still have questions? <Link href="/contact" className="font-bold text-blue-600 hover:text-blue-700">Send a message</Link> and the team will respond.
+            If you still have questions, <Link href="/contact" className="font-bold text-blue-600 hover:text-blue-700">send us a message</Link> and the team will respond
           </p>
         </div>
       </main>

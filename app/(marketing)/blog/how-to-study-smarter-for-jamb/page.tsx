@@ -24,7 +24,7 @@ export default function HowToStudySmarterForJambPage() {
     <MarketingArticle article={article}>
       <ArticleBody>
         <p>
-          Most students do not fail JAMB because they are not clever. They fail because the way
+          Most people do not fail JAMB because they are not clever. They fail because the way
           they study produces a feeling of progress without producing any marks. You read a
           textbook, highlight it, watch a video that explains the same thing, and end the day
           convinced you have covered the topic. Then the exam asks you a question in a form you
@@ -65,8 +65,8 @@ export default function HowToStudySmarterForJambPage() {
         <h2>2. Practise in the format you will be examined in</h2>
         <p>
           JAMB is a Computer-Based Test. You get a fixed number of questions in a fixed amount of
-          time, on a computer, with the pressure of a countdown. A student who knows the topic
-          perfectly but has never answered questions on a screen under time pressure can still
+          time, on a computer, with the pressure of a countdown. If you know the topic
+          perfectly but have never answered questions on a screen under time pressure, you can still
           underperform badly.
         </p>
         <p>
@@ -93,18 +93,18 @@ export default function HowToStudySmarterForJambPage() {
         <p>A workable pattern:</p>
         <ul>
           <li>
-            <strong>Day 1</strong> — learn the topic and solve worked examples with the book open.
+            <strong>Day 1</strong>: you learn the topic and solve worked examples with the book open.
           </li>
           <li>
-            <strong>Day 2</strong> — same topic, book closed. Recall the method, then attempt the
+            <strong>Day 2</strong>: same topic, book closed. Recall the method, then attempt the
             questions unaided.
           </li>
           <li>
-            <strong>Day 4</strong> — mixed questions on that topic alongside other subjects, so
+            <strong>Day 4</strong>: mixed questions on that topic alongside other subjects, so
             retrieval is not cued by the order you studied in.
           </li>
           <li>
-            <strong>Day 7</strong> — a short set of mixed questions covering the week.
+            <strong>Day 7</strong>: a short set of mixed questions covering the week.
           </li>
         </ul>
         <p>
@@ -115,16 +115,16 @@ export default function HowToStudySmarterForJambPage() {
         <h2>4. Interleave your subjects</h2>
         <p>
           Studying one subject until you are exhausted feels productive, but it trains you to
-          remember the order things came in. On the exam, the questions arrive mixed. Interleaving
-          — a session of mathematics, then English, then current affairs — trains the skill you
+          remember the order things came in. On the exam, the questions arrive mixed. Interleaving,
+          such as a session of mathematics, then English, then current affairs, trains the skill you
           actually need, which is recognising which method applies when nothing has been signposted.
         </p>
 
         <h2>5. Keep an error log</h2>
         <p>
-          This is the highest-value habit on this list and the one most students skip. Every time
+          This is the highest-value habit on this list and the one most people skip. Every time
           you get a question wrong, write three things: the topic, the reason you got it wrong, and
-          the correct method. The reasons are usually repetitive — arithmetic slip, misread the
+          the correct method. The reasons are usually repetitive: arithmetic slip, misread the
           stem, confusing two similar concepts, or genuinely not understanding the topic.
         </p>
         <p>

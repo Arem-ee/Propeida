@@ -64,7 +64,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-base font-extrabold text-gray-900 mb-3">Changes to this policy</h2>
             <p>
-              If this policy changes, registered users will be notified via the email address on their account. Continued use of the platform after a change constitutes acceptance of the updated policy.
+              If this policy changes, we will notify you by email at the address on your account. If you keep using the platform after a change, you accept the updated policy.
             </p>
           </section>
         </div>

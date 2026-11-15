@@ -25,9 +25,9 @@ export default function BuildACalmEffectiveExamRoutinePage() {
       <ArticleBody>
         <p>
           A lot of exam preparation is not really about the syllabus. It is about the hours
-          around it. A student who knows the topics but panics in week one, sleeps badly, and
-          cannot decide what to revise on a given evening will underperform a student with a
-          slightly weaker grasp of the material but a stable routine.
+          around it. You may know the topics, but panicking in week one, sleeping badly, and
+          struggling to decide what to revise on a given evening will drag you below someone with a
+          slightly weaker grasp of the material and a stable routine.
         </p>
         <p>
           The goal of a routine is not to make you work harder. It is to remove the number of
@@ -126,7 +126,7 @@ export default function BuildACalmEffectiveExamRoutinePage() {
           bedtime a week before the exam, not a week of all-nighters.
         </p>
         <p>
-          Movement helps too, and it is the part everyone skips. A twenty-minute walk, some
+          Movement helps too, and it is the part most people skip. A twenty-minute walk, some
           stretching between blocks, or a short session of whatever sport you already play will
           do more for your next two hours of study than another hour of notes.
         </p>

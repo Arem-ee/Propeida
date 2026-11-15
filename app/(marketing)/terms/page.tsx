@@ -27,7 +27,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-base font-extrabold text-gray-900 mb-3">Free Tier and Pro Upgrade</h2>
             <p>
-              Propeida offers a free tier with limited access to practice questions and mock exams. Paid plans are monthly or yearly: each payment grants the period shown at checkout, and Pro continues when you pay again — nothing renews on its own. Access is tied to your account and is non-transferable. Plan prices, limits, and how renewal works are shown before payment.
+              Propeida offers a free tier with limited access to practice questions and mock exams. Paid plans are monthly or yearly: each payment grants the period shown at checkout, and Pro continues when you pay again. Nothing renews on its own. Access is tied to your account and is non-transferable. Plan prices, limits, and how renewal works are shown before payment.
             </p>
           </section>
 
@@ -43,7 +43,7 @@ export default function TermsPage() {
             </p>
             <p className="mt-3">
               After 7 days, or after you have used Pro for lessons, mocks, or
-              reviews, payments are not refundable — the product has already been
+              reviews, payments are not refundable because the product has already been
               enjoyed. When a payment is refunded, your account and your study
               history stay. You return to the free tier and can pay again normally.
             </p>
@@ -52,7 +52,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-base font-extrabold text-gray-900 mb-3">No Guarantee of Exam Outcomes</h2>
             <p>
-              Propeida provides practice and preparation material. It does not guarantee any specific score, grade, percentile, ranking, or admission outcome on JAMB, WAEC, Post-UTME, or any other examination. Performance on the platform does not predict performance on actual exams. Results depend on the individual student, their preparation, and factors outside Propeida&apos;s control.
+              Propeida provides practice and preparation material. It does not guarantee any specific score, grade, percentile, ranking, or admission outcome on JAMB, WAEC, Post-UTME, or any other examination. Performance on the platform does not predict performance on actual exams. Results depend on your preparation and factors outside Propeida&apos;s control.
             </p>
             <p className="mt-3">
               THE PRACTICE MATERIAL IS PROVIDED &ldquo;AS IS&rdquo; WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. IN NO EVENT SHALL PROPEIDA BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM THE USE OF THE PLATFORM, INCLUDING BUT NOT LIMITED TO EXAM OUTCOMES OR ADMISSION RESULTS.
@@ -78,7 +78,7 @@ export default function TermsPage() {
 
           <section>
             <h2 className="text-base font-extrabold text-gray-900 mb-3">Refund Policy</h2>
-            <p className="text-xs font-bold text-amber-600 mb-3 uppercase tracking-wider">Draft — pending legal review</p>
+            <p className="text-xs font-bold text-amber-600 mb-3 uppercase tracking-wider">Draft, pending legal review</p>
             <p>
               Paid access begins when payment is successful. Your consumer cancellation and refund rights depend on the plan and applicable law; the terms shown at checkout apply to that purchase.
             </p>
@@ -90,7 +90,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-base font-extrabold text-gray-900 mb-3">Changes to These Terms</h2>
             <p>
-              Propeida reserves the right to update these terms at any time. Registered users will be notified of material changes via the email address on their account. Continued use of the platform after a change constitutes acceptance of the updated terms.
+              We can update these terms at any time. If we make a material change, we will notify you by email at the address on your account. If you keep using the platform after a change, you accept the updated terms.
             </p>
           </section>
 

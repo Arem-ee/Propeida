@@ -38,7 +38,7 @@ export default function ContactPage() {
           </div>
           <h1 className="text-2xl font-extrabold tracking-tight text-gray-900">Message sent</h1>
           <p className="mt-3 text-base text-gray-500 max-w-sm mx-auto leading-relaxed">
-            Thanks for reaching out. The team will respond as soon as possible.
+            Thanks for reaching out, and the team will respond as soon as possible
           </p>
         </main>
         <MarketingFooter />
@@ -52,10 +52,11 @@ export default function ContactPage() {
       <main className="mx-auto max-w-3xl px-4 py-20 sm:py-24">
         <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Contact</h1>
         <p className="mt-4 text-lg text-gray-500 leading-relaxed">
-          Send a message to the team, or email us directly at{' '}
+          You can send a message to the team or email us directly at{' '}
           <a href="mailto:propeida.help@gmail.com" className="text-blue-600 hover:text-blue-700 font-semibold">
             propeida.help@gmail.com
-          </a>. All submissions are read and responded to.
+          </a>
+          , and we read and answer every message
         </p>
 
         <form onSubmit={handleSubmit} className="mt-10 max-w-lg">
@@ -75,7 +76,7 @@ export default function ContactPage() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="student@example.com"
+              placeholder="you@example.com"
               className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm focus:border-blue-600 focus:outline-none min-h-[44px]"
             />
           </div>
@@ -101,7 +102,7 @@ export default function ContactPage() {
             className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-bold text-white hover:bg-blue-700 active:bg-blue-800 disabled:bg-blue-400 min-h-[44px] cursor-pointer"
           >
             <Send className="h-4 w-4" />
-            {sending ? 'Sending...' : 'Send message'}
+            {sending ? 'Sending your message' : 'Send message'}
           </button>
         </form>
       </main>

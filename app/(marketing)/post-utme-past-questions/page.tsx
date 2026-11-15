@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Post-UTME Past Questions & Online Practice',
   alternates: { canonical: '/post-utme-past-questions' },
   description:
-    'Practice post-UTME past questions online with a real CBT simulator, timed mock exams, and short revision notes. Start with the verified UNILORIN Post-UTME question bank.',
+    'Practise post-UTME past questions online with a real CBT simulator, timed mock exams, and short revision notes, and start with the verified UNILORIN Post-UTME question bank',
 }
 
 const FAQ_ITEMS = [
@@ -21,17 +21,17 @@ const FAQ_ITEMS = [
   {
     question: 'What is PUTME?',
     answer:
-      'PUTME is short for Post-UTME — the computer-based aptitude test many Nigerian universities run after JAMB for candidates seeking admission. Propeida currently covers the UNILORIN Post-UTME (PUTME), with more universities being prepared.',
+      'PUTME is short for Post-UTME, the computer-based aptitude test many Nigerian universities run after JAMB for candidates seeking admission. Propeida currently covers the UNILORIN Post-UTME (PUTME), with more universities being prepared.',
   },
   {
     question: 'Does Propeida cover JAMB past questions?',
     answer:
-      'Not yet. Just like our Post-UTME material, we\u2019re taking the time to check every single JAMB question so you can trust them. You can start with UNILORIN Post-UTME practice today, and JAMB material follows the same model when it ships.',
+      'Yes. Propeida has more than 500 JAMB questions published across English, Mathematics, Government, and Economics, and you practise them in the same CBT screen. We add more subjects as we verify them.',
   },
   {
-    question: 'Do I need to pay to practice post-UTME questions?',
+    question: 'Do I need to pay to practise post-UTME questions?',
     answer:
-      'Practicing is free — questions, explanations, learning days, and your performance history — no card required. An optional Pro upgrade unlocks unlimited mock exams and extra features for students who want more.',
+      'Practising is free, with questions, explanations, learning days, and your performance history, and no card is required. An optional Pro upgrade unlocks unlimited mock exams and extra features when you want more.',
   },
 ]
 
@@ -45,14 +45,14 @@ export default function PostUtmePastQuestionsPage() {
           Post-UTME Past Questions, Online Practice &amp; Mock Exams
         </h1>
         <p className="mt-4 text-lg text-gray-500 leading-relaxed">
-          Most post-UTME exams today run on computers. Practicing past questions in a real CBT environment —
-          with a countdown clock and timed mocks — is the closest way to prepare.
+          Most post-UTME exams today run on computers, so practising past questions in a real CBT environment with a countdown clock and timed mocks is the closest way to prepare
         </p>
 
         <div className="mt-10 space-y-6 text-base text-gray-500 leading-relaxed">
           <p>
-            Propeida is a CBT practice platform with verified post-UTME questions, timed mock exams, and short
-            revision notes for Nigerian entrance exams. We started with the{' '}
+            Propeida is a CBT practice platform for JAMB and post-UTME with verified questions, timed mock exams,
+            and short revision notes. You can start with more than 500 published JAMB questions across English,
+            Mathematics, Government, and Economics. We also cover the{' '}
             <Link href="/unilorin-putme" className="font-bold text-blue-600 hover:text-blue-700">
               UNILORIN Post-UTME (PUTME)
             </Link>{' '}
@@ -60,7 +60,7 @@ export default function PostUtmePastQuestionsPage() {
           </p>
           <p>
             Every question is built from the recollections of past candidates who sat the exam, then checked and
-            reworked by hand before it is published. Practicing on the actual CBT screen — rather than paper PDFs —
+            reworked by hand before it is published. Practising on the actual CBT screen instead of paper PDFs
             gets you used to the timing, the navigation, and the pressure of the real test.
           </p>
         </div>
@@ -68,11 +68,11 @@ export default function PostUtmePastQuestionsPage() {
         <div className="mt-10 rounded-xl border border-gray-100 bg-gray-50/30 p-6">
           <h2 className="text-lg font-extrabold text-gray-900">Why practice post-UTME past questions on Propeida</h2>
           <ul className="mt-4 space-y-3 text-sm text-gray-600 leading-relaxed">
-            <li><strong className="text-gray-900">Real CBT simulation</strong> — the countdown clock and exam screen, not paper PDFs.</li>
-            <li><strong className="text-gray-900">Timed mock exams</strong> — full sessions under real exam conditions.</li>
-            <li><strong className="text-gray-900">Explanations</strong> — understand the answer, not just the option letter.</li>
-            <li><strong className="text-gray-900">Revision notes</strong> — short, topic-by-topic notes for quick review.</li>
-            <li><strong className="text-gray-900">Progress tracking</strong> — accuracy by subject and performance over time.</li>
+            <li><strong className="text-gray-900">Real CBT simulation</strong> lets you practise on the real CBT screen with a countdown clock, not on paper PDFs</li>
+            <li><strong className="text-gray-900">Timed mock exams</strong> let you sit full mock exams under real exam conditions</li>
+            <li><strong className="text-gray-900">Explanations</strong> give you an explanation for every answer, so you understand it and not just the option letter</li>
+            <li><strong className="text-gray-900">Revision notes</strong> give you short notes for each topic when you need a quick review</li>
+            <li><strong className="text-gray-900">Progress tracking</strong> shows your accuracy by subject and how your performance changes over time</li>
           </ul>
         </div>
 
@@ -81,7 +81,7 @@ export default function PostUtmePastQuestionsPage() {
             href="/signup"
             className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3.5 text-base font-bold text-white hover:bg-blue-700 active:bg-blue-800 min-h-[44px]"
           >
-            Start practicing
+            Start practising
             <ArrowRight className="h-5 w-5" />
           </Link>
           <Link

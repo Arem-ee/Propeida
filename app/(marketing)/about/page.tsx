@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'About',
   alternates: { canonical: '/about' },
   description:
-    'Propeida helps Nigerian students pass JAMB and Post-UTME with interactive CBT mock exams and real past questions.',
+    'Propeida helps you prepare for JAMB and Post-UTME with interactive CBT mock exams and real past questions',
 }
 
 export default function AboutPage() {
@@ -19,16 +19,16 @@ export default function AboutPage() {
 
         <div className="mt-8 space-y-6 text-base text-gray-500 leading-relaxed">
           <p>
-            Propeida is a Computer-Based Test (CBT) exam preparation platform built for Nigerian students preparing for JAMB and Post-UTME. It replaces paper booklets and PDFs with a timed digital exam environment that works on the phones and networks students actually use.
+            Propeida is a Computer-Based Test (CBT) exam preparation platform built for you if you are preparing for JAMB or Post-UTME. It replaces paper booklets and PDFs with a timed digital exam environment that works on the phone and the network you actually use.
           </p>
           <p>
-            Our position is simple: <strong className="text-gray-900">every Nigerian candidate deserves a real chance.</strong> Propeida starts with a useful free tier, then offers paid subscriptions for students who want deeper practice, full mock access, and more personalised support.
+            Our position is simple: <strong className="text-gray-900">every Nigerian candidate deserves a real chance.</strong> Propeida starts with a useful free tier, then offers paid subscriptions when you want deeper practice, full mock access, and more personal support.
           </p>
           <p>
-            The question bank draws from the recollections of past candidates who have taken the University of Ilorin Post-UTME, with every question checked and reworked by hand. These are not official questions and Propeida has no affiliation with the University of Ilorin, JAMB, or any examination body. The platform provides practice and preparation material. It does not guarantee any specific exam score or admission outcome.
+            The question bank draws from the recollections of past candidates who have taken the University of Ilorin Post-UTME, with every question checked and reworked by hand. These are not official questions, and Propeida has no affiliation with the University of Ilorin, JAMB, or any examination body. The platform gives you practice and preparation material. It does not guarantee any exam score or admission outcome.
           </p>
           <p>
-            Propeida was started to give every student a realistic practice environment — not just the ones whose parents can pay for lesson centers and practice apps. We are starting small on purpose, so every question we publish is one we can stand behind, and every student we count is a real student.
+            Propeida was started to give every candidate a realistic practice environment, not just the ones whose parents can pay for lesson centres and practice apps. We are starting small on purpose, so every question we publish is one we can stand behind, and every person we count is a real person.
           </p>
         </div>
 

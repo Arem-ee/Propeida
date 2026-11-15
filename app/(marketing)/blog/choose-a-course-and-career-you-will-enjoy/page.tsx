@@ -31,13 +31,13 @@ export default function ChooseACourseAndCareerPage() {
         <p>
           The first is what you are <strong>eligible</strong> for. The second is what you are{' '}
           <strong>good at</strong>. The third is what the world will <strong>pay you for</strong>.
-          Students who apply all three filters at once usually end up with a course they can live
+          When you apply all three filters at once, you usually end up with a course you can live
           with, but not one they will enjoy.
         </p>
 
         <h2>Filter one: what your JAMB subjects actually allow</h2>
         <p>
-          This is the constraint most students discover too late. Many courses in Nigerian
+          This is the constraint most people discover too late. Many courses in Nigerian
           universities have a fixed subject requirement. Medicine, law, engineering, pharmacy and
           the pure sciences at most institutions typically require Mathematics, plus Chemistry and
           Physics or Biology depending on the course. Some faculties restrict the combinations
@@ -47,7 +47,7 @@ export default function ChooseACourseAndCareerPage() {
         <p>
           You do not have to memorise a table. But you should, before you commit to a course, check
           the official requirements of the specific universities you are aiming at. They are
-          published, they change, and the differences between institutions are larger than students
+          published, they change, and the differences between institutions are larger than most people
           expect. A course you have heard of is a poor proxy for a course you can actually apply for.
         </p>
         <p>
@@ -59,7 +59,7 @@ export default function ChooseACourseAndCareerPage() {
         <h2>Filter two: what you are actually good at</h2>
         <p>
           Interests change. Aptitudes are more stable, and they are also easier to measure. Most
-          students have never been told how to find out what they are good at, so they guess from
+          people have never been told how to find out what they are good at, so they guess from
           the only evidence they have, which is a single school subject score.
         </p>
         <p>

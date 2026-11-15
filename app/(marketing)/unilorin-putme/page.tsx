@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'UNILORIN Post-UTME (PUTME) Practice & Past Questions',
   alternates: { canonical: '/unilorin-putme' },
   description:
-    'Practice verified UNILORIN Post-UTME (PUTME) questions with a real CBT simulator, timed mock exams, and short revision notes. Every question is checked by hand.',
+    'Practise verified UNILORIN Post-UTME (PUTME) questions with a real CBT simulator, timed mock exams, and short revision notes, and every question is checked by hand',
 }
 
 const FAQ_ITEMS = [
@@ -21,22 +21,22 @@ const FAQ_ITEMS = [
   {
     question: 'What is the UNILORIN Post-UTME (PUTME)?',
     answer:
-      'The UNILORIN Post-UTME, often called PUTME, is the University of Ilorin\u2019s computer-based aptitude test taken by candidates seeking admission. Propeida simulates that CBT experience — timed practice, mock exams, and progress tracking — on the phones and networks students actually use.',
+      'The UNILORIN Post-UTME, often called PUTME, is the University of Ilorin\u2019s computer-based aptitude test taken by candidates seeking admission. Propeida simulates that CBT experience with timed practice, mock exams, and progress tracking, on the phone and the network you actually use.',
   },
   {
-    question: 'How do I practice UNILORIN Post-UTME questions on Propeida?',
+    question: 'How do I practise UNILORIN Post-UTME questions on Propeida?',
     answer:
       'Create a free account, open the Universities hub, and pick UNILORIN. Practice mode lets you learn at your own pace, while mock mode runs the full timed CBT exam experience with explanations after each session.',
   },
   {
-    question: 'Is practicing free?',
+    question: 'Is practising free?',
     answer:
-      'Practicing is free — questions, explanations, learning days, and your performance history — no card required. An optional Pro upgrade unlocks unlimited mock exams and extra features for students who want more, and we\u2019re working to expand free access as the platform grows.',
+      'Practising is free, with questions, explanations, learning days, and your performance history, and no card is required. An optional Pro upgrade unlocks unlimited mock exams and extra features when you want more, and we\u2019re working to expand free access as the platform grows.',
   },
   {
     question: 'Does Propeida cover JAMB too?',
     answer:
-      'Not yet. Just like our Post-UTME material, we\u2019re taking the time to check every single JAMB question so you can trust them. You can start with UNILORIN Post-UTME practice today, and JAMB material follows the same model when it ships.',
+      'Yes. Propeida has more than 500 JAMB questions published across English, Mathematics, Government, and Economics, and you practise them in the same CBT screen. We add more subjects as we verify them.',
   },
 ]
 
@@ -57,8 +57,8 @@ export default function UnilorinPutmePage() {
         <div className="mt-10 space-y-6 text-base text-gray-500 leading-relaxed">
           <p>
             The UNILORIN Post-UTME is a computer-based test, and the fastest way to prepare for a CBT exam is to
-            practice in a CBT environment. Propeida replicates the real exam screen — the countdown clock,
-            multi-subject navigation, and instant feedback — so the real test feels familiar.
+            practice in a CBT environment. Propeida replicates the real exam screen, including the countdown clock,
+            multi-subject navigation, and instant feedback, so the real test feels familiar.
           </p>
           <p>
             Our UNILORIN question bank follows the real pattern: <strong className="text-gray-900">English, Mathematics, and Current Affairs</strong>.
@@ -70,10 +70,10 @@ export default function UnilorinPutmePage() {
         <div className="mt-10 rounded-xl border border-gray-100 bg-gray-50/30 p-6">
           <h2 className="text-lg font-extrabold text-gray-900">What you get with UNILORIN Post-UTME practice</h2>
           <ul className="mt-4 space-y-3 text-sm text-gray-600 leading-relaxed">
-            <li><strong className="text-gray-900">Practice mode</strong> — learn question by question, with explanations for every answer.</li>
-            <li><strong className="text-gray-900">Timed mock exams</strong> — full CBT sessions under real exam conditions.</li>
-            <li><strong className="text-gray-900">Revision notes</strong> — short, topic-by-topic notes for quick review.</li>
-            <li><strong className="text-gray-900">Progress tracking</strong> — accuracy by subject, learning days, and session history.</li>
+            <li><strong className="text-gray-900">Practice mode</strong> lets you learn question by question, and every answer comes with an explanation</li>
+            <li><strong className="text-gray-900">Timed mock exams</strong> let you sit full CBT sessions under real exam conditions</li>
+            <li><strong className="text-gray-900">Revision notes</strong> give you short notes for each topic when you need a quick review</li>
+            <li><strong className="text-gray-900">Progress tracking</strong> shows your accuracy by subject, your learning days, and your session history</li>
           </ul>
         </div>
 
@@ -82,7 +82,7 @@ export default function UnilorinPutmePage() {
             href="/signup"
             className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3.5 text-base font-bold text-white hover:bg-blue-700 active:bg-blue-800 min-h-[44px]"
           >
-            Start practicing
+            Start practising
             <ArrowRight className="h-5 w-5" />
           </Link>
           <Link
