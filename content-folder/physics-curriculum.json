@@ -214,7 +214,7 @@
       "heading": "SI units, area and volume",
       "paragraphs": [
        "SI has seven fundamental quantities and their units: length (metre, m), mass (kilogram, kg), time (second, s), electric current (ampere, A), temperature (kelvin, K), amount of substance (mole, mol) and luminous intensity (candela, cd). Everything else is derived from these.",
-       "Derived units come by multiplication and division: area m², volume m³, speed m/s; force = mass × acceleration = kg·m/s² = newton (N); energy = kg·m²/s² = joule (J); power = J/s = watt (W). Regular bodies use formulas: square a², rectangle lw, circle πr², cube a³, cuboid lwh, cylinder πr²h, sphere ⁴⁄₃πr³.",
+       "Derived units come by multiplication and division: area m², volume m³, speed m/s; force = mass × acceleration = kg·m/s² = newton (N); energy = kg·m²/s² = joule (J); power = J/s = watt (W). Regular bodies use formulas: square a², rectangle lw, circle πr², cube a³, cuboid lwh, cylinder πr²h, sphere ⁴⁄_3πr³.",
        "Prefixes: 1 km = 10³ m, 1 cm = 10⁻² m, 1 mm = 10⁻³ m, 1 μm = 10⁻⁶ m."
       ],
       "bullets": [
@@ -635,12 +635,12 @@
       "heading": "Go deeper: resolving vectors into perpendicular parts",
       "paragraphs": [
        "Any vector can be split into two perpendicular components. For the vector F at angle θ from the horizontal, the horizontal (adjacent) component is Fcosθ and the vertical (opposite) component is Fsinθ. This is why a 20 N pull at 30° to the ground moves a crate with 17.3 N horizontal force and 10 N lifting vertically.",
-       "The reverse: from components you can rebuild the vector — F = √(Fₓ² + F_y²), tanθ = F_y/Fₓ. In two dimensions this is exactly the Cartesian resynthesis from vectors (x, y) to their length, and it mirrors the x-y plane you use in displacement questions.",
+       "The reverse: from components you can rebuild the vector — F = √(F_x² + F_y²), tanθ = F_y/F_x. In two dimensions this is exactly the Cartesian resynthesis from vectors (x, y) to their length, and it mirrors the x-y plane you use in displacement questions.",
        "JAMB loves components on an inclined plane: a block of weight W on a slope at angle θ experiences Wcosθ into the slope and Wsinθ along the slope downward. The friction needed to keep it still is therefore f = μWcosθ, and to keep it from sliding, the applied force along the plane must equal Wsinθ − f."
       ],
       "bullets": [
        "Horizontal (adjacent): Fcosθ",
-       "Vertical (opposite): Fsinθ; rebuild: √(Fₓ² + F_y), tanθ = F_y/Fₓ",
+       "Vertical (opposite): Fsinθ; rebuild: √(F_x² + F_y), tanθ = F_y/F_x",
        "Incline: Wparallel = Wsinθ; Wperpendicular = Wcosθ"
       ],
       "takeaway": "Resolution is not a trick — it is how physics splits problems into convenient directions."
@@ -745,7 +745,7 @@
       "paragraphs": [
        "Distance–time graph: gradient = speed, steeper line = faster. Displacement–time graph: gradient = velocity (negative = returning). Velocity–time graph: gradient = acceleration, area under it = distance travelled.",
        "Constant velocity → flat line; acceleration → straight line, gradient ≠ 0; deceleration → sloping down. Area: triangle ½bh, rectangle bh, trapezium ½(a + b)h.",
-       "Reading a drawn graph: intercept (value at x = 0); gradient from two far-apart points ((y₂ − y₁) ÷ (x₂ − x₁)); area below the curve. JAMB wants: (i) gradient or area, (ii) labelled axes, (iii) best-fit line, (iv) where two curves cross — when two bodies meet."
+       "Reading a drawn graph: intercept (value at x = 0); gradient from two far-apart points ((y_2 − y_1) ÷ (x_2 − x_1)); area below the curve. JAMB wants: (i) gradient or area, (ii) labelled axes, (iii) best-fit line, (iv) where two curves cross — when two bodies meet."
       ],
       "bullets": [
        "gradient of distance–time = speed; of displacement–time = velocity",
@@ -1205,12 +1205,12 @@
      "content": {
       "heading": "Conservation of momentum",
       "paragraphs": [
-       "When no external force acts, total momentum is conserved: p_before = p_after. For two bodies, m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂, along any one axis.",
+       "When no external force acts, total momentum is conserved: p_before = p_after. For two bodies, m_1u_1 + m_2u_2 = m_1v_1 + m_2v_2, along any one axis.",
        "Uses: cannon recoil (cannon backward, shell forward — total momentum still zero), explosion separation (two pieces fly apart — total stays zero), a car picking up a passenger (the shove is internal; total is unchanged), and inelastic collisions where the two bodies stick together.",
        "Kinetic energy is not conserved in most collisions — the lost energy becomes heat, sound and deformation. Momentum alone tracks. Coefficient of restitution is not needed for JAMB; the diagram + 'stuck together' is the standard stem."
       ],
       "bullets": [
-       "m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂ — always along one axis",
+       "m_1u_1 + m_2u_2 = m_1v_1 + m_2v_2 — always along one axis",
        "Sticky collisions: final masses merge, single v",
        "Explosion: start from rest → two pieces fly apart, total p = 0"
       ],
@@ -1328,7 +1328,7 @@
      "content": {
       "heading": "Go deeper: reading the force–time graph",
       "paragraphs": [
-       "Typical JAMB graph questions: the force rises linearly from 0 to a peak (straight-line ramp) and collapses back to 0 — a symmetric triangle. Area = ½ b × h. Another variant shows a force F₁ rising then an opposing constant force F₂ — shaded area above versus below the axis: take the positive area minus the negative.",
+       "Typical JAMB graph questions: the force rises linearly from 0 to a peak (straight-line ramp) and collapses back to 0 — a symmetric triangle. Area = ½ b × h. Another variant shows a force F_1 rising then an opposing constant force F_2 — shaded area above versus below the axis: take the positive area minus the negative.",
        "The staircase graph: force steps at 2 N, 4 N, 6 N for sequential 1 s intervals — momentum change = Σ of rectangle areas = sum, not product. A pulse of 10 N lasting 0.1 s gives 1 N·s — small numbers, but the impulse is not small in a hammer blow.",
        "Trick variants: the y-axis is labelled in N, x-axis in ms — multiply 10⁻³ into the area; the question asks 'momentum change' — that is exactly impulse in disguise. Or it asks for 'velocity after' — divide Δp by the mass first; JAMB never needs a second physical principle past Ft = Δp for these."
       ],
@@ -1347,7 +1347,7 @@
       "paragraphs": [
        "Archetype one: two trolley cars stick together — straightforward mass-weight, one line. Archetype two: the gun recoil — total momentum zero before, ±v after; the gun's recoil speed = mv ÷ M where m is bullet, M is gun (mass ratio always a trick — gun heavier by factor 100, recoil 100 times slower). Archetype three: 'a person of mass X jumps from a boat' — boat shoots away opposite; sign it carefully.",
        "'Which is conserved?' stems ask for momentum versus kinetic energy. Answer momentum; KE only in elastic collisions — JAMB lists this distinction deliberately. 'How much energy is lost?' answers a subtraction of initial minus final KE, not a restitution reflex.",
-       "The relative-velocity bridge wins the long problems: before impact the relative speed of approach is u₁ − u₂; the relative speed of separation is v₁ − v₂ — the two are related to elastic bands and elastic 'coefficient 1' case the syllabus skips; but two bodies attracting-then-separating reciprocally is simple addition on a signed axis count. Track signs carefully: velocities in the opposite direction carry opposite signs; momentum survives the signs honestly."
+       "The relative-velocity bridge wins the long problems: before impact the relative speed of approach is u_1 − u_2; the relative speed of separation is v_1 − v_2 — the two are related to elastic bands and elastic 'coefficient 1' case the syllabus skips; but two bodies attracting-then-separating reciprocally is simple addition on a signed axis count. Track signs carefully: velocities in the opposite direction carry opposite signs; momentum survives the signs honestly."
       ],
       "bullets": [
        "Gun recoil: v_gun = m v / M — one-line momentum",
@@ -1614,13 +1614,13 @@
       "heading": "Splitting the motion into two axes",
       "paragraphs": [
        "A launched projectile splits into horizontal motion (no force, no acceleration — velocity u cos θ, constant through the whole flight) and vertical motion (constant acceleration, g acting downward).",
-       "u cos θ = uₓ, u sin θ = u_y. At all times: x = u cos θ · t, y = u sin θ · t − ½gt². The curve, when time is eliminated, is a parabola.",
+       "u cos θ = u_x, u sin θ = u_y. At all times: x = u cos θ · t, y = u sin θ · t − ½gt². The curve, when time is eliminated, is a parabola.",
        "Upward or downward launched — the same split holds. The sign of u_y depends on the angle above or below the horizontal; r_components always come in this pair."
       ],
       "bullets": [
-       "horizontal: aₓ = 0, uₓ = u cos θ constant",
+       "horizontal: a_x = 0, u_x = u cos θ constant",
        "vertical: a_y = g (down), u_y = u sin θ",
-       "x = uₓt · y = u_y t − ½gt² — the parabola itself"
+       "x = u_xt · y = u_y t − ½gt² — the parabola itself"
       ],
       "takeaway": "Horizontal keeps; vertical performs — never the same account.",
       "check": {
@@ -2012,7 +2012,7 @@
       "bullets": [
        "1 rad ≈ 57.3°; 1 rev = 360° = 2π rad",
        "v = rω — same ω for whole wheel, v varies with r",
-       "rotational suvat mirror: θ = ω₀t + ½αt²"
+       "rotational suvat mirror: θ = ω_0t + ½αt²"
       ],
       "takeaway": "Radians are just a rotated ruler — they carry all the same equations."
      }
@@ -2307,11 +2307,11 @@
      "content": {
       "heading": "Newton’s law of gravitation and g",
       "paragraphs": [
-       "Every body pulls every other body with a force F = Gm₁m₂ / r². G is the universal constant, 6.67 × 10⁻¹¹ N·m²/kg²; r is the distance between centres of mass. The force acts along the line joining them and is mutual — Earth pulls us, we pull Earth, equally.",
+       "Every body pulls every other body with a force F = Gm_1m_2 / r². G is the universal constant, 6.67 × 10⁻¹¹ N·m²/kg²; r is the distance between centres of mass. The force acts along the line joining them and is mutual — Earth pulls us, we pull Earth, equally.",
        "Near the surface the same law reduces to W = mg, where g = 9.8 m/s² (or 10 in rough problems). g varies with height (g’ = g(1 − 2h/R)) and with latitude — Earth is not a perfect sphere, it bulges at the equator, so g is slightly smaller there."
       ],
       "bullets": [
-       "F = Gm₁m₂ ÷ r² — attractive along the line joining centres",
+       "F = Gm_1m_2 ÷ r² — attractive along the line joining centres",
        "g = GM ÷ R² — the strength of the field at a point",
        "smaller at poles > smaller at the equator; smaller with height"
       ],
@@ -2399,7 +2399,7 @@
       "steps": [
        {
         "operation": "Write the formula",
-        "reason": "Newton’s law of gravitation — F = Gm₁m₂ / r². Best: two masses and the gap. Near the surface, use L = W ÷ g with weight.",
+        "reason": "Newton’s law of gravitation — F = Gm_1m_2 / r². Best: two masses and the gap. Near the surface, use L = W ÷ g with weight.",
         "result": "F = 6.67 × 10⁻¹¹ × 4 × 3 ÷ 2²",
         "predictPrompt": "What is the value of r² for r = 2 m?"
        },
@@ -2411,8 +2411,8 @@
        },
        {
         "operation": "Check to confirm: multiply back by r²",
-        "reason": "F × r² must rebuild G m₁m₂ exactly, so a wrong power of ten outs itself",
-        "result": "F × r² = 2.001 × 10⁻¹⁰ × 4 = 8.004 × 10⁻¹⁰; G m₁m₂ = 6.67 × 10⁻¹¹ × 12 = 8.004 × 10⁻¹⁰ ✓ equal",
+        "reason": "F × r² must rebuild G m_1m_2 exactly, so a wrong power of ten outs itself",
+        "result": "F × r² = 2.001 × 10⁻¹⁰ × 4 = 8.004 × 10⁻¹⁰; G m_1m_2 = 6.67 × 10⁻¹¹ × 12 = 8.004 × 10⁻¹⁰ ✓ equal",
         "predictPrompt": "Reverse the division. Do the books balance to 8.004 × 10⁻¹⁰?"
        }
       ]
@@ -2461,7 +2461,7 @@
      "content": {
       "heading": "Go deeper: G and g — neighbours, not twins",
       "paragraphs": [
-       "G is universal — it works on every body everywhere; g is private to each planet — Earth's surface g ≈ 9.8 N/kg; the Moon's ≈ 1.6; Jupiter's ≈ 24.8. The book where they belong together is Newton's law: F = Gm₁m₂/r². Set m₂ = mass of Earth at r = R and you get W = mg with g = GM/R² — gravity testing your ability to relate the two constants in one step.",
+       "G is universal — it works on every body everywhere; g is private to each planet — Earth's surface g ≈ 9.8 N/kg; the Moon's ≈ 1.6; Jupiter's ≈ 24.8. The book where they belong together is Newton's law: F = Gm_1m_2/r². Set m_2 = mass of Earth at r = R and you get W = mg with g = GM/R² — gravity testing your ability to relate the two constants in one step.",
        "Use g for surface weight questions, G for planet-scale questions: 'mass of the planet' asks for GM; 'weight of an astronaut' asks for m × g. JAMB rarely crosses the wires at once; knowing which is G and which is g saves half the marks.",
        "Mass vs weight on different planets: mass is constant, weight changes — the moon-scale in the pharmacy measures weight, not mass (a coil spring stretches under pull); a balance scale compares two objects against a standard mass — mechanical, unaffected by g. JAMB loves 'weighing machine reads zero' for freely falling frames."
       ],
@@ -2479,13 +2479,13 @@
       "heading": "Go deeper: gravitational field and potential",
       "paragraphs": [
        "Field strength g at a point = the force on unit mass placed there: g = GM ÷ r². Field lines diverge outward — radial. Potential at that point Φ = −GM ÷ r: the work done per unit mass bringing a body from infinity to the point, and it is always negative because infinity is zero and bringing the body downhill releases energy.",
-       "Potential energy difference between two heights near Earth is ΔPE = mgh only for small height changes; the full account is ΔPE = −GM(1/r₂ − 1/r₁). JAMB's stem will rarely detail beyond the small-h limit — use mgh for ordinary launches and keep Φ in mind for satellite topics.",
+       "Potential energy difference between two heights near Earth is ΔPE = mgh only for small height changes; the full account is ΔPE = −GM(1/r_2 − 1/r_1). JAMB's stem will rarely detail beyond the small-h limit — use mgh for ordinary launches and keep Φ in mind for satellite topics.",
        "Conservative field test: repositioning a body anywhere brings the same energy debt; friction and drag do not — how long you walked does matter at your legs. In a conservative gravitational field, total energy is conserved between any two points; work done by gravity = −ΔPE."
       ],
       "bullets": [
        "field g = GM ÷ r² (radial lines outward)",
        "Φ = −GM/r — negative at finite r, zero at infinity",
-       "ΔPE near Earth = mgh; in orbit use −GM(1/r₂ − 1/r₁)"
+       "ΔPE near Earth = mgh; in orbit use −GM(1/r_2 − 1/r_1)"
       ],
       "takeaway": "g is push/unit mass; Φ is winter of where energy goes."
      }
@@ -2495,7 +2495,7 @@
      "content": {
       "heading": "Go deeper: how JAMB sets gravitation questions",
       "paragraphs": [
-       "Archetypes: (1) 'force between two masses' — direct F = Gm₁m₂/r², often in powers of ten; (2) 'if r doubles, F becomes' — inverse square; (3) 'a planet with different g' — weight scales linearly with g, mass constant; (4) 'escape velocity' — no trick, two substitutions into √(2GM/R); (5) 'an object weighs X at surface and Y at height' — g falls off with r; (6) 'parking orbit' — equator-aligned, 24 h; (7) 'why do astronauts float' — mutual free fall.",
+       "Archetypes: (1) 'force between two masses' — direct F = Gm_1m_2/r², often in powers of ten; (2) 'if r doubles, F becomes' — inverse square; (3) 'a planet with different g' — weight scales linearly with g, mass constant; (4) 'escape velocity' — no trick, two substitutions into √(2GM/R); (5) 'an object weighs X at surface and Y at height' — g falls off with r; (6) 'parking orbit' — equator-aligned, 24 h; (7) 'why do astronauts float' — mutual free fall.",
        "Value of g itself appears: 'at the surface of a planet of mass M and radius R' — write g = GM/R² and plug; or find 'the mass of the planet given surface g and R'. Cross-planet ratios: g ∝ M/R² dominates — doubling mass multiplies g by two; doubling radius quarters it.",
        "Trap stems: 'the astronaut in ISS orbits at 400 km — his/her weight is zero' — no: roughly 90% of surface g acts there; he has mass, she has inertia; it is apparent weightlessness. Reading too much into 'parking orbit' — means geostationary (24-hour) AND orbiting above the equator — the satellite appears parked; they are technically 'fixed' to one longitude."
       ],
@@ -2531,12 +2531,12 @@
      "content": {
       "heading": "The conditions for equilibrium",
       "paragraphs": [
-       "For coplanar forces — all lying in one plane — a body stays at rest (or at constant speed) when (1) the vector sum of forces is zero, or (2) the resolution in two perpendicular directions is zero in both directions: ΣFₓ = 0 and ΣF_y = 0.",
+       "For coplanar forces — all lying in one plane — a body stays at rest (or at constant speed) when (1) the vector sum of forces is zero, or (2) the resolution in two perpendicular directions is zero in both directions: ΣF_x = 0 and ΣF_y = 0.",
        "For two or more forces: if they act in line, add with signs; at angle, resolve into components; the polygon-of-forces closed figure test says resultant = 0 when the forces drawn tip-to-tail form a closed loop.",
        "Equilibrant is the single force that exactly balances a resultant — equal magnitude, opposite direction."
       ],
       "bullets": [
-       "ΣFₓ = 0 AND ΣF_y = 0 — both components zero",
+       "ΣF_x = 0 AND ΣF_y = 0 — both components zero",
        "or ΣF vector = 0 — one rule in all shapes",
        "closed polygon ⟺ resultant is zero"
       ],
@@ -2544,9 +2544,9 @@
       "check": {
        "question": "Three coplanar forces keep a body in equilibrium. Which is the necessary condition?",
        "options": [
-        "only ΣFₓ = 0",
+        "only ΣF_x = 0",
         "only ΣF_y = 0",
-        "ΣFₓ = 0 and ΣF_y = 0",
+        "ΣF_x = 0 and ΣF_y = 0",
         "sum of forces is equal to the weight"
        ],
        "answer": 2,
@@ -2587,12 +2587,12 @@
      "content": {
       "heading": "Lami’s theorem and resolution of forces",
       "paragraphs": [
-       "Lami’s theorem: if three coplanar forces keep a body in equilibrium, each force is proportional to the sine of the angle opposite it: F₁/sin α = F₂/sin β = F₃/sin γ. Use it when the angles are known but not the magnitudes.",
+       "Lami’s theorem: if three coplanar forces keep a body in equilibrium, each force is proportional to the sine of the angle opposite it: F_1/sin α = F_2/sin β = F_3/sin γ. Use it when the angles are known but not the magnitudes.",
        "Resolution: every force has two perpendicular components: Fcosθ along the axis, Fsinθ across it. Add the components on each axis, then check: ΣFx = 0, ΣFy = 0.",
        "Resultant: after resolving, the net pair (X, Y) rebuilds R = √(X² + Y²). Equilibrant: the single force opposite the resultant in direction and equal in magnitude."
       ],
       "bullets": [
-       "Lami: F₁/sin α = F₂/sin β = F₃/sin γ",
+       "Lami: F_1/sin α = F_2/sin β = F_3/sin γ",
        "resolve into perpendicular components first",
        "resultant √(Fx² + Fy²); equilibrant = same size, opposite sense"
       ],
@@ -2625,7 +2625,7 @@
       "steps": [
        {
         "operation": "Resolve into components",
-        "reason": "ΣFₓ and ΣF_y on the chosen axes. Best: add the parts on each axis, then Pythagoras when the legs are right angles. If components feel messy, use the parallelogram law.",
+        "reason": "ΣF_x and ΣF_y on the chosen axes. Best: add the parts on each axis, then Pythagoras when the legs are right angles. If components feel messy, use the parallelogram law.",
         "result": "X = 50 + 30 cos 60° = 50 + 15 = 65 N; Y = 30 sin 60° ≈ 26 N",
         "predictPrompt": "What is cos 60°?"
        },
@@ -2675,7 +2675,7 @@
        },
        {
         "operation": "Lami applies",
-        "reason": "F₁/sin α = constant for a stable equilibrium",
+        "reason": "F_1/sin α = constant for a stable equilibrium",
         "result": "angle opposite 6 N: sin α = 6/k; angle opposite 8 N: sin β = 8/k; angle opposite 10 N: sin γ = 10/k",
         "predictPrompt": "What is k? Adding all three angles reaches 360°."
        },
@@ -2717,8 +2717,8 @@
       "heading": "Go deeper: Lami’s theorem from the quiet inside",
       "paragraphs": [
        "Three forces in equilibrium form a closed triangle. Each side represents one force; each interior angle opposes its own force — draw the triangle with the forces tip-to-tail and everything you want sits on the page.",
-       "The mathematics behind Lami is just the sine rule applied to the force triangle: F₁ ÷ sin α, F₂ ÷ sin β, F₃ ÷ sin γ are equal constants. For the 6-8-10 case above, the constants are 10 (opposite the 90° angle) and 6-8 give 0.6-0.8 — matches arcsin values.",
-       "When Lami's theorem is too slow, fall back on X/Y: resolution always works; labelling the correct angle every time is where it breaks. Pipeline for examinations: draw the force triangle → compute angles → F₁/sin α = F₂/sin β = F₃/sin γ — any one force equals the others per sine."
+       "The mathematics behind Lami is just the sine rule applied to the force triangle: F_1 ÷ sin α, F_2 ÷ sin β, F_3 ÷ sin γ are equal constants. For the 6-8-10 case above, the constants are 10 (opposite the 90° angle) and 6-8 give 0.6-0.8 — matches arcsin values.",
+       "When Lami's theorem is too slow, fall back on X/Y: resolution always works; labelling the correct angle every time is where it breaks. Pipeline for examinations: draw the force triangle → compute angles → F_1/sin α = F_2/sin β = F_3/sin γ — any one force equals the others per sine."
       ],
       "bullets": [
        "closed tip-to-tail force triangle",
@@ -2733,7 +2733,7 @@
      "content": {
       "heading": "Go deeper: how JAMB sets equilibrium problems",
       "paragraphs": [
-       "Archetypes: (1) 'three forces keep a body in equilibrium — find angle or force': Lami ratio or closed triangle; (2) 'the tension in the rope holding a weight' — cos or sin of the angle with the wall; (3) 'a man holds a load with two ropes' — symmetry: each rope bears W ÷ (2 sin θ); (4) 'a lamp hangs from two chains making angles θ and β with the wall, find their tensions' — Lami answer √(T₁/ sin α = T₂/sin β) or resolve on both axes; (5) 'a block resting is pulled by two horizontal forces — find the remaining friction' — ΣFx = 0 tells you where the missing number lives.",
+       "Archetypes: (1) 'three forces keep a body in equilibrium — find angle or force': Lami ratio or closed triangle; (2) 'the tension in the rope holding a weight' — cos or sin of the angle with the wall; (3) 'a man holds a load with two ropes' — symmetry: each rope bears W ÷ (2 sin θ); (4) 'a lamp hangs from two chains making angles θ and β with the wall, find their tensions' — Lami answer √(T_1/ sin α = T_2/sin β) or resolve on both axes; (5) 'a block resting is pulled by two horizontal forces — find the remaining friction' — ΣFx = 0 tells you where the missing number lives.",
        "Traps: the angle in the problem can be measured from the wall or the vertical — get it consistent before substituting into sin or cos; 'coplanar' all forces in one plane — JAMB rarely leaves the plane; a force pair of equal size at 60° is not the equilibrant of the third — do the sum of all three, not two; 'stable equilibrium' wording belongs to the stability topic — moments — don't answer on dimensions from this section.",
        "'Resultant' vs 'equilibrant': in equilibrium, the resultant of the applied forces is cancelled by a further force — the equilibrant. Equal in size, opposite in sense. JAMB swaps the two keywords on purpose; read which one the question asks for."
       ],
@@ -2864,26 +2864,26 @@
        {
         "operation": "Total reaction",
         "reason": "both supports hold the beam’s weight plus the woman. Best: bundle the load first, then moments about one support. If reactions are a puzzle, pivot about the load.",
-        "result": "R₁ + R₂ = 200 + 300 = 500 N",
+        "result": "R_1 + R_2 = 200 + 300 = 500 N",
         "predictPrompt": "Which reaction will be larger — the near one or the far one?"
        },
        {
         "operation": "Take moments about the left support",
-        "reason": "moments eliminate the near support — only R₂ stays",
-        "result": "R₂ × 4 = 200 × 2 + 300 × 1 = 700 → R₂ = 175 N",
+        "reason": "moments eliminate the near support — only R_2 stays",
+        "result": "R_2 × 4 = 200 × 2 + 300 × 1 = 700 → R_2 = 175 N",
         "predictPrompt": "Why does the beam weight act at 2 m — its centre of gravity?"
        },
        {
         "operation": "Other reaction by subtraction",
-        "reason": "R₁ = total − R₂",
-        "result": "R₁ = 500 − 175 = 325 N",
-        "predictPrompt": "Does R₁ + R₂ = 500 N settle to 175 + 325?"
+        "reason": "R_1 = total − R_2",
+        "result": "R_1 = 500 − 175 = 325 N",
+        "predictPrompt": "Does R_1 + R_2 = 500 N settle to 175 + 325?"
        },
        {
         "operation": "Check to confirm: take moments about the right support instead",
-        "reason": "A second pivot returns R₁ without the subtraction",
-        "result": "R₁ × 4 = 200 × 2 + 300 × 3 = 1300 → R₁ = 325 N ✓ matches 500 − 175",
-        "predictPrompt": "Pivot right instead of left. Does R₁ still come to 325 N?"
+        "reason": "A second pivot returns R_1 without the subtraction",
+        "result": "R_1 × 4 = 200 × 2 + 300 × 3 = 1300 → R_1 = 325 N ✓ matches 500 − 175",
+        "predictPrompt": "Pivot right instead of left. Does R_1 still come to 325 N?"
        }
       ]
      }
@@ -2907,26 +2907,26 @@
       "steps": [
        {
         "operation": "Total load reaction",
-        "reason": "both supports hold beam + load. Best: bundled load (R₁ + R₂), then moments about one end. If subtraction feels awkward, write two separate moment equations.",
-        "result": "R₁ + R₂ = 100 + 60 = 160 kgf = 160 × 10 N = 1600 N",
+        "reason": "both supports hold beam + load. Best: bundled load (R_1 + R_2), then moments about one end. If subtraction feels awkward, write two separate moment equations.",
+        "result": "R_1 + R_2 = 100 + 60 = 160 kgf = 160 × 10 N = 1600 N",
         "predictPrompt": "Which side carries more, the near load or the far?"
        },
        {
         "operation": "Take moments about one support",
-        "reason": "unknown R₂ becomes the only lever term on the other side",
-        "result": "R₂ × 4 = 100 × 2 + 60 × 1 = 260 kg·m → R₂ = 65 kgf = 650 N",
+        "reason": "unknown R_2 becomes the only lever term on the other side",
+        "result": "R_2 × 4 = 100 × 2 + 60 × 1 = 260 kg·m → R_2 = 65 kgf = 650 N",
         "predictPrompt": "What lever confirms 100 × 2? — centre of gravity of the beam sits at the beam's centre"
        },
        {
         "operation": "Compute the other reaction",
         "reason": "subtract or take moments anew",
-        "result": "R₁ = 160 − 65 = 95 kgf = 950 N",
-        "predictPrompt": "Does R₁ + R₂ = 1600 N check out?"
+        "result": "R_1 = 160 − 65 = 95 kgf = 950 N",
+        "predictPrompt": "Does R_1 + R_2 = 1600 N check out?"
        },
        {
         "operation": "Check to confirm: take moments about the far support",
-        "reason": "A second pivot must return R₁ without leaning on the subtraction",
-        "result": "R₁ × 4 = 100 × 2 + 60 × 3 = 380 → R₁ = 95 kgf = 950 N ✓ matches 1600 − 650",
+        "reason": "A second pivot must return R_1 without leaning on the subtraction",
+        "result": "R_1 × 4 = 100 × 2 + 60 × 3 = 380 → R_1 = 95 kgf = 950 N ✓ matches 1600 − 650",
         "predictPrompt": "Pivot at the far end. Do you still land on 950 N?"
        }
       ]
@@ -3528,7 +3528,7 @@
       "heading": "Energy, society and the environment",
       "paragraphs": [
        "Energy powers development: electrified clinics deliver vaccines at night; electrified schools keep children reading after dark; electrified factories create jobs. Nigeria spends billions on diesels while grumbling about fuel prices — the paradox of energy poverty.",
-       "Impact of energy use: global warming, greenhouse gas (CO₂ from petrol, coal, gas), air pollution (sulfur, oxides of nitrogen), oil spills (Bodo, Niger Delta, Ogoniland), gas flaring, deforestation from firewood.",
+       "Impact of energy use: global warming, greenhouse gas (CO_2 from petrol, coal, gas), air pollution (sulfur, oxides of nitrogen), oil spills (Bodo, Niger Delta, Ogoniland), gas flaring, deforestation from firewood.",
        "Safe use: fuel-efficient cooking stoves, switching off when leaving a room, solar home systems for rural areas, safe disposal of batteries, public education; electricity accidents account for a large fraction of NIIE emergencies."
       ],
       "bullets": [
@@ -3546,7 +3546,7 @@
         "desertification"
        ],
        "answer": 1,
-       "why": "Burning petrol releases CO₂, a greenhouse gas that traps heat."
+       "why": "Burning petrol releases CO_2, a greenhouse gas that traps heat."
       }
      }
     },
@@ -3555,7 +3555,7 @@
      "content": {
       "title": "Exam tip",
       "tone": "tip",
-      "body": "The exam wants you to argue, not guess: renewable = examples, non-renewable = examples, side effects of petrol = always CO₂ and greenhouse. 'Diversification' is the magic word for mixing sources."
+      "body": "The exam wants you to argue, not guess: renewable = examples, non-renewable = examples, side effects of petrol = always CO_2 and greenhouse. 'Diversification' is the magic word for mixing sources."
      }
     },
     {
@@ -3646,13 +3646,13 @@
      "content": {
       "heading": "Go deeper: energy and the environment",
       "paragraphs": [
-       "CO₂ from petrol and coal — captured in the atmosphere; heat from the sun cannot escape back; global temperatures rise; sea levels climb; savanna expands; coastal settlements drown.",
+       "CO_2 from petrol and coal — captured in the atmosphere; heat from the sun cannot escape back; global temperatures rise; sea levels climb; savanna expands; coastal settlements drown.",
        "Gas flaring in the Niger Delta: light, heat, wasted fuel and diseases of the lungs and eyes nearby; Nigeria has committed to end it — commitments slow.",
        "Nigeria owns the largest natural gas reserves in Africa but imports refined petrol — mismatch of resource and value; agriculture (firewood and charcoal) drives deforestation; biomass energy can be cheap but must be harvested renewably.",
        "Efficient cooking stoves cut firewood use by about half, slowing local deforestation — proposed as one of Nigeria's cheapest reforestation measures; replacement trees recycle wind and rainfall further than most concrete plans ever will."
       ],
       "bullets": [
-       "CO₂ from petrol → greenhouse → global warming",
+       "CO_2 from petrol → greenhouse → global warming",
        "gas flaring: poisoning local health and air",
        "firewood: deforestation driver — recoverable stoves required"
       ],
@@ -3664,9 +3664,9 @@
      "content": {
       "heading": "Go deeper: how JAMB sets energy-society questions",
       "paragraphs": [
-       "Archetypes: (1) 'renewable vs non-renewable' — examples from list; (2) 'a device' — identify conversion type; (3) 'which is best for a remote village' — answer: off-grid solar; (4) 'environmental impact of petrol' — always CO₂ + greenhouse effect; (5) 'safe energy use' — switch off, kerosene stove away from children, no open flames; (6) 'energy crises' — price volatility + import dependency + transmission losses.",
+       "Archetypes: (1) 'renewable vs non-renewable' — examples from list; (2) 'a device' — identify conversion type; (3) 'which is best for a remote village' — answer: off-grid solar; (4) 'environmental impact of petrol' — always CO_2 + greenhouse effect; (5) 'safe energy use' — switch off, kerosene stove away from children, no open flames; (6) 'energy crises' — price volatility + import dependency + transmission losses.",
        "'Diversification' means mixing sources — sun, wind, hydro, gas reserves — to reduce shock exposure. Nigeria has 60% dependence on gas thermal plus dams; solar would diversify 30% via mini-grids.",
-       "Recall the three-answer triad in every exam question — renewable examples, petrol's environmental side-effects (CO₂ → greenhouse warming), and the magic word 'diversification'. Recite all three, every time.",
+       "Recall the three-answer triad in every exam question — renewable examples, petrol's environmental side-effects (CO_2 → greenhouse warming), and the magic word 'diversification'. Recite all three, every time.",
        "Nigeria generates barely 40% of its installed ~12 GW at any moment; maintenance, gas supply hitches and transmission losses bleed the rest — that is the exam's whole Nigerian energy diagnosis in one line.",
        "Nigeria questions: 'three renewable sources in Nigeria' — sun, water, wind (Katsina); 'three non-renewables used in Nigeria' — crude oil, natural gas, coal (Enugu coal historically); 'a dam in Nigeria' — Kainji, Jebba or Shiroro; 'a nuclear facility' — the research reactor at Zaria. The exam expects you to know these."
       ],
@@ -3729,11 +3729,11 @@
      "content": {
       "heading": "Threshold frequency and work function",
       "paragraphs": [
-       "Threshold frequency (f₀) is the lowest frequency at which photoemission happens. Work function W = hf₀. Below f₀ for a metal, no electron emerges regardless of intensity — intensity affects how many electrons, not whether. A bright red lamp fired as hard as you like makes no electrons emerge; a faint violet just above threshold does.",
+       "Threshold frequency (f_0) is the lowest frequency at which photoemission happens. Work function W = hf_0. Below f_0 for a metal, no electron emerges regardless of intensity — intensity affects how many electrons, not whether. A bright red lamp fired as hard as you like makes no electrons emerge; a faint violet just above threshold does.",
        "Different metals have different W: sodium ~2.3 eV, zinc ~4.3 eV. Photons carry packet sizes e = hf — higher frequency photons dribble the most powerful punch. Once above threshold the photon’s energy splits into escape work plus KE."
       ],
       "bullets": [
-       "W = hf₀",
+       "W = hf_0",
        "higher photon frequency → more KE per electron",
        "brightness affects number of photoelectrons, not their KE"
       ],
@@ -3794,7 +3794,7 @@
       "steps": [
        {
         "operation": "Compute hf",
-        "reason": "the photon’s energy. Best: hf − W = KE — frequency is already printed. If W is printed instead, W = hf₀ from the threshold.",
+        "reason": "the photon’s energy. Best: hf − W = KE — frequency is already printed. If W is printed instead, W = hf_0 from the threshold.",
         "result": "E = h × f = 6.63 × 10⁻³⁴ × 5 × 10¹⁴ = 3.3 × 10⁻¹⁹ J",
         "predictPrompt": "Is 6.63 × 5 = 33.15 or 5.63?"
        },
@@ -3812,8 +3812,8 @@
        },
        {
         "operation": "Check to confirm: compare against the threshold instead",
-        "reason": "f₀ = W ÷ h asks the same question from the other side",
-        "result": "f₀ = (2.5 × 1.6 × 10⁻¹⁹) ÷ 6.63 × 10⁻³⁴ ≈ 6.03 × 10¹⁴ Hz > 5 × 10¹⁴ Hz ✓ below threshold; KE = 0 holds",
+        "reason": "f_0 = W ÷ h asks the same question from the other side",
+        "result": "f_0 = (2.5 × 1.6 × 10⁻¹⁹) ÷ 6.63 × 10⁻³⁴ ≈ 6.03 × 10¹⁴ Hz > 5 × 10¹⁴ Hz ✓ below threshold; KE = 0 holds",
         "predictPrompt": "Ask the threshold. Is 5 × 10¹⁴ Hz above or below it?"
        }
       ]
@@ -3838,7 +3838,7 @@
       "steps": [
        {
         "operation": "Work function",
-        "reason": "W = hf₀. Best: threshold frequency straight into Planck's equation. If W is now in hand, hf = W + KE finishes it.",
+        "reason": "W = hf_0. Best: threshold frequency straight into Planck's equation. If W is now in hand, hf = W + KE finishes it.",
         "result": "W = 6.63 × 10⁻³⁴ × 5 × 10¹⁴ = 3.315 × 10⁻¹⁹ J = 2.07 eV",
         "predictPrompt": "Convert J → eV by dividing by 1.6 × 10⁻¹⁹!"
        },
@@ -3850,9 +3850,9 @@
        },
        {
         "operation": "Check to confirm: subtract the frequencies first",
-        "reason": "KE = h(f − f₀) is the one-line form, no detours",
+        "reason": "KE = h(f − f_0) is the one-line form, no detours",
         "result": "KE = 6.63 × 10⁻³⁴ × 3 × 10¹⁴ = 1.989 × 10⁻¹⁹ J ≈ 1.24 eV ✓ matches the two-step route",
-        "predictPrompt": "One line, no stopovers. Does h(f − f₀) give 1.24 eV?"
+        "predictPrompt": "One line, no stopovers. Does h(f − f_0) give 1.24 eV?"
        }
       ]
      }
@@ -3864,10 +3864,10 @@
       "paragraphs": [
        "First verified by Hertz in 1887 — spark gaps shorted by UV. Hallwachs saw discharge only with high-frequency light. J.J. Thomson clarified charge dependence; Millikan measured h to 0.5% accuracy — the metal work function, the charge of electron, e restores mastery.",
        "Each metal has its own work function — sodium 2.28 eV, caesium lower ~2.1 eV, zinc 4.3 eV. A beam's intensity decides number of electrons, not their energy; that is why the mass light above the threshold work function matters, and the mass light below it does nothing.",
-       "Photocurrent vs voltage: with negative potential sufficiently large on the anode, no electrons reach — this 'stopping potential' V₀ × e = KEmax.  JAMB may ask: 'find the stopping potential for given light' — V₀ = KE ÷ e awkward in eV → e cancels (KE in eV equals V₀ in volts)."
+       "Photocurrent vs voltage: with negative potential sufficiently large on the anode, no electrons reach — this 'stopping potential' V_0 × e = KEmax.  JAMB may ask: 'find the stopping potential for given light' — V_0 = KE ÷ e awkward in eV → e cancels (KE in eV equals V_0 in volts)."
       ],
       "bullets": [
-       "stopping potential V₀ (V) = KE_max (eV) — same numerical value",
+       "stopping potential V_0 (V) = KE_max (eV) — same numerical value",
        "work function per metal: sodium 2.28, zinc 4.3 eV",
        "Hertz → Hallwachs → Thomson → Millikan — the history JAMB recycles"
       ],
@@ -3905,7 +3905,7 @@
       ],
       "bullets": [
        "hf − W = KE — everything in Joules",
-       "stopping potential trade: KE (eV) ≡ V₀ (V)",
+       "stopping potential trade: KE (eV) ≡ V_0 (V)",
        "red below threshold = silence, regardless of brightness"
       ],
       "takeaway": "Two constants, one subtraction — the three-line exam skill."
@@ -3965,7 +3965,7 @@
       "paragraphs": [
        "MA = Load ÷ Effort — how many times the device multiplies your force. VR = distance moved by effort ÷ distance moved by load — Vрыр. Ideal machine (no friction): MA = VR.",
        "Efficiency = (useful work out ÷ total work in) = MA ÷ VR × 100%. Never above 100% — impossible to get back more useful work than you put in. Real machines: 20–90%.",
-       "Compound machines: combined advantage MA = MA₁ × MA₂. Pulley + inclined plane systems multiply forces."
+       "Compound machines: combined advantage MA = MA_1 × MA_2. Pulley + inclined plane systems multiply forces."
       ],
       "bullets": [
        "MA = Load ÷ Effort",
@@ -4362,14 +4362,14 @@
      "content": {
       "heading": "Go deeper: how JAMB sets elasticity questions",
       "paragraphs": [
-       "Archetypes: (1) 'load-extension graph', gradient = k; (2) 'find Young's modulus from F, x, L, A' — one target formula rearrangement; (3) 'two materials compared' — Y with bigger number returns less stretch under the same load; (4) 'spring is stretched from x₁ to x₂ — work done' — ½k(x₂² − x₁²); (5) 'work done by F against spring' — area interpretation: piecewise trapezia; (6) 'spring balance reading in a lift' — apparent weight, a.",
-       "Backup rule: the difference trick saves the day every time — work = ½k x₂² − ½k x₁²; the same formula reads as the area of the strip underneath the F–x curve; both views are true and the exam loves to mix them.",
+       "Archetypes: (1) 'load-extension graph', gradient = k; (2) 'find Young's modulus from F, x, L, A' — one target formula rearrangement; (3) 'two materials compared' — Y with bigger number returns less stretch under the same load; (4) 'spring is stretched from x_1 to x_2 — work done' — ½k(x_2² − x_1²); (5) 'work done by F against spring' — area interpretation: piecewise trapezia; (6) 'spring balance reading in a lift' — apparent weight, a.",
+       "Backup rule: the difference trick saves the day every time — work = ½k x_2² − ½k x_1²; the same formula reads as the area of the strip underneath the F–x curve; both views are true and the exam loves to mix them.",
        "Trap: 'if the load doubles, the extension halves' — wrong: Hooke directs × 2; trap: 'the work done stretching is ½ F x' — true; trap: 'beyond proportional limit hooke remains' — wrong: beyond that everything is plastic.",
        "Once more to wheels: measuring stiffness of metal plate 'a plate bent 2 mm under a load of 500 N' — if the problem wants Y, cross-section geometry is given; if extension falls beyond elastic limit, Y no longer applies — JAMB reminds you rather than tricks."
       ],
       "bullets": [
        "gradient = k; Δl formula = FL/(AY)",
-       "½k(x₂² − x₁²) when stretch grows from x₁ to x₂",
+       "½k(x_2² − x_1²) when stretch grows from x_1 to x_2",
        "beyond elastic limit — no Hooke"
       ],
       "takeaway": "Hooke manages the light loads; beyond limit, new rules apply."
@@ -4515,9 +4515,9 @@
     {
      "type": "guided_question",
      "content": {
-      "question": "A man climbs a hill. His barometer readings drop from 76 cm to 70 cm. Estimate his height above sea level. Take g = 10 m/s², ρₐᵢᵣ ≈ 1.2 kg/m³.",
+      "question": "A man climbs a hill. His barometer readings drop from 76 cm to 70 cm. Estimate his height above sea level. Take g = 10 m/s², ρ_a_iᵣ ≈ 1.2 kg/m³.",
       "hints": [
-       "ΔP = ρₘₑᵣᶜᵤʳʸ g Δh — pressure-per-unit-length cancels with ρ air",
+       "ΔP = ρ_m_eᵣᶜᵤʳʸ g Δh — pressure-per-unit-length cancels with ρ air",
        "ΔP = (0.76 − 0.70) × 13,600 × 10 = 8,160 Pa — pressure difference in Pascals",
        "altitude gain = ΔP ÷ (ρ_air × g) = 8,160 ÷ (1.2 × 10) ≈ 680 m"
       ]
@@ -4591,7 +4591,7 @@
      "content": {
       "heading": "Go deeper: how JAMB sets atmospheric-pressure questions",
       "paragraphs": [
-       "Archetypes: (1) 'a column of mercury sits at 76 cm' — straight P = ρgh; (2) 'the barometer is taken to a mountain' — new reading, compare; (3) 'find the depth in water equivalent to 76 cm Hg' — ρₘgh matches ρ_w h_w; (4) 'aneroid vs mercury' — purpose comparison; (5) 'air pressure at sea level' — 1.01 × 10⁵ Pa / 760 mm Hg; (6) 'flight altitude read from pressure' — 10% drops per kilometre approximate.",
+       "Archetypes: (1) 'a column of mercury sits at 76 cm' — straight P = ρgh; (2) 'the barometer is taken to a mountain' — new reading, compare; (3) 'find the depth in water equivalent to 76 cm Hg' — ρ_mgh matches ρ_w h_w; (4) 'aneroid vs mercury' — purpose comparison; (5) 'air pressure at sea level' — 1.01 × 10⁵ Pa / 760 mm Hg; (6) 'flight altitude read from pressure' — 10% drops per kilometre approximate.",
        "Traps: 'the column in the mercury barometer has vacuum, but the air presses nowhere' — wrong: completely opposite — vacuum exerts no pressure, so it absorbs the column's own weight by falling; trap: 'water columns work equally' — yes, but the column would stand 10.3 m; trap: 'mass of air above your head' — roughly 10 tonnes per square metre — overwhelming intuition reset.",
        "Conversion between mmHg and Pascals — 1 mmHg = 133 Pa; JAMB never reverses, always forward; remember 13.6 × ρ water and you're safe.",
        "The whole toolkit: 1 cm Hg = 133 Pa; 1 atm ≈ 1.01 × 10⁵ Pa; 10.3 m water column holds the same weight of air — learn the trio cold."
@@ -4657,12 +4657,12 @@
       "heading": "Pascal’s principle and hydraulic machines",
       "paragraphs": [
        "Pascal’s principle: pressure applied to an enclosed liquid is transmitted undiminished in all directions. In a tube open at both ends, a small force on a small piston raises the pressure in the whole tube — and a large piston at one end responds with a big force.",
-       "Hydraulic vehicle lift: F₁/A₁ = F₂/A₂ — small effort pushes large mass up with essentially the same pressure everywhere. You sit in the driver's seat and press the foot-brake — brake fluid transmits the force to all four wheels instantly.",
+       "Hydraulic vehicle lift: F_1/A_1 = F_2/A_2 — small effort pushes large mass up with essentially the same pressure everywhere. You sit in the driver's seat and press the foot-brake — brake fluid transmits the force to all four wheels instantly.",
        "Hydraulic brake lines leak easily — air bubble ruins pressure transfer, hence bleeding. Car jacks, forklift rams, aircraft flap actuators — all Pascal."
       ],
       "bullets": [
        "ρgh rules once at the surface; P = F/A for applied force elsewhere",
-       "F₁/A₁ = F₂/A₂ for hydraulic: pressure is the same",
+       "F_1/A_1 = F_2/A_2 for hydraulic: pressure is the same",
        "brakes and lifts carry fluid, not rods"
       ],
       "takeaway": "Pressure travels without weakening in a still liquid — Pascal’s gift to engineers.",
@@ -4675,7 +4675,7 @@
         "50 N"
        ],
        "answer": 2,
-       "why": "F₂ = F₁ × (A₂/A₁) = 100 × (0.5 ÷ 0.01) = 100 × 50 = 5000 N."
+       "why": "F_2 = F_1 × (A_2/A_1) = 100 × (0.5 ÷ 0.01) = 100 × 50 = 5000 N."
       }
      }
     },
@@ -4712,7 +4712,7 @@
      "content": {
       "title": "Exam tip",
       "tone": "tip",
-      "body": "ρgh + F₁/A₁ = F₂/A₂ carry the whole hydraulic family; add 10 m seawater = 1 atm."
+      "body": "ρgh + F_1/A_1 = F_2/A_2 carry the whole hydraulic family; add 10 m seawater = 1 atm."
      }
     },
     {
@@ -4746,9 +4746,9 @@
      "content": {
       "question": "In a hydraulic press, the small piston has area 0.02 m² and the large piston 0.5 m². A 100 N force on the small piston lifts a car. What weight car? Ignore losses.",
       "hints": [
-       "F₁/A₁ = F₂/A₂",
-       "F₂ = F₁ × (A₂/A₁)",
-       "F₂ = 100 × 0.5 ÷ 0.02 = 2500 N"
+       "F_1/A_1 = F_2/A_2",
+       "F_2 = F_1 × (A_2/A_1)",
+       "F_2 = 100 × 0.5 ÷ 0.02 = 2500 N"
       ]
      }
     },
@@ -4811,7 +4811,7 @@
       "heading": "Go deeper: Pascal’s principle in every system domestic",
       "paragraphs": [
        "Pascal lived at a time of cart wheels and taverns; his law works just the same today: press a small area with F small; the same pressure reaches every point of the fluid. This is the hydraulic jack, the car brake, the forklift, the aircraft landing gear — everything we trust.",
-       "Transmission fluid isn't magic: it's the same density anywhere, incompressible enough to treat as rigid body for steady-state motion. The pressure is high but so is the leverage: F₂ = F₁ × A₂/A₁ — Pascal's trick for making small efforts move tons.",
+       "Transmission fluid isn't magic: it's the same density anywhere, incompressible enough to treat as rigid body for steady-state motion. The pressure is high but so is the leverage: F_2 = F_1 × A_2/A_1 — Pascal's trick for making small efforts move tons.",
        "And the system breaks if air gets in — air compresses, liquids do not; bicycle brakes develop the same failure the same way."
       ],
       "bullets": [

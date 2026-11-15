@@ -1552,7 +1552,7 @@
           "content": {
             "heading": "Number Bases",
             "paragraphs": [
-              "Here is the mark that disappears in silence: you read 34₅ as thirty-four. The base is the system, not the number itself, and once you respect it, number bases become one of the friendlier topics on the paper."
+              "Here is the mark that disappears in silence: you read 34_5 as thirty-four. The base is the system, not the number itself, and once you respect it, number bases become one of the friendlier topics on the paper."
             ],
             "bullets": []
           }
@@ -1593,7 +1593,7 @@
               "To convert from base b to decimal, expand by place value: base-three 210 is 2×9 + 1×3 + 0 = 21, while base-two 1011 is 11.",
               "To go the other way, divide by b repeatedly: 25 ÷ 5 = 5 r0, 5 ÷ 5 = 1 r0, 1 ÷ 5 = 0 r1, so 25 is 100 in base five; read the remainders upward.",
               "Between two non-decimal bases, pass through decimal: expand to decimal, then divide to the new base, since no direct shortcut exists.",
-              "Fractional parts multiply out: 0.5₁₀ = 0.1₂ since 0.5×2 = 1.0."
+              "Fractional parts multiply out: 0.5_1_0 = 0.1_2 since 0.5×2 = 1.0."
             ],
             "bullets": [
               "Base b to decimal: expand by powers of b",
@@ -1621,7 +1621,7 @@
             "heading": "Adding and subtracting in another base",
             "paragraphs": [
               "Addition in base b works like decimal addition except that the carrying threshold is b. In base five, 3 + 3 = 11 because 6 is one five and one unit. The carry is therefore smaller than in decimal.",
-              "Subtraction borrows the same way: 31₄ − 12₄ borrows one four as four units. Only the threshold and the borrow differ.",
+              "Subtraction borrows the same way: 31_4 − 12_4 borrows one four as four units. Only the threshold and the borrow differ.",
               "Multiplication by a single digit also follows the threshold. In base five, 4 × 4 = 31 because 16 is three fives and one unit. A table of products up to base minus one is therefore enough.",
               "Multiplication and division are done column-wise with the same threshold. In base five, 23 × 14 = 432: work in columns as in decimal, carrying at five: 4 × 23 = 202, then 1 × 23 shifted one place = 230, and 202 + 230 = 432."
             ],
@@ -1684,7 +1684,7 @@
               {
                 "operation": "Check to confirm: convert both sides back",
                 "reason": "Base 5 numbers never contain the digit 5",
-                "result": "55 is not a base-5 numeral; 110₅ equals 30 and 132₄ does too",
+                "result": "55 is not a base-5 numeral; 110_5 equals 30 and 132_4 does too",
                 "predictPrompt": "Which digits can appear in base 5?"
               }
             ]
@@ -1779,8 +1779,8 @@
               },
               {
                 "operation": "Check to confirm: column method in base eight",
-                "reason": "4 × 25₈ = 124₈: carry 2 from 4 × 5 = 24₈; 2 × 4 + 2 = 12₈",
-                "result": "124₈ either way, two methods, one answer",
+                "reason": "4 × 25_8 = 124_8: carry 2 from 4 × 5 = 24_8; 2 × 4 + 2 = 12_8",
+                "result": "124_8 either way, two methods, one answer",
                 "predictPrompt": "How would you multiply directly in base eight?"
               }
             ]
@@ -1791,11 +1791,11 @@
           "content": {
             "heading": "Go deeper: Multiplication and division in base two and beyond",
             "paragraphs": [
-              "Two-digit multiplication in base b is carried out one digit at a time exactly as in decimal, and the carry threshold is always b. In base eight, 12 × 6 means (2×6 = 14₈, write 4 and carry 1; 1×6 + 1 = 7₈), so the answer is 74₈.",
+              "Two-digit multiplication in base b is carried out one digit at a time exactly as in decimal, and the carry threshold is always b. In base eight, 12 × 6 means (2×6 = 14_8, write 4 and carry 1; 1×6 + 1 = 7_8), so the answer is 74_8.",
               "Division in another base is the same repeated subtraction, with remainders read in that base. In base two, 1101 ÷ 11 = 100 r 1, because 11 goes into 11 exactly once and into 01 is zero times, remainder 1.",
               "A shortcut when the question is in base ten: convert the numbers to decimal, do the division there, then convert back. That route is reliable, but reading the question carefully prevents the commonest error of writing a decimal answer labelled as a base answer.",
-              "Binary multiplication is the engine of every computer, and each bit shift doubles or halves the number. Multiplying by 1000₂ in base two is shifting three places left, the same as multiplying by eight.",
-              "Fractional conversion also tests understanding rather than memory. To check 0.1₂, multiply 0.1 × 2 = 0.2, take the whole part, multiply the remainder by 2 again, and continue; the pattern either repeats or terminates."
+              "Binary multiplication is the engine of every computer, and each bit shift doubles or halves the number. Multiplying by 1000_2 in base two is shifting three places left, the same as multiplying by eight.",
+              "Fractional conversion also tests understanding rather than memory. To check 0.1_2, multiply 0.1 × 2 = 0.2, take the whole part, multiply the remainder by 2 again, and continue; the pattern either repeats or terminates."
             ],
             "bullets": [
               "Multiply digit-wise; carry at b, read upward",
@@ -3411,19 +3411,19 @@
             "steps": [
               {
                 "operation": "Name the progression",
-                "reason": "Each term adds 3, so it is arithmetic with a = 3 and d = 3. Use Sₙ = n/2 (2a + (n−1)d) because the sum needs only the first term, common difference and count. If you know the last term, Sₙ = n(a + l)/2 is a quicker route.",
+                "reason": "Each term adds 3, so it is arithmetic with a = 3 and d = 3. Use S_n = n/2 (2a + (n−1)d) because the sum needs only the first term, common difference and count. If you know the last term, S_n = n(a + l)/2 is a quicker route.",
                 "result": "Use the sum formula",
                 "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
                 "operation": "Apply the sum formula",
-                "reason": "The arithmetic series formula Sₙ = n/2(2a + (n−1)d) computes the total from the first term and common difference. If you know the last term instead, Sₙ = n(a + l)/2 is a quicker route.",
+                "reason": "The arithmetic series formula S_n = n/2(2a + (n−1)d) computes the total from the first term and common difference. If you know the last term instead, S_n = n(a + l)/2 is a quicker route.",
                 "result": "10/2 × (6 + 27) = 5 × 33 = 165",
                 "predictPrompt": "How would you verify this answer satisfies the question?"
               },
               {
                 "operation": "List check",
-                "reason": "a₁ = 3, d = 3, a₁₀ = 30; sum = 5(3 + 30) = 165",
+                "reason": "a_1 = 3, d = 3, a_1_0 = 30; sum = 5(3 + 30) = 165",
                 "result": "Listing terms matches the formula",
                 "predictPrompt": "How would you check by listing terms?"
               },
@@ -3510,7 +3510,7 @@
             "steps": [
               {
                 "operation": "Name the progression",
-                "reason": "Each term is a third of the last, so a = 96 and r = 1/3 < 1. Use S∞ = a/(1 − r) because the series converges. If r ≥ 1, the sum is infinite and you swap to the finite Sₙ formula instead.",
+                "reason": "Each term is a third of the last, so a = 96 and r = 1/3 < 1. Use S∞ = a/(1 − r) because the series converges. If r ≥ 1, the sum is infinite and you swap to the finite S_n formula instead.",
                 "result": "A convergent geometric series",
                 "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
@@ -5095,8 +5095,8 @@
               "The midpoint is the average of the coordinates: ((1 + 4)/2, (2 + 6)/2) = (2.5, 4). It lies halfway along the join, so halving each sum gives equal distance to both ends."
             ],
             "bullets": [
-              "Distance: d = √((x₂ − x₁)² + (y₂ − y₁)²).",
-              "Midpoint: ((x₁ + x₂)/2, (y₁ + y₂)/2).",
+              "Distance: d = √((x_2 − x_1)² + (y_2 − y_1)²).",
+              "Midpoint: ((x_1 + x_2)/2, (y_1 + y_2)/2).",
               "Swapping the points leaves the distance unchanged, while Δx and Δy reverse sign."
             ],
             "takeaway": "Distance uses Pythagoras on the differences; midpoint averages each coordinate.",
@@ -5119,13 +5119,13 @@
             "heading": "Gradient, parallel and perpendicular lines",
             "paragraphs": [
               "Two roads in Kano leave a junction in different directions. One rises 2 metres for every metre forward, while the other climbs faster. Their steepness decides if they run together or meet at right angles.",
-              "Gradient m measures steepness: m = (y₂ − y₁)/(x₂ − x₁), rise over run. For (0, 1) and (3, 7), the rise is 6 and the run is 3, so m = 6/3 = 2. A negative m falls as x rises.",
-              "Lines are parallel when they rise at the same rate, so their gradients are equal. A line with m = 2 is parallel to any line with m = 2. Lines are perpendicular when m₁ × m₂ = −1, so m = 2 pairs with −1/2."
+              "Gradient m measures steepness: m = (y_2 − y_1)/(x_2 − x_1), rise over run. For (0, 1) and (3, 7), the rise is 6 and the run is 3, so m = 6/3 = 2. A negative m falls as x rises.",
+              "Lines are parallel when they rise at the same rate, so their gradients are equal. A line with m = 2 is parallel to any line with m = 2. Lines are perpendicular when m_1 × m_2 = −1, so m = 2 pairs with −1/2."
             ],
             "bullets": [
               "Gradient m is rise over run; its sign gives the direction.",
               "Parallel lines have equal gradients.",
-              "Perpendicular lines have m₁ × m₂ = −1."
+              "Perpendicular lines have m_1 × m_2 = −1."
             ],
             "takeaway": "Parallel lines share a gradient; perpendicular gradients multiply to −1.",
             "check": {
@@ -5147,8 +5147,8 @@
             "heading": "Four forms for the equation of a line",
             "paragraphs": [
               "A carpenter needs the height of a sloping board at any point. An equation in x and y lists every point on the line. Four forms write the same line differently.",
-              "Slope-intercept y = mx + c shows gradient m and y-intercept c. Point-slope y − y₁ = m(x − x₁) uses one known point. Through (2, 3) with m = 2, it gives y − 3 = 2(x − 2), so y = 2x − 1.",
-              "Two-point form y − y₁ = ((y₂ − y₁)/(x₂ − x₁))(x − x₁) finds m from both points. General form ax + by = c collects x and y on one side. For instance, y = 2x − 1 becomes 2x − y = 1."
+              "Slope-intercept y = mx + c shows gradient m and y-intercept c. Point-slope y − y_1 = m(x − x_1) uses one known point. Through (2, 3) with m = 2, it gives y − 3 = 2(x − 2), so y = 2x − 1.",
+              "Two-point form y − y_1 = ((y_2 − y_1)/(x_2 − x_1))(x − x_1) finds m from both points. General form ax + by = c collects x and y on one side. For instance, y = 2x − 1 becomes 2x − y = 1."
             ],
             "bullets": [
               "Slope-intercept y = mx + c gives m and c.",
@@ -5165,7 +5165,7 @@
                 "y = 5x + 2"
               ],
               "answer": 0,
-              "why": "Point-slope form is y − y₁ = m(x − x₁), so substitute the gradient and the point."
+              "why": "Point-slope form is y − y_1 = m(x − x_1), so substitute the gradient and the point."
             }
           }
         },
@@ -5184,7 +5184,7 @@
             "steps": [
               {
                 "operation": "Use the point-slope form",
-                "reason": "The gradient and one point are known, so substitute into y − y₁ = m(x − x₁). Use the point-slope form because it is the universal line formula. If you prefer, expand it manually and check by substituting the known point.",
+                "reason": "The gradient and one point are known, so substitute into y − y_1 = m(x − x_1). Use the point-slope form because it is the universal line formula. If you prefer, expand it manually and check by substituting the known point.",
                 "result": "y − 3 = 2(x − 2).",
                 "predictPrompt": "Which numbers or terms work with each other first?"
               },
@@ -5225,9 +5225,9 @@
           "content": {
             "heading": "Go deeper: Why distance is Pythagoras and midpoint is an average",
             "paragraphs": [
-              "Take any points P(x₁, y₁) and Q(x₂, y₂) and join them. Draw a horizontal from P and a vertical from Q until they meet. Those segments have lengths |x₂ − x₁| and |y₂ − y₁| and meet at right angles.",
-              "The join PQ is the hypotenuse of that right triangle. Pythagoras gives PQ² = (x₂ − x₁)² + (y₂ − y₁)², and the positive root is the distance. Squaring, adding, then rooting is therefore not a trick.",
-              "Midpoint means moving halfway. From P to Q you gain Δx in x and Δy in y, so half the move adds Δx/2 and Δy/2. The halfway point is therefore ((x₁ + x₂)/2, (y₁ + y₂)/2), the coordinate averages.",
+              "Take any points P(x_1, y_1) and Q(x_2, y_2) and join them. Draw a horizontal from P and a vertical from Q until they meet. Those segments have lengths |x_2 − x_1| and |y_2 − y_1| and meet at right angles.",
+              "The join PQ is the hypotenuse of that right triangle. Pythagoras gives PQ² = (x_2 − x_1)² + (y_2 − y_1)², and the positive root is the distance. Squaring, adding, then rooting is therefore not a trick.",
+              "Midpoint means moving halfway. From P to Q you gain Δx in x and Δy in y, so half the move adds Δx/2 and Δy/2. The halfway point is therefore ((x_1 + x_2)/2, (y_1 + y_2)/2), the coordinate averages.",
               "Averaging explains the check. From the midpoint to P the differences are (Δx/2, Δy/2), and to Q they are opposite. Squaring removes the signs, so both distances match, while any other point fails that equality.",
               "Ratio division is different from halfway. A point in the ratio 1 : 2 divides the join into three parts and weights the coordinates. JAMB may offer both a midpoint and a ratio point, so read the words before averaging."
             ],
@@ -5244,8 +5244,8 @@
             "heading": "Go deeper: Vertical, horizontal and coincident lines",
             "paragraphs": [
               "Horizontal and vertical directions escape the gradient rules. A horizontal line has no rise, so m = 0. A vertical line has no run, so rise over run divides by zero and m is undefined.",
-              "A vertical line x = 3 is perpendicular to every horizontal y = c, yet m₁ × m₂ = −1 cannot be applied. Likewise two vertical lines are parallel though neither has a numeric m. The rules work only for non-vertical lines.",
-              "Equal gradients also hide coincidence. Two lines with m₁ = m₂ either never meet or share every point. They coincide exactly when they share a point as well as a gradient, so they have the same equation.",
+              "A vertical line x = 3 is perpendicular to every horizontal y = c, yet m_1 × m_2 = −1 cannot be applied. Likewise two vertical lines are parallel though neither has a numeric m. The rules work only for non-vertical lines.",
+              "Equal gradients also hide coincidence. Two lines with m_1 = m_2 either never meet or share every point. They coincide exactly when they share a point as well as a gradient, so they have the same equation.",
               "A parallel line through a point therefore needs two steps. The gradient must match, and the point fixes the intercept. Through (1, 4) parallel to y = 2x + 1, the form is y = 2x + c, and c = 2.",
               "Perpendicular lines through a point follow the same pattern. The new gradient is the opposite reciprocal, and the point gives the intercept. Through (0, 0) perpendicular to y = 2x + 1, that gives y = −x/2."
             ],
@@ -5680,7 +5680,7 @@
         {
           "type": "worked_example",
           "content": {
-            "problem": "Evaluate ∫₀² (3x² + 4x) dx.",
+            "problem": "Evaluate ∫_0² (3x² + 4x) dx.",
             "steps": [
               {
                 "operation": "Integrate term by term",
@@ -5697,14 +5697,14 @@
               {
                 "operation": "Subtract and state the result",
                 "reason": "The value is a number, not a function, so drop c entirely.",
-                "result": "∫₀² (3x² + 4x) dx = 16 − 0 = 16.",
+                "result": "∫_0² (3x² + 4x) dx = 16 − 0 = 16.",
                 "predictPrompt": "How would you test this answer before writing it down?"
               },
               {
                 "operation": "Loop case",
                 "reason": "sin x from 0 to π integrates to 2; from 0 to 2π to 0",
                 "result": "Symmetric limits cancel in periodic functions",
-                "predictPrompt": "What does ∫₀²π sin x dx equal?"
+                "predictPrompt": "What does ∫_0²π sin x dx equal?"
               },
               {
                 "operation": "Check to confirm: differentiate the antiderivative",
@@ -5718,7 +5718,7 @@
         {
           "type": "guided_question",
           "content": {
-            "question": "Evaluate ∫₁² (4x³ − 2x) dx.",
+            "question": "Evaluate ∫_1² (4x³ − 2x) dx.",
             "hints": [
               "Integrate term by term to get x⁴ − x² + c.",
               "At x = 2, the value is 16 − 4 = 12.",
@@ -5784,12 +5784,12 @@
           "type": "worked_example",
           "content": {
             "heading": "Go deeper: A harder worked example: Substitution inside a square",
-            "problem": "Evaluate ∫₀² (3x+1)² dx using the substitution u=3x+1.",
+            "problem": "Evaluate ∫_0² (3x+1)² dx using the substitution u=3x+1.",
             "steps": [
               {
                 "operation": "Substitute u=3x+1",
                 "reason": "Inside is linear, so substitution avoids expansion because dx = du/3. Use u-substitution because it collapses the chain. If you cannot see the substitution, expand (3x+1)² and integrate term by term.",
-                "result": "x=0 gives u=1; x=2 gives u=7, so integral is (1/3)∫₁⁷u²du.",
+                "result": "x=0 gives u=1; x=2 gives u=7, so integral is (1/3)∫_1⁷u²du.",
                 "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
@@ -6690,7 +6690,7 @@
             "steps": [
               {
                 "operation": "Write the permutation",
-                "reason": "Order matters and no letter repeats, so choose ordered positions (first place 8, second 7, third 6). Use the permutation formula ⁸P₃ because the order is fixed. If the order did not matter, switch to combinations instead.",
+                "reason": "Order matters and no letter repeats, so choose ordered positions (first place 8, second 7, third 6). Use the permutation formula ⁸P_3 because the order is fixed. If the order did not matter, switch to combinations instead.",
                 "result": "8P3 = 8! / 5!.",
                 "predictPrompt": "Which numbers or terms work with each other first?"
               },
@@ -7043,23 +7043,23 @@
           "type": "worked_example",
           "content": {
             "heading": "Go deeper: A harder worked example: Change of base with log10 2 given",
-            "problem": "Given log₁₀2=0.3010, evaluate log₈32 in its simplest exact form.",
+            "problem": "Given log_1_02=0.3010, evaluate log_832 in its simplest exact form.",
             "steps": [
               {
                 "operation": "Change the base",
-                "reason": "Use base 10 because only log₁₀2 is known. Best move: the change-of-base formula, logₐb = log₁₀b ÷ log₁₀a. If you want to double-check, memorise log₃ 9 = 2.",
-                "result": "log₈32 = log₁₀32 ÷ log₁₀8.",
+                "reason": "Use base 10 because only log_1_02 is known. Best move: the change-of-base formula, log_ab = log_1_0b ÷ log_1_0a. If you want to double-check, memorise log_3 9 = 2.",
+                "result": "log_832 = log_1_032 ÷ log_1_08.",
                 "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Expand both logs",
-                "reason": "Powers become multiples by the power law, so log₁₀(2ᵏ) equals k times log₁₀2.",
-                "result": "log₁₀32=5×0.3010=1.5050; log₁₀8=3×0.3010=0.9030.",
+                "reason": "Powers become multiples by the power law, so log_1_0(2ᵏ) equals k times log_1_02.",
+                "result": "log_1_032=5×0.3010=1.5050; log_1_08=3×0.3010=0.9030.",
                 "predictPrompt": "Which numbers or terms work with each other first?"
               },
               {
                 "operation": "Cancel and divide",
-                "reason": "Both terms share log₁₀2, so that factor cancels, leaving only the powers.",
+                "reason": "Both terms share log_1_02, so that factor cancels, leaving only the powers.",
                 "result": "1.5050 ÷ 0.9030 = 5/3 ≈ 1.667.",
                 "predictPrompt": "How would you sanity-check the size and sign of this answer?"
               },
