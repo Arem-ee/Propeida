@@ -50,6 +50,7 @@ const problems = []
 
 source.questions.forEach((q, i) => {
   const label = `question ${i + 1} (${q.topic ?? 'no topic'})`
+  if (q.hold_reason) return // held items never reach production; the file documents why each cannot be used
   const text = (q.question ?? '').trim()
   const options = q.options ?? []
   const keys = options.map((o) => o.key)
@@ -126,6 +127,7 @@ let tagged = 0
 const perTopic = {}
 
 for (const q of source.questions) {
+  if (q.hold_reason) continue
   const text = q.question.trim()
   const topic = topicBySlug.get(q.topic)
   if (!topic) {
@@ -150,6 +152,7 @@ for (const q of source.questions) {
       status: 'draft',
       verified_state: 'unverified',
       response_type: 'mcq',
+      steps: q.steps ?? null,
     })
     .select('id')
     .single()
