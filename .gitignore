@@ -47,3 +47,73 @@ content-folder/english-jamb-bank-expanded.json
 
 # Isolated verification builds
 .next-prod/
+
+# Scratch diagnostics (not part of the app)
+scripts/_*.mjs
+scripts/_*.cjs
+scripts/_*.js
+scripts/_*.txt
+scripts/_*.json
+content-folder/solve-answers/
+english-jamb-solve-promoted.json
+emdash-contexts.txt
+propeida mascot/
+
+# Scratch dumps, snapshots and backups in content-folder (kept on disk for the authoring pipeline, never committed)
+content-folder/_pilot/
+content-folder/.merge-*.json
+content-folder/_parsed-recheck-*.txt
+content-folder/_pre-*backup*.json
+content-folder/english-jamb-solve-batch-*.json
+content-folder/english-jamb-solve-batch-*-out.json
+content-folder/english-jamb-bank-batch-*-*.json
+content-folder/english-jamb-bank-solve-batch-*.json
+content-folder/english-jamb-bank-extension-*.json
+content-folder/english-jamb-bank-explanation-flags.json
+content-folder/english-jamb-bank-expanded.json.bak-solve-merge2
+content-folder/english-jamb-solve-promoted.json
+content-folder/physics-jamb-bank.json
+content-folder/maths-jamb-bank-extension.json
+content-folder/emdash-contexts.txt
+content-folder/english-comprehension-passages.raw.json
+content-folder/english-jamb-bank-explanation-flags.json
+
+# Ingestion outputs derived from past papers (kept on disk, never committed)
+scripts/_bio-*.txt
+scripts/_bio-*.json
+scripts/_bio-rewrite/
+scripts/_ca-upgrade.json
+scripts/_english-*.json
+scripts/_english-*.mjs
+scripts/_gov-*.json
+scripts/_lh-voice.json
+scripts/_math-upgrade.json
+scripts/_bio-lessons.json
+scripts/_pilot/
+
+# Scratch scratch files
+_parse-pdf.cjs
+_review.js
+build-economics-bank.mjs
+build-*.mjs
+merge-econ-*.mjs
+merge-*.mjs
+topic-map-*.mjs
+topic-map-*.cjs
+econ-count-final.mjs
+phys-count-now.mjs
+probe-steps.mjs
+db-state.cjs
+dll-probe.mjs
+tmp-vis-setup.cjs
+probe-steps.mjs
+exam-subject-map.cjs
+
+# Dev/tooling backups
+*.HEADbak
+
+# Legacy scratch in root
+_parse-pdf.cjs
+_review.js
+*.bak
+sect.txt
