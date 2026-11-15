@@ -1,5 +1,9 @@
 -- Weekly plans expire after 7 days. Monthly stays 30, yearly stays 365.
 -- Run after 20261115000010_weekly_product_types has committed the enum values.
+--
+-- The questions policy for weekly PUTME holders lives in
+-- 20261115000012_policy_and_free_pool_fix, which supersedes it and owns the
+-- drop/create so the policy is always built from the definer helper.
 
 create or replace function process_payment(
   p_user_id uuid,
@@ -59,61 +63,3 @@ begin
   end if;
 end;
 $$;
-
--- School banks open for weekly PUTME holders too. Recreate the current policy
--- (20261115000003) with the weekly product added; everything else is unchanged.
-drop policy if exists "questions are accessible by exam access" on public.questions;
-
-create policy "questions are accessible by exam access"
-  on public.questions for select
-  to authenticated
-  using (
-    exists (
-      select 1
-      from public.profiles p
-      where p.id = (select auth.uid()) and p.is_admin
-    )
-    or public.has_campaign_access()
-    or (
-      status = 'published'
-      and (
-        exists (
-          select 1
-          from public.exams e
-          where e.id = questions.exam_id
-            and e.school_id is null
-        )
-        or exists (
-          select 1
-          from public.user_exam_free_pools p
-          where p.question_id = questions.id
-            and p.user_id = (select auth.uid())
-        )
-        or exists (
-          select 1
-          from public.user_free_questions p
-          where p.question_id = questions.id
-            and p.user_id = (select auth.uid())
-        )
-        or (
-          exists (
-            select 1
-            from public.exams e
-            join public.user_exam_access uea
-              on uea.exam_id = e.id
-             and uea.user_id = (select auth.uid())
-            where e.id = questions.exam_id
-              and e.school_id is not null
-          )
-          and exists (
-            select 1
-            from public.entitlements ent
-            where ent.user_id = (select auth.uid())
-              and ent.status = 'active'
-              and (ent.expires_at is null or ent.expires_at > now())
-              and ent.product in ('putme_pro', 'putme_pro_weekly', 'putme_pro_yearly')
-          )
-        )
-      )
-    )
-  );

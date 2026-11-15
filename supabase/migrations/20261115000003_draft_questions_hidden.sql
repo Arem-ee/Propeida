@@ -51,7 +51,7 @@ create policy "questions are accessible by exam access"
             where ent.user_id = (select auth.uid())
               and ent.status = 'active'
               and (ent.expires_at is null or ent.expires_at > now())
-              and ent.product in ('putme_pro', 'putme_pro_yearly')
+              and ent.product in ('putme_pro', 'putme_pro_weekly', 'putme_pro_yearly')
           )
         )
       )
