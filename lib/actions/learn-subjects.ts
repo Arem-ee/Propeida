@@ -1,14 +1,20 @@
 'use server'
 
+import { unstable_cache } from 'next/cache'
 import { createAdminClient } from '@/lib/supabase/admin'
 
 /**
  * The Learn hub: every subject with at least one published lesson, straight
  * from the database, so someone new never sees a ghost outcome for a subject
  * we have not actually authored yet. Counts are lesson counts, not
- * static-note counts.
+ * static-note counts. The lesson id scan is cached for five minutes.
  */
 export async function getLearnSubjects(): Promise<{ slug: string; label: string; lessonCount: number }[]> {
+  return getCachedLearnSubjects()
+}
+
+const getCachedLearnSubjects = unstable_cache(
+  async (): Promise<{ slug: string; label: string; lessonCount: number }[]> => {
   const admin = createAdminClient()
   const [{ data: subjects }, { data: lessons }] = await Promise.all([
     admin.from('subjects').select('id, slug, name'),
@@ -25,4 +31,7 @@ export async function getLearnSubjects(): Promise<{ slug: string; label: string;
     out.push({ slug: subject.slug, label: subject.name, lessonCount: count })
   }
   return out.sort((a, b) => a.label.localeCompare(b.label))
-}
+  },
+  ['learn-hub-subjects'],
+  { revalidate: 300 },
+)
