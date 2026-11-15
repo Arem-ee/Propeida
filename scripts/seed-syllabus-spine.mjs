@@ -64,7 +64,9 @@ const SUBJECT_SLUG = {
 }
 
 // Already hand-built, with published lessons. Do not overwrite.
-const AUTHORED = new Set(['english', 'mathematics', 'government', 'economics'])
+// Any subject with authored lessons belongs in this set: the spine seeder
+// would otherwise re-create topic rows for it on its next run.
+const AUTHORED = new Set(['english', 'mathematics', 'government', 'economics', 'physics', 'chemistry', 'biology', 'commerce'])
 
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL
 const key = process.env.SUPABASE_SERVICE_ROLE_KEY

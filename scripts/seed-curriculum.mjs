@@ -217,10 +217,27 @@ for (const lesson of lessons) {
     content: block.content,
   }))
   if (!dryRun) {
+    // Capture the current blocks before touching anything. If the swap fails
+    // part-way, the original blocks go back — a live lesson never ends up empty.
+    const { data: existingBlocks } = await db
+      .from('lesson_blocks')
+      .select('position, block_type, content')
+      .eq('lesson_id', lessonId)
+      .order('position')
     const { error: deleteError } = await db.from('lesson_blocks').delete().eq('lesson_id', lessonId)
     if (deleteError) throw new Error(`clear blocks ${lesson.slug}: ${deleteError.message}`)
     const { error: blockError } = await db.from('lesson_blocks').insert(blocks)
-    if (blockError) throw new Error(`insert blocks ${lesson.slug}: ${blockError.message}`)
+    if (blockError) {
+      if (existingBlocks && existingBlocks.length > 0) {
+        const restore = existingBlocks.map((b) => ({ lesson_id: lessonId, position: b.position, block_type: b.block_type, content: b.content }))
+        const { error: restoreError } = await db.from('lesson_blocks').insert(restore)
+        if (restoreError) {
+          throw new Error(`insert blocks ${lesson.slug}: ${blockError.message} — AND the rollback also failed: ${restoreError.message}. Lesson ${lesson.slug} is currently EMPTY in the database.`)
+        }
+        throw new Error(`insert blocks ${lesson.slug}: ${blockError.message} — rolled back to the previous ${restore.length} blocks`)
+      }
+      throw new Error(`insert blocks ${lesson.slug}: ${blockError.message} — the previous blocks were already deleted; lesson may be EMPTY`)
+    }
   }
   blocksWritten += blocks.length
   console.log(`  ${existing ? '~' : '+'} ${lesson.slug} (${blocks.length} blocks)`)

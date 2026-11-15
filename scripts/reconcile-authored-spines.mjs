@@ -133,7 +133,7 @@ const db = createClient(url, key)
 const { data: subjects, error: subjectError } = await db
   .from('subjects')
   .select('id,slug')
-  .in('slug', ['english', 'mathematics', 'government', 'economics'])
+  .in('slug', ['english', 'mathematics', 'government', 'economics', 'physics', 'chemistry', 'biology', 'commerce'])
 if (subjectError) throw new Error(subjectError.message)
 const subjectBySlug = new Map(subjects.map((s) => [s.slug, s]))
 

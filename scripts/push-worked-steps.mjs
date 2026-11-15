@@ -4,25 +4,43 @@
 //
 // When to run: AFTER the code that renders worked-steps explanations
 // (lib/lessons.ts parseExplanation + practice/lesson feedback wiring) is
-// deployed — origin/main before that renders the raw JSON in the feedback UI.
+// deployed — origin/main before that build renders the raw JSON in the
+// feedback UI.
 //
-//   node --env-file=.env scripts/push-worked-steps.mjs           # dry-run (no writes)
-//   node --env-file=.env scripts/push-worked-steps.mjs --apply   # write
+// Scope: defaults to the Chemistry bank; pass --bank=physics for Physics,
+// --bank=economics for Economics.
+//   node --env-file=.env scripts/push-worked-steps.mjs                       # chemistry dry-run
+//   node --env-file=.env scripts/push-worked-steps.mjs --apply                # chemistry write
+//   node --env-file=.env scripts/push-worked-steps.mjs --bank=physics         # physics dry-run
+//   node --env-file=.env scripts/push-worked-steps.mjs --bank=physics --apply # physics write
+//   node --env-file=.env scripts/push-worked-steps.mjs --bank=economics        # economics dry-run
+//   node --env-file=.env scripts/push-worked-steps.mjs --bank=economics --apply # economics write
 import { readFileSync } from 'fs'
 import { createClient } from '@supabase/supabase-js'
 
-const APPLY = process.argv.includes('--apply')
+const args = process.argv.slice(2)
+const APPLY = args.includes('--apply')
+const bankArg = args.find(a => a.startsWith('--bank='))
+const BANK = bankArg ?? 'chemistry'
+const SUBJECT = ['physics', 'economics'].includes(BANK) ? BANK : 'chemistry'
+const BANK_FILE = SUBJECT === 'physics'
+  ? 'content-folder/physics-jamb-bank.json'
+  : SUBJECT === 'economics'
+    ? 'content-folder/economics-jamb-bank.json'
+    : 'content-folder/chemistry-jamb-bank.json'
+console.log('bank:', SUBJECT, '|', BANK_FILE, '| mode:', APPLY ? 'APPLY' : 'dry-run')
 
 const URL = process.env.NEXT_PUBLIC_SUPABASE_URL
 const KEY = process.env.SUPABASE_SERVICE_ROLE_KEY
 if (!URL || !KEY) { console.error('Missing env vars'); process.exit(1) }
 const db = createClient(URL, KEY)
 
-const source = JSON.parse(readFileSync('content-folder/chemistry-jamb-bank.json', 'utf8'))
+const source = JSON.parse(readFileSync(BANK_FILE, 'utf8'))
 const targets = source.questions.filter(q => q.answerExplanationFormat === 'worked-steps-v1')
+console.log('targets:', targets.length)
 
-const { data: subject } = await db.from('subjects').select('id').eq('slug', 'chemistry').single()
-const chemId = subject.id
+const { data: subject } = await db.from('subjects').select('id').eq('slug', SUBJECT).single()
+const subjectId = subject.id
 const { data: exam } = await db.from('exams').select('id').eq('slug', 'jamb').single()
 const examId = exam.id
 
@@ -40,7 +58,7 @@ async function worker() {
         .from('questions')
         .select('id')
         .eq('exam_id', examId)
-        .eq('subject_id', chemId)
+        .eq('subject_id', subjectId)
         .eq('question_text', qText)
       if (lookupErr) { results.push({ id: q.id, ok: false, why: 'lookup: ' + lookupErr.message }); continue }
       if (!rows || rows.length === 0) { results.push({ id: q.id, ok: false, why: 'no DB row' }); continue }
