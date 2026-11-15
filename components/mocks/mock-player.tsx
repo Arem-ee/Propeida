@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useEffect, useCallback, useRef } from 'react'
 import { useRouter } from 'next/navigation'
-import { Flag, Send, CheckCircle, Calculator } from 'lucide-react'
+import { Flag, CheckCircle, Calculator } from 'lucide-react'
 import { Mascot } from '@/components/mascot'
 import { useWins } from '@/components/celebrations/use-wins'
 import { celebrateStreakIfNew } from '@/components/celebrations/streak-celebration'
@@ -407,16 +407,11 @@ export default function MockPlayer({
       <div className="mt-5 rounded-3xl border border-blue-100/70 bg-white p-5 shadow-[0_2px_12px_-6px_rgba(16,28,51,0.12)]">
         <div className="mb-3 flex items-center justify-between">
           <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-gray-500">
-            {answeredCount}/{total} answered
+            {answeredCount}/{total} answered{flagged.size > 0 ? ` · ${flagged.size} flagged` : ''}
           </p>
-          <button
-            onClick={() => setConfirming(true)}
-            disabled={finalizing}
-            className="inline-flex items-center gap-1.5 rounded-full bg-blue-600 px-4 py-2 text-xs font-extrabold text-white min-h-[40px] cursor-pointer disabled:opacity-50"
-          >
-            <Send className="h-3.5 w-3.5" />
-            End exam
-          </button>
+          <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-gray-400">
+            Exam palette
+          </span>
         </div>
         <div className="grid grid-cols-8 sm:grid-cols-10 gap-1.5">
           {questions.map((q, i) => {
