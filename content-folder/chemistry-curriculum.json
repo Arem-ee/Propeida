@@ -206,7 +206,7 @@
        "Shells are floors; orbitals are rooms; quantum numbers are addresses.",
        "Aufbau: lowest first. Hund: singly first. Pauli: two at most.",
        "s = round cloud (2); p = three dumbbells (6).",
-       "Z 1–20: H 1s{{sup:1}} to Ca 2,8,8,2. Add superscripts, check against Z."
+       "Z 1-20: H 1s{{sup:1}} to Ca 2,8,8,2. Add superscripts, check against Z."
       ],
       "takeaway": "Four quantum numbers address each electron and three rules govern filling.",
       "check": {
@@ -362,6 +362,44 @@
        "RAM is abundance-weighted, not a plain average.",
        "Ions change electron count only; Z and A stay fixed.",
        "Check configuration totals against Z every time."
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: an element X has two isotopes, {{sup:6}}²X with 60% abundance and {{sup:6}}{{sup:4}}X with 40% abundance. The number of neutrons in {{sup:6}}²X is 33. Find the relative atomic mass and the proton number of X.",
+      "steps": [
+       {
+        "operation": "Write the weighted-average formula",
+        "reason": "Ar is the abundance-weighted average of the isotope masses",
+        "result": "Ar = 0.60(62) + 0.40(64)",
+        "predictPrompt": "What formula gives the average atomic mass from abundances?"
+       },
+       {
+        "operation": "Compute Ar",
+        "reason": "Multiply abundance x mass, add the parts",
+        "result": "Ar = 37.2 + 25.6 = 62.8",
+        "predictPrompt": "What does 37.2 + 25.6 come to?"
+       },
+       {
+        "operation": "Identify the element from neutron count",
+        "reason": "Mass number - atomic number = neutrons; so atomic number = mass number - neutrons",
+        "result": "Atomic number = 62 - 33 = 29",
+        "predictPrompt": "What is the proton number when there are 33 neutrons and mass is 62?"
+       },
+       {
+        "operation": "Confirm the identity",
+        "reason": "Atomic number 29 belongs to the element 29 in the periodic table",
+        "result": "Element X is copper (Cu)",
+        "predictPrompt": "Which element sits at atomic number 29?"
+       },
+       {
+        "operation": "Check to confirm: re-read the abundance",
+        "reason": "Both isotopes must produce copper  -  the check is the chemistry, not the arithmetic alone",
+        "result": "Copper in nature is {{sup:6}}³Cu (69%) and {{sup:6}}{{sup:5}}Cu (31%); the set-up uses shifted isotopes but the algebra is sound: 62.8 ~ Cu, so confirmation passes ✓",
+        "predictPrompt": "What are the naturally occurring isotopes of copper?"
+       }
       ]
      }
     }
@@ -618,6 +656,44 @@
        "Convert cm{{sup:3}} to dm{{sup:3}} before dividing."
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: 8.1 g of aluminium (Aᵣ Al = 27, O = 16) is completely reacted with oxygen. Find the volume of oxygen at s.t.p. needed.",
+      "steps": [
+       {
+        "operation": "Write the balanced equation",
+        "reason": "4Al + 3O{{sub:2}} → 2Al{{sub:2}}O{{sub:3}} - coefficients needed for the mole ratio",
+        "result": "4Al + 3O{{sub:2}} → 2Al{{sub:2}}O{{sub:3}}",
+        "predictPrompt": "What is the balanced equation for aluminium burning in oxygen?"
+       },
+       {
+        "operation": "Convert aluminium mass to moles",
+        "reason": "8.1 / 27 = 0.3 mol",
+        "result": "n(Al) = 0.3 mol",
+        "predictPrompt": "How many moles of aluminium are in 8.1 g?"
+       },
+       {
+        "operation": "Use the mole ratio to find moles of O{{sub:2}}",
+        "reason": "3 mol O{{sub:2}} per 4 mol Al",
+        "result": "n(O{{sub:2}}) = 0.3 x 3/4 = 0.225 mol",
+        "predictPrompt": "What is the 3-to-4 ratio applied to 0.3 mol?"
+       },
+       {
+        "operation": "Convert moles of O{{sub:2}} to volume at s.t.p.",
+        "reason": "1 mol of any gas occupies 22.4 dm³ at s.t.p.",
+        "result": "0.225 x 22.4 = 5.04 dm³",
+        "predictPrompt": "What volume does 1 mol of any gas occupy at s.t.p.?"
+       },
+       {
+        "operation": "Check to confirm: reconstruct the oxygen mass",
+        "reason": "0.225 mol O{{sub:2}} x 32 = 7.2 g; alongside 8.1 g Al = 15.3 g Al{{sub:2}}O{{sub:3}} = 0.15 mol x 102 ✓",
+        "result": "n(Al{{sub:2}}O{{sub:3}}) = 0.3 / 2 = 0.15 mol; mass = 0.15 x 102 = 15.3 g; 8.1 + 7.2 = 15.3 ✓",
+        "predictPrompt": "What is the mass of oxygen that reacted?"
+       }
+      ]
+     }
     }
    ]
   },
@@ -694,7 +770,7 @@
        "Boyle's law says squeezing a gas raises its pressure, like crowding a bus. Charles's law says a gas grows when heated, because faster particles push harder. Gay-Lussac's law says pressure rises with temperature in a sealed container.",
        "Avogadro's law says equal volumes hold equal numbers: one mole fills 22.4 dm{{sup:3}} at s.t.p. Graham's law says light gases diffuse faster by the √Mr ratio. Dalton's law adds each gas's pressure in a mixture.",
        "Each law holds one variable constant, so read that constant first.",
-       "Boyle is a P–V hyperbola; Charles is a V–T straight line through 0 K; Gay-Lussac is P–T through the same point. Read the constant first; the shape tells you the law."
+       "Boyle is a P-V hyperbola; Charles is a V-T straight line through 0 K; Gay-Lussac is P-T through the same point. Read the constant first; the shape tells you the law."
       ],
       "bullets": [
        "Boyle: squeeze a gas and pressure rises.",
@@ -870,7 +946,7 @@
       "steps": [
        {
         "operation": "Use the s.t.p. molar volume",
-        "reason": "one mole of gas at s.t.p. occupies 22,400 cm3 — one mole, one molar volume",
+        "reason": "one mole of gas at s.t.p. occupies 22,400 cm3  -  one mole, one molar volume",
         "result": "moles = 800 / 22,400 = 0.036 mol",
         "predictPrompt": "Why 22,400 cm3 and not 22.4 dm3?"
        },
@@ -959,6 +1035,38 @@
        "Vapour density = Mr ÷ 2, never Mr.",
        "Boyle's law needs constant temperature stated or implied.",
        "Dalton's law adds gases sharing one vessel."
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: a sample of gas occupies 2 dm³ at 27 °C and 1.0 atm pressure. Find the volume the same gas occupies at 127 °C and 0.50 atm, assuming no gas escaped.",
+      "steps": [
+       {
+        "operation": "Convert temperatures to Kelvin",
+        "reason": "Gas laws use the absolute scale",
+        "result": "T{{sub:1}} = 300 K; T{{sub:2}} = 400 K",
+        "predictPrompt": "What is 27 °C in Kelvin?"
+       },
+       {
+        "operation": "State the combined gas law",
+        "reason": "P{{sub:1}}V{{sub:1}} / T{{sub:1}} = P{{sub:2}}V{{sub:2}} / T{{sub:2}}",
+        "result": "V{{sub:2}} = P{{sub:1}}V{{sub:1}}T{{sub:2}} / (P{{sub:2}}T{{sub:1}})",
+        "predictPrompt": "What is the combined gas law?"
+       },
+       {
+        "operation": "Substitute the values",
+        "reason": "V{{sub:2}} = 1.0 x 2 x 400 / (0.5 x 300)",
+        "result": "V{{sub:2}} = 800 / 150 = 5.333 dm³",
+        "predictPrompt": "What is 800 divided by 150?"
+       },
+       {
+        "operation": "Check to confirm: compare the ratios",
+        "reason": "T ratio 400/300 = 4/3; P ratio 1/0.5 = 2; net factor (4/3) x 2 = 8/3; V{{sub:2}} = 2 x (8/3) = 16/3 dm³ ✓",
+        "result": "V{{sub:2}} = 16/3 dm³ ≈ 5.33 dm³  -  the two routes agree ✓",
+        "predictPrompt": "Does the pressure doubling and temperature factor 4/3 give the same volume?"
+       }
       ]
      }
     }
@@ -1164,7 +1272,7 @@
        },
        {
         "operation": "Check to confirm: use the data",
-        "reason": "Na 496, Cl 1251, O 1314 kJ per mol — a widening gap consistent with the shielding argument",
+        "reason": "Na 496, Cl 1251, O 1314 kJ per mol  -  a widening gap consistent with the shielding argument",
         "result": "the numbers match the order exactly",
         "predictPrompt": "Do the values confirm the order, or overturn it?"
        }
@@ -1236,6 +1344,38 @@
        "Metallic character fades across, grows down.",
        "Reasons (charge vs shielding) earn the full mark.",
        "Write the arrows beside every trend item."
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: an element Y shows successive ionisation energies IE{{sub:1}} = 496, IE{{sub:2}} = 4562, IE{{sub:3}} = 6910, IE{{sub:4}} = 9540, IE{{sub:5}} = 13380 kJ mol{{sup:-1}}. Explain the cause of the big jump and identify the group to which Y belongs.",
+      "steps": [
+       {
+        "operation": "Locate the jump",
+        "reason": "The group number sits just before the jump (alky)",
+        "result": "IE{{sub:1}} = 496, IE{{sub:2}} = 4562  -  skip between first and second ionisation is roughly 9x",
+        "predictPrompt": "Which jump do these numbers actually show?"
+       },
+       {
+        "operation": "Explain what the jump means",
+        "reason": "Removing the first electron gets the atom to a noble-gas configuration; the next electron is removed from the full inner shell, which is harder to attack",
+        "result": "Y has one outer shell electron",
+        "predictPrompt": "What electron configuration does the atom reach after the first removal?"
+       },
+       {
+        "operation": "Identify the group",
+        "reason": "Group 1 elements are ns¹ with one valence electron",
+        "result": "Y belongs to Group 1 (the alkali metals). The nearest real elements: lithium, sodium, potassium.",
+        "predictPrompt": "How many valence electrons define Group 1?"
+       },
+       {
+        "operation": "Check to confirm: compare with lithium",
+        "reason": "Lithium has IE{{sub:1}} = 520, IE{{sub:2}} = 7297  -  same order of jump; our IE{{sub:1}} = 496 is closest to sodium",
+        "result": "Y is plausibly sodium; the group identification is secure ✓",
+        "predictPrompt": "Which Group 1 element has an IE{{sub:1}} near 496 kJ mol{{sup:-1}}?"
+       }
       ]
      }
     }
@@ -1394,7 +1534,7 @@
     {
      "type": "worked_example",
      "content": {
-      "problem": "Predict and explain the shape and polarity of CO₂, given that carbon has 4 outer electrons and oxygen has 6.",
+      "problem": "Predict and explain the shape and polarity of CO{{sub:2}}, given that carbon has 4 outer electrons and oxygen has 6.",
       "steps": [
        {
         "operation": "Count shared electrons",
@@ -1411,12 +1551,12 @@
        {
         "operation": "Decide polarity",
         "reason": "each C=O bond is polar, but the two bond dipoles are equal and cancel across the linear axis",
-        "result": "CO₂ is non-polar overall",
+        "result": "CO{{sub:2}} is non-polar overall",
         "predictPrompt": "Why do the two identical dipoles cancel instead of adding?"
        },
        {
         "operation": "Check to confirm: compare the sibling bent water molecule",
-        "reason": "water bent at ~105° does not cancel its dipoles — CO₂ does because both ends are identical",
+        "reason": "water bent at ~105° does not cancel its dipoles  -  CO{{sub:2}} does because both ends are identical",
         "result": "asymmetry decides polarity, not bond count",
         "predictPrompt": "What makes the one cancel and the other not?"
        }
@@ -1490,6 +1630,44 @@
        "In coordinate bonds the ligand donates both electrons."
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: predict and explain the molecular shape of SF{{sub:6}}, PCl{{sub:5}} and XeF{{sub:4}} using VSEPR, and give the bond angle of each.",
+      "steps": [
+       {
+        "operation": "Count the bonding regions around each central atom",
+        "reason": "VSEPR counts regions of electron density and empty space",
+        "result": "SF{{sub:6}}: 6 bonding regions; PCl{{sub:5}}: 5 bonding regions; XeF{{sub:4}}: 4 bonding + 2 lone pairs",
+        "predictPrompt": "How many regions of electron density does SF{{sub:6}} have?"
+       },
+       {
+        "operation": "Assign each a VSEPR shape",
+        "reason": "Octa AX{{sub:6}} for SF{{sub:6}}, trig bipy AX{{sub:5}} for PCl{{sub:5}}, square planar AX{{sub:4}}E{{sub:2}} for XeF{{sub:4}}",
+        "result": "SF{{sub:6}} = octahedral; PCl{{sub:5}} = trigonal bipyramidal; XeF{{sub:4}} = square planar",
+        "predictPrompt": "What is the VSEPR class for 6 bonding regions?"
+       },
+       {
+        "operation": "State the bond angles",
+        "reason": "Octahedral 90°; trig bipy 90°, 120°, 180°; square planar 90°",
+        "result": "SF{{sub:6}}: 90° and 180°; PCl{{sub:5}}: 90°, 120°, 180°; XeF{{sub:4}}: 90° and 180°",
+        "predictPrompt": "What bond angle does a square planar shape carry?"
+       },
+       {
+        "operation": "Explain why XeF{{sub:4}} is square planar,not pyramidal",
+        "reason": "Two lone pairs go opposite poles to minimise repulsion, leaving the four fluorines in a square",
+        "result": "AX{{sub:4}}E{{sub:2}}: 180° apart lone pair positions; 90° between adjacent F-F bonds ✓",
+        "predictPrompt": "Where must the two lone pairs sit to keep them as far apart as possible?"
+       },
+       {
+        "operation": "Check to confirm: recall methane and ammonia parallels",
+        "reason": "AX{{sub:4}} = tetrahedral 109.5°, AX{{sub:3}}E = pyramidal 107°, AX{{sub:2}}E{{sub:2}} = bent 104.5°  -  lone pairs drop the angle",
+        "result": "SF{{sub:6}} (no lone pairs) has 90°, XeF{{sub:4}} (2 lone pairs) has 90° square planar ✓ - consistent framework",
+        "predictPrompt": "What does adding lone pairs do to bond angle in the same region count?"
+       }
+      ]
+     }
     }
    ]
   },
@@ -1530,7 +1708,7 @@
       "check": {
        "question": "Which statement correctly pairs a pure substance with its test?",
        "options": [
-        "Pure water melts over 0–10 °C",
+        "Pure water melts over 0-10 °C",
         "A pure substance melts at one exact temperature",
         "Pure substances never crystallise",
         "Impure substances boil at one exact temperature"
@@ -1684,11 +1862,11 @@
         "operation": "Interpret what it means",
         "reason": "an Rf of 0.9 means this dye travels nearly as fast as the solvent front under these conditions",
         "result": "the faster dye has Rf 0.9; the slower has Rf 3.0 / 5.0 = 0.6",
-        "predictPrompt": "Why the other dye is slower — what differs?"
+        "predictPrompt": "Why the other dye is slower  -  what differs?"
        },
        {
         "operation": "Check to confirm: the other dye",
-        "reason": "Rf(slower) = 3.0 / 5.0 = 0.6 — ratio of 4.5 to 3.0 equals Rf ratio 0.9 to 0.6 = 3/2",
+        "reason": "Rf(slower) = 3.0 / 5.0 = 0.6  -  ratio of 4.5 to 3.0 equals Rf ratio 0.9 to 0.6 = 3/2",
         "result": "both dyes measured from the same front give consistent results",
         "predictPrompt": "Do the two Rf values confirm the same solvent conditions?"
        }
@@ -1715,11 +1893,11 @@
        "Each level of the column is a separate still in miniature: vapour condenses, re-boils and rises again. The lightest fraction escapes at the top, while heavier ones leave lower down. The column therefore multiplies the separation without multiplying the apparatus.",
        "The same principle refines air into oxygen and nitrogen, and petroleum into petrol, kerosene and diesel. Whenever boiling points crowd together, fractionation is the answer.",
        "Once you link the column to repeated simple distillations, you will never mistake a single flask for a fractionating column again.",
-       "A simple still can split two liquids when their boiling points differ by a wide margin, because the lower-boiling vapour leaves alone. As the gap narrows, contamination rises, and only the column's repeated boil–condense cycles keep the fractions apart."
+       "A simple still can split two liquids when their boiling points differ by a wide margin, because the lower-boiling vapour leaves alone. As the gap narrows, contamination rises, and only the column's repeated boil-condense cycles keep the fractions apart."
       ],
       "bullets": [
        "Crude oil fractions boil too close for one still.",
-       "The column repeats boil–condense at each level.",
+       "The column repeats boil-condense at each level.",
        "Light fractions exit top; heavy fractions exit lower.",
        "Fractionation is repeated simple distillation in one tower."
       ]
@@ -1761,6 +1939,44 @@
        "Sublimation starts from a solid; evaporation from a liquid.",
        "Decantation pours; filtration traps; centrifugation spins.",
        "Immiscible liquids separate without boiling."
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: an oil spill sample contains crude oil (density 0.81 g cm-³), saltwater (1.03 g cm-³) and fine solid sediment. Describe, in order, the operations you would use to recover pure saltwater, the oil and a dry sample of the sand.",
+      "steps": [
+       {
+        "operation": "Settle the mixture to separate the sediment by density",
+        "reason": "Solid particles settle under gravity",
+        "result": "Sediment sinks; oil floats on saltwater",
+        "predictPrompt": "Which component settles to the bottom?"
+       },
+       {
+        "operation": "Decant off the liquid stack without disturbing the sediment",
+        "reason": "Gravity naturally orders dense at bottom, least dense at top",
+        "result": "Decant crude oil + saltwater layer; sediment remains",
+        "predictPrompt": "What does decantation achieve?"
+       },
+       {
+        "operation": "Split the oil from the water with a separating funnel",
+        "reason": "Oil is less dense  -  it floats on the saltwater layer",
+        "result": "Draw off saltwater below; oil remains on top",
+        "predictPrompt": "Which layer does the separating funnel deliver first?"
+       },
+       {
+        "operation": "Filter the remaining sediment and wash",
+        "reason": "The sediment needs to be collected and dried away from the liquids",
+        "result": "Filter, wash with distilled water, dry  -  sand recovered",
+        "predictPrompt": "Why must the sand be washed before drying?"
+       },
+       {
+        "operation": "Check to confirm: identify the purer oil as starting to emulsify",
+        "reason": "Real-world emulsions resist separation; a thin third layer may always remain",
+        "result": "Complete separation is hard in spills; the sequence is the correct engineering order ✓",
+        "predictPrompt": "What limits the success of this separation in real spills?"
+       }
       ]
      }
     }
@@ -1952,7 +2168,7 @@
        },
        {
         "operation": "Molar solubility = moles / dm3",
-        "reason": "one mole dissolves per 101 g — divide by volume",
+        "reason": "one mole dissolves per 101 g  -  divide by volume",
         "result": "c = 0.396 / 0.2 ≈ 1.98 mol per dm3",
         "predictPrompt": "Is this more or less than 2 M?"
        },
@@ -2033,6 +2249,38 @@
        "Convert g/dm{{sup:3}} to mol/dm{{sup:3}} by dividing by Mr.",
        "Anchor every curve reading to its temperature.",
        "Colloids scatter light; suspensions settle."
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: the solubility of KNO{{sub:3}} in 100 g of water is 13.3 g at 0 °C, 38 g at 25 °C and 246 g at 100 °C. A saturated solution at 100 °C is cooled to 25 °C. Find the mass of KNO{{sub:3}} crystals deposited, and explain why recrystallisation purifies the compound.",
+      "steps": [
+       {
+        "operation": "Write the amounts in 100 g water at both temperatures",
+        "reason": "Same reservoir of solvent the whole time",
+        "result": "At 100 °C: 246 g dissolved; at 25 °C: only 38 g can stay",
+        "predictPrompt": "What is the maximum mass that can stay dissolved at 25 °C?"
+       },
+       {
+        "operation": "Compute the excess",
+        "reason": "What the cooled water rejects = what crystallises out",
+        "result": "246 - 38 = 208 g deposited",
+        "predictPrompt": "How much solid does the water have to give up?"
+       },
+       {
+        "operation": "Explain the purification property",
+        "reason": "Impurities stay dissolved better because of their different solubility profiles",
+        "result": "Recrystallisation removes impurities: they stay in the cool solution while KNO{{sub:3}} crystallises",
+        "predictPrompt": "Why do most impurities stay behind during recrystallisation?"
+       },
+       {
+        "operation": "Check to confirm: apply the same logic at 0 °C",
+        "reason": "If the solution were cooled to 0 °C, the deposit would be even larger",
+        "result": "At 0 °C: 246 - 13.3 = 232.7 g would deposit; consistent trend confirms the calculation ✓",
+        "predictPrompt": "How much would be deposited at 0 °C if cooled fully?"
+       }
       ]
      }
     }
@@ -2292,6 +2540,50 @@
        "Higher state takes -ate (sulphate); lower takes -ite (sulphite); metals take Roman numerals."
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: balance the half-equation for the reduction of nitrate in acidic solution: NO{{sub:3}}- + H⁺ → NO + H{{sub:2}}O, and use standard electrode potentials to predict whether copper is dissolved by nitric acid.",
+      "steps": [
+       {
+        "operation": "Balance the half-equation in acid",
+        "reason": "NO{{sub:3}}- + 4H⁺ → NO + 2H{{sub:2}}O, then add electrons on the left",
+        "result": "NO{{sub:3}}- + 4H⁺ + 3e- → NO + 2H{{sub:2}}O ✓ (nitrogen +5 → +2, gains 3 electrons)",
+        "predictPrompt": "What is the oxidation state of N in nitrate?"
+       },
+       {
+        "operation": "Pair with the copper oxidation half-equation",
+        "reason": "Cu → Cu²⁺ + 2e-",
+        "result": "Cu → Cu²⁺ + 2e-",
+        "predictPrompt": "What occurs at the copper electrode?"
+       },
+       {
+        "operation": "Balance the electrons between the two half-equations",
+        "reason": "LCM of 3 and 2 is 6",
+        "result": "2NO{{sub:3}}- + 8H⁺ + 3Cu → 2NO + 4H{{sub:2}}O + 3Cu²⁺",
+        "predictPrompt": "How many copper atoms fit alongside two nitrates?"
+       },
+       {
+        "operation": "Compute the cell EMF",
+        "reason": "Ecell = E°(reduction) - E°(oxidation)",
+        "result": "E°(NO{{sub:3}}-/NO) = +0.96 V; E°(Cu²⁺/Cu) = +0.34 V; EMF = 0.96 - 0.34 = +0.62 V",
+        "predictPrompt": "What is the EMF of the pair?"
+       },
+       {
+        "operation": "Decide whether the reaction is spontaneous",
+        "reason": "Positive EMF means spontaneous",
+        "result": "+0.62 V: nitric acid does dissolve copper, evolving NO gas ✓",
+        "predictPrompt": "Does a positive EMF mean a spontaneous reaction?"
+       },
+       {
+        "operation": "Check to confirm: what color is the gas given off",
+        "reason": "NO produced is colourless; it turns brown on contact with air (NO{{sub:2}})",
+        "result": "NO is colourless at first; the familiar brown fume is NO{{sub:2}} formed in air ✓",
+        "predictPrompt": "Why does the gas turn brown in air?"
+       }
+      ]
+     }
     }
    ]
   },
@@ -2376,12 +2668,12 @@
       "heading": "pH, titration and hydrolysis",
       "paragraphs": [
        "The pH scale counts hydrogen ions by their power of ten: pH = −log[H{{sup:+}}], so [H{{sup:+}}] = 1×10{{sup:-3}} mol/dm{{sup:3}} means pH 3. At 25 °C, pH + pOH = 14, so pOH = 14 − pH. Pure water sits at 7.",
-       "pH matters daily: the stomach works near pH 1–2, soil suits crops near 6–7 and blood holds 7.4. An indicator marks the titration end point: phenolphthalein for a strong acid with a strong base, methyl orange for a strong acid with a weak base.",
+       "pH matters daily: the stomach works near pH 1-2, soil suits crops near 6-7 and blood holds 7.4. An indicator marks the titration end point: phenolphthalein for a strong acid with a strong base, methyl orange for a strong acid with a weak base.",
        "Hydrolysis is a salt reacting with water, and it sets the solution's character. NH{{sub:4Cl}} hydrolyses acidic; Na{{sub:2CO}}{{sub:3}} hydrolyses basic. Their equations: NH{{sub:4}}{{sup:+}} + H{{sub:2O}} ⇌ NH{{sub:3}} + H{{sub:3O}}{{sup:+}} and CO{{sub:3}}{{sup:2-}} + H{{sub:2O}} ⇌ HCO{{sub:3}}{{sup:-}} + OH{{sup:-}}. The ion that hydrolyses decides the result."
       ],
       "bullets": [
        "pH = −log[H{{sup:+}}]; pOH = 14 − pH.",
-       "Blood 7.4; stomach 1–2; soil 6–7.",
+       "Blood 7.4; stomach 1-2; soil 6-7.",
        "Indicator must change near the end point.",
        "NH{{sub:4Cl}} gives acidic; Na{{sub:2CO}}{{sub:3}} gives basic solutions."
       ],
@@ -2524,7 +2816,7 @@
        "Conductance needs ions to carry charge to the electrodes. A strong acid like HCl dissociates almost completely, so many ions move and conductance is high. A weak acid like ethanoic acid dissociates only partly, so few ions move and conductance stays low at the same concentration.",
        "Dilution makes the contrast sharper: a weak acid dissociates more as it spreads out, so its molar conductance rises on dilution. Strength is about dissociation; concentration is only about amount. A concentrated weak acid can still conduct less than a dilute strong one.",
        "That is the exam link tested: compare two molar solutions, and the stronger acid shows the higher conductance. The degree of dissociation can be read off the conductance ratio directly.",
-       "Bases mirror acids: NaOH is strong and conducts well, ammonia solution is weak and conducts poorly although both are bases. Strength, not the acid–base label, sets the ion count.",
+       "Bases mirror acids: NaOH is strong and conducts well, ammonia solution is weak and conducts poorly although both are bases. Strength, not the acid-base label, sets the ion count.",
        "Common bases feel soapy, turn red litmus blue and neutralise acids to salts, with NaOH in soap and limewater Ca(OH){{sub:2}} in mortar. Ammonia solution serves as a laboratory base and a fertiliser feedstock. Useful salts include ammonium sulphate fertiliser, sodium chloride for food preservation and calcium hydroxide for soil treatment."
       ],
       "bullets": [
@@ -2542,12 +2834,12 @@
       "paragraphs": [
        "An indicator changes colour across a pH range, so it must change close to the end point of the reaction. Methyl orange changes between pH 3.1 and 4.4, phenolphthalein between 8.2 and 10.0 and litmus changes broadly near 7.",
        "A strong acid with a strong base ends near pH 7, so either indicator works. A weak acid with a strong base ends above pH 7, so phenolphthalein is correct and methyl orange would change too early. A strong acid with a weak base ends below pH 7, so methyl orange is correct.",
-       "The titration curve shows why: it jumps through the end-point range sharply for strong–strong pairs and more gently for weak pairs. Read the jump and you see why the wrong indicator gives a false end point.",
+       "The titration curve shows why: it jumps through the end-point range sharply for strong-strong pairs and more gently for weak pairs. Read the jump and you see why the wrong indicator gives a false end point.",
        "Litmus is a mixture and changes gradually, so it is a poor titration indicator. Methyl orange and phenolphthalein stay the sharp choices, and the curve tells you which one to pick.",
        "AlCl{{sub:3}} (aluminium chloride) hydrolyses acidic because Al{{sup:3+}} pulls hydroxide from water and leaves hydrogen ions: Al{{sup:3+}} + 3H{{sub:2O}} ⇌ Al(OH){{sub:3}} + 3H{{sup:+}}. CH{{sub:3COONa}} (sodium ethanoate) hydrolyses basic because CH{{sub:3COO}}{{sup:-}} takes a proton from water: CH{{sub:3COO}}{{sup:-}} + H{{sub:2O}} ⇌ CH{{sub:3COOH}} + OH{{sup:-}}. The ion from the weak parent therefore decides the pH the indicator must match."
       ],
       "bullets": [
-       "Methyl orange changes near pH 3–4; phenolphthalein near pH 8–10.",
+       "Methyl orange changes near pH 3-4; phenolphthalein near pH 8-10.",
        "Weak acid + strong base needs phenolphthalein.",
        "Strong acid + weak base needs methyl orange.",
        "The titration curve shows where the jump falls.",
@@ -2556,7 +2848,7 @@
       ],
       "visual": {
        "kind": "chart",
-       "caption": "The strong–strong curve jumps sharply through pH 7; the indicator must change inside the jump.",
+       "caption": "The strong-strong curve jumps sharply through pH 7; the indicator must change inside the jump.",
        "xLabel": "Base added (cm{{sup:3}})",
        "yLabel": "pH",
        "series": [
@@ -2630,6 +2922,38 @@
        "Hydrolysis of the ion decides the solution character.",
        "Write the ion equation before choosing the answer.",
        "Acidic oxide + base → salt; basic oxide + acid → salt; trioxocarbonate(IV) salt + acid → CO{{sub:2}} effervescence."
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: 25.00 cm³ of an unknown dibasic acid was titrated against 30.00 cm³ of 0.200 mol dm-³ NaOH to the end point. Calculate the concentration of the acid.",
+      "steps": [
+       {
+        "operation": "Compute moles of NaOH delivered",
+        "reason": "Concentration x volume; convert to dm³",
+        "result": "0.200 x 0.030 = 0.006 mol",
+        "predictPrompt": "How many moles of sodium hydroxide are in 30 cm³?"
+       },
+       {
+        "operation": "Write the mole ratio",
+        "reason": "Dibasic acid: 1 H{{sub:2}}A + 2 NaOH → Na{{sub:2}}A + 2H{{sub:2}}O",
+        "result": "Moles acid = 0.006 / 2 = 0.003 mol",
+        "predictPrompt": "How many NaOH per formula of H{{sub:2}}A?"
+       },
+       {
+        "operation": "Find the concentration of the acid",
+        "reason": "Concentration = moles / volume (in dm³)",
+        "result": "[H{{sub:2}}A] = 0.003 / 0.025 = 0.120 mol dm-³",
+        "predictPrompt": "What is 0.003 divided by 0.025?"
+       },
+       {
+        "operation": "Check to confirm: remultipolarity",
+        "reason": "If the acid were monoprotic, the moles would be 0.006 and concentration 0.24 mol dm-³  -  the halving for dibasic is required",
+        "result": "0.120 mol dm-³ if dibasic ✓  -  matches the stated dibasic condition",
+        "predictPrompt": "Which volume would correspond to the monoprotic alternative?"
+       }
       ]
      }
     }
@@ -2909,6 +3233,50 @@
        "Oxidation at the anode is the one rule to keep."
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: when molten lead bromide is electrolysed for 20 minutes using a current of 2.0 A, calculate the volume of bromine collected at the anode at s.t.p. (1 Faraday = 96500 C).",
+      "steps": [
+       {
+        "operation": "State the half-equation at the anode",
+        "reason": "2Br- → Br{{sub:2}} + 2e- - two electrons free per Br{{sub:2}} molecule",
+        "result": "2Br- → Br{{sub:2}} + 2e-",
+        "predictPrompt": "What happens at the anode in molten lead bromide?"
+       },
+       {
+        "operation": "Compute the total charge passed",
+        "reason": "Q = It",
+        "result": "Q = 2.0 x (20 x 60) = 2400 C",
+        "predictPrompt": "What is 20 minutes in seconds?"
+       },
+       {
+        "operation": "Convert charge to moles of electrons",
+        "reason": "n(e-) = Q / F",
+        "result": "n(e-) = 2400 / 96500 ≈ 0.0249 mol",
+        "predictPrompt": "What is 2400 / 96500?"
+       },
+       {
+        "operation": "Convert moles of electrons to moles of Br{{sub:2}}",
+        "reason": "2 mol e- produce 1 mol Br{{sub:2}}",
+        "result": "n(Br{{sub:2}}) ≈ 0.0124 mol",
+        "predictPrompt": "Based on the half-equation, what is the mole ratio?"
+       },
+       {
+        "operation": "Convert moles to volume at s.t.p.",
+        "reason": "1 mol gas = 22400 cm³ at s.t.p.",
+        "result": "V(Br{{sub:2}}) ≈ 0.0124 x 22400 ≈ 278 cm³",
+        "predictPrompt": "What volume does one mole of gas occupy at s.t.p.?"
+       },
+       {
+        "operation": "Check to confirm: alternate route through molar mass",
+        "reason": "Mass of Br{{sub:2}} = 0.0124 x 160 = 1.99 g; 160 g of Br{{sub:2}} occupies 22400 cm³, so 1.99 g occupies 278 cm³  -  consistent",
+        "result": "n(Br{{sub:2}}) = 0.0124; V ≈ 278 cm³ ✓ - the mass route agrees",
+        "predictPrompt": "What mass of bromine is liberated?"
+       }
+      ]
+     }
     }
    ]
   },
@@ -3157,6 +3525,38 @@
        "Penetration order: alpha < beta < gamma.",
        "Three half-lives leave one eighth, not a subtraction.",
        "Fusion joins light nuclei; fission splits heavy ones."
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: carbon-14 has a half-life of 5730 years. A sample of charcoal contains 12.5% of the original {{sup:14}}C content. How old is the sample?",
+      "steps": [
+       {
+        "operation": "Write the decay fraction",
+        "reason": "N/N{{sub:0}} = (1/2){{sup:n}}, where n = number of half-lives",
+        "result": "12.5% = 1/8 = (1/2)³",
+        "predictPrompt": "What fraction of the atom remains after three half-lives?"
+       },
+       {
+        "operation": "Count the half-lives",
+        "reason": "n = 3",
+        "result": "n = 3 half-lives",
+        "predictPrompt": "How many half-lives have passed?"
+       },
+       {
+        "operation": "Multiply half-life by n",
+        "reason": "Time elapsed = n x t{{sub:1}}/{{sub:2}}",
+        "result": "3 x 5730 = 17190 years",
+        "predictPrompt": "What is 3 x 5730?"
+       },
+       {
+        "operation": "Check to confirm: reverse the calculation",
+        "reason": "17190 years ÷ 5730 = 3; (1/2)³ = 1/8 = 12.5% ✓",
+        "result": "Back-calculated: 12.5% of the original activity remains after 17190 years ✓",
+        "predictPrompt": "Does the reverse check land back on 12.5%?"
+       }
       ]
      }
     }
@@ -3495,6 +3895,44 @@
        "Entropy and energy are weighed separately."
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: using Hess's law and the data ΔH_c(CH{{sub:4}}) = −890 kJ mol{{sup:-1}}, ΔH_f(CO{{sub:2}}) = −394 kJ mol{{sup:-1}}, ΔH_f(H{{sub:2}}O(l)) = −286 kJ mol{{sup:-1}}  -  find the enthalpy of formation of methane.",
+      "steps": [
+       {
+        "operation": "Write the combustion equation",
+        "reason": "CH{{sub:4}} + 2O{{sub:2}} → CO{{sub:2}} + 2H{{sub:2}}O",
+        "result": "CH{{sub:4}} + 2O{{sub:2}} → CO{{sub:2}} + 2H{{sub:2}}O, ΔH = −890",
+        "predictPrompt": "What does the combustion of methane produce?"
+       },
+       {
+        "operation": "Apply Hess's law with the formation values",
+        "reason": "ΔH_c = Σ ΔH_f(products) − Σ ΔH_f(reactants)",
+        "result": "−890 = [(−394) + 2(−286)] − [ΔH_f(CH{{sub:4}}) + 2 x 0]",
+        "predictPrompt": "What does Hess's law say about products minus reactants?"
+       },
+       {
+        "operation": "Compute the products total",
+        "reason": "−394 + 2 x (−286) = −966",
+        "result": "−890 = −966 − ΔH_f(CH{{sub:4}})",
+        "predictPrompt": "What does −394 + 2 x (−286) exceed to?"
+       },
+       {
+        "operation": "Solve for ΔH_f(CH{{sub:4}})",
+        "reason": "ΔH_f(CH{{sub:4}}) = −966 + 890 = −76",
+        "result": "ΔH_f(CH{{sub:4}}) = −76 kJ mol{{sup:-1}}",
+        "predictPrompt": "What is −966 + 890?"
+       },
+       {
+        "operation": "Check to confirm: verify against experimental value",
+        "reason": "ΔH_f(CH{{sub:4}}) is approximately −75 kJ mol{{sup:-1}} from the standard tables",
+        "result": "−76 kJ mol{{sup:-1}} from the calculation matches the reference value ✓",
+        "predictPrompt": "Is the calculated value consistent with the reference tables?"
+       }
+      ]
+     }
     }
    ]
   },
@@ -3821,6 +4259,44 @@
        "Rate follows exposed area, not total mass."
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: for the reaction 2A + B -> C, the rate law is rate = k[A]{{sup:2}}[B]. If [A] doubles, what happens to the rate? If [A] doubles once more and [B] triples simultaneously, what is the total factor on the final rate relative to the original?",
+      "steps": [
+       {
+        "operation": "Write the rate law",
+        "reason": "rate = k[A]{{sup:2}}[B]{{sup:1}} - A is second order, B is first order",
+        "result": "Numerically: doubling A once gives x2 squared = 4; doubling B once gives x2; tripling B gives x3",
+        "predictPrompt": "What are the orders of A and B?"
+       },
+       {
+        "operation": "Answer the first question: [A] doubles once",
+        "reason": "rate scales as [A]{{sup:2}}; doubling [A] multiplies rate by 4",
+        "result": "rate becomes 4 times the original",
+        "predictPrompt": "What happens to the rate if [A] doubles once?"
+       },
+       {
+        "operation": "Set up the second change",
+        "reason": "A doubles AGAIN, so [A] is now 4[A]o; simultaneously [B] triples, so [B] is 3[B]o",
+        "result": "[A] final = 4[A]o, [B] final = 3[B]o",
+        "predictPrompt": "How many times did [A] double in total?"
+       },
+       {
+        "operation": "Compute the final/initial ratio",
+        "reason": "rate final / rate initial = (4){{sup:2}} x 3 = 48",
+        "result": "Final rate = 48 times the original rate",
+        "predictPrompt": "What is 4 squared times 3?"
+       },
+       {
+        "operation": "Check to confirm: verify via the first change as an intermediate",
+        "reason": "First doubling gives x4; the second change applies another x4 (second doubling of A) and x3 (B triples): 4 x 4 x 3 = 48",
+        "result": "4 x 4 x 3 = 48, matching the direct calculation ✓",
+        "predictPrompt": "Does multiplying 4 x 4 x 3 give the same answer?"
+       }
+      ]
+     }
     }
    ]
   },
@@ -4032,7 +4508,7 @@
        },
        {
         "operation": "Check to confirm: combine both",
-        "reason": "pressure pushes forward, low temperature pushes forward — industry uses moderate values for rate as well as yield",
+        "reason": "pressure pushes forward, low temperature pushes forward  -  industry uses moderate values for rate as well as yield",
         "result": "industry conditions are a compromise between both",
         "predictPrompt": "Does the combination make sense for a plant, not just the exam?"
        }
@@ -4107,6 +4583,44 @@
        "Only temperature changes the equilibrium constant.",
        "Pressure favours fewer gas molecules specifically.",
        "Separate concentration effects from catalyst effects."
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: in the Haber process N{{sub:2}} + 3H{{sub:2}} ⇌ 2NH{{sub:3}} (ΔH = −92 kJ mol{{sup:-1}}), 4 moles of N{{sub:2}} and 12 moles of H{{sub:2}} are placed in a 10 dm³ vessel. At equilibrium, 6 moles of NH{{sub:3}} are present. Calculate Kc.",
+      "steps": [
+       {
+        "operation": "Write the Kc expression",
+        "reason": "Kc = [NH{{sub:3}}]² / ([N{{sub:2}}][H{{sub:2}}]³)",
+        "result": "Kc = [NH{{sub:3}}]² / ([N{{sub:2}}][H{{sub:2}}]³)",
+        "predictPrompt": "What is the equilibrium constant expression for this reaction?"
+       },
+       {
+        "operation": "Find the equilibrium amounts from the stoichiometry",
+        "reason": "6 mol NH{{sub:3}} means 3 mol N{{sub:2}} and 9 mol H{{sub:2}} consumed",
+        "result": "N{{sub:2}} at equilibrium: 4 − 3 = 1 mol; H{{sub:2}} at equilibrium: 12 − 9 = 3 mol; NH{{sub:3}}: 6 mol",
+        "predictPrompt": "How many moles of N{{sub:2}} react to produce 6 moles of NH{{sub:3}}?"
+       },
+       {
+        "operation": "Convert to concentrations in 10 dm³",
+        "reason": "Amount ÷ volume",
+        "result": "[N{{sub:2}}] = 0.1 mol dm-³; [H{{sub:2}}] = 0.3 mol dm-³; [NH{{sub:3}}] = 0.6 mol dm-³",
+        "predictPrompt": "What is 3 mol divided by 10 dm³?"
+       },
+       {
+        "operation": "Evaluate Kc",
+        "reason": "Kc = (0.6)² / (0.1 x 0.3³) = 0.36 / 0.0027",
+        "result": "Kc ≈ 133",
+        "predictPrompt": "What is 0.6² divided by 0.0027?"
+       },
+       {
+        "operation": "Check to confirm: re-verify the consumption quantities",
+        "reason": "6 NH{{sub:3}} produced consumes 3 N{{sub:2}} (coefficient 1) and 9 H{{sub:2}} (coefficient 3) - matches",
+        "result": "1 + 9 + 12 = 22 total mol in mixture before reaction; after: 1 + 3 + 6 + 12 = 22 ✓ mass conserved ✓",
+        "predictPrompt": "Is the total atom balance maintained through the change?"
+       }
       ]
      }
     }
@@ -4270,7 +4784,7 @@
       "steps": [
        {
         "operation": "Name the scrubber action",
-        "reason": "SO₂ in the flue gas is captured by limewater or CaO slurry in the scrubber vessel",
+        "reason": "SO{{sub:2}} in the flue gas is captured by limewater or CaO slurry in the scrubber vessel",
         "result": "acidic oxide reacts with the base",
         "predictPrompt": "Why is the base used here?"
        },
@@ -4283,7 +4797,7 @@
        {
         "operation": "State why treatment is required",
         "reason": "calcium sulphite is a sludge residue, sometimes oxidised to gypsum; it must be handled as industrial waste",
-        "result": "if released untreated it would defeat the purpose — it must be disposed of safely",
+        "result": "if released untreated it would defeat the purpose  -  it must be disposed of safely",
         "predictPrompt": "Where does the sludge end up?"
        },
        {
@@ -4362,6 +4876,44 @@
        "Biodegradable rots; non-biodegradable persists.",
        "Source ≠ effect. Name which is asked.",
        "Noble gases in air are natural, not pollutants."
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: explain, with the correct GWP comparisons, why carbon dioxide dominates greenhouse warming even though methane and nitrous oxide are stronger per molecule.",
+      "steps": [
+       {
+        "operation": "Define global warming potential",
+        "reason": "GWP compares the heat-trapping strength of a gas against CO{{sub:2}} over 100 years",
+        "result": "CO{{sub:2}}: GWP = 1 (reference); CH{{sub:4}}: GWP = 25; N{{sub:2}}O: GWP = 273",
+        "predictPrompt": "What is GWP measured against?"
+       },
+       {
+        "operation": "Compare atmospheric lifetimes",
+        "reason": "CH{{sub:4}} lasts ~12 years; CO{{sub:2}} persists for centuries to millennia",
+        "result": "CH{{sub:4}} breaks down quickly; CO{{sub:2}} persists far longer",
+        "predictPrompt": "Which gas stays in the atmosphere for centuries?"
+       },
+       {
+        "operation": "Explain why CO{{sub:2}} dominates total warming",
+        "reason": "GWP per molecule favours CH{{sub:4}} and N{{sub:2}}O, but the amount and lifetime of CO{{sub:2}} win the product",
+        "result": "CO{{sub:2}} accounts for ~75% of anthropogenic warming by mass and persistence",
+        "predictPrompt": "Which dominates by mass and lifetime?"
+       },
+       {
+        "operation": "Apply to a coal power station",
+        "reason": "One power station emitting 1 Mt of CO{{sub:2}}/year contributes ~1 Mt CO{{sub:2}}-equivalents vs 0.04 MtCH{{sub:4}}-equivalents from the same mass of methane",
+        "result": "Volume of emission controls cumulative warming  -  not just per-molecule strength",
+        "predictPrompt": "Which emission source has the larger cumulative impact?"
+       },
+       {
+        "operation": "Check to confirm: the takeaway for climate policy",
+        "reason": "Cutting CO{{sub:2}} is unavoidable; cutting CH{{sub:4}} (livestock, landfill) is faster but smaller",
+        "result": "Both must be cut, and CO{{sub:2}} is the harder, larger target ✓",
+        "predictPrompt": "Which gas requires deeper cuts: CO{{sub:2}} or CH{{sub:4}}?"
+       }
       ]
      }
     }
@@ -4615,6 +5167,44 @@
        "Biotechnology complements chemistry; it does not replace it."
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: describe the contact process and justify the conditions chosen for the oxidation of SO{{sub:2}} to SO{{sub:3}}.",
+      "steps": [
+       {
+        "operation": "Write the equation",
+        "reason": "2SO{{sub:2}} + O{{sub:2}} ⇌ 2SO{{sub:3}}, ΔH = −197 kJ mol{{sup:-1}}",
+        "result": "2SO{{sub:2}} + O{{sub:2}} ⇌ 2SO{{sub:3}}",
+        "predictPrompt": "What is the balanced equation for sulfur dioxide oxidation?"
+       },
+       {
+        "operation": "Name the catalyst and the reason for it",
+        "reason": "Catalyst speeds rate but does not shift equilibrium",
+        "result": "Vanadium(V) oxide (V{{sub:2}}O{{sub:5}})",
+        "predictPrompt": "Which catalyst is used in the contact process?"
+       },
+       {
+        "operation": "Give the operating temperature and explain",
+        "reason": "450 °C is a kinetic compromise: lower temperature raises yield but slows rate",
+        "result": "450 °C",
+        "predictPrompt": "Why not run the reactor at 200 °C?"
+       },
+       {
+        "operation": "Give the operating pressure and explain",
+        "reason": "2 atm: conversion is already about 98% at this pressure; higher pressure means higher cost",
+        "result": "2 atm",
+        "predictPrompt": "Why is 2 atm chosen rather than 100 atm?"
+       },
+       {
+        "operation": "Sketch what happens to yield vs temperature",
+        "reason": "Equilibrium shifts towards reactant as temperature rises; rate rises with temperature  -  the optimum is a compromise",
+        "result": "Yield decreases from 100% at low T to ~99% equilibrium shift but rate demands 450 °C ✓",
+        "predictPrompt": "In which direction does equilibrium move at higher temperature?"
+       }
+      ]
+     }
     }
    ]
   },
@@ -4785,7 +5375,7 @@
        },
        {
         "operation": "Explain oxygen’s role in combustion",
-        "reason": "combustion requires an oxidant — oxygen — plus heat and fuel; the nitrogen is inert spectator",
+        "reason": "combustion requires an oxidant  -  oxygen  -  plus heat and fuel; the nitrogen is inert spectator",
         "result": "fire needs oxygen, not just heat and fuel",
         "predictPrompt": "Why does smothering a fire with a blanket work?"
        },
@@ -4838,7 +5428,7 @@
        "The cycle is also a purification: evaporated water leaves its salts behind, so rain is fresh water distilled by the sun. The hydrosphere's salt and the atmosphere's freshness are two ends of one process.",
        "Human activity interrupts the cycle at every step: pollution enters the rain, dams slow the rivers and deforestation reduces evaporation. The chemistry is simple; the management is not.",
        "That is why the water cycle is the bridge between this topic and pollution: the same trading of water carries both purity and pollutants.",
-       "The cycle also moves pollutants: acid rain falls through the same evaporation–condensation loop that purifies water. Pollution is water chemistry out of place, carried by the same machinery that delivers clean rain.",
+       "The cycle also moves pollutants: acid rain falls through the same evaporation-condensation loop that purifies water. Pollution is water chemistry out of place, carried by the same machinery that delivers clean rain.",
        "Understand the loop and you have one picture explaining both the syllabus fact and the environmental consequence."
       ],
       "bullets": [
@@ -4864,6 +5454,44 @@
        "Recite the planets in order; Jupiter is fifth.",
        "Nitrogen (78%) dominates air, not oxygen.",
        "Hydrosphere is mostly salt water."
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: explain why elements lighter than lithium can be formed in the Big Bang, but elements heavier than lithium cannot, and name the processes by which heavier elements are made.",
+      "steps": [
+       {
+        "operation": "State the elements produced in the Big Bang",
+        "reason": "The universe cooled too fast for heavier nuclei to build",
+        "result": "H, He, traces of Li, Be and B",
+        "predictPrompt": "Which elements does the Big Bang produce?"
+       },
+       {
+        "operation": "Explain why heavier elements could not form",
+        "reason": "No stable nuclei with mass number 5 or 8 exist; fusion pathways stop there",
+        "result": "The 5- and 8-mass gaps prevent fusion beyond lithium",
+        "predictPrompt": "What is the beryllium-8 barrier?"
+       },
+       {
+        "operation": "Describe stellar nucleosynthesis",
+        "reason": "Once stars form, extreme temperature and pressure allow fusion through carbon, oxygen, silicon to iron",
+        "result": "Elements up to iron are made in ordinary stars",
+        "predictPrompt": "Which elements form in ordinary stars?"
+       },
+       {
+        "operation": "Describe supernova nucleosynthesis",
+        "reason": "Explosive conditions in supernovae allow rapid neutron capture (r-process) to build the heaviest elements",
+        "result": "Elements heavier than iron come from supernovae",
+        "predictPrompt": "Where are elements heavier than iron made?"
+       },
+       {
+        "operation": "Check to confirm: the periodic table picture",
+        "reason": "Big Bang: H, He; stars: Li to Fe; supernovae: heavier",
+        "result": "Element origin matches cosmic abundance data ✓",
+        "predictPrompt": "Which element has both stellar and supernova origin?"
+       }
       ]
      }
     }
@@ -5067,7 +5695,7 @@
        "Water gas is made by passing steam over red-hot coke: C + H{{sub:2O}} → CO + H{{sub:2}}. The mixture of carbon monoxide and hydrogen is called producer gas or water gas, and it is the cheapest large-scale source of hydrogen because coke and water are cheap.",
        "The water-gas shift converts the carbon monoxide further: CO + H{{sub:2O}} → CO{{sub:2}} + H{{sub:2}}. That step doubles the hydrogen yield per coke and gives a cleaner gas for ammonia synthesis. Industry runs both steps in sequence.",
        "Cracking of petroleum fractions yields hydrogen with alkenes, but the yield per barrel is smaller than the coke route. Scale is why water gas dominates: the feedstock is nearly free.",
-       "The exam link is direct: any question asking the industrial source of hydrogen expects water gas (or steam–coke); any question about cracking expects alkenes as the main product, with hydrogen as a by-product.",
+       "The exam link is direct: any question asking the industrial source of hydrogen expects water gas (or steam-coke); any question about cracking expects alkenes as the main product, with hydrogen as a by-product.",
        "The shift step is also why syngas is called synthesis gas in industry: the same CO + H{{sub:2}} mixture feeds ammonia, methanol and oxo processes. One feedstock, several industries.",
        "Write both steps (coke to water gas, then shift to hydrogen) and you show the full manufacturing chain rather than just the winning name."
       ],
@@ -5114,6 +5742,44 @@
        "Industrial = water gas; laboratory = metal + acid.",
        "Hydrogen pops; oxygen rekindles. Never swap them.",
        "Flammable, but burns cleanly to water."
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: describe the laboratory preparation of hydrogen gas, state which of the named reactions are redox, and explain why industrial hydrogen is made by steam reforming rather than the laboratory route.",
+      "steps": [
+       {
+        "operation": "Write the laboratory preparation",
+        "reason": "Zn + dilute H{{sub:2}}SO{{sub:4}} or HCl → H{{sub:2}} + ZnSO{{sub:4}}",
+        "result": "Zn + H{{sub:2}}SO{{sub:4}} → ZnSO{{sub:4}} + H{{sub:2}} ↑",
+        "predictPrompt": "What is the standard laboratory production of hydrogen?"
+       },
+       {
+        "operation": "Classify the reaction as redox",
+        "reason": "Zn goes from 0 to +2 (oxidation); H goes from +1 to 0 (reduction)",
+        "result": "It is redox",
+        "predictPrompt": "Which element is oxidised and which is reduced?"
+       },
+       {
+        "operation": "Explain why this method is unsuitable industrially",
+        "reason": "Massive cost of zinc; tiny quantities; rate is modest",
+        "result": "Industrially wasteful",
+        "predictPrompt": "Why is zinc not used industrially?"
+       },
+       {
+        "operation": "State the actual industrial route",
+        "reason": "Steam reforming of natural gas: CH{{sub:4}} + H{{sub:2}}O → CO + 3H{{sub:2}}, then water-gas shift: CO + H{{sub:2}}O → CO{{sub:2}} + H{{sub:2}}",
+        "result": "Steam reforming + shift reaction, large-scale",
+        "predictPrompt": "What is the most common industrial hydrogen source?"
+       },
+       {
+        "operation": "State the purity requirement",
+        "reason": "NH{{sub:3}} synthesis requires very pure H{{sub:2}}; CO{{sub:2}} is scrubbed out before use",
+        "result": "Scrubbing with amine solution removes CO{{sub:2}} and CO (in catalytic form) ✓",
+        "predictPrompt": "Why must CO be removed before ammonia synthesis?"
+       }
       ]
      }
     }
@@ -5338,7 +6004,7 @@
        "Reactivity falls down the group: fluorine is the strongest oxidising agent, iodine the weakest. Displacement reactions show it plainly: chlorine displaces bromine from its salts, bromine displaces iodine, and the reverse never happens.",
        "That order is why chlorine sterilises water efficiently while iodine is used more gently as an antiseptic. Group position predicts behaviour, and the trend is the same charge-versus-shielding contest as the periodic table.",
        "Recite the displacement order F{{sub:2}} > Cl{{sub:2}} > Br{{sub:2}} > I{{sub:2}} and you can answer any halogen comparison item without memorising individual reactions.",
-       "The displacement order also explains why chlorine water turns starch–potassium iodide paper blue-black in halogen tests: chlorine oxidises iodide to iodine, colouring the paper. The reaction is the test.",
+       "The displacement order also explains why chlorine water turns starch-potassium iodide paper blue-black in halogen tests: chlorine oxidises iodide to iodine, colouring the paper. The reaction is the test.",
        "Link displacement to oxidation power and both the comparison item and the test item fall out of one rule.",
        "That single order of oxidising power also explains naming: fluorine is the strongest oxidising agent of all elements, which is why it is never found free in nature and must be made from its compounds."
       ],
@@ -5366,6 +6032,44 @@
        "AgNO{{sub:3}} tests the chloride ion, not chlorine gas.",
        "HCl gas and hydrochloric acid are different states.",
        "Chlorine displaces bromine, never the reverse."
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: describe how chlorine is used to purify water, the two competing pathways after chlorine is added, and why the dosage has to be carefully controlled.",
+      "steps": [
+       {
+        "operation": "Write the disinfection equilibrium",
+        "reason": "Cl{{sub:2}} + H{{sub:2}}O ⇌ HCl + HOCl",
+        "result": "Cl{{sub:2}} + H{{sub:2}}O ⇌ HCl + HOCl",
+        "predictPrompt": "What does chlorine produce in water?"
+       },
+       {
+        "operation": "Name the disinfecting species",
+        "reason": "HOCl is the actual antiseptic agent; HOCl dissociates to OCl-",
+        "result": "HOCl and OCl- are the biocidal species",
+        "predictPrompt": "Which chemical species kills bacteria after chlorine is added?"
+       },
+       {
+        "operation": "Name the undesirable pathway",
+        "reason": "HOCl reacts with organic matter producing trihalomethanes (THMs)",
+        "result": "THM formation: carcinogenic",
+        "predictPrompt": "What does chlorine react with to form trihalomethanes?"
+       },
+       {
+        "operation": "Explain the dosing philosophy",
+        "reason": "Dose to the breakpoint chlorination curve: enough chlorine to kill demand without excess residue to form THMs",
+        "result": "Breakpoint chlorination practice",
+        "predictPrompt": "What is the relationship between dose and THM risk?"
+       },
+       {
+        "operation": "Check to confirm: the practical result",
+        "reason": "Free chlorine residue of 0.2-0.5 mg/L: enough to stop regrowth; low THM dose ✓",
+        "result": "Optimised ratio confirmed ✓",
+        "predictPrompt": "What residual chlorine level is typical in delivered water?"
+       }
       ]
      }
     }
@@ -5528,7 +6232,7 @@
        {
         "operation": "Classify the hardness",
         "reason": "hardness that persists after boiling is permanent hardness; temporary hardness would boil away",
-        "result": "permanent hardness — sulphates of Ca and Mg",
+        "result": "permanent hardness  -  sulphates of Ca and Mg",
         "predictPrompt": "Why does boiling fail here?"
        },
        {
@@ -5539,13 +6243,13 @@
        },
        {
         "operation": "Name the softening methods",
-        "reason": "washing soda (Na₂CO₃) precipitates the Ca/Mg ions as insoluble carbonates; ion-exchange resins swap them for Na⁺ or H⁺",
+        "reason": "washing soda (Na{{sub:2}}CO{{sub:3}}) precipitates the Ca/Mg ions as insoluble carbonates; ion-exchange resins swap them for Na⁺ or H⁺",
         "result": "precipitation as carbonate or ion exchange",
         "predictPrompt": "Which one physically pours out a solid?"
        },
        {
         "operation": "Check to confirm: link to temporary hardness",
-        "reason": "temporary hardness is hydrogencarbonates and boils away; permanent is sulphates and persists — two different chemistry routes",
+        "reason": "temporary hardness is hydrogencarbonates and boils away; permanent is sulphates and persists  -  two different chemistry routes",
         "result": "one test distinguishes the two kinds",
         "predictPrompt": "What single test separates them?"
        }
@@ -5620,6 +6324,44 @@
        "Efflorescence loses water; deliquescence dissolves in it.",
        "Stratospheric ozone protects; ground ozone pollutes.",
        "H{{sub:2}}:O{{sub:2}} volume ratio in water is 2:1."
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: distinguish between the chemistry of temporary and permanent hardness, and write the equations showing the removal of each type of hardness by washing soda (sodium carbonate).",
+      "steps": [
+       {
+        "operation": "Define temporary hardness",
+        "reason": "Dissolved bicarbonate: Ca(HCO{{sub:3}}){{sub:2}} and Mg(HCO{{sub:3}}){{sub:2}}",
+        "result": "Temporary hardness: Ca(HCO{{sub:3}}){{sub:2}} etc.",
+        "predictPrompt": "What is the chemical cause of temporary hardness?"
+       },
+       {
+        "operation": "Define permanent hardness",
+        "reason": "Dissolved sulfate/chloride: CaSO{{sub:4}}, MgSO{{sub:4}}, CaCl{{sub:2}}",
+        "result": "Permanent hardness: CaSO{{sub:4}} etc.",
+        "predictPrompt": "What is the chemical cause of permanent hardness?"
+       },
+       {
+        "operation": "Equate permanent removal with washing soda",
+        "reason": "Na{{sub:2}}CO{{sub:3}} + CaCl{{sub:2}} → CaCO{{sub:3}} ↓ + 2NaCl",
+        "result": "Na{{sub:2}}CO{{sub:3}} + CaCl{{sub:2}} → CaCO{{sub:3}} + 2NaCl",
+        "predictPrompt": "What precipitate forms in washing soda + calcium chloride?"
+       },
+       {
+        "operation": "Equate temporary removal with boiling",
+        "reason": "Ca(HCO{{sub:3}}){{sub:2}} → CaCO{{sub:3}} ↓ + H{{sub:2}}O + CO{{sub:2}}",
+        "result": "Ca(HCO{{sub:3}}){{sub:2}} → CaCO{{sub:3}} + CO{{sub:2}} + H{{sub:2}}O",
+        "predictPrompt": "What happens to calcium bicarbonate on boiling?"
+       },
+       {
+        "operation": "Check to confirm: limescale problem",
+        "reason": "Both mechanisms strip carbonate as CaCO{{sub:3}}, which is the basis of kettles furring up",
+        "result": "Both types produce CaCO{{sub:3}} ✓",
+        "predictPrompt": "Which compound forms kettle scale?"
+       }
       ]
      }
     }
@@ -5875,6 +6617,44 @@
        "Allotropes are elements; preparation is not expected."
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: outline the route from elemental sulfur to sulfuric acid, and write the equation for the formation of acid rain from SO{{sub:2}}.",
+      "steps": [
+       {
+        "operation": "Roast the sulfur to SO{{sub:2}}",
+        "reason": "S + O{{sub:2}} → SO{{sub:2}}",
+        "result": "S + O{{sub:2}} → SO{{sub:2}}",
+        "predictPrompt": "What does burning sulfur in air produce?"
+       },
+       {
+        "operation": "Catalytic oxidation to SO{{sub:3}}",
+        "reason": "2SO{{sub:2}} + O{{sub:2}} ⇌ 2SO{{sub:3}} (V{{sub:2}}O{{sub:5}} catalyst, 450 °C)",
+        "result": "2SO{{sub:2}} + O{{sub:2}} → 2SO{{sub:3}}",
+        "predictPrompt": "What does the contact process produce from SO{{sub:2}}?"
+       },
+       {
+        "operation": "Absorption of SO{{sub:3}} into sulfuric acid",
+        "reason": "SO{{sub:3}} + H{{sub:2}}SO{{sub:4}} → H{{sub:2}}S{{sub:2}}O{{sub:7}}; then H{{sub:2}}S{{sub:2}}O{{sub:7}} + H{{sub:2}}O → 2H{{sub:2}}SO{{sub:4}}",
+        "result": "SO{{sub:3}} + H{{sub:2}}SO{{sub:4}} → H{{sub:2}}S{{sub:2}}O{{sub:7}}; H{{sub:2}}S{{sub:2}}O{{sub:7}} + H{{sub:2}}O → 2H{{sub:2}}SO{{sub:4}}",
+        "predictPrompt": "Why is SO{{sub:3}} dissolved in acid and not straight into water?"
+       },
+       {
+        "operation": "Formation of acid rain",
+        "reason": "SO{{sub:2}} + H{{sub:2}}O → H{{sub:2}}SO{{sub:3}}; 2SO{{sub:2}} + O{{sub:2}} + 2H{{sub:2}}O → 2H{{sub:2}}SO{{sub:4}}",
+        "result": "SO{{sub:2}} + H{{sub:2}}O → H{{sub:2}}SO{{sub:3}}; 2SO{{sub:2}} + O{{sub:2}} + 2H{{sub:2}}O → 2H{{sub:2}}SO{{sub:4}}",
+        "predictPrompt": "What does SO{{sub:2}} form in rainwater?"
+       },
+       {
+        "operation": "Check to confirm: the environmental impact",
+        "reason": "Sulfuric deposition acidifies lakes, kills forests, corrodes limestone",
+        "result": "Acid rain is a primary environmental consequence of SO{{sub:2}} emissions ✓",
+        "predictPrompt": "What are the two main consequences of acid rain?"
+       }
+      ]
+     }
     }
    ]
   },
@@ -6043,7 +6823,7 @@
         "operation": "Apply the ratio",
         "reason": "1 mole N{{sub:2}} gives 2 mol NH{{sub:3}}",
         "result": "1.0 mol NH{{sub:3}}",
-        "predictPrompt": "Double, double — why?"
+        "predictPrompt": "Double, double  -  why?"
        },
        {
         "operation": "Mass of ammonia",
@@ -6097,7 +6877,7 @@
       "heading": "Go deeper: Ammonia as a ligand and a test",
       "paragraphs": [
        "Ammonia's lone pair makes it a ligand: it donates both electrons of a coordinate bond to metal ions, forming complex ions like [Cu(NH{{sub:3}}){{sub:4}}]{{sup:2+}}. That is why excess ammonia dissolves copper(II) hydroxide to a deep blue solution, a qualitative-analysis landmark.",
-       "The same lone pair makes ammonia a base: it accepts a proton to form NH{{sub:4}}{{sup:+}}. The acid–base and ligand roles are one property, the available electron pair, used in two different reactions.",
+       "The same lone pair makes ammonia a base: it accepts a proton to form NH{{sub:4}}{{sup:+}}. The acid-base and ligand roles are one property, the available electron pair, used in two different reactions.",
        "The white-fume test exploits both: NH{{sub:3}} + HCl → NH{{sub:4Cl}} solid fumes. The reaction is instant and unmistakable, which is why it confirms ammonia beyond doubt.",
        "Link the lone pair to both behaviours and you will never memorise them as separate facts.",
        "Nitrates are used in fertilisers, gunpowder and matches, and the nitrate ion is the starting point of the whole nitric-acid chain. Their heat decomposition supplies the oxygen that makes gunpowder and matches work."
@@ -6128,6 +6908,44 @@
        "N states: NH{{sub:3}} −3, NO +2, NO{{sub:2}} +4, HNO{{sub:3}} +5.",
        "White fumes = ammonia test; bleaching = chlorine test.",
        "Nitrate test gives brown NO{{sub:2}} fumes."
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: for the Haber equilibrium N{{sub:2}} + 3H{{sub:2}} ⇌ 2NH{{sub:3}} (ΔH = −92 kJ mol{{sup:-1}}), predict and explain the effect of raising the temperature on yield and on rate of attainment, and state the industrial compromise.",
+      "steps": [
+       {
+        "operation": "Apply Le Chatelier to the direction of heat",
+        "reason": "Exothermic direction always shifts against rising temperature",
+        "result": "Higher T shifts equilibrium left (less NH{{sub:3}} at equilibrium)",
+        "predictPrompt": "Does raising temperature increase or reduce equilibrium yield?"
+       },
+       {
+        "operation": "Apply kinetics to rate",
+        "reason": "Higher temperature speeds every reaction regardless of direction",
+        "result": "Higher T reaches equilibrium faster",
+        "predictPrompt": "Does raising temperature speed up attaining equilibrium?"
+       },
+       {
+        "operation": "State the resolution",
+        "reason": "A compromise temperature (about 450 °C) is used with catalyst and pressure",
+        "result": "450-500 °C with Fe catalyst, 200 atm",
+        "predictPrompt": "What is the typical industrial temperature?"
+       },
+       {
+        "operation": "Explain why pressure is also chosen",
+        "reason": "Fewer gas moles on product side: high pressure pushes yield right",
+        "result": "High pressure (200 atm) raises yield",
+        "predictPrompt": "Which direction does more pressure push the equilibrium?"
+       },
+       {
+        "operation": "Check to confirm: the takeaway",
+        "reason": "Rate and yield oppose here; conditions chosen to optimise total throughput, not either alone",
+        "result": "Industrial Haber works because of compromise choices ✓",
+        "predictPrompt": "Why is 450 °C the typical compromise?"
+       }
       ]
      }
     }
@@ -6293,7 +7111,7 @@
         "predictPrompt": "Estimate: 16 × 0.5 = 8 ✓"
        },
        {
-        "operation": "Ratio to CO₂",
+        "operation": "Ratio to CO{{sub:2}}",
         "reason": "1 mol CH{{sub:4}} → 1 mol CO{{sub:2}}",
         "result": "0.5 mol CO{{sub:2}}",
         "predictPrompt": "Why 1:1 and not 1:2?"
@@ -6349,7 +7167,7 @@
      "content": {
       "heading": "Go deeper: Carbon monoxide as a poison",
       "paragraphs": [
-       "Carbon monoxide binds haemoglobin about 200–300 times more strongly than oxygen does. Once bound, the haemoglobin cannot carry oxygen, so the blood's oxygen delivery collapses even though the air contains oxygen.",
+       "Carbon monoxide binds haemoglobin about 200-300 times more strongly than oxygen does. Once bound, the haemoglobin cannot carry oxygen, so the blood's oxygen delivery collapses even though the air contains oxygen.",
        "That is why charcoal fires and faulty generators kill in closed rooms: the CO is colourless and odourless, the victim notices nothing, and the blood is quietly taken over. The danger is silent because the gas gives no smell and no irritation.",
        "CO is also a reducing agent: it removes oxygen from hot copper(II) oxide. The same property that makes it a poison makes it a useful reducer in metallurgy.",
        "The exam trap is to treat CO as merely ‘a greenhouse gas’. Its primary danger is haemoglobin binding, not the greenhouse effect.",
@@ -6357,7 +7175,7 @@
        "That reversibility is also why CO poisoning is survivable: given oxygen and time, the haemoglobin releases CO and reloads with oxygen."
       ],
       "bullets": [
-       "CO binds haemoglobin 200–300× stronger than O{{sub:2}}.",
+       "CO binds haemoglobin 200-300× stronger than O{{sub:2}}.",
        "No smell, no irritation: silent poison.",
        "CO reduces hot metal oxides (metallurgy).",
        "Primary danger is blood binding, not greenhouse effect."
@@ -6380,6 +7198,44 @@
        "C in CO{{sub:2}} is +4; in CO is +2.",
        "Anthracite is dug; coke is manufactured.",
        "Incomplete combustion → CO; complete → CO{{sub:2}}."
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: describe the carbon cycle in terms of the combustion equation and explain why the two direct industrial processes (syngas via coal gasification, steel production) are major CO contributors to the atmosphere.",
+      "steps": [
+       {
+        "operation": "Write the base combustion of carbon",
+        "reason": "C + O{{sub:2}} → CO{{sub:2}}  -  a single carbon enters the atmospheric cycle directly",
+        "result": "C + O{{sub:2}} → CO{{sub:2}}",
+        "predictPrompt": "What does burning elemental carbon produce?"
+       },
+       {
+        "operation": "Write the incomplete combustion",
+        "reason": "O{{sub:2}} limited: 2C + O{{sub:2}} → 2CO  -  a toxic gas rises alongside",
+        "result": "2C + O{{sub:2}} → 2CO",
+        "predictPrompt": "What is produced when oxygen is limited?"
+       },
+       {
+        "operation": "Name the industrial source of syngas",
+        "reason": "Syngas = CO + H{{sub:2}}; produced by gasifying coal with steam at high temperature",
+        "result": "CO{{sub:2}} + C → 2CO; CO{{sub:2}} produced at the same time",
+        "predictPrompt": "How is syngas produced from coal?"
+       },
+       {
+        "operation": "Connect steel production to atmospheric output",
+        "reason": "Blast furnaces carry out the reverse water-gas shift to produce CO, which escapes to atmosphere",
+        "result": "Iron-making is net CO and CO{{sub:2}} positive",
+        "predictPrompt": "Why is steel-making a net carbon source?"
+       },
+       {
+        "operation": "Check to confirm: the consequence in atmospheric terms",
+        "reason": "Two anthropogenic routes (steel and syngas) have scaled the carbon cycle far beyond pre-industrial baseline",
+        "result": "CO{{sub:2}} concentration rose from ~280 ppm pre-industrial to ~420 ppm now ✓",
+        "predictPrompt": "What ppm has atmospheric CO{{sub:2}} reached today?"
+       }
       ]
      }
     }
@@ -6656,6 +7512,44 @@
        "An alloy is a mixture, not a compound; constituents keep their properties."
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: explain why highly reactive metals like sodium and potassium cannot be reduced by carbon, the difference between reduction by heating with carbon and electrolysis, and write the aluminium extraction equations.",
+      "steps": [
+       {
+        "operation": "State the reduction-by-carbon limit",
+        "reason": "Reactive metals hold their oxygen more strongly than carbon can rip it away",
+        "result": "Carbon fails above Al in the reactivity series",
+        "predictPrompt": "Where does carbon fall in the reactivity series?"
+       },
+       {
+        "operation": "Describe the blast furnace principle",
+        "reason": "Fe{{sub:2}}O{{sub:3}} + 3C → 2Fe + 3CO (with additional step Fe{{sub:2}}O{{sub:3}} + 3CO → 2Fe + 3CO{{sub:2}})",
+        "result": "Iron is reduced by carbon at high temperature",
+        "predictPrompt": "What gas does iron oxide produce when reduced?"
+       },
+       {
+        "operation": "Describe aluminium extraction (Hall-Héroult)",
+        "reason": "Aluminium oxide (bauxite) is dissolved in molten cryolite to lower operating temperature; electrolysed between carbon anodes and cathode",
+        "result": "Al{{sub:2}}O{{sub:3}} + 3C → 4Al + 3CO{{sub:2}} (electrolysis product summary)",
+        "predictPrompt": "Why is cryolite used in aluminium extraction?"
+       },
+       {
+        "operation": "Explain why aluminium cannot be reduced by carbon energetically",
+        "reason": "Al-C bond strong enough that carbon reduction delivers too little energy return; electrolysis handles it",
+        "result": "Aluminium is produced by electrolysis, not reduction with carbon",
+        "predictPrompt": "Why is electrolysis used for aluminium and not iron?"
+       },
+       {
+        "operation": "Check to confirm: distinguish reactivity-by-electrolysis from other metals",
+        "reason": "Zinc can be blown to metal with carbon; aluminium cannot; silver fine with coke",
+        "result": "Reactivity determines reduction route: Al → electrolysis, Fe → carbon, Ag → coke or heat ✓",
+        "predictPrompt": "Why does Zn reduce with carbon while Al does not?"
+       }
+      ]
+     }
     }
    ]
   },
@@ -6912,6 +7806,44 @@
        "Na{{sup:+}} flame is golden yellow; K{{sup:+}} is lilac.",
        "NaOH precipitates the metal ions, not Na{{sup:+}}.",
        "Heating NaHCO{{sub:3}} gives Na{{sub:2CO}}{{sub:3}}, never backwards."
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: describe the membrane cell setup for electrolysis of brine and write the half equations along with the overall equation for producing chlorine, sodium hydroxide and hydrogen.",
+      "steps": [
+       {
+        "operation": "Identify the electrodes",
+        "reason": "Anode and cathode separated by a semipermeable membrane, which allows cations but not anions through",
+        "result": "Anode: graphite/titanium; cathode: iron; Na⁺ migrates to cathode side",
+        "predictPrompt": "Which ion migrates across the membrane in the membrane cell?"
+       },
+       {
+        "operation": "Write the cathode half-equation",
+        "reason": "2H{{sub:2}}O + 2e- → H{{sub:2}} + 2OH-",
+        "result": "2H{{sub:2}}O + 2e- → H{{sub:2}} + 2OH-",
+        "predictPrompt": "What forms at the cathode in brine electrolysis?"
+       },
+       {
+        "operation": "Write the anode half-equation",
+        "reason": "2Cl- → Cl{{sub:2}} + 2e-",
+        "result": "2Cl- → Cl{{sub:2}} + 2e-",
+        "predictPrompt": "What forms at the anode?"
+       },
+       {
+        "operation": "Write the overall equation including NaOH product",
+        "reason": "NaOH stays in the cathode chamber; overall: 2NaCl + 2H{{sub:2}}O → 2NaOH + H{{sub:2}} + Cl{{sub:2}}",
+        "result": "2NaCl + 2H{{sub:2}}O → 2NaOH + Cl{{sub:2}} + H{{sub:2}}",
+        "predictPrompt": "Write the overall equation for brine electrolysis."
+       },
+       {
+        "operation": "Check to confirm: why is a diaphragm/membrane essential",
+        "reason": "Without separation, Cl{{sub:2}} and NaOH are produced in the same chamber and react to form bleach then chlorate",
+        "result": "Membrane separation prevents loss and preserves product purity ✓",
+        "predictPrompt": "What happens if chlorine and sodium hydroxide meet in the same chamber?"
+       }
       ]
      }
     }
@@ -7173,6 +8105,44 @@
        "Gypsum regulates setting time."
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: using Hess's law and the data ΔH_f(CaCO{{sub:3}}) = −1207 kJ mol{{sup:-1}}, ΔH_f(CaO) = −635 kJ mol{{sup:-1}}, ΔH_f(CO{{sub:2}}) = −394 kJ mol{{sup:-1}}, calculate the enthalpy change for breaking down limestone to lime.",
+      "steps": [
+       {
+        "operation": "Write the thermal decomposition equation",
+        "reason": "CaCO{{sub:3}} → CaO + CO{{sub:2}}",
+        "result": "CaCO{{sub:3}} → CaO + CO{{sub:2}}",
+        "predictPrompt": "What does heating calcium carbonate give?"
+       },
+       {
+        "operation": "State Hess's law for decomposition",
+        "reason": "ΔH = Σ ΔH_f(products) − Σ ΔH_f(reactants)",
+        "result": "ΔH = (ΔH_f(CaO) + ΔH_f(CO{{sub:2}})) − ΔH_f(CaCO{{sub:3}})",
+        "predictPrompt": "How does Hess's law apply to the limestone reaction?"
+       },
+       {
+        "operation": "Substitute the values",
+        "reason": "(−635) + (−394) − (−1207)",
+        "result": "ΔH = −1029 + 1207 = +178 kJ mol{{sup:-1}}",
+        "predictPrompt": "What does −635 − 394 + 1207 give?"
+       },
+       {
+        "operation": "Interpret the sign",
+        "reason": "Positive ΔH means the reaction is endothermic; it needs continuous heating",
+        "result": "Endothermic lime kiln, large flue gas burden",
+        "predictPrompt": "Does a positive ΔH mean endothermic or exothermic?"
+       },
+       {
+        "operation": "Check to confirm: verify against direct measurement",
+        "reason": "Thermochemical data for CaCO{{sub:3}} shows a similar value; the temperature requirement is consistent",
+        "result": "≈ 178 kJ mol{{sup:-1}} endothermic ✓",
+        "predictPrompt": "Does the sign of ΔH match the need to keep firing the kiln?"
+       }
+      ]
+     }
     }
    ]
   },
@@ -7426,6 +8396,44 @@
        "Al(OH){{sub:3}} dissolves in excess NaOH; Fe(OH){{sub:3}} does not."
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: explain the chemistry of anodizing aluminium and why aluminium, despite its high reactivity, does not corrode visibly in air the way iron does.",
+      "steps": [
+       {
+        "operation": "Describe the passive layer on aluminium",
+        "reason": "Naturally formed Al{{sub:2}}O{{sub:3}} immediately coats the bare metal surface",
+        "result": "Stable Al{{sub:2}}O{{sub:3}} layer shields the bulk",
+        "predictPrompt": "What oxide forms naturally on aluminium?"
+       },
+       {
+        "operation": "Explain why iron does not benefit from this protection",
+        "reason": "Fe{{sub:2}}O{{sub:3}} is porous; water and oxygen penetrate rust and continue attack",
+        "result": "Rust continues inward; aluminium oxide is dense and self-adhesive",
+        "predictPrompt": "What is the difference between iron oxide and aluminium oxide surfaces?"
+       },
+       {
+        "operation": "Define anodizing",
+        "reason": "Deliberately thickening the oxide on aluminium electrolytically in sulphuric acid",
+        "result": "Anode oxidation forms a controlled Al{{sub:2}}O{{sub:3}} layer 100x thicker than natural",
+        "predictPrompt": "How is the oxide layer deliberately thickened in anodizing?"
+       },
+       {
+        "operation": "Use applications",
+        "reason": "Hardness, corrosion resistance, ability to take dyes  -  aircraft, utensils",
+        "result": "Used for cookware and aerospace ✓",
+        "predictPrompt": "Why is anodized aluminium used in cookware?"
+       },
+       {
+        "operation": "Check to confirm: compare corrosion rates",
+        "reason": "Iron rusts at 0.1-3 mm/year; aluminium oxidation is negligible alumina-scale",
+        "result": "Anodizing improves but the chemistry is fundamentally the same ✓",
+        "predictPrompt": "Why does iron rust while aluminium does not?"
+       }
+      ]
+     }
     }
    ]
   },
@@ -7583,20 +8591,20 @@
       "steps": [
        {
         "operation": "Name the charge",
-        "reason": "haematite ore (Fe₂O₃), limestone (flux), and coke (fuel/reducer)",
+        "reason": "haematite ore (Fe{{sub:2}}O{{sub:3}}), limestone (flux), and coke (fuel/reducer)",
         "result": "ore + limestone + coke",
         "predictPrompt": "Why do you need all three?"
        },
        {
         "operation": "Explain coke’s role",
-        "reason": "coke burns in hot air to make CO, which reduces the oxide to molten iron: Fe₂O₃ + 3CO → 2Fe + 3CO₂",
+        "reason": "coke burns in hot air to make CO, which reduces the oxide to molten iron: Fe{{sub:2}}O{{sub:3}} + 3CO → 2Fe + 3CO{{sub:2}}",
         "result": "CO is the actual reducing agent, coke is its source",
         "predictPrompt": "Why start from coke and not CO directly?"
        },
        {
         "operation": "Explain limestone’s role",
-        "reason": "limestone decomposes to CaO, which combines with silica impurities in the ore to form slag — calcium silicate",
-        "result": "slag — liquid at furnace temperature",
+        "reason": "limestone decomposes to CaO, which combines with silica impurities in the ore to form slag  -  calcium silicate",
+        "result": "slag  -  liquid at furnace temperature",
         "predictPrompt": "Why must the impurities leave and not the iron?"
        },
        {
@@ -7607,7 +8615,7 @@
        },
        {
         "operation": "Check to confirm: reductant terminology",
-        "reason": "coke is the fuel; CO is the reductant; limestone is the flux — three distinct jobs",
+        "reason": "coke is the fuel; CO is the reductant; limestone is the flux  -  three distinct jobs",
         "result": "no single input does two jobs",
         "predictPrompt": "Which does reduction alone?"
        }
@@ -7682,6 +8690,44 @@
        "Fe{{sup:2+}} → hexacyanoferrate(III); Fe{{sup:3+}} → hexacyanoferrate(II).",
        "Wrought iron is tough; cast iron is brittle.",
        "Crossed reagents, crossed reputations."
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: starting with 2000 tonnes of Fe{{sub:2}}O{{sub:3}}, calculate the mass of iron produced in a blast furnace (Mr Fe{{sub:2}}O{{sub:3}} = 160, Fe = 56).",
+      "steps": [
+       {
+        "operation": "Write the key balanced equation",
+        "reason": "Fe{{sub:2}}O{{sub:3}} + 3CO → 2Fe + 3CO{{sub:2}}",
+        "result": "Fe{{sub:2}}O{{sub:3}} + 3CO → 2Fe + 3CO{{sub:2}}",
+        "predictPrompt": "What is the principal reaction in the blast furnace?"
+       },
+       {
+        "operation": "Convert the mass to moles of Fe{{sub:2}}O{{sub:3}}",
+        "reason": "2000 tonnes = 2,000,000 kg; n = mass / Mr",
+        "result": "n(Fe{{sub:2}}O{{sub:3}}) = 2,000,000,000 / 160 = 12,500,000 mol",
+        "predictPrompt": "What is 2,000,000,000 divided by 160?"
+       },
+       {
+        "operation": "Convert to moles of Fe",
+        "reason": "2 mol Fe per mol Fe{{sub:2}}O{{sub:3}}",
+        "result": "n(Fe) = 2 x 12,500,000 = 25,000,000 mol",
+        "predictPrompt": "How many moles of iron come from 1 mol of Fe{{sub:2}}O{{sub:3}}?"
+       },
+       {
+        "operation": "Convert to mass of Fe",
+        "reason": "mass = n × Mr = 25,000,000 × 56",
+        "result": "mass(Fe) = 1,400,000,000,000 g = 1400 tonnes",
+        "predictPrompt": "What is 25 million multiplied by 56 g/mol?"
+       },
+       {
+        "operation": "Check to confirm: simple percentage conversion",
+        "reason": "Fe content of Fe{{sub:2}}O{{sub:3}} is 112/160 = 70%; so mass of Fe = 70% of 2000 = 1400 tonnes ✓",
+        "result": "1400 tonnes iron ✓ - the percentage shortcut matches",
+        "predictPrompt": "What percentage of Fe{{sub:2}}O{{sub:3}} is iron by mass?"
+       }
       ]
      }
     }
@@ -7852,7 +8898,7 @@
         "predictPrompt": "Is 0.1006 about right?"
        },
        {
-        "operation": "Moles of Cu — 1:1",
+        "operation": "Moles of Cu  -  1:1",
         "reason": "1 mol CuO → 1 mol Cu",
         "result": "0.1006 mol Cu",
         "predictPrompt": "Why 1:1?"
@@ -7943,6 +8989,44 @@
        "Alloys always beat pure metals at their job."
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: describe the electrolytic refining of copper, and explain why copper is the essential wirer for electricity despite its scarcity.",
+      "steps": [
+       {
+        "operation": "Describe the cell",
+        "reason": "Impure copper anode, pure copper cathode, CuSO{{sub:4}} + H{{sub:2}}SO{{sub:4}} solution",
+        "result": "Impure → pure: anode loses Cu, cathode gains Cu",
+        "predictPrompt": "What electrodes are used in copper refining?"
+       },
+       {
+        "operation": "Write the anode/cathode half-equations",
+        "reason": "Anode: Cu → Cu²⁺ + 2e-; cathode: Cu²⁺ + 2e- → Cu",
+        "result": "Cu(s) → Cu²⁺(aq) + 2e-; Cu²⁺(aq) + 2e- → Cu(s)",
+        "predictPrompt": "What is the anode half-equation?"
+       },
+       {
+        "operation": "Describe where impurities go",
+        "reason": "Less electropositive metals (Au, Ag, Pt) fall as sludge under anode; more electropositive metals stay in solution (Fe, Zn)",
+        "result": "Sludge: Ag, Au, Pt; in-solution: Fe, Zn, Ni",
+        "predictPrompt": "Where do silver, gold and platinum end up?"
+       },
+       {
+        "operation": "Explain why refined copper wins for wiring",
+        "reason": "Highest non-precious electrical conductivity of all metals; great ductility; corrosion resistance acceptable for indoors",
+        "result": "Cheaper silver is reserved for special electronics",
+        "predictPrompt": "Why are silver wires not used at home?"
+       },
+       {
+        "operation": "Check to confirm: the final purity",
+        "reason": "Cathode copper reaches 99.99% purity; conductivity meets grid specification ✓",
+        "result": "Refined copper meets national grid standard ✓",
+        "predictPrompt": "Is electrolytically refined copper pure enough for the grid?"
+       }
+      ]
+     }
     }
    ]
   },
@@ -7969,7 +9053,7 @@
       "heading": "Why carbon forms chains",
       "paragraphs": [
        "Carbon has four outer electrons, so it forms four bonds: it is tetravalent. Each bond can link to another carbon, so chains, rings and branches grow without limit. That ability to link carbon to carbon is called catenation.",
-       "No other element does this as well: silicon forms chains poorly, while nitrogen and oxygen stop at two or three bonds. Carbon's four bonds plus its strong carbon–carbon links make it the chain-builder of nature.",
+       "No other element does this as well: silicon forms chains poorly, while nitrogen and oxygen stop at two or three bonds. Carbon's four bonds plus its strong carbon-carbon links make it the chain-builder of nature.",
        "Inside every organic molecule the carbon skeleton carries functional groups (OH, COOH, NH{{sub:2}}), small teams of atoms that decide the compound's behaviour. The skeleton gives the name's length; the group gives its personality."
       ],
       "bullets": [
@@ -8109,18 +9193,18 @@
        {
         "operation": "Find the smallest whole-number ratio",
         "reason": "divide both by 6.67: 1 : 3",
-        "result": "empirical formula = CH₃",
-        "predictPrompt": "Why is CH₃ not a real molecule on its own?"
+        "result": "empirical formula = CH{{sub:3}}",
+        "predictPrompt": "Why is CH{{sub:3}} not a real molecule on its own?"
        },
        {
         "operation": "Scale correctly to a molecular formula",
         "reason": "if the Mr were known we could scale, but with percentages alone the empirical formula is the answer",
-        "result": "empirical formula: CH₃",
+        "result": "empirical formula: CH{{sub:3}}",
         "predictPrompt": "What is missing for the true formula?"
        },
        {
         "operation": "Check to confirm: combine with Mr",
-        "reason": "if the Mr were 30, then 2 x 15 = 30, giving C₂H₆ (ethane) — the percentages fit",
+        "reason": "if the Mr were 30, then 2 x 15 = 30, giving C{{sub:2}}H{{sub:6}} (ethane)  -  the percentages fit",
         "result": "the ratio is consistent with ethane",
         "predictPrompt": "What Mr would give this exact composition?"
        }
@@ -8143,7 +9227,7 @@
      "content": {
       "heading": "Go deeper: Why carbon chains are endless",
       "paragraphs": [
-       "Carbon's four bonds and its strong carbon–carbon links let it form chains, rings and branches of any length. Silicon, directly below carbon, forms chains poorly because silicon–silicon bonds are weak; nitrogen and oxygen stop at two or three bonds.",
+       "Carbon's four bonds and its strong carbon-carbon links let it form chains, rings and branches of any length. Silicon, directly below carbon, forms chains poorly because silicon-silicon bonds are weak; nitrogen and oxygen stop at two or three bonds.",
        "That chain-building is catenation, and it is the reason organic chemistry exists as a subject: millions of compounds from one element's linking habit. Inorganic chemistry, by contrast, counts thousands.",
        "The skeleton is not the whole story: functional groups hang off it and decide reactivity. The same chain length with an OH is an alkanol; with a COOH it is an acid. Skeleton plus group is the complete description.",
        "Separate skeleton from group and you can classify any organic compound by naming its two parts.",
@@ -8183,8 +9267,8 @@
      "content": {
       "heading": "Go deeper: Exam traps in organic introduction",
       "paragraphs": [
-       "The classic trap is the empirical–molecular confusion. Percentages give the ratio only; without a molar mass the true formula cannot be known. Any option scaling the ratio without an Mr is wrong.",
-       "The second trap is the name–structure direction. ‘Butene’ names a four-carbon chain with a double bond; the double bond's position needs the number. Drawing only the skeleton misses the position.",
+       "The classic trap is the empirical-molecular confusion. Percentages give the ratio only; without a molar mass the true formula cannot be known. Any option scaling the ratio without an Mr is wrong.",
+       "The second trap is the name-structure direction. ‘Butene’ names a four-carbon chain with a double bond; the double bond's position needs the number. Drawing only the skeleton misses the position.",
        "The third trap is tetravalency. Carbon forms four bonds always; structures with five bonds or with carbon carrying a charge in simple molecules violate the rule. Counting bonds is the check.",
        "The fourth trap is treating functional groups as decoration. The -OH of an alkanol and the -OH of an acid behave differently because the group is embedded differently. The group decides, the skeleton merely carries.",
        "A final trap is the abbreviation habit. Writing CH{{sub:3CH}}{{sub:2OH}} without recognising ethanol wastes the naming skill the question is testing. Expand structures before naming them."
@@ -8194,6 +9278,44 @@
        "Names encode chain, bonds and group together.",
        "Carbon always forms four bonds.",
        "Functional groups decide behaviour, not the skeleton."
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: how many structural isomers does the formula C{{sub:4}}H{{sub:1}}{{sub:0}}O have? Write them all.",
+      "steps": [
+       {
+        "operation": "Identify the general family",
+        "reason": "CₙH{{sub:2}}ₙ₊{{sub:2}}O: ethers and alcohols, not unsaturated acids or carbonyls",
+        "result": "C{{sub:4}}H{{sub:1}}{{sub:0}}O: saturated monohydric alcohol or ether",
+        "predictPrompt": "What family does C{{sub:4}}H{{sub:1}}{{sub:0}}O belong to?"
+       },
+       {
+        "operation": "List all alcohols",
+        "reason": "Four unique alcohols: 1-butanol, 2-butanol, isopropanol, tert-butanol",
+        "result": "1-butanol; 2-butanol; isobutanol; tert-butanol",
+        "predictPrompt": "How many alcohols are possible for C{{sub:4}}H{{sub:1}}{{sub:0}}O?"
+       },
+       {
+        "operation": "List all ethers",
+        "reason": "Three ethers: methoxy propane, isopropoxy methane, ethoxy ethane",
+        "result": "Methoxypropane; methoxyisopropane; ethoxyethane",
+        "predictPrompt": "How many ethers exist for C{{sub:4}}H{{sub:1}}{{sub:0}}O?"
+       },
+       {
+        "operation": "Count the total",
+        "reason": "7 compounds is the final answer",
+        "result": "7 distinct structural isomers",
+        "predictPrompt": "What is the total count of C{{sub:4}}H{{sub:1}}{{sub:0}}O structural isomers?"
+       },
+       {
+        "operation": "Check to confirm: systematic enumeration",
+        "reason": "No other structural families work (acids need carbonyls/double bonds excluded by formula); enumeration exhaustive",
+        "result": "7 structural isomers ✓ - exhaustive list",
+        "predictPrompt": "Why are acids and esters ruled out for C{{sub:4}}H{{sub:1}}{{sub:0}}O?"
+       }
       ]
      }
     }
@@ -8383,7 +9505,7 @@
         "predictPrompt": "Is 0.1 exact?"
        },
        {
-        "operation": "Ratio to CO₂",
+        "operation": "Ratio to CO{{sub:2}}",
         "reason": "2 mol ethane → 4 mol CO{{sub:2}} = 1:2",
         "result": "0.2 mol CO{{sub:2}}",
         "predictPrompt": "Why 1:2 rather than 1:1?"
@@ -8474,6 +9596,50 @@
        "Cracking shortens chains; distillation purifies."
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: 35 kg of propane is burnt completely in excess oxygen. Calculate the mass of CO{{sub:2}} produced (Aᵣ C = 12, O = 16, H = 1).",
+      "steps": [
+       {
+        "operation": "Write the balanced combustion equation",
+        "reason": "C{{sub:3}}H{{sub:8}} + 5O{{sub:2}} → 3CO{{sub:2}} + 4H{{sub:2}}O",
+        "result": "C{{sub:3}}H{{sub:8}} + 5O{{sub:2}} → 3CO{{sub:2}} + 4H{{sub:2}}O",
+        "predictPrompt": "What is the balanced combustion equation for propane?"
+       },
+       {
+        "operation": "Find the molar mass of propane",
+        "reason": "3 x 12 + 8 x 1 = 44 g/mol",
+        "result": "M(C{{sub:3}}H{{sub:8}}) = 44",
+        "predictPrompt": "What is the molar mass of propane?"
+       },
+       {
+        "operation": "Convert propane mass to moles",
+        "reason": "35,000 / 44 ≈ 795 mol",
+        "result": "n(C{{sub:3}}H{{sub:8}}) = 795 mol",
+        "predictPrompt": "What is 35,000 divided by 44?"
+       },
+       {
+        "operation": "Use mole ratio to find moles of CO{{sub:2}}",
+        "reason": "3 mol CO{{sub:2}} per mol propane",
+        "result": "n(CO{{sub:2}}) = 3 x 795 = 2385 mol",
+        "predictPrompt": "How many moles of carbon dioxide come from one mole of propane?"
+       },
+       {
+        "operation": "Convert to mass",
+        "reason": "mass = n x Mr = 2385 x 44",
+        "result": "m(CO{{sub:2}}) = 105,000 g = 105 kg",
+        "predictPrompt": "What is 2385 times 44?"
+       },
+       {
+        "operation": "Check to confirm: carbon balance",
+        "reason": "35 kg propane × 36/44 kg C per molecule = 28.6 kg C; all of it ends in CO{{sub:2}}: 28.6 × (44/12) = 105 kg CO{{sub:2}} ✓",
+        "result": "105 kg CO{{sub:2}} ✓ - balance route matches",
+        "predictPrompt": "Does the carbon-balance route give the same 105 kg?"
+       }
+      ]
+     }
     }
    ]
   },
@@ -8499,7 +9665,7 @@
      "content": {
       "heading": "Alkenes: one double bond",
       "paragraphs": [
-       "Alkenes have one carbon–carbon double bond: general formula C{{sub:nH}}{{sub:2}}{{sub:n}} (ethene C{{sub:2H}}{{sub:4}}, propene C{{sub:3H}}{{sub:6}}). The double bond is reactive: it opens up to add atoms across it. Bromine water is decolourised by alkenes, the orange colour disappears as bromine adds, and that is the alkene test.",
+       "Alkenes have one carbon-carbon double bond: general formula C{{sub:nH}}{{sub:2}}{{sub:n}} (ethene C{{sub:2H}}{{sub:4}}, propene C{{sub:3H}}{{sub:6}}). The double bond is reactive: it opens up to add atoms across it. Bromine water is decolourised by alkenes, the orange colour disappears as bromine adds, and that is the alkene test.",
        "Geometric isomerism (cis/trans) appears around the double bond because it cannot rotate. In cis-but-2-ene the two methyl groups sit on the same side; in trans-but-2-ene they sit opposite. Same formula, different geometry, different boiling points.",
        "Alkenes polymerise: ethene joins into polythene (polyethylene), the plastic of bags and bottles. The double bond opens to link thousands of molecules into one long chain."
       ],
@@ -8581,7 +9747,7 @@
      "content": {
       "heading": "Alkynes and ethyne",
       "paragraphs": [
-       "Alkynes have one carbon–carbon triple bond: general formula C{{sub:n}}H{{sub:2n-2}} (ethyne C{{sub:2H}}{{sub:2}}, propyne C{{sub:3H}}{{sub:4}}). The triple bond adds twice, so ethyne takes on two molecules of hydrogen and then two of bromine.",
+       "Alkynes have one carbon-carbon triple bond: general formula C{{sub:n}}H{{sub:2n-2}} (ethyne C{{sub:2H}}{{sub:2}}, propyne C{{sub:3H}}{{sub:4}}). The triple bond adds twice, so ethyne takes on two molecules of hydrogen and then two of bromine.",
        "Ethyne is produced from calcium carbide and water: CaC{{sub:2}} + 2H{{sub:2O}} → C{{sub:2H}}{{sub:2}} + Ca(OH){{sub:2}}. It burns with a very hot flame (oxy-ethyne welding) because its combustion releases great energy.",
        "Terminal alkynes (with H on the triple bond, like ethyne) give a red precipitate with ammoniacal silver nitrate, the specific test. Non-terminal alkynes do not.",
        "Ethyne is also the feedstock for solvents and plastics, and its acetylene flame slices through steel, which is why workshops keep carbide and water instead of a hot gas cylinder."
@@ -8663,7 +9829,7 @@
         "predictPrompt": "Is 0.1 exact?"
        },
        {
-        "operation": "Ratio to CO₂",
+        "operation": "Ratio to CO{{sub:2}}",
         "reason": "1 mol ethene → 2 mol CO{{sub:2}}",
         "result": "0.2 mol CO{{sub:2}}",
         "predictPrompt": "Why 2 and not 1?"
@@ -8755,6 +9921,44 @@
        "Geometric isomerism needs two different groups per carbon."
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: describe how to distinguish C{{sub:2}}H{{sub:6}}, C{{sub:2}}H{{sub:4}} and C{{sub:2}}H{{sub:2}} from each other, and name the phenomena of hydration, halogenation and hydrogenation for alkynes.",
+      "steps": [
+       {
+        "operation": "Describe each observation with bromine water",
+        "reason": "Only unsaturated hydrocarbons decolourise Br{{sub:2}} water",
+        "result": "C{{sub:2}}H{{sub:6}}: no colour change; C{{sub:2}}H{{sub:4}}: decolourises; C{{sub:2}}H{{sub:2}}: decolourises",
+        "predictPrompt": "Which of the three decolourise bromine water?"
+       },
+       {
+        "operation": "Describe Bayer's test for unsaturation",
+        "reason": "KMnO{{sub:4}} solution: purple fades for alkenes and alkynes",
+        "result": "C{{sub:2}}H{{sub:4}} and C{{sub:2}}H{{sub:2}} decolourise KMnO{{sub:4}}; C{{sub:2}}H{{sub:6}} does not",
+        "predictPrompt": "Does ethane decolourise acidified potassium manganate(VII)?"
+       },
+       {
+        "operation": "Identify the silver-nitrate confirmation",
+        "reason": "Terminal alkynes form precipitate with silver nitrate in ammonia solution",
+        "result": "C{{sub:2}}H{{sub:2}} gives a white AgC≡CAg precipitate",
+        "predictPrompt": "What does silver nitrate in ammonia do with acetylene?"
+       },
+       {
+        "operation": "Define hydrogenation",
+        "reason": "Adding H{{sub:2}} across the triple bond under nickel catalyst: C{{sub:2}}H{{sub:2}} → C{{sub:2}}H{{sub:4}} → C{{sub:2}}H{{sub:6}}",
+        "result": "C{{sub:2}}H{{sub:2}} + 2H{{sub:2}} → C{{sub:2}}H{{sub:6}} (full saturation)",
+        "predictPrompt": "How do you saturate acetylene?"
+       },
+       {
+        "operation": "Check to confirm: the reaction sequence",
+        "reason": "Hydrogenation progresses stepwise: alkyne → alkene → alkane",
+        "result": "One H{{sub:2}} per π bond to end with alkane ✓",
+        "predictPrompt": "How many moles of H{{sub:2}} does acetylene need to become ethane?"
+       }
+      ]
+     }
     }
    ]
   },
@@ -8822,7 +10026,7 @@
       "check": {
        "question": "Bromine water is not decolourised by benzene in the dark because",
        "options": [
-        "Benzene has no carbon–carbon bonds",
+        "Benzene has no carbon-carbon bonds",
         "Its delocalised electrons resist addition",
         "Benzene is a saturated hydrocarbon",
         "Bromine does not react with rings"
@@ -8842,13 +10046,13 @@
        "That is why benzene's properties cannot be predicted from ethene's. The ring is a different kind of unsaturation (shared, not localised) and its chemistry follows the sharing."
       ],
       "bullets": [
-       "All C–C bonds in benzene are equal (delocalised).",
+       "All C-C bonds in benzene are equal (delocalised).",
        "Substitution preserves the ring; addition would break it.",
        "Ring unsaturation ≠ double-bond unsaturation."
       ],
       "takeaway": "Delocalisation makes benzene substitute where alkenes add.",
       "check": {
-       "question": "In benzene, all carbon–carbon bonds are",
+       "question": "In benzene, all carbon-carbon bonds are",
        "options": [
         "Alternating single and double",
         "Equal in length: delocalised",
@@ -8913,19 +10117,19 @@
       "steps": [
        {
         "operation": "Recall benzene’s structure",
-        "reason": "C₆H₆ — a ring of six carbons with a delocalised electron system",
-        "result": "aromatic — stable ring",
+        "reason": "C{{sub:6}}H{{sub:6}}  -  a ring of six carbons with a delocalised electron system",
+        "result": "aromatic  -  stable ring",
         "predictPrompt": "Why is the ring not three separate double bonds?"
        },
        {
         "operation": "Explain why addition is resisted",
-        "reason": "addition would break the delocalised ring and destroy the stability — benzene avoids it",
+        "reason": "addition would break the delocalised ring and destroy the stability  -  benzene avoids it",
         "result": "addition would forfeit the aromatic stability",
         "predictPrompt": "What else would the ring lose?"
        },
        {
         "operation": "Explain why substitution occurs",
-        "reason": "FeCl₃ generates a Br⁺-like electrophile, which attacks the ring, one H is swapped out and the delocalised system reforms",
+        "reason": "FeCl{{sub:3}} generates a Br⁺-like electrophile, which attacks the ring, one H is swapped out and the delocalised system reforms",
         "result": "substitution preserves the ring",
         "predictPrompt": "What does the ring gain by surviving?"
        },
@@ -8937,7 +10141,7 @@
        },
        {
         "operation": "Check to confirm: the bromine-water test",
-        "reason": "bromine water is not decolourised by benzene because it substitutes, not adds — benzene is not an alkene",
+        "reason": "bromine water is not decolourised by benzene because it substitutes, not adds  -  benzene is not an alkene",
         "result": "benzene and alkenes behave completely differently with bromine water",
         "predictPrompt": "Why does the bottle not clear up like with ethene?"
        }
@@ -8960,7 +10164,7 @@
      "content": {
       "heading": "Go deeper: Delocalisation made visible",
       "paragraphs": [
-       "X-ray measurements show all six C–C bonds in benzene are equal at 139 pm, between single (154 pm) and double (134 pm) lengths. The structure is a perfect hexagon, not a triangle of alternating bonds.",
+       "X-ray measurements show all six C-C bonds in benzene are equal at 139 pm, between single (154 pm) and double (134 pm) lengths. The structure is a perfect hexagon, not a triangle of alternating bonds.",
        "That equality is the direct evidence for delocalisation: if three double bonds existed, the molecule would show two bond lengths. It shows one.",
        "The extra stability from delocalisation is called resonance energy, and it is why benzene needs more energy to hydrogenate than three isolated double bonds would suggest.",
        "Link the bond-length evidence to the substitution behaviour and you have explained benzene completely: structure, proof and chemistry in one chain.",
@@ -8969,7 +10173,7 @@
        "State the gap and you have explained both the structure and the chemistry from one number."
       ],
       "bullets": [
-       "All C–C bonds equal at 139 pm, direct evidence.",
+       "All C-C bonds equal at 139 pm, direct evidence.",
        "Delocalisation gives resonance energy.",
        "Equal bonds prove sharing; alternating bonds would not.",
        "One chain: structure → evidence → behaviour.",
@@ -9016,6 +10220,44 @@
        "Equal bonds: delocalisation is real, not a drawing."
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: explain the bonding in benzene, why it does not behave like an ordinary alkene, and name the type of reaction that is typical of aromatic rings.",
+      "steps": [
+       {
+        "operation": "Describe the bonding",
+        "reason": "Each C uses sp² hybridisation; remaining p electrons form a delocalised π ring above and below the plane",
+        "result": "6 delocalised π electrons in a ring",
+        "predictPrompt": "How many π electrons does every single carbon share?"
+       },
+       {
+        "operation": "Explain the observed chemical behaviour",
+        "reason": "Delocalisation stabilises the ring; addition would break the pattern; substitution preserves it",
+        "result": "Benzene undergoes substitution, not addition",
+        "predictPrompt": "Why does benzene resist addition reactions?"
+       },
+       {
+        "operation": "Demonstrate the contrast with alkenes",
+        "reason": "C{{sub:2}}H{{sub:4}} + Br{{sub:2}} → 1,2-dibromoethane (addition); benzene + Br{{sub:2}} does not decolourise without FeBr{{sub:3}} catalyst",
+        "result": "Benzene needs a Lewis acid catalyst for halogenation",
+        "predictPrompt": "What catalyst does benzene require to brominate?"
+       },
+       {
+        "operation": "Give a direct substitution equation",
+        "reason": "C{{sub:6}}H{{sub:6}} + Br{{sub:2}} → (FeBr{{sub:3}}) C{{sub:6}}H{{sub:5}}Br + HBr",
+        "result": "C{{sub:6}}H{{sub:6}} + Br{{sub:2}} → C{{sub:6}}H{{sub:5}}Br + HBr",
+        "predictPrompt": "What is the organic product of bromination with FeBr{{sub:3}}?"
+       },
+       {
+        "operation": "Check to confirm: the industrial importance",
+        "reason": "Almost all aromatics (toluene, xylene, naphthalene) share this substitution chemistry",
+        "result": "Basis of aromatic synthesis ✓",
+        "predictPrompt": "Which chemical industry depends on aromatic substitution?"
+       }
+      ]
+     }
     }
    ]
   },
@@ -9031,7 +10273,7 @@
      "content": {
       "heading": "Alkanols",
       "paragraphs": [
-       "Drinking spirits, hand sanitiser and biofuel all share one family: the alkanols, alcohols carrying an –OH group. This lesson follows ethanol from palm wine to the petrol tank, and the test that tells the alcohol classes apart."
+       "Drinking spirits, hand sanitiser and biofuel all share one family: the alkanols, alcohols carrying an -OH group. This lesson follows ethanol from palm wine to the petrol tank, and the test that tells the alcohol classes apart."
       ],
       "bullets": []
      }
@@ -9041,7 +10283,7 @@
      "content": {
       "heading": "Primary, secondary and tertiary",
       "paragraphs": [
-       "Alkanols carry the hydroxyl group (–OH) on carbon. The class depends on how many other carbons share that carbon: primary (1°) alcohols have the OH on a carbon bonded to one other carbon (ethanol); secondary (2°) on two (propan-2-ol); tertiary (3°) on three (2-methylpropan-2-ol).",
+       "Alkanols carry the hydroxyl group (-OH) on carbon. The class depends on how many other carbons share that carbon: primary (1°) alcohols have the OH on a carbon bonded to one other carbon (ethanol); secondary (2°) on two (propan-2-ol); tertiary (3°) on three (2-methylpropan-2-ol).",
        "That single difference decides reactivity: primary alkanols oxidise to aldehydes then acids; secondary oxidise to ketones; tertiary resist oxidation altogether. The more carbons around the OH, the less the OH can be attacked.",
        "The classes also differ in boiling point and solubility, both falling as the chain branches. Structure at the OH carbon is the whole story."
       ],
@@ -9271,6 +10513,44 @@
        "Trihydric counts OH groups; tertiary counts neighbours."
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: predict the products of CH{{sub:3}}CH{{sub:2}}OH heated with conc. H{{sub:2}}SO{{sub:4}} under two different regimes (≈170 °C vs ≈140 °C), and explain the difference. Also state the Saytzeff rule for dehydration of 2-butanol.",
+      "steps": [
+       {
+        "operation": "Label the two regimes",
+        "reason": "Temperature changes the mechanism from substitution to elimination",
+        "result": "170 °C (elimination): ethene; 140 °C (substitution): diethyl ether",
+        "predictPrompt": "What happens to ethanol at 170 °C with concentrated H{{sub:2}}SO{{sub:4}}?"
+       },
+       {
+        "operation": "Write the elimination equation",
+        "reason": "C{{sub:2}}H{{sub:5}}OH → C{{sub:2}}H{{sub:4}} + H{{sub:2}}O",
+        "result": "C{{sub:2}}H{{sub:5}}OH → C{{sub:2}}H{{sub:4}} + H{{sub:2}}O at 170 °C",
+        "predictPrompt": "What is the elimination product at 170 °C?"
+       },
+       {
+        "operation": "Write the intermolecular substitution equation",
+        "reason": "2 C{{sub:2}}H{{sub:5}}OH → (C{{sub:2}}H{{sub:5}}){{sub:2}}O + H{{sub:2}}O at 140 °C",
+        "result": "2 C{{sub:2}}H{{sub:5}}OH → C{{sub:2}}H{{sub:5}}OC{{sub:2}}H{{sub:5}} + H{{sub:2}}O at 140 °C",
+        "predictPrompt": "What is the substitution product at 140 °C?"
+       },
+       {
+        "operation": "State Saytzeff rule",
+        "reason": "On dehydration of 2-butanol, the H removed should come from the more substituted carbon to give the more stable, more substituted alkene",
+        "result": "Preferred alkene: but-2-ene (CH{{sub:3}}CH=CHCH{{sub:3}})",
+        "predictPrompt": "Which alkene does Saytzeff favour for 2-butanol?"
+       },
+       {
+        "operation": "Check to confirm: 2-butanol dehydration equation",
+        "reason": "CH{{sub:3}}CH(OH)CH{{sub:2}}CH{{sub:3}} → CH{{sub:3}}CH=CHCH{{sub:3}} + H{{sub:2}}O (main product)",
+        "result": "CH{{sub:3}}CH(OH)CH{{sub:2}}CH{{sub:3}} → CH{{sub:3}}CH=CHCH{{sub:3}} + H{{sub:2}}O ✓",
+        "predictPrompt": "Write the equation for 2-butanol dehydration."
+       }
+      ]
+     }
     }
    ]
   },
@@ -9353,7 +10633,7 @@
      "content": {
       "heading": "Properties and uses",
       "paragraphs": [
-       "Aldehydes and ketones are polar liquids held by dipole–dipole forces (they cannot hydrogen-bond with each other, though they accept hydrogen bonds from water) and are soluble when small. Their boiling points rise with chain length, and both families are used as solvents and intermediates.",
+       "Aldehydes and ketones are polar liquids held by dipole-dipole forces (they cannot hydrogen-bond with each other, though they accept hydrogen bonds from water) and are soluble when small. Their boiling points rise with chain length, and both families are used as solvents and intermediates.",
        "Formaldehyde (methanal) preserves specimens and makes plastics; acetone (propanone) is a nail-polish remover and industrial solvent. Flavouring aldehydes perfume foods and soaps.",
        "The carbonyl group decides both families' chemistry: it is the site of addition reactions (hydrogen, HCN) and of the oxidation that separates them.",
        "Their polarity also lets small members dissolve in water, which is why formaldehyde is sold as a solution and acetone mixes with water freely."
@@ -9431,7 +10711,7 @@
        {
         "operation": "Choose the test",
         "reason": "Tollens’ reagent (ammoniacal silver nitrate) is the classic aldehyde test; Fehling’s solution gives the same distinction with copper",
-        "result": "Tollens’ — the silver mirror",
+        "result": "Tollens’  -  the silver mirror",
         "predictPrompt": "Why is it called a mirror test?"
        },
        {
@@ -9471,13 +10751,13 @@
      "content": {
       "heading": "Go deeper: Why aldehydes oxidise and ketones refuse",
       "paragraphs": [
-       "Oxidation removes the hydrogen from the carbonyl carbon. Aldehydes have one to remove, so they oxidise to acids. Ketones have none (both neighbours are carbons), so oxidation would need to break a carbon–carbon bond, which does not happen under these conditions.",
+       "Oxidation removes the hydrogen from the carbonyl carbon. Aldehydes have one to remove, so they oxidise to acids. Ketones have none (both neighbours are carbons), so oxidation would need to break a carbon-carbon bond, which does not happen under these conditions.",
        "That is why the oxidation ladder stops at ketones in the alkanol series: primary gives aldehyde then acid, secondary gives ketone and stops, tertiary gives nothing. The carbonyl neighbourhood decides the fate.",
        "The same neighbourhood explains Tollens' reagent: only the aldehyde hydrogen can reduce silver ions. A ketone offers no hydrogen, so no mirror forms.",
        "One hydrogen atom thus decides two famous tests; count it and you predict both.",
        "The same count explains the boiling points and reactivity patterns of the two families. Reaction chemistry, in this topic, is hydrogen counting from start to finish.",
        "Count first and name second, and you will never confuse the families under time pressure.",
-       "One exception keeps the rule honest: a ketone with an –OH on the carbon next to the carbonyl can be oxidised, because that hydrogen is removed instead. In the examination syllabus the simple case is the one tested, so the rule stands."
+       "One exception keeps the rule honest: a ketone with an -OH on the carbon next to the carbonyl can be oxidised, because that hydrogen is removed instead. In the examination syllabus the simple case is the one tested, so the rule stands."
       ],
       "bullets": [
        "Oxidation removes the carbonyl hydrogen.",
@@ -9526,6 +10806,44 @@
        "Count the carbonyl hydrogen first."
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: describe the chemistry by which primary, secondary and tertiary alcohols are distinguished by oxidation, and write the equation for the oxidation of ethanol with acidified potassium dichromate(VI).",
+      "steps": [
+       {
+        "operation": "Define primary alcohol oxidation products",
+        "reason": "Primary → aldehyde → carboxylic acid with excess oxidant",
+        "result": "CH{{sub:3}}CH{{sub:2}}OH → CH{{sub:3}}CHO → CH{{sub:3}}COOH",
+        "predictPrompt": "What are the two products of primary alcohol over-oxidation?"
+       },
+       {
+        "operation": "Define secondary alcohol oxidation products",
+        "reason": "Secondary → ketone only",
+        "result": "CH{{sub:3}}CH(OH)CH{{sub:3}} → CH{{sub:3}}COCH{{sub:3}}",
+        "predictPrompt": "What single family of compound does a secondary alcohol give on oxidation?"
+       },
+       {
+        "operation": "Explain tertiary resistance",
+        "reason": "Tertiary alcohols cannot be oxidised without breaking C-C bonds",
+        "result": "No oxidation product without drastic conditions",
+        "predictPrompt": "Why can tertiary alcohols not be oxidised normally?"
+       },
+       {
+        "operation": "Write the dichromate equation",
+        "reason": "CH{{sub:3}}CH{{sub:2}}OH + [O] → CH{{sub:3}}CHO + H{{sub:2}}O; further: CH{{sub:3}}CHO + [O] → CH{{sub:3}}COOH",
+        "result": "CH{{sub:3}}CH{{sub:2}}OH + [O] → CH{{sub:3}}COOH + H{{sub:2}}O (overall)",
+        "predictPrompt": "What is the overall oxidation of ethanol with acidified K{{sub:2}}Cr{{sub:2}}O{{sub:7}}?"
+       },
+       {
+        "operation": "Check to confirm: the dichromate colour change",
+        "reason": "Cr{{sub:2}}O{{sub:7}}²- (orange) → Cr³⁺ (green)",
+        "result": "Orange to green ✓ distinguish ethanol from water directly",
+        "predictPrompt": "What colour change happens in the test solution?"
+       }
+      ]
+     }
     }
    ]
   },
@@ -9551,12 +10869,12 @@
      "content": {
       "heading": "Alkanoic acids: reactions and types",
       "paragraphs": [
-       "Alkanoic acids carry the carboxyl group (–COOH): ethanoic acid (CH{{sub:3COOH}}) is vinegar; propanoic acid is its next member. They are weak acids (they ionise partly), but they neutralise bases like any acid, forming alkanoates (salts).",
+       "Alkanoic acids carry the carboxyl group (-COOH): ethanoic acid (CH{{sub:3COOH}}) is vinegar; propanoic acid is its next member. They are weak acids (they ionise partly), but they neutralise bases like any acid, forming alkanoates (salts).",
        "Esterification is their signature reaction: a carboxylic acid plus an alkanol gives an ester plus water. Ethanoic acid + ethanol ⇌ ethyl ethanoate + water. The product smells fruity; esters are the perfumes of nature.",
        "Ethanedioic (oxalic) acid is a dicarboxylic acid: two COOH groups on one molecule. Benzoic acid (benzene carboxylic acid) is aromatic, a preservative because it stops microbes growing."
       ],
       "bullets": [
-       "Alkanoic acids: –COOH, weak acids, form alkanoate salts.",
+       "Alkanoic acids: -COOH, weak acids, form alkanoate salts.",
        "Esterification: acid + alkanol ⇌ ester + water (fruity).",
        "Oxalic acid has two COOH groups; benzoic acid is aromatic."
       ],
@@ -9606,7 +10924,7 @@
     {
      "type": "text",
      "content": {
-      "heading": "Natural sources and the soap–detergent choice",
+      "heading": "Natural sources and the soap-detergent choice",
       "paragraphs": [
        "Alkanoates come from natural fats and oils: palm oil, coconut oil, groundnut oil and animal tallow. The fatty acid composition of each source decides the soap's hardness and lathering.",
        "Soap cleans by the same emulsifying trick as detergent, but it forms insoluble scum with Ca{{sup:2+}} and Mg{{sup:2+}} in hard water. Detergents (synthetic sulphonates) form soluble salts and keep working in hard water.",
@@ -9684,7 +11002,7 @@
       "steps": [
        {
         "operation": "Name the reaction",
-        "reason": "saponification — alkaline hydrolysis of an ester (fat) with NaOH",
+        "reason": "saponification  -  alkaline hydrolysis of an ester (fat) with NaOH",
         "result": "saponification",
         "predictPrompt": "Why is it not called esterification?"
        },
@@ -9702,7 +11020,7 @@
        },
        {
         "operation": "Check to confirm: link to the lesson",
-        "reason": "soap cleans by emulsifying grease into micelles; glycerol is syrupy and sweet — the two together make soap valuable",
+        "reason": "soap cleans by emulsifying grease into micelles; glycerol is syrupy and sweet  -  the two together make soap valuable",
         "result": "saponification delivers both a cleanser and a valuable by-product",
         "predictPrompt": "What is glycerol used for, then?"
        }
@@ -9749,10 +11067,10 @@
        "Soap anions pair with Ca{{sup:2+}} and Mg{{sup:2+}} to form insoluble scum instead of micelles. The soap is wasted on the hardness ions before it can clean. That is the whole chemistry of the hard-water problem.",
        "Detergent sulphonates form soluble calcium salts, so they keep cleaning. The difference is solubility of the salt, nothing more mysterious.",
        "Saponification's glycerol by-product is itself valuable in soaps. A fat plus alkali gives two products, and both are sold; the process wastes nothing.",
-       "Link scum to solubility and you predict the soap–detergent choice for any water hardness.",
+       "Link scum to solubility and you predict the soap-detergent choice for any water hardness.",
        "Boiling a soap solution does not remove the scum, because the calcium salts are insoluble at any temperature. Only a chemical exchange (washing soda or resins) removes the hardness ions.",
        "That is why hard-water areas adopted detergents first: scum made soap uneconomic there long before brands competed.",
-       "That solubility difference, not cleaning power, is the entire basis of the soap–detergent choice in any water.",
+       "That solubility difference, not cleaning power, is the entire basis of the soap-detergent choice in any water.",
        "The same calcium ions leave limescale on kettles and damage boil-dry elements. Heating drives calcium carbonate out of solution, which is why kettles need descaling even where tap water stays drinkable."
       ],
       "bullets": [
@@ -9781,6 +11099,44 @@
        "Margarine is hydrogenation, not esterification."
       ]
      }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: describe the Fisher esterification reaction (acetic acid + ethanol ⇌ ethyl ethanoate), explain why excess alcohol is used, and write the hydrolysis equation under alkaline conditions (saponification).",
+      "steps": [
+       {
+        "operation": "Write the esterification equation",
+        "reason": "CH{{sub:3}}COOH + C{{sub:2}}H{{sub:5}}OH ⇌ CH{{sub:3}}COOC{{sub:2}}H{{sub:5}} + H{{sub:2}}O",
+        "result": "CH{{sub:3}}COOH + C{{sub:2}}H{{sub:5}}OH ⇌ CH{{sub:3}}COOC{{sub:2}}H{{sub:5}} + H{{sub:2}}O",
+        "predictPrompt": "What is the product of acetic acid and ethanol?"
+       },
+       {
+        "operation": "Name the conditions",
+        "reason": "Heat under reflux with concentrated H{{sub:2}}SO{{sub:4}} as catalyst and dehydrating agent",
+        "result": "conc H{{sub:2}}SO{{sub:4}}, heat, reflux",
+        "predictPrompt": "What catalyst/drives the reaction forward?"
+       },
+       {
+        "operation": "Apply Le Chatelier",
+        "reason": "Excess alcohol shifts equilibrium right to favour ester formation",
+        "result": "Excess ethanol, or H{{sub:2}}SO{{sub:4}} removes water",
+        "predictPrompt": "Why is excess ethanol added?"
+       },
+       {
+        "operation": "Explain saponification",
+        "reason": "NaOH hydrolyses esters: RCOONa decides soap making",
+        "result": "RCOOR + NaOH → RCOONa + ROH",
+        "predictPrompt": "What is saponification?"
+       },
+       {
+        "operation": "Check to confirm: the product name",
+        "reason": "Ethyl ethanoate; esters of higher fatty acids → soaps",
+        "result": "Ethyl ethanoate ✓ classic lab product",
+        "predictPrompt": "Name the product ester of ethanol + acetic acid."
+       }
+      ]
+     }
     }
    ]
   },
@@ -9806,7 +11162,7 @@
      "content": {
       "heading": "Primary, secondary and tertiary",
       "paragraphs": [
-       "Amines carry the amino group (–NH{{sub:2}}) on carbon, like the hydroxyl group of alkanols. The class depends on how many carbons share the nitrogen: primary (1°) amines have one carbon on nitrogen (ethanamine, CH{{sub:3CH}}{{sub:2NH}}{{sub:2}}); secondary (2°) have two (dimethylamine); tertiary (3°) have three (trimethylamine).",
+       "Amines carry the amino group (-NH{{sub:2}}) on carbon, like the hydroxyl group of alkanols. The class depends on how many carbons share the nitrogen: primary (1°) amines have one carbon on nitrogen (ethanamine, CH{{sub:3CH}}{{sub:2NH}}{{sub:2}}); secondary (2°) have two (dimethylamine); tertiary (3°) have three (trimethylamine).",
        "That count decides the reactions. Primary amines react with nitrous acid (HNO{{sub:2}}) to give nitrogen gas, which is their distinguishing test. Secondary amines give a yellow oil with the same reagent, and tertiary amines do not react at all.",
        "Amines are bases: they accept protons to form ammonium-type ions. That basicity makes them smell fishy and makes their salts soluble in water."
       ],
@@ -9919,7 +11275,7 @@
        },
        {
         "operation": "Van Slyke test",
-        "reason": "Tertiary amines have no N–H to react.",
+        "reason": "Tertiary amines have no N-H to react.",
         "result": "Primary and secondary amines pass; tertiary fails",
         "predictPrompt": "Which amine would not react?"
        },
@@ -9940,30 +11296,30 @@
        {
         "operation": "Name the reagent",
         "reason": "nitrous acid, produced in situ from sodium nitrite and dilute HCl",
-        "result": "HNO₂ made fresh in the test tube",
-        "predictPrompt": "Why not dispense HNO₂ directly from a bottle?"
+        "result": "HNO{{sub:2}} made fresh in the test tube",
+        "predictPrompt": "Why not dispense HNO{{sub:2}} directly from a bottle?"
        },
        {
         "operation": "Apply to the primary amine",
-        "reason": "ethylamine (primary, 1°, two N–H hydrogens) reacts to give nitrogen gas (vigorous effervescence)",
+        "reason": "ethylamine (primary, 1°, two N-H hydrogens) reacts to give nitrogen gas (vigorous effervescence)",
         "result": "ethylamine → nitrogen gas, visible bubbles",
-        "predictPrompt": "Why two N–H hydrogens matter?"
+        "predictPrompt": "Why two N-H hydrogens matter?"
        },
        {
         "operation": "Apply to the secondary amine",
-        "reason": "dimethylamine (secondary, 2°, one N–H hydrogen) gives a yellow oily N-nitroso compound, no gas",
+        "reason": "dimethylamine (secondary, 2°, one N-H hydrogen) gives a yellow oily N-nitroso compound, no gas",
         "result": "dimethylamine → yellow oil, no bubbles",
         "predictPrompt": "What is missing for primary-style gas?"
        },
        {
         "operation": "Apply to the tertiary amine",
-        "reason": "trimethylamine (tertiary, 3°, no N–H hydrogen) does not react with cold nitrous acid",
+        "reason": "trimethylamine (tertiary, 3°, no N-H hydrogen) does not react with cold nitrous acid",
         "result": "trimethylamine → no reaction in the cold",
         "predictPrompt": "Why is the cold restriction important?"
        },
        {
         "operation": "Check to confirm: the test is a classification system",
-        "reason": "one reagent, three outcomes, three classes — the test sits in a row, not a guess",
+        "reason": "one reagent, three outcomes, three classes  -  the test sits in a row, not a guess",
         "result": "primary = gas; secondary = oil; tertiary = nothing",
         "predictPrompt": "Can you recall which amine smells like rotten fish?"
        }
@@ -9995,7 +11351,7 @@
        "Basicity learned here decides how amine salts split and recombine in reactions."
       ],
       "bullets": [
-       "Diazotisation needs N–H hydrogen: 1° has two, 2° has one, 3° none.",
+       "Diazotisation needs N-H hydrogen: 1° has two, 2° has one, 3° none.",
        "Basicity follows electron donation, a different order.",
        "Two ladders, never merged.",
        "Count hydrogens for the test."
@@ -10014,7 +11370,7 @@
        "The coupling step is electrophilic substitution on the aromatic ring, so the diazonium ion is the electrophile. Electron-donating groups on the coupling partner speed it up.",
        "That mechanism links amines to the whole dye industry: diazotisation plus coupling is the manufacturing sequence for azo colours.",
        "Know that the diazonium must be kept cold and you have answered both the test item and the dye item from one fact.",
-       "The colour of an azo dye comes from the same electron jumps as any coloured compound, and the –N=N– group is the part that absorbs the visible light. Shifting the groups on either side of it therefore shifts the colour, which is how dye chemists design a shade."
+       "The colour of an azo dye comes from the same electron jumps as any coloured compound, and the -N=N- group is the part that absorbs the visible light. Shifting the groups on either side of it therefore shifts the colour, which is how dye chemists design a shade."
       ],
       "bullets": [
        "Aniline + HNO{{sub:2}} (cold) → diazonium salt → azo dyes.",
@@ -10040,6 +11396,44 @@
        "N{{sub:2}} = primary; yellow oil = secondary; nothing = tertiary.",
        "Amides (CONH{{sub:2}}) ≠ amines (RNH{{sub:2}}).",
        "Basicity and test orders are different ladders."
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: predict the basicity of methylamine, compare with ammonia, and write the equilibrium equation showing methylamine acting as a Brønsted base.",
+      "steps": [
+       {
+        "operation": "State the basicity trend",
+        "reason": "Alkyl groups push electron density towards N (+I effect), making it more willing to accept a proton",
+        "result": "Methylamine is more basic than ammonia",
+        "predictPrompt": "Is methylamine more or less basic than ammonia?"
+       },
+       {
+        "operation": "Explain the molecular basis",
+        "reason": "Increased electron density on N strengthens the coordinate bond to H⁺",
+        "result": "N more available ⇒ stronger Brønsted base",
+        "predictPrompt": "Why is the lone pair more available in methylamine?"
+       },
+       {
+        "operation": "Write the equilibrium equation",
+        "reason": "CH{{sub:3}}NH{{sub:2}} + H{{sub:2}}O ⇌ CH{{sub:3}}NH{{sub:3}}⁺ + OH-",
+        "result": "CH{{sub:3}}NH{{sub:2}} + H{{sub:2}}O ⇌ CH{{sub:3}}NH{{sub:3}}⁺ + OH-",
+        "predictPrompt": "What are the products of methylamine in water?"
+       },
+       {
+        "operation": "Compare with aniline",
+        "reason": "Aniline is far weaker than ammonia: N lone pair delocalised into the benzene ring",
+        "result": "Aniline ≪ ammonia in basic strength",
+        "predictPrompt": "Is aniline stronger or weaker than ammonia as a base?"
+       },
+       {
+        "operation": "Check to confirm: pKb values",
+        "reason": "pKb methylamine ≈ 3.36; pKb ammonia ≈ 4.75; pKb aniline ≈ 9.4",
+        "result": "Methylamine > ammonia > aniline in basicity ✓",
+        "predictPrompt": "What does a smaller pKb mean for base strength?"
+       }
       ]
      }
     }
@@ -10205,7 +11599,7 @@
         "predictPrompt": "Is 0.02 exact?"
        },
        {
-        "operation": "Ratio to CO₂",
+        "operation": "Ratio to CO{{sub:2}}",
         "reason": "1 mol glucose → 6 mol CO{{sub:2}}",
         "result": "0.12 mol CO{{sub:2}}",
         "predictPrompt": "Why 6 and not 2?"
@@ -10296,6 +11690,44 @@
        "Sucrose is non-reducing until hydrolysed.",
        "Alpha links digest; beta links do not.",
        "Fermentation: sugar → ethanol, never backwards."
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: draw the condensation reaction between two molecules of α-D-glucose to form maltose, identify the glycosidic linkage, and show whether maltose is a reducing sugar.",
+      "steps": [
+       {
+        "operation": "Write the condensation equation",
+        "reason": "Two α-D-glucose molecules lose H{{sub:2}}O between C1 and C4 of the second",
+        "result": "2 C{{sub:6}}H{{sub:1}}{{sub:2}}O{{sub:6}} → C{{sub:1}}{{sub:2}}H{{sub:2}}{{sub:2}}O{{sub:1}}{{sub:1}} + H{{sub:2}}O",
+        "predictPrompt": "How many glucose units form one maltose?"
+       },
+       {
+        "operation": "Identify the linkage",
+        "reason": "α-1,4-glycosidic bond links C1 of one unit to C4 of the next",
+        "result": "α-1,4-link",
+        "predictPrompt": "What carbons does the linkage involve?"
+       },
+       {
+        "operation": "Explain maltose is reducing",
+        "reason": "The fourth glucose retains a free anomeric carbon (C1 of second glucose)",
+        "result": "Maltose is a reducing sugar",
+        "predictPrompt": "What does maltose have on one terminus that enables reduction?"
+       },
+       {
+        "operation": "Test for reducing property",
+        "reason": "Fehling's / Tollens' solution turn orange/or silver mirror for aldehydes",
+        "result": "Maltose turns Fehling's orange",
+        "predictPrompt": "What colour does Fehling's solution turn with reducing sugars?"
+       },
+       {
+        "operation": "Check to confirm: identify the linkage in starch",
+        "reason": "Amylose = linear α-1,4; amylopectin = branched α-1,4 + α-1,6",
+        "result": "Starch links: α-1,4 and α-1,6 ✓",
+        "predictPrompt": "What type of linkage does amylopectin also contain?"
+       }
       ]
      }
     }
@@ -10452,35 +11884,35 @@
     {
      "type": "worked_example",
      "content": {
-      "problem": "Describe the biuret test for proteins — the reagents used and the colour obtained — and explain why boiling egg white loses its gel-forming ability (denaturation).",
+      "problem": "Describe the biuret test for proteins  -  the reagents used and the colour obtained  -  and explain why boiling egg white loses its gel-forming ability (denaturation).",
       "steps": [
        {
         "operation": "Name the reagents",
         "reason": "copper(II) sulphate solution and dilute sodium hydroxide (or an ordinary alkali)",
-        "result": "CuSO₄ + NaOH",
+        "result": "CuSO{{sub:4}} + NaOH",
         "predictPrompt": "Why the alkali is needed?"
        },
        {
         "operation": "State the observation",
-        "reason": "a violet (purple) colour develops — the deeper the colour, the more peptide bonds detected",
+        "reason": "a violet (purple) colour develops  -  the deeper the colour, the more peptide bonds detected",
         "result": "violet = positive",
         "predictPrompt": "What does a pale colour mean?"
        },
        {
         "operation": "Explain the chemistry",
-        "reason": "the biuret reagent complexes with peptide bonds — any compound with at least two peptide bonds in a row reacts",
+        "reason": "the biuret reagent complexes with peptide bonds  -  any compound with at least two peptide bonds in a row reacts",
         "result": "targets peptide bonds specifically, not amino acids or single bonds",
         "predictPrompt": "Why is an amino acid alone not enough?"
        },
        {
         "operation": "Explain denaturation",
-        "reason": "boiling unravels the secondary and tertiary structure — the protein unfolds and its function is lost, irreversibly",
+        "reason": "boiling unravels the secondary and tertiary structure  -  the protein unfolds and its function is lost, irreversibly",
         "result": "shape is function; once unfolded, the protein cannot re-fold on cooling",
         "predictPrompt": "Can the egg white be uncooked to undo this?"
        },
        {
         "operation": "Check to confirm: contrast with hydrolysis",
-        "reason": "hydrolysis breaks the peptide bonds to release amino acids; denaturation unfolds without breaking them — different fates",
+        "reason": "hydrolysis breaks the peptide bonds to release amino acids; denaturation unfolds without breaking them  -  different fates",
         "result": "denaturation unfolds; hydrolysis destroys the chain",
         "predictPrompt": "Which one keeps the sequence intact?"
        }
@@ -10545,7 +11977,7 @@
      "content": {
       "heading": "Go deeper: Exam traps in proteins",
       "paragraphs": [
-       "The classic trap is the test–feature match. Biuret targets peptide bonds, ninhydrin targets amino groups, Millon targets tyrosine, xanthoproteic targets aromatic rings. Naming the feature first prevents every mismatch.",
+       "The classic trap is the test-feature match. Biuret targets peptide bonds, ninhydrin targets amino groups, Millon targets tyrosine, xanthoproteic targets aromatic rings. Naming the feature first prevents every mismatch.",
        "The second trap is denaturation versus hydrolysis. Denaturation unfolds the protein (function lost, sequence kept); hydrolysis breaks the sequence (amino acids freed). The two processes are different depths of destruction.",
        "The third trap is the enzyme's role. Enzymes speed reactions without changing yield or equilibrium. Any option giving an enzyme control over the final amount reverses its role.",
        "The fourth trap is the peptide bond count. A chain of n amino acids has n − 1 bonds, not n. The first amino acid adds no bond; it starts the chain.",
@@ -10555,6 +11987,44 @@
        "Match each test to its feature before answering.",
        "Denaturation unfolds; hydrolysis breaks the chain.",
        "n amino acids = n − 1 peptide bonds."
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: describe the four levels of protein structure  -  primary, secondary, tertiary, quaternary  -  and explain denaturation with a real example.",
+      "steps": [
+       {
+        "operation": "Define primary",
+        "reason": "Linear sequence of amino acids joined by peptide bonds",
+        "result": "Sequence of ~50-2000 residues",
+        "predictPrompt": "What holds the primary structure together?"
+       },
+       {
+        "operation": "Define secondary",
+        "reason": "Local folding into α-helix or β-sheet stabilised by hydrogen bonds",
+        "result": "α-helix and β-pleated sheet",
+        "predictPrompt": "What two secondary structures are common?"
+       },
+       {
+        "operation": "Define tertiary",
+        "reason": "Full 3D folding: side-chain interactions (hydrophobic, ionic, disulfide)",
+        "result": "Final 3D shape; responsible for enzyme specificity",
+        "predictPrompt": "What determines the tertiary structure of an enzyme?"
+       },
+       {
+        "operation": "Define quaternary",
+        "reason": "Assembly of multiple peptide subunits (Haemoglobin: 2α + 2β chains)",
+        "result": "Quaternary = multi-subunit complexes",
+        "predictPrompt": "What are the subunits of haemoglobin?"
+       },
+       {
+        "operation": "Illustrate denaturation with egg",
+        "reason": "Heat disrupts tertiary/secondary without breaking primary; egg whites solidify irreversibly",
+        "result": "Cooked egg: denatured, cannot re-fold",
+        "predictPrompt": "Why can't a cooked egg be uncooked?"
+       }
       ]
      }
     }
@@ -10687,7 +12157,7 @@
        {
         "operation": "Link the chains",
         "reason": "The double bonds open and join thousands of units.",
-        "result": "–[CH{{sub:2}}–CH{{sub:2}}]_n–",
+        "result": "-[CH{{sub:2}}-CH{{sub:2}}]_n-",
         "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
        },
        {
@@ -10718,7 +12188,7 @@
       "steps": [
        {
         "operation": "State addition polymerisation",
-        "reason": "monomers with double bonds join by opening the double bond, with nothing lost — the repeat unit appears unchanged",
+        "reason": "monomers with double bonds join by opening the double bond, with nothing lost  -  the repeat unit appears unchanged",
         "result": "no by-product is lost",
         "predictPrompt": "What about a double bond happens?"
        },
@@ -10820,6 +12290,44 @@
        "Natural = living; synthetic = reactor-made.",
        "Remelts = thermoplastic; chars = thermosetting.",
        "Vulcanisation links chains; it does not make them."
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: distinguish addition and condensation polymerisation, and identify the polymer PVC and its monomers.",
+      "steps": [
+       {
+        "operation": "Define addition polymerisation",
+        "reason": "Monomers with C=C double bonds simply link  -  no atoms lost",
+        "result": "n CH{{sub:2}}=CHX → (−CH{{sub:2}}−CHX−){{sub:n}}",
+        "predictPrompt": "Do any atoms leave during addition polymerisation?"
+       },
+       {
+        "operation": "Define condensation polymerisation",
+        "reason": "Monomers joined with simultaneous loss of small molecule (H{{sub:2}}O, HCl)",
+        "result": "n HOOC−R−COOH + n HO−R'−OH → polymer + 2n H{{sub:2}}O",
+        "predictPrompt": "What small molecule is usually lost in condensation?"
+       },
+       {
+        "operation": "Describe PVC: monomers and class",
+        "reason": "Vinyl chloride (CH{{sub:2}}=CHCl); addition class; forms PVC",
+        "result": "CH{{sub:2}}=CHCl; addition",
+        "predictPrompt": "What monomer makes PVC?"
+       },
+       {
+        "operation": "Describe nylon: monomers and class",
+        "reason": "Adipic acid + hexamethylenediamine; condensation class; forms nylon 6,6",
+        "result": "HOOC(CH{{sub:2}}){{sub:4}}COOH + H{{sub:2}}N(CH{{sub:2}}){{sub:6}}NH{{sub:2}}; condensation",
+        "predictPrompt": "What monomers make nylon 6,6?"
+       },
+       {
+        "operation": "Check to confirm: common household use",
+        "reason": "PVC is used in pipes, cables, clothing; nylon is used in ropes, fishing lines, parachutes",
+        "result": "PVC: plastic windows, cables; nylon: ropes, fishing line ✓",
+        "predictPrompt": "Which polymer family does nylon belong to?"
+       }
       ]
      }
     }
@@ -10991,13 +12499,13 @@
        },
        {
         "operation": "Rank ligands by strength",
-        "reason": "stronger ligands (e.g. NH₃) split the d-levels wider than weaker ones (H₂O); [Cu(NH₃)₄]²⁺ is deep blue, [Cu(H₂O)₆]²⁺ is pale blue",
-        "result": "ammonia splits wider — stronger ligand",
+        "reason": "stronger ligands (e.g. NH{{sub:3}}) split the d-levels wider than weaker ones (H{{sub:2}}O); [Cu(NH{{sub:3}}){{sub:4}}]²⁺ is deep blue, [Cu(H{{sub:2}}O){{sub:6}}]²⁺ is pale blue",
+        "result": "ammonia splits wider  -  stronger ligand",
         "predictPrompt": "What colour is deep-blue vs pale-blue copper?"
        },
        {
         "operation": "Check to confirm: colour belongs to the complex",
-        "reason": "change the ligand and the colour changes: Cu²⁺ is not “blue” — it is blue with water and deep blue with ammonia",
+        "reason": "change the ligand and the colour changes: Cu²⁺ is not “blue”  -  it is blue with water and deep blue with ammonia",
         "result": "a colour is always “with what ligand around”",
         "predictPrompt": "What if the metal were the same but always stayed the same colour?"
        }
@@ -11073,6 +12581,44 @@
        "Zinc (3d{{sup:10}}) is not a typical transition metal.",
        "Colour belongs to the complex, not the metal.",
        "Catalysts never change yield or equilibrium."
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: explain why transition metals are coloured and paramagnetic, and identify the compound responsible for each of the following: blue(CuSO{{sub:4}} solution), pale green(FeSO{{sub:4}} solution), purple(KMnO{{sub:4}} solution).",
+      "steps": [
+       {
+        "operation": "Explain variable oxidation states",
+        "reason": "d-block elements use 3d and 4s electrons in bonding; losing small amounts gives stable intermediates at several oxidation states",
+        "result": "Iron: Fe²⁺, Fe³⁺; Copper: Cu⁺, Cu²⁺; Manganese: Mn²⁺ to Mn{{sup:7}}⁺",
+        "predictPrompt": "How many oxidation states do transition metals typically show?"
+       },
+       {
+        "operation": "Explain coloured compounds",
+        "reason": "The partially filled d subshell allows d-d transitions that absorb visible light; colour seen is complementary",
+        "result": "CuSO{{sub:4}}: d{{sup:9}}, absorbs orange; FeSO{{sub:4}}: d{{sup:6}}; KMnO{{sub:4}}: Mn(VII) d{{sup:0}} purple",
+        "predictPrompt": "Why does CuSO{{sub:4}} appear blue?"
+       },
+       {
+        "operation": "Explain paramagnetism",
+        "reason": "Unpaired electrons make ions magnetic; Fe³⁺ has 5 unpaired electrons in d orbitals",
+        "result": "Paramagnetic effect measurable",
+        "predictPrompt": "Is Fe³⁺ paramagnetic or diamagnetic?"
+       },
+       {
+        "operation": "Match the compound to the colour",
+        "reason": "CuSO{{sub:4}} solution is blue (Cu²⁺); FeSO{{sub:4}} solution is pale green (Fe²⁺); KMnO{{sub:4}} is purple (MnO{{sub:4}}-)",
+        "result": "Blue: Cu²⁺; pale green: Fe²⁺; purple: MnO{{sub:4}}-",
+        "predictPrompt": "What is the colour of a solution containing permanganate ion?"
+       },
+       {
+        "operation": "Check to confirm: reactivity of Mn species",
+        "reason": "Purple permanganate is a strong oxidant; green manganate, colourless Mn²⁺ follow reduction",
+        "result": "MnO{{sub:4}}- → MnO{{sub:4}}²- → Mn²⁺ going from purple to green to colourless ✓",
+        "predictPrompt": "What colour sequence signals reduction from permanganate to manganous ion?"
+       }
       ]
      }
     }
@@ -11255,32 +12801,32 @@
       "steps": [
        {
         "operation": "Name lightning’s role",
-        "reason": "the intense heat fixes atmospheric N₂ with O₂ into nitrogen oxides, which dissolve in rain and reach the soil",
-        "result": "lightning produces nitrogen oxides (NO, NO₂)",
+        "reason": "the intense heat fixes atmospheric N{{sub:2}} with O{{sub:2}} into nitrogen oxides, which dissolve in rain and reach the soil",
+        "result": "lightning produces nitrogen oxides (NO, NO{{sub:2}})",
         "predictPrompt": "What state does the nitrogen start in?"
        },
        {
         "operation": "Name Nitrosomonas’s role",
         "reason": "Nitrosomonas oxidises ammonium ions, produced by rotting plant and animal matter, into nitrite ions",
-        "result": "Nitrosomonas: NH₄⁺ → NO₂⁻",
+        "result": "Nitrosomonas: NH{{sub:4}}⁺ → NO{{sub:2}}-",
         "predictPrompt": "What does it do to the ammonia?"
        },
        {
         "operation": "Name Nitrobacter’s role",
         "reason": "Nitrobacter oxidises nitrite ions into nitrate ions, which plants absorb through their roots to build proteins",
-        "result": "Nitrobacter: NO₂⁻ → NO₃⁻",
+        "result": "Nitrobacter: NO{{sub:2}}- → NO{{sub:3}}-",
         "predictPrompt": "What do plants absorb, then?"
        },
        {
         "operation": "Name denitrifying bacteria’s role",
         "reason": "in airless soil, denitrifying bacteria convert nitrate back to nitrogen gas and release it to the atmosphere",
-        "result": "denitrifying bacteria: NO₃⁻ → N₂",
+        "result": "denitrifying bacteria: NO{{sub:3}}- → N{{sub:2}}",
         "predictPrompt": "Why do they work only in wet soil?"
        },
        {
         "operation": "Check to confirm: a nitrogen atom’s path",
         "reason": "air → (lightning or bacterium) → ammonia/nitrate → plant → animal → rotting → denitrification → air",
-        "result": "it is a loop — nothing created or lost, just changed",
+        "result": "it is a loop  -  nothing created or lost, just changed",
         "predictPrompt": "Which stage feeds the plant, and which stage releases the gas?"
        }
       ]
@@ -11353,6 +12899,44 @@
        "Nitrification builds nitrate; denitrification releases N{{sub:2}}.",
        "Nitrite is middle and toxic; nitrate is plant food.",
        "Relevance: fertiliser restores fertility, excess nitrate pollutes water."
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: describe how atmospheric nitrogen is converted into nitrates in the soil (fixation, nitrification) and how the cycle returns nitrogen to the atmosphere (denitrification).",
+      "steps": [
+       {
+        "operation": "Define nitrogen fixation",
+        "reason": "Atmospheric N{{sub:2}} is converted to ammonia by lightning and by symbiotic bacteria (Rhizobium in legume roots) and free-living bacteria (Azotobacter)",
+        "result": "N{{sub:2}} + 8H⁺ + 8e- → 2NH{{sub:3}} + H{{sub:2}} (bacterial)",
+        "predictPrompt": "What does Rhizobium convert atmospheric nitrogen into?"
+       },
+       {
+        "operation": "Define ammonification",
+        "reason": "Animal waste contains organic nitrogen; decomposers release ammonium",
+        "result": "Urea + H{{sub:2}}O → 2NH{{sub:3}} + CO{{sub:2}}",
+        "predictPrompt": "What do decomposers release from animal waste?"
+       },
+       {
+        "operation": "Define nitrification",
+        "reason": "Nitrosomonas: NH{{sub:3}} → NO{{sub:2}}-; Nitrobacter: NO{{sub:2}}- → NO{{sub:3}}-",
+        "result": "NH{{sub:3}} → NO{{sub:2}}- → NO{{sub:3}}-",
+        "predictPrompt": "Which bacteria converts ammonia to nitrite?"
+       },
+       {
+        "operation": "Define denitrification",
+        "reason": "Pseudomonas reduces NO{{sub:3}}- → N{{sub:2}}",
+        "result": "NO{{sub:3}}- → N{{sub:2}} ↑",
+        "predictPrompt": "What do denitrifying bacteria do to nitrate?"
+       },
+       {
+        "operation": "Check to confirm: the agricultural implication",
+        "reason": "Rotating legumes adds fixed nitrogen to soil without synthetic fertiliser",
+        "result": "Legume rotation increases fertility ✓",
+        "predictPrompt": "Why are legumes called for soil rotation?"
+       }
       ]
      }
     }
@@ -11513,25 +13097,25 @@
       "steps": [
        {
         "operation": "State why roasting is required",
-        "reason": "sulphide ores cannot be reduced directly with CO — the sulphur would remain in the iron and spoil it",
-        "result": "roasting is oxidation: sulphur leaves as SO₂",
+        "reason": "sulphide ores cannot be reduced directly with CO  -  the sulphur would remain in the iron and spoil it",
+        "result": "roasting is oxidation: sulphur leaves as SO{{sub:2}}",
         "predictPrompt": "What would happen to the iron if roasting were skipped?"
        },
        {
         "operation": "Write the balanced equation",
-        "reason": "4FeS₂ + 11O₂ → 2Fe₂O₃ + 8SO₂",
+        "reason": "4FeS{{sub:2}} + 11O{{sub:2}} → 2Fe{{sub:2}}O{{sub:3}} + 8SO{{sub:2}}",
         "result": "pyrite burns to iron(III) oxide and sulphur dioxide",
         "predictPrompt": "Where does the sulphur go?"
        },
        {
         "operation": "Explain the steelmaking constraint",
-        "reason": "residual sulphur makes steel brittle and hard to weld — it must be removed before the steel is made",
+        "reason": "residual sulphur makes steel brittle and hard to weld  -  it must be removed before the steel is made",
         "result": "sulphur embrittles steel",
         "predictPrompt": "What practical consequence does brittleness create?"
        },
        {
         "operation": "Check to confirm: contrast with oxide ores",
-        "reason": "haematite (Fe₂O₃) goes straight to the furnace — no roasting needed, no sulphur, no roasting step",
+        "reason": "haematite (Fe{{sub:2}}O{{sub:3}}) goes straight to the furnace  -  no roasting needed, no sulphur, no roasting step",
         "result": "the two ore families take different paths",
         "predictPrompt": "Why are oxide ores easier?"
        }
@@ -11600,6 +13184,44 @@
        "Roasting is oxidation; reduction removes oxygen later.",
        "Carbon monoxide reduces; carbon burns; limestone fluxes.",
        "Wrought iron is tough; cast iron is brittle."
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: describe the roasting of iron pyrite (FeS{{sub:2}}) and explain why sulfur capture is essential for environmental control.",
+      "steps": [
+       {
+        "operation": "Write the roasting equation",
+        "reason": "4FeS{{sub:2}} + 11O{{sub:2}} → 2Fe{{sub:2}}O{{sub:3}} + 8SO{{sub:2}}",
+        "result": "4FeS{{sub:2}} + 11O{{sub:2}} → 2Fe{{sub:2}}O{{sub:3}} + 8SO{{sub:2}}",
+        "predictPrompt": "Write the balanced equation for roasting iron pyrite."
+       },
+       {
+        "operation": "Identify the useful product and the waste problem",
+        "reason": "Fe{{sub:2}}O{{sub:3}} feeds the blast furnace; SO{{sub:2}} is a major atmospheric pollutant",
+        "result": "Product: Fe{{sub:2}}O{{sub:3}}; by-product: SO{{sub:2}}",
+        "predictPrompt": "Which product of pyrite roasting is sought?"
+       },
+       {
+        "operation": "Explain why sulfur capture is necessary",
+        "reason": "SO{{sub:2}} + H{{sub:2}}O → H{{sub:2}}SO{{sub:3}}; further oxidation → acid rain: pH falls below 5 in affected regions",
+        "result": "SO{{sub:2}} forms H{{sub:2}}SO{{sub:4}} in cloud droplets",
+        "predictPrompt": "What does SO{{sub:2}} produce in clouds?"
+       },
+       {
+        "operation": "Describe flue gas desulphurisation",
+        "reason": "Limestone scrubbing to remove SO{{sub:2}}: CaCO{{sub:3}} + SO{{sub:2}} → CaSO{{sub:3}} + CO{{sub:2}}; further oxidation yields gypsum CaSO{{sub:4}}",
+        "result": "CaSO{{sub:4}} by-product used in plasterboard",
+        "predictPrompt": "What is limestone used for in flue gas treatment?"
+       },
+       {
+        "operation": "Check to confirm: environmental effectiveness",
+        "reason": "Advanced plants reach >95% SO{{sub:2}} capture; modern reworking recovers sulfuric acid for sale",
+        "result": "Roasting with capture is compatible with modern iron production ✓",
+        "predictPrompt": "What percentage of SO{{sub:2}} is captured with modern scrubbers?"
+       }
       ]
      }
     }
@@ -11790,7 +13412,7 @@
       "steps": [
        {
         "operation": "Name the aircraft-frame alloy",
-        "reason": "duralumin — aluminium with copper, magnesium and manganese",
+        "reason": "duralumin  -  aluminium with copper, magnesium and manganese",
         "result": "duralumin",
         "predictPrompt": "Which metal is the light one?"
        },
@@ -11802,7 +13424,7 @@
        },
        {
         "operation": "Name the pipe-joining alloy",
-        "reason": "soft solder — a lead–tin alloy",
+        "reason": "soft solder  -  a lead-tin alloy",
         "result": "soft solder",
         "predictPrompt": "What about its melting point?"
        },
@@ -11883,6 +13505,44 @@
        "Zinc means brass; tin means bronze, solder and bells.",
        "Chromium means rust-proof stainless steel; light means duralumin.",
        "Guide a field: permalloy; keep a field: alnico."
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "University hard tier: explain why alloys are harder and stronger than the pure metals, and identify common uses for: brass, bronze, solder, stainless steel, carbon steel.",
+      "steps": [
+       {
+        "operation": "Define an alloy",
+        "reason": "A mixture of metals (or metals + non-metals) melted together, producing altered properties",
+        "result": "Brass: Cu + Zn; bronze: Cu + Sn",
+        "predictPrompt": "What are the components of brass?"
+       },
+       {
+        "operation": "Explain why alloys are harder",
+        "reason": "Atoms of differing radii cannot slide easily past one another; dislocation motion is impeded",
+        "result": "Deformation harder; irregular lattice",
+        "predictPrompt": "Why does a metal lattice resist deformation more with bigger atoms replaced by smaller ones (or vice versa)?"
+       },
+       {
+        "operation": "Identify standard uses for each alloy",
+        "reason": "Brass: decoration, valves, plumbing; bronze: statues, coins; solder: circuits; stainless steel: cutlery, surgical; carbon steel: railways",
+        "result": "Brass: plumbing; bronze: bearings; solder: electronics; stainless: surgical; carbon steel: railways",
+        "predictPrompt": "For which is solder used?"
+       },
+       {
+        "operation": "Describe carbon steel",
+        "reason": "Small % carbon (0.1-1.5) misaligned inside iron lattice adds strength; high carbon = hard but brittle; low carbon = soft and ductile",
+        "result": "High carbon → hard; low carbon → ductile",
+        "predictPrompt": "What distinguishes high-carbon steel from low-carbon?"
+       },
+       {
+        "operation": "Check to confirm: case-hardened steel",
+        "reason": "Surface carbon is diffused into the outer layer; the core stays tough; outside becomes hard  -  ideal for gears",
+        "result": "Case hardening: hard surface, tough core ✓",
+        "predictPrompt": "What does case hardening produce in a steel gear?"
+       }
       ]
      }
     }
