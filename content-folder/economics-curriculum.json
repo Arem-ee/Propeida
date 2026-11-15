@@ -341,6 +341,12 @@
                 "reason": "The N2,000 is what she paid, not what she gave up.",
                 "result": "Opportunity cost = the data bundle.",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Check to confirm: Re-test the answer against the scale of preference",
+                "reason": "Re-reading the ranking from the top is independent of the first pass, so any pick that is not the next best forgone want fails here.",
+                "result": "Textbook first, data bundle second, cinema ticket third. The ticket is not next best and the N2,000 was paid, not forgone, so opportunity cost remains the data bundle.",
+                "predictPrompt": "What would make the cinema ticket the right answer instead?"
               }
             ]
           }
@@ -569,6 +575,12 @@
                 "reason": "Public provision of roads alongside private production of bus services combines both sectors.",
                 "result": "(c) Mixed economy.",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
+              },
+              {
+                "operation": "Check to confirm: Re-test all three answers with the ownership-and-signal test",
+                "reason": "Sorting each case again by who owns the means and which signal directs is an independent re-read, so a misread case shows itself.",
+                "result": "(a) state quotas direct output with no price signal, so planned. (b) a private firm follows a price rise, so free enterprise. (c) roads public with buses private, so mixed. The same verdicts hold.",
+                "predictPrompt": "Which single fact settles each of the three cases for you?"
               }
             ]
           }
@@ -798,6 +810,12 @@
                 "reason": "The range is the highest value minus the lowest.",
                 "result": "11 − 4 = 7 bags.",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
+              },
+              {
+                "operation": "Check to confirm: Rebuild the total from the mean and re-read the middle",
+                "reason": "Multiplying the mean back out and picking the third of five values must both return known quantities, so a missed value breaks the sums.",
+                "result": "7 × 5 = 35 = 4 + 6 + 6 + 8 + 11. The third ordered value is 6 (median), 6 is the most frequent value (mode), and 11 − 4 = 7 (range). The whole summary holds.",
+                "predictPrompt": "Can you rebuild the total of 35 from your mean?"
               }
             ]
           }
@@ -1026,6 +1044,12 @@
                 "reason": "Elasticity is the quantity change divided by the price change.",
                 "result": "PED = 40 ÷ 20 = 2. Demand is elastic because the value exceeds one.",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
+              },
+              {
+                "operation": "Check to confirm: Reverse the calculation with the elasticity",
+                "reason": "Feeding the 40 per cent quantity rise and the PED of 2 back must return the 20 per cent price fall, so a slip fails the round trip.",
+                "result": "0.40 ÷ 2 = 0.20, that is 20 per cent of N10 = N2, so N10 − N2 = N8; and 100 × 1.40 = 140 units. Both ends agree.",
+                "predictPrompt": "Does your PED of 2 rebuild the N2 fall and the 140 units?"
               }
             ]
           }
@@ -1255,6 +1279,12 @@
                 "reason": "The result is the quantity supplied at that price.",
                 "result": "Qs = 30 units.",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Check to confirm: Substitute the answer back into the original function",
+                "reason": "The given N10 price must fall straight out of the original equation, so a slip in the rearrangement leaves it short.",
+                "result": "P = ¼(30 + 10) = ¼ × 40 = N10, exactly the price given. So Qs = 30 units is confirmed.",
+                "predictPrompt": "Does the original function hand back N10?"
               }
             ]
           }
@@ -1479,7 +1509,7 @@
                 "predictPrompt": "What do you substitute, into which formula?"
               },
               {
-                "operation": "Substitute back for quantity",
+                "operation": "Check to confirm: Substitute back for quantity",
                 "reason": "Either equation gives the equilibrium quantity at P = 2.",
                 "result": "Qd = 15 − 2(2) = 11, and Qs = 5 + 3(2) = 11. Equilibrium is P = 2, Q = 11.",
                 "predictPrompt": "How would you test this answer before writing it down?"
@@ -1707,6 +1737,12 @@
                 "reason": "The law begins where marginal product turns downward.",
                 "result": "MP rises from 10 to 15, then falls to 10 at the third worker, so diminishing returns set in there even though total output rises to 35 tonnes.",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
+              },
+              {
+                "operation": "Check to confirm: Add the marginal products and rebuild each total",
+                "reason": "Marginal products must accumulate to the final total, and every average must rebuild its own output, so a slip fails one of them.",
+                "result": "10 + 15 + 10 + 5 = 40 tonnes, the full output. Average product rebuilds: 12.5 × 2 = 25, 35 ÷ 3 ≈ 11.7, 10 × 4 = 40. The table ties up.",
+                "predictPrompt": "Do your marginal products add up to 40 tonnes?"
               }
             ]
           }
@@ -1931,6 +1967,12 @@
                 "reason": "Average total cost is total cost divided by output; marginal cost is the extra cost of one more unit.",
                 "result": "ATC = N240,000 ÷ 60 = N4,000. MC = N2,000, because each extra unit adds only its variable cost.",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Check to confirm: Rebuild TC from ATC and reconcile fixed and variable cost",
+                "reason": "ATC times output must return the TC found earlier, and TC minus fixed cost must equal the variable cost, so a slip breaks the reconciliation.",
+                "result": "N4,000 × 60 = N240,000 = TC. N240,000 − N120,000 fixed = N120,000 = 60 × N2,000 variable. Every figure ties up.",
+                "predictPrompt": "Can you rebuild N240,000 from your ATC of N4,000?"
               }
             ]
           }
@@ -2148,6 +2190,12 @@
                 "reason": "The firm will not pay more than the value the worker adds.",
                 "result": "The highest wage is N750; at a lower wage the firm can profitably hire more workers.",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Check to confirm: Compare total revenue with and without the last worker",
+                "reason": "The last worker is worth only the revenue she adds, so computing it from the totals must give the same N750.",
+                "result": "TR = 200 × N50 = N10,000 with her; TR = 185 × N50 = N9,250 without her; N10,000 − N9,250 = N750 = MRP. Same ceiling, second route.",
+                "predictPrompt": "Does total revenue move by N750 when you drop the last worker?"
               }
             ]
           }
@@ -2378,6 +2426,12 @@
                 "reason": "Average total cost exceeds price, so the firm makes a loss on each unit.",
                 "result": "Loss = N60 − N50 = N10 per unit, but shutting down would lose the average fixed cost of N15 per unit.",
                 "predictPrompt": "How would you explain why this beats the other options?"
+              },
+              {
+                "operation": "Check to confirm: Rebuild the fixed cost per unit from ATC minus AVC",
+                "reason": "The shut-down call hinges on the N15 average fixed cost, so reconstructing it from the two averages proves it independently.",
+                "result": "AFC = N60 − N45 = N15 per unit. Staying loses N10 per unit and shutting down loses N15, so keeping output is confirmed; N50 − N45 = N5 contribution still covers part of fixed cost.",
+                "predictPrompt": "Rebuild the N15 fixed cost from your two average costs. Does it hold?"
               }
             ]
           }
@@ -2603,6 +2657,12 @@
                 "reason": "Inflation is the percentage change in the index from the base year.",
                 "result": "Inflation = ((125 − 100) ÷ 100) × 100 = 25 per cent.",
                 "predictPrompt": "How would you prove this claim to a sceptic?"
+              },
+              {
+                "operation": "Check to confirm: Reconstruct the basket cost from the index and the inflation rate",
+                "reason": "Inflating the base-year basket by each answer in turn must return the current N25,000, so a slip in either shows itself.",
+                "result": "N20,000 × 125 ÷ 100 = N25,000. And N20,000 + 25 per cent of N20,000 = N20,000 + N5,000 = N25,000. Both routes rebuild the basket exactly.",
+                "predictPrompt": "Does the index multiply the base year back to N25,000?"
               }
             ]
           }
@@ -2827,6 +2887,12 @@
                 "reason": "Each country should produce the good for which it gives up less.",
                 "result": "A has the lower cocoa cost (0.5 coffee vs 2), so A produces cocoa; B has the lower coffee cost (0.5 cocoa vs 2), so B produces coffee.",
                 "predictPrompt": "How would you explain why this beats the other options?"
+              },
+              {
+                "operation": "Check to confirm: Run a trial trade at one cocoa for one coffee",
+                "reason": "If trade at middle terms helps both sides, the comparative-advantage call is right; if it hurts either, the ranking is wrong.",
+                "result": "A trading one cocoa gets one coffee, which would cost two cocoa at home, so A gains. B trading one coffee gets one cocoa, which would cost two coffee at home, so B gains. Both gain, so the specialisation stands.",
+                "predictPrompt": "At one cocoa for one coffee, does each country come out ahead?"
               }
             ]
           }
@@ -3050,6 +3116,12 @@
                 "reason": "The quota caps output, so a lower quota or price cuts revenue even if costs are unchanged.",
                 "result": "At full quota and $80 oil, Nigeria earns about $43.8 billion a year; a quota cut or price fall reduces that directly.",
                 "predictPrompt": "How would you explain why this beats the other options?"
+              },
+              {
+                "operation": "Check to confirm: Rebuild the annual figure through barrels per year",
+                "reason": "Going by yearly barrels instead of daily revenue must land on the same total, so a dropped factor shows up here.",
+                "result": "1.5 million × 365 = 547.5 million barrels a year; 547.5 million × $80 = $43,800 million = $43.8 billion. Same answer, second route.",
+                "predictPrompt": "Can you reach $43.8 billion by counting barrels first?"
               }
             ]
           }
@@ -3276,6 +3348,12 @@
                 "reason": "The consumer paid N900 for three units but was willing to pay N1,200.",
                 "result": "She gains N300, which is the area between her demand curve and the price.",
                 "predictPrompt": "How would you explain why this beats the other options?"
+              },
+              {
+                "operation": "Check to confirm: Rebuild the surplus from willingness to pay",
+                "reason": "Adding all three valuations and subtracting what was actually paid must return the N300, so a slip breaks the balance.",
+                "result": "Willingness to pay = N500 + N400 + N300 = N1,200. Amount actually paid = 3 × N300 = N900. N1,200 − N900 = N300. Consumer surplus confirmed.",
+                "predictPrompt": "Does willingness to pay minus what was paid give N300?"
               }
             ]
           }
@@ -3501,6 +3579,12 @@
                 "reason": "The extra income is larger than the initial injection because each round of spending becomes someone else's income.",
                 "result": "Income rises by N320 million, four times the N80 million injection.",
                 "predictPrompt": "How would you explain why this beats the other options?"
+              },
+              {
+                "operation": "Check to confirm: Rebuild the rise round by round",
+                "reason": "Adding every round of spending must converge on the same N320 million, so a wrong multiplier fails here.",
+                "result": "80 + 60 + 45 + 33.75 + … = 80 ÷ 0.25 = N320 million, matching k × ΔI = 4 × N80 million. Both ends agree.",
+                "predictPrompt": "Does the round-by-round sum also reach N320 million?"
               }
             ]
           }
@@ -3724,6 +3808,12 @@
                 "reason": "Total output rose, but population rose by the same proportion.",
                 "result": "Output per person is unchanged, so average living standards did not rise.",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Check to confirm: Divide both years straight through again",
+                "reason": "Fresh divisions and the two growth rates must all agree, so an error in either kills the match.",
+                "result": "N80 trillion ÷ 200 million = N400,000 and N88 trillion ÷ 220 million = N400,000. Output and population both grew 10 per cent, so flat output per person is confirmed.",
+                "predictPrompt": "Do both years divide to exactly N400,000?"
               }
             ]
           }
@@ -3947,6 +4037,12 @@
                 "reason": "The bank keeps 20 per cent as reserves and lends the rest, and each loan returns as a deposit.",
                 "result": "The N50,000 deposit supports N250,000 of deposits, with N200,000 created as credit.",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Check to confirm: Test the system against the reserve ratio",
+                "reason": "The multiplier only works if 20 per cent of the created deposits equals the cash the bank began with, so any slip breaks the match.",
+                "result": "20 per cent of N250,000 = N50,000, exactly the new deposit. N250,000 − N50,000 = N200,000 created credit, as stated. The multiplier of 5 holds.",
+                "predictPrompt": "Do the reserves come out at exactly N50,000?"
               }
             ]
           }
@@ -4170,6 +4266,12 @@
                 "reason": "The consumer pays the price plus the tax, and the trader remits the tax.",
                 "result": "Consumer pays N5,375, and the trader remits N375 to government.",
                 "predictPrompt": "How would you explain why this beats the other options?"
+              },
+              {
+                "operation": "Check to confirm: Split the rate and divide the VAT back out",
+                "reason": "Building the VAT two ways and recovering the rate from it must agree, so a slip fails the round trip.",
+                "result": "10 per cent − 2.5 per cent: N500 − N125 = N375. And N375 ÷ N5,000 = 0.075 = 7.5 per cent. The consumer price of N5,375 stands.",
+                "predictPrompt": "Can you make N375 from a 10 per cent slice minus a 2.5 per cent slice?"
               }
             ]
           }
@@ -4391,8 +4493,14 @@
               {
                 "operation": "Interpret",
                 "reason": "Storage or a better road would have turned the loss into sales.",
-                "result": "Better storage would have raised his income by N200,000, a third of his potential revenue.",
+                "result": "Better storage would have raised his income by N200,000, a quarter of his potential revenue.",
                 "predictPrompt": "How would you explain why this beats the other options?"
+              },
+              {
+                "operation": "Check to confirm: Reconcile sales and spoilage with the harvest",
+                "reason": "The kilograms must add back to 2,000 kg and the money must add back to the full potential, so any slip breaks both sums.",
+                "result": "1,500 kg + 500 kg = 2,000 kg. N600,000 + N200,000 = N800,000 = 2,000 × N400. Everything balances.",
+                "predictPrompt": "Do sales and spoilage add back to the whole harvest?"
               }
             ]
           }
@@ -4617,6 +4725,12 @@
                 "reason": "The cheaper site is the one with the lower total transport cost.",
                 "result": "The raw-material site is cheaper by N20 per tonne, so the firm locates near the deposit.",
                 "predictPrompt": "How would you prove this claim to a sceptic?"
+              },
+              {
+                "operation": "Check to confirm: Compare both sites for any tonnage of output",
+                "reason": "The verdict must hold at every scale of production and not just one tonne, so a sign slip breaks the general comparison.",
+                "result": "For T tonnes of product, the deposit site costs N80 × T to ship out; the market site costs 2T × N50 = N100 × T to ship in. The gap is N20 × T every time, so the deposit site wins.",
+                "predictPrompt": "Does the N20 per tonne gap hold at any tonnage you try?"
               }
             ]
           }
@@ -4840,6 +4954,12 @@
                 "reason": "The remaining profit belongs to the oil company, but the state also gains from taxes and royalties.",
                 "result": "Government takes $36 and the company keeps $24 of the profit on each barrel.",
                 "predictPrompt": "How would you explain why this beats the other options?"
+              },
+              {
+                "operation": "Check to confirm: Add the two shares and divide them back out",
+                "reason": "The government and company portions must rebuild the whole $60 profit and divide back to the same rates, so a slip breaks the split.",
+                "result": "$36 + $24 = $60 = $80 − $20. And $36 ÷ $60 = 0.6, so 60 per cent to government; $24 ÷ $60 = 0.4 to the company. The split is exact.",
+                "predictPrompt": "Do the two shares add back to $60?"
               }
             ]
           }
@@ -5068,6 +5188,12 @@
                 "reason": "Incorporation brings registration, disclosure and compliance costs.",
                 "result": "They accept formalities in exchange for limited liability and easier capital raising.",
                 "predictPrompt": "How would you prove this claim to a sceptic?"
+              },
+              {
+                "operation": "Check to confirm: Eliminate the rival forms against both tests",
+                "reason": "Every rival is re-tested against the N50 million and the risk goal, so any form passing both would break the choice.",
+                "result": "Sole proprietorship: one owner, unlimited liability, no outside share capital. Partnership: two to twenty partners, all personally liable, so personal assets are at risk. Co-operative: one-member-one-vote control rooted in customer-members, a poor shape for outside money. Public company: raises far more but trades shares publicly and loads disclosure on two friends too early. Only the private limited company passes both tests.",
+                "predictPrompt": "Can any other form pass both the risk and the capital test?"
               }
             ]
           }
@@ -5291,6 +5417,12 @@
                 "reason": "The labour force is those working or actively seeking work, not everyone of working age.",
                 "result": "50 ÷ 70 ≈ 71.4 per cent participation.",
                 "predictPrompt": "How would you explain why this beats the other options?"
+              },
+              {
+                "operation": "Check to confirm: Rebuild the 120 million and reverse both divisions",
+                "reason": "The age groups must sum to the population, and the two ratios must divide back to the same 50 million, so a slip breaks the chain.",
+                "result": "45 + 5 + 70 = 120 million. 0.71 × 70 million is about 50 million dependants, and 50 ÷ 70 ≈ 71.4 per cent. Both ratios reverse cleanly.",
+                "predictPrompt": "Do your ratios reverse back to 50 million, and do the ages sum to 120?"
               }
             ]
           }

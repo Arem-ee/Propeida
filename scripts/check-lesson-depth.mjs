@@ -20,6 +20,7 @@ import { basename, join } from 'node:path'
 
 const CORE_MIN = 500
 const CORE_MAX = 800
+const CORE_HARD_MAX = 950
 const DEPTH_MIN = 600
 const DEPTH_MAX = 900
 const DEPTH_PREFIX = /^go deeper\s*:\s*/i
@@ -162,8 +163,12 @@ function checkLesson(lesson, file) {
   const coreWords = coreBlocks.reduce((n, b) => n + blockWords(b), 0)
   const depthWords = depthBlocks.reduce((n, b) => n + blockWords(b), 0)
 
-  if (coreWords < CORE_MIN || coreWords > CORE_MAX) {
-    errors.push(`core ${coreWords} words (need ${CORE_MIN}–${CORE_MAX})`)
+  if (coreWords < CORE_MIN) {
+    errors.push(`core ${coreWords} words (need at least ${CORE_MIN})`)
+  } else if (coreWords > CORE_HARD_MAX) {
+    errors.push(`core ${coreWords} words (hard stop is ${CORE_HARD_MAX}; over ${CORE_MAX} is permitted per the 2026-11-14 quality-over-counter rule but this is beyond the review margin)`)
+  } else if (coreWords > CORE_MAX) {
+    warnings.push(`core ${coreWords} words (over ${CORE_MAX}, permitted per the 2026-11-14 quality-over-counter rule; review for genuine bloat)`)
   }
   if (depthBlocks.length > 0 && depthBlocks.length < 2) {
     errors.push(`depth has ${depthBlocks.length} section (need at least 2)`)

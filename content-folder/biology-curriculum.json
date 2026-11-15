@@ -907,6 +907,12 @@
         "reason": "Life needs the full set of processes, not one imitation. End with the verdict the evidence allows. If you get stuck, insist on all seven processes before anything earns the name living.",
         "result": "The candle is non-living.",
         "predictPrompt": "How would you prove this claim to someone who doubts you?"
+       },
+       {
+        "operation": "Check to confirm: re-test against the seven processes",
+        "reason": "One failed process sinks the claim; two failures leave no room for a slip.",
+        "result": "The candle fails respiration (no cells) and growth (no increase from within), so the claim collapses. Both ends agree.",
+        "predictPrompt": "Which process would you re-test first, and why?"
        }
       ]
      }
@@ -1145,6 +1151,12 @@
         "reason": "Name only the structures the plant cell lacks. Re-read the stem and answer exactly what it asks. If you get stuck, strike every shared structure out of your answer.",
         "result": "Centrioles and small temporary vacuoles.",
         "predictPrompt": "How would you prove this claim to someone who doubts you?"
+       },
+       {
+        "operation": "Check to confirm: re-trace every answer back to the stem",
+        "reason": "Each named structure must come from the stem or the difference list, so a shared structure slipped in would stand out here.",
+        "result": "The stem hands you a cellulose wall, chloroplasts and a large vacuole, so the cell is a plant cell; centrioles and small vacuoles are the animal-only extras, and nothing shared is listed. Both ends agree.",
+        "predictPrompt": "Which two structures would you strike out if a friend listed them by mistake?"
        }
       ]
      }
@@ -1386,6 +1398,12 @@
         "reason": "The human is the complete living thing. Take the last rung, because this step asks for the whole organism. If you get stuck, ask which item contains every level before it.",
         "result": "5. Organism.",
         "predictPrompt": "How would you explain why this wins over the other options?"
+       },
+       {
+        "operation": "Check to confirm: rebuild the ladder from both ends",
+        "reason": "Every rung is built from the one below, so it must hold in both directions.",
+        "result": "Cells, tissue, stomach, system, human: the chain rebuilds upwards and downwards unchanged. Both ends agree.",
+        "predictPrompt": "Where would you start if the ladder was handed to you in reverse?"
        }
       ]
      }
@@ -1627,6 +1645,12 @@
         "reason": "Kingdom is decided by cell plan and body plan, never by colour. Close the key with the deciding features. If you get stuck, restate the deciding features and name the kingdom they point to.",
         "result": "The specimen is a protist, not a plant.",
         "predictPrompt": "How would you test this answer before you write it down?"
+       },
+       {
+        "operation": "Check to confirm: eliminate the other four kingdoms",
+        "reason": "Each rejected kingdom must fall for its own reason; one that survives breaks the key.",
+        "result": "Monera on the nucleus, Plantae on one cell, Fungi on chloroplasts, Animalia on self-feeding; Protista alone fits. Both ends agree.",
+        "predictPrompt": "Which single feature kills the plant claim fastest?"
        }
       ]
      }
@@ -1868,6 +1892,12 @@
         "reason": "A flagellum alone does not make an organism a protist; bacteria can wave flagella too. Return to the key, because this step asks you to reject a false shortcut. If you get stuck, swap flagellum for nucleus as the deciding feature and re-read both.",
         "result": "The nucleus, not movement, separates the kingdoms.",
         "predictPrompt": "How would you prove this claim to someone who doubts you?"
+       },
+       {
+        "operation": "Check to confirm: re-test both with the nucleus fork",
+        "reason": "The nucleus is the deciding fork, so re-running it must return the same two kingdoms.",
+        "result": "Free DNA and no nuclear membrane give Monera; nucleus with cilia and contractile vacuole gives Protista; flagella never decide. Both ends agree.",
+        "predictPrompt": "What would you ask first about any mystery cell?"
        }
       ]
      }
@@ -2109,6 +2139,12 @@
         "reason": "Staying still does not make something a plant. Tally the three features you have found and match the set to Fungi. If you get stuck, recount the three and match each one to Fungi.",
         "result": "The mushroom belongs to Fungi.",
         "predictPrompt": "How would you sanity-check this answer against the evidence on the table?"
+       },
+       {
+        "operation": "Check to confirm: match each feature against a true plant",
+        "reason": "Every Fungi feature must be absent in a genuine plant; one that matched would make the classification unsafe.",
+        "result": "Chitin wall, not cellulose; absorbs ready-made food, not photosynthesis; hyphae and mycelium, not roots, stems and leaves; all three split the mushroom away from plants. Both ends agree.",
+        "predictPrompt": "Which feature would settle it for a sceptic fastest?"
        }
       ]
      }
@@ -2329,6 +2365,12 @@
         "reason": "Vascular tissue allows height, but reproduction still needs water. Close the key with the division verdict and its reason. If you get stuck, combine the vascular answer and the spore answer into one sentence.",
         "result": "The plant is a pteridophyte.",
         "predictPrompt": "How would you prove this claim to someone who doubts you?"
+       },
+       {
+        "operation": "Check to confirm: re-walk the key",
+        "reason": "A sound key must land there again.",
+        "result": "Vascular, spores, needs water: Pteridophyta again. Both ends agree.",
+        "predictPrompt": "Which fork would you re-check first if the answer felt shaky?"
        }
       ]
      }
@@ -2552,6 +2594,12 @@
         "reason": "The plant dies after one seed crop in its second year. Tally the life span and match it to a definition. If you get stuck, match the two-year pattern to the biennial definition.",
         "result": "Carrot is a biennial.",
         "predictPrompt": "How would you explain why this wins over the other options?"
+       },
+       {
+        "operation": "Check to confirm: match the timeline to the biennial definition",
+        "reason": "A biennial is one seed crop across two seasons, so the timeline must match that definition exactly or the label is wrong.",
+        "result": "Year one gives leaves and a swollen root but no flowers; year two flowers, sets seed and dies, one crop in two seasons, the biennial definition. Both ends agree.",
+        "predictPrompt": "Which season tells you a carrot is not an annual?"
        }
       ]
      }
@@ -2793,6 +2841,12 @@
         "reason": "Body covering and appendages decide the phylum. Close the key with both names attached to their evidence. If you get stuck, restate the two body plans and attach one phylum to each.",
         "result": "The specimens are Mollusca and Arthropoda.",
         "predictPrompt": "How would you prove this claim to someone who doubts you?"
+       },
+       {
+        "operation": "Check to confirm: tick each specimen against its phylum checklist",
+        "reason": "Each phylum has a signature kit of features, so ticking them off one by one must reproduce the same two names.",
+        "result": "Soft body with a mantle-made shell and muscular foot all present, so Mollusca; jointed legs and chitin exoskeleton both present, so Arthropoda; swap either name and its checklist breaks. Both ends agree.",
+        "predictPrompt": "Which feature would you check first on an unknown specimen?"
        }
       ]
      }
@@ -3054,6 +3108,12 @@
         "reason": "The answer depends on the stage named in the question. Tally the verdict stage by stage, then combine them. If you get stuck, write larva harmful and adult useful, then put them together.",
         "result": "The insect is both harmful and useful.",
         "predictPrompt": "How would you test this answer before you write it down?"
+       },
+       {
+        "operation": "Check to confirm: re-rate each stage by its mouthparts",
+        "reason": "Mouthparts decide what a stage eats, and the feeding decides harm or use, so re-reading them must reproduce the verdict.",
+        "result": "Chewing mouthparts on the caterpillar strip leaves, harmful; the coiled proboscis of the adult sips nectar and moves pollen, useful; same species, two verdicts. Both ends agree.",
+        "predictPrompt": "How would you settle this for a fellow farmer?"
        }
       ]
      }
@@ -3296,6 +3356,12 @@
         "reason": "Skin, egg and life cycle all point one way. Close the key with the class verdict. If you get stuck, restate the skin, egg and cycle answers in one sentence.",
         "result": "The vertebrate is a reptile, not an amphibian.",
         "predictPrompt": "How would you sanity-check this answer against the evidence on the table?"
+       },
+       {
+        "operation": "Check to confirm: re-test the amphibian checklist",
+        "reason": "Every amphibian trait must fail for the exclusion to hold.",
+        "result": "Moist skin, shell-less eggs, water-bound breeding: this animal has none. Both ends agree.",
+        "predictPrompt": "Which amphibian trait would you test first, and why?"
        }
       ]
      }
@@ -3536,6 +3602,12 @@
         "reason": "The first pattern earns its signal; the second copies it. Name both phenomena with the evidence beside them. If you get stuck, pair each frog with its mechanism in one line each.",
         "result": "The pair shows warning colouration and mimicry.",
         "predictPrompt": "How would you explain why this wins over the other options?"
+       },
+       {
+        "operation": "Check to confirm: re-test each frog against the two mechanisms",
+        "reason": "Warning colouration is honest and mimicry copies it; matching must reproduce both labels.",
+        "result": "The first frog is truly poisonous, an honest warning; the harmless second copies the pattern, Batesian mimicry. Both ends agree.",
+        "predictPrompt": "Why is the second frog's trick only possible because the first is honest?"
        }
       ]
      }
@@ -3777,6 +3849,12 @@
         "reason": "Large heads and mandibles are soldier features. Use the same caste features, because this step names the large-headed defenders. If you get stuck, match oversized heads and strong mandibles to the soldier row.",
         "result": "They are soldiers.",
         "predictPrompt": "How would you sanity-check this answer against the evidence on the table?"
+       },
+       {
+        "operation": "Check to confirm: match each caste to its job",
+        "reason": "Each caste is defined by body design serving a duty, so matching them one to one must reproduce the identification.",
+        "result": "The one large egg-layer is the queen, the pale blind ones forage and build as workers, the big-headed mandible-bearers fight as soldiers; every body fits its duty. Both ends agree.",
+        "predictPrompt": "What would a colony lose first if it had no soldiers?"
        }
       ]
      }
@@ -4019,6 +4097,12 @@
         "reason": "The two beaks solve different feeding problems. Name both diets with the table behind them. If you get stuck, write nectar for the first bird and seeds for the second.",
         "result": "One is nectarivorous and the other granivorous.",
         "predictPrompt": "How would you test this answer before you write it down?"
+       },
+       {
+        "operation": "Check to confirm: re-match each beak to the food it handles",
+        "reason": "Beak shape is shaped by the food it handles, so re-matching from scratch must return the same two diets.",
+        "result": "A long, slender, curved beak cannot crack seeds but slips deep into flowers for nectar; a short, stout, conical beak cannot reach nectar but crushes seeds. Both ends agree.",
+        "predictPrompt": "Which everyday job would each beak fail at?"
        }
       ]
      }
@@ -4261,6 +4345,12 @@
         "reason": "This is sexual selection, not natural selection for survival alone. Name the selection type the evidence points to. If you get stuck, name sexual selection and note that survival alone would favour dull males.",
         "result": "The trait persists because it wins mates.",
         "predictPrompt": "How would you prove this claim to someone who doubts you?"
+       },
+       {
+        "operation": "Check to confirm: weigh the survival cost against the mating gain",
+        "reason": "A trait persists only when reproductive gain beats survival cost, so weighing them again must tip the same way.",
+        "result": "Bright tails catch more predators yet win more mates, so more offspring inherit the display; sexual selection outweighs natural selection for survival here. Both ends agree.",
+        "predictPrompt": "What would you expect to happen to dull males in this population over time?"
        }
       ]
      }
@@ -4503,6 +4593,12 @@
         "reason": "Water availability shapes the plant body. Name both matches with their explanations. If you get stuck, write xerophyte for the cactus and hydrophyte for the lily.",
         "result": "Cactus is a xerophyte; water lily is a hydrophyte.",
         "predictPrompt": "How would you test this answer before you write it down?"
+       },
+       {
+        "operation": "Check to confirm: re-match adaptations to habitats",
+        "reason": "Every named structure solves its habitat's water problem.",
+        "result": "Spines and thick stem fit drought: xerophyte; broad leaves floating: hydrophyte. Both ends agree.",
+        "predictPrompt": "Which clue would you use to place a cactus in the desert column?"
        }
       ]
      }
@@ -4708,6 +4804,12 @@
         "reason": "No cambium means no secondary growth, consistent with a monocot. Make the cambium check, because this step asks whether the stem can thicken. If you get stuck, ask whether the plant can form wood.",
         "result": "The plant will not form wood.",
         "predictPrompt": "How would you prove this claim to someone who doubts you?"
+       },
+       {
+        "operation": "Check to confirm: run the monocot checklist on the section",
+        "reason": "Scattered bundles, inward-facing xylem and no cambium are the monocot signature, so re-ticking all three must give the same organ.",
+        "result": "Scattered bundles confirmed, xylem inside each bundle confirmed, no cambium confirmed; a dicot would show a neat ring of bundles and a cambium strip. Both ends agree.",
+        "predictPrompt": "What would a single cambium strip tell you that ten scattered bundles cannot?"
        }
       ]
      }
@@ -4924,6 +5026,12 @@
         "reason": "Find the pores. Finish the walk, because this step asks for the lower pores. If you get stuck, find the paired pores with guard cells and match them to stomata.",
         "result": "Lower epidermis with stomata and guard cells.",
         "predictPrompt": "How would you explain why this wins over the other options?"
+       },
+       {
+        "operation": "Check to confirm: rebuild the leaf from the light's side",
+        "reason": "Every tissue must make sense under light arriving from above, so a wrong order breaks the chain of jobs.",
+        "result": "Transparent cuticle and epidermis let light through, palisade cells packed with chloroplasts catch it, spongy cells with air spaces route gases, stomata underneath let them in and out. Both ends agree.",
+        "predictPrompt": "Why do the chloroplasts sit in the palisade layer and not the upper epidermis?"
        }
       ]
      }
@@ -5128,6 +5236,12 @@
         "reason": "It sits directly under the epidermis in a young stem. Read the tissue location map, because this step places the tissue in the stem. If you get stuck, recall the layer just under the epidermis in young stems.",
         "result": "Matches the clue.",
         "predictPrompt": "How would you prove this claim to someone who doubts you?"
+       },
+       {
+        "operation": "Check to confirm: eliminate the other three support tissues",
+        "reason": "Parenchyma, collenchyma, sclerenchyma and xylem each carry a wall signature, so eliminating three leaves one standing.",
+        "result": "Parenchyma walls are thin, sclerenchyma are dead with lignified walls, xylem is lignified and dead too; only living collenchyma with corner thickening sits right under the epidermis. Both ends agree.",
+        "predictPrompt": "Why does the sunflower stem need flexible support and not bone-hard cells?"
        }
       ]
      }
@@ -5333,6 +5447,12 @@
         "reason": "Fatty meals trigger cholecystokinin and sphincter relaxation. Continue the flow chart, because this step asks where bile is released. If you get stuck, follow the common bile duct into the duodenum and check the fat signal.",
         "result": "Bile flows via common bile duct to emulsify fats.",
         "predictPrompt": "How would you sanity-check this answer against the evidence on the table?"
+       },
+       {
+        "operation": "Check to confirm: walk the bile route backwards",
+        "reason": "A flow traced backwards must unwind organ by organ, so a missing link snaps the chain.",
+        "result": "Small intestine, common bile duct, gall bladder, hepatic ducts, liver; the reversed walk matches the forward route exactly. Both ends agree.",
+        "predictPrompt": "How would fat digestion change if the common bile duct were blocked?"
        }
       ]
      }
@@ -5543,6 +5663,12 @@
         "reason": "Yam stores starch made in leaves from carbon (IV) oxide and water. Use the same key, because this step classifies the yam. If you get stuck, ask whether the organism makes food from carbon (IV) oxide and water by photosynthesis.",
         "result": "Autotrophic.",
         "predictPrompt": "How would you prove this claim to someone who doubts you?"
+       },
+       {
+        "operation": "Check to confirm: re-run the feeding key",
+        "reason": "Each fork of the key must return the same label when re-applied.",
+        "result": "Tapeworm on a living host is parasitic, mushroom on dead wood is saprophytic, sundew traps insects, yam makes its own food. Both ends agree.",
+        "predictPrompt": "Which fork of the key confuses people most, and why?"
        }
       ]
      }
@@ -5747,6 +5873,12 @@
         "reason": "Mineral salts must be replaced in soil fertiliser. Read the remedy column of the same table, because this step asks what to apply. If you get stuck, choose the fertiliser named in the magnesium row, Epsom salts.",
         "result": "Apply a magnesium-containing fertiliser (e.g. Epsom salts).",
         "predictPrompt": "How would you sanity-check this answer against the evidence on the table?"
+       },
+       {
+        "operation": "Check to confirm: re-derive the remedy from the chlorophyll molecule",
+        "reason": "Magnesium sits inside every chlorophyll molecule, so working backwards from that fact must land on the same deficiency and cure.",
+        "result": "No magnesium means no chlorophyll, so the leaves turn chlorotic and pale; magnesium is mobile and moves to young growth, so older leaves fade first; Epsom salts put it back. Both ends agree.",
+        "predictPrompt": "Why do the older leaves pale first when magnesium is in short supply?"
        }
       ]
      }
@@ -5955,6 +6087,12 @@
         "reason": "Purple indicates protein. Use the same table, because this step matches the biuret change to a nutrient. If you get stuck, match purple to the protein row.",
         "result": "Protein.",
         "predictPrompt": "How would you sanity-check this answer against the evidence on the table?"
+       },
+       {
+        "operation": "Check to confirm: re-run each test from its chemistry",
+        "reason": "Each colour change names a specific reaction, so replaying the chemistry must return the same three foods.",
+        "result": "Iodine wraps starch into a blue-black complex, Benedict's reagent is reduced by reducing sugars to a brick-red copper oxide, biuret turns purple with peptide bonds. Both ends agree.",
+        "predictPrompt": "Which test would you run first if you suspected a protein drink?"
        }
       ]
      }
@@ -6156,7 +6294,7 @@
         "predictPrompt": "How would you check this answer?"
        },
        {
-        "operation": "Examine the canine counter-test",
+        "operation": "Check to confirm: Examine the canine counter-test",
         "reason": "Canines would indicate meat-tearing; their absence excludes a carnivore. Apply the counter-example check, because this step asks what missing canines rule out. If you get stuck, recall that carnivores need canines and cross the carnivore option off.",
         "result": "Concluded as herbivore.",
         "predictPrompt": "How would you prove this claim to someone who doubts you?"
@@ -6371,6 +6509,12 @@
         "reason": "The pancreas makes insulin and releases it into blood. Use the same trace map, because this step follows insulin from pancreas to target organs. If you get stuck, follow insulin from the pancreas through blood to liver and muscles.",
         "result": "Carried to the liver and muscles, where it lowers blood glucose.",
         "predictPrompt": "How would you test this answer before you write it down?"
+       },
+       {
+        "operation": "Check to confirm: re-trace all four routes into blood",
+        "reason": "Each route must enter the blood before reaching its target.",
+        "result": "Gut glucose, liver urea, lung oxygen, pancreatic insulin: all four enter the blood first. Both ends agree.",
+        "predictPrompt": "Trace insulin one more time, pancreas to muscle, and name every hand-off."
        }
       ]
      }
@@ -6583,6 +6727,12 @@
         "reason": "Blood passes through the bicuspid valve into the left ventricle, which pumps it into the aorta. Finish the route, because this step asks where blood leaves for the body. If you get stuck, follow blood through the bicuspid valve, the left ventricle and the aorta.",
         "result": "Aorta and the systemic circulation.",
         "predictPrompt": "How would you prove this claim to someone who doubts you?"
+       },
+       {
+        "operation": "Check to confirm: re-trace the route and flag each valve",
+        "reason": "Each chamber-to-vessel jump crosses one valve; a missed valve breaks the loop.",
+        "result": "Right atrium, tricuspid, ventricle, lungs, left atrium, bicuspid, ventricle, aorta. Both ends agree.",
+        "predictPrompt": "Where would blood back up if the bicuspid valve leaked?"
        }
       ]
      }
@@ -6788,6 +6938,12 @@
         "reason": "Lymph capillaries join larger lymph vessels and pass through lymph nodes. Draw the lymph route, because this step traces the normal drainage path. If you get stuck, follow lymph from capillaries through vessels and nodes into neck veins.",
         "result": "Lymph returns to the blood through veins near the neck.",
         "predictPrompt": "How would you prove this claim to someone who doubts you?"
+       },
+       {
+        "operation": "Check to confirm: re-derive the fluid balance across the capillary",
+        "reason": "What leaves the capillary must return through veins and lymph, so block lymph and the surplus has nowhere to go.",
+        "result": "More fluid filters out at the arterial end than is reabsorbed at the venous end; the difference normally drains away as lymph; block the duct and that difference pools in the tissues, the swelling seen. Both ends agree.",
+        "predictPrompt": "Why does the swelling settle if the blockage is cleared?"
        }
       ]
      }
@@ -7000,6 +7156,12 @@
         "reason": "The root system starves while the shoot keeps photosynthesising. Project the trend forward, because this step asks for the final outcome. If you get stuck, follow the starved roots until the shoot can no longer cope.",
         "result": "The tree may eventually die.",
         "predictPrompt": "How would you prove this claim to someone who doubts you?"
+       },
+       {
+        "operation": "Check to confirm: re-test what the ring removes",
+        "reason": "The ring cuts phloem, so sugars stall while water rises freely.",
+        "result": "Bark above the ring swells with pooled sugars; the roots below starve first; the tree weakens over time. Both ends agree.",
+        "predictPrompt": "What would you see happen if the xylem were cut instead of the phloem?"
        }
       ]
      }
@@ -7204,6 +7366,12 @@
         "reason": "The external solution is more concentrated than the cell sap. Use the same rule, because this step asks which way water moves out. If you get stuck, compare external solution with cell sap and pick the more concentrated side.",
         "result": "Water leaves the cells; the strip becomes limp and plasmolysed.",
         "predictPrompt": "How would you test this answer before you write it down?"
+       },
+       {
+        "operation": "Check to confirm: rank the three solutions by water potential",
+        "reason": "Water moves from higher to lower water potential, so ranking the solutions must rank the strip responses in the same order.",
+        "result": "Distilled water sits highest, so the strip takes water and turns turgid; dilute salt nearly balances it, so little changes; concentrated salt pulls water out, so the strip goes limp and plasmolysed. Both ends agree.",
+        "predictPrompt": "Which strip would you weigh again after an hour, and what would it show?"
        }
       ]
      }
@@ -7414,6 +7582,12 @@
         "reason": "Not all the energy is captured in ATP. Draw the energy budget, because this step asks where the uncaptured energy goes. If you get stuck, split incoming energy into stored energy and heat and check they tally.",
         "result": "Some is released as heat, even in a resting plant.",
         "predictPrompt": "How would you explain why this wins over the other options?"
+       },
+       {
+        "operation": "Check to confirm: re-derive the two outputs of respiration",
+        "reason": "Respiration always releases carbon (IV) oxide and heat; both must appear if plants truly respire.",
+        "result": "Glucose and oxygen enter; carbon (IV) oxide, water and heat leave, resting or active; sealed germinating seeds warm a flask. Both ends agree.",
+        "predictPrompt": "Why does the flask of germinating seeds grow warm?"
        }
       ]
      }
@@ -7620,6 +7794,12 @@
         "reason": "The animal has no internal lung to protect its surface from drying. Match the habitat to the body, because this step links the surface to damp places. If you get stuck, match no internal lung with damp soil or water only.",
         "result": "It is restricted to damp soil or water.",
         "predictPrompt": "How would you explain why this wins over the other options?"
+       },
+       {
+        "operation": "Check to confirm: re-test the moisture requirement on the skin",
+        "reason": "Oxygen must dissolve in a water film before diffusing, so a surface that dries out cannot exchange gas at all.",
+        "result": "The earthworm's moist skin dissolves oxygen and passes it inward; dry sand strips the film, diffusion stops and the worm suffocates, so damp soil is not optional. Both ends agree.",
+        "predictPrompt": "Why would an earthworm laid on dry concrete die by morning?"
        }
       ]
      }
@@ -7826,6 +8006,12 @@
         "reason": "Carbon (IV) oxide reacts with limewater, and the result of that test tells you which gas has been building up. If you get stuck, match milky limewater to carbon (IV) oxide and work backwards from the table of gas tests.",
         "result": "The limewater turns milky.",
         "predictPrompt": "How would you sanity-check this answer against the evidence?"
+       },
+       {
+        "operation": "Check to confirm: flip the light and predict the limewater",
+        "reason": "In light the plant reclaims its own carbon (IV) oxide for photosynthesis, so removing light must flip the net flow to release.",
+        "result": "Lamp on, the limewater stays clear because photosynthesis mops the gas up; lamp off, only respiration runs, carbon (IV) oxide builds up and the limewater turns milky. Both ends agree.",
+        "predictPrompt": "What would happen to the limewater if you then switched the lamp back on?"
        }
       ]
      }
@@ -8032,6 +8218,12 @@
         "reason": "Oxygen accepts the final electrons, which is what keeps the chain flowing. If you get stuck, follow the electrons down the chain and ask yourself who is waiting at the very end to catch them.",
         "result": "Without oxygen the chain stops and the large ATP yield is lost.",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: re-add the three yields",
+        "reason": "Addition must undo the subtraction, so both directions agreeing settles the chain's share and exposes any slip.",
+        "result": "2 ATP from glycolysis plus 2 from the Krebs cycle plus 34 from the electron transport chain gives 38 ATP per glucose, the textbook total; the chain supplies 34 of the 38. Both ends agree.",
+        "predictPrompt": "What percentage of the total does the electron transport chain supply?"
        }
       ]
      }
@@ -8240,6 +8432,12 @@
         "reason": "The flask is sealed, so oxygen runs out quickly and fermentation takes over. If you get stuck, write out glucose becoming ethanol and carbon (IV) oxide, and read the other product off the equation.",
         "result": "Ethanol is formed, giving a characteristic smell.",
         "predictPrompt": "How would you sanity-check this answer against the evidence?"
+       },
+       {
+        "operation": "Check to confirm: tally the atoms on both sides of fermentation",
+        "reason": "An unbalanced equation means the products are wrong, so a carbon, hydrogen and oxygen count that ties out proves the products.",
+        "result": "Glucose becomes ethanol and carbon (IV) oxide; six carbons, twelve hydrogens and six oxygens sit on each side, and the bubbling gas turns limewater milky. Both ends agree.",
+        "predictPrompt": "Which atom would you count first, and why?"
        }
       ]
      }
@@ -8446,6 +8644,12 @@
         "reason": "Apply the same test once more: urea is made in the liver from excess amino acids, so it was made inside the body. If you get stuck, ask whether it is manufactured in the body from amino acids; it is.",
         "result": "An excretory product removed by the kidneys.",
         "predictPrompt": "How would you test this answer before writing it down?"
+       },
+       {
+        "operation": "Check to confirm: re-test each waste against the excretion test",
+        "reason": "Excretion means removing waste made inside the body, so re-applying that single test must sort the three wastes the same way.",
+        "result": "Faeces never entered cells, so egestion, not excretion; carbon (IV) oxide comes from respiration and leaves via the lungs; urea is made in the liver and leaves via the kidneys. Both ends agree.",
+        "predictPrompt": "Which waste would you name if a friend called all removal excretion?"
        }
       ]
      }
@@ -8656,6 +8860,12 @@
         "reason": "A mammal filters blood under pressure and reabsorbs what is still useful. If you get stuck, match blood filtered under pressure to the kidneys with nephrons row.",
         "result": "Kidneys with nephrons.",
         "predictPrompt": "How would you prove this claim to a sceptic?"
+       },
+       {
+        "operation": "Check to confirm: re-match each structure to the job it does",
+        "reason": "Every structure solves the same two problems, shedding metabolic waste and balancing water, so a mismatch would fail the job description.",
+        "result": "The contractile vacuole squirts excess water out of Amoeba, nephridia filter the earthworm's blood, Malpighian tubules empty the grasshopper's gut, nephrons filter the mammal's blood. Both ends agree.",
+        "predictPrompt": "Which structure would you point at if asked how an insect handles nitrogen waste?"
        }
       ]
      }
@@ -8860,6 +9070,12 @@
         "reason": "Two abnormal findings together point to a kidney problem, not a normal variation. If you get stuck, list each finding separately and ask whether both point to the same organ.",
         "result": "The patient needs medical tests to locate the damage.",
         "predictPrompt": "How would you prove this claim to a sceptic?"
+       },
+       {
+        "operation": "Check to confirm: re-derive each finding at the nephron",
+        "reason": "The nephron explains both findings from two independent angles, so if both land on the same organ the interpretation is sound.",
+        "result": "Glucose in the urine means blood sugar beat the reabsorption limit or the tubules leaked it back; protein, far too big to filter, means the filtration barrier leaks; two angles, one organ. Both ends agree.",
+        "predictPrompt": "Which finding would you expect a diabetic who missed their insulin to show, and why?"
        }
       ]
      }
@@ -9065,6 +9281,12 @@
         "reason": "When filtration fails, something must do the filtering instead. If you get stuck, ask which treatment cleans blood outside the body and match it to dialysis.",
         "result": "Dialysis or a kidney transplant is required.",
         "predictPrompt": "How would you sanity-check this answer against the evidence?"
+       },
+       {
+        "operation": "Check to confirm: weigh the sweat against the kidneys",
+        "reason": "If sweat could do the kidneys' job, the amounts of urea moved would be comparable; comparing them shows how lopsided the swap is.",
+        "result": "The kidneys clear about a litre and a half of urine daily with its urea, salts and water; heavy sweating shifts only a fraction of that waste and cannot set concentration or water balance. Dialysis or transplant stands. Both ends agree.",
+        "predictPrompt": "Why does the skin still sweat in kidney failure, and why is that not a rescue?"
        }
       ]
      }
@@ -9270,6 +9492,12 @@
         "reason": "It contains quinine, an alkaloid used against malaria, so the upside is medical and the downside is the dose. If you get stuck, match quinine to malaria treatment and remember the dose caution.",
         "result": "Valuable for medicine, but extraction and dose control are essential.",
         "predictPrompt": "How would you sanity-check this answer against the evidence?"
+       },
+       {
+        "operation": "Check to confirm: re-match each plant waste to its factory job",
+        "reason": "Each suggested use must rest on a known chemical property, so checking property against job confirms the match.",
+        "result": "Tannins bind protein and darken leather, acacia gum thickens and emulsifies, cinchona bark yields quinine for malaria; each property fits the job named. Both ends agree.",
+        "predictPrompt": "Why would you never dose quinine without a doctor?"
        }
       ]
      }
@@ -9481,6 +9709,12 @@
         "reason": "Underneath the different materials, both animals use muscles that pull against a support. If you get stuck, ask what muscles pull against in each animal and circle the common answer.",
         "result": "Different materials, same principle of movement.",
         "predictPrompt": "How would you test this answer before writing it down?"
+       },
+       {
+        "operation": "Check to confirm: find the one thing both animals pull against",
+        "reason": "Movement always needs a muscle working against a resisting anchor, so locating the anchor in both must confirm the shared principle.",
+        "result": "Earthworm muscles squeeze fluid in a sealed cavity against setal anchors; grasshopper muscles pull on jointed chitin plates; muscle against anchor both times. Both ends agree.",
+        "predictPrompt": "Where is the anchor in each animal, and what shortens when the muscle contracts?"
        }
       ]
      }
@@ -9693,6 +9927,12 @@
         "reason": "The shoot is positively phototropic and negatively geotropic; the root is positively geotropic. If you get stuck, write towards or away for each organ, then attach the stimulus.",
         "result": "One hormone, two opposite growth effects depending on the organ.",
         "predictPrompt": "How would you sanity-check this answer against the evidence?"
+       },
+       {
+        "operation": "Check to confirm: re-trace auxin in both organs",
+        "reason": "The same hormone must explain both bends with no extra assumptions.",
+        "result": "Shaded-side auxin elongates shoot cells, bending to light; lower-side auxin inhibits root cells, bending down. Both ends agree.",
+        "predictPrompt": "What would a slowly rotating clinostat do to both responses, and why?"
        }
       ]
      }
@@ -9904,6 +10144,12 @@
         "reason": "Each material sits in a different place and does a different job, so lay them out side by side. If you get stuck, write material, position and job as columns with one row for each animal.",
         "result": "Chitin covers, cartilage flexes, and bone bears load.",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: match each material to the problem it solves",
+        "reason": "Support material is chosen by the load an animal carries and its life, so matching material to problem from scratch must return the same three pairings.",
+        "result": "The crab needs light armour for jointed legs, chitin, and must moult to grow; the shark needs bendy support without bone's weight, cartilage; the cow needs load-bearing limbs, rigid bone that also stores minerals. Both ends agree.",
+        "predictPrompt": "Which material would you expect a much larger animal to struggle with, and why?"
        }
       ]
      }
@@ -10109,6 +10355,12 @@
         "reason": "Protection, support, movement and breathing are separate but connected functions. If you get stuck, write rib next to protection and breathing, and femur next to support and movement.",
         "result": "The same skeleton serves all four, so the effect depends on which bone is damaged.",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: map each broken bone onto the four jobs",
+        "reason": "Each job of the skeleton sits with particular bones, so matching rib and femur to their jobs must reproduce both effects.",
+        "result": "The rib shields heart and lungs and swings the chest in breathing, so its break punishes ventilation; the femur bears weight and drives walking, so its break floors support and movement. Both ends agree.",
+        "predictPrompt": "Which skeleton job did the leg injury strike, and which did the rib strike?"
        }
       ]
      }
@@ -10321,6 +10573,12 @@
         "reason": "The hamstrings flex the knee and are antagonistic to the quadriceps. If you get stuck, picture one muscle pulling while the other relaxes, then write which does which.",
         "result": "Balanced pairs are needed for controlled movement.",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: re-derive which muscle straightens the knee",
+        "reason": "A muscle can only pull, never push, so the extensor must sit in front of the joint; that one rule re-derives the answer.",
+        "result": "The quadriceps at the front of the thigh pulls the shin straight by way of the patella and its tendon; the hamstrings behind pull the opposite way to bend the knee; pull, never push. Both ends agree.",
+        "predictPrompt": "Which muscle pair would you test if the knee could not bend?"
        }
       ]
      }
@@ -10534,6 +10792,12 @@
         "reason": "Rapid asexual reproduction pays off most where conditions are stable and favourable. If you get stuck, picture a rich, unchanging pond and ask which route fills it fastest.",
         "result": "Populations can grow quickly without mates.",
         "predictPrompt": "How would you sanity-check this answer against the evidence?"
+       },
+       {
+        "operation": "Check to confirm: re-derive the offspring genes from the parent count",
+        "reason": "One parent supplies the whole genome, so offspring must be identical, and that logic must return the same consequence for both processes.",
+        "result": "Paramecium splits in two and yeast buds an outgrowth, each copying genes from the single parent; identical offspring every time, so populations soar fast in good conditions. Both ends agree.",
+        "predictPrompt": "What would change about the offspring if two parents were involved instead of one?"
        }
       ]
      }
@@ -10740,6 +11004,12 @@
         "reason": "All the new plants are clones, so ask what happens when a disease meets identical genes. If you get stuck, list shared disease weakness and note using several clean varieties.",
         "result": "They may share the same disease weakness, so use clean stock and several varieties.",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: re-derive why seeds fail the mango farmer",
+        "reason": "Sexual reproduction reshuffles genes by design, so seed-raised mangoes would not match the parent; only a clone can hold the variety.",
+        "result": "A seed mango is a fresh roll of the genetic dice and can lose the traits the farmer wants; grafting or budding carries the exact variety forward; cassava stems clone the field the same way. Both ends agree.",
+        "predictPrompt": "Why is grafting safer than seed for a named mango variety?"
        }
       ]
      }
@@ -10944,6 +11214,12 @@
         "reason": "Planting in blocks rather than long thin rows raises the pollen available to every plant. If you get stuck, pick compact blocks over long thin rows and justify it with pollen density.",
         "result": "A block layout improves pollination and grain fill.",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: re-derive the pollen geometry at the field edge",
+        "reason": "Wind carries pollen only so far, so an edge plant faces open field on one side and loses part of its catch; re-drawing the exposure must reproduce the yield gap.",
+        "result": "Middle plants catch pollen from every direction, edge plants catch it from one side only; fewer silks fertilised, fewer grains set; block planting gives every plant a full surround. Both ends agree.",
+        "predictPrompt": "Why does planting in blocks beat long thin rows?"
        }
       ]
      }
@@ -11151,6 +11427,12 @@
         "reason": "Gametes must actually fuse to form a zygote and endosperm, and without both, the ovary is dropped. If you get stuck, recall that double fertilisation needs both fusions or no fruit forms.",
         "result": "Without double fertilisation, the ovary may drop instead of forming fruit.",
         "predictPrompt": "How would you prove this claim to a sceptic?"
+       },
+       {
+        "operation": "Check to confirm: re-walk the double fertilisation chain",
+        "reason": "Fruit set needs every link from stigma to zygote, so finding where the chain can snap must reveal why no fruit formed.",
+        "result": "Compatible pollen must germinate, the tube must grow down the style, one nucleus must fuse the egg and one the polar cells; break either early link and the ovary drops instead of setting fruit. Both ends agree.",
+        "predictPrompt": "Which link would you test first, and how?"
        }
       ]
      }
@@ -11357,6 +11639,12 @@
         "reason": "Animals carry seeds far from the parent, which sidesteps the fight for resources. If you get stuck, pick reduced competition and new-area colonisation from the list of dispersal advantages.",
         "result": "Reduced competition and colonisation of new areas.",
         "predictPrompt": "How would you prove this claim to a sceptic?"
+       },
+       {
+        "operation": "Check to confirm: eliminate the other dispersal agents",
+        "reason": "Fruit structure dictates the agent, so each alternative must fail against the observed flesh and seeds.",
+        "result": "No wings or parachutes, so not wind; no fibrous husk for floating, so not water; no explosive pod, so not self-bursting; fleshy pulp around small hard seeds, the animal-dispersal pattern. Both ends agree.",
+        "predictPrompt": "Which agent would a coconut use, and which feature gives it away?"
        }
       ]
      }
@@ -11567,6 +11855,12 @@
         "reason": "No embryo implants means no signal, and the corpus luteum degenerates. If you get stuck, follow the corpus luteum through degeneration and match it against falling progesterone and menstruation.",
         "result": "Progesterone falls and menstruation follows.",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: re-play the hormone chain from FSH",
+        "reason": "The cycle is a closed loop of feedbacks, so replaying it from the first signal must arrive at the reading the blood test gave.",
+        "result": "FSH ripens the follicle, oestrogen builds the lining, the LH surge releases the egg, the empty follicle becomes the corpus luteum and secretes progesterone; with no fertilisation it fails and the lining sheds. Both ends agree.",
+        "predictPrompt": "What would you expect the progesterone level to do if the egg were fertilised?"
        }
       ]
      }
@@ -11775,6 +12069,12 @@
         "reason": "Iron supplements, a balanced diet and antenatal monitoring can catch and correct anaemia. If you get stuck, list iron, a better diet and regular checks as the three care measures.",
         "result": "Treating the mother protects both her and the foetus.",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: re-derive the chain from haemoglobin to birth weight",
+        "reason": "Fewer red cells carry less oxygen, and every link after that is forced, so the chain cannot skip a step.",
+        "result": "Severe anaemia cuts oxygen capacity, the placenta passes less to the foetus, growth slows and the baby comes early or small; iron, diet and antenatal checks rebuild the link. Both ends agree.",
+        "predictPrompt": "Which link in the chain would iron supplements fix first?"
        }
       ]
      }
@@ -11983,6 +12283,12 @@
         "reason": "Condoms can sit alongside a hormonal method to cover both goals more strongly. If you get stuck, pair a condom with a pill and tick both goals on the list.",
         "result": "Dual protection covers pregnancy and STIs.",
         "predictPrompt": "How would you sanity-check this answer against the evidence?"
+       },
+       {
+        "operation": "Check to confirm: score each method against both goals",
+        "reason": "Each goal must be answered, so any method that scores on one and not the other is only half an answer.",
+        "result": "Pill and IUD answer pregnancy only, rhythm scores reliably on neither, the condom answers pregnancy and HIV when used correctly and consistently, and adding a hormonal method strengthens it. Both ends agree.",
+        "predictPrompt": "Why does pairing a condom with the pill beat the pill alone here?"
        }
       ]
      }
@@ -12190,6 +12496,12 @@
         "reason": "Real growth also involves cell division, not just mass, so check more than one measure. If you get stuck, add height and cell counts to the mass evidence before you judge.",
         "result": "Plant B is growing; Plant A needs more evidence such as height or cell counts.",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: re-derive growth from dry mass alone",
+        "reason": "Water alone cannot raise dry mass, only fixed carbon and new protoplasm can, so the dry-mass readings must settle the argument.",
+        "result": "Plant A gained fresh mass with a flat dry mass, water only; plant B gained dry mass steadily, real tissue built; height and cell counts would seal it. Both ends agree.",
+        "predictPrompt": "What single extra measurement would settle plant A's case?"
        }
       ]
      }
@@ -12395,6 +12707,12 @@
         "reason": "Fix the two failures: sow into warm, well-drained soil. If you get stuck, look at the two failed boxes and pick the remedies sitting right beside them.",
         "result": "Better aeration and temperature improve germination.",
         "predictPrompt": "How would you test this answer before writing it down?"
+       },
+       {
+        "operation": "Check to confirm: re-test the three germination requirements one by one",
+        "reason": "Germination needs air, warmth and water, so each failure must trace to exactly one broken requirement.",
+        "result": "Cold soil starves the enzymes of their working temperature, waterlogged pores hold no air for respiration, so embryos stall or rot; drainage and warmth fix the two that broke. Both ends agree.",
+        "predictPrompt": "Which broken requirement killed the most seeds here?"
        }
       ]
      }
@@ -12601,6 +12919,12 @@
         "reason": "Maize keeps its food store underground and its epicotyl is built to push through crusted soil. If you get stuck, match maize keeping the store below ground against the hypogeal row.",
         "result": "Maize emerges from the same depth more successfully.",
         "predictPrompt": "How would you prove this claim to a sceptic?"
+       },
+       {
+        "operation": "Check to confirm: re-derive what deep planting costs each seedling",
+        "reason": "Deep planting spends the food store before the first leaf sees light, so whichever pattern spends less reaching the surface survives.",
+        "result": "The bean must haul its cotyledons up through a long column of soil and tends to exhaust its store; the maize sends a slim shoot up while its food stays buried and feeding it. Both ends agree.",
+        "predictPrompt": "Which seedling would you plant deeper on purpose, and which shallower?"
        }
       ]
      }
@@ -12806,6 +13130,12 @@
         "reason": "Synapses transmit in one direction only, so the block stops communication at the synapse rather than everywhere behind it. If you get stuck, recall that the receptors are the only gate for this messenger.",
         "result": "The block stops communication at that synapse, not along the axon behind it.",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: re-walk the synapse link by link",
+        "reason": "Every link from impulse to contraction must fire in order, so a block at the receptor must stop the chain at exactly that link.",
+        "result": "The impulse reaches the ending and vesicles release acetylcholine, but the blocked receptors never open their channels, so the end plate never depolarises and the muscle stays weak or paralysed. Both ends agree.",
+        "predictPrompt": "Why does the axon behind the synapse still fire normally?"
        }
       ]
      }
@@ -13012,6 +13342,12 @@
         "reason": "The command leaves the spinal cord before the brain has even logged the signal. If you get stuck, compare the short spinal route against the longer brain route and see which arrives first.",
         "result": "The leg kicks automatically, and the brain is informed afterwards.",
         "predictPrompt": "How would you prove this claim to a sceptic?"
+       },
+       {
+        "operation": "Check to confirm: re-trace the arc from tap to kick",
+        "reason": "A reflex runs the shortest route in the nervous system, so re-tracing it must show the kick leaving before the brain even hears about it.",
+        "result": "Tap on the tendon, stretch receptor fires, sensory nerve to the spinal cord, straight out the motor nerve, the quadriceps contracts and the leg kicks; the brain learns afterwards. Both ends agree.",
+        "predictPrompt": "What would happen to the kick if the motor nerve were cut?"
        }
       ]
      }
@@ -13219,6 +13555,12 @@
         "reason": "Your brain builds flavour from taste and smell together, so losing one hollows out the whole experience. If you get stuck, recall that smell carries most of what you call flavour.",
         "result": "Food tastes bland even though the tongue is working.",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: re-derive flavour with the nose sealed",
+        "reason": "If smell truly builds flavour, sealing the nose must hollow out the whole experience, and that everyday experiment settles it.",
+        "result": "Pinch your nose and a favourite meal collapses to the five basic tastes; the injured cook's brain gets taste signals but no smell signals, so food turns bland. Both ends agree.",
+        "predictPrompt": "Why does food taste flat with a blocked nose and a cold?"
        }
       ]
      }
@@ -13448,6 +13790,12 @@
         "reason": "A concave lens spreads the rays out before they enter the eye, pushing the focus backwards. If you get stuck, match concave with rays spread apart on your lens effects table.",
         "result": "The image moves back onto the retina.",
         "predictPrompt": "How would you prove this claim to a sceptic?"
+       },
+       {
+        "operation": "Check to confirm: re-draw the rays for both lens signs",
+        "reason": "Rays bend by a rule, not by choice, so re-drawing them for a concave and a convex lens must single out exactly one that pushes the focus backwards.",
+        "result": "The long myopic eyeball focuses distant rays in front of the retina; a concave lens spreads the rays so the focus lands exactly on the retina; a convex lens would drag it further forward. Both ends agree.",
+        "predictPrompt": "What would you expect a plus prescription to do to this patient?"
        }
       ]
      }
@@ -13654,6 +14002,12 @@
         "reason": "Wax can be removed, but damaged hair cells rarely regenerate. If you get stuck, match removable wax against likely recovery, and hair cells against permanent loss.",
         "result": "Conductive loss is often reversible; sensorineural loss is usually permanent.",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: re-test each case with the tuning fork logic",
+        "reason": "Wax blocks only the air route while nerve damage breaks the whole route, so bone conduction must separate the two.",
+        "result": "In the wax case the fork on the mastoid still reaches the cochlea, so clearing the canal recovers hearing; in the noise case the hair cells are dead and never regrow, so loss is permanent. Both ends agree.",
+        "predictPrompt": "Which case could a nurse fix in one visit, and why?"
        }
       ]
      }
@@ -13860,6 +14214,12 @@
         "reason": "Glucose left in the filtrate acts like a sponge and pulls water out with it by osmosis. If you get stuck, trace the glucose that stays in the filtrate and watch it drag water after it.",
         "result": "The patient passes large volumes of urine and becomes thirsty.",
         "predictPrompt": "How would you prove this claim to a sceptic?"
+       },
+       {
+        "operation": "Check to confirm: re-derive each symptom from one missing hormone",
+        "reason": "Every symptom must follow from insulin lack alone, so one that refused to follow would crack the story.",
+        "result": "No insulin, glucose piles up in the blood, spills past the kidney's reabsorption limit into the urine, drags water after it by osmosis and leaves the body dry and thirsty. Both ends agree.",
+        "predictPrompt": "Why does sugar in the urine always drag extra water with it?"
        }
       ]
      }
@@ -14067,6 +14427,12 @@
         "reason": "Fresh air flushes ethylene out, and less ethylene means slower over-ripening. If you get stuck, ask what ventilation removes from the room and match it to ethylene.",
         "result": "Spoilage is reduced and the fruit lasts longer.",
         "predictPrompt": "How would you prove this claim to a sceptic?"
+       },
+       {
+        "operation": "Check to confirm: re-derive what a sealed room would do",
+        "reason": "Ethylene works in trace amounts, so if the room were sealed the gas must build until every green fruit ripens together.",
+        "result": "One ripening fruit leaks ethylene, the closed room stacks the dose on the whole batch and everything ripens at once, so spoilage wins; fresh air flushes the gas and spreads ripening out. Both ends agree.",
+        "predictPrompt": "Why do importers use ventilated containers for green tomatoes?"
        }
       ]
      }
@@ -14273,6 +14639,12 @@
         "reason": "More water is reabsorbed into the blood. Reach for the effect chain, because this step asks what the hormone achieves in the kidney. Stuck? Trace more antidiuretic hormone to more water reabsorbed.",
         "result": "Urine becomes small and concentrated, and thirst encourages drinking.",
         "predictPrompt": "How would you prove this to a sceptic?"
+       },
+       {
+        "operation": "Check to confirm: re-derive the loop from the first water loss",
+        "reason": "Detection, signal, target and response must join back on themselves, so if the loop does not close, some step is wrong.",
+        "result": "Water loss concentrates the blood, hypothalamic osmoreceptors fire, the pituitary releases ADH, the collecting ducts pass water back to the blood and the urine shrinks, concentrates and thirst calls for a drink. Both ends agree.",
+        "predictPrompt": "What would urine look like after a full bottle of water on a hot day?"
        }
       ]
      }
@@ -14478,6 +14850,12 @@
         "reason": "Runoff and erosion raise turbidity in dams. Reach for source control, because this step asks how to cut the turbidity. Stuck? Fix the mud at the field edge before it reaches the dam.",
         "result": "Plant grass strips and reduce soil erosion",
         "predictPrompt": "How would clearer water help the fish return?"
+       },
+       {
+        "operation": "Check to confirm: re-read the stem for the one changed variable",
+        "reason": "Food is ruled out, so turbidity must be the limiter.",
+        "result": "Feed is plentiful, so food is out; Secchi shows turbidity is the only change. Both ends agree.",
+        "predictPrompt": "What would you measure tomorrow morning to test the fix, and what would you expect?"
        }
       ]
      }
@@ -14682,6 +15060,12 @@
         "reason": "Both partners gain only in lichen. Close with the table, because the question asks for the answer with reasons. Stuck? Write lichen mutualism and the other two commensalism, each with one reason line.",
         "result": "Lichen mutualism, barnacle and orchid commensalism",
         "predictPrompt": "Why is the orchid not parasitism?"
+       },
+       {
+        "operation": "Check to confirm: eliminate parasitism and mutualism where they fail",
+        "reason": "Three definitions, three tests; each rejected label needs its reason or the classification is a guess.",
+        "result": "Lichen, both partners gain, mutualism; barnacle on the whale, the whale neither loses nor gains, commensalism; orchid on the mango, the mango unaffected, commensalism; parasitism fits neither pair. Both ends agree.",
+        "predictPrompt": "Why is the orchid never eating the mango, and how would you prove it?"
        }
       ]
      }
@@ -14887,6 +15271,12 @@
         "reason": "Energy drops at each level. Reach for the ten per cent energy rule here, because this step asks why the pyramid narrows. Stuck? Cut the energy by a tenth at each level.",
         "result": "Pyramid narrows toward heron and snake",
         "predictPrompt": "Why are there fewer herons than tilapia?"
+       },
+       {
+        "operation": "Check to confirm: run the ten per cent law with numbers",
+        "reason": "A tenth passes on each step, leaving about a hundredth at the top.",
+        "result": "10 000 kJ in algae, about 1 000 kJ in tilapia, about 100 kJ at the heron or snake. Both ends agree.",
+        "predictPrompt": "Why could no chain support ten herons on this pond?"
        }
       ]
      }
@@ -15091,6 +15481,12 @@
         "reason": "Waste breaks down to ammonium then nitrates. Use the same cycle map, because this step asks how manure returns nitrogen. Stuck? Trace waste to ammonium, then nitrates, and circle the uptake arrow.",
         "result": "Plants absorb nitrates and grow better",
         "predictPrompt": "How does denitrification complete the cycle?"
+       },
+       {
+        "operation": "Check to confirm: re-trace one nitrogen atom through the new routine",
+        "reason": "Both additions feed the same nitrate pool, so following a single atom through them must end inside the millet grain.",
+        "result": "Air nitrogen enters the cowpea roots with Rhizobium and leaves as ammonium; the waste rots to more ammonium; Nitrosomonas makes nitrite, Nitrobacter makes nitrate; the crop drinks it up. Both ends agree.",
+        "predictPrompt": "Which two bacteria would you name if asked who builds the nitrates?"
        }
       ]
      }
@@ -15296,6 +15692,12 @@
         "reason": "Salt and oxygen needs differ. Reach for adaptation matching here, because this step links the crab to its tide-bound habitat. Stuck? Match salt tolerance and mudflat feeding to low tide.",
         "result": "Fishers follow tide",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: re-read the tide against the animal's shift",
+        "reason": "The question changes only the tide, so matching each tide to its feeders must reproduce the mangrove rhythm.",
+        "result": "At low tide the roots stand in air and the crabs come out to feed and hide; at high tide the fish move in to feed near the roots; two shifts, one feeding ground. Both ends agree.",
+        "predictPrompt": "At which tide would you set your crab line?"
        }
       ]
      }
@@ -15500,6 +15902,12 @@
         "reason": "The fruits remain in the trees. Reach for a canopy check here, because this step asks why arboreal animals suffered less. Stuck? List the canopy fruits and leaves untouched by a ground fire.",
         "result": "Monkeys suffer less",
         "predictPrompt": "How would you prove this claim to a sceptic?"
+       },
+       {
+        "operation": "Check to confirm: re-derive each effect from what the fire reaches",
+        "reason": "Fire attacks only what it touches, so tracing what burns and what does not must reproduce every effect named.",
+        "result": "The fire ate the grass, so the grasscutters lost food and cover; soil animals waited it out underground, untouched; the monkeys stayed in the untouched canopy and suffered least. Both ends agree.",
+        "predictPrompt": "Which group would you check first after the fire, and what would you find?"
        }
       ]
      }
@@ -15704,6 +16112,12 @@
         "reason": "Shrubs grow below the canopy. Use the same checklist, because this step asks what to record below the canopy. Stuck? Tick the understorey and note the moisture-hungry shrubs there.",
         "result": "Record moisture needs",
         "predictPrompt": "How would you prove this claim to a sceptic?"
+       },
+       {
+        "operation": "Check to confirm: fit the findings into one biome profile",
+        "reason": "Buttress roots, lianas and shade are a single signature package, so if they all belong together the biome is settled.",
+        "result": "Buttress roots hold giant trees in shallow rainforest soil, lianas climb them into the light, and moist shade rules the floor; textbook rainforest, the Cross River country. Both ends agree.",
+        "predictPrompt": "What would you expect to find on the forest floor at noon?"
        }
       ]
      }
@@ -15908,6 +16322,12 @@
         "reason": "Potatoes suit cool soils. Reach for a crop climate table here, because this step asks what to grow instead. Stuck? Match cool moist highland conditions to potatoes and temperate crops.",
         "result": "Plant temperate crops",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: re-derive the cooling with the lapse rate",
+        "reason": "Air cools as it rises, about 6 degrees Celsius per thousand metres, so high ground must feel the frost the farmer met.",
+        "result": "Jos sits well above Kano on the plateau, the rising air loses about 6 degrees per 1000 m, frost bites the sorghum on cold nights; temperate crops match the cool better. Both ends agree.",
+        "predictPrompt": "What would the thermometer show at dawn in Jos that it would not show in Kano?"
        }
       ]
      }
@@ -16112,6 +16532,12 @@
         "reason": "Density is number per unit area. Finish with the quadrat formula, because this step computes the density itself. Stuck? Divide thirty-six by four and attach the unit seedlings per square metre.",
         "result": "Density = 9 seedlings per m²",
         "predictPrompt": "How would you prove this claim to a sceptic?"
+       },
+       {
+        "operation": "Check to confirm: substitute back into the quadrat formula",
+        "reason": "Density times area must return the counted seedlings exactly.",
+        "result": "9 seedlings per m² times 4 m² gives 36, the exact tally. Both ends agree.",
+        "predictPrompt": "What density would 72 seedlings in the same four quadrats show?"
        }
       ]
      }
@@ -16317,6 +16743,12 @@
         "reason": "The better adapted species will dominate the bed. Reach for an exclusion forecast here, because this step predicts what continued competition causes. Stuck? Project the better adapted species spreading and the weaker fading year by year.",
         "result": "Groundnut density and yield will fall",
         "predictPrompt": "How would you test this answer before writing it down?"
+       },
+       {
+        "operation": "Check to confirm: split the competition into its two kinds",
+        "reason": "The question turns on one species or two, so the names alone settle it.",
+        "result": "Millet and groundnut are different species sharing water, so inter-specific; taller millet shaded groundnut out. Both ends agree.",
+        "predictPrompt": "What single word separates this from two millet rows fighting each other?"
        }
       ]
      }
@@ -16523,6 +16955,12 @@
         "reason": "Lichens must build soil before larger plants grow. Use the same pioneer list, because this step names the first colonists on bare rock. Stuck? Name lichens then mosses and match them to primary succession.",
         "result": "Pioneers: lichens, then mosses",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: run both successions side by side",
+        "reason": "Bare rock must add the whole soil-building stage the farm already has, so counting the extra stages shows which wins.",
+        "result": "On the farm, soil and seed bank are waiting, so grasses and herbs pioneer straight away; on the bare rock, lichens must weather the stone into soil first and mosses follow after; one full stage slower. Both ends agree.",
+        "predictPrompt": "Which plot would feed a goat first, and why?"
        }
       ]
      }
@@ -16731,6 +17169,12 @@
         "reason": "Smaller pore spaces reduce drainage and hold water. Use the same amendment table, because this step asks what clay does to pores. Stuck? Match fine particles to smaller pores and better water holding.",
         "result": "Soil becomes loamier with better balance",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: match each amendment to its failure",
+        "reason": "Each amendment has one job in pores and crumbs, closing the water and air gaps.",
+        "result": "Compost humus grips water and keeps air spaces; fine clay fills the sandy pores; loam at last. Both ends agree.",
+        "predictPrompt": "Why would adding only sand make yam land worse?"
        }
       ]
      }
@@ -16939,6 +17383,12 @@
         "reason": "Mulch cuts evaporation and ridges slow runoff. Reach for a conservation measures list here, because this step asks how to keep the top soil. Stuck? Match mulch to evaporation and contour ridges to runoff.",
         "result": "Top soil stays and yields stabilise",
         "predictPrompt": "How would you prove this claim to a sceptic?"
+       },
+       {
+        "operation": "Check to confirm: pair every symptom with its remedy",
+        "reason": "The plan is complete only if each symptom named in the question has an action answering it; a leftover symptom exposes a gap.",
+        "result": "Falling yields meet rotation with cowpea, compost and NPK; acidity, if the test shows it, meets lime; washing of the topsoil meets mulch and contour ridges; nothing left unanswered. Both ends agree.",
+        "predictPrompt": "Which single action breaks the pest cycle in the rotation?"
        }
       ]
      }
@@ -17143,6 +17593,12 @@
         "reason": "Vaccines prevent polio and severe TB; DOTS ensures TB cure. Use the same intervention map, because this step pairs vaccines with preventable diseases. Stuck? Match the oral polio vaccine to polio and the tuberculosis vaccine to tuberculosis.",
         "result": "Outbreaks prevented and treatment completed",
         "predictPrompt": "How would you prove this claim to a sceptic?"
+       },
+       {
+        "operation": "Check to confirm: pair every disease with its control",
+        "reason": "Each illness named needs its own countermeasure; one unpaired disease would be a blind spot in the plan.",
+        "result": "Contaminated wells meet chlorination and distant latrines, mosquito pools meet nets and spraying, diarrhoea eases as the water is made safe, polio meets OPV, TB meets BCG and DOTS. Both ends agree.",
+        "predictPrompt": "Which two actions would you take first at the flooded well, and why?"
        }
       ]
      }
@@ -17351,6 +17807,12 @@
         "reason": "Positive outlets replace drug rewards and peer influence. Reach for a replacement rewards plan here, because this step asks how he avoids relapse. Stuck? Match each drug reward with a healthy reward like sport.",
         "result": "School and business recovery sustained",
         "predictPrompt": "How would you test this answer before writing it down?"
+       },
+       {
+        "operation": "Check to confirm: pair every driver of the habit with its counter",
+        "reason": "Craving, cash, company and idleness each need their own answer; one unanswered driver and the plan leaks.",
+        "result": "Cravings meet clinic counselling and medical care; drug cash meets family supervision and a school routine; idle and dangerous company meet a sports club, a trade skill and clean friends. Both ends agree.",
+        "predictPrompt": "Which driver do families most often miss, and what closes it?"
        }
       ]
      }
@@ -17560,6 +18022,12 @@
         "reason": "Trees cut wind, bind soil and preserve biodiversity. Reach for a conservation actions list here, because this step asks how trees help the area. Stuck? Match shelterbelts to wind and soil and reserves to habitat.",
         "result": "Anti-desertification and habitat protected",
         "predictPrompt": "How would you test this answer before writing it down?"
+       },
+       {
+        "operation": "Check to confirm: pair every pollutant with its control",
+        "reason": "Each contamination named needs a control that fits it; a control with no pollutant, or a pollutant with no control, exposes a gap.",
+        "result": "Smoke and dust meet chimney scrubbers and filters; the dump meets waste segregation, composting and recycling; factory effluent meets treatment; barren ground meets shelterbelts and a protected reserve. Both ends agree.",
+        "predictPrompt": "Why are shelterbelts the long game rather than the quick fix?"
        }
       ]
      }
@@ -17767,6 +18235,12 @@
         "reason": "A smooth bell curve with intermediates indicates continuous variation. Reach for bell curve recognition here, because this step asks which type of variation the shape shows. Stuck? Match smooth spread with a middle peak to continuous variation.",
         "result": "Most pupils cluster near the average height; extremes are rare.",
         "predictPrompt": "How would you sanity-check this answer against the evidence?"
+       },
+       {
+        "operation": "Check to confirm: re-read the histogram shape",
+        "reason": "Continuous variation is one smooth middle peak with tapering tails.",
+        "result": "Middle peak, tapering tails, one smooth bell: continuous variation. Both ends agree.",
+        "predictPrompt": "Where would you expect the two shortest in the class and the two tallest to fall on the curve?"
        }
       ]
      }
@@ -17972,6 +18446,12 @@
         "reason": "Exclusion by blood group is evidence; DNA gives stronger confirmation. Reach for an evidence ladder here, because this step weighs how strong the proof is. Stuck? Rank blood group exclusion as support and genetic profiling as confirmation.",
         "result": "The man cannot be the father; DNA profiling confirms the result.",
         "predictPrompt": "How would you sanity-check this answer against the evidence?"
+       },
+       {
+        "operation": "Check to confirm: list every group the parents can make",
+        "reason": "The child carries one allele from each parent; a group absent from the set proves exclusion.",
+        "result": "Cross the parents' alleles: the child's group never appears; DNA confirms. Both ends agree.",
+        "predictPrompt": "What single Punnett square would settle this pair forever?"
        }
       ]
      }
@@ -18179,6 +18659,12 @@
         "reason": "T codes for tallness and dominates t. Reach for the dominance rule, dominant masks recessive, because this step asks what the offspring look like. Stuck? Mark every hybrid as tall.",
         "result": "All F1 plants are tall, heterozygous",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: re-derive the F1 from the parents' gametes",
+        "reason": "Each parent is homozygous, so each makes exactly one gamete type; multiplying certainty by certainty must give all heterozygotes.",
+        "result": "The TT parent gives T every single time and the tt parent gives t every single time, so every zygote is Tt; the tall allele dominates, so every F1 plant is tall. Both ends agree.",
+        "predictPrompt": "What would you see in the F2 if every F1 bred on?"
        }
       ]
      }
@@ -18388,6 +18874,12 @@
         "reason": "Probability equals favourable outcomes over total. Reach for the probability rule, favourable over total, because this step asks for the proportion. Stuck? Count the nine round yellow boxes and divide by sixteen.",
         "result": "9/16 or 56.25 per cent",
         "predictPrompt": "How would you prove this claim to a sceptic?"
+       },
+       {
+        "operation": "Check to confirm: multiply the single-gene probabilities",
+        "reason": "The two genes assort independently, so the two three-in-four chances multiply, reaching the same result by arithmetic.",
+        "result": "Round is 3 of 4, RR, Rr or rR; yellow is 3 of 4, YY, Yy or yY; independent assortment gives 3/4 times 3/4 equals 9/16 equals 56.25 per cent, the same nine boxes of sixteen. Both ends agree.",
+        "predictPrompt": "What proportion would be wrinkled and yellow, and how did you get it?"
        }
       ]
      }
@@ -18591,6 +19083,12 @@
         "reason": "Daughters have one normal and one faulty X. Reach for the carrier rule here, because this step asks what one faulty X does in a daughter. Stuck? Recall the father's normal X masks it.",
         "result": "All daughters are carriers but sighted",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: re-run the Punnett by the father's two sperm types",
+        "reason": "The father's X goes only to girls and his Y goes only to boys, so re-splitting by that rule must return the same two outcomes.",
+        "result": "Every egg from the XcXc mother carries Xc; the father's X makes XCXc daughters, sighted carriers; his Y makes XcY sons, colour-blind; half and half, matching the first pass. Both ends agree.",
+        "predictPrompt": "Why can no daughter from this marriage be colour-blind?"
        }
       ]
      }
@@ -18795,6 +19293,12 @@
         "reason": "One favourable box over four total. Reach for the probability rule, favourable over total, because this step states the risk as a fraction. Stuck? Put one over four and convert it to a quarter.",
         "result": "25 per cent SS risk",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: multiply the two S-allele chances",
+        "reason": "One S allele must arrive from each parent and the draws are independent, so the quarter must reappear without drawing any square.",
+        "result": "Each AS parent passes S half the time; half times a half is a quarter, 25 per cent, exactly the one SS box among the four, AA, AS, AS, SS. Both ends agree.",
+        "predictPrompt": "What would you tell the couple about testing each pregnancy?"
        }
       ]
      }
@@ -19001,6 +19505,12 @@
         "reason": "Proper management prevents dangerous highs and lows. Reach for a monitoring plan here, because this step asks how treatment stays safe. Stuck? Set regular blood sugar checks and adjust the dose to the readings.",
         "result": "Stable health and reduced complications are achieved.",
         "predictPrompt": "How would you test this answer before writing it down?"
+       },
+       {
+        "operation": "Check to confirm: re-derive why the yeast insulin cannot trigger the old allergy",
+        "reason": "The allergy tracked the foreign shape of animal insulin, so a protein built from the human gene carries no shape for the immune system to attack.",
+        "result": "The human insulin gene in modified yeast gives human-identical insulin; identical means no foreign flag, so the body accepts it and the daily sugar stays steady under monitoring. Both ends agree.",
+        "predictPrompt": "What would you check at every clinic visit to confirm the new insulin is working?"
        }
       ]
      }
@@ -19206,6 +19716,12 @@
         "reason": "Feeding does not alter hereditary material. Reach for the germ line separation here, because this step asks why acquired size is not inherited. Stuck? Ask whether eating changes the sex cells.",
         "result": "Offspring size depends on their own feeding and genes",
         "predictPrompt": "How would you sanity-check this answer against the evidence?"
+       },
+       {
+        "operation": "Check to confirm: test the claim against the germ-line rule",
+        "reason": "Only sex-cell changes reach the next generation, and feeding alters neither.",
+        "result": "Feeding builds bigger muscles, not different DNA; lean-raised offspring of two big goats stay lean. Both ends agree.",
+        "predictPrompt": "Which cells would have to change for Lamarck to be right?"
        }
       ]
      }
@@ -19417,6 +19933,12 @@
         "reason": "Advantageous alleles increase each generation. Reach for the frequency trend here, because this step asks what changes in the population. Stuck? Project the long-neck trait rising from generation to generation in the herd.",
         "result": "Longer necks become commoner over many generations",
         "predictPrompt": "How would you sanity-check this answer against the evidence?"
+       },
+       {
+        "operation": "Check to confirm: re-derive one generation at a time",
+        "reason": "Selection compounds small advantages, so a trait that wins survival and mating must rise a little per generation and a lot over long time.",
+        "result": "Long-necked giraffes reach more leaves, survive the dry season and breed more; their calves inherit the long-neck alleles; each generation raises the average neck length. Both ends agree.",
+        "predictPrompt": "What would you measure in the herd after twenty dry seasons?"
        }
       ]
      }
@@ -19630,6 +20152,12 @@
         "reason": "Repeated exposure amplifies selection. Reach for trend extrapolation here, because this step asks for the final hospital picture. Stuck? Project repeated exposures until resistant cells dominate the wards.",
         "result": "The resistant strain becomes dominant in the hospital",
         "predictPrompt": "How would you prove this claim to a sceptic?"
+       },
+       {
+        "operation": "Check to confirm: run the numbers for repeated courses",
+        "reason": "Selection is arithmetic, so if nearly all sensitive cells die each round while resistant cells thrive, dominance is a matter of rounds, not luck.",
+        "result": "Start with one resistant cell in ten thousand; a course of antibiotic wipes out almost every sensitive cell while the resistant one multiplies; repeat the rounds and the ward fills with the resistant strain. Both ends agree.",
+        "predictPrompt": "Why does stopping the course early hand the ward to the surviving bacteria?"
        }
       ]
      }
@@ -19844,6 +20372,12 @@
         "reason": "Fossils match related groups appearing in order. Reach for evolutionary interpretation here, because this step asks what the sequence means overall. Stuck? Match the layered order to gradual change and name fossil succession.",
         "result": "Life became more complex step by step, not in single leaps",
         "predictPrompt": "How would you test this answer before writing it down?"
+       },
+       {
+        "operation": "Check to confirm: re-read the layers by the law of superposition",
+        "reason": "Undisturbed strata stack oldest at the bottom, so if the fossil order matches known life history, the interpretation is solid.",
+        "result": "Shellfish bed at the bottom, reptile-like bones in the middle, mammal skull on top; superposition makes the bottom layer oldest, so life moved from sea to land to more complex forms step by step. Both ends agree.",
+        "predictPrompt": "What single crack in the rock would overturn this reading?"
        }
       ]
      }
@@ -20057,6 +20591,12 @@
         "reason": "Different environments favour different uses. Reach for the adaptation rule here, because this step asks why the same plan serves different tasks. Stuck? Match human, bat and whale to different environment demands.",
         "result": "The same ancestral plan was modified for arm, wing and flipper",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: re-walk the five-finger plan bone by bone",
+        "reason": "Homology means identical arrangement with different uses, so counting the shared bones must reproduce the verdict from scratch.",
+        "result": "Humerus, radius, ulna, wrist bones and five finger bones appear in the arm, the wing and the flipper; plan preserved, job altered, so all three march back to one pentadactyl ancestor. Both ends agree.",
+        "predictPrompt": "Which bones match between your hand and a flipper?"
        }
       ]
      }
@@ -20268,6 +20808,12 @@
         "reason": "Sequence comparison measures descent. Reach for tree building here, because this step asks what the data imply overall. Stuck? Cluster the four sequences by similarity and read the branching as descent.",
         "result": "Molecular data supports common ancestry in an evolutionary tree",
         "predictPrompt": "How would you prove this claim to a sceptic?"
+       },
+       {
+        "operation": "Check to confirm: recompute the gaps in the three percentages",
+        "reason": "Relatedness must track sequence identity in order, so if the gaps widened in the wrong direction the ranking would fall apart.",
+        "result": "98 minus 84 is 14 and 84 minus 78 is 6; the chimpanzee shares the most, the dog next and the mouse least; the gaps and the family tree point the same way. Both ends agree.",
+        "predictPrompt": "How would you order the whale against these three if the whale also scored 84 per cent?"
        }
       ]
      }

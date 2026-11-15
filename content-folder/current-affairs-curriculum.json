@@ -189,6 +189,12 @@
                 "reason": "The judiciary does not remove a president; it can only adjudicate a challenge to the process.",
                 "result": "The correct arm is the legislature.",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
+              },
+              {
+                "operation": "Check to confirm: walk the removal process and test each arm",
+                "reason": "Only one arm holds the constitutional power to remove a president; the others fail because they cannot act or can only review.",
+                "result": "The executive cannot remove itself, so the presidency is out. The judiciary cannot remove a president; at most it adjudicates a challenge to the process, so “the courts will jail him” fails. Only the National Assembly can act: the House impeaches and the Senate tries. The legislature stands alone.",
+                "predictPrompt": "What could the courts do about an impeachment, and what could they never do?"
               }
             ]
           }
@@ -370,6 +376,12 @@
                 "reason": "NAFDAC registers and controls drugs and medical products.",
                 "result": "The answer is NAFDAC.",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Check to confirm: run the four acronyms against the stem one by one",
+                "reason": "Each option owns a distinct mandate; the stem asks for pre-sale approval of a medicine, and only one mandate fits.",
+                "result": "SON sets standards for goods generally, not drugs for sale. NDLEA arrests and prosecutes drug offences; it never licenses medicines. NCDC tracks and contains outbreaks; it does not approve products. NAFDAC registers and controls food, drugs and medical products, exactly a pre-sale drug approval. NAFDAC stands.",
+                "predictPrompt": "Expand each acronym before you choose. Which full name fits best?"
               }
             ]
           }
@@ -546,7 +558,7 @@
                 "predictPrompt": "How would you verify this answer?"
               },
               {
-                "operation": "Confirm the detail",
+                "operation": "Check to confirm: confirm the detail",
                 "reason": "Both are in Washington, so the headquarters does not separate them.",
                 "result": "The answer is the IMF, chosen by mandate rather than location.",
                 "predictPrompt": "How would you prove this claim to a sceptic?"
@@ -730,6 +742,12 @@
                 "reason": "Fuel is an input to transport and food, so the change spread through the economy.",
                 "result": "Transport fares and food prices rose, and inflation increased.",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
+              },
+              {
+                "operation": "Check to confirm: re-trace the chain from subsidy removal to pump price to inflation",
+                "reason": "The check re-runs cause then mechanism then effect; a link that fails the dates or the market logic exposes a wrong answer.",
+                "result": "On 29 May 2023 the new administration removed the fuel subsidy that had held the pump price below cost. Within days the pump price jumped from about ₦189 to above ₦500 a litre. Petrol feeds transport and food distribution, so fares, food prices and inflation all climbed through the rest of 2023. A currency-only story does not explain a jump pinned to the inauguration; subsidy removal stands as the trigger.",
+                "predictPrompt": "What had the subsidy been doing to the pump price before then?"
               }
             ]
           }

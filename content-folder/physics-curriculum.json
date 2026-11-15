@@ -322,6 +322,12 @@
         "reason": "homogeneity is necessary for any equation to be possible",
         "result": "Both sides are L²T⁻² — the equation is homogeneous",
         "predictPrompt": "What would mismatched powers tell you?"
+       },
+       {
+        "operation": "Check to confirm: plug in real numbers",
+        "reason": "A real case must obey it if the two sides match",
+        "result": "t ≈ 1.71 s from s = ut + ½at²; v = u + at ≈ 13.4 m/s; v² ≈ 180; u² + 2as = 180 ✓",
+        "predictPrompt": "Try your own u, a and s. Does v² always land on u² + 2as?"
        }
       ]
      }
@@ -354,6 +360,12 @@
         "reason": "R = kg·m²·s⁻² ÷ (mol·K) = kg·m²·s⁻²·mol⁻¹·K⁻¹",
         "result": "R has the unit kg·m²·s⁻²·mol⁻¹·K⁻¹ — identical to J·mol⁻¹·K⁻¹",
         "predictPrompt": "Which IS-unit does that product equal?"
+       },
+       {
+        "operation": "Check to confirm: plug the found unit back in",
+        "reason": "nRT ÷ V must come out in the unit of pressure, or R cannot be right",
+        "result": "mol × kg·m²·s⁻²·mol⁻¹·K⁻¹ × K ÷ m³ = kg·m⁻¹·s⁻² = N/m² ✓ exactly the unit of P",
+        "predictPrompt": "Check the powers of m survive the subtraction. Do they?"
        }
       ]
      }
@@ -541,6 +553,12 @@
         "reason": "take the positive square root — force is a magnitude",
         "result": "R = √109 ≈ 10.4 N",
         "predictPrompt": "If θ were 120°, would R be bigger or smaller?"
+       },
+       {
+        "operation": "Check to confirm: split into components instead",
+        "reason": "The cosine rule and Pythagoras on components are two independent routes to R",
+        "result": "X = 5 + 7cos60° = 8.5; Y = 7sin60° ≈ 6.06; R = √(8.5² + 6.06²) = √109 ≈ 10.4 N ✓",
+        "predictPrompt": "Split it yourself. Do the components rebuild √109?"
        }
       ]
      }
@@ -559,26 +577,37 @@
     {
      "type": "worked_example",
      "content": {
-      "heading": "A harder worked example: the river-crossing triplet",
       "problem": "Swimmer 4 m/s, river 50 m wide, current 3 m/s. Find (a) heading upstream, (b) crossing time, (c) resultant speed.",
       "steps": [
        {
         "operation": "Heading angle",
-        "reason": "the swimmer's upstream component must cancel the current: sinθ = current ÷ own speed. Best: split the velocity into two perpendicular parts and use those. If stuck, reach for Pythagoras on them.",
-        "result": "sinθ = 3/4 → θ ≈ 46.9° upstream",
+        "reason": "the swimmer’s upstream component must cancel the current: 4 sin theta = 3",
+        "result": "theta = arcsin(3/4) about 48.6° upstream of the straight-across direction",
         "predictPrompt": "If the current were faster than his swimming speed, could he ever land opposite?"
        },
        {
+        "operation": "Across speed",
+        "reason": "the crossing uses the across-the-river component 4 cos theta, never his full 4 m/s",
+        "result": "4 cos theta = √(4² - 3²) = √7 about 2.65 m/s",
+        "predictPrompt": "Why can this not be his full swimming speed?"
+       },
+       {
         "operation": "Crossing time",
-        "reason": "crossing uses his own speed across the river, not the resultant",
-        "result": "t = 50 ÷ 4 = 12.5 s",
+        "reason": "time is width over across-speed, because the river carries him nowhere closer to the far bank",
+        "result": "t = 50 / 2.65 about 18.9 s",
         "predictPrompt": "Why does the current not enter this calculation?"
        },
        {
         "operation": "Resultant speed",
-        "reason": "velocity is the vector sum of his speed and the current",
-        "result": "R = √(4² + 3²) = 5 m/s",
+        "reason": "velocity is the vector sum; the upstream leg exactly cancels the current, so only the across leg survives",
+        "result": "R = √(4² - 3²) = √7 about 2.65 m/s across the river",
         "predictPrompt": "What would (c) be if he ignored the current and swam straight across?"
+       },
+       {
+        "operation": "Check to confirm: his own speed recovered from the split",
+        "reason": "Pythagoras on the two components must rebuild 4 m/s, or one of the three answers is wrong",
+        "result": "(4 sin 48.6°)² + (4 cos 48.6°)² = 3² + (2.65)² = 9 + 7 = 16, so √16 = 4 m/s, exactly his swimming speed",
+        "predictPrompt": "Run the same split with your own numbers and watch it rebuild 4 m/s."
        }
       ]
      }
@@ -767,6 +796,12 @@
         "reason": "tanθ = northward ÷ eastward = 4/3",
         "result": "tanθ = 4/3 → θ = 53° north of east",
         "predictPrompt": "Would a calculator give θ ≈ 53.13°? Why is the exam-writer's expected answer 53°?"
+       },
+       {
+        "operation": "Check to confirm: get the angle two other ways",
+        "reason": "Sine and cosine must both rebuild the 53.13° that tan θ produced",
+        "result": "cos θ = 3/5 = 0.6 → θ = 53.13°; sin θ = 4/5 = 0.8 → θ = 53.13° ✓ both agree",
+        "predictPrompt": "Which of sin, cos, tan is least trustworthy here?"
        }
       ]
      }
@@ -805,6 +840,12 @@
         "reason": "total distance ÷ total time",
         "result": "average = (48 + 108) ÷ 10 = 15.6 m/s",
         "predictPrompt": "If you instead averaged just the speeds, 12 and 18 — the answer would still differ. Which is correct?"
+       },
+       {
+        "operation": "Check to confirm: redo it with suvat",
+        "reason": "suvat never touches the graph, so the two routes must agree",
+        "result": "a = (18 − 6) ÷ 4 = 3 m/s²; s = ut + ½at² = 24 + 24 = 48 m ✓; (48 + 108) ÷ 10 = 15.6 m/s ✓",
+        "predictPrompt": "Suvat it. Does s still come to 48 m?"
        }
       ]
      }
@@ -985,6 +1026,12 @@
         "reason": "v = u + at, with u = 0",
         "result": "v = 0 + 3 × 4 = 12 m/s",
         "predictPrompt": "Does the acceleration change during the 4 s?"
+       },
+       {
+        "operation": "Check to confirm: run it through impulse and momentum",
+        "reason": "F t = m Δv never touches acceleration, so the two routes must agree",
+        "result": "F t = 15 × 4 = 60 kg·m/s; Δv = 60 ÷ 5 = 12 m/s ✓ matches v = 12 m/s",
+        "predictPrompt": "Use F t = m Δv. Do you land on 12 m/s too?"
        }
       ]
      }
@@ -1017,6 +1064,12 @@
         "reason": "a = R ÷ m",
         "result": "a = 50 ÷ 10 = 5 m/s² in the direction of R",
         "predictPrompt": "In which direction is 'the direction of R' — north of east or east of north?"
+       },
+       {
+        "operation": "Check to confirm: split the forces into parts",
+        "reason": "Components never lean on the 3-4-5 split, so both must agree",
+        "result": "a_x = 30 ÷ 10 = 3; a_y = 40 ÷ 10 = 4; a = √(3² + 4²) = 5 m/s² ✓ and F = ma = 50 N ✓",
+        "predictPrompt": "Components first. Does a still come to 5 m/s²?"
        }
       ]
      }
@@ -1199,6 +1252,12 @@
         "reason": "opposite signs add",
         "result": "I = 1.5 + 1.5 = 3.0 N·s, directed away from the wall",
         "predictPrompt": "Would the impulse differ if the ball rebounded at only 10 m/s?"
+       },
+       {
+        "operation": "Check to confirm: use the 2mv rebound rule",
+        "reason": "For a straight reversal at equal speed, Δp = m(v + u) is a separate route to the same impulse",
+        "result": "Δp = 0.05 × (30 + 30) = 3.0 N·s ✓ directed away from the wall",
+        "predictPrompt": "Which is shorter: mv − m(−u) or m(v + u)? Same answer?"
        }
       ]
      }
@@ -1237,6 +1296,12 @@
         "reason": "p_before = p_after",
         "result": "V = 6 ÷ 2.02 ≈ 2.97 m/s in the bullet's direction",
         "predictPrompt": "Why is the answer much smaller than 300 m/s?"
+       },
+       {
+        "operation": "Check to confirm: count the momentum after impact",
+        "reason": "p_after = total mass × V must equal p_before, or the collision logic is broken",
+        "result": "p_after = 2.02 × 2.97 ≈ 6.0 kg·m/s ✓ equals p_before = 6 kg·m/s",
+        "predictPrompt": "Weigh the books. Does 2.02 × 2.97 give back 6?"
        }
       ]
      }
@@ -1419,6 +1484,12 @@
         "reason": "average velocity × time",
         "result": "s = ½(15 + 35) × 5 = 125 m",
         "predictPrompt": "Between two speeds, is average speed the safe route here?"
+       },
+       {
+        "operation": "Check to confirm: cross-check with the v² equation",
+        "reason": "v² = u² + 2as needs neither t nor average velocity, so it stands alone",
+        "result": "s = (35² − 15²) ÷ (2 × 4) = 1000 ÷ 8 = 125 m ✓ matches the average-velocity route",
+        "predictPrompt": "Which equation needs no t? Does it give 125 m too?"
        }
       ]
      }
@@ -1457,6 +1528,12 @@
         "reason": "symmetric: ascent = descent",
         "result": "T = 2 × 2 = 4 s",
         "predictPrompt": "If the stone is caught at a lower point, will T be bigger or smaller?"
+       },
+       {
+        "operation": "Check to confirm: track the displacement at the flight time",
+        "reason": "At 4 s the stone must be back at launch level",
+        "result": "s = ut − ½gt² = 80 − 80 = 0 m ✓ back at launch level, so T = 4 s stands",
+        "predictPrompt": "Plug t = 4 into s = ut − ½gt². Is the stone home?"
        }
       ]
      }
@@ -1645,6 +1722,12 @@
         "reason": "R = u² sin 2θ ÷ g, sin 60° = 0.866",
         "result": "R = 400 × 0.866 ÷ 10 ≈ 34.6 m",
         "predictPrompt": "sin 2θ for θ = 30°: is that sin 30° or sin 60°?"
+       },
+       {
+        "operation": "Check to confirm: reach the range the sideways way",
+        "reason": "u_x × T is a route that never touches sin 2θ",
+        "result": "u_x = 20 cos30° = 17.32 m/s; R = u_x × T = 17.32 × 2 ≈ 34.6 m ✓ matches R = u² sin 2θ ÷ g",
+        "predictPrompt": "Walk sideways at 17.32 m/s for 2 s. How far is that?"
        }
       ]
      }
@@ -1683,6 +1766,12 @@
         "reason": "R = u² sin 2θ ÷ g, sin 120° = 0.866",
         "result": "R = 1600 × 0.866 ÷ 10 ≈ 138.6 m",
         "predictPrompt": "At 30° and 60°, would the ranges match?"
+       },
+       {
+        "operation": "Check to confirm: reach the range the sideways way",
+        "reason": "u_x × T is a route that never touches sin 2θ",
+        "result": "u_x = 40 cos60° = 20 m/s; R = u_x × T = 20 × 6.93 ≈ 138.6 m ✓ matches the sin 120° route",
+        "predictPrompt": "Horizontal distance = speed sideways × time. Does it give 138.6 m?"
        }
       ]
      }
@@ -1863,6 +1952,12 @@
         "reason": "powers of ten, before and after squaring",
         "result": "F = 10²⁴ × 4 × 10⁸ ÷ 10¹¹ = 4 × 10²¹ N",
         "predictPrompt": "Does squaring 2 × 10⁴ raise the exponent to 8?"
+       },
+       {
+        "operation": "Check to confirm: redo it with omega",
+        "reason": "F = mω²r never touches v², so the powers of ten are confirmed",
+        "result": "ω = 2 × 10⁴ ÷ 10¹¹ = 2 × 10⁻⁷ rad/s; F = 10²⁴ × (2 × 10⁻⁷)² × 10¹¹ = 4 × 10²¹ N ✓",
+        "predictPrompt": "Square 2 × 10⁻⁷ in your head. What exponent do you get?"
        }
       ]
      }
@@ -1893,8 +1988,14 @@
        {
         "operation": "Centripetal acceleration",
         "reason": "a = v² ÷ r",
-        "result": "a = (7330)² ÷ (7 × 10⁶) ≈ 7.66 m/s²",
+        "result": "a = (7330)² ÷ (7 × 10⁶) ≈ 7.68 m/s²",
         "predictPrompt": "Do you recognise that number? It is g — why?"
+       },
+       {
+        "operation": "Check to confirm: skip v entirely with the direct formula",
+        "reason": "a = 4π²r ÷ T² never leans on the rounded 7330 m/s",
+        "result": "a = 4π² × 7 × 10⁶ ÷ 6000² ≈ 7.7 m/s² ✓ matches v² ÷ r; v × T = 7330 × 6000 ≈ 2πr ✓",
+        "predictPrompt": "Which feels safer: v² ÷ r, or 4π²r ÷ T²?"
        }
       ]
      }
@@ -2077,6 +2178,12 @@
         "reason": "v_max = ωA, where ω = 2πf",
         "result": "ω = 2π × 2 = 4π; v_max = 0.4π ≈ 1.26 m/s",
         "predictPrompt": "Which speed does the mass hold as it passes the mean position?"
+       },
+       {
+        "operation": "Check to confirm: go straight from the period",
+        "reason": "v_max = 2πA ÷ T skips the frequency entirely, so the two routes must agree",
+        "result": "v_max = 2π × 0.1 ÷ 0.5 = 0.4π ≈ 1.26 m/s ✓ matches ωA",
+        "predictPrompt": "Can you get 1.26 m/s without ever writing f? Do it."
        }
       ]
      }
@@ -2115,6 +2222,12 @@
         "reason": "v_max = ωA",
         "result": "v_max = 20 × 0.05 = 1 m/s",
         "predictPrompt": "At which point in the swing does the mass attain this speed?"
+       },
+       {
+        "operation": "Check to confirm: use the energy route",
+        "reason": "E = ½kA² = ½mv_max² pins v_max down without any time or frequency",
+        "result": "E = ½ × 200 × 0.05² = 0.25 J; v_max = √(2E ÷ m) = √(0.5 ÷ 0.5) = 1 m/s ✓ matches ωA",
+        "predictPrompt": "Start from energy alone. Does v_max still come out 1 m/s?"
        }
       ]
      }
@@ -2295,6 +2408,12 @@
         "reason": "multiply the numerators, divide by r²",
         "result": "F = 6.67 × 10⁻¹¹ × 12 ÷ 4 = 2 × 10⁻¹⁰ N",
         "predictPrompt": "Is 6.67 × 3 = 20.01 or 6.67 × 12 = 80? Watch the numbers"
+       },
+       {
+        "operation": "Check to confirm: multiply back by r²",
+        "reason": "F × r² must rebuild G m₁m₂ exactly, so a wrong power of ten outs itself",
+        "result": "F × r² = 2.001 × 10⁻¹⁰ × 4 = 8.004 × 10⁻¹⁰; G m₁m₂ = 6.67 × 10⁻¹¹ × 12 = 8.004 × 10⁻¹⁰ ✓ equal",
+        "predictPrompt": "Reverse the division. Do the books balance to 8.004 × 10⁻¹⁰?"
        }
       ]
      }
@@ -2327,6 +2446,12 @@
         "reason": "2 × 6.67 × 6 = 80 × 10¹³ ÷ 6.4 × 10⁶ — powers of ten",
         "result": "v² = 80 × 10¹³ ÷ 6.4 × 10⁶ ≈ 125 × 10⁶ → v ≈ 11.2 × 10³ m/s",
         "predictPrompt": "Which of these is 80/6.4 — 1.25 or 12.5?"
+       },
+       {
+        "operation": "Check to confirm: plug v² back into the definition",
+        "reason": "v² × R must rebuild 2GM, independent of the route to v",
+        "result": "v² × R = 1.25 × 10⁸ × 6.4 × 10⁶ = 8.0 × 10¹⁴ ✓; 2GM = 2 × 6.67 × 10⁻¹¹ × 6 × 10²⁴ ≈ 8.0 × 10¹⁴ ✓",
+        "predictPrompt": "Would v = 11.2 km/s survive the round trip here?"
        }
       ]
      }
@@ -2515,6 +2640,12 @@
         "reason": "tan θ = Y ÷ X",
         "result": "tan θ = 26 ÷ 65 = 0.4 → θ ≈ 22°",
         "predictPrompt": "If the 30 N force were doubled, the angle would — grow or shrink?"
+       },
+       {
+        "operation": "Check to confirm: use the cosine rule instead",
+        "reason": "Cosine rule never resolves: both routes must agree",
+        "result": "R² = 2500 + 900 + 3000 × 0.5 = 4900 → R = 70 N ✓; cos θ = 6500 ÷ 7000 ≈ 0.93 → θ ≈ 22° ✓",
+        "predictPrompt": "Two ladders, one roof. Does the cosine rule reach 70 N too?"
        }
       ]
      }
@@ -2553,6 +2684,12 @@
         "reason": "the biggest force (10) opposes the biggest angle (90° for the closed triangle)",
         "result": "α = 36.9° (arcsin 6/10); β = 53.1° (arcsin 8/10)",
         "predictPrompt": "α + β + 90° = 180° for a closed triangle — does 36.9 + 53.1 + 90 = 180?"
+       },
+       {
+        "operation": "Check to confirm: close the Lami books",
+        "reason": "All three F ÷ sin(angle) ratios must return one k",
+        "result": "6 ÷ sin 36.9° = 10; 8 ÷ sin 53.1° = 10; 10 ÷ sin 90° = 10 ✓ one common k",
+        "predictPrompt": "Divide each force by its sine. Do you get three tens?"
        }
       ]
      }
@@ -2741,6 +2878,12 @@
         "reason": "R₁ = total − R₂",
         "result": "R₁ = 500 − 175 = 325 N",
         "predictPrompt": "Does R₁ + R₂ = 500 N settle to 175 + 325?"
+       },
+       {
+        "operation": "Check to confirm: take moments about the right support instead",
+        "reason": "A second pivot returns R₁ without the subtraction",
+        "result": "R₁ × 4 = 200 × 2 + 300 × 3 = 1300 → R₁ = 325 N ✓ matches 500 − 175",
+        "predictPrompt": "Pivot right instead of left. Does R₁ still come to 325 N?"
        }
       ]
      }
@@ -2779,6 +2922,12 @@
         "reason": "subtract or take moments anew",
         "result": "R₁ = 160 − 65 = 95 kgf = 950 N",
         "predictPrompt": "Does R₁ + R₂ = 1600 N check out?"
+       },
+       {
+        "operation": "Check to confirm: take moments about the far support",
+        "reason": "A second pivot must return R₁ without leaning on the subtraction",
+        "result": "R₁ × 4 = 100 × 2 + 60 × 3 = 380 → R₁ = 95 kgf = 950 N ✓ matches 1600 − 650",
+        "predictPrompt": "Pivot at the far end. Do you still land on 950 N?"
        }
       ]
      }
@@ -2961,6 +3110,12 @@
         "reason": "F_lim = μ × N",
         "result": "F = 0.4 × 50 = 20 N",
         "predictPrompt": "Does the body start moving at 10 N? At 25 N?"
+       },
+       {
+        "operation": "Check to confirm: solve backwards for μ",
+        "reason": "μ = F_lim ÷ N must return the 0.4 given, or the slip force is wrong",
+        "result": "μ = 20 ÷ 50 = 0.4 ✓ exactly the coefficient printed in the question",
+        "predictPrompt": "Recover μ from F and N. Do you get 0.4?"
        }
       ]
      }
@@ -2999,6 +3154,12 @@
         "reason": "friction can be at most μN — here attempting step asks |mg sin θ|",
         "result": "mg sin θ = 10 × 10 × 0.6 = 60 N > 24 N → the block slides; friction stays at 24 N (dynamic, often a little lower)",
         "predictPrompt": "Which falls away first — static friction or the applied force?"
+       },
+       {
+        "operation": "Check to confirm: rebuild cos θ from tan θ",
+        "reason": "sec θ = √(1 + tan²θ) is a separate route to the same 0.8, never touching the 3-4-5 triangle",
+        "result": "sec θ = √(1 + 0.75²) = 1.25 → cos θ = 0.8 ✓ and sin θ = 0.75 × 0.8 = 0.6 ✓; N = 100 × 0.8 = 80 N ✓",
+        "predictPrompt": "No triangle allowed. Can you reach 0.8 with sec θ?"
        }
       ]
      }
@@ -3181,6 +3342,12 @@
         "reason": "W = Fs cos θ",
         "result": "W = 500 × 30 = 15000 J = 15 kJ",
         "predictPrompt": "Does the weight enter this calculation at all?"
+       },
+       {
+        "operation": "Check to confirm: solve backwards for the force",
+        "reason": "F = W ÷ s must return the 500 N pushed, or the work number is wrong",
+        "result": "F = 15,000 ÷ 30 = 500 N ✓ exactly the pushing force; N × m = J ✓",
+        "predictPrompt": "Divide the work by 30 m. Do you recover 500 N?"
        }
       ]
      }
@@ -3219,6 +3386,12 @@
         "reason": "total energy conserved; back at the same level",
         "result": "KE = 200 J — same as launch (neglecting air resistance)",
         "predictPrompt": "Is the speed the same on the way down?"
+       },
+       {
+        "operation": "Check to confirm: fall back down with v² = 2gh",
+        "reason": "Falling 20 m must rebuild the 200 J launch energy",
+        "result": "v² = 2 × 10 × 20 = 400 → v = 20 m/s; KE = ½ × 1 × 400 = 200 J ✓ exactly the launch value",
+        "predictPrompt": "Catch it on the way down. Is the KE still 200 J?"
        }
       ]
      }
@@ -3401,6 +3574,12 @@
         "reason": "kWh × tariff",
         "result": "9 × 70 = ₦630",
         "predictPrompt": "Would the same formula work for a kW's electric kettle used 10 times?"
+       },
+       {
+        "operation": "Check to confirm: do it in joules instead",
+        "reason": "Both routes price the same 9 kWh, so a slip outs itself",
+        "result": "60 W × 150 h = 9 kWh ✓; 60 × 540,000 s = 3.24 × 10⁷ J = 9 kWh ✓; 9 × ₦70 = ₦630 ✓",
+        "predictPrompt": "Convert 3.24 × 10⁷ J to kWh. Still 9?"
        }
       ]
      }
@@ -3433,6 +3612,12 @@
         "reason": "plug values",
         "result": "h = 20² ÷ (2 × 10) = 400 ÷ 20 = 20 m",
         "predictPrompt": "Does a higher turbine get more energy, or the same?"
+       },
+       {
+        "operation": "Check to confirm: fall back with the speed you were given",
+        "reason": "v = √(2gh) must rebuild the 20 m/s the turbine needs, or h cannot be right",
+        "result": "v = √(2 × 10 × 20) = √400 = 20 m/s ✓ exactly the given speed",
+        "predictPrompt": "Drop it from 20 m. Does it arrive at 20 m/s?"
        }
       ]
      }
@@ -3624,6 +3809,12 @@
         "reason": "KE = 2.06 − 2.5",
         "result": "hf < W — no emission occurs; this trick question has one answer: 0",
         "predictPrompt": "What does it mean when the photon is too weak?"
+       },
+       {
+        "operation": "Check to confirm: compare against the threshold instead",
+        "reason": "f₀ = W ÷ h asks the same question from the other side",
+        "result": "f₀ = (2.5 × 1.6 × 10⁻¹⁹) ÷ 6.63 × 10⁻³⁴ ≈ 6.03 × 10¹⁴ Hz > 5 × 10¹⁴ Hz ✓ below threshold; KE = 0 holds",
+        "predictPrompt": "Ask the threshold. Is 5 × 10¹⁴ Hz above or below it?"
        }
       ]
      }
@@ -3656,6 +3847,12 @@
         "reason": "KE = hf − W",
         "result": "hf = 6.63 × 10⁻³⁴ × 8 × 10¹⁴ = 5.304 × 10⁻¹⁹ J; KE = 5.304 − 3.315 = 1.99 × 10⁻¹⁹ J ≈ 1.24 eV",
         "predictPrompt": "Of the two terms in hf − W, which is the big one — and which is the small one?"
+       },
+       {
+        "operation": "Check to confirm: subtract the frequencies first",
+        "reason": "KE = h(f − f₀) is the one-line form, no detours",
+        "result": "KE = 6.63 × 10⁻³⁴ × 3 × 10¹⁴ = 1.989 × 10⁻¹⁹ J ≈ 1.24 eV ✓ matches the two-step route",
+        "predictPrompt": "One line, no stopovers. Does h(f − f₀) give 1.24 eV?"
        }
       ]
      }
@@ -3828,19 +4025,25 @@
     {
      "type": "worked_example",
      "content": {
-      "problem": "A pulley system has a mechanical advantage of 3. To raise a 120 N load through 0.6 m, the effort end is pulled down 1.8 m with 50 N. Find (a) VR, (b) efficiency.",
+      "problem": "A pulley system has a mechanical advantage of 3. To raise a 120 N load through 0.6 m, the effort end is pulled down 1.8 m with 40 N. Find (a) VR, (b) efficiency.",
       "steps": [
        {
         "operation": "Velocity ratio",
-        "reason": "VR = effort distance ÷ load distance. Best: use VR — distances only, friction ignored. If stuck, cash-check MA = Load ÷ Effort.",
-        "result": "VR = 1.8 ÷ 0.6 = 3",
-        "predictPrompt": "Which is the longer distance — the load or the hand?"
+        "reason": "VR = effort distance ÷ load distance. Best: use VR = distances only, friction ignored. If stuck, cash-check MA = Load ÷ Effort.",
+        "result": "VR = 1.8 / 0.6 = 3",
+        "predictPrompt": "Which is the longer distance: the load or the hand?"
        },
        {
         "operation": "Efficiency",
-        "reason": "efficiency = MA ÷ VR × 100",
-        "result": "efficiency = 3 ÷ 3 × 100 = 100%",
+        "reason": "efficiency = MA ÷ VR x 100",
+        "result": "efficiency = 3 / 3 x 100 = 100%",
         "predictPrompt": "Is MA = VR a sign of zero losses or terrible friction?"
+       },
+       {
+        "operation": "Check to confirm: the energy books balance",
+        "reason": "useful work (load x its distance) and effort work (effort x its distance) must match a 100% machine, or the efficiency line is a fluke",
+        "result": "120 x 0.6 = 72 J out; 40 x 1.8 = 72 J in; 72 / 72 = 1.00, exactly the printed efficiency",
+        "predictPrompt": "What would the energy books say if the effort were 50 N instead?"
        }
       ]
      }
@@ -3879,6 +4082,12 @@
         "reason": "MA ÷ VR × 100",
         "result": "efficiency = 4 ÷ 4 × 100 = 100%",
         "predictPrompt": "Would you accept that answer, or would you suspect a typo?"
+       },
+       {
+        "operation": "Check to confirm: balance the energy books",
+        "reason": "At 100% efficiency, work in = effort × distance and work out = load × height must be equal",
+        "result": "Work in = 100 × 4 = 400 J; work out = 400 × 1 = 400 J ✓ equal; η = MA ÷ VR = 4 ÷ 4 = 100% ✓",
+        "predictPrompt": "Count the joules both ways. Are they 400 and 400?"
        }
       ]
      }
@@ -4064,6 +4273,12 @@
         "reason": "W = ½kx² (equivalently ½Fx)",
         "result": "W = ½ × 200 × 0.05² = ½ × 200 × 0.0025 = 0.25 J",
         "predictPrompt": "A second way to compute it — which one did you trust more?"
+       },
+       {
+        "operation": "Check to confirm: use half force times extension",
+        "reason": "W = ½Fx is the triangle’s area on its own",
+        "result": "W = ½ × 10 × 0.05 = 0.25 J ✓ matches ½kx²; and x = F ÷ k = 10 ÷ 200 = 0.05 m ✓",
+        "predictPrompt": "Triangle area ½ × base × height. Does it match 0.25 J?"
        }
       ]
      }
@@ -4096,6 +4311,12 @@
         "reason": "W = ½ F · ΔL",
         "result": "W = ½ × 4800 × 0.08 = 192 J",
         "predictPrompt": "Would W = ½kΔL² also work — if so, what is k?"
+       },
+       {
+        "operation": "Check to confirm: go via the spring constant",
+        "reason": "k = F ÷ ΔL and ½kΔL² never touch Young’s modulus",
+        "result": "k = 4800 ÷ 0.08 = 60,000 N/m; W = ½ × 60,000 × 0.08² = 192 J ✓ matches",
+        "predictPrompt": "What is k here? Does ½kΔL² give 192 J?"
        }
       ]
      }
@@ -4281,6 +4502,12 @@
         "reason": "P = ρgh. Best: depth sets pressure, not the shape. If the question asks, add the atmosphere to get P = ρgh + P_atm.",
         "result": "P = 13,600 × 10 × 0.74 = 100,640 Pa ≈ 1.01 × 10⁵ N/m²",
         "predictPrompt": "Which gives a familiar number — would you say 100,640 or more likely 101,000?"
+       },
+       {
+        "operation": "Check to confirm: solve backwards for the column",
+        "reason": "h = P ÷ ρg must return the 74 cm that produced this pressure",
+        "result": "h = 100,640 ÷ (13,600 × 10) = 0.74 m = 74 cm ✓ exactly the reading that started us off",
+        "predictPrompt": "Dive back down the formula. Does 74 cm surface again?"
        }
       ]
      }
@@ -4313,6 +4540,12 @@
         "reason": "gas could be at higher or lower pressure than air — we need the context",
         "result": "if the gas is above 1 atm → 101,325 + 20,400 = 121,725 Pa; if below → 80,925 Pa",
         "predictPrompt": "Is 'higher' or 'lower' the likely context for a manometer?"
+       },
+       {
+        "operation": "Check to confirm: recover the column height",
+        "reason": "h = ΔP ÷ ρg must return 15 cm, and the branches share 101,325 Pa",
+        "result": "h = 20,400 ÷ (13,600 × 10) = 0.15 m = 15 cm ✓; 101,325 + 20,400 = 121,725 ✓; 101,325 − 20,400 = 80,925 ✓",
+        "predictPrompt": "Convert 20,400 Pa back to cm of mercury. Is it 15?"
        }
       ]
      }
@@ -4498,6 +4731,12 @@
         "reason": "P_total = P_atm + ρgh",
         "result": "P_total = 1.01 × 10⁵ + 3.00 × 10⁵ = 4.01 × 10⁵ Pa",
         "predictPrompt": "Will the diver feel it as 'total' or just'gp's?"
+       },
+       {
+        "operation": "Check to confirm: solve backwards for the depth",
+        "reason": "h = P ÷ ρg must return the 30 m dive that produced 300,000 Pa",
+        "result": "h = 300,000 ÷ (1000 × 10) = 30 m ✓ exactly the given depth; 3.00 × 10⁵ + 1.01 × 10⁵ = 4.01 × 10⁵ Pa ✓",
+        "predictPrompt": "Spiral back up. Does h land on 30 m again?"
        }
       ]
      }
@@ -4536,6 +4775,12 @@
         "reason": "gas side lower → gas pressure < atm pressure",
         "result": "P_gas = 1.01 × 10⁵ − 34,000 = 67,000 Pa",
         "predictPrompt": "Does the sign of the difference matter here?"
+       },
+       {
+        "operation": "Check to confirm: recover the column and cross-add",
+        "reason": "h must come back as 25 cm, and the two branches must differ by exactly twice ΔP",
+        "result": "h = 34,000 ÷ (13,600 × 10) = 0.25 m = 25 cm ✓; 135,000 − 67,000 = 68,000 = 2 × 34,000 ✓",
+        "predictPrompt": "Subtract the two branch pressures. Is it twice the difference?"
        }
       ]
      }
@@ -4727,6 +4972,12 @@
         "reason": "equal forces up and down",
         "result": "the body floats with upthrust = weight (5 N)",
         "predictPrompt": "If only partly immersed, is that enough?"
+       },
+       {
+        "operation": "Check to confirm: compare densities instead",
+        "reason": "ρ_body against ρ_water decides floating without any force bookkeeping at all",
+        "result": "ρ_body = 0.5 ÷ 500 × 10⁻⁶ = 1000 kg/m³ = ρ_water ✓ floats exactly submerged; upthrust = weight = 5 N ✓",
+        "predictPrompt": "Weigh it and measure it. Is its density 1000 kg/m³?"
        }
       ]
      }
@@ -4765,6 +5016,12 @@
         "reason": "relative density = mass of given liquid ÷ mass of equal volume of water",
         "result": "RD = 80 ÷ 100 = 0.8; density = 0.8 × 1000 = 800 kg/m³",
         "predictPrompt": "Is oil denser than water here?"
+       },
+       {
+        "operation": "Check to confirm: rebuild the density from the volume",
+        "reason": "ρ = m ÷ V from the same bottle never touches RD",
+        "result": "V = 100 g ÷ 1 g/cm³ = 100 cm³; ρ = 80 ÷ 100 = 0.8 g/cm³ = 800 kg/m³ ✓ matches the RD route",
+        "predictPrompt": "Volume first, density second. Same 800 kg/m³?"
        }
       ]
      }
@@ -4945,6 +5202,12 @@
         "reason": "Reach for the same rule backwards because Kelvin and Celsius differ only by 273",
         "result": "10 degrees C",
         "predictPrompt": "Sanity check: is 10 C cold enough for film storage?"
+       },
+       {
+        "operation": "Check to confirm: fly the conversions backwards",
+        "reason": "The return trip must land on the same 31 C",
+        "result": "304 − 273 = 31 C ✓; (87.8 − 32) x 5/9 = 31 C ✓ both back at 31 degrees C",
+        "predictPrompt": "Fly home. Do both conversions land on 31 C?"
        }
       ]
      }
@@ -5145,6 +5408,12 @@
         "reason": "Reach for simplifying the fraction before multiplying, to dodge arithmetic slips",
         "result": "75 degrees C",
         "predictPrompt": "35 cm is three quarters of the way up the scale; does 75 match that?"
+       },
+       {
+        "operation": "Check to confirm: fly the scale forwards",
+        "reason": "75 C must put the thread back at exactly 35 cm",
+        "result": "L = 20 + (75 / 100) x (40 - 20) = 20 + 15 = 35 cm ✓ the very reading that gave us 75 C",
+        "predictPrompt": "Scale it up. Does 75 C put the thread at 35 cm?"
        }
       ]
      }
@@ -5351,6 +5620,12 @@
         "reason": "Reach for kilowatt-joule conversion because JAMB answers are often tidied in kJ",
         "result": "75.6 kJ absorbed",
         "predictPrompt": "If this were copper (385), would the absorbed heat be larger or smaller?"
+       },
+       {
+        "operation": "Check to confirm: solve backwards for the temperature rise",
+        "reason": "delta theta = Q / (m c) must rebuild the 78 - 22 = 56 K rise exactly",
+        "result": "delta theta = 75,600 / (1.5 x 900) = 75,600 / 1350 = 56 K ✓ exactly 78 - 22",
+        "predictPrompt": "Feed it Q and m and c. Do you get 56 K out?"
        }
       ]
      }
@@ -5562,6 +5837,12 @@
         "reason": "Reach for division because one unknown is all that is left",
         "result": "theta about 34.4 C",
         "predictPrompt": "JAMB asks for final temperature; is yours between 20 and 100?"
+       },
+       {
+        "operation": "Check to confirm: close the balance sheet",
+        "reason": "Loss must equal gain at your theta, or the equation is not satisfied",
+        "result": "Nail loses 92 x (100 - 34.375) ≈ 6038 J; water gains 420 x (34.375 - 20) ≈ 6038 J ✓ identical",
+        "predictPrompt": "Book the same theta both sides. Do the joules match?"
        }
       ]
      }
@@ -5774,6 +6055,12 @@
         "reason": "Reach for the same exponential because the constant never changes for this cube",
         "result": "Total about 10.8 minutes (the last 10 degrees take about 5.8 minutes)",
         "predictPrompt": "Does it make sense that the second 10 degrees took longer than the first?"
+       },
+       {
+        "operation": "Check to confirm: run the clock forwards to 80 C",
+        "reason": "The model must land on 80 C at the t you just found",
+        "result": "T = 25 + 75 e^(-0.0286 x 10.8) ≈ 25 + 55 = 80 C ✓",
+        "predictPrompt": "Fast-forward 10.8 minutes. Has the cube landed on 80 C?"
        }
       ]
      }
@@ -5986,6 +6273,12 @@
         "reason": "Reach for equating loss and gain; one balance sheet",
         "result": "c about 417 J/kg K",
         "predictPrompt": "Between water's 4200 and copper's 385: does the metal feel like a midweight?"
+       },
+       {
+        "operation": "Check to confirm: replay the metal’s loss",
+        "reason": "The block’s heat lost with your c must repay the joules the water and cup collected",
+        "result": "0.1 x 417.3 x (150 - 26) = 0.1 x 417.3 x 124 ≈ 5175 J ✓ = 5040 + 135, the books balance",
+        "predictPrompt": "Repay with your own c. Is it 5175 J to the joule?"
        }
       ]
      }
@@ -6018,6 +6311,12 @@
         "reason": "Reach for equating; every joule condensed lands in the water",
         "result": "About 6.8 g",
         "predictPrompt": "Is 6.8 g plausible for a short blast of steam?"
+       },
+       {
+        "operation": "Check to confirm: replay the payment per gram",
+        "reason": "Grams condensed times 2512 J/g must equal the joules the water and cup absorbed",
+        "result": "6.84 x 2512 ≈ 17,190 J ✓ = 16,800 + 390; every joule accounted for",
+        "predictPrompt": "Multiply 6.84 g by 2512. Do you get 17,190?"
        }
       ]
      }
@@ -6050,6 +6349,12 @@
         "reason": "Reach for division by k; t = ln ratio / k always",
         "result": "About 13.2 minutes",
         "predictPrompt": "More or less than the 10 minutes the first 20 degrees took? Why?"
+       },
+       {
+        "operation": "Check to confirm: run the clock forwards from 40 C",
+        "reason": "The 13.2 minutes must land the tea exactly on 28 C if k is right",
+        "result": "T = 20 + 20 e^(-0.0693 x 13.2) ≈ 28.0 C ✓ exactly where it should settle",
+        "predictPrompt": "Fast-forward 13.2 minutes. Is the tea at 28 C?"
        }
       ]
      }

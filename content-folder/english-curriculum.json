@@ -331,6 +331,12 @@
         "reason": "The answer must restate the evidence without adding to it. Reach for the answer-control discipline because it keeps you inside the text. If stuck, mark every detail the answer ignores outside the text and cross them off.",
         "result": "The correct option is 'resources, not awareness'.",
         "predictPrompt": "How would you prove this claim to a sceptic?"
+       },
+       {
+        "operation": "Check to confirm: re-read the stem against the answer",
+        "reason": "The stem asks why the council failed; the passage clears knowing and caring, so only money can carry the failure.",
+        "result": "Awareness loses (the council knew the problem), indifference loses (it met several times anyway), and the lack of money for a borehole stands.",
+        "predictPrompt": "Which rival cause can the passage itself rule out, and how?"
        }
       ]
      }
@@ -925,6 +931,12 @@
         "reason": "One subordinate clause can carry the cause while the main clause carries the threat. Reach for the answer-control discipline because it keeps you inside the text. If stuck, mark every detail you added outside the text and cross them off.",
         "result": "A fast-growing night market has drawn traders because it is cheap, but its future is uncertain because the land is needed for a road.",
         "predictPrompt": "How would you sanity-check this answer against the evidence?"
+       },
+       {
+        "operation": "Check to confirm: re-read the sentence against the three points",
+        "reason": "A one-sentence summary must carry growth, cause and threat; drop any of the three and the compression has gone too far.",
+        "result": "“Fast-growing” keeps growth, “because it is cheap” keeps the cause, “future is uncertain because the land is needed for a road” keeps the threat; an option missing any one of these loses.",
+        "predictPrompt": "Which of the three points would your summary lose first?"
        }
       ]
      }
@@ -1343,6 +1355,12 @@
         "reason": "History and supervision are details or absent; the main point is the hall's physical character. Reach for detail pairing because the correct option restates the topic sentence and nothing else. If stuck, cross off options that add or omit a detail.",
         "result": "Choose 'the physical and sensory character of the market hall'.",
         "predictPrompt": "How would you sanity-check this answer against the evidence?"
+       },
+       {
+        "operation": "Check to confirm: eliminate each remaining option with its reason",
+        "reason": "The topic sentence names size, material and shape only, so any option that adds history or supervision reaches beyond the text.",
+        "result": "“The history of the market” loses (nothing in the passage says who built it or when), “the supervision of the market” loses (no managers appear), and “the physical and sensory character of the market hall” stands.",
+        "predictPrompt": "Which rival option tempts you most, and what single detail kills it?"
        }
       ]
      }
@@ -1761,6 +1779,12 @@
         "reason": "The action must support the inference without contradicting the text. Reach for detail pairing because the inference must rest on what the text shows. If stuck, cross off any option the final action contradicts.",
         "result": "He is resigned or defeated, not cheerful about the delay.",
         "predictPrompt": "How would you sanity-check this answer against the evidence?"
+       },
+       {
+        "operation": "Check to confirm: eliminate each remaining option with its reason",
+        "reason": "The final action is the evidence; any feeling the unloading and leaving contradicts must lose.",
+        "result": "“Cheerful about the delay” loses (he unloads and leaves instead of staying to sell), “hot with anger” loses (the text shows no shout or blame), and “resigned or defeated” stands.",
+        "predictPrompt": "What does he do with the load, and what does that rule out?"
        }
       ]
      }
@@ -2194,6 +2218,12 @@
         "reason": "The answer must explain the order, not merely repeat it. Reach for detail pairing because the answer must state the dependency the passage shows. If stuck, cross off options that repeat the order without explaining it.",
         "result": "The filling must come first because there is nothing to heat otherwise.",
         "predictPrompt": "How would you prove this claim to a sceptic?"
+       },
+       {
+        "operation": "Check to confirm: eliminate each remaining option with its reason",
+        "reason": "The stem asks why the order matters, so an option that merely repeats the order cannot answer it.",
+        "result": "“First the tube is filled, then heated” loses (it repeats the order with no reason), “heating makes the water rise” loses (it states the result, not the order), and “there is nothing to heat otherwise” stands.",
+        "predictPrompt": "Which option only repeats the order without explaining it?"
        }
       ]
      }
@@ -2607,6 +2637,12 @@
         "reason": "The answer must include the recommendation, not just the problem. Reach for detail pairing because the answer must carry the recommendation, not just the problem. If stuck, cross off options that name only the overcrowded roads.",
         "result": "The writer wants affordable alternatives before any restriction.",
         "predictPrompt": "How would you test this answer before writing it down?"
+       },
+       {
+        "operation": "Check to confirm: eliminate each remaining option with its reason",
+        "reason": "The stem asks for the purpose, and in persuasion the purpose is the action urged on the reader.",
+        "result": "“To describe how crowded the roads are” loses (it names the problem, not the call to act), “to argue for restrictions first” loses (he says improve the alternative first, then restrict), and “to urge affordable alternatives before any restriction” stands.",
+        "predictPrompt": "Which option names only the problem?"
        }
       ]
      }
@@ -3012,7 +3048,7 @@
         "predictPrompt": "What does the question tell you to find first?"
        },
        {
-        "operation": "Re-read the sentence",
+        "operation": "Check to confirm: re-read the sentence aloud",
         "reason": "The chosen word must sound natural in the whole clause. Reach for the answer-control discipline because it keeps you inside the text. If stuck, say the whole sentence aloud and listen for a wrong note.",
         "result": "'The leaves turned blue-black when the iodine solution was applied.'",
         "predictPrompt": "How would you explain why this beats the other options?"
@@ -3581,6 +3617,12 @@
         "reason": "When several options fit, intensity decides. Reach for the intensity dial because close synonyms differ in strength. If stuck, rank the survivors from mild to strong and pick the nearest.",
         "result": "'Delighted' is stronger than 'pleased' but keeps the positive sense, so it is the nearest.",
         "predictPrompt": "How would you test this answer before writing it down?"
+       },
+       {
+        "operation": "Check to confirm: eliminate each remaining option with its reason",
+        "reason": "Every rejected option must reverse the teacher’s reaction or clash in the slot; delighted alone does neither.",
+        "result": "“Angry” loses (it reverses the positive reaction to good work), “disappointed” loses (same reversal), and “delighted” stands (it keeps the positive sense of pleased and is the nearest match the options offer).",
+        "predictPrompt": "Which option direction would make you re-check the slot?"
        }
       ]
      }
@@ -3887,7 +3929,7 @@
         "predictPrompt": "How would you verify this answer?"
        },
        {
-        "operation": "Check the sentence",
+        "operation": "Check to confirm: swap it in and read the sentence",
         "reason": "The replacement must keep the sentence logical. Reach for the sentence-logic check because the antonym must reverse the sense. If stuck, swap it in and ask whether the sentence still holds.",
         "result": "'The room was cramped enough for a family of six' is odd, so the option describes the opposite condition rather than fitting positively.",
         "predictPrompt": "How would you explain why this beats the other options?"
@@ -4198,7 +4240,7 @@
         "predictPrompt": "What does the question tell you to find first?"
        },
        {
-        "operation": "Read the sentence",
+        "operation": "Check to confirm: re-read the sentence",
         "reason": "The finished sentence must show the order clearly. Reach for the parse ladder because re-reading rebuilds the clause with its verb. If stuck, swap in had started and check the order still reads true.",
         "result": "'By the time we arrived, the film had started.'",
         "predictPrompt": "How would you prove this claim to a sceptic?"
@@ -4577,6 +4619,12 @@
         "reason": "A word modifying the verb 'travel' answers how. Reach for the parse ladder because the last rung tests how the verb is done. If stuck, ask whether the word answers how after the verb.",
         "result": "'Light' is an adverb in (c).",
         "predictPrompt": "How would you sanity-check this answer against the evidence?"
+       },
+       {
+        "operation": "Check to confirm: run the slot test on a fresh sentence",
+        "reason": "Position is the tell; a fresh sentence in each slot proves the method, not the memory of these three.",
+        "result": "“The lamp failed” gives a noun, “a heavy bag” an adjective and “travel slowly” an adverb; light keeps its three jobs, so noun, adjective and adverb stands.",
+        "predictPrompt": "Which fresh sentence would you build for the adverb reading?"
        }
       ]
      }
@@ -4804,6 +4852,12 @@
         "reason": "The future perfect is will + have + past participle. Reach for the tense map because it builds the future perfect from its parts. If stuck, assemble will, have and the past participle aloud.",
         "result": "Ada will have lived here for five years.",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: eliminate each remaining option with its reason",
+        "reason": "The stem pins a five-year period complete by next June, so every form that misses completion or the future point loses.",
+        "result": "“Will live” loses (it says she will be there, not that five years are finished), “lives” loses (it ignores “by next June”), “lived” loses (it points at the past), and “will have lived” stands.",
+        "predictPrompt": "Which option misses the future point, and which misses completion?"
        }
       ]
      }
@@ -5036,6 +5090,12 @@
         "reason": "A singular subject takes a singular verb. Reach for the agreement mirror because singular subjects take singular verbs. If stuck, read it aloud with is and then with are and hear the match.",
         "result": "'The quality of the students' projects is impressive.'",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: strip the phrase and hear it again",
+        "reason": "The nearest-noun lure is the tempting wrong answer; phrases after the head never govern the verb, so that match must lose.",
+        "result": "“Are” loses (it chases “projects”, the nearest noun, across a prepositional phrase), and “is” stands (the stripped sentence “The quality is impressive” is what the subject demands).",
+        "predictPrompt": "What is the bare sentence, and what verb does it need?"
        }
       ]
      }
@@ -5268,6 +5328,12 @@
         "reason": "A superlative normally takes 'the'. Reach for the degrees chart because the superlative row carries the article. If stuck, place good, better, best on the chart and pick the last.",
         "result": "This is the best result of the three tests.",
         "predictPrompt": "How would you test this answer before writing it down?"
+       },
+       {
+        "operation": "Check to confirm: eliminate each remaining option with its reason",
+        "reason": "Three items demand the superlative, and irregular adjectives never take -er or -est, so every rival degree and ending loses.",
+        "result": "“Better” loses (comparative; it compares two, not three), “goodest” loses (good is irregular and never takes -est), and “best” stands (the superlative of good, with “the”, before three tests).",
+        "predictPrompt": "Which ending could an irregular adjective ever take?"
        }
       ]
      }
@@ -5495,6 +5561,12 @@
         "reason": "The subject must become a pronoun that matches in person and number. Reach for the tag chart because the pronoun column matches the subject's person and number. If stuck, turn the subject into a pronoun.",
         "result": "'The students' becomes 'they', so the tag is 'hadn't they?'.",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: re-run the tag formula",
+        "reason": "The tag is a machine: negative of the auxiliary plus a matching pronoun, and both halves must line up.",
+        "result": "“Had they?” loses (a positive statement takes a negative tag), “hadn’t it?” loses (the subject is third person plural, so the pronoun is they), and “hadn’t they?” stands.",
+        "predictPrompt": "What are the two halves of the machine, and what does yours produce?"
        }
       ]
      }
@@ -5723,7 +5795,7 @@
         "predictPrompt": "What does the question tell you to find first?"
        },
        {
-        "operation": "Read the corrected sentence",
+        "operation": "Check to confirm: read the corrected sentence",
         "reason": "Both marks must now carry the right meaning. Reach for the apostrophe chart because it re-checks both marks against their jobs. If stuck, circle each apostrophe and say what each one stands for.",
         "result": "'It's raining, so the children's books are wet.'",
         "predictPrompt": "How would you sanity-check this answer against the evidence?"
@@ -5955,7 +6027,7 @@
         "predictPrompt": "How would you verify this answer?"
        },
        {
-        "operation": "Check the sentence",
+        "operation": "Check to confirm: substitute the paraphrase and read the sentence",
         "reason": "The meaning must fit the context of a tax. Reach for the context probe because the tax sets the scene for the meaning. If stuck, substitute the paraphrase and see whether the sentence still holds.",
         "result": "A tax that is very expensive for the company fits the meaning.",
         "predictPrompt": "How would you sanity-check this answer against the evidence?"
@@ -6332,6 +6404,12 @@
         "reason": "The question asks for a diphthong, not merely a long vowel. Reach for the vowel chart because the diphthong row lists the gliding vowels. If stuck, match each option to the chart and pick the gliding one.",
         "result": "Sight /saɪt/ is the answer.",
         "predictPrompt": "How would you sanity-check this answer against the evidence?"
+       },
+       {
+        "operation": "Check to confirm: match each option to the chart",
+        "reason": "Only the diphthong row glides; a word that stays steady in the mouth cannot sit there.",
+        "result": "“Seat” /iː/ loses (steady long vowel), “sit” /ɪ/ loses (steady short vowel), “set” /ɛ/ loses (steady short vowel), and “sight” /saɪt/ stands (it glides from /a/ to /ɪ/).",
+        "predictPrompt": "Stretch each option aloud: which one moves, and which stay still?"
        }
       ]
      }
@@ -6564,6 +6642,12 @@
         "reason": "Remove the vowel /e/ and count what remains. Reach for the consonant chart because it separates vowels from consonants. If stuck, cross out the vowel symbols and count what remains.",
         "result": "Six consonants: s, t, r, ŋ, θ, s.",
         "predictPrompt": "How would you test this answer before writing it down?"
+       },
+       {
+        "operation": "Check to confirm: run the same count on a fresh word",
+        "reason": "A second word proves the method, not the memory of this one.",
+        "result": "“Sixths” is /sɪksθs/: /s/, /ɪ/, /k/, /s/, /θ/, /s/; the lone vowel /ɪ/ leaves five consonants, so the strengths count of six (one vowel, /e/) stands.",
+        "predictPrompt": "How many consonants are in “sixths”, and what does that show about strengths?"
        }
       ]
      }
@@ -6796,6 +6880,12 @@
         "reason": "A homophone pair must also differ in spelling and sense. Reach for the homophone card because it pairs identical sound with different spelling and sense. If stuck, write both words, then say what each one means.",
         "result": "Write and right are spelled differently and mean different things.",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: re-sound each named pair",
+        "reason": "Homophones must match beat for beat; spelling and sense cannot rescue a pair with a single differing sound.",
+        "result": "“Lose/loose” loses (/luːz/ vs /luːs/, final voicing), “food/foot” loses (/uː/ vs /ʊ/, length), “advice/advise” loses (/s/ vs /z/, final voicing), and “write/right” stands (/raɪt/ both, different spelling and sense).",
+        "predictPrompt": "Which pair has the one small sound that betrays it?"
        }
       ]
      }
@@ -7029,6 +7119,12 @@
         "reason": "Words ending in -ian also stress the syllable before it. Reach for the suffix stress table because -ian likewise stresses the syllable before it. If stuck, tap the syllable before -ian and feel the beat.",
         "result": "Politician becomes pol-i-TI-cian.",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: re-tabulate the two suffixes",
+        "reason": "Both -ical and -ian stress the syllable before the suffix; one beat anywhere else fails the table.",
+        "result": "“PO-litical” loses (it keeps the base beat after adding -ical), “po-LI-tician” loses (it lands one syllable too early before -ian), and po-LIT-i-cal, pol-i-TI-cian stand.",
+        "predictPrompt": "Say each word aloud: which syllable lands before the suffix?"
        }
       ]
      }
@@ -7260,7 +7356,7 @@
         "predictPrompt": "How would you verify this answer?"
        },
        {
-        "operation": "Check the alternatives",
+        "operation": "Check to confirm: cap each other word and hear the question",
         "reason": "A question about who or what would stress a different word. Reach for the stress worksheet because moving the capital moves the question. If stuck, cap each other word in turn and see which question it springs.",
         "result": "'Who sang at the party?' would stress MARY, and 'What did Mary do?' would stress SANG.",
         "predictPrompt": "How would you explain why this beats the other options?"
@@ -7466,6 +7562,12 @@
         "reason": "One sentence must cover both claims in new wording. Reach for the answer-control discipline because it keeps you inside the text. If stuck, join the two claims with but and drop everything outside them.",
         "result": "The garden improves diets but demands careful budgeting from schools",
         "predictPrompt": "How would you sanity-check this answer against the evidence?"
+       },
+       {
+        "operation": "Check to confirm: re-read the stem against the chosen sentence",
+        "reason": "The stem asks for one sentence covering both passages; an option holding only one voice cannot answer a synthesis question.",
+        "result": "“The school garden is a good idea” loses (Passage B is missing), “schools must budget for gardens” loses (Passage A is missing), and “the garden improves diets but demands careful budgeting from schools” stands (both voices, fresh words).",
+        "predictPrompt": "Which passage does the tempting option leave out?"
        }
       ]
      }
@@ -7663,6 +7765,12 @@
         "reason": "The surrounding idea is that the library ends illiteracy, not that it replaces electricity. Reach for the answer-control discipline because it keeps you inside the text. If stuck, cross off every option that reaches beyond the passage.",
         "result": "The answer is that the library brings knowledge and hope.",
         "predictPrompt": "How would you sanity-check this answer against the evidence?"
+       },
+       {
+        "operation": "Check to confirm: eliminate each remaining option with its reason",
+        "reason": "The chairman most nearly means the figurative freight; literal light and overreach both fail the image.",
+        "result": "“The library saves power bills” loses (a literal-light reading unrelated to illiteracy), “one speech cures illiteracy overnight” loses (it overreaches the passage), and “knowledge and hope in the dark of illiteracy” stands.",
+        "predictPrompt": "Which literal reading tempts you, and why must it lose?"
        }
       ]
      }
@@ -7863,6 +7971,12 @@
         "reason": "A main clause with dependent clauses is complex. Reach for the parse ladder because naming the pattern locks in the structure. If stuck, count main clauses and match to simple, compound or complex.",
         "result": "Complex sentence with adjective and adverbial clauses.",
         "predictPrompt": "How would you prove this claim to a sceptic?"
+       },
+       {
+        "operation": "Check to confirm: run the verb count on a fresh sentence",
+        "reason": "The same count must give the same pattern elsewhere; if the method transfers, the labels here are sound.",
+        "result": "“The prefects who patrolled at night caught the vandals because the watch was organised” has patrolled, caught, organised: adjective and adverbial clauses around one main clause, complex.",
+        "predictPrompt": "How many finite verbs are in a sentence you build the same way?"
        }
       ]
      }
@@ -8059,6 +8173,12 @@
         "operation": "Pick the option that pairs cause with effect",
         "reason": "The trap is true facts from the wrong moment. Take the full pair the question wants; when stuck, read the verb “transform” and give it a before and an after",
         "result": "The fee cut moved families into boarding and assembly became punctual"
+       },
+       {
+        "operation": "Check to confirm: re-read the stem against the chosen answer",
+        "reason": "The stem asks how lateness transformed, so an answer missing the assembly half cannot state the change.",
+        "result": "A fee-cut-only option loses (it is the lever without the result), a 7:45 a.m. assembly option alone loses (the result without the lever), and the pair stands (over 80% boarded, nearly everyone at assembly by 7:45 a.m.).",
+        "predictPrompt": "Which half is missing from the tempting option you saw?"
        }
       ]
      }
@@ -8252,6 +8372,12 @@
         "operation": "Choose the option that holds both halves",
         "reason": "The wrong options use true numbers from the wrong moment, so take the full pair: the cut and the 7:45 assembly; when stuck, rule out options naming the cut without the assembly",
         "result": "The fee cut filled the boarding houses and made the school punctual"
+       },
+       {
+        "operation": "Check to confirm: re-read the stem against the chosen answer",
+        "reason": "The stem asks how lateness transformed, so an answer missing the assembly half cannot state the change.",
+        "result": "A fee-cut-only option loses (it is the lever without the result), an assembly-only option loses (the result without the lever), and the pair stands (over 80% boarded, nearly everyone at assembly by 7:45 a.m.).",
+        "predictPrompt": "Which half is missing from the tempting option you saw?"
        }
       ]
      }
@@ -8442,7 +8568,7 @@
         "result": "A monthly £1,000 remittance beats any naira salary at home"
        },
        {
-        "operation": "Discard the Oyelana-shaped distractor",
+        "operation": "Check to confirm: discard the Oyelana-shaped distractor",
         "reason": "Oyelana is the cautious voice and Audu is the persuader. The stem asks you to be persuaded, so give Audu’s position; when stuck, reread the stem for the word “persuade”",
         "result": "Audu’s remittance argument, not Oyelana’s pounds-are-spent-in-pounds caution"
        }
@@ -8634,7 +8760,7 @@
         "result": "His first jobs were freight loading, then correctional service"
        },
        {
-        "operation": "Rule out younger migrants with softer jobs",
+        "operation": "Check to confirm: rule out younger migrants with softer jobs",
         "reason": "Jare and Hope fit dignity but not the age rule. Every adjective in a JAMB stem is a filter; when stuck, reread “age grants no exemption”. Only a man with a stated age fits",
         "result": "Akindele: the fifty-five-year-old in manual labour"
        }
@@ -8829,6 +8955,12 @@
         "operation": "State the consequence in one clause",
         "reason": "JAMB wants a full answer, not a fragment. Both DNA and refusal together; when stuck, recall that the embassy said “refused”",
         "result": "The visa was refused; the family never survived the fallout"
+       },
+       {
+        "operation": "Check to confirm: re-read the stem against the chosen answer",
+        "reason": "The stem asks for the reason, not the fallout, so an answer naming only the refusal cannot carry it.",
+        "result": "“The embassy refused the visa” loses (it is the refusal, not the reason), “the missing son at 11:55 p.m.” loses (it is the Ignatius thread, not the visa), and the DNA verdict stands (the test showed Ibe is not Favour’s father).",
+        "predictPrompt": "Which thread does the tempting option borrow from, and why must it lose?"
        }
       ]
      }
@@ -9021,6 +9153,12 @@
         "operation": "Close with the conclusion the accountant gave the MD",
         "reason": "JAMB’s answer key rewards the whole arc, suspicion, evidence, verdict, the verdict is the mark; when stuck, recall nobody was stealing",
         "result": "The cars were honest cooperative purchases, no embezzlement"
+       },
+       {
+        "operation": "Check to confirm: re-read the stem against the chosen answer",
+        "reason": "The stem asks for the official account; the suspicion was overturned by the books, so an answer without the loans is not the account.",
+        "result": "“The school’s money leaked into staff cars” loses (it is the suspicion, disproved), “a ₦95m purse” alone loses (the loans are missing), and “over ₦50m loaned from the cooperative, repaid at source” stands.",
+        "predictPrompt": "Which half of the official account is the tempting option missing?"
        }
       ]
      }
@@ -9210,7 +9348,7 @@
         "result": "Singular-governed constructions: the verb agrees with the first noun"
        },
        {
-        "operation": "Apply it to the sentence to confirm the answer",
+        "operation": "Check to confirm: apply it to the sentence",
         "reason": "Proof beats memory. Test the rule on the sentence; JAMB designs distractors around “comes/come”; when stuck, ask yourself who leads: Ade, and it’s “comes”",
         "result": "“Comes” agrees with Ade: Fafore was right all along"
        }
@@ -9409,6 +9547,12 @@
         "operation": "Note who refused and why, in one clause",
         "reason": "The question may follow up, practise finishing the fact, JAMB loves the pair: correction refused because it’s “divinely inspired”; when stuck, recall Meko’s CAC and Ministry line",
         "result": "Meko refused: “divinely inspired”, CAC registration, Ministry backing"
+       },
+       {
+        "operation": "Check to confirm: re-read the stem against the chosen answer",
+        "reason": "The stem asks what Bepo wanted, so Meko’s refusal, the sequel, cannot be the answer.",
+        "result": "“CAC and Ministry backing makes the name divine” loses (it is Meko’s defence, not Bepo’s correction), “Group of School stays as printed” loses (it is the error itself), and “Group of Schools” stands.",
+        "predictPrompt": "Which option is the sequel rather than the ask?"
        }
       ]
      }
@@ -9602,6 +9746,12 @@
         "operation": "State who demanded what afterwards",
         "reason": "Walk-outs come with aftermaths. JAMB often pairs them. Ogba’s demand for published apologies is next; when stuck, recall the APC and PDP families and their refusal",
         "result": "Ogba demands published apologies; Banky’s parents refuse"
+       },
+       {
+        "operation": "Check to confirm: re-read the stem against the chosen answer",
+        "reason": "The stem asks for the trigger; the history and the aftermath are context and sequel, not cause.",
+        "result": "“His family lost the JSS 3 hip-hop final 3-2” loses (it is the backdrop, not the trigger), “Ogba demanded published apologies” loses (that came after the walk-out), and “son of an ex-convict” stands as the cause.",
+        "predictPrompt": "Which option is the sequel rather than the spark?"
        }
       ]
      }
@@ -9795,6 +9945,12 @@
         "operation": "State what this overturns in his life plan",
         "reason": "The realisation has a job, to kill the London arithmetic, so answer the “how” with the collapse, not with his feelings; when stuck, recall that the ₦6 million quietly dies",
         "result": "His japa arithmetic breaks; only the question of staying remains"
+       },
+       {
+        "operation": "Check to confirm: re-read the stem against the chosen answer",
+        "reason": "The stem asks how the visit changed him; a feeling alone or the surviving plan cannot carry the change.",
+        "result": "“He cried at the Point of No Return” loses (it is the setting, not the change), “his japa arithmetic survives” loses (the opposite of what the visit did), and “japa means chains on the economy, so the London plan dies” stands.",
+        "predictPrompt": "Which option keeps the old arithmetic alive, and why must it lose?"
        }
       ]
      }
@@ -9987,6 +10143,12 @@
         "operation": "State what the Ibadan route delivered",
         "reason": "Why-questions want the comparison, civil Ibadan against mad Lagos, the orderliness is the point; when stuck, recall the civil queues, the 6 a.m., the NIN and the three weeks",
         "result": "Civil queues, 6 a.m. arrival, three-week capture, all impossible in Lagos"
+       },
+       {
+        "operation": "Check to confirm: re-read the stem against the chosen answer",
+        "reason": "The stem asks why Lagos failed, so the connector’s name or the Ibadan benefits alone misses the contrast.",
+        "result": "“Tai, a friend-of-a-friend with a direct line” loses (it answers how Ibadan opened, not why Lagos failed), “civil queues from 6 a.m.” loses (it is the result), and “the Lagos office was maddeningly crowded” stands as the why.",
+        "predictPrompt": "Which option answers how, and which one answers why?"
        }
       ]
      }
@@ -10180,6 +10342,12 @@
         "operation": "State the meaning the MD draws from it",
         "reason": "The exam loves the story’s meaning, not just the events: “earned his trust on the spot” is the point; when stuck, recall the pillar-qualities she names next",
         "result": "Aje trusted Bepo on character, not interview performance"
+       },
+       {
+        "operation": "Check to confirm: re-read the stem against the chosen answer",
+        "reason": "The stem asks for the hiring itself; the meaning the MD draws from it is the sequel, not the steps.",
+        "result": "“He earned Aje’s trust on the spot” loses (it is the MD’s meaning, not the hiring), “an interview panel verdict” loses (there was no interview he attended), and “applied, never showed, a chat, eight days” stands.",
+        "predictPrompt": "Which option is the moral rather than the method?"
        }
       ]
      }
@@ -10373,6 +10541,12 @@
         "operation": "Name the announcement that resolves it",
         "reason": "JAMB expects both halves, the warning, then the shouts, and the shouts are the answer; when stuck, recall “I’m back! I didn’t go!”",
         "result": "The shouts at the gate: he is back, and the school erupts"
+       },
+       {
+        "operation": "Check to confirm: re-read the stem against the chosen answer",
+        "reason": "The stem asks what Monday’s students notice; the correct option names the warning, not the announcement.",
+        "result": "“I’m back! I didn’t go!” loses as the answer to an immediately question (it is the announcement that closes the day), a Saturday option loses (wrong day), and the classroom absentee trend stands (the quiet rooms warn the students before anyone speaks).",
+        "predictPrompt": "Which of the two halves answers an “immediately” question?"
        }
       ]
      }

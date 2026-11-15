@@ -417,6 +417,12 @@
         "reason": "Government acts for the state. The state never acts for the government.",
         "result": "Option C is correct.",
         "predictPrompt": "How would you check this answer against the evidence?"
+       },
+       {
+        "operation": "Check to confirm: re-run both filters on all four options",
+        "reason": "A second pass catches a lucky C; B is the tempting read and the direction filter breaks it, since B makes the state the machinery",
+        "result": "A and D fail permanence, B fails direction, so C stands",
+        "predictPrompt": "Which filter does option B fail?"
        }
       ]
      }
@@ -643,7 +649,7 @@
         "predictPrompt": "What would a weaker answer look like here?"
        },
        {
-        "operation": "Reject the agents",
+        "operation": "Check to confirm: reject the agents",
         "reason": "The judiciary, executive and armed forces exercise authority but do not own it.",
         "result": "The state is the answer.",
         "predictPrompt": "How would you test this answer before writing it down?"
@@ -853,6 +859,12 @@
         "reason": "A council of officers ruling without the constitution is a military junta.",
         "result": "(c) Military junta.",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: match each case to its signature feature",
+        "reason": "The near-miss labels are absolute monarchy, oligarchy and democracy; each signature breaks the mislabel",
+        "result": "(a) Parliament governs, so constitutional not absolute monarchy; (b) age alone qualifies, so gerontocracy not oligarchy; (c) constitution suspended, so junta",
+        "predictPrompt": "Which near-miss ruins (a)?"
        }
       ]
      }
@@ -1085,7 +1097,7 @@
         "predictPrompt": "What would a weaker answer look like here?"
        },
        {
-        "operation": "Reject the alternatives",
+        "operation": "Check to confirm: reject the alternatives",
         "reason": "Courts do not sign bills and governors do not assent to federal bills.",
         "result": "Option B is correct.",
         "predictPrompt": "How would you prove this claim to a sceptic?"
@@ -1311,6 +1323,12 @@
         "reason": "A codified text amendable by ordinary law is written but flexible.",
         "result": "(c) Written and flexible.",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: test each against form and amendment",
+        "reason": "Flexible is about amendment, not form; swapping the two questions swaps (a) and (c)",
+        "result": "(a) one codified text plus special majority: written and rigid; (b) no single text: unwritten; (c) codified but amendable by ordinary Act: written and flexible",
+        "predictPrompt": "What separates (a) from (c)?"
        }
       ]
      }
@@ -1545,6 +1563,12 @@
         "reason": "An Emir appointing officials and a judge under Islamic law is the Hausa/Fulani emirate.",
         "result": "(c) Hausa/Fulani system.",
         "predictPrompt": "How would you sanity-check this answer against the evidence?"
+       },
+       {
+        "operation": "Check to confirm: match each scene to its tell",
+        "reason": "One tell each; force a scene into the wrong system and the tell snaps",
+        "result": "(a) Alaafin plus Oyomesi: Yoruba; (b) assembly consensus: Igbo; (c) Emir plus Alkali: Hausa/Fulani; reading (b) as a monarchy fails the consensus tell",
+        "predictPrompt": "Which tell breaks if (b) becomes a monarchy?"
        }
       ]
      }
@@ -1753,6 +1777,12 @@
         "reason": "Several parties winning seats and forming coalitions is multi-party; repeated victory by one competitor is dominant-party.",
         "result": "(c) Multi-party system; (d) dominant-party system.",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: sort all four by their signatures",
+        "reason": "The traps are dominant versus one-party and multi versus two-party; each swap breaks its signature",
+        "result": "(a) no choice: one-party; (b) alternation: two-party; (c) coalition from several parties: multi-party; (d) one victor, others competing: dominant-party",
+        "predictPrompt": "What separates (d) from (a)?"
        }
       ]
      }
@@ -1985,6 +2015,12 @@
         "reason": "Aid is an economic instrument intended to build influence and goodwill.",
         "result": "(d) Economic instrument.",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: name the tool, not the motive",
+        "reason": "Instrument names how Nigeria acts; boycott-as-legal and aid-as-military are the standard slips",
+        "result": "(a) court action: legal; (b) Games withdrawal: symbolic; (c) troops under a regional mandate: military/peacekeeping; (d) aid: economic",
+        "predictPrompt": "Which instrument uses withdrawal without a lawsuit?"
        }
       ]
      }
@@ -2219,6 +2255,12 @@
         "reason": "A citizen by birth may hold another citizenship without losing Nigerian citizenship.",
         "result": "(c) Still a Nigerian citizen.",
         "predictPrompt": "How would you check this answer against the evidence?"
+       },
+       {
+        "operation": "Check to confirm: run each person through their route test",
+        "reason": "Residence alone never confers citizenship; without the oath the trader stays a resident",
+        "result": "(a) birth in Nigeria to citizen parents: birth, section 25; (b) sixteen years plus good character plus the oath: naturalisation; (c) dual passport keeps Nigerian citizenship",
+        "predictPrompt": "Does a second passport end Nigerian citizenship?"
        }
       ]
      }
@@ -2447,6 +2489,12 @@
         "reason": "Ultranationalism, a single leader and rule by force are fascist.",
         "result": "(c) Fascism.",
         "predictPrompt": "How would you test this answer before writing it down?"
+       },
+       {
+        "operation": "Check to confirm: pair each claim with its kernel",
+        "reason": "Communalism is not socialism and fascism is not nationalism; one tell each keeps them apart",
+        "result": "(a) lineage land worked in common: communalism; (b) state owns banks, plans output: socialism; (c) leader, ultranationalism, force: fascism",
+        "predictPrompt": "Which ideology gives banks to the state?"
        }
       ]
      }
@@ -2676,6 +2724,12 @@
         "reason": "Sovereign states delegating a few powers to a weak centre form a confederation.",
         "result": "(c) Confederal.",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: ask who is allowed to abolish whom",
+        "reason": "Federal and confederal both have levels, but only the confederal centre cannot command; that is the trap",
+        "result": "(a) Westminster abolishes councils by ordinary law: unitary; (b) constitution splits federal and state powers: federal; (c) states keep sovereignty, weak centre: confederal",
+        "predictPrompt": "What could a state keep that a British council cannot?"
        }
       ]
      }
@@ -2913,6 +2967,12 @@
         "reason": "Federal supremacy applies only where the laws are inconsistent.",
         "result": "The state may add stricter rules that do not contradict the federal standard.",
         "predictPrompt": "How would you sanity-check this answer against the evidence?"
+       },
+       {
+        "operation": "Check to confirm: re-run the rule with a fresh case",
+        "reason": "‘Federal always wins’ is the trap; supremacy bites only the inconsistent part, nothing more",
+        "result": "A stricter state rule that does not clash stands; only the clash point goes federal",
+        "predictPrompt": "Does the state drop the whole law or only the clash?"
        }
       ]
      }
@@ -3111,6 +3171,12 @@
         "reason": "A centre that cannot tax or command its units is confederal, a structure rather than a system.",
         "result": "(c) Confederal structure.",
         "predictPrompt": "How would you test this answer before writing it down?"
+       },
+       {
+        "operation": "Check to confirm: find where the executive sits",
+        "reason": "‘A monarch means presidential’ is the trap; the test is where the executive sits",
+        "result": "(a) president elected separately: presidential; (b) PM from majority party under a monarch: parliamentary, constitutional monarchy; (c) centre cannot tax or command: confederal structure",
+        "predictPrompt": "In the United Kingdom, who is head of government?"
        }
       ]
      }
@@ -3332,6 +3398,12 @@
         "reason": "Local government staff belong to the public service, not the civil service.",
         "result": "(c) Public servant, not a civil servant.",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: sort by who signs the pay cheque",
+        "reason": "A separate legal person is the trap; ministry is the core civil service, corporation and council sit in the public service",
+        "result": "(a) ministry staff: civil service; (b) separate legal corporation: public servant, not civil servant; (c) council staff: public service, not civil service",
+        "predictPrompt": "Is the corporation accountant a civil servant?"
        }
       ]
      }
@@ -3561,6 +3633,12 @@
         "reason": "A minister answering for his own department is individual responsibility.",
         "result": "(c) Individual responsibility.",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: name who is checking whom, in which direction",
+        "reason": "Collective versus individual is the trap on (c): cabinet sign-up would be collective, one department is not",
+        "result": "(a) court order over a jailer: rule of law, habeas corpus; (b) Senate over presidential nominee: checks and balances; (c) own department only: individual responsibility",
+        "predictPrompt": "What separates individual from collective responsibility?"
        }
       ]
      }
@@ -3759,6 +3837,12 @@
         "reason": "A new ruling council signals a change of regime within military rule, not a return to civilian government.",
         "result": "(c) A new military regime.",
         "predictPrompt": "How would you prove this claim to a sceptic?"
+       },
+       {
+        "operation": "Check to confirm: ask what each event does to the constitution",
+        "reason": "A renamed council feels like change; the trap is reading (c) as a handover, which only (b) is",
+        "result": "(a) constitution suspended, decree announced: military intervention; (b) timetable restores elections: disengagement; (c) council renamed: a new military regime",
+        "predictPrompt": "Which of the three restores elections?"
        }
       ]
      }
@@ -3987,6 +4071,12 @@
         "reason": "A state government dissolving an elected council is state supervision, and a common source of conflict.",
         "result": "(c) State control over local government.",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: sort the acts by who holds the power",
+        "reason": "Emir-as-government is the trap; an Emir advises, councillors decide, only the state dissolves",
+        "result": "(a) chairman and councillors on the budget: local government decision-making; (b) Emir mediating: advisory role; (c) governor dissolving an elected council: state control",
+        "predictPrompt": "Who actually dissolves an elected council?"
        }
       ]
      }
@@ -4215,6 +4305,12 @@
         "reason": "A condition with a deadline is the pressure group's last warning before action.",
         "result": "(d) Pressure-group ultimatum.",
         "predictPrompt": "How would you explain why this beats the other options?"
+       },
+       {
+        "operation": "Check to confirm: ask what each actor wants",
+        "reason": "Manifesto-as-pressure is the trap; a manifesto is a ballot, not leverage",
+        "result": "(a) strike on fuel prices: pressure; (b) NBA petition: pressure; (c) APC rally for a manifesto to govern: party; (d) ultimatum with a deadline: pressure",
+        "predictPrompt": "Which of the four wants votes rather than influence?"
        }
       ]
      }
@@ -4443,6 +4539,12 @@
         "reason": "Choosing a party's candidate before the general election is a primary.",
         "result": "(d) Primary election.",
         "predictPrompt": "How would you sanity-check this answer against the evidence?"
+       },
+       {
+        "operation": "Check to confirm: name what is chosen and by how many",
+        "reason": "A primary is not an election of the people; a referendum is not one either; scale and act decide",
+        "result": "(a) direct vote on the constitution: referendum; (b) every seat at once: general election; (c) single vacancy after a death: bye-election; (d) party candidate: primary",
+        "predictPrompt": "Which act chooses a person inside one party only?"
        }
       ]
      }
@@ -4641,6 +4743,12 @@
         "reason": "The Commonwealth can suspend a member over human-rights abuses, as it did to Nigeria in 1995.",
         "result": "(d) The Commonwealth.",
         "predictPrompt": "How would you prove this claim to a sceptic?"
+       },
+       {
+        "operation": "Check to confirm: match each dispute to the body’s actual mandate",
+        "reason": "ICJ-as-peacekeeping is the trap; courts settle disputes, missions keep peace, cartels set quotas",
+        "result": "(a) ICJ; (b) ECOWAS via ECOMOG; (c) OPEC; (d) Commonwealth, as in 1995",
+        "predictPrompt": "Which body can suspend a member over human rights?"
        }
       ]
      }
@@ -4866,6 +4974,12 @@
         "reason": "Each step widened Nigerian participation and moved power from the governor to elected ministers and regional premiers.",
         "result": "The sequence runs from a nominated council to a federation ready for independence.",
         "predictPrompt": "How would you prove this claim to a sceptic?"
+       },
+       {
+        "operation": "Check to confirm: line the four constitutions up by date",
+        "reason": "Macpherson-before-Richards is the recurring mix-up; ministerial government came after regions, federal confirmation last",
+        "result": "Clifford 1922, elective principle; Richards 1946, regions; Macpherson 1951, ministerial government; Lyttleton 1954, federal structure confirmed",
+        "predictPrompt": "Which constitution followed Macpherson?"
        }
       ]
      }
@@ -5060,7 +5174,7 @@
         "predictPrompt": "Why is the regulator’s rule not an Act?"
        },
        {
-        "operation": "Check the pecking order",
+        "operation": "Check to confirm: the pecking order",
         "reason": "Delegated legislation stays within its parent Act; a state law cannot override an Act; a Decree could override everything.",
         "result": "(a) Act; (b) delegated legislation; (c) state law; (d) Decree.",
         "predictPrompt": "What happens to a regulator’s rule that contradicts its Act?"
@@ -5258,6 +5372,12 @@
         "reason": "Polls carry margins of error; referenda are decisive but rare; protests and letters are vivid but partial.",
         "result": "All four are legitimate measures, with different strengths and biases.",
         "predictPrompt": "Why can a protest not be read as the whole country speaking?"
+       },
+       {
+        "operation": "Check to confirm: cross-check each method against its known bias",
+        "reason": "Intensity versus representativeness is the trap; marches are vivid but never the whole country",
+        "result": "(a) poll, sampled with a margin of error; (b) referendum, decisive; (c) protest, intense not representative; (d) letters, the articulate few",
+        "predictPrompt": "Does a petition carry a margin of error?"
        }
       ]
      }
@@ -5452,6 +5572,12 @@
         "reason": "Britain leaned on missionaries for southern education; France ran secular state schools for French-speaking citizens.",
         "result": "(iv) Mission education in the South vs secular French schooling.",
         "predictPrompt": "Whose exports did the railways serve?"
+       },
+       {
+        "operation": "Check to confirm: re-sort each row against how the two rule",
+        "reason": "Direct-everywhere is the trap; indirect rule needed an existing ruler, direct rule none",
+        "result": "(i) indirect via Native Administrations vs French commandants; (ii) Emirs kept vs rulers marginalised; (iii) subjects vs assimilado route; (iv) mission education vs secular French schooling",
+        "predictPrompt": "Where did indirect rule find its rulers?"
        }
       ]
      }
@@ -5641,7 +5767,7 @@
         "predictPrompt": "Who became Governor-General of Nigeria?"
        },
        {
-        "operation": "Beat the standard traps",
+        "operation": "Check to confirm: beat the standard traps",
         "reason": "Exams swap men and platforms; the fix is one man, one platform.",
         "result": "Macaulay-NNDP; Azikiwe-NCNC; Awolowo-AG; Kano-NEPU.",
         "predictPrompt": "Who became Prime Minister at independence?"
@@ -5839,6 +5965,12 @@
         "reason": "Carry: the Political Bureau, the CRC, the Assembly, the two-party imposition and the 1993 annulment.",
         "result": "Model: a military-supervised revision of 1979 under an imposed two-party system, never in full force after the 1993 annulment.",
         "predictPrompt": "How would you test a classmate’s rewrite?"
+       },
+       {
+        "operation": "Check to confirm: test the rewrite against the two pins",
+        "reason": "‘Direct adoption’ and ‘free multi-party’ both fail on the pins: Bureau, decreed pair, 1993",
+        "result": "Holds only if it keeps a military-supervised revision under two decreed parties, SDP and NRC, never in full force after 1993; both borrowed phrases fall",
+        "predictPrompt": "Which two phrases must any rewrite avoid?"
        }
       ]
      }
@@ -6034,6 +6166,12 @@
         "reason": "If the Act or its execution breaks the constitution, the courts can strike it down or restrain it.",
         "result": "Referee: the judiciary, via judicial review, the Supreme Court last.",
         "predictPrompt": "What makes the Supreme Court the final stop?"
+       },
+       {
+        "operation": "Check to confirm: trace the money once more, fresh eyes",
+        "reason": "Proposer and approver swapped is the classic slip; three stations spend, the courts halt",
+        "result": "President and FEC propose, National Assembly passes the Appropriation Act, Civil Service MDAs execute, courts can halt it, the Supreme Court last",
+        "predictPrompt": "Who can finally halt an unconstitutional Act?"
        }
       ]
      }
@@ -6231,6 +6369,12 @@
         "reason": "EFCC (2003) investigates financial crimes and money laundering; the Judicial Service Commission advises on appointments and discipline of judges.",
         "result": "(c) EFCC; (d) Judicial Service Commission.",
         "predictPrompt": "How would you separate ICPC from EFCC if the options blur them?"
+       },
+       {
+        "operation": "Check to confirm: run each task through its commission’s keywords",
+        "reason": "EFCC-as-ICPC is the blur; money laundering is the EFCC (2003), declarations the Code of Conduct Bureau (1990)",
+        "result": "(a) rerun: INEC; (b) declaration: Code of Conduct Bureau; (c) transfers: EFCC; (d) judges: Judicial Service Commission",
+        "predictPrompt": "Which commission watches asset declarations?"
        }
       ]
      }
@@ -6421,7 +6565,7 @@
         "predictPrompt": "What were the three merging parties?"
        },
        {
-        "operation": "Check ideology quickly",
+        "operation": "Check to confirm: ideology quickly",
         "reason": "NPC conservative, SDP centre-left, APC big tent, NPP progressive-Eastern. Ideology separates lookalikes.",
         "result": "Answers hold: NPC, SDP, APC, NPP.",
         "predictPrompt": "How would you answer if the options swapped GNPP and PRP?"
@@ -6615,6 +6759,12 @@
         "reason": "All three were loss-making and politically staffed; control on paper rarely matched control in practice.",
         "result": "Same skeleton: specific purpose, statutory basis, ministerial control, weak discipline.",
         "predictPrompt": "What would privatisation change that board oversight could not?"
+       },
+       {
+        "operation": "Check to confirm: re-test each body against its purpose and statute",
+        "reason": "Ministerial-as-corporation is the trap; separate legal person plus statute is what makes a corporation",
+        "result": "(a) PHCN before 2013: statutory utility, PAC; (b) water board: municipal-type, assembly audit; (c) NNPC: corporation with parastatal reach, Auditor General and Assembly committees",
+        "predictPrompt": "Which money trail ends at the Public Accounts Committee?"
        }
       ]
      }
@@ -6807,6 +6957,12 @@
         "reason": "Both express Balewa's rules: great powers on Nigeria's terms, Africa first through solidarity.",
         "result": "Same doctrine, two instruments: hard bargaining with powers, soft power with Africa.",
         "predictPrompt": "Which exam word covers all of them?"
+       },
+       {
+        "operation": "Check to confirm: re-sort by who the partner is",
+        "reason": "Visa-bans-as-solidarity is the trap; sanctions are power-to-power, TAC and ECOMOG Africa first",
+        "result": "(a) Chinese loan, US visa bans on Abacha officials: major powers; (b) TAC volunteers in Gambia, ECOMOG in Liberia: developing countries",
+        "predictPrompt": "Are US visa bans power-to-power or solidarity?"
        }
       ]
      }
@@ -6999,6 +7155,12 @@
         "reason": "ECOMOG is the ECOWAS Ceasefire Monitoring Group, deployed in Liberia from 1990 and in Sierra Leone in the late 1990s.",
         "result": "(c) ECOWAS, under its 1975 Lagos treaty mandate.",
         "predictPrompt": "Which body absorbed the OAU in 2002?"
+       },
+       {
+        "operation": "Check to confirm: re-anchor each fact to its date and author",
+        "reason": "Wrong name or year is the trap; 1963 Balewa, five NEPAD heads, ECOWAS mandate",
+        "result": "(a) Tafawa Balewa, 1963; (b) Nigeria, South Africa, Algeria, Egypt, Senegal; (c) ECOWAS, under its 1975 Lagos treaty mandate",
+        "predictPrompt": "Whose 1963 statement do all successors keep?"
        }
       ]
      }
@@ -7190,6 +7352,12 @@
         "reason": "Nigeria helped birth ECOWAS, sits at the AU leadership table, joined the Commonwealth before independence, joined OPEC in 1971, and co-founded APPA in Lagos.",
         "result": "Nigeria is a founder, a member or a leader in all six.",
         "predictPrompt": "Which one can suspend Nigeria if democracy breaks?"
+       },
+       {
+        "operation": "Check to confirm: re-sort with the region, reach and product tests",
+        "reason": "Region, reach and product: three questions, one answer each; APPA is the deliberate double answer",
+        "result": "(a) AU, ECOWAS, APPA; (b) UNO, Commonwealth; (c) OPEC and APPA; Nigeria is founder or leader in all six",
+        "predictPrompt": "Which one sits in two boxes?"
        }
       ]
      }

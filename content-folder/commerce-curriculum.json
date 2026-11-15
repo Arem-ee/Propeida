@@ -292,7 +292,7 @@
                 "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
-                "operation": "Reject production",
+                "operation": "Check to confirm: reject production",
                 "reason": "Production creates goods; commerce moves and supports them.",
                 "result": "The answer is B, insurance.",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
@@ -517,6 +517,12 @@
                 "reason": "Electronic advertising is e-business, not e-commerce.",
                 "result": "The answer is C.",
                 "predictPrompt": "How would you explain why this beats the other options?"
+              },
+              {
+                "operation": "Check to confirm: trace the sale, not the advert",
+                "reason": "A website closes nothing by itself; A and B would fail because publicity is e-business, not e-commerce.",
+                "result": "A and B fail: a website and electronic advertising never complete a sale. D fails: e-commerce needs an online transaction, not an app. C stands: orders by phone, paid in cash, never touch a network.",
+                "predictPrompt": "Where exactly does the sale close in this story?"
               }
             ]
           }
@@ -736,7 +742,7 @@
                 "predictPrompt": "What would a weaker answer look like here?"
               },
               {
-                "operation": "Reject service",
+                "operation": "Check to confirm: reject service",
                 "reason": "A service is rendered directly to a client; she sells goods to buyers.",
                 "result": "The answer is C, commercial.",
                 "predictPrompt": "How would you explain why this beats the other options?"
@@ -949,7 +955,7 @@
                 "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
-                "operation": "Reject building and trade",
+                "operation": "Check to confirm: reject building and trade",
                 "reason": "The firm neither builds a fixed asset nor merely resells the cassava.",
                 "result": "The answer is B, manufacturing.",
                 "predictPrompt": "How would you test this answer before writing it down?"
@@ -1120,7 +1126,7 @@
                 "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
-                "operation": "Reject service",
+                "operation": "Check to confirm: reject service",
                 "reason": "A service is rendered directly to a client; she sells goods to buyers.",
                 "result": "The answer is C, commercial.",
                 "predictPrompt": "How would you prove this claim to a sceptic?"
@@ -1261,7 +1267,7 @@
                 "predictPrompt": "What would a weaker answer look like here?"
               },
               {
-                "operation": "Match the pair",
+                "operation": "Check to confirm: match the pair",
                 "reason": "Only option B names government policy and demand.",
                 "result": "The answer is B.",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
@@ -1409,6 +1415,12 @@
                 "reason": "Capital supplied for a payment receives interest as its return.",
                 "result": "The answer is C, interest.",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Check to confirm: match each reward to its factor",
+                "reason": "Each factor owns exactly one reward, so a wrong match fails on its own name; profit is for risk, not ownership.",
+                "result": "A rent pays for land, not equipment. B wages pay labour, the farmer’s men, not the tractor owner. D profit rewards the farmer for bearing the yam risk, not the lender. The tractor is capital, so C, interest, stands.",
+                "predictPrompt": "Which reward does each of the other factors earn?"
               }
             ]
           }
@@ -1602,6 +1614,12 @@
                 "reason": "Divisibility allows small change from one unit of money.",
                 "result": "The answer is B, divisibility.",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Check to confirm: run the defect test on each option",
+                "reason": "Good money must circulate widely and keep value; the three defects fail by their own names.",
+                "result": "A perishability fails: good money is durable. C limited acceptance fails: good money is generally acceptable. D instability fails: good money keeps stable value. B stands: divisibility lets one unit give small change.",
+                "predictPrompt": "Which of the four would you happily take as payment?"
               }
             ]
           }
@@ -1792,7 +1810,7 @@
                 "predictPrompt": "How would you choose between the possible routes?"
               },
               {
-                "operation": "Choose the company",
+                "operation": "Check to confirm: choose the company",
                 "reason": "Only the limited company combines limited liability with separate identity.",
                 "result": "The answer is C, limited liability company.",
                 "predictPrompt": "How would you prove this claim to a sceptic?"
@@ -1986,7 +2004,7 @@
                 "predictPrompt": "How would you choose between the possible routes?"
               },
               {
-                "operation": "Choose the answer",
+                "operation": "Check to confirm: choose the answer",
                 "reason": "Ten towns under one control match chain retail",
                 "result": "The answer is C, chain store.",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
@@ -2183,6 +2201,12 @@
                 "reason": "A positive goods surplus is favourable",
                 "result": "The answer is B, surplus 2.",
                 "predictPrompt": "How would you prove this claim to a sceptic?"
+              },
+              {
+                "operation": "Check to confirm: recompute from the imports side and test the sign",
+                "reason": "Magnitude rules out 16 (that is 9 + 7, a sum, not a difference); the sign rules out a deficit, and the imports-side recomputation must agree.",
+                "result": "9 − 7 = 2, a positive result; 7 − 9 = −2, a deficit of minus 2, the same verdict twice. A fails the sign. C and D fail the magnitude, since 16 counts the goods twice. B, surplus 2, stands.",
+                "predictPrompt": "If imports were 11 and exports 7, what would the balance be?"
               }
             ]
           }
@@ -2379,6 +2403,12 @@
                 "reason": "Subtract cash discount to get final amount owed",
                 "result": "₦180,000 − ₦9,000 = ₦171,000 payable",
                 "predictPrompt": "How would you explain why this beats the other options?"
+              },
+              {
+                "operation": "Check to confirm: rebuild the figures backwards and via the combined rate",
+                "reason": "Two independent routes must land on 171,000, and they expose the tempting 170,000 as double counting the list price.",
+                "result": "Backwards: 171,000 + 9,000 = 180,000, then 180,000 + 20,000 = 200,000, exactly the list price, with 20,000/200,000 = 10% and 9,000/180,000 = 5%. Also 200,000 × 0.9 × 0.95 = 171,000. The tempting 170,000 applies 15% to the list price, but cash discount bites after trade discount. 171,000 payable stands.",
+                "predictPrompt": "Why does the cash discount fall on 180,000 and not on 200,000?"
               }
             ]
           }
@@ -2578,6 +2608,12 @@
                 "reason": "Net profit is the final earning after all deductions",
                 "result": "Gross ₦1,300,000; net ₦500,000",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
+              },
+              {
+                "operation": "Check to confirm: cross-foot the profit ladder backwards",
+                "reason": "Deductions plus net profit must rebuild turnover exactly; any slip shows up as a remainder that refuses to close.",
+                "result": "Deductions total 2,200,000 + 800,000 = 3,000,000; 3,500,000 − 3,000,000 = 500,000, matching net profit. Cross-foot: 2,200,000 + 1,300,000 = 3,500,000 and 1,300,000 − 800,000 = 500,000, both exact. Forgetting expenses gives the tempting 1,300,000 net; deducting them twice starves gross to 500,000. Gross 1,300,000, net 500,000 stands.",
+                "predictPrompt": "Fastest way to prove 1,300,000 − 800,000 = 500,000?"
               }
             ]
           }
@@ -2777,6 +2813,12 @@
                 "reason": "It creates awareness and induces demand for the soap",
                 "result": "Advertising meets the need",
                 "predictPrompt": "How would you explain why this beats the other options?"
+              },
+              {
+                "operation": "Check to confirm: walk every other aid past the same test",
+                "reason": "The need is mass awareness at low cost; any aid that cannot reach the whole country cheaply fails, however useful it is elsewhere.",
+                "result": "Transport moves the soap but tells nobody. Warehousing stores it in silence. Banking finances the trader; insurance covers risk; communication reaches individuals one at a time, not millions at once. Only radio advertising meets the test: national reach, low cost per buyer, and it creates the demand. Radio advertising stands.",
+                "predictPrompt": "Could any other single aid tell the whole country for less?"
               }
             ]
           }
@@ -2986,6 +3028,12 @@
                 "reason": "Indemnity restores the trader to the former position",
                 "result": "Payment covers actual loss",
                 "predictPrompt": "How would you prove this claim to a sceptic?"
+              },
+              {
+                "operation": "Check to confirm: re-read the claim against the indemnity rule",
+                "reason": "Indemnity means restored, never enriched, so the payout must equal the actual damage; a full-value claim would break the contract.",
+                "result": "Fire is a covered risk, so the claim is sound only for the damaged part. Claiming the whole load would breach indemnity; sitting back and hoping would forfeit the premium already paid. File the claim promptly with evidence; payout equals the real loss, restoring the trader to the former position. Indemnity for the damaged grain only stands.",
+                "predictPrompt": "May the trader keep the undamaged grain and collect full value?"
               }
             ]
           }
@@ -3189,7 +3237,7 @@
                 "predictPrompt": "In your own words, why does this step come before the next one?"
               },
               {
-                "operation": "Rule out the alternatives",
+                "operation": "Check to confirm: rule out the alternatives",
                 "reason": "No different-stage supply link and no unrelated trade is involved.",
                 "result": "The answer is a horizontal merger, not vertical, conglomerate or cartel.",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
@@ -3384,7 +3432,7 @@
                 "predictPrompt": "Which part of the question does this step answer?"
               },
               {
-                "operation": "Contrast with investing",
+                "operation": "Check to confirm: contrast with investing",
                 "reason": "Investing seeks steady income and long term growth of the firm.",
                 "result": "Selling quickly for a price rise shows speculation, not investing.",
                 "predictPrompt": "How would you prove this claim to a sceptic?"
@@ -3580,7 +3628,7 @@
                 "predictPrompt": "Which part of the question does this step answer?"
               },
               {
-                "operation": "Reject the other options",
+                "operation": "Check to confirm: reject the other options",
                 "reason": "Staffing would concern recruitment; controlling compares results, and planning sets goals.",
                 "result": "The answer is A: unity of command, organising.",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
@@ -3782,6 +3830,12 @@
                 "reason": "Premium buyers accept a single location, while deal-seekers need online discounts and delivery.",
                 "result": "Serve the mall segment for experience and the Jumia segment for price and speed.",
                 "predictPrompt": "How would you prove this claim to a sceptic?"
+              },
+              {
+                "operation": "Check to confirm: re-read the two differences against the stem",
+                "reason": "Only the elements the stem actually contrasts may be named, and the response must defend the premium mall niche, not copy the rival.",
+                "result": "Place differs (one mall shop versus Jumia, own shops and Instagram) and promotion differs (silence versus Instagram and Jumia pages); product and price are unstated, so claiming them invents facts. Copying the rival everywhere would blur the premium offer. Premium buyers get the mall experience; deal-seekers get online price and speed. That response stands.",
+                "predictPrompt": "Which two mix elements does the stem honestly give you?"
               }
             ]
           }
@@ -3984,6 +4038,12 @@
                 "reason": "Both adults can contract and the purpose is lawful trading.",
                 "result": "Answer is A: a valid contract exists.",
                 "predictPrompt": "How would you sanity-check this answer against the evidence?"
+              },
+              {
+                "operation": "Check to confirm: tick off the five elements and test each wrong option",
+                "reason": "A contract needs offer, acceptance, consideration, capacity and legality; the wrong options fail on a different element each, or on none.",
+                "result": "Offer: a definite ₦30,000 promise. Acceptance: exact. Consideration: ₦30,000 has value, and adequacy is irrelevant, so low value (D) fails. Capacity: two adults. Legality: lawful trading. Oral form is valid, so B fails; writing proves nothing here, so C fails. A stands: a valid contract exists, spoken or not.",
+                "predictPrompt": "Which element does each wrong option break?"
               }
             ]
           }
@@ -4182,7 +4242,7 @@
                 "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
               },
               {
-                "operation": "Reject the methods",
+                "operation": "Check to confirm: reject the methods",
                 "reason": "Outcry and electronic matching set price but do not store goods.",
                 "result": "Answer is B: warehousing protects the miller.",
                 "predictPrompt": "How would you prove this claim to a sceptic?"
@@ -4391,6 +4451,12 @@
                 "reason": "Legal is rules to obey, but the change came from policy.",
                 "result": "Answer is B: political.",
                 "predictPrompt": "How would you test this answer before writing it down?"
+              },
+              {
+                "operation": "Check to confirm: re-read the trigger word by word against each option",
+                "reason": "The stem names a policy change, and only one option means decisions of government; the rest answer to rules, tastes or customs, none present.",
+                "result": "The trigger is “a policy change”, a decision of government, so B political stands. A legal fails: no rule was obeyed or broken, the rules themselves changed. C social fails: no buyer habits or pressure groups at play. D cultural fails: no values or customs involved.",
+                "predictPrompt": "Which exact words in the stem decided this question?"
               }
             ]
           }
