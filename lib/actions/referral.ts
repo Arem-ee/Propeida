@@ -3,11 +3,20 @@
 import { createClient } from '@/lib/supabase/server'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { revalidatePath } from 'next/cache'
+import { headers } from 'next/headers'
+import { checkRateLimit, getClientIp, rateLimitKey } from '@/lib/rate-limit'
 
 export async function claimReferral(code: string) {
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
   if (!user) throw new Error('Please sign in again')
+
+  // Referral codes are short strings; brute-forcing them must be slower
+  // than the unique constraint can be probed.
+  const headersList = await headers()
+  const ip = getClientIp((name) => headersList.get(name))
+  const { allowed } = await checkRateLimit(rateLimitKey(ip, 'referral-claim'), 10, 60000)
+  if (!allowed) throw new Error('Too many attempts. Please wait a moment')
 
   const { data: profile } = await supabase
     .from('profiles')

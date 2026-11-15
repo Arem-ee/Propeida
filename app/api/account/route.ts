@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { createAdminClient } from '@/lib/supabase/admin'
+import { headers } from 'next/headers'
+import { checkRateLimit, getClientIp, rateLimitKey } from '@/lib/rate-limit'
 
 /**
  * Account deletion. Removes the auth user; every user-owned row cascades
@@ -11,6 +13,14 @@ export async function DELETE() {
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
   if (!user) return NextResponse.json({ error: 'Not authenticated' }, { status: 401 })
+
+  // Destructive and unrecoverable: throttle it like any other mutation.
+  const headersList = await headers()
+  const ip = getClientIp((name) => headersList.get(name))
+  const { allowed } = await checkRateLimit(rateLimitKey(ip, 'account-delete'), 5, 60000)
+  if (!allowed) {
+    return NextResponse.json({ error: 'Too many attempts. Please wait a moment' }, { status: 429 })
+  }
 
   try {
     const admin = createAdminClient()
