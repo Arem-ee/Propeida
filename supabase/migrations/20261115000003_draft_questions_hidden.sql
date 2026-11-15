@@ -34,18 +34,7 @@ create policy "questions are accessible by exam access"
           where e.id = questions.exam_id
             and e.school_id is null
         )
-        or exists (
-          select 1
-          from public.user_exam_free_pools p
-          where p.question_id = questions.id
-            and p.user_id = (select auth.uid())
-        )
-        or exists (
-          select 1
-          from public.user_free_questions p
-          where p.question_id = questions.id
-            and p.user_id = (select auth.uid())
-        )
+        or public.is_own_free_pool_question(questions.id)
         or (
           exists (
             select 1
