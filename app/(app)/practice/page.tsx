@@ -1,5 +1,5 @@
 import { createClient } from '@/lib/supabase/server'
-import { getExamScope, filterExamsForScope, examPathLabel, filterSubjectsForScope, filterExamSubjectMapForScope } from '@/lib/exam-scope'
+import { getExamScope, filterExamsForScope, examPathLabel, filterSubjectsForScope, filterExamSubjectMapForScope, isExamInScope } from '@/lib/exam-scope'
 import Link from 'next/link'
 import PracticeConfig from '@/components/practice/practice-config'
 import { getCampaignStatus } from '@/lib/campaign'
@@ -51,8 +51,17 @@ export default async function PracticePage() {
       supabase.from('user_exam_access').select('exam_id').eq('user_id', user.id),
       supabase.from('profiles').select('subjects_pending').eq('id', user.id).maybeSingle(),
     ])
-    const first = sessions[0]
-    if (first) activeSession = { id: first.id, examName: first.exams.name }
+    // Only the learner's own exam path gets a resume card. A JAMB-focus
+    // learner never sees a Post-UTME nudge in this UI, and vice versa. An
+    // untargeted learner only sees their JAMB sessions; anything else
+    // waits for them to pick a target in onboarding first.
+    const resume = sessions.find((session) => {
+      if (scope?.restricted) {
+        return isExamInScope(scope, session.exam_id)
+      }
+      return session.exams.slug === 'jamb'
+    })
+    if (resume) activeSession = { id: resume.id, examName: resume.exams.name }
     userExamAccessIds = (accessRes.data ?? []).map((a) => a.exam_id)
     subjectsPending = profileRes.data?.subjects_pending ?? false
   }

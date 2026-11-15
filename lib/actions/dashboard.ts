@@ -1,8 +1,9 @@
 'use server'
 
 import { createClient, getAuthUser } from '@/lib/supabase/server'
-import { getDueReviews, getMasterySummary, getSecuredSubjects, getProgressMap, getWeakestSubject } from '@/lib/mastery'
+import { getDueReviews, getMasterySummary, getSecuredSubjects, getWeakestSubject } from '@/lib/mastery'
 import { getUserActiveSessions } from '@/lib/practice'
+import { getExamScope, isExamInScope } from '@/lib/exam-scope'
 import { getNearestCohort } from '@/lib/cohort'
 import { getCachedPresenceStats } from '@/lib/presence'
 import { getNoteById } from '@/lib/notes'
@@ -132,27 +133,30 @@ export async function getDashboardData() {
     verified: boolean
     weeklyActive: number
   } | null = null
-  let progressMap: { subjectId: string; subjectName: string; subjectSlug: string; status: string }[] = []
   let weakest: { subjectId: string; subjectName: string; subjectSlug: string } | null = null
   try {
-    const [due, summary, secured, presenceStats, active, nearest, pmap, weak] = await Promise.all([
+    const [due, summary, secured, presenceStats, active, nearest, weak, scope] = await Promise.all([
       getDueReviews(supabase, user.id),
       getMasterySummary(supabase, user.id),
       getSecuredSubjects(supabase, user.id),
       getCachedPresenceStats(),
       getUserActiveSessions(user.id),
       getNearestCohort(supabase, user.id),
-      getProgressMap(supabase, user.id),
       getWeakestSubject(supabase, user.id),
+      getExamScope(supabase, user.id),
     ])
     dueReviews = due
     mastery = summary
     securedSubjects = secured
     presence = presenceStats
     cohort = nearest
-    progressMap = pmap
     weakest = weak
-    const first = active[0]
+    // Only the learner's own exam path resumes here. A JAMB-focus
+    // learner never sees a Post-UTME nudge in the hero; an untargeted
+    // learner only sees their JAMB sessions.
+    const first = active.find((session) =>
+      scope.restricted ? isExamInScope(scope, session.exam_id) : session.exams.slug === 'jamb',
+    )
     if (first) {
       continueSession = { id: first.id, examName: first.exams.name, mode: first.mode }
     }
@@ -203,7 +207,6 @@ export async function getDashboardData() {
     continueSession,
     continueLesson,
     cohort,
-    progressMap,
     weakest,
   }
 }
