@@ -8,6 +8,7 @@ import {
   type CheckQuestion,
 } from '@/lib/actions/onboarding'
 import { ArrowRight, Check, ArrowLeft } from 'lucide-react'
+import { MathText } from '@/components/lessons/math-text'
 
 type Confidence = 'sure' | 'unsure' | null
 
@@ -170,7 +171,7 @@ export default function DiagnosticPage() {
              </span>
            </div>
            <p className="font-display text-lg sm:text-xl font-medium leading-snug text-black mb-6">
-             {q.questionText}
+             <MathText text={q.questionText} />
            </p>
            <div className="mt-4 space-y-2.5 flex-1">
              {q.options.map((opt) => (
@@ -188,7 +189,7 @@ export default function DiagnosticPage() {
                  }`}>
                    {opt.key}
                  </span>
-                 <span className="text-[15px] font-bold text-black">{opt.text}</span>
+                 <span className="text-[15px] font-bold text-black"><MathText text={opt.text} /></span>
                </button>
              ))}
            </div>

@@ -8,6 +8,7 @@ import { useWins } from '@/components/celebrations/use-wins'
 import { celebrateStreakIfNew } from '@/components/celebrations/streak-celebration'
 import { submitAnswer, completeMockSession } from '@/lib/actions/practice'
 import { celebrate } from '@/lib/celebrate'
+import { MathText } from '@/components/lessons/math-text'
 
 function SafeCalculator({ onClose }: { onClose: () => void }) {
   const [display, setDisplay] = useState('0')
@@ -339,7 +340,9 @@ export default function MockPlayer({
           </span>
         </div>
 
-        <h3 className="font-display text-lg sm:text-xl font-medium leading-snug text-black mb-5">{current.questionText}</h3>
+        <h3 className="font-display text-lg sm:text-xl font-medium leading-snug text-black mb-5">
+          <MathText text={current.questionText} />
+        </h3>
         <div className="space-y-2.5">
           {current.options.map((opt) => {
             const isSel = selections[current.id] === opt.key
@@ -356,7 +359,7 @@ export default function MockPlayer({
                 }`}>
                   {opt.key}
                 </span>
-                <span className="text-[15px] font-bold text-black">{opt.text}</span>
+                <span className="text-[15px] font-bold text-black"><MathText text={opt.text} /></span>
               </button>
             )
           })}

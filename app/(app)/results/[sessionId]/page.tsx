@@ -8,6 +8,7 @@ import { getSessionResults, getMyPlan } from '@/lib/actions/practice'
 import { LoadingCards, ErrorState } from '@/components/ui-states'
 import UpgradeCard from '@/components/paywall/upgrade-card'
 import { WorkedSteps } from '@/components/celebrations/worked-steps'
+import { MathText } from '@/components/lessons/math-text'
 import type { WorkedStep } from '@/lib/lessons'
 
 interface QuestionReview {
@@ -234,7 +235,7 @@ export default function ResultsPage({ params }: { params: Promise<{ sessionId: s
 
                   {open && (
                     <div className="border-t border-gray-100 px-4 py-4 space-y-3 animate-fade-up">
-                      <p className="text-[15px] font-bold text-black leading-snug">{q.questionText}</p>
+                      <p className="text-[15px] font-bold text-black leading-snug"><MathText text={q.questionText} /></p>
                       <div className="space-y-1.5">
                         {q.options.map((opt) => {
                           const mine = opt.key === q.selectedAnswer
