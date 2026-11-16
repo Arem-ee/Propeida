@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { ArrowLeft } from 'lucide-react'
+import 'katex/dist/katex.min.css'
 import { SUBJECTS } from '@/lib/notes'
 import {
   getLessonByPath,
