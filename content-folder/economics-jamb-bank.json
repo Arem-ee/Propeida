@@ -48152,7 +48152,7 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "from",
+      "question": "An excess demand for beans will result from",
       "options": [
         {
           "key": "a",
@@ -48168,11 +48168,7 @@
         },
         {
           "key": "d",
-          "text": "a decrease in the supply of beans Consumer surplus tends to be"
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "a decrease in the supply of beans"
         }
       ],
       "answer": "a",
@@ -48189,7 +48185,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "Fragment only ('from'); no recoverable content, defaulted to basic-concepts."
+      "topicConfidenceNote": "Fragment only ('from'); no recoverable content, defaulted to basic-concepts.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2010-q11",
@@ -48382,7 +48379,7 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "theory is that",
+      "question": "One of the assumptions of ordinal utility theory is that",
       "options": [
         {
           "key": "a",
@@ -48398,11 +48395,7 @@
         },
         {
           "key": "d",
-          "text": "satisfaction is measurable The law of diminishing marginal utility"
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "satisfaction is measurable"
         }
       ],
       "answer": "d",
@@ -48419,7 +48412,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "Fragment only ('theory is that'); named theory not recoverable, defaulted to basic-concepts."
+      "topicConfidenceNote": "Fragment only ('theory is that'); named theory not recoverable, defaulted to basic-concepts.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2010-q13",
@@ -48428,27 +48422,23 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "explains why",
+      "question": "The law of diminishing marginal utility explains why",
       "options": [
         {
           "key": "a",
-          "text": "the slope of a normal demand curve is negative"
+          "text": "the slope of a normal demand curve"
         },
         {
           "key": "b",
-          "text": "an abnormal demand curve slopes upwards"
+          "text": "an abnormal demand curve slopes"
         },
         {
           "key": "c",
-          "text": "the slope of a normal demand curve is positive"
+          "text": "the slope of a normal demand curve"
         },
         {
           "key": "d",
-          "text": "the consumption of inferior goods increases with income If a consumer plans to spend 120k on"
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "the consumption of inferior goods"
         }
       ],
       "answer": "b",
@@ -48465,7 +48455,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "Fragment only ('explains why'); likely continuation of a theory question, not recoverable, defaulted to basic-concepts."
+      "topicConfidenceNote": "Fragment only ('explains why'); likely continuation of a theory question, not recoverable, defaulted to basic-concepts.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2010-q14",
@@ -48520,7 +48511,7 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "curve are changes in",
+      "question": "A set of factors that can shift the supply curve are changes in",
       "options": [
         {
           "key": "a",
@@ -48536,11 +48527,7 @@
         },
         {
           "key": "d",
-          "text": "population, price and taste If the coefficient of price elasticity of"
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "population, price and taste"
         }
       ],
       "answer": "a",
@@ -48557,7 +48544,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "exact - 'A set of factors that can shift the supply curve are changes in...' (weather, price, technology): determinants of supply / changes in supply, syllabus topic 6.1/6.3. Supply-curve shifters, not demand."
+      "topicConfidenceNote": "exact - 'A set of factors that can shift the supply curve are changes in...' (weather, price, technology): determinants of supply / changes in supply, syllabus topic 6.1/6.3. Supply-curve shifters, not demand.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2010-q16",
@@ -48612,27 +48600,23 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "commodity Y, this implies that both commodities are firms",
+      "question": "If commodity X is a by-product of commodity Y, this implies that both commodities are",
       "options": [
         {
           "key": "a",
-          "text": ""
+          "text": "in competitive supply"
         },
         {
           "key": "b",
-          "text": ""
+          "text": "in composite supply"
         },
         {
           "key": "c",
-          "text": "maximizing profits as production increases"
+          "text": "jointly supplied"
         },
         {
           "key": "d",
-          "text": "having an upward-sloping average cost curve The rising portion of the long-run"
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "in excess supply"
         }
       ],
       "answer": "c",
@@ -48649,7 +48633,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "exact - 'If commodity X is a by-product of commodity Y, this implies that both commodities are...' (jointly supplied): joint supply, a type of supply, syllabus topic 6.2."
+      "topicConfidenceNote": "exact - 'If commodity X is a by-product of commodity Y, this implies that both commodities are...' (jointly supplied): joint supply, a type of supply, syllabus topic 6.2.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2010-q22",
@@ -48749,27 +48734,23 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "[ORPHAN — RECOVER BY HAND] competition is that In perfect competition, price s",
+      "question": "One of the characteristics of monopolistic competition is that",
       "options": [
         {
           "key": "a",
-          "text": ""
+          "text": "there is mobility of factors"
         },
         {
           "key": "b",
-          "text": ""
+          "text": "no single seller dominates the market"
         },
         {
           "key": "c",
-          "text": ""
+          "text": "the firms are price-takers"
         },
         {
           "key": "d",
-          "text": ""
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "consumers have perfect knowledge of"
         }
       ],
       "answer": "c",
@@ -48785,7 +48766,8 @@
       "needsManualReview": false,
       "needsFigure": false,
       "parseQuality": "ok",
-      "topicConfidence": "high"
+      "topicConfidence": "high",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2010-q18",
@@ -48794,7 +48776,7 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "is determined by the",
+      "question": "In perfect competition, price is determined by the",
       "options": [
         {
           "key": "a",
@@ -48802,7 +48784,7 @@
         },
         {
           "key": "b",
-          "text": "sellers m"
+          "text": "sellers"
         },
         {
           "key": "c",
@@ -48810,11 +48792,7 @@
         },
         {
           "key": "d",
-          "text": "market . In order two reduce hardship faced by"
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "market"
         }
       ],
       "answer": "d",
@@ -48831,7 +48809,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "exact (stem verified against source paper) - 'In perfect competition, price is determined by the...' (the market): market/forces determining price, syllabus topic 7 (concepts of market and price / equilibrium price). Alt: market-structures (perfect-competition price-taking characteristic), but the stem asks WHO determines price, i.e. price determination."
+      "topicConfidenceNote": "exact (stem verified against source paper) - 'In perfect competition, price is determined by the...' (the market): market/forces determining price, syllabus topic 7 (concepts of market and price / equilibrium price). Alt: market-structures (perfect-competition price-taking characteristic), but the stem asks WHO determines price, i.e. price determination.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2010-q19",
@@ -48886,7 +48865,7 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "product when",
+      "question": "Average product is less than marginal product when",
       "options": [
         {
           "key": "a",
@@ -48902,11 +48881,7 @@
         },
         {
           "key": "d",
-          "text": "diminishing returns set in A firm enjoying economies of scale is"
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "diminishing returns set in"
         }
       ],
       "answer": "d",
@@ -48923,7 +48898,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "exact - 'Average product is less than marginal product when...' (diminishing returns set in): TP/AP/MP relationships and the law of variable proportions, syllabus topic 8.2."
+      "topicConfidenceNote": "exact - 'Average product is less than marginal product when...' (diminishing returns set in): TP/AP/MP relationships and the law of variable proportions, syllabus topic 8.2.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2010-q21",
@@ -48932,27 +48908,23 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "said to be",
+      "question": "A firm enjoying economies of scale is said to be",
       "options": [
         {
           "key": "a",
-          "text": "there is mobility of factors of production"
+          "text": "reducing average cost as"
         },
         {
           "key": "b",
-          "text": "no single seller dominates the market"
+          "text": "benefiting from the activities of other"
         },
         {
           "key": "c",
-          "text": "the firms are price-takers"
+          "text": "maximizing profits as"
         },
         {
           "key": "d",
-          "text": "consumers have perfect knowledge of price The demand curve for factors of"
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "having an upward-sloping average cost"
         }
       ],
       "answer": "a",
@@ -48969,7 +48941,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "exact - 'A firm enjoying economies of scale is said to be...' (reducing average cost as production increases): internal economies of scale, syllabus topic 8.4."
+      "topicConfidenceNote": "exact - 'A firm enjoying economies of scale is said to be...' (reducing average cost as production increases): internal economies of scale, syllabus topic 8.4.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2010-q25",
@@ -48978,7 +48951,7 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "production",
+      "question": "The demand curve for factors of production",
       "options": [
         {
           "key": "a",
@@ -48995,10 +48968,6 @@
         {
           "key": "d",
           "text": "is perfectly inelastic"
-        },
-        {
-          "key": "e",
-          "text": ""
         }
       ],
       "answer": "b",
@@ -49015,7 +48984,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "exact - 'The demand curve for factors of production...' (slopes downwards): factor demand under the marginal productivity theory (diminishing MRP), syllabus topic 23.3. Alt: demand-and-supply, but factor-demand is a factor-market/wage-theory concept."
+      "topicConfidenceNote": "exact - 'The demand curve for factors of production...' (slopes downwards): factor demand under the marginal productivity theory (diminishing MRP), syllabus topic 23.3. Alt: demand-and-supply, but factor-demand is a factor-market/wage-theory concept.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2010-q26",
@@ -49070,7 +49040,7 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "determined by the",
+      "question": "In national income accounting, tax is determined by the",
       "options": [
         {
           "key": "a",
@@ -49079,18 +49049,6 @@
         {
           "key": "b",
           "text": "level of consumption"
-        },
-        {
-          "key": "c",
-          "text": "level of investment"
-        },
-        {
-          "key": "d",
-          "text": "rate of savings ` A decrease in aggregate spending in A strategy for curbing unemployment is"
-        },
-        {
-          "key": "e",
-          "text": ""
         }
       ],
       "answer": "a",
@@ -49107,7 +49065,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "exact (stem verified against source paper) - 'In national income accounting, tax is determined by the...' (level of income): national income accounting/measurement, syllabus topic 11.1-11.2."
+      "topicConfidenceNote": "exact (stem verified against source paper) - 'In national income accounting, tax is determined by the...' (level of income): national income accounting/measurement, syllabus topic 11.1-11.2.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2010-q34",
@@ -49116,27 +49075,23 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "[ORPHAN — RECOVER BY HAND] to",
+      "question": "A strategy for curbing unemployment is to",
       "options": [
         {
           "key": "a",
-          "text": ""
+          "text": "implement government"
         },
         {
           "key": "b",
-          "text": ""
+          "text": "increase taxes and decrease"
         },
         {
           "key": "c",
-          "text": ""
+          "text": "increase government expenditure"
         },
         {
           "key": "d",
-          "text": ""
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "ensure even distribution of job"
         }
       ],
       "answer": "d",
@@ -49153,7 +49108,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "inference from content (orphan; stem recovered from source paper) - 'A strategy for curbing unemployment is to...' (increase government expenditure and decrease taxes): unemployment and its solutions, syllabus topic 23.5. Alt: public-finance (fiscal stimulus instrument); chosen because the stem targets unemployment remedies, and the options include non-fiscal answers."
+      "topicConfidenceNote": "inference from content (orphan; stem recovered from source paper) - 'A strategy for curbing unemployment is to...' (increase government expenditure and decrease taxes): unemployment and its solutions, syllabus topic 23.5. Alt: public-finance (fiscal stimulus instrument); chosen because the stem targets unemployment remedies, and the options include non-fiscal answers.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2010-q28",
@@ -49299,27 +49255,23 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "job opportunities",
+      "question": "In Nigeria, the distribution of job opportunities",
       "options": [
         {
           "key": "a",
-          "text": "overdependence on foreign aids B."
+          "text": "balanced budgeting"
         },
         {
           "key": "b",
-          "text": "deficit"
+          "text": "deficit budgeting"
         },
         {
           "key": "c",
-          "text": "poor implementation strategies By buying treasury bills, the"
+          "text": "surplus budgeting"
         },
         {
           "key": "d",
-          "text": "standard of deferred payment inadequate funding of projects"
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "zero budgeting"
         }
       ],
       "answer": "c",
@@ -49336,7 +49288,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "approximate (source PDF misaligns stem/options with neighbouring questions) - stem fragment 'In Nigeria, the distribution of job opportunities' with budget-type options (balanced/deficit/surplus/zero budgeting): government budget as an instrument affecting employment, syllabus topic 14.7 (public expenditure/budget). Green Bridge CBT tags this Public Finance. Alt: factors-of-production (unemployment); chosen on the options, all budget types."
+      "topicConfidenceNote": "approximate (source PDF misaligns stem/options with neighbouring questions) - stem fragment 'In Nigeria, the distribution of job opportunities' with budget-type options (balanced/deficit/surplus/zero budgeting): government budget as an instrument affecting employment, syllabus topic 14.7 (public expenditure/budget). Green Bridge CBT tags this Public Finance. Alt: factors-of-production (unemployment); chosen on the options, all budget types.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2010-q31",
@@ -49754,15 +49707,15 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "zone is",
+      "question": "One of the characteristics of free trade zone is",
       "options": [
         {
           "key": "a",
-          "text": "common tariff against non- member countries"
+          "text": "common tariff against non-"
         },
         {
           "key": "b",
-          "text": "different trade policies of non- member countries"
+          "text": "different trade policies of non-"
         },
         {
           "key": "c",
@@ -49770,11 +49723,7 @@
         },
         {
           "key": "d",
-          "text": "harmonized t rade among member countries . If Nigeria imports vehicles from Japan"
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "harmonized trade among"
         }
       ],
       "answer": "d",
@@ -49791,7 +49740,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "exact (stem verified against source paper) - 'One of the characteristics of free trade zone is...' (harmonized trade among member countries): economic integration / free trade area, closest to international-trade (topic 21). Alt: international-economic-organizations (ECOWAS-style free trade area); chosen because the question asks about the trade arrangement itself (integration), not a named organization's roles."
+      "topicConfidenceNote": "exact (stem verified against source paper) - 'One of the characteristics of free trade zone is...' (harmonized trade among member countries): economic integration / free trade area, closest to international-trade (topic 21). Alt: international-economic-organizations (ECOWAS-style free trade area); chosen because the question asks about the trade arrangement itself (integration), not a named organization's roles.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2010-q47",
@@ -49800,11 +49750,11 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "trasnsaction the will appear as a",
+      "question": "If Nigeria imports vehicles from Japan the transaction will appear as a",
       "options": [
         {
           "key": "a",
-          "text": "deibit on Japan's balance of payments"
+          "text": "debit on Japan's balance of payments"
         },
         {
           "key": "b",
@@ -49816,11 +49766,7 @@
         },
         {
           "key": "d",
-          "text": "credit on Nigeria's balance of payment One of the objectives of ADB is to"
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "credit on Nigeria's balance of payment"
         }
       ],
       "answer": "c",
@@ -49837,7 +49783,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "exact - 'If Nigeria imports vehicles from Japan the transaction will appear as a...' (credit/debit entry under balance of trade/payments): balance of trade and balance of payments, syllabus topic 21.2."
+      "topicConfidenceNote": "exact - 'If Nigeria imports vehicles from Japan the transaction will appear as a...' (credit/debit entry under balance of trade/payments): balance of trade and balance of payments, syllabus topic 21.2.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2010-q48",
@@ -50305,27 +50252,23 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "[ORPHAN — RECOVER BY HAND] The median of an odd-numbered set of hscores is the",
+      "question": "The median of an odd-numbered set of scores is the",
       "options": [
         {
           "key": "a",
-          "text": ""
+          "text": "Middle value in the set"
         },
         {
           "key": "b",
-          "text": ""
+          "text": "Highest value in the set"
         },
         {
           "key": "c",
-          "text": ""
+          "text": "Arithmetic means of the set"
         },
         {
           "key": "d",
-          "text": ""
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "Most frequent occurring score"
         }
       ],
       "answer": "a",
@@ -50342,7 +50285,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "exact (orphan; stem recovered from source paper) - 'The median of an odd-numbered set of scores is the...' (middle value): measures of central tendency, syllabus topic 3.2."
+      "topicConfidenceNote": "exact (orphan; stem recovered from source paper) - 'The median of an odd-numbered set of scores is the...' (middle value): measures of central tendency, syllabus topic 3.2.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2011-q04",
@@ -50670,7 +50614,7 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "will",
+      "question": "Minimum price legislation by government will",
       "options": [
         {
           "key": "a",
@@ -50686,11 +50630,7 @@
         },
         {
           "key": "d",
-          "text": "increase demand and create scarcity Ranking is the method use in measuring"
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "increase demand and create scarcity"
         }
       ],
       "answer": "c",
@@ -50707,7 +50647,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "exact - 'Minimum price legislation by government will...' (reduce demand and create surplus): price legislation (minimum price) and its effects, syllabus topic 7.3."
+      "topicConfidenceNote": "exact - 'Minimum price legislation by government will...' (reduce demand and create surplus): price legislation (minimum price) and its effects, syllabus topic 7.3.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2011-q15",
@@ -50808,27 +50749,23 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "[ORPHAN — RECOVER BY HAND] If a firm is faced with an elastic s upply If real income increases while nominal",
+      "question": "If a firm is faced with an elastic supply curve, its revenue will",
       "options": [
         {
           "key": "a",
-          "text": ""
+          "text": "be supplied at a higher price"
         },
         {
           "key": "b",
-          "text": ""
+          "text": "double at a higher price"
         },
         {
           "key": "c",
-          "text": ""
+          "text": "increase by more than the"
         },
         {
           "key": "d",
-          "text": ""
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "equal percentage change in price"
         }
       ],
       "answer": "c",
@@ -50845,7 +50782,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "Elastic supply curve: revenue rises by more than the percentage increase in price (quantity responds strongly) - price elasticity of supply/revenue, syllabus topic 6."
+      "topicConfidenceNote": "Elastic supply curve: revenue rises by more than the percentage increase in price (quantity responds strongly) - price elasticity of supply/revenue, syllabus topic 6.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2011-q21",
@@ -50990,27 +50928,23 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "applicable only",
+      "question": "The law of variable proportions is applicable only",
       "options": [
         {
           "key": "a",
-          "text": "Unemployment rate has decreased"
+          "text": "in the long-run period"
         },
         {
           "key": "b",
-          "text": "General prices have fallen"
+          "text": "to large-scale enterprises"
         },
         {
           "key": "c",
-          "text": "Employment rate has risen"
+          "text": "to small-scale enterprises"
         },
         {
           "key": "d",
-          "text": "General prices have risen One of the characteristics of oligopoly is"
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "in the short-run period"
         }
       ],
       "answer": "a",
@@ -51027,7 +50961,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "Law of variable proportions is applicable in the short-run period (at least one fixed factor) - TP/AP/MP and returns to a factor, syllabus topic 8b."
+      "topicConfidenceNote": "Law of variable proportions is applicable in the short-run period (at least one fixed factor) - TP/AP/MP and returns to a factor, syllabus topic 8b.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2011-q22",
@@ -51036,7 +50971,7 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "the availability of",
+      "question": "One of the characteristics of oligopoly is the availability of",
       "options": [
         {
           "key": "a",
@@ -51053,10 +50988,6 @@
         {
           "key": "d",
           "text": "a single seller"
-        },
-        {
-          "key": "e",
-          "text": ""
         }
       ],
       "answer": "b",
@@ -51073,7 +51004,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "Characteristic of oligopoly: availability of few sellers (many buyers), syllabus topic 10b imperfect markets. (PDF key B 'few buyers' noted as inversion in research; either way market-structures.)"
+      "topicConfidenceNote": "Characteristic of oligopoly: availability of few sellers (many buyers), syllabus topic 10b imperfect markets. (PDF key B 'few buyers' noted as inversion in research; either way market-structures.)",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2011-q23",
@@ -51128,7 +51060,7 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "will be",
+      "question": "When 20 units of output is produced, TC will be",
       "options": [
         {
           "key": "a",
@@ -51136,19 +51068,15 @@
         },
         {
           "key": "b",
-          "text": "pension"
+          "text": "N300"
         },
         {
           "key": "c",
-          "text": "scholarship"
+          "text": "N460"
         },
         {
           "key": "d",
-          "text": "social welfare If aggregate demand is lower than total"
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "N400"
         }
       ],
       "answer": "b",
@@ -51161,11 +51089,12 @@
         "sourceField": "JAMB-Economics-Past-Questions-and-Answers [2011]",
         "booklet": "keyed"
       },
-      "needsManualReview": true,
+      "needsManualReview": false,
       "needsFigure": true,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "Parsed options garbled (mixed with Q28 'pension/scholarship/social welfare' fragments); clean source shows Q24 = 'When 20 units of output is produced, TC will be' (N360/N300/N460/N400) - total cost calculation, cost concepts, syllabus topic 9a."
+      "topicConfidenceNote": "Parsed options garbled (mixed with Q28 'pension/scholarship/social welfare' fragments); clean source shows Q24 = 'When 20 units of output is produced, TC will be' (N360/N300/N460/N400) - total cost calculation, cost concepts, syllabus topic 9a.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2011-q29",
@@ -51266,11 +51195,11 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "income",
+      "question": "The profit of a monopolist can be eliminated where price equals",
       "options": [
         {
           "key": "a",
-          "text": "AFC services"
+          "text": "AFC"
         },
         {
           "key": "b",
@@ -51282,11 +51211,7 @@
         },
         {
           "key": "d",
-          "text": "AVC Bank consolidation policy in Nigeria is An indicator of growth in an"
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "AVC"
         }
       ],
       "answer": "b",
@@ -51303,7 +51228,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "Monopolist's profit eliminated where price = AC (break-even condition, normal profit); monopoly break-even/shut-down analysis, syllabus topic 10c. (theory-of-costs-and-revenue defensible as the P=AC normal-profit condition.)"
+      "topicConfidenceNote": "Monopolist's profit eliminated where price = AC (break-even condition, normal profit); monopoly break-even/shut-down analysis, syllabus topic 10c. (theory-of-costs-and-revenue defensible as the P=AC normal-profit condition.)",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2011-q32",
@@ -51312,7 +51238,7 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "economy over a period of time is the",
+      "question": "An indicator of growth in an economy over a period of time is the",
       "options": [
         {
           "key": "a",
@@ -51320,19 +51246,15 @@
         },
         {
           "key": "b",
-          "text": ""
+          "text": "GDP at factor cost"
         },
         {
           "key": "c",
-          "text": ""
+          "text": "GDP at market price"
         },
         {
           "key": "d",
-          "text": ""
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "GDP deflator"
         }
       ],
       "answer": "c",
@@ -51349,7 +51271,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "Indicator of growth over a period of time; options GDP gap/GDP at factor cost/GDP at market price/GDP deflator - national income measurement (GDP at market price, PDF key C), syllabus topic 11a-c. (economic-growth-and-development defensible for 'indicator of growth'.)"
+      "topicConfidenceNote": "Indicator of growth over a period of time; options GDP gap/GDP at factor cost/GDP at market price/GDP deflator - national income measurement (GDP at market price, PDF key C), syllabus topic 11a-c. (economic-growth-and-development defensible for 'indicator of growth'.)",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2011-q26",
@@ -51404,7 +51327,7 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "counted as part of government spending is",
+      "question": "In national income accounts, an item counted as part of government spending is",
       "options": [
         {
           "key": "a",
@@ -51412,19 +51335,15 @@
         },
         {
           "key": "b",
-          "text": ""
+          "text": "pension"
         },
         {
           "key": "c",
-          "text": "GDP at market price"
+          "text": "scholarship"
         },
         {
           "key": "d",
-          "text": "GDP deflator"
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "social welfare"
         }
       ],
       "answer": "d",
@@ -51441,7 +51360,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "Item counted as part of government spending in national income accounts (salaries and wages; pension/scholarship/social welfare are transfer payments, not government consumption) - GNP measurement, syllabus topic 11b."
+      "topicConfidenceNote": "Item counted as part of government spending in national income accounts (salaries and wages; pension/scholarship/social welfare are transfer payments, not government consumption) - GNP measurement, syllabus topic 11b.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2011-q33",
@@ -51770,11 +51690,11 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "constrained by",
+      "question": "Agricultural production in Nigeria is constrained by",
       "options": [
         {
           "key": "a",
-          "text": "ineffective use of wstabilization measures"
+          "text": "ineffective use of"
         },
         {
           "key": "b",
@@ -51787,10 +51707,6 @@
         {
           "key": "d",
           "text": "balance of payments deficits"
-        },
-        {
-          "key": "e",
-          "text": ""
         }
       ],
       "answer": "c",
@@ -51807,7 +51723,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "Agricultural production in Nigeria is constrained by poor implementation of policies - problems of agriculture, syllabus topic 16c."
+      "topicConfidenceNote": "Agricultural production in Nigeria is constrained by poor implementation of policies - problems of agriculture, syllabus topic 16c.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2011-q39",
@@ -52367,27 +52284,23 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "[ORPHAN — RECOVER BY HAND] If the quantity of rice bought decreases from",
+      "question": "If the quantity of rice bought decreases from 250 tonnes to 200 tonnes owing to a 2% rise in price, it shows that there is a change in",
       "options": [
         {
           "key": "a",
-          "text": ""
+          "text": "consumers' income"
         },
         {
           "key": "b",
-          "text": ""
+          "text": "demand"
         },
         {
           "key": "c",
-          "text": ""
+          "text": "consumers' tastes"
         },
         {
           "key": "d",
-          "text": ""
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "quantity damanded"
         }
       ],
       "answer": "b",
@@ -52404,7 +52317,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "Rice quantity bought falls 250t -> 200t owing to a 2% rise in price = change in quantity demanded (movement along the demand curve), not a demand shift - syllabus topic 4a-iii. (Recovered research: corrected answer D quantity demanded.)"
+      "topicConfidenceNote": "Rice quantity bought falls 250t -> 200t owing to a 2% rise in price = change in quantity demanded (movement along the demand curve), not a demand shift - syllabus topic 4a-iii. (Recovered research: corrected answer D quantity demanded.)",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2012-q08",
@@ -52429,11 +52343,7 @@
         },
         {
           "key": "d",
-          "text": ""
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "no effect on the demand curve"
         }
       ],
       "answer": "b",
@@ -52450,7 +52360,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "A rise in income, ceteris paribus, brings about a rightward shift of the demand curve (income as a determinant of demand) - syllabus topic 4a-i/iii."
+      "topicConfidenceNote": "A rise in income, ceteris paribus, brings about a rightward shift of the demand curve (income as a determinant of demand) - syllabus topic 4a-i/iii.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2012-q04",
@@ -53343,11 +53254,7 @@
         },
         {
           "key": "d",
-          "text": "fiat money"
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "zero elasticity in all markets"
         }
       ],
       "answer": "a",
@@ -53363,7 +53270,8 @@
       "needsManualReview": false,
       "needsFigure": false,
       "parseQuality": "ok",
-      "topicConfidence": "high"
+      "topicConfidence": "high",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2012-q31",
@@ -53509,27 +53417,23 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "[ORPHAN — RECOVER BY HAND] An ad valorem tax is imposed on",
+      "question": "An ad valorem tax is imposed on",
       "options": [
         {
           "key": "a",
-          "text": ""
+          "text": "special commodities"
         },
         {
           "key": "b",
-          "text": ""
+          "text": "exports"
         },
         {
           "key": "c",
-          "text": ""
+          "text": "imports"
         },
         {
           "key": "d",
-          "text": ""
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "the value of a commodity"
         }
       ],
       "answer": "a",
@@ -53545,7 +53449,8 @@
       "needsManualReview": false,
       "needsFigure": false,
       "parseQuality": "ok",
-      "topicConfidence": "high"
+      "topicConfidence": "high",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2012-q27",
@@ -53939,10 +53844,6 @@
         {
           "key": "d",
           "text": "establishing commondity boards"
-        },
-        {
-          "key": "e",
-          "text": ""
         }
       ],
       "answer": "a",
@@ -53958,7 +53859,8 @@
       "needsManualReview": false,
       "needsFigure": false,
       "parseQuality": "ok",
-      "topicConfidence": "high"
+      "topicConfidence": "high",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2012-q40",
@@ -53967,27 +53869,23 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "[ORPHAN — RECOVER BY HAND] A sugar industry is best located near the source of",
+      "question": "A sugar industry is best located near the source of",
       "options": [
         {
           "key": "a",
-          "text": ""
+          "text": "labour"
         },
         {
           "key": "b",
-          "text": ""
+          "text": "raw materials"
         },
         {
           "key": "c",
-          "text": ""
+          "text": "power"
         },
         {
           "key": "d",
-          "text": ""
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "capital"
         }
       ],
       "answer": "a",
@@ -54004,7 +53902,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "Sugar industry best located near the source of (raw materials) - weight-losing industry; location-of-industry factors. Orphan stem recovered by hand."
+      "topicConfidenceNote": "Sugar industry best located near the source of (raw materials) - weight-losing industry; location-of-industry factors. Orphan stem recovered by hand.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2012-q46",
@@ -54196,27 +54095,23 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "[ORPHAN — RECOVER BY HAND] A change in the pump price of petrol in Nigeria",
+      "question": "A change in the pump price of petrol in Nigeria has a direct effect on the",
       "options": [
         {
           "key": "a",
-          "text": ""
+          "text": "prices of consumer goods"
         },
         {
           "key": "b",
-          "text": ""
+          "text": "prices of essential goods"
         },
         {
           "key": "c",
-          "text": ""
+          "text": "cost of raw materials"
         },
         {
           "key": "d",
-          "text": ""
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "cost of transportation"
         }
       ],
       "answer": "b",
@@ -54233,7 +54128,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "A change in the pump price of petrol in Nigeria has a direct effect on the cost of transportation (corrected key D); downstream petroleum sector of the Nigerian economy. Alt: money-and-inflation (cost-push price effects). Orphan stem recovered by hand."
+      "topicConfidenceNote": "A change in the pump price of petrol in Nigeria has a direct effect on the cost of transportation (corrected key D); downstream petroleum sector of the Nigerian economy. Alt: money-and-inflation (cost-push price effects). Orphan stem recovered by hand.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2012-q49",
@@ -54334,7 +54230,7 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "A policy aimed at enhancing globalization of wthe Nigerian economy is",
+      "question": "A policy aimed at enhancing globalization of the Nigerian economy is",
       "options": [
         {
           "key": "a",
@@ -54351,10 +54247,6 @@
         {
           "key": "d",
           "text": "privatization"
-        },
-        {
-          "key": "e",
-          "text": ""
         }
       ],
       "answer": "d",
@@ -54371,7 +54263,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "Policy aimed at enhancing globalization of the Nigerian economy (privatization per key; deregulation also credited) - market-oriented reform in a mixed economy. Alt: international-trade."
+      "topicConfidenceNote": "Policy aimed at enhancing globalization of the Nigerian economy (privatization per key; deregulation also credited) - market-oriented reform in a mixed economy. Alt: international-trade.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2012-q45",
@@ -54565,27 +54458,23 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "[ORPHAN — RECOVER BY HAND] Which of the following set of statistical",
+      "question": "Which of the following set of statistical tools is used for further economic analysis?",
       "options": [
         {
           "key": "a",
-          "text": ""
+          "text": "the median and standard deviation"
         },
         {
           "key": "b",
-          "text": ""
+          "text": "the mean and mode"
         },
         {
           "key": "c",
-          "text": ""
+          "text": "the mean and standard deviation"
         },
         {
           "key": "d",
-          "text": ""
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "the mode and median"
         }
       ],
       "answer": "b",
@@ -54602,7 +54491,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "Orphan stem fragment ('Which of the following set of statistical [tools]...'); statistical-tools topic. Stem recovered by hand; options missing."
+      "topicConfidenceNote": "Orphan stem fragment ('Which of the following set of statistical [tools]...'); statistical-tools topic. Stem recovered by hand; options missing.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2013-q07",
@@ -55887,27 +55777,23 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "[ORPHAN — RECOVER BY HAND] The main reason for low agriculturahl produce in west Africa is need to",
+      "question": "The main reason for low agricultural produce in west Africa is need to",
       "options": [
         {
           "key": "a",
-          "text": ""
+          "text": "the presence of large-scale agro-"
         },
         {
           "key": "b",
-          "text": ""
+          "text": "high dependency ratio"
         },
         {
           "key": "c",
-          "text": ""
+          "text": "over dependence on agriculture"
         },
         {
           "key": "d",
-          "text": ""
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "the use of crude implements in"
         }
       ],
       "answer": "d",
@@ -55924,7 +55810,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "The main reason for low agricultural produce in West Africa (poor inputs/techniques); problems of agriculture topic. Orphan stem recovered by hand; options missing."
+      "topicConfidenceNote": "The main reason for low agricultural produce in West Africa (poor inputs/techniques); problems of agriculture topic. Orphan stem recovered by hand; options missing.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2013-q42",
@@ -56617,27 +56504,19 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "[ORPHAN — RECOVER BY HAND] . A combination of factors responsible for",
+      "question": "A combination of factors responsible for a shift from D0D0to D1D1 are",
       "options": [
         {
           "key": "a",
-          "text": ""
+          "text": "consumers income and change in"
         },
         {
           "key": "b",
-          "text": ""
+          "text": "price of the commodity and weather"
         },
         {
           "key": "c",
-          "text": ""
-        },
-        {
-          "key": "d",
-          "text": ""
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "consumers taste and change in price"
         }
       ],
       "answer": "d",
@@ -56654,7 +56533,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "Recovered: 'A combination of factors responsible for a shift from D0D0 to D1D1' (consumers' income, population size, etc.) - non-price determinants shifting the demand curve; change in demand vs change in quantity demanded."
+      "topicConfidenceNote": "Recovered: 'A combination of factors responsible for a shift from D0D0 to D1D1' (consumers' income, population size, etc.) - non-price determinants shifting the demand curve; change in demand vs change in quantity demanded.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2014-q04",
@@ -56710,7 +56590,7 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "nationaml services to the income?",
+      "question": "What is the percentage contribution of services to the national income?",
       "options": [
         {
           "key": "a",
@@ -56718,19 +56598,15 @@
         },
         {
           "key": "b",
-          "text": "10% ."
+          "text": "10%"
         },
         {
           "key": "c",
-          "text": "consumers taste and change in price"
+          "text": "54%"
         },
         {
           "key": "d",
-          "text": ""
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "24%"
         }
       ],
       "answer": "c",
@@ -56747,7 +56623,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "Recovered: 'What is the percentage contribution of services to the national income?' - national-income pie chart (sector shares of GDP/NI); measurement/uses of national income estimates, syllabus topic 11. Alt: methods-and-tools-of-economic-analysis (pie charts/angles)."
+      "topicConfidenceNote": "Recovered: 'What is the percentage contribution of services to the national income?' - national-income pie chart (sector shares of GDP/NI); measurement/uses of national income estimates, syllabus topic 11. Alt: methods-and-tools-of-economic-analysis (pie charts/angles).",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2014-q08",
@@ -57125,27 +57002,23 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "[ORPHAN — RECOVER BY HAND] If the production of a large firm is higher",
+      "question": "If the production of a large firm is higher than that of a small firm, it is experiencing.",
       "options": [
         {
           "key": "a",
-          "text": ""
+          "text": "external economies of scale"
         },
         {
           "key": "b",
-          "text": ""
+          "text": "external diseconomies of scale"
         },
         {
           "key": "c",
-          "text": ""
+          "text": "internal economies of scale"
         },
         {
           "key": "d",
-          "text": ""
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "internal diseconomies of scale"
         }
       ],
       "answer": "c",
@@ -57162,7 +57035,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "Recovered: 'If the production of a large firm is higher than that of a small firm, it is experiencing [economies of large-scale production]' - internal economies of scale, scale of production, syllabus topic 8d."
+      "topicConfidenceNote": "Recovered: 'If the production of a large firm is higher than that of a small firm, it is experiencing [economies of large-scale production]' - internal economies of scale, scale of production, syllabus topic 8d.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2014-q14",
@@ -57537,27 +57411,23 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "[ORPHAN — RECOVER BY HAND] One of the characteristics of a",
+      "question": "One of the characteristics of a monopolist is that, he can influence",
       "options": [
         {
           "key": "a",
-          "text": ""
+          "text": "quantity produced by other producers"
         },
         {
           "key": "b",
-          "text": ""
+          "text": "prices charged by other producers"
         },
         {
           "key": "c",
-          "text": ""
+          "text": "both price and quantity"
         },
         {
           "key": "d",
-          "text": ""
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "price or quantity"
         }
       ],
       "answer": "c",
@@ -57574,7 +57444,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "Recovered: 'One of the characteristics of a monopolist is that, he can influence [both price and quantity / price or quantity produced]' - pure monopoly characteristics, syllabus topic 10b."
+      "topicConfidenceNote": "Recovered: 'One of the characteristics of a monopolist is that, he can influence [both price and quantity / price or quantity produced]' - pure monopoly characteristics, syllabus topic 10b.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2014-q29",
@@ -58040,27 +57911,23 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "[ORPHAN — RECOVER BY HAND] The loading of crude oil at the terminal is",
+      "question": "The loading of crude oil at the terminal is an activity in the",
       "options": [
         {
           "key": "a",
-          "text": ""
+          "text": "downstream sector of the oil industry"
         },
         {
           "key": "b",
-          "text": ""
+          "text": "upstream and downstream sector of"
         },
         {
           "key": "c",
-          "text": ""
+          "text": "upstream sector of the oil industry"
         },
         {
           "key": "d",
-          "text": ""
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "midstream and upstream sectors of"
         }
       ],
       "answer": "b",
@@ -58077,7 +57944,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "Recovered: 'The loading of crude oil at the terminal is an activity in the [upstream sector of the oil industry]' - upstream/downstream classification and the oil sector, syllabus topic 18d."
+      "topicConfidenceNote": "Recovered: 'The loading of crude oil at the terminal is an activity in the [upstream sector of the oil industry]' - upstream/downstream classification and the oil sector, syllabus topic 18d.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2014-q35",
@@ -58184,19 +58052,15 @@
         },
         {
           "key": "b",
-          "text": ""
+          "text": "over-utilization of installed"
         },
         {
           "key": "c",
-          "text": "upstream sector of the oil industry"
+          "text": "the risk of seasonal unemployment"
         },
         {
           "key": "d",
-          "text": "midstream and upstream sectors of the oil industry"
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "under-utilization of installed"
         }
       ],
       "answer": "d",
@@ -58213,7 +58077,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "A major disadvantage of localization of industry (congestion, pollution, over-dependence on one centre) - location/localization of industry, syllabus topic 17a."
+      "topicConfidenceNote": "A major disadvantage of localization of industry (congestion, pollution, over-dependence on one centre) - location/localization of industry, syllabus topic 17a.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2014-q41",
@@ -59151,10 +59016,6 @@
         {
           "key": "d",
           "text": "Excess demand."
-        },
-        {
-          "key": "e",
-          "text": ""
         }
       ],
       "answer": "d",
@@ -59171,7 +59032,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "inference from content (orphan; graph-based item, stem recovered from source paper) - 'From the graph above, FG indicates' (answer: excess supply): excess demand/supply and market adjustment on a demand-supply equilibrium diagram, syllabus topic 7d (effects of changes in supply and demand on equilibrium price and quantity). Alt: demand-and-supply; chosen because it is a price-formation/disequilibrium concept, matching prior-batch precedent (econ-1988-q19)."
+      "topicConfidenceNote": "inference from content (orphan; graph-based item, stem recovered from source paper) - 'From the graph above, FG indicates' (answer: excess supply): excess demand/supply and market adjustment on a demand-supply equilibrium diagram, syllabus topic 7d (effects of changes in supply and demand on equilibrium price and quantity). Alt: demand-and-supply; chosen because it is a price-formation/disequilibrium concept, matching prior-batch precedent (econ-1988-q19).",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2015-q13",
@@ -59472,10 +59334,6 @@
         {
           "key": "d",
           "text": "unitary elastic."
-        },
-        {
-          "key": "e",
-          "text": ""
         }
       ],
       "answer": "d",
@@ -59491,7 +59349,8 @@
       "needsManualReview": false,
       "needsFigure": false,
       "parseQuality": "ok",
-      "topicConfidence": "high"
+      "topicConfidence": "high",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2015-q17",
@@ -60457,7 +60316,7 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "can protect consumers from exploitative prices by introducing",
+      "question": "Government can protect consumers from exploitative prices by introducing",
       "options": [
         {
           "key": "a",
@@ -60465,19 +60324,15 @@
         },
         {
           "key": "b",
-          "text": "20"
+          "text": "price differentiation"
         },
         {
           "key": "c",
-          "text": "100"
+          "text": "price floor"
         },
         {
           "key": "d",
-          "text": "60."
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "maximum price."
         }
       ],
       "answer": "a",
@@ -60494,7 +60349,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "exact - 'Government can protect consumers from exploitative prices by introducing...' (maximum price): maximum price legislation and its effects, syllabus topic 7c(iii) (price legislation and its effects; government interference with the price system). Prior-batch precedent: econ-2010-q19, econ-2011-q14."
+      "topicConfidenceNote": "exact - 'Government can protect consumers from exploitative prices by introducing...' (maximum price): maximum price legislation and its effects, syllabus topic 7c(iii) (price legislation and its effects; government interference with the price system). Prior-batch precedent: econ-2010-q19, econ-2011-q14.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2015-q42",
@@ -61615,10 +61471,6 @@
         {
           "key": "d",
           "text": "population growth rate."
-        },
-        {
-          "key": "e",
-          "text": ""
         }
       ],
       "answer": "b",
@@ -61635,7 +61487,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "exact - 'A change in supply of a commodity is due to a change in the...' (cost of production - a non-price shifter, distinct from quantity supplied): distinction between change in supply and change in quantity supplied; determinants of supply (input/production costs), syllabus topic 6a.i, 6a.iii (meaning and determinants of supply; change in quantity supplied vs change in supply)."
+      "topicConfidenceNote": "exact - 'A change in supply of a commodity is due to a change in the...' (cost of production - a non-price shifter, distinct from quantity supplied): distinction between change in supply and change in quantity supplied; determinants of supply (input/production costs), syllabus topic 6a.i, 6a.iii (meaning and determinants of supply; change in quantity supplied vs change in supply).",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2016-q19",
@@ -61689,7 +61542,7 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "A market characterized by absence of ssubstitutes close of goods and services is an eixample of",
+      "question": "A market characterized by absence of close substitutes of goods and services is an example of",
       "options": [
         {
           "key": "a",
@@ -61706,10 +61559,6 @@
         {
           "key": "d",
           "text": "a monopolistic competition."
-        },
-        {
-          "key": "e",
-          "text": ""
         }
       ],
       "answer": "a",
@@ -61726,7 +61575,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "exact - 'A market characterized by absence of close substitutes of goods and services is an example of...' (a monopoly): assumptions and characteristics of imperfect markets - monopoly, syllabus topic 10 (market structures)."
+      "topicConfidenceNote": "exact - 'A market characterized by absence of close substitutes of goods and services is an example of...' (a monopoly): assumptions and characteristics of imperfect markets - monopoly, syllabus topic 10 (market structures).",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2016-q16",
@@ -61933,10 +61783,6 @@
         {
           "key": "d",
           "text": "cost of production."
-        },
-        {
-          "key": "e",
-          "text": ""
         }
       ],
       "answer": "c",
@@ -61953,7 +61799,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "exact - 'A major determinant of demand is...' (population - the only demand determinant among the options; technology and cost of production are supply determinants): determinants of demand, syllabus topic 4a.i (meaning and determinants of demand)."
+      "topicConfidenceNote": "exact - 'A major determinant of demand is...' (population - the only demand determinant among the options; technology and cost of production are supply determinants): determinants of demand, syllabus topic 4a.i (meaning and determinants of demand).",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2016-q24",
@@ -62433,10 +62280,6 @@
         {
           "key": "d",
           "text": "imports exceeds exports."
-        },
-        {
-          "key": "e",
-          "text": ""
         }
       ],
       "answer": "d",
@@ -62453,7 +62296,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "Net exports negative when imports exceed exports; trade balance."
+      "topicConfidenceNote": "Net exports negative when imports exceed exports; trade balance.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2016-q34",
@@ -62645,27 +62489,23 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "[ORPHAN — RECOVER BY HAND] Given: 32, 18, 24, 17, 16, 32, 28, 68,",
+      "question": "A country embarks on deficit financing in order to",
       "options": [
         {
           "key": "a",
-          "text": ""
+          "text": "reduce aggregate demand"
         },
         {
           "key": "b",
-          "text": ""
+          "text": "increase revenue"
         },
         {
           "key": "c",
-          "text": ""
+          "text": "stimulate investment"
         },
         {
           "key": "d",
-          "text": ""
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "curb inflation"
         }
       ],
       "answer": "c",
@@ -62682,7 +62522,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "Range/mode of a data set (32, 18, 24, 17, 16, 32, 28, 68, ...); statistical calculation."
+      "topicConfidenceNote": "Range/mode of a data set (32, 18, 24, 17, 16, 32, 28, 68, ...); statistical calculation.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2016-q38",
@@ -63927,27 +63768,23 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "[ORPHAN — RECOVER BY HAND] From the pie chart above, determine othe contribution of capital if the total contribution of all factors is A.",
+      "question": "From the pie chart above, determine the contribution of capital if the total contribution of all factors is",
       "options": [
         {
           "key": "a",
-          "text": ""
+          "text": "₦12.50 million"
         },
         {
           "key": "b",
-          "text": ""
+          "text": "₦142.50 million"
         },
         {
           "key": "c",
-          "text": ""
+          "text": "₦50 million"
         },
         {
           "key": "d",
-          "text": ""
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "₦7.50 million"
         }
       ],
       "answer": "b",
@@ -63964,7 +63801,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "Pie chart of factor contributions; determine contribution of capital given total of all factors. Same factor-share diagram as q12."
+      "topicConfidenceNote": "Pie chart of factor contributions; determine contribution of capital given total of all factors. Same factor-share diagram as q12.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2017-q16",
@@ -64386,27 +64224,23 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "[ORPHAN — RECOVER BY HAND] A change in the quantity supplied of a commodity is influenced by A.",
+      "question": "A change in the quantity supplied of a commodity is influenced by",
       "options": [
         {
           "key": "a",
-          "text": ""
+          "text": "the price of substitutes"
         },
         {
           "key": "b",
-          "text": ""
+          "text": "the price of the commodity"
         },
         {
           "key": "c",
-          "text": ""
+          "text": "consumer's tastes"
         },
         {
           "key": "d",
-          "text": ""
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "technological know-how"
         }
       ],
       "answer": "b",
@@ -64423,7 +64257,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "Change in the quantity supplied of a commodity is influenced by price (movement along the supply curve)."
+      "topicConfidenceNote": "Change in the quantity supplied of a commodity is influenced by price (movement along the supply curve).",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2017-q27",
@@ -64752,27 +64587,23 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "[ORPHAN — RECOVER BY HAND] large firm can achieve on its own is called initernal",
+      "question": "The cost-saving advantages which a large firm can achieve on its own is called",
       "options": [
         {
           "key": "a",
-          "text": ""
+          "text": "internal economies of scale"
         },
         {
           "key": "b",
-          "text": ""
+          "text": "diseconomies of large scale"
         },
         {
           "key": "c",
-          "text": ""
+          "text": "externa diseconomies of scale"
         },
         {
           "key": "d",
-          "text": ""
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "external economies of scale"
         }
       ],
       "answer": "a",
@@ -64789,7 +64620,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "Cost-saving advantages a large firm can achieve on its own = internal economies of scale (theory of production/long-run costs)."
+      "topicConfidenceNote": "Cost-saving advantages a large firm can achieve on its own = internal economies of scale (theory of production/long-run costs).",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2017-q35",
@@ -64844,27 +64676,23 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "[ORPHAN — RECOVER BY HAND] A country uses the foreign exchange 4 X 3 control measure to eliminate balance of",
+      "question": "A country uses the foreign exchange control measure to eliminate balance of payments deficit by",
       "options": [
         {
           "key": "a",
-          "text": ""
+          "text": "limiting her imports to its currency"
         },
         {
           "key": "b",
-          "text": ""
+          "text": "limiting her exports to its currency"
         },
         {
           "key": "c",
-          "text": ""
+          "text": "overvaluing the country's currency"
         },
         {
           "key": "d",
-          "text": ""
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "reducing the nation's domestic price"
         }
       ],
       "answer": "a",
@@ -64881,7 +64709,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "Foreign exchange control used to eliminate balance of payments disequilibrium (balance of payments)."
+      "topicConfidenceNote": "Foreign exchange control used to eliminate balance of payments disequilibrium (balance of payments).",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2017-q05",
@@ -66133,7 +65962,7 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "advantage was propounded by",
+      "question": "The principle of comparative cost advantage was propounded by",
       "options": [
         {
           "key": "a",
@@ -66150,10 +65979,6 @@
         {
           "key": "d",
           "text": "Adam Smith"
-        },
-        {
-          "key": "e",
-          "text": ""
         }
       ],
       "answer": "a",
@@ -66170,7 +65995,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "Fragment: '... advantage was propounded by' — principle of comparative cost advantage propounded by David Ricardo; international trade theory. Reconstructed from options."
+      "topicConfidenceNote": "Fragment: '... advantage was propounded by' — principle of comparative cost advantage propounded by David Ricardo; international trade theory. Reconstructed from options.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2018-q29",
@@ -66271,27 +66097,23 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "[ORPHAN — RECOVER BY HAND] The diagram below represents If the budget of the country wsas",
+      "question": "The diagram below represents a production function. At which of the points does diminishing returns set in?",
       "options": [
         {
           "key": "a",
-          "text": ""
+          "text": "R"
         },
         {
           "key": "b",
-          "text": ""
+          "text": "S"
         },
         {
           "key": "c",
-          "text": ""
+          "text": "T"
         },
         {
           "key": "d",
-          "text": ""
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "V"
         }
       ],
       "answer": "c",
@@ -66307,7 +66129,8 @@
       "needsManualReview": false,
       "needsFigure": false,
       "parseQuality": "ok",
-      "topicConfidence": "high"
+      "topicConfidence": "high",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2018-q25",
@@ -66363,7 +66186,7 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "health to Agriculture?",
+      "question": "What is the ratio of expenditure on health to Agriculture?",
       "options": [
         {
           "key": "a",
@@ -66379,11 +66202,7 @@
         },
         {
           "key": "d",
-          "text": "5:4 Which of the following items is not an"
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "5:4"
         }
       ],
       "answer": "b",
@@ -66399,7 +66218,8 @@
       "needsManualReview": false,
       "needsFigure": false,
       "parseQuality": "ok",
-      "topicConfidence": "high"
+      "topicConfidence": "high",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2018-q27",
@@ -66515,11 +66335,7 @@
         },
         {
           "key": "d",
-          "text": "trade liberalisation. The Family Support Programme in"
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "trade liberalisation."
         }
       ],
       "answer": "a",
@@ -66536,7 +66352,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "Commodity sold abroad below cost of production at home — dumping; trade restriction/practice in international trade."
+      "topicConfidenceNote": "Commodity sold abroad below cost of production at home — dumping; trade restriction/practice in international trade.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2018-q34",
@@ -66591,7 +66408,7 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "examination?",
+      "question": "How many students took the examination?",
       "options": [
         {
           "key": "a",
@@ -66603,15 +66420,11 @@
         },
         {
           "key": "c",
-          "text": "200 ."
+          "text": "200"
         },
         {
           "key": "d",
-          "text": "80 Utilitys is the satisfaction derived from"
-        },
-        {
-          "key": "e",
-          "text": ""
+          "text": "80"
         }
       ],
       "answer": "a",
@@ -66624,11 +66437,12 @@
         "sourceField": "JAMB-Economics-Past-Questions-and-Answers [2018]",
         "booklet": "keyed"
       },
-      "needsManualReview": true,
+      "needsManualReview": false,
       "needsFigure": true,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "Fragment: '... examination?' — same score-chart item: how many students took the examination (total frequency). Statistics tool; truncated text."
+      "topicConfidenceNote": "Fragment: '... examination?' — same score-chart item: how many students took the examination (total frequency). Statistics tool; truncated text.",
+      "recoveredFromPdf": true
     },
     {
       "id": "econ-2018-q38",
@@ -66729,7 +66543,7 @@
       "skillConfidence": "high",
       "skillConfidenceNote": "Solved from PDF-printed answer keys + textbook cross-checks.",
       "difficulty": "medium",
-      "question": "was set up by the",
+      "question": "The Economic Commission for Africa was set up by the",
       "options": [
         {
           "key": "a",
@@ -66746,10 +66560,6 @@
         {
           "key": "d",
           "text": "IMF"
-        },
-        {
-          "key": "e",
-          "text": ""
         }
       ],
       "answer": "a",
@@ -66766,7 +66576,8 @@
       "needsFigure": false,
       "parseQuality": "ok",
       "topicConfidence": "medium",
-      "topicConfidenceNote": "Fragment: 'The Economic Commission for Africa was set up by the ...' — UNO (UNECA); international economic organisation. Reconstructed from options."
+      "topicConfidenceNote": "Fragment: 'The Economic Commission for Africa was set up by the ...' — UNO (UNECA); international economic organisation. Reconstructed from options.",
+      "recoveredFromPdf": true
     }
   ]
 }
