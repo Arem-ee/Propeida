@@ -10,6 +10,7 @@ import { submitAnswer, completeMockSession } from '@/lib/actions/practice'
 import { celebrate } from '@/lib/celebrate'
 import { MathText } from '@/components/lessons/math-text'
 import { QuestionTable } from '@/components/questions/question-table'
+import { PassagePanel } from '@/components/questions/passage-panel'
 
 function SafeCalculator({ onClose }: { onClose: () => void }) {
   const [display, setDisplay] = useState('0')
@@ -140,6 +141,7 @@ export interface MockQuestion {
   questionText: string
   options: { key: string; text: string }[]
   questionTable?: { headers: string[]; rows: string[][]; caption?: string } | null
+  questionPassage?: { title?: string; text: string } | null
   selectedAnswer?: string | null
 }
 
@@ -342,6 +344,7 @@ export default function MockPlayer({
           </span>
         </div>
 
+        {current.questionPassage && <PassagePanel passage={current.questionPassage} />}
         <h3 className="font-display text-lg sm:text-xl font-medium leading-snug text-black mb-5">
           <MathText text={current.questionText} />
         </h3>
