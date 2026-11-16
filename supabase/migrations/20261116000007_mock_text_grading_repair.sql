@@ -1,32 +1,20 @@
--- Mock with derivation/text items, tier 5 of the mock-format build-out.
---
--- JAMB sessions today are MCQ by construction: serving defaults to
--- array['mcq']::text[] and record_session_answer accepts only a-e, so a
--- text/derivation item can never make it into a mock and be scored.
--- That gap closes here:
---
---   1. session_answers learns text_answer (the learner's own words).
---   2. record_session_extended_answer() stores extended answers - the
---      MCQ-only record_session_answer stays untouched for paper flow.
---   3. complete_mock_session() now grades only mcq items. Non-mcq items
---      keep is_correct = NULL (a pending verdict, not an incorrect one)
---      and are reported in the score as pending_count in the results
---      performance_by_subject payload - a subject with 1 derivation shows
---      { correct, total, pending } with total = mcq count only, and
---      pending = the derivation count.
---
--- The session serving default stays mcq-only on purpose: this migration
--- does not let any existing exam set flip to text/derivation by accident.
--- Exams opt in per configuration, then flow completely through the same
--- path.
+-- Repair for 20261116000004_mock_text_grading. The first push attempt
+-- aborted at the `create or replace` on complete_mock_session (SQLSTATE
+-- 42P13 - you cannot change the OUT parameters of a table function), and
+-- supabase_migrations.schema_migrations already carries version
+-- 20261116000004 with a partially-applied body. Rather than edit history,
+-- bring the database to the intended final state with one migration that
+-- is idempotent end to end.
 
 alter table public.session_answers
   add column if not exists text_answer text null;
 
-comment on column public.session_answers.text_answer is
-  'The learner''s own words for a text/derivation item. Graded by review, not by equality; is_correct stays NULL for these items.';
+-- Same grant contract as everywhere else: definer functions for the app
+-- surface revoke from anon, grant to authenticated and service_role.
 
-create or replace function record_session_extended_answer(
+drop function if exists record_session_extended_answer(uuid, uuid, text);
+
+create function record_session_extended_answer(
   p_session_id uuid,
   p_question_id uuid,
   p_text_answer text
@@ -59,11 +47,9 @@ $$;
 revoke all on function record_session_extended_answer(uuid, uuid, text) from public, anon;
 grant execute on function record_session_extended_answer(uuid, uuid, text) to authenticated, service_role;
 
--- complete_mock_session: only mcq items count toward score and accuracy.
--- Extended items are left ungraded (is_correct IS NULL) and reported as
--- pending in the performance_by_subject payload.
+drop function if exists complete_mock_session(uuid);
 
-create or replace function complete_mock_session(p_session_id uuid)
+create function complete_mock_session(p_session_id uuid)
 returns table (score integer, accuracy numeric, performance_by_subject jsonb, completed_at timestamptz, pending_count integer)
 language plpgsql
 security definer
