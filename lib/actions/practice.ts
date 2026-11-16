@@ -600,7 +600,7 @@ export async function completePracticeSession(sessionId: string) {
 
   revalidatePath('/practice')
   revalidatePath(`/practice/session/${sessionId}`)
-  revalidatePath('/history')
+  // (no '/history' route exists; nothing to revalidate there)
 
   return { sessionId, streak }
 }
