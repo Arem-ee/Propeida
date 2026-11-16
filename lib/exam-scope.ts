@@ -1,4 +1,5 @@
-import type { createClient } from './supabase/server'
+import { cache } from 'react'
+import { createClient } from './supabase/server'
 
 export {
   filterExamSubjectMapForScope,
@@ -229,3 +230,15 @@ export function examPathLabel(scope: ExamScope): string {
   }
   return 'No exam path yet'
 }
+
+/**
+ * Request-scoped exam scope. /home (and every reader on it) asks for this
+ * five or six times per render through different paths (dashboard readers,
+ * cohort, horizon, explicit calls). React cache() dedupes the identical
+ * computation inside one render pass, so the profiles/exams/sessions reads
+ * happen once instead of five or six times.
+ */
+export const getRequestExamScope = cache(async (userId: string): Promise<ExamScope> => {
+  const supabase = await createClient()
+  return getExamScope(supabase, userId)
+})

@@ -1,8 +1,8 @@
-import { createClient } from './supabase/server'
+﻿import { createClient } from './supabase/server'
 import { createAdminClient } from './supabase/admin'
 import { getExamHorizonDays } from './cohort'
 import { getPathSubjects } from './path-subjects'
-import { getExamScope } from './exam-scope'
+import { getRequestExamScope } from './exam-scope'
 import { sendCohortGhostPush } from './ghost-push'
 
 /**
@@ -12,11 +12,10 @@ import { sendCohortGhostPush } from './ghost-push'
  * reader filters through this so no path ever sees another path's score.
  */
 async function scopeExamIds(
-  supabase: SupabaseClient,
   userId: string,
 ): Promise<Set<string> | null> {
   try {
-    const scope = await getExamScope(supabase, userId)
+    const scope = await getRequestExamScope(userId)
     if (!scope.restricted) return null
     const allowed = new Set<string>((scope.examIds ?? []).filter(Boolean))
     allowed.add('null')
@@ -34,15 +33,15 @@ function inScope(examId: unknown, allowed: Set<string> | null): boolean {
 /**
  * Step 2 proof engine: an explainable rules engine, not ML.
  *
- * Versioned configuration — intervals and thresholds change here, in the
+ * Versioned configuration â€” intervals and thresholds change here, in the
  * open, never in a black box:
- * - Mastery score: exponential moving average (α = 0.5) of per-session
+ * - Mastery score: exponential moving average (Î± = 0.5) of per-session
  *   subject accuracy. One number, one update rule, auditable from raw
  *   session_answers at any time.
- * - Success: session subject accuracy ≥ 80%. A success lengthens the next
+ * - Success: session subject accuracy â‰¥ 80%. A success lengthens the next
  *   review gap; anything below resets the ladder (Karpicke & Roediger:
- *   repeated study after success adds nothing — only tested success counts).
- * - Intervals: expanding ladder 1 → 3 → 7 → 14 → 30 days (Cepeda et al.:
+ *   repeated study after success adds nothing â€” only tested success counts).
+ * - Intervals: expanding ladder 1 â†’ 3 â†’ 7 â†’ 14 â†’ 30 days (Cepeda et al.:
  *   optimal absolute gaps grow with retention horizon). Exam-date-anchored
  *   scheduling (gap as a function of days-to-exam) is the documented next
  *   step once the exam calendar binds to paths.
@@ -60,7 +59,7 @@ export const MASTERY_CONFIG = {
   intervalDays: [1, 3, 7, 14, 30],
   maxDuePerUser: 5,
   // Cepeda bands: optimal gap as a share of the retention interval.
-  // Long horizon → small share; imminent exam → review tomorrow.
+  // Long horizon â†’ small share; imminent exam â†’ review tomorrow.
   horizonBands: [
     { minDays: 180, share: 0.08 },
     { minDays: 90, share: 0.12 },
@@ -162,7 +161,7 @@ export async function applySubjectEvidence(
   sourceSessionId: string | null,
   examId: string | null = null,
 ): Promise<void> {
-  // Verified exam horizon, once per completion. Unverified or absent →
+  // Verified exam horizon, once per completion. Unverified or absent â†’
   // null, and the fixed ladder carries scheduling honestly.
   let horizonDays: number | null = null
   try {
@@ -287,7 +286,7 @@ export async function getDueReviews(
     .order('due_at', { ascending: true })
     .limit(MASTERY_CONFIG.maxDuePerUser)
 
-  const allowed = await scopeExamIds(supabase, userId)
+  const allowed = await scopeExamIds(userId)
   return (data ?? [])
     .filter((row) => inScope((row as { exam_id?: unknown }).exam_id, allowed))
     .map((row) => {
@@ -311,7 +310,7 @@ export async function getMasterySummary(
     .eq('user_id', userId)
     .is('topic_id', null)
 
-  const allowed = await scopeExamIds(supabase, userId)
+  const allowed = await scopeExamIds(userId)
   const rows = (data ?? []).filter((r) =>
     inScope((r as { exam_id?: unknown }).exam_id, allowed),
   ) as { status: string }[]
@@ -337,7 +336,7 @@ export interface ProgressSubject {
 
 /**
  * Progress map: every subject with content, each in exactly one honest
- * state. Untracked subjects are "not-started" — shown calmly, never as
+ * state. Untracked subjects are "not-started" â€” shown calmly, never as
  * a deficit. Sorted: secured, developing, fragile, then not-started.
  */
 export async function getProgressMap(
@@ -353,7 +352,7 @@ export async function getProgressMap(
       .is('topic_id', null),
   ])
 
-  const scope = await getExamScope(supabase, userId)
+  const scope = await getRequestExamScope(userId)
   const allowed =
     scope.restricted && scope.examIds
       ? new Set<string>([...scope.examIds, 'null'])
@@ -372,7 +371,7 @@ export async function getProgressMap(
   }
   const order: Record<string, number> = { secured: 0, developing: 1, fragile: 2, 'not-started': 3 }
 
-  // A restricted path sees only subjects its exams can teach or test — or
+  // A restricted path sees only subjects its exams can teach or test â€” or
   // ones this learner already has in-flight evidence for (legacy rows keep
   // their shelf). General keeps the old all-subjects view.
   let visibleIds: Set<string> | null = null
@@ -423,7 +422,7 @@ export async function getWeakestSubject(
     .order('mastery_score', { ascending: true })
     .limit(10)
 
-  const allowed = await scopeExamIds(supabase, userId)
+  const allowed = await scopeExamIds(userId)
   const row = ((data ?? []) as Record<string, unknown>[])
     .find((r) => inScope(r.exam_id, allowed)) as {
     subject_id: string
@@ -456,7 +455,7 @@ export async function getSecuredSubjects(
     .order('updated_at', { ascending: false })
     .limit(12)
 
-  const allowed = await scopeExamIds(supabase, userId)
+  const allowed = await scopeExamIds(userId)
   return ((data ?? []) as Record<string, unknown>[])
     .filter((row) => inScope(row.exam_id, allowed))
     .map((row) => {
@@ -507,7 +506,7 @@ export async function getNextReviews(
     .is('topic_id', null)
     .in('subject_id', subjectIds)
 
-  const allowed = await scopeExamIds(supabase, userId)
+  const allowed = await scopeExamIds(userId)
   const out: Record<string, string | null> = {}
   for (const row of (data ?? []) as { subject_id: string; next_review_at: string | null; exam_id: unknown }[]) {
     if (!inScope(row.exam_id, allowed)) continue

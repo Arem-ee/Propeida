@@ -3,7 +3,7 @@
 import { createClient, getAuthUser } from '@/lib/supabase/server'
 import { getDueReviews, getMasterySummary, getSecuredSubjects, getWeakestSubject } from '@/lib/mastery'
 import { getUserActiveSessions } from '@/lib/practice'
-import { getExamScope, isExamInScope } from '@/lib/exam-scope'
+import { getRequestExamScope, isExamInScope } from '@/lib/exam-scope'
 import { getNearestCohort } from '@/lib/cohort'
 import { getCachedPresenceStats } from '@/lib/presence'
 import { getNoteById } from '@/lib/notes'
@@ -150,7 +150,7 @@ export async function getDashboardData() {
       getUserActiveSessions(user.id),
       getNearestCohort(supabase, user.id),
       getWeakestSubject(supabase, user.id),
-      getExamScope(supabase, user.id),
+      getRequestExamScope(user.id),
     ])
     dueReviews = due
     mastery = summary
