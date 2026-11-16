@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { ArrowRight, RotateCcw, Flame, BookOpen, Play, Check, X } from 'lucide-react'
@@ -18,6 +18,7 @@ import { MathText } from '@/components/lessons/math-text'
 import { QuestionTable } from '@/components/questions/question-table'
 import { PassagePanel } from '@/components/questions/passage-panel'
 import { QuestionFigure } from '@/components/questions/question-figure'
+import { loadResume, saveResume, clearResume, clampIndex } from '@/lib/resume'
 
 export interface PlayerQuestion {
   id: string
@@ -91,7 +92,7 @@ export default function PracticePlayer({
   const lesson = lessonNoteId ? getNoteById(lessonNoteId) : null
 
   const [showLearn, setShowLearn] = useState(Boolean(lesson) && !alreadyStarted)
-  const [index, setIndex] = useState(0)
+  const [index, setIndex] = useState(() => clampIndex(loadResume(sessionId).index, ordered.length))
   const [selected, setSelected] = useState<string | null>(null)
   const [feedback, setFeedback] = useState<Feedback | null>(null)
   const [checking, setChecking] = useState(false)
@@ -102,6 +103,17 @@ export default function PracticePlayer({
   const [answered, setAnswered] = useState(0)
 
   const { add } = useWins()
+
+  // Persist the question position so a reload mid-session (failed connection,
+  // closed tab, accidental back-swipe) resumes where the learner left off.
+  // Answers themselves are already restored from the database.
+  useEffect(() => {
+    saveResume(sessionId, { index })
+  }, [sessionId, index])
+
+  useEffect(() => {
+    if (finished) clearResume(sessionId)
+  }, [finished, sessionId])
 
   const q = ordered[index]
   const isWarmup = index < warmupCount

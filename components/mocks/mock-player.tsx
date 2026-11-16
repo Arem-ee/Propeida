@@ -12,6 +12,7 @@ import { MathText } from '@/components/lessons/math-text'
 import { QuestionTable } from '@/components/questions/question-table'
 import { PassagePanel } from '@/components/questions/passage-panel'
 import { QuestionFigure } from '@/components/questions/question-figure'
+import { loadResume, saveResume, clearResume, clampIndex } from '@/lib/resume'
 
 function SafeCalculator({ onClose }: { onClose: () => void }) {
   const [display, setDisplay] = useState('0')
@@ -188,7 +189,7 @@ export default function MockPlayer({
 }) {
   const router = useRouter()
   const { add } = useWins()
-  const [index, setIndex] = useState(0)
+  const [index, setIndex] = useState(() => clampIndex(loadResume(sessionId).index, questions.length))
   const [selections, setSelections] = useState<Record<string, string>>(() => {
     const init: Record<string, string> = {}
     for (const q of questions) {
@@ -201,6 +202,7 @@ export default function MockPlayer({
   const [done, setDone] = useState(false)
   const [timedOut, setTimedOut] = useState(false)
   const [calculatorOpen, setCalculatorOpen] = useState(false)
+  const [saveFailures, setSaveFailures] = useState(0)
 
   const total = questions.length
   const current = questions[index]
@@ -250,10 +252,24 @@ export default function MockPlayer({
   const select = (key: string) => {
     if (!current || done) return
     setSelections((prev) => ({ ...prev, [current.id]: key }))
-    void submitAnswer(sessionId, current.id, key).catch(() => {})
+    submitAnswer(sessionId, current.id, key)
+      .then(() => setSaveFailures(0))
+      .catch(() => setSaveFailures((n) => n + 1))
   }
 
   const goTo = (i: number) => setIndex(Math.min(Math.max(0, i), total - 1))
+
+  // Persist the question position so a reload mid-exam (failed connection,
+  // closed tab, dead battery) resumes at the same question. Answers are
+  // already restored from the database; only the place in the paper needs
+  // this. The timer is anchored to the server-side start time either way.
+  useEffect(() => {
+    saveResume(sessionId, { index })
+  }, [sessionId, index])
+
+  useEffect(() => {
+    if (done) clearResume(sessionId)
+  }, [done, sessionId])
 
   if (done) {
     return (
@@ -397,6 +413,14 @@ export default function MockPlayer({
           </button>
         </div>
       </div>
+
+      {/* Honest save failure: the exam keeps going (like a real CBT), but
+          the learner must know their last taps have not reached the server. */}
+      {saveFailures >= 2 && (
+        <p role="alert" className="mt-3 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-bold text-red-700">
+          Your answers are not saving. Check your connection; if it drops, your last taps are lost and will score blank.
+        </p>
+      )}
 
       {/* Palette */}
       <div className="mt-5 rounded-3xl border border-blue-100/70 bg-white p-5 shadow-[0_2px_12px_-6px_rgba(16,28,51,0.12)]">
