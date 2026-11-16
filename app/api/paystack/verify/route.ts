@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { headers } from 'next/headers'
 import { createClient } from '@/lib/supabase/server'
 import { createAdminClient } from '@/lib/supabase/admin'
-import { isValidProduct, verifyTransaction } from '@/lib/paystack'
+import { isValidProduct, isPlausiblePayment, verifyTransaction } from '@/lib/paystack'
 import { checkRateLimit, getClientIp, rateLimitKey } from '@/lib/rate-limit'
 
 export async function GET(request: NextRequest) {
@@ -57,6 +57,10 @@ export async function GET(request: NextRequest) {
     const product = paystackResult.product
     if (!product || !isValidProduct(product)) {
       return NextResponse.json({ status: 'error', error: 'Invalid payment product' }, { status: 400 })
+    }
+
+    if (!isPlausiblePayment(product, paystackResult.amount, paystackResult.currency)) {
+      return NextResponse.json({ status: 'error', error: 'Payment amount does not match this product' }, { status: 400 })
     }
 
     // Keep reconciliation and webhook fulfillment on the same atomic, privileged path.

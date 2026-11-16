@@ -1,6 +1,6 @@
 import { NextRequest } from 'next/server'
 import { createAdminClient } from '@/lib/supabase/admin'
-import { verifyWebhookSignature, verifyTransaction, isValidProduct } from '@/lib/paystack'
+import { verifyWebhookSignature, verifyTransaction, isValidProduct, isPlausiblePayment } from '@/lib/paystack'
 
 const DEBUG = process.env.DEBUG === 'true'
 
@@ -136,6 +136,11 @@ export async function POST(request: NextRequest) {
 
   if (verification.status !== 'success') {
     return new Response('Transaction not successful', { status: 400 })
+  }
+
+  if (!isPlausiblePayment(product, verification.amount, verification.currency)) {
+    log('amount/currency mismatch for product', product)
+    return new Response('Payment amount does not match this product', { status: 400 })
   }
 
   const { error: processError } = await supabase.rpc('process_payment', {

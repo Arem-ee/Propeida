@@ -44,6 +44,24 @@ export function isValidProduct(product: string): product is typeof VALID_PRODUCT
   return (VALID_PRODUCTS as readonly string[]).includes(product)
 }
 
+/**
+ * Sanity check before granting entitlements: the paid amount must match the
+ * product's NGN price (kobo), and the currency must be NGN. The amount the
+ * buyer actually paid is re-fetched from Paystack at fulfillment time; the
+ * product is validated separately. This is defense in depth against a
+ * reference initialized for one product being spent on another.
+ */
+export function isPlausiblePayment(
+  product: string,
+  amount: number,
+  currency: string | undefined,
+): boolean {
+  const expected = PRODUCT_AMOUNTS[product]
+  if (expected == null) return false
+  if (currency !== 'NGN') return false
+  return amount >= expected
+}
+
 export async function initializeTransaction(email: string, userId: string, product: string = 'jamb_pro', idempotencyKey?: string) {
   const amount = PRODUCT_AMOUNTS[product] ?? PAYSTACK_AMOUNT
   const headers: Record<string, string> = {
