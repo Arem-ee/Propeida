@@ -134,7 +134,8 @@ function splitRuns(text: string): Array<{ math: boolean; src: string }> {
   for (const piece of pieces) {
     if (!piece) continue
     if (!piece.trim()) {
-      buf += piece
+      if (buf) { runs.push({ math: bufMath, src: buf }); buf = '' }
+      runs.push({ math: false, src: piece })
       continue
     }
     const math = isMathPiece(piece)
