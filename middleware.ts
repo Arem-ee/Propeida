@@ -31,6 +31,14 @@ export async function middleware(request: NextRequest) {
   const hasAuthCookie = request.cookies
     .getAll()
     .some(({ name }) => name.startsWith('sb-') && name.includes('auth-token'))
+  const isAuthPage = pathname === '/login' || pathname === '/signup'
+
+  // Public matched routes (currently just '/') need nothing from this
+  // middleware — do not pay for a Supabase round trip to the auth server
+  // just to reach the "return response" at the bottom.
+  if (hasAuthCookie && !needsAuth && !isAuthPage) {
+    return response
+  }
 
   // No session cookie: protected routes bounce immediately and anonymous
   // visitors never pay for a Supabase client on the edge.
@@ -75,8 +83,6 @@ export async function middleware(request: NextRequest) {
     return response
   }
 
-  const isAuthPage = pathname === '/login' || pathname === '/signup'
-
   if (!user && needsAuth) {
     const url = request.nextUrl.clone()
     url.pathname = '/login'
@@ -99,7 +105,8 @@ export async function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    '/',
+    // '/' is intentionally absent: the landing is a static file rewrite and
+    // middleware has nothing to do for anonymous or signed-in visitors there.
     '/home',
     '/learn', '/learn/:path*',
     '/practice', '/practice/:path*',
