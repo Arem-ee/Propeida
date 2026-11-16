@@ -109,7 +109,7 @@ export default function SettingsClient({
         <Row label="Plan" hint={planHint}>
           <p className="font-display text-xl font-medium text-black">{planLabel}</p>
           <Link
-            href="/pricing"
+            href="/account/upgrade"
             className="mt-3 inline-flex items-center justify-center rounded-2xl bg-blue-600 px-5 py-3 text-sm font-extrabold text-white hover:bg-blue-700 min-h-[48px] pressable"
           >
             {planCtaLabel}

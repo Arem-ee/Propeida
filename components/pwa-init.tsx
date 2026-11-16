@@ -14,6 +14,13 @@ export default function PwaInit() {
 
     if (!('serviceWorker' in navigator)) return
 
+    // In development the build output is not content-hashed, so a cache-first
+    // service worker serves the previous bundle forever and the app seems to
+    // ignore every edit. Register it only outside localhost, where the
+    // content-hashed output makes the cache safe.
+    const host = window.location.hostname
+    if (host === 'localhost' || host === '127.0.0.1') return
+
     // updateViaCache: 'none' — the browser must always revalidate the
     // service worker script against the network. Otherwise a cached sw.js
     // can keep an old caching strategy alive indefinitely, which is how

@@ -85,7 +85,7 @@ export default function AuthShell({
               aria-hidden="true"
               className="absolute -left-6 top-4 h-40 w-40 rounded-full bg-blue-100/70 blur-2xl"
             />
-            <Mascot expression={copy.mascot} size="xl" className="relative" />
+            <Mascot expression={copy.mascot} size="xl" className="relative" priority />
             <SpeechBubble text={copy.mascotLine} className="relative mt-1" />
           </div>
 

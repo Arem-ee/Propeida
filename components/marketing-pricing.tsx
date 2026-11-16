@@ -31,6 +31,7 @@ const PLANS: PlanCard[] = [
     features: [
       { text: 'You get one full practice per exam, with 180 questions for JAMB', included: true },
       { text: 'You get one mock exam simulation per exam', included: true },
+      { text: 'You get the first lesson of each subject free', included: true },
       { text: 'You see step-by-step explanations for all questions', included: true },
       { text: 'You get performance analytics and tracking', included: false },
       { text: 'You get school-specific Post-UTME banks', included: false },

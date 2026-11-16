@@ -52,6 +52,8 @@ interface MascotProps {
   /** Override the expression's default ambient loop.
    *  'flicker' = quick flame dance, for the streak chip. */
   motion?: 'auto' | 'flicker' | 'none'
+  /** Load eagerly (above-the-fold). */
+  priority?: boolean
 }
 
 const ASSETS: Record<MascotExpression, string> = {
@@ -89,7 +91,7 @@ const WIDTH: Record<'xs' | 'sm' | 'md' | 'lg' | 'xl', number> = {
   xl: 168,
 }
 
-export function Mascot({ expression = 'idle', size = 'md', className, popKey, motion = 'auto' }: MascotProps) {
+export function Mascot({ expression = 'idle', size = 'md', className, popKey, motion = 'auto', priority = false }: MascotProps) {
   const width = WIDTH[size]
   const ambient = motion === 'auto' ? AMBIENT[expression] : motion === 'flicker' ? 'flame-pulse' : ''
   return (
@@ -109,6 +111,7 @@ export function Mascot({ expression = 'idle', size = 'md', className, popKey, mo
           fill
           sizes={`${width}px`}
           className="object-cover"
+          priority={priority}
         />
       </span>
     </span>

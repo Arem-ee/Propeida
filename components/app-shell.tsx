@@ -1,9 +1,9 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
-import Link from 'next/link'
+import Link, { useLinkStatus } from 'next/link'
 import {
-  Home, BookOpen, BarChart3, Timer, TrendingUp, User, LogOut, Settings, X, Download, Crosshair, Users, ChevronRight, Sparkles, Atom,
+  Home, BookOpen, BarChart3, Timer, TrendingUp, User, LogOut, Settings, X, Download, Crosshair, Users, ChevronRight, Sparkles, Atom, Loader2,
 } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import Logo from '@/components/logo'
@@ -19,7 +19,7 @@ const TABS = [
 
 const ACCOUNT_LINKS = [
   { href: '/account', label: 'Profile', icon: User },
-  { href: '/pricing', label: 'Pro plans', icon: Sparkles },
+  { href: '/account/upgrade', label: 'Pro plans', icon: Sparkles },
   { href: '/squad', label: 'Study squad', icon: Users },
   { href: '/target', label: 'My target', icon: Crosshair },
   { href: '/account/downloads', label: 'Downloads', icon: Download },
@@ -29,13 +29,83 @@ const ACCOUNT_LINKS = [
 
 const ACCOUNT_ITEMS = [
   { href: '/account', label: 'Profile', caption: 'Your account details', icon: User },
-  { href: '/pricing', label: 'Pro plans', caption: 'What Pro opens', icon: Sparkles },
+  { href: '/account/upgrade', label: 'Pro plans', caption: 'What Pro opens', icon: Sparkles },
   { href: '/squad', label: 'Study squad', caption: 'Practise with people', icon: Users },
   { href: '/target', label: 'My target', caption: 'The course you want', icon: Crosshair },
   { href: '/account/downloads', label: 'Downloads', caption: 'Your files', icon: Download },
   { href: '/account/settings', label: 'Settings', caption: 'Your preferences', icon: Settings },
   { href: '/periodic-table', label: 'Periodic Table', caption: 'IUPAC Chemistry elements', icon: Atom },
 ]
+
+function SidebarTabLink({
+  item,
+  active,
+}: {
+  item: (typeof TABS)[number]
+  active: boolean
+}) {
+  const { pending } = useLinkStatus()
+  const Icon = item.icon
+  return (
+    <Link
+      key={item.href}
+      data-tour={item.tour}
+      href={item.href}
+      aria-current={active ? 'page' : undefined}
+      aria-busy={pending}
+      className={`group flex items-center gap-3 rounded-2xl px-3.5 py-3 text-[15px] font-extrabold min-h-[52px] transition-all pressable ${
+        active
+          ? 'bg-blue-600 text-white shadow-[0_8px_20px_-8px_rgba(37,99,235,0.6)]'
+          : 'text-ink-soft hover:text-black hover:bg-blue-50/70'
+      }`}
+    >
+      <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl transition-colors ${
+        active ? 'bg-white/20' : 'bg-blue-50 text-blue-600 group-hover:bg-blue-100'
+      }`}>
+        {pending && !active
+          ? <Loader2 className="h-[18px] w-[18px] animate-spin" />
+          : <Icon className="h-[18px] w-[18px]" />}
+      </span>
+      {item.label}
+      {pending && !active ? (
+        <span className="ml-auto h-1.5 w-8 overflow-hidden rounded-full bg-blue-200/60">
+          <span className="block h-full w-3 rounded-full bg-blue-600 animate-tab-progress" />
+        </span>
+      ) : null}
+    </Link>
+  )
+}
+
+function BottomTabLink({
+  item,
+  active,
+}: {
+  item: (typeof TABS)[number]
+  active: boolean
+}) {
+  const { pending } = useLinkStatus()
+  const Icon = item.icon
+  return (
+    <Link
+      key={item.href}
+      data-tour={item.tour}
+      href={item.href}
+      aria-current={active ? 'page' : undefined}
+      aria-busy={pending}
+      className={`relative flex flex-col items-center justify-center gap-1 min-w-0 flex-1 px-1 py-1.5 rounded-2xl transition-all pressable min-h-[52px] ${
+        active ? 'text-blue-700' : 'text-gray-500 hover:text-gray-600'
+      }`}
+    >
+      {pending && !active
+        ? <Loader2 className="h-[22px] w-[22px] animate-spin" />
+        : <Icon className="h-[22px] w-[22px] transition-transform duration-200" strokeWidth={active ? 2.5 : 2} />}
+      <span className="text-[10px] font-extrabold leading-tight">{item.label}</span>
+      {active && (
+        <span className="absolute bottom-[3px] h-1 w-8 rounded-full bg-blue-600 animate-pop-in" />
+      )}
+    </Link>
+  )
+}
 
 export default function AppShell({ children, email, isAdmin, onLogout }: {
   children: React.ReactNode
@@ -85,27 +155,9 @@ export default function AppShell({ children, email, isAdmin, onLogout }: {
 
         <nav className="flex-1 px-4 py-3 space-y-1.5 overflow-y-auto" aria-label="Primary">
           {TABS.map((item) => {
-            const Icon = item.icon
             const active = isActive(item.href)
             return (
-              <Link
-                key={item.href}
-                data-tour={item.tour}
-                href={item.href}
-                aria-current={active ? 'page' : undefined}
-                className={`group flex items-center gap-3 rounded-2xl px-3.5 py-3 text-[15px] font-extrabold min-h-[52px] transition-all pressable ${
-                  active
-                    ? 'bg-blue-600 text-white shadow-[0_8px_20px_-8px_rgba(37,99,235,0.6)]'
-                    : 'text-ink-soft hover:text-black hover:bg-blue-50/70'
-                }`}
-              >
-                <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl transition-colors ${
-                  active ? 'bg-white/20' : 'bg-blue-50 text-blue-600 group-hover:bg-blue-100'
-                }`}>
-                  <Icon className="h-[18px] w-[18px]" />
-                </span>
-                {item.label}
-              </Link>
+              <SidebarTabLink key={item.href} item={item} active={active} />
             )
           })}
         </nav>
@@ -282,24 +334,9 @@ export default function AppShell({ children, email, isAdmin, onLogout }: {
       <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur border-t border-blue-100/60 safe-area-bottom" aria-label="Primary">
         <div className="flex items-center justify-around h-[68px] px-1">
           {TABS.map((item) => {
-            const Icon = item.icon
             const active = isActive(item.href)
             return (
-              <Link
-                key={item.href}
-                data-tour={item.tour}
-                href={item.href}
-                aria-current={active ? 'page' : undefined}
-                className={`relative flex flex-col items-center justify-center gap-1 min-w-0 flex-1 px-1 py-1.5 rounded-2xl transition-all pressable min-h-[52px] ${
-                  active ? 'text-blue-700' : 'text-gray-500 hover:text-gray-600'
-                }`}
-              >
-                <Icon className="h-[22px] w-[22px] transition-transform duration-200" strokeWidth={active ? 2.5 : 2} />
-                <span className="text-[10px] font-extrabold leading-tight">{item.label}</span>
-                {active && (
-                  <span className="absolute bottom-[3px] h-1 w-8 rounded-full bg-blue-600 animate-pop-in" />
-                )}
-              </Link>
+              <BottomTabLink key={item.href} item={item} active={active} />
             )
           })}
         </div>

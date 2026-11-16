@@ -36,7 +36,7 @@ const FAQ_ITEMS = [
   {
     question: 'Does Propeida cover JAMB too?',
     answer:
-      'Yes. Propeida has more than 500 JAMB questions published across English, Mathematics, Government, and Economics, and you practise them in the same CBT screen. We add more subjects as we verify them.',
+      'Yes. Propeida has JAMB practice questions published across the subjects you study, and you practise them in the same CBT screen. We add more subjects as we verify them.',
   },
 ]
 

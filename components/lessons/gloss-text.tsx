@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { X } from 'lucide-react'
 import { MathText } from './math-text'
@@ -16,19 +16,47 @@ const MATH_TOKEN = /(\{\{(?:sub|sup|frac):[^{}]*\}\})/g
 
 function GlossTerm({ term }: { term: string }) {
   const [open, setOpen] = useState(false)
+  const triggerRef = useRef<HTMLButtonElement>(null)
+  const [position, setPosition] = useState<{ top: number; left: number } | null>(null)
   const definition = GLOSSARY[term.toLowerCase()]
+
   useEffect(() => {
     if (!open) return
+
+    // Keep the popup pinned above the trigger, inside the viewport.
+    const positionPopup = () => {
+      const trigger = triggerRef.current
+      if (!trigger) return
+      const rect = trigger.getBoundingClientRect()
+      const width = 256 // w-64
+      const left = Math.min(Math.max(12, rect.left), Math.max(12, window.innerWidth - width - 12))
+      setPosition({ top: rect.bottom + 6, left })
+    }
+    positionPopup()
+
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') setOpen(false)
     }
+    const onDismiss = () => setOpen(false)
+
     window.addEventListener('keydown', onKeyDown)
-    return () => window.removeEventListener('keydown', onKeyDown)
+    // A fixed popup stops making sense once the lesson scrolls; dismiss cleanly.
+    window.addEventListener('scroll', onDismiss, true)
+    window.addEventListener('resize', onDismiss)
+
+    return () => {
+      window.removeEventListener('keydown', onKeyDown)
+      window.removeEventListener('scroll', onDismiss, true)
+      window.removeEventListener('resize', onDismiss)
+    }
   }, [open])
+
   if (!definition) return <>{term}</>
+
   return (
     <span className="relative inline">
       <button
+        ref={triggerRef}
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
@@ -37,45 +65,48 @@ function GlossTerm({ term }: { term: string }) {
       >
         {term}
       </button>
-      {open && (
-        <>
-          {createPortal(
-            <div
-              aria-hidden="true"
-              onClick={() => setOpen(false)}
-              className="fixed inset-0 z-[65] cursor-pointer bg-slate-900/20 backdrop-blur-[2px] animate-fade-up"
-            />,
-            document.body,
-          )}
-          <span
-            id={`gloss-def-${term.toLowerCase()}`}
-            role="dialog"
-            aria-modal="false"
-            aria-label={`Definition of ${term}`}
-            className="absolute left-0 z-[70] mt-1.5 inline-flex w-64 max-w-[calc(100vw-2rem)] flex-col rounded-2xl border border-blue-100 bg-white p-3 text-left shadow-[0_18px_44px_-16px_rgba(16,28,51,0.45)] animate-pop-in"
-          >
-            <span className="flex items-center justify-between gap-3">
-              <span className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-blue-500">
-                Definition
-              </span>
+      {open && position
+        ? createPortal(
+            <>
               <button
                 type="button"
+                aria-hidden="true"
+                tabIndex={-1}
                 onClick={() => setOpen(false)}
-                aria-label="Close definition"
-                className="flex h-7 w-7 items-center justify-center rounded-full text-gray-400 transition-colors hover:bg-blue-50 hover:text-black"
+                className="fixed inset-0 z-[65] cursor-pointer bg-black/30 animate-fade-up"
+              />
+              <span
+                id={`gloss-def-${term.toLowerCase()}`}
+                role="dialog"
+                aria-modal="false"
+                aria-label={`Definition of ${term}`}
+                style={{ top: position.top, left: position.left }}
+                className="fixed z-[70] w-64 flex-col items-start rounded-2xl border border-blue-100 bg-white p-3 text-left shadow-[0_18px_44px_-16px_rgba(16,28,51,0.45)] animate-pop-in flex"
               >
-                <X className="h-4 w-4" />
-              </button>
-            </span>
-            <span className="mt-0.5 block font-display text-lg leading-snug text-black">
-              {term.toLowerCase()}
-            </span>
-            <span className="mt-1.5 block border-t border-blue-100/70 pt-1.5 text-[12px] font-semibold leading-snug text-ink-soft">
-              {definition}
-            </span>
-          </span>
-        </>
-      )}
+                <span className="flex w-full items-center justify-between gap-3">
+                  <span className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-blue-500">
+                    Definition
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => setOpen(false)}
+                    aria-label="Close definition"
+                    className="flex h-7 w-7 items-center justify-center rounded-full text-gray-400 transition-colors hover:bg-blue-50 hover:text-black"
+                  >
+                    <X className="h-4 w-4" />
+                  </button>
+                </span>
+                <span className="mt-0.5 block font-display text-lg leading-snug text-black">
+                  {term.toLowerCase()}
+                </span>
+                <span className="mt-1.5 block w-full border-t border-blue-100/70 pt-1.5 text-[12px] font-semibold leading-snug text-ink-soft">
+                  {definition}
+                </span>
+              </span>
+            </>,
+            document.body,
+          )
+        : null}
     </span>
   )
 }

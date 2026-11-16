@@ -26,7 +26,7 @@ const FAQ_ITEMS = [
   {
     question: 'Does Propeida cover JAMB past questions?',
     answer:
-      'Yes. Propeida has more than 500 JAMB questions published across English, Mathematics, Government, and Economics, and you practise them in the same CBT screen. We add more subjects as we verify them.',
+      'Yes. Propeida has JAMB practice questions published across the subjects you study, and you practise them in the same CBT screen. We add more subjects as we verify them.',
   },
   {
     question: 'Do I need to pay to practise post-UTME questions?',
@@ -51,8 +51,7 @@ export default function PostUtmePastQuestionsPage() {
         <div className="mt-10 space-y-6 text-base text-gray-500 leading-relaxed">
           <p>
             Propeida is a CBT practice platform for JAMB and post-UTME with verified questions, timed mock exams,
-            and short revision notes. You can start with more than 500 published JAMB questions across English,
-            Mathematics, Government, and Economics. We also cover the{' '}
+            and short revision notes. You can start with published JAMB practice across the subjects you study. We also cover the{' '}
             <Link href="/unilorin-putme" className="font-bold text-blue-600 hover:text-blue-700">
               UNILORIN Post-UTME (PUTME)
             </Link>{' '}

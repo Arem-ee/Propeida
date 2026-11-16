@@ -56,7 +56,7 @@ const featureTiles = [
     icon: TrendingUp,
     title: 'Review brings topics back before you forget',
     description:
-      'Topics return before you forget them on a schedule tuned to your exam date, and each review proves it stuck',
+      'Topics return before you forget them on an expanding-interval schedule, and each review proves it stuck',
     color: 'bg-indigo-100 text-indigo-600',
     hero: false,
   },

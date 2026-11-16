@@ -39,7 +39,7 @@ export default function UpgradeCard({
       ) : null}
       <div className="mt-5 flex flex-col gap-2 sm:flex-row">
         <Link
-          href="/pricing"
+          href="/account/upgrade"
           className="inline-flex flex-1 items-center justify-center rounded-2xl bg-blue-600 px-5 py-3 text-sm font-extrabold text-white hover:bg-blue-700 min-h-[48px] pressable"
         >
           See Pro

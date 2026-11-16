@@ -71,8 +71,8 @@ export default function FAQPage() {
             Straight answers about Propeida, how it is funded, and how it works.
           </p>
           <p className="mt-2 text-sm text-gray-500">
-            Also see the <Link href="/#faq" className="font-bold text-blue-600 hover:text-blue-700">FAQ section on the homepage</Link> and our{' '}
-            <Link href="/pricing" className="font-bold text-blue-600 hover:text-blue-700">plans and pricing</Link>.
+            Also see how we are funded on our{' '}
+            <Link href="/pricing" className="font-bold text-blue-600 hover:text-blue-700">plans and pricing page</Link>.
           </p>
         </div>
 

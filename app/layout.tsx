@@ -31,22 +31,25 @@ const supabaseOrigin = process.env.NEXT_PUBLIC_SUPABASE_URL
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Propeida | Free JAMB & Post-UTME Practice with CBT Mock Exams',
+    default: 'Free JAMB Past Questions & Post-UTME Mock Exams | Propeida',
     template: '%s | Propeida',
   },
   description:
-    'Prepare smarter for JAMB and Post-UTME with realistic CBT practice, clear explanations, and progress tracking, and start free before you upgrade when you need more',
+    'Free JAMB past questions and Post-UTME past questions with a real CBT simulator, timed mock exams, step-by-step explanations, and progress tracking',
   keywords: [
     'free JAMB past questions',
-    'Post UTME practice',
-    'free CBT exam simulator Nigeria',
+    'JAMB past questions',
+    'Post UTME past questions',
+    'UNILORIN Post UTME past questions',
+    'JAMB mock exam',
+    'JAMB CBT',
+    'CBT exam simulator Nigeria',
     'exam preparation app Nigeria',
-    'sponsor a school exam prep',
   ],
   openGraph: {
-    title: 'Propeida | Free JAMB & Post-UTME Practice with CBT Mock Exams',
+    title: 'Free JAMB Past Questions & Post-UTME Mock Exams | Propeida',
     description:
-      'Real CBT mock exams, human-checked questions, and progress tracking for your JAMB and Post-UTME preparation, with a free start and an upgrade when you want more practice',
+      'Free JAMB past questions and Post-UTME past questions with a real CBT simulator, timed mock exams, step-by-step explanations, and progress tracking',
     url: siteUrl,
     siteName: 'Propeida',
     type: 'website',
@@ -55,9 +58,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Propeida | Free JAMB & Post-UTME Practice with CBT Mock Exams',
+    title: 'Free JAMB Past Questions & Post-UTME Mock Exams | Propeida',
     description:
-      'Real CBT mock exams, human-checked questions, and progress tracking for your JAMB and Post-UTME preparation, with a free start and an upgrade when you want more practice',
+      'Free JAMB past questions and Post-UTME past questions with a real CBT simulator, timed mock exams, step-by-step explanations, and progress tracking',
     images: ['/opengraph-image'],
   },
   robots: {
