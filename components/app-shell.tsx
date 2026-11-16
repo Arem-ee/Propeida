@@ -3,7 +3,7 @@
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import {
-  Home, BookOpen, BarChart3, Timer, TrendingUp, User, LogOut, Settings, X, Download, Crosshair, Users, ChevronRight, Sparkles,
+  Home, BookOpen, BarChart3, Timer, TrendingUp, User, LogOut, Settings, X, Download, Crosshair, Users, ChevronRight, Sparkles, Atom,
 } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import Logo from '@/components/logo'
@@ -24,6 +24,7 @@ const ACCOUNT_LINKS = [
   { href: '/target', label: 'My target', icon: Crosshair },
   { href: '/account/downloads', label: 'Downloads', icon: Download },
   { href: '/account/settings', label: 'Settings', icon: Settings },
+  { href: '/periodic-table', label: 'Periodic Table', icon: Atom },
 ]
 
 const ACCOUNT_ITEMS = [
@@ -33,6 +34,7 @@ const ACCOUNT_ITEMS = [
   { href: '/target', label: 'My target', caption: 'The course you want', icon: Crosshair },
   { href: '/account/downloads', label: 'Downloads', caption: 'Your files', icon: Download },
   { href: '/account/settings', label: 'Settings', caption: 'Your preferences', icon: Settings },
+  { href: '/periodic-table', label: 'Periodic Table', caption: 'IUPAC Chemistry elements', icon: Atom },
 ]
 
 export default function AppShell({ children, email, isAdmin, onLogout }: {
@@ -59,6 +61,11 @@ export default function AppShell({ children, email, isAdmin, onLogout }: {
 
   const isActive = (href: string) => pathname === href || pathname.startsWith(href + '/')
   const initial = (email?.[0] ?? '?').toUpperCase()
+  // The mock has to mirror a real exam: no reference material anywhere in the
+  // chrome while the learner is inside a mock (lobby or live session).
+  const onMocks = pathname.startsWith('/mocks')
+  const accountLinks = onMocks ? ACCOUNT_LINKS.filter((item) => item.href !== '/periodic-table') : ACCOUNT_LINKS
+  const accountItems = onMocks ? ACCOUNT_ITEMS.filter((item) => item.href !== '/periodic-table') : ACCOUNT_ITEMS
 
   return (
     <div className="min-h-screen flex">
@@ -159,7 +166,7 @@ export default function AppShell({ children, email, isAdmin, onLogout }: {
               </span>
             </div>
             <nav aria-label="Account" className="mt-2 space-y-1">
-              {ACCOUNT_ITEMS.map((item) => {
+              {accountItems.map((item) => {
                 const Icon = item.icon
                 const active = pathname === item.href
                 return (
@@ -221,7 +228,7 @@ export default function AppShell({ children, email, isAdmin, onLogout }: {
           <div id="account-menu-mobile" className="border-t border-blue-100/60 bg-paper px-4 py-3 animate-pop-in">
             <p className="truncate px-1 text-xs font-extrabold text-black">{email}</p>
             <div className="mt-1 space-y-0.5">
-              {ACCOUNT_LINKS.map((item) => {
+              {accountLinks.map((item) => {
                 const Icon = item.icon
                 return (
                   <Link

@@ -15,6 +15,7 @@ const PROTECTED_PREFIXES = [
   '/recall',
   '/squad',
   '/diagnostic',
+  '/periodic-table',
 ]
 const EXACT_PROTECTED = ['/onboarding']
 

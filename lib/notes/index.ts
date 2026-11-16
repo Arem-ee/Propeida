@@ -112,6 +112,12 @@ export type LessonVisual =
       /** How the picture is shaped so it scales without a layout jump. */
       aspect: 'wide' | 'portrait'
     }
+  | {
+      kind: 'periodic-table'
+      caption?: string
+      initialFocus?: 'first-20' | 'all'
+      highlight?: string[]
+    }
 
 export interface NoteSection {
   heading: string

@@ -112,6 +112,18 @@ export function toLessonVisual(value: unknown): LessonVisual | null {
     return { kind: 'image', src, alt, caption, aspect }
   }
 
+  if (v.kind === 'periodic-table') {
+    const rawHighlights = Array.isArray(v.highlight) ? v.highlight : []
+    const highlight = rawHighlights.map(text).filter(Boolean)
+    const initialFocus = v.initialFocus === 'all' ? 'all' : 'first-20'
+    return {
+      kind: 'periodic-table',
+      caption: caption || undefined,
+      initialFocus,
+      highlight: highlight.length > 0 ? highlight : undefined,
+    }
+  }
+
   return null
 }
 
