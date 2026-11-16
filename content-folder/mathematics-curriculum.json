@@ -1827,22 +1827,34 @@
       "problem": "Write 25 in decimal as a base-five number.",
       "steps": [
        {
-        "operation": "Divide by five repeatedly, keeping the remainder",
-        "reason": "Each division peels off one base-five digit from the back",
-        "result": "25 ÷ 5 = 5 r 0, 5 ÷ 5 = 1 r 0, 1 ÷ 5 = 0 r 1",
-        "predictPrompt": "Which remainder comes out first?"
+        "operation": "Divide 25 by 5",
+        "reason": "Split it into groups of 5: you get 5 groups and nothing over. The leftover is the last digit of the base-five number.",
+        "result": "25 ÷ 5 = 5 r 0",
+        "predictPrompt": "What is 25 divided by 5?"
        },
        {
-        "operation": "Read the remainders from the last one upward",
-        "reason": "The last remainder is the most significant digit",
+        "operation": "Divide 5 by 5",
+        "reason": "Split the result into groups of 5: you get 1 group and nothing over. The leftover is the middle digit of the base-five number.",
+        "result": "5 ÷ 5 = 1 r 0",
+        "predictPrompt": "What is 5 divided by 5?"
+       },
+       {
+        "operation": "Divide 1 by 5",
+        "reason": "One cannot be split into a full group of 5, so the quotient is 0 and everything is remainder. The leftover is the first digit of the base-five number.",
+        "result": "1 ÷ 5 = 0 r 1",
+        "predictPrompt": "What is 1 divided by 5?"
+       },
+       {
+        "operation": "Read the remainders from the bottom up",
+        "reason": "The bottom remainder is the leftmost digit and the top remainder is the rightmost.",
         "result": "100 in base five",
-        "predictPrompt": "Which remainder takes the biggest place?"
+        "predictPrompt": "Which remainder is the leftmost digit?"
        },
        {
-        "operation": "Check by expanding back",
-        "reason": "1×25 + 0×5 + 0×1 = 25",
-        "result": "100 in base five is 25, exactly as expected",
-        "predictPrompt": "What does 100 in base five expand to?"
+        "operation": "Check: expand 100 in base five back to decimal",
+        "reason": "Each place is five times the one to its right, so 100 means one 25 and zero 5s and zero 1s.",
+        "result": "1×25 + 0×5 + 0×1 = 25 — done",
+        "predictPrompt": "Does 25 match what you started with?"
        }
       ]
      }
