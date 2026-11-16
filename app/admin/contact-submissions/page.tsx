@@ -2,11 +2,13 @@ import { createAdminClient } from '@/lib/supabase/admin'
 import { Mail } from 'lucide-react'
 import PageHeader from '@/components/admin/page-header'
 import ContactInbox from '@/components/admin/contact-inbox'
+import { requireAdmin } from '@/lib/admin'
 
 export const dynamic = 'force-dynamic'
 export const metadata = { title: 'Contact messages' }
 
 export default async function AdminContactSubmissionsPage() {
+  await requireAdmin()
   const supabase = createAdminClient()
 
   const { data: submissions } = await supabase

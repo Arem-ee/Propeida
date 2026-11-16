@@ -3,10 +3,12 @@ import Link from 'next/link'
 import { Plus, School } from 'lucide-react'
 import PageHeader from '@/components/admin/page-header'
 import { AdminTable, THead, Th, TBody, Td, TableEmpty } from '@/components/admin/table'
+import { requireAdmin } from '@/lib/admin'
 
 export const metadata = { title: 'Exams' }
 
 export default async function AdminExamsPage() {
+  await requireAdmin()
   const supabase = await createClient()
 
   const { data: exams } = await supabase

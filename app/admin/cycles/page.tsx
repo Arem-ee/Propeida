@@ -1,11 +1,13 @@
 import { createAdminClient } from '@/lib/supabase/admin'
 import CyclesManager from '../schools/cycles-manager'
 import PageHeader from '@/components/admin/page-header'
+import { requireAdmin } from '@/lib/admin'
 
 export const metadata = { title: 'Exam cycles' }
 export const dynamic = 'force-dynamic'
 
 export default async function CyclesPage() {
+  await requireAdmin()
   const supabase = createAdminClient()
   const { data: exams } = await supabase.from('exams').select('id, name, slug').order('name')
 

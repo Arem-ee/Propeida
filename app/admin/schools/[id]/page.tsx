@@ -2,11 +2,13 @@ import { notFound } from 'next/navigation'
 import { createAdminClient } from '@/lib/supabase/admin'
 import ScreeningsManager from './screenings-manager'
 import PageHeader from '@/components/admin/page-header'
+import { requireAdmin } from '@/lib/admin'
 
 export const metadata = { title: 'Manage school' }
 export const dynamic = 'force-dynamic'
 
 export default async function SchoolDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  await requireAdmin()
   const { id } = await params
   const supabase = createAdminClient()
 

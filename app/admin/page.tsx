@@ -10,6 +10,7 @@ import {
   CalendarClock,
   Tags,
 } from 'lucide-react'
+import { requireAdmin } from '@/lib/admin'
 import { createAdminClient } from '@/lib/supabase/admin'
 import PageHeader from '@/components/admin/page-header'
 import StatCard from '@/components/admin/stat-card'
@@ -30,6 +31,7 @@ function timeAgo(iso: string) {
 }
 
 export default async function AdminDashboardPage() {
+  await requireAdmin()
   const supabase = createAdminClient()
 
   const [

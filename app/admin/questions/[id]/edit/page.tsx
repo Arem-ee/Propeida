@@ -1,8 +1,10 @@
 import { createAdminClient } from '@/lib/supabase/admin'
 import { redirect } from 'next/navigation'
 import EditQuestionForm from './form'
+import { requireAdmin } from '@/lib/admin'
 
 export default async function EditQuestionPage({ params }: { params: Promise<{ id: string }> }) {
+  await requireAdmin()
   const { id } = await params
   const supabase = createAdminClient()
 

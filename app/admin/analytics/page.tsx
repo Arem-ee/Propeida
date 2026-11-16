@@ -2,11 +2,13 @@ import { createAdminClient } from '@/lib/supabase/admin'
 import { BarChart3 } from 'lucide-react'
 import PageHeader from '@/components/admin/page-header'
 import AnalyticsInbox from '@/components/admin/analytics-inbox'
+import { requireAdmin } from '@/lib/admin'
 
 export const dynamic = 'force-dynamic'
 export const metadata = { title: 'Analytics' }
 
 export default async function AdminAnalyticsPage() {
+  await requireAdmin()
   const supabase = createAdminClient()
 
   const [{ data: events }, { data: eventCounts }] = await Promise.all([

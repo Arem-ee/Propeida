@@ -3,11 +3,13 @@ import { createAdminClient } from '@/lib/supabase/admin'
 import LessonMetaForm from './meta-form'
 import BlockEditor from '../block-editor'
 import PageHeader from '@/components/admin/page-header'
+import { requireAdmin } from '@/lib/admin'
 
 export const metadata = { title: 'Edit lesson' }
 export const dynamic = 'force-dynamic'
 
 export default async function EditLessonPage({ params }: { params: Promise<{ id: string }> }) {
+  await requireAdmin()
   const { id } = await params
   const supabase = createAdminClient()
 

@@ -1,8 +1,10 @@
 import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 import EditExamForm from './form'
+import { requireAdmin } from '@/lib/admin'
 
 export default async function EditExamPage({ params }: { params: Promise<{ id: string }> }) {
+  await requireAdmin()
   const { id } = await params
   const supabase = await createClient()
 

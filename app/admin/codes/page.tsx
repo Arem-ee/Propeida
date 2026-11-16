@@ -2,11 +2,13 @@ import { createAdminClient } from '@/lib/supabase/admin'
 import NewCodeForm from './form'
 import PageHeader from '@/components/admin/page-header'
 import { AdminTable, THead, Th, TBody, Td, TableEmpty } from '@/components/admin/table'
+import { requireAdmin } from '@/lib/admin'
 
 export const metadata = { title: 'Misconception codes' }
 export const dynamic = 'force-dynamic'
 
 export default async function CodesPage() {
+  await requireAdmin()
   const supabase = createAdminClient()
   const [{ data: codes }, { data: subjects }] = await Promise.all([
     supabase

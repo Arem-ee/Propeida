@@ -4,11 +4,13 @@ import DuplicateLessonButton from './duplicate-button'
 import PageHeader from '@/components/admin/page-header'
 import { AdminTable, THead, Th, TBody, Td, TableEmpty } from '@/components/admin/table'
 import { LessonStatusPill } from '@/components/admin/badge'
+import { requireAdmin } from '@/lib/admin'
 
 export const metadata = { title: 'Lessons' }
 export const dynamic = 'force-dynamic'
 
 export default async function AdminLessonsPage() {
+  await requireAdmin()
   const supabase = createAdminClient()
   const { data: lessons } = await supabase
     .from('lessons')

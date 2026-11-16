@@ -3,11 +3,13 @@ import { createAdminClient } from '@/lib/supabase/admin'
 import NewSchoolFormWrapper from './new-school-form-wrapper'
 import PageHeader from '@/components/admin/page-header'
 import { AdminTable, THead, Th, TBody, Td, TableEmpty } from '@/components/admin/table'
+import { requireAdmin } from '@/lib/admin'
 
 export const metadata = { title: 'Schools' }
 export const dynamic = 'force-dynamic'
 
 export default async function SchoolsPage() {
+  await requireAdmin()
   const supabase = createAdminClient()
   const { data: schools } = await supabase
     .from('schools')
