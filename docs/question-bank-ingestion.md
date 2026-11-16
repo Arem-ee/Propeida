@@ -1,4 +1,4 @@
-﻿# Question-bank ingestion framework
+# Question-bank ingestion framework
 
 This is the staging pipeline between the parsed JAMB-like corpus and the live question bank. It never publishes a question. It prepares an auditable batch, imports it as `in_review`, and leaves human verification as the final gate.
 

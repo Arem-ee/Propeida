@@ -1,4 +1,4 @@
-﻿// seeds a JAMB UTME question bank built from LLM-solved past papers with an 'unmapped' topic default.
+// seeds a JAMB UTME question bank built from LLM-solved past papers with an 'unmapped' topic default.
 //
 // Used for the biology and commerce banks authored 2026-11-15. Answers are
 // LLM-solved, NOT source-verified; verified_state is set to 'source_cited'.

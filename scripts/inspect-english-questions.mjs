@@ -1,4 +1,4 @@
-﻿// Inspect the live English question bank.
+// Inspect the live English question bank.
 import { createClient } from '@supabase/supabase-js'
 
 const URL = process.env.NEXT_PUBLIC_SUPABASE_URL

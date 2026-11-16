@@ -1,4 +1,4 @@
-﻿import { createClient } from "@supabase/supabase-js"
+import { createClient } from "@supabase/supabase-js"
 const db = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY)
 const { data: subject } = await db.from("subjects").select("id").eq("slug","english").single()
 const { data: lessons } = await db.from("lessons").select("id,slug,status").eq("subject_id", subject.id).eq("status","published")

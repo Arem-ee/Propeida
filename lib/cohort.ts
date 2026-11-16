@@ -1,4 +1,4 @@
-﻿import { createClient } from './supabase/server'
+import { createClient } from './supabase/server'
 import { getCachedCohortStats } from './presence'
 import { getRequestExamScope } from './exam-scope'
 

@@ -1,4 +1,4 @@
-﻿import { createClient } from './supabase/server'
+import { createClient } from './supabase/server'
 import { createAdminClient } from './supabase/admin'
 import { getExamHorizonDays } from './cohort'
 import { getPathSubjects } from './path-subjects'

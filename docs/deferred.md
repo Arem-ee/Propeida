@@ -1,4 +1,4 @@
-﻿# Deferred work ledger
+# Deferred work ledger
 
 Everything deliberately postponed, with its unblock condition. Nothing here is forgotten â€” items leave this list only by being built or explicitly rejected. Updated 2026-11-06.
 

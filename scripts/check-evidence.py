@@ -1,4 +1,4 @@
-﻿import json, pathlib
+import json, pathlib
 d = json.loads(pathlib.Path(r"content-folder\english-section-a.json").read_text(encoding="utf-8"))
 bad = []
 for L in d["lessons"]:
