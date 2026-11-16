@@ -81,39 +81,138 @@ function init() {
   }
 
   /* ==========================================================================
-     3. SCREENSHOTS MARQUEE (Infinite Loop with Smooth Hover Deceleration)
+     3. 3D APPLE-STYLE INTERACTIVE SHOWCASE CONTROLLER
      ========================================================================== */
-  const trackWrapper = document.getElementById('screenshotsTrackWrapper');
-  const track = document.getElementById('screenshotsTrack');
+  const showcaseViewport = document.getElementById('showcaseViewport');
+  const showcaseRig = document.getElementById('showcaseRig');
+  const showcaseNav = document.getElementById('showcaseNav');
+  const pills = document.querySelectorAll('.showcase-pill');
 
-  if (track && trackWrapper && !prefersReducedMotion) {
-    let currentX = 0;
-    const baseSpeed = 0.85;
-    let targetSpeed = baseSpeed;
-    let currentSpeed = baseSpeed;
+  if (showcaseViewport && showcaseRig && pills.length > 0) {
+    let currentPhase = 1;
+    const totalPhases = 4;
+    const phaseDurations = [3000, 2400, 4200, 3600]; // Duration per phase in ms
+    let phaseStartTime = Date.now();
+    let isUserPaused = false;
+    let autoTimer = null;
+    let animFrame = null;
 
-    trackWrapper.addEventListener('mouseenter', () => {
-      targetSpeed = 0;
-    });
+    // Mouse Parallax & Gyro State
+    let targetRotX = 0;
+    let targetRotY = 0;
+    let currentRotX = 0;
+    let currentRotY = 0;
 
-    trackWrapper.addEventListener('mouseleave', () => {
-      targetSpeed = baseSpeed;
-    });
-
-    function animateMarquee() {
-      currentSpeed += (targetSpeed - currentSpeed) * 0.06;
-      currentX -= currentSpeed;
-
-      const halfWidth = track.scrollWidth / 2;
-      if (halfWidth > 0 && Math.abs(currentX) >= halfWidth) {
-        currentX += halfWidth;
+    function getBaseRotation(phase) {
+      switch (phase) {
+        case 1: return { x: 0, y: 0, z: 0 };
+        case 2: return { x: 0, y: -1.5, z: 0 };
+        case 3: return { x: 6, y: -8, z: 1.5 }; // Clean subtle elevation
+        case 4: return { x: 0, y: 0, z: 0 };
+        default: return { x: 0, y: 0, z: 0 };
       }
-
-      track.style.transform = `translate3d(${currentX}px, 0, 0)`;
-      requestAnimationFrame(animateMarquee);
     }
 
-    requestAnimationFrame(animateMarquee);
+    function setPhase(phase, manual = false) {
+      currentPhase = phase;
+      showcaseViewport.setAttribute('data-active', String(phase));
+
+      pills.forEach((p) => {
+        const pPhase = parseInt(p.getAttribute('data-phase'), 10);
+        const isActive = pPhase === phase;
+        p.classList.toggle('is-active', isActive);
+        p.setAttribute('aria-selected', String(isActive));
+
+        const progressFill = p.querySelector('.pill-progress-fill');
+        if (progressFill) {
+          progressFill.style.width = pPhase < phase ? '100%' : '0%';
+        }
+      });
+
+      phaseStartTime = Date.now();
+
+      if (manual) {
+        isUserPaused = true;
+        // Resume autoplay after 9 seconds of inactivity
+        clearTimeout(autoTimer);
+        autoTimer = setTimeout(() => {
+          isUserPaused = false;
+          nextPhase();
+        }, 9000);
+      }
+    }
+
+    function nextPhase() {
+      const next = currentPhase >= totalPhases ? 1 : currentPhase + 1;
+      setPhase(next, false);
+    }
+
+    // Pill click triggers
+    pills.forEach((pill) => {
+      pill.addEventListener('click', () => {
+        const phase = parseInt(pill.getAttribute('data-phase'), 10);
+        setPhase(phase, true);
+      });
+    });
+
+    // Mouse Parallax on Desktop
+    if (!prefersReducedMotion && window.matchMedia('(pointer: fine)').matches) {
+      showcaseViewport.addEventListener('mousemove', (e) => {
+        const rect = showcaseViewport.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        const normX = (e.clientX - centerX) / (rect.width / 2);
+        const normY = (e.clientY - centerY) / (rect.height / 2);
+
+        // Limit tilt to +/- 9 degrees
+        targetRotY = normX * 9;
+        targetRotX = -normY * 8;
+      });
+
+      showcaseViewport.addEventListener('mouseleave', () => {
+        targetRotX = 0;
+        targetRotY = 0;
+      });
+    }
+
+    // Main Animation Loop
+    function updateShowcaseLoop() {
+      const now = Date.now();
+      const currentDuration = phaseDurations[currentPhase - 1] || 3200;
+      const elapsed = now - phaseStartTime;
+
+      if (!isUserPaused && !prefersReducedMotion) {
+        const activePill = document.querySelector(`.showcase-pill[data-phase="${currentPhase}"]`);
+        const fill = activePill ? activePill.querySelector('.pill-progress-fill') : null;
+        if (fill) {
+          const progress = Math.min(100, (elapsed / currentDuration) * 100);
+          fill.style.width = `${progress}%`;
+        }
+
+        if (elapsed >= currentDuration) {
+          nextPhase();
+        }
+      }
+
+      // Smooth interpolation for 3D Rig
+      if (!prefersReducedMotion) {
+        currentRotX += (targetRotX - currentRotX) * 0.08;
+        currentRotY += (targetRotY - currentRotY) * 0.08;
+
+        const base = getBaseRotation(currentPhase);
+        const totalX = base.x + currentRotX;
+        const totalY = base.y + currentRotY;
+        const totalZ = base.z;
+
+        showcaseRig.style.transform = `rotateX(${totalX.toFixed(2)}deg) rotateY(${totalY.toFixed(2)}deg) rotateZ(${totalZ}deg)`;
+      }
+
+      animFrame = requestAnimationFrame(updateShowcaseLoop);
+    }
+
+    // Initialize in Phase 1
+    setPhase(1, false);
+    animFrame = requestAnimationFrame(updateShowcaseLoop);
   }
 
   /* ==========================================================================
