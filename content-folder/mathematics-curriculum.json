@@ -1998,6 +1998,89 @@
      }
     },
     {
+     "type": "text",
+     "content": {
+      "heading": "Decimal to base two, the quick way",
+      "paragraphs": [
+       "Same method as above, in binary. Divide by 2, write the remainder to the right of the row, carry down what is left over. When the quotient is 0, you are done. Read the remainders from the bottom up.",
+       "That is the entire procedure. It works for any base - three, five, eight, sixteen."
+      ],
+      "bullets": [
+       "Each row: divide what you have, write the remainder to the right, carry down the quotient",
+       "Stop when the quotient is 0",
+       "Read the remainders from the bottom row upwards"
+      ],
+      "takeaway": "Divide by the new base, write the remainder, carry down. When the quotient is 0, reverse the list.",
+      "check": {
+       "question": "What is the decimal number 13 in base two?",
+       "options": [
+        "1101",
+        "1011",
+        "1001",
+        "1111"
+       ],
+       "answer": 0,
+       "steps": [
+        {
+         "operation": "Divide 13 by 2",
+         "reason": "Each row: take a number, divide by the base, write the remainder to the right",
+         "result": "13 ÷ 2 = 6 r 1",
+         "predictPrompt": "What is 13 divided by 2?"
+        },
+        {
+         "operation": "Divide 6 by 2",
+         "reason": "Carry down the quotient from the previous row",
+         "result": "6 ÷ 2 = 3 r 0",
+         "predictPrompt": "Half of 6?"
+        },
+        {
+         "operation": "Divide 3 by 2",
+         "reason": "Divide until the quotient reaches 0",
+         "result": "3 ÷ 2 = 1 r 1",
+         "predictPrompt": "Half of 3 with remainder?"
+        },
+        {
+         "operation": "Divide 1 by 2",
+         "reason": "Quotient of 1 means this is the last row",
+         "result": "1 ÷ 2 = 0 r 1",
+         "predictPrompt": "Half of 1 in integers?"
+        },
+        {
+         "operation": "Read the remainders from the bottom up",
+         "reason": "The bottom remainder is the leftmost digit, the top is the rightmost",
+         "result": "1101 in base two",
+         "predictPrompt": "Which remainder is the leftmost digit?",
+         "visual": {
+          "kind": "quotient-table",
+          "props": {
+           "divisor": 2,
+           "rows": [
+            {
+             "dividend": 13,
+             "remainder": 1
+            },
+            {
+             "dividend": 6,
+             "remainder": 0
+            },
+            {
+             "dividend": 3,
+             "remainder": 1
+            },
+            {
+             "dividend": 1,
+             "remainder": 1
+            }
+           ],
+           "caption": "1101 in base two"
+          }
+         }
+        }
+       ]
+      }
+     }
+    },
+    {
      "type": "worked_example",
      "content": {
       "problem": "Convert 132 in base four to base five.",
