@@ -48,6 +48,7 @@ export default async function MockSessionPage({ params }: { params: Promise<{ se
         options: q.options,
         questionTable: q.questionTable ?? null,
         questionPassage: q.questionPassage ?? null,
+        questionFigure: q.questionFigure ?? null,
         selectedAnswer: q.selectedAnswer,
       }))}
       timeLimitSeconds={session.timeLimitSeconds}
