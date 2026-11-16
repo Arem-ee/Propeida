@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { ChevronRight, CalendarCheck, Target, ArrowRight } from 'lucide-react'
-import { createClient } from '@/lib/supabase/server'
+import { createClient, getCurrentUser } from '@/lib/supabase/server'
 import { getDashboardData } from '@/lib/actions/dashboard'
 import { getProStatus } from '@/lib/entitlements'
 import { Mascot } from '@/components/mascot'
@@ -13,7 +13,7 @@ export const metadata = { title: 'Home' }
 
 export default async function HomePage() {
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   let subjectsPending = false
   if (user) {
     const { data: profile } = await supabase
