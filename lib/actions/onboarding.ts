@@ -120,7 +120,7 @@ export async function submitOnboardingCheck(
   // another exam never enters this learner's model.
   let questionQuery = admin
     .from('questions')
-    .select('id, subjects!inner(name)')
+    .select('id, subject_id, subjects!inner(name)')
     .in('id', questionIds)
   if (scope.restricted) {
     if (!scope.examIds || scope.examIds.length === 0) return { summary: [] }
@@ -148,18 +148,21 @@ export async function submitOnboardingCheck(
 
   for (const a of answers) {
     const q = keyById.get(a.questionId) as
-      | { subjects: { name: string } | { name: string }[] | null }
+      | { subject_id: string; subjects: { name: string } | { name: string }[] | null }
       | undefined
     if (!q) continue
     const correct = answerById.get(a.questionId) === a.selectedAnswer
     const s = Array.isArray(q.subjects) ? q.subjects[0] : q.subjects
-    const entry = bySubject.get(a.subjectId) ?? { name: s?.name ?? 'Subject', correct: 0, total: 0 }
+    // Grade to the question's real subject, not a client-supplied one —
+    // a forged subjectId must not pollute the mastery model.
+    const subjectId = q.subject_id
+    const entry = bySubject.get(subjectId) ?? { name: s?.name ?? 'Subject', correct: 0, total: 0 }
     entry.total += 1
     if (correct) entry.correct += 1
-    bySubject.set(a.subjectId, entry)
+    bySubject.set(subjectId, entry)
     rows.push({
       user_id: user.id,
-      subject_id: a.subjectId,
+      subject_id: subjectId,
       question_id: a.questionId,
       lesson_id: 'onboarding-check',
       attempt_type: 'diagnostic',

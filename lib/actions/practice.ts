@@ -87,6 +87,7 @@ async function countUsedFreeMocks(
     .eq('user_id', userId)
     .eq('exam_id', examId)
     .eq('mode', 'mock')
+    .limit(100)
 
   return (data ?? []).filter((row) => {
     const answers = (row as { session_answers?: { id?: string }[] | null }).session_answers
@@ -890,6 +891,7 @@ export async function getSessionHistory() {
     .eq('user_id', user.id)
     .eq('status', 'completed')
     .order('started_at', { ascending: false })
+    .limit(100)
 
   if (error) throw new Error('Could not load your history.')
 

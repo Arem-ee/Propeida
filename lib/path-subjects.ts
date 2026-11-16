@@ -24,6 +24,11 @@ async function loadPathSubjects(examIds: string[]): Promise<PathSubject[]> {
   const candidateIds = [...new Set((links ?? []).map((row) => row.subject_id as string))]
   if (candidateIds.length === 0) return []
 
+  // examIds flow into a string-built .or() below; assert they are UUIDs so
+  // the filter cannot be turned into anything else.
+  const safeExamIds = examIds.filter((id) => /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(id))
+  if (safeExamIds.length === 0) return []
+
   const questionSubjectIds = new Set<string>()
   for (let from = 0; from < MAX_ROWS; from += PAGE) {
     const { data, error } = await admin
@@ -43,7 +48,7 @@ async function loadPathSubjects(examIds: string[]): Promise<PathSubject[]> {
     .from('lessons')
     .select('subject_id')
     .in('subject_id', candidateIds)
-    .or(`exam_id.is.null,exam_id.in.(${examIds.join(',')})`)
+    .or(`exam_id.is.null,exam_id.in.(${safeExamIds.join(',')})`)
 
   const lessonSubjectIds = new Set((lessons ?? []).map((row) => row.subject_id as string))
   const available = candidateIds.filter(

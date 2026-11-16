@@ -17,7 +17,7 @@ export const metadata = { title: 'Practice' }
 const getPublishedExamIds = unstable_cache(
   async (): Promise<string[]> => {
     const db = createAdminClient()
-    const { data, error } = await db.from('questions').select('exam_id').limit(20000)
+    const { data, error } = await db.from('questions').select('exam_id').eq('status', 'published').limit(20000)
     if (error) return []
     return [...new Set((data ?? []).map((q) => q.exam_id as string))]
   },
