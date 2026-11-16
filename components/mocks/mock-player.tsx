@@ -9,6 +9,7 @@ import { celebrateStreakIfNew } from '@/components/celebrations/streak-celebrati
 import { submitAnswer, completeMockSession } from '@/lib/actions/practice'
 import { celebrate } from '@/lib/celebrate'
 import { MathText } from '@/components/lessons/math-text'
+import { QuestionTable } from '@/components/questions/question-table'
 
 function SafeCalculator({ onClose }: { onClose: () => void }) {
   const [display, setDisplay] = useState('0')
@@ -138,6 +139,7 @@ export interface MockQuestion {
   subjectName: string
   questionText: string
   options: { key: string; text: string }[]
+  questionTable?: { headers: string[]; rows: string[][]; caption?: string } | null
   selectedAnswer?: string | null
 }
 
@@ -343,6 +345,7 @@ export default function MockPlayer({
         <h3 className="font-display text-lg sm:text-xl font-medium leading-snug text-black mb-5">
           <MathText text={current.questionText} />
         </h3>
+        {current.questionTable && <QuestionTable spec={current.questionTable} />}
         <div className="space-y-2.5">
           {current.options.map((opt) => {
             const isSel = selections[current.id] === opt.key

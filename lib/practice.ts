@@ -224,7 +224,8 @@ export async function getSessionQuestionsWithStatus(sessionId: string, includeRe
         id,
         subject_id,
         question_text,
-        options
+        options,
+        question_table
       )
     `)
     .eq('session_id', sessionId)
@@ -259,6 +260,7 @@ export async function getSessionQuestionsWithStatus(sessionId: string, includeRe
       subjectId: q.subject_id,
       questionText: q.question_text,
       options: q.options as { key: string; text: string }[],
+      questionTable: (q.question_table ?? null) as { headers: string[]; rows: string[][]; caption?: string } | null,
       selectedAnswer: sa.selected_answer,
       isCorrect: sa.is_correct,
       correctAnswer: includeReveal ? (answer?.correct_answer ?? null) : undefined,

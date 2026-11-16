@@ -656,6 +656,7 @@ export async function loadSessionData(sessionId: string) {
     subjectId: q.subjectId,
     questionText: q.questionText,
     options: q.options,
+    questionTable: q.questionTable ?? null,
     selectedAnswer: q.selectedAnswer,
     correctAnswer: q.correctAnswer,
     explanation: q.explanation,
