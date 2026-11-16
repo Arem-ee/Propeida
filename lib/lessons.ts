@@ -21,8 +21,9 @@ export interface WorkedStep {
    * { kind: 'fraction-bars', props: { fractions[{numerator,denominator,color?,label?}] } }
    * { kind: 'balance', props: { left[string], right[string], tilt? } }
    * { kind: 'plane', props: { points[{x,y,label?,color?}], range? } }
+   * { kind: 'quotient-table', props: { divisor: number, rows[{dividend, remainder}], caption? } }
    */
-  visual?: { kind: 'number-line' | 'fraction-bars' | 'balance' | 'plane'; props: Record<string, unknown> } | null
+  visual?: { kind: 'number-line' | 'fraction-bars' | 'balance' | 'plane' | 'quotient-table'; props: Record<string, unknown> } | null
 }
 
 export interface WorkedExample {

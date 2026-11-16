@@ -1,7 +1,8 @@
 import { NumberLine, FractionBars, AlgebraBalance, CoordinatePlane } from '@/components/maths/diagrams'
+import { QuotientTable, type QuotientRow } from '@/components/maths/quotient-table'
 
 export interface StepVisual {
-  kind: 'number-line' | 'fraction-bars' | 'balance' | 'plane'
+  kind: 'number-line' | 'fraction-bars' | 'balance' | 'plane' | 'quotient-table'
   props: Record<string, unknown>
 }
 
@@ -14,6 +15,7 @@ type Parsed =
   | { kind: 'number-line'; min: number; max: number; step: number; points: { value: number; label: string; color?: string }[] }
   | { kind: 'fraction-bars'; fractions: { numerator: number; denominator: number; color?: string; label?: string }[] }
   | { kind: 'balance'; left: string[]; right: string[]; tilt: number }
+  | { kind: 'quotient-table'; divisor: number; rows: QuotientRow[]; caption?: string }
   | { kind: 'plane'; points: { x: number; y: number; label?: string; color?: string }[]; range: number }
   | null
 
@@ -72,6 +74,24 @@ function parseVisual(visual: StepVisual | null | undefined): Parsed {
           tilt: typeof p.tilt === 'number' ? p.tilt : 0,
         }
       }
+      case 'quotient-table': {
+        const p = visual.props ?? {}
+        const divisor = Math.floor(num(p.divisor, 2))
+        const rawRows = Array.isArray(p.rows) ? p.rows : []
+        if (divisor < 2 || rawRows.length === 0) return null
+        return {
+          kind: 'quotient-table',
+          divisor,
+          rows: rawRows.map((r) => {
+            const o = r as Record<string, unknown>
+            return {
+              dividend: Math.max(0, Math.floor(num(o.dividend, 0))),
+              remainder: Math.max(0, Math.floor(num(o.remainder, 0))),
+            }
+          }),
+          caption: typeof p.caption === 'string' ? p.caption : undefined,
+        }
+      }
       case 'plane': {
         const raw = (visual.props ?? {}).points
         if (!Array.isArray(raw) || raw.length === 0) return null
@@ -107,6 +127,7 @@ export default function StepVisual({ visual }: { visual: StepVisual | null | und
 
   return (
     <div className="mt-3 rounded-2xl border border-blue-100 bg-blue-50/40 p-3">
+      {parsed.kind === 'quotient-table' && <QuotientTable divisor={parsed.divisor} rows={parsed.rows} caption={parsed.caption} />}
       {parsed.kind === 'number-line' && (
         <NumberLine min={parsed.min} max={parsed.max} step={parsed.step} points={parsed.points} />
       )}

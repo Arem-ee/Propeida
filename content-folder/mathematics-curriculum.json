@@ -1848,7 +1848,28 @@
         "operation": "Read the remainders from the bottom up",
         "reason": "The bottom remainder is the leftmost digit and the top remainder is the rightmost.",
         "result": "100 in base five",
-        "predictPrompt": "Which remainder is the leftmost digit?"
+        "predictPrompt": "Which remainder is the leftmost digit?",
+        "visual": {
+         "kind": "quotient-table",
+         "props": {
+          "divisor": 5,
+          "rows": [
+           {
+            "dividend": 25,
+            "remainder": 0
+           },
+           {
+            "dividend": 5,
+            "remainder": 0
+           },
+           {
+            "dividend": 1,
+            "remainder": 1
+           }
+          ],
+          "caption": "100 in base five"
+         }
+        }
        },
        {
         "operation": "Check: expand 100 in base five back to decimal",
