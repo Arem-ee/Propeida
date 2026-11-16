@@ -21,11 +21,22 @@ function toSectionCheck(value: unknown): NoteSection['check'] {
   const options = Array.isArray(v.options) ? v.options.map(String) : []
   const answer = typeof v.answer === 'number' ? v.answer : -1
   if (!question || options.length < 2 || answer < 0 || answer >= options.length) return undefined
+  const why = typeof v.why === 'string' && v.why.trim() ? v.why.trim() : undefined
+  const steps = Array.isArray(v.steps) && v.steps.every(
+    s => s && typeof s === 'object'
+      && typeof (s as Record<string, unknown>).operation === 'string'
+      && typeof (s as Record<string, unknown>).reason === 'string'
+      && typeof (s as Record<string, unknown>).result === 'string'
+      && typeof (s as Record<string, unknown>).predictPrompt === 'string',
+  )
+    ? (v.steps as import('@/lib/lessons').WorkedStep[])
+    : undefined
   return {
     question,
     options,
     answer,
-    ...(typeof v.why === 'string' && v.why.trim() ? { why: v.why.trim() } : {}),
+    ...(why ? { why } : {}),
+    ...(steps ? { steps } : {}),
   }
 }
 

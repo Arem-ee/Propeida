@@ -6,6 +6,8 @@ import type { NoteSection, SectionCheck } from '@/lib/notes'
 import LessonVisualBlock from './visuals'
 import { GlossText } from './gloss-text'
 import { MascotExplains } from '@/components/celebrations/speech-bubble'
+import { WorkedSteps } from '@/components/celebrations/worked-steps'
+import type { WorkedStep } from '@/lib/lessons'
 
 /**
  * The core reading flow: one concept per lesson, split into at most three
@@ -137,10 +139,14 @@ function CheckBlock({
               ? `${correct ? 'You got it right' : `Not quite, the answer is ${String.fromCharCode(65 + check.answer)}`}, ${check.why}`
               : correct ? 'You got it right' : `Not quite, the answer is ${String.fromCharCode(65 + check.answer)}`}
             steps={
-              <span className="text-sm font-semibold leading-relaxed text-ink-soft">
-                {correct ? 'You got it right' : `Not quite, the answer is ${String.fromCharCode(65 + check.answer)}`}
-                {check.why ? <>, <GlossText text={check.why} /></> : null}
-              </span>
+              check.steps && check.steps.length > 0
+                ? <WorkedSteps steps={check.steps as WorkedStep[]} />
+                : (
+                  <span className="text-sm font-semibold leading-relaxed text-ink-soft">
+                    {correct ? 'You got it right' : `Not quite, the answer is ${String.fromCharCode(65 + check.answer)}`}
+                    {check.why ? <>, <GlossText text={check.why} /></> : null}
+                  </span>
+                )
             }
           />
         </div>

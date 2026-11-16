@@ -57,6 +57,8 @@ export interface SectionCheck {
   answer: number
   /** One-line reason, shown after answering. */
   why?: string
+  /** Full worked derivation for the calculation, rendered step by step. */
+  steps?: import('@/lib/lessons').WorkedStep[]
 }
 
 export interface FlowStep {
