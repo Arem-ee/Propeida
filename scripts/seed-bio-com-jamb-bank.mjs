@@ -23,8 +23,8 @@ const flag = (name, fallback = undefined) => {
 const hasFlag = (name) => args.includes(name)
 const dryRun = hasFlag('--dry-run')
 const subjectSlug = flag('--subject')
-if (!['biology', 'commerce'].includes(subjectSlug)) {
-  console.error('--subject biology|commerce is required')
+if (!['biology', 'commerce', 'government'].includes(subjectSlug)) {
+  console.error('--subject biology|commerce|government is required')
   process.exit(1)
 }
 
@@ -38,7 +38,8 @@ if (!CONFIDENCE_RANK[minConfidence]) {
 const sourcePath = flag('--source', join('content-folder', `${subjectSlug}-jamb-bank.json`))
 const here = dirname(fileURLToPath(import.meta.url))
 const source = JSON.parse(readFileSync(join(here, '..', sourcePath), 'utf8'))
-const sourceLabel = flag('--source-label', `JAMB UTME ${subjectSlug === 'biology' ? 'Biology' : 'Commerce'} past papers (LLM-recomputed)`)
+const SUBJECT_NAMES = { biology: 'Biology', commerce: 'Commerce', government: 'Government' }
+const sourceLabel = flag('--source-label', `JAMB UTME ${SUBJECT_NAMES[subjectSlug]} past papers (LLM-recomputed)`)
 const expectedSubject = subjectSlug
 
 const URL = process.env.NEXT_PUBLIC_SUPABASE_URL
