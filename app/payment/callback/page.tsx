@@ -11,7 +11,7 @@ const MAX_POLL_MS = 60000
 
 function CallbackContent() {
   const searchParams = useSearchParams()
-  const reference = searchParams.get('reference')
+  const reference = searchParams.get('reference')?.slice(0, 128) ?? null
   const [status, setStatus] = useState<'verifying' | 'success' | 'processing' | 'failed'>('verifying')
   const [error, setError] = useState<string | null>(null)
 
@@ -32,7 +32,7 @@ function CallbackContent() {
       if (stopped) return
 
       try {
-        const res = await fetch(`/api/paystack/verify?reference=${reference}`)
+        const res = await fetch(`/api/paystack/verify?reference=${encodeURIComponent(reference)}`)
         const data = await res.json()
 
         if (data.status === 'success') {

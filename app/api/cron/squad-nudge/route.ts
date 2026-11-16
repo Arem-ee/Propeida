@@ -94,12 +94,17 @@ export async function GET(request: NextRequest) {
     if (candidates.length > 0) emailableBySquad.set(squadId, candidates)
   }
 
-  const { data: usersPage } = await admin.auth.admin.listUsers({ page: 1, perPage: 1000 })
-  const emailById = new Map(
-    (usersPage?.users ?? [])
-      .filter((user) => !!user.email)
-      .map((user) => [user.id, user.email as string]),
-  )
+  // Page through every auth user; a single 1000-user page silently drops
+  // anyone past the first.
+  const emailById = new Map<string, string>()
+  for (let page = 1; ; page++) {
+    const { data: usersPage } = await admin.auth.admin.listUsers({ page, perPage: 1000 })
+    const users = usersPage?.users ?? []
+    for (const user of users) {
+      if (user.email) emailById.set(user.id, user.email)
+    }
+    if (users.length < 1000 || page >= 20) break
+  }
 
   let sent = 0
   let failed = 0

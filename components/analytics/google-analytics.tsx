@@ -11,7 +11,10 @@ declare global {
   }
 }
 
-const MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+const MEASUREMENT_ID = (() => {
+  const raw = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+  return raw && /^G-[A-Z0-9]+$/.test(raw) ? raw : undefined
+})()
 
 export default function GoogleAnalytics() {
   const pathname = usePathname()
@@ -45,7 +48,7 @@ export default function GoogleAnalytics() {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', '${MEASUREMENT_ID}', { page_path: window.location.pathname + window.location.search });
+          gtag('config', '${MEASUREMENT_ID}', { page_path: window.location.pathname });
         `}
       </Script>
     </>
