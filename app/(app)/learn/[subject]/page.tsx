@@ -110,7 +110,7 @@ export default async function SubjectLessonsPage({ params }: { params: Promise<{
                         className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-xl text-xs font-extrabold ${
                           topic.lesson
                             ? 'bg-blue-50 text-blue-600'
-                            : 'bg-gray-100 text-gray-400'
+                            : 'bg-gray-100 text-gray-500'
                         }`}
                       >
                         {topic.order}
@@ -127,7 +127,7 @@ export default async function SubjectLessonsPage({ params }: { params: Promise<{
                   (() => {
                     const locked = isFree && topic.lesson.id !== firstLesson?.lesson?.id
                     return locked ? (
-                      <span className="flex shrink-0 items-center gap-1.5 text-xs font-extrabold text-gray-400">
+                      <span className="flex shrink-0 items-center gap-1.5 text-xs font-extrabold text-gray-500">
                         <Lock className="h-3.5 w-3.5" />
                         Pro
                       </span>
@@ -148,7 +148,7 @@ export default async function SubjectLessonsPage({ params }: { params: Promise<{
                     )
                   })()
                 ) : (
-                        <span className="flex shrink-0 items-center gap-1.5 text-xs font-extrabold text-gray-400">
+                        <span className="flex shrink-0 items-center gap-1.5 text-xs font-extrabold text-gray-500">
                           <Lock className="h-3.5 w-3.5" />
                           Coming
                         </span>

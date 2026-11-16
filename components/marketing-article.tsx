@@ -35,7 +35,7 @@ export default function MarketingArticle({
     <div className="min-h-screen bg-white text-gray-900 antialiased">
       <MarketingHeader />
       <main className="mx-auto max-w-3xl px-4 py-16 sm:py-20">
-        <nav aria-label="Breadcrumb" className="text-sm text-gray-400">
+        <nav aria-label="Breadcrumb" className="text-sm text-gray-500">
           <ol className="flex flex-wrap items-center gap-2">
             <li>
               <Link href="/" className="font-semibold text-gray-500 hover:text-blue-600">
@@ -49,7 +49,7 @@ export default function MarketingArticle({
               </Link>
             </li>
             <li aria-hidden="true">/</li>
-            <li className="text-gray-400">{article.title}</li>
+            <li className="text-gray-500">{article.title}</li>
           </ol>
         </nav>
 
@@ -59,7 +59,7 @@ export default function MarketingArticle({
               {article.title}
             </h1>
             <p className="mt-4 text-lg leading-relaxed text-gray-500">{article.excerpt}</p>
-            <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-400">
+            <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-500">
               <span className="inline-flex items-center gap-1.5">
                 <CalendarDays className="h-4 w-4" />
                 <time dateTime={article.publishedAt}>{article.publishedLabel}</time>
@@ -130,7 +130,7 @@ export default function MarketingArticle({
           </section>
         )}
 
-        <p className="mt-12 text-xs leading-relaxed text-gray-400">
+        <p className="mt-12 text-xs leading-relaxed text-gray-500">
           Propeida provides practice and preparation material. We are not affiliated with JAMB,
           WAEC, NECO or any university, and nothing on this page is a promise of an admission
           outcome. The content here is general study guidance, not official examination
@@ -147,7 +147,7 @@ export function ArticleIndex() {
     <div className="min-h-screen bg-white text-gray-900 antialiased">
       <MarketingHeader />
       <main className="mx-auto max-w-5xl px-4 py-16 sm:py-20">
-        <nav aria-label="Breadcrumb" className="text-sm text-gray-400">
+        <nav aria-label="Breadcrumb" className="text-sm text-gray-500">
           <ol className="flex items-center gap-2">
             <li>
               <Link href="/" className="font-semibold text-gray-500 hover:text-blue-600">
@@ -155,7 +155,7 @@ export function ArticleIndex() {
               </Link>
             </li>
             <li aria-hidden="true">/</li>
-            <li className="text-gray-400">Guides</li>
+            <li className="text-gray-500">Guides</li>
           </ol>
         </nav>
 

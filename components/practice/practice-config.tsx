@@ -227,7 +227,7 @@ export default function PracticeConfig({
         </div>
 
         <div>
-          <p className="mb-2 text-[11px] font-extrabold uppercase tracking-[0.14em] text-gray-500">Topics <span className="normal-case text-gray-400">(optional)</span></p>
+          <p className="mb-2 text-[11px] font-extrabold uppercase tracking-[0.14em] text-gray-500">Topics <span className="normal-case text-gray-500">(optional)</span></p>
           <p className="mb-2 text-[12px] font-semibold text-gray-500">Pick specific syllabus points, or leave it blank for the whole subject</p>
           {examSubjects.filter((s) => topicsBySubject?.[s.id]?.length).length === 0 ? (
             <p className="text-sm font-semibold text-gray-500">Topic mapping coming soon for these subjects</p>
@@ -311,7 +311,7 @@ export default function PracticeConfig({
           <Play className="h-5 w-5" />
           {loading ? 'Setting up your session' : 'Start practising'}
         </button>
-        <p className="text-center text-[11px] font-semibold text-gray-400">
+        <p className="text-center text-[11px] font-semibold text-gray-500">
           Question source: JAMB past papers · Propeida is not affiliated with JAMB
         </p>
       </div>
