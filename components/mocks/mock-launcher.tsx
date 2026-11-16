@@ -110,9 +110,6 @@ export default function MockLauncher({
     || (englishId !== null && countFor(englishId) >= englishRequirement)
   const jambStructureReady = !isJamb || (englishId !== null && electives.length === 3)
   const jambReady = jambStructureReady && englishReady && electivesReady
-  const viableElectives = examSubjects.filter(
-    (s) => s.id !== englishId && (!electiveRequirement || countFor(s.id) >= electiveRequirement),
-  )
 
   const shortfall = [...slotRequirements].reduce(
     (total, [id, needed]) => total + Math.max(0, needed - countFor(id)),
@@ -230,9 +227,9 @@ export default function MockLauncher({
                   } ${locked ? 'cursor-default' : short ? 'cursor-not-allowed' : 'cursor-pointer'}`}
                 >
                   <span>{subject.name}{locked ? ' · always included' : ''}</span>
-                  <span className={`text-[11px] font-bold ${short ? 'text-red-500' : 'opacity-70'}`}>
-                    {count} ready{requirement !== null && count < requirement ? ` · needs ${requirement}` : ''}
-                  </span>
+                  {short && (
+                    <span className="text-[11px] font-bold opacity-80">Not available yet</span>
+                  )}
                 </button>
               )
             })}
@@ -240,13 +237,13 @@ export default function MockLauncher({
           {isJamb && (
             <p className="mt-2 text-xs font-bold text-gray-500">
               {electives.length < 3
-                ? `JAMB needs English plus 3 more subjects, and you have picked ${electives.length} of 3${viableElectives.length < 3 ? `, and only ${viableElectives.length} elective banks are fully ready` : ''}`
-                : 'Your paper has English and 3 electives, and the banks match the paper'}
+                ? `JAMB needs English plus 3 more subjects, and you have picked ${electives.length} of 3`
+                : 'Your paper has English and 3 electives'}
             </p>
           )}
           {!englishReady && englishRequirement !== null && (
             <p className="mt-2 text-xs font-bold text-red-600">
-              The English bank has {englishId ? countFor(englishId) : 0} questions ready, and this paper needs {englishRequirement}
+              English is still being topped up for this paper, so check back soon
             </p>
           )}
         </div>
@@ -257,7 +254,7 @@ export default function MockLauncher({
 
         {exam && shortfall > 0 && (
           <p className="rounded-2xl bg-amber-50 border border-amber-200 px-4 py-3 text-sm font-bold text-amber-800">
-            This paper is short {shortfall} question{shortfall === 1 ? '' : 's'} for the subjects in it, so pick subjects that have enough questions or check back when more are ready
+            This paper needs subjects that are ready, so swap a greyed-out subject for one that is available, or check back soon
           </p>
         )}
 
