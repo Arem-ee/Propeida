@@ -128,14 +128,15 @@ function renderToken(token: string, key: number, displayMode = false): ReactNode
   const latex = tokenToLatex(token)
   const html = latex ? renderKaTeX(latex, displayMode) : null
   if (!html) return <span key={key}>{token}</span>
-  if (displayMode) {
-    return (
-      <div key={key} className="my-2 overflow-x-auto text-center text-[21px] font-medium leading-relaxed text-blue-900" role="math">
-        <span dangerouslySetInnerHTML={{ __html: html }} />
-      </div>
-    )
-  }
-  return <span key={key} className="mathx" dangerouslySetInnerHTML={{ __html: html }} />
+  return (
+    <span
+      key={key}
+      className="mathx"
+      role={displayMode ? undefined : 'math'}
+      aria-label={displayMode ? undefined : 'mathematics'}
+      dangerouslySetInnerHTML={{ __html: html }}
+    />
+  )
 }
 
 function splitRuns(text: string): Array<{ math: boolean; src: string }> {
@@ -171,27 +172,9 @@ function splitRuns(text: string): Array<{ math: boolean; src: string }> {
 export function MathText({ text, display }: { text: string; display?: boolean }) {
   const raw = String(text ?? '')
   const auto = /^MATH:\s*/.test(raw)
-  // MATH: lines are single display-mode equations — one KaTeX call, no splits.
-  if (auto) {
-    const body = raw.replace(/^MATH:\s*/, '').trim()
-    const latex = convert(body)
-      .replace(/\{\{sub:([^{}]+)\}\}/g, '_{$1}')
-      .replace(/\{\{sup:([^{}]+)\}\}/g, '^{$1}')
-      .replace(/\{\{frac:([^{}|]*)\|([^{}|]*)\}\}/g, '\\frac{$1}{$2}')
-    const html = renderKaTeX(latex, true)
-    if (html) {
-      return (
-        <div className="my-3 overflow-x-auto rounded-xl border border-blue-100 bg-blue-50/40 px-5 py-4 text-center text-[19px] font-medium text-blue-900">
-          <span dangerouslySetInnerHTML={{ __html: html }} />
-        </div>
-      )
-    }
-    // Fall back to literal text so an author never loses their work.
-    return <div className="my-3 overflow-x-auto rounded-xl border border-blue-100 bg-blue-50/40 px-5 py-4 text-center font-mono text-[15px] text-blue-900">{body}</div>
-  }
-
-  const displayMode = display
-  const parts = raw.split(TOKEN)
+  const displayMode = display || auto
+  const body = auto ? raw.replace(/^MATH:\s*/, '') : raw
+  const parts = body.split(TOKEN)
   const out: ReactNode[] = []
   parts.forEach((piece, index) => {
     if (index % 2 === 1) {
@@ -204,25 +187,13 @@ export function MathText({ text, display }: { text: string; display?: boolean })
         const html = renderKaTeX(convert(run.src), displayMode)
         if (html) {
           out.push(
-            display
-              ? (
-                <div
-                  key={`${index}-math-${r}`}
-                  className="my-2 overflow-x-auto text-[19px] font-medium leading-relaxed text-blue-900"
-                  role="math"
-                >
-                  <span dangerouslySetInnerHTML={{ __html: html }} />
-                </div>
-              )
-              : (
-                <span
-                  key={`${index}-math-${r}`}
-                  className="mathx"
-                  role="math"
-                  aria-label="mathematics"
-                  dangerouslySetInnerHTML={{ __html: html }}
-                />
-              ),
+            <span
+              key={`${index}-math-${r}`}
+              className="mathx"
+              role={displayMode ? undefined : 'math'}
+              aria-label={displayMode ? undefined : 'mathematics'}
+              dangerouslySetInnerHTML={{ __html: html }}
+            />,
           )
           return
         }
