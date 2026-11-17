@@ -1740,9 +1740,11 @@
     {
      "type": "text",
      "content": {
-      "heading": "Number Bases",
+      "heading": "Counting in bundles",
       "paragraphs": [
-       "Here is the mark that disappears in silence: you read 34{{sub:5}} as thirty-four. The base is the system, not the number itself, and once you respect it, number bases become one of the friendlier topics on the paper."
+       "When you count, you bundle things together. Counting **23** marbles on their own is doable but slow. You probably count them anyway by grouping into bundles of **ten** (because our default number system uses ten as its bundle size): **2** groups of ten plus **3** leftover.",
+       "Group the same **23** marbles into bundles of **five** instead. You get **4** bundles of five and **3** leftover. That grouping is just as valid as the grouping by ten - it just counts the same pile differently.",
+       "The base is just the bundle size you decide to use. Base ten bundles in tens. Base five bundles in fives. Base two bundles in twos. Every number written down is just a tally: how many bundles of each size, then how many leftover."
       ],
       "bullets": []
      }
@@ -1750,50 +1752,19 @@
     {
      "type": "text",
      "content": {
-      "heading": "What a base is",
+      "heading": "What a base actually is",
       "paragraphs": [
-       "A base is the number of symbols a system uses. In base ten the symbols are 0 to 9 and each place is ten times the one to its right. In base five the symbols are 0 to 4 and each place is five times the one to its right.",
-       "A digit must therefore be smaller than the base. The digit 5 cannot appear in base five because the system has only 0 to 4. That test alone rejects a distractor without any calculation.",
-       "The rightmost place is ones, the next is b, the next is b{{sup:2}}. A three-digit base-five number 243{{sub:5}} is therefore 2 × 5{{sup:2}} + 4 × 5 + 3 = 73 in decimal. The position, not the shape of the digit, decides the value.",
-       "MATH: 243{{sub:5}} = 2 × 5{{sup:2}} + 4 × 5 + 3 = 73 in decimal"
+       "A base is the **bundle size**. In base ten, the bundles are big enough that we keep a symbol for every bundle size between 1 and 9, plus 0 for \"none\". In base five the bundles are smaller, so we only need symbols for 0 to **4** - digit **5** would already fill one bundle, so it always rolls over.",
+       "Why is the digit rule so important? Because every digit must fit inside a bundle. If we tried to write a five inside a base-five number, we would accidentally mean a bundle of five instead of a raw five. The digit rule says: **every digit is smaller than the base**.",
+       "In base ten the places go: ones, tens, hundreds, thousands. In base five: ones, fives, twenty-fives, one hundred twenty-fives. The leftmost digit still tells you how many of the biggest bundles you have.",
+       "So **43₅** has **4** twenty-fives and **3** ones — **4 × 25 + 3 × 1 = 103** in the base-ten count. That is what **43₅** means.",
+       "The bundle size and the digit limit are the same thing: the size of the bundle is the number of symbols you need."
       ],
       "bullets": [
-       "In base b, each place is b times the one to its right",
-       "Digits must be smaller than the base",
-       "Place values are 1, b, b{{sup:2}} and so on"
-      ],
-      "takeaway": "A digit must be smaller than the base, and place values are powers of it.",
-      "check": {
-       "question": "Which number cannot be written in base five?",
-       "options": [
-        "243",
-        "354",
-        "132",
-        "204"
-       ],
-       "answer": 1,
-       "why": "5 is not a base-five digit, so 354 cannot be a base-five number.",
-       "steps": [
-        {
-         "operation": "Look at the digits allowed",
-         "reason": "Base five only accepts the digits 0 to 4 — anything higher won't fit.",
-         "result": "Digits allowed: 0, 1, 2, 3, 4",
-         "predictPrompt": "What is the biggest digit in base five?"
-        },
-        {
-         "operation": "Test each option through it",
-         "reason": "354 has a 5 in it, so that one is out. The remaining three pass.",
-         "result": "354 rejected; 243, 132, 204 all survive",
-         "predictPrompt": "Which options survive the digit rule?"
-        },
-        {
-         "operation": "Settle it",
-         "reason": "The question asks which base-five impossibility you cannot write.",
-         "result": "354",
-         "predictPrompt": "Which one is impossible?"
-        }
-       ]
-      }
+       "Bundles go in 1, b, b² and so on. Each place is b times the one to its right.",
+       "The digits are 0, 1, 2 up to (b minus 1). Digit b does not exist - it is the first new bundle.",
+       "A base-ten number like **23₅** is not the same as **23** in base ten."
+      ]
      }
     },
     {
