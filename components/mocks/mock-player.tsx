@@ -6,7 +6,7 @@ import { CheckCircle, Calculator } from 'lucide-react'
 import { Mascot } from '@/components/mascot'
 import { useWins } from '@/components/celebrations/use-wins'
 import { celebrateStreakIfNew } from '@/components/celebrations/streak-celebration'
-import { submitAnswer, completeMockSession } from '@/lib/actions/practice'
+import { completeMockSession } from '@/lib/actions/practice'
 import { celebrate } from '@/lib/celebrate'
 import { MathText } from '@/components/lessons/math-text'
 import { QuestionTable } from '@/components/questions/question-table'
@@ -209,11 +209,48 @@ export default function MockPlayer({
   const answeredCount = Object.keys(selections).length
   const allAnswered = answeredCount >= total
 
+  // Selections are batched client-side and flushed at navigation boundaries,
+  // on pagehide, and before submit. Marking dirty is the whole tap path: the
+  // UI updates instantly and no network round trip happens per tap.
+  const dirtyRef = useRef(new Map<string, string>())
+  const flushingRef = useRef(false)
+
+  const flush = useCallback(async () => {
+    if (flushingRef.current) return
+    const sent = [...dirtyRef.current]
+    if (sent.length === 0) return
+    flushingRef.current = true
+    try {
+      const res = await fetch('/api/answers/sync', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          sessionId,
+          answers: sent.map(([questionId, selectedAnswer]) => ({ questionId, selectedAnswer })),
+        }),
+      })
+      if (!res.ok) throw new Error('flush failed')
+      // Only clear what we just sent; anything tapped during the flight stays dirty.
+      for (const [questionId, selectedAnswer] of sent) {
+        if (dirtyRef.current.get(questionId) === selectedAnswer) {
+          dirtyRef.current.delete(questionId)
+        }
+      }
+      setSaveFailures(0)
+    } catch {
+      setSaveFailures((n) => n + 1)
+    } finally {
+      flushingRef.current = false
+    }
+  }, [sessionId])
+
+
   const submitAll = useCallback(async () => {
     if (finalizing) return
     setFinalizing(true)
     setConfirming(false)
     try {
+      await flush() // write any mark-to-leave selections before the exam is closed
       const result = await completeMockSession(sessionId)
       celebrateStreakIfNew(result.streak, add)
       celebrate()
@@ -221,7 +258,7 @@ export default function MockPlayer({
     } catch {
       setFinalizing(false)
     }
-  }, [finalizing, sessionId, add])
+  }, [finalizing, sessionId, add, flush])
 
   const handleExpire = useCallback(() => {
     setTimedOut(true)
@@ -252,12 +289,13 @@ export default function MockPlayer({
   const select = (key: string) => {
     if (!current || done) return
     setSelections((prev) => ({ ...prev, [current.id]: key }))
-    submitAnswer(sessionId, current.id, key)
-      .then(() => setSaveFailures(0))
-      .catch(() => setSaveFailures((n) => n + 1))
+    dirtyRef.current.set(current.id, key)
   }
 
-  const goTo = (i: number) => setIndex(Math.min(Math.max(0, i), total - 1))
+  const goTo = (i: number) => {
+    void flush()
+    setIndex(Math.min(Math.max(0, i), total - 1))
+  }
 
   // Persist the question position so a reload mid-exam (failed connection,
   // closed tab, dead battery) resumes at the same question. Answers are
@@ -270,6 +308,31 @@ export default function MockPlayer({
   useEffect(() => {
     if (done) clearResume(sessionId)
   }, [done, sessionId])
+
+  // Flush pending answers when the tab hides or unloads. sendBeacon survives
+  // page teardown; the regular flush round trip does not.
+  useEffect(() => {
+    const beacon = () => {
+      const sent = [...dirtyRef.current]
+      if (sent.length === 0) return
+      navigator.sendBeacon?.(
+        '/api/answers/sync',
+        new Blob(
+          [JSON.stringify({ sessionId, answers: sent.map(([questionId, selectedAnswer]) => ({ questionId, selectedAnswer })) })],
+          { type: 'application/json' },
+        ),
+      )
+    }
+    const onVisibility = () => {
+      if (document.visibilityState === 'hidden') beacon()
+    }
+    window.addEventListener('pagehide', beacon)
+    window.addEventListener('visibilitychange', onVisibility)
+    return () => {
+      window.removeEventListener('pagehide', beacon)
+      window.removeEventListener('visibilitychange', onVisibility)
+    }
+  }, [sessionId])
 
   if (done) {
     return (
@@ -309,7 +372,7 @@ export default function MockPlayer({
       <div className="sticky top-16 lg:top-0 z-30 -mx-4 px-4 sm:-mx-6 sm:px-6 bg-paper/95 backdrop-blur py-3 border-b border-blue-100/60">
         <div className="flex items-center gap-2 overflow-x-auto">
           <button
-            onClick={() => setSubjectFilter(null)}
+            onClick={() => { void flush(); setSubjectFilter(null) }}
             className={`shrink-0 rounded-full px-3.5 py-2 text-xs font-extrabold min-h-[40px] cursor-pointer transition-all pressable ${
               !subjectFilter ? 'bg-blue-600 text-white' : 'bg-blue-50 text-blue-700'
             }`}
@@ -319,7 +382,7 @@ export default function MockPlayer({
           {subjects.map((s) => (
             <button
               key={s.id}
-              onClick={() => setSubjectFilter((f) => (f === s.id ? null : s.id))}
+              onClick={() => { void flush(); setSubjectFilter((f) => (f === s.id ? null : s.id)) }}
               className={`shrink-0 rounded-full px-3.5 py-2 text-xs font-extrabold min-h-[40px] cursor-pointer transition-all pressable ${
                 subjectFilter === s.id ? 'bg-blue-600 text-white' : 'bg-blue-50 text-blue-700'
               }`}
