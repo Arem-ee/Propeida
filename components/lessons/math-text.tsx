@@ -111,13 +111,15 @@ function tokenToLatex(token: string): string | null {
   return kind === 'sub' ? `_{${inner}}` : `^{${inner}}`
 }
 
-function renderKaTeX(src: string, displayMode = false): string | null {
+function renderKaTeX(src: string, _display = false): string | null {
   try {
+    // KaTeX's displayMode emits katex-display, which is block-level and
+    // stacks every span on its own line. We keep inline output and style our
+    // own wrapper element for centering/size instead.
     return katex.renderToString(src, {
       throwOnError: false,
       strict: false,
       output: 'html',
-      displayMode,
     })
   } catch {
     return null
@@ -202,7 +204,7 @@ export function MathText({ text, display }: { text: string; display?: boolean })
     })
   })
   if (displayMode && out.length > 0) {
-    return <div className="my-3 rounded-xl border border-blue-100 bg-blue-50/40 px-5 py-3 text-center">{out}</div>
+    return <div className="my-3 overflow-x-auto rounded-xl border border-blue-100 bg-blue-50/40 px-5 py-4 text-center text-[21px] font-medium text-blue-900">{out}</div>
   }
   return <>{out}</>
 }
