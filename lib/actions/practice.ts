@@ -252,12 +252,12 @@ export async function createSession(params: CreateSessionParams) {
   try {
     if (!isJambMock && (isFreeMock || (isFree && params.mode === 'practice'))) {
       questions = lockedPool
-        ? await fetchLockedPoolQuestions(user.id, params.examId, subjectIds, effectiveCount, session.id, params.difficulty)
-        : await fetchFreePoolQuestions(user.id, params.examId, subjectIds, effectiveCount, session.id, params.difficulty)
+        ? await fetchLockedPoolQuestions(user.id, params.examId, subjectIds, effectiveCount, questionSeed, params.difficulty)
+        : await fetchFreePoolQuestions(user.id, params.examId, subjectIds, effectiveCount, questionSeed, params.difficulty)
     } else if (params.mode === 'mock' && examSlug === 'jamb') {
       const roles = mockDefaults?.subject_roles
       if (!roles) {
-        questions = await fetchWeightedQuestions(supabase, params.examId, examSlug, subjectIds, effectiveCount, session.id)
+        questions = await fetchWeightedQuestions(supabase, params.examId, examSlug, subjectIds, effectiveCount, questionSeed)
       } else {
         const { data: englishSubject } = await supabase
           .from('subjects')
@@ -279,7 +279,7 @@ export async function createSession(params: CreateSessionParams) {
           p_subject_ids: [englishId],
           p_difficulty: null,
           p_limit: englishCount,
-          p_seed: session.id,
+          p_seed: questionSeed,
           p_topic_ids: [],
         })
 
@@ -292,7 +292,7 @@ export async function createSession(params: CreateSessionParams) {
             p_subject_ids: [electiveId],
             p_difficulty: null,
             p_limit: electiveCount,
-            p_seed: session.id,
+            p_seed: questionSeed,
             p_topic_ids: [],
           })
           if (electiveError) throw new Error('Could not load one of your elective banks')
@@ -304,10 +304,10 @@ export async function createSession(params: CreateSessionParams) {
       }
     } else {
       questions = subjectIds.length > 1 && params.mode === 'mock'
-        ? await fetchWeightedQuestions(supabase, params.examId, examSlug, subjectIds, effectiveCount, session.id)
+        ? await fetchWeightedQuestions(supabase, params.examId, examSlug, subjectIds, effectiveCount, questionSeed)
         : await fetchQuestionsForSession(
             { ...params, subjectIds, questionCount: effectiveCount },
-            session.id
+            questionSeed
           )
     }
   } catch (err) {

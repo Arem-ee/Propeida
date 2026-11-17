@@ -4,6 +4,8 @@ import { createAdminClient } from '@/lib/supabase/admin'
 import { getExamScope, filterExamsForScope, examPathLabel, filterSubjectsForScope, filterExamSubjectMapForScope } from '@/lib/exam-scope'
 import MockLauncher from '@/components/mocks/mock-launcher'
 import { getMockDefaults, type MockDefaults } from '@/lib/practice'
+import { listMockEvents } from '@/lib/mock-events'
+import Link from 'next/link'
 
 export const metadata = { title: 'Mocks' }
 
@@ -60,6 +62,8 @@ export default async function MocksPage() {
   const { data: { user } } = await supabase.auth.getUser()
   const scope = user ? await getExamScope(supabase, user.id) : null
   const pathLabel = scope ? examPathLabel(scope) : null
+  const mockEvents = await listMockEvents()
+  const liveOrUpcoming = mockEvents.filter((e) => new Date(e.ends_at).getTime() >= Date.now())
 
   const [examsRes, subjectsRes, examSubjectsRes, weightingRes, publishedCounts] = await Promise.all([
     supabase.from('exams').select('id, name, slug').order('name'),
@@ -121,6 +125,19 @@ export default async function MocksPage() {
           {pathLabel ? `${pathLabel} · ` : ''}You sit the real hall under a countdown, with no pauses, and your answers save themselves
         </p>
       </div>
+
+      {liveOrUpcoming.length > 0 && (
+        <Link
+          href={`/mocks/event/${liveOrUpcoming[0]!.slug}`}
+          className="mb-5 block overflow-hidden rounded-3xl border border-blue-100/80 bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-900 p-5 text-white shadow-[0_24px_48px_-24px_rgba(37,99,235,0.55)] transition-transform hover:-translate-y-0.5"
+        >
+          <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-blue-200">Mock event · Pro</p>
+          <h2 className="mt-1 font-display text-2xl font-semibold leading-[1.12] text-white">{liveOrUpcoming[0]!.name}</h2>
+          <p className="mt-1 text-sm font-semibold text-blue-100/90">
+            {new Date(liveOrUpcoming[0]!.starts_at).toLocaleString(undefined, { day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit' })} to {new Date(liveOrUpcoming[0]!.ends_at).toLocaleString(undefined, { day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit' })}
+          </p>
+        </Link>
+      )}
 
       {exams.length === 0 ? (
         <div className="rounded-3xl border-2 border-dashed border-blue-200 bg-white/70 p-8 text-center">

@@ -146,7 +146,8 @@ export async function createExamSession(
   userId: string,
   examId: string,
   mode: 'practice' | 'mock',
-  timeLimitSeconds: number | null
+  timeLimitSeconds: number | null,
+  mockEventId: string | null = null,
 ) {
   // Clients do not hold INSERT on exam_sessions: a session row is
   // server-authored. The caller (createSession) has already authenticated
@@ -159,6 +160,7 @@ export async function createExamSession(
       exam_id: examId,
       mode,
       time_limit_seconds: timeLimitSeconds,
+      ...(mockEventId ? { mock_event_id: mockEventId } : {}),
     })
     .select('id, started_at')
     .single()
