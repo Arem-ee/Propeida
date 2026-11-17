@@ -2,6 +2,7 @@
 
 import { revalidatePath } from 'next/cache'
 import { createClient, getAuthUser } from '@/lib/supabase/server'
+import { getLocalAuthUserId } from '@/lib/auth/local-verify'
 import { createAdminClient } from '@/lib/supabase/admin'
 import {
   getMockDefaults,
@@ -40,6 +41,10 @@ interface CreateSessionParams {
   /** Optional topic routing — when provided, route practice to those topics
    *  only. Mock mode ignores this; mock selection stays blueprint-weighted. */
   topicIds?: string[]
+  /** Event identity for mock selection. When set, every participant in the
+   *  event sees the same questions (seed = event id), and the session row
+   *  links back to the event for leaderboard purposes. */
+  mockEventId?: string
 }
 
 interface SessionQuestion {
@@ -233,9 +238,10 @@ export async function createSession(params: CreateSessionParams) {
   const isFree = !hasAccess
 
   const [session, lockedPool] = await Promise.all([
-    createExamSession(user.id, params.examId, params.mode, timeLimitSeconds),
+    createExamSession(user.id, params.examId, params.mode, timeLimitSeconds, params.mockEventId ?? null),
     isFree ? isLockedPoolExam(supabase, params.examId) : Promise.resolve(false),
   ] as const)
+  const questionSeed = params.mockEventId ? `mock-event:${params.mockEventId}` : session.id
 
   let questions: SessionQuestion[]
   // JAMB papers keep their real shape (English 60 and 3 electives at 40)
@@ -430,11 +436,19 @@ export async function submitAnswer(
   selectedAnswer: string
 ) {
   const supabase = await createClient()
-  const user = await getAuthUser(supabase)
-  if (!user) throw new Error('Please sign in again.')
+  // Taps: identify the caller locally (ES256 vs the project JWKS) instead of
+  // round-tripping the auth server on every answered question. Ownership is
+  // re-enforced inside plpgsql, so this is a fast path, not an authorization
+  // boundary. Any failure falls back to the networked verification.
+  let userId = await getLocalAuthUserId()
+  if (!userId) {
+    const user = await getAuthUser(supabase)
+    if (!user) throw new Error('Please sign in again.')
+    userId = user.id
+  }
 
   const session = await getSessionById(sessionId)
-  if (session.user_id !== user.id) throw new Error('This session could not be opened.')
+  if (session.user_id !== userId) throw new Error('This session could not be opened.')
   if (session.status !== 'in_progress') throw new Error('This session is already finished.')
 
 
@@ -497,7 +511,7 @@ export async function submitAnswer(
         const repairNote = mc.repair_note_id ? getNoteById(mc.repair_note_id) : null
         // Repeat detection: the code was just recorded on this answer by
         // record_session_answer, so a repeat means it appeared before.
-        const repeatCount = await countCodeRepeats(user.id, mc.misconception_code)
+        const repeatCount = await countCodeRepeats(userId, mc.misconception_code)
         misconception = {
           code: mc.misconception_code,
           name: mc.misconception_name,
