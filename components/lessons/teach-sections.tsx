@@ -8,6 +8,7 @@ import { GlossText } from './gloss-text'
 import { MascotExplains } from '@/components/celebrations/speech-bubble'
 import { WorkedSteps } from '@/components/celebrations/worked-steps'
 import type { WorkedStep } from '@/lib/lessons'
+import { MathText } from './math-text'
 
 /**
  * The core reading flow: one concept per lesson, split into at most three
@@ -159,9 +160,13 @@ function SectionBody({ section }: { section: TeachSectionData }) {
   return (
     <>
       {(section.paragraphs ?? []).map((paragraph, i) => (
-        <p key={i} className="mt-3.5 text-[15px] font-semibold leading-relaxed text-ink">
-          <GlossText text={paragraph} />
-        </p>
+        paragraph.trim().startsWith('MATH:') ? (
+          <MathText key={i} text={paragraph} display />
+        ) : (
+          <p key={i} className="mt-3.5 text-[15px] font-semibold leading-relaxed text-ink">
+            <GlossText text={paragraph} />
+          </p>
+        )
       ))}
       {section.bullets.length > 0 && (
         <div className="mt-3.5 rounded-2xl border border-blue-100 bg-blue-50/50 p-4 sm:p-5">

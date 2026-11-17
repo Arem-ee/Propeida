@@ -111,18 +111,30 @@ function tokenToLatex(token: string): string | null {
   return kind === 'sub' ? `_{${inner}}` : `^{${inner}}`
 }
 
-function renderKaTeX(src: string): string | null {
+function renderKaTeX(src: string, displayMode = false): string | null {
   try {
-    return katex.renderToString(src, { throwOnError: true, strict: false, output: 'html' })
+    return katex.renderToString(src, {
+      throwOnError: false,
+      strict: false,
+      output: 'html',
+      displayMode,
+    })
   } catch {
     return null
   }
 }
 
-function renderToken(token: string, key: number): ReactNode {
+function renderToken(token: string, key: number, displayMode = false): ReactNode {
   const latex = tokenToLatex(token)
-  const html = latex ? renderKaTeX(latex) : null
+  const html = latex ? renderKaTeX(latex, displayMode) : null
   if (!html) return <span key={key}>{token}</span>
+  if (displayMode) {
+    return (
+      <div key={key} className="my-2 overflow-x-auto text-center text-[21px] font-medium leading-relaxed text-blue-900" role="math">
+        <span dangerouslySetInnerHTML={{ __html: html }} />
+      </div>
+    )
+  }
   return <span key={key} className="mathx" dangerouslySetInnerHTML={{ __html: html }} />
 }
 
@@ -156,27 +168,43 @@ function splitRuns(text: string): Array<{ math: boolean; src: string }> {
   return runs
 }
 
-export function MathText({ text }: { text: string }) {
-  const parts = String(text ?? '').split(TOKEN)
+export function MathText({ text, display }: { text: string; display?: boolean }) {
+  const raw = String(text ?? '')
+  const auto = /^MATH:\s*/.test(raw)
+  const displayMode = display || auto
+  const body = auto ? raw.replace(/^MATH:\s*/, '') : raw
+  const parts = body.split(TOKEN)
   const out: ReactNode[] = []
   parts.forEach((piece, index) => {
     if (index % 2 === 1) {
-      out.push(renderToken(piece, index))
+      out.push(renderToken(piece, index, displayMode))
       return
     }
     const runs = splitRuns(piece)
     runs.forEach((run, r) => {
       if (run.math) {
-        const html = renderKaTeX(convert(run.src))
+        const html = renderKaTeX(convert(run.src), displayMode)
         if (html) {
           out.push(
-            <span
-              key={`${index}-math-${r}`}
-              className="mathx"
-              role="math"
-              aria-label="mathematics"
-              dangerouslySetInnerHTML={{ __html: html }}
-            />,
+            display
+              ? (
+                <div
+                  key={`${index}-math-${r}`}
+                  className="my-2 overflow-x-auto text-[19px] font-medium leading-relaxed text-blue-900"
+                  role="math"
+                >
+                  <span dangerouslySetInnerHTML={{ __html: html }} />
+                </div>
+              )
+              : (
+                <span
+                  key={`${index}-math-${r}`}
+                  className="mathx"
+                  role="math"
+                  aria-label="mathematics"
+                  dangerouslySetInnerHTML={{ __html: html }}
+                />
+              ),
           )
           return
         }
@@ -184,5 +212,8 @@ export function MathText({ text }: { text: string }) {
       out.push(<span key={`${index}-text-${r}`}>{run.src}</span>)
     })
   })
+  if (displayMode && out.length > 0) {
+    return <div className="my-3 rounded-xl border border-blue-100 bg-blue-50/40 px-5 py-3 text-center">{out}</div>
+  }
   return <>{out}</>
 }

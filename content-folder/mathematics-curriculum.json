@@ -1754,7 +1754,8 @@
       "paragraphs": [
        "A base is the number of symbols a system uses. In base ten the symbols are 0 to 9 and each place is ten times the one to its right. In base five the symbols are 0 to 4 and each place is five times the one to its right.",
        "A digit must therefore be smaller than the base. The digit 5 cannot appear in base five because the system has only 0 to 4. That test alone rejects a distractor without any calculation.",
-       "The rightmost place is ones, the next is b, the next is b{{sup:2}}. A three-digit base-five number 243{{sub:5}} is therefore 2 × 5{{sup:2}} + 4 × 5 + 3 = 73 in decimal. The position, not the shape of the digit, decides the value."
+       "The rightmost place is ones, the next is b, the next is b{{sup:2}}. A three-digit base-five number 243{{sub:5}} is therefore 2 × 5{{sup:2}} + 4 × 5 + 3 = 73 in decimal. The position, not the shape of the digit, decides the value.",
+       "MATH: 243{{sub:5}} = 2 × 5{{sup:2}} + 4 × 5 + 3 = 73 in decimal"
       ],
       "bullets": [
        "In base b, each place is b times the one to its right",
@@ -1886,6 +1887,7 @@
       "heading": "The rule that covers every conversion",
       "paragraphs": [
        "Between two bases that are not decimal, pass through decimal: expand to decimal first, then divide to the new base. No direct shortcut exists.",
+       "MATH: 0.5{{sub:10}} = 0.1{{sub:2}}",
        "Fractional parts multiply out: 0.5{{sub:10}} = 0.1{{sub:2}} since 0.5×2 = 1.0."
       ],
       "bullets": [
@@ -1940,9 +1942,11 @@
       "heading": "Adding and subtracting in another base",
       "paragraphs": [
        "Addition in base b works like decimal addition except that the carrying threshold is b. In base five, 3 + 3 = 11{{sub:5}} because 6 is one five and one unit. The carry is therefore smaller than in decimal.",
+       "MATH: 3 + 3 = 11{{sub:5}}",
        "Subtraction borrows the same way: 31{{sub:4}} − 12{{sub:4}} borrows one four as four units. Only the threshold and the borrow differ.",
        "Multiplication by a single digit also follows the threshold. In base five, 4 × 4 = 31{{sub:5}} because 16 is three fives and one unit. A table of products up to base minus one is therefore enough.",
-       "Multiplication and division are done column-wise with the same threshold. In base five, 23{{sub:5}} × 14{{sub:5}} = 432{{sub:5}}: work in columns as in decimal, carrying at five: 4 × 23{{sub:5}} = 202{{sub:5}}, then 1 × 23 shifted one place = 230{{sub:5}}, and 202{{sub:5}} + 230{{sub:5}} = 432{{sub:5}}."
+       "Multiplication and division are done column-wise with the same threshold. In base five, 23{{sub:5}} × 14{{sub:5}} = 432{{sub:5}}: work in columns as in decimal, carrying at five: 4 × 23{{sub:5}} = 202{{sub:5}}, then 1 × 23 shifted one place = 230{{sub:5}}, and 202{{sub:5}} + 230{{sub:5}} = 432{{sub:5}}.",
+       "MATH: 23{{sub:5}} × 14{{sub:5}} = 432{{sub:5}} (work column-wise as in decimal, carrying at five)"
       ],
       "bullets": [
        "Carry at b, not at ten",
@@ -2142,6 +2146,7 @@
       "paragraphs": [
        "Base two uses only 0 and 1 because a circuit can be on or off. Each place is a power of two, so a byte of eight bits can represent 256 values. That economy is why computers count in binary.",
        "A binary number such as 1011{{sub:2}} is therefore 8 + 0 + 2 + 1 = 11. The expansion is the same as in any base, only the place values are powers of two. The method does not change with the base.",
+       "MATH: 1011{{sub:2}} = 8 + 0 + 2 + 1 = 11",
        "A hexadecimal digit packs four binary digits. That packing is why two hexadecimal digits stand for a whole byte, which is how addresses are written in fewer symbols.",
        "The eight bits of a byte can therefore represent 256 values. That economy is why a byte is the unit of storage."
       ],
@@ -2159,6 +2164,7 @@
       "paragraphs": [
        "The trap is a digit that is valid in decimal but invalid in the base. If you do not test the digits, you will add 5 in base five and get a sum that cannot be written. That test is therefore the first step.",
        "The second trap is a decimal sum that looks like a base sum. In base five, 33{{sub:5}} + 24{{sub:5}} = 112{{sub:5}} (32 in decimal). Adding each column in decimal (3+4 = 7, 3+2 = 5) and writing 57 answers a different question.",
+       "MATH: 33{{sub:5}} + 24{{sub:5}} = 112{{sub:5}} = 18 + 14 = 32 in decimal",
        "Budget your time as you would in any paper. A conversion that resists can be left and returned to. A test that is finished is worth more than a perfect answer to three items.",
        "The easy-first sweep is why this matters. The easy conversions can be answered at once, and the hard ones can be left until the base is clear.",
        "The trap is therefore the option that is correct in sense but wrong in form. If you read only for meaning, you will choose it."
