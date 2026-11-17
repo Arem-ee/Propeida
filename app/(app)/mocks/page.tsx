@@ -63,6 +63,7 @@ export default async function MocksPage() {
   const scope = user ? await getExamScope(supabase, user.id) : null
   const pathLabel = scope ? examPathLabel(scope) : null
   const mockEvents = await listMockEvents()
+  // eslint-disable-next-line react-hooks/purity -- request-time filter; page reads cookies() every render
   const liveOrUpcoming = mockEvents.filter((e) => new Date(e.ends_at).getTime() >= Date.now())
 
   const [examsRes, subjectsRes, examSubjectsRes, weightingRes, publishedCounts] = await Promise.all([

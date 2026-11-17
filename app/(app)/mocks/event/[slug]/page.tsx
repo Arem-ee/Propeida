@@ -23,6 +23,7 @@ export default async function MockEventPage({ params }: { params: Promise<{ slug
   const { data: { user } } = await supabase.auth.getUser()
   const hasAccess = user ? await hasExamAccess(user.id, event.exam_id) : false
 
+  // eslint-disable-next-line react-hooks/purity -- request-time clock; route is force-dynamic, rendered per request
   const now = Date.now()
   const started = now >= new Date(event.starts_at).getTime()
   const ended = now >= new Date(event.ends_at).getTime()
