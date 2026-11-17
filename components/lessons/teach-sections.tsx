@@ -161,7 +161,7 @@ function SectionBody({ section }: { section: TeachSectionData }) {
     <>
       {(section.paragraphs ?? []).map((paragraph, i) => (
         paragraph.trim().startsWith('MATH:') ? (
-          <MathText key={i} text={paragraph} display />
+          <MathText key={i} text={paragraph} />
         ) : (
           <p key={i} className="mt-3.5 text-[15px] font-semibold leading-relaxed text-ink">
             <GlossText text={paragraph} />

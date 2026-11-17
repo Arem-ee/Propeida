@@ -171,9 +171,27 @@ function splitRuns(text: string): Array<{ math: boolean; src: string }> {
 export function MathText({ text, display }: { text: string; display?: boolean }) {
   const raw = String(text ?? '')
   const auto = /^MATH:\s*/.test(raw)
-  const displayMode = display || auto
-  const body = auto ? raw.replace(/^MATH:\s*/, '') : raw
-  const parts = body.split(TOKEN)
+  // MATH: lines are single display-mode equations — one KaTeX call, no splits.
+  if (auto) {
+    const body = raw.replace(/^MATH:\s*/, '').trim()
+    const latex = convert(body)
+      .replace(/\{\{sub:([^{}]+)\}\}/g, '_{$1}')
+      .replace(/\{\{sup:([^{}]+)\}\}/g, '^{$1}')
+      .replace(/\{\{frac:([^{}|]*)\|([^{}|]*)\}\}/g, '\\frac{$1}{$2}')
+    const html = renderKaTeX(latex, true)
+    if (html) {
+      return (
+        <div className="my-3 overflow-x-auto rounded-xl border border-blue-100 bg-blue-50/40 px-5 py-4 text-center text-[19px] font-medium text-blue-900">
+          <span dangerouslySetInnerHTML={{ __html: html }} />
+        </div>
+      )
+    }
+    // Fall back to literal text so an author never loses their work.
+    return <div className="my-3 overflow-x-auto rounded-xl border border-blue-100 bg-blue-50/40 px-5 py-4 text-center font-mono text-[15px] text-blue-900">{body}</div>
+  }
+
+  const displayMode = display
+  const parts = raw.split(TOKEN)
   const out: ReactNode[] = []
   parts.forEach((piece, index) => {
     if (index % 2 === 1) {
