@@ -113,8 +113,11 @@ function GlossTerm({ term }: { term: string }) {
 
 /**
  * Renders body text with syllabus vocabulary wrapped in tap-to-define
- * terms. Matching is whole-word, case-insensitive, longest term first.
+ * terms, and inline **emphasis** on key numbers/words. Matching is
+ * whole-word, case-insensitive, longest term first.
  */
+const BOLD = /(\*\*[^*]+\*\*)/g
+
 export function GlossText({ text }: { text: string }) {
   const mathPieces = text.split(MATH_TOKEN)
   return (
@@ -123,13 +126,19 @@ export function GlossText({ text }: { text: string }) {
         mi % 2 === 1 ? (
           <MathText key={mi} text={mathPiece} />
         ) : (
-          mathPiece.split(PATTERN).map((part, i) =>
-            i % 2 === 1 && GLOSSARY[part.toLowerCase()] ? (
-              <GlossTerm key={`${mi}-${i}`} term={part} />
-            ) : (
-              <span key={`${mi}-${i}`}>{part}</span>
-            ),
-          )
+          mathPiece.split(BOLD).map((bolded, bi) => {
+            if (!bolded) return null
+            const isBold = bolded.startsWith('**') && bolded.endsWith('**')
+            const inner = isBold ? bolded.slice(2, -2) : bolded
+            const children = inner.split(PATTERN).map((part, i) =>
+              i % 2 === 1 && GLOSSARY[part.toLowerCase()] ? (
+                <GlossTerm key={`${mi}-${bi}-${i}`} term={part} />
+              ) : (
+                <span key={`${mi}-${bi}-${i}`}>{part}</span>
+              ),
+            )
+            return isBold ? <strong key={`${mi}-b-${bi}`}>{children}</strong> : <span key={`${mi}-n-${bi}`}>{children}</span>
+          })
         ),
       )}
     </>
