@@ -1772,7 +1772,7 @@
          "operation": "Read the little 5",
          "reason": "It is the bundle size.",
          "result": "Bundle size five",
-         "predictPrompt": "What does the little number say?"
+         "predictPrompt": "What is the little number?"
         },
         {
          "operation": "Count the bundles",
@@ -1924,7 +1924,7 @@
         "operation": "Write the place values from the right",
         "reason": "Each place is three times the one to its right.",
         "result": "Place values are 9, 3 and 1",
-        "predictPrompt": "What are the three places worth in base three?"
+        "predictPrompt": "What are the places in base three worth?"
        },
        {
         "operation": "Multiply each digit by its place value",
@@ -2188,7 +2188,7 @@
          "operation": "Borrow a four into the ones",
          "reason": "One place up is worth four in base four.",
          "result": "The 1 becomes 5, the 3 becomes 2",
-         "predictPrompt": "What is one place up worth in base four?"
+         "predictPrompt": "In base four, what is the next place worth?"
         },
         {
          "operation": "Subtract the ones",
@@ -2360,7 +2360,7 @@
         "operation": "Set up the column addition",
         "reason": "Ones: 2 + 0 = 2, no carry. Tens: 2 + 1 = 3. Hundreds: 1 plus whatever carries in.",
         "result": "The tens row writes 0 and carries 1.",
-        "predictPrompt": "What does the tens column give before the carry?"
+        "predictPrompt": "What does 2 + 1 give in the next column?"
        },
        {
         "operation": "Find the base",
