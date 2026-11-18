@@ -2121,17 +2121,17 @@
       "heading": "Go deeper: Base two and the computer",
       "paragraphs": [
        "A switch has only two positions: off or on. That is the whole idea.",
-       "Computers use those switches to store numbers. We write an OFF switch as 0 and an ON switch as 1.",
-       "Let us line up four switches. Each spot is worth double the spot next to it.",
-       "The spots, from right to left, are worth 1, 2, 4 and 8.",
-       "Written as numbers: 0001 is one, 0010 is two, 0011 is three, 0100 is four, and 0101 is five.",
-       "Each new switch doubles in worth. That is the pattern.",
-       "Let us try one. The digits 1011 mean the 8-spot is ON, the 4-spot is OFF, the 2-spot is ON, the 1-spot is ON.",
+       "Computers use those switches to store numbers. We write an OFF switch as **0** and an ON switch as **1**.",
+       "Let us line up four switches. Each spot is worth double the next spot along.",
+       "From right to left, the spots are worth **1, 2, 4 and 8**.",
+       "Written in binary: **0001** is one, **0010** is two, **0011** is three, **0100** is four, and **0101** is five.",
+       "Each new spot doubles. That is the pattern: **1, 2, 4, 8, 16, 32**.",
+       "Let us try one. The digits **1011** mean the **8**-spot is ON, the **4**-spot is OFF, the **2**-spot is ON, the **1**-spot is ON.",
        "MATH: 1011{{sub:2}} = 8 + 0 + 2 + 1 = 11",
-       "So 1011 is eleven when we count in base ten.",
-       "Eight switches in a row make a byte. A byte can be in two hundred and fifty-six different patterns.",
+       "So **1011** in base two is **11** in base ten.",
+       "Eight of these switches in a row make a **byte**. A byte holds **256** different patterns.",
        "MATH: 11111111{{sub:2}} = 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1 = 255",
-       "Hexadecimal groups four switches at a time. Two hex digits exactly fill one byte."
+       "**Hex** groups four switches at a time. Two hex digits fill one byte exactly."
       ],
       "bullets": [
        "A bit is one switch, off or on.",

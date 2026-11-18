@@ -578,19 +578,16 @@ export default function LessonPlayer({
           {depthSections.length > 0 && (
             <details className="group mt-5 border-t border-gray-100 pt-4">
               <summary className="flex min-h-[52px] cursor-pointer list-none items-center justify-between gap-3 rounded-2xl border border-blue-200 bg-blue-50/50 px-4 py-3 transition-colors hover:border-blue-300 hover:bg-blue-50">
-                <span className="inline-flex items-center gap-2.5 text-[13px] font-extrabold normal-case text-blue-900">
+                <span className="inline-flex items-center gap-2 text-[13px] font-extrabold normal-case text-blue-900">
                   <Lightbulb className="h-4 w-4 shrink-0 text-blue-700" aria-hidden="true" />
-                  Go deeper · optional
+                  Go deeper
                 </span>
-                <span className="inline-flex shrink-0 items-center gap-1.5 text-[12px] font-extrabold text-blue-700">
+                <span className="inline-flex shrink-0 items-center gap-1 text-[12px] font-extrabold text-blue-700">
                   <span className="group-open:hidden">Show more</span>
                   <span className="hidden group-open:inline">Show less</span>
                   <ChevronDown className="h-4 w-4 transition-transform group-open:rotate-180" aria-hidden="true" />
                 </span>
               </summary>
-              <p className="mt-2 text-[13px] font-semibold leading-relaxed text-ink-soft">
-                You get extra context for the same topic, so skip it now and come back when you want the full picture
-              </p>
               <div className="mt-4 space-y-5">
                 {depthSections.map((section, sectionIndex) => (
                   <SectionText
