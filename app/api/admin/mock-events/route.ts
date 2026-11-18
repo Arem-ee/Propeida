@@ -19,7 +19,7 @@ export async function GET() {
     const supabase = createAdminClient()
     const { data, error } = await supabase
       .from('mock_events')
-      .select('id, name, slug, exam_id, starts_at, ends_at, description, created_at, exams!inner(name, slug)')
+      .select('id, name, slug, exam_id, starts_at, ends_at, description, topic_ids, question_count, created_at, exams!inner(name, slug)')
       .order('starts_at', { ascending: false })
     if (error) throw error
     return NextResponse.json({ events: data ?? [] })
@@ -33,7 +33,7 @@ export async function POST(request: Request) {
     await requireAdmin()
     const supabase = createAdminClient()
     const body = await request.json()
-    const { name, exam_id, starts_at, ends_at, description } = body
+    const { name, exam_id, starts_at, ends_at, description, topic_ids, question_count } = body
 
     if (typeof name !== 'string' || !name.trim()) {
       return NextResponse.json({ error: 'Give the event a name' }, { status: 400 })
@@ -64,6 +64,8 @@ export async function POST(request: Request) {
         starts_at: starts,
         ends_at: ends,
         description: typeof description === 'string' && description.trim() ? description.trim() : null,
+        topic_ids: Array.isArray(topic_ids) && topic_ids.length > 0 ? topic_ids : null,
+        question_count: typeof question_count === 'number' && Number.isInteger(question_count) && question_count >= 5 && question_count <= 500 ? question_count : null,
       })
       .select('id, slug')
       .single()
@@ -79,7 +81,7 @@ export async function PUT(request: Request) {
     await requireAdmin()
     const supabase = createAdminClient()
     const body = await request.json()
-    const { id, name, description, starts_at, ends_at } = body
+    const { id, name, description, starts_at, ends_at, topic_ids, question_count } = body
     if (!id) return NextResponse.json({ error: 'Missing event id' }, { status: 400 })
 
     const updates: Record<string, unknown> = {}
@@ -90,6 +92,8 @@ export async function PUT(request: Request) {
     if (description !== undefined) updates.description = typeof description === 'string' && description.trim() ? description.trim() : null
     if (starts_at !== undefined) updates.starts_at = asDate(starts_at)
     if (ends_at !== undefined) updates.ends_at = asDate(ends_at)
+    if (topic_ids !== undefined) updates.topic_ids = Array.isArray(topic_ids) && topic_ids.length > 0 ? topic_ids : null
+    if (question_count !== undefined) updates.question_count = typeof question_count === 'number' && Number.isInteger(question_count) && question_count >= 5 && question_count <= 500 ? question_count : null
     if (updates.starts_at && updates.ends_at && new Date(String(updates.ends_at)) <= new Date(String(updates.starts_at))) {
       return NextResponse.json({ error: 'The event must end after it starts' }, { status: 400 })
     }

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useMemo } from 'react'
 import { inputClass, labelClass, FormError } from '@/components/admin/form'
 import { useConfirm } from '@/components/admin/confirm'
 
@@ -12,11 +12,15 @@ interface MockEvent {
   starts_at: string
   ends_at: string
   description: string | null
+  topic_ids: string[] | null
+  question_count: number | null
   created_at: string
   exams: { name: string; slug: string } | { name: string; slug: string }[] | null
 }
 
 interface ExamOption { id: string; name: string; slug: string }
+interface TopicOption { id: string; subject_id: string; name: string; slug: string }
+interface SubjectOption { id: string; name: string; slug: string }
 
 function toDateTimeInput(iso: string) {
   const d = new Date(iso)
@@ -30,13 +34,27 @@ function formatWhen(iso: string) {
   return d.toLocaleString(undefined, { day: 'numeric', month: 'short', year: 'numeric', hour: 'numeric', minute: '2-digit' })
 }
 
-export default function MockEventManager({ exams }: { exams: ExamOption[] }) {
+const dividerClass = 'h-px bg-blue-100/70'
+
+export default function MockEventManager({
+  exams,
+  topics,
+  subjects,
+  examSubjectMap,
+}: {
+  exams: ExamOption[]
+  topics: TopicOption[]
+  subjects: SubjectOption[]
+  examSubjectMap: Record<string, string[]>
+}) {
   const [events, setEvents] = useState<MockEvent[]>([])
   const [name, setName] = useState('')
   const [examId, setExamId] = useState(exams[0]?.id ?? '')
   const [startsAt, setStartsAt] = useState('')
   const [endsAt, setEndsAt] = useState('')
   const [description, setDescription] = useState('')
+  const [topicIds, setTopicIds] = useState<string[]>([])
+  const [questionCount, setQuestionCount] = useState('')
   const [editingId, setEditingId] = useState<string | null>(null)
   const [saving, setSaving] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -52,27 +70,62 @@ export default function MockEventManager({ exams }: { exams: ExamOption[] }) {
 
   useEffect(() => { void load() }, [load])
 
+  const examTopics = useMemo(() => {
+    const subjectIds = examSubjectMap[examId] ?? []
+    return subjects
+      .filter((s) => subjectIds.includes(s.id))
+      .map((s) => ({
+        subject: s,
+        topics: topics.filter((t) => t.subject_id === s.id),
+      }))
+      .filter((g) => g.topics.length > 0)
+  }, [examId, examSubjectMap, subjects, topics])
+
+  const topicNameById = useMemo(() => new Map(topics.map((t) => [t.id, t.name])), [topics])
+
+  const toggleTopic = (id: string) => {
+    setTopicIds((prev) => (prev.includes(id) ? prev.filter((t) => t !== id) : [...prev, id]))
+  }
+  const setAll = (subjectId: string) => {
+    const all = examTopics.find((g) => g.subject.id === subjectId)?.topics.map((t) => t.id) ?? []
+    setTopicIds((prev) => {
+      const set = new Set(prev)
+      const allSet = new Set(all)
+      const everyIn = all.every((t) => set.has(t))
+      if (everyIn) return prev.filter((t) => !allSet.has(t))
+      for (const t of all) set.add(t)
+      return [...set]
+    })
+  }
+
   const reset = () => {
-    setEditingId(null); setName(''); setExamId(exams[0]?.id ?? ''); setStartsAt(''); setEndsAt(''); setDescription(''); setError(null)
+    setEditingId(null); setName(''); setExamId(exams[0]?.id ?? ''); setStartsAt(''); setEndsAt(''); setDescription(''); setTopicIds([]); setQuestionCount(''); setError(null)
   }
 
   const startEdit = (e: MockEvent) => {
     setEditingId(e.id); setName(e.name); setExamId(e.exam_id)
     setStartsAt(toDateTimeInput(e.starts_at))
     setEndsAt(toDateTimeInput(e.ends_at))
-    setDescription(e.description ?? ''); setError(null)
+    setDescription(e.description ?? '')
+    setTopicIds(Array.isArray(e.topic_ids) ? e.topic_ids : [])
+    setQuestionCount(e.question_count === null ? '' : String(e.question_count))
+    setError(null)
   }
 
   const save = async () => {
     setSaving(true)
     setError(null)
     try {
+      const parsedCount = questionCount.trim() === '' ? null : Number(questionCount)
+      if (parsedCount !== null && (!Number.isInteger(parsedCount) || parsedCount < 5 || parsedCount > 500)) {
+        throw new Error('Question count must be a whole number between 5 and 500')
+      }
       const res = await fetch('/api/admin/mock-events', {
         method: editingId ? 'PUT' : 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(editingId
-          ? { id: editingId, name, starts_at: startsAt || null, ends_at: endsAt || null, description }
-          : { name, exam_id: examId, starts_at: startsAt || null, ends_at: endsAt || null, description }),
+          ? { id: editingId, name, starts_at: startsAt || null, ends_at: endsAt || null, description, topic_ids: topicIds, question_count: parsedCount }
+          : { name, exam_id: examId, starts_at: startsAt || null, ends_at: endsAt || null, description, topic_ids: topicIds, question_count: parsedCount }),
       })
       const data = await res.json()
       if (!res.ok) throw new Error(data.error ?? 'Save failed')
@@ -105,6 +158,16 @@ export default function MockEventManager({ exams }: { exams: ExamOption[] }) {
     return 'upcoming'
   }
 
+  const focusSummary = (e: MockEvent): string => {
+    const parts: string[] = []
+    if (Array.isArray(e.topic_ids) && e.topic_ids.length > 0) {
+      const names = e.topic_ids.map((id) => topicNameById.get(id) ?? id.slice(0, 8))
+      parts.push(names.length === 1 ? `Topic: ${names[0]}` : `Topics: ${names.join(', ')}`)
+    }
+    if (typeof e.question_count === 'number') parts.push(`${e.question_count} questions`)
+    return parts.join(' · ')
+  }
+
   return (
     <div className="space-y-4">
       {dialog}
@@ -119,6 +182,7 @@ export default function MockEventManager({ exams }: { exams: ExamOption[] }) {
               <p className="mt-0.5 text-[11px] font-bold uppercase tracking-[0.14em] text-gray-400">
                 {status(e) === 'live' ? 'Live now' : status(e) === 'upcoming' ? 'Upcoming' : 'Ended'}
               </p>
+              {focusSummary(e) && <p className="mt-1 text-xs font-bold text-blue-700">{focusSummary(e)}</p>}
               {e.description && <p className="mt-1 text-sm text-ink-soft">{e.description}</p>}
               <p className="mt-1 text-[11px] text-gray-400">/event/{e.slug}</p>
             </div>
@@ -160,6 +224,52 @@ export default function MockEventManager({ exams }: { exams: ExamOption[] }) {
             <input id="mock-event-ends" type="datetime-local" value={endsAt} onChange={(e) => setEndsAt(e.target.value)} className={inputClass} />
           </div>
         </div>
+
+        <div className={dividerClass} />
+
+        <div>
+          <p className={labelClass}>Focused paper (optional)</p>
+          <p className="mt-0.5 text-[11px] font-semibold text-gray-500">Leave every topic unchecked and Pro users get a full exam paper, like an ordinary mock</p>
+        </div>
+        {examTopics.length === 0 && (
+          <p className="rounded-xl bg-amber-50 px-3 py-2 text-xs font-semibold text-amber-800">No topics published for this exam yet</p>
+        )}
+        {examTopics.map((group) => (
+          <div key={group.subject.id} className="rounded-xl border border-blue-100/70 bg-white p-3">
+            <div className="flex items-center justify-between gap-2">
+              <p className="text-sm font-extrabold text-ink">{group.subject.name}</p>
+              <button
+                type="button"
+                onClick={() => setAll(group.subject.id)}
+                className="text-[11px] font-bold text-blue-700 hover:underline"
+              >
+                Toggle all
+              </button>
+            </div>
+            <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1.5">
+              {group.topics.map((t) => {
+                const checked = topicIds.includes(t.id)
+                return (
+                  <label key={t.id} className="inline-flex cursor-pointer items-center gap-1.5 py-1 text-[13px] font-semibold text-ink-soft hover:text-black">
+                    <input
+                      type="checkbox"
+                      checked={checked}
+                      onChange={() => toggleTopic(t.id)}
+                      className="h-4 w-4 cursor-pointer rounded border-gray-300 text-blue-600"
+                    />
+                    {t.name}
+                  </label>
+                )
+              })}
+            </div>
+          </div>
+        ))}
+
+        <div>
+          <label className={labelClass} htmlFor="mock-event-count">Question count <span className="font-normal text-gray-400">(leave blank for exam default)</span></label>
+          <input id="mock-event-count" type="number" min={5} max={500} step={1} value={questionCount} onChange={(e) => setQuestionCount(e.target.value)} placeholder="e.g. 20" className={inputClass} />
+        </div>
+
         <div>
           <label className={labelClass} htmlFor="mock-event-desc">Note</label>
           <textarea id="mock-event-desc" value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Optional — one or two sentences learners see on the event page" rows={2} className={inputClass} />

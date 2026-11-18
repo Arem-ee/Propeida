@@ -28,7 +28,7 @@ export async function startMockEventSession(eventId: string): Promise<StartMockE
   const admin = createAdminClient()
   const { data: event, error: evError } = await admin
     .from('mock_events')
-    .select('id, name, slug, exam_id, starts_at, ends_at')
+    .select('id, name, slug, exam_id, starts_at, ends_at, topic_ids, question_count')
     .eq('id', eventId)
     .single()
   if (evError || !event) return { ok: false, error: 'That mock event is not available.', errorCode: 'error' }
@@ -66,16 +66,20 @@ export async function startMockEventSession(eventId: string): Promise<StartMockE
 
   const defaults = await getMockDefaults(examSlug)
   const questionCount = defaults?.question_count ?? 180
+  const eventQuestionCount = event.question_count ?? questionCount
+  const focusTopics = Array.isArray(event.topic_ids) && event.topic_ids.length > 0 ? (event.topic_ids as string[]) : undefined
 
   try {
     const result = await createSession({
       examId: event.exam_id,
       examSlug,
       subjectIds: [],
-      questionCount,
+      questionCount: eventQuestionCount,
       difficulty: null,
       mode: 'mock',
       mockEventId: event.id,
+      topicIds: focusTopics,
+      questionCountOverride: eventQuestionCount,
     })
     return { ok: true, sessionId: result.sessionId }
   } catch (err) {

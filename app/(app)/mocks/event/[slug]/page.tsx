@@ -29,10 +29,13 @@ export default async function MockEventPage({ params }: { params: Promise<{ slug
   const ended = now >= new Date(event.ends_at).getTime()
   const state: 'upcoming' | 'live' | 'ended' = !started ? 'upcoming' : ended ? 'ended' : 'live'
 
+  const { data: topicRows } = event.topicIds && event.topicIds.length > 0
+    ? await supabase.from('topics').select('id, name').in('id', event.topicIds)
+    : { data: null }
+  const focusNames: string[] = ((topicRows as { id: string; name: string }[] | null) ?? []).map((t) => t.name)
+
   const myEntry = user ? await getMyEventEntry(event.id, user.id) : null
   const leaderboard = await getMockEventLeaderboard(event.id, user?.id ?? null)
-
-
 
   return (
     <div className="mx-auto max-w-3xl space-y-5 pb-16">
@@ -62,6 +65,16 @@ export default async function MockEventPage({ params }: { params: Promise<{ slug
           {event.exam_slug === 'jamb' && (
             <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1.5">
               <Timer className="h-4 w-4" /> JAMB format
+            </span>
+          )}
+          {typeof event.questionCount === 'number' && (
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1.5 text-blue-50">
+              {event.questionCount} questions
+            </span>
+          )}
+          {focusNames.length > 0 && (
+            <span className="inline-flex items-start gap-1.5 rounded-full bg-blue-500/30 px-3 py-1.5 text-xs font-semibold text-blue-50">
+              {focusNames.length === 1 ? focusNames[0] : `${focusNames.length} topics: ${focusNames.slice(0, 3).join(', ')}${focusNames.length > 3 ? ` +${focusNames.length - 3} more` : ''}`}
             </span>
           )}
         </div>

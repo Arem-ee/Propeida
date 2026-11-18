@@ -9,6 +9,8 @@ export interface MockEvent {
   starts_at: string
   ends_at: string
   description: string | null
+  topicIds: string[] | null
+  questionCount: number | null
   exam_name: string | null
   exam_slug: string | null
 }
@@ -18,7 +20,7 @@ export async function listMockEvents(): Promise<MockEvent[]> {
   const supabase = await createClient()
   const { data, error } = await supabase
     .from('mock_events')
-    .select('id, name, slug, exam_id, starts_at, ends_at, description, exams!inner(name, slug)')
+    .select('id, name, slug, exam_id, starts_at, ends_at, description, topic_ids, question_count, exams!inner(name, slug)')
     .order('starts_at', { ascending: false })
   if (error) return []
   return (data ?? []).map((row) => {
@@ -31,6 +33,8 @@ export async function listMockEvents(): Promise<MockEvent[]> {
       starts_at: row.starts_at as string,
       ends_at: row.ends_at as string,
       description: (row.description as string | null) ?? null,
+      topicIds: (row.topic_ids as string[] | null) ?? null,
+      questionCount: (row.question_count as number | null) ?? null,
       exam_name: (exams as { name?: string })?.name ?? null,
       exam_slug: (exams as { slug?: string })?.slug ?? null,
     }

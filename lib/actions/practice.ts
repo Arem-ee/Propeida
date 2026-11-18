@@ -45,6 +45,8 @@ interface CreateSessionParams {
    *  event sees the same questions (seed = event id), and the session row
    *  links back to the event for leaderboard purposes. */
   mockEventId?: string
+  /** Per-event paper length override. Null/undefined = exam default. */
+  questionCountOverride?: number
 }
 
 interface SessionQuestion {
@@ -107,6 +109,7 @@ async function fetchWeightedQuestions(
   subjectIds: string[],
   totalCount: number,
   seed: string,
+  topicIds: string[] = [],
 ): Promise<SessionQuestion[]> {
   const { data: weighting } = await supabase
     .from('app_config')
@@ -153,7 +156,7 @@ async function fetchWeightedQuestions(
       p_difficulty: null,
       p_limit: count,
       p_seed: seed,
-      p_topic_ids: [],
+      p_topic_ids: topicIds.length ? topicIds : [],
     })
 
     if (questions) {
@@ -223,6 +226,9 @@ export async function createSession(params: CreateSessionParams) {
       effectiveCount = mockDefaults.question_count
     }
   }
+  if (params.questionCountOverride && params.questionCountOverride > 0) {
+    effectiveCount = params.questionCountOverride
+  }
 
   let subjectIds = params.subjectIds
 
@@ -280,7 +286,7 @@ export async function createSession(params: CreateSessionParams) {
           p_difficulty: null,
           p_limit: englishCount,
           p_seed: questionSeed,
-          p_topic_ids: [],
+          p_topic_ids: params.topicIds?.length ? params.topicIds : [],
         })
 
         if (englishError) throw new Error('Could not load the English questions')
@@ -293,7 +299,7 @@ export async function createSession(params: CreateSessionParams) {
             p_difficulty: null,
             p_limit: electiveCount,
             p_seed: questionSeed,
-            p_topic_ids: [],
+            p_topic_ids: params.topicIds?.length ? params.topicIds : [],
           })
           if (electiveError) throw new Error('Could not load one of your elective banks')
           if (electiveQs) allQuestions.push(...(electiveQs as SessionQuestion[]))
@@ -304,7 +310,7 @@ export async function createSession(params: CreateSessionParams) {
       }
     } else {
       questions = subjectIds.length > 1 && params.mode === 'mock'
-        ? await fetchWeightedQuestions(supabase, params.examId, examSlug, subjectIds, effectiveCount, questionSeed)
+        ? await fetchWeightedQuestions(supabase, params.examId, examSlug, subjectIds, effectiveCount, questionSeed, params.topicIds ?? [])
         : await fetchQuestionsForSession(
             { ...params, subjectIds, questionCount: effectiveCount },
             questionSeed
