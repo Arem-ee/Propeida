@@ -67,6 +67,17 @@ first read.
   eight binary digits" where the extras add nothing, and "you can combine
   bits to make any number" over "the binary representation scheme allows the
   formation of arbitrary integers".
+- **"Decimal" means a dotted number, never base ten.** In ordinary use a
+  decimal is 0.625, not the base-ten system. Do not define, introduce or
+  re-label base ten as "decimal", anywhere in a lesson, example or prompt.
+  Write "base ten" / "base-ten" explicitly. If you mean the dotted number
+  (0.625), say "decimal point" or show the dotted numeral.
+- **Predict-prompts are real questions, not meta-prompts.** Ask exactly what
+  you would ask across the table: direct, plain, specific, answerable at once.
+  Numbers first where the answer is numeric ("What is 18 plus 3 plus 0?"),
+  concrete ("What are the three places worth in base three?"), never abstract
+  ("How much is the place value worth?"). A prompt the learner cannot parse on
+  first read is broken, whatever the answer is.
 
 ## Worked calculations and hierarchy
 

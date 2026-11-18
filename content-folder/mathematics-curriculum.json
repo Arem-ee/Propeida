@@ -1749,7 +1749,7 @@
      "content": {
       "heading": "What a base is",
       "paragraphs": [
-       "You count on ten fingers. That is why base ten exists. We call it **decimal**. Every base that is not decimal counts in bundles of a different size. A **digit** is one of the marks 0 to 9.",
+       "You count on ten fingers. That is why base ten exists. Every base that is not base ten counts in bundles of a different size. A **digit** is one of the marks 0 to 9.",
        "Now imagine you counted on five fingers instead of ten. Each full hand is a bundle of five.",
        "Counting **23** that way, you get **4** full bundles of five, with **3** ones over.",
        "Mathematicians write **43{{sub:5}}** for that.",
@@ -1834,17 +1834,17 @@
        "Take 210 in base three. The places are worth 9, 3 and 1:",
        "210{{sub:3}} = (2 × 9) + (1 × 3) + (0 × 1)",
        "210{{sub:3}} = 18 + 3 + 0 = 21",
-       "To write a decimal number in another base, divide by the base and collect the remainders.",
+       "To write a base-ten number in another base, divide by the base and collect the remainders.",
        "Here is 25 in base five, divided row by row:",
        "25 ÷ 5 = 5 r 0",
        "5 ÷ 5 = 1 r 0",
        "1 ÷ 5 = 0 r 1",
        "Read the remainders from the bottom up: **100{{sub:5}}**.",
-       "Between two bases that are not decimal, go through decimal first. There is no quicker way than decimal.",
+       "Between two bases that are not base ten, go through base ten first. There is no quicker way than base ten.",
        "Fractions convert the same way: multiply by the new base, take the whole part each time."
       ],
       "bullets": [],
-      "takeaway": "Convert to decimal from any base; divide to land in a new one.",
+      "takeaway": "Convert to base ten from any base; divide to land in a new one.",
       "check": {
        "question": "What is 13 in base two?",
        "options": [
@@ -1918,13 +1918,13 @@
     {
      "type": "worked_example",
      "content": {
-      "problem": "Write 210 in base three as a decimal number.",
+      "problem": "Write 210 in base three as a base-ten number.",
       "steps": [
        {
         "operation": "Write the place values from the right",
         "reason": "Each place is three times the one to its right.",
         "result": "Place values are 9, 3 and 1",
-        "predictPrompt": "How much is each place worth?"
+        "predictPrompt": "What are the three places worth in base three?"
        },
        {
         "operation": "Multiply each digit by its place value",
@@ -1936,7 +1936,7 @@
         "operation": "Add the three answers",
         "reason": "The three answers add to the whole number.",
         "result": "18 + 3 + 0 = 21",
-        "predictPrompt": "What is left to combine?"
+        "predictPrompt": "What is left to add up?"
        },
        {
         "operation": "Check to confirm: convert it back",
@@ -1950,7 +1950,7 @@
     {
      "type": "worked_example",
      "content": {
-      "problem": "Write 25 in decimal as a base-five number.",
+      "problem": "Write 25 in base ten as a base-five number.",
       "steps": [
        {
         "operation": "Divide 25 by 5",
@@ -2018,9 +2018,9 @@
         "predictPrompt": "Can any digit be 4 or more?"
        },
        {
-        "operation": "Convert to decimal",
+        "operation": "Convert to base ten",
         "reason": "Place values in base four are 16, 4 and 1.",
-        "result": "1 × 16 + 3 × 4 + 2 = 30 in decimal",
+        "result": "1 × 16 + 3 × 4 + 2 = 30 in base ten",
         "predictPrompt": "How do you convert 132 in base four?"
        },
        {
@@ -2039,7 +2039,7 @@
         "operation": "Check to confirm: convert back",
         "reason": "Convert 110 in base five and compare.",
         "result": "1 × 25 + 1 × 5 + 0 = 30, so both routes give 30",
-        "predictPrompt": "Does the expansion agree?"
+        "predictPrompt": "Do the two answers match?"
        }
       ]
      }
@@ -2049,7 +2049,7 @@
      "content": {
       "title": "Exam tip",
       "tone": "tip",
-      "body": "Digits equal to or bigger than the base cannot appear, so they reject an answer at once. Between two non-decimal bases, go through decimal."
+      "body": "Digits equal to or bigger than the base cannot appear, so they reject an answer at once. Between two bases that are not base ten, go through base ten."
      }
     },
     {
@@ -2067,7 +2067,7 @@
        "The same four is written in every base:",
        "100{{sub:2}} = 20{{sub:5}} = 4{{sub:10}}",
        "(3 × 5) + (4 × 1) = 19",
-       "202{{sub:2}} is five in decimal, not two hundred and two.",
+       "202{{sub:2}} is five in base ten, not two hundred and two.",
        "202{{sub:2}} = 4 + 0 + 1 = 5",
        "A price tag of 200{{sub:5}} is not two hundred either; it is two twenty-fives.",
        "200{{sub:5}} = 2 × 25 = 50",
@@ -2087,15 +2087,15 @@
       "heading": "Go deeper: The trap in a base question",
       "paragraphs": [
        "The first trap is a digit the base does not allow. Base five never writes **5**, so any option containing it falls at once.",
-       "The second trap is a decimal answer dressed up as a base answer.",
+       "The second trap is a base-ten answer dressed up as a base answer.",
        "33{{sub:5}} + 24{{sub:5}} = 112{{sub:5}}",
-       "In decimal, that is 32. In base five, the paper wants 112{{sub:5}}.",
+       "In base ten, that is 32. In base five, the paper wants 112{{sub:5}}.",
        "18 + 14 = 32; 112{{sub:5}} = 25 + 5 + 2 = 32",
-       "Split the columns in decimal instead and you get 7 and 5. Writing 57 answers a different question.",
+       "Split the columns in base ten instead and you get 7 and 5. Writing 57 answers a different question.",
        "If a conversion stalls, leave it and come back. Three careful answers beat five rushed ones.",
        "Sweep the easy conversions first. By then the base is usually clear.",
        "Read the question twice. The base is always in the question, and it is always the first thing to mark.",
-       "Here is how the paper springs it: the correct number is 112{{sub:5}}, and 57 is what you get if you add in decimal by accident (3 + 4 = 7, 3 + 2 = 5). That is the trap.",
+       "Here is how the paper springs it: the correct number is 112{{sub:5}}, and 57 is what you get if you add in base ten by accident (3 + 4 = 7, 3 + 2 = 5). That is the trap.",
        "Read the base before you read the digits. Always."
       ],
       "bullets": [
@@ -2135,10 +2135,10 @@
     {
      "type": "guided_question",
      "content": {
-      "question": "Convert 24 in base six to base four. Show the decimal value first, then the division.",
+      "question": "Convert 24 in base six to base four. Show the value in base ten first, then the division.",
       "hints": [
        "Work out what the units, sixes and thirty-sixes are worth first",
-       "Divide that decimal value by four repeatedly",
+       "Divide that value in base ten by four repeatedly",
        "Read the remainders upward"
       ]
      }
@@ -2157,7 +2157,7 @@
      "content": {
       "heading": "Adding and subtracting in another base",
       "paragraphs": [
-       "Adding in base b runs the same as in decimal, except the carry starts at b. We write **b** for \"any base\". A **digit** is one of the symbols 0, 1, 2 up to the base minus one. **Decimal** means base ten.",
+       "Adding in base b runs the same as in base ten, except the carry starts at b. We write **b** for \"any base\". A **digit** is one of the symbols 0, 1, 2 up to the base minus one.",
        "In base five, 3 + 4 rolls over: write 2, carry 1.",
        "3 + 4 = 12{{sub:5}}",
        "A full sum, one column at a time. The ones column first:",
@@ -2203,7 +2203,7 @@
          "predictPrompt": "What is 2 minus 1?"
         },
         {
-         "operation": "Check to confirm in decimal",
+         "operation": "Check to confirm in base ten",
          "reason": "13 in base four is 1 × 4 + 3 = 7, and 31 in base four is 13; 13 − 6 = 7.",
          "result": "13{{sub:4}} both ways",
          "predictPrompt": "Does base ten agree?"
@@ -2217,12 +2217,12 @@
      "content": {
       "heading": "Multiplying in another base",
       "paragraphs": [
-       "Multiplication in another base is decimal multiplication with a different carry.",
+       "Multiplication in another base is base-ten multiplication with a different carry.",
        "In base five, single-digit multiplication tops out at 4 × 4.",
        "In base eight the table stops at 7 × 7 = 49, and 49 is 61{{sub:8}}.",
        "Here is 4 × 4. Sixteen is three fives and one over:",
        "4 × 4 = 16 = 31{{sub:5}}",
-       "Long multiplication is the same as in decimal. Stage one, the ones digit 4:",
+       "Long multiplication is the same as in base ten. Stage one, the ones digit 4:",
        "4 × 23{{sub:5}} = 202{{sub:5}}",
        "The **1** shifts one place left:",
        "23{{sub:5}} × 10{{sub:5}} = 230{{sub:5}}",
@@ -2240,17 +2240,17 @@
         "203{{sub:5}}"
        ],
        "answer": 0,
-       "why": "4 × 3 = 12 decimal: write 2, carry 2. 4 × 2 + 2 = 10 decimal = 20 in base five. So 202{{sub:5}}.",
+       "why": "4 × 3 = 12 in base ten: write 2, carry 2. 4 × 2 + 2 = 10 in base ten = 20 in base five. So 202{{sub:5}}.",
        "steps": [
         {
          "operation": "Ones column",
-         "reason": "4 × 3 = 12 decimal = 22 in base five: write 2, carry 2.",
+         "reason": "4 × 3 = 12 in base ten = 22 in base five: write 2, carry 2.",
          "result": "Ones digit 2, carry 2",
          "predictPrompt": "What is 4 times 3 in base five?"
         },
         {
          "operation": "Fives column",
-         "reason": "4 × 2 + 2 = 10 decimal = 20 in base five.",
+         "reason": "4 × 2 + 2 = 10 in base ten = 20 in base five.",
          "result": "20 in base five, write 0 carry 2",
          "predictPrompt": "What is 4 times 2 plus the carry?"
         },
@@ -2267,10 +2267,10 @@
     {
      "type": "text",
      "content": {
-      "heading": "Check by going through decimal",
+      "heading": "Check by going through base ten",
       "paragraphs": [
-       "The one check that never fails: convert to decimal and compare.",
-       "Turn our multiplication into decimal first:",
+       "The one check that never fails: convert to base ten and compare.",
+       "Turn our multiplication into base ten first:",
        "23{{sub:5}} = 13,  14{{sub:5}} = 9",
        "Two routes to one answer is the whole trick.",
        "13 × 9 = 117",
@@ -2279,7 +2279,7 @@
        "117 = 432{{sub:5}}",
        "Both routes give the same answer. That is how you recover after a slip.",
        "Then label the answer in the base the paper asked for.",
-       "**117** is decimal; **432{{sub:5}}** is base five. Writing 117{{sub:5}} is a different number.",
+       "**117** is in base ten; **432{{sub:5}}** is in base five. Writing 117{{sub:5}} is a different number.",
        "That mismatch is the commonest base-arithmetic mistake on the paper."
       ],
       "bullets": [],
@@ -2299,11 +2299,11 @@
          "operation": "Convert both numbers",
          "reason": "23 in base five is 2 × 5 + 3 = 13; 14 in base five is 1 × 5 + 4 = 9.",
          "result": "13 and 9",
-         "predictPrompt": "What are 23 and 14 in decimal?"
+         "predictPrompt": "What are 23 and 14 in base ten?"
         },
         {
-         "operation": "Multiply in decimal",
-         "reason": "A check done in plain decimal is safer than a duplicate in base five.",
+         "operation": "Multiply in base ten",
+         "reason": "A check done in plain base ten is safer than a duplicate in base five.",
          "result": "13 × 9 = 117",
          "predictPrompt": "What is 13 times 9?"
         }
@@ -2316,7 +2316,7 @@
      "content": {
       "title": "Exam tip",
       "tone": "tip",
-      "body": "Answer in the base the paper asked for. A decimal answer labelled as a base answer scores nothing."
+      "body": "Answer in the base the paper asked for. A base-ten answer labelled as a base answer scores nothing."
      }
     },
     {
@@ -2366,19 +2366,19 @@
         "operation": "Find the base",
         "reason": "If 3 writes as 0 with a carry of 1, then 3 is exactly one full bundle of the base.",
         "result": "r = 3",
-        "predictPrompt": "When does 3 write as 0 with a carry of 1?"
+        "predictPrompt": "When exactly is 3 one full bundle of the base?"
        },
        {
         "operation": "Check the two numbers in base three",
-        "reason": "Convert each number to decimal and add.",
+        "reason": "Convert each number to base ten and add.",
         "result": "122{{sub:3}} = 17 and 10{{sub:3}} = 3, so 17 + 3 = 20",
-        "predictPrompt": "What is 122 in base three, in decimal?"
+        "predictPrompt": "What is 122 in base three, in base ten?"
        },
        {
         "operation": "Check the answer the same way",
         "reason": "Convert 202{{sub:3}} the same way and compare.",
         "result": "202{{sub:3}} = 2 × 9 + 2 = 20. It matches.",
-        "predictPrompt": "What is 202 in base three, in decimal?"
+        "predictPrompt": "What is 202 in base three, in base ten?"
        },
        {
         "operation": "Check to confirm: base ten agrees",
@@ -2394,9 +2394,9 @@
      "content": {
       "heading": "Go deeper: Multiplication and division in base two and beyond",
       "paragraphs": [
-       "Binary multiplication is easier than decimal. The multiplication table has four facts.",
+       "Binary multiplication is easier than base ten. The multiplication table has four facts.",
        "0 × 0 = 0,  0 × 1 = 0,  1 × 0 = 0,  1 × 1 = 1",
-       "Long multiplication works the same as in decimal.",
+       "Long multiplication works the same as in base ten.",
        "Multiplying by **1** copies the number. Multiplying by **10{{sub:2}}** copies it and shifts one place left.",
        "Take 101{{sub:2}} × 11{{sub:2}}, one row at a time.",
        "First row, multiply by the ones digit:",
@@ -2406,13 +2406,13 @@
        "Add the two rows in binary:",
        "101 + 1010 = 1111",
        "101{{sub:2}} × 11{{sub:2}} = 1111{{sub:2}}",
-       "Check in decimal: 5 × 3 = 15, and 1111{{sub:2}} = 8 + 4 + 2 + 1 = 15. They agree.",
+       "Check in base ten: 5 × 3 = 15, and 1111{{sub:2}} = 8 + 4 + 2 + 1 = 15. They agree.",
        "Multiplying by 100{{sub:2}} shifts two places left, the same as multiplying by four.",
        "101{{sub:2}} × 100{{sub:2}} = 10100{{sub:2}} = 20",
        "And by 1000{{sub:2}}, three places, the same as multiplying by eight:",
        "101{{sub:2}} × 1000{{sub:2}} = 101000{{sub:2}} = 40",
        "Binary division works like the divide-and-bring-down method in base ten. You subtract, bring down, and write the remainder. The leftover after every full bundle is taken out is the **remainder**.",
-       "The round trip works in any base. Convert to decimal, divide there, convert the answer back.",
+       "The round trip works in any base. Convert to base ten, divide there, convert the answer back.",
        "Division by 10{{sub:2}} is a right shift. It halves the number.",
        "11010{{sub:2}} ÷ 10{{sub:2}} = 1101{{sub:2}} = 13",
        "The round trip also solves division. Take 23{{sub:5}} ÷ 5.",
@@ -2430,7 +2430,7 @@
       "bullets": [
        "Multiply digit-wise, carry at b",
        "Divide by repeated subtraction in the base",
-       "Check by going through decimal"
+       "Check by going through base ten"
       ]
      }
     },
@@ -2448,7 +2448,7 @@
        "1111{{sub:2}} ÷ 11{{sub:2}} = 101{{sub:2}}",
        "Check by multiplying back:",
        "101{{sub:2}} × 11{{sub:2}} = 1111{{sub:2}}",
-       "The back door works too: convert to decimal, divide, convert back.",
+       "The back door works too: convert to base ten, divide, convert back.",
        "1111{{sub:2}} is 15. 15 ÷ 3 = 5. And 5 is 101{{sub:2}}. Same answer.",
        "1111{{sub:2}} = 15,  101{{sub:2}} = 5",
        "And when the number you divide by is **10{{sub:2}}**, dividing just means shifting right.",
@@ -2477,7 +2477,7 @@
     {
      "type": "guided_question",
      "content": {
-      "question": "Divide 10110 in base two by 10 in base two, then check the answer in decimal.",
+      "question": "Divide 10110 in base two by 10 in base two, then check the answer in base ten.",
       "hints": [
        "Shift the bits one place to the right",
        "That is the same as dividing by two",
