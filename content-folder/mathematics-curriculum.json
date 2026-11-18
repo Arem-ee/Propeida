@@ -1789,15 +1789,14 @@
      "content": {
       "heading": "What each place is worth",
       "paragraphs": [
-       "In base ten, every place is worth **ten times** the one to its right. Units, then tens, then hundreds.",
-       "In base five, every place is worth **five times** the one to its right.",
-       "The ones place is the **units** place. The worth of each place is its **place value**: units 1, then fives 5, then twenty-fives 25.",
-       "In base three, the places count **1**, **3**, **9**, **27** and so on.",
-       "The pattern goes on forever in both directions: bigger places to the left, fractions to the right.",
-       "Digits stay smaller than the bundle. In base five, **5** is never a digit; it is the next bundle. When a column is built by multiplying by the same number over and over, we call that a **power** of the base."
+       "In base ten, the places are **thousands** (1000), **hundreds** (100), **tens** (10) and **units** (1). Each place is ten times the one to its right.",
+       "The same holds in any base. In base five: units **1**, fives **5**, twenty-fives **25**.",
+       "In base three: units **1**, threes **3**, nines **9**, twenty-sevens **27**.",
+       "We can also write those places with powers of the base: **3²**, **3¹**, **3⁰** are the same as nine, three and one. In base ten that is **10³**, **10²**, **10¹**, **10⁰**. Same worths, shorter writing.",
+       "Digits stay smaller than the base. In base five, **5** never appears; it is the next bundle."
       ],
       "bullets": [],
-      "takeaway": "Each place is the base times the one to its right. Digits stay below the base.",
+      "takeaway": "Name the places from the right: units, then the base, then the base squared.",
       "check": {
        "question": "In base five, what is the third place worth from the right?",
        "options": [
@@ -1921,28 +1920,28 @@
       "problem": "Write 210 in base three as a base-ten number.",
       "steps": [
        {
-        "operation": "Write the place values from the right",
-        "reason": "Each place is three times the one to its right.",
-        "result": "Place values are 9, 3 and 1",
+        "operation": "Name the places from the right",
+        "reason": "Units, threes, nines. Each place is three times the one before it.",
+        "result": "Places from the right: 1, 3, 9",
         "predictPrompt": "What are the places in base three worth?"
        },
        {
-        "operation": "Multiply each digit by its place value",
-        "reason": "Opening the number out means multiplying each digit by its place, then adding.",
-        "result": "2 × 9 + 1 × 3 + 0 × 1",
-        "predictPrompt": "Which digit sits over which place?"
+        "operation": "Multiply each digit by its place",
+        "reason": "The 2 sits on the nine. The 1 sits on the three. The 0 sits on the units.",
+        "result": "(2 × 9) + (1 × 3) + (0 × 1) = 18 + 3 + 0",
+        "predictPrompt": "Which digit sits on which place?"
        },
        {
         "operation": "Add the three answers",
-        "reason": "The three answers add to the whole number.",
+        "reason": "18 + 3 is 21, and the zero changes nothing.",
         "result": "18 + 3 + 0 = 21",
-        "predictPrompt": "What is left to add up?"
+        "predictPrompt": "What is 18 plus 3?"
        },
        {
         "operation": "Check to confirm: convert it back",
-        "reason": "Convert the answer back with division.",
-        "result": "21 ÷ 3 = 7 r 0, 7 ÷ 3 = 2 r 1, 2 ÷ 3 = 0 r 2, which reads 210 in base three",
-        "predictPrompt": "Does 21 in base three read 210?"
+        "reason": "Divide 21 by three and read the remainders upwards.",
+        "result": "21 ÷ 3 = 7 r 0; 7 ÷ 3 = 2 r 1; 2 ÷ 3 = 0 r 2; which reads 210 in base three",
+        "predictPrompt": "Does dividing 21 by 3 give 210 back in base three?"
        }
       ]
      }

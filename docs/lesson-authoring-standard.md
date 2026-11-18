@@ -35,6 +35,28 @@ follow.
    JAMB syllabus. Verify primary sources, not secondary summaries; keep
    sources so audits can trace claims back to their material. Publication
    without research is a reason to reject the commit.
+3. **Follow the Nigerian classroom, not a pet order.** Research means the
+   published Nigerian schemes: the NERDC curriculum documents, the official
+   IBASS topic structure, and the teacher guides the Nigerian classroom
+   actually uses (Learn Africa, Cambridge Nigerian edition, New
+   Concept in Mathematics, New Excellence). Teach the topic in the order
+   those materials teach it, in the terminology they use, and with the
+   notation they hand to students.
+   - Number bases are taught base-ten first (thousands, hundreds, tens,
+     units with their worths), then other bases via the same table; then
+     expansion; then conversion. Exponents and powers-of-the-base are a
+     notation shown alongside (10\u00B3, 10\u00B2, 10\u00B9, 10\u2070), not a
+     substitute for the named place values.
+   - "Place value" means the named place and its worth (units, tens,
+     hundreds; in other bases, units, the base, the base squared), never the
+     bare exponents of the base.
+   - Order and gap-filling follow the Nigerian sequence: revise base ten
+     first; teach the named places; put the powers notation beside them;
+     then expand and add; then convert. Never invent a sequence the
+     Nigerian classroom does not use.
+   - If your own ordering feels more elegant, that is a reason to keep it
+     out, not in.
+
 
 A lesson that fails either test is unfinished, regardless of how correct the
 content is. A correct answer installed on a missing foundation is not a lesson.
@@ -438,6 +460,10 @@ command.
 
 Before a lesson is seeded:
 
+- [ ] Research was done against the published Nigerian schemes (NERDC
+      curriculum, the IBASS topic structure, and the Nigerian classroom
+      teacher guides), and order, terminology and notation match that
+      sequence, not a private re-ordering.
 - [ ] Every `syllabus_items` entry **and every syllabus objective** on the linked
       topic is taught by the core.
 - [ ] The lesson teaches one concept; a second testable idea has its own lesson.
