@@ -8,7 +8,7 @@ import { GlossText } from './gloss-text'
 import { MascotExplains } from '@/components/celebrations/speech-bubble'
 import { WorkedSteps } from '@/components/celebrations/worked-steps'
 import type { WorkedStep } from '@/lib/lessons'
-import { MathText } from './math-text'
+import { MathText, isMathOnly } from './math-text'
 
 /**
  * The core reading flow: one concept per lesson, split into at most three
@@ -160,7 +160,7 @@ function SectionBody({ section }: { section: TeachSectionData }) {
   return (
     <>
       {(section.paragraphs ?? []).map((paragraph, i) => (
-        paragraph.trim().startsWith('MATH:') ? (
+        isMathOnly(paragraph) ? (
           <MathText key={i} text={paragraph} />
         ) : (
           <p key={i} className="mt-3.5 text-[15px] font-semibold leading-relaxed text-ink">

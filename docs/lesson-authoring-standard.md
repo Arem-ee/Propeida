@@ -79,12 +79,14 @@ the reader can see being carried out. That includes the "obvious" ones: a
   clause in a sentence. The line that carries the working stands on its own,
   in reading order, one step per line.
 - **Hierarchy in presentation.** Put a short sentence of setup first, then
-  the working on its own lines (a `MATH:` paragraph for the maths proper).
-  The reader should see the calculation before they read the commentary.
-- **Words stay in prose; maths stays in the maths lines.** Inside a `MATH:`
-  line, do not tuck commentary in parentheses or trailing clauses
-  ("carrying at b", "shift left"). Put the explanation in the sentence before
-  the working, or the step right after it.
+  the working on its own lines. A paragraph that is maths only is set as a
+  centred, tinted maths panel automatically; authors never type a prefix
+  (`MATH:` is retired, and old `MATH:` prefixes still parse).
+- **A full sentence never sits on a maths line.** The renderer keeps a line
+  as prose when it finds a lowercase English word on it. Write the
+  commentary as its own sentence before or after the working instead of
+  tucking "units:", "mind the carry" or bracketed asides onto the maths
+  line. Words stay in prose; maths stays on the working lines.
 - **Every shortcut ships with a calculation instance.** If the lesson says
   "convert to decimal, do it there, then convert back", it must show one full
   conversion, start to finish, not just describe the route.

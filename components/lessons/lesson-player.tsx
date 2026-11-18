@@ -9,7 +9,7 @@ import { WorkedSteps } from '@/components/celebrations/worked-steps'
 import { useWins } from '@/components/celebrations/use-wins'
 import { celebrateStreakIfNew } from '@/components/celebrations/streak-celebration'
 import StepVisual from '@/components/lessons/step-visual'
-import { MathText } from '@/components/lessons/math-text'
+import { MathText, isMathOnly } from '@/components/lessons/math-text'
 import {
   recordLessonAttempt,
   completeLesson,
@@ -52,9 +52,13 @@ function SectionText({ section }: { section: NoteSection }) {
         <h3 className="font-display text-base font-medium text-black">{section.heading}</h3>
       )}
       {(section.paragraphs ?? []).map((paragraph, i) => (
-        <p key={i} className="mt-2 text-[15px] font-semibold leading-relaxed text-ink">
-          <GlossText text={paragraph} />
-        </p>
+        isMathOnly(paragraph) ? (
+          <MathText key={i} text={paragraph} />
+        ) : (
+          <p key={i} className="mt-2 text-[15px] font-semibold leading-relaxed text-ink">
+            <GlossText text={paragraph} />
+          </p>
+        )
       ))}
       {section.bullets.length > 0 && (
         <ul className="mt-2 space-y-1.5">

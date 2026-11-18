@@ -82,6 +82,34 @@ function isMathPiece(piece: string): boolean {
   return false
 }
 
+// Stand-alone punctuation/operators that belong to a maths line, never to
+// English prose. Used by isMathOnly so authors never need a prefix.
+const PURE_OPERATORS = /^[+\-=×÷·(),.;:%[\]{}]+$/
+
+/**
+ * A paragraph that is maths only: digits, operators, greek letters, KaTeX
+ * fragments and explicit {{sub:}} tokens. Any lowercase English word makes
+ * the line a sentence, not a maths line, and it stays inline prose.
+ *
+ * Authors never prefix a line. The body is detected, and math-only lines are
+ * set as display panels with hierarchy. (The legacy `MATH:` prefix is still
+ * honoured for older content.)
+ */
+export function isMathOnly(src: string): boolean {
+  const body = String(src ?? '').replace(/^MATH:\s*/i, '')
+  if (!body.trim()) return false
+  const parts = body.split(TOKEN)
+  for (let index = 0; index < parts.length; index++) {
+    const piece = parts[index] ?? ''
+    if (index % 2 === 1) continue // explicit math tokens are maths
+    for (const p of piece.split(/(\s+)/)) {
+      if (!p.trim()) continue
+      if (!isMathPiece(p) && !PURE_OPERATORS.test(p)) return false
+    }
+  }
+  return true
+}
+
 function convert(src: string): string {
   let out = String(src)
   // Tokens were split out before this ran, so any raw braces left are
@@ -173,7 +201,7 @@ function splitRuns(text: string): Array<{ math: boolean; src: string }> {
 
 export function MathText({ text, display }: { text: string; display?: boolean }) {
   const raw = String(text ?? '')
-  const auto = /^MATH:\s*/.test(raw)
+  const auto = /^MATH:\s*/.test(raw) || isMathOnly(raw)
   const displayMode = display || auto
   const body = auto ? raw.replace(/^MATH:\s*/, '') : raw
   const parts = body.split(TOKEN)
