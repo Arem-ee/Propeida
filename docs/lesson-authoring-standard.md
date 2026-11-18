@@ -44,16 +44,22 @@ follow.
    notation they hand to students.
    - Number bases are taught base-ten first (thousands, hundreds, tens,
      units with their worths), then other bases via the same table; then
-     expansion; then conversion. Exponents and powers-of-the-base are a
-     notation shown alongside (10\u00B3, 10\u00B2, 10\u00B9, 10\u2070), not a
-     substitute for the named place values.
-   - "Place value" means the named place and its worth (units, tens,
-     hundreds; in other bases, units, the base, the base squared), never the
-     bare exponents of the base.
+     expansion; then conversion. Powers of the base are the column worths
+     as they are raised (3² = 9, 3¹ = 3, 3⁰ = 1), shown as notation, not as
+     column names.
+   - **"Place value" means the base-ten columns and their worths:**
+     thousands 1000, hundreds 100, tens 10, units 1. Other bases are not
+     given invented column names (no "fives", "nines place", or "hundreds
+     of base five"). Other places are referred to by their worth, the
+     number itself. The power notation 3² means "three raised to the
+     power 2", and the power is the exponent: the number of times a
+     number should be multiplied by itself. Write it as "the column
+     worth 9", never as a nickname for the column.
    - Order and gap-filling follow the Nigerian sequence: revise base ten
-     first; teach the named places; put the powers notation beside them;
-     then expand and add; then convert. Never invent a sequence the
-     Nigerian classroom does not use.
+     first (thousands, hundreds, tens, units); then other bases as the same
+     table with their worths (1, b, b², …); then expansion; then
+     conversion written with the powers of the base in brackets beside the
+     digits. Never invent a sequence the Nigerian classroom does not use.
    - If your own ordering feels more elegant, that is a reason to keep it
      out, not in.
 
