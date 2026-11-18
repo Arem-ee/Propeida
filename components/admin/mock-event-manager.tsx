@@ -98,6 +98,7 @@ export default function MockEventManager({ exams }: { exams: ExamOption[] }) {
   }
 
   const status = (e: MockEvent): 'live' | 'upcoming' | 'ended' => {
+    // eslint-disable-next-line react-hooks/purity -- status is derived per render from request-time clock
     const now = Date.now()
     if (now >= new Date(e.ends_at).getTime()) return 'ended'
     if (now >= new Date(e.starts_at).getTime()) return 'live'
