@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Menu, X, ArrowLeftToLine } from 'lucide-react'
+import { Menu, X, ArrowLeftToLine, Atom } from 'lucide-react'
 import Logo from '@/components/logo'
 import { ADMIN_NAV } from './nav'
 
@@ -86,6 +86,13 @@ function NavContents({
             {email}
           </p>
         )}
+        <Link
+          href="/periodic-table"
+          className="mb-1 flex min-h-[44px] items-center gap-2 rounded-xl px-3 text-[13px] font-extrabold text-blue-700 hover:bg-blue-50"
+        >
+          <Atom className="h-4 w-4" aria-hidden />
+          Periodic Table
+        </Link>
         <Link
           href="/home"
           className="flex min-h-[44px] items-center gap-2 rounded-xl px-3 text-[13px] font-extrabold text-blue-700 hover:bg-blue-50"

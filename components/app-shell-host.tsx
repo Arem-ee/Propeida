@@ -9,10 +9,12 @@ export default function AppShellHost({
   children,
   email,
   isAdmin,
+  subjectCombinations,
 }: {
   children: React.ReactNode
   email: string | null
   isAdmin: boolean
+  subjectCombinations: string[]
 }) {
   const router = useRouter()
 
@@ -24,7 +26,7 @@ export default function AppShellHost({
   }
 
   return (
-    <AppShell email={email} isAdmin={isAdmin} onLogout={handleLogout}>
+    <AppShell email={email} isAdmin={isAdmin} subjectCombinations={subjectCombinations} onLogout={handleLogout}>
       <SettingsApplier />
       {children}
     </AppShell>

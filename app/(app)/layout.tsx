@@ -9,7 +9,7 @@ export default async function AppGroupLayout({ children }: { children: React.Rea
 
   const { data: profile } = await supabase
     .from('profiles')
-    .select('is_admin, onboarding_completed')
+    .select('is_admin, onboarding_completed, subject_combinations')
     .eq('id', user.id)
     .single()
 
@@ -20,7 +20,11 @@ export default async function AppGroupLayout({ children }: { children: React.Rea
   }
 
   return (
-    <AppShellHost email={user.email ?? null} isAdmin={profile?.is_admin ?? false}>
+    <AppShellHost
+      email={user.email ?? null}
+      isAdmin={profile?.is_admin ?? false}
+      subjectCombinations={Array.isArray(profile?.subject_combinations) ? (profile.subject_combinations as string[]) : []}
+    >
       {children}
     </AppShellHost>
   )

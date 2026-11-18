@@ -1,14 +1,40 @@
 import type { Metadata } from 'next'
 import PeriodicTable from '@/components/chemistry/periodic-table'
-import { Sparkles, BookOpen, ArrowRight } from 'lucide-react'
+import { Sparkles, BookOpen, ArrowRight, FlaskConical } from 'lucide-react'
 import Link from 'next/link'
+import { getPeriodicTableEligibility } from '@/lib/periodic-table-access'
 
 export const metadata: Metadata = {
   title: 'Periodic Table of Elements - Chemistry Reference',
   description: 'Interactive IUPAC Periodic Table with electron configurations, relative atomic masses, and First 20 Elements focus for JAMB and Post-UTME candidates.',
 }
 
-export default function PeriodicTablePage() {
+export default async function PeriodicTablePage() {
+  const { canSee } = await getPeriodicTableEligibility()
+
+  if (!canSee) {
+    return (
+      <div className="mx-auto max-w-md py-16 text-center">
+        <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-blue-600">
+          <FlaskConical className="h-7 w-7" aria-hidden />
+        </span>
+        <h1 className="mt-5 font-heading text-2xl font-bold tracking-tight text-slate-900">
+          Chemistry reference
+        </h1>
+        <p className="mt-2 text-sm leading-relaxed text-slate-600">
+          The Periodic Table is available to learners studying Chemistry (and to admins). Add Chemistry to your subjects on your account page to unlock it here.
+        </p>
+        <Link
+          href="/account"
+          className="mt-6 inline-flex items-center gap-1.5 rounded-xl bg-blue-600 px-5 py-3 text-sm font-bold text-white shadow-xs transition hover:bg-blue-700"
+        >
+          <span>Choose your subjects</span>
+          <ArrowRight className="h-4 w-4" />
+        </Link>
+      </div>
+    )
+  }
+
   return (
     <div className="mx-auto max-w-5xl pb-16">
       {/* Header */}

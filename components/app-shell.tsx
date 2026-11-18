@@ -3,7 +3,7 @@
 import { usePathname } from 'next/navigation'
 import Link, { useLinkStatus } from 'next/link'
 import {
-  Home, BookOpen, BarChart3, Timer, TrendingUp, User, LogOut, Settings, X, Download, Crosshair, Users, ChevronRight, Sparkles, Loader2,
+  Home, BookOpen, BarChart3, Timer, TrendingUp, User, LogOut, Settings, X, Download, Crosshair, Users, ChevronRight, Sparkles, Loader2, Atom,
 } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import Logo from '@/components/logo'
@@ -35,6 +35,9 @@ const ACCOUNT_ITEMS = [
   { href: '/account/downloads', label: 'Downloads', caption: 'Your files', icon: Download },
   { href: '/account/settings', label: 'Settings', caption: 'Your preferences', icon: Settings },
 ]
+
+const PERIODIC_TABLE_LINK = { href: '/periodic-table', label: 'Periodic Table', icon: Atom }
+const PERIODIC_TABLE_ITEM = { href: '/periodic-table', label: 'Periodic Table', caption: 'IUPAC Chemistry elements', icon: Atom }
 
 function SidebarTabLink({
   item,
@@ -106,10 +109,11 @@ function BottomTabLink({
   )
 }
 
-export default function AppShell({ children, email, isAdmin, onLogout }: {
+export default function AppShell({ children, email, isAdmin, subjectCombinations, onLogout }: {
   children: React.ReactNode
   email: string | null
   isAdmin: boolean
+  subjectCombinations: string[]
   onLogout: () => void
 }) {
   const pathname = usePathname()
@@ -130,6 +134,13 @@ export default function AppShell({ children, email, isAdmin, onLogout }: {
 
   const isActive = (href: string) => pathname === href || pathname.startsWith(href + '/')
   const initial = (email?.[0] ?? '?').toUpperCase()
+  // The periodic table is a Chemistry tool: learners whose chosen subjects
+  // include Chemistry see it while learning and practising; admins see it
+  // everywhere (including during mocks, where candidates never do).
+  const onLearningOrPractice = pathname.startsWith('/learn') || pathname.startsWith('/practice')
+  const canSeePeriodicTable = isAdmin || (subjectCombinations.includes('chemistry') && onLearningOrPractice)
+  const accountItems = canSeePeriodicTable ? [...ACCOUNT_ITEMS, PERIODIC_TABLE_ITEM] : ACCOUNT_ITEMS
+  const accountLinks = canSeePeriodicTable ? [...ACCOUNT_LINKS, PERIODIC_TABLE_LINK] : ACCOUNT_LINKS
 
   return (
     <div className="min-h-screen flex">
@@ -212,7 +223,7 @@ export default function AppShell({ children, email, isAdmin, onLogout }: {
               </span>
             </div>
             <nav aria-label="Account" className="mt-2 space-y-1">
-              {ACCOUNT_ITEMS.map((item) => {
+              {accountItems.map((item) => {
                 const Icon = item.icon
                 const active = pathname === item.href
                 return (
@@ -274,7 +285,7 @@ export default function AppShell({ children, email, isAdmin, onLogout }: {
           <div id="account-menu-mobile" className="border-t border-blue-100/60 bg-paper px-4 py-3 animate-pop-in">
             <p className="truncate px-1 text-xs font-extrabold text-black">{email}</p>
             <div className="mt-1 space-y-0.5">
-              {ACCOUNT_LINKS.map((item) => {
+              {accountLinks.map((item) => {
                 const Icon = item.icon
                 return (
                   <Link
