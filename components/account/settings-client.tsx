@@ -4,6 +4,7 @@ import { useState, useEffect, useTransition } from 'react'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 import { Mascot } from '@/components/mascot'
+import ReferralCard from '@/components/account/referral-card'
 import { getPreferences, setPreference, type FontScale, type Theme } from '@/lib/settings'
 import { setCohortUpdatesEnabled } from '@/lib/actions/notifications'
 
@@ -51,11 +52,13 @@ export default function SettingsClient({
   planLabel = 'Free',
   planHint = 'Free practice and one mock per exam, and Pro opens everything',
   planCtaLabel = 'See Pro',
+  referral = null,
 }: {
   initialNotificationsEnabled?: boolean
   planLabel?: string
   planHint?: string
   planCtaLabel?: string
+  referral?: { referralCode: string; totalReferrals: number; verifiedReferrals: number } | null
 }) {
   const [font, setFont] = useState<FontScale>('standard')
   const [theme, setTheme] = useState<Theme>('default')
@@ -115,6 +118,15 @@ export default function SettingsClient({
             {planCtaLabel}
           </Link>
         </Row>
+
+        {referral && (
+          <Row
+            label="Bring a friend"
+            hint="Share your link, and when your friend makes their first Pro payment, you get 7 days of JAMB Pro"
+          >
+            <ReferralCard {...referral} />
+          </Row>
+        )}
 
         <Row label="Text size" hint="This device only and separate from the accessibility needs saved on your profile">
           <Choice<FontScale>

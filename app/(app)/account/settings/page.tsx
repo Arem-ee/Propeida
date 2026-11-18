@@ -1,6 +1,7 @@
 import SettingsClient from '@/components/account/settings-client'
 import { createClient } from '@/lib/supabase/server'
 import { getProStatus } from '@/lib/entitlements'
+import { getReferralStats } from '@/lib/actions/referral'
 
 export const metadata = { title: 'Settings' }
 
@@ -52,12 +53,23 @@ export default async function SettingsPage() {
     }
   }
 
+  let referral: { referralCode: string; totalReferrals: number; verifiedReferrals: number } | null = null
+  if (user) {
+    try {
+      referral = await getReferralStats()
+    } catch {
+      // If stats fail, the card hides rather than blocking the whole page
+      referral = null
+    }
+  }
+
   return (
     <SettingsClient
       initialNotificationsEnabled={notificationsEnabled}
       planLabel={planLabel}
       planHint={planHint}
       planCtaLabel={planCtaLabel}
+      referral={referral}
     />
   )
 }

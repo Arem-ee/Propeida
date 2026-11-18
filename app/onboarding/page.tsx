@@ -14,6 +14,7 @@ import { Mascot, type MascotExpression } from '@/components/mascot'
 import { MascotSays } from '@/components/celebrations/speech-bubble'
 import { Confetti } from '@/components/celebrations/confetti'
 import { WinToastList, useWins } from '@/components/celebrations/win-toast-list'
+import { ReferralClaim } from '@/components/referrals/referral-claim'
 
 type Step =
   | 'welcome'
@@ -195,6 +196,7 @@ export default function OnboardingPage() {
   return (
     <div className="flex min-h-screen flex-col bg-paper">
       <WinToastList />
+      <ReferralClaim />
       <Confetti enabled={showConfetti} count={70} onEnd={() => setShowConfetti(false)} />
       <div className="w-full max-w-4xl mx-auto px-4 py-6">
         <div className="flex items-center justify-between mb-2">
