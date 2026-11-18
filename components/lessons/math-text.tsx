@@ -7,6 +7,10 @@ import katex from 'katex'
  * MathText: renders inline mathematics the learner reads inside lesson
  * prose, section cards and worked steps.
  *
+ * Display mode (the centred maths panel) comes from the `display` prop or
+ * a leading `MATH:` prefix, never from the shape of the input. Fragment
+ * callers pass maths-only tokens inside sentences; those must stay inline.
+ *
  * Authoring tokens (ASCII, safe in JSON, never visible to learners raw):
  *   x{{sub:1}}     subscript            -> x with lowered small 1
  *   x{{sup:2}}     superscript          -> x with raised small 2
@@ -91,9 +95,10 @@ const PURE_OPERATORS = /^[+\-=×÷·(),.;:%[\]{}]+$/
  * fragments and explicit {{sub:}} tokens. Any lowercase English word makes
  * the line a sentence, not a maths line, and it stays inline prose.
  *
- * Authors never prefix a line. The body is detected, and math-only lines are
- * set as display panels with hierarchy. (The legacy `MATH:` prefix is still
- * honoured for older content.)
+ * Paragraph dispatchers use this to decide how to render a full paragraph:
+ * true means render with the `display` panel, false means prose paragraph
+ * with inline maths. It decides nothing inside MathText itself. (The legacy
+ * `MATH:` prefix still forces a panel.)
  */
 export function isMathOnly(src: string): boolean {
   const body = String(src ?? '').replace(/^MATH:\s*/i, '')
@@ -201,7 +206,11 @@ function splitRuns(text: string): Array<{ math: boolean; src: string }> {
 
 export function MathText({ text, display }: { text: string; display?: boolean }) {
   const raw = String(text ?? '')
-  const auto = /^MATH:\s*/.test(raw) || isMathOnly(raw)
+  // Block panels are decided by the caller (`display` prop), never by the
+  // shape of the input. Fragment callers (GlossText, question stems, step
+  // cells) would otherwise turn every maths-only fragment into a block.
+  // The legacy `MATH:` prefix still forces a panel.
+  const auto = /^MATH:\s*/.test(raw)
   const displayMode = display || auto
   const body = auto ? raw.replace(/^MATH:\s*/, '') : raw
   const parts = body.split(TOKEN)

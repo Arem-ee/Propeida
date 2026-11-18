@@ -53,7 +53,7 @@ function SectionText({ section }: { section: NoteSection }) {
       )}
       {(section.paragraphs ?? []).map((paragraph, i) => (
         isMathOnly(paragraph) ? (
-          <MathText key={i} text={paragraph} />
+          <MathText key={i} text={paragraph} display />
         ) : (
           <p key={i} className="mt-2 text-[15px] font-semibold leading-relaxed text-ink">
             <GlossText text={paragraph} />
