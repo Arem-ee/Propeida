@@ -1,6 +1,6 @@
 # Deferred work ledger
 
-Everything deliberately postponed, with its unblock condition. Nothing here is forgotten â€” items leave this list only by being built or explicitly rejected. Updated 2026-11-06.
+Everything deliberately postponed, with its unblock condition. Nothing here is forgotten â€” items leave this list only by being built or explicitly rejected. Updated 2026-11-18.
 
 ## Content (authoring labor, not code)
 
@@ -131,6 +131,7 @@ Everything deliberately postponed, with its unblock condition. Nothing here is f
 - [ ] **Realtime presence heartbeat**: only if weekly aggregates ever feel insufficient.
 - [ ] **AI coach**: server gateway, closed actions, quotas, evals â€” after non-AI retention is proven AND self-hosting is affordable. Suggest endpoint drafts against the registry when that day comes.
 - [ ] **Classifier eval set**: 50 hand-labeled questions to measure any future model against.
+- [x] **Periodic table scoped to Chemistry learners and admins (2026-11-18)**: the `/periodic-table` tool is no longer in the account drawer for everyone. Chemistry learners see the drawer entry only on `/learn` and `/practice` routes (it renders when the path is under either prefix and `chemistry` is in `profiles.subject_combinations`); admins see it everywhere — all routes in the app shell plus a link in the admin sidebar. The page itself is server-gated the same way (`lib/periodic-table-access.ts`): non-eligible visitors get a pointer back to their account page instead of the table. No chemistry lesson embeds the `periodic-table` visual kind yet, so no lesson content changed. Shipped in `94f4cdc`.
 
 ## Belonging + growth (later phases)
 
