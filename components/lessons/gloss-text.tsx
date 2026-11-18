@@ -118,29 +118,43 @@ function GlossTerm({ term }: { term: string }) {
  */
 const BOLD = /(\*\*[^*]+\*\*)/g
 
-export function GlossText({ text }: { text: string }) {
-  const mathPieces = text.split(MATH_TOKEN)
+/** Shared renderer: tokens become maths, glossary terms become tap-to-define. */
+function renderRich(source: string, keyPrefix: string) {
+  const mathPieces = source.split(MATH_TOKEN)
   return (
     <>
       {mathPieces.map((mathPiece, mi) =>
         mi % 2 === 1 ? (
-          <MathText key={mi} text={mathPiece} />
+          <MathText key={`${keyPrefix}-${mi}`} text={mathPiece} />
         ) : (
-          mathPiece.split(BOLD).map((bolded, bi) => {
-            if (!bolded) return null
-            const isBold = bolded.startsWith('**') && bolded.endsWith('**')
-            const inner = isBold ? bolded.slice(2, -2) : bolded
-            const children = inner.split(PATTERN).map((part, i) =>
-              i % 2 === 1 && GLOSSARY[part.toLowerCase()] ? (
-                <GlossTerm key={`${mi}-${bi}-${i}`} term={part} />
-              ) : (
-                <span key={`${mi}-${bi}-${i}`}>{part}</span>
-              ),
-            )
-            return isBold ? <strong key={`${mi}-b-${bi}`}>{children}</strong> : <span key={`${mi}-n-${bi}`}>{children}</span>
-          })
+          mathPiece.split(PATTERN).map((part, i) =>
+            i % 2 === 1 && GLOSSARY[part.toLowerCase()] ? (
+              <GlossTerm key={`${keyPrefix}-${mi}-${i}`} term={part} />
+            ) : (
+              <span key={`${keyPrefix}-${mi}-${i}`}>{part}</span>
+            ),
+          )
         ),
       )}
+    </>
+  )
+}
+
+export function GlossText({ text }: { text: string }) {
+  // Split on the bold markers FIRST so a token sitting inside a bold span
+  // does not split the markers apart. Tokens inside bold still render as
+  // inline maths, wrapped in <strong>.
+  const boldParts = String(text ?? '').split(BOLD)
+  return (
+    <>
+      {boldParts.map((part, pi) => {
+        if (!part) return null
+        const isBold = part.length >= 4 && part.startsWith('**') && part.endsWith('**')
+        const inner = isBold ? part.slice(2, -2) : part
+        if (!inner) return null
+        const children = renderRich(inner, `p${pi}`)
+        return isBold ? <strong key={pi}>{children}</strong> : <span key={pi}>{children}</span>
+      })}
     </>
   )
 }
