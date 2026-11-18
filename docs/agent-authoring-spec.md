@@ -63,7 +63,9 @@ books teach:
   then convert.
 
 R.4 British spelling, British punctuation. colour, programme, judgement. No
-American spellings. No em dashes or en dashes anywhere in lesson text.
+American spellings. No em dashes or en dashes anywhere in lesson text. Same
+rules apply to every learner-facing explanation outside lessons (step
+reasons, check `why` lines, guided hints, mascot lines, topic descriptions).
 
 R.5 Natural, casual, spoken register. The lesson is written for a
 thirteen-year-old to parse in nine seconds. Short sentences. One idea per
