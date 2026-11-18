@@ -58,9 +58,6 @@ export default async function SquadPage({ searchParams }: { searchParams: Search
               {preview.memberCount} of {preview.maxMembers} seats filled
             </p>
           )}
-          <p className="mt-2 text-[15px] font-semibold leading-relaxed text-ink-soft">
-            Your squad shares one exam and one private link, and nobody compares scores, pace, or rank
-          </p>
           {status.joined ? (
             <div className="mt-6 rounded-2xl border border-emerald-200 bg-emerald-50/60 px-5 py-4">
               <p className="flex items-center gap-2 text-sm font-extrabold text-emerald-800">
@@ -88,9 +85,6 @@ export default async function SquadPage({ searchParams }: { searchParams: Search
           <h1 className="font-display text-[32px] font-semibold leading-tight text-black sm:text-4xl">
             Study squad
           </h1>
-          <p className="mt-1.5 text-[15px] font-semibold text-ink-soft">
-            You&rsquo;re in a small group with other people doing the same exam and you each go at your own speed
-          </p>
         </div>
 
         <div className="rounded-3xl border border-blue-100/70 bg-white p-6 sm:p-8 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)] animate-fade-up">
@@ -98,10 +92,10 @@ export default async function SquadPage({ searchParams }: { searchParams: Search
             <Users className="h-8 w-8" />
           </span>
           <h2 className="mt-5 font-display text-2xl font-medium leading-tight text-black">
-            The other people in your squad are studying for the same exam and nobody ranks you against anyone else
+            Join your squad
           </h2>
-          <p className="mt-2 text-[15px] font-semibold leading-relaxed text-ink-soft">
-            You&rsquo;re with other people doing <strong>{status.pathLabel}</strong> and you study whenever you want so you&rsquo;re not on your own
+          <p className="mt-1.5 text-sm font-semibold text-ink-soft">
+            {status.pathLabel}
           </p>
 
           {status.eligible ? (
@@ -119,21 +113,6 @@ export default async function SquadPage({ searchParams }: { searchParams: Search
               )}
             </div>
           )}
-
-          <div className="mt-6 space-y-2 border-t border-blue-100/60 pt-5 text-sm font-semibold text-ink-soft">
-            <p className="flex items-start gap-2">
-              <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
-              Your squad is built around one exam, so you and the other people here are working toward the same test
-            </p>
-            <p className="flex items-start gap-2">
-              <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
-              No one in your squad can see your score, accuracy, or how fast you work
-            </p>
-            <p className="flex items-start gap-2">
-              <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
-              Your squad has a private link and there&rsquo;s no public list or messaging inside Propeida
-            </p>
-          </div>
         </div>
       </div>
     )
@@ -148,9 +127,6 @@ export default async function SquadPage({ searchParams }: { searchParams: Search
         <h1 className="font-display text-[32px] font-semibold leading-tight text-black sm:text-4xl">
           Your squad
         </h1>
-        <p className="mt-1.5 text-[15px] font-semibold text-ink-soft">
-          Everyone here is taking the same exam and nobody compares scores or pace
-        </p>
       </div>
 
       <div className="rounded-3xl border-2 border-blue-100/70 bg-white p-6 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)] animate-fade-up">
@@ -163,10 +139,7 @@ export default async function SquadPage({ searchParams }: { searchParams: Search
               <SquadMarkIcon mark={squad.mark} seedFallback={squad.id} />
             </span>
             <div>
-              <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-blue-700">
-                Your exam path
-              </p>
-              <h2 className="mt-0.5 font-display text-2xl font-medium leading-tight text-black">
+              <h2 className="font-display text-2xl font-medium leading-tight text-black">
                 {squad.name}
               </h2>
               <p className="mt-1 text-xs font-bold text-gray-500">
@@ -183,9 +156,6 @@ export default async function SquadPage({ searchParams }: { searchParams: Search
             isDefaultName={squad.isDefaultName}
           />
         </div>
-        <p className="mt-4 text-sm font-semibold leading-relaxed text-ink-soft">
-          Everyone here is preparing for the same exam at their own pace and no one can see your score, accuracy, streak, or rank
-        </p>
       </div>
 
       {squad.weekly ? (
@@ -215,7 +185,7 @@ export default async function SquadPage({ searchParams }: { searchParams: Search
         <div className="mt-4 flex items-start gap-3 rounded-3xl border border-amber-100 bg-amber-50/60 px-5 py-4">
           <CircleDashed className="mt-0.5 h-5 w-5 shrink-0 text-amber-600" />
           <p className="text-sm font-semibold leading-relaxed text-amber-900">
-            Weekly squad totals appear after three people join because small numbers would reveal who is doing what
+            Squad totals appear after three people join
           </p>
         </div>
       )}

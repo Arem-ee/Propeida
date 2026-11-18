@@ -142,12 +142,7 @@ export function InviteShare({
         <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-blue-50 text-blue-600">
           <Users className="h-5 w-5" />
         </span>
-        <div>
-          <p className="text-sm font-extrabold text-black">Invite a study partner</p>
-          <p className="text-xs font-semibold text-gray-500">
-            This link is private and no one else can see it
-          </p>
-        </div>
+        <p className="text-sm font-extrabold text-black">Invite a study partner</p>
       </div>
       <label htmlFor="squad-invite" className="sr-only">Squad invite link</label>
       <input
@@ -224,7 +219,7 @@ export function SquadIdentityEditor({
         Squad identity
       </p>
       <p className="mt-1 text-xs font-semibold text-ink-soft">
-        Anyone in the squad can change this, because it belongs to the whole squad
+        Anyone in the squad can edit this
       </p>
 
       <label htmlFor="squad-name" className="mt-4 block text-xs font-bold text-ink-soft">
@@ -348,9 +343,6 @@ export function WeeklyGoalCard({
         <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-blue-700">
           This week&rsquo;s shared goal
         </p>
-        <p className="mt-1 text-xs font-semibold text-ink-soft">
-          One collective target for the squad and nobody is measured individually
-        </p>
         <div className="mt-4 space-y-4">
           {GOAL_KINDS.map((kind) => (
             <div key={kind}>
@@ -408,8 +400,7 @@ export function WeeklyGoalCard({
 
       {goal.current == null ? (
         <p className="mt-4 text-sm font-semibold leading-relaxed text-ink-soft">
-          Your squad target is <strong>{goal.target.toLocaleString('en-NG')} {preset.unit}</strong>, and squad
-          totals appear after three people join
+          Your squad target is <strong>{goal.target.toLocaleString('en-NG')} {preset.unit}</strong>, and totals appear when three people join
         </p>
       ) : (
         <>
@@ -471,7 +462,7 @@ export function MockWindowCard({
       })
     : null
   const shareMessage = label
-    ? `My squad is taking the ${examName} mock together on ${label} and we are not comparing scores ${inviteUrl}`
+    ? `My squad takes the ${examName} mock on ${label} ${inviteUrl}`
     : inviteUrl
 
   if (mockWindow) {
@@ -482,16 +473,10 @@ export function MockWindowCard({
             <CalendarClock className="h-5 w-5" />
           </span>
           <div>
-            <p className="text-sm font-extrabold text-black">The squad takes one mock together</p>
-            <p className="text-xs font-semibold text-gray-500">
-              The mock starts at the same time for every member
-            </p>
+            <p className="text-sm font-extrabold text-black">Squad mock</p>
           </div>
         </div>
         <p className="mt-4 font-display text-xl font-medium leading-snug text-black">{label}</p>
-        <p className="mt-1 text-xs font-semibold text-ink-soft">
-          Taking it together does not share your scores and it only sets the same start time for the whole squad
-        </p>
         <div className="mt-4 flex flex-wrap gap-2">
           <a
             href="/mocks"
@@ -545,10 +530,7 @@ export function MockWindowCard({
           <CalendarClock className="h-5 w-5" />
         </span>
         <div>
-          <p className="text-sm font-extrabold text-black">Pick one mock time for the squad</p>
-          <p className="text-xs font-semibold text-gray-500">
-            Pick one time for the squad and the whole squad takes the mock together without comparing scores
-          </p>
+          <p className="text-sm font-extrabold text-black">Squad mock</p>
         </div>
       </div>
       <label htmlFor="squad-mock-time" className="mt-4 block text-xs font-bold text-ink-soft">
@@ -579,7 +561,7 @@ export function MockWindowCard({
         }}
         className="mt-3 w-full rounded-2xl bg-blue-600 px-6 py-4 text-[15px] font-extrabold text-white hover:bg-blue-700 min-h-[52px] disabled:opacity-60 cursor-pointer pressable"
       >
-        {busy ? 'Scheduling…' : 'Schedule shared mock'}
+        {busy ? 'Scheduling…' : 'Schedule mock'}
       </button>
       {error && <p role="alert" className="mt-3 text-sm font-bold text-red-600">{error}</p>}
     </div>
