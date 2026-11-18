@@ -68,6 +68,35 @@ first read.
   bits to make any number" over "the binary representation scheme allows the
   formation of arbitrary integers".
 
+## Worked calculations and hierarchy
+
+Calculations cannot be understood with prose alone. Every rule, shortcut or
+method a lesson states is unfinished until it is followed by a worked instance
+the reader can see being carried out. That includes the "obvious" ones: a
+"quick way" with no example is not a way at all.
+
+- **Never trap a calculation inside a prose sentence.** A procedure is not a
+  clause in a sentence. The line that carries the working stands on its own,
+  in reading order, one step per line.
+- **Hierarchy in presentation.** Put a short sentence of setup first, then
+  the working on its own lines (a `MATH:` paragraph for the maths proper).
+  The reader should see the calculation before they read the commentary.
+- **Words stay in prose; maths stays in the maths lines.** Inside a `MATH:`
+  line, do not tuck commentary in parentheses or trailing clauses
+  ("carrying at b", "shift left"). Put the explanation in the sentence before
+  the working, or the step right after it.
+- **Every shortcut ships with a calculation instance.** If the lesson says
+  "convert to decimal, do it there, then convert back", it must show one full
+  conversion, start to finish, not just describe the route.
+- **In worked and check steps, one fact per result.** A result string that
+  chains three operations with semicolons or parentheses is three steps
+  trapped in a sentence. Split it.
+- **Bold the quantities that carry the idea** (the digits, the carries, the
+  answers) so the eye lands on the working, not the prose.
+
+A lesson with a method but no worked instance fails the commit just as surely
+as a lesson with a wrong answer.
+
 Violations fail the commit just as surely as a missing objective.
 
 

@@ -1742,7 +1742,9 @@
      "content": {
       "heading": "Counting in groups of ten",
       "paragraphs": [
-       "You use ten fingers, that is why we count in tens. Counting **23** isn't \"two and three\", it's **2** tens and **3** ones added together. The usual number system is just a way of writing \"how many bundles of ten and how many leftovers\"."
+       "You count on ten fingers. That is why base ten exists.",
+       "Counting **23** is not \"two and three\". It is **2** tens and **3** ones added together.",
+       "Every number is a pile of bundles and some leftovers. The base is just the bundle size."
       ],
       "bullets": [],
       "takeaway": "The usual number system is just bundles of ten, then leftovers."
@@ -1753,8 +1755,9 @@
      "content": {
       "heading": "Counting in groups of five",
       "paragraphs": [
-       "Now imagine we picked five fingers instead of ten. In bundles of five, **23** counts as **4** bundles of five plus **3** leftover ones.",
-       "Instead of writing that as \"4 fives and 3 ones\", mathematicians write it **43₅**. The little **5** tells us it is \"bundled in fives\", a five worth one place."
+       "Now pick five fingers instead of ten. In bundles of five, **23** is **4** bundles of five and **3** ones left over.",
+       "Nobody writes \"four fives and three ones\". Mathematicians write **43₅**.",
+       "The little **5** tells you the bundle size."
       ],
       "bullets": [],
       "takeaway": "A base is just the bundle size you are counting in."
@@ -1765,11 +1768,12 @@
      "content": {
       "heading": "What place means",
       "paragraphs": [
-       "In base ten, every place is worth **ten times** the one to its right: units, then tens, then hundreds. In base five every place is worth **five times** the one to its right: units, fives, twenty-fives, one hundred and twenty-fives.",
-       "The digits only have to fit inside the bundle, **five would already be a new bundle, so it is never a digit.**"
+       "In base ten, each place is **ten times** the one to its right. Units, then tens, then hundreds.",
+       "In base five, each place is **five times** the one to its right. Units, then fives, then twenty-fives, then one hundred and twenty-fives.",
+       "The digits have to fit inside the bundle. In base five, **5** is already a new bundle, so it is never a digit."
       ],
       "bullets": [],
-      "takeaway": "Each place is b times the one to its right, and digits must fit inside the base."
+      "takeaway": "Each place is the base times the one to its right. Digits must fit inside the base."
      }
     },
     {
@@ -1781,11 +1785,11 @@
         "operation": "Write the place values from the right",
         "reason": "Each place is three times the one to its right",
         "result": "place values are 9, 3 and 1",
-        "predictPrompt": "What power of three does each position count?"
+        "predictPrompt": "What power of three does each place count?"
        },
        {
         "operation": "Multiply each digit by its place value",
-        "reason": "Expansion is distributive multiplication across the places",
+        "reason": "Expanding means multiplying each digit by its place, then adding.",
         "result": "2×9 + 1×3 + 0×1",
         "predictPrompt": "Which digit sits over which power of three?"
        },
@@ -1851,7 +1855,7 @@
        {
         "operation": "Check: expand 100 in base five back to decimal",
         "reason": "Each place is five times the one to its right, so 100 means one 25 and zero 5s and zero 1s.",
-        "result": "1×25 + 0×5 + 0×1 = 25 — done",
+        "result": "1×25 + 0×5 + 0×1 = 25, done",
         "predictPrompt": "Does 25 match what you started with?"
        }
       ]
@@ -1862,9 +1866,14 @@
      "content": {
       "heading": "The rule that covers every conversion",
       "paragraphs": [
-       "Between two bases that are not decimal, pass through decimal: expand to decimal first, then divide to the new base. No direct shortcut exists.",
-       "MATH: 0.5{{sub:10}} = 0.1{{sub:2}}",
-       "Fractional parts multiply out: 0.5{{sub:10}} = 0.1{{sub:2}} since 0.5×2 = 1.0."
+       "Between two bases that are not decimal, go through decimal. Expand to decimal first, then divide to the new base. There is no direct shortcut.",
+       "Fractions work too. Multiply by the new base and take the whole part.",
+       "MATH: 0.625 × 2 = 1.25, whole part 1",
+       "MATH: 0.25 × 2 = 0.5, whole part 0",
+       "MATH: 0.5 × 2 = 1.0, whole part 1",
+       "Each whole part is the next binary digit. Read them in order: **0.101{{sub:2}}**.",
+       "Check it: half plus an eighth is 0.625.",
+       "Some fractions never end. 0.1 in decimal goes on forever in binary: 0.0001100110011... and the 0011 part keeps repeating."
       ],
       "bullets": [
        "Base b to decimal: expand by powers of b",
@@ -1888,7 +1897,7 @@
          "operation": "Work out the place values",
          "reason": "Starting from the right, each place is three times the last one. The places are 9, 3 and 1.",
          "result": "9, 3, 1",
-         "predictPrompt": "What is three squared minus one?"
+         "predictPrompt": "What power of three does each place count?"
         },
         {
          "operation": "Multiply each digit by its place",
@@ -1900,7 +1909,7 @@
          "operation": "Add them up",
          "reason": "Three numbers to combine: 18, 3 and 0.",
          "result": "21",
-         "predictPrompt": "Do those numbers land near twenty?"
+         "predictPrompt": "What is 18 plus 3 plus 0?"
         },
         {
          "operation": "Check back",
@@ -1917,19 +1926,32 @@
      "content": {
       "heading": "Adding and subtracting in another base",
       "paragraphs": [
-       "Addition in base b works like decimal addition except that the carrying threshold is b. In base five, 3 + 3 = 11{{sub:5}} because 6 is one five and one unit. The carry is therefore smaller than in decimal.",
-       "MATH: 3 + 3 = 11{{sub:5}}",
-       "Subtraction borrows the same way: 31{{sub:4}} − 12{{sub:4}} borrows one four as four units. Only the threshold and the borrow differ.",
-       "Multiplication by a single digit also follows the threshold. In base five, 4 × 4 = 31{{sub:5}} because 16 is three fives and one unit. A table of products up to base minus one is therefore enough.",
-       "Multiplication and division are done column-wise with the same threshold. In base five, 23{{sub:5}} × 14{{sub:5}} = 432{{sub:5}}: work in columns as in decimal, carrying at five: 4 × 23{{sub:5}} = 202{{sub:5}}, then 1 × 23 shifted one place = 230{{sub:5}}, and 202{{sub:5}} + 230{{sub:5}} = 432{{sub:5}}.",
-       "MATH: 23{{sub:5}} × 14{{sub:5}} = 432{{sub:5}} (work column-wise as in decimal, carrying at five)"
+       "Addition in base b works like decimal, except the carry starts at b.",
+       "In base five, 3 + 4 is **12 in base five**: write 2, carry 1.",
+       "MATH: 3 + 4 = 12{{sub:5}}",
+       "A whole sum in base five, one column at a time:",
+       "MATH: units: 3 + 4 = 12{{sub:5}}, write 2, carry 1",
+       "MATH: fives: 3 + 2 + 1 = 6 = 11{{sub:5}}, write 1, carry 1",
+       "MATH: 33{{sub:5}} + 24{{sub:5}} = 112{{sub:5}}",
+       "Check in decimal: 18 + 14 = 32, and 112{{sub:5}} = 25 + 5 + 2 = 32. They agree.",
+       "Subtraction borrows the same way. 31{{sub:4}} − 12{{sub:4}}: the 1 borrows one four from the next place, so it becomes 5.",
+       "MATH: 31{{sub:4}} − 12{{sub:4}}: units 5 − 2 = 3, fours 2 − 1 = 1",
+       "MATH: 31{{sub:4}} − 12{{sub:4}} = 13{{sub:4}}",
+       "Single-digit multiplication follows the same threshold. In base five, 4 × 4: **16** is three fives and one left over.",
+       "MATH: 4 × 4 = 16 = 31{{sub:5}}",
+       "That is why you only need a products table up to one less than the base.",
+       "Long multiplication is the same column method, carrying at b. Here is 23{{sub:5}} × 14{{sub:5}}, laid out:",
+       "MATH: 4 × 23{{sub:5}} = 202{{sub:5}}",
+       "MATH: 1 × 23{{sub:5}} shifted one place = 230{{sub:5}}",
+       "MATH: 202{{sub:5}} + 230{{sub:5}} = 432{{sub:5}}",
+       "Each line is one stage of the long multiplication. The shift is the same shift as in base ten; only the carry changes."
       ],
       "bullets": [
        "Carry at b, not at ten",
        "Borrow b units, not ten",
        "Single-digit products use the same threshold"
       ],
-      "takeaway": "Do the arithmetic in the base, carrying and borrowing at b.",
+      "takeaway": "Do the arithmetic in the base. Carry and borrow at the base, not at ten.",
       "check": {
        "question": "What is 33 + 24 in base five?",
        "options": [
@@ -1939,7 +1961,7 @@
         "57"
        ],
        "answer": 0,
-       "why": "3 + 4 = 12 in base five (write 2, carry 1); fives column 3 + 2 + 1 = 11 base five, giving 112. Check: 18 + 14 = 32 = 112 base five.",
+       "why": "3 + 4 = 12 in base five: write 2, carry 1. Fives column: 3 + 2 + 1 = 6 = 11 in base five. The answer is 112. Check: 18 + 14 = 32, and 112 in base five is 32 too.",
        "steps": [
         {
          "operation": "Add the units place first",
@@ -1982,8 +2004,8 @@
      "content": {
       "heading": "Decimal to base two, the quick way",
       "paragraphs": [
-       "Same method as above, in binary. Divide by 2, write the remainder to the right of the row, carry down what is left over. When the quotient is 0, you are done. Read the remainders from the bottom up.",
-       "That is the entire procedure. It works for any base - three, five, eight, sixteen."
+       "Same method as above, in binary. Divide by 2, write the remainder, carry down the quotient. When the quotient is 0, you are done.",
+       "Read the remainders from the bottom row up. That is the whole procedure, and it works in any base."
       ],
       "bullets": [
        "Each row: divide what you have, write the remainder to the right, carry down the quotient",
@@ -2023,7 +2045,7 @@
          "operation": "Divide 1 by 2",
          "reason": "Quotient of 1 means this is the last row",
          "result": "1 ÷ 2 = 0 r 1",
-         "predictPrompt": "Half of 1 in integers?"
+         "predictPrompt": "What is 1 divided by 2?"
         },
         {
          "operation": "Read the remainders from the bottom up",
@@ -2067,33 +2089,33 @@
       "steps": [
        {
         "operation": "Verify the digits",
-        "reason": "Each digit must be smaller than four. Use the place-value rule because it explains where every digit sits; if you get lost, write down the first few multiples and read off by hand.",
+        "reason": "Digits must be smaller than the base. Check each one first.",
         "result": "1, 3 and 2 are valid, so 132 is a base-four number",
-        "predictPrompt": "Which numbers or terms work with each other first?"
+        "predictPrompt": "Can any digit be 4 or more?"
        },
        {
         "operation": "Expand to decimal",
         "reason": "Place values in base four are 16, 4 and 1",
         "result": "1×16 + 3×4 + 2 = 30 in decimal",
-        "predictPrompt": "Which numbers or terms work with each other first?"
+        "predictPrompt": "How do you expand 132 in base four?"
        },
        {
         "operation": "Divide 30 by five",
         "reason": "Base five needs remainders on division by five",
         "result": "30 ÷ 5 = 6 r 0; 6 ÷ 5 = 1 r 1; 1 ÷ 5 = 0 r 1",
-        "predictPrompt": "What does the question tell you to find first?"
+        "predictPrompt": "What is 30 divided by 5?"
        },
        {
         "operation": "Read remainders upward",
         "reason": "The last remainder is the most significant digit",
         "result": "110 in base five",
-        "predictPrompt": "How would you explain why this beats the other options?"
+        "predictPrompt": "In what order do the remainders become digits?"
        },
        {
-        "operation": "Check to confirm: convert both sides back",
-        "reason": "Base 5 numbers never contain the digit 5",
-        "result": "55 is not a base-5 numeral; 110{{sub:5}} equals 30 and 132{{sub:4}} does too",
-        "predictPrompt": "Which digits can appear in base 5?"
+        "operation": "Check to confirm: convert back",
+        "reason": "Expand 110{{sub:5}} back: 1×25 + 1×5 + 0 = 30. And 132{{sub:4}} expands to 30 too.",
+        "result": "Both routes give 30, so the answer is right.",
+        "predictPrompt": "Does the expansion agree?"
        }
       ]
      }
@@ -2103,10 +2125,13 @@
      "content": {
       "heading": "Go deeper: Why base ten is a habit, not a law",
       "paragraphs": [
-       "Base ten is used because humans have ten fingers. It is a habit of counting, not a property of numbers. A number written in base five is the same quantity as a number written in decimal; only the place values differ.",
-       "That is why a bag priced at 34{{sub:5}} is not thirty-four in the price. The digits are the same, but the place values are 25, 5 and 1 rather than 100, 10 and 1. Read the base before you read the number.",
-       "Examiners test that habit directly. A question that asks for a base-five sum in decimal is testing whether you convert, not whether you can add. The conversion is the skill.",
-       "Base ten is therefore a cultural fact rather than a mathematical law. That distinction is why a number in another base can be mistaken for a decimal one."
+       "Base ten is what we count on because we have ten fingers. It is a habit, not a law.",
+       "A number is the same amount in any base. Only the place values change.",
+       "Read the base before you read the digits. 34{{sub:5}} is not thirty-four.",
+       "MATH: 34{{sub:5}} = 3 × 5 + 4 = 19",
+       "Examiners like this trap. A base-five sum asked in decimal tests the conversion, not the adding.",
+       "MATH: 33{{sub:5}} + 24{{sub:5}} = 112{{sub:5}} = 32 in decimal",
+       "Read the little base number first. Everything follows from it."
       ],
       "bullets": [
        "Base ten is a habit from ten fingers",
@@ -2122,10 +2147,10 @@
       "paragraphs": [
        "A switch has only two positions: off or on. That is the whole idea.",
        "Computers use those switches to store numbers. We write an OFF switch as **0** and an ON switch as **1**.",
-       "Let us line up four switches. Each spot is worth double the next spot along.",
-       "From right to left, the spots are worth **1, 2, 4 and 8**.",
+       "Let us line up four switches. Each spot counts **twice** what the one on its right counts.",
+       "From right to left, the spots count **1, 2, 4 and 8**.",
        "Written in binary: **0001** is one, **0010** is two, **0011** is three, **0100** is four, and **0101** is five.",
-       "Each spot is worth double the one next to it. That is the pattern: **1, 2, 4, 8, 16, 32**.",
+       "Each new spot doubles. That is the pattern: **1, 2, 4, 8, 16, 32**.",
        "Let us try one. The digits **1011** mean the **8**-spot is ON, the **4**-spot is OFF, the **2**-spot is ON, the **1**-spot is ON.",
        "MATH: 1011{{sub:2}} = 8 + 0 + 2 + 1 = 11",
        "So **1011** in base two is **11** in base ten.",
@@ -2144,12 +2169,16 @@
      "content": {
       "heading": "Go deeper: The trap in a base question",
       "paragraphs": [
-       "The trap is a digit that is valid in decimal but invalid in the base. If you do not test the digits, you will add 5 in base five and get a sum that cannot be written. That test is therefore the first step.",
-       "The second trap is a decimal sum that looks like a base sum. In base five, 33{{sub:5}} + 24{{sub:5}} = 112{{sub:5}} (32 in decimal). Adding each column in decimal (3+4 = 7, 3+2 = 5) and writing 57 answers a different question.",
-       "MATH: 33{{sub:5}} + 24{{sub:5}} = 112{{sub:5}} = 18 + 14 = 32 in decimal",
-       "Budget your time as you would in any paper. A conversion that resists can be left and returned to. A test that is finished is worth more than a perfect answer to three items.",
-       "The easy-first sweep is why this matters. The easy conversions can be answered at once, and the hard ones can be left until the base is clear.",
-       "The trap is therefore the option that is correct in sense but wrong in form. If you read only for meaning, you will choose it."
+       "The first trap is a digit that cannot exist. In base five there is no digit 5. That rules the option out on sight. Test the digits before you calculate anything.",
+       "The second trap is answering a different question. Work the sum in base five first:",
+       "MATH: 33{{sub:5}} + 24{{sub:5}} = 112{{sub:5}}",
+       "Check it in decimal:",
+       "MATH: 18 + 14 = 32",
+       "MATH: 112{{sub:5}} = 25 + 5 + 2 = 32",
+       "Adding column by column in decimal gives 7 and 5. Writing 57 answers a different question.",
+       "If a conversion resists, leave it and come back. One careful answer is worth more than several rushed ones.",
+       "Sweep the easy conversions first, then come back to the hard ones.",
+       "The last trap is the option that makes sense but is written in the wrong base. If you only read for meaning, you will pick it."
       ],
       "bullets": [
        "Test the digits before any calculation",
@@ -2172,32 +2201,32 @@
     {
      "type": "worked_example",
      "content": {
-      "heading": "Go deeper: A harder worked example: multiplying 25 by 4 in base eight",
+      "heading": "Go deeper: Multiply 25 by 4 in base eight",
       "problem": "Multiply 25 by 4 in base eight.",
       "steps": [
        {
         "operation": "Multiply the units",
-        "reason": "Base-eight carries come in eights; 20 is 2 eights with 4 left over. Use column addition then carry out in groups of eight; if you slip, convert to decimal, add normally, then convert back.",
-        "result": "5 × 4 = 20, so write 4 and carry 2.",
-        "predictPrompt": "Which numbers or terms work with each other first?"
+        "reason": "5 times 4 is 20. Base eight rolls over at eight. 20 is two eights with 4 left over.",
+        "result": "20 = 24{{sub:8}}, so write 4 and carry 2",
+        "predictPrompt": "What is five times four?"
        },
        {
         "operation": "Multiply the eights column",
-        "reason": "The eights column adds its own 8 to the 2 carried eights.",
-        "result": "8 + 2 = 10, so write 2 and carry 1.",
-        "predictPrompt": "In your own words, why does this step come before the next one?"
+        "reason": "The 2 in 25 times 4 is 8. Add the 2 you carried: 10. Ten is one eight and 2 left over.",
+        "result": "2 × 4 + 2 = 10 = 12{{sub:8}}, so write 2 and carry 1",
+        "predictPrompt": "Does the eights column roll over too?"
        },
        {
         "operation": "Write the final carry",
-        "reason": "A final carry becomes the new highest place value.",
-        "result": "Answer: 124{{sub:8}}, and 25{{sub:8}} × 4 = 21 × 4 = 84 checks it.",
-        "predictPrompt": "How would you verify this answer satisfies the question?"
+        "reason": "What you carry out of the top becomes the next place.",
+        "result": "The 1 lands in the sixty-fours place: 124{{sub:8}}",
+        "predictPrompt": "Where does the last carry go?"
        },
        {
-        "operation": "Check to confirm: column method in base eight",
-        "reason": "4 × 25{{sub:8}} = 124{{sub:8}}: carry 2 from 4 × 5 = 24{{sub:8}}; 2 × 4 + 2 = 12{{sub:8}}",
-        "result": "124{{sub:8}} either way, two methods, one answer",
-        "predictPrompt": "How would you multiply directly in base eight?"
+        "operation": "Check to confirm: count in base ten",
+        "reason": "25 in base eight is 21. And 21 times 4 is 84.",
+        "result": "124{{sub:8}} = 64 + 16 + 4 = 84. It matches.",
+        "predictPrompt": "Does base ten agree with base eight?"
        }
       ]
      }
@@ -2207,16 +2236,42 @@
      "content": {
       "heading": "Go deeper: Multiplication and division in base two and beyond",
       "paragraphs": [
-       "Two-digit multiplication in base b is carried out one digit at a time exactly as in decimal, and the carry threshold is always b. In base eight, 12 × 6 means (2×6 = 14{{sub:8}}, write 4 and carry 1; 1×6 + 1 = 7{{sub:8}}), so the answer is 74{{sub:8}}.",
-       "Division in another base is the same repeated subtraction, with remainders read in that base. In base two, 1101{{sub:2}} ÷ 11{{sub:2}} = 100{{sub:2}} r 1{{sub:2}}, because 11 goes into 11 exactly once and into 01 is zero times, remainder 1.",
-       "A shortcut when the question is in base ten: convert the numbers to decimal, do the division there, then convert back. That route is reliable, but reading the question carefully prevents the commonest error of writing a decimal answer labelled as a base answer.",
-       "Binary multiplication is the engine of every computer, and each bit shift doubles or halves the number. Multiplying by 1000{{sub:2}} in base two is shifting three places left, the same as multiplying by eight.",
-       "Fractional conversion also tests understanding rather than memory. To check 0.1{{sub:2}}, multiply 0.1 × 2 = 0.2, take the whole part, multiply the remainder by 2 again, and continue; the pattern either repeats or terminates."
+       "Binary multiplication is easier than decimal. The multiplication table has four facts.",
+       "MATH: 0 × 0 = 0,  0 × 1 = 0,  1 × 0 = 0,  1 × 1 = 1",
+       "Long multiplication works the same as in decimal.",
+       "Multiplying by **1** copies the number. Multiplying by **10{{sub:2}}** copies it and shifts one place left.",
+       "Take 101{{sub:2}} × 11{{sub:2}}, one row at a time.",
+       "First row, multiply by the units digit:",
+       "MATH: 101{{sub:2}} × 1 = 101",
+       "Second row, multiply by the twos digit, shifted one place left:",
+       "MATH: 101{{sub:2}} × 10{{sub:2}} = 1010{{sub:2}}",
+       "Add the two rows in binary:",
+       "MATH: 101 + 1010 = 1111",
+       "MATH: 101{{sub:2}} × 11{{sub:2}} = 1111{{sub:2}}",
+       "Check in decimal: 5 × 3 = 15, and 1111{{sub:2}} = 8 + 4 + 2 + 1 = 15. They agree.",
+       "Multiplying by 100{{sub:2}} shifts two places left. That is the same as multiplying by four.",
+       "MATH: 101{{sub:2}} × 100{{sub:2}} = 10100{{sub:2}} = 20",
+       "Binary division works like long division in base ten. You subtract, bring down, and write the remainder.",
+       "Take 1101{{sub:2}} ÷ 11{{sub:2}}, line by line.",
+       "11{{sub:2}} goes into 11{{sub:2}} exactly once. Write 1, remainder 0.",
+       "Bring down the 0. 11{{sub:2}} goes into 0 zero times. Write 0.",
+       "Bring down the 1. 11{{sub:2}} goes into 1 zero times. Write 0, remainder 1.",
+       "MATH: 1101{{sub:2}} ÷ 11{{sub:2}} = 100{{sub:2}} r 1{{sub:2}}",
+       "Check by multiplying back:",
+       "MATH: 100{{sub:2}} × 11{{sub:2}} + 1 = 1100{{sub:2}} + 1 = 1101{{sub:2}}",
+       "The round trip works in any base. Convert to decimal, divide there, convert the answer back.",
+       "The same sum by the round trip. Expand first.",
+       "MATH: 23{{sub:5}} = 13,  14{{sub:5}} = 9",
+       "MATH: 13 × 9 = 117",
+       "MATH: 117 = 4 × 25 + 3 × 5 + 2 = 432{{sub:5}}",
+       "Both routes give **432{{sub:5}}**. 117 is a decimal answer; writing 117{{sub:5}} would be wrong.",
+       "Division by 10{{sub:2}} is a right shift. It halves the number.",
+       "MATH: 11010{{sub:2}} ÷ 10{{sub:2}} = 1101{{sub:2}} = 13"
       ],
       "bullets": [
-       "Multiply digit-wise; carry at b, read upward",
-       "Divide by repeated subtraction; remainders stay in base",
-       "Backward route: multiply back to verify in the original base"
+       "Multiply digit-wise, carry at b",
+       "Divide by repeated subtraction in the base",
+       "Check by going through decimal"
       ]
      }
     },
@@ -2226,28 +2281,34 @@
       "problem": "University hard tier: find the number r such that the base-r numeral 122{{sub:r}} + 10{{sub:r}} = 202{{sub:r}}, and convert the sum to base 10.",
       "steps": [
        {
-        "operation": "Set up column addition",
-        "reason": "Units first, then the tens column, then the hundreds",
-        "result": "Units: 2 + 0 = 2 ✓ (no carry). Tens: 2 + 1 = 3 → write 0 carry 1. Hundreds: 1 + 0 + 1 (from carry) = 2 ✓",
-        "predictPrompt": "What does the tens column of 122 + 10 give in base r?"
+        "operation": "Set up the column addition",
+        "reason": "Units: 2 + 0 = 2, no carry. Tens: 2 + 1 = 3. Hundreds: 1 plus whatever carries in.",
+        "result": "The tens row writes 0 and carries 1.",
+        "predictPrompt": "What does the tens column give before the carry?"
        },
        {
-        "operation": "Use the tens column rule",
-        "reason": "A written 0 with a carry of 1 means 3 equalled r exactly",
+        "operation": "Find the base",
+        "reason": "If 3 writes as 0 with a carry of 1, then 3 is exactly one full bundle of the base.",
         "result": "r = 3",
-        "predictPrompt": "In base r, when does 2 + 1 = 0 with carry 1?"
+        "predictPrompt": "When does 3 write as 0 with a carry of 1?"
        },
        {
-        "operation": "Verify the full numeral in base 3",
-        "reason": "122{{sub:3}} = 1 x 9 + 2 x 3 + 2 = 17; 10{{sub:3}} = 3; 17 + 3 = 20; 202{{sub:3}} = 2 x 9 + 0 + 2 = 20 ✓",
-        "result": "122{{sub:3}} + 10{{sub:3}} = 202{{sub:3}} = 20 (base 10)",
-        "predictPrompt": "What is 122 in base 3, in decimal?"
+        "operation": "Check the two numbers in base three",
+        "reason": "Convert each numeral to decimal and add.",
+        "result": "122{{sub:3}} = 17 and 10{{sub:3}} = 3, so 17 + 3 = 20",
+        "predictPrompt": "What is 122 in base three, in decimal?"
        },
        {
-        "operation": "Check to confirm: re-add in base 10 only",
-        "reason": "If both routes reach 20, the base choice is secure",
-        "result": "17 + 3 = 20 ✓ matches 202{{sub:3}} = 20",
-        "predictPrompt": "Does the denary sum agree with the base-3 result?"
+        "operation": "Check the answer expands the same way",
+        "reason": "Expand 202{{sub:3}} the same way and compare.",
+        "result": "202{{sub:3}} = 2 × 9 + 2 = 20. It matches.",
+        "predictPrompt": "What is 202 in base three, in decimal?"
+       },
+       {
+        "operation": "Check to confirm: base ten agrees",
+        "reason": "Both routes gave 20.",
+        "result": "17 + 3 = 20 = 202{{sub:3}}. Done.",
+        "predictPrompt": "Do the two routes agree?"
        }
       ]
      }
