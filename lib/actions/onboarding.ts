@@ -243,10 +243,13 @@ export interface OnboardingProfileInput {
   exam_target: ExamTarget
   subject_combinations: string[]            // subject slugs
   intended_course?: string | null
-  heard_about: HeardAbout
-  study_time: StudyTime
-  target_score: number
-  accessibility_needs: AccessibilityNeeds
+  /** Optional since onboarding v2 — defaults to 'other' when omitted. */
+  heard_about?: HeardAbout | null
+  /** Optional since onboarding v2 — defaults to 'flexible' when omitted. */
+  study_time?: StudyTime | null
+  /** Optional since onboarding v2 — defaults to an exam-typical target when omitted. */
+  target_score?: number | null
+  accessibility_needs?: Partial<AccessibilityNeeds> | null
   subjects_pending?: boolean
 }
 
@@ -267,17 +270,28 @@ export async function saveOnboardingProfile(payload: OnboardingProfileInput) {
   if (!payload.subject_combinations?.length && !payload.subjects_pending) {
     throw new OnboardingError('Please select at least one subject, or choose to pick subjects later.')
   }
-  if (!payload.intended_course?.trim()) payload.intended_course = null // optional
-  if (!payload.heard_about) throw new OnboardingError('Please tell us how you heard about Propeida.')
-  if (!payload.study_time) throw new OnboardingError('Please select your preferred study time.')
-  if (!payload.target_score || payload.target_score < 1) {
-    throw new OnboardingError('Please enter a valid target score.')
-  }
-  if (payload.exam_target === 'jamb' && payload.target_score > 400) {
+
+  // Optional fields, with safe defaults so onboarding can stay frictionless.
+  const heardAbout = payload.heard_about ?? 'other'
+  const studyTime = payload.study_time ?? 'flexible'
+  const examDefaultTarget = payload.exam_target === 'jamb' ? 200
+    : payload.exam_target === 'post-utme' ? 60
+    : 100
+  const rawTarget = payload.target_score ?? examDefaultTarget
+  if (payload.exam_target === 'jamb' && (rawTarget < 1 || rawTarget > 400)) {
     throw new OnboardingError('JAMB scores run from 1 to 400.')
   }
-  if (payload.exam_target === 'post-utme' && payload.target_score > 100) {
+  if (payload.exam_target === 'post-utme' && (rawTarget < 1 || rawTarget > 100)) {
     throw new OnboardingError('Post-UTME scores are typically out of 100.')
+  }
+  if (rawTarget < 1) {
+    throw new OnboardingError('Please enter a valid target score.')
+  }
+  if (!payload.intended_course?.trim()) payload.intended_course = null // optional
+  const accessibility = {
+    large_font: payload.accessibility_needs?.large_font ?? false,
+    high_contrast: payload.accessibility_needs?.high_contrast ?? false,
+    sound_off: payload.accessibility_needs?.sound_off ?? false,
   }
 
   const { error } = await supabase
@@ -286,10 +300,10 @@ export async function saveOnboardingProfile(payload: OnboardingProfileInput) {
       exam_target: payload.exam_target,
       subject_combinations: payload.subject_combinations,
       intended_course: payload.intended_course,
-      heard_about: payload.heard_about,
-      study_time: payload.study_time,
-      target_score: payload.target_score,
-      accessibility_needs: payload.accessibility_needs,
+      heard_about: heardAbout,
+      study_time: studyTime,
+      target_score: rawTarget,
+      accessibility_needs: accessibility,
       subjects_pending: !!payload.subjects_pending,
       onboarding_completed: true,
     })

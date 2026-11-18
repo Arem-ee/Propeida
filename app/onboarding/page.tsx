@@ -6,8 +6,6 @@ import { createClient } from '@/lib/supabase/client'
 import {
   saveOnboardingProfile,
   type ExamTarget,
-  type HeardAbout,
-  type StudyTime,
   type AccessibilityNeeds,
 } from '@/lib/actions/onboarding'
 import { isStandaloneSubject } from '@/lib/subject-scope'
@@ -21,17 +19,11 @@ type Step =
   | 'welcome'
   | 'exam'
   | 'subjects'
-  | 'name'
-  | 'course'
-  | 'heard-about'
-  | 'study-time'
-  | 'target-score'
   | 'accessibility'
   | 'summary'
 
 const STEPS: Step[] = [
-  'welcome', 'exam', 'subjects', 'name', 'course',
-  'heard-about', 'study-time', 'target-score', 'accessibility', 'summary',
+  'welcome', 'exam', 'subjects', 'accessibility', 'summary',
 ]
 
 interface Subject { id: string; name: string; slug: string }
@@ -40,21 +32,6 @@ const EXAM_TARGETS: { value: ExamTarget; label: string; hint: string }[] = [
   { value: 'jamb', label: 'JAMB UTME', hint: 'University entrance exam (CBT)' },
   { value: 'post-utme', label: 'Post-UTME', hint: 'University screening (e.g. UNILORIN)' },
   { value: 'general', label: 'General study', hint: 'Build knowledge without a specific exam' },
-]
-
-const HEARD_ABOUT: { value: HeardAbout; label: string }[] = [
-  { value: 'whatsapp', label: 'WhatsApp channel' },
-  { value: 'friend', label: 'Friend or classmate' },
-  { value: 'school', label: 'School or teacher' },
-  { value: 'social', label: 'Social media' },
-  { value: 'other', label: 'Other' },
-]
-
-const STUDY_TIME: { value: StudyTime; label: string }[] = [
-  { value: 'morning', label: 'Morning' },
-  { value: 'afternoon', label: 'Afternoon' },
-  { value: 'night', label: 'Night' },
-  { value: 'flexible', label: 'Flexible / varies' },
 ]
 
 /**
@@ -81,35 +58,10 @@ const STEP_COPY: Record<
     lead: 'You pick what you want to study, and you can change this later',
     footnote: 'You can choose whenever you are ready and nothing is locked',
   },
-  name: {
-    mascot: 'encourage',
-    heading: 'Your full name',
-    lead: 'We use this for certificates and support messages',
-  },
-  course: {
-    mascot: 'thinking',
-    heading: 'Course you intend to study',
-    lead: 'This is optional, and you can set your Post-UTME target school later',
-  },
-  'heard-about': {
-    mascot: 'encourage',
-    heading: 'How did you hear about us?',
-    lead: 'This helps us reach more people preparing for the same exams',
-  },
-  'study-time': {
-    mascot: 'encourage',
-    heading: 'Preferred study time',
-    lead: "We will show 'Today's review' at a good time for you",
-  },
-  'target-score': {
-    mascot: 'thinking',
-    heading: 'Target score',
-    lead: "This sets your personal goal on the progress map",
-  },
   accessibility: {
     mascot: 'encourage',
-    heading: 'Accessibility needs',
-    lead: 'You can turn on anything that helps you, and you can change it later',
+    heading: 'One last optional thing',
+    lead: 'You can turn on anything that helps you, or skip past this',
   },
   summary: {
     mascot: 'celebrate',
@@ -136,11 +88,6 @@ export default function OnboardingPage() {
   const [examTarget, setExamTarget] = useState<ExamTarget | null>(null)
   const [selectedSubjects, setSelectedSubjects] = useState<string[]>([])
   const [subjectsPending, setSubjectsPending] = useState(false)
-  const [name, setName] = useState('')
-  const [course, setCourse] = useState('')
-  const [heardAbout, setHeardAbout] = useState<HeardAbout | null>(null)
-  const [studyTime, setStudyTime] = useState<StudyTime | null>(null)
-  const [targetScore, setTargetScore] = useState<string>('')
   const [accessibility, setAccessibility] = useState<AccessibilityNeeds>({
     large_font: false, high_contrast: false, sound_off: false,
   })
@@ -179,21 +126,6 @@ export default function OnboardingPage() {
         return !!examTarget
       case 'subjects':
         return selectedSubjects.length > 0 || subjectsPending
-      case 'name':
-        return name.trim().length >= 2
-      case 'course':
-        return true
-      case 'heard-about':
-        return !!heardAbout
-      case 'study-time':
-        return !!studyTime
-      case 'target-score': {
-        const n = Number(targetScore)
-        if (!n || n < 1) return false
-        if (examTarget === 'jamb' && n > 400) return false
-        if (examTarget === 'post-utme' && n > 100) return false
-        return true
-      }
       case 'accessibility':
         return true
       case 'summary':
@@ -201,7 +133,7 @@ export default function OnboardingPage() {
       default:
         return false
     }
-  }, [step, examTarget, selectedSubjects, subjectsPending, name, heardAbout, studyTime, targetScore])
+  }, [step, examTarget, selectedSubjects, subjectsPending])
 
   const stepError = useCallback((): string | null => {
     switch (step) {
@@ -211,23 +143,10 @@ export default function OnboardingPage() {
         return selectedSubjects.length > 0 || subjectsPending
           ? null
           : 'Please select at least one subject, or choose to pick subjects later'
-      case 'name':
-        return name.trim().length >= 2 ? null : 'Please enter your full name'
-      case 'heard-about':
-        return heardAbout ? null : 'Please select how you heard about us'
-      case 'study-time':
-        return studyTime ? null : 'Please select your preferred study time'
-      case 'target-score': {
-        const n = Number(targetScore)
-        if (!n || n < 1) return 'Please enter a valid target score'
-        if (examTarget === 'jamb' && n > 400) return 'JAMB scores run from 1 to 400'
-        if (examTarget === 'post-utme' && n > 100) return 'Post-UTME scores are typically out of 100'
-        return null
-      }
       default:
         return null
     }
-  }, [step, examTarget, selectedSubjects, subjectsPending, name, heardAbout, studyTime, targetScore])
+  }, [step, examTarget, selectedSubjects, subjectsPending])
 
   const handleSave = useCallback(async () => {
     setError(null)
@@ -239,10 +158,6 @@ export default function OnboardingPage() {
       await saveOnboardingProfile({
         exam_target: examTarget!,
         subject_combinations: selectedSubjects,
-        intended_course: course.trim() || null,
-        heard_about: heardAbout!,
-        study_time: studyTime!,
-        target_score: Number(targetScore),
         accessibility_needs: accessibility,
         subjects_pending: subjectsPending,
       })
@@ -265,7 +180,7 @@ export default function OnboardingPage() {
       setLoading(false)
     }
   }, [
-    examTarget, selectedSubjects, course, heardAbout, studyTime, targetScore,
+    examTarget, selectedSubjects,
     accessibility, subjectsPending, router, stepError, add,
   ])
 
@@ -290,16 +205,16 @@ export default function OnboardingPage() {
             <span className="text-xs font-extrabold text-red-600">{error}</span>
           )}
         </div>
-        <div className="flex items-center gap-2 mb-8">
+        <div className="flex items-center gap-2 mb-8 overflow-x-auto pb-1 -mx-4 px-4 sm:-mx-6 sm:px-6">
           {STEPS.map((s, i) => {
             const active = i === STEPS.indexOf(step)
             const completed = i < STEPS.indexOf(step)
             return (
-              <div key={s} className="flex items-center gap-2">
+              <div key={s} className="flex shrink-0 items-center gap-2">
                 {i > 0 && (
-                  <div className={`h-1 w-4 ${completed ? 'bg-blue-600' : 'bg-gray-200'}`} />
+                  <div className={`h-1 w-3 sm:w-4 ${completed ? 'bg-blue-600' : 'bg-gray-200'}`} />
                 )}
-                <div className={`flex h-8 w-8 items-center justify-center rounded-full transition-colors duration-300 ${
+                <div className={`flex h-7 w-7 items-center justify-center rounded-full transition-colors duration-300 sm:h-8 sm:w-8 ${
                   active
                     ? 'bg-blue-600 text-white'
                     : completed ? 'bg-emerald-100 text-emerald-600 animate-pop-in' : 'bg-gray-200 text-gray-400'
@@ -310,7 +225,7 @@ export default function OnboardingPage() {
                     <span className="text-[10px] font-extrabold">{i + 1}</span>
                   )}
                 </div>
-                <span className={`text-[11px] font-extrabold uppercase tracking-tighter ${
+                <span className={`hidden text-[11px] font-extrabold uppercase tracking-tighter sm:inline ${
                   active || completed ? 'text-black' : 'text-gray-400'
                 }`}>
                   {s.replace('-', ' ')}
@@ -424,30 +339,6 @@ export default function OnboardingPage() {
                         : 'Not set'}
                   </span>
                 </div>
-                {name && (
-                  <div className="flex justify-between text-black">
-                    <span className="font-semibold text-ink-soft">Full name</span>
-                    <span className="font-medium">{name}</span>
-                  </div>
-                )}
-                {course && (
-                  <div className="flex justify-between text-black">
-                    <span className="font-semibold text-ink-soft">Intended course</span>
-                    <span className="font-medium">{course}</span>
-                  </div>
-                )}
-                <div className="flex justify-between text-black">
-                  <span className="font-semibold text-ink-soft">Heard about us</span>
-                  <span className="font-medium">{HEARD_ABOUT.find((o) => o.value === heardAbout)?.label ?? 'Not set'}</span>
-                </div>
-                <div className="flex justify-between text-black">
-                  <span className="font-semibold text-ink-soft">Study time</span>
-                  <span className="font-medium">{STUDY_TIME.find((t) => t.value === studyTime)?.label ?? 'Not set'}</span>
-                </div>
-                <div className="flex justify-between text-black">
-                  <span className="font-semibold text-ink-soft">Target score</span>
-                  <span className="font-medium">{targetScore}</span>
-                </div>
                 <div className="flex justify-between text-black">
                   <span className="font-semibold text-ink-soft">Accessibility</span>
                   <span className="font-medium">
@@ -529,138 +420,6 @@ export default function OnboardingPage() {
               )}
             </div>
           )}
-          {step === 'name' && (
-            <div className="flex-1 space-y-6">
-              <div className="flex items-center justify-start gap-3 mb-2">
-                <Mascot expression={STEP_COPY.name.mascot} size="sm" className="shrink-0 animate-pop-in" />
-                <div>
-                  <h2 className="font-display text-2xl font-semibold text-black mb-0.5">
-                    {STEP_COPY.name.heading}
-                  </h2>
-                  <p className="text-[14px] text-ink-soft">{STEP_COPY.name.lead}</p>
-                </div>
-              </div>
-              <input
-                autoComplete="name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder="e.g. Adebola Okafor"
-                className="w-full rounded-2xl border border-gray-200 bg-white px-4 py-4 text-black focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none min-h-[56px]"
-              />
-            </div>
-          )}
-          {step === 'course' && (
-            <div className="flex-1 space-y-6">
-              <div className="flex items-center justify-start gap-3 mb-2">
-                <Mascot expression={STEP_COPY.course.mascot} size="sm" className="shrink-0 animate-pop-in" />
-                <div>
-                  <h2 className="font-display text-2xl font-semibold text-black mb-0.5">
-                    {STEP_COPY.course.heading}
-                  </h2>
-                  <p className="text-[14px] text-ink-soft">{STEP_COPY.course.lead}</p>
-                </div>
-              </div>
-              <input
-                autoComplete="off"
-                value={course}
-                onChange={(e) => setCourse(e.target.value)}
-                placeholder="e.g. Medicine, Law, Computer Science"
-                className="w-full rounded-2xl border border-gray-200 bg-white px-4 py-4 text-black focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none min-h-[56px]"
-              />
-            </div>
-          )}
-
-          {step === 'heard-about' && (
-            <div className="flex-1 space-y-6">
-              <div className="flex items-center justify-start gap-3 mb-2">
-                <Mascot expression={STEP_COPY['heard-about'].mascot} size="sm" className="shrink-0 animate-pop-in" />
-                <div>
-                  <h2 className="font-display text-2xl font-semibold text-black mb-0.5">
-                    {STEP_COPY['heard-about'].heading}
-                  </h2>
-                  <p className="text-[14px] text-ink-soft">{STEP_COPY['heard-about'].lead}</p>
-                </div>
-              </div>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                {HEARD_ABOUT.map((o) => (
-                  <button
-                    key={o.value}
-                    onClick={() => setHeardAbout(o.value)}
-                    className={`flex items-center justify-center rounded-2xl border-2 p-4 text-left transition-all pressable ${
-                      heardAbout === o.value
-                        ? 'border-blue-600 bg-blue-50/60'
-                        : 'border-gray-200 bg-white'
-                    }`}
-                  >
-                    <div className="flex-1">
-                      <span className="text-sm font-semibold text-black">{o.label}</span>
-                    </div>
-                    {heardAbout === o.value && <Check className="h-5 w-5 text-blue-600" strokeWidth={3} />}
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {step === 'study-time' && (
-            <div className="flex-1 space-y-6">
-              <div className="flex items-center justify-start gap-3 mb-2">
-                <Mascot expression={STEP_COPY['study-time'].mascot} size="sm" className="shrink-0 animate-pop-in" />
-                <div>
-                  <h2 className="font-display text-2xl font-semibold text-black mb-0.5">
-                    {STEP_COPY['study-time'].heading}
-                  </h2>
-                  <p className="text-[14px] text-ink-soft">{STEP_COPY['study-time'].lead}</p>
-                </div>
-              </div>
-              <div className="grid grid-cols-2 gap-3">
-                {STUDY_TIME.map((t) => (
-                  <button
-                    key={t.value}
-                    onClick={() => setStudyTime(t.value)}
-                    className={`flex items-center justify-center rounded-2xl border-2 p-4 text-left transition-all pressable ${
-                      studyTime === t.value
-                        ? 'border-blue-600 bg-blue-50/60'
-                        : 'border-gray-200 bg-white'
-                    }`}
-                  >
-                    <div className="flex-1">
-                      <span className="text-sm font-semibold text-black">{t.label}</span>
-                    </div>
-                    {studyTime === t.value && <Check className="h-5 w-5 text-blue-600" strokeWidth={3} />}
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {step === 'target-score' && (
-            <div className="flex-1 space-y-6">
-              <div className="flex items-center justify-start gap-3 mb-2">
-                <Mascot expression={STEP_COPY['target-score'].mascot} size="sm" className="shrink-0 animate-pop-in" />
-                <div>
-                  <h2 className="font-display text-2xl font-semibold text-black mb-0.5">
-                    {STEP_COPY['target-score'].heading}
-                  </h2>
-                  <p className="text-[14px] text-ink-soft">{STEP_COPY['target-score'].lead}</p>
-                </div>
-              </div>
-              <div className="space-y-3">
-                <label className="text-sm font-semibold text-black">
-                  Target score (out of {examTarget === 'jamb' ? 400 : examTarget === 'post-utme' ? 100 : 400})
-                </label>
-                <input
-                  type="number"
-                  min="1"
-                  max={examTarget === 'jamb' ? 400 : examTarget === 'post-utme' ? 100 : 400}
-                  value={targetScore}
-                  onChange={(e) => setTargetScore(e.target.value)}
-                  className="w-full rounded-2xl border border-gray-200 bg-white px-4 py-4 text-black focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none min-h-[56px]"
-                />
-              </div>
-            </div>
-          )}
-
           {step === 'accessibility' && (
             <div className="flex-1 space-y-6">
               <div className="flex items-center justify-start gap-3 mb-2">
