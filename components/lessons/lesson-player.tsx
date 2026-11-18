@@ -579,7 +579,9 @@ export default function LessonPlayer({
             sections={coreSections}
             onComplete={() => setSectionsDone(true)}
           />
-          {depthSections.length > 0 && (
+          {/* One shared depth module, after all core sections are read (or
+              when a lesson carries no core sections at all). */}
+          {depthSections.length > 0 && (sectionsDone || coreSections.length === 0) && (
             <details className="group mt-5 border-t border-gray-100 pt-4">
               <summary className="flex min-h-[52px] cursor-pointer list-none items-center justify-between gap-3 rounded-2xl border border-blue-200 bg-blue-50/50 px-4 py-3 transition-colors hover:border-blue-300 hover:bg-blue-50">
                 <span className="inline-flex items-center gap-2 text-[13px] font-extrabold normal-case text-blue-900">
