@@ -1921,13 +1921,13 @@
       "steps": [
        {
         "operation": "Name the places from the right",
-        "reason": "Units, threes, nines. Each place is three times the one before it.",
-        "result": "Places from the right: 1, 3, 9",
+        "reason": "From the right: units 1, threes 3, nines 9. Each place is three times the one before it.",
+        "result": "Places from the right: units 1, threes 3, nines 9",
         "predictPrompt": "What are the places in base three worth?"
        },
        {
         "operation": "Multiply each digit by its place",
-        "reason": "The 2 sits on the nine. The 1 sits on the three. The 0 sits on the units.",
+        "reason": "The 2 is in the nines column. The 1 is in the threes column. The 0 is in the units column.",
         "result": "(2 × 9) + (1 × 3) + (0 × 1) = 18 + 3 + 0",
         "predictPrompt": "Which digit sits on which place?"
        },
