@@ -313,9 +313,13 @@ function WorkedCard({
   total: number
   onDone: () => void
 }) {
+  // The reveal loop only pays off if the guess survives it: each written
+  // guess is kept beside the revealed result with a one-tap self-check.
   const [revealed, setRevealed] = useState(0)
   const [predictionInput, setPredictionInput] = useState('')
   const [triedEmpty, setTriedEmpty] = useState(false)
+  const [guesses, setGuesses] = useState<Array<string | undefined>>(() => Array(example.steps.length).fill(undefined))
+  const [selfCheck, setSelfCheck] = useState<Array<'right' | 'off' | undefined>>(() => Array(example.steps.length).fill(undefined))
   const doneFired = useRef(false)
 
   useEffect(() => {
@@ -351,6 +355,35 @@ function WorkedCard({
               {isRevealed ? (
                 <>
                   <p className="mt-2 rounded-xl bg-white border border-emerald-200 px-3 py-2.5 text-sm font-bold text-emerald-800 animate-pop-in"><MathText text={step.result} /></p>
+                  {typeof guesses[i] === 'string' && (
+                    <div className="mt-2 flex flex-wrap items-center gap-2">
+                      <span className="text-[12px] font-bold italic text-blue-800">
+                        Your guess: <span className="not-italic">{guesses[i]}</span>
+                      </span>
+                      <button
+                        type="button"
+                        onClick={() => setSelfCheck((s) => s.map((v, j) => (j === i ? 'right' : v)))}
+                        className={`rounded-full border px-2.5 py-0.5 text-[11px] font-extrabold transition-colors ${
+                          selfCheck[i] === 'right'
+                            ? 'border-emerald-600 bg-emerald-600 text-white'
+                            : 'border-emerald-300 bg-white text-emerald-800 hover:bg-emerald-50'
+                        }`}
+                      >
+                        I was right
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setSelfCheck((s) => s.map((v, j) => (j === i ? 'off' : v)))}
+                        className={`rounded-full border px-2.5 py-0.5 text-[11px] font-extrabold transition-colors ${
+                          selfCheck[i] === 'off'
+                            ? 'border-amber-600 bg-amber-600 text-white'
+                            : 'border-amber-300 bg-white text-amber-800 hover:bg-amber-50'
+                        }`}
+                      >
+                        I was off
+                      </button>
+                    </div>
+                  )}
                   <StepVisual visual={step.visual ?? null} />
                 </>
               ) : isNext ? (
@@ -378,6 +411,7 @@ function WorkedCard({
                         setTriedEmpty(true)
                         return
                       }
+                      setGuesses((g) => g.map((v, j) => (j === i ? predictionInput.trim() || '—' : v)))
                       setRevealed((n) => n + 1)
                       setPredictionInput('')
                     }}
@@ -393,6 +427,13 @@ function WorkedCard({
             </div>
           )
         })}
+        {revealed >= example.steps.length && (
+          <p className="pt-1 text-center text-[12px] font-extrabold leading-snug text-emerald-800">
+            {selfCheck.filter(Boolean).length === 0
+              ? 'You predicted every step before it opened. That is the whole exercise. Keep doing it.'
+              : `${selfCheck.filter((v) => v === 'right').length} of ${selfCheck.filter(Boolean).length} called right. Predicting first is what makes it stick.`}
+          </p>
+        )}
       </div>
     </div>
   )
