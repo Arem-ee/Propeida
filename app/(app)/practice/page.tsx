@@ -61,11 +61,12 @@ export default async function PracticePage() {
   let activeSession: { id: string; examName: string } | null = null
   let userExamAccessIds: string[] = []
   let subjectsPending = false
+  let defaultSubjectSlugs: string[] = []
   if (user) {
     const [sessions, accessRes, profileRes] = await Promise.all([
       getUserActiveSessions(user.id),
       supabase.from('user_exam_access').select('exam_id').eq('user_id', user.id),
-      supabase.from('profiles').select('subjects_pending').eq('id', user.id).maybeSingle(),
+      supabase.from('profiles').select('subjects_pending, subject_combinations').eq('id', user.id).maybeSingle(),
     ])
     // Only the learner's own exam path gets a resume card. A JAMB-focus
     // learner never sees a Post-UTME nudge in this UI, and vice versa. An
@@ -80,6 +81,7 @@ export default async function PracticePage() {
     if (resume) activeSession = { id: resume.id, examName: resume.exams.name }
     userExamAccessIds = (accessRes.data ?? []).map((a) => a.exam_id)
     subjectsPending = profileRes.data?.subjects_pending ?? false
+    defaultSubjectSlugs = ((profileRes.data as { subject_combinations?: string[] } | null)?.subject_combinations ?? []) as string[]
   }
 
   const accessSet = new Set(userExamAccessIds)
@@ -133,6 +135,7 @@ export default async function PracticePage() {
           examSubjectMap={scopedExamSubjectMap}
           activeSession={activeSession}
           subjectsPending={subjectsPending}
+          defaultSubjectSlugs={defaultSubjectSlugs}
           topicsBySubject={topicsBySubject}
         />
       )}

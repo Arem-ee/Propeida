@@ -62,6 +62,10 @@ export default async function MocksPage() {
   const { data: { user } } = await supabase.auth.getUser()
   const scope = user ? await getExamScope(supabase, user.id) : null
   const pathLabel = scope ? examPathLabel(scope) : null
+  const profileRes = user
+    ? await supabase.from('profiles').select('subject_combinations').eq('id', user.id).maybeSingle()
+    : { data: null }
+  const defaultSubjectSlugs = ((profileRes.data as { subject_combinations?: string[] } | null)?.subject_combinations ?? []) as string[]
   const mockEvents = await listMockEvents()
   // eslint-disable-next-line react-hooks/purity -- request-time filter; page reads cookies() every render
   const liveOrUpcoming = mockEvents.filter((e) => new Date(e.ends_at).getTime() >= Date.now())
@@ -154,6 +158,7 @@ export default async function MocksPage() {
           exams={exams}
           allSubjects={subjects}
           examSubjectMap={scopedExamSubjectMap}
+          defaultSubjectSlugs={defaultSubjectSlugs}
         />
       )}
     </div>

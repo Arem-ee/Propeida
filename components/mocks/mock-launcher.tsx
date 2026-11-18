@@ -33,14 +33,20 @@ export default function MockLauncher({
   exams,
   allSubjects,
   examSubjectMap,
+  defaultSubjectSlugs = [],
 }: {
   exams: Exam[]
   allSubjects: Subject[]
   examSubjectMap: Record<string, string[]>
+  defaultSubjectSlugs?: string[]
 }) {
   const router = useRouter()
   const [selectedExamId, setSelectedExamId] = useState(exams[0]?.id ?? '')
-  const [selectedSubjectIds, setSelectedSubjectIds] = useState<string[]>([])
+  const [selectedSubjectIds, setSelectedSubjectIds] = useState<string[]>(() =>
+    defaultSubjectSlugs
+      .map((slug) => allSubjects.find((s) => s.slug === slug)?.id)
+      .filter((id): id is string => Boolean(id)),
+  )
   const [starting, setStarting] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [mockFree, setMockFree] = useState(true)

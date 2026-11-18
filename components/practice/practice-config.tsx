@@ -37,6 +37,7 @@ export default function PracticeConfig({
   examSubjectMap,
   activeSession,
   subjectsPending = false,
+  defaultSubjectSlugs = [],
   topicsBySubject,
 }: {
   exams: Exam[]
@@ -44,6 +45,7 @@ export default function PracticeConfig({
   examSubjectMap: Record<string, string[]>
   activeSession: { id: string; examName: string } | null
   subjectsPending?: boolean
+  defaultSubjectSlugs?: string[]
   topicsBySubject: Record<string, Topic[]>
 }) {
   const router = useRouter()
@@ -78,7 +80,12 @@ export default function PracticeConfig({
     presetExamId ?? exams[0]?.id ?? '',
   )
   const [selectedSubjectIds, setSelectedSubjectIds] = useState<string[]>(
-    presetSubjects.map((s) => s.id),
+    () =>
+      presetSubjects.map((s) => s.id).length > 0
+        ? presetSubjects.map((s) => s.id)
+        : defaultSubjectSlugs
+            .map((slug) => allSubjects.find((s) => s.slug === slug)?.id)
+            .filter((id): id is string => Boolean(id)),
   )
   const [selectedTopicIds, setSelectedTopicIds] = useState<string[]>([])
   const [questionCount, setQuestionCount] = useState(10)
