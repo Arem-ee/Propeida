@@ -1,5 +1,10 @@
 # Lesson authoring standard: two tiers
 
+This document governs lesson shape; `docs/agent-authoring-spec.md` governs
+cold-start agents and is the first thing to read when picking the task up
+without seeing this note. Where the two disagree, the agent-authoring-spec
+wins.
+
 Every published topic must have a lesson. This standard defines what "a lesson"
 means so that 500+ topics can be authored consistently without turning into
 essays.
