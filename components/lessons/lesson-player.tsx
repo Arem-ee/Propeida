@@ -315,10 +315,12 @@ function WorkedCard({
 }) {
   const [revealed, setRevealed] = useState(0)
   const [predictionInput, setPredictionInput] = useState('')
+  const [triedEmpty, setTriedEmpty] = useState(false)
   const doneFired = useRef(false)
 
   useEffect(() => {
     setPredictionInput('')
+    setTriedEmpty(false)
   }, [revealed])
 
   useEffect(() => {
@@ -358,29 +360,35 @@ function WorkedCard({
                       <p className="text-[13px] font-bold italic text-blue-700"><MathText text={step.predictPrompt} /></p>
                       <input
                         value={predictionInput}
-                        onChange={(e) => setPredictionInput(e.target.value)}
-                        placeholder="Type your prediction"
+                        onChange={(e) => {
+                          setPredictionInput(e.target.value)
+                          if (e.target.value.trim() !== '') setTriedEmpty(false)
+                        }}
+                        placeholder="Your best guess (any answer counts)"
                         className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm min-h-[44px] focus:border-blue-600 focus:outline-none"
                       />
-                      {predictionInput.trim() === '' && (
-                        <p className="text-xs font-bold text-red-600">Type your prediction before you reveal the answer</p>
+                      {triedEmpty && predictionInput.trim() === '' && (
+                        <p className="text-xs font-bold text-red-600">Type anything you think — even a guess — then reveal</p>
                       )}
                     </>
                   )}
                   <button
                     onClick={() => {
+                      if (step.predictPrompt && predictionInput.trim() === '') {
+                        setTriedEmpty(true)
+                        return
+                      }
                       setRevealed((n) => n + 1)
                       setPredictionInput('')
                     }}
-                    disabled={!!step.predictPrompt && predictionInput.trim() === ''}
-                    className="mt-2 inline-flex items-center gap-1.5 rounded-xl border-2 border-blue-600 px-4 py-2 text-[13px] font-extrabold text-blue-700 min-h-[44px] cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="mt-2 inline-flex items-center gap-1.5 rounded-xl border-2 border-blue-600 px-4 py-2 text-[13px] font-extrabold text-blue-700 min-h-[44px] cursor-pointer"
                   >
                     <Eye className="h-4 w-4" />
-                    {step.predictPrompt ? 'Submit prediction, then reveal' : 'Reveal'}
+                    {step.predictPrompt ? 'Reveal step' : 'Reveal'}
                   </button>
                 </div>
               ) : (
-                <p className="mt-2 text-xs font-bold text-gray-500">This is locked until you submit the prediction above</p>
+                <p className="mt-2 text-xs font-bold text-gray-500">Reveal the step above first</p>
               )}
             </div>
           )
