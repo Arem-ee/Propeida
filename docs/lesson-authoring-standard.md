@@ -57,6 +57,16 @@ first read.
 - **No theatre.** Lines like "Here is the mark that disappears in silence" or
   "a circuit can be on or off" that perform significance without teaching the
   thing do not appear in a lesson. The learner is not a literary audience.
+- **Natural, casual register.** Write the way a patient tutor talks across a
+  table, not the way a spec is written. Avoid formal inversions, decorative
+  vocabulary, words that mean one thing in the lesson and a broader thing in
+  ordinary speech ("worth" as a noun for value), and any sentence that
+  sounds like it was drafted to satisfy a requirement. Pick words that pass
+  the spoken test: say the sentence aloud; if it sounds strained, rewrite.
+  Prefer "doubles in value" to "doubles in worth", "a byte" to "a byte of
+  eight binary digits" where the extras add nothing, and "you can combine
+  bits to make any number" over "the binary representation scheme allows the
+  formation of arbitrary integers".
 
 Violations fail the commit just as surely as a missing objective.
 

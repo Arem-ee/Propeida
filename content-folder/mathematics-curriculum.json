@@ -2125,7 +2125,7 @@
        "Let us line up four switches. Each spot is worth double the next spot along.",
        "From right to left, the spots are worth **1, 2, 4 and 8**.",
        "Written in binary: **0001** is one, **0010** is two, **0011** is three, **0100** is four, and **0101** is five.",
-       "Each new spot doubles. That is the pattern: **1, 2, 4, 8, 16, 32**.",
+       "Each spot is worth double the one next to it. That is the pattern: **1, 2, 4, 8, 16, 32**.",
        "Let us try one. The digits **1011** mean the **8**-spot is ON, the **4**-spot is OFF, the **2**-spot is ON, the **1**-spot is ON.",
        "MATH: 1011{{sub:2}} = 8 + 0 + 2 + 1 = 11",
        "So **1011** in base two is **11** in base ten.",
