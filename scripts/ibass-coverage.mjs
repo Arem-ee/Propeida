@@ -32,10 +32,10 @@ function parseSections(md) {
   const sections = []
   let current = null
   for (const line of lines) {
-    const m = /^###\s+(\d+)\.\s+(.+?)\s*$/.exec(line)
+    const m = /^###\s+([A-Za-z0-9]+\.)?\s*(.+?)\s*$/.exec(line)
     if (m) {
       if (current) sections.push(current)
-      current = { number: Number(m[1]), title: m[2].trim(), topicsBlock: '', objectivesBlock: '', mode: null }
+      current = { number: (m[1] ?? '').replace(/\.$/, ''), title: m[2].trim(), topicsBlock: '', objectivesBlock: '', mode: null }
       continue
     }
     if (current) {
@@ -102,28 +102,36 @@ function lessonsFromSpineDescription(desc, lessons) {
   const raw = m[1]
     .replace(/(spine topic)/gi, '')
     .replace(/lessons?/gi, '')
-    .replace(/,"?and"? "$/gi, ', ')
-    .replace(/,"?and"? "?/gi, ', ')
-    .replace(/"""?\s*/g, ' ')
-    .replace(/""/g, ',')
+    .replace(/"?and"?/gi, ' ')
+    .replace(/\s+/g, ' ')
     .trim()
-  const parts = raw.split(/\s*(?:,|;)\s*/).filter((p) => p.trim().length > 2)
+  const parts = raw.split(/\s*(?:,|;| and )\s*/).filter((p) => p.trim().length > 2)
   const out = []
   for (const p of parts) {
     const target = norm(p)
-    const hit = lessons.find((l) => norm(l.slug) === target || norm(l.slug).startsWith(target) || norm(l.slug).replace(/-and-.*$/, '') === target)
+    const hit = lessons.find((l) =>
+      norm(l.slug) === target
+      || norm(l.slug).replace(/-/g, ' ').startsWith(target)
+      || target.startsWith(norm(l.slug).replace(/-/g, ' '))
+      || norm(l.slug).replace(/-/g, '') === target.replace(/-/g, '').replace(/\s/g, '')
+    )
     if (hit) out.push(hit)
   }
   return out
 }
 
 function bestSpineMatch(ibassTitle, spineTopics) {
-  let best = null
+  // English's spine has multiple topics under one IBASS section, so this
+  // returns ALL topics with non-trivial overlap.
+  const candidates = []
   for (const t of spineTopics) {
-    const score = tokenOverlap(ibassTitle, t.name)
-    if (!best || score > best.score) best = { topic: t, score }
+    const a = tokenOverlap(ibassTitle, t.section ? t.section : '')
+    const b = tokenOverlap(ibassTitle, t.name)
+    const s = Math.max(a, b)
+    if (s >= 0.34) candidates.push({ topic: t, score: s })
   }
-  return best
+  candidates.sort((a, b) => b.score - a.score)
+  return candidates
 }
 
 for (const subject of process.argv.slice(2)) {
@@ -135,16 +143,11 @@ for (const subject of process.argv.slice(2)) {
   const lessons = curriculum.lessons ?? []
   const lessonsBySlugPrefix = new Map()
   for (const s of spineTopics) {
-    const fromDesc = lessonsFromSpineDescription(s.description, lessons)
-    if (fromDesc.length) { lessonsBySlugPrefix.set(s.slug, fromDesc) }
-    else { // fallback: direct slug match or lesson slug starts with spine slug
-      lessonsBySlugPrefix.set(s.slug, lessons.filter((l) =>
-        l.slug === s.slug
-        || l.slug.startsWith(s.slug + '-')
-        || s.slug.startsWith(l.slug + '-')
-        || tokenOverlap(l.slug.replace(/-/g, ' '), s.slug.replace(/-/g, ' ')) >= 0.34,
-      ))
-    }
+    const key = norm(s.slug)
+    lessonsBySlugPrefix.set(s.slug, lessons.filter((l) => {
+      const k = norm(l.slug)
+      return k === key || k.startsWith(key + '-') || key.startsWith(k + '-')
+    }))
   }
 
   const sections = parseSections(doc)
@@ -160,26 +163,35 @@ for (const subject of process.argv.slice(2)) {
 
   let matched = 0
   for (const s of sections) {
-    const best = bestSpineMatch(s.title, spineTopics)
-    const ls = best && best.score >= 0.3 ? (lessonsBySlugPrefix.get(best.topic.slug) ?? []) : []
+    const candidates = bestSpineMatch(s.title, spineTopics)
+    const mapped = []
+    for (const c of candidates) {
+      for (const l of (lessonsBySlugPrefix.get(c.topic.slug) ?? [])) mapped.push(l)
+    }
+    const ls = [...new Map(mapped.map((l) => [l.slug, l])).values()]
     const topicList = ls.length ? ls.map((l) => l.slug).join(', ') : '—'
+    const spineList = candidates.length ? candidates.map((c) => c.topic.slug).join(', ') : '—'
     const attached = ls.length > 0
     if (attached) matched += 1
     out.push(
-      `| ${s.number} | ${s.title} | ${best ? best.topic.name + ' (' + topicList + ')' : '—'} | ${attached ? '✓' : 'MISS'} |`,
+      `| ${s.number} | ${s.title} | ${spineList} (${topicList}) | ${attached ? '✓' : 'MISS'} |`,
     )
   }
   out.push(``)
   out.push(`## Section → spine-topic checklist`)
   out.push(``)
   for (const s of sections) {
-    const best = bestSpineMatch(s.title, spineTopics)
-    const ls = best && best.score >= 0.3 ? (lessonsBySlugPrefix.get(best.topic.slug) ?? []) : []
+    const candidates = bestSpineMatch(s.title, spineTopics)
+    const mapped = []
+    for (const c of candidates) {
+      for (const l of (lessonsBySlugPrefix.get(c.topic.slug) ?? [])) mapped.push(l)
+    }
+    const ls = [...new Map(mapped.map((l) => [l.slug, l])).values()]
     out.push(`### ${s.number}. ${s.title}`)
     if (ls.length === 0) {
-      out.push(`_no spine topic"s authority mapped${best ? ` (nearest: ${best.topic.name}, overlap ${best.score.toFixed(2)} — NOT sufficient)` : ''}_`)
+      out.push(`_no spine topic overlap_`)
     } else {
-      out.push(`- mapped spine topic: \`${best.topic.slug}\` — lessons: ${ls.map((l) => l.slug).join(', ')}`)
+      out.push(`- mapped spine topic: \`${candidates.map((c) => c.topic.slug).join(', ')}\` — lessons: ${ls.map((l) => l.slug).join(', ')}`)
     }
     out.push(``)
     out.push(`Topics (from IBASS):`)
