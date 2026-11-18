@@ -3,6 +3,7 @@ import localFont from 'next/font/local'
 import './globals.css'
 import PwaInit from '@/components/pwa-init'
 import GoogleAnalytics from '@/components/analytics/google-analytics'
+import SiteJsonLd from '@/components/seo/site-json-ld'
 
 // Same voice as the landing page: Fredoka display + Nunito body.
 // Self-hosted (works offline, no network round-trip at build time).
@@ -86,6 +87,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {supabaseOrigin ? <link rel="preconnect" href={supabaseOrigin} crossOrigin="anonymous" /> : null}
       </head>
       <body className="font-sans antialiased">
+        <SiteJsonLd siteUrl={siteUrl} />
         {children}
         <PwaInit />
         <GoogleAnalytics />
