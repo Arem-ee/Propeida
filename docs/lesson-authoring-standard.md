@@ -16,6 +16,29 @@ lesson because power, authority and legitimacy are taught as one contrast;
 The test is simple: if a lesson needs the word "also" to connect two sections
 that could each carry their own exam question, it is two lessons.
 
+## How a learner meets a topic for the first time
+
+A lesson is written for a learner meeting the topic for the **first time**. The
+author has deep knowledge of the topic; the learner has none. Two consequences
+follow.
+
+1. **No prior knowledge is assumed.** The lesson must teach any term, formula
+   or symbol before it uses it, at the level the syllabus requires. The word
+   "base" is defined; the word "exponent" is glossed; "remainder" is turned
+   into a concrete sentence ("what is left over after the groups are taken
+   out"). A concept in the core is never "obvious from context" or
+   "obvious from the previous section". A reader with none of the surrounding
+   material should still finish the lesson.
+2. **Research first.** No lesson is written from the author's memory of the
+   topic. The lesson is constructed from published curricula, teacher guides,
+   worked-solution collections, and verification against the official IBASS /
+   JAMB syllabus. Verify primary sources, not secondary summaries; keep
+   sources so audits can trace claims back to their material. Publication
+   without research is a reason to reject the commit.
+
+A lesson that fails either test is unfinished, regardless of how correct the
+content is. A correct answer installed on a missing foundation is not a lesson.
+
 ## Nigerian curriculum verification
 
 The authoring standard controls shape; the Nigerian curriculum controls content.

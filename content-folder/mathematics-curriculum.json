@@ -1742,7 +1742,7 @@
      "content": {
       "heading": "Counting in groups of ten",
       "paragraphs": [
-       "You use ten fingers — that is why we count in tens. Counting **23** isn't \"two and three\", it's **2** tens and **3** ones added together. The usual number system is just a way of writing \"how many bundles of ten and how many leftovers\"."
+       "You use ten fingers, that is why we count in tens. Counting **23** isn't \"two and three\", it's **2** tens and **3** ones added together. The usual number system is just a way of writing \"how many bundles of ten and how many leftovers\"."
       ],
       "bullets": [],
       "takeaway": "The usual number system is just bundles of ten, then leftovers."
@@ -1754,7 +1754,7 @@
       "heading": "Counting in groups of five",
       "paragraphs": [
        "Now imagine we picked five fingers instead of ten. In bundles of five, **23** counts as **4** bundles of five plus **3** leftover ones.",
-       "Instead of writing that as \"4 fives and 3 ones\", mathematicians write it **43₅**. The little **5** tells us it is \"bundled in fives\" — a five worth one place."
+       "Instead of writing that as \"4 fives and 3 ones\", mathematicians write it **43₅**. The little **5** tells us it is \"bundled in fives\", a five worth one place."
       ],
       "bullets": [],
       "takeaway": "A base is just the bundle size you are counting in."
@@ -1766,7 +1766,7 @@
       "heading": "What place means",
       "paragraphs": [
        "In base ten, every place is worth **ten times** the one to its right: units, then tens, then hundreds. In base five every place is worth **five times** the one to its right: units, fives, twenty-fives, one hundred and twenty-fives.",
-       "The digits only have to fit inside the bundle — **five would already be a new bundle, so it is never a digit.**"
+       "The digits only have to fit inside the bundle, **five would already be a new bundle, so it is never a digit.**"
       ],
       "bullets": [],
       "takeaway": "Each place is b times the one to its right, and digits must fit inside the base."
@@ -2120,16 +2120,20 @@
      "content": {
       "heading": "Go deeper: Base two and the computer",
       "paragraphs": [
-       "Base two uses only 0 and 1 because a circuit can be on or off. Each place is a power of two, so a byte of eight bits can represent 256 values. That economy is why computers count in binary.",
-       "A binary number such as 1011{{sub:2}} is therefore 8 + 0 + 2 + 1 = 11. The expansion is the same as in any base, only the place values are powers of two. The method does not change with the base.",
+       "Start with a light switch. Two positions only: off or on. They are easy to build, easy to read reliably and cheap. That is the whole physical story.",
+       "Write an on switch as **1** and an off switch as **0**. Every digit in a computer is exactly one of those two states.",
+       "Line up switches. Each position is worth twice as much as the position to its right, the same rule as base ten, only the bundle is two instead of ten. The places are 1, 2, 4, 8, 16 and so on.",
+       "Count: 0001, 0010, 0011, 0100, 0101 in base two. Those are 1, 2, 3, 4, 5 in base ten.",
+       "Read an 8-switch arrangement and count the places that are on: that is how adding two binary numbers works.",
+       "So if you see **1011**, the switches in the 8, 2 and 1 places are on. The 4s place is off.",
        "MATH: 1011{{sub:2}} = 8 + 0 + 2 + 1 = 11",
-       "A hexadecimal digit packs four binary digits. That packing is why two hexadecimal digits stand for a whole byte, which is how addresses are written in fewer symbols.",
-       "The eight bits of a byte can therefore represent 256 values. That economy is why a byte is the unit of storage."
+       "Eight switches in a row make a **byte**, 256 patterns, so a byte can hold any value from zero to 255.",
+       "MATH: 11111111{{sub:2}} = 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1 = 255",
+       "Hexadecimal groups four binary digits into one symbol. That is why memory addresses use them, two hex digits fill one byte exactly."
       ],
       "bullets": [
-       "Base two uses 0 and 1 for on and off",
-       "Place values are powers of two",
-       "Two hexadecimal digits pack one byte"
+       "A bit is one switch, on or off.",
+       "Eight bits make a byte."
       ]
      }
     },
