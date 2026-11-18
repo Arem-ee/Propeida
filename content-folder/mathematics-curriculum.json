@@ -1740,31 +1740,36 @@
     {
      "type": "text",
      "content": {
-      "heading": "Counting in bundles",
+      "heading": "Counting in groups of ten",
       "paragraphs": [
-       "When you count, you bundle things together. Counting **23** marbles on their own is doable but slow. You probably count them anyway by grouping into bundles of **ten** (because our default number system uses ten as its bundle size): **2** groups of ten plus **3** leftover.",
-       "Group the same **23** marbles into bundles of **five** instead. You get **4** bundles of five and **3** leftover. That grouping is just as valid as the grouping by ten - it just counts the same pile differently.",
-       "The base is just the bundle size you decide to use. Base ten bundles in tens. Base five bundles in fives. Base two bundles in twos. Every number written down is just a tally: how many bundles of each size, then how many leftover."
+       "You use ten fingers — that is why we count in tens. Counting **23** isn't \"two and three\", it's **2** tens and **3** ones added together. The usual number system is just a way of writing \"how many bundles of ten and how many leftovers\"."
       ],
-      "bullets": []
+      "bullets": [],
+      "takeaway": "The usual number system is just bundles of ten, then leftovers."
      }
     },
     {
      "type": "text",
      "content": {
-      "heading": "What a base actually is",
+      "heading": "Counting in groups of five",
       "paragraphs": [
-       "A base is the **bundle size**. In base ten, the bundles are big enough that we keep a symbol for every bundle size between 1 and 9, plus 0 for \"none\". In base five the bundles are smaller, so we only need symbols for 0 to **4** - digit **5** would already fill one bundle, so it always rolls over.",
-       "Why is the digit rule so important? Because every digit must fit inside a bundle. If we tried to write a five inside a base-five number, we would accidentally mean a bundle of five instead of a raw five. The digit rule says: **every digit is smaller than the base**.",
-       "In base ten the places go: ones, tens, hundreds, thousands. In base five: ones, fives, twenty-fives, one hundred twenty-fives. The leftmost digit still tells you how many of the biggest bundles you have.",
-       "So **43₅** has **4** twenty-fives and **3** ones — **4 × 25 + 3 × 1 = 103** in the base-ten count. That is what **43₅** means.",
-       "The bundle size and the digit limit are the same thing: the size of the bundle is the number of symbols you need."
+       "Now imagine we picked five fingers instead of ten. In bundles of five, **23** counts as **4** bundles of five plus **3** leftover ones.",
+       "Instead of writing that as \"4 fives and 3 ones\", mathematicians write it **43₅**. The little **5** tells us it is \"bundled in fives\" — a five worth one place."
       ],
-      "bullets": [
-       "Bundles go in 1, b, b² and so on. Each place is b times the one to its right.",
-       "The digits are 0, 1, 2 up to (b minus 1). Digit b does not exist - it is the first new bundle.",
-       "A base-ten number like **23₅** is not the same as **23** in base ten."
-      ]
+      "bullets": [],
+      "takeaway": "A base is just the bundle size you are counting in."
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "heading": "What place means",
+      "paragraphs": [
+       "In base ten, every place is worth **ten times** the one to its right: units, then tens, then hundreds. In base five every place is worth **five times** the one to its right: units, fives, twenty-fives, one hundred and twenty-fives.",
+       "The digits only have to fit inside the bundle — **five would already be a new bundle, so it is never a digit.**"
+      ],
+      "bullets": [],
+      "takeaway": "Each place is b times the one to its right, and digits must fit inside the base."
      }
     },
     {
