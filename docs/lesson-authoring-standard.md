@@ -39,6 +39,28 @@ follow.
 A lesson that fails either test is unfinished, regardless of how correct the
 content is. A correct answer installed on a missing foundation is not a lesson.
 
+## Sentence length and register
+
+The reader is young. Write sentences a thirteen-year-old can parse on the
+first read.
+
+- **Short sentences.** Prefer several short sentences to one long one. If a
+  sentence carries two clauses and a sub-clause, it is two sentences.
+- **One idea per sentence.** A sentence that teaches one thing
+  (", "comma, then another clause teaching something else) is two sentences.
+- **Concrete before abstract.** Use scenarios, objects and numbers before
+  symbols and rules. A definition that follows a worked example is
+  rememberable; the same definition first is not.
+- **No nested qualification.** Avoid em-dash asides, parenthetical
+  pit stops, and nested second thoughts. If the sentence needs they, they
+  are a new sentence.
+- **No theatre.** Lines like "Here is the mark that disappears in silence" or
+  "a circuit can be on or off" that perform significance without teaching the
+  thing do not appear in a lesson. The learner is not a literary audience.
+
+Violations fail the commit just as surely as a missing objective.
+
+
 ## Nigerian curriculum verification
 
 The authoring standard controls shape; the Nigerian curriculum controls content.

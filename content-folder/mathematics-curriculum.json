@@ -2120,20 +2120,22 @@
      "content": {
       "heading": "Go deeper: Base two and the computer",
       "paragraphs": [
-       "Start with a light switch. Two positions only: off or on. They are easy to build, easy to read reliably and cheap. That is the whole physical story.",
-       "Write an on switch as **1** and an off switch as **0**. Every digit in a computer is exactly one of those two states.",
-       "Line up switches. Each position is worth twice as much as the position to its right, the same rule as base ten, only the bundle is two instead of ten. The places are 1, 2, 4, 8, 16 and so on.",
-       "Count: 0001, 0010, 0011, 0100, 0101 in base two. Those are 1, 2, 3, 4, 5 in base ten.",
-       "Read an 8-switch arrangement and count the places that are on: that is how adding two binary numbers works.",
-       "So if you see **1011**, the switches in the 8, 2 and 1 places are on. The 4s place is off.",
+       "A switch has only two positions: off or on. That is the whole idea.",
+       "Computers use those switches to store numbers. We write an OFF switch as 0 and an ON switch as 1.",
+       "Let us line up four switches. Each spot is worth double the spot next to it.",
+       "The spots, from right to left, are worth 1, 2, 4 and 8.",
+       "Written as numbers: 0001 is one, 0010 is two, 0011 is three, 0100 is four, and 0101 is five.",
+       "Each new switch doubles in worth. That is the pattern.",
+       "Let us try one. The digits 1011 mean the 8-spot is ON, the 4-spot is OFF, the 2-spot is ON, the 1-spot is ON.",
        "MATH: 1011{{sub:2}} = 8 + 0 + 2 + 1 = 11",
-       "Eight switches in a row make a **byte**, 256 patterns, so a byte can hold any value from zero to 255.",
+       "So 1011 is eleven when we count in base ten.",
+       "Eight switches in a row make a byte. A byte can be in two hundred and fifty-six different patterns.",
        "MATH: 11111111{{sub:2}} = 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1 = 255",
-       "Hexadecimal groups four binary digits into one symbol. That is why memory addresses use them, two hex digits fill one byte exactly."
+       "Hexadecimal groups four switches at a time. Two hex digits exactly fill one byte."
       ],
       "bullets": [
-       "A bit is one switch, on or off.",
-       "Eight bits make a byte."
+       "A bit is one switch, off or on.",
+       "Eight bits make one byte."
       ]
      }
     },
