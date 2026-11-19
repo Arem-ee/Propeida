@@ -195,15 +195,15 @@
    "slug": "measurements-and-units",
    "topic": "measurements-and-units",
    "title": "Measurements and Units",
-   "objective": "Apply SI units without hesitation: identify fundamental and derived units, measure regular and irregular bodies, read instruments to their least count, estimate errors, write standard form and check equations by dimensions.",
+   "objective": "Identify the seven fundamental SI units, choose the right instrument for a measurement, use derived units and dimensions, estimate errors, and express results in standard form.",
    "estimatedMinutes": 10,
    "blocks": [
     {
      "type": "text",
      "content": {
-      "heading": "Measurements and Units",
+      "heading": "",
       "paragraphs": [
-       "A painter quotes 2.1 m on a wall; a grocer sells 1 kilogram of tomatoes. Every honest physics answer carries a number and a unit — no unit, no meaning."
+       "In physics a measurement is a number with a unit. This lesson teaches the seven fundamental SI units, the instruments that produce them, and how to use dimensions, standard form and error estimates in exam answers."
       ],
       "bullets": []
      }
@@ -211,84 +211,86 @@
     {
      "type": "text",
      "content": {
-      "heading": "SI units, area and volume",
+      "heading": "Fundamental quantities and their units",
       "paragraphs": [
-       "SI has seven fundamental quantities and their units: length (metre, m), mass (kilogram, kg), time (second, s), electric current (ampere, A), temperature (kelvin, K), amount of substance (mole, mol) and luminous intensity (candela, cd). Everything else is derived from these.",
-       "Derived units come by multiplication and division: area m{{sup:2}}, volume m{{sup:3}}, speed m/s; force = mass × acceleration = kg·m/s{{sup:2}} = newton (N); energy = kg·m{{sup:2}}/s{{sup:2}} = joule (J); power = J/s = watt (W). Regular bodies use formulas: square a{{sup:2}}, rectangle lw, circle πr{{sup:2}}, cube a{{sup:3}}, cuboid lwh, cylinder πr{{sup:2}}h, sphere {{sup:4}}⁄_3πr{{sup:3}}.",
-       "Prefixes: 1 km = 10{{sup:3}} m, 1 cm = 10{{sup:-2}} m, 1 mm = 10{{sup:-3}} m, 1 μm = 10{{sup:-6}} m."
+       "A physical quantity is anything you can measure. Length, mass and time are physical quantities. Some quantities stand on their own. They are called fundamental quantities. There are seven, and each has one SI unit.",
+       "Length is distance. Its unit is the metre, symbol m. Mass is the amount of matter in a body. Its unit is the kilogram, kg. Time is duration. Its unit is the second, s. Electric current has the ampere, A. Temperature has the kelvin, K. Amount of substance has the mole, mol. Luminous intensity has the candela, cd.",
+       "Derived quantities come from these seven. Area is length times length, so its unit is the square metre, {{sup:2}}. Volume is length times length times length, so its unit is the cubic metre, {{sup:3}}. Speed is distance divided by time, so its unit is m/s. Force is mass times acceleration, so its unit is kg·m/s{{sup:2}}. We give that combination a short name, the newton, N.",
+       "The same body has one mass but different weights, because weight is the pull of gravity on the mass. Mass is measured with a beam or chemical balance in kilograms. Weight is measured with a spring balance in newtons. JAMB tests this pair often."
       ],
       "bullets": [
-       "Fundamentals: m, kg, s, A, K, mol, cd",
-       "Derived: m{{sup:2}}, m{{sup:3}}, m/s, N, J, W",
-       "Regular: square a{{sup:2}}, circle πr{{sup:2}}, cuboid lwh, cylinder πr{{sup:2}}h"
+       "The seven fundamental units are m, kg, s, A, K, mol and cd.",
+       "Area, volume, speed, force and energy are derived from those seven units.",
+       "A beam balance measures mass in kg; a spring balance measures weight in N."
       ],
-      "takeaway": "A unit is an identity card — carry it through every line of the calculation.",
+      "takeaway": "Seven units carry every measurement in physics; all other units are built from them.",
       "check": {
-       "question": "Which of these is an SI derived unit?",
+       "question": "Which list contains only fundamental SI units?",
        "options": [
-        "kilometre",
-        "ampere",
-        "newton",
-        "kelvin"
+        "metre, kilogram, second",
+        "newton, metre, second",
+        "joule, ampere, kelvin",
+        "metre, volt, kilogram"
        ],
-       "answer": 2,
-       "why": "The newton combines fundamental units (kg·m/s{{sup:2}}); the ampere and the kelvin are fundamental, and the kilometre is a prefixed metre."
+       "answer": 0,
+       "why": "The metre, kilogram and second are three of the seven fundamental units. The newton, joule and volt are derived."
       }
      }
     },
     {
      "type": "text",
      "content": {
-      "heading": "Measuring instruments and their least counts",
+      "heading": "Instruments and the size they measure",
       "paragraphs": [
-       "Instruments match their job: metre rule ±1 mm; vernier caliper ±0.1 mm (measures tubes inside); micrometer screw gauge ±0.01 mm; measuring cylinder — irregular solid volume by displacement; stop watch 0.01–0.1 s; beam balance (Buchert’s/chemical) matches unknown masses.",
-       "Least count is the smallest interval on the scale; the best reading any instrument gives is true ± half its least count. Accuracy is how near the truth a reading lies; precision is how finely it reads.",
-       "Common errors: parallax (view from above — the object appears shifted), zero error (reads non-zero at zero — subtract for positive, add for negative), calibration (marks misplaced). Estimate simple error as ± half a least count."
+       "Choose the instrument by the size of the thing you are measuring. A metre rule reads to 1 mm. It suits a table top or a room. A vernier caliper reads to 0.1 mm. It suits the inside of a tube or the diameter of a rod. A micrometer screw gauge reads to 0.01 mm. It suits the thickness of paper or the diameter of a wire.",
+       "For irregular solids such as a stone, fill a measuring cylinder with water and read the level. Lower the stone in and read the new level. The rise in water is the volume of the stone. A stopwatch measures short time intervals. A beam balance or a chemical balance compares an unknown mass with known masses.",
+       "The least count of an instrument is the smallest change it can show. Your reading cannot be better than half of that least count. Reading a scale from an angle gives parallax error. Read it with your eye straight in line with the mark. If an instrument reads 0.2 mm when nothing is between its jaws, subtract 0.2 mm from every reading you take."
       ],
       "bullets": [
-       "metre rule ±1 mm; vernier ±0.1 mm; micrometer ±0.01 mm",
-       "Irregular solids: displacement method with a measuring cylinder",
-       "Simple error estimate: half a least count; fix zero error first"
+       "A metre rule reads to 1 mm, a vernier caliper to 0.1 mm, and a micrometer to 0.01 mm.",
+       "The rise in water level in a cylinder gives the volume of an irregular solid.",
+       "Subtract a positive zero error from every reading taken with that instrument."
       ],
-      "takeaway": "Match the instrument to the size — a ruler cannot do a micrometer's job.",
+      "takeaway": "Match the instrument to the size, then correct the zero error before you trust the reading.",
       "check": {
-       "question": "The least count of a micrometer screw gauge is",
+       "question": "Which instrument gives the most precise reading of a wire diameter?",
        "options": [
-        "1 mm",
-        "0.1 mm",
-        "0.01 mm",
-        "0.001 mm"
+        "metre rule",
+        "measuring cylinder",
+        "micrometer screw gauge",
+        "beam balance"
        ],
        "answer": 2,
-       "why": "Each thimble division advances the spindle by 0.01 mm, which is the least count of a standard micrometer."
+       "why": "The micrometer reads to 0.01 mm, smaller than the 1 mm of a metre rule. A cylinder measures volume and a balance measures mass."
       }
      }
     },
     {
      "type": "text",
      "content": {
-      "heading": "Dimensions, homogeneity and standard form",
+      "heading": "Dimensions, standard form and error",
       "paragraphs": [
-       "Every derived unit has a dimension in M, L and T. Speed LT{{sup:-1}}; acceleration LT{{sup:-2}}; force MLT{{sup:-2}}; energy ML{{sup:2}}T{{sup:-2}}; pressure ML{{sup:-1}}T{{sup:-2}}; power ML{{sup:2}}T{{sup:-3}}.",
-       "Get dimensions from definitions: force = mass × acceleration = MLT{{sup:-2}}. Use them to (1) deduce forgotten units — replace unit letters with dimensions and compare powers; (2) test homogeneity — both sides must carry identical powers of M, L and T.",
-       "Standard form: exactly one digit left of the point — 46,200 = 4.62 × 10{{sup:4}}; 0.000321 = 3.21 × 10{{sup:-4}}. Significant figures: non-zero digits count; zeros between non-zero digits count; leading zeros do not; closing zeros in a decimal do."
+       "Dimensions show which fundamental quantities build a derived quantity. Use M for mass, L for length and T for time. Speed is length divided by time, so its dimensions are L{{sup:-1}}. Acceleration is speed divided by time, so its dimensions are L{{sup:-2}}. Force is mass times acceleration, so its dimensions are MLT{{sup:-2}}.",
+       "Two sides of a correct equation must have the same dimensions. This is called homogeneity. In {{sup:2}} = u{{sup:2}} + 2as, every term has L{{sup:2}}T{{sup:-2}}, so the equation passes the test. If one term has different dimensions, the equation is wrong. A dimensional check cannot prove an equation true, but it can prove one false.",
+       "Standard form writes a number as one digit before the decimal point times a power of ten. So 46,200 becomes 4.62 × 10{{sup:4}}, and 0.000321 becomes 3.21 × 10{{sup:-4}}. Significant figures are the digits that carry meaning. Zeros at the front do not count. Zeros between digits do count. Closing zeros after a decimal point do count, so 4.50 has three significant figures.",
+       "Estimate a simple error as half the least count of the instrument. Percentage error is the difference between measured and accepted values, divided by the accepted value, then multiplied by 100."
       ],
       "bullets": [
-       "M, L and T alone — never kg or seconds",
-       "Both sides of an equation must match: v{{sup:2}} = u{{sup:2}} + 2as → each side L{{sup:2}}T{{sup:-2}}",
-       "46,200 = 4.62 × 10{{sup:4}}; 0.000321 = 3.21 × 10{{sup:-4}}"
+       "Mass, length and time have the dimensions M, L and T.",
+       "Both sides of a homogeneous equation carry identical powers of M, L and T.",
+       "A number in standard form has one digit before the decimal point."
       ],
-      "takeaway": "An equation can be dimensionally correct and numerically wrong — dimensions check possibility, not truth.",
+      "takeaway": "Dimensions check whether an equation can be true; standard form and significant figures show how precisely you measured.",
       "check": {
-       "question": "The dimension of power is",
+       "question": "What are the dimensions of energy?",
        "options": [
         "MLT{{sup:-2}}",
-        "ML{{sup:2}}T{{sup:-3}}",
         "ML{{sup:2}}T{{sup:-2}}",
-        "ML{{sup:2}}T{{sup:-1}}"
+        "ML{{sup:2}}T{{sup:-3}}",
+        "ML{{sup:-1}}T{{sup:-2}}"
        ],
        "answer": 1,
-       "why": "Power = work ÷ time = (ML{{sup:2}}T{{sup:-2}}) ÷ T = ML{{sup:2}}T{{sup:-3}}."
+       "why": "Energy is force times distance. Force is MLT{{sup:-2}}, and distance is L, so energy is ML{{sup:2}}T{{sup:-2}}."
       }
      }
     },
@@ -297,7 +299,7 @@
      "content": {
       "title": "Exam tip",
       "tone": "tip",
-      "body": "JAMB derives units and tests homogeneity. Replace unit letters with dimensions; impossible formulas collapse."
+      "body": "When a question asks for an unknown unit, write the known quantities in M, L and T first. Cancel the powers, then match what is left to a named unit."
      }
     },
     {
@@ -306,28 +308,40 @@
       "problem": "Check whether v{{sup:2}} = u{{sup:2}} + 2as is homogeneous.",
       "steps": [
        {
-        "operation": "Dimension of each term",
-        "reason": "v, u velocities (LT{{sup:-1}}); a acceleration (LT{{sup:-2}}); s displacement (L). Best: match M, L and T powers on both sides — if they differ, the equation cannot hold. If unsure, check each term separately.",
-        "result": "v{{sup:2}} = L{{sup:2}}T{{sup:-2}}; u{{sup:2}} = L{{sup:2}}T{{sup:-2}}; 2as = L{{sup:2}}T{{sup:-2}}",
-        "predictPrompt": "What powers of L and T hide inside v{{sup:2}}? Work them out before looking."
+        "operation": "Write the dimensions of each symbol",
+        "reason": "v and u are velocities, a is acceleration and s is displacement. Dimensions use M, L and T.",
+        "result": "v = LT{{sup:-1}}; u = LT{{sup:-1}}; a = LT{{sup:-2}}; s = L",
+        "predictPrompt": "What are the dimensions of acceleration?"
        },
        {
-        "operation": "Add the terms",
-        "reason": "only terms with identical dimensions can be added",
-        "result": "u{{sup:2}} + 2as = L{{sup:2}}T{{sup:-2}} + L{{sup:2}}T{{sup:-2}} = L{{sup:2}}T{{sup:-2}}",
-        "predictPrompt": "Can you add terms whose powers differ?"
+        "operation": "Square the velocities",
+        "reason": "Squaring doubles the power of each dimension.",
+        "result": "v{{sup:2}} = L{{sup:2}}T{{sup:-2}}; u{{sup:2}} = L{{sup:2}}T{{sup:-2}}",
+        "predictPrompt": "What do you get when you square LT{{sup:-1}}?"
        },
        {
-        "operation": "Conclude",
-        "reason": "homogeneity is necessary for any equation to be possible",
-        "result": "Both sides are L{{sup:2}}T{{sup:-2}} — the equation is homogeneous",
-        "predictPrompt": "What would mismatched powers tell you?"
+        "operation": "Find the dimensions of 2as",
+        "reason": "Multiply acceleration by displacement. The number 2 has no dimensions.",
+        "result": "2as = L{{sup:2}}T{{sup:-2}}",
+        "predictPrompt": "What is LT{{sup:-2}} times L?"
        },
        {
-        "operation": "Check to confirm: plug in real numbers",
-        "reason": "A real case must obey it if the two sides match",
-        "result": "t ≈ 1.71 s from s = ut + ½at{{sup:2}}; v = u + at ≈ 13.4 m/s; v{{sup:2}} ≈ 180; u{{sup:2}} + 2as = 180 ✓",
-        "predictPrompt": "Try your own u, a and s. Does v{{sup:2}} always land on u{{sup:2}} + 2as?"
+        "operation": "Compare all three terms",
+        "reason": "Only terms with the same dimensions can be added or set equal.",
+        "result": "Every term is L{{sup:2}}T{{sup:-2}}",
+        "predictPrompt": "Do all three terms carry the same powers of L and T?"
+       },
+       {
+        "operation": "Check to confirm with numbers",
+        "reason": "A true equation also balances with real values. Take u = 4 m/s, a = 2 m/s{{sup:2}}, t = 3 s.",
+        "result": "v = u + at = 4 + 2 × 3 = 10 m/s",
+        "predictPrompt": "What is v after three seconds?"
+       },
+       {
+        "operation": "Compare both sides of the original equation",
+        "reason": "Both forms must give the same number.",
+        "result": "v{{sup:2}} = 100 and u{{sup:2}} + 2as = 16 + 84 = 100",
+        "predictPrompt": "Does 16 + 84 equal 100?"
        }
       ]
      }
@@ -335,38 +349,11 @@
     {
      "type": "guided_question",
      "content": {
-      "question": "Use dimensions to show that the newton (N) is equivalent to kg·m/s{{sup:2}}.",
+      "question": "Use dimensions to show that the newton is the same as kg·m/s{{sup:2}}.",
       "hints": [
-       "Start with Force = Mass × Acceleration.",
-       "Dimension is MLT{{sup:-2}} — collect the powers of M, L and T.",
-       "So a newton must carry one  M, one  L and T to the power −2; that is kg·m/s{{sup:2}}."
-      ]
-     }
-    },
-    {
-     "type": "worked_example",
-     "content": {
-      "heading": "A harder worked example: find a missing unit with dimensions",
-      "problem": "Find the unit of R in PV = nRT. (P: N/m{{sup:2}}, V: m{{sup:3}}, n: moles, T: K)",
-      "steps": [
-       {
-        "operation": "Write each quantity in fundamentals",
-        "reason": "pressure = N/m{{sup:2}} = kg·m{{sup:-1}}·s{{sup:-2}}; volume m{{sup:3}} — P × V removes one m. Best: cancel unit symbols to reach the missing unit. If unsure, write each piece in M, L, T and compare powers.",
-        "result": "P × V = kg·m{{sup:2}}·s{{sup:-2}} = mol·K × R",
-        "predictPrompt": "What powers of m survive when you multiply kg·m{{sup:-1}}·s{{sup:-2}} by m{{sup:3}}?"
-       },
-       {
-        "operation": "Solve for R",
-        "reason": "R = kg·m{{sup:2}}·s{{sup:-2}} ÷ (mol·K) = kg·m{{sup:2}}·s{{sup:-2}}·mol{{sup:-1}}·K{{sup:-1}}",
-        "result": "R has the unit kg·m{{sup:2}}·s{{sup:-2}}·mol{{sup:-1}}·K{{sup:-1}} — identical to J·mol{{sup:-1}}·K{{sup:-1}}",
-        "predictPrompt": "Which IS-unit does that product equal?"
-       },
-       {
-        "operation": "Check to confirm: plug the found unit back in",
-        "reason": "nRT ÷ V must come out in the unit of pressure, or R cannot be right",
-        "result": "mol × kg·m{{sup:2}}·s{{sup:-2}}·mol{{sup:-1}}·K{{sup:-1}} × K ÷ m{{sup:3}} = kg·m{{sup:-1}}·s{{sup:-2}} = N/m{{sup:2}} ✓ exactly the unit of P",
-        "predictPrompt": "Check the powers of m survive the subtraction. Do they?"
-       }
+       "Start from force = mass × acceleration.",
+       "Mass has dimensions M and acceleration has dimensions LT{{sup:-2}}.",
+       "Multiply them to get MLT{{sup:-2}}. Then write M as kg, L as m and T{{sup:-2}} as 1/s{{sup:2}}."
       ]
      }
     },
@@ -375,16 +362,16 @@
      "content": {
       "heading": "Go deeper: reading a vernier caliper and a micrometer",
       "paragraphs": [
-       "A vernier caliper refines one main-scale millimetre into ten equal vernier divisions, so each vernier division is 0.1 mm. Its reading is MSR (main scale reading just before the vernier zero) + the division on the vernier scale that coincides with a main-scale mark × 0.1 mm. Example: MSR = 2.4 cm and the 7th vernier division coincides — length = 2.4 + 0.07 = 2.47 cm.",
-       "A micrometer screw gauge goes smaller: each sleeve mark is 0.5 mm (half a millimetre), and the thimble is divided into 50, so each thimble division advances the spindle by 0.01 mm. Its reading is sleeve reading + thimble division coinciding × 0.01 mm. Example: sleeve reads 6.5 mm and the 27th thimble division aligns with the sleeve line — length = 6.5 + 0.27 = 6.77 mm.",
-       "Both instruments have an optional depth rod or outside jaws (vernier) and an anvil/spindle (micrometer). Strings and dividers measure non-straight objects: wind a string along the curve, mark its ends, then measure the straight string against a ruler. A zero error is corrected BEFORE adding anything: if the micrometer reads +0.02 mm at zero, subtract 0.02 mm from every reading."
+       "A vernier caliper has a main scale in millimetres and a sliding vernier scale. Ten vernier divisions span nine main scale divisions, so one vernier division is 0.9 mm. The difference between one main division and one vernier division is 0.1 mm. That difference is the least count. To read the instrument, note the main scale mark just before the vernier zero. Then find the vernier mark that lines up with a main scale mark. Multiply that vernier number by 0.1 mm and add the two readings. If the main scale reads 24 mm and the seventh vernier mark lines up, the length is 24 mm plus 0.7 mm, which is 24.7 mm.",
+       "The micrometer screw gauge works by turning a thimble. The sleeve carries a scale in half millimetres. The thimble has fifty divisions. One full turn moves the spindle by 0.5 mm, so one thimble division moves it by 0.01 mm. Read the last visible sleeve mark and add the thimble division that lines up with the sleeve line, multiplied by 0.01 mm. A sleeve reading of 6.5 mm with thimble division 27 gives 6.5 mm plus 0.27 mm, which is 6.77 mm.",
+       "Both instruments can carry a zero error. Close the jaws with nothing between them. If the micrometer reads 0.02 mm at closed, subtract 0.02 mm from every reading. If it reads minus 0.02 mm, add 0.02 mm to every reading. Correct the zero error before you add any other part of the reading. For a curved line such as a wire loop, lay a string along the curve, mark the ends, straighten the string and measure it with a metre rule."
       ],
       "bullets": [
-       "Vernier: MSR + (coinciding vernier division) × 0.1 mm",
-       "Micrometer: sleeve + (coinciding thimble division) × 0.01 mm",
-       "No device can beat its least count — estimate ± half a division"
+       "Vernier reading is the main scale reading plus the coinciding vernier number times 0.1 mm.",
+       "Micrometer reading is the sleeve reading plus the coinciding thimble number times 0.01 mm.",
+       "Correct a zero error before adding any other part of the reading."
       ],
-      "takeaway": "Add the main scale and the vernier/thimble reading — then fix the zero error."
+      "takeaway": "Add the main scale to the fine scale, then correct the zero error."
      }
     },
     {
@@ -392,33 +379,33 @@
      "content": {
       "heading": "Go deeper: errors, accuracy and significant figures",
       "paragraphs": [
-       "Errors come in two families. Systematic errors push every reading the same way — a mismarked scale, a zero error, parallax viewed from above (the object appears shifted toward the eye). Random errors scatter readings either way and cancel over many tries. JAMB consistently asks the difference, and 'calibrate before you measure' is the exam's expected fix.",
-       "Accuracy is how near the truth a reading lies; precision is how repeatable or fine it is. A leaky beam balance is precise (same wrong reading every time) but inaccurate (never sees the truth). Percentage error is |(experimental − accepted) ÷ accepted| × 100% — a lab favourite; simple estimate error is half the least count.",
-       "Significant figures follow three rules: non-zero digits are always significant; zeros between non-zero digits are significant (205 has three); leading zeros never are (0.0024 has two: 2 and 4); closing zeros after a decimal point are (4.50 has three). In standard form every digit shown is significant — 4.50 × 10{{sup:3}} signals three figures, while 4.5 × 10{{sup:3}} signals two."
+       "An error is the difference between a measured value and the true value. A mistake is different. A mistake is a blunder such as reading 5.2 cm for 6.2 cm. Systematic errors push every reading the same way. A scale marked wrongly or a zero error does this. Random errors scatter readings around the truth, and taking repeated readings reduces them. Calibration against a known standard removes a systematic error.",
+       "Accuracy describes how close a reading is to the truth. Precision describes how close repeat readings are to one another. A balance with a sticky pan can give the same wrong mass five times. That is precise but not accurate. Percentage error is the measured value minus the accepted value, divided by the accepted value, then multiplied by 100. Use the absolute value so the result is positive.",
+       "Significant figures are the digits that carry meaning. Every non-zero digit counts. Zeros between non-zero digits count, so 205 has three. Leading zeros do not count, so 0.0024 has two. Closing zeros after a decimal point do count, so 4.50 has three. In standard form every digit you write is significant. Writing 4.50 × 10{{sup:3}} promises three significant figures. Writing 4.5 × 10{{sup:3}} promises two. Quote only as many figures as your instrument can deliver."
       ],
       "bullets": [
-       "Systematic: same-way push; random: scatters then cancels",
-       "Percent error = (exp − acc) ÷ acc × 100%",
-       "4.50 × 10{{sup:3}} ≠ 4.5 × 10{{sup:3}} — closing zeros signal precision"
+       "Systematic errors push all readings one way; random errors scatter them.",
+       "Accuracy is closeness to the truth; precision is closeness between repeats.",
+       "Closing zeros after a decimal point are significant figures."
       ],
-      "takeaway": "Quote as many figures as the instrument actually delivers."
+      "takeaway": "Fix systematic errors, average out random ones, and quote only the figures your instrument can support."
      }
     },
     {
      "type": "text",
      "content": {
-      "heading": "Go deeper: how JAMB sets questions on this topic",
+      "heading": "Go deeper: how JAMB tests this topic",
       "paragraphs": [
-       "The IBASS syllabus lists this topic as the entry point to physics — and JAMB's question bank reflects it. Internally this topic carries one of the biggest single-topic totals in the 1983–2004 archive (27 mapped items). The recurring archetypes are: (1) 'which of these is a fundamental unit?' — the safe order is m, kg, s, A, K, mol, cd; (2) 'deduce the unit of X' with dimensions; (3) 'which equation is homogeneous?' — or which term fits the gap; (4) standard form conversion, either direction; (5) significant figures counting.",
-       "Instrument variation: metre rule vs vernier vs micrometer — the silt test is 'how precisely does this measure a diameter?' Answer: micrometer > vernier > metre rule. An irregular stone in an overflow can collects a measured volume of water — that is the stone's volume (top up the can to the brim first). A stop watch never measures anything well to 0.1 s below; small falls need light gates.",
-       "Compound variations fold two operations into one stem: 'a vernier reads 2.47 cm — write it in standard form and express its percentage error vs an accepted 2.50 cm.' Answer in two steps: 2.47 × 10{{sup:-2}} m; error = |2.47 − 2.50| / 2.50 × 100 = 1.2%. Practise both moves until the sequence is automatic — most candidates drop the mark on the percent step, not the subtraction."
+       "JAMB opens the paper with this topic because every later calculation uses it. The first recurring question asks you to pick the fundamental units from a mixed list. The seven to remember are the metre, kilogram, second, ampere, kelvin, mole and candela. The newton, joule, watt and pascal are all derived. A prefixed metre such as the kilometre is still a metre with a prefix, not a new fundamental unit.",
+       "The second recurring question gives an unknown unit inside an equation. Write every known quantity in M, L and T. Cancel what appears on both sides. The leftover dimensions name the missing unit. The third question asks which equation is homogeneous. Give every term the same dimensions, and reject any option where one term differs. A dimensional check cannot catch a wrong numerical factor, so it cannot prove an equation true.",
+       "The fourth question converts a number to standard form or counts significant figures. Move the decimal point until one digit stands before it, and count the places you moved as the power of ten. The fifth question compares instruments. A micrometer beats a vernier caliper, which beats a metre rule. For a stone in a measuring cylinder, the rise in water level is the volume of the stone. Fill the can to the brim first so no water spills before the stone goes in."
       ],
       "bullets": [
-       "Fundamental vs derived pick-the-odd-one-out",
-       "Homogeneity: term missing from u{{sup:2}} + 2as — try LT counterweights",
-       "Overflow can value = volume of the solid placed in it"
+       "Pick the fundamental units from a list by knowing the seven base units.",
+       "Find an unknown unit by cancelling dimensions on both sides of the equation.",
+       "The rise in water level in a cylinder gives the volume of an irregular solid."
       ],
-      "takeaway": "The archive shows the recurring variation list — drill the eight, not the hundred."
+      "takeaway": "Drill the five recurring question types; each one tests a single move you have already learned."
      }
     }
    ]
