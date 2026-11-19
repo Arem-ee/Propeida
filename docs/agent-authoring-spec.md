@@ -101,6 +101,12 @@ each other first?" — plain, answerable questions with concrete answers:
 "How much is each place in base three worth?", "What is 18 plus 3?". If a
 learner cannot parse the ask in one read, the prompt is broken. Numbers
 first when the answer is numeric.
+- **The reason must not leak the answer.** The reason states the rule or
+  principle ("each place is three times the one before it"); the result
+  carries the numbers for this question ("1, 3 and 9"); the prompt asks
+  for the concrete next computation. If the prompt can be answered by
+  reading the reason above it, the prediction is copying, not recall,
+  and the step must be rewritten.
 
 R.11 "Decimal" means a dotted number, never base ten. Never define
 base ten as decimal. Write "base ten". Zero occurrences in anything you ship.
