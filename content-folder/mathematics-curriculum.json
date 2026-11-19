@@ -1920,26 +1920,26 @@
       "problem": "Write 210 in base three as a base-ten number.",
       "steps": [
        {
-        "operation": "Name the places from the right",
-        "reason": "From the right the worths are 1, 3 and 9. Each place is three times the one before it.",
+        "operation": "Work out the worths from the right",
+        "reason": "Start at the right. The first place is worth 1. Each place to the left is three times the one before it.",
         "result": "Worths from the right: 1, 3 and 9",
-        "predictPrompt": "What are the places in base three worth?"
+        "predictPrompt": "What are the worths in base three, from the right?"
        },
        {
         "operation": "Multiply each digit by its place",
-        "reason": "The 2 is in the column worth 9. The 1 is in the column worth 3. The 0 is in the units column.",
-        "result": "(2 × 9) + (1 × 3) + (0 × 1) = 18 + 3 + 0",
-        "predictPrompt": "Which digit sits on which place?"
+        "reason": "Multiply each digit by the worth of its column.",
+        "result": "2 × 9 = 18, 1 × 3 = 3, 0 × 1 = 0",
+        "predictPrompt": "What is 2 × 9?"
        },
        {
         "operation": "Add the three answers",
-        "reason": "18 + 3 is 21, and the zero changes nothing.",
+        "reason": "Add the products. The zero adds nothing.",
         "result": "18 + 3 + 0 = 21",
         "predictPrompt": "What is 18 plus 3?"
        },
        {
         "operation": "Check to confirm: convert it back",
-        "reason": "Divide 21 by three and read the remainders upwards.",
+        "reason": "Divide 21 by three, writing each remainder, until nothing is left.",
         "result": "21 ÷ 3 = 7 r 0; 7 ÷ 3 = 2 r 1; 2 ÷ 3 = 0 r 2; which reads 210 in base three",
         "predictPrompt": "Does dividing 21 by 3 give 210 back in base three?"
        }
@@ -2018,9 +2018,9 @@
        },
        {
         "operation": "Convert to base ten",
-        "reason": "Place values in base four are 16, 4 and 1.",
+        "reason": "Multiply each digit by the worth of its column, then add.",
         "result": "1 × 16 + 3 × 4 + 2 = 30 in base ten",
-        "predictPrompt": "How do you convert 132 in base four?"
+        "predictPrompt": "What is 1 × 16?"
        },
        {
         "operation": "Divide 30 by five",
@@ -2325,15 +2325,15 @@
       "steps": [
        {
         "operation": "Multiply the ones",
-        "reason": "5 times 4 is 20. Base eight rolls over at eight. 20 is two eights with 4 left over.",
-        "result": "20 = 24{{sub:8}}, so write 4 and carry 2",
+        "reason": "Multiply the ones digit by 4, then see how many eights fit.",
+        "result": "5 × 4 = 20 = 24{{sub:8}}, so write 4 and carry 2",
         "predictPrompt": "What is five times four?"
        },
        {
         "operation": "Multiply the column worth eight",
-        "reason": "The 2 in 25 times 4 is 8. Add the 2 you carried: 10. Ten is one eight and 2 left over.",
+        "reason": "Multiply the eights-column digit by 4 and add the carry.",
         "result": "2 × 4 + 2 = 10 = 12{{sub:8}}, so write 2 and carry 1",
-        "predictPrompt": "Does the column worth eight roll over too?"
+        "predictPrompt": "What is 2 × 4 plus the carry?"
        },
        {
         "operation": "Write the final carry",
@@ -2357,8 +2357,8 @@
       "steps": [
        {
         "operation": "Set up the column addition",
-        "reason": "Ones: 2 + 0 = 2, no carry. Tens: 2 + 1 = 3. Hundreds: 1 plus whatever carries in.",
-        "result": "The tens row writes 0 and carries 1.",
+        "reason": "Add column by column: ones first, then the next column, then the next.",
+        "result": "Ones: 2 + 0 = 2, no carry. Tens: 2 + 1 = 3. Hundreds: 1 plus whatever carries in.",
         "predictPrompt": "What does 2 + 1 give in the next column?"
        },
        {
@@ -2971,13 +2971,13 @@
       "steps": [
        {
         "operation": "Add the two sales",
-        "reason": "Both days used from the same whole, so parts share a scale.",
+        "reason": "Both days used from the same whole, so the parts can be combined.",
         "result": "3/8 + 1/4",
-        "predictPrompt": "Do you add or subtract?"
+        "predictPrompt": "Are the two fractions over the same bottom?"
        },
        {
         "operation": "Make a common denominator",
-        "reason": "Use the smallest, 8.",
+        "reason": "Rewrite 1/4 with the same bottom as 3/8.",
         "result": "1/4 = 2/8",
         "predictPrompt": "How does 1/4 become eighths?"
        },
@@ -2989,8 +2989,8 @@
        },
        {
         "operation": "Subtract from the whole",
-        "reason": "All of the bale is 1; take away the sold part.",
-        "result": "8/8 - 5/8 = 3/8",
+        "reason": "The whole bale is 1, which is 8/8. Take away the sold part.",
+        "result": "8/8 − 5/8 = 3/8",
         "predictPrompt": "What is left from 8/8?"
        },
        {
@@ -3020,7 +3020,7 @@
         "predictPrompt": "Do you multiply or divide next?"
        },
        {
-        "operation": "Tip by tip, bottom by bottom",
+        "operation": "Top by top, bottom by bottom",
         "reason": "2 × 5 and 3 × 4.",
         "result": "{{frac:10|12}}",
         "predictPrompt": "What is 2 × 5 and 3 × 4?"
