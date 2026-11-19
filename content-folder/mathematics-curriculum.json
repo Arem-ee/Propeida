@@ -2772,44 +2772,94 @@
    "slug": "fractions-and-decimals",
    "topic": "fractions-decimals-approximations",
    "title": "Fractions and Decimals",
-   "objective": "Add, subtract, multiply and divide fractions and convert between fractions and decimals.",
-   "estimatedMinutes": 10,
+   "objective": "Explain fractions, compare them and calculate with them; convert between fractions, decimals and percentages.",
+   "estimatedMinutes": 12,
    "blocks": [
-    {
-     "type": "text",
-     "content": {
-      "heading": "Fractions and Decimals",
-      "paragraphs": [
-       "A trader shares three oranges equally among five customers. Each customer gets three-fifths of an orange. That sharing is a fraction, and its decimal form is 0.6. Fractions are everywhere in everyday life; the maths just gives them names, and once you can work with them, half the everyday calculation questions on the paper open up."
-      ],
-      "bullets": []
-     }
-    },
     {
      "type": "text",
      "content": {
       "heading": "What a fraction means",
       "paragraphs": [
-       "A fraction a/b means a divided by b. The top is the number of parts taken and the bottom is the number of parts in a whole. A fraction is therefore a division, not only a pair of numbers.",
-       "An improper fraction has a top greater than its bottom, as in {{frac:7|4}}. Its mixed form is 1 and {{frac:3|4}}, because one whole is four quarters. Conversion between the two forms is therefore a division with remainder.",
-       "A fraction can equal one when top and bottom are equal, be less than one when the top is smaller and be greater than one when the top is larger. That comparison decides the size before any calculation."
+       "A trader shares three oranges equally between five people. Each person gets the same amount, and we need a way to write it.",
+       "We write it as **three-fifths**, or **3/5**, or as the symbol **⅗**.",
+       "The top number says how many parts of the whole we are taking. The bottom number says how many equal parts the whole was cut into.",
+       "A fraction is therefore a type of division. **3/5** means three divided by five.",
+       "An improper fraction has a top bigger than its bottom, like **7/4**. It is more than one whole. We rewrite it as one **whole** and a bit left over, and we call that a mixed number, like **1 and 3/4**.",
+       "A fraction where top and bottom are equal, like **4/4**, is one whole. Smaller top than bottom means less than one whole."
       ],
-      "bullets": [
-       "a/b means a divided by b",
-       "Improper fractions convert to mixed fractions by division",
-       "Top smaller than bottom means less than one"
-      ],
-      "takeaway": "A fraction is a division, so its size is read from top against bottom.",
+      "bullets": [],
+      "takeaway": "A fraction is a division written as a shape: top is the parts taken, bottom is the parts in the whole.",
       "check": {
-       "question": "Which fraction is greater than one?",
+       "question": "What is **7/4** as a mixed number?",
        "options": [
-        "{{frac:3|5}}",
-        "{{frac:4|4}}",
-        "{{frac:7|3}}",
-        "{{frac:2|9}}"
+        "1 and 3/4",
+        "1 and 2/4",
+        "2 and 1/4",
+        "2 and 3/4"
        ],
-       "answer": 2,
-       "why": "The top is greater than the bottom, so the fraction is greater than one."
+       "answer": 0,
+       "why": "Divide 7 by 4. The quotient is 1 and the remainder is 3, so 7/4 = 1 and 3/4.",
+       "steps": [
+        {
+         "operation": "Divide top by bottom",
+         "reason": "Half the whole is made first, then the leftover.",
+         "result": "7 ÷ 4 = 1 r 3",
+         "predictPrompt": "What is 7 divided by 4?"
+        },
+        {
+         "operation": "Write the whole and the leftover",
+         "reason": "The remainder goes over the same bottom.",
+         "result": "1 and 3/4",
+         "predictPrompt": "Where does the 3 go?"
+        },
+        {
+         "operation": "Check to confirm: turn it back",
+         "reason": "1 and 3/4 should multiply back to 7/4.",
+         "result": "1 × 4 + 3 = 7",
+         "predictPrompt": "Can you put the mixed number back?"
+        }
+       ]
+      }
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "heading": "Which fraction is bigger",
+      "paragraphs": [
+       "Compare fractions by making their parts the same size.",
+       "Take **1/2** and **2/3**. The pieces are not the same size, so we cannot tell straight away.",
+       "Multiply top and bottom of 1/2 by three: **3/6**. Multiply top and bottom of 2/3 by two: **4/6**.",
+       "Now both fractions have sixths. **3/6** is smaller than **4/6**. So **1/2 is smaller than 2/3**.",
+       "This is how we spot equivalent fractions, like **1/2 is the same as 2/4, 3/6, 4/8**. The fraction keeps its size when you multiply top and bottom by the same number.",
+       "Use the same idea to put a list in order, smallest to biggest, or to spot the same fraction written two ways."
+      ],
+      "bullets": [],
+      "takeaway": "Compare fractions by writing them over the same bottom. Same parts can be added, subtracted and ordered.",
+      "check": {
+       "question": "Which of these is the same as **3/4**?",
+       "options": [
+        "6/8",
+        "8/6",
+        "6/4",
+        "3/8"
+       ],
+       "answer": 0,
+       "why": "Multiply top and bottom by 2. 3/4 = 6/8, the same value.",
+       "steps": [
+        {
+         "operation": "Try the top option",
+         "reason": "Multiplying by the same number must give an equivalent fraction.",
+         "result": "3 × 2 = 6, 4 × 2 = 8, so 6/8",
+         "predictPrompt": "What is 3 x 2 and 4 x 2?"
+        },
+        {
+         "operation": "Check the others",
+         "reason": "8/6 is the swap, 6/4 is more than 3/4, 3/8 is less.",
+         "result": "Only 6/8 has the same value",
+         "predictPrompt": "Which options clearly do not work?"
+        }
+       ]
       }
      }
     },
@@ -2818,55 +2868,91 @@
      "content": {
       "heading": "Adding and subtracting fractions",
       "paragraphs": [
-       "Fractions add by a common denominator. To add a/b and c/d, write both over bd and add the tops. The denominators therefore become the same before the tops are added.",
-       "The sum must then be reduced. A fraction that shares a common factor can be divided by that factor. Reduction is therefore the final step of every addition.",
-       "Subtraction follows the same rule with a minus in place of a plus. The common denominator is still the first step, and reduction is still the last."
+       "You cannot add **1/2** and **1/3** directly, because the pieces are different sizes.",
+       "Multiply the tops and bottoms to get a common denominator: **1/2 = 3/6** and **1/3 = 2/6**.",
+       "1/2 + 1/3 = 3/6 + 2/6 = 5/6",
+       "Reduce when you can: divide top and bottom by any number that fits both.",
+       "For subtraction, do the same: **5/6 − 1/4 = 10/12 − 3/12 = 7/12**, which has no common factor.",
+       "5/6 − 1/4 = 10/12 − 3/12 = 7/12",
+       "Multiplication is simpler: multiply top by top, bottom by bottom. **2/3 × 3/4 = 6/12 = 1/2**.",
+       "Division flips to multiplication: **2/3 ÷ 3/4 = 2/3 × 4/3 = 8/9**."
       ],
-      "bullets": [
-       "Add over a common denominator, then reduce",
-       "Subtract over a common denominator, then reduce",
-       "Reduction follows every addition and subtraction"
-      ],
-      "takeaway": "Find a common denominator first, add or subtract the tops, then reduce.",
+      "bullets": [],
+      "takeaway": "Match the bottoms, then add or subtract the tops. Reduce at the end. Multiplication is top by top, bottom by bottom; division is flip and multiply.",
       "check": {
-       "question": "What is {{frac:1|3}} + {{frac:2|3}}?",
+       "question": "What is **2/3 + 1/4**?",
        "options": [
-        "{{frac:3|6}}",
-        "{{frac:1|2}}",
-        "1",
-        "{{frac:3|9}}"
+        "11/12",
+        "3/7",
+        "8/12",
+        "3/4"
        ],
-       "answer": 2,
-       "why": "The denominator is already common, so the tops add to 3 over 3, which is 1."
+       "answer": 0,
+       "why": "Common denominator 12: 2/3 = 8/12, 1/4 = 3/12. 8/12 + 3/12 = 11/12.",
+       "steps": [
+        {
+         "operation": "Find a common denominator",
+         "reason": "Use 12, the lowest common multiple of 3 and 4.",
+         "result": "12",
+         "predictPrompt": "What is the smallest multiple of 3 and 4?"
+        },
+        {
+         "operation": "Rewrite both fractions",
+         "reason": "Multiply top and bottom of 2/3 by 4, and 1/4 by 3.",
+         "result": "2/3 = 8/12, 1/4 = 3/12",
+         "predictPrompt": "What is 2 x 4 and 3 x 3?"
+        },
+        {
+         "operation": "Add the tops",
+         "reason": "The bottoms match.",
+         "result": "8/12 + 3/12 = 11/12",
+         "predictPrompt": "What is 8 plus 3?"
+        }
+       ]
       }
      }
     },
     {
      "type": "text",
      "content": {
-      "heading": "Decimals and conversion",
+      "heading": "Decimals and how they connect",
       "paragraphs": [
-       "A decimal is a fraction over a power of ten, so 0.75 is 75 hundredths and reduces to {{frac:3|4}}. A recurring decimal does not terminate, and its repetend converts by a short algebraic step into a fraction.",
-       "Add and subtract decimals by lining up the decimal points first. Multiply by counting decimal places in the answer, so 0.4×0.3=0.12, and divide by scaling both numbers by a power of ten, so 4.8÷0.4=12.",
-       "Significant figures count from the first non-zero digit, and leading zeros do not count. Count 0.00457 as three figures (4, 5 and 7) and 2.345 as four. Round by the next digit, so 0.00457 to two figures becomes 0.0046, while 2.345 to three figures becomes 2.35."
+       "A decimal is just a fraction whose bottom is ten, a hundred or a thousand.",
+       "0.4 = 4/10 = 2/5",
+       "Read the digits from the point: the first is tenths (1/10), the second hundredths (1/100), the third thousandths (1/1000).",
+       "0.75 = 75/100 = 3/4",
+       "Percent means over 100. **50% is 50/100 = 1/2**. Convert both ways: divide the fraction by its top and the percentage is the answer × 1 (as a percent).",
+       "3/4 is **75%** — seventy-five hundredths.",
+       "Terminating decimals end after a few digits (like 0.5). Recurring decimals keep going forever (like 0.333… or the bar version 0.3̃).",
+       "Significant figures count from the first non-zero digit. **0.00457 has three significant figures (4, 5, 7)**. 2.345 has four.",
+       "Round by looking at the digit after the cut-off point: five or more rounds up, less than five stays."
       ],
-      "bullets": [
-       "Decimals are fractions over powers of ten.",
-       "Align points for adding and subtracting; count places for multiplying.",
-       "Scale by powers of ten before dividing.",
-       "Leading zeros do not count as significant figures."
-      ],
-      "takeaway": "Decimals convert by powers of ten, and rounding counts significant figures.",
+      "bullets": [],
+      "takeaway": "Decimals are fractions with 10, 100 or 1000 as the bottom. Percent is a decimal times 100. Recurring or terminating; counted by signficiant figures.",
       "check": {
-       "question": "What is 0.75 as a fraction?",
+       "question": "What is 7/20 as a percentage?",
        "options": [
-        "{{frac:7|5}}",
-        "{{frac:3|4}}",
-        "{{frac:7|10}}",
-        "{{frac:5|7}}"
+        "35%",
+        "3.5%",
+        "25%",
+        "14%"
        ],
-       "answer": 1,
-       "why": "0.75 is 75 hundredths, which reduces by 25 to {{frac:3|4}}."
+       "answer": 0,
+       "why": "Multiply top and bottom by 5: 7/20 = 35/100 = 35%.",
+       "steps": [
+        {
+         "operation": "Make the bottom 100",
+         "reason": "20 × 5 = 100, so multiply top by 5 too.",
+         "result": "7 × 5 = 35",
+         "predictPrompt": "What times 20 makes 100?"
+        },
+        {
+         "operation": "Read off the percentage",
+         "reason": "A bottom of 100 makes the top the percent.",
+         "result": "35%",
+         "predictPrompt": "What number sits over 100?"
+        }
+       ]
       }
      }
     },
@@ -2875,37 +2961,81 @@
      "content": {
       "title": "Exam tip",
       "tone": "tip",
-      "body": "For any fraction operation, name the denominator first. If it is not common, make it common before you touch the numerators, and reduce at the end. A fraction that is never reduced is marked as incomplete."
+      "body": "Write the operation down first: +, −, ×, ÷. Match the bottoms to add or subtract. Flip and multiply on division. Reduce at the end. If the question is a multiple-choice shortlist, none of the options repeat sloppy working."
      }
     },
     {
      "type": "worked_example",
      "content": {
-      "problem": "Work out {{frac:2|3}} + {{frac:3|4}}.",
+      "problem": "A trader sells 3/8 of a bale of cloth on Monday and 1/4 of the same bale on Tuesday. What fraction of the bale is left to sell?",
       "steps": [
        {
-        "operation": "Find a common denominator",
-        "reason": "3 and 4 multiply to 12, so 12 is common. Use the smallest common denominator because it keeps the arithmetic light. If you cannot see it, list multiples of 4 until one sits.",
-        "result": "{{frac:2|3}} = {{frac:8|12}} and {{frac:3|4}} = {{frac:9|12}}",
-        "predictPrompt": "Which numbers or terms work with each other first?"
+        "operation": "Add the two sales",
+        "reason": "Both days used from the same whole, so parts share a scale.",
+        "result": "3/8 + 1/4",
+        "predictPrompt": "Do you add or subtract?"
        },
        {
-        "operation": "Add the numerators",
-        "reason": "The denominators are now equal",
-        "result": "(8 + 9)/12 = {{frac:17|12}}",
-        "predictPrompt": "What could go wrong at this step, and how do you prevent it?"
+        "operation": "Make a common denominator",
+        "reason": "Use the smallest, 8.",
+        "result": "1/4 = 2/8",
+        "predictPrompt": "How does 1/4 become eighths?"
        },
        {
-        "operation": "Write as a mixed fraction",
-        "reason": "17 exceeds 12 by 5",
-        "result": "1 and {{frac:5|12}}, which is already reduced",
-        "predictPrompt": "How would you verify this answer satisfies the question?"
+        "operation": "Add",
+        "reason": "Both parts are now eighths.",
+        "result": "3/8 + 2/8 = 5/8",
+        "predictPrompt": "What is 3 + 2 in eighths?"
        },
        {
-        "operation": "Check to confirm: a magnitude sanity check",
-        "reason": "{{frac:2|3}} + {{frac:3|4}} = {{frac:17|12}} exceeds 1; write a mixed number",
-        "result": "1 {{frac:5|12}} sits between 1 and 2",
-        "predictPrompt": "How do you know the sum exceeds 1?"
+        "operation": "Subtract from the whole",
+        "reason": "All of the bale is 1; take away the sold part.",
+        "result": "8/8 - 5/8 = 3/8",
+        "predictPrompt": "What is left from 8/8?"
+       },
+       {
+        "operation": "Check to confirm: add the sales back",
+        "reason": "3/8 + 5/8 = 8/8.",
+        "result": "3/8 + 5/8 = 1",
+        "predictPrompt": "Does 3/8 + 5/8 = 1 whole?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "Work out {{frac:2|3}} ÷ {{frac:4|5}}.",
+      "steps": [
+       {
+        "operation": "Flip the second fraction",
+        "reason": "Division by a fraction is multiplication by its reciprocal.",
+        "result": "{{frac:4|5}} → {{frac:5|4}}",
+        "predictPrompt": "Which fraction flips?"
+       },
+       {
+        "operation": "Multiply top by top, bottom by bottom",
+        "reason": "Now multiply straight through.",
+        "result": "{{frac:2|3}} × {{frac:5|4}}",
+        "predictPrompt": "Do you multiply or divide next?"
+       },
+       {
+        "operation": "Tip by tip, bottom by bottom",
+        "reason": "2 × 5 and 3 × 4.",
+        "result": "{{frac:10|12}}",
+        "predictPrompt": "What is 2 × 5 and 3 × 4?"
+       },
+       {
+        "operation": "Reduce",
+        "reason": "Both are divisible by 2.",
+        "result": "{{frac:5|6}}",
+        "predictPrompt": "What is 10/12 reduced?"
+       },
+       {
+        "operation": "Check to confirm: multiply back",
+        "reason": "{{frac:5|6}} × {{frac:4|5}} should return {{frac:2|3}}.",
+        "result": "{{frac:20|30}} = {{frac:2|3}}",
+        "predictPrompt": "Does multiplying by 4/5 give back 2/3?"
        }
       ]
      }
@@ -2913,11 +3043,11 @@
     {
      "type": "guided_question",
      "content": {
-      "question": "Work out {{frac:3|4}} − {{frac:2|5}}. Give the common denominator, then reduce.",
+      "question": "A pupil scores 7/10 in the first test and 14/20 in the second. Are the two marks equivalent? Show your working.",
       "hints": [
-       "Multiply the denominators for a common one",
-       "Subtract the new numerators",
-       "Reduce and write as a mixed fraction if needed"
+       "Compare 7/10 and 14/20.",
+       "Reduce 14/20 by dividing by 2.",
+       "Decide which is bigger or if they are the same."
       ]
      }
     },
@@ -2926,129 +3056,93 @@
      "content": {
       "heading": "Go deeper: Why the common denominator works",
       "paragraphs": [
-       "A fraction counts parts of a whole. Two fractions can only be added when their parts are the same size, which is what a common denominator provides. That sameness is why the denominators must match, and why skipping this step is the one habit that undoes all the others.",
-       "Multiplying top and bottom by the same number does not change a fraction. That equivalence is why {{frac:2|3}} and {{frac:8|12}} are the same quantity. The common denominator is therefore not a trick, but a change of size.",
-       "Reduction then returns the fraction to its smallest parts. A fraction that is not reduced is not wrong, but it is incomplete. Examiners therefore mark the reduced form.",
-       "That reduction is why cancelling is valid. A common factor in top and bottom counts the same parts twice, so removing it simplifies the count.",
-       "A common denominator works because multiplying top and bottom by the same number preserves the value of the fraction. Every addition and subtraction of fractions reduces to it; multiplication does not need it at all, which is why it reverses so easily."
+       "Two fractions can only be added when the pieces are the same size.",
+       "That is the whole story. The textbook notation hides the simplicity but the meaning is not complicated.",
+       "Look at 1/2 and 1/3 again. One has a denominator of 2, the other a denominator of 3.",
+       "They are different pieces. Half of a whole is bigger than a third of a whole, so 'bigger fraction' this way needs a bigger context.",
+       "1/2 + 1/3 = 3/6 + 2/6 = 5/6",
+       "The answer is five-sixths. That is bigger than one-half and smaller than two.",
+       "Treat the denominator like the same piece size. Whatever makes the denominators match is the common denominator.",
+       "Two fractions cannot be added while their feet are on different ground. Common ground first, then the tops can be added.",
+       "3/4 + 1/6 = 9/12 + 2/12 = 11/12",
+       "Notice how both fractions are now over 12. The trick is never to stop halfway, stop listing, or subtract a wrong term."
       ],
       "bullets": [
-       "Same-sized parts can be added; unlike parts cannot",
-       "Multiplying top and bottom by the same number keeps the fraction",
-       "Reduction removes a common factor from both"
-      ]
+       "Match pieces first: common denominator, then add tops",
+       "Reduce at the end: divide by the largest common factor"
+      ],
+      "takeaway": ""
      }
     },
     {
      "type": "text",
      "content": {
-      "heading": "Go deeper: Multiplying and dividing fractions",
+      "heading": "Go deeper: Recurring and terminating decimals",
       "paragraphs": [
-       "Multiplication needs no common denominator. Multiply top by top and bottom by bottom. That direct method is why multiplication is shorter than addition, and why examiners put a × between fractions to test whether you know the difference.",
-       "Division by a fraction means multiplying by its reciprocal. To divide by {{frac:2|3}}, multiply by {{frac:3|2}}. That inversion is why a division question becomes a multiplication question.",
-       "Cancelling before multiplying saves work. If a top and a bottom share a factor, divide them first. Cancel early and you keep the numbers small; leave the cancelling until the end and you inherit a large fraction you then have to reduce.",
-       "That cancelling is the same reduction as in addition, only earlier. Examiners reward it because it prevents a large fraction that must then be reduced."
+       "Most fraction-to-decimal conversions are quick. Some are not, but the pattern tells you which.",
+       "1/4 = 0.25",
+       "That is a terminating decimal. Try dividing it yourself: 4 goes into 1.0 twice with 0.2 left, into 0.20 five times. Done.",
+       "1/3 = 0.333…",
+       "That is a recurring decimal. No matter how long you keep dividing by 3, you never reach zero.",
+       "Look at the denominator before you divide. If the denominator is a product of 2s and 5s only, the fraction terminates.",
+       "7/40 = 0.175",
+       "If any other prime appears — 3, 7, 11, 13 — the fraction recurrs.",
+       "5/11 = 0.4545…",
+       "Recognising this saves the algebra of repetend conversion. You know immediately whether to simplify the division or set up a repeating-pattern solution.",
+       "To convert a terminating decimal back, multiply by a power of ten until the decimal point moves to after the repeated part, then divide.",
+       "0.75 = 75/100 = 3/4"
       ],
       "bullets": [
-       "Multiply top by top and bottom by bottom",
-       "Divide by flipping the divisor and multiplying",
-       "Cancel common factors before multiplying"
-      ]
+       "Denominator: only 2 and 5 → terminates",
+       "Any other prime → recurring"
+      ],
+      "takeaway": ""
      }
     },
     {
      "type": "text",
      "content": {
-      "heading": "Go deeper: Recurring decimals and approximations",
+      "heading": "Go deeper: Recurring decimals in full",
       "paragraphs": [
-       "Look at the denominator: only 2s and 5s, terminating; any other prime factor, recurring. Test the denominator first; it sorts every case in seconds, before any conversion is attempted.",
-       "The conversion sets x equal to the decimal and uses the repetend to eliminate it. A decimal that starts with a non-repeating part needs a longer step. That step is algebraic, not arithmetic.",
-       "An approximation rounds a decimal to a stated place. That rounding must follow the next digit, not the size of the number. If you round by guesswork, you lose the mark.",
-       "That rule is why 0.75 rounds to 0.8 to one decimal place. The next digit is five, so the kept digit rises, and the fraction of the measurement that was kept is still the fraction that matters.",
-       "Rounding a decimal to a stated place looks at the next digit. If that digit is five or more, the last kept digit rises by one.",
-       "A recurring decimal such as 0.333… is written 0.3̄, and the bar marks where the repeat begins. Every recurring decimal is a fraction whose denominator has a prime factor other than 2 or 5, so recognising the factor is a fast way to predict whether the decimal repeats."
+       "A recurring decimal has a section that repeats forever. The simplest is 0.333….",
+       "1 = 3 × 0.333…",
+       "Let x = a repeating decimal, then form equations by multiplying by the right power of 10.",
+       "let x = 0.333…",
+       "Then 10x = 3.333…",
+       "Subtract: 10x − x = 3.333… − 0.333…",
+       "9x = 3",
+       "x = 3/9 = 1/3",
+       "This method proves something every learner can see with their eyes. The algebra is not magic. It just lines up the digits.",
+       "For a decimal like 0.125125125…, let x = 0.125125…, then 1000x = 125.125125…, so 999x = 125 and x = 125/999.",
+       "0.125125… = 125/999",
+       "A mix like 0.1666… can be trickier. Write the non-repeating part as a fraction of the power of 10, then repeat x."
       ],
       "bullets": [
-       "Recurring decimals have a repeating repetend",
-       "Conversion uses an algebraic step to eliminate it",
-       "Round by the next digit, not by guesswork"
-      ]
+       "x = the decimal; multiply by the right power of 10; subtract; divide"
+      ],
+      "takeaway": ""
      }
     },
     {
-     "type": "worked_example",
+     "type": "text",
      "content": {
-      "heading": "Go deeper: A harder worked example: Nested division",
-      "problem": "Work out {{frac:5|6}} ÷ ({{frac:2|3}} − {{frac:1|4}}).",
-      "steps": [
-       {
-        "operation": "Simplify the brackets first",
-        "reason": "The minus sign inside applies before dividing, so the outer fraction waits. Use the order of operations strictly; if you relax it, do the inner step twice and compare.",
-        "result": "{{frac:2|3}} − {{frac:1|4}} = {{frac:8|12}} − {{frac:3|12}} = {{frac:5|12}}",
-        "predictPrompt": "In your own words, why does this step come before the next one?"
-       },
-       {
-        "operation": "Turn division into multiplication",
-        "reason": "Dividing by a fraction means multiplying by its reciprocal, so invert {{frac:5|12}}.",
-        "result": "{{frac:5|6}} × {{frac:12|5}} = {{frac:60|30}}",
-        "predictPrompt": "What would a weaker answer look like here?"
-       },
-       {
-        "operation": "Reduce the fraction",
-        "reason": "Both 5s and the factors 6 and 12 share a common factor, so cancel them first.",
-        "result": "Answer is 2",
-        "predictPrompt": "How would you verify this answer satisfies the question?"
-       },
-       {
-        "operation": "Flip check",
-        "reason": "Division is multiplication by the reciprocal: {{frac:5|6}} × {{frac:12|5}}",
-        "result": "Every division is a flipped multiply",
-        "predictPrompt": "Why does division flip into multiplication?"
-       },
-       {
-        "operation": "Check to confirm: multiply back to the dividend",
-        "reason": "Answer times divisor must return the dividend, so a wrong quotient outs itself here.",
-        "result": "2 × {{frac:5|12}} = {{frac:10|12}} = {{frac:5|6}} ✓, exactly the dividend, so the answer 2 holds",
-        "predictPrompt": "Multiply your answer by the bracket. Do you recover {{frac:5|6}}?"
-       }
-      ]
-     }
-    },
-    {
-     "type": "worked_example",
-     "content": {
-      "problem": "University hard tier: express (√3 + 1)/(√3 − 1) in the form a + b√3, where a and b are rational numbers.",
-      "steps": [
-       {
-        "operation": "Rationalise the denominator",
-        "reason": "Multiply top and bottom by the conjugate",
-        "result": "[(√3 + 1)²] / [(√3 − 1)(√3 + 1)] = (4 + 2√3) / 2",
-        "predictPrompt": "What is the conjugate of √3 − 1?"
-       },
-       {
-        "operation": "Simplify the denominator",
-        "reason": "Difference of squares: (√3)² − 1² = 3 − 1 = 2",
-        "result": "(√3 − 1)(√3 + 1) = 2",
-        "predictPrompt": "What is (√3 − 1)(√3 + 1)?"
-       },
-       {
-        "operation": "Simplify the numerator",
-        "reason": "(√3 + 1)² = 3 + 2√3 + 1 = 4 + 2√3",
-        "result": "(√3 + 1)² = 4 + 2√3",
-        "predictPrompt": "What is (√3 + 1)²?"
-       },
-       {
-        "operation": "Divide through",
-        "reason": "Both terms carry a factor of 2",
-        "result": "(4 + 2√3)/2 = 2 + √3",
-        "predictPrompt": "What is (4 + 2√3)/2?"
-       },
-       {
-        "operation": "Check to confirm: multiply back and compare",
-        "reason": "If 2 + √3 is right, multiplying by (√3 − 1) must return (√3 + 1)",
-        "result": "(2 + √3)(√3 − 1) = 2√3 − 2 + 3 − √3 = √3 + 1 ✓",
-        "predictPrompt": "Does (2 + √3) x (√3 − 1) give √3 + 1?"
-       }
+      "heading": "Go deeper: The 2/3 of a number",
+      "paragraphs": [
+       "A quarter of 60 is found by dividing, not multiplying. 60 ÷ 4 = 15.",
+       "60 ÷ 4 = 15",
+       "A fifth of 80 is the same idea: 80 ÷ 5 = 16.",
+       "80 ÷ 5 = 16",
+       "Then three quarters of 60 is 3 × 15 = 45.",
+       "Two thirds of a whole is 2 times the whole divided by 3.",
+       "(2 × 60) ÷ 3 = 40",
+       "Nine tenths of 80 is 9 × (80 ÷ 10) = 9 × 8 = 72.",
+       "(9 × 80) ÷ 10 = 72",
+       "Take the number apart into the fraction in that order and it always works. The whole must divide by the bottom first, then multiply by the top."
+      ],
+      "bullets": [
+       "Half of a number: divide by 2",
+       "A fifth of a number: divide by 5",
+       "Seven eighths of: divide by 8, multiply by 7"
       ]
      }
     }
