@@ -137,6 +137,18 @@ four options, plus a `why` string every time.
 R.16 British spelling, British punctuation, British idiom. No American
 spelling in any line of an authored lesson, example, check or prompt.
 
+R.17 Render and inspect the actual page before declaring the work done.
+Data checks and seed verification prove the bytes landed; they do not
+prove the page looks right. Open the rendered lesson in a browser and
+look at it (the public preview route is
+`/preview/lesson-db/<subject>/<slug>`), or the page you changed for any
+other implementation. Check the things that can survive every script:
+bare superscript tokens rendering as floating `²`, broken bold spans,
+missing glossary underlines, mangled fractions, overflow, and the
+mobile width. If you cannot render it, say so explicitly and do not
+claim the work is visually verified. This rule applies to every
+implementation, not only lessons.
+
 ## Pipeline
 
 1. Locate the lesson in the subject's curriculum file. Read the IBASS topic
