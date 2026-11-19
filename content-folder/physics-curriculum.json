@@ -214,12 +214,12 @@
       "heading": "Fundamental quantities and their units",
       "paragraphs": [
        "A physical quantity is anything you can measure. Length, mass and time are physical quantities. Some quantities stand on their own. They are called fundamental quantities. There are seven, and each has one SI unit.",
-       "Length is distance. Its unit is the metre, symbol m. Mass is the amount of matter in a body. Its unit is the kilogram, kg. Time is duration. Its unit is the second, s. Electric current has the ampere, A. Temperature has the kelvin, K. Amount of substance has the mole, mol. Luminous intensity has the candela, cd.",
-       "Derived quantities come from these seven. Area is length times length, so its unit is the square metre, {{sup:2}}. Volume is length times length times length, so its unit is the cubic metre, {{sup:3}}. Speed is distance divided by time, so its unit is m/s. Force is mass times acceleration, so its unit is kg·m/s{{sup:2}}. We give that combination a short name, the newton, N.",
+       "Length is distance. Its unit is the metre, symbol **m**. Mass is the amount of matter in a body. Its unit is the kilogram, **kg**. Time is duration. Its unit is the second, **s**. Electric current has the ampere, **A**. Temperature has the kelvin, **K**. Amount of substance has the mole, **mol**. Luminous intensity has the candela, **cd**.",
+       "Derived quantities come from these seven. Area is length times length, so its unit is the square metre, **m{{sup:2}}**. Volume is length times length times length, so its unit is the cubic metre, **m{{sup:3}}**. Speed is distance divided by time, so its unit is **m/s**. Force is mass times acceleration, so its unit is **kg·m/s{{sup:2}}**. We give that combination a short name, the newton, N.",
        "The same body has one mass but different weights, because weight is the pull of gravity on the mass. Mass is measured with a beam or chemical balance in kilograms. Weight is measured with a spring balance in newtons. JAMB tests this pair often."
       ],
       "bullets": [
-       "The seven fundamental units are m, kg, s, A, K, mol and cd.",
+       "The seven fundamental units are **m, kg, s, A, K, mol** and **cd**.",
        "Area, volume, speed, force and energy are derived from those seven units.",
        "A beam balance measures mass in kg; a spring balance measures weight in N."
       ],
@@ -249,7 +249,7 @@
       "bullets": [
        "A metre rule reads to 1 mm, a vernier caliper to 0.1 mm, and a micrometer to 0.01 mm.",
        "The rise in water level in a cylinder gives the volume of an irregular solid.",
-       "Subtract a positive zero error from every reading taken with that instrument."
+       "Subtract a **positive zero error** from every reading taken with that instrument."
       ],
       "takeaway": "Match the instrument to the size, then correct the zero error before you trust the reading.",
       "check": {
@@ -271,14 +271,14 @@
       "heading": "Dimensions, standard form and error",
       "paragraphs": [
        "Dimensions show which fundamental quantities build a derived quantity. Use M for mass, L for length and T for time. Speed is length divided by time, so its dimensions are L{{sup:-1}}. Acceleration is speed divided by time, so its dimensions are L{{sup:-2}}. Force is mass times acceleration, so its dimensions are MLT{{sup:-2}}.",
-       "Two sides of a correct equation must have the same dimensions. This is called homogeneity. In {{sup:2}} = u{{sup:2}} + 2as, every term has L{{sup:2}}T{{sup:-2}}, so the equation passes the test. If one term has different dimensions, the equation is wrong. A dimensional check cannot prove an equation true, but it can prove one false.",
+       "Two sides of a correct equation must have the same dimensions. This is called homogeneity. In **v{{sup:2}} = u{{sup:2}} + 2as**, every term has L{{sup:2}}T{{sup:-2}}, so the equation passes the test. If one term has different dimensions, the equation is wrong. A dimensional check cannot prove an equation true, but it can prove one false.",
        "Standard form writes a number as one digit before the decimal point times a power of ten. So 46,200 becomes 4.62 × 10{{sup:4}}, and 0.000321 becomes 3.21 × 10{{sup:-4}}. Significant figures are the digits that carry meaning. Zeros at the front do not count. Zeros between digits do count. Closing zeros after a decimal point do count, so 4.50 has three significant figures.",
        "Estimate a simple error as half the least count of the instrument. Percentage error is the difference between measured and accepted values, divided by the accepted value, then multiplied by 100."
       ],
       "bullets": [
        "Mass, length and time have the dimensions M, L and T.",
-       "Both sides of a homogeneous equation carry identical powers of M, L and T.",
-       "A number in standard form has one digit before the decimal point."
+       "Both sides of a homogeneous equation carry identical powers of **M, L** and **T**.",
+       "A number in standard form has **one digit** before the decimal point."
       ],
       "takeaway": "Dimensions check whether an equation can be true; standard form and significant figures show how precisely you measured.",
       "check": {
