@@ -74,7 +74,12 @@ function LoginForm() {
     }
   }
 
-  const showStatus = confirmed || errParam === 'verification_failed' || Boolean(error)
+  const linkError =
+    errParam === 'verification_failed' ||
+    errParam === 'link_expired' ||
+    errParam === 'auth_failed' ||
+    errParam === 'oauth_failed'
+  const showStatus = confirmed || linkError || Boolean(error)
 
   return (
     <>
@@ -90,6 +95,18 @@ function LoginForm() {
           {errParam === 'verification_failed' && (
             <div role="alert" className="rounded-xl bg-red-50 px-4 py-3 text-xs font-semibold text-red-700">
               We could not verify that link, so it may have expired
+            </div>
+          )}
+
+          {errParam === 'link_expired' && (
+            <div role="alert" className="rounded-xl bg-red-50 px-4 py-3 text-xs font-semibold text-red-700">
+              That link has expired, so go back to sign up and request a new one
+            </div>
+          )}
+
+          {(errParam === 'auth_failed' || errParam === 'oauth_failed') && (
+            <div role="alert" className="rounded-xl bg-red-50 px-4 py-3 text-xs font-semibold text-red-700">
+              We could not finish signing you in, so try again
             </div>
           )}
 

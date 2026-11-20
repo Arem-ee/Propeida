@@ -1,5 +1,6 @@
 import { type NextRequest, NextResponse } from 'next/server'
 import { createServerClient } from '@supabase/ssr'
+import { type EmailOtpType, type User } from '@supabase/supabase-js'
 
 async function waitForProfile(supabase: ReturnType<typeof createServerClient>, userId: string) {
   const delays = [300, 600, 1200, 2400]
@@ -25,14 +26,31 @@ async function waitForProfile(supabase: ReturnType<typeof createServerClient>, u
   console.warn('[auth/confirm] Profile not visible after 5 attempts, redirecting anyway')
 }
 
+/** Only allow local paths so `next` can never become an open redirect. */
+function safeNext(value: string | null): string {
+  if (!value || !value.startsWith('/') || value.startsWith('//')) return '/home'
+  return value
+}
+
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url)
-  const code = searchParams.get('code')
   // Redirect back to the exact host the user started from so auth never
   // bounces users to a different domain (e.g. a Vercel deployment URL).
   const baseUrl = new URL(request.url).origin
+  const next = safeNext(searchParams.get('next'))
 
-  if (code) {
+  const errorCode = searchParams.get('error_code')
+  const errorDescription = searchParams.get('error_description')
+  if (errorCode || errorDescription) {
+    const kind = errorCode === 'otp_expired' ? 'link_expired' : 'verification_failed'
+    return NextResponse.redirect(new URL(`/login?error=${kind}`, baseUrl))
+  }
+
+  const code = searchParams.get('code')
+  const tokenHash = searchParams.get('token_hash')
+  const type = searchParams.get('type') as EmailOtpType | null
+
+  if (code || (tokenHash && type)) {
     const tempRes = NextResponse.next()
 
     const supabase = createServerClient(
@@ -52,16 +70,24 @@ export async function GET(request: NextRequest) {
       }
     )
 
-    const { error } = await supabase.auth.exchangeCodeForSession(code)
+    let user: User | null = null
+    let failure: string | null = null
 
-    if (!error) {
-      const { data: { user } } = await supabase.auth.getUser()
-      if (user) {
-        await waitForProfile(supabase, user.id)
-      }
+    if (code) {
+      const { data, error } = await supabase.auth.exchangeCodeForSession(code)
+      user = data.user ?? null
+      failure = error?.message ?? null
+    } else {
+      // Custom email templates send token_hash + type instead of a fragment.
+      const { data, error } = await supabase.auth.verifyOtp({ token_hash: tokenHash!, type: type! })
+      user = data.user ?? null
+      failure = error?.message ?? null
+    }
 
-      const redirectPath = '/home'
-      const response = NextResponse.redirect(new URL(redirectPath, baseUrl))
+    if (!failure) {
+      if (user) await waitForProfile(supabase, user.id)
+
+      const response = NextResponse.redirect(new URL(next, baseUrl))
       for (const cookie of tempRes.cookies.getAll()) {
         // Preserve attributes (maxAge, path, sameSite, ...) — dropping them
         // turns the session cookies into session-only cookies that are lost
@@ -78,6 +104,8 @@ export async function GET(request: NextRequest) {
       }
       return response
     }
+
+    console.error('[auth/confirm] exchange failed:', failure)
   }
 
   return NextResponse.redirect(new URL('/login?error=verification_failed', baseUrl))

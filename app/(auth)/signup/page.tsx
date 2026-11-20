@@ -120,7 +120,11 @@ export default function SignupPage() {
 
     setLoading(true)
 
-    const redirectPath = typeof window !== 'undefined' ? localStorage.getItem('pending_redirect') || '/login?confirmed=true' : '/login?confirmed=true'
+    // The confirmation link must land on a page that can read the session.
+    // Supabase's default email template returns tokens in a URL fragment,
+    // which a server route cannot see, so /auth/finish handles the handoff.
+    const storedNext = typeof window !== 'undefined' ? localStorage.getItem('pending_redirect') : null
+    const redirectPath = storedNext && storedNext.startsWith('/') && !storedNext.startsWith('//') ? storedNext : '/home'
 
     const supabase = supabaseRef.current
     const { data: signUpData, error: authError } = await supabase.auth.signUp({
@@ -128,7 +132,7 @@ export default function SignupPage() {
       password,
       options: {
         data: { username },
-        emailRedirectTo: `${window.location.origin}/api/auth/confirm?next=${encodeURIComponent(redirectPath)}`,
+        emailRedirectTo: `${window.location.origin}/auth/finish?next=${encodeURIComponent(redirectPath)}`,
       },
     })
 
