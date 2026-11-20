@@ -1749,7 +1749,7 @@
      "content": {
       "heading": "What a base is",
       "paragraphs": [
-       "You count on ten fingers. That is why base ten exists. Every base that is not base ten counts in bundles of a different size. A **digit** is one of the marks 0 to 9.",
+       "You count on ten fingers. That is why base ten exists. Every base that is not base ten counts in bundles of a different size. A **digit** is one written mark. Base ten uses 0 to 9.",
        "Now imagine you counted on five fingers instead of ten. Each full hand is a bundle of five.",
        "Counting **23** that way, you get **4** full bundles of five, with **3** ones over.",
        "Mathematicians write **43{{sub:5}}** for that.",
@@ -1789,14 +1789,18 @@
      "content": {
       "heading": "What each place is worth",
       "paragraphs": [
-       "In base ten, the places are **thousands** (1000), **hundreds** (100), **tens** (10) and **units** (1). Each place is ten times the one to its right.",
-       "The same holds in any base. In base five the worths are **1**, **5** and **25**.",
-       "In base three the worths are **1**, **3**, **9** and **27**.",
-       "We can also write those places with powers of the base: **3²**, **3¹**, **3⁰** are the same as nine, three and one. In base ten that is **10³**, **10²**, **10¹**, **10⁰**. Same worths, shorter writing.",
-       "Digits stay smaller than the base. In base five, **5** never appears; it is the next bundle."
+       "In base ten the places from the right are worth **1**, **10**, **100** and **1000**. We call them units, tens, hundreds and thousands.",
+       "Now take a number written in base five: **43{{sub:5}}**.",
+       "The right digit sits on the worth 1. The next digit sits on the worth 5.",
+       "So **43{{sub:5}}** means 4 of the 5s and 3 of the 1s.",
+       "4 × 5 + 3 × 1 = 23",
+       "So 43{{sub:5}} is 23 in base ten. That is what place worths are for.",
+       "In base three the worths from the right are **1**, **3**, **9** and **27**.",
+       "We can write the same worths as powers of the base: **3² = 9**, **3¹ = 3**, **3⁰ = 1**. Same numbers, shorter writing.",
+       "A digit must be smaller than the base. Base five uses **0, 1, 2, 3 and 4**. A 5 would already be the next bundle."
       ],
       "bullets": [],
-      "takeaway": "Name the places from the right: units, then the base, then the base squared.",
+      "takeaway": "Every place is the bundle size times the one before it. Digits stay below the bundle size.",
       "check": {
        "question": "In base five, what is the third place worth from the right?",
        "options": [
