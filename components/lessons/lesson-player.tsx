@@ -342,7 +342,7 @@ function WorkedCard({
         </p>
       )}
       <p className="mt-2 rounded-2xl bg-ink p-4 font-display text-lg font-medium leading-snug text-white">
-        {example.problem}
+        <MathText text={example.problem} />
       </p>
       <div className="mt-4 space-y-3">
         {example.steps.map((step, i) => {
@@ -769,7 +769,7 @@ export default function LessonPlayer({
               <div className="rounded-2xl bg-blue-50/60 border border-blue-100 p-3.5 animate-pop">
                 <div className="flex gap-2.5">
                   <Lightbulb className="h-4 w-4 shrink-0 text-blue-600 mt-0.5" />
-                  <p className="text-sm font-bold text-blue-900">Hint {revealedHints}: {enhancement.supported.hints[revealedHints - 1]}</p>
+                  <p className="text-sm font-bold text-blue-900">Hint {revealedHints}: <MathText text={enhancement.supported.hints[revealedHints - 1] as string} /></p>
                 </div>
               </div>
             )}
