@@ -1789,18 +1789,22 @@
      "content": {
       "heading": "What each place is worth",
       "paragraphs": [
-       "In base ten the places from the right are worth **1**, **10**, **100** and **1000**. We call them units, tens, hundreds and thousands.",
-       "Now take a number written in base five: **43{{sub:5}}**.",
-       "The right digit sits on the worth 1. The next digit sits on the worth 5.",
-       "So **43{{sub:5}}** means 4 of the 5s and 3 of the 1s.",
+       "Put five counters on the table. In base ten you write them as **5**.",
+       "Now make bundles of five. The five counters make one full bundle with none left over. You write that as **10{{sub:5}}**.",
+       "Use the same five counters, but make bundles of three. You get one bundle of three and two left over: **12{{sub:3}}**.",
+       "So the same five counters are **5**, **10{{sub:5}}** and **12{{sub:3}}**. The base is the size of the bundle you count in.",
+       "Counting in base five goes **0, 1, 2, 3, 4, 10, 11, 12, 13, 14, 20**. You never write a 5, because 5 is a full bundle.",
+       "The places follow the bundles. In base five the right column counts ones (**1**). The next counts groups of five (**5**). The next counts groups of twenty-five (**25**).",
+       "Now read **43{{sub:5}}**. The 4 is in the column worth 5. The 3 is in the column worth 1.",
        "4 × 5 + 3 × 1 = 23",
-       "So 43{{sub:5}} is 23 in base ten. That is what place worths are for.",
-       "In base three the worths from the right are **1**, **3**, **9** and **27**.",
-       "We can write the same worths as powers of the base: **3² = 9**, **3¹ = 3**, **3⁰ = 1**. Same numbers, shorter writing.",
-       "A digit must be smaller than the base. Base five uses **0, 1, 2, 3 and 4**. A 5 would already be the next bundle."
+       "So **43{{sub:5}}** is **23** in base ten. That is what place worths are for.",
+       "The small raised number is a **power**. It tells you how many times to multiply the base by itself.",
+       "5 × 5 = 25",
+       "So the twenty-fives column can be written **5²**, the fives column **5¹**, and the ones column **5⁰ = 1**. Same worths, shorter writing.",
+       "Digits stay smaller than the base. Base five uses **0, 1, 2, 3 and 4**."
       ],
       "bullets": [],
-      "takeaway": "Every place is the bundle size times the one before it. Digits stay below the bundle size.",
+      "takeaway": "A base is the size of the bundle you count in. Digits stop one short of the bundle size.",
       "check": {
        "question": "In base five, what is the third place worth from the right?",
        "options": [
