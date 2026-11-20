@@ -154,6 +154,12 @@ function LoginForm() {
         >
           {loading ? 'We are signing you in' : 'Sign in'}
         </button>
+
+        <div className="text-right">
+          <Link href="/forgot-password" className="text-xs font-bold text-blue-600 hover:text-blue-700">
+            Forgot password?
+          </Link>
+        </div>
       </form>
 
       <div className="relative my-6">

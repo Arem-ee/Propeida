@@ -28,6 +28,10 @@ function FinishingAuth() {
     const run = async () => {
       const next = safeNext(params.get('next'))
       const hash = new URLSearchParams(window.location.hash.slice(1))
+      // Recovery links carry type=recovery. Route them to the new-password
+      // page even if an email template drops the `next` param.
+      const linkType = (hash.get('type') || params.get('type') || '').toLowerCase()
+      const target = linkType === 'recovery' ? '/auth/update-password' : next
 
       // Supabase reports failures in the query for OAuth and in the fragment
       // for email confirmation links.
@@ -52,7 +56,7 @@ function FinishingAuth() {
           refresh_token: refreshToken,
         })
         window.history.replaceState(null, '', window.location.pathname + window.location.search)
-        router.replace(error ? '/login?error=verification_failed' : next)
+        router.replace(error ? '/login?error=verification_failed' : target)
         return
       }
 
@@ -63,7 +67,7 @@ function FinishingAuth() {
       const type = params.get('type') as EmailOtpType | null
       if (tokenHash && type) {
         const { error } = await supabase.auth.verifyOtp({ token_hash: tokenHash, type })
-        router.replace(error ? '/login?error=verification_failed' : next)
+        router.replace(error ? '/login?error=verification_failed' : target)
         return
       }
 
@@ -74,7 +78,7 @@ function FinishingAuth() {
         const { data } = await supabase.auth.getSession()
         if (data.session) {
           window.history.replaceState(null, '', window.location.pathname + window.location.search)
-          router.replace(next)
+          router.replace(target)
           return
         }
       }

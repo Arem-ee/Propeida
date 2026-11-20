@@ -4,7 +4,7 @@ import Logo from '@/components/logo'
 import { Mascot, type MascotExpression } from '@/components/mascot'
 import { SpeechBubble } from '@/components/celebrations/speech-bubble'
 
-type AuthMode = 'login' | 'signup'
+type AuthMode = 'login' | 'signup' | 'recover'
 
 const COPY: Record<
   AuthMode,
@@ -41,6 +41,18 @@ const COPY: Record<
       'You can see what improved since your last session',
     ],
     note: 'Your progress is saved to your account',
+  },
+  recover: {
+    headline: 'Getting back in takes one short link',
+    lead: 'We will send you a link so you can choose a new password and carry on',
+    mascot: 'encourage',
+    mascotLine: 'I will help you get back to your lessons, one step at a time',
+    mobileLine: 'I will help you get back in',
+    points: [
+      'The link works once, so use it soon after it arrives',
+      'Your lessons and progress stay exactly where you left them',
+    ],
+    note: 'You can close this page after you send the link',
   },
 }
 
