@@ -9,6 +9,13 @@ import { GoogleIcon } from '@/components/auth/google-icon'
 import { friendlyAuthError } from '@/lib/auth-errors'
 import { track } from '@/lib/analytics'
 
+/** Where the confirmation link continues after the session is established. */
+function confirmationNext(): string {
+  if (typeof window === 'undefined') return '/home'
+  const stored = localStorage.getItem('pending_redirect')
+  return stored && stored.startsWith('/') && !stored.startsWith('//') ? stored : '/home'
+}
+
 export default function SignupPage() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -17,6 +24,10 @@ export default function SignupPage() {
   const [googleLoading, setGoogleLoading] = useState(false)
   const [agreed, setAgreed] = useState(false)
   const [verificationSent, setVerificationSent] = useState(false)
+  const [resending, setResending] = useState(false)
+  const [resent, setResent] = useState(false)
+  const [resendError, setResendError] = useState<string | null>(null)
+  const [cooldown, setCooldown] = useState(0)
   const startedRef = useRef(false)
   const supabaseRef = useRef(createClient())
 
@@ -42,6 +53,12 @@ export default function SignupPage() {
     }
   }, [])
 
+  useEffect(() => {
+    if (cooldown <= 0) return
+    const timer = setInterval(() => setCooldown((n) => Math.max(0, n - 1)), 1000)
+    return () => clearInterval(timer)
+  }, [cooldown])
+
   const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault()
     setError(null)
@@ -57,8 +74,7 @@ export default function SignupPage() {
     // The confirmation link must land on a page that can read the session.
     // Supabase's default email template returns tokens in a URL fragment,
     // which a server route cannot see, so /auth/finish handles the handoff.
-    const storedNext = typeof window !== 'undefined' ? localStorage.getItem('pending_redirect') : null
-    const redirectPath = storedNext && storedNext.startsWith('/') && !storedNext.startsWith('//') ? storedNext : '/home'
+    const redirectPath = confirmationNext()
 
     const supabase = supabaseRef.current
     const { data: signUpData, error: authError } = await supabase.auth.signUp({
@@ -114,6 +130,30 @@ export default function SignupPage() {
     }
   }
 
+  const handleResend = async () => {
+    setResending(true)
+    setResendError(null)
+    setResent(false)
+
+    // Resend issues a fresh link, so it needs the same handoff URL as signup.
+    const { error } = await supabaseRef.current.auth.resend({
+      type: 'signup',
+      email,
+      options: {
+        emailRedirectTo: `${window.location.origin}/auth/finish?next=${encodeURIComponent(confirmationNext())}`,
+      },
+    })
+
+    setResending(false)
+    if (error) {
+      setResendError(friendlyAuthError(error.message, 'signup'))
+      return
+    }
+
+    setResent(true)
+    setCooldown(60)
+  }
+
   if (verificationSent) {
     return (
       <AuthShell mode="signup">
@@ -125,6 +165,33 @@ export default function SignupPage() {
           <p className="mt-2 text-sm leading-relaxed text-ink-soft">
             We sent a verification link to <strong>{email}</strong>, so click it to activate your account
           </p>
+
+          <div className="mt-5">
+            <p className="text-[11px] text-gray-500">No email yet? Check your spam folder, or send it again</p>
+            <button
+              type="button"
+              onClick={handleResend}
+              disabled={resending || cooldown > 0}
+              className="pressable mt-2 min-h-[44px] w-full rounded-xl border border-gray-200 bg-white py-2.5 text-xs font-bold text-blue-600 hover:border-blue-200 hover:bg-blue-50/40 disabled:cursor-not-allowed disabled:opacity-60"
+            >
+              {resending
+                ? 'We are sending another link'
+                : cooldown > 0
+                  ? `You can resend in ${cooldown}s`
+                  : 'Resend verification email'}
+            </button>
+            {resent && (
+              <p role="status" className="mt-2 text-xs font-semibold text-green-700">
+                We sent another link, so check your inbox
+              </p>
+            )}
+            {resendError && (
+              <div role="alert" className="mt-2 rounded-lg bg-red-50 px-3 py-2 text-xs font-semibold text-red-700">
+                {resendError}
+              </div>
+            )}
+          </div>
+
           <Link
             href="/login"
             className="pressable mt-6 inline-block min-h-[44px] w-full rounded-xl bg-blue-600 py-3 text-sm font-bold text-white shadow-[0_8px_20px_-10px_rgba(37,99,235,0.8)] hover:bg-blue-700"
