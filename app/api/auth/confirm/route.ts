@@ -1,6 +1,7 @@
 import { type NextRequest, NextResponse } from 'next/server'
 import { createServerClient } from '@supabase/ssr'
 import { type EmailOtpType, type User } from '@supabase/supabase-js'
+import { maybeSendWelcomeEmail } from '@/lib/emails/send'
 
 async function waitForProfile(supabase: ReturnType<typeof createServerClient>, userId: string) {
   const delays = [300, 600, 1200, 2400]
@@ -85,7 +86,12 @@ export async function GET(request: NextRequest) {
     }
 
     if (!failure) {
-      if (user) await waitForProfile(supabase, user.id)
+      if (user && type !== 'recovery') {
+        await waitForProfile(supabase, user.id)
+        // Send the welcome only now that the account is verified and the
+        // session has been established, never at signup time.
+        await maybeSendWelcomeEmail(user.id)
+      }
 
       const response = NextResponse.redirect(new URL(next, baseUrl))
       for (const cookie of tempRes.cookies.getAll()) {

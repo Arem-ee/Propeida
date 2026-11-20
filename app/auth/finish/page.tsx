@@ -14,6 +14,11 @@ function safeNext(value: string | null): string {
   return value
 }
 
+/** Welcome mail belongs after a verified session, never at signup time. */
+function triggerWelcomeEmail() {
+  void fetch('/api/auth/welcome', { method: 'POST', keepalive: true }).catch(() => {})
+}
+
 function FinishingAuth() {
   const router = useRouter()
   const params = useSearchParams()
@@ -56,6 +61,7 @@ function FinishingAuth() {
           refresh_token: refreshToken,
         })
         window.history.replaceState(null, '', window.location.pathname + window.location.search)
+        if (!error && linkType !== 'recovery') triggerWelcomeEmail()
         router.replace(error ? '/login?error=verification_failed' : target)
         return
       }
@@ -67,6 +73,7 @@ function FinishingAuth() {
       const type = params.get('type') as EmailOtpType | null
       if (tokenHash && type) {
         const { error } = await supabase.auth.verifyOtp({ token_hash: tokenHash, type })
+        if (!error && linkType !== 'recovery') triggerWelcomeEmail()
         router.replace(error ? '/login?error=verification_failed' : target)
         return
       }
@@ -78,6 +85,7 @@ function FinishingAuth() {
         const { data } = await supabase.auth.getSession()
         if (data.session) {
           window.history.replaceState(null, '', window.location.pathname + window.location.search)
+          if (linkType !== 'recovery') triggerWelcomeEmail()
           router.replace(target)
           return
         }

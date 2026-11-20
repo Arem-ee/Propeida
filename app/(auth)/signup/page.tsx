@@ -77,7 +77,7 @@ export default function SignupPage() {
     const redirectPath = confirmationNext()
 
     const supabase = supabaseRef.current
-    const { data: signUpData, error: authError } = await supabase.auth.signUp({
+    const { error: authError } = await supabase.auth.signUp({
       email,
       password,
       options: {
@@ -92,15 +92,9 @@ export default function SignupPage() {
       return
     }
 
-    if (signUpData?.user?.id) {
-      void fetch('/api/auth/welcome', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ userId: signUpData.user.id }),
-        keepalive: true,
-      }).catch(() => {})
-    }
-
+    // Welcome mail is intentionally not sent here. At this point the account
+    // exists but is unverified and has no session, so it belongs after the
+    // confirmation link is followed (/auth/finish or /api/auth/confirm).
     void track('signup-complete', { method: 'email' })
     setVerificationSent(true)
   }
