@@ -123,6 +123,14 @@ function convert(src: string): string {
   for (const [re, to] of LATEX_MAP) out = out.replace(re, to)
   // Raw % is a comment char in LaTeX; keep it readable in math mode.
   out = out.replace(/([0-9]+(?:\.[0-9]+)?)%/g, '$1\\\\%')
+  // Numeric divisions written plainly by the question bank (e.g. -3/2,
+  // 5/2, √3/2) become stacked fractions, the way JAMB prints them. The
+  // explicit {{frac:a|b}} token is split out before convert() and is
+  // untouched. Keep a decimal or sqrt numerator intact inside the brace.
+  out = out.replace(
+    /(^|[\s(+\-])([+-]?(?:\\sqrt\{[^}]*\}|\d+(?:\.\d+)?))\s*\/\s*(\d+(?:\.\d+)?)(?=$|[\s)+\-.,;])/g,
+    '$1\\frac{$2}{$3}',
+  )
   return out
 }
 
