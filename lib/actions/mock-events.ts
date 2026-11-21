@@ -83,6 +83,12 @@ export async function startMockEventSession(eventId: string): Promise<StartMockE
     })
     return { ok: true, sessionId: result.sessionId }
   } catch (err) {
+    // The unique (mock_event_id, user_id) index is the real arbiter when two
+    // starts race past the app-level check above.
+    const code = (err as { code?: string } | null)?.code
+    if (code === '23505') {
+      return { ok: false, error: 'You have already sat this mock event.', errorCode: 'already_done' }
+    }
     const message = err instanceof Error ? err.message : 'Could not start the mock event'
     return { ok: false, error: message, errorCode: 'error' }
   }
