@@ -307,40 +307,45 @@ export async function getLessonByPath(
         sections.find((s) => (s.takeaway ?? '').trim())?.takeaway ??
         note.summary ??
         null
+      // An anonymous caller is a free caller. Without a user the gate used
+      // to stay open, so a direct Server Action call could read any lesson
+      // from the database. Compute the gate for everyone; only the Pro
+      // lookup depends on having a verified user.
+      const { getProStatus } = await import('@/lib/entitlements')
+      const pro = user ? await getProStatus(user.id) : null
       let gated = false
-      if (user) {
-        const { getProStatus } = await import('@/lib/entitlements')
-        const pro = await getProStatus(user.id)
-        if (!pro.isPro) {
-          const [{ data: subjectTopics }, { data: subjectLessons }] = await Promise.all([
-            supabase
-              .from('topics')
-              .select('id, sort_order')
-              .eq('subject_id', subject.id)
-              .eq('published', true)
-              .order('sort_order'),
-            admin
-              .from('lessons')
-              .select('id, topic_id, exam_id')
-              .eq('subject_id', subject.id)
-              .eq('status', 'published'),
-          ])
-          const orderOf = new Map(
-            (subjectTopics ?? []).map((t) => [t.id, t.sort_order ?? 0]),
-          )
-          const visible = (subjectLessons ?? []).filter(
-            (l) =>
-              l.exam_id === null ||
-              (scope?.examIds?.includes(l.exam_id) ?? false),
-          )
-          const first = visible
-            .filter((l) => l.topic_id && orderOf.has(l.topic_id))
-            .sort(
-              (a, b) =>
-                (orderOf.get(a.topic_id!) ?? 0) - (orderOf.get(b.topic_id!) ?? 0),
-            )[0]
-          if (first && first.id !== lesson.id) gated = true
-        }
+      if (!pro?.isPro) {
+        const [{ data: subjectTopics }, { data: subjectLessons }] = await Promise.all([
+          supabase
+            .from('topics')
+            .select('id, sort_order')
+            .eq('subject_id', subject.id)
+            .eq('published', true)
+            .order('sort_order'),
+          admin
+            .from('lessons')
+            .select('id, topic_id, exam_id')
+            .eq('subject_id', subject.id)
+            .eq('status', 'published'),
+        ])
+        const orderOf = new Map(
+          (subjectTopics ?? []).map((t) => [t.id, t.sort_order ?? 0]),
+        )
+        const visible = (subjectLessons ?? []).filter(
+          (l) =>
+            l.exam_id === null ||
+            (scope?.examIds?.includes(l.exam_id) ?? false),
+        )
+        const first = visible
+          .filter((l) => l.topic_id && orderOf.has(l.topic_id))
+          .sort(
+            (a, b) =>
+              (orderOf.get(a.topic_id!) ?? 0) - (orderOf.get(b.topic_id!) ?? 0),
+          )[0]
+        // With no scope (anonymous) treat only the first published lesson as
+        // the free teaser; every other lesson is gated.
+        if (first && first.id !== lesson.id) gated = true
+        if (!scope && !first) gated = true
       }
 
       return {
