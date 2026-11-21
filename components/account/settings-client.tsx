@@ -122,7 +122,7 @@ export default function SettingsClient({
         {referral && (
           <Row
             label="Bring a friend"
-            hint="Share your link, and when your friend makes their first Pro payment, you get 7 days of JAMB Pro"
+            hint="Share your link, and when your friend makes their first Pro payment, you get 3 days of JAMB Pro"
           >
             <ReferralCard {...referral} />
           </Row>
