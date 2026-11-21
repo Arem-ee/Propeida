@@ -172,7 +172,26 @@ on a one-line takeaway; carries an inline check with a `why` line and
 procedural `steps` for the check's own answer. Inline checks are JAMB-style,
 four options, plus a `why` string every time.
 
-R.17 Render and inspect the actual page before declaring the work done.
+R.17 **Patient-tutor walkthrough shape (maths).** Every maths explanation,
+in a card, worked example or check feedback, follows this shape:
+ 1. a two or three sentence concrete analogy from everyday life, true for the
+    whole topic, named before formal terms;
+ 2. a one or two sentence plain summary of the main rule;
+ 3. numbered stages (`operation` field in worked examples) that build from
+    intuition to mechanics to shortcuts to edge cases;
+ 4. a plain-English "why" beside every operation, never a bare rule;
+ 5. one small mental leap per step, even when the prose is already short;
+ 6. bullets or a compact table for quick comparison, separate cards or steps
+    for major stages;
+ 7. the final answer stated plainly at the bottom after the working;
+ 8. formal terms introduced with their everyday translation, with the
+    textbook's necessary words kept;
+ 9. one plain takeaway sentence tying the topic back to the opening analogy.
+- Formatting in this renderer: `**bold**`, `{{sub:x}}`, `{{sup:x}}`,
+  `{{frac:x|y}}`, maths-only lines as plain lines (auto panels). Chat-style
+  `$...$`, `$$...$$` and `---` are not consumed here; do not use them.
+
+R.18 Render and inspect the actual page before declaring the work done.
 Data checks and seed verification prove the bytes landed; they do not
 prove the page looks right. Open the rendered lesson in a browser and
 look at it (the public preview route is

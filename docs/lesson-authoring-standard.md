@@ -126,6 +126,49 @@ can parse on the first read. Do not chop ideas into fragments.
   ("How much is the place value worth?"). A prompt the learner cannot parse on
   first read is broken, whatever the answer is.
 
+## Maths explanation shape: the patient-tutor walkthrough
+
+Every mathematical explanation, whether it is a teaching card, a worked
+example or the feedback under a check, is written the way a patient tutor
+talks a student through a problem at a table. The student should feel the
+topic is intuitive and effortless, not that a textbook has been compressed.
+
+- **Lead with a concrete analogy.** Open with two or three sentences that
+  anchor the whole idea in an everyday physical picture (a bag size, a bundle
+  of counters, sharing oranges) before any formal term appears. The analogy
+  must stay true for the whole topic and be tied back to at the end.
+- **A one- or two-sentence plain summary of the main rule** follows the
+  analogy, so the learner knows what they are about to do before the steps.
+- **Numbered stages with clear headings.** In cards, use the card heading and
+  prose stages; in worked examples, use the numbered `operation` field as the
+  step heading ("Step 1: Write the place worths"). Progress from basic
+  intuition to core mechanics, then shortcuts, then edge cases.
+- **Explain the why inside every step, in plain English.** Never state a rule
+  and leave it bare. Right after the operation, say why it is done, in words
+  a thirteen-year-old uses at home: why remainders are read from the bottom,
+  why a base cannot contain its own digit, why we multiply before adding.
+- **One small mental leap per step.** If a step needs the learner to hold two
+  new ideas at once, split it. This is stricter than "one idea per sentence":
+  it applies to operations as well as prose.
+- **Visual breathing room.** Keep related rules together, use bullets for
+  quick reference lists, and give each major stage its own card or its own
+  step block. Compact tables are good for comparing bases or cases; do not
+  invent new visual components without the owner's say-so.
+- **Final answer stated plainly at the bottom**, after every step has been
+  shown, never only inside the working.
+- **Plain English over jargon.** Introduce each formal term beside its
+  everyday translation on first use: "remainders (leftovers)", "expanding
+  (opening the number out)". Keep the textbook's necessary terms; simplify
+  the language around them, not the definition.
+- **One plain takeaway sentence at the end** that ties the topic back to the
+  opening analogy.
+
+Our renderer does not consume `$...$` or `$$...$$`: use `**bold**` for
+emphasis and `{{sub:x}}` / `{{sup:x}}` / `{{frac:x|y}}` tokens for maths, with
+maths-only lines left as plain lines so they become centred panels. The
+horizontal rules from a chat answer are replaced by separate cards/steps in
+our schema. Keep the encouraging, direct, jargon-free tone.
+
 ## Worked calculations and hierarchy
 
 Calculations cannot be understood with prose alone. Every rule, shortcut or

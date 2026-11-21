@@ -57,6 +57,15 @@ otherwise the agent-authoring-spec wins over habit and memory.
 - **Quality over quantity.** Never cut good teaching, steps or examples to fit
   a word cap. Budgets are warnings; a lesson that teaches well wins over a
   shorter one every time.
+- **Maths explanations are patient-tutor walkthroughs.** Lead with a concrete
+  everyday analogy, then a plain one- or two-sentence rule, then numbered
+  stages that build from intuition to mechanics to shortcuts to edge cases.
+  Say the *why* in plain English beside every operation. One small mental leap
+  per step. Give major stages breathing room, state the final answer plainly
+  at the bottom, translate every formal term on first use while keeping the
+  textbook's necessary words, and end with a takeaway tied back to the
+  analogy. Use our renderer's bold/tokens/maths-only lines, not chat `$...$`
+  or `---`.
 - **British spelling and punctuation** throughout; no em dashes in lessons.
 - **Bold the key quantities** in working; keep bold inside `**...**` (the
   renderer turns it into `<strong>`).
