@@ -16,8 +16,25 @@ function confirmationNext(): string {
   return stored && stored.startsWith('/') && !stored.startsWith('//') ? stored : '/home'
 }
 
+/** Supabase hides duplicate signups, so ask the server before submitting. */
+async function emailHasAccount(email: string): Promise<boolean> {
+  try {
+    const res = await fetch('/api/auth/check-email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email }),
+    })
+    if (!res.ok) return false
+    const body = await res.json()
+    return !!body.exists
+  } catch {
+    return false
+  }
+}
+
 export default function SignupPage() {
   const [email, setEmail] = useState('')
+  const [emailExists, setEmailExists] = useState(false)
   const [password, setPassword] = useState('')
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
@@ -59,6 +76,24 @@ export default function SignupPage() {
     return () => clearInterval(timer)
   }, [cooldown])
 
+  // Tell the user early if the address is already registered, so they do not
+  // wait for an email that Supabase will deliberately never send.
+  useEffect(() => {
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setEmailExists(false)
+      return
+    }
+    let cancelled = false
+    const timer = setTimeout(async () => {
+      const exists = await emailHasAccount(email)
+      if (!cancelled) setEmailExists(exists)
+    }, 450)
+    return () => {
+      cancelled = true
+      clearTimeout(timer)
+    }
+  }, [email])
+
   const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault()
     setError(null)
@@ -66,6 +101,12 @@ export default function SignupPage() {
 
     if (!agreed) {
       setError('Please agree to the Terms of Service and Privacy Policy before you create your account')
+      return
+    }
+
+    // Recheck at submit time in case the debounced lookup had not finished.
+    if (await emailHasAccount(email)) {
+      setError('An account with that email already exists, so sign in instead')
       return
     }
 
@@ -222,6 +263,12 @@ export default function SignupPage() {
             placeholder="you@example.com"
             className="min-h-[44px] w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-ink placeholder:text-gray-400 focus:border-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-100"
           />
+          {emailExists && (
+            <p className="mt-1.5 text-xs font-semibold text-amber-700">
+              An account already uses this email, so{' '}
+              <Link href="/login" className="font-bold text-blue-600 hover:underline">sign in instead</Link>
+            </p>
+          )}
         </div>
 
         <div>
