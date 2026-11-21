@@ -91,11 +91,18 @@ rules apply to every learner-facing explanation outside lessons (step
 reasons, check `why` lines, guided hints, mascot lines, topic descriptions).
 
 R.5 Natural, casual, spoken register. The lesson is written for a
-thirteen-year-old to parse in nine seconds. Short sentences. One idea per
-sentence. Every sentence should sound right when said aloud to a patient
-tutor. No decorative phrasing, no theatre ("the mark that disappears in
-silence"), no nested qualifications or asides in brackets/em dashes, no
-"obviously", no "of course", no "in fact".
+thirteen-year-old to parse on the first read. Write **proper, connected
+sentences**, not fragments. Join closely related ideas with natural connectives
+(and, so, then, because). One main idea per sentence, simple everyday English
+at roughly level 4, with any essential definition word kept even when it is a
+bigger word. Follow the textbook's wording and notation; do not contradict it.
+Every sentence should sound right when said aloud to a patient tutor. No
+decorative phrasing, no theatre ("the mark that disappears in silence"), no
+nested qualifications or asides in brackets/em dashes, no "obviously", no "of
+course", no "in fact".
+- **Quality over quantity.** Never cut good teaching, steps or examples to fit
+  a word cap. Budgets are warnings. A lesson that teaches well wins over a
+  shorter one every time.
 
 R.6 Concrete before abstract. Scenarios, objects, numbers first; symbols
 and rules after. Definition follows worked example; rule follows instance.

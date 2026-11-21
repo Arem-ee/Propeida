@@ -48,9 +48,15 @@ otherwise the agent-authoring-spec wins over habit and memory.
   exponent (how many times a number is multiplied by itself); other bases get
   no invented column names ("nines column" etc. do not exist) — say "the
   column worth 9".
-- **Register:** natural and casual, the spoken test, one idea per sentence,
-  concrete before abstract, no nested qualification, no theatre. These rules
-  are cumulative; use all of them, not whichever is convenient.
+- **Register:** natural and casual with proper, connected sentences. Do not
+  chop ideas into fragments; join related ideas with and/so/then/because. One
+  main idea per sentence, simple level-4 English, essential definition words
+  kept even when they are bigger. Follow the textbook wording and notation;
+  never contradict it. Use every rule cumulatively, not whichever is
+  convenient.
+- **Quality over quantity.** Never cut good teaching, steps or examples to fit
+  a word cap. Budgets are warnings; a lesson that teaches well wins over a
+  shorter one every time.
 - **British spelling and punctuation** throughout; no em dashes in lessons.
 - **Bold the key quantities** in working; keep bold inside `**...**` (the
   renderer turns it into `<strong>`).
@@ -88,10 +94,10 @@ otherwise the agent-authoring-spec wins over habit and memory.
 - Never author new visual components into the lesson renderer without asking.
 - Never claim a rule was recorded or a check was run unless it actually was.
 
-## Open point awaiting the owner
+## Decisions settled by the owner
 
-The sentence-length rule is recorded in both documents as **"prefer several
-short sentences to one long one; one idea per sentence"**. The owner has said
-they believe the rule is the opposite ("not to write short sentences"). Do not
-silently change it. Ask for the exact wording they want and then amend all
-three files together.
+Sentence length: **write proper, connected sentences, not fragments**. Join
+related ideas with and/so/then/because; one main idea per sentence; simple
+level-4 English, keeping any word a correct definition cannot lose. The old
+"prefer several short sentences" wording was wrong and has been removed from
+all three documents.

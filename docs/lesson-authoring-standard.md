@@ -74,13 +74,27 @@ content is. A correct answer installed on a missing foundation is not a lesson.
 
 ## Sentence length and register
 
-The reader is young. Write sentences a thirteen-year-old can parse on the
-first read.
+The reader is young. Write proper, connected sentences that a thirteen-year-old
+can parse on the first read. Do not chop ideas into fragments.
 
-- **Short sentences.** Prefer several short sentences to one long one. If a
-  sentence carries two clauses and a sub-clause, it is two sentences.
-- **One idea per sentence.** A sentence that teaches one thing
-  (", "comma, then another clause teaching something else) is two sentences.
+- **Proper, connected sentences.** Write a complete sentence with its subject
+  and verb, then join the closely related ideas in that sentence with natural
+  connectives (and, so, then, because). A chain of one-word or three-word
+  sentences reads like notes, not like teaching. "The 4 is in the fives
+  column, so we multiply it by 5 and get 20" is right. "The 4 sits in the
+  fives column. Multiply it. 4 × 5." is wrong.
+- **One main idea per sentence.** Two separate ideas belong in two connected
+  sentences, not in one loaded sentence and not in a staccato list.
+- **Simple English, level 4.** Prefer everyday words and short, direct
+  phrasing. Keep any word that a correct definition cannot do without, even
+  if it is a bigger word; simplify around it, not by removing it. Never change
+  the meaning of a definition to make it simpler.
+- **Follow the textbook.** Use the method, wording and notation the Nigerian
+  textbook uses. Do not contradict it, and do not add an outside shortcut the
+  textbook does not use unless it makes the idea genuinely simpler.
+- **Quality over quantity.** Prefer a lesson that teaches well over a lesson
+  that fits a word cap. Never delete good teaching to reach a number. Caps and
+  budgets are warnings, not reasons to make the lesson worse.
 - **Concrete before abstract.** Use scenarios, objects and numbers before
   symbols and rules. A definition that follows a worked example is
   rememberable; the same definition first is not.
