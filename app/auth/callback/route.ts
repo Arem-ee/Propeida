@@ -2,7 +2,6 @@ import { type NextRequest, NextResponse } from 'next/server'
 import { createServerClient } from '@supabase/ssr'
 import { maybeSendWelcomeEmail } from '@/lib/emails/send'
 import { safeInternalPath } from '@/lib/safe-redirect'
-import { claimReferral } from '@/lib/actions/referral'
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url)
@@ -49,19 +48,6 @@ export async function GET(request: NextRequest) {
         // Placeholder user_* usernames no longer block the app: the user goes
         // straight to the dashboard and is prompted to choose a username there.
         await maybeSendWelcomeEmail(user.id)
-      }
-
-      // Claim any referral code that was stored pending from the signup page.
-      // This covers Google OAuth and any other sign-in path that doesn't go
-      // through the password-login handler.
-      try {
-        const code = window.localStorage.getItem('pending_ref')
-        if (code) {
-          await claimReferral(code)
-          window.localStorage.removeItem('pending_ref')
-        }
-      } catch {
-        // best-effort; don't block the login even if the referral fails
       }
 
       const response = NextResponse.redirect(new URL(next, baseUrl))
