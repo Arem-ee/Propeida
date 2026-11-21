@@ -169,6 +169,13 @@ maths-only lines left as plain lines so they become centred panels. The
 horizontal rules from a chat answer are replaced by separate cards/steps in
 our schema. Keep the encouraging, direct, jargon-free tone.
 
+- **Worked examples use the v2 walkthrough shape.** Every worked example is a
+  `problem`, a `finalAnswer` and numbered `steps` (`stepNumber`, `instruction`,
+  `hint`, `explanation`). The whole solution is shown at once, each step
+  explains the why, and the final answer is stated at the bottom. There is no
+  per-step typing gate. The older operation/reason/result shape still renders
+  for the other subjects; new authoring uses v2 only.
+
 ## Worked calculations and hierarchy
 
 Calculations cannot be understood with prose alone. Every rule, shortcut or

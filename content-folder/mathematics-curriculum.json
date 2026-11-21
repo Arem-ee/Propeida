@@ -1908,63 +1908,28 @@
     {
      "type": "worked_example",
      "content": {
-      "problem": "Write 210 in base three as a base-ten number.",
+      "problem": "Convert 21 (base 4) to base 10.",
       "steps": [
        {
-        "operation": "Write the digits from the right",
-        "reason": "The digits of 210 from the right are 0, 1 and 2.",
-        "result": "0, 1 and 2",
-        "predictPrompt": "Which digit is rightmost?"
+        "stepNumber": 1,
+        "instruction": "Write the place values (powers of 4) for each digit from right to left, starting at 0.",
+        "hint": "The digit 1 is on the far right, so its power of 4 is 4⁰.",
+        "explanation": "Positions start at 0 on the right, so the 1 is at 4⁰ = 1 and the 2 is at 4¹ = 4."
        },
        {
-        "operation": "Write the place worths in base three",
-        "reason": "From the right: 1, then 3, then 9.",
-        "result": "1, 3 and 9",
-        "predictPrompt": "What are the first three worths in base three?"
+        "stepNumber": 2,
+        "instruction": "Multiply each digit by its base-4 place value and add the answers.",
+        "hint": "Set up (2 × 4) + (1 × 1).",
+        "explanation": "The 2 is in the fours column, so 2 × 4 = 8. The 1 is in the ones column, so 1 × 1 = 1. Then 8 + 1 = 9."
        },
        {
-        "operation": "Work out each place worth",
-        "reason": "Each worth is the base multiplied by itself. 3 × 3 = 9.",
-        "result": "3⁰ = 1; 3¹ = 3; 3² = 3 × 3 = 9",
-        "predictPrompt": "What is 3 × 3?"
-       },
-       {
-        "operation": "Match each digit to its place",
-        "reason": "The 0 is over 1, the 1 is over 3, the 2 is over 9.",
-        "result": "0 → 1; 1 → 3; 2 → 9",
-        "predictPrompt": "Which digit sits over 9?"
-       },
-       {
-        "operation": "Multiply the first digit",
-        "reason": "0 × 1.",
-        "result": "0 × 1 = 0",
-        "predictPrompt": "What is 0 × 1?"
-       },
-       {
-        "operation": "Multiply the second digit",
-        "reason": "1 × 3.",
-        "result": "1 × 3 = 3",
-        "predictPrompt": "What is 1 × 3?"
-       },
-       {
-        "operation": "Multiply the third digit",
-        "reason": "2 × 9.",
-        "result": "2 × 9 = 18",
-        "predictPrompt": "What is 2 × 9?"
-       },
-       {
-        "operation": "Add the three answers",
-        "reason": "0 + 3 + 18.",
-        "result": "0 + 3 + 18 = 21",
-        "predictPrompt": "What is 0 + 3 + 18?"
-       },
-       {
-        "operation": "Check to confirm: convert back",
-        "reason": "Divide 21 by 3 and read the remainders upward.",
-        "result": "21 ÷ 3 = 7 r 0; 7 ÷ 3 = 2 r 1; 2 ÷ 3 = 0 r 2, which reads 210",
-        "predictPrompt": "Does 21 in base three read 210?"
+        "stepNumber": 3,
+        "instruction": "Check by dividing 9 by 4 and reading the remainders upward.",
+        "hint": "9 ÷ 4 = 2 remainder 1; 2 ÷ 4 = 0 remainder 2.",
+        "explanation": "Reading the remainders from the last row upward gives 21 in base four, which is where we started."
        }
-      ]
+      ],
+      "finalAnswer": "21{{sub:4}} = 9{{sub:10}}"
      }
     },
     {
@@ -1973,42 +1938,37 @@
       "problem": "Write 25 in base ten as a base-five number.",
       "steps": [
        {
-        "operation": "Divide 25 by 5",
-        "reason": "The new base is 5, so divide by 5. Keep the remainder.",
-        "result": "25 ÷ 5 = 5 remainder 0",
-        "predictPrompt": "What is 25 divided by 5?"
+        "stepNumber": 1,
+        "instruction": "Divide 25 by the new base, 5, and keep the remainder.",
+        "hint": "25 ÷ 5 = 5 remainder 0.",
+        "explanation": "Each division makes one full bundle of five, and the remainder is the digit left over for that column."
        },
        {
-        "operation": "Divide the 5 by 5",
-        "reason": "Carry the 5 down and divide again.",
-        "result": "5 ÷ 5 = 1 remainder 0",
-        "predictPrompt": "What is 5 divided by 5?"
+        "stepNumber": 2,
+        "instruction": "Divide the 5 by 5 again and keep the remainder.",
+        "hint": "5 ÷ 5 = 1 remainder 0.",
+        "explanation": "We keep dividing the answer until it is too small to make another full group of five."
        },
        {
-        "operation": "Divide the 1 by 5",
-        "reason": "One cannot make a full group of five, so the remainder is 1.",
-        "result": "1 ÷ 5 = 0 remainder 1",
-        "predictPrompt": "What is the answer now?"
+        "stepNumber": 3,
+        "instruction": "Divide the 1 by 5, then stop.",
+        "hint": "1 ÷ 5 = 0 remainder 1.",
+        "explanation": "One counter cannot make a full group of five, so the quotient is 0 and the whole 1 is remainder. That 0 means the working is finished."
        },
        {
-        "operation": "Stop",
-        "reason": "The answer 0 means there is nothing left to divide.",
-        "result": "Last row",
-        "predictPrompt": "Why do we stop?"
+        "stepNumber": 4,
+        "instruction": "Read the remainders from the bottom row upward.",
+        "hint": "The last remainder is the first digit.",
+        "explanation": "Reading from the bottom gives 4, then 3, then 0, so 25 in base ten is 100 in base five."
        },
        {
-        "operation": "Read the remainders from the bottom up",
-        "reason": "The last remainder is the first digit.",
-        "result": "100{{sub:5}}",
-        "predictPrompt": "Which remainder is the first digit?"
-       },
-       {
-        "operation": "Check to confirm: expand 100 in base five",
-        "reason": "Worths are 25, 5 and 1 from the right.",
-        "result": "1 × 25 + 0 × 5 + 0 × 1 = 25",
-        "predictPrompt": "Does it come back to 25?"
+        "stepNumber": 5,
+        "instruction": "Check by expanding 100 in base five.",
+        "hint": "The place worths are 25, 5 and 1.",
+        "explanation": "1 × 25 + 0 × 5 + 0 × 1 = 25, which is the number we started with."
        }
-      ]
+      ],
+      "finalAnswer": "25{{sub:10}} = 100{{sub:5}}"
      }
     },
     {
@@ -2017,42 +1977,37 @@
       "problem": "Convert 0.625 in base ten into a binary (base-two) fraction.",
       "steps": [
        {
-        "operation": "Multiply the fraction by 2",
-        "reason": "The new base is 2. Multiply, then keep the whole number part.",
-        "result": "0.625 × 2 = 1.25, whole part 1",
-        "predictPrompt": "What is 0.625 × 2?"
+        "stepNumber": 1,
+        "instruction": "Multiply the fraction by 2 and keep the whole number part.",
+        "hint": "0.625 × 2 = 1.25, so the whole part is 1.",
+        "explanation": "Repeated multiplication by the new base turns a fraction into that base, and each whole part becomes the next digit after the point."
        },
        {
-        "operation": "Multiply what is left by 2",
-        "reason": "Drop the whole part. Multiply 0.25.",
-        "result": "0.25 × 2 = 0.5, whole part 0",
-        "predictPrompt": "What is 0.25 × 2?"
+        "stepNumber": 2,
+        "instruction": "Drop the whole part and multiply what is left by 2 again.",
+        "hint": "0.25 × 2 = 0.5, so the whole part is 0.",
+        "explanation": "We only multiply the fractional part each time, because the whole part has already been written as a digit."
        },
        {
-        "operation": "Multiply again",
-        "reason": "Drop the whole part. Multiply 0.5.",
-        "result": "0.5 × 2 = 1.0, whole part 1",
-        "predictPrompt": "What is 0.5 × 2?"
+        "stepNumber": 3,
+        "instruction": "Drop the whole part and multiply again.",
+        "hint": "0.5 × 2 = 1.0, so the whole part is 1.",
+        "explanation": "Nothing is left over now, so the chain ends here."
        },
        {
-        "operation": "Stop",
-        "reason": "Nothing is left over, so the chain ends.",
-        "result": "No remainder",
-        "predictPrompt": "Why do we stop?"
+        "stepNumber": 4,
+        "instruction": "Read the whole parts in order after the point.",
+        "hint": "The digits are 1, 0 and 1.",
+        "explanation": "Writing them in the order we found them gives 0.101 in base two."
        },
        {
-        "operation": "Read the whole parts in order",
-        "reason": "First digit first, after the point.",
-        "result": "0.101{{sub:2}}",
-        "predictPrompt": "Which digit comes first?"
-       },
-       {
-        "operation": "Check to confirm: expand 0.101 in base two",
-        "reason": "The worths after the point are 1/2, 1/4 and 1/8.",
-        "result": "1/2 + 0/4 + 1/8 = 0.5 + 0 + 0.125 = 0.625",
-        "predictPrompt": "Does it come back to 0.625?"
+        "stepNumber": 5,
+        "instruction": "Check by expanding 0.101 in base two.",
+        "hint": "The places after the point are worth 1/2, 1/4 and 1/8.",
+        "explanation": "1/2 + 0/4 + 1/8 = 0.5 + 0 + 0.125 = 0.625, which is the fraction we started with."
        }
-      ]
+      ],
+      "finalAnswer": "0.625{{sub:10}} = 0.101{{sub:2}}"
      }
     },
     {
@@ -2061,60 +2016,37 @@
       "problem": "Convert 132 in base four to base five.",
       "steps": [
        {
-        "operation": "Test the digits",
-        "reason": "Every digit must be smaller than the base. Here the base is four.",
-        "result": "1, 3 and 2 are allowed",
-        "predictPrompt": "Can any digit be 4 or more?"
+        "stepNumber": 1,
+        "instruction": "Test the digits, then write the place worths in base four.",
+        "hint": "Digits stop one short of the base, so 1, 3 and 2 are allowed.",
+        "explanation": "Each digit must be smaller than 4, and the column worths from the right are 1, 4 and 4 × 4 = 16."
        },
        {
-        "operation": "Write the place worths in base four",
-        "reason": "From the right: 1, then 4, then 4 × 4.",
-        "result": "1, 4 and 16",
-        "predictPrompt": "What is 4 × 4?"
+        "stepNumber": 2,
+        "instruction": "Multiply each digit by its column worth and add.",
+        "hint": "2 × 1 = 2; 3 × 4 = 12; 1 × 16 = 16.",
+        "explanation": "The 2 is over 1, the 3 is over 4 and the 1 is over 16, so the total in base ten is 2 + 12 + 16 = 30."
        },
        {
-        "operation": "Multiply the first digit",
-        "reason": "The 2 sits over 1.",
-        "result": "2 × 1 = 2",
-        "predictPrompt": "What is 2 × 1?"
+        "stepNumber": 3,
+        "instruction": "Write 30 in base five by repeated division.",
+        "hint": "30 ÷ 5 = 6 r 0; 6 ÷ 5 = 1 r 1; 1 ÷ 5 = 0 r 1.",
+        "explanation": "Dividing by the new base and keeping each remainder gives the digits of the number in base five."
        },
        {
-        "operation": "Multiply the second digit",
-        "reason": "The 3 sits over 4.",
-        "result": "3 × 4 = 12",
-        "predictPrompt": "What is 3 × 4?"
+        "stepNumber": 4,
+        "instruction": "Read the remainders from the bottom row upward.",
+        "hint": "The last remainder is the first digit.",
+        "explanation": "Reading upward gives 1, 1 and 0, so 132 in base four is 110 in base five."
        },
        {
-        "operation": "Multiply the third digit",
-        "reason": "The 1 sits over 16.",
-        "result": "1 × 16 = 16",
-        "predictPrompt": "What is 1 × 16?"
-       },
-       {
-        "operation": "Add to get the base-ten number",
-        "reason": "2 + 12 + 16.",
-        "result": "2 + 12 + 16 = 30 in base ten",
-        "predictPrompt": "What is 2 + 12 + 16?"
-       },
-       {
-        "operation": "Divide 30 by five",
-        "reason": "Now write 30 in base five. Divide by 5 and keep each remainder.",
-        "result": "30 ÷ 5 = 6 r 0; 6 ÷ 5 = 1 r 1; 1 ÷ 5 = 0 r 1",
-        "predictPrompt": "What is 30 ÷ 5?"
-       },
-       {
-        "operation": "Read the remainders upward",
-        "reason": "Last remainder first.",
-        "result": "110{{sub:5}}",
-        "predictPrompt": "Which remainder is first?"
-       },
-       {
-        "operation": "Check to confirm: convert back",
-        "reason": "Expand 110 in base five and compare.",
-        "result": "1 × 25 + 1 × 5 + 0 = 30, so both routes give 30",
-        "predictPrompt": "Do the two routes agree?"
+        "stepNumber": 5,
+        "instruction": "Check by converting back.",
+        "hint": "Expand 110 in base five: 1 × 25 + 1 × 5 + 0.",
+        "explanation": "That is 30, and the first route also gave 30, so both routes agree."
        }
-      ]
+      ],
+      "finalAnswer": "132{{sub:4}} = 110{{sub:5}}"
      }
     },
     {

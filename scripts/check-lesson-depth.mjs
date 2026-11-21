@@ -150,10 +150,15 @@ function blockWords(block) {
   if (block.type === 'worked_example') {
     return (
       words(c.problem) +
-      (c.steps ?? []).reduce(
-        (n, s) => n + words(s.operation) + words(s.reason) + words(s.result),
-        0,
-      )
+      words(c.finalAnswer) +
+      (c.steps ?? []).reduce((n, s) => {
+        // v2 walkthrough shape (stepNumber/instruction/hint/explanation).
+        if (s.instruction || s.explanation) {
+          return n + words(s.instruction) + words(s.hint) + words(s.explanation)
+        }
+        // Legacy operation/reason/result shape, still used by other subjects.
+        return n + words(s.operation) + words(s.reason) + words(s.result)
+      }, 0)
     )
   }
   return 0

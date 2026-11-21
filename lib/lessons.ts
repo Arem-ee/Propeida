@@ -10,6 +10,12 @@
  */
 
 export interface WorkedStep {
+  /** New walkthrough shape (v2). */
+  stepNumber?: number
+  instruction?: string
+  hint?: string
+  explanation?: string
+  /** Legacy shape (v1), still rendered for the other subjects. */
   operation: string
   reason: string
   result: string
@@ -29,6 +35,8 @@ export interface WorkedStep {
 export interface WorkedExample {
   problem: string
   steps: WorkedStep[]
+  /** Plain final answer, shown at the bottom of the walkthrough. */
+  finalAnswer?: string
 }
 
 export interface SupportedPrompt {

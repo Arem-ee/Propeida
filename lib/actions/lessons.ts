@@ -258,13 +258,24 @@ export async function getLessonByPath(
                 ? {
                     workedExamples: workedBlocks.map((worked) => ({
                       problem: String(worked.content.problem ?? ''),
+                      ...(typeof worked.content.finalAnswer === 'string' && worked.content.finalAnswer.trim()
+                        ? { finalAnswer: String(worked.content.finalAnswer) }
+                        : {}),
                       steps: ((worked.content.steps ?? []) as {
-                        operation: string
-                        reason: string
-                        result: string
-                        predictPrompt: string
+                        stepNumber?: number
+                        instruction?: string
+                        hint?: string
+                        explanation?: string
+                        operation?: string
+                        reason?: string
+                        result?: string
+                        predictPrompt?: string
                         visual?: { kind: 'number-line' | 'fraction-bars' | 'balance' | 'plane'; props: Record<string, unknown> } | null
-                      }[]).map((s) => ({
+                      }[]).map((s, i) => ({
+                        stepNumber: typeof s.stepNumber === 'number' ? s.stepNumber : i + 1,
+                        instruction: String(s.instruction ?? ''),
+                        hint: String(s.hint ?? ''),
+                        explanation: String(s.explanation ?? ''),
                         operation: String(s.operation ?? ''),
                         reason: String(s.reason ?? ''),
                         result: String(s.result ?? ''),

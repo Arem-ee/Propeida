@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
-import { ArrowRight, CheckCircle, ChevronDown, Eye, Lightbulb, Target } from 'lucide-react'
+import { ArrowRight, CheckCircle, ChevronDown, Lightbulb, Target } from 'lucide-react'
 import { celebrate } from '@/lib/celebrate'
 import { MascotExplains, MascotMisconception } from '@/components/celebrations/speech-bubble'
 import { WorkedSteps } from '@/components/celebrations/worked-steps'
@@ -302,6 +302,11 @@ function BankQuestion({
   )
 }
 
+// WorkedCard: a complete patient-tutor walkthrough. All steps are visible at
+// once; there is no per-step input gate. Each step carries a heading, a plain
+// English explanation of WHY, and the working. The final answer is stated at
+// the bottom. The v1 (operation/reason/result) shape still renders for the
+// other subjects; v2 (stepNumber/instruction/hint/explanation) is preferred.
 function WorkedCard({
   example,
   index,
@@ -313,26 +318,15 @@ function WorkedCard({
   total: number
   onDone: () => void
 }) {
-  // The reveal loop only pays off if the guess survives it: each written
-  // guess is kept beside the revealed result with a one-tap self-check.
-  const [revealed, setRevealed] = useState(0)
-  const [predictionInput, setPredictionInput] = useState('')
-  const [triedEmpty, setTriedEmpty] = useState(false)
-  const [guesses, setGuesses] = useState<Array<string | undefined>>(() => Array(example.steps.length).fill(undefined))
-  const [selfCheck, setSelfCheck] = useState<Array<'right' | 'off' | undefined>>(() => Array(example.steps.length).fill(undefined))
   const doneFired = useRef(false)
+  const steps = example.steps ?? []
 
   useEffect(() => {
-    setPredictionInput('')
-    setTriedEmpty(false)
-  }, [revealed])
-
-  useEffect(() => {
-    if (revealed >= example.steps.length && !doneFired.current) {
+    if (!doneFired.current) {
       doneFired.current = true
       onDone()
     }
-  }, [revealed, example.steps.length, onDone])
+  }, [onDone])
 
   return (
     <div className="rounded-3xl border border-blue-100/70 bg-white p-6 sm:p-8 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)]">
@@ -344,97 +338,57 @@ function WorkedCard({
       <p className="mt-2 rounded-2xl bg-ink p-4 font-display text-lg font-medium leading-snug text-white">
         <MathText text={example.problem} />
       </p>
-      <div className="mt-4 space-y-3">
-        {example.steps.map((step, i) => {
-          const isRevealed = i < revealed
-          const isNext = i === revealed
+      <p className="mt-3 text-[13px] font-semibold text-ink-soft">
+        Work through it with me. Every step is written out, so you can follow the
+        thinking as well as the answer.
+      </p>
+      <ol className="mt-4 space-y-4">
+        {steps.map((step, i) => {
+          const isV2 = Boolean(step.instruction || step.explanation)
+          const heading = isV2 ? step.instruction || '' : step.operation
+          const why = isV2 ? step.explanation || '' : step.reason
+          const working = isV2 ? step.explanation || '' : step.result
           return (
-            <div key={i} className={`rounded-2xl border p-4 ${isRevealed ? 'border-emerald-200 bg-emerald-50/50' : 'border-gray-200 bg-white'}`}>
-              <p className="text-sm font-extrabold text-black">{i + 1}. <MathText text={step.operation} /></p>
-              <p className="mt-1 text-[13px] font-semibold text-ink-soft"><MathText text={step.reason} /></p>
-              {isRevealed ? (
-                <>
-                  <p className="mt-2 rounded-xl bg-white border border-emerald-200 px-3 py-2.5 text-sm font-bold text-emerald-800 animate-pop-in"><MathText text={step.result} /></p>
-                  {typeof guesses[i] === 'string' && (
-                    <div className="mt-2 flex flex-wrap items-center gap-2">
-                      <span className="text-[12px] font-bold italic text-blue-800">
-                        Your guess: <span className="not-italic">{guesses[i]}</span>
-                      </span>
-                      <button
-                        type="button"
-                        onClick={() => setSelfCheck((s) => s.map((v, j) => (j === i ? 'right' : v)))}
-                        className={`rounded-full border px-2.5 py-0.5 text-[11px] font-extrabold transition-colors ${
-                          selfCheck[i] === 'right'
-                            ? 'border-emerald-600 bg-emerald-600 text-white'
-                            : 'border-emerald-300 bg-white text-emerald-800 hover:bg-emerald-50'
-                        }`}
-                      >
-                        I was right
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => setSelfCheck((s) => s.map((v, j) => (j === i ? 'off' : v)))}
-                        className={`rounded-full border px-2.5 py-0.5 text-[11px] font-extrabold transition-colors ${
-                          selfCheck[i] === 'off'
-                            ? 'border-amber-600 bg-amber-600 text-white'
-                            : 'border-amber-300 bg-white text-amber-800 hover:bg-amber-50'
-                        }`}
-                      >
-                        I was off
-                      </button>
-                    </div>
-                  )}
-                  <StepVisual visual={step.visual ?? null} />
-                </>
-              ) : isNext ? (
-                <div className="mt-2 space-y-2">
-                  {step.predictPrompt && (
-                    <>
-                      <p className="text-[13px] font-bold italic text-blue-700"><MathText text={step.predictPrompt} /></p>
-                      <input
-                        value={predictionInput}
-                        onChange={(e) => {
-                          setPredictionInput(e.target.value)
-                          if (e.target.value.trim() !== '') setTriedEmpty(false)
-                        }}
-                        placeholder="Your best guess (any answer counts)"
-                        className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm min-h-[44px] focus:border-blue-600 focus:outline-none"
-                      />
-                      {triedEmpty && predictionInput.trim() === '' && (
-                        <p className="text-xs font-bold text-red-600">Type anything you think — even a guess — then reveal</p>
-                      )}
-                    </>
-                  )}
-                  <button
-                    onClick={() => {
-                      if (step.predictPrompt && predictionInput.trim() === '') {
-                        setTriedEmpty(true)
-                        return
-                      }
-                      setGuesses((g) => g.map((v, j) => (j === i ? predictionInput.trim() || '—' : v)))
-                      setRevealed((n) => n + 1)
-                      setPredictionInput('')
-                    }}
-                    className="mt-2 inline-flex items-center gap-1.5 rounded-xl border-2 border-blue-600 px-4 py-2 text-[13px] font-extrabold text-blue-700 min-h-[44px] cursor-pointer"
-                  >
-                    <Eye className="h-4 w-4" />
-                    {step.predictPrompt ? 'Reveal step' : 'Reveal'}
-                  </button>
-                </div>
-              ) : (
-                <p className="mt-2 text-xs font-bold text-gray-500">Reveal the step above first</p>
+            <li
+              key={i}
+              className="rounded-2xl border border-gray-200 bg-white p-4"
+            >
+              <p className="font-display text-sm font-extrabold text-black">
+                Step {step.stepNumber ?? i + 1}: <MathText text={heading} />
+              </p>
+              {why && (
+                <p className="mt-1 text-[13px] font-semibold leading-relaxed text-ink-soft">
+                  <MathText text={why} />
+                </p>
               )}
-            </div>
+              {isV2 && step.hint && (
+                <p className="mt-1 text-[12px] font-bold italic text-blue-700">
+                  Hint: <MathText text={step.hint} />
+                </p>
+              )}
+              {!isV2 && working && (
+                <p className="mt-2 rounded-xl border border-blue-100 bg-blue-50/60 px-3 py-2.5 text-sm font-bold text-blue-900">
+                  <MathText text={working} />
+                </p>
+              )}
+              <StepVisual visual={step.visual ?? null} />
+            </li>
           )
         })}
-        {revealed >= example.steps.length && (
-          <p className="pt-1 text-center text-[12px] font-extrabold leading-snug text-emerald-800">
-            {selfCheck.filter(Boolean).length === 0
-              ? 'You predicted every step before it opened. That is the whole exercise. Keep doing it.'
-              : `${selfCheck.filter((v) => v === 'right').length} of ${selfCheck.filter(Boolean).length} called right. Predicting first is what makes it stick.`}
-          </p>
-        )}
-      </div>
+      </ol>
+      {(example.finalAnswer || steps.length > 0) && (
+        <p className="mt-5 rounded-2xl border-2 border-emerald-200 bg-emerald-50/60 px-4 py-3 text-sm font-extrabold text-emerald-900">
+          Final answer:{' '}
+          <MathText
+            text={
+              example.finalAnswer ||
+              steps[steps.length - 1]?.result ||
+              steps[steps.length - 1]?.explanation ||
+              ''
+            }
+          />
+        </p>
+      )}
     </div>
   )
 }

@@ -125,6 +125,13 @@ is the full round trip done once, labels included.
 
 R.9 Worked examples end with "Check to confirm:" — the final step, a
 independent verification of the answer, never the same method twice.
+- **Worked-example schema (v2).** Author `problem`, `finalAnswer` and numbered
+  `steps` with `stepNumber`, `instruction`, `hint` and `explanation`. The
+  renderer shows the whole walkthrough at once, with the why inside each step,
+  no prediction gate, and the final answer at the bottom. The older
+  `operation`/`reason`/`result`/`predictPrompt` shape still renders for the
+  other subjects; new authoring uses v2 only. `hint` is a nudge for a stuck
+  learner, never a gate.
 
 R.10 Working steps carry predictPrompts. Not "Which numbers work with
 each other first?" — plain, answerable questions with concrete answers:
