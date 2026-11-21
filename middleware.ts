@@ -81,6 +81,15 @@ export async function middleware(request: NextRequest) {
     const result = await supabase.auth.getUser()
     user = result.data.user ?? null
   } catch {
+    // Fail closed. A stale or unreachable auth server must not turn a
+    // protected route into a public one. Auth pages can still render so the
+    // learner has a way back in and can retry.
+    if (needsAuth) {
+      const url = request.nextUrl.clone()
+      url.pathname = '/login'
+      url.searchParams.set('redirect', pathname)
+      return NextResponse.redirect(url)
+    }
     return response
   }
 
