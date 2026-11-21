@@ -162,6 +162,19 @@ export default function SignupPage() {
     if (error) {
       setError(friendlyAuthError(error.message, 'signup'))
       setGoogleLoading(false)
+    } else {
+      // Store the referral code so it can be claimed after OAuth completes.
+      // The /auth/callback route will read it from localStorage and apply it.
+      try {
+        const ref = window.localStorage.getItem('pending_ref')
+        if (ref) {
+          // Keep it; /auth/callback will claim it
+        } else {
+          // No pending ref — that's fine too.
+        }
+      } catch {
+        // best-effort; don't block the Google flow
+      }
     }
   }
 

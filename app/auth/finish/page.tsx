@@ -7,12 +7,8 @@ import { type EmailOtpType } from '@supabase/supabase-js'
 import { Loader2 } from 'lucide-react'
 import Logo from '@/components/logo'
 import { createClient } from '@/lib/supabase/client'
-
-/** Only allow local paths so the `next` param can never become an open redirect. */
-function safeNext(value: string | null): string {
-  if (!value || !value.startsWith('/') || value.startsWith('//')) return '/home'
-  return value
-}
+import { claimReferral } from '@/lib/actions/referral'
+import { safeInternalPath } from '@/lib/safe-redirect'
 
 /** Welcome mail belongs after a verified session, never at signup time. */
 function triggerWelcomeEmail() {
@@ -31,7 +27,7 @@ function FinishingAuth() {
     started.current = true
 
     const run = async () => {
-      const next = safeNext(params.get('next'))
+      const next = safeInternalPath(params.get('next'))
       const hash = new URLSearchParams(window.location.hash.slice(1))
       // Recovery links carry type=recovery. Route them to the new-password
       // page even if an email template drops the `next` param.
@@ -61,7 +57,19 @@ function FinishingAuth() {
           refresh_token: refreshToken,
         })
         window.history.replaceState(null, '', window.location.pathname + window.location.search)
-        if (!error && linkType !== 'recovery') triggerWelcomeEmail()
+        if (!error && linkType !== 'recovery') {
+          // Claim any referral code that was stored pending from the signup page.
+          try {
+            const code = window.localStorage.getItem('pending_ref')
+            if (code) {
+              await claimReferral(code)
+              window.localStorage.removeItem('pending_ref')
+            }
+          } catch {
+            // best-effort; don't block the finish
+          }
+          triggerWelcomeEmail()
+        }
         router.replace(error ? '/login?error=verification_failed' : target)
         return
       }
@@ -73,7 +81,19 @@ function FinishingAuth() {
       const type = params.get('type') as EmailOtpType | null
       if (tokenHash && type) {
         const { error } = await supabase.auth.verifyOtp({ token_hash: tokenHash, type })
-        if (!error && linkType !== 'recovery') triggerWelcomeEmail()
+        if (!error && linkType !== 'recovery') {
+          // Claim any referral code that was stored pending from the signup page.
+          try {
+            const code = window.localStorage.getItem('pending_ref')
+            if (code) {
+              await claimReferral(code)
+              window.localStorage.removeItem('pending_ref')
+            }
+          } catch {
+            // best-effort; don't block the finish
+          }
+          triggerWelcomeEmail()
+        }
         router.replace(error ? '/login?error=verification_failed' : target)
         return
       }
@@ -85,7 +105,19 @@ function FinishingAuth() {
         const { data } = await supabase.auth.getSession()
         if (data.session) {
           window.history.replaceState(null, '', window.location.pathname + window.location.search)
-          if (linkType !== 'recovery') triggerWelcomeEmail()
+          if (linkType !== 'recovery') {
+            // Claim any referral code that was stored pending from the signup page.
+            try {
+              const code = window.localStorage.getItem('pending_ref')
+              if (code) {
+                await claimReferral(code)
+                window.localStorage.removeItem('pending_ref')
+              }
+            } catch {
+              // best-effort; don't block the finish
+            }
+            triggerWelcomeEmail()
+          }
           router.replace(target)
           return
         }

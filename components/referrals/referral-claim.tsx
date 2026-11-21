@@ -3,9 +3,9 @@
 import { useEffect } from 'react'
 import { claimReferral } from '@/lib/actions/referral'
 
-// Failures that will never succeed on retry, so the stored code must be
-// cleared. Anything else (network error, rate limit, session not ready yet)
-// keeps the code so the next visit tries again.
+// Failures that should clear the stored code permanently; everything else
+// (network error, rate limit, session not ready yet) keeps the code so the
+// next visit retries.
 const PERMANENT_FAILURES = [
   'Already referred by someone',
   'Invalid referral code',
@@ -15,10 +15,13 @@ const PERMANENT_FAILURES = [
 ]
 
 /**
- * Closes the gap the password-login claim left behind: people who sign up
- * through Google or confirm their email link never pass through the login
- * page handler, so their `pending_ref` stayed in localStorage forever.
- * This mounts on every app page and claims it once, silently.
+ * Closes the gap where Google OAuth and email-confirmation signups never
+ * pass through the login-page claim handler, so their `pending_ref` stayed
+ * in localStorage forever.
+ *
+ * Mount on every `(app)` page and onboarding: it runs once on mount, claims
+ * the stored code silently, and clears the key on success or permanent
+ * failure. Transient failures retry on the next visit.
  */
 export function ReferralClaim() {
   useEffect(() => {
@@ -48,6 +51,7 @@ export function ReferralClaim() {
             // Nothing sensible to do here
           }
         }
+        // Transient failures: keep the key; the next page mount will retry
       }
     })()
   }, [])
