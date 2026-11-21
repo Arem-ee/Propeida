@@ -1749,14 +1749,14 @@
      "content": {
       "heading": "What a base is",
       "paragraphs": [
-       "Put **12** counters on the table. Count them the way you always do: one full group of ten, and 2 left over. You write that as **12**.",
-       "Now group the same **12** counters in fives instead.",
-       "You get **2** full groups of five, with **2** counters left over.",
-       "Mathematicians write that as **22{{sub:5}}**. The little **5** tells you the group size.",
-       "Group the same 12 counters in fours. You get **3** full groups of four, with none left over: **30{{sub:4}}**.",
-       "The counters never changed. Only the group size changed. The group size is called the **base**.",
-       "A **digit** is one written mark. In base five the digits stop at **4**, because 5 is already a full group.",
-       "Counting in base five goes **0, 1, 2, 3, 4, 10, 11, 12, 13, 14, 20**. After 4 comes 10, never 5."
+       "You count on ten fingers, so base ten uses ten digits, from 0 to 9.",
+       "Put **12** counters on the table and count them the way you always do, so you get one full group of ten with 2 left over, and you write that as **12**.",
+       "Now group the same **12** counters in fives instead, and you get **2** full groups of five with **2** left over, which mathematicians write as **22{{sub:5}}**.",
+       "The little **5** tells you the group size.",
+       "If you group the same counters in fours, you get **3** full groups of four with none left over, so you write **30{{sub:4}}**.",
+       "The counters never changed, but the group size did, and that group size is called the **base**.",
+       "A **digit** is one written mark, and in base five the digits stop at **4** because 5 is already a full group.",
+       "Counting in base five goes **0, 1, 2, 3, 4, 10, 11, 12, 13, 14, 20**, so after 4 comes 10 and never 5."
       ],
       "bullets": [],
       "takeaway": "A base is the size of the group you count in. Digits stop one short of the base.",
@@ -1792,15 +1792,15 @@
      "content": {
       "heading": "Reading a number written in another base",
       "paragraphs": [
-       "Take **43{{sub:5}}**. To read it, find what each column is worth.",
-       "The right column counts ones: **5⁰ = 1**. The next counts fives: **5¹ = 5**. One more to the left counts **5² = 5 × 5 = 25**.",
-       "The **4** sits in the fives column. Multiply it by the worth of that column:",
+       "Take **43{{sub:5}}**, and to read it you first find what each column is worth.",
+       "The right column counts ones and is worth **5⁰ = 1**, the next counts fives and is worth **5¹ = 5**, and one more to the left would be worth **5² = 5 × 5 = 25**.",
+       "Write each digit over its column, so the **4** is over 5 and the **3** is over 1.",
+       "Now multiply each digit by its column worth, one at a time.",
        "4 × 5 = 20",
-       "The **3** sits in the ones column. Multiply it by the worth of that column:",
        "3 × 1 = 3",
-       "Add the two products:",
+       "Then add the answers.",
        "20 + 3 = 23",
-       "So **43{{sub:5}}** is **23** in base ten. This is called expanding the number."
+       "So **43{{sub:5}}** is **23** in base ten, and this is called expanding the number."
       ],
       "bullets": [],
       "takeaway": "Find each column worth, multiply each digit by its worth, then add.",
@@ -1848,15 +1848,15 @@
      "content": {
       "heading": "Writing a base-ten number in another base",
       "paragraphs": [
-       "To go the other way, divide again and again by the new base, writing each remainder.",
-       "Take **23** and write it in base five. Divide by 5:",
+       "To go the other way, you divide again and again by the new base and write down each remainder.",
+       "Take **23** and write it in base five, so first divide 23 by 5.",
        "23 ÷ 5 = 4 remainder 3",
-       "Now divide that **4** by 5:",
+       "Now divide that **4** by 5 and keep its remainder as well.",
        "4 ÷ 5 = 0 remainder 4",
-       "The answer 0 means stop.",
-       "Read the remainders from the last one back to the first: **4**, then **3**.",
+       "The answer 0 means the division is finished.",
+       "Read the remainders from the last one back to the first, so you get **4**, then **3**.",
        "So **23** in base ten is **43{{sub:5}}**.",
-       "Check it by reading 43{{sub:5}} the way you learned in the last card: 4 × 5 + 3 × 1 = 23."
+       "You can check this by reading 43{{sub:5}} the way you learned in the last card, because 4 × 5 + 3 × 1 = 23."
       ],
       "bullets": [],
       "takeaway": "Divide by the new base until the answer is 0. Read the remainders from last to first.",
