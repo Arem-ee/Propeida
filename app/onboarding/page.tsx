@@ -106,6 +106,21 @@ export default function OnboardingPage() {
     return () => { cancelled = true }
   }, [supabase])
 
+  // /onboarding lives outside the (app) group, so nothing here redirects a
+  // user who is not signed in. Guard it here so they never hit a generic
+  // "Something went wrong" when the save action has no session.
+  useEffect(() => {
+    let cancelled = false
+    const checkSession = async () => {
+      const { data } = await supabase.auth.getSession()
+      if (!cancelled && !data.session) {
+        router.replace('/login')
+      }
+    }
+    checkSession()
+    return () => { cancelled = true }
+  }, [supabase, router])
+
   const goNext = useCallback(() => {
     const next = STEPS[STEPS.indexOf(step) + 1]
     if (next) setStep(next)
@@ -263,17 +278,30 @@ export default function OnboardingPage() {
                 <ArrowRight className="h-5 w-5" />
               </button>
               <button
-                onClick={() => {
-                  saveOnboardingProfile({
-                    exam_target: 'general',
-                    subject_combinations: [],
-                    intended_course: null,
-                    heard_about: 'other',
-                    study_time: 'flexible',
-                    target_score: 1,
-                    accessibility_needs: { large_font: false, high_contrast: false, sound_off: false },
-                    subjects_pending: true,
-                  }).then(() => router.push('/home')).catch(() => router.push('/home'))
+                onClick={async () => {
+                  setError(null)
+                  setLoading(true)
+                  try {
+                    await saveOnboardingProfile({
+                      exam_target: 'general',
+                      subject_combinations: [],
+                      intended_course: null,
+                      heard_about: 'other',
+                      study_time: 'flexible',
+                      target_score: 1,
+                      accessibility_needs: { large_font: false, high_contrast: false, sound_off: false },
+                      subjects_pending: true,
+                    })
+                    router.push('/home')
+                  } catch (err: unknown) {
+                    if (err instanceof Error && (err as { name?: string }).name === 'OnboardingError') {
+                      setError(err.message)
+                    } else {
+                      setError('Something went wrong, so please try again')
+                    }
+                  } finally {
+                    setLoading(false)
+                  }
                 }}
                 className="mt-3 w-full sm:w-auto rounded-2xl border border-gray-200 bg-white px-8 py-3 text-[15px] font-extrabold text-ink-soft hover:bg-gray-50 min-h-[52px] cursor-pointer transition-all"
               >

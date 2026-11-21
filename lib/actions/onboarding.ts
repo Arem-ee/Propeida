@@ -263,7 +263,7 @@ class OnboardingError extends Error {
 export async function saveOnboardingProfile(payload: OnboardingProfileInput) {
   const supabase = await createClient()
   const user = await getAuthUser(supabase)
-  if (!user) throw new Error('Please sign in again')
+  if (!user) throw new OnboardingError('Please sign in again')
 
   // ---- Compulsory validation ----
   if (!payload.exam_target) throw new OnboardingError('Please select what you are preparing for.')
@@ -294,7 +294,7 @@ export async function saveOnboardingProfile(payload: OnboardingProfileInput) {
     sound_off: payload.accessibility_needs?.sound_off ?? false,
   }
 
-  const { error } = await supabase
+  const { data, error } = await supabase
     .from('profiles')
     .update({
       exam_target: payload.exam_target,
@@ -308,8 +308,10 @@ export async function saveOnboardingProfile(payload: OnboardingProfileInput) {
       onboarding_completed: true,
     })
     .eq('id', user.id)
+    .select('id')
 
   if (error) throw new Error('Could not save your profile')
+  if (!data || data.length === 0) throw new OnboardingError('Your profile could not be found, so sign in again')
 
   revalidatePath('/home')
   revalidatePath('/account')
