@@ -1749,84 +1749,37 @@
      "content": {
       "heading": "What a base is",
       "paragraphs": [
-       "You count on ten fingers. That is why base ten exists. Every base that is not base ten counts in bundles of a different size. A **digit** is one written mark. Base ten uses 0 to 9.",
-       "Now imagine you counted on five fingers instead of ten. Each full hand is a bundle of five.",
+       "You count on ten fingers. That is why base ten exists. It has ten digits, **0 to 9**.",
+       "Now imagine you counted on five fingers. You would only have five digits, **0, 1, 2, 3 and 4**.",
        "Counting **23** that way, you get **4** full bundles of five, with **3** ones over.",
-       "Mathematicians write **43{{sub:5}}** for that.",
-       "The little **5** tells you the bundle size. Everything groups in bundles of five."
+       "Mathematicians write **43{{sub:5}}** for that. The little **5** tells you the bundle size.",
+       "Counting in base five goes **0, 1, 2, 3, 4, 10, 11, 12, 13, 14, 20**. There is no digit 5, because 5 is the next bundle.",
+       "A **digit** is one written mark. Base ten uses 0 to 9. Base five uses 0 to 4."
       ],
       "bullets": [],
-      "takeaway": "A base is the size of the bundle. The little subscript number tells you.",
+      "takeaway": "A base is the size of the bundle you count in. Digits stop one short of the base.",
       "check": {
-       "question": "What does **43{{sub:5}}** mean?",
+       "question": "Which of these digits can appear in base five?",
        "options": [
-        "Four bundles of five and three ones",
-        "The number forty-three",
-        "The base is five written as 43",
-        "Five bundles of forty-three"
-       ],
-       "answer": 0,
-       "why": "The 5 says bundle of five: 4 × 5 + 3 = 23.",
-       "steps": [
-        {
-         "operation": "Read the little 5",
-         "reason": "It is the bundle size.",
-         "result": "Bundle size five",
-         "predictPrompt": "What is the little number?"
-        },
-        {
-         "operation": "Count the bundles",
-         "reason": "Four bundles of five with three ones over makes twenty-three.",
-         "result": "4 × 5 + 3 = 23",
-         "predictPrompt": "How many groups of 5 are in 23?"
-        }
-       ]
-      }
-     }
-    },
-    {
-     "type": "text",
-     "content": {
-      "heading": "What each place is worth",
-      "paragraphs": [
-       "Put five counters on the table. In base ten you write them as **5**.",
-       "Now make bundles of five. The five counters make one full bundle with none left over. You write that as **10{{sub:5}}**.",
-       "Use the same five counters, but make bundles of three. You get one bundle of three and two left over: **12{{sub:3}}**.",
-       "So the same five counters are **5**, **10{{sub:5}}** and **12{{sub:3}}**. The base is the size of the bundle you count in.",
-       "Counting in base five goes **0, 1, 2, 3, 4, 10, 11, 12, 13, 14, 20**. You never write a 5, because 5 is a full bundle.",
-       "The places follow the bundles. In base five the right column counts ones (**1**). The next counts groups of five (**5**). The next counts groups of twenty-five (**25**).",
-       "Now read **43{{sub:5}}**. The 4 is in the column worth 5. The 3 is in the column worth 1.",
-       "4 × 5 + 3 × 1 = 23",
-       "So **43{{sub:5}}** is **23** in base ten. That is what place worths are for.",
-       "The small raised number is a **power**. It tells you how many times to multiply the base by itself.",
-       "5 × 5 = 25",
-       "So the twenty-fives column can be written **5²**, the fives column **5¹**, and the ones column **5⁰ = 1**. Same worths, shorter writing.",
-       "Digits stay smaller than the base. Base five uses **0, 1, 2, 3 and 4**."
-      ],
-      "bullets": [],
-      "takeaway": "A base is the size of the bundle you count in. Digits stop one short of the bundle size.",
-      "check": {
-       "question": "In base five, what is the third place worth from the right?",
-       "options": [
-        "25",
-        "125",
+        "4",
         "5",
-        "15"
+        "6",
+        "9"
        ],
        "answer": 0,
-       "why": "Base five places run 1, 5, 25. The third one is 25.",
+       "why": "Base five uses 0, 1, 2, 3 and 4. A 5 would already be one full bundle.",
        "steps": [
         {
-         "operation": "List the places from the right",
-         "reason": "Each place is five times the one before it.",
-         "result": "1, 5, 25",
-         "predictPrompt": "What are the first three places in base five?"
+         "operation": "List the digits of base five",
+         "reason": "The digits stop one short of the bundle size.",
+         "result": "0, 1, 2, 3 and 4",
+         "predictPrompt": "What is one less than five?"
         },
         {
-         "operation": "Read off the third",
-         "reason": "The places are 1, 5, 25 from the right.",
-         "result": "25",
-         "predictPrompt": "Which is the third place?"
+         "operation": "Test each option",
+         "reason": "Only 4 is in that list.",
+         "result": "4 is allowed",
+         "predictPrompt": "Which option is in the list?"
         }
        ]
       }
@@ -1835,88 +1788,116 @@
     {
      "type": "text",
      "content": {
-      "heading": "The rule that covers every conversion",
+      "heading": "Reading a number written in another base",
       "paragraphs": [
-       "We write **b** for \"any base\". To read any base-b number, multiply each digit by its place and add. The **quotient** is how many full groups get made; the **remainder** is what is left over when the groups are taken out.",
-       "Take 210 in base three. The places are worth 9, 3 and 1:",
-       "210{{sub:3}} = (2 × 9) + (1 × 3) + (0 × 1)",
-       "210{{sub:3}} = 18 + 3 + 0 = 21",
-       "To write a base-ten number in another base, divide by the base and collect the remainders.",
-       "Here is 25 in base five, divided row by row:",
-       "25 ÷ 5 = 5 r 0",
-       "5 ÷ 5 = 1 r 0",
-       "1 ÷ 5 = 0 r 1",
-       "Read the remainders from the bottom up: **100{{sub:5}}**.",
-       "Between two bases that are not base ten, go through base ten first. There is no quicker way than base ten.",
-       "Fractions convert the same way: multiply by the new base, take the whole part each time."
+       "To read **43{{sub:5}}**, first write the place worths from the right.",
+       "The right column counts ones: **5⁰ = 1**. The next counts fives: **5¹ = 5**. One more to the left would count **5² = 5 × 5 = 25**.",
+       "Write each digit over its place: the **4** is over 5, the **3** is over 1.",
+       "Now multiply each digit by the worth of its place, one at a time:",
+       "4 × 5 = 20",
+       "3 × 1 = 3",
+       "Add the answers:",
+       "20 + 3 = 23",
+       "So **43{{sub:5}}** is **23** in base ten. This is called expanding the number."
       ],
       "bullets": [],
-      "takeaway": "Convert to base ten from any base; divide to land in a new one.",
+      "takeaway": "To read a base number: find each place worth, multiply each digit by its worth, then add.",
       "check": {
-       "question": "What is 13 in base two?",
+       "question": "What is **21{{sub:4}}** in base ten?",
+       "options": [
+        "9",
+        "8",
+        "7",
+        "21"
+       ],
+       "answer": 0,
+       "why": "Place worths in base four are 4 and 1. 2 × 4 = 8, 1 × 1 = 1, and 8 + 1 = 9.",
+       "steps": [
+        {
+         "operation": "Write the place worths",
+         "reason": "From the right: 1, then 4.",
+         "result": "4 and 1",
+         "predictPrompt": "What are the first two worths in base four?"
+        },
+        {
+         "operation": "Multiply the left digit",
+         "reason": "The 2 sits over 4.",
+         "result": "2 × 4 = 8",
+         "predictPrompt": "What is 2 × 4?"
+        },
+        {
+         "operation": "Multiply the right digit",
+         "reason": "The 1 sits over 1.",
+         "result": "1 × 1 = 1",
+         "predictPrompt": "What is 1 × 1?"
+        },
+        {
+         "operation": "Add",
+         "reason": "8 + 1.",
+         "result": "9",
+         "predictPrompt": "What is 8 + 1?"
+        }
+       ]
+      }
+     }
+    },
+    {
+     "type": "text",
+     "content": {
+      "heading": "Writing a base-ten number in another base",
+      "paragraphs": [
+       "To go the other way, divide again and again by the new base, writing each remainder.",
+       "Take **23** and write it in base five. Divide by 5:",
+       "23 ÷ 5 = 4 remainder 3",
+       "Now divide that **4** by 5:",
+       "4 ÷ 5 = 0 remainder 4",
+       "The answer 0 means stop.",
+       "Read the remainders from the last one back to the first: **4**, then **3**.",
+       "So **23** in base ten is **43{{sub:5}}**.",
+       "Check it by reading 43{{sub:5}} the way you learned in the last card: 4 × 5 + 3 × 1 = 23."
+      ],
+      "bullets": [],
+      "takeaway": "Divide by the new base until the answer is 0. Read the remainders from last to first.",
+      "check": {
+       "question": "What is **13** in base two?",
        "options": [
         "1101",
         "1011",
-        "1100",
+        "1110",
         "1001"
        ],
        "answer": 0,
-       "why": "Divide repeatedly: 13 ÷ 2 = 6 r 1; 6 ÷ 2 = 3 r 0; 3 ÷ 2 = 1 r 1; 1 ÷ 2 = 0 r 1. Reading the remainders upwards gives 1101.",
+       "why": "13 ÷ 2 = 6 r 1; 6 ÷ 2 = 3 r 0; 3 ÷ 2 = 1 r 1; 1 ÷ 2 = 0 r 1. Read up: 1101.",
        "steps": [
         {
          "operation": "Divide 13 by 2",
-         "reason": "Each row: divide, write the remainder, carry down what you are left with.",
+         "reason": "Each row leaves a remainder.",
          "result": "13 ÷ 2 = 6 r 1",
          "predictPrompt": "What is 13 divided by 2?"
         },
         {
          "operation": "Divide 6 by 2",
-         "reason": "Carry down what the previous row leaves behind.",
+         "reason": "Carry the 6 down.",
          "result": "6 ÷ 2 = 3 r 0",
-         "predictPrompt": "Half of 6?"
+         "predictPrompt": "What is 6 divided by 2?"
         },
         {
          "operation": "Divide 3 by 2",
-         "reason": "Keep dividing until nothing is left to carry down.",
+         "reason": "Carry the 3 down.",
          "result": "3 ÷ 2 = 1 r 1",
-         "predictPrompt": "How many twos in 3, and what is left?"
+         "predictPrompt": "What is 3 divided by 2?"
         },
         {
          "operation": "Divide 1 by 2",
-         "reason": "Only one left, so this row finishes the working.",
+         "reason": "This row ends the working.",
          "result": "1 ÷ 2 = 0 r 1",
-         "predictPrompt": "What is 1 divided by 2?"
+         "predictPrompt": "What is the answer now?"
         },
         {
-         "operation": "Read the remainders from the bottom up",
-         "reason": "The bottom remainder is the leftmost digit.",
-         "result": "1101 in base two",
-         "predictPrompt": "Which remainder is the leftmost digit?",
-         "visual": {
-          "kind": "quotient-table",
-          "props": {
-           "divisor": 2,
-           "rows": [
-            {
-             "dividend": 13,
-             "remainder": 1
-            },
-            {
-             "dividend": 6,
-             "remainder": 0
-            },
-            {
-             "dividend": 3,
-             "remainder": 1
-            },
-            {
-             "dividend": 1,
-             "remainder": 1
-            }
-           ],
-           "caption": "1101 in base two"
-          }
-         }
+         "operation": "Read the remainders upward",
+         "reason": "Last remainder first.",
+         "result": "1101{{sub:2}}",
+         "predictPrompt": "Which remainder is first?"
         }
        ]
       }
@@ -1928,28 +1909,58 @@
       "problem": "Write 210 in base three as a base-ten number.",
       "steps": [
        {
-        "operation": "Work out the worths from the right",
-        "reason": "Start at the right. The first place is worth 1. Each place to the left is three times the one before it.",
-        "result": "Worths from the right: 1, 3 and 9",
-        "predictPrompt": "What are the worths in base three, from the right?"
+        "operation": "Write the digits from the right",
+        "reason": "The digits of 210 from the right are 0, 1 and 2.",
+        "result": "0, 1 and 2",
+        "predictPrompt": "Which digit is rightmost?"
        },
        {
-        "operation": "Multiply each digit by its place",
-        "reason": "Multiply each digit by the worth of its column.",
-        "result": "2 × 9 = 18, 1 × 3 = 3, 0 × 1 = 0",
+        "operation": "Write the place worths in base three",
+        "reason": "From the right: 1, then 3, then 9.",
+        "result": "1, 3 and 9",
+        "predictPrompt": "What are the first three worths in base three?"
+       },
+       {
+        "operation": "Work out each place worth",
+        "reason": "Each worth is the base multiplied by itself. 3 × 3 = 9.",
+        "result": "3⁰ = 1; 3¹ = 3; 3² = 3 × 3 = 9",
+        "predictPrompt": "What is 3 × 3?"
+       },
+       {
+        "operation": "Match each digit to its place",
+        "reason": "The 0 is over 1, the 1 is over 3, the 2 is over 9.",
+        "result": "0 → 1; 1 → 3; 2 → 9",
+        "predictPrompt": "Which digit sits over 9?"
+       },
+       {
+        "operation": "Multiply the first digit",
+        "reason": "0 × 1.",
+        "result": "0 × 1 = 0",
+        "predictPrompt": "What is 0 × 1?"
+       },
+       {
+        "operation": "Multiply the second digit",
+        "reason": "1 × 3.",
+        "result": "1 × 3 = 3",
+        "predictPrompt": "What is 1 × 3?"
+       },
+       {
+        "operation": "Multiply the third digit",
+        "reason": "2 × 9.",
+        "result": "2 × 9 = 18",
         "predictPrompt": "What is 2 × 9?"
        },
        {
         "operation": "Add the three answers",
-        "reason": "Add the products. The zero adds nothing.",
-        "result": "18 + 3 + 0 = 21",
-        "predictPrompt": "What is 18 plus 3?"
+        "reason": "0 + 3 + 18.",
+        "result": "0 + 3 + 18 = 21",
+        "predictPrompt": "What is 0 + 3 + 18?"
        },
        {
-        "operation": "Check to confirm: convert it back",
-        "reason": "Divide 21 by three, writing each remainder, until nothing is left.",
-        "result": "21 ÷ 3 = 7 r 0; 7 ÷ 3 = 2 r 1; 2 ÷ 3 = 0 r 2; which reads 210 in base three",
-        "predictPrompt": "Does dividing 21 by 3 give 210 back in base three?"
+        "operation": "Check to confirm: convert back",
+        "reason": "Divide 21 by 3 and read the remainders upward.",
+        "result": "21 ÷ 3 = 7 r 0; 7 ÷ 3 = 2 r 1; 2 ÷ 3 = 0 r 2, which reads 210",
+        "predictPrompt": "Does 21 in base three read 210?"
        }
       ]
      }
@@ -1961,54 +1972,83 @@
       "steps": [
        {
         "operation": "Divide 25 by 5",
-        "reason": "Divide and keep the remainder as a digit.",
-        "result": "25 ÷ 5 = 5 r 0",
+        "reason": "The new base is 5, so divide by 5. Keep the remainder.",
+        "result": "25 ÷ 5 = 5 remainder 0",
         "predictPrompt": "What is 25 divided by 5?"
        },
        {
-        "operation": "Divide 5 by 5",
-        "reason": "Divide again and keep the remainder.",
-        "result": "5 ÷ 5 = 1 r 0",
+        "operation": "Divide the 5 by 5",
+        "reason": "Carry the 5 down and divide again.",
+        "result": "5 ÷ 5 = 1 remainder 0",
         "predictPrompt": "What is 5 divided by 5?"
        },
        {
-        "operation": "Divide 1 by 5",
-        "reason": "One cannot be split into a full group of five, so everything is remainder.",
-        "result": "1 ÷ 5 = 0 r 1",
-        "predictPrompt": "What is 1 divided by 5?"
+        "operation": "Divide the 1 by 5",
+        "reason": "One cannot make a full group of five, so the remainder is 1.",
+        "result": "1 ÷ 5 = 0 remainder 1",
+        "predictPrompt": "What is the answer now?"
+       },
+       {
+        "operation": "Stop",
+        "reason": "The answer 0 means there is nothing left to divide.",
+        "result": "Last row",
+        "predictPrompt": "Why do we stop?"
        },
        {
         "operation": "Read the remainders from the bottom up",
-        "reason": "The bottom remainder is the leftmost digit.",
-        "result": "100 in base five",
-        "predictPrompt": "Which remainder is the leftmost digit?",
-        "visual": {
-         "kind": "quotient-table",
-         "props": {
-          "divisor": 5,
-          "rows": [
-           {
-            "dividend": 25,
-            "remainder": 0
-           },
-           {
-            "dividend": 5,
-            "remainder": 0
-           },
-           {
-            "dividend": 1,
-            "remainder": 1
-           }
-          ],
-          "caption": "100 in base five"
-         }
-        }
+        "reason": "The last remainder is the first digit.",
+        "result": "100{{sub:5}}",
+        "predictPrompt": "Which remainder is the first digit?"
        },
        {
-        "operation": "Check to confirm: convert it back",
-        "reason": "Place values are 25, 5 and 1 from the right.",
+        "operation": "Check to confirm: expand 100 in base five",
+        "reason": "Worths are 25, 5 and 1 from the right.",
         "result": "1 × 25 + 0 × 5 + 0 × 1 = 25",
-        "predictPrompt": "Does 25 match what you started with?"
+        "predictPrompt": "Does it come back to 25?"
+       }
+      ]
+     }
+    },
+    {
+     "type": "worked_example",
+     "content": {
+      "problem": "Convert 0.625 in base ten into a binary (base-two) fraction.",
+      "steps": [
+       {
+        "operation": "Multiply the fraction by 2",
+        "reason": "The new base is 2. Multiply, then keep the whole number part.",
+        "result": "0.625 × 2 = 1.25, whole part 1",
+        "predictPrompt": "What is 0.625 × 2?"
+       },
+       {
+        "operation": "Multiply what is left by 2",
+        "reason": "Drop the whole part. Multiply 0.25.",
+        "result": "0.25 × 2 = 0.5, whole part 0",
+        "predictPrompt": "What is 0.25 × 2?"
+       },
+       {
+        "operation": "Multiply again",
+        "reason": "Drop the whole part. Multiply 0.5.",
+        "result": "0.5 × 2 = 1.0, whole part 1",
+        "predictPrompt": "What is 0.5 × 2?"
+       },
+       {
+        "operation": "Stop",
+        "reason": "Nothing is left over, so the chain ends.",
+        "result": "No remainder",
+        "predictPrompt": "Why do we stop?"
+       },
+       {
+        "operation": "Read the whole parts in order",
+        "reason": "First digit first, after the point.",
+        "result": "0.101{{sub:2}}",
+        "predictPrompt": "Which digit comes first?"
+       },
+       {
+        "operation": "Check to confirm: expand 0.101 in base two",
+        "reason": "The worths after the point are 1/2, 1/4 and 1/8.",
+        "result": "1/2 + 0/4 + 1/8 = 0.5 + 0 + 0.125 = 0.625",
+        "predictPrompt": "Does it come back to 0.625?"
        }
       ]
      }
@@ -2020,43 +2060,59 @@
       "steps": [
        {
         "operation": "Test the digits",
-        "reason": "Digits must be smaller than the base. Check each one first.",
-        "result": "1, 3 and 2 are valid, so 132 is a base-four number",
+        "reason": "Every digit must be smaller than the base. Here the base is four.",
+        "result": "1, 3 and 2 are allowed",
         "predictPrompt": "Can any digit be 4 or more?"
        },
        {
-        "operation": "Convert to base ten",
-        "reason": "Multiply each digit by the worth of its column, then add.",
-        "result": "1 × 16 + 3 × 4 + 2 = 30 in base ten",
+        "operation": "Write the place worths in base four",
+        "reason": "From the right: 1, then 4, then 4 × 4.",
+        "result": "1, 4 and 16",
+        "predictPrompt": "What is 4 × 4?"
+       },
+       {
+        "operation": "Multiply the first digit",
+        "reason": "The 2 sits over 1.",
+        "result": "2 × 1 = 2",
+        "predictPrompt": "What is 2 × 1?"
+       },
+       {
+        "operation": "Multiply the second digit",
+        "reason": "The 3 sits over 4.",
+        "result": "3 × 4 = 12",
+        "predictPrompt": "What is 3 × 4?"
+       },
+       {
+        "operation": "Multiply the third digit",
+        "reason": "The 1 sits over 16.",
+        "result": "1 × 16 = 16",
         "predictPrompt": "What is 1 × 16?"
        },
        {
-        "operation": "Divide 30 by five",
-        "reason": "Repeatedly divide by the target base and collect remainders.",
-        "result": "30 ÷ 5 = 6 r 0; 6 ÷ 5 = 1 r 1; 1 ÷ 5 = 0 r 1",
-        "predictPrompt": "What is 30 divided by 5?"
+        "operation": "Add to get the base-ten number",
+        "reason": "2 + 12 + 16.",
+        "result": "2 + 12 + 16 = 30 in base ten",
+        "predictPrompt": "What is 2 + 12 + 16?"
        },
        {
-        "operation": "Read remainders upward",
-        "reason": "The last remainder is the leftmost digit.",
-        "result": "110 in base five",
-        "predictPrompt": "In what order do remainders become digits?"
+        "operation": "Divide 30 by five",
+        "reason": "Now write 30 in base five. Divide by 5 and keep each remainder.",
+        "result": "30 ÷ 5 = 6 r 0; 6 ÷ 5 = 1 r 1; 1 ÷ 5 = 0 r 1",
+        "predictPrompt": "What is 30 ÷ 5?"
+       },
+       {
+        "operation": "Read the remainders upward",
+        "reason": "Last remainder first.",
+        "result": "110{{sub:5}}",
+        "predictPrompt": "Which remainder is first?"
        },
        {
         "operation": "Check to confirm: convert back",
-        "reason": "Convert 110 in base five and compare.",
+        "reason": "Expand 110 in base five and compare.",
         "result": "1 × 25 + 1 × 5 + 0 = 30, so both routes give 30",
-        "predictPrompt": "Do the two answers match?"
+        "predictPrompt": "Do the two routes agree?"
        }
       ]
-     }
-    },
-    {
-     "type": "callout",
-     "content": {
-      "title": "Exam tip",
-      "tone": "tip",
-      "body": "Digits equal to or bigger than the base cannot appear, so they reject an answer at once. Between two bases that are not base ten, go through base ten."
      }
     },
     {
@@ -2137,6 +2193,14 @@
        "A bit is one switch, off or on",
        "Eight bits make one byte"
       ]
+     }
+    },
+    {
+     "type": "callout",
+     "content": {
+      "title": "Exam tip",
+      "tone": "tip",
+      "body": "Digits equal to or bigger than the base cannot appear, so they reject an answer at once. Between two bases that are not base ten, go through base ten."
      }
     },
     {

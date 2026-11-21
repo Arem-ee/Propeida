@@ -36,13 +36,36 @@ What is NOT in scope without explicit instruction:
 
 R.1 Zero prior knowledge assumed. Every term, symbol, formula, method and
 word the learner could stumble on is defined in place, in plain English,
-before the first use. "Base", "digit", "place value", "quotient",
-"remainder", "decimal", "power" — taught in the lesson body, not assumed.
+before the first use. "Base", "digit", "place value", "remainder",
+"power" — taught in the lesson body, not assumed.
+- **Never author calculations from memory.** The formula, the sequence of
+  operations and the notation must come from the researched textbook, checked
+  against a worked example from that source. Then choose the simplest and
+  easiest version to grasp. A calculation you invented is a calculation you
+  cannot trust.
+- **Use the accepted system for Nigeria.** Words, formulas and notation must
+  be the ones found in Nigerian textbooks. Borrow something from outside only
+  if it makes the idea simpler to understand; otherwise it adds complexity and
+  strange things we do not want. If you are unsure whether a term is Nigerian
+  textbook language, do not use it.
 
-R.2 Research first. Pull the NERDC topic/objective and at least one full
-Nigerian lesson note or teacher guide for the topic before writing a word.
-If you can't find one online, say so; never invent the sequence to fill the
-gap.
+R.2 Research first. Pull the IBASS topic goals and at least one full Nigerian
+lesson note or teacher guide for the topic before writing a word. IBASS
+recommends textbooks; follow the textbook's method and sequence, then break it
+into smaller, logically separate pieces. Our difference from the big textbooks
+is the breakdown, not a rewrite of the mathematics. Never deviate from the
+recommended system. Never invent a sequence to fill a gap; say so instead.
+- The **IBASS goals are the test of completeness**. Every goal listed for the
+  topic ("convert one base to another", "perform four basic operations",
+  "perform operations in modulo arithmetic") must be taught as its own
+  distinct skill with its own worked instance. Surface resemblance is not
+  coverage.
+- **Each card advances one concept.** Cards that restate the same idea in
+  different clothes ("bundles of five" three times) are a failure. State the
+  progression before drafting: what the learner knows after card 1 that they
+  did not know before, and so on. Lessons in a series must also progress:
+  concept, then conversion, then operations, then modular arithmetic — never
+  three versions of the introduction.
 
 R.3 Follow the Nigerian classroom order. Teach in the order the Nigerian
 books teach:
@@ -108,10 +131,18 @@ first when the answer is numeric.
   reading the reason above it, the prediction is copying, not recall,
   and the step must be rewritten.
 
-R.11 "Decimal" means a dotted number, never base ten. Never define
+R.11 **Never skip a step in a calculation.** This includes the "obvious"
+operations: calculating the place worth before multiplying (3² = 3 × 3 = 9),
+writing each remainder line in a division, multiplying each digit separately
+before adding. A worked example that jumps from a numeral to its expanded sum
+in one line is broken. The test: can a learner follow every operation without
+doing hidden arithmetic in their head? If not, split the step. Two lines for a
+conversion is almost always too few.
+
+R.12 "Decimal" means a dotted number, never base ten. Never define
 base ten as decimal. Write "base ten". Zero occurrences in anything you ship.
 
-R.12 Other base column naming, explicitly banned everywhere:
+R.13 Other base column naming, explicitly banned everywhere:
 - "fives column", "fives place", "threes column", "nines column",
   "twenty-fives place", "eights column", "sixty-fours place", "twos digit",
   "twos place" — none of these exist. Use position+worth: "the ones column"
@@ -119,23 +150,20 @@ R.12 Other base column naming, explicitly banned everywhere:
   "the column worth sixty-four", "the middle column", "the next place to
   the left". "Units" is acceptable for the worth-1 column of any base.
 
-R.13 bold contract. `**…**` renders as bold inside body and step text.
+R.14 bold contract. `**…**` renders as bold inside body and step text.
 Bold the numbers and key words in worked steps and intro paragraphs so the
 eye lands on the working, not the prose. Never bold a full sentence; never
 bold a calculation inside a maths-only panel (KaTeX strips `**`).
 
-R.14 Core and depth budgets. Core: 500 words soft cap (750+ is a warning,
+R.15 Core and depth budgets. Core: 500 words soft cap (750+ is a warning,
 not a law) but never reduce content to fit a counter. Depth (`Go deeper:`
 sections): 600–900 words, at least two sections; depth sections appear only
 at the end of the lesson. One lesson, one concept.
 
-R.15 Every section card opens with the situation, then the concept; ends
+R.16 Every section card opens with the situation, then the concept; ends
 on a one-line takeaway; carries an inline check with a `why` line and
 procedural `steps` for the check's own answer. Inline checks are JAMB-style,
 four options, plus a `why` string every time.
-
-R.16 British spelling, British punctuation, British idiom. No American
-spelling in any line of an authored lesson, example, check or prompt.
 
 R.17 Render and inspect the actual page before declaring the work done.
 Data checks and seed verification prove the bytes landed; they do not
