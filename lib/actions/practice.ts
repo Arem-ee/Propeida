@@ -26,9 +26,9 @@ import { fetchCurrentStreak } from '@/lib/streak'
 import { parseExplanation } from '@/lib/lessons'
 
 function practiceParseExplanation(explanation: string | null) {
-  if (!explanation) return { explanationText: '', steps: undefined as ReturnType<typeof parseExplanation>['steps'] | undefined }
+  if (!explanation) return { explanationText: '', steps: undefined as ReturnType<typeof parseExplanation>['steps'] | undefined, walkthrough: undefined as ReturnType<typeof parseExplanation>['walkthrough'] | undefined }
   const parsed = parseExplanation(explanation)
-  return { explanationText: parsed.explanationText, steps: parsed.steps }
+  return { explanationText: parsed.explanationText, steps: parsed.steps, walkthrough: parsed.walkthrough }
 }
 
 interface CreateSessionParams {
@@ -530,12 +530,13 @@ export async function submitAnswer(
       }
     }
 
-    const { explanationText, steps } = practiceParseExplanation(revealRow.explanation)
+    const { explanationText, steps, walkthrough } = practiceParseExplanation(revealRow.explanation)
     return {
       isCorrect,
       correctAnswer: revealRow.correct_answer,
       explanation: explanationText,
       steps,
+      walkthrough,
       misconception,
     }
   }
@@ -570,35 +571,21 @@ export async function completePracticeSession(sessionId: string) {
   if (session.mode !== 'practice') throw new Error('This is not a practice session.')
 
 
-  const answers = await getSessionQuestionsWithStatus(sessionId, false)
-  const attempted = answers.filter((a) => a.selectedAnswer != null)
-  const correct = attempted.filter((a) => a.isCorrect === true).length
-  const accuracy = attempted.length > 0 ? correct / attempted.length : 0
-
-  const perfBySubject: Record<string, { correct: number; total: number }> = {}
-  for (const a of attempted) {
-    const entry = perfBySubject[a.subjectId] ?? { correct: 0, total: 0 }
-    entry.total += 1
-    if (a.isCorrect === true) entry.correct += 1
-    perfBySubject[a.subjectId] = entry
+  // The RPC locks the session row and writes the result in one transaction.
+  // A concurrent second call now fails cleanly instead of marking the session
+  // complete and then throwing on a duplicate result row.
+  const { data: completed, error: completeError } = await supabase.rpc(
+    'complete_practice_session',
+    { p_session_id: sessionId }
+  )
+  if (completeError) {
+    throw new Error(
+      /Active practice session not found/i.test(completeError.message)
+        ? 'This session is already finished.'
+        : 'Could not finish this session.'
+    )
   }
-
-  const { createAdminClient } = await import('@/lib/supabase/admin')
-  const admin = createAdminClient()
-  const { error: sessionError } = await admin
-    .from('exam_sessions')
-    .update({ status: 'completed', completed_at: new Date().toISOString() })
-    .eq('id', sessionId)
-    .eq('user_id', user.id)
-  if (sessionError) throw new Error('Could not finish this session.')
-
-  const { error: resultsError } = await admin.from('results').insert({
-    session_id: sessionId,
-    score: correct,
-    accuracy,
-    performance_by_subject: perfBySubject,
-  })
-  if (resultsError) throw new Error('Could not save your results.')
+  void completed
 
   // Proof engine: fold this session into the learner model. Best-effort —
   // completion already succeeded, so a mastery write failure must not
@@ -683,6 +670,7 @@ export async function loadSessionData(sessionId: string) {
     correctAnswer: q.correctAnswer,
     explanation: q.explanation,
     steps: q.steps,
+    walkthrough: q.walkthrough,
   }))
 
   return {
@@ -786,7 +774,7 @@ export async function getSessionResults(sessionId: string) {
         const repair = row.selected_answer
           ? repairs.get(`${row.question_id}:${row.selected_answer}`) ?? null
           : null
-        const { explanationText, steps } = practiceParseExplanation(row.explanation)
+        const { explanationText, steps, walkthrough } = practiceParseExplanation(row.explanation)
         return [{
           questionId: row.question_id,
           questionText: row.question_text,
@@ -797,6 +785,7 @@ export async function getSessionResults(sessionId: string) {
           isCorrect: row.is_correct,
           explanation: explanationText,
           steps,
+          walkthrough,
           timeTakenSeconds: row.time_taken_seconds,
           misconception: repair,
         }]

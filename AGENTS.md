@@ -57,7 +57,13 @@ otherwise the agent-authoring-spec wins over habit and memory.
 - **Quality over quantity.** Never cut good teaching, steps or examples to fit
   a word cap. Budgets are warnings; a lesson that teaches well wins over a
   shorter one every time.
-- **Worked examples use the v2 walkthrough schema:** `problem`, `finalAnswer`,
+- **Practice question explanations use the v3 walkthrough schema:** a plain
+  one-line verdict, numbered steps with a title, an everyday why and separate
+  workings lines, a distractor explanation keyed to the wrong option, and a
+  final takeaway rule. The mascot bubble shows the whole walkthrough, and the
+  distractor note only when the learner chose that option.
+
+- **Worked examples use the v2 walkthrough shape:** `problem`, `finalAnswer`,
   and numbered `steps` with `stepNumber`, `instruction`, `hint`, `explanation`.
   Show the whole solution, no per-step typing gate, final answer at the bottom.
 - **Maths explanations are patient-tutor walkthroughs.** Lead with a concrete

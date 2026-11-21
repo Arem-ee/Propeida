@@ -272,7 +272,26 @@ for (const [key, value] of Object.entries(EXTRA_ENHANCEMENTS)) {
 export interface ParsedExplanation {
   explanationText: string
   steps?: WorkedStep[]
-  format: 'prose' | 'worked-steps-v1'
+  format: 'prose' | 'worked-steps-v1' | 'walkthrough-v3'
+  /** v3 practice explanation: verdict, worked steps, distractor notes, rule. */
+  walkthrough?: WalkthroughExplanation
+}
+
+/** v3: the patient-tutor explanation shown in the mascot bubble after an answer. */
+export interface WalkthroughStep {
+  stepNumber: number
+  title: string
+  explanation: string
+  workings: string[]
+}
+export interface WalkthroughExplanation {
+  questionId?: string
+  question?: string
+  correctAnswer?: string
+  summaryVerdict: string
+  steps: WalkthroughStep[]
+  distractorExplanations?: Record<string, { reason: string; wrongWorkings?: string[] }>
+  takeawayRule?: string
 }
 
 /**
@@ -287,7 +306,50 @@ export function parseExplanation(input: string | null | undefined): ParsedExplan
   const trimmed = input.trim()
   if (!trimmed.startsWith('{')) return { explanationText: input, format: 'prose' }
   try {
-    const parsed = JSON.parse(trimmed) as { format?: string; steps?: unknown }
+    const parsed = JSON.parse(trimmed) as Record<string, unknown>
+    // v3 walkthrough: a verdict with title/explanation/workings steps.
+    if (typeof parsed?.summaryVerdict === 'string' && Array.isArray(parsed.steps)) {
+      const steps: WalkthroughStep[] = []
+      for (const raw of parsed.steps as unknown[]) {
+        if (!raw || typeof raw !== 'object') continue
+        const s = raw as Record<string, unknown>
+        const title = typeof s.title === 'string' ? s.title : ''
+        if (!title) continue
+        steps.push({
+          stepNumber: typeof s.stepNumber === 'number' ? s.stepNumber : steps.length + 1,
+          title,
+          explanation: typeof s.explanation === 'string' ? s.explanation : '',
+          workings: Array.isArray(s.workings) ? s.workings.map(String) : [],
+        })
+      }
+      const distractors: Record<string, { reason: string; wrongWorkings?: string[] }> = {}
+      const rawDistractors = parsed.distractorExplanations
+      if (rawDistractors && typeof rawDistractors === 'object') {
+        for (const [key, value] of Object.entries(rawDistractors as Record<string, unknown>)) {
+          if (!value || typeof value !== 'object') continue
+          const d = value as Record<string, unknown>
+          if (typeof d.reason !== 'string') continue
+          distractors[key] = {
+            reason: d.reason,
+            ...(Array.isArray(d.wrongWorkings) ? { wrongWorkings: d.wrongWorkings.map(String) } : {}),
+          }
+        }
+      }
+      const walkthrough: WalkthroughExplanation = {
+        summaryVerdict: parsed.summaryVerdict,
+        steps,
+        distractorExplanations: distractors,
+        ...(typeof parsed.questionId === 'string' ? { questionId: parsed.questionId } : {}),
+        ...(typeof parsed.question === 'string' ? { question: parsed.question } : {}),
+        ...(typeof parsed.correctAnswer === 'string' ? { correctAnswer: parsed.correctAnswer } : {}),
+        ...(typeof parsed.takeawayRule === 'string' ? { takeawayRule: parsed.takeawayRule } : {}),
+      }
+      return {
+        explanationText: parsed.summaryVerdict,
+        walkthrough,
+        format: 'walkthrough-v3',
+      }
+    }
     if (parsed?.format === 'worked-steps-v1' && Array.isArray(parsed.steps)) {
       const steps = parsed.steps as unknown[]
       const cleanSteps: WorkedStep[] = []

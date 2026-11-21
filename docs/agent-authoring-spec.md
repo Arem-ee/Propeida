@@ -125,6 +125,12 @@ is the full round trip done once, labels included.
 
 R.9 Worked examples end with "Check to confirm:" — the final step, a
 independent verification of the answer, never the same method twice.
+- **Practice explanations use the v3 walkthrough schema:** a one-line
+  `summaryVerdict`, numbered `steps` with `title`, `explanation` and separate
+  `workings` lines, optional `distractorExplanations` keyed by wrong answer,
+  and a `takeawayRule`. The mascot bubble shows the verdict, steps, workings,
+  the distractor note only when that wrong option was chosen, and the rule.
+  Renderer: `MascotWalkthrough`; parser: `parseExplanation` (walkthrough-v3).
 - **Worked-example schema (v2).** Author `problem`, `finalAnswer` and numbered
   `steps` with `stepNumber`, `instruction`, `hint` and `explanation`. The
   renderer shows the whole walkthrough at once, with the why inside each step,

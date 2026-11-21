@@ -11,9 +11,10 @@ import { useWins } from '@/components/celebrations/use-wins'
 import { celebrateStreakIfNew } from '@/components/celebrations/streak-celebration'
 import { MascotSays, MascotExplains, MascotMisconception, MascotExamTip } from '@/components/celebrations/speech-bubble'
 import { WorkedSteps } from '@/components/celebrations/worked-steps'
+import { MascotWalkthrough } from '@/components/celebrations/mascot-walkthrough'
 import { StepFeedback } from '@/components/practice/step-feedback'
 import { Confetti } from '@/components/celebrations/confetti'
-import type { WorkedStep } from '@/lib/lessons'
+import type { WalkthroughExplanation, WorkedStep } from '@/lib/lessons'
 import { MathText } from '@/components/lessons/math-text'
 import { QuestionTable } from '@/components/questions/question-table'
 import { PassagePanel } from '@/components/questions/passage-panel'
@@ -33,6 +34,8 @@ export interface PlayerQuestion {
   explanation?: string | null
   /** Optional structured derivation (maths/science). Same shape as lesson WorkedStep. */
   steps?: WorkedStep[] | null
+  /** v3 patient-tutor explanation shown in the mascot bubble. */
+  walkthrough?: WalkthroughExplanation | null
 }
 
 /** Rotated by question index so the line never repeats back-to-back. */
@@ -51,6 +54,7 @@ interface Feedback {
   correctAnswer: string
   explanation: string
   steps?: WorkedStep[] | null
+  walkthrough?: WalkthroughExplanation | null
   misconception?: {
     code: string
     name: string
@@ -128,6 +132,7 @@ export default function PracticePlayer({
         correctAnswer: q.correctAnswer,
         explanation: q.explanation ?? '',
         steps: q.steps ?? null,
+        walkthrough: q.walkthrough ?? null,
       })
       setAnswered((n) => n + 1)
       // Keep the local feedback instant, but do not pretend the write landed.
@@ -376,7 +381,11 @@ export default function PracticePlayer({
             <MascotExplains
               correct={feedback.isCorrect}
               explanation={feedback.explanation}
-              steps={feedback.steps ? <WorkedSteps steps={feedback.steps} /> : undefined}
+              steps={
+                feedback.walkthrough
+                  ? <MascotWalkthrough walkthrough={feedback.walkthrough} selectedAnswer={selected} />
+                  : feedback.steps ? <WorkedSteps steps={feedback.steps} /> : undefined
+              }
               popKey={answered}
             />
             {feedback.steps && feedback.steps.length > 0 && (

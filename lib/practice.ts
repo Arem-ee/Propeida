@@ -257,7 +257,7 @@ export async function getSessionQuestionsWithStatus(sessionId: string, includeRe
     const answer = answerByQuestion.get(q.id)
     const parsed = includeReveal
       ? parseExplanation(answer?.explanation ?? null)
-      : { explanationText: '', steps: undefined }
+      : { explanationText: '', steps: undefined, walkthrough: undefined }
     return [{
       answerId: sa.id,
       questionId: q.id,
@@ -272,6 +272,7 @@ export async function getSessionQuestionsWithStatus(sessionId: string, includeRe
       correctAnswer: includeReveal ? (answer?.correct_answer ?? null) : undefined,
       explanation: includeReveal ? parsed.explanationText : undefined,
       steps: includeReveal ? parsed.steps : undefined,
+      walkthrough: includeReveal ? parsed.walkthrough : undefined,
     }]
   })
 
