@@ -13,6 +13,7 @@ import { SUBJECTS, isValidSubject } from '@/lib/notes'
 import { getNextRecommendedLesson, getSubjectCurriculum } from '@/lib/actions/lessons'
 import { getProStatus } from '@/lib/entitlements'
 import { createClient } from '@/lib/supabase/server'
+import { MathText } from '@/components/lessons/math-text'
 
 export async function generateMetadata({ params }: { params: Promise<{ subject: string }> }) {
   const { subject } = await params
@@ -117,10 +118,10 @@ export default async function SubjectLessonsPage({ params }: { params: Promise<{
                       </span>
                       <span className="min-w-0 flex-1">
                         <span className="block text-sm font-bold leading-snug text-gray-900">
-                          {topic.name}
+                          <MathText text={topic.name} />
                         </span>
                         <span className="mt-0.5 block text-xs leading-relaxed text-gray-500">
-                          {topic.description}
+                          <MathText text={topic.description} />
                         </span>
                       </span>
                       {topic.lesson ? (

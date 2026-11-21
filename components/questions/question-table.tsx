@@ -1,5 +1,7 @@
 'use client'
 
+import { MathText } from '@/components/lessons/math-text'
+
 /**
  * QuestionTable: render a tabular question the way a candidate sees it in
  * the JAMB booklet. Mobile-first: horizontal scroll on narrow screens,
@@ -29,7 +31,7 @@ export function QuestionTable({ spec }: { spec: QuestionTableSpec }) {
                 key={i}
                 className="border-b border-gray-200 bg-blue-50/60 px-4 py-2 text-left text-[12px] font-extrabold uppercase tracking-wide text-gray-600"
               >
-                {header}
+                <MathText text={header} />
               </th>
             ))}
           </tr>
@@ -39,7 +41,7 @@ export function QuestionTable({ spec }: { spec: QuestionTableSpec }) {
             <tr key={r} className={r % 2 === 0 ? 'bg-white' : 'bg-gray-50/40'}>
               {row.map((cell, c) => (
                 <td key={c} className="border-b border-gray-100 px-4 py-2 tabular-nums">
-                  {cell}
+                  <MathText text={cell} />
                 </td>
               ))}
             </tr>

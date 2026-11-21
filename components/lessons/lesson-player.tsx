@@ -673,7 +673,7 @@ export default function LessonPlayer({
           {note.examTip && (
             <div className="mt-6 rounded-2xl border-2 border-amber-200 bg-amber-50 p-4">
               <p className="font-display text-base font-medium text-amber-900">Exam tip</p>
-              <p className="mt-1 text-sm font-semibold leading-relaxed text-amber-900">{note.examTip}</p>
+              <p className="mt-1 text-sm font-semibold leading-relaxed text-amber-900"><GlossText text={note.examTip as string} /></p>
             </div>
           )}
           {enhancement?.vocabulary && enhancement.vocabulary.length > 0 && (
@@ -685,12 +685,12 @@ export default function LessonPlayer({
               <div className="mt-3 grid gap-2.5 sm:grid-cols-2">
                 {enhancement.vocabulary.map((w) => (
                   <div key={w.word} className="rounded-2xl border border-blue-100 bg-blue-50/40 p-3.5">
-                    <p className="font-display text-base font-medium text-black">{w.word}</p>
-                    <p className="mt-0.5 text-[13px] font-semibold text-ink-soft">{w.definition}</p>
+                    <p className="font-display text-base font-medium text-black"><GlossText text={w.word as string} /></p>
+                    <p className="mt-0.5 text-[13px] font-semibold text-ink-soft"><GlossText text={w.definition as string} /></p>
                     <p className="mt-1.5 text-xs font-bold text-gray-500">
-                      It does not mean {w.contrast}
+                      It does not mean <GlossText text={w.contrast as string} />
                     </p>
-                    <p className="mt-1 text-[13px] italic font-semibold text-blue-900">“{w.sentence}”</p>
+                    <p className="mt-1 text-[13px] italic font-semibold text-blue-900">“<GlossText text={w.sentence as string} />”</p>
                   </div>
                 ))}
               </div>
@@ -763,7 +763,7 @@ export default function LessonPlayer({
       {phase === 'supported' && enhancement?.supported && (
         <div className="rounded-3xl border border-blue-100/70 bg-white p-6 sm:p-8 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)] animate-fade-up" key="supported">
           <p className="font-display text-[22px] font-medium text-black">Your turn, and you can use hints</p>
-          <p className="mt-2 text-[15px] font-semibold leading-relaxed text-ink-soft">{enhancement.supported.question}</p>
+          <p className="mt-2 text-[15px] font-semibold leading-relaxed text-ink-soft"><MathText text={enhancement.supported.question as string} /></p>
           <div className="mt-4 space-y-3">
             {revealedHints > 0 && revealedHints <= enhancement.supported.hints.length && (
               <div className="rounded-2xl bg-blue-50/60 border border-blue-100 p-3.5 animate-pop">

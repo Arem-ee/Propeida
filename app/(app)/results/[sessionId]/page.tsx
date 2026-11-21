@@ -246,7 +246,7 @@ export default function ResultsPage({ params }: { params: Promise<{ sessionId: s
                           return (
                             <div key={opt.key} className={`flex items-center gap-2 rounded-xl border px-3 py-2 text-xs font-bold ${style}`}>
                               <span className="shrink-0 w-4 text-center">{opt.key}</span>
-                              <span>{opt.text}</span>
+                              <span><MathText text={opt.text} /></span>
                             </div>
                           )
                         })}
@@ -256,7 +256,7 @@ export default function ResultsPage({ params }: { params: Promise<{ sessionId: s
                           <BookOpen className="h-3.5 w-3.5" />
                           Explanation
                         </p>
-                        <p className="text-[13px] font-semibold text-ink-soft leading-relaxed">{q.explanation}</p>
+                        <p className="text-[13px] font-semibold text-ink-soft leading-relaxed"><MathText text={q.explanation} /></p>
                         {q.steps && q.steps.length > 0 && <WorkedSteps steps={q.steps} />}
                       </div>
                       {!q.isCorrect && q.misconception && (
@@ -264,7 +264,7 @@ export default function ResultsPage({ params }: { params: Promise<{ sessionId: s
                           <p className="text-[13px] font-extrabold text-amber-800 mb-1">
                             Why this tempts: {q.misconception.name}
                           </p>
-                          <p className="text-[13px] font-semibold text-ink-soft leading-relaxed">{q.misconception.explanation}</p>
+                          <p className="text-[13px] font-semibold text-ink-soft leading-relaxed"><MathText text={q.misconception.explanation} /></p>
                           {q.misconception.repairHref && (
                             <Link
                               href={q.misconception.repairHref}

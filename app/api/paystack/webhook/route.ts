@@ -35,6 +35,12 @@ async function handleRefund(
     return new Response('No matching payment', { status: 200 })
   }
   if (payment.status === 'refunded') {
+    // The RPC repairs a partial refund if the entitlement was not expired.
+    const { error: repairError } = await supabase.rpc('process_refund', { p_reference: reference })
+    if (repairError) {
+      log('refund repair failed', repairError.message)
+      return new Response('Failed to record refund', { status: 500 })
+    }
     return new Response('Already refunded', { status: 200 })
   }
 
@@ -52,26 +58,12 @@ async function handleRefund(
     return new Response('Not refunded', { status: 400 })
   }
 
-  const { error: paymentError } = await supabase
-    .from('payments')
-    .update({ status: 'refunded' })
-    .eq('paystack_reference', reference)
-
-  if (paymentError) {
-    log('payments refund update failed', paymentError.message)
+  // Both writes happen in one transaction inside the RPC, so a failure
+  // cannot leave a refunded payment with a still-active entitlement.
+  const { error: refundError } = await supabase.rpc('process_refund', { p_reference: reference })
+  if (refundError) {
+    log('process_refund failed', refundError.message)
     return new Response('Failed to record refund', { status: 500 })
-  }
-
-  const { error: entError } = await supabase
-    .from('entitlements')
-    .update({ status: 'expired', expires_at: new Date().toISOString() })
-    .eq('user_id', payment.user_id)
-    .eq('product', payment.product)
-    .eq('status', 'active')
-
-  if (entError) {
-    log('entitlement expiry failed', entError.message)
-    return new Response('Failed to expire entitlement', { status: 500 })
   }
 
   return new Response('OK', { status: 200 })
@@ -141,6 +133,19 @@ export async function POST(request: NextRequest) {
   if (!isPlausiblePayment(product, verification.amount, verification.currency)) {
     log('amount/currency mismatch for product', product)
     return new Response('Payment amount does not match this product', { status: 400 })
+  }
+
+  // Paystack retries webhooks and signed requests can be replayed. A payment
+  // already recorded as successful must not re-arm a fresh subscription term.
+  const { data: existingPayment } = await supabase
+    .from('payments')
+    .select('status')
+    .eq('paystack_reference', reference)
+    .maybeSingle()
+
+  if (existingPayment?.status === 'success') {
+    log('duplicate charge.success for', reference)
+    return new Response('OK', { status: 200 })
   }
 
   const { error: processError } = await supabase.rpc('process_payment', {

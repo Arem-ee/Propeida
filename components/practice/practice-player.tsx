@@ -97,6 +97,7 @@ export default function PracticePlayer({
   const [feedback, setFeedback] = useState<Feedback | null>(null)
   const [checking, setChecking] = useState(false)
   const [checkError, setCheckError] = useState<string | null>(null)
+  const [answerSaveError, setAnswerSaveError] = useState<string | null>(null)
   const [finished, setFinished] = useState(false)
   const [finishing, setFinishing] = useState(false)
   const [finishError, setFinishError] = useState<string | null>(null)
@@ -129,7 +130,10 @@ export default function PracticePlayer({
         steps: q.steps ?? null,
       })
       setAnswered((n) => n + 1)
-      void submitAnswer(sessionId, q.id, selected).catch(() => {})
+      // Keep the local feedback instant, but do not pretend the write landed.
+      void submitAnswer(sessionId, q.id, selected).catch(() => {
+        setAnswerSaveError('Your answer was not saved. Check your connection before you finish.')
+      })
       if (isCorrect) {
         add({
           kind: 'correct',
@@ -168,6 +172,7 @@ export default function PracticePlayer({
       setSelected(null)
       setFeedback(null)
       setCheckError(null)
+      setAnswerSaveError(null)
     } else {
       setFinished(true)
     }
@@ -422,6 +427,12 @@ export default function PracticePlayer({
       {checkError && (
         <p role="alert" className="mt-4 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-bold text-red-700">
           {checkError}
+        </p>
+      )}
+
+      {answerSaveError && (
+        <p role="alert" className="mt-4 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm font-bold text-amber-800">
+          {answerSaveError}
         </p>
       )}
 

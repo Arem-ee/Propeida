@@ -2,6 +2,7 @@ import { type NextRequest, NextResponse } from 'next/server'
 import { createServerClient } from '@supabase/ssr'
 import { type EmailOtpType, type User } from '@supabase/supabase-js'
 import { maybeSendWelcomeEmail } from '@/lib/emails/send'
+import { safeInternalPath } from '@/lib/safe-redirect'
 
 async function waitForProfile(supabase: ReturnType<typeof createServerClient>, userId: string) {
   const delays = [300, 600, 1200, 2400]
@@ -27,18 +28,12 @@ async function waitForProfile(supabase: ReturnType<typeof createServerClient>, u
   console.warn('[auth/confirm] Profile not visible after 5 attempts, redirecting anyway')
 }
 
-/** Only allow local paths so `next` can never become an open redirect. */
-function safeNext(value: string | null): string {
-  if (!value || !value.startsWith('/') || value.startsWith('//')) return '/home'
-  return value
-}
-
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url)
   // Redirect back to the exact host the user started from so auth never
   // bounces users to a different domain (e.g. a Vercel deployment URL).
   const baseUrl = new URL(request.url).origin
-  const next = safeNext(searchParams.get('next'))
+  const next = safeInternalPath(searchParams.get('next'))
 
   const errorCode = searchParams.get('error_code')
   const errorDescription = searchParams.get('error_description')

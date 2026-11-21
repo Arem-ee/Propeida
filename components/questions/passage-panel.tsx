@@ -1,5 +1,7 @@
 'use client'
 
+import { MathText } from '@/components/lessons/math-text'
+
 /**
  * PassagePanel: the reading passage for a comprehension question. Rendered
  * above the stem in mock and practice players (reading order: passage,
@@ -16,7 +18,7 @@ export function PassagePanel({ passage }: { passage: { title?: string; text: str
       </p>
       <div className="mt-2 space-y-3 text-[15px] font-medium leading-[1.75] text-black">
         {paragraphs.map((paragraph, i) => (
-          <p key={i}>{paragraph}</p>
+          <p key={i}><MathText text={paragraph} /></p>
         ))}
       </div>
     </div>

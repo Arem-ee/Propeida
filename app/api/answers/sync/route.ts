@@ -74,5 +74,8 @@ export async function POST(request: NextRequest) {
     results.push({ questionId: answer.questionId, ok: !error })
   }
 
-  return NextResponse.json({ ok: true, results })
+  // A partial failure must not look like success: callers keep unsynced
+  // answers dirty and refuse to finish the exam until they are written.
+  const failed = results.filter((r) => !r.ok).length
+  return NextResponse.json({ ok: failed === 0, failed, results })
 }

@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react'
 import { Check, X, Eye } from 'lucide-react'
 import { MascotExplains, MascotSays } from '@/components/celebrations/speech-bubble'
+import { MathText } from '@/components/lessons/math-text'
 
 export interface PassageQuestion {
   question: string
@@ -205,7 +206,7 @@ function PassageReader({
                 }`}>
                   {opt.key}
                 </span>
-                <span className="text-sm font-bold text-black">{opt.text}</span>
+                <span className="text-sm font-bold text-black"><MathText text={opt.text} /></span>
               </button>
             )
           })}
@@ -276,7 +277,7 @@ export function PairComparator({ pair, onAnswered }: { pair: MinimalPair; onAnsw
                     : 'border-gray-200 bg-white text-black hover:border-blue-400'
               }`}
             >
-              {sentence}
+              <MathText text={sentence} />
             </button>
           )
         })}

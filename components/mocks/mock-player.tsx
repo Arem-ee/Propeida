@@ -203,6 +203,7 @@ export default function MockPlayer({
   const [timedOut, setTimedOut] = useState(false)
   const [calculatorOpen, setCalculatorOpen] = useState(false)
   const [saveFailures, setSaveFailures] = useState(0)
+  const [submitBlocked, setSubmitBlocked] = useState(false)
 
   const total = questions.length
   const current = questions[index]
@@ -230,6 +231,10 @@ export default function MockPlayer({
         }),
       })
       if (!res.ok) throw new Error('flush failed')
+      const body = await res.json()
+      // The route reports per-item RPC failures in a 200 response. Treat any
+      // failure as a failed flush so those answers stay dirty and retry.
+      if (body?.ok === false) throw new Error('some answers were not saved')
       // Only clear what we just sent; anything tapped during the flight stays dirty.
       for (const [questionId, selectedAnswer] of sent) {
         if (dirtyRef.current.get(questionId) === selectedAnswer) {
@@ -250,7 +255,16 @@ export default function MockPlayer({
     setFinalizing(true)
     setConfirming(false)
     try {
+      setSubmitBlocked(false)
       await flush() // write any mark-to-leave selections before the exam is closed
+      // If any answer is still unsynced, do not close the exam. Completing the
+      // session here would permanently lose those selections from the score.
+      if (dirtyRef.current.size > 0) {
+        setSubmitBlocked(true)
+        setSaveFailures((n) => n + 1)
+        setFinalizing(false)
+        return
+      }
       const result = await completeMockSession(sessionId)
       celebrateStreakIfNew(result.streak, add)
       celebrate()
@@ -344,7 +358,7 @@ export default function MockPlayer({
           {timedOut ? 'Time is up, so your exam is submitted' : 'Your mock is submitted'}
         </h2>
         <p className="mt-2 text-[15px] font-semibold text-ink-soft mb-7">
-          You answered {answeredCount} of {total} questions, and your answers were saved throughout
+          You answered {answeredCount} of {total} questions, and your answers have been saved
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
           <button
@@ -479,7 +493,12 @@ export default function MockPlayer({
 
       {/* Honest save failure: the exam keeps going (like a real CBT), but
           the learner must know their last taps have not reached the server. */}
-      {saveFailures >= 2 && (
+      {submitBlocked && (
+        <p role="alert" className="mt-3 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-bold text-red-700">
+          We could not save all your answers, so the exam was not submitted. Check your connection and try again.
+        </p>
+      )}
+      {!submitBlocked && saveFailures >= 2 && (
         <p role="alert" className="mt-3 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-bold text-red-700">
           Your answers are not saving. Check your connection; if it drops, your last taps are lost and will score blank.
         </p>
