@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { requireAdmin } from '@/lib/admin'
+import { requireAdmin, adminErrorResponse } from '@/lib/admin'
 import { createAdminClient } from '@/lib/supabase/admin'
 
 function slugify(name: string): string {
@@ -22,8 +22,8 @@ export async function GET() {
       .order('name')
     if (error) throw error
     return NextResponse.json({ schools: data ?? [] })
-  } catch {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  } catch (err) {
+    return adminErrorResponse(err)
   }
 }
 
@@ -50,7 +50,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Failed to add school' }, { status: 500 })
     }
     return NextResponse.json({ success: true, id: data.id })
-  } catch {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  } catch (err) {
+    return adminErrorResponse(err)
   }
 }

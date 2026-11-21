@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { requireAdmin } from '@/lib/admin'
+import { requireAdmin, adminErrorResponse } from '@/lib/admin'
 
 export async function GET() {
   try {
@@ -15,7 +15,7 @@ export async function GET() {
       subjects: subjectsRes.data ?? [],
       schools: schoolsRes.data ?? [],
     })
-  } catch {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  } catch (err) {
+    return adminErrorResponse(err)
   }
 }

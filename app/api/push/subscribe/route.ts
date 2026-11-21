@@ -1,4 +1,5 @@
 import { createClient } from '@/lib/supabase/server'
+import { logError } from '@/lib/error-log'
 import { type NextRequest, NextResponse } from 'next/server'
 
 export async function POST(req: NextRequest) {
@@ -45,7 +46,8 @@ export async function POST(req: NextRequest) {
   )
 
   if (error) {
-    console.error('[push/subscribe] upsert error:', error)
+    // A Postgres error can echo the endpoint and user id in `details`.
+    logError('push/subscribe', error)
     return NextResponse.json({ error: 'Failed to save subscription' }, { status: 500 })
   }
 

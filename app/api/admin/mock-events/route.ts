@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { requireAdmin } from '@/lib/admin'
+import { requireAdmin, adminErrorResponse } from '@/lib/admin'
 import { createAdminClient } from '@/lib/supabase/admin'
 
 function asDate(value: unknown): string | null {
@@ -23,8 +23,8 @@ export async function GET() {
       .order('starts_at', { ascending: false })
     if (error) throw error
     return NextResponse.json({ events: data ?? [] })
-  } catch {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  } catch (err) {
+    return adminErrorResponse(err)
   }
 }
 
@@ -71,8 +71,8 @@ export async function POST(request: Request) {
       .single()
     if (error) return NextResponse.json({ error: error.message ?? 'Failed to create the event' }, { status: 500 })
     return NextResponse.json({ success: true, id: data.id, slug: data.slug })
-  } catch {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  } catch (err) {
+    return adminErrorResponse(err)
   }
 }
 
@@ -101,8 +101,8 @@ export async function PUT(request: Request) {
     const { error } = await supabase.from('mock_events').update(updates).eq('id', id)
     if (error) return NextResponse.json({ error: error.message ?? 'Failed to update the event' }, { status: 500 })
     return NextResponse.json({ success: true })
-  } catch {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  } catch (err) {
+    return adminErrorResponse(err)
   }
 }
 
@@ -118,7 +118,7 @@ export async function DELETE(request: Request) {
     const { error } = await supabase.from('mock_events').delete().eq('id', id)
     if (error) return NextResponse.json({ error: 'Failed to delete the event' }, { status: 500 })
     return NextResponse.json({ success: true })
-  } catch {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  } catch (err) {
+    return adminErrorResponse(err)
   }
 }

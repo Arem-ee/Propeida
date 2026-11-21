@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { requireAdmin } from '@/lib/admin'
+import { requireAdmin, adminErrorResponse } from '@/lib/admin'
 import { createAdminClient } from '@/lib/supabase/admin'
 
 const BLOCK_TYPES = [
@@ -126,8 +126,8 @@ export async function POST(request: Request) {
       .single()
     if (error || !data) return NextResponse.json({ error: 'Failed to create block' }, { status: 500 })
     return NextResponse.json({ success: true, id: data.id })
-  } catch {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  } catch (err) {
+    return adminErrorResponse(err)
   }
 }
 
@@ -165,8 +165,8 @@ export async function PUT(request: Request) {
       .eq('id', id)
     if (error) return NextResponse.json({ error: 'Failed to update block' }, { status: 500 })
     return NextResponse.json({ success: true })
-  } catch {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  } catch (err) {
+    return adminErrorResponse(err)
   }
 }
 
@@ -181,7 +181,7 @@ export async function DELETE(request: Request) {
     const { error } = await supabase.from('lesson_blocks').delete().eq('id', id)
     if (error) return NextResponse.json({ error: 'Failed to delete block' }, { status: 500 })
     return NextResponse.json({ success: true })
-  } catch {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  } catch (err) {
+    return adminErrorResponse(err)
   }
 }

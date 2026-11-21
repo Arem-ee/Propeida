@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { requireAdmin } from '@/lib/admin'
+import { requireAdmin, adminErrorResponse } from '@/lib/admin'
 import { createAdminClient } from '@/lib/supabase/admin'
 
 const STATUSES = ['draft', 'review', 'published', 'retired']
@@ -44,7 +44,7 @@ export async function PUT(
     const { error } = await supabase.from('lessons').update(patch).eq('id', id)
     if (error) return NextResponse.json({ error: 'Failed to update lesson' }, { status: 500 })
     return NextResponse.json({ success: true })
-  } catch {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  } catch (err) {
+    return adminErrorResponse(err)
   }
 }

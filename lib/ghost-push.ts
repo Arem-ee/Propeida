@@ -2,6 +2,7 @@ import { createAdminClient } from './supabase/admin'
 import { sendPushNotification } from './web-push'
 import { claimOnce } from './redis'
 import { getExamScope } from './exam-scope'
+import { logError } from './error-log'
 
 const MAX_CANDIDATES = 5
 const ONE_DAY_MS = 24 * 60 * 60 * 1000
@@ -94,6 +95,6 @@ export async function sendCohortGhostPush(actorId: string, subjectId: string): P
       return
     }
   } catch (err) {
-    console.error('[ghost-push] failed:', err)
+    logError('ghost-push', err)
   }
 }

@@ -3,6 +3,7 @@ import { createServerClient } from '@supabase/ssr'
 import { type EmailOtpType, type User } from '@supabase/supabase-js'
 import { maybeSendWelcomeEmail } from '@/lib/emails/send'
 import { safeInternalPath } from '@/lib/safe-redirect'
+import { logError } from '@/lib/error-log'
 
 async function waitForProfile(supabase: ReturnType<typeof createServerClient>, userId: string) {
   const delays = [300, 600, 1200, 2400]
@@ -16,7 +17,7 @@ async function waitForProfile(supabase: ReturnType<typeof createServerClient>, u
     if (data) return
 
     if (error && error.code !== 'PGRST116') {
-      console.error(`[auth/confirm] Profile check attempt ${attempt + 1}/5 unexpected error:`, error)
+      logError(`auth/confirm profile attempt ${attempt + 1}/5`, error)
       return
     }
 
@@ -106,7 +107,7 @@ export async function GET(request: NextRequest) {
       return response
     }
 
-    console.error('[auth/confirm] exchange failed:', failure)
+    logError('auth/confirm exchange', failure)
   }
 
   return NextResponse.redirect(new URL('/login?error=verification_failed', baseUrl))

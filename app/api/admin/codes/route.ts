@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { requireAdmin } from '@/lib/admin'
+import { requireAdmin, adminErrorResponse } from '@/lib/admin'
 
 /** Registry codes for a subject, for misconception authoring dropdowns. */
 export async function GET(request: Request) {
@@ -15,8 +15,8 @@ export async function GET(request: Request) {
       .order('code')
     if (error) throw error
     return NextResponse.json({ codes: data ?? [] })
-  } catch {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  } catch (err) {
+    return adminErrorResponse(err)
   }
 }
 
@@ -54,7 +54,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Failed to add code' }, { status: 500 })
     }
     return NextResponse.json({ success: true, code: cleanCode })
-  } catch {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  } catch (err) {
+    return adminErrorResponse(err)
   }
 }

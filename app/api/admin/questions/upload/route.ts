@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { requireAdmin } from '@/lib/admin'
+import { requireAdmin, adminErrorResponse } from '@/lib/admin'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { createClient } from '@supabase/supabase-js'
 import Papa from 'papaparse'
@@ -27,8 +27,8 @@ export async function POST(request: Request) {
   try {
     try {
       await requireAdmin()
-    } catch {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    } catch (err) {
+      return adminErrorResponse(err)
     }
     const supabase = createAdminClient()
 

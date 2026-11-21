@@ -1,6 +1,11 @@
 import { Resend } from 'resend'
 import { getWelcomeEmail } from './welcome'
 import { createAdminClient } from '../supabase/admin'
+import { withTimeout } from '@/lib/timeout'
+import { logError } from '@/lib/error-log'
+
+// Resend exposes no per-request signal, so bound sends at the caller.
+const SEND_TIMEOUT_MS = 10000
 
 export const WELCOME_SENT_META = 'welcome_email_sent_at'
 
@@ -33,28 +38,28 @@ export async function sendWelcomeEmail(email: string, _name?: string): Promise<{
   const resend = new Resend(apiKey)
 
   try {
-    const res = await resend.emails.send({
-      from: mailFrom,
-      to: email.toLowerCase(),
-      replyTo: 'propeida.help@gmail.com',
-      subject: message.subject,
-      text: message.text,
-      html: message.html,
-    })
+    const res = await withTimeout(
+      resend.emails.send({
+        from: mailFrom,
+        to: email.toLowerCase(),
+        replyTo: 'propeida.help@gmail.com',
+        subject: message.subject,
+        text: message.text,
+        html: message.html,
+      }),
+      SEND_TIMEOUT_MS,
+      'Resend send',
+    )
 
     if (res.error) {
-      return {
-        ok: false,
-        message: `Resend error ${res.error.statusCode ?? ''} ${res.error.name ?? ''}: ${res.error.message}`,
-      }
+      logError('email/resend', res.error)
+      return { ok: false, message: `Resend error ${res.error.statusCode ?? ''} ${res.error.name ?? ''}` }
     }
 
     return { ok: true, message: res.data?.id ?? 'sent' }
   } catch (err) {
-    return {
-      ok: false,
-      message: `Exception while sending welcome email: ${err instanceof Error ? err.message : String(err)}`,
-    }
+    logError('email/welcome', err)
+    return { ok: false, message: 'Exception while sending email' }
   }
 }
 
@@ -78,26 +83,26 @@ export async function sendEmail(input: {
 
   const resend = new Resend(apiKey)
   try {
-    const res = await resend.emails.send({
-      from: mailFrom,
-      to: input.to.toLowerCase(),
-      replyTo: 'propeida.help@gmail.com',
-      subject: input.subject,
-      text: input.text,
-      html: input.html,
-    })
+    const res = await withTimeout(
+      resend.emails.send({
+        from: mailFrom,
+        to: input.to.toLowerCase(),
+        replyTo: 'propeida.help@gmail.com',
+        subject: input.subject,
+        text: input.text,
+        html: input.html,
+      }),
+      SEND_TIMEOUT_MS,
+      'Resend send',
+    )
     if (res.error) {
-      return {
-        ok: false,
-        message: `Resend error ${res.error.statusCode ?? ''} ${res.error.name ?? ''}: ${res.error.message}`,
-      }
+      logError('email/resend', res.error)
+      return { ok: false, message: `Resend error ${res.error.statusCode ?? ''} ${res.error.name ?? ''}` }
     }
     return { ok: true, message: res.data?.id ?? 'sent' }
   } catch (err) {
-    return {
-      ok: false,
-      message: `Exception while sending email: ${err instanceof Error ? err.message : String(err)}`,
-    }
+    logError('email/send', err)
+    return { ok: false, message: 'Exception while sending email' }
   }
 }
 
@@ -118,7 +123,7 @@ export async function maybeSendWelcomeEmail(userId: string): Promise<WelcomeEmai
   const { data: au, error } = await supabase.auth.admin.getUserById(userId)
   if (error || !au?.user) {
     // Never log the id or email — they are PII. The error code is enough.
-    console.error('[welcome] user lookup failed:', error?.code ?? error?.message ?? 'not found')
+    logError('welcome/user-lookup', error ?? 'not found')
     return { status: 'invalid_user' }
   }
 
@@ -145,7 +150,7 @@ export async function maybeSendWelcomeEmail(userId: string): Promise<WelcomeEmai
   }
   const { error: updateError } = await supabase.auth.admin.updateUserById(userId, { user_metadata: mark })
   if (updateError) {
-    console.error('[welcome] failed to mark sent:', updateError.message)
+    logError('welcome/mark-sent', updateError)
   }
 
   return { status: 'sent', message: result.message ?? 'sent' }

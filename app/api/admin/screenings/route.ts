@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { requireAdmin } from '@/lib/admin'
+import { requireAdmin, adminErrorResponse } from '@/lib/admin'
 import { createAdminClient } from '@/lib/supabase/admin'
 
 const MODES = ['in_person_cbt', 'online_proctored', 'documentary']
@@ -32,8 +32,8 @@ export async function GET(request: Request) {
       .order('year', { ascending: false })
     if (error) throw error
     return NextResponse.json({ screenings: data ?? [] })
-  } catch {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  } catch (err) {
+    return adminErrorResponse(err)
   }
 }
 
@@ -79,8 +79,8 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Failed to add screening' }, { status: 500 })
     }
     return NextResponse.json({ success: true, id: data.id })
-  } catch {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  } catch (err) {
+    return adminErrorResponse(err)
   }
 }
 
@@ -111,8 +111,8 @@ export async function PUT(request: Request) {
     const { error } = await supabase.from('school_screenings').update(payload).eq('id', id)
     if (error) return NextResponse.json({ error: 'Failed to update screening' }, { status: 500 })
     return NextResponse.json({ success: true })
-  } catch {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  } catch (err) {
+    return adminErrorResponse(err)
   }
 }
 
@@ -125,7 +125,7 @@ export async function DELETE(request: Request) {
     const { error } = await supabase.from('school_screenings').delete().eq('id', id)
     if (error) return NextResponse.json({ error: 'Failed to delete screening' }, { status: 500 })
     return NextResponse.json({ success: true })
-  } catch {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  } catch (err) {
+    return adminErrorResponse(err)
   }
 }

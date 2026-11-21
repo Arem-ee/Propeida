@@ -1,4 +1,5 @@
 import webpush from 'web-push'
+import { logError } from '@/lib/error-log'
 
 export function initWebPush() {
   const publicKey = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY
@@ -30,7 +31,9 @@ export async function sendPushNotification(
     if (err instanceof webpush.WebPushError && err.statusCode === 410) {
       return { expired: true }
     }
-    console.error('[push] send error:', err)
+    // WebPushError carries the subscription endpoint, which identifies a
+    // device. Log only its code and status.
+    logError('push/send', err)
     return false
   }
 }

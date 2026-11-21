@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import { headers } from 'next/headers'
 import { createClient } from '@/lib/supabase/server'
 import { maybeSendWelcomeEmail } from '@/lib/emails/send'
+import { logError } from '@/lib/error-log'
 import { checkRateLimit, getClientIp, rateLimitKey } from '@/lib/rate-limit'
 
 export async function POST() {
@@ -36,7 +37,7 @@ export async function POST() {
         return NextResponse.json({ error: 'Welcome email could not be delivered' }, { status: 502 })
     }
   } catch (err) {
-    console.error('[welcome] unexpected error:', err)
+    logError('welcome/route', err)
     return NextResponse.json({ error: 'Welcome email could not be delivered' }, { status: 500 })
   }
 }

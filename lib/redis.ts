@@ -11,7 +11,13 @@ let client: Redis | null | undefined
 export function getRedis(): Redis | null {
   if (client !== undefined) return client
   if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
-    client = Redis.fromEnv()
+    // The default is 5 retries with exponential backoff. On a hot rate-limit
+    // path that can hold a request for seconds before failing open. One retry
+    // and a fresh 2s abort signal per call bounds it while keeping resilience.
+    client = Redis.fromEnv({
+      retry: { retries: 1 },
+      signal: () => AbortSignal.timeout(2000),
+    })
   } else {
     client = null
   }
