@@ -1909,144 +1909,150 @@
      "type": "worked_example",
      "content": {
       "problem": "Convert 21 (base 4) to base 10.",
+      "finalAnswer": "21{{sub:4}} = 9{{sub:10}}",
       "steps": [
        {
         "stepNumber": 1,
-        "instruction": "Write the place values (powers of 4) for each digit from right to left, starting at 0.",
-        "hint": "The digit 1 is on the far right, so its power of 4 is 4⁰.",
-        "explanation": "Positions start at 0 on the right, so the 1 is at 4⁰ = 1 and the 2 is at 4¹ = 4."
+        "instruction": "Find the worth of each place in base four.",
+        "hint": "Count places from the right, starting at 0.",
+        "explanation": "The right digit is in the ones place (4⁰ = 1), the next is in the fours place (4¹ = 4)."
        },
        {
         "stepNumber": 2,
-        "instruction": "Multiply each digit by its base-4 place value and add the answers.",
-        "hint": "Set up (2 × 4) + (1 × 1).",
-        "explanation": "The 2 is in the fours column, so 2 × 4 = 8. The 1 is in the ones column, so 1 × 1 = 1. Then 8 + 1 = 9."
+        "instruction": "Multiply each digit by its place worth.",
+        "hint": "The 2 is in the fours place, the 1 is in the ones place.",
+        "explanation": "Multiply before adding: 2 × 4 = 8 and 1 × 1 = 1."
        },
        {
         "stepNumber": 3,
-        "instruction": "Check by dividing 9 by 4 and reading the remainders upward.",
-        "hint": "9 ÷ 4 = 2 remainder 1; 2 ÷ 4 = 0 remainder 2.",
-        "explanation": "Reading the remainders from the last row upward gives 21 in base four, which is where we started."
+        "instruction": "Add the two answers.",
+        "hint": "8 + 1.",
+        "explanation": "Adding the column values gives 8 + 1 = 9."
+       },
+       {
+        "stepNumber": 4,
+        "instruction": "Check to confirm by converting back.",
+        "hint": "Divide 9 by 4 and read the remainders upward.",
+        "explanation": "9 ÷ 4 = 2 r 1 and 2 ÷ 4 = 0 r 2, which reads 21 in base four, so the answer is right."
        }
-      ],
-      "finalAnswer": "21{{sub:4}} = 9{{sub:10}}"
+      ]
      }
     },
     {
      "type": "worked_example",
      "content": {
       "problem": "Write 25 in base ten as a base-five number.",
+      "finalAnswer": "25{{sub:10}} = 100{{sub:5}}",
       "steps": [
        {
         "stepNumber": 1,
-        "instruction": "Divide 25 by the new base, 5, and keep the remainder.",
-        "hint": "25 ÷ 5 = 5 remainder 0.",
-        "explanation": "Each division makes one full bundle of five, and the remainder is the digit left over for that column."
+        "instruction": "Divide 25 by the new base, 5.",
+        "hint": "25 ÷ 5.",
+        "explanation": "Each division makes one full group of five, and the leftover is the next digit."
        },
        {
         "stepNumber": 2,
-        "instruction": "Divide the 5 by 5 again and keep the remainder.",
-        "hint": "5 ÷ 5 = 1 remainder 0.",
-        "explanation": "We keep dividing the answer until it is too small to make another full group of five."
+        "instruction": "Keep the remainder and divide the answer again.",
+        "hint": "25 ÷ 5 = 5 remainder 0, then 5 ÷ 5.",
+        "explanation": "We divide the answer from the last row until it is too small to make another group of five."
        },
        {
         "stepNumber": 3,
-        "instruction": "Divide the 1 by 5, then stop.",
-        "hint": "1 ÷ 5 = 0 remainder 1.",
-        "explanation": "One counter cannot make a full group of five, so the quotient is 0 and the whole 1 is remainder. That 0 means the working is finished."
+        "instruction": "Continue until the answer is 0.",
+        "hint": "5 ÷ 5 = 1 remainder 0, then 1 ÷ 5 = 0 remainder 1.",
+        "explanation": "One counter cannot make a full group of five, so the answer is 0 and the whole 1 is remainder."
        },
        {
         "stepNumber": 4,
         "instruction": "Read the remainders from the bottom row upward.",
         "hint": "The last remainder is the first digit.",
-        "explanation": "Reading from the bottom gives 4, then 3, then 0, so 25 in base ten is 100 in base five."
+        "explanation": "Reading upward gives 1, 0, 0, so 25 in base ten is 100 in base five."
        },
        {
         "stepNumber": 5,
-        "instruction": "Check by expanding 100 in base five.",
-        "hint": "The place worths are 25, 5 and 1.",
-        "explanation": "1 × 25 + 0 × 5 + 0 × 1 = 25, which is the number we started with."
+        "instruction": "Check to confirm by expanding back.",
+        "hint": "1 × 25 + 0 × 5 + 0 × 1.",
+        "explanation": "The expansion is 25, which is the number we started with."
        }
-      ],
-      "finalAnswer": "25{{sub:10}} = 100{{sub:5}}"
+      ]
      }
     },
     {
      "type": "worked_example",
      "content": {
       "problem": "Convert 0.625 in base ten into a binary (base-two) fraction.",
+      "finalAnswer": "0.625{{sub:10}} = 0.101{{sub:2}}",
       "steps": [
        {
         "stepNumber": 1,
-        "instruction": "Multiply the fraction by 2 and keep the whole number part.",
-        "hint": "0.625 × 2 = 1.25, so the whole part is 1.",
-        "explanation": "Repeated multiplication by the new base turns a fraction into that base, and each whole part becomes the next digit after the point."
+        "instruction": "Multiply the fraction by the new base, 2.",
+        "hint": "0.625 × 2.",
+        "explanation": "Each multiplication produces the next digit after the point, so we keep the whole part and carry the rest."
        },
        {
         "stepNumber": 2,
-        "instruction": "Drop the whole part and multiply what is left by 2 again.",
-        "hint": "0.25 × 2 = 0.5, so the whole part is 0.",
-        "explanation": "We only multiply the fractional part each time, because the whole part has already been written as a digit."
+        "instruction": "Keep the whole part and multiply what is left again.",
+        "hint": "0.625 × 2 = 1.25, keep 1, left 0.25. Then 0.25 × 2.",
+        "explanation": "We only multiply the fractional part each time, because the whole part is already written."
        },
        {
         "stepNumber": 3,
-        "instruction": "Drop the whole part and multiply again.",
-        "hint": "0.5 × 2 = 1.0, so the whole part is 1.",
-        "explanation": "Nothing is left over now, so the chain ends here."
+        "instruction": "Repeat until nothing is left.",
+        "hint": "0.25 × 2 = 0.5 keep 0; 0.5 × 2 = 1.0 keep 1.",
+        "explanation": "Nothing remains after the third multiplication, so the chain ends."
        },
        {
         "stepNumber": 4,
-        "instruction": "Read the whole parts in order after the point.",
-        "hint": "The digits are 1, 0 and 1.",
-        "explanation": "Writing them in the order we found them gives 0.101 in base two."
+        "instruction": "Read the whole parts in order.",
+        "hint": "The digits are 1, 0, 1.",
+        "explanation": "Writing them in order after the point gives 0.101 in base two."
        },
        {
         "stepNumber": 5,
-        "instruction": "Check by expanding 0.101 in base two.",
+        "instruction": "Check to confirm by expanding.",
         "hint": "The places after the point are worth 1/2, 1/4 and 1/8.",
-        "explanation": "1/2 + 0/4 + 1/8 = 0.5 + 0 + 0.125 = 0.625, which is the fraction we started with."
+        "explanation": "1/2 + 0/4 + 1/8 = 0.5 + 0 + 0.125 = 0.625, which is where we started."
        }
-      ],
-      "finalAnswer": "0.625{{sub:10}} = 0.101{{sub:2}}"
+      ]
      }
     },
     {
      "type": "worked_example",
      "content": {
       "problem": "Convert 132 in base four to base five.",
+      "finalAnswer": "132{{sub:4}} = 110{{sub:5}}",
       "steps": [
        {
         "stepNumber": 1,
         "instruction": "Test the digits, then write the place worths in base four.",
-        "hint": "Digits stop one short of the base, so 1, 3 and 2 are allowed.",
-        "explanation": "Each digit must be smaller than 4, and the column worths from the right are 1, 4 and 4 × 4 = 16."
+        "hint": "Digits stop one short of the base.",
+        "explanation": "Every digit must be smaller than 4, so 1, 3 and 2 are valid, and the places from the right are worth 1, 4 and 16."
        },
        {
         "stepNumber": 2,
-        "instruction": "Multiply each digit by its column worth and add.",
+        "instruction": "Multiply each digit by its place worth and add.",
         "hint": "2 × 1 = 2; 3 × 4 = 12; 1 × 16 = 16.",
-        "explanation": "The 2 is over 1, the 3 is over 4 and the 1 is over 16, so the total in base ten is 2 + 12 + 16 = 30."
+        "explanation": "The total in base ten is 2 + 12 + 16 = 30."
        },
        {
         "stepNumber": 3,
         "instruction": "Write 30 in base five by repeated division.",
         "hint": "30 ÷ 5 = 6 r 0; 6 ÷ 5 = 1 r 1; 1 ÷ 5 = 0 r 1.",
-        "explanation": "Dividing by the new base and keeping each remainder gives the digits of the number in base five."
+        "explanation": "Dividing by the new base and keeping the remainders gives the base-five digits."
        },
        {
         "stepNumber": 4,
         "instruction": "Read the remainders from the bottom row upward.",
         "hint": "The last remainder is the first digit.",
-        "explanation": "Reading upward gives 1, 1 and 0, so 132 in base four is 110 in base five."
+        "explanation": "Reading upward gives 1, 1, 0, so 132 in base four is 110 in base five."
        },
        {
         "stepNumber": 5,
-        "instruction": "Check by converting back.",
+        "instruction": "Check to confirm by converting back.",
         "hint": "Expand 110 in base five: 1 × 25 + 1 × 5 + 0.",
         "explanation": "That is 30, and the first route also gave 30, so both routes agree."
        }
-      ],
-      "finalAnswer": "132{{sub:4}} = 110{{sub:5}}"
+      ]
      }
     },
     {
