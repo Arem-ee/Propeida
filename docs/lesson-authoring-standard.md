@@ -201,6 +201,13 @@ the reader can see being carried out. That includes the "obvious" ones: a
 - **In worked and check steps, one fact per result.** A result string that
   chains three operations with semicolons or parentheses is three steps
   trapped in a sentence. Split it.
+- **The 10-second section checks use the walkthrough shape too.** Each
+  section card's inline check carries `summaryVerdict`, numbered `steps`
+  with `title`, `explanation` and `workings`, and an optional `takeawayRule`.
+  The mascot renders them through `MascotWalkthrough`, the same component as
+  practice feedback. Legacy `operation/reason/result/predictPrompt` checks
+  still render for the other subjects, but new authoring uses the walkthrough.
+  The checker accepts either shape; do not author new legacy checks.
 - **Bold the quantities that carry the idea** (the digits, the carries, the
   answers) so the eye lands on the working, not the prose.
 

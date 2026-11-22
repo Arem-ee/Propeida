@@ -7,6 +7,7 @@ import LessonVisualBlock from './visuals'
 import { GlossText } from './gloss-text'
 import { MascotExplains } from '@/components/celebrations/speech-bubble'
 import { WorkedSteps } from '@/components/celebrations/worked-steps'
+import { MascotWalkthrough } from '@/components/celebrations/mascot-walkthrough'
 import type { WorkedStep } from '@/lib/lessons'
 import { MathText, isMathOnly } from './math-text'
 
@@ -140,9 +141,11 @@ function CheckBlock({
               ? `${correct ? 'You got it right' : `Not quite, the answer is ${String.fromCharCode(65 + check.answer)}`}, ${check.why}`
               : correct ? 'You got it right' : `Not quite, the answer is ${String.fromCharCode(65 + check.answer)}`}
             steps={
-              check.steps && check.steps.length > 0
-                ? <WorkedSteps steps={check.steps as WorkedStep[]} />
-                : (
+              check.walkthrough
+                ? <MascotWalkthrough walkthrough={check.walkthrough} />
+                : check.steps && check.steps.length > 0
+                  ? <WorkedSteps steps={check.steps as WorkedStep[]} />
+                  : (
                   <span className="text-sm font-semibold leading-relaxed text-ink-soft">
                     {correct ? 'You got it right' : `Not quite, the answer is ${String.fromCharCode(65 + check.answer)}`}
                     {check.why ? <>, <GlossText text={check.why} /></> : null}

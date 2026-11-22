@@ -1772,18 +1772,24 @@
        "why": "Base five uses 0, 1, 2, 3 and 4. A 5 would already be one full group of five.",
        "steps": [
         {
-         "operation": "List the digits of base five",
-         "reason": "Digit symbols stop one short of the group size.",
-         "result": "0, 1, 2, 3 and 4",
-         "predictPrompt": "What is one less than five?"
+         "stepNumber": 1,
+         "title": "List the digits of base five",
+         "explanation": "Digits stop one short of the group size.",
+         "workings": [
+          "0, 1, 2, 3, 4"
+         ]
         },
         {
-         "operation": "Test each option",
-         "reason": "Only 4 is in that list.",
-         "result": "4 is allowed",
-         "predictPrompt": "Which option is in the list?"
+         "stepNumber": 2,
+         "title": "Test each option",
+         "explanation": "Only 4 is in that list.",
+         "workings": [
+          "4 is allowed; 5, 6 and 9 are not"
+         ]
         }
-       ]
+       ],
+       "summaryVerdict": "Base five uses the digits 0, 1, 2, 3 and 4, so 4 is allowed and 5 is already the next full group.",
+       "takeawayRule": "A digit is always smaller than the base."
       }
      }
     },
@@ -1809,37 +1815,47 @@
        "options": [
         "9",
         "8",
-        "7",
-        "21"
+        "10",
+        "6"
        ],
        "answer": 0,
        "why": "Place worths in base four are 4 and 1. 2 × 4 = 8, 1 × 1 = 1, and 8 + 1 = 9.",
        "steps": [
         {
-         "operation": "Write the place worths",
-         "reason": "From the right: 1, then 4.",
-         "result": "4 and 1",
-         "predictPrompt": "What are the first two worths in base four?"
+         "stepNumber": 1,
+         "title": "Write the place worths",
+         "explanation": "From the right, the places are worth 1 and then 4.",
+         "workings": [
+          "worths: 4 and 1"
+         ]
         },
         {
-         "operation": "Multiply the left digit",
-         "reason": "The 2 sits over 4.",
-         "result": "2 × 4 = 8",
-         "predictPrompt": "What is 2 × 4?"
+         "stepNumber": 2,
+         "title": "Multiply the left digit",
+         "explanation": "The 2 is in the fours place.",
+         "workings": [
+          "2 × 4 = 8"
+         ]
         },
         {
-         "operation": "Multiply the right digit",
-         "reason": "The 1 sits over 1.",
-         "result": "1 × 1 = 1",
-         "predictPrompt": "What is 1 × 1?"
+         "stepNumber": 3,
+         "title": "Multiply the right digit",
+         "explanation": "The 1 is in the ones place.",
+         "workings": [
+          "1 × 1 = 1"
+         ]
         },
         {
-         "operation": "Add",
-         "reason": "8 + 1.",
-         "result": "9",
-         "predictPrompt": "What is 8 + 1?"
+         "stepNumber": 4,
+         "title": "Add the two answers",
+         "explanation": "Add the column values together.",
+         "workings": [
+          "8 + 1 = 9"
+         ]
         }
-       ]
+       ],
+       "summaryVerdict": "In base four the places are worth 4 and 1, so 21 in base four is 2 × 4 + 1 × 1 = 9 in base ten.",
+       "takeawayRule": "Expand each digit by its place worth, then add."
       }
      }
     },
@@ -1865,43 +1881,55 @@
        "options": [
         "1101",
         "1011",
-        "1110",
-        "1001"
+        "1001",
+        "1111"
        ],
        "answer": 0,
        "why": "13 ÷ 2 = 6 r 1; 6 ÷ 2 = 3 r 0; 3 ÷ 2 = 1 r 1; 1 ÷ 2 = 0 r 1. Read up: 1101.",
        "steps": [
         {
-         "operation": "Divide 13 by 2",
-         "reason": "Each row leaves a remainder.",
-         "result": "13 ÷ 2 = 6 r 1",
-         "predictPrompt": "What is 13 divided by 2?"
+         "stepNumber": 1,
+         "title": "Divide 13 by 2",
+         "explanation": "Each row keeps the remainder.",
+         "workings": [
+          "13 ÷ 2 = 6 remainder 1"
+         ]
         },
         {
-         "operation": "Divide 6 by 2",
-         "reason": "Carry the 6 down.",
-         "result": "6 ÷ 2 = 3 r 0",
-         "predictPrompt": "What is 6 divided by 2?"
+         "stepNumber": 2,
+         "title": "Divide 6 by 2",
+         "explanation": "Carry the answer down and divide again.",
+         "workings": [
+          "6 ÷ 2 = 3 remainder 0"
+         ]
         },
         {
-         "operation": "Divide 3 by 2",
-         "reason": "Carry the 3 down.",
-         "result": "3 ÷ 2 = 1 r 1",
-         "predictPrompt": "What is 3 divided by 2?"
+         "stepNumber": 3,
+         "title": "Divide 3 by 2",
+         "explanation": "Keep going until the answer is 0.",
+         "workings": [
+          "3 ÷ 2 = 1 remainder 1"
+         ]
         },
         {
-         "operation": "Divide 1 by 2",
-         "reason": "This row ends the working.",
-         "result": "1 ÷ 2 = 0 r 1",
-         "predictPrompt": "What is the answer now?"
+         "stepNumber": 4,
+         "title": "Divide 1 by 2",
+         "explanation": "The last row ends the working.",
+         "workings": [
+          "1 ÷ 2 = 0 remainder 1"
+         ]
         },
         {
-         "operation": "Read the remainders upward",
-         "reason": "Last remainder first.",
-         "result": "1101{{sub:2}}",
-         "predictPrompt": "Which remainder is first?"
+         "stepNumber": 5,
+         "title": "Read the remainders upward",
+         "explanation": "The last remainder is the first digit.",
+         "workings": [
+          "1101 in base two"
+         ]
         }
-       ]
+       ],
+       "summaryVerdict": "Dividing 13 by 2 repeatedly gives remainders 1, 0, 1, 1, which read upward as 1101 in base two.",
+       "takeawayRule": "Divide by the base, keep the remainders, read them from the bottom up."
       }
      }
     },

@@ -31,12 +31,40 @@ function toSectionCheck(value: unknown): NoteSection['check'] {
   )
     ? (v.steps as import('@/lib/lessons').WorkedStep[])
     : undefined
+  // Walkthrough shape (v2/v3): a verdict with title/explanation/workings
+  // steps. Preferred over legacy steps when present.
+  let walkthrough: import('@/lib/lessons').WalkthroughExplanation | undefined
+  if (typeof v.summaryVerdict === 'string' && Array.isArray(v.steps)) {
+    const wSteps: import('@/lib/lessons').WalkthroughStep[] = []
+    for (const raw of v.steps as unknown[]) {
+      if (!raw || typeof raw !== 'object') continue
+      const ws = raw as Record<string, unknown>
+      const title = typeof ws.title === 'string' ? ws.title : ''
+      if (!title) continue
+      wSteps.push({
+        stepNumber: typeof ws.stepNumber === 'number' ? ws.stepNumber : wSteps.length + 1,
+        title,
+        explanation: typeof ws.explanation === 'string' ? ws.explanation : '',
+        workings: Array.isArray(ws.workings) ? ws.workings.map(String) : [],
+      })
+    }
+    if (wSteps.length > 0) {
+      walkthrough = {
+        summaryVerdict: v.summaryVerdict,
+        steps: wSteps,
+        ...(typeof v.takeawayRule === 'string' && v.takeawayRule.trim()
+          ? { takeawayRule: v.takeawayRule.trim() }
+          : {}),
+      }
+    }
+  }
   return {
     question,
     options,
     answer,
     ...(why ? { why } : {}),
     ...(steps ? { steps } : {}),
+    ...(walkthrough ? { walkthrough } : {}),
   }
 }
 

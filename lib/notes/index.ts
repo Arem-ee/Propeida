@@ -59,6 +59,8 @@ export interface SectionCheck {
   why?: string
   /** Full worked derivation for the calculation, rendered step by step. */
   steps?: import('@/lib/lessons').WorkedStep[]
+  /** Walkthrough shape (v2/v3): verdict, worked steps, optional takeaway. */
+  walkthrough?: import('@/lib/lessons').WalkthroughExplanation
 }
 
 export interface FlowStep {
@@ -119,6 +121,12 @@ export type LessonVisual =
       caption?: string
       initialFocus?: 'first-20' | 'all'
       highlight?: string[]
+    }
+  | {
+      kind: 'nephron'
+      caption?: string
+      initialTab?: 'nephron' | 'kidney'
+      initialZone?: string
     }
 
 export interface NoteSection {
