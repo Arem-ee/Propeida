@@ -144,6 +144,7 @@ function BankQuestion({
   const [confidence, setConfidence] = useState<Confidence>(null)
   const [feedback, setFeedback] = useState<AttemptFeedback | null>(null)
   const [checking, setChecking] = useState(false)
+  const [checkError, setCheckError] = useState<string | null>(null)
   // The confidence bet only means something once the learner has read the
   // options, so it appears only after an answer is chosen.
   const hasAnswer = question.responseType === 'mcq' ? !!selected : !!textInput
@@ -153,6 +154,7 @@ function BankQuestion({
     const answer = isMcq ? selected : textInput
     if ((isMcq && !selected) || (!isMcq && !textInput) || !confidence || checking || feedback) return
     setChecking(true)
+    setCheckError(null)
     try {
       const result = await recordLessonAttempt({
         subjectId,
@@ -169,12 +171,18 @@ function BankQuestion({
       if (!result.isCorrect && result.graded) onWrong?.(question.id)
     } catch {
       setChecking(false)
+      setCheckError('We could not check that answer, so check your connection and try again')
     }
   }
 
   return (
     <div>
       <p className="font-display text-lg sm:text-xl font-medium leading-snug text-black">{question.questionText}</p>
+      {checkError && (
+        <p role="alert" className="mt-3 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-bold text-red-700">
+          {checkError}
+        </p>
+      )}
       <div className="mt-4 space-y-2.5">
         {question.responseType === 'mcq' && question.options ? (
           question.options.map((opt) => {
@@ -349,6 +357,7 @@ export default function LessonPlayer({
   const [closeout, setCloseout] = useState<{ nextReviewAt: string | null; status?: string; streak?: number | null } | null>(null)
   const [reflectionText, setReflectionText] = useState('')
   const [reflectionSubmitted, setReflectionSubmitted] = useState(false)
+  const [reflectionError, setReflectionError] = useState<string | null>(null)
   // Frozen at first render: "review in N days" must not shift under re-renders.
   const [nowMs] = useState(() => Date.now())
 
@@ -694,14 +703,19 @@ export default function LessonPlayer({
                 className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm min-h-[56px] focus:border-blue-600 focus:outline-none"
                 rows={3}
               />
+              {reflectionError && (
+                <p role="alert" className="mt-2 text-sm font-bold text-red-700">{reflectionError}</p>
+              )}
               <button
                 onClick={async () => {
                   if (!reflectionText.trim()) return
+                  setReflectionError(null)
                   try {
                     await saveLessonReflection({ lessonId: note.id, explanation: reflectionText })
                     setReflectionSubmitted(true)
                   } catch {
-                    // swallow; reflection is best-effort and must not block navigation
+                    // Best-effort: never block navigation, but say it did not save.
+                    setReflectionError('We could not save that explanation, so check your connection and try again')
                   }
                 }}
                 disabled={!reflectionText.trim()}

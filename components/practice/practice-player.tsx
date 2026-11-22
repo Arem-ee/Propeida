@@ -292,7 +292,22 @@ export default function PracticePlayer({
     )
   }
 
-  if (!q) return null
+  if (!q) {
+    return (
+      <div className="mx-auto max-w-2xl rounded-3xl border border-blue-100 bg-white p-8 text-center">
+        <h1 className="font-display text-xl font-medium text-black">No questions in this set</h1>
+        <p className="mt-2 text-sm font-semibold text-ink-soft">
+          This session has no questions ready yet, so there is nothing to answer.
+        </p>
+        <Link
+          href="/practice"
+          className="mt-6 inline-flex min-h-[48px] items-center justify-center rounded-2xl bg-blue-600 px-6 text-sm font-extrabold text-white hover:bg-blue-700"
+        >
+          Back to practice
+        </Link>
+      </div>
+    )
+  }
 
   return (
     <div className="mx-auto max-w-2xl">

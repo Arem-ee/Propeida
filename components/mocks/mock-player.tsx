@@ -204,6 +204,7 @@ export default function MockPlayer({
   const [calculatorOpen, setCalculatorOpen] = useState(false)
   const [saveFailures, setSaveFailures] = useState(0)
   const [submitBlocked, setSubmitBlocked] = useState(false)
+  const [submitError, setSubmitError] = useState<string | null>(null)
 
   const total = questions.length
   const current = questions[index]
@@ -256,6 +257,7 @@ export default function MockPlayer({
     setConfirming(false)
     try {
       setSubmitBlocked(false)
+      setSubmitError(null)
       await flush() // write any mark-to-leave selections before the exam is closed
       // If any answer is still unsynced, do not close the exam. Completing the
       // session here would permanently lose those selections from the score.
@@ -270,6 +272,7 @@ export default function MockPlayer({
       celebrate()
       setDone(true)
     } catch {
+      setSubmitError('We could not submit your mock, so check your connection and try again')
       setFinalizing(false)
     }
   }, [finalizing, sessionId, add, flush])
@@ -378,7 +381,22 @@ export default function MockPlayer({
     )
   }
 
-  if (!current) return null
+  if (!current) {
+    return (
+      <div className="mx-auto max-w-2xl rounded-3xl border border-blue-100 bg-white p-8 text-center">
+        <h1 className="font-display text-xl font-medium text-black">No questions in this mock</h1>
+        <p className="mt-2 text-sm font-semibold text-ink-soft">
+          This mock has no questions ready yet, so there is nothing to answer.
+        </p>
+        <button
+          onClick={() => router.push('/mocks')}
+          className="mt-6 inline-flex min-h-[48px] items-center justify-center rounded-2xl bg-blue-600 px-6 text-sm font-extrabold text-white hover:bg-blue-700"
+        >
+          Back to mocks
+        </button>
+      </div>
+    )
+  }
 
   return (
     <div className="mx-auto max-w-3xl pb-40 lg:pb-28">
@@ -496,6 +514,11 @@ export default function MockPlayer({
       {submitBlocked && (
         <p role="alert" className="mt-3 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-bold text-red-700">
           We could not save all your answers, so the exam was not submitted. Check your connection and try again.
+        </p>
+      )}
+      {!submitBlocked && submitError && (
+        <p role="alert" className="mt-3 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-bold text-red-700">
+          {submitError}
         </p>
       )}
       {!submitBlocked && saveFailures >= 2 && (
