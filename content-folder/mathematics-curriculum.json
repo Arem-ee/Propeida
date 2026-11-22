@@ -1798,10 +1798,10 @@
      "content": {
       "heading": "Reading a number written in another base",
       "paragraphs": [
-       "Take **43{{sub:5}}**, and to read it you first find what each column is worth.",
+       "Take **43{{sub:5}}**, and to read it you first find what each place value is.",
        "The right column counts ones and is worth **5⁰ = 1**, the next counts fives and is worth **5¹ = 5**, and one more to the left would be worth **5² = 5 × 5 = 25**.",
        "Write each digit over its column, so the **4** is over 5 and the **3** is over 1.",
-       "Now multiply each digit by its column worth, one at a time.",
+       "Now multiply each digit by its place value, one at a time.",
        "4 × 5 = 20",
        "3 × 1 = 3",
        "Then add the answers.",
@@ -1809,7 +1809,7 @@
        "So **43{{sub:5}}** is **23** in base ten, and this is called expanding the number."
       ],
       "bullets": [],
-      "takeaway": "Find each column worth, multiply each digit by its worth, then add.",
+      "takeaway": "Find each place value, multiply each digit by its worth, then add.",
       "check": {
        "question": "What is **21{{sub:4}}** in base ten?",
        "options": [
@@ -1819,12 +1819,12 @@
         "6"
        ],
        "answer": 0,
-       "why": "Place worths in base four are 4 and 1. 2 × 4 = 8, 1 × 1 = 1, and 8 + 1 = 9.",
+       "why": "The place values in base four are 4 and 1. 2 × 4 = 8, 1 × 1 = 1, and 8 + 1 = 9.",
        "steps": [
         {
          "stepNumber": 1,
-         "title": "Write the place worths",
-         "explanation": "From the right, the places are worth 1 and then 4.",
+         "title": "Write the place values",
+         "explanation": "From the right, the place values are 1 and then 4.",
          "workings": [
           "worths: 4 and 1"
          ]
@@ -1855,7 +1855,7 @@
         }
        ],
        "summaryVerdict": "In base four the places are worth 4 and 1, so 21 in base four is 2 × 4 + 1 × 1 = 9 in base ten.",
-       "takeawayRule": "Expand each digit by its place worth, then add."
+       "takeawayRule": "Expand each digit by its place value, then add."
       }
      }
     },
@@ -1947,7 +1947,7 @@
        },
        {
         "stepNumber": 2,
-        "instruction": "Multiply each digit by its place worth.",
+        "instruction": "Multiply each digit by its place value.",
         "hint": "The 2 is in the fours place, the 1 is in the ones place.",
         "explanation": "Multiply before adding: 2 × 4 = 8 and 1 × 1 = 1."
        },
@@ -2052,13 +2052,13 @@
       "steps": [
        {
         "stepNumber": 1,
-        "instruction": "Test the digits, then write the place worths in base four.",
+        "instruction": "Test the digits, then write the place values in base four.",
         "hint": "Digits stop one short of the base.",
         "explanation": "Every digit must be smaller than 4, so 1, 3 and 2 are valid, and the places from the right are worth 1, 4 and 16."
        },
        {
         "stepNumber": 2,
-        "instruction": "Multiply each digit by its place worth and add.",
+        "instruction": "Multiply each digit by its place value and add.",
         "hint": "2 × 1 = 2; 3 × 4 = 12; 1 × 16 = 16.",
         "explanation": "The total in base ten is 2 + 12 + 16 = 30."
        },
