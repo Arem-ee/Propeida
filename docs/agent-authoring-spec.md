@@ -131,6 +131,9 @@ independent verification of the answer, never the same method twice.
   and a `takeawayRule`. The mascot bubble shows the verdict, steps, workings,
   the distractor note only when that wrong option was chosen, and the rule.
   Renderer: `MascotWalkthrough`; parser: `parseExplanation` (walkthrough-v3).
+- **Store v3 explanations in `question_answers.explanation`, not `questions.explanation`.** The question row's explanation stays NULL for learners; seeding only there is why the pilot never reached the mascot.
+- **The free pool only serves published, mcq questions and freezes per user on first use** (`ensure_free_question_pool`). A draft or `in_review` v3 question will never appear in a free learner's practice. Pilot v3 on a pro/admin user, a fresh user, or after publishing.
+- **Each explanation format is its own decode-and-render path.** Legacy prose and `worked-steps-v1` are decoded by `parseExplanation`; the bubble picks the renderer from the decoded shape. Never render a v3 payload through the legacy steps renderer — it loses the verdict, workings and distractor note.
 - **Worked-example schema (v2).** Author `problem`, `finalAnswer` and numbered
   `steps` with `stepNumber`, `instruction`, `hint` and `explanation`. The
   renderer shows the whole walkthrough at once, with the why inside each step,

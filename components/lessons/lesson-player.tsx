@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle, ChevronDown, Lightbulb, Target } from 'lucide-react'
 import { celebrate } from '@/lib/celebrate'
@@ -8,7 +8,6 @@ import { MascotExplains, MascotMisconception } from '@/components/celebrations/s
 import { WorkedSteps } from '@/components/celebrations/worked-steps'
 import { useWins } from '@/components/celebrations/use-wins'
 import { celebrateStreakIfNew } from '@/components/celebrations/streak-celebration'
-import StepVisual from '@/components/lessons/step-visual'
 import { MathText, isMathOnly } from '@/components/lessons/math-text'
 import {
   recordLessonAttempt,
@@ -26,7 +25,7 @@ import TeachSections from './teach-sections'
 import LessonVisualBlock from './visuals'
 import { GlossText } from './gloss-text'
 
-type Phase = 'diagnostic' | 'teach' | 'worked' | 'supported' | 'independent' | 'done'
+type Phase = 'diagnostic' | 'teach' | 'supported' | 'independent' | 'done'
 type Confidence = 'sure' | 'unsure' | null
 type NoteSection = RevisionNote['sections'][number]
 
@@ -302,97 +301,6 @@ function BankQuestion({
   )
 }
 
-// WorkedCard: a complete patient-tutor walkthrough. All steps are visible at
-// once; there is no per-step input gate. Each step carries a heading, a plain
-// English explanation of WHY, and the working. The final answer is stated at
-// the bottom. The v1 (operation/reason/result) shape still renders for the
-// other subjects; v2 (stepNumber/instruction/hint/explanation) is preferred.
-function WorkedCard({
-  example,
-  index,
-  total,
-  onDone,
-}: {
-  example: NonNullable<LessonEnhancement['workedExamples']>[number]
-  index: number
-  total: number
-  onDone: () => void
-}) {
-  const doneFired = useRef(false)
-  const steps = example.steps ?? []
-
-  useEffect(() => {
-    if (!doneFired.current) {
-      doneFired.current = true
-      onDone()
-    }
-  }, [onDone])
-
-  return (
-    <div className="rounded-3xl border border-blue-100/70 bg-white p-6 sm:p-8 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)]">
-      {total > 1 && (
-        <p className="text-[11px] font-extrabold uppercase tracking-wider text-gray-500">
-          Worked example {index + 1} of {total}
-        </p>
-      )}
-      <p className="mt-2 rounded-2xl bg-ink p-4 font-display text-lg font-medium leading-snug text-white">
-        <MathText text={example.problem} />
-      </p>
-      <p className="mt-3 text-[13px] font-semibold text-ink-soft">
-        Work through it with me. Every step is written out, so you can follow the
-        thinking as well as the answer.
-      </p>
-      <ol className="mt-4 space-y-4">
-        {steps.map((step, i) => {
-          const isV2 = Boolean(step.instruction || step.explanation)
-          const heading = isV2 ? step.instruction || '' : step.operation
-          const why = isV2 ? step.explanation || '' : step.reason
-          const working = isV2 ? step.explanation || '' : step.result
-          return (
-            <li
-              key={i}
-              className="rounded-2xl border border-gray-200 bg-white p-4"
-            >
-              <p className="font-display text-sm font-extrabold text-black">
-                Step {step.stepNumber ?? i + 1}: <MathText text={heading} />
-              </p>
-              {why && (
-                <p className="mt-1 text-[13px] font-semibold leading-relaxed text-ink-soft">
-                  <MathText text={why} />
-                </p>
-              )}
-              {isV2 && step.hint && (
-                <p className="mt-1 text-[12px] font-bold italic text-blue-700">
-                  Hint: <MathText text={step.hint} />
-                </p>
-              )}
-              {!isV2 && working && (
-                <p className="mt-2 rounded-xl border border-blue-100 bg-blue-50/60 px-3 py-2.5 text-sm font-bold text-blue-900">
-                  <MathText text={working} />
-                </p>
-              )}
-              <StepVisual visual={step.visual ?? null} />
-            </li>
-          )
-        })}
-      </ol>
-      {(example.finalAnswer || steps.length > 0) && (
-        <p className="mt-5 rounded-2xl border-2 border-emerald-200 bg-emerald-50/60 px-4 py-3 text-sm font-extrabold text-emerald-900">
-          Final answer:{' '}
-          <MathText
-            text={
-              example.finalAnswer ||
-              steps[steps.length - 1]?.result ||
-              steps[steps.length - 1]?.explanation ||
-              ''
-            }
-          />
-        </p>
-      )}
-    </div>
-  )
-}
-
 export default function LessonPlayer({
   note,
   subjectLabel,
@@ -419,7 +327,6 @@ export default function LessonPlayer({
   const phases: Phase[] = [
     ...(diagnostic ? (['diagnostic'] as Phase[]) : []),
     'teach',
-    ...((enhancement?.workedExamples?.length ?? 0) > 0 ? (['worked'] as Phase[]) : []),
     ...(enhancement?.supported ? (['supported'] as Phase[]) : []),
     ...(independent.length > 0 ? (['independent'] as Phase[]) : []),
     'done',
@@ -428,7 +335,6 @@ export default function LessonPlayer({
   const phase = phases[phaseIdx] ?? 'done'
 
   const [revealedHints, setRevealedHints] = useState(0)
-  const [workedDone, setWorkedDone] = useState<number[]>([])
   const [supportedDone, setSupportedDone] = useState(false)
   const [results, setResults] = useState<boolean[]>([])
   const { add } = useWins()
@@ -684,36 +590,12 @@ export default function LessonPlayer({
                 : 'bg-blue-600 hover:bg-blue-700'
             }`}
           >
-            {(enhancement?.workedExamples?.length ?? 0) > 0 ? 'See it worked' : 'Try it yourself'} <ArrowRight className="h-4 w-4" />
+            Try it yourself <ArrowRight className="h-4 w-4" />
           </button>
         </div>
       )}
 
-      {/* 3 — Worked examples: predict before reveal, one problem at a time */}
-      {phase === 'worked' && (enhancement?.workedExamples?.length ?? 0) > 0 && (
-        <div className="space-y-4 animate-fade-up" key="worked">
-          <p className="font-display text-[22px] font-medium text-black">Watch it worked</p>
-          {enhancement!.workedExamples!.map((example, ei) => (
-            <WorkedCard
-              key={ei}
-              example={example}
-              index={ei}
-              total={enhancement!.workedExamples!.length}
-              onDone={() => setWorkedDone((prev) => (prev.includes(ei) ? prev : [...prev, ei]))}
-            />
-          ))}
-          {workedDone.length >= enhancement!.workedExamples!.length && (
-            <button
-              onClick={next}
-              className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-blue-600 py-3.5 text-[15px] font-extrabold text-white hover:bg-blue-700 min-h-[52px] animate-pop-in pressable"
-            >
-              Try one with help <ArrowRight className="h-4 w-4" />
-            </button>
-          )}
-        </div>
-      )}
-
-      {/* 4 — Supported attempt: hints on demand */}
+      {/* 3 — Supported attempt: hints on demand */}
       {phase === 'supported' && enhancement?.supported && (
         <div className="rounded-3xl border border-blue-100/70 bg-white p-6 sm:p-8 shadow-[0_2px_16px_-8px_rgba(16,28,51,0.15)] animate-fade-up" key="supported">
           <p className="font-display text-[22px] font-medium text-black">Your turn, and you can use hints</p>
