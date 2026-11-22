@@ -40,6 +40,7 @@ follow.
    JAMB syllabus. Verify primary sources, not secondary summaries; keep
    sources so audits can trace claims back to their material. Publication
    without research is a reason to reject the commit.
+   Research the **vocabulary** as well as the method: list the exact terms the textbook uses for the topic and use those terms everywhere, including checks and worked examples. Keep the list with the source. "Place value", not "place worth". A wrong word is a teaching failure.
 3. **Follow the Nigerian classroom, not a pet order.** Research means the
    published Nigerian schemes: the NERDC curriculum documents, the official
    IBASS topic structure, and the teacher guides the Nigerian classroom

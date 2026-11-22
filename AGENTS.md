@@ -25,6 +25,7 @@ otherwise the agent-authoring-spec wins over habit and memory.
 - **IBASS goals are the completeness test.** Every listed goal is its own
   distinct skill with its own worked instance. Surface resemblance is not
   coverage.
+- **Research the vocabulary, not only the method.** List the exact terms the textbook uses for the topic and use them everywhere: lesson, check and worked example. Keep a per-topic vocabulary list with its source and check every authoring pass against it: "place value" not "place worth", "base" not "group size", "power"/"index" not "the raised number", "remainder" not "leftover". A wrong word is a teaching failure, not a wording slip.
 - **IBASS recommends textbooks; follow them.** Use the Nigerian system for
   Nigeria: words, formulas and notation from Nigerian textbooks. Borrow from
   outside only when it genuinely makes the idea simpler. Never invent a

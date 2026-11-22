@@ -55,6 +55,7 @@ recommends textbooks; follow the textbook's method and sequence, then break it
 into smaller, logically separate pieces. Our difference from the big textbooks
 is the breakdown, not a rewrite of the mathematics. Never deviate from the
 recommended system. Never invent a sequence to fill a gap; say so instead.
+- **Research the vocabulary, not only the method.** Before authoring, list the exact terms the textbook uses for the topic, and use those terms everywhere: lesson, check and worked example. A wrong word is a teaching failure, not a wording slip. "place value" (not "place worth"), "base" (not "group size" as a proper noun), "power" / "index" (not "the raised number"), "remainder" (not "leftover" as a definition), "convert" (not "change" where the textbook says convert). Keep a vocabulary list per topic with each term's source, and check every authoring pass against it. If the textbook term is ambiguous or outdated, keep it and explain it rather than replacing it with a synonym.
 - The **IBASS goals are the test of completeness**. Every goal listed for the
   topic ("convert one base to another", "perform four basic operations",
   "perform operations in modulo arithmetic") must be taught as its own
