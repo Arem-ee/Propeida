@@ -21,37 +21,17 @@ export interface MockableExam {
 }
 
 /**
- * Published questions per exam and subject. Counts only, read through the
- * service role so a learner who has not opened a school bank yet still sees
- * an honest readiness figure. The page never renders question content.
- * The full-table scan is cached for five minutes so page views do not
- * re-read every question row on each visit.
+ * Published questions per exam and subject. A single grouped aggregate in the
+ * database replaces the old full-table pagination, so a cold cache miss is
+ * O(1) round trips instead of one per 1,000 question rows. Data is the same
+ * public catalogue and stays cached for five minutes.
  */
 const getPublishedCounts = unstable_cache(
   async (): Promise<Record<string, Record<string, number>>> => {
-  const admin = createAdminClient()
-  const counts: Record<string, Record<string, number>> = {}
-  const PAGE = 1000
-
-  for (let from = 0; ; from += PAGE) {
-    const { data, error } = await admin
-      .from('questions')
-      .select('exam_id, subject_id')
-      .eq('status', 'published')
-      .range(from, from + PAGE - 1)
-
+    const admin = createAdminClient()
+    const { data, error } = await admin.rpc('get_published_question_counts')
     if (error) throw new Error('Could not count the question banks')
-    if (!data || data.length === 0) break
-
-    for (const row of data as { exam_id: string; subject_id: string }[]) {
-      if (!counts[row.exam_id]) counts[row.exam_id] = {}
-      counts[row.exam_id]![row.subject_id] = (counts[row.exam_id]![row.subject_id] ?? 0) + 1
-    }
-
-    if (data.length < PAGE) break
-  }
-
-  return counts
+    return (data ?? {}) as Record<string, Record<string, number>>
   },
   ['mock-published-counts'],
   { revalidate: 300 },

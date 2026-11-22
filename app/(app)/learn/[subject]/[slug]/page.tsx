@@ -3,17 +3,14 @@ import { notFound } from 'next/navigation'
 import { ArrowLeft } from 'lucide-react'
 import 'katex/dist/katex.min.css'
 import { SUBJECTS } from '@/lib/notes'
-import {
-  getLessonByPath,
-  getLessonQuestions,
-  getNextLessonInCurriculum,
-} from '@/lib/actions/lessons'
+import { getLessonQuestions, getNextLessonInCurriculum } from '@/lib/actions/lessons'
+import { loadLessonByPath } from '@/lib/lesson-loader'
 import LessonPlayer from '@/components/lessons/lesson-player'
 import UpgradeCard, { PRO_BULLETS } from '@/components/paywall/upgrade-card'
 
 export async function generateMetadata({ params }: { params: Promise<{ subject: string; slug: string }> }) {
   const { subject, slug } = await params
-  const lesson = await getLessonByPath(subject, slug)
+  const lesson = await loadLessonByPath(subject, slug)
   return { title: lesson ? lesson.note.topic : 'Lesson' }
 }
 
@@ -23,7 +20,7 @@ export default async function LessonPage({
   params: Promise<{ subject: string; slug: string }>
 }) {
   const { subject, slug } = await params
-  const lesson = await getLessonByPath(subject, slug)
+  const lesson = await loadLessonByPath(subject, slug)
   if (!lesson) notFound()
 
   const { note, enhancement, english, subjectId, examId, topicId, gated } = lesson
@@ -47,27 +44,17 @@ export default async function LessonPage({
     )
   }
 
-  let diagnostic = null
-  let independent: Awaited<ReturnType<typeof getLessonQuestions>>['independent'] = []
-  let microCheck: Awaited<ReturnType<typeof getLessonQuestions>>['independent'][number] | null = null
-  if (subjectId) {
-    try {
-      // Scoped to the exam the lesson serves, and preferring questions
-      // tagged to the lesson's own topic: a JAMB lesson is never quizzed
-      // with a Post-UTME question, nor with one from another topic.
-      const set = await getLessonQuestions(subjectId, examId, topicId)
-      diagnostic = set.diagnostic
-      microCheck = set.independent[0] ?? null
-      independent = set.independent.slice(1)
-    } catch {
-      diagnostic = null
-      independent = []
-      microCheck = null
-    }
-  }
+  // Question set and onward path are independent; fetch them together.
+  const [set, nextLesson] = await Promise.all([
+    subjectId
+      ? getLessonQuestions(subjectId, examId, topicId).catch(() => null)
+      : Promise.resolve(null),
+    getNextLessonInCurriculum(note.subject, note.slug).catch(() => null),
+  ])
 
-  // Onward path: the next lesson in curriculum order, from the database.
-  const nextLesson = await getNextLessonInCurriculum(note.subject, note.slug)
+  const diagnostic = set?.diagnostic ?? null
+  const microCheck = set?.independent[0] ?? null
+  const independent = set ? set.independent.slice(1) : []
 
   return (
     <div className="mx-auto max-w-2xl">
