@@ -1,7 +1,59 @@
 'use client'
 
 import type { ReactNode } from 'react'
-import katex from 'katex'
+import { useEffect, useState } from 'react'
+
+type KatexModule = typeof import('katex')
+
+let katexModule: KatexModule | null = null
+let katexLoad: Promise<KatexModule> | null = null
+const htmlCache = new Map<string, string>()
+
+/** KaTeX is heavy; load it once, on the first lesson/question that needs it. */
+function loadKatex(): Promise<KatexModule> {
+  if (katexModule) return Promise.resolve(katexModule)
+  if (!katexLoad) {
+    katexLoad = import('katex').then((m) => {
+      // katex is CommonJS: the callable API is on `.default` under webpack.
+      katexModule = (m as unknown as { default?: KatexModule }).default ?? m
+      return katexModule
+    })
+  }
+  return katexLoad
+}
+
+function useKatexReady(): boolean {
+  const [ready, setReady] = useState(false)
+  useEffect(() => {
+    let cancelled = false
+    loadKatex()
+      .then(() => { if (!cancelled) setReady(true) })
+      .catch(() => {})
+    return () => { cancelled = true }
+  }, [])
+  return ready
+}
+
+/**
+ * Fallback shown until KaTeX arrives. A fraction is stacked with plain CSS so
+ * learners never see a flat `3/2` flash on the way to the real typeset form.
+ */
+function fallbackForToken(token: string): ReactNode {
+  const m = /^\{\{(sub|sup|frac):([^{}]*)\}\}$/.exec(token)
+  if (!m) return token
+  const body = m[2] ?? ''
+  if (m[1] !== 'frac') return body
+  const i = body.indexOf('|')
+  if (i === -1) return body
+  const top = body.slice(0, i)
+  const bottom = body.slice(i + 1)
+  return (
+    <span className="inline-flex flex-col items-center align-middle mx-[0.12em] leading-[1.05] text-[0.92em]">
+      <span className="border-b border-current px-[0.18em] pb-[0.06em]">{top}</span>
+      <span className="px-[0.18em] pt-[0.06em]">{bottom}</span>
+    </span>
+  )
+}
 
 /**
  * MathText: renders inline mathematics the learner reads inside lesson
@@ -153,15 +205,21 @@ function tokenToLatex(token: string): string | null {
 }
 
 function renderKaTeX(src: string, _display = false): string | null {
+  if (!katexModule) return null
+  const key = src
+  const cached = htmlCache.get(key)
+  if (cached !== undefined) return cached
   try {
     // KaTeX's displayMode emits katex-display, which is block-level and
     // stacks every span on its own line. We keep inline output and style our
     // own wrapper element for centering/size instead.
-    return katex.renderToString(src, {
+    const html = katexModule.renderToString(src, {
       throwOnError: false,
       strict: false,
       output: 'html',
     })
+    if (htmlCache.size < 2000) htmlCache.set(key, html)
+    return html
   } catch {
     return null
   }
@@ -170,7 +228,7 @@ function renderKaTeX(src: string, _display = false): string | null {
 function renderToken(token: string, key: number, displayMode = false): ReactNode {
   const latex = tokenToLatex(token)
   const html = latex ? renderKaTeX(latex, displayMode) : null
-  if (!html) return <span key={key}>{token}</span>
+  if (!html) return <span key={key}>{fallbackForToken(token)}</span>
   return (
     <span
       key={key}
@@ -213,6 +271,9 @@ function splitRuns(text: string): Array<{ math: boolean; src: string }> {
 }
 
 export function MathText({ text, display }: { text: string; display?: boolean }) {
+  // The module loads in the background; the first paint uses plain text and
+  // re-renders with KaTeX once ready. Server and first client render match.
+  useKatexReady()
   const raw = String(text ?? '')
   // Block panels are decided by the caller (`display` prop), never by the
   // shape of the input. Fragment callers (GlossText, question stems, step
