@@ -7,6 +7,10 @@
     {
       "path": "/api/cron/squad-nudge",
       "schedule": "30 17 * * 0"
+    },
+    {
+      "path": "/api/cron/reconcile",
+      "schedule": "15 3 * * *"
     }
   ]
 }
