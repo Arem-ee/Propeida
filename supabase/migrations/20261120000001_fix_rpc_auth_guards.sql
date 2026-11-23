@@ -25,6 +25,11 @@ begin
     )
   loop
     v_def := pg_get_functiondef(r.oid);
+    -- Already guarded from an earlier run: skip instead of failing, so this
+    -- migration can be replayed safely by `supabase db push`.
+    if v_def like '%auth.uid() is null or p_user_id <> auth.uid()%' then
+      continue;
+    end if;
     v_fixed := replace(
       v_def,
       'if p_user_id <> auth.uid() then',
@@ -46,6 +51,10 @@ begin
   select pg_get_functiondef(oid) into v_def
   from pg_proc
   where oid::regprocedure::text = 'update_streak(uuid)';
+
+  if v_def like '%auth.uid() is null or p_user_id <> auth.uid()%' then
+    return;
+  end if;
 
   v_fixed := replace(
     v_def,
