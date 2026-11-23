@@ -254,46 +254,48 @@ export default function OnboardingPage() {
                 {STEP_COPY.welcome.lead}, and you tell us what you are preparing for so we can show you the right
                 lessons, questions, and mocks
               </p>
-              <button
-                onClick={() => {
-                  add({ kind: 'onboarded', message: 'We are glad you are here', mascot: true, duration: 3000 })
-                  goNext()
-                }}
-                className="w-full sm:w-auto rounded-2xl bg-blue-600 px-8 py-4 text-[16px] font-extrabold text-white hover:bg-blue-700 min-h-[56px] cursor-pointer transition-all win-pulse pressable"
-              >
-                Get started
-                <ArrowRight className="h-5 w-5" />
-              </button>
-              <button
-                onClick={async () => {
-                  setError(null)
-                  setLoading(true)
-                  try {
-                    await saveOnboardingProfile({
-                      exam_target: 'general',
-                      subject_combinations: [],
-                      intended_course: null,
-                      heard_about: 'other',
-                      study_time: 'flexible',
-                      target_score: 1,
-                      accessibility_needs: { large_font: false, high_contrast: false, sound_off: false },
-                      subjects_pending: true,
-                    })
-                    router.push('/home')
-                  } catch (err: unknown) {
-                    if (err instanceof Error && (err as { name?: string }).name === 'OnboardingError') {
-                      setError(err.message)
-                    } else {
-                      setError('Something went wrong, so please try again')
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                <button
+                  onClick={() => {
+                    add({ kind: 'onboarded', message: 'We are glad you are here', mascot: true, duration: 3000 })
+                    goNext()
+                  }}
+                  className="w-full sm:w-auto rounded-2xl bg-blue-600 px-8 py-4 text-[16px] font-extrabold text-white hover:bg-blue-700 min-h-[56px] cursor-pointer transition-all win-pulse pressable"
+                >
+                  Get started
+                  <ArrowRight className="h-5 w-5" />
+                </button>
+                <button
+                  onClick={async () => {
+                    setError(null)
+                    setLoading(true)
+                    try {
+                      await saveOnboardingProfile({
+                        exam_target: 'general',
+                        subject_combinations: [],
+                        intended_course: null,
+                        heard_about: 'other',
+                        study_time: 'flexible',
+                        target_score: 1,
+                        accessibility_needs: { large_font: false, high_contrast: false, sound_off: false },
+                        subjects_pending: true,
+                      })
+                      router.push('/home')
+                    } catch (err: unknown) {
+                      if (err instanceof Error && (err as { name?: string }).name === 'OnboardingError') {
+                        setError(err.message)
+                      } else {
+                        setError('Something went wrong, so please try again')
+                      }
+                    } finally {
+                      setLoading(false)
                     }
-                  } finally {
-                    setLoading(false)
-                  }
-                }}
-                className="mt-3 w-full sm:w-auto rounded-2xl border border-gray-200 bg-white px-8 py-3 text-[15px] font-extrabold text-ink-soft hover:bg-gray-50 min-h-[52px] cursor-pointer transition-all"
-              >
-                Skip for now
-              </button>
+                  }}
+                  className="w-full sm:w-auto rounded-2xl border border-gray-200 bg-white px-8 py-3 text-[15px] font-extrabold text-ink-soft hover:bg-gray-50 min-h-[52px] cursor-pointer transition-all"
+                >
+                  Skip for now
+                </button>
+              </div>
             </div>
           )}
           {step === 'exam' && (
