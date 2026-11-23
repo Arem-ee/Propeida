@@ -216,40 +216,27 @@ export default function OnboardingPage() {
       <div className="w-full max-w-4xl mx-auto px-4 py-6">
         <div className="flex items-center justify-between mb-2">
           <span className="text-xs font-extrabold text-ink-soft uppercase tracking-wider">
-            Step {currentIndex} of {totalSteps}
+            Step {currentIndex} of {totalSteps}: {step.replace('-', ' ')}
           </span>
           {error && (
             <span className="text-xs font-extrabold text-red-600">{error}</span>
           )}
         </div>
-        <div className="flex items-center gap-2 mb-8 overflow-x-auto pb-1 -mx-4 px-4 sm:-mx-6 sm:px-6">
-          {STEPS.map((s, i) => {
-            const active = i === STEPS.indexOf(step)
-            const completed = i < STEPS.indexOf(step)
-            return (
-              <div key={s} className="flex shrink-0 items-center gap-2">
-                {i > 0 && (
-                  <div className={`h-1 w-3 sm:w-4 ${completed ? 'bg-blue-600' : 'bg-gray-200'}`} />
-                )}
-                <div className={`flex h-7 w-7 items-center justify-center rounded-full transition-colors duration-300 sm:h-8 sm:w-8 ${
-                  active
-                    ? 'bg-blue-600 text-white'
-                    : completed ? 'bg-emerald-100 text-emerald-600 animate-pop-in' : 'bg-gray-200 text-gray-400'
-                }`}>
-                  {completed ? (
-                    <Check className="h-4 w-4" strokeWidth={3} />
-                  ) : (
-                    <span className="text-[10px] font-extrabold">{i + 1}</span>
-                  )}
-                </div>
-                <span className={`hidden text-[11px] font-extrabold uppercase tracking-tighter sm:inline ${
-                  active || completed ? 'text-black' : 'text-gray-400'
-                }`}>
-                  {s.replace('-', ' ')}
-                </span>
-              </div>
-            )
-          })}
+        {/* Compact progress bar: shows how far through the flow the learner is
+            without listing every step. The full labelled stepper is a desktop
+            pattern that breaks on mobile (compressed labels, tiny targets). */}
+        <div
+          className="mb-8 h-1.5 w-full overflow-hidden rounded-full bg-gray-200"
+          role="progressbar"
+          aria-valuenow={currentIndex}
+          aria-valuemin={1}
+          aria-valuemax={totalSteps}
+          aria-label={`Onboarding step ${currentIndex} of ${totalSteps}`}
+        >
+          <div
+            className="h-full rounded-full bg-blue-600 transition-all duration-300"
+            style={{ width: `${(currentIndex / totalSteps) * 100}%` }}
+          />
         </div>
       </div>
 
