@@ -1,38 +1,34 @@
-import { MASTERY_CONFIG, statusForScore, type MasteryStatus } from '@/lib/mastery'
+import { statusForScore, type MasteryStatus } from '@/lib/mastery'
 
 /**
- * MasteryRing: a MATHia-style progress ring for one subject.
+ * MasteryRing: a progress ring for one subject.
  *
- * The arc shows progress toward mastery, not raw accuracy and not content
- * covered. It fills relative to the Secured threshold, so reaching mastery
- * is a full ring. A raw accuracy of 80 is not "80% of the subject learned",
- * so showing it as a 80%-full ring would be dishonest. The colour and centre
- * label carry the level; unstarted subjects get an empty grey ring, and a
- * tracked subject that scored zero keeps a visible mark so the two states
- * cannot be confused.
+ * The arc shows how far the learner has gone: it fills to the raw mastery
+ * score, so more practice evidence means a fuller ring. The qualitative
+ * level is carried by the label inside, not by changing the arc colour,
+ * because one brand colour reads as progress while a traffic-light scheme
+ * reads as a judgement. An unstarted subject gets an empty grey ring.
  */
-const LEVEL: Record<MasteryStatus, { label: string; color: string }> = {
-  secured: { label: 'Secured', color: '#22c55e' },
-  developing: { label: 'Developing', color: '#f59e0b' },
-  fragile: { label: 'Needs work', color: '#f97316' },
+const LEVEL: Record<MasteryStatus, string> = {
+  secured: 'Secured',
+  developing: 'Developing',
+  fragile: 'Needs work',
 }
 
 const R = 32
 const CIRCUMFERENCE = 2 * Math.PI * R
+const FILL = '#2563eb'
 
 export default function MasteryRing({ score, size = 96 }: { score: number | null; size?: number }) {
   const level = score === null ? null : statusForScore(score)
-  const color = level ? LEVEL[level].color : '#d1d5db'
-  const label = level ? LEVEL[level].label : 'Not started'
-  const fill = score === null
-    ? 0
-    : Math.min(100, Math.max(0, (score / MASTERY_CONFIG.securedScore) * 100))
-  // A tracked subject with a zero score still shows a small mark so it is
+  const label = level ? LEVEL[level] : 'Not started'
+  const fill = score === null ? 0 : Math.max(0, Math.min(100, score))
+  // A tracked subject that scored zero still shows a small mark so it is
   // never mistaken for a subject that was never attempted.
   const arc = score === null ? 0 : Math.max(fill, 3)
   const aria = score === null
     ? 'Not started'
-    : `${label}, ${fill >= 100 ? 'mastery reached' : `${Math.round(fill)} percent toward mastery`}`
+    : `${label}, ${fill}% of the way along`
 
   return (
     <div className="shrink-0" role="img" aria-label={aria}>
@@ -44,7 +40,7 @@ export default function MasteryRing({ score, size = 96 }: { score: number | null
             cy="40"
             r={R}
             fill="none"
-            stroke={color}
+            stroke={FILL}
             strokeWidth="7"
             strokeLinecap="round"
             strokeDasharray={`${(CIRCUMFERENCE * arc) / 100} ${CIRCUMFERENCE}`}
@@ -56,9 +52,9 @@ export default function MasteryRing({ score, size = 96 }: { score: number | null
           y="40"
           textAnchor="middle"
           dominantBaseline="central"
-          fontSize={level === 'secured' ? 8.5 : 8}
+          fontSize={fill >= 100 ? 8.5 : 8}
           fontWeight="800"
-          fill={score === null ? '#9ca3af' : color}
+          fill={score === null ? '#9ca3af' : '#1f2937'}
         >
           {label}
         </text>
