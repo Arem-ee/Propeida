@@ -2,7 +2,7 @@ import { CircleDashed, History, Target } from 'lucide-react'
 import { createClient, getAuthUser } from '@/lib/supabase/server'
 import { getProgressMap, getNextReviews, type ProgressSubject } from '@/lib/mastery'
 import { getProStatus } from '@/lib/entitlements'
-import MasteryBar from '@/components/mastery-bar'
+import MasteryRing from '@/components/mastery-ring'
 import { getSessionHistory } from '@/lib/actions/practice'
 import { EmptyState } from '@/components/ui-states'
 import UpgradeCard from '@/components/paywall/upgrade-card'
@@ -14,30 +14,22 @@ import { fetchCurrentStreak } from '@/lib/streak'
 
 export const metadata = { title: 'Progress' }
 
-const STATUS_CARD: Record<string, { border: string; badge: string; dot: string; label: string }> = {
+const STATUS_CARD: Record<string, { border: string; dot: string }> = {
   secured: {
     border: 'border-emerald-200 bg-emerald-50/50',
-    badge: 'bg-emerald-500 text-white',
     dot: 'bg-emerald-500',
-    label: 'Secured',
   },
   developing: {
     border: 'border-amber-200 bg-amber-50/50',
-    badge: 'bg-amber-400 text-black',
     dot: 'bg-amber-500',
-    label: 'Developing',
   },
   fragile: {
     border: 'border-amber-200 bg-amber-50/50',
-    badge: 'bg-amber-400 text-black',
     dot: 'bg-amber-500',
-    label: 'Needs work',
   },
   'not-started': {
     border: 'border-gray-200 bg-white',
-    badge: 'bg-gray-100 text-gray-500',
     dot: 'bg-gray-300',
-    label: 'Not started',
   },
 }
 
@@ -291,18 +283,15 @@ export default async function ProgressPage({
                           : 'You have started this subject, so keep going'
                   return (
                     <div key={s.subjectId} className={`rounded-3xl border-2 p-4 animate-fade-up ${style.border}`} style={{ animationDelay: `${Math.min(8, idx) * 40}ms` }}>
-                      <div className="flex items-center justify-between gap-2">
-                        <span className="flex items-center gap-2 min-w-0">
-                          <span className={`h-2.5 w-2.5 shrink-0 rounded-full ${style.dot}`} />
-                          <span className="truncate font-display text-lg font-medium text-black">{s.subjectName}</span>
-                        </span>
-                        <span className={`shrink-0 rounded-full px-2.5 py-1 text-[10px] font-extrabold ${style.badge}`}>
-                          {style.label}
-                        </span>
-                      </div>
-                      <p className="mt-1.5 text-xs font-bold text-ink-soft">{reviewCopy}</p>
-                      <div className="mt-2.5">
-                        <MasteryBar score={s.score} />
+                      <div className="flex items-start justify-between gap-3">
+                        <div className="min-w-0 flex-1">
+                          <span className="flex items-center gap-2 min-w-0">
+                            <span className={`h-2.5 w-2.5 shrink-0 rounded-full ${style.dot}`} />
+                            <span className="truncate font-display text-lg font-medium text-black">{s.subjectName}</span>
+                          </span>
+                          <p className="mt-1.5 text-xs font-bold text-ink-soft">{reviewCopy}</p>
+                        </div>
+                        <MasteryRing score={s.score} />
                       </div>
                     </div>
                   )
