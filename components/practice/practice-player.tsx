@@ -281,7 +281,7 @@ export default function PracticePlayer({
             <ArrowRight className="h-4 w-4" />
           </button>
           <button
-            onClick={() => { setIndex(0); setSelected(null); setFeedback(null); setFinished(false); setAnswered(0); setCheckError(null) }}
+            onClick={() => { setIndex(0); setSelected(null); setFeedback(null); setFinished(false); setAnswered(0); setCheckError(null); setAnswerSaveError(null); setFinishError(null) }}
             className="inline-flex items-center gap-2 rounded-2xl border-2 border-gray-200 bg-white px-6 py-3 text-sm font-extrabold text-ink-soft min-h-[52px] cursor-pointer"
           >
             <RotateCcw className="h-4 w-4" />

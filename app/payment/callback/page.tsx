@@ -1,6 +1,6 @@
 'use client'
 
-import { Suspense, useState, useEffect, useCallback } from 'react'
+import { Suspense, useState, useEffect, useCallback, useRef } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { Check, X, Loader2, RefreshCw, ArrowRight } from 'lucide-react'
@@ -14,6 +14,11 @@ function CallbackContent() {
   const reference = searchParams.get('reference')?.slice(0, 128) ?? null
   const [status, setStatus] = useState<'verifying' | 'success' | 'processing' | 'failed'>('verifying')
   const [error, setError] = useState<string | null>(null)
+  // Only one poll loop may run at a time. The "Check again" button calls poll
+  // directly, so without this each click would spawn a parallel setTimeout
+  // chain that only stops on its own terminal state.
+  const pollingRef = useRef(false)
+  const stopRef = useRef<(() => void) | null>(null)
 
   const poll = useCallback(async () => {
     if (!reference) {
@@ -21,26 +26,35 @@ function CallbackContent() {
       setError('No payment reference found')
       return
     }
+    if (pollingRef.current) return
+    pollingRef.current = true
+    stopRef.current?.()
 
     setStatus('verifying')
     setError(null)
 
     const startTime = Date.now()
     let stopped = false
+    stopRef.current = () => { stopped = true }
 
     const tick = async () => {
-      if (stopped) return
+      if (stopped) {
+        pollingRef.current = false
+        return
+      }
 
       try {
         const res = await fetch(`/api/paystack/verify?reference=${encodeURIComponent(reference)}`)
         const data = await res.json()
 
         if (data.status === 'success') {
+          pollingRef.current = false
           setStatus('success')
           return
         }
 
         if (data.status === 'failed') {
+          pollingRef.current = false
           setStatus('failed')
           setError(data.error ?? 'Transaction could not be completed')
           return
@@ -48,6 +62,7 @@ function CallbackContent() {
       } catch {}
 
       if (Date.now() - startTime >= MAX_POLL_MS) {
+        pollingRef.current = false
         setStatus('processing')
         setError(null)
         return
@@ -57,13 +72,11 @@ function CallbackContent() {
     }
 
     tick()
-
-    return () => { stopped = true }
   }, [reference])
 
   useEffect(() => {
-    const cleanup = poll()
-    return () => { cleanup.then((fn) => fn?.()) }
+    void poll()
+    return () => { stopRef.current?.() }
   }, [poll])
 
   return (

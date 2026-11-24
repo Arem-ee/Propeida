@@ -149,10 +149,12 @@ export interface MockQuestion {
 }
 
 function useCountdown(startedAt: string, limitSeconds: number, onExpire: () => void) {
-  const [left, setLeft] = useState(() => {
-    const deadline = new Date(startedAt).getTime() + limitSeconds * 1000
-    return Math.max(0, Math.floor((deadline - Date.now()) / 1000))
-  })
+  // Anchor to the server start time and always recompute from the wall clock.
+  // Chained setTimeout decrements drift when the tab is backgrounded (browsers
+  // throttle timers to ~1/min), which would show more time than remains.
+  const deadline = new Date(startedAt).getTime() + limitSeconds * 1000
+  const computeLeft = useCallback(() => Math.max(0, Math.floor((deadline - Date.now()) / 1000)), [deadline])
+  const [left, setLeft] = useState(computeLeft)
   const expiredRef = useRef(false)
   useEffect(() => {
     if (left <= 0) {
@@ -162,9 +164,18 @@ function useCountdown(startedAt: string, limitSeconds: number, onExpire: () => v
       }
       return
     }
-    const t = setTimeout(() => setLeft((s) => s - 1), 1000)
-    return () => clearTimeout(t)
-  }, [left, onExpire])
+    // Recompute from the clock on each tick, and again when the tab returns
+    // to the foreground, so the display is always the true time remaining.
+    const t = setTimeout(() => setLeft(computeLeft()), 1000)
+    const onVisible = () => {
+      if (document.visibilityState === 'visible') setLeft(computeLeft())
+    }
+    document.addEventListener('visibilitychange', onVisible)
+    return () => {
+      clearTimeout(t)
+      document.removeEventListener('visibilitychange', onVisible)
+    }
+  }, [left, onExpire, computeLeft])
   return left
 }
 
