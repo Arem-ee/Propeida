@@ -490,16 +490,15 @@ export default function OnboardingPage() {
               </div>
             </div>
           )}
+          {step !== 'welcome' && (
           <div className="mt-auto pt-6 border-t border-gray-100 flex flex-col-reverse sm:flex-row sm:items-center gap-3 sm:gap-0">
-            {step !== 'welcome' && (
-              <button
-                onClick={goBack}
-                disabled={loading}
-                className="flex items-center justify-center gap-2 text-sm font-bold text-ink-soft hover:text-blue-600 min-h-[52px] sm:min-h-0 sm:mr-auto cursor-pointer disabled:opacity-50"
-              >
-                <ChevronLeft className="h-4 w-4" /> Back
-              </button>
-            )}
+            <button
+              onClick={goBack}
+              disabled={loading}
+              className="flex items-center justify-center gap-2 text-sm font-bold text-ink-soft hover:text-blue-600 min-h-[52px] sm:min-h-0 sm:mr-auto cursor-pointer disabled:opacity-50"
+            >
+              <ChevronLeft className="h-4 w-4" /> Back
+            </button>
             <button
               onClick={handleSave}
               disabled={loading || !canProceed()}
@@ -522,6 +521,7 @@ export default function OnboardingPage() {
               )}
             </button>
           </div>
+          )}
 
         </div>
       </div>
