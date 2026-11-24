@@ -310,7 +310,7 @@ export async function saveOnboardingProfile(payload: OnboardingProfileInput) {
     .eq('id', user.id)
     .select('id')
 
-  if (error) throw new Error('Could not save your profile')
+  if (error) throw new OnboardingError(`Could not save your profile: ${error.message}`)
   if (!data || data.length === 0) throw new OnboardingError('Your profile could not be found, so sign in again')
 
   revalidatePath('/home')

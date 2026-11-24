@@ -164,10 +164,18 @@ export default function OnboardingPage() {
     }
   }, [step, examTarget, selectedSubjects, subjectsPending])
 
-  const handleSave = useCallback(async () => {
+  const handleContinue = useCallback(async () => {
     setError(null)
     const err = stepError()
     if (err) { setError(err); return }
+
+    // Every step except the last only advances. Saving and navigating to
+    // /home belongs to the summary step alone, so the flow cannot collapse
+    // early and the profile is written once, complete.
+    if (step !== 'summary') {
+      goNext()
+      return
+    }
 
     setLoading(true)
     try {
@@ -196,8 +204,8 @@ export default function OnboardingPage() {
       setLoading(false)
     }
   }, [
-    examTarget, selectedSubjects,
-    accessibility, subjectsPending, router, stepError, add,
+    step, examTarget, selectedSubjects,
+    accessibility, subjectsPending, router, stepError, goNext, add,
   ])
 
   if (loading) {
@@ -500,7 +508,7 @@ export default function OnboardingPage() {
               <ChevronLeft className="h-4 w-4" /> Back
             </button>
             <button
-              onClick={handleSave}
+              onClick={handleContinue}
               disabled={loading || !canProceed()}
               className={`flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl px-6 py-3.5 text-[15px] font-extrabold text-white min-h-[52px] transition-all pressable ${
                 canProceed() && !loading
