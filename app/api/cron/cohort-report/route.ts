@@ -3,6 +3,7 @@ import { createAdminClient } from '@/lib/supabase/admin'
 import { isAuthorizedCron } from '@/lib/cron'
 import { sendEmail } from '@/lib/emails/send'
 import { getCachedPresenceStats } from '@/lib/presence'
+import { reportError } from '@/lib/error-report'
 
 export const dynamic = 'force-dynamic'
 export const maxDuration = 60
@@ -151,6 +152,10 @@ export async function GET(request: NextRequest) {
     })
     if (result.ok) sent += 1
     else failed += 1
+  }
+
+  if (failed > 0) {
+    await reportError('cron/cohort-report', new Error(`${failed} of ${sent + failed} weekly emails failed`), `eligible=${profiles.length}`)
   }
 
   return NextResponse.json({ ok: true, sent, failed, eligible: profiles.length })

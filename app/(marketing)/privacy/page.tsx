@@ -57,7 +57,10 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-base font-extrabold text-gray-900 mb-3">Cookies and local storage</h2>
             <p>
-              Propeida uses Supabase Auth cookies to maintain your login session. No tracking cookies, analytics cookies, or third-party cookies are used. The platform uses local storage only to store a referral code reference if you sign up through a referral link.
+              Propeida uses Supabase Auth cookies to keep you signed in, and Google Analytics cookies to understand which pages learners use. Google Analytics is a third-party service with its own privacy policy. We do not use advertising or cross-site tracking cookies.
+            </p>
+            <p className="mt-3">
+              Local storage on your device keeps your display settings, where you left off in a practice session, and one-time flags for tips you have already seen. A referral code reference is stored there only if you sign up through a referral link. You can clear all of this from your browser settings.
             </p>
           </section>
 

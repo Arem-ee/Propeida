@@ -1,6 +1,17 @@
 'use client'
 
-export default function GlobalError({ reset }: { reset: () => void }) {
+import { useEffect } from 'react'
+
+export default function GlobalError({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) {
+  useEffect(() => {
+    void fetch('/api/report-error', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ scope: 'global', message: error.message.slice(0, 500) }),
+      keepalive: true,
+    }).catch(() => {})
+  }, [error])
+
   return (
     <html lang="en">
       <body style={{ margin: 0, background: '#fffdf8', color: '#000000', fontFamily: 'system-ui, sans-serif' }}>

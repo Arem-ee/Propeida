@@ -7,6 +7,16 @@ import { logError } from '@/lib/error-log'
 export default function Error({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) {
   useEffect(() => {
     logError('error-boundary', error)
+    void fetch('/api/report-error', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        scope: 'page',
+        message: error.message.slice(0, 500),
+        path: window.location.pathname,
+      }),
+      keepalive: true,
+    }).catch(() => {})
   }, [error])
 
   return (

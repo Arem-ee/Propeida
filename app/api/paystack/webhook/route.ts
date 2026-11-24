@@ -1,6 +1,7 @@
 import { NextRequest } from 'next/server'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { verifyWebhookSignature, verifyTransaction, isValidProduct, isPlausiblePayment } from '@/lib/paystack'
+import { reportError } from '@/lib/error-report'
 
 const DEBUG = process.env.DEBUG === 'true'
 
@@ -38,7 +39,7 @@ async function handleRefund(
     // The RPC repairs a partial refund if the entitlement was not expired.
     const { error: repairError } = await supabase.rpc('process_refund', { p_reference: reference })
     if (repairError) {
-      log('refund repair failed', repairError.message)
+      await reportError('paystack/refund-repair', repairError, reference)
       return new Response('Failed to record refund', { status: 500 })
     }
     return new Response('Already refunded', { status: 200 })
@@ -49,7 +50,7 @@ async function handleRefund(
   try {
     verification = await verifyTransaction(reference)
   } catch (err) {
-    log('verifyTransaction failed on refund', err)
+    await reportError('paystack/verify-refund', err, reference)
     return new Response('Transaction verification failed', { status: 502 })
   }
 
@@ -62,7 +63,7 @@ async function handleRefund(
   // cannot leave a refunded payment with a still-active entitlement.
   const { error: refundError } = await supabase.rpc('process_refund', { p_reference: reference })
   if (refundError) {
-    log('process_refund failed', refundError.message)
+    await reportError('paystack/process-refund', refundError, reference)
     return new Response('Failed to record refund', { status: 500 })
   }
 
@@ -122,7 +123,7 @@ export async function POST(request: NextRequest) {
   try {
     verification = await verifyTransaction(reference)
   } catch (err) {
-    log('verifyTransaction failed', err)
+    await reportError('paystack/verify', err, reference)
     return new Response('Transaction verification failed', { status: 502 })
   }
 
@@ -157,7 +158,7 @@ export async function POST(request: NextRequest) {
   })
 
   if (processError) {
-    log('process_payment RPC failed', processError.message)
+    await reportError('paystack/process-payment', processError, reference)
     return new Response('Failed to process payment', { status: 500 })
   }
 

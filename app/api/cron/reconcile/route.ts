@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { isAuthorizedCron } from '@/lib/cron'
-import { logError } from '@/lib/error-log'
+import { reportError } from '@/lib/error-report'
 
 export const dynamic = 'force-dynamic'
 export const maxDuration = 60
@@ -19,7 +19,7 @@ export async function GET(request: NextRequest) {
   const admin = createAdminClient()
   const { data, error } = await admin.rpc('reconcile_business_state')
   if (error) {
-    logError('cron/reconcile', error)
+    await reportError('cron/reconcile', error)
     return NextResponse.json({ error: 'Reconciliation failed' }, { status: 500 })
   }
 

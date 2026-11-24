@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { logError } from './error-log'
+import { reportError } from './error-report'
 import { createClient } from './supabase/server'
 
 /** Distinguishes an auth failure from a real operation failure in admin routes. */
@@ -30,10 +30,10 @@ export async function requireAdmin() {
  * Only AdminAuthError is 401; database or parsing failures are 500 with a
  * generic message and a redacted server-side log.
  */
-export function adminErrorResponse(error: unknown): NextResponse {
+export async function adminErrorResponse(error: unknown): Promise<NextResponse> {
   if (error instanceof AdminAuthError) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
-  logError('admin/route', error)
+  await reportError('admin/route', error)
   return NextResponse.json({ error: 'Could not complete this request' }, { status: 500 })
 }
