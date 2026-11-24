@@ -1,34 +1,21 @@
-import { statusForScore, type MasteryStatus } from '@/lib/mastery'
-
 /**
  * MasteryRing: a progress ring for one subject.
  *
  * The arc shows how far the learner has gone: it fills to the raw mastery
- * score, so more practice evidence means a fuller ring. The qualitative
- * level is carried by the label inside, not by changing the arc colour,
- * because one brand colour reads as progress while a traffic-light scheme
- * reads as a judgement. An unstarted subject gets an empty grey ring.
+ * score. The percentage sits in the centre so the ring reads at a glance
+ * without a second label. An unstarted subject gets an empty grey ring.
  */
-const LEVEL: Record<MasteryStatus, string> = {
-  secured: 'Secured',
-  developing: 'Developing',
-  fragile: 'Needs work',
-}
-
 const R = 32
 const CIRCUMFERENCE = 2 * Math.PI * R
-const FILL = '#2563eb'
+const FILL = '#22c55e'
 
 export default function MasteryRing({ score, size = 96 }: { score: number | null; size?: number }) {
-  const level = score === null ? null : statusForScore(score)
-  const label = level ? LEVEL[level] : 'Not started'
-  const fill = score === null ? 0 : Math.max(0, Math.min(100, score))
+  const started = score !== null
+  const fill = started ? Math.max(0, Math.min(100, score)) : 0
   // A tracked subject that scored zero still shows a small mark so it is
   // never mistaken for a subject that was never attempted.
-  const arc = score === null ? 0 : Math.max(fill, 3)
-  const aria = score === null
-    ? 'Not started'
-    : `${label}, ${fill}% of the way along`
+  const arc = started ? Math.max(fill, 3) : 0
+  const aria = started ? `${fill}% mastery` : 'Not started'
 
   return (
     <div className="shrink-0" role="img" aria-label={aria}>
@@ -52,11 +39,11 @@ export default function MasteryRing({ score, size = 96 }: { score: number | null
           y="40"
           textAnchor="middle"
           dominantBaseline="central"
-          fontSize={fill >= 100 ? 8.5 : 8}
+          fontSize="19"
           fontWeight="800"
-          fill={score === null ? '#9ca3af' : '#1f2937'}
+          fill={started ? '#166534' : '#9ca3af'}
         >
-          {label}
+          {started ? `${fill}%` : '—'}
         </text>
       </svg>
     </div>

@@ -239,9 +239,9 @@ export default async function ProgressPage({
                 </p>
                 <p className="mt-0.5 text-xs font-semibold text-ink-soft">
                   {nextDue
-                    ? `${isReviewDue(nextDue) ? 'Due' : 'Next review'} ${formatDay(nextDue)}. Short practice brings a subject back.`
-                    : 'A short practice session sets the next review date.'}
-                  {streak !== null ? ` Current streak: ${streak} day${streak === 1 ? '' : 's'}.` : ''}
+                    ? `${isReviewDue(nextDue) ? 'Due' : 'Next review'} ${formatDay(nextDue)}`
+                    : 'No practice due yet'}
+                  {streak !== null ? ` · ${streak} day${streak === 1 ? '' : 's'} streak` : ''}
                 </p>
               </div>
             </div>
@@ -250,32 +250,24 @@ export default async function ProgressPage({
               <p className="mb-1 text-[11px] font-extrabold uppercase tracking-[0.14em] text-gray-500">
                 Your subjects
               </p>
-              <p className="mb-3 text-[13px] font-semibold leading-relaxed text-ink-soft">
-                The marker follows the questions you answer, so it moves when you practise and it stays put when you only read
-              </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {rows.map((s, idx) => {
                   const style = STATUS_CARD[s.status] ?? STATUS_CARD['not-started']!
                   const reviewAt = nextReviews[s.subjectId] ?? null
-                  const reviewDue = isReviewDue(reviewAt)
                   const reviewDate = reviewAt ? formatDay(reviewAt) : null
-                  const reviewCopy =
+                  const shortCopy =
                     s.status === 'not-started'
-                      ? s.hasContent
-                        ? 'You have not started this subject yet, and it stays here until you are ready'
-                        : 'We are still checking the questions for this subject, so it stays here until they are ready'
-                      : reviewDue
-                        ? `This was due for review on ${reviewDate}, so a short practice brings it back`
-                        : reviewDate
-                          ? `This comes back for review around ${reviewDate}`
-                          : 'You have started this subject, so keep going'
+                      ? s.hasContent ? 'Not started' : 'Coming soon'
+                      : reviewDate
+                        ? isReviewDue(reviewAt) ? `Due ${reviewDate}` : `Next ${reviewDate}`
+                        : 'Keep going'
                   return (
                     <div key={s.subjectId} className={`rounded-3xl border-2 p-5 animate-fade-up ${style.border}`} style={{ animationDelay: `${Math.min(8, idx) * 40}ms` }}>
                       <div className="flex items-center gap-4">
                         <MasteryRing score={s.score} />
                         <div className="min-w-0 flex-1">
                           <span className="block truncate font-display text-xl font-medium text-black">{s.subjectName}</span>
-                          <p className="mt-1.5 text-xs font-bold leading-relaxed text-ink-soft">{reviewCopy}</p>
+                          <p className="mt-1.5 text-xs font-bold text-ink-soft">{shortCopy}</p>
                         </div>
                       </div>
                     </div>
