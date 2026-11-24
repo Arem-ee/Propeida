@@ -39,8 +39,11 @@ export default function AppLoading() {
         ))}
       </div>
 
-      {/* Living mascot accent, bottom right */}
-      <div className="pointer-events-none mt-6 flex items-center justify-end gap-3">
+      {/* Living mascot accent. On phones it follows the skeleton; from the
+          tablet breakpoint up the skeleton can be taller than the viewport,
+          so pin it above the bottom nav (or above the fold on desktop) rather
+          than letting it disappear at the end of the scroll. */}
+      <div className="pointer-events-none mt-6 flex items-center justify-end gap-3 sm:fixed sm:bottom-24 sm:right-6 sm:z-10 lg:bottom-8 lg:right-8">
         <Mascot expression="thinking" size="sm" priority />
         <div className="flex items-center gap-1.5" aria-hidden="true">
           {[0, 1, 2].map((dot) => (
