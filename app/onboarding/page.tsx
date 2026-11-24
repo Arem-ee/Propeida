@@ -381,9 +381,9 @@ export default function OnboardingPage() {
 
               <button
                 onClick={() => setSubjectsPending(true)}
-                className="w-full rounded-2xl border-2 border-dashed border-gray-200 bg-white/50 px-4 py-4 text-left transition-all hover:bg-gray-50"
+                className="flex w-full items-center gap-2 rounded-2xl border-2 border-dashed border-gray-200 bg-white/50 px-4 py-4 text-left transition-all hover:bg-gray-50"
               >
-                <HelpCircle className="h-4 w-4 text-gray-400 mr-2" />
+                <HelpCircle className="h-4 w-4 shrink-0 text-gray-400" />
                 <span className="text-[14px] font-semibold text-ink-soft">I&apos;m not sure yet, so show me everything</span>
               </button>
 
@@ -490,12 +490,12 @@ export default function OnboardingPage() {
               </div>
             </div>
           )}
-          <div className="mt-auto pt-6 border-t border-gray-100 flex items-center justify-between">
+          <div className="mt-auto pt-6 border-t border-gray-100 flex flex-col-reverse sm:flex-row sm:items-center gap-3 sm:gap-0">
             {step !== 'welcome' && (
               <button
                 onClick={goBack}
                 disabled={loading}
-                className="flex items-center gap-2 text-sm font-bold text-ink-soft hover:text-blue-600 cursor-pointer disabled:opacity-50"
+                className="flex items-center justify-center gap-2 text-sm font-bold text-ink-soft hover:text-blue-600 min-h-[52px] sm:min-h-0 sm:mr-auto cursor-pointer disabled:opacity-50"
               >
                 <ChevronLeft className="h-4 w-4" /> Back
               </button>
@@ -503,7 +503,7 @@ export default function OnboardingPage() {
             <button
               onClick={handleSave}
               disabled={loading || !canProceed()}
-              className={`flex items-center gap-2 rounded-2xl px-6 py-3.5 text-[15px] font-extrabold text-white min-h-[52px] transition-all pressable ${
+              className={`flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl px-6 py-3.5 text-[15px] font-extrabold text-white min-h-[52px] transition-all pressable ${
                 canProceed() && !loading
                   ? 'bg-blue-600 hover:bg-blue-700 shadow-[0_0_0_3px_rgba(37,99,235,0.12)] cursor-pointer'
                   : 'bg-gray-300'
