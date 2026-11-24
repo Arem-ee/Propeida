@@ -14,23 +14,11 @@ import { fetchCurrentStreak } from '@/lib/streak'
 
 export const metadata = { title: 'Progress' }
 
-const STATUS_CARD: Record<string, { border: string; dot: string }> = {
-  secured: {
-    border: 'border-emerald-200 bg-emerald-50/50',
-    dot: 'bg-emerald-500',
-  },
-  developing: {
-    border: 'border-amber-200 bg-amber-50/50',
-    dot: 'bg-amber-500',
-  },
-  fragile: {
-    border: 'border-amber-200 bg-amber-50/50',
-    dot: 'bg-amber-500',
-  },
-  'not-started': {
-    border: 'border-gray-200 bg-white',
-    dot: 'bg-gray-300',
-  },
+const STATUS_CARD: Record<string, { border: string }> = {
+  secured: { border: 'border-emerald-200 bg-emerald-50/50' },
+  developing: { border: 'border-amber-200 bg-amber-50/50' },
+  fragile: { border: 'border-amber-200 bg-amber-50/50' },
+  'not-started': { border: 'border-gray-200 bg-white' },
 }
 
 interface ProgressRow extends ProgressSubject {
@@ -282,16 +270,13 @@ export default async function ProgressPage({
                           ? `This comes back for review around ${reviewDate}`
                           : 'You have started this subject, so keep going'
                   return (
-                    <div key={s.subjectId} className={`rounded-3xl border-2 p-4 animate-fade-up ${style.border}`} style={{ animationDelay: `${Math.min(8, idx) * 40}ms` }}>
-                      <div className="flex items-start justify-between gap-3">
-                        <div className="min-w-0 flex-1">
-                          <span className="flex items-center gap-2 min-w-0">
-                            <span className={`h-2.5 w-2.5 shrink-0 rounded-full ${style.dot}`} />
-                            <span className="truncate font-display text-lg font-medium text-black">{s.subjectName}</span>
-                          </span>
-                          <p className="mt-1.5 text-xs font-bold text-ink-soft">{reviewCopy}</p>
-                        </div>
+                    <div key={s.subjectId} className={`rounded-3xl border-2 p-5 animate-fade-up ${style.border}`} style={{ animationDelay: `${Math.min(8, idx) * 40}ms` }}>
+                      <div className="flex items-center gap-4">
                         <MasteryRing score={s.score} />
+                        <div className="min-w-0 flex-1">
+                          <span className="block truncate font-display text-xl font-medium text-black">{s.subjectName}</span>
+                          <p className="mt-1.5 text-xs font-bold leading-relaxed text-ink-soft">{reviewCopy}</p>
+                        </div>
                       </div>
                     </div>
                   )
