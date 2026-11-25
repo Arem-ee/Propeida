@@ -23,7 +23,7 @@ export default function SiteJsonLd({ siteUrl }: { siteUrl: string }) {
       url: siteUrl,
       logo: {
         '@type': 'ImageObject',
-        url: `${siteUrl}/logo.png`,
+        url: `${siteUrl}/logo.svg`,
         width: 640,
         height: 640,
       },

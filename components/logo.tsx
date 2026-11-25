@@ -23,6 +23,7 @@ export default function Logo({ size = 32, showText = true, className = '' }: Log
           height={size}
           style={{ width: '100%', height: '100%' }}
           priority={false}
+          unoptimized
         />
       </span>
       {showText && (
