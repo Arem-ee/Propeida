@@ -11,12 +11,12 @@ The current states:
 
 | Mechanism | Coverage | Retrieval mode | Timing |
 |-----------|----------|----------------|--------|
-| Inline 10-second check | 447/1,000 section cards (44.7%) across 9 subjects | **Cued** recognition (4 options visible) | Massed, immediately after the section |
+| Inline 10-second check | 988/2,191 text blocks (45.1%) across 9 subjects | **Cued** recognition (4 options visible) | Massed, immediately after the section |
 | Recall card (`/recall`) | 20 cards in **1 topic** (0.4% of published topics) | **Free** recall (front → generate → flip) | Spaced via `learner_topic_mastery.next_review_at` |
 
 The evidence base says the strongest learning comes from **free recall**, **spaced at low retrievability**, with **feedback**, and from **pre-testing** before new material. The 10-second checks already deliver the feedback half (why + steps + walkthrough) and the spaced engine already exists — but the two are disconnected: the checks die at the end of the lesson, and the recall engine has almost no cards.
 
-Goal: connect them. Convert every section check into a recall card so the existing 447 checks become a spaced retrieval queue, then make the interval respond to how close the learner was to forgetting.
+Goal: connect them. Convert every section check into a recall card so the existing 988 checks become a spaced retrieval queue, then make the interval respond to how close the learner was to forgetting.
 
 ---
 
@@ -71,18 +71,20 @@ Re-running the script must produce zero new rows after the first run (idempotenc
 
 ### 3.3 Expected coverage after Phase 1
 
-| Subject | Section checks → candidate cards |
-|---------|----------------------------------|
-| Biology | 123 |
-| Chemistry | 69 |
-| Mathematics | 58 |
-| Physics | 50 |
-| Government | 42 |
-| English | 36 |
-| Commerce | 33 |
-| Economics | 30 |
-| Current Affairs | 6 |
-| **Total** | **447 candidate cards** (minus figure-dependent skips, reported explicitly) |
+| Subject | Section checks → candidate cards (dry run 2026-11-25) |
+|---------|--------------------------------------------------------|
+| Biology | 276 |
+| Chemistry | 132 |
+| Physics | 129 |
+| English | 111 |
+| Government | 99 |
+| Mathematics | 94 |
+| Economics | 69 |
+| Commerce | 66 |
+| Current Affairs | 12 |
+| **Total** | **988 candidate cards**, 0 figure-dependent skips, idempotent on re-run |
+
+Measured from all 2,191 published text blocks, not a sample; an earlier 447 count came from a query capped at 1,000 blocks and was an undercount.
 
 Topic-level coverage rises from 1/274 to roughly the 1/3–1/2 of topics that carry section checks, measured and reported per subject after the dry run — not claimed before it.
 
