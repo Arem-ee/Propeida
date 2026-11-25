@@ -55,12 +55,12 @@ export default async function HomePage() {
   return (
     <div className="mx-auto max-w-2xl">
       <div className="mb-7">
-        <h1 className="font-display text-[32px] font-semibold leading-tight text-black sm:text-4xl">
-          {username ? `Welcome back, ${username}` : 'Welcome back'}
-        </h1>
-        <p className="mt-1.5 text-[15px] font-semibold text-ink-soft">
-          Here is what to do next
-        </p>
+        <div className="flex items-center gap-3">
+          <Mascot expression="welcome" size="md" className="shrink-0" priority />
+          <h1 className="font-display text-[32px] font-semibold leading-tight text-black sm:text-4xl">
+            {username ? `Welcome back, ${username}` : 'Welcome back'}
+          </h1>
+        </div>
         {presence && presence.weeklyActiveStudents >= PRESENCE_MIN_WEEKLY_ACTIVE && (
           <p className="mt-2.5 inline-flex items-center gap-1.5 rounded-full bg-white border border-blue-100 px-3 py-1.5 text-xs font-bold text-ink-soft shadow-sm">
             <span className="relative flex h-2 w-2">
@@ -88,7 +88,7 @@ export default async function HomePage() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v4m0 4h.01M20.386 14.586a5 5 0 10-7.072-7.072 7 7 0 117.072 7.072z" />
             </svg>
             <p className="text-xs font-bold text-amber-800">
-              You haven&rsquo;t picked your subjects yet, so pick them and your questions, lessons, and reviews will match what you study
+              Pick your subjects so your questions and lessons match what you study
               <Link href="/onboarding" className="underline underline-offset-2 font-extrabold text-amber-900 ml-1">Edit here</Link>
             </p>
           </div>
@@ -122,8 +122,7 @@ export default async function HomePage() {
             href={`/mocks/session/${continueSession.id}`}
             className="group sm:col-span-2 rounded-3xl bg-red-500 p-6 sm:p-8 text-white shadow-[0_20px_44px_-20px_rgba(239,68,68,0.65)] transition-all card-lift animate-fade-up"
           >
-            <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-red-100">Next: finish your mock</p>
-            <h2 className="mt-1.5 font-display text-3xl sm:text-4xl font-medium leading-tight">{continueSession.examName}</h2>
+            <h2 className="font-display text-3xl sm:text-4xl font-medium leading-tight">{continueSession.examName}</h2>
             <p className="mt-1.5 text-[15px] font-semibold text-red-100">Your timed exam is still running and the clock has not stopped</p>
             <span className="mt-4 inline-flex items-center gap-2 rounded-2xl bg-white px-6 py-3 text-sm font-extrabold text-red-600 min-h-[52px]">
               Resume mock <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -141,15 +140,12 @@ export default async function HomePage() {
             </div>
           ) : (
           <div data-tour="hero" className="sm:col-span-2 rounded-3xl bg-violet-600 p-6 sm:p-8 text-white shadow-[0_20px_44px_-20px_rgba(139,92,246,0.65)] animate-fade-up">
-            <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-violet-200">
-              Next: review what you learned
-            </p>
-            <h2 className="mt-1.5 font-display text-3xl sm:text-4xl font-medium leading-tight">Today&apos;s review</h2>
+            <h2 className="font-display text-3xl sm:text-4xl font-medium leading-tight">Today&apos;s review</h2>
             <Link
               href="/recall"
               className="mt-3 flex items-center justify-between gap-3 rounded-2xl bg-white/10 border border-white/20 px-4 py-3.5 hover:bg-white/20 transition-all min-h-[52px]"
             >
-              <span className="text-[15px] font-extrabold text-white">You recall one fact at a time in a quick round</span>
+              <span className="text-[15px] font-extrabold text-white">Quick recall</span>
               <span className="inline-flex items-center gap-1 rounded-full bg-white px-3 py-1.5 text-xs font-extrabold text-violet-700 shrink-0">
                 Start
                 <ChevronRight className="h-3.5 w-3.5" />
@@ -160,7 +156,7 @@ export default async function HomePage() {
                 href={`/practice?subjects=${review.due.map((d) => encodeURIComponent(d.subjectSlug)).join(',')}`}
                 className="mt-3 flex items-center justify-between gap-3 rounded-2xl bg-white px-4 py-3.5 transition-all min-h-[52px] hover:shadow-lg"
               >
-                <span className="text-[15px] font-extrabold text-violet-700">You get a mixed review with questions from all {review.due.length} subjects in one session</span>
+                <span className="text-[15px] font-extrabold text-violet-700">Mixed review · {review.due.length} subjects</span>
                 <span className="inline-flex items-center gap-1 rounded-full bg-violet-600 px-3 py-1.5 text-xs font-extrabold text-white shrink-0">
                   Start
                   <ChevronRight className="h-3.5 w-3.5" />
@@ -191,8 +187,7 @@ export default async function HomePage() {
             href={`/learn/${continueLesson.subject}/${continueLesson.slug}`}
             className="group sm:col-span-2 rounded-3xl bg-emerald-500 p-6 sm:p-8 text-white shadow-[0_20px_44px_-20px_rgba(16,185,129,0.65)] transition-all card-lift animate-fade-up"
           >
-            <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-emerald-100">Next: continue learning</p>
-            <h2 className="mt-1.5 font-display text-3xl sm:text-4xl font-medium leading-tight">{continueLesson.topic}</h2>
+            <h2 className="font-display text-3xl sm:text-4xl font-medium leading-tight">{continueLesson.topic}</h2>
             <p className="mt-1.5 text-[15px] font-semibold text-emerald-100">You get a quick check, a worked example, and then practice</p>
             <span className="mt-4 inline-flex items-center gap-2 rounded-2xl bg-white px-6 py-3 text-sm font-extrabold text-emerald-700 min-h-[52px]">
               Continue <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -205,8 +200,7 @@ export default async function HomePage() {
             href={continueSession && continueSession.mode !== 'mock' ? `/practice/session/${continueSession.id}` : practiseHref}
             className="group sm:col-span-2 rounded-3xl bg-blue-600 p-6 sm:p-8 text-white shadow-[0_20px_44px_-20px_rgba(37,99,235,0.65)] hover:bg-blue-700 transition-all card-lift animate-fade-up"
           >
-            <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-blue-200">Next: practise a skill</p>
-            <h2 className="mt-1.5 font-display text-3xl sm:text-4xl font-medium leading-tight">
+            <h2 className="font-display text-3xl sm:text-4xl font-medium leading-tight">
               {continueSession && continueSession.mode !== 'mock' ? continueSession.examName : (weakest?.subjectName ?? 'Practice')}
             </h2>
             <span className="mt-4 inline-flex items-center gap-2 rounded-2xl bg-white px-6 py-3 text-sm font-extrabold text-blue-700 min-h-[52px]">
@@ -220,8 +214,7 @@ export default async function HomePage() {
             href="/learn"
             className="group sm:col-span-2 rounded-3xl bg-blue-600 p-6 sm:p-8 text-white shadow-[0_20px_44px_-20px_rgba(37,99,235,0.65)] hover:bg-blue-700 transition-all card-lift animate-fade-up"
           >
-            <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-blue-200">Next: begin</p>
-            <h2 className="mt-1.5 font-display text-3xl sm:text-4xl font-medium leading-tight">Start your first lesson</h2>
+            <h2 className="font-display text-3xl sm:text-4xl font-medium leading-tight">Start your first lesson</h2>
             <span className="mt-4 inline-flex items-center gap-2 rounded-2xl bg-white px-6 py-3 text-sm font-extrabold text-blue-700 min-h-[52px]">
               Begin <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </span>
@@ -254,7 +247,6 @@ export default async function HomePage() {
           >
             <div className="flex items-center justify-between gap-3">
               <div>
-                <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-red-700">Continue learning</p>
                 <h2 className="mt-1 font-display text-[22px] font-medium text-black">{continueSession.examName} mock</h2>
                 <p className="text-sm font-semibold text-ink-soft mt-0.5">Your timed exam is still running, so pick up where you left off</p>
               </div>
@@ -270,7 +262,6 @@ export default async function HomePage() {
           >
             <div className="flex items-center justify-between gap-3">
               <div>
-                <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-emerald-700">Continue learning</p>
                 <h2 className="mt-1 font-display text-[22px] font-medium text-black">{continueLesson.topic}</h2>
                 <p className="text-sm font-semibold text-ink-soft mt-0.5">You get a quick check, a worked example, and then practice</p>
               </div>
@@ -286,7 +277,6 @@ export default async function HomePage() {
           >
             <div className="flex items-center justify-between gap-3">
               <div>
-                <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-emerald-700">Continue learning</p>
                 <h2 className="mt-1 font-display text-[22px] font-medium text-black">{continueSession.examName}</h2>
                 <p className="text-sm font-semibold text-ink-soft mt-0.5">{continueSession.mode === 'mock' ? 'Your mock exam' : 'Your practice'} is in progress</p>
               </div>
@@ -302,7 +292,6 @@ export default async function HomePage() {
           >
             <div className="flex items-center justify-between gap-3">
               <div>
-                <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-blue-200">Continue learning</p>
                 <h2 className="mt-1 font-display text-[22px] font-medium">Start your first lesson</h2>
               </div>
               <ChevronRight className="h-7 w-7 text-blue-200 transition-transform group-hover:translate-x-1" />
@@ -355,7 +344,6 @@ export default async function HomePage() {
           >
             <div className="flex items-center justify-between gap-3">
               <div>
-                <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-blue-700">Practise a skill</p>
                 <h2 className="mt-1 font-display text-[22px] font-medium text-black">{weakest.subjectName}</h2>
               </div>
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 transition-colors group-hover:bg-blue-600 group-hover:text-white">
@@ -370,7 +358,6 @@ export default async function HomePage() {
           >
             <div className="flex items-center justify-between gap-3">
               <div>
-                <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-blue-700">Practise a skill</p>
                 <h2 className="mt-1 font-display text-[22px] font-medium text-black">Finish a lesson before you practise</h2>
               </div>
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 transition-colors group-hover:bg-blue-600 group-hover:text-white">
