@@ -416,7 +416,7 @@ export default function LessonPlayer({
         return
       }
       const correct = results.filter(Boolean).length
-      const summary = await completeLesson({ subjectId, correct, total: results.length })
+      const summary = await completeLesson({ subjectId, lessonId: note.id, correct, total: results.length })
       celebrateStreakIfNew(summary.streak, add)
       setCloseout(summary)
       celebrate()

@@ -167,19 +167,30 @@ export async function getDashboardData() {
     if (first) {
       continueSession = { id: first.id, examName: first.exams.name, mode: first.mode }
     }
-    // Last engaged lesson (teach-first ordering is resolved client-side;
-    // here we only supply the candidate).
+    // Last engaged lesson that is not yet finished. A completed lesson has a
+    // row in lesson_completions; skip those so Home never offers "Continue
+    // learning" on something the learner already finished.
     const { data: lastAttempts } = await supabase
       .from('learning_attempts')
       .select('lesson_id')
       .eq('user_id', user.id)
       .not('lesson_id', 'is', null)
       .order('created_at', { ascending: false })
-      .limit(10)
+      .limit(20)
+    let completedIds = new Set<string>()
+    try {
+      const { data: completions } = await supabase
+        .from('lesson_completions')
+        .select('lesson_id')
+        .eq('user_id', user.id)
+      completedIds = new Set((completions ?? []).map((c) => (c as { lesson_id: string }).lesson_id))
+    } catch {
+      // Table not deployed yet: fall back to offering the last engaged lesson.
+    }
     for (const row of lastAttempts ?? []) {
-      const note = (row as { lesson_id: string }).lesson_id
-        ? getNoteById((row as { lesson_id: string }).lesson_id)
-        : null
+      const lessonId = (row as { lesson_id: string }).lesson_id
+      if (!lessonId || completedIds.has(lessonId)) continue
+      const note = getNoteById(lessonId)
       if (note) {
         continueLesson = { noteId: note.id, subject: note.subject, slug: note.slug, topic: note.topic }
         break

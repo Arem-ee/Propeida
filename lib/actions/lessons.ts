@@ -796,6 +796,7 @@ export async function recordLessonAttempt(input: AttemptInput): Promise<{
  */
 export async function completeLesson(input: {
   subjectId: string
+  lessonId: string
   correct: number
   total: number
 }): Promise<{ nextReviewAt: string | null; status: string; streak?: number | null }> {
@@ -808,6 +809,21 @@ export async function completeLesson(input: {
 
   const bySubject = new Map<string, { correct: number; total: number }>()
   bySubject.set(input.subjectId, { correct, total })
+
+  // Record completion idempotently so Home never offers a finished lesson as
+  // "Continue learning". Best-effort: a failure here must not lose the rest
+  // of the close-out (mastery evidence and streak).
+  try {
+    const admin = createAdminClient()
+    await admin
+      .from('lesson_completions')
+      .upsert(
+        { user_id: user.id, lesson_id: input.lessonId, completed_at: new Date().toISOString() },
+        { onConflict: 'user_id,lesson_id' },
+      )
+  } catch (err) {
+    console.error('[lesson] completion record failed:', err)
+  }
 
   try {
     // Lesson evidence belongs to the learner's current path exam — never to a
