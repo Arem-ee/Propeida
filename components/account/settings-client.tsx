@@ -128,7 +128,7 @@ export default function SettingsClient({
           </Row>
         )}
 
-        <Row label="Text size" hint="This device only and separate from the accessibility needs saved on your profile">
+        <Row label="Text size" hint="On this device only">
           <Choice<FontScale>
             value={font}
             onPick={(v) => { setFont(v); setPreference('font', v) }}
@@ -139,7 +139,7 @@ export default function SettingsClient({
           />
         </Row>
 
-        <Row label="Appearance" hint="This device only, and sunlight gives you maximum contrast outdoors while profile accessibility is separate">
+        <Row label="Appearance" hint="On this device only; sunlight is for bright outdoors">
           <Choice<Theme>
             value={theme}
             onPick={(v) => { setTheme(v); setPreference('theme', v) }}
@@ -151,7 +151,7 @@ export default function SettingsClient({
           />
         </Row>
 
-        <Row label="Celebration sound" hint="One short chime when a session ends and never during questions">
+        <Row label="Celebration sound" hint="A short chime when a session ends">
           <Choice
             value={sound ? 'on' : 'off'}
             onPick={(v) => { setSound(v === 'on'); setPreference('sound', v) }}
@@ -162,7 +162,7 @@ export default function SettingsClient({
           />
         </Row>
 
-        <Row label="Haptics" hint="One soft vibration on session completion, where supported">
+        <Row label="Haptics" hint="A soft buzz when a session ends, where supported">
           <Choice
             value={haptics ? 'on' : 'off'}
             onPick={(v) => { setHaptics(v === 'on'); setPreference('haptics', v) }}
@@ -175,7 +175,7 @@ export default function SettingsClient({
 
         <Row
           label="Cohort updates"
-          hint="Short anonymous updates about your study group and a weekly summary, never a ranking"
+          hint="Short updates about your study group, never a ranking"
         >
           <Choice
             value={notifications ? 'on' : 'off'}
