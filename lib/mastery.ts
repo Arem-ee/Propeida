@@ -287,8 +287,19 @@ export async function getDueReviews(
     .limit(MASTERY_CONFIG.maxDuePerUser)
 
   const allowed = await scopeExamIds(userId)
+  const seenSubjects = new Set<string>()
   return (data ?? [])
     .filter((row) => inScope((row as { exam_id?: unknown }).exam_id, allowed))
+    // review_queue can hold several rows for the same subject (one per exam
+    // path or topic). The review card is per-subject and every button opens
+    // /practice?subject=<slug>, so duplicates are meaningless here. Keep the
+    // earliest due row per subject (the query is already sorted by due_at).
+    .filter((row) => {
+      const id = row.subject_id as string
+      if (seenSubjects.has(id)) return false
+      seenSubjects.add(id)
+      return true
+    })
     .map((row) => {
     const s = Array.isArray(row.subject) ? row.subject[0] : row.subject
     return {
