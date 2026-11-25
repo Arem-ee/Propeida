@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 interface LogoProps {
   size?: number
   showText?: boolean
@@ -16,14 +14,13 @@ export default function Logo({ size = 32, showText = true, className = '' }: Log
         className="block shrink-0 overflow-hidden"
         style={{ width: size, height: size, borderRadius: Math.max(6, Math.round(size * 0.24)) }}
       >
-        <Image
+        <img
           src="/logo.svg"
           alt="Propeida"
           width={size}
           height={size}
-          style={{ width: '100%', height: '100%' }}
-          priority={false}
-          unoptimized
+          style={{ width: '100%', height: '100%', display: 'block' }}
+          decoding="async"
         />
       </span>
       {showText && (
