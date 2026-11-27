@@ -277,3 +277,49 @@ Every exam fact in code, content, or UI carries a status: ✅ official source ·
 - Cut-offs, fees, dates, and screening modes are **year-tagged rows**, never constants.
 - Mock blueprints encode the verified format: 4 subjects, 2-hour single sitting, on-screen calculator available; per-question mark values are never displayed as official.
 - Distractor→misconception maps (`question_misconceptions`) are authored per distractor with a named misconception code and repair-lesson link, following Eedi's design rules: unambiguous, single-skill, and impossible to answer correctly while holding the target misconception.
+
+## 12. University track architecture (planned)
+
+The exam paths are the proving ground; the university track is the second structural pillar. It follows the standard higher-education pattern (institution → programme → course → module → lesson) and the multi-tenant LMS practices below. It is an opt-in second track: nothing here changes the JAMB/Post-UTME experience.
+
+### 12.1 Content hierarchy
+
+Three visible levels in the UI (catalogue → course home → module → lesson), matching the Canvas/Moodle/Coursera IA that learners already know. Content is atomised (`course → modules → single-concept lessons`) so it scales as data, not code.
+
+| Table | Purpose | Core fields |
+|---|---|---|
+| `institutions` | A university or college (extends the existing `unilorin` seed) | `id`, `name`, `slug`, `country`, `published` |
+| `programmes` | A degree a learner enrols in | `id`, `institution_id`, `name`, `degree_type`, `duration_years`, `published` |
+| `courses` | A unit within a programme | `id`, `programme_id`, `code`, `title`, `level` (100L–500L), `semester`, `credits`, `status` |
+| `modules` | Chapters inside a course | `id`, `course_id`, `position`, `title`, `published` |
+| `course_enrolments` | Which learner takes which course | `id`, `user_id`, `course_id`, `enrolled_at`, `status`, unique `(user_id, course_id)` |
+| `lesson_completions` | Already built this session; reused for course progress | `user_id`, `lesson_id`, `completed_at` |
+
+`lessons` and `questions` gain a nullable `course_id` (and `module_id` on lessons) so school lessons and the exam bank keep working untouched. Course practice and mocks reuse the existing question engine, keyed by `course_id` instead of `exam_id`.
+
+### 12.2 Tenancy and isolation
+
+Most edtech SaaS serves many institutions from one database. The practice that holds: **shared schema with a tenant discriminator, enforced below the application layer.** Every durable learning object carries `institution_id` (the tenant); Postgres RLS keyed on it catches any query the application forgot to scope. Model the person once (`profiles`) and membership per institution separately, so a learner at two institutions never shares progress or roles. Composite foreign keys (`institution_id, course_id`) prevent cross-tenant references.
+
+### 12.3 Course versioning
+
+The scenario that breaks naive course models: an instructor edits a module while 400 learners are mid-course. The practice is **snapshot versioning** — a course has a mutable draft and immutable published versions; publishing deep-copies the module/lesson structure into a new version; enrolments pin to a version; progress references the pinned version, never the draft. New enrolments get the latest published version; existing ones keep theirs with an explicit migration path. Store a diff summary between versions. Structure is tiny next to media, so the storage cost is negligible against the audit trail it preserves.
+
+### 12.4 Document library (student uploads)
+
+The standard study-app set (Goodnotes/Notion/Notability pattern): upload lecture PDFs/slides/readings, organise by course/module, search, annotate, attach notes and recordings, and generate study sets from the question bank.
+
+Storage follows the Supabase private-bucket practice:
+
+| Concern | Practice |
+|---|---|
+| Bucket | Private `course-documents` (never public); per-bucket size + MIME allowlist (`pdf, images, pptx, docx`) enforced by Storage itself |
+| Path | `{user_id}/{course_id}/{doc_id}/{filename}` — store the **path**, never a URL |
+| Access | RLS on `storage.objects` scoping every verb to the first path segment = `auth.uid()`; reads via short-lived `createSignedUrl(path, 300)` |
+| Upload | Signed upload URL for files under 6 MB; resumable TUS for larger; the server writes the `course_documents` row after upload |
+| Signed URLs | Short expiry (minutes); they cannot be revoked individually, so expiry is the control — delete/move the object to cut access early |
+| Limits | Free tier proposed at 50 MB/file, 500 MB total (within Supabase's 50 MB free global ceiling) |
+
+### 12.5 Progress and events
+
+Decouple content from progress: a completion writes a progress record linking `user_id, lesson_id, course_id, status`, and the course/programme roll-ups are queries over those records, not columns on the content. The write path is event-centred (a completion emits an immutable event) so the learner-facing path stays fast while analytics catch up asynchronously. Reuse `lesson_completions`, the mastery engine, and the progress rings already built.

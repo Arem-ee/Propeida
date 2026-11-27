@@ -70,6 +70,30 @@ Account, notifications, support, payment, and the path switcher are shared. The 
 
 “Universities” is not a learning path label. It becomes **Post-UTME**. (Career/course/university discovery was removed: it is guidance, not learning, and a discovery feed actively works against the promise. School requirements and cut-offs return later as reference data inside the Post-UTME path — see the architecture's `school_screenings` — not as a browsing surface.)
 
+### University track (planned, not built)
+
+The exam paths above are the proving ground. The **university track** is the second structural pillar: learners who are *in* university use Propeida for their degree courses, not only for entrance exams. It is a full track, not a content add-on, and it follows the standard higher-education pattern rather than a minimal path.
+
+**Structure (the standard hierarchy, three visible levels):**
+
+```text
+Institution → Programme (degree) → Course → Module → Lesson → Blocks
+```
+
+A learner sees **their** programme and courses, never the whole university catalogue. Course cards carry progress rings; each course opens to a module → lesson flow with a collapsible syllabus that doubles as the progress map. Course home answers four things: what this is, what you will be able to do, how long it takes, what is next.
+
+**Why a new layer, not more subjects.** The current model is a flat exam path (`exam_target` → `subjects` → `lessons` → `lesson_blocks`; question bank keyed by `exam_id + subject_id`). A university is thousands of courses across hundreds of programmes — it needs `programmes`, `courses`, `modules`, `course_enrolments`, and a `course_id` on lessons and questions. Courses are data rows, so the catalogue scales without code changes. The existing `lessons`, `lesson_blocks`, `lesson_completions`, mastery engine, progress rings, and question bank are reused, not rebuilt.
+
+**Student features beyond lessons** (the standard study-app set, from the Goodnotes/Notion/Notability pattern):
+
+- **Document library** — upload lecture PDFs, slides, and readings; organise by course/module; search. Private bucket, one folder per user, short-lived signed URLs, resumable uploads over 6 MB, bucket-level size and type limits.
+- **Annotation** — highlight and margin notes on documents (the close-reading workflow).
+- **Notes and recordings** — typed notes and audio lecture recordings attached to a course/module/lesson.
+- **Study sets** — turn notes and documents into flashcards and quizzes, reusing the question bank.
+- **Progress and grades** — per-course and per-programme progress, with the same "what's next" surface.
+
+**Guardrails.** The university track never changes the JAMB/Post-UTME experience; it is an opt-in second track. The free tier keeps a storage cap (proposed: 50 MB per file, 500 MB total, within Supabase's free ceiling). Content follows the same editorial gate as lessons: draft → review → published. The "no gates before learning" principle holds — a learner reaches their next lesson without a catalogue browse.
+
 ## 3. The non-AI learning core
 
 ### The learning home
