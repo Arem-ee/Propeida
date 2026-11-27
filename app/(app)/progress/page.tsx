@@ -43,6 +43,13 @@ function formatDay(iso: string): string {
   return date.toLocaleDateString('en-NG', { day: 'numeric', month: 'short' })
 }
 
+/** A past due date is not a schedule, it is work waiting now. Never print a stale date as "Due". */
+function dueCopy(reviewAt: string | null): string {
+  if (!reviewAt) return 'Keep going'
+  if (isReviewDue(reviewAt)) return 'Review ready'
+  return `Next ${formatDay(reviewAt)}`
+}
+
 export default async function ProgressPage({
   searchParams,
 }: {
@@ -239,7 +246,7 @@ export default async function ProgressPage({
                 </p>
                 <p className="mt-0.5 text-xs font-semibold text-ink-soft">
                   {nextDue
-                    ? `${isReviewDue(nextDue) ? 'Due' : 'Next review'} ${formatDay(nextDue)}`
+                    ? isReviewDue(nextDue) ? 'Review ready now' : `Next review ${formatDay(nextDue)}`
                     : 'No practice due yet'}
                   {streak !== null ? ` · ${streak} day${streak === 1 ? '' : 's'} streak` : ''}
                 </p>
@@ -250,17 +257,17 @@ export default async function ProgressPage({
               <p className="mb-1 text-[11px] font-extrabold uppercase tracking-[0.14em] text-gray-500">
                 Your subjects
               </p>
+              <p className="mb-3 text-[11px] font-semibold text-gray-500">
+                The number is how accurate your answers have been so far, not how much of the subject you have covered.
+              </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {rows.map((s, idx) => {
                   const style = STATUS_CARD[s.status] ?? STATUS_CARD['not-started']!
                   const reviewAt = nextReviews[s.subjectId] ?? null
-                  const reviewDate = reviewAt ? formatDay(reviewAt) : null
                   const shortCopy =
                     s.status === 'not-started'
                       ? s.hasContent ? 'Not started' : 'Coming soon'
-                      : reviewDate
-                        ? isReviewDue(reviewAt) ? `Due ${reviewDate}` : `Next ${reviewDate}`
-                        : 'Keep going'
+                      : dueCopy(reviewAt)
                   return (
                     <div key={s.subjectId} className={`rounded-3xl border-2 p-5 animate-fade-up ${style.border}`} style={{ animationDelay: `${Math.min(8, idx) * 40}ms` }}>
                       <div className="flex items-center gap-4">
