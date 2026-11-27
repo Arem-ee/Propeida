@@ -217,7 +217,7 @@ function BankQuestion({
                 }`}>
                   {opt.key}
                 </span>
-                <span className="text-[15px] font-bold text-black">{opt.text}</span>
+                <span className="text-[15px] font-bold text-black"><MathText text={opt.text} /></span>
               </button>
             )
           })
