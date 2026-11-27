@@ -76,6 +76,8 @@ function GlossTerm({ term }: { term: string }) {
                 className="fixed inset-0 z-[65] cursor-pointer bg-black/30 animate-fade-up"
               />
               <span
+                ref={(node) => { if (open && node) node.focus() }}
+                tabIndex={-1}
                 id={`gloss-def-${term.toLowerCase()}`}
                 role="dialog"
                 aria-modal="false"

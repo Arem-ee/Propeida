@@ -47,13 +47,15 @@ export default function SetUsernamePage() {
       setUsernameStatus('taken')
       let counter = 1
       let alt = `${value}${counter}`
-      while (true) {
+      // Bound the lookup: after 50 suffixes, stop querying and offer a
+      // UUID-based fallback rather than hammering the API forever.
+      while (counter <= 50) {
         const { data: exists } = await supabaseRef.current.from('profiles').select('username').ilike('username', alt).maybeSingle()
         if (!exists) break
         counter++
         alt = `${value}${counter}`
       }
-      setSuggestion(alt)
+      setSuggestion(counter > 50 ? `${value}_${Math.random().toString(36).slice(2, 8)}` : alt)
     } else {
       setUsernameStatus('available')
       setSuggestion(null)

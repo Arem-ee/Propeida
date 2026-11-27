@@ -271,13 +271,15 @@ export default function SignupPage() {
             type="email"
             required
             autoComplete="email"
+            aria-invalid={emailExists}
+            aria-describedby={emailExists ? 'email-exists-hint' : undefined}
             value={email}
             onChange={(e) => { markStarted(); setEmail(e.target.value) }}
             placeholder="you@example.com"
             className="min-h-[44px] w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-ink placeholder:text-gray-400 focus:border-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-100"
           />
           {emailExists && (
-            <p className="mt-1.5 text-xs font-semibold text-amber-700">
+            <p id="email-exists-hint" role="status" aria-live="polite" className="mt-1.5 text-xs font-semibold text-amber-700">
               An account already uses this email, so{' '}
               <Link href="/login" className="font-bold text-blue-600 hover:underline">sign in instead</Link>
             </p>

@@ -50,6 +50,7 @@ export default function QuestionReviewPage() {
   const [refused, setRefused] = useState<{ id: string; text: string }[]>([])
 
   const load = useCallback(async () => {
+    try {
     const supabase = createClient()
     // The answer key is not readable by a signed-in learner. The review
     // queue is served by a definer function that checks the caller is an
@@ -73,6 +74,9 @@ export default function QuestionReviewPage() {
       setHistory(grouped)
     } else {
       setHistory({})
+    }
+    } catch {
+      setLoading(false)
     }
   }, [])
 

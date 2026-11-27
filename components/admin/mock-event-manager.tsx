@@ -61,10 +61,14 @@ export default function MockEventManager({
   const { confirm, dialog } = useConfirm()
 
   const load = useCallback(async () => {
-    const res = await fetch('/api/admin/mock-events')
-    if (res.ok) {
-      const data = await res.json()
-      setEvents(data.events ?? [])
+    try {
+      const res = await fetch('/api/admin/mock-events')
+      if (res.ok) {
+        const data = await res.json()
+        setEvents(data.events ?? [])
+      }
+    } catch {
+      // A failed refresh is harmless; the current list stays visible.
     }
   }, [])
 

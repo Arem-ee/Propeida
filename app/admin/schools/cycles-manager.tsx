@@ -36,9 +36,13 @@ export default function CyclesManager({ exams }: { exams: { id: string; name: st
   const { confirm, dialog } = useConfirm()
 
   const load = useCallback(async () => {
-    const res = await fetch('/api/admin/cycles')
-    const data = await res.json()
-    if (res.ok) setCycles(data.cycles ?? [])
+    try {
+      const res = await fetch('/api/admin/cycles')
+      const data = await res.json()
+      if (res.ok) setCycles(data.cycles ?? [])
+    } catch {
+      // A failed refresh leaves the current list visible.
+    }
   }, [])
 
   useEffect(() => {
