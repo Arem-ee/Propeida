@@ -20,6 +20,7 @@ export async function GET() {
       .from('schools')
       .select('id, name, slug')
       .order('name')
+      .limit(500)
     if (error) throw error
     return NextResponse.json({ schools: data ?? [] })
   } catch (err) {

@@ -28,6 +28,7 @@ export async function GET(request: Request) {
     const { data, error } = await supabase
       .from('school_screenings')
       .select('id, year, mode, jamb_weight, screening_weight, olevel_weight, cutoff, sittings_allowed, source')
+      .limit(500)
       .eq('school_id', schoolId)
       .order('year', { ascending: false })
     if (error) throw error

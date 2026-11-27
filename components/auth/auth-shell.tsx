@@ -73,15 +73,9 @@ export default function AuthShell({
         <div className="absolute left-1/2 top-1/3 h-64 w-64 -translate-x-1/2 rounded-full bg-white/70 blur-3xl" />
       </div>
 
-      <header className="relative z-10 mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-5 sm:px-6">
+      <header className="relative z-10 mx-auto flex w-full max-w-6xl items-center px-4 py-5 sm:px-6">
         <Link href="/" className="flex min-h-[44px] items-center" aria-label="Propeida home">
           <Logo />
-        </Link>
-        <Link
-          href="/"
-          className="pressable inline-flex min-h-[44px] items-center rounded-full px-4 text-sm font-bold text-ink-soft hover:bg-white hover:text-blue-700"
-        >
-          Go back home
         </Link>
       </header>
 

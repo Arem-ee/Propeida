@@ -45,6 +45,16 @@ const nextConfig: NextConfig = {
         ],
       },
       {
+        // Hashed/versioned static assets can be cached hard; the service
+        // worker and HTML below opt out separately.
+        source: '/images/:path*',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
+      {
+        source: '/lessons/:path*',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
+      {
         // The service worker must never be served stale: a cached script
         // keeps its old caching strategy alive and pins the whole site to
         // whatever was cached first.

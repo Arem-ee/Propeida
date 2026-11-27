@@ -13,6 +13,7 @@ import { toLessonVisual } from '@/lib/notes/visual'
 import { parseExplanation, type LessonEnhancement, type WorkedStep } from '@/lib/lessons'
 import { getExamScope } from '@/lib/exam-scope'
 
+import { reportError } from '@/lib/error-report'
 /** One inline check authored on a text block: question, options, answer index. */
 function toSectionCheck(value: unknown): NoteSection['check'] {
   if (!value || typeof value !== 'object') return undefined
@@ -822,7 +823,7 @@ export async function completeLesson(input: {
         { onConflict: 'user_id,lesson_id' },
       )
   } catch (err) {
-    console.error('[lesson] completion record failed:', err)
+    void reportError('lesson/completion', err)
   }
 
   try {
@@ -831,7 +832,7 @@ export async function completeLesson(input: {
     const scope = await getExamScope(supabase, user.id)
     await applySubjectEvidence(supabase, user.id, bySubject, null, scope.primaryExamId)
   } catch (err) {
-    console.error('[mastery] completeLesson failed:', err)
+    void reportError('mastery/completeLesson', err)
   }
 
   // A finished lesson is a completed planned action: it extends the
@@ -839,7 +840,7 @@ export async function completeLesson(input: {
   try {
     await supabase.rpc('update_streak', { p_user_id: user.id })
   } catch (err) {
-    console.error('[streak] update_streak failed:', err)
+    void reportError('streak/update', err)
   }
   const streak = await fetchCurrentStreak(supabase, user.id)
 

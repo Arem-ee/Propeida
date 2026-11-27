@@ -3,6 +3,7 @@ import { createClient } from '@/lib/supabase/server'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { headers } from 'next/headers'
 import { checkRateLimit, getClientIp, rateLimitKey } from '@/lib/rate-limit'
+import { originAllowed, originDenied } from '@/lib/origin-check'
 
 /**
  * Account deletion. Removes the auth user; every user-owned row cascades
@@ -10,6 +11,7 @@ import { checkRateLimit, getClientIp, rateLimitKey } from '@/lib/rate-limit'
  * Payment rows cascade too — the privacy policy states exactly this.
  */
 export async function DELETE() {
+  if (!(await originAllowed())) return originDenied()
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
   if (!user) return NextResponse.json({ error: 'Not authenticated' }, { status: 401 })

@@ -480,6 +480,8 @@ export default function MockPlayer({
             return (
               <button
                 key={opt.key}
+                type="button"
+                aria-pressed={isSel}
                 onClick={() => select(opt.key)}
                 className={`flex w-full items-center gap-3 rounded-2xl border-2 p-3.5 text-left min-h-[56px] transition-all cursor-pointer pressable ${
                   isSel ? 'border-blue-600 bg-blue-50/60' : 'border-gray-200 bg-white hover:border-blue-300'

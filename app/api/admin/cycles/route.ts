@@ -17,6 +17,7 @@ export async function GET() {
       .from('exam_cycles')
       .select('id, exam_id, year, starts_at, ends_at, verified, source, exams!inner(name)')
       .order('year', { ascending: false })
+      .limit(500)
     if (error) throw error
     return NextResponse.json({ cycles: data ?? [] })
   } catch (err) {

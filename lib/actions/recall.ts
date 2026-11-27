@@ -7,6 +7,7 @@ import { applySubjectEvidence } from '@/lib/mastery'
 import { getProStatus } from '@/lib/entitlements'
 import { applyReview, initialState, retrievability, type Grade } from '@/lib/recall-scheduler'
 
+import { reportError } from '@/lib/error-report'
 export interface RecallCard {
   id: string
   subjectName: string
@@ -216,7 +217,7 @@ export async function submitRecallMark(input: {
       grade: outcome.grade,
       updated_at: now.toISOString(),
     }, { onConflict: 'user_id,card_id' })
-  if (stateError) console.error('[recall] review state write failed:', stateError.message)
+  if (stateError) void reportError('recall/review-state', stateError)
 
   try {
     const scope = await getExamScope(supabase, user.id)
@@ -228,6 +229,6 @@ export async function submitRecallMark(input: {
       scope.primaryExamId,
     )
   } catch (err) {
-    console.error('[mastery] submitRecallMark failed:', err)
+    void reportError('mastery/recallMark', err)
   }
 }

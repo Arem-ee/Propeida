@@ -21,6 +21,7 @@ export async function GET() {
       .from('mock_events')
       .select('id, name, slug, exam_id, starts_at, ends_at, description, topic_ids, question_count, created_at, exams!inner(name, slug)')
       .order('starts_at', { ascending: false })
+      .limit(500)
     if (error) throw error
     return NextResponse.json({ events: data ?? [] })
   } catch (err) {

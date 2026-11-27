@@ -7,6 +7,7 @@ import { revalidatePath } from 'next/cache'
 import { applySubjectEvidence } from '@/lib/mastery'
 import { getExamScope } from '@/lib/exam-scope'
 
+import { reportError } from '@/lib/error-report'
 export async function completeOnboarding() {
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
@@ -181,7 +182,7 @@ export async function submitOnboardingCheck(
       // Placement evidence belongs to the learner's current path.
       await applySubjectEvidence(supabase, user.id, evidence, null, scope.primaryExamId)
     } catch (err) {
-      console.error('[mastery] onboarding evidence failed:', err)
+      void reportError('mastery/onboarding', err)
     }
   }
 

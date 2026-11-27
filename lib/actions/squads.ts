@@ -5,6 +5,7 @@ import { createClient, getAuthUser } from '@/lib/supabase/server'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { getExamScope, examPathLabel } from '@/lib/exam-scope'
 import { siteUrl } from '@/lib/site-url'
+import { reportError } from '@/lib/error-report'
 import {
   GOAL_PRESETS,
   SQUAD_COLORS,
@@ -382,7 +383,11 @@ export async function joinMySquad(): Promise<{ squadId: string }> {
     throw new Error('Choose your exam path first')
   }
 
-  await admin.from('profiles').update({ squads_enabled: true }).eq('id', user.id)
+  const { error: flagError } = await admin.from('profiles').update({ squads_enabled: true }).eq('id', user.id)
+  if (flagError) {
+    void reportError('squad/enable-flag', flagError)
+    throw new Error('Could not open squads for your account')
+  }
 
   const cycleYear = await getCycleYear(admin, scope.primaryExamId)
   const { data, error } = await supabase.rpc('join_my_squad', {
@@ -392,7 +397,10 @@ export async function joinMySquad(): Promise<{ squadId: string }> {
   })
 
   if (error) {
-    if (!wasEnabled) await admin.from('profiles').update({ squads_enabled: false }).eq('id', user.id)
+    if (!wasEnabled) {
+      const { error: undoError } = await admin.from('profiles').update({ squads_enabled: false }).eq('id', user.id)
+      if (undoError) void reportError('squad/undo-flag', undoError)
+    }
     throw new Error(friendlyJoinError(error.message))
   }
 
@@ -418,11 +426,18 @@ export async function joinSquadByInvite(code: string): Promise<{ squadId: string
   const wasEnabled =
     (profile as { squads_enabled?: boolean } | null)?.squads_enabled ?? false
 
-  await admin.from('profiles').update({ squads_enabled: true }).eq('id', user.id)
+  const { error: flagError } = await admin.from('profiles').update({ squads_enabled: true }).eq('id', user.id)
+  if (flagError) {
+    void reportError('squad/enable-flag', flagError)
+    throw new Error('Could not open squads for your account')
+  }
 
   const { data, error } = await supabase.rpc('join_squad_by_invite', { p_code: code })
   if (error) {
-    if (!wasEnabled) await admin.from('profiles').update({ squads_enabled: false }).eq('id', user.id)
+    if (!wasEnabled) {
+      const { error: undoError } = await admin.from('profiles').update({ squads_enabled: false }).eq('id', user.id)
+      if (undoError) void reportError('squad/undo-flag', undoError)
+    }
     throw new Error(friendlyInviteError(error.message))
   }
 
@@ -436,7 +451,11 @@ export async function leaveSquad(): Promise<void> {
   if (!user) throw new Error('Please sign in again')
 
   const admin = createAdminClient()
-  await admin.from('profiles').update({ squads_enabled: false }).eq('id', user.id)
+  const { error: flagError } = await admin.from('profiles').update({ squads_enabled: false }).eq('id', user.id)
+  if (flagError) {
+    void reportError('squad/disable-flag', flagError)
+    throw new Error('Could not update your squad settings')
+  }
   const { error } = await supabase.rpc('leave_my_squad')
   if (error) throw new Error('Could not leave your squad')
 

@@ -25,6 +25,7 @@ import { recordSessionEvidence, getNextReviews } from '@/lib/mastery'
 import { fetchCurrentStreak } from '@/lib/streak'
 import { parseExplanation } from '@/lib/lessons'
 
+import { reportError } from '@/lib/error-report'
 function practiceParseExplanation(explanation: string | null) {
   if (!explanation) return { explanationText: '', steps: undefined as ReturnType<typeof parseExplanation>['steps'] | undefined, walkthrough: undefined as ReturnType<typeof parseExplanation>['walkthrough'] | undefined }
   const parsed = parseExplanation(explanation)
@@ -203,16 +204,29 @@ export async function createSession(params: CreateSessionParams) {
   const hasAccess = examAccess
   const isFreeMock = !hasAccess && params.mode === 'mock'
 
-  // Free mock attempts per exam (config: default 1; unilorin 2). Past the
-  // allowance the mock is a Pro feature -- say so plainly, in one sentence.
+  // Free mock attempts per exam (config: default 1; unilorin 2). The claim is
+  // atomic: two simultaneous starts cannot both observe a free slot. The
+  // source of truth stays the real session rows; the claim is a short-lived
+  // reservation released once the session exists (or creation fails).
+  let freeMockClaimId: string | null = null
+  const releaseClaim = async () => {
+    if (!freeMockClaimId) return
+    const id = freeMockClaimId
+    freeMockClaimId = null
+    await supabase.rpc('release_free_mock_claim', { p_claim_id: id })
+  }
   if (isFreeMock) {
-    const [attempts, usedMocks] = await Promise.all([
-      getFreeMockAttempts(examSlug),
-      countUsedFreeMocks(supabase, user.id, params.examId),
-    ])
-    if (usedMocks >= attempts) {
+    const attempts = await getFreeMockAttempts(examSlug)
+    const { data: claimId, error: claimError } = await supabase.rpc('claim_free_mock', {
+      p_user_id: user.id,
+      p_exam_id: params.examId,
+      p_limit: attempts,
+    })
+    if (claimError) throw new Error('Could not check your free mock allowance.')
+    if (!claimId) {
       throw new Error('You have used your free mock. Pro unlocks unlimited mocks.')
     }
+    freeMockClaimId = claimId as string
   }
 
   let timeLimitSeconds: number | null = null
@@ -321,6 +335,7 @@ export async function createSession(params: CreateSessionParams) {
     // remove it so the learner is never left with an empty session that counts
     // against their free mock allowance.
     await createAdminClient().from('exam_sessions').delete().eq('id', session.id)
+    await releaseClaim()
     throw err instanceof Error ? err : new Error('Could not start this session')
   }
 
@@ -328,6 +343,7 @@ export async function createSession(params: CreateSessionParams) {
   // looks like the real hall, so stop cleanly and say what is missing.
   if (params.mode === 'mock' && questions.length < effectiveCount) {
     await createAdminClient().from('exam_sessions').delete().eq('id', session.id)
+    await releaseClaim()
     throw new Error(
       `This mock needs ${effectiveCount} questions, and the bank has ${questions.length} ready for those subjects, so pick subjects with more questions or practise them first`,
     )
@@ -415,8 +431,12 @@ export async function createSession(params: CreateSessionParams) {
   const { error: answersError } = await admin.from('session_answers').insert(rows)
   if (answersError) {
     await admin.from('exam_sessions').delete().eq('id', session.id)
+    await releaseClaim()
     throw new Error('Could not start this session.')
   }
+
+  // The session row is now the allowance record, so drop the reservation.
+  await releaseClaim()
 
   revalidatePath('/practice')
 
@@ -593,7 +613,7 @@ export async function completePracticeSession(sessionId: string) {
   try {
     await recordSessionEvidence(supabase, user.id, sessionId)
   } catch (err) {
-    console.error('[mastery] recordSessionEvidence failed:', err)
+    void reportError('mastery/evidence', err)
   }
 
   // Streak counts the completed session (a planned action done), never
@@ -601,7 +621,7 @@ export async function completePracticeSession(sessionId: string) {
   try {
     await supabase.rpc('update_streak', { p_user_id: user.id })
   } catch (err) {
-    console.error('[streak] update_streak failed:', err)
+    void reportError('streak/update', err)
   }
   const streak = await fetchCurrentStreak(supabase, user.id)
 
@@ -636,7 +656,7 @@ export async function completeMockSession(sessionId: string) {
   try {
     await recordSessionEvidence(supabase, user.id, sessionId)
   } catch (err) {
-    console.error('[mastery] recordSessionEvidence failed:', err)
+    void reportError('mastery/evidence', err)
   }
 
   revalidatePath('/practice')

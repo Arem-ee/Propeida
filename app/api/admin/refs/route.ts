@@ -5,9 +5,9 @@ export async function GET() {
   try {
     const { supabase } = await requireAdmin()
     const [examsRes, subjectsRes, schoolsRes] = await Promise.all([
-      supabase.from('exams').select('id, name').order('name'),
-      supabase.from('subjects').select('id, name').order('name'),
-      supabase.from('schools').select('id, name').order('name'),
+      supabase.from('exams').select('id, name').order('name').limit(500),
+      supabase.from('subjects').select('id, name').order('name').limit(500),
+      supabase.from('schools').select('id, name').order('name').limit(500),
     ])
 
     return NextResponse.json({

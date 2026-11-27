@@ -14,6 +14,7 @@ export async function GET(request: Request) {
       .eq('subject_id', subjectId)
       .eq('published', true)
       .order('sort_order')
+      .limit(500)
     if (error) throw error
     return NextResponse.json({ topics: data ?? [] })
   } catch (err) {

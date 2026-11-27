@@ -13,6 +13,7 @@ export async function GET(request: Request) {
       .select('code, name, definition')
       .eq('subject_id', subjectId)
       .order('code')
+      .limit(500)
     if (error) throw error
     return NextResponse.json({ codes: data ?? [] })
   } catch (err) {
