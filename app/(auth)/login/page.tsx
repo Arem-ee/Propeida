@@ -1,7 +1,7 @@
 'use client'
 
 import { Suspense, useState } from 'react'
-import { useRouter, useSearchParams } from 'next/navigation'
+import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/client'
 import { claimReferral } from '@/lib/actions/referral'
@@ -17,7 +17,6 @@ function LoginForm() {
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
   const [googleLoading, setGoogleLoading] = useState(false)
-  const router = useRouter()
   const searchParams = useSearchParams()
   const redirect = safeInternalPath(searchParams.get('redirect'))
   const confirmed = searchParams.get('confirmed') === 'true'
@@ -52,8 +51,11 @@ function LoginForm() {
       localStorage.removeItem('pending_ref')
     }
 
-    router.push(redirect)
-    router.refresh()
+    // Hard navigation, not router.push. The (app) layout decides where a
+    // signed-in user belongs (onboarding vs home) with a server redirect;
+    // a client push races that redirect and can land on /home with the
+    // onboarding gate skipped until the next full load.
+    window.location.assign(redirect)
   }
 
   const handleGoogleSignIn = async () => {
